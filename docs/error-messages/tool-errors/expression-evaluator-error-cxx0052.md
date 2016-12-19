@@ -1,0 +1,37 @@
+---
+title: "Ошибка вычислителя выражений CXX0052 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "CXX0052"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CAN0052"
+  - "CXX0052"
+ms.assetid: 5060d479-d0a4-4682-b858-c8b9a4f324e6
+caps.latest.revision: 6
+caps.handback.revision: 6
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Ошибка вычислителя выражений CXX0052
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+отсутствует функция\-член  
+  
+ Не обнаружена функция\-член, определенная как точка останова.  Настройка точки останова во встроенной функции могло стать причиной возникновения данной ошибки.  
+  
+ Следует повторно выполнить компиляцию файла с принудительно отключенной функцией встраивания \(\/Ob0\), чтобы задать точку останова в данной функции.  
+  
+ Выражение вызвало функцию, которая не была определена.  
+  
+ Эта ошибка идентична ошибке CAN0052.

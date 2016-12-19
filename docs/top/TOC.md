@@ -1,0 +1,8 @@
+# [Visual C++ в Visual Studio 2015](visual-cpp-in-visual-studio-2015.md)
+# [Запуск от имени участника группы "Пользователи"](running-as-a-member-of-the-users-group.md)
+# [C++ REST SDK (Codename "Casablanca")](cpp-rest-sdk-codename-casablanca.md)
+# [Рекомендации по безопасности для C++](security-best-practices-for-cpp.md)
+# [Примеры кода на Visual C++](visual-cpp-samples.md)
+# [Справка и сообщество Visual C++](visual-cpp-help-and-community.md)
+# [Новые возможности Visual C++ в Visual Studio 2015](what-s-new-for-visual-cpp-in-visual-studio-2015.md)
+# [Поддерживаемые платформы (Visual C++)](supported-platforms-visual-cpp.md)

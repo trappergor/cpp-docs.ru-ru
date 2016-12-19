@@ -1,0 +1,105 @@
+---
+title: "__popcnt16, __popcnt, __popcnt64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "__popcnt64"
+  - "__popcnt"
+  - "__popcnt16"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Инструкция popcnt"
+  - "__popcnt16"
+  - "__popcnt64"
+  - "__popcnt"
+ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
+caps.latest.revision: 15
+caps.handback.revision: 13
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# __popcnt16, __popcnt, __popcnt64
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+**Только для систем Microsoft**  
+  
+ Подсчитывает количество битов один \(количество заполнения\) как единое целое число без знака размером 16 \- 32 \- или 64 байт.  
+  
+## Синтаксис  
+  
+```  
+unsigned short __popcnt16(  
+   unsigned short value  
+);  
+unsigned int __popcnt(  
+   unsigned int value  
+);  
+unsigned __int64 __popcnt64(  
+   unsigned __int64 value  
+);  
+```  
+  
+#### Параметры  
+ \[входящий\] `value`  
+ 16 \- 32 \- Или 64 целое число без знака, для которого нужно хочет количество заполнения.  
+  
+## Возвращаемое значение  
+ Количество битов одного в параметре `value`.  
+  
+## Требования  
+  
+|Встроенный объект|Архитектура|  
+|-----------------------|-----------------|  
+|`__popcnt16`|Предварительная обработка данных bit|  
+|`__popcnt`|Предварительная обработка данных bit|  
+|`__popcnt64`|Предварительная обработка данных 64 бита в 64\-разрядном режиме.|  
+  
+ **Файл заголовка** \<intrin.h\>  
+  
+## Заметки  
+ Каждый из этих встроенных функций формирует инструкцию `popcnt`.  Размер значений, инструкция `popcnt` возвращает такое же, как и размер аргумента.  В 64\-разрядном режиме не 32 с пакетом обновления 64 \(sp2\) регистры общего назначения, следовательно, нет пакетом обновления 64 \(sp2 `popcnt`.  
+  
+ Чтобы определить аппаратную поддержку для инструкции `popcnt`, вызовите внутреннего элемента `__cpuid` с `InfoType=0x00000001` и контрольный двоичный разряд 23 `CPUInfo[2] (ECX)`.  Этот бит 1, если инструкция поддерживается, и 0 \- в противном случае.  Если запустить код, который использует этот встроенный на оборудовании, не поддерживает инструкцию `popcnt` результаты становятся непредсказуемыми.  
+  
+## Пример  
+  
+```  
+#include <iostream>   
+#include <intrin.h>   
+using namespace std;   
+  
+int main()   
+{  
+  unsigned short us[3] = {0, 0xFF, 0xFFFF};  
+  unsigned short usr;  
+  unsigned int   ui[4] = {0, 0xFF, 0xFFFF, 0xFFFFFFFF};  
+  unsigned int   uir;  
+  
+  for (int i=0; i<3; i++) {  
+    usr = __popcnt16(us[i]);  
+    cout << "__popcnt16(0x" << hex << us[i] << ") = " << dec << usr << endl;  
+  }  
+  
+  for (int i=0; i<4; i++) {  
+    uir = __popcnt(ui[i]);  
+    cout << "__popcnt(0x" << hex << ui[i] << ") = " << dec << uir << endl;  
+  }  
+}  
+  
+```  
+  
+  **\_\_popcnt16 \(0x0\) \= 0 \_\_popcnt16 \(0xff\) \= 8 \(0xffff\) \= 16 \_\_popcnt \_\_popcnt16 \(0x0\) \= 0 \_\_popcnt \(0xff\) \= 8 \_\_popcnt \_\_oopcnt \(0xffff\) \= 16 \(0xffffffff\) \= 32**   
+## ЭЛЕМЕНТ, относящийся Майкрософт  
+ Авторские права 2007 предварительными микро\- Устройствами, Inc все права защищены.  Воспроизведено с разрешением от предварительных микро\- Устройств, Inc  
+  
+## См. также  
+ [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
