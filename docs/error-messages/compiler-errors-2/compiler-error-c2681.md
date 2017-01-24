@@ -1,0 +1,42 @@
+---
+title: "Ошибка компилятора C2681 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2681"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2681"
+ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Ошибка компилятора C2681
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+'type' : недопустимый тип выражения для имени  
+  
+ Оператор приведения попытался преобразовать из недопустимого типа.  Например, при использовании оператора [dynamic\_cast](../../cpp/dynamic-cast-operator.md) для преобразования выражения в тип указателя, исходное выражение должно быть указателем.  
+  
+ Следующий пример приводит к возникновению ошибки C2681:  
+  
+```  
+// C2681.cpp  
+class A { virtual void f(); };  
+  
+void g(int i) {  
+    A* pa;  
+    pa = dynamic_cast<A*>(i);  // C2681  
+}  
+```

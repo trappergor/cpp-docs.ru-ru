@@ -1,0 +1,75 @@
+---
+title: "Инициализация массивов | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "инициализация массивов"
+  - "инициализация массивов [C++]"
+ms.assetid: 41efe5f0-15b5-4f49-9196-c4902f8fc705
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Инициализация массивов
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Если класс имеет конструктор, массивы этого класса инициализируются конструктором. Если число элементов в списке инициализаторов меньше числа элементов в массиве, для остальных элементов используется конструктор по умолчанию. Если конструктор по умолчанию для класса не определен, список инициализаторов должен быть полным, т. е. для каждого элемента массива должен иметься один инициализатор.  
+  
+ Рассмотрим класс `Point`, определяющий два конструктора:  
+  
+```  
+// initializing_arrays1.cpp  
+class Point  
+{  
+public:  
+   Point()   // Default constructor.  
+   {  
+   }  
+   Point( int, int )   // Construct from two ints  
+   {  
+   }  
+};  
+  
+// An array of Point objects can be declared as follows:  
+Point aPoint[3] = {  
+   Point( 3, 3 )     // Use int, int constructor.  
+};  
+  
+int main()  
+{  
+}  
+```  
+  
+ Первый элемент `aPoint` создается с помощью конструктора `Point( int, int )`, а оставшиеся два элемента — с помощью конструктора по умолчанию.  
+  
+ Массивы статических членов (ли **const** или нет) могут инициализироваться в своих определениях (вне объявления класса). Пример:  
+  
+```  
+// initializing_arrays2.cpp  
+class WindowColors  
+{  
+public:  
+    static const char *rgszWindowPartList[7];  
+};  
+  
+const char *WindowColors::rgszWindowPartList[7] = {  
+    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",  
+    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };  
+int main()  
+{  
+}  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [(NOTINBUILD) Специальные функции-члены](http://msdn.microsoft.com/ru-ru/82223d73-64cb-4923-b678-78f9568ff3ca)

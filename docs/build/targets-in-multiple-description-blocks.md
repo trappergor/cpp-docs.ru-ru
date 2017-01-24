@@ -1,0 +1,40 @@
+---
+title: "Целевые объекты в нескольких блоках описания | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "блоки, множественное описание"
+  - "блоки описания"
+  - "несколько блоков описания"
+ms.assetid: 8618dcd9-c11d-4562-91a7-0c904ed438a8
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Целевые объекты в нескольких блоках описания
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Чтобы обновить целевой объект в нескольких блоках описания, использующих различные команды, укажите между целевым и зависимым объектами два последовательных знака двоеточия.  
+  
+```  
+target.lib :: one.asm two.asm three.asm  
+    ml one.asm two.asm three.asm  
+    lib target one.obj two.obj three.obj  
+target.lib :: four.c five.c  
+    cl /c four.c five.c  
+    lib target four.obj five.obj  
+```  
+  
+## См. также  
+ [Целевые объекты](../build/targets.md)

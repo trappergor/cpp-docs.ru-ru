@@ -1,0 +1,91 @@
+---
+title: "defaultvtable | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - "vc-attr.defaultvtable"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "defaultvtable attribute"
+ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# defaultvtable
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Задает интерфейс в качестве интерфейса по умолчанию vtable для com\-объекта.  
+  
+## Синтаксис  
+  
+```  
+  
+      [ defaultvtable(  
+   interface  
+) ]  
+```  
+  
+#### Параметры  
+ `interface`  
+ Назначенный интерфейс, который необходимо иметь значение по умолчанию vtable для com\-объекта.  
+  
+## Заметки  
+ **defaultvtable** Атрибут C\+\+ имеет ту же функциональность, что и  [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) атрибут MIDL.  
+  
+## Пример  
+ В следующем примере кода показаны атрибуты в классе, использующих defaultvtable определить интерфейс по умолчанию:  
+  
+```  
+// cpp_attr_ref_defaultvtable.cpp  
+// compile with: /LD  
+#include <unknwn.h>  
+[module(name="MyLib")];  
+  
+[object, uuid("00000000-0000-0000-0000-000000000001")]  
+__interface IMyI1 {  
+   HRESULT x();  
+};  
+  
+[object, uuid("00000000-0000-0000-0000-000000000002")]  
+__interface IMyI2 {  
+   HRESULT x();  
+};  
+  
+[object, uuid("00000000-0000-0000-0000-000000000003")]  
+__interface IMyI3 {  
+   HRESULT x();  
+};  
+  
+[coclass, source(IMyI3, IMyI1), default(IMyI3, IMyI2), defaultvtable(IMyI1),  
+uuid("00000000-0000-0000-0000-000000000004")]  
+class CMyC3 : public IMyI3 {};  
+```  
+  
+## Требования  
+  
+### Контекст атрибута  
+  
+|||  
+|-|-|  
+|**Применение**|**класс**"  `struct`|  
+|**Repeatable**|Нет|  
+|**Обязательные атрибуты**|**CoClass**|  
+|**Недопустимые атрибуты**|None|  
+  
+ Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+  
+## См. также  
+ [IDL Attributes](../windows/idl-attributes.md)   
+ [Class Attributes](../windows/class-attributes.md)   
+ [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
