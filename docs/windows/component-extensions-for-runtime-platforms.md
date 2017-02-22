@@ -1,8 +1,7 @@
 ---
 title: "Расширения компонентов для платформ среды выполнения | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "новые возможности [C++], возможности языка"
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
 caps.latest.revision: 77
-caps.handback.revision: 77
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 77
 ---
 # Расширения компонентов для платформ среды выполнения
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

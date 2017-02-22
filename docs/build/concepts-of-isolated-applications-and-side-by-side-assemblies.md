@@ -1,8 +1,7 @@
 ---
 title: "Основные понятия, связанные с изолированными приложениями и параллельными сборками | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "изолированные сборки [C++]"
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Основные понятия, связанные с изолированными приложениями и параллельными сборками
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

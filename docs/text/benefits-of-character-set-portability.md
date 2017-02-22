@@ -1,8 +1,7 @@
 ---
 title: "Преимущества переносимости кодировки | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "переносимость [C++], кодировки"
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Преимущества переносимости кодировки
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

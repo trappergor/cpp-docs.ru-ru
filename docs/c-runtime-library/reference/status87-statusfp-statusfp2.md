@@ -1,8 +1,7 @@
 ---
 title: "_status87, _statusfp, _statusfp2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "statusfp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "функции с плавающей запятой, получение слова, обозначающего статус"
   - "числа с плавающей запятой, слово, обозначающее статус"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "слово, обозначающее статус"
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _status87, _statusfp, _statusfp2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

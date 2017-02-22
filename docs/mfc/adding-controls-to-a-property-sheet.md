@@ -1,8 +1,7 @@
 ---
 title: "Добавление элементов управления на вкладку свойств | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "страницы свойств, добавление элементов управления"
 ms.assetid: 24ad4c0b-c1db-4850-b9f0-34aae8d74571
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Добавление элементов управления на вкладку свойств
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

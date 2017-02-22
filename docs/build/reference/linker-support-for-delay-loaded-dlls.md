@@ -1,8 +1,7 @@
 ---
 title: "Поддержка компоновщика для DLLs, загружаемых с задержкой | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "отложенная загрузка библиотек DLL, поддержка компоновщика"
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Поддержка компоновщика для DLLs, загружаемых с задержкой
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

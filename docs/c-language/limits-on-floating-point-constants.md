@@ -1,8 +1,7 @@
 ---
 title: "Ограничения констант с плавающей запятой | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "константы, с плавающей запятой"
   - "FLOAT.H - заголовочный файл"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "диапазоны, константы с плавающей запятой"
 ms.assetid: 2d975868-2af6-45d7-a8af-db79f2c6b67b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Ограничения констант с плавающей запятой
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

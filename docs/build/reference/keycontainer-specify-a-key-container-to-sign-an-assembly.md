@@ -1,8 +1,7 @@
 ---
 title: "/KEYCONTAINER (задание контейнера ключей для подписи сборки) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-KEYCONTAINER - параметр компоновщика"
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /KEYCONTAINER (задание контейнера ключей для подписи сборки)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

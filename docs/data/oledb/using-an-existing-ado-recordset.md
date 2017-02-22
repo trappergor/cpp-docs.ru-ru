@@ -1,8 +1,7 @@
 ---
 title: "Использование существующего набора записей ADO | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "наборы записей [C++], использование в OLE DB"
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Использование существующего набора записей ADO
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

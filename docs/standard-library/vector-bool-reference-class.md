@@ -1,8 +1,7 @@
 ---
 title: "Класс vector&lt;bool&gt;::reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "vector<bool> - ссылочный класс"
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
 caps.latest.revision: 22
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Класс vector&lt;bool&gt;::reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

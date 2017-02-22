@@ -1,8 +1,7 @@
 ---
 title: "Инициализация и прекращение работы ядра базы данных DAO | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "доступ к данным DAO.NET, завершение"
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Инициализация и прекращение работы ядра базы данных DAO
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

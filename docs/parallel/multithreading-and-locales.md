@@ -1,8 +1,7 @@
 ---
 title: "Многопоточность и языковые стандарты | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "работа с потоками [C++], язык и региональные стандарты"
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Многопоточность и языковые стандарты
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

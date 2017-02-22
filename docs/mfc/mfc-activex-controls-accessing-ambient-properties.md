@@ -1,8 +1,7 @@
 ---
 title: "Элементы управления ActiveX в MFC. Доступ к свойствам окружения | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "свойства [MFC], доступ к внешним"
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Элементы управления ActiveX в MFC. Доступ к свойствам окружения
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

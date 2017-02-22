@@ -1,8 +1,7 @@
 ---
 title: "Функции преобразования строк в числовое значение | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,16 +21,15 @@ f1_keywords:
   - "_tcstoi64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "синтаксический разбор, числовые строки"
   - "преобразование строк, к числовым значениям"
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Функции преобразования строк в числовое значение
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Фазы трансляции | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "перевод файла [C++], процесс компилятора"
   - "файлы [C++], преобразование"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "преобразование, процесс компилятора"
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Фазы трансляции
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

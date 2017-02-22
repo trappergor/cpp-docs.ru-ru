@@ -1,8 +1,7 @@
 ---
 title: "Общие сведения о синтаксисе языка C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "нотация в C"
   - "синтаксис"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "Visual C, нотация синтаксиса"
 ms.assetid: 6edccdb7-453b-4820-a5d8-075c19fb8926
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Общие сведения о синтаксисе языка C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Отключение параметра &quot;Активация при отображении&quot; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "параметр "Активация при отображении""
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Отключение параметра &quot;Активация при отображении&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

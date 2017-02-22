@@ -1,8 +1,7 @@
 ---
 title: "Уведомления, отправленные элементами управления &quot;Анимация&quot; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "уведомления, элементы управления анимацией"
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Уведомления, отправленные элементами управления &quot;Анимация&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

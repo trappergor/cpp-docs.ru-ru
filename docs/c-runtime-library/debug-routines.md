@@ -1,8 +1,7 @@
 ---
 title: "Процедуры отладки | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.debug"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "отладка [CRT], использование макросов"
   - "макросы, отладка с помощью"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "отладка [CRT], подпрограммы времени выполнения"
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Процедуры отладки
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

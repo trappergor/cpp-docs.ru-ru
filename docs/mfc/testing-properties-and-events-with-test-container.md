@@ -1,8 +1,7 @@
 ---
 title: "Тестирование свойств и событий с использованием тестового контейнера | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "tstcon32.exe"
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Тестирование свойств и событий с использованием тестового контейнера
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

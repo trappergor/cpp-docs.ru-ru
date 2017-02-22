@@ -1,8 +1,7 @@
 ---
 title: "Параметр /LTCG (создание кода во время компоновки) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "-LTCG - параметр компоновщика"
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Параметр /LTCG (создание кода во время компоновки)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

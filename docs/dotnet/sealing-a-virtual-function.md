@@ -1,8 +1,7 @@
 ---
 title: "Запечатывание виртуальной функции | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "виртуальные функции, запечатывание"
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Запечатывание виртуальной функции
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

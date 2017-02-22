@@ -1,8 +1,7 @@
 ---
 title: "Повторное использование подставляемого файла | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "повторное использование встроенного файла"
 ms.assetid: d42dbffb-2cef-4ccb-9a1f-20b8ef81481c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Повторное использование подставляемого файла
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

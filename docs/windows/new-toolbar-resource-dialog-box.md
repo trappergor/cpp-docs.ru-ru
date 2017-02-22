@@ -1,8 +1,7 @@
 ---
 title: "Диалоговое окно &quot;Создание ресурса панели инструментов&quot; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Создание ресурса панели инструментов - диалоговое окно"
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Диалоговое окно &quot;Создание ресурса панели инструментов&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

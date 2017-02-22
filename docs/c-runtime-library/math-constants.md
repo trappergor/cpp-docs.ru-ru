@@ -1,8 +1,7 @@
 ---
 title: "Математические константы | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_USE_MATH_DEFINES - константа"
   - "константы, математические"
@@ -34,10 +32,10 @@ helpviewer_keywords:
   - "USE_MATH_DEFINES - константа"
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Математические константы
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

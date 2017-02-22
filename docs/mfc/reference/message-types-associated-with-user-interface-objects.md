@@ -1,8 +1,7 @@
 ---
 title: "Типы сообщений, связанных с объектами пользовательского интерфейса | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "типы сообщений и объекты пользовательского интерфейса"
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Типы сообщений, связанных с объектами пользовательского интерфейса
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

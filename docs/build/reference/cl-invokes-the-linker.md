@@ -1,8 +1,7 @@
 ---
 title: "Вызов компоновщика компилятором CL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "LINK - средство [C++], вызов из компилятора CL"
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Вызов компоновщика компилятором CL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

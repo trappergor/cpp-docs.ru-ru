@@ -1,8 +1,7 @@
 ---
 title: "-clr (компиляция CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "среда CLR, /clr — параметр компилятора"
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
 caps.latest.revision: 72
-caps.handback.revision: 72
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 72
 ---
 # /clr (компиляция CLR)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

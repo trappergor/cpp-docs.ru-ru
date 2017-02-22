@@ -1,8 +1,7 @@
 ---
 title: "Контейнеры. Проблемы пользовательского интерфейса | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "проблемы пользовательского интерфейса"
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Контейнеры. Проблемы пользовательского интерфейса
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

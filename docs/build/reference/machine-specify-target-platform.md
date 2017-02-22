@@ -1,8 +1,7 @@
 ---
 title: "Параметр /MACHINE (определение целевой платформы) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "конечная платформа"
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Параметр /MACHINE (определение целевой платформы)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

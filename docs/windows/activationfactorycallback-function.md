@@ -1,8 +1,7 @@
 ---
 title: "Функция ActivationFactoryCallback | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ActivationFactoryCallback - функция"
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Функция ActivationFactoryCallback
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

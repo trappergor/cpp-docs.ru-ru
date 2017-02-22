@@ -1,8 +1,7 @@
 ---
 title: "Операторы назначения в C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "%= - оператор"
   - "&= - оператор"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "оператор вычитания, Операторы присваивания C"
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Операторы назначения в C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

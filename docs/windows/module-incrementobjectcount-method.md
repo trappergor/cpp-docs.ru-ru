@@ -1,8 +1,7 @@
 ---
 title: "Метод Module::IncrementObjectCount | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IncrementObjectCount - метод"
 ms.assetid: 268b79be-15c3-4b07-884e-18da2c7281f2
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Метод Module::IncrementObjectCount
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

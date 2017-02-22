@@ -1,8 +1,7 @@
 ---
 title: "Объекты пользовательского интерфейса и идентификаторы команд | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "объекты пользовательского интерфейса, связь с идентификаторами"
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Объекты пользовательского интерфейса и идентификаторы команд
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Процедуры среды выполнения по категориям | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "категории, функции среды выполнения"
   - "функции [CRT]"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "процедуры, среда выполнения"
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Процедуры среды выполнения по категориям
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

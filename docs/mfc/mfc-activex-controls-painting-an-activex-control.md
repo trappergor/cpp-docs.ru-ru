@@ -1,8 +1,7 @@
 ---
 title: "Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC ActiveX - элементы управления, рисование"
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

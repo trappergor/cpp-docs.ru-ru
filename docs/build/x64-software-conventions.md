@@ -1,8 +1,7 @@
 ---
 title: "Программные соглашения x64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "64-битные соглашения о написании кода"
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Программные соглашения x64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/HEAP (Установка размера кучи) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-HEAP - параметр компоновщика"
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /HEAP (Установка размера кучи)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Положение файла в режиме дозаписи | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "указатели файлов [C++], режим добавления"
 ms.assetid: fca94e95-907c-4703-ad7d-2fcac1592168
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Положение файла в режиме дозаписи
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

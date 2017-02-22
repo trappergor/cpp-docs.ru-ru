@@ -1,8 +1,7 @@
 ---
 title: "Основные понятия активной библиотеки шаблонных классов (ATL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ATL, сведения об ATL"
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
 caps.latest.revision: 18
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Основные понятия активной библиотеки шаблонных классов (ATL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

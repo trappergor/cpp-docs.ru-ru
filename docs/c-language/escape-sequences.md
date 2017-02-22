@@ -1,8 +1,7 @@
 ---
 title: "Escape-последовательности | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "(') - одиночные кавычки"
   - "? символ"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "\v - escape-последовательность с вертикальной табуляцией"
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Escape-последовательности
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

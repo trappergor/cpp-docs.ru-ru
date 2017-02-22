@@ -1,8 +1,7 @@
 ---
 title: "Определение подставляемых функций C с использованием dllexport и dllimport | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport - атрибут [C++]"
   - "dllexport - атрибут [C++], встроенные функции"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "встроенные функции [C++], с dllexport и dllimport"
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Определение подставляемых функций C с использованием dllexport и dllimport
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

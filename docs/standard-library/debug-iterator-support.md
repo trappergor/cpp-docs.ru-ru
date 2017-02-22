@@ -1,16 +1,13 @@
 ---
 title: "Поддержка отладки итераторов | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-f1_keywords: 
-  - "_HAS_ITERATOR_DEBUGGING symbol"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -24,10 +21,10 @@ helpviewer_keywords:
   - "Стандартная библиотека C++, поддержка отладки итераторов"
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 caps.latest.revision: 22
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Поддержка отладки итераторов
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

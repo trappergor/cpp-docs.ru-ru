@@ -1,8 +1,7 @@
 ---
 title: "Ошибки и предупреждения режима построения проекта (PRJxxxx) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 79d223ed-986a-4536-8299-aec8356b449c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ошибки и предупреждения режима построения проекта (PRJxxxx)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
