@@ -1,8 +1,7 @@
 ---
 title: "Меню и ресурсы. Слияние меню | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "визуальное редактирование, меню и ресурсы приложений"
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Меню и ресурсы. Слияние меню
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

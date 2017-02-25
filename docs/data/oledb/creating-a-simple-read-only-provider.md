@@ -1,8 +1,7 @@
 ---
 title: "Создание простого поставщика только для чтения | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "поставщики OLE DB, создание"
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Создание простого поставщика только для чтения
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

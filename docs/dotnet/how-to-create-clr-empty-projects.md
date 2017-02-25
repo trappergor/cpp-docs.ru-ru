@@ -1,8 +1,7 @@
 ---
 title: "Практическое руководство. Создание пустых проектов CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "пустые проекты CLR, создание"
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Практическое руководство. Создание пустых проектов CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

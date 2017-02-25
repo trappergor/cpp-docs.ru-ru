@@ -1,8 +1,7 @@
 ---
 title: "Правила целостности для параметров компилятора /Yc и /Yu | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "-Yu - параметр компилятора [C++]"
 ms.assetid: 9dfb0e32-ec9b-4a36-9355-27a0e5fba512
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Правила целостности для параметров компилятора /Yc и /Yu
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

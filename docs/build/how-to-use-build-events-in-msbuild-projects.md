@@ -1,8 +1,7 @@
 ---
 title: "Практическое руководство. Использование событий построения в проектах MSBuild | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild (c++), практическое руководство: использование событий построения в проектах"
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Практическое руководство. Использование событий построения в проектах MSBuild
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

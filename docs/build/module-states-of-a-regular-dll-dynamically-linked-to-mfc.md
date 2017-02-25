@@ -1,8 +1,7 @@
 ---
 title: "Состояние модулей регулярной динамической библиотеки DLL, связанной с MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "обычные библиотеки DLL [C++], динамически компонуемые с MFC"
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Состояние модулей регулярной динамической библиотеки DLL, связанной с MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

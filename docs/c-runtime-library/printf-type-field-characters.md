@@ -1,8 +1,7 @@
 ---
 title: "Символы поля типа printf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,16 +18,15 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "printf - функция, поля описания формата"
   - "printf - функция, знаки поля типа"
 ms.assetid: 699cb438-cd14-402e-9f81-c7a32acc3317
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Символы поля типа printf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

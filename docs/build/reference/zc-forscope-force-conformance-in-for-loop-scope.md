@@ -1,8 +1,7 @@
 ---
 title: "/Zc:forScope (принудительное обеспечение соответствия в области видимости оператора for) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Zc - параметры компилятора [C++]"
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # /Zc:forScope (принудительное обеспечение соответствия в области видимости оператора for)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

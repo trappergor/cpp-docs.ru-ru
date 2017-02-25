@@ -1,8 +1,7 @@
 ---
-title: "Вызов функций C во встроенной сборке | Microsoft Docs"
+title: "Вызов функций C++ во встроенной сборке | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,17 @@ dev_langs:
   - "C++"
 helpviewer_keywords: 
   - "__asm - ключевое слово [C++], вызывающие функции"
-  - "вызовы функций, функции C"
+  - "вызовы функций, функции C++"
   - "вызовы функций, встроенная сборка"
-  - "функции [C], вызов во встроенной сборке"
+  - "функции [C++], вызов во встроенной сборке"
   - "встроенная сборка, вызывающие функции"
-  - "Visual C, функции"
+  - "Visual C++, функции"
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Вызов функций C во встроенной сборке
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

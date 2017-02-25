@@ -1,8 +1,7 @@
 ---
 title: "Буферизация файлов | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "буферизация"
   - "буферы [C++], буферизация файлов"
   - "файлы [C++], буферизация"
 ms.assetid: 6bca67d1-a98f-43ac-9c6e-6c0504357aba
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Буферизация файлов
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

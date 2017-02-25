@@ -1,8 +1,7 @@
 ---
 title: "Классы баз данных библиотеки ATL (шаблоны OLE DB) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "шаблоны OLE DB [C++], ATL-классы баз данных"
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Классы баз данных библиотеки ATL (шаблоны OLE DB)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

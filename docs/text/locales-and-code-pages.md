@@ -1,8 +1,7 @@
 ---
 title: "Языковые стандарты и кодовые страницы | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "несколько кодовых страниц [C++]"
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Языковые стандарты и кодовые страницы
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

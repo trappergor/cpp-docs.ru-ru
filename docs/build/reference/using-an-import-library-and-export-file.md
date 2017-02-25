@@ -1,8 +1,7 @@
 ---
 title: "Использование библиотеки импорта и файла экспорта | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "библиотеки - импорт, использование"
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Использование библиотеки импорта и файла экспорта
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

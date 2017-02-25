@@ -1,8 +1,7 @@
 ---
 title: "Поддержка библиотек динамической компоновки | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "библиотеки USRDLL, поддержка DLL"
 ms.assetid: cc31c69f-3c78-4db1-9ecd-0fd8dc3217e3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Поддержка библиотек динамической компоновки
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Класс ClassFactory | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ClassFactory - класс"
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Класс ClassFactory
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

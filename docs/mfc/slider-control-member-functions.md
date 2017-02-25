@@ -1,8 +1,7 @@
 ---
 title: "Функции-члены элемента управления &quot;Ползунок&quot; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "элементы управления "Ползунок", функция-член"
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Функции-члены элемента управления &quot;Ползунок&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

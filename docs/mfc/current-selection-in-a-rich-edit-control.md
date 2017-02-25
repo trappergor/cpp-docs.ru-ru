@@ -1,8 +1,7 @@
 ---
 title: "Текущее выделение в элементе управления &quot;Rich Edit&quot; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "выделенный фрагмент, текущий в CRichEditCtrl"
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Текущее выделение в элементе управления &quot;Rich Edit&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

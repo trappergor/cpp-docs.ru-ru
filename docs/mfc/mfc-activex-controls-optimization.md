@@ -1,8 +1,7 @@
 ---
 title: "Элементы управления ActiveX в MFC. Оптимизация | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "элементы управления ActiveX MFC без окон"
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Элементы управления ActiveX в MFC. Оптимизация
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

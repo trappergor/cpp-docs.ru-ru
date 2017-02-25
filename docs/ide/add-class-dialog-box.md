@@ -1,8 +1,7 @@
 ---
 title: "Диалоговое окно &quot;Добавление класса&quot; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Диалоговое окно "Добавление класса""
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Диалоговое окно &quot;Добавление класса&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Обработка уведомляющих сообщений в элементах управления главной панели | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "RBN_ - сообщения с уведомлением, описание"
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Обработка уведомляющих сообщений в элементах управления главной панели
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

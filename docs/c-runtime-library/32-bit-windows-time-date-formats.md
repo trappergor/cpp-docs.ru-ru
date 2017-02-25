@@ -1,8 +1,7 @@
 ---
 title: "Форматы даты и времени в 32-разрядных операционных системах Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "vc.time"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "32-разрядная Windows"
 ms.assetid: ef1589db-84d7-4b24-8799-7c7a22cfe2bf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Форматы даты и времени в 32-разрядных операционных системах Windows
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

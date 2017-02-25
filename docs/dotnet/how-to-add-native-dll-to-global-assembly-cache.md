@@ -1,8 +1,7 @@
 ---
 title: "Практическое руководство. Добавление машинной библиотеки DLL в глобальный кэш сборок | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "собственные библиотеки DLL [C++]"
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Практическое руководство. Добавление машинной библиотеки DLL в глобальный кэш сборок
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

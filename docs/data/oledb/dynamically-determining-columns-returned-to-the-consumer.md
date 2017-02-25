@@ -1,8 +1,7 @@
 ---
 title: "Динамично определяемые столбцы, возвращенные объекту-получателю | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "динамически определяемые столбцы [C++]"
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Динамично определяемые столбцы, возвращенные объекту-получателю
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

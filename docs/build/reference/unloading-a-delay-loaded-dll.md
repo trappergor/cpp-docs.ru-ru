@@ -1,8 +1,7 @@
 ---
 title: "Выгрузка библиотеки DLL, загруженной с задержкой | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "отложенная загрузка библиотек DLL, выгрузка"
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Выгрузка библиотеки DLL, загруженной с задержкой
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

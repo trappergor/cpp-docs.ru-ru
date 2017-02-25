@@ -1,8 +1,7 @@
 ---
 title: "Распространение компонентов с использованием модулей слияния | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "повторное распространение приложений, использование модулей слияния"
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Распространение компонентов с использованием модулей слияния
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

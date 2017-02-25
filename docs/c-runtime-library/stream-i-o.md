@@ -1,8 +1,7 @@
 ---
 title: "Потоковый ввод-вывод | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Ввод и вывод [CRT], поток"
   - "процедуры ввода и вывода, потоковый ввод-вывод"
   - "потоковый ввод-вывод"
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Потоковый ввод-вывод
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

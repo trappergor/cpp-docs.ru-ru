@@ -1,8 +1,7 @@
 ---
 title: "Низкоуровневый ввод-вывод | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "файловые дескрипторы [C++]"
   - "файловые дескрипторы [C++], функции ввода и вывода"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "процедуры низкоуровневого ввода и вывода"
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Низкоуровневый ввод-вывод
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

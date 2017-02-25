@@ -1,8 +1,7 @@
 ---
 title: "Создание элемента выбора даты и времени | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "DateTimePicker - элемент управления [MFC], создание"
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Создание элемента выбора даты и времени
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

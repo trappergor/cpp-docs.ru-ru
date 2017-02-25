@@ -1,8 +1,7 @@
 ---
 title: "Требования к сборке для использования стандартных элементов управления в Windows Vista | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "стандартные элементы управления (MFC), требования к сборке"
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Требования к сборке для использования стандартных элементов управления в Windows Vista
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

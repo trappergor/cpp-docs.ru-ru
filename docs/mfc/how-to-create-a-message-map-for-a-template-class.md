@@ -1,8 +1,7 @@
 ---
 title: "Практическое руководство. Создание виртуальной схемы сообщений для класса шаблона | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "классы шаблонов, создание схем сообщений"
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Практическое руководство. Создание виртуальной схемы сообщений для класса шаблона
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

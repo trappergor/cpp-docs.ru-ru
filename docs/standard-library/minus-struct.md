@@ -1,8 +1,7 @@
 ---
 title: "Структура minus | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "minus - класс"
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Структура minus
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

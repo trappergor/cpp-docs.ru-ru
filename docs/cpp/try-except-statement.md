@@ -1,8 +1,7 @@
 ---
 title: "Оператор try-except | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,10 +35,10 @@ helpviewer_keywords:
   - "try-except - ключевое слово [C++]"
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Оператор try-except
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

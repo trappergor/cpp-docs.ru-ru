@@ -1,8 +1,7 @@
 ---
 title: "Настройка внешнего вида элементов управления панели инструментов | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "прозрачные панели инструментов"
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Настройка внешнего вида элементов управления панели инструментов
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

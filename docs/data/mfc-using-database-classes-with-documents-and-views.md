@@ -1,8 +1,7 @@
 ---
 title: "MFC. Использование классов базы данных с документами и представлениями | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "представления [C++], приложения баз данных"
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # MFC. Использование классов базы данных с документами и представлениями
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

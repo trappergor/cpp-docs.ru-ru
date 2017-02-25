@@ -1,8 +1,7 @@
 ---
 title: "Практическое руководство. Использование групп планирования для определения порядка выполнения | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "использование групп расписаний [среда выполнения с параллелизмом]"
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Практическое руководство. Использование групп планирования для определения порядка выполнения
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

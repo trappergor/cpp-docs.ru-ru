@@ -1,8 +1,7 @@
 ---
 title: "Статические стили | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -72,10 +71,10 @@ helpviewer_keywords:
   - "статические стили"
 ms.assetid: a1114548-fc6d-491d-8c46-21d11b8574f5
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Статические стили
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

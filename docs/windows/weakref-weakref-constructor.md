@@ -1,8 +1,7 @@
 ---
 title: "Конструктор WeakRef::WeakRef | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WeakRef, конструктор"
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Конструктор WeakRef::WeakRef
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

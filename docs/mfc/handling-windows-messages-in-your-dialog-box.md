@@ -1,8 +1,7 @@
 ---
 title: "Обработка сообщений Windows для диалогового окна | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "сообщения Windows [C++], обработка"
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Обработка сообщений Windows для диалогового окна
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

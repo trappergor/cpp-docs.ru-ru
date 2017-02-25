@@ -1,8 +1,7 @@
 ---
 title: "Выравнивание данных | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "data.alignment"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "выравнивание данных [C++]"
 ms.assetid: 35ac3d2d-a4b3-421b-954f-b7372b1f18e1
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Выравнивание данных
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

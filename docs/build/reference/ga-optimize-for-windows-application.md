@@ -1,8 +1,7 @@
 ---
 title: "/GA (Оптимизация для приложений Windows) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Оптимизация для параметров компилятора Windows"
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GA (Оптимизация для приложений Windows)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

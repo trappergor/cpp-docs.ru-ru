@@ -1,8 +1,7 @@
 ---
 title: "Добавление потребителя OLE DB библиотеки ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB, добавление потребителей ATL OLE DB в проект"
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Добавление потребителя OLE DB библиотеки ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Ошибки и предупреждения профильной оптимизации | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: f67b1011-fb64-4df3-9356-d52c9423ff3f
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Ошибки и предупреждения профильной оптимизации
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

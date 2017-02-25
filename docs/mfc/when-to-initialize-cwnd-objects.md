@@ -1,8 +1,7 @@
 ---
 title: "Время инициализации объектов CWnd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "объекты окон, когда инициализировать CWnd"
 ms.assetid: 4d31bcb1-73db-4f2f-b71c-89b087569a10
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Время инициализации объектов CWnd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
