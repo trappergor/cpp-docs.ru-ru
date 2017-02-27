@@ -15,10 +15,10 @@ translation.priority.ht:
 - zh-tw
 translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de91b1fe4ba92fa1472fef69a1551c9571c8b8be
+ms.openlocfilehash: 97950b1da4e79feaf4d2657aed570c704f4046b4
 
 ---
-Visual C++ в Visual Studio 2015
+Visual Studio 2012 Обновление 1
 
 
 <!--HONumber=Feb17_HO4-->
