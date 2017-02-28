@@ -1,100 +1,275 @@
 ---
-title: "Поддержка чисел с плавающей запятой | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.math"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "числа с плавающей запятой"
-  - "числа с плавающей запятой, математические подпрограммы"
-  - "математические подпрограммы"
+title: "Поддержка чисел с плавающей запятой | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.math
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point numbers, math routines
+- math routines
+- floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Поддержка чисел с плавающей запятой
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: e289b439f53b987f57face51952d54dc16002edd
+ms.openlocfilehash: f378805dc00885c10816c989da22f13357b8f894
+ms.lasthandoff: 02/24/2017
 
-Многие функции библиотеки времени выполнения \(Майкрософт\) требуют, чтобы числа с плавающей запятой поддерживались математическим сопроцессором или библиотеками чисел с плавающей запятой компьютера.  Функции для поддержки чисел с плавающей запятой загружаются только при необходимости.  
+---
+# <a name="floating-point-support"></a>Поддержка чисел с плавающей запятой
+Библиотека среды выполнения Microsoft C (CRT) предоставляет множество математических функций с плавающей точкой, включая все функции, предусмотренные ISO C99. Эти функции предназначены для балансировки производительности и правильности. Так как получение правильно округленного результата может оказаться неоправданно дорогим, эти функции позволяют получить значение, максимально приближенное к правильно округленному результату. В большинстве случаев результат будет соответствовать правильно округленному значению +/–1 ULP, хотя в некоторых случаях погрешность может быть выше.  
   
- При использовании описателя типа с плавающей запятой в строке формата вызова функции в семействе `printf` или `scanf` необходимо указать значение с плавающей запятой или указатель на такое значение в списке аргументов, чтобы уведомить компилятор о необходимости поддержки чисел с плавающей запятой.  
+ Во многих функциях математической библиотеки с плавающей точкой используются различные реализации разной архитектуры ЦП. Например, в 32-разрядных CRT x86 могут использоваться не такие реализации, как в 64-разрядных CRT x64. Кроме того, некоторые функции могут содержать сразу несколько реализаций заданной архитектуры ЦП. Наиболее эффективная реализация выбирается в среде выполнения динамически в зависимости от того, какие наборы инструкций поддерживает ЦП. Например, в 32-разрядных CRT x86 некоторые функции включают сразу две реализации — x87 и SSE2. При работе на ЦП, который поддерживает SSE2, используется более быстрая реализация SSE2. При работе на ЦП, который не поддерживает SSE2, используется более медленная реализация x87. Так как различные реализации функций математической библиотеки могут использовать для получения результатов различные инструкции ЦП и разнообразные алгоритмы, эти функции могут давать различные результаты на разных ЦП. В большинстве случаев результаты находятся в пределах +/–1 ULP от правильно округленного результата, но фактические результаты могут отличаться в зависимости от ЦП.  
   
- Примеры кода, демонстрирующие обработку исключений чисел с плавающей запятой, см. в разделе [\_fpieee\_flt](../c-runtime-library/reference/fpieee-flt.md).  
+ Предыдущие 16-разрядные версии Microsoft C/C++ и Microsoft Visual C++ поддерживали тип `long double` как тип данных с плавающей точкой 80-битной точности. В более поздних версиях Visual C++ тип данных `long double` представляет собой тип данных с плавающей запятой 64-битной точности, идентичный типу `double`. Компилятор обрабатывает `long double` и `double` как различные типы данных, однако функции `long double` идентичны своим аналогам, `double`. Для обеспечения совместимости с исходным кодом ISO C99 в CRT предоставляются `long double`-версии математических функций, однако следует иметь в виду, что двоичное представление может быть не таким, как в других компиляторах.  
   
- Точность вычислений с плавающей запятой для промежуточных значений контролируется функциями [\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md).  По умолчанию для элемента управления точностью `_controlfp` задано значение 53 бита \(\_PC\_53\).  Связывание с помощью FP10.OBJ заменяет значение по умолчанию значением 64 бита \(\_PC\_64\).  В командной строке компоновщика FP10.OBJ должен стоять перед LIBC.LIB, LIBCMT.LIB или MSVCRT.LIB.  
+ CRT поддерживает следующие функции с плавающей запятой:  
   
-### Функции с плавающей запятой  
+ [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)  
   
-|Подпрограмма|Применение|Эквивалент .NET Framework|  
-|------------------|----------------|-------------------------------|  
-|[abs](../Topic/abs.md)|Возвращение абсолютного значения `int`|[\<caps:sentence id\="tgt14" sentenceid\="9594ba199e25e9de6b463c8efc9fbe95" class\="tgtSentence"\>System::Math::Abs\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)|  
-|[acos, acosf](../c-runtime-library/reference/acos-acosf-acosl.md)|Вычисление арккосинуса|[\<caps:sentence id\="tgt17" sentenceid\="954a441495360a1fa8b0170297b2ff38" class\="tgtSentence"\>System::Math::Acos\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)|  
-|[asin, asinf](../c-runtime-library/reference/asin-asinf-asinl.md)|Вычисление арксинуса|[\<caps:sentence id\="tgt20" sentenceid\="313917cde9698a0924536719f5bece25" class\="tgtSentence"\>System::Math::Asin\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.asin.aspx)|  
-|[atan, atanf, atan2, atan2f](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Вычисление арктангенса|[System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx), [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)|  
-|[atof, \_atof\_l, \_wtof, \_wtof\_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразование строки символов в значение двойной точности с плавающей запятой|[System::Convert::ToSingle](https://msdn.microsoft.com/en-us/library/system.convert.tosingle.aspx), [System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)|  
-|[Функции Бесселя](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Вычисление функций Бесселя `_j0`, `_j1`, `_jn`, `_y0`, `_y1`, `_yn`|Неприменимо.  Для вызова стандартной функции C используйте `PInvoke`.  Для получения дополнительной информации см. [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).|  
-|[\_cabs](../Topic/_cabs.md)|Нахождение абсолютного значения сложного числа|Неприменимо.|  
-|[cbrt](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Вычисление кубического корня|Неприменимо.|  
-|[ceil, ceilf](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Нахождение верхней целой части целого числа|[\<caps:sentence id\="tgt39" sentenceid\="656009d71fb974368bded363746de018" class\="tgtSentence"\>System::Math::Ceiling\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.ceiling.aspx)|  
-|[\_chgsign, \_chgsignf, \_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Изменение знака числа двойной точности с плавающей запятой или аргумента числа двойной точности с плавающей запятой long double|Неприменимо.|  
-|[\_clear87, \_clearfp](../c-runtime-library/reference/clear87-clearfp.md)|Получение и сброс слова состояния числа с плавающей запятой|Неприменимо.|  
-|[\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md), [\_controlfp\_s](../c-runtime-library/reference/controlfp-s.md)|Получение старого управляющего слова числа с плавающей запятой и задание нового значения управляющего слова|Неприменимо.|  
-|[copysign, copysignf, copysignl, \_copysign, \_copysignf, \_copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Возвращение одного значения со знаком другого|Неприменимо.|  
-|[cos, cosf, cosh, coshf](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)|Вычисление косинуса|[System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx), [System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)|  
-|[difftime](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Вычисление разницы между двумя указанными значениями времени|[\<caps:sentence id\="tgt54" sentenceid\="5f4f365a3cd7f368db2f6ce31b797fdf" class\="tgtSentence"\>System::DateTime::Subtract\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
-|[div](../c-runtime-library/reference/div.md)|Деление одного целого числа на другое, возврат частного и остатка|Неприменимо.|  
-|[\_ecvt](../c-runtime-library/reference/ecvt.md), [\_ecvt\_s](../Topic/_ecvt_s.md)|Преобразование `double` в строку символов указанной длины|[\<caps:sentence id\="tgt60" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
-|[exp, expf](../c-runtime-library/reference/exp-expf.md)|Вычисление экспоненциальной функции|[\<caps:sentence id\="tgt63" sentenceid\="81a65df6ac66cdc4a4b12c2f7e555487" class\="tgtSentence"\>System::Math::Exp\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.exp.aspx)|  
-|[fabs, fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Нахождение абсолютного значения|[\<caps:sentence id\="tgt66" sentenceid\="9594ba199e25e9de6b463c8efc9fbe95" class\="tgtSentence"\>System::Math::Abs\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)|  
-|[\_fcvt](../Topic/_fcvt.md), [\_fcvt\_s](../c-runtime-library/reference/fcvt-s.md)|Преобразование `double` в строку, имеющую заданное число цифр дробной части|[\<caps:sentence id\="tgt69" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
-|[\_finite](../c-runtime-library/reference/finite-finitef.md)|Определение конечности данного числа двойной точности с плавающей запятой|[\<caps:sentence id\="tgt72" sentenceid\="8d081c50adeda3dde4cebab81a0b3583" class\="tgtSentence"\>System::Double::IsInfinity\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double.isinfinity.aspx)|  
-|[floor, floorf](../c-runtime-library/reference/floor-floorf-floorl.md)|Нахождение самого большого целого числа, которое меньше или равно аргументу|[\<caps:sentence id\="tgt75" sentenceid\="609db9ab0433b647d5350d3b965d70f9" class\="tgtSentence"\>System::Math::Floor\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)|  
-|[fmod, fmodf](../Topic/fmod,%20fmodf.md)|Нахождение остатка с плавающей запятой|[\<caps:sentence id\="tgt78" sentenceid\="127a04426267ccb17fb4b566ad56de9c" class\="tgtSentence"\>System::Math::IEEERemainder\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)|  
-|[\_fpclass](../c-runtime-library/reference/fpclass-fpclassf.md)|Возвращение слова состояния, которое содержит сведения о классе чисел с плавающей запятой|[System::Double::IsInfinity](https://msdn.microsoft.com/en-us/library/system.double.isinfinity.aspx), [System::Double::IsNegativeInfinity](https://msdn.microsoft.com/en-us/library/system.double.isnegativeinfinity.aspx), [System::Double::IsPositiveInfinity](https://msdn.microsoft.com/en-us/library/system.double.ispositiveinfinity.aspx), [System::Double::IsNan](https://msdn.microsoft.com/en-us/library/system.double.isnan.aspx)|  
-|[\_fpieee\_flt](../c-runtime-library/reference/fpieee-flt.md)|Вызов обработчика исключений и прерываний для исключений с плавающей запятой IEEE|Неприменимо.|  
-|[\_fpreset](../c-runtime-library/reference/fpreset.md)|Повторная инициализация математического пакета с плавающей запятой||  
-|[frexp](../c-runtime-library/reference/frexp.md)|Вычисление экспоненциального значения|Неприменимо.|  
-|[\_gcvt](../c-runtime-library/reference/gcvt.md), [\_gcvt\_s](../c-runtime-library/reference/gcvt-s.md)|Преобразование числа с плавающей запятой в строку символов|[\<caps:sentence id\="tgt92" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
-|[hypot, hypotf, hypotl, \_hypot, \_hypotf, \_hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)|Вычисление гипотенузы правильного треугольника|Неприменимо.|  
-|[\_isnan](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Проверка того, что данное значение двойной точности с плавающей запятой не является числом \(NaN\)|[\<caps:sentence id\="tgt97" sentenceid\="18f7dc07d0c506c23f2f7eb89262d274" class\="tgtSentence"\>System::Double::IsNan\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double.isnan.aspx)|  
-|[labs](../misc/labs-llabs.md)|Возвращение абсолютного значения `long`|[\<caps:sentence id\="tgt100" sentenceid\="9594ba199e25e9de6b463c8efc9fbe95" class\="tgtSentence"\>System::Math::Abs\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)|  
-|[ldexp](../c-runtime-library/reference/ldexp.md)|Вычисление произведения аргумента и 2<sup>exp</sup> \(указанная степень\)|[\<caps:sentence id\="tgt103" sentenceid\="839e85fe5fb98e8520d40a703d06932b" class\="tgtSentence"\>System::Math::Pow\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)|  
-|[ldiv](../Topic/ldiv,%20lldiv.md)|Деление одного целого числа `long` на другое, возврат частного и остатка|Неприменимо.|  
-|[log, logf, log10, log10f](../Topic/log,%20logf,%20log10,%20log10f.md)|Вычисление натурального логарифма или логарифма по основанию 10|[System::Math::Log](https://msdn.microsoft.com/en-us/library/system.math.log.aspx), [System::Math::Log10](https://msdn.microsoft.com/en-us/library/system.math.log10.aspx)|  
-|[\_logb](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|Извлечение экспоненциального значения аргумента числа двойной точности с плавающей запятой|Неприменимо.|  
-|[\_lrotl, \_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|Сдвиг `unsigned long int` влево \(`_lrotl`\) или вправо \(`_lrotr`\)|Неприменимо.|  
-|[\_matherr](../c-runtime-library/reference/matherr.md)|Обработка математических ошибок|Неприменимо.|  
-|[\_\_max](../c-runtime-library/reference/max.md)|Возвращение большего из двух значений|[\<caps:sentence id\="tgt121" sentenceid\="6f9dcb228534c3e5b0013615b2b1d003" class\="tgtSentence"\>System::Math::Max\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.max.aspx)|  
-|[\_\_min](../c-runtime-library/reference/min.md)|Возвращение меньшего из двух значений|[\<caps:sentence id\="tgt124" sentenceid\="ff471983fc666dec7ba58b17a0bf76e6" class\="tgtSentence"\>System::Math::Min\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.min.aspx)|  
-|[modf, modff](../c-runtime-library/reference/modf-modff-modfl.md)|Разбиение аргумента на целую и дробную части|Неприменимо.|  
-|[nan, nanf, nanl](../c-runtime-library/reference/nan-nanf-nanl.md)|Возвращение несигнального значения NaN \(QNaN\)|[\<caps:sentence id\="tgt129" sentenceid\="c251043405ffa73fe857c83428b58fdc" class\="tgtSentence"\>System::Double::NaN\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double.nan.aspx)|  
-|[\_nextafter](../c-runtime-library/reference/nextafter-functions.md)|Возвращение следующего представимого соседнего числа|Неприменимо.|  
-|[pow, powf](../Topic/pow,%20powf,%20powl.md)|Вычисление значения, возведенного в степень|[\<caps:sentence id\="tgt135" sentenceid\="839e85fe5fb98e8520d40a703d06932b" class\="tgtSentence"\>System::Math::Pow\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)|  
-|[printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), [printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Запись данных в `stdout` согласно указанному формату|[System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx), [System::Console::WriteLine](https://msdn.microsoft.com/en-us/library/system.console.writeline.aspx)|  
-|[rand](../Topic/rand.md), [rand\_s](../c-runtime-library/reference/rand-s.md)|Получение псевдослучайного числа|[\<caps:sentence id\="tgt141" sentenceid\="00574fde17be9de3e07567ef5abe0110" class\="tgtSentence"\>System::Random Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.random.aspx)|  
-|[rint, rintf, rintl](../c-runtime-library/reference/rint-rintf-rintl.md)|Округление до ближайшего целого числа в формате с плавающей запятой|[\<caps:sentence id\="tgt143" sentenceid\="1c04aeb4aeff1752cb65adabcee29f53" class\="tgtSentence"\>System::Math::Round\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.round.aspx)|  
-|[\_rotl, \_rotr](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|Сдвиг `unsigned int` влево \(`_rotl`\) или вправо \(`_rotr`\)|Неприменимо.|  
-|[\_scalb](../c-runtime-library/reference/scalb.md)|Масштабирование по степеням числа 2|Неприменимо.|  
-|[scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Умножение на целую степень числа `FLT_RADIX`|Неприменимо.|  
-|[scanf, wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Чтение данных из `stdin` согласно указанному формату и запись данных в заданное расположение|[System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx), [System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)|  
-|[\_set\_controlfp](../c-runtime-library/reference/set-controlfp.md)|Задание нового значения контрольного слова|Неприменимо.|  
-|[sin, sinf, sinh, sinhf](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)|Вычисление синуса или гиперболического синуса|[System::Math::Sin](https://msdn.microsoft.com/en-us/library/system.math.sin.aspx), [System::Math::Sinh](https://msdn.microsoft.com/en-us/library/system.math.sinh.aspx)|  
-|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Нахождение квадратного корня|[\<caps:sentence id\="tgt162" sentenceid\="1a91af0bd8c63b4be64c7a0bec8dc8c4" class\="tgtSentence"\>System::Math::Sqrt\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.sqrt.aspx)|  
-|[srand](../c-runtime-library/reference/srand.md)|Инициализация серии псевдослучайных чисел|[\<caps:sentence id\="tgt165" sentenceid\="00574fde17be9de3e07567ef5abe0110" class\="tgtSentence"\>System::Random Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.random.aspx)|  
-|[\_status87, \_statusfp, \_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Получение слова состояния с плавающей запятой|Неприменимо.|  
-|[strtod, \_strtod\_l, wcstod, \_wcstod\_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Преобразование строки символов в значение двойной точности|[\<caps:sentence id\="tgt169" sentenceid\="363f8f2cb09f8ca850491a65df66522e" class\="tgtSentence"\>System::Convert::ToDouble\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)|  
-|[tan, tanf, tanh, tanhf](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)|Вычисление тангенса или гиперболического тангенса|[System::Math::Tan](https://msdn.microsoft.com/en-us/library/system.math.tan.aspx), [System::Math::Tanh](https://msdn.microsoft.com/en-us/library/system.math.tanh.aspx)|  
+ [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)  
   
-## См. также  
+ [acosh, acoshf, acoshl](../c-runtime-library/reference/acosh-acoshf-acoshl.md)  
+  
+ [asin, asinf, asinl](../c-runtime-library/reference/asin-asinf-asinl.md)  
+  
+ [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)  
+  
+ [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+  
+ [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)  
+  
+ [_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)  
+  
+ [atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)  
+  
+ [_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)  
+  
+ [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)  
+  
+ [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)  
+  
+ [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)  
+  
+ [_clear87, _clearfp](../c-runtime-library/reference/clear87-clearfp.md)  
+  
+ [compl](../c-runtime-library/reference/compl.md)  
+  
+ [conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)  
+  
+ [_control87, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)  
+  
+ [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)  
+  
+ [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)  
+  
+ [cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)  
+  
+ [cosh, coshf, coshl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)  
+  
+ [div](../c-runtime-library/reference/div.md)  
+  
+ [_ecvt](../c-runtime-library/reference/ecvt.md)  
+  
+ [ecvt](../c-runtime-library/reference/posix-ecvt.md)  
+  
+ [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)  
+  
+ [erf, erff, erfl, erfc, erfcf, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)  
+  
+ [exp, expf](../c-runtime-library/reference/exp-expf.md)  
+  
+ [exp2, exp2f, exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)  
+  
+ [expm1, expm1f, expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)  
+  
+ [fabs, fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)  
+  
+ [_fcvt](../c-runtime-library/reference/fcvt.md)  
+  
+ [fcvt](../c-runtime-library/reference/posix-fcvt.md)  
+  
+ [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)  
+  
+ [fdim, fdimf, fdiml](../c-runtime-library/reference/fdim-fdimf-fdiml.md)  
+  
+ [feclearexcept](../c-runtime-library/reference/feclearexcept1.md)  
+  
+ [fegetenv](../c-runtime-library/reference/fegetenv1.md)  
+  
+ [fegetexceptflag](../c-runtime-library/reference/fegetexceptflag2.md)  
+  
+ [fegetround](../c-runtime-library/reference/fegetround-fesetround2.md)  
+  
+ [feholdexcept](../c-runtime-library/reference/feholdexcept2.md)  
+  
+ [feraiseexcept](../c-runtime-library/reference/feraiseexcept.md)  
+  
+ [ferror](../c-runtime-library/reference/ferror.md)  
+  
+ [fesetenv](../c-runtime-library/reference/fesetenv1.md)  
+  
+ [fesetexceptflag](../c-runtime-library/reference/fesetexceptflag2.md)  
+  
+ [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)  
+  
+ [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)  
+  
+ [feupdateenv](../c-runtime-library/reference/feupdateenv.md)  
+  
+ [_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)  
+  
+ [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)  
+  
+ [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)  
+  
+ [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)  
+  
+ [fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)  
+  
+ [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)  
+  
+ [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)  
+  
+ [fpclassify](../c-runtime-library/reference/fpclassify.md)  
+  
+ [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)  
+  
+ [_fpreset](../c-runtime-library/reference/fpreset.md)  
+  
+ [frexp](../c-runtime-library/reference/frexp.md)  
+  
+ [gcvt](../c-runtime-library/reference/posix-gcvt.md)  
+  
+ [_gcvt](../c-runtime-library/reference/gcvt.md)  
+  
+ [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)  
+  
+ [hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)  
+  
+ [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)  
+  
+ [imaxabs](../c-runtime-library/reference/imaxabs.md)  
+  
+ [imaxdiv](../c-runtime-library/reference/imaxdiv.md)  
+  
+ [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)  
+  
+ [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)  
+  
+ [ldexp](../c-runtime-library/reference/ldexp.md)  
+  
+ [ldiv, lldiv](../c-runtime-library/reference/ldiv-lldiv.md)  
+  
+ [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)  
+  
+ [llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)  
+  
+ [llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)  
+  
+ [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)  
+  
+ [log1p, log1pf, log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)  
+  
+ [log2, log2f, log2l](../c-runtime-library/reference/log2-log2f-log2l.md)  
+  
+ [logb, logbf, logbl, _logb, _logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)  
+  
+ [lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)  
+  
+ [_lrotl, _lrotr](../c-runtime-library/reference/lrotl-lrotr.md)  
+  
+ [lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)  
+  
+ [_matherr](../c-runtime-library/reference/matherr.md)  
+  
+ [__max](../c-runtime-library/reference/max.md)  
+  
+ [__min](../c-runtime-library/reference/min.md)  
+  
+ [modf, modff](../c-runtime-library/reference/modf-modff-modfl.md)  
+  
+ [nan, nanf, nanl](../c-runtime-library/reference/nan-nanf-nanl.md)  
+  
+ [nanf](../c-runtime-library/reference/nan-nanf-nanl.md)  
+  
+ [nanl](../c-runtime-library/reference/nan-nanf-nanl.md)  
+  
+ [nearbyint, nearbyintf, nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)  
+  
+ [nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl](../c-runtime-library/reference/nextafter-functions.md)  
+  
+ [norm, normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)  
+  
+ [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)  
+  
+ [remainder, remainderf, remainderl](../c-runtime-library/reference/remainder-remainderf-remainderl.md)  
+  
+ [remquo, remquof, remquol](../c-runtime-library/reference/remquo-remquof-remquol.md)  
+  
+ [rint, rintf, rintl](../c-runtime-library/reference/rint-rintf-rintl.md)  
+  
+ [_rotl, _rotl64, _rotr, _rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)  
+  
+ [round, roundf, roundl](../c-runtime-library/reference/round-roundf-roundl.md)  
+  
+ [_scalb](../c-runtime-library/reference/scalb.md)  
+  
+ [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)  
+  
+ [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)  
+  
+ [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)  
+  
+ [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)  
+  
+ [sinh, sinhf, sinhl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)  
+  
+ [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)  
+  
+ [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)  
+  
+ [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)  
+  
+ [strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)  
+  
+ [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)  
+  
+ [tanh, tanhf, tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)  
+  
+ [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)  
+  
+ [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)  
+  
+ [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)  
+  
+ [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)  
+  
+## <a name="see-also"></a>См. также  
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)
