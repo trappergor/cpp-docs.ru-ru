@@ -1,84 +1,127 @@
 ---
-title: "Класс task_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::task_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "task_handle - класс"
+title: "Класс task_handle | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::task_handle
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Класс task_handle
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
+ms.lasthandoff: 02/24/2017
 
-Класс `task_handle` представляет отдельный параллельный рабочий элемент.  Он инкапсулирует инструкции и данные, необходимые для выполнения части работы.  
+---
+# <a name="taskhandle-class"></a>Класс task_handle
+Класс `task_handle` представляет отдельный параллельный рабочий элемент. Он инкапсулирует инструкции и данные, необходимые для выполнения части работы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<  
-   typename _Function  
+template<
+    typename _Function  
 >  
 class task_handle : public ::Concurrency::details::_UnrealizedChore;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_Function`  
- Тип объекта функции, который будет вызываться для выполнения работы, представленной объектом `task_handle`.  
+ Тип объекта функции, который будет вызываться для выполнения работы, представленной `task_handle` объекта.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Конструктор task\_handle::task\_handle](../Topic/task_handle::task_handle%20Constructor.md)|Создает новый объект `task_handle`.  Работа задачи выполняется путем вызова функции, указанной в качестве параметра конструктора.|  
-|[Деструктор task\_handle::~task\_handle](../Topic/task_handle::~task_handle%20Destructor.md)|Уничтожает объект `task_handle`.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Конструктор task_handle](#ctor)|Создает новый `task_handle` объекта. Работа задачи выполняется путем вызова функции, указанной в качестве параметра конструктора.|  
+|[~ task_handle деструктор](#dtor)|Уничтожает `task_handle` объекта.|  
   
-### Открытые операторы  
+### <a name="public-operators"></a>Открытые операторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Оператор task\_handle::operator\(\)](../Topic/task_handle::operator\(\)%20Operator.md)|Оператор вызова функции, который среда выполнения вызывает для выполнения работ дескриптора задачи.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Оператор Operator()](#task_handle__operator_call)|Оператор вызова функции, который среда выполнения вызывает для выполнения работ дескриптора задачи.|  
   
-## Заметки  
- Объекты `task_handle` могут использоваться в сочетании с `structured_task_group` или более общим объектом `task_group` для разделения работы в параллельные задачи.  Для получения дополнительной информации см. [Параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+## <a name="remarks"></a>Примечания  
+ `task_handle`объекты, которые могут использоваться в сочетании с `structured_task_group` или более общим `task_group` объекта, чтобы разделить трудозатраты на параллельные задачи. Дополнительные сведения см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
- Обратите внимание, что создатель объекта `task_handle` ответственен за поддержание времени существования, созданного объекта `task_handle` до тех пор, пока он больше не требуется средой параллелизма.  Как правило это означает, что объект `task_handle` не должен разрушаться до вызова метода `wait` или `run_and_wait` `task_group` или `structured_task_group`, в которой он находится в очереди.  
+ Обратите внимание, что автор `task_handle` объект отвечает за поддержание времени существования, созданного объекта `task_handle` объекта, пока он больше не требуется средой выполнения с параллелизмом. Как правило, это означает, что `task_handle` объект не должен уничтожения пока не `wait` или `run_and_wait` метод `task_group` или `structured_task_group` вызывался при которой она помещается в очередь.  
   
- Объекты `task_handle` обычно используются в сочетании с лямбда\-выражения C\+\+.  Поскольку вы не знаете истинный тип лямбда\-выражение, функция [make\_task](../Topic/make_task%20Function.md) обычно используется для создания объекта `task_handle`.  
+ `task_handle`объекты обычно используются в сочетании с лямбда-выражения C++. Поскольку вы не знаете истинный тип лямбда-выражения, [make_task](concurrency-namespace-functions.md#make_task) функция обычно используется для создания `task_handle` объекта.  
   
- Среда выполнения создает копию рабочей функции, передаваемой объекту `task_handle`.  Следовательно, любые изменения, происходящие в объекте функции, передаваемом объекту `task_handle`, не отобразятся в пользовательской копии объекта функции.  
+ Среда выполнения создает копию рабочей функции, передаваемой `task_handle` объекта. Таким образом, изменения состояния, возникающие в функции объекта, передается `task_handle` объект не будет отображаться в копию этого объекта функции.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `task_handle`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** ppl.h  
   
  **Пространство имен:** concurrency  
   
-## См. также  
- [Пространство имен concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Класс task\_group](../Topic/task_group%20Class.md)   
- [Класс structured\_task\_group](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [Функция make\_task](../Topic/make_task%20Function.md)   
- [Метод task\_group::run](../Topic/task_group::run%20Method.md)   
- [Метод task\_group::wait](../Topic/task_group::wait%20Method.md)   
- [Метод task\_group::run\_and\_wait](../Topic/task_group::run_and_wait%20Method.md)   
- [Метод structured\_task\_group::run](../Topic/structured_task_group::run%20Method.md)   
- [Метод structured\_task\_group::wait](../Topic/structured_task_group::wait%20Method.md)   
- [Метод structured\_task\_group::run\_and\_wait](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>Operator() 
+
+ Оператор вызова функции, который среда выполнения вызывает для выполнения работ дескриптора задачи.  
+  
+```  
+void operator()() const;
+
+ 
+```  
+  
+##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+
+ Создает новый `task_handle` объекта. Работа задачи выполняется путем вызова функции, указанной в качестве параметра конструктора.  
+  
+```  
+task_handle(const _Function& _Func);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Func`  
+ Функция, которая будет вызываться для выполнения работы, представленной `task_handle` объекта. Это может быть лямбда-функтор, указатель на функцию или другой объект, который поддерживает версию оператора вызова функции с сигнатурой `void operator()()`.  
+  
+### <a name="remarks"></a>Примечания  
+ Среда выполнения создает копию рабочей функции, передаваемой конструктору. Таким образом, изменения состояния, возникающие в функции объекта, передается `task_handle` объект не будет отображаться в копию этого объекта функции.  
+  
+##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+
+ Уничтожает `task_handle` объекта.  
+  
+```  
+~task_handle();
+```  
+  
+## <a name="see-also"></a>См. также  
+ [пространство имен Concurrency](concurrency-namespace.md)   
+ [Класс task_group](task-group-class.md)   
+ [Класс structured_task_group](structured-task-group-class.md)
+

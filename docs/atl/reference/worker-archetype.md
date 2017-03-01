@@ -1,68 +1,144 @@
 ---
-title: "Worker Archetype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Worker archetype"
+title: "Архитектура рабочих | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Worker Archetype
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.lasthandoff: 02/24/2017
 
-Классы, соответствующие архетипу *рабочего* процесса предоставляют код в очереди элементы работы в пуле потоков.  
+---
+# <a name="worker-archetype"></a>Архитектура рабочих
+Классы, которые соответствуют *рабочей* архетипа предоставить код для обработки рабочих элементов в очередь в пуле потоков.  
   
  **Реализация**  
   
- Чтобы реализовать класс, соответствующий этому архетипу, класс должен предоставлять следующие функции:  
+ Для реализации класса, соответствующие этой архетипа, класс должен предоставлять следующие возможности:  
   
 |Метод|Описание|  
-|-----------|--------------|  
-|[Инициализация](../Topic/WorkerArchetype::Initialize.md)|Вызываемый для инициализации объекта работу перед всеми запросами передайте в [Execute](../Topic/WorkerArchetype::Execute.md).|  
-|[Выполнение](../Topic/WorkerArchetype::Execute.md)|Вызываемый для обработки рабочий элемент.|  
-|[Завершить](../Topic/WorkerArchetype::Terminate.md)|Вызываемый для uninitialize объект работу после того, как все запросы будут переданы [Execute](../Topic/WorkerArchetype::Execute.md).|  
+|------------|-----------------|  
+|[Инициализация](#initialize)|Вызывается для инициализации рабочий объект, прежде чем все запросы передаются [Execute](#execute).|  
+|[Выполнение](#execute)|Вызывается для обработки рабочего элемента.|  
+|[Завершить](#terminate)|Вызван для отмены инициализации рабочий объект после передачи всех запросов [Execute](#execute).|  
   
-|Определение типа|Описание|  
-|----------------------|--------------|  
-|[RequestType](../Topic/WorkerArchetype::RequestType.md)|Typedef для типа рабочего элемента, который может быть обработан классом рабочего процесса.|  
+|Typedef|Описание|  
+|-------------|-----------------|  
+|[RequestType](#requesttype)|Typedef для типа рабочего элемента, который может быть обработан с помощью класса рабочей.|  
   
- Типичный класс *работы* выглядит следующим образом:  
+ Типичный *рабочей* класса выглядит следующим образом:  
   
- [!CODE [NVC_ATL_Utilities#137](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#137)]  
+ [!code-cpp[NVC_ATL_Utilities&#137;](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
   
  **Существующие реализации**  
   
- Эти классы соответствующих этому архетипу:  
+ Эти классы соответствуют этой архетипа:  
   
 |Класс|Описание|  
-|-----------|--------------|  
-|[CNonStatelessWorker](../Topic/CNonStatelessWorker%20Class.md)|Получает запросы из пула потоков и передает их в объект работы, создание и уничтожается для каждого запроса.|  
+|-----------|-----------------|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Получает запросы из пула потоков и передает их рабочий объект, который создается и уничтожается при каждом запросе.|  
   
- **Применение**  
+ **Использование**  
   
- Эти параметры шаблона ожидают класс, чтобы соответствовать этому архетипу:  
+ Эти параметры шаблона ожидают, что класс, чтобы соответствовать этой архетипа:  
   
-|Имя параметра|Использующие элементы|  
-|-------------------|---------------------------|  
-|*Рабочий*|[CThreadPool](../Topic/CThreadPool%20Class.md)|  
-|*Рабочий*|[CNonStatelessWorker](../Topic/CNonStatelessWorker%20Class.md)|  
+|Имя параметра|Где используется|  
+|--------------------|-------------|  
+|*Работник*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
+|*Работник*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
-## Требования  
- **Header:** atlutil.h  
+### <a name="requirements"></a>Требования  
+ **Заголовок:** файлов atlutil.h  
   
-## См. также  
+## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+Вызывается для обработки рабочего элемента.  
+  
+  
+  
+```  
+void Execute(
+    RequestType request,  
+    void* pvWorkerParam,  
+    OVERLAPPED* pOverlapped);
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ `request`  
+ Рабочий элемент для обработки. Рабочий элемент имеет тот же тип, что `RequestType`.  
+  
+ `pvWorkerParam`  
+ Настраиваемый параметр поняты рабочий класс. Также передается `WorkerArchetype::Initialize` и `Terminate`.  
+  
+ `pOverlapped`  
+ Указатель на [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) структура, используемая для создания очереди, на какие рабочие элементы были поставлены в очередь.  
+  
+## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+Вызывается для инициализации рабочий объект, прежде чем все запросы передаются `WorkerArchetype::Execute`.  
+```
+BOOL Initialize(void* pvParam) throw();
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ `pvParam`  
+ Настраиваемый параметр поняты рабочий класс. Также передается `WorkerArchetype::Terminate` и `WorkerArchetype::Execute`.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Вернуть **TRUE** в случае успешного выполнения **FALSE** в случае сбоя.  
+  
+## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+Typedef для типа рабочего элемента, который может быть обработан с помощью класса рабочей.  
+  
+```  
+typedef MyRequestType RequestType;    
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип должен использоваться в качестве первого параметра `WorkerArchetype::Execute` и должно быть способно, приводимый в и из ULONG_PTR.  
+  
+## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+Вызван для отмены инициализации рабочий объект после передачи всех запросов `WorkerArchetype::Execute`).  
+    
+``` 
+void Terminate(void* pvParam) throw();
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ `pvParam`  
+ Настраиваемый параметр поняты рабочий класс. Также передается `WorkerArchetype::Initialize` и `WorkerArchetype::Execute`.  
+  
+## <a name="see-also"></a>См. также  
  [Archetypes](../../atl/reference/atl-archetypes.md)   
  [Основные понятия](../../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)
+ [Компоненты COM Desktop ATL](../../atl/atl-com-desktop-components.md)
+
+
+
+

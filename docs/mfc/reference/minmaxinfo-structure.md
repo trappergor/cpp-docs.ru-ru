@@ -1,63 +1,80 @@
 ---
-title: "Структура MINMAXINFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MINMAXINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MINMAXINFO - структура"
+title: "Структура MINMAXINFO | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MINMAXINFO
+dev_langs:
+- C++
+helpviewer_keywords:
+- MINMAXINFO structure
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Структура MINMAXINFO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 772416bdac3c72f55644fa31aef23ba76a14e606
+ms.lasthandoff: 02/24/2017
 
-Структура `MINMAXINFO` содержит сведения о размере окна и развернутых позиции и его минимуме и размера отслеживания максимальных значений.  
+---
+# <a name="minmaxinfo-structure"></a>Структура MINMAXINFO
+`MINMAXINFO` Структура содержит сведения об окне развернутого размеров и положения его отслеживания минимальный и максимальный размер.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      typedef struct tagMINMAXINFO {  
-   POINT ptReserved;  
-   POINT ptMaxSize;  
-   POINT ptMaxPosition;  
-   POINT ptMinTrackSize;  
-   POINT ptMaxTrackSize;  
+typedef struct tagMINMAXINFO {  
+    POINT ptReserved;  
+    POINT ptMaxSize;  
+    POINT ptMaxPosition;  
+    POINT ptMinTrackSize;  
+    POINT ptMaxTrackSize;  
 } MINMAXINFO;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *ptReserved*  
  Зарезервировано для внутреннего использования.  
   
  *ptMaxSize*  
- Определяет развернутую \(\) point.x ширину и высоту развернутую \(point.y окна\).  
+ Задает ширину развернутого (point.x) и развернутом высоту окна (point.y).  
   
  `ptMaxPosition`  
- Задает положение левой части развернутого окна \(point.x\) и положение верхнего развернутого окна \(point.y\).  
+ Задает позицию левого края развернутого окна (point.x) и положение верхнего края развернутого окна (point.y).  
   
  *ptMinTrackSize*  
- Указывает минимальную ширину отслеживания \(point.x\) и минимальную высоту отслеживания \(point.y окна\).  
+ Указывает минимальную отслеживаемую ширину (point.x) и Минимальная отслеживаемая высота окна (point.y).  
   
  *ptMaxTrackSize*  
- Указывает максимальную ширину отслеживания \(point.x\) и максимальную высоту отслеживания \(point.y окна\).  
+ Указывает максимально отслеживаемую ширину (point.x) и максимальным отслеживаемую высоту (point.y) окна.  
   
-## Требования  
- **Header:** winuser.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** winuser.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnGetMinMaxInfo](../Topic/CWnd::OnGetMinMaxInfo.md)
+ [CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
+
+

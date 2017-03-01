@@ -1,128 +1,225 @@
 ---
-title: "Класс unorm_2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator+="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::y"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_y"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::x"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator--"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator*="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::xy"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_y"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_x"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::rg"
-  - "amp_short_vectors/Concurrency::graphics::unorm_2"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator-="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator/="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::yx"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::gr"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::r"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator-"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_x"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::g"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator++"
-dev_langs: 
-  - "C++"
+title: "Класс unorm_2 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator+=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::y
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_y
+- amp_short_vectors/Concurrency::graphics::unnorm_2::x
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_yx
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator--
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_xy
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator*=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::xy
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_y
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_x
+- amp_short_vectors/Concurrency::graphics::unnorm_2::rg
+- amp_short_vectors/Concurrency::graphics::unorm_2
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator-=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator/=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_xy
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_yx
+- amp_short_vectors/Concurrency::graphics::unnorm_2::yx
+- amp_short_vectors/Concurrency::graphics::unnorm_2::gr
+- amp_short_vectors/Concurrency::graphics::unnorm_2::r
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator-
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_x
+- amp_short_vectors/Concurrency::graphics::unnorm_2::g
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
+dev_langs:
+- C++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Класс unorm_2
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8c4e7cd3040e9d9d6d3c3a5a915118fbc815aebf
+ms.lasthandoff: 02/24/2017
 
-Представляет короткий вектор из двух нормальных чисел без знака.  
+---
+# <a name="unorm2-class"></a>Класс unorm_2
+Представляет короткий вектор из двух чисел без знака normal.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class unorm_2;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |`value_type`||  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Конструктор unorm\_2::unorm\_2](../Topic/unorm_2::unorm_2%20Constructor.md)|Перегружен.  Конструктор по умолчанию, инициализирует все элементы нулем.|  
+|----------|-----------------|  
+|[Конструктор unorm_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
-### Открытые методы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|Метод unorm\_2::get\_x||  
-|Метод unorm\_2::get\_xy||  
-|Метод unorm\_2::get\_y||  
-|Метод unorm\_2::get\_yx||  
-|Метод unorm\_2::ref\_g||  
-|Метод unorm\_2::ref\_r||  
-|Метод unorm\_2::ref\_x||  
-|Метод unorm\_2::ref\_y||  
-|Метод unorm\_2::set\_x||  
-|Метод unorm\_2::set\_xy||  
-|Метод unorm\_2::set\_y||  
-|Метод unorm\_2::set\_yx||  
-  
-### Открытые операторы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|Оператор unorm\_2::operator\-\-||  
-|Оператор unorm\_2::operator\*\=||  
-|Оператор unorm\_2::operator\/\=||  
-|Оператор unorm\_2::operator\+\+||  
-|Оператор unorm\_2::operator\+\=||  
-|Оператор unorm\_2::operator\=||  
-|Оператор unorm\_2::operator\-\=||  
+|----------|-----------------|  
+|Метод unorm_2::get_X||  
+|Метод unorm_2::get_xy||  
+|Метод unorm_2::get_y||  
+|Метод unorm_2::get_yx||  
+|Метод unorm_2::ref_g||  
+|Метод unorm_2::ref_r||  
+|Метод unorm_2::ref_x||  
+|Метод unorm_2::ref_y||  
+|Метод unorm_2::set_X||  
+|Метод unorm_2::set_xy||  
+|Метод unorm_2::set_y||  
+|Метод unorm_2::set_yx||  
   
-### Открытые константы  
+### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|Константа unorm\_2::size||  
+|----------|-----------------|  
+|unorm_2::operator - оператор||  
+|unorm_2::operator * =-оператор||  
+|unorm_2::operator / =-оператор||  
+|unorm_2::operator оператор ++||  
+|Оператор += unorm_2::operator||  
+|unorm_2::operator =-оператор||  
+|unorm_2::operator-= оператор||  
   
-### Открытые члены данных  
+### <a name="public-constants"></a>Открытые константы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|Член данных unorm\_2::g||  
-|Член данных unorm\_2::gr||  
-|Член данных unorm\_2::r||  
-|Член данных unorm\_2::rg||  
-|Член данных unorm\_2::x||  
-|Член данных unorm\_2::xy||  
-|Член данных unorm\_2::y||  
-|Член данных unorm\_2::yx||  
+|----------|-----------------|  
+|Константа unorm_2::size||  
   
-## Иерархия наследования  
+### <a name="public-data-members"></a>Открытые члены данных  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|Элемент данных unorm_2::g||  
+|Элемент данных unorm_2::GR||  
+|Элемент данных unorm_2::r||  
+|Элемент данных unorm_2::RG||  
+|Элемент данных unorm_2::x||  
+|Элемент данных unorm_2::XY||  
+|Элемент данных unorm_2::y||  
+|Элемент данных unorm_2::YX||  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `unorm_2`  
   
-## Требования  
- **Заголовок:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** amp_short_vectors.h  
   
  **Пространство имен:** Concurrency::graphics  
   
-## См. также  
- [Пространство имен Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-unorm2"></a><a name="ctor"></a>unorm_2 
+
+ По умолчанию конструктор инициализирует все элементы с 0.  
+  
+```  
+unorm_2() restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    unorm _V0,  
+    unorm _V1) restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    float _V0,  
+    float _V1) restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    unorm _V) restrict(amp,
+    cpu);
+
+ 
+explicit unorm_2(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    const unorm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const uint_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const int_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const float_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const norm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const double_2& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_V0`  
+ Значение для инициализации элемента 0.  
+  
+ `_V1`  
+ Значение для инициализации элемент 1.  
+  
+ `_V`  
+ Значение для инициализации.  
+  
+ `_Other`  
+ Объект, используемый для инициализации.  
+  
+##  <a name="a-nameunorm2sizea-size"></a><a name="unorm_2__size"></a>размер 
+
+```  
+static const int size = 2;  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+

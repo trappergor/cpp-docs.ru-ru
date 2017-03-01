@@ -1,68 +1,110 @@
 ---
-title: "_U_MENUorID Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL._U_MENUorID"
-  - "ATL::_U_MENUorID"
-  - "_U_MENUorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_MENUorID class"
-  - "U_MENUorID class"
+title: "Класс _U_MENUorID | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL._U_MENUorID
+- ATL::_U_MENUorID
+- _U_MENUorID
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_MENUorID class
+- _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _U_MENUorID Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.lasthandoff: 02/24/2017
 
-Этот класс предоставляет программы\-оболочки для **CreateWindow** и **CreateWindowEx**.  
+---
+# <a name="umenuorid-class"></a>Класс _U_MENUorID
+Этот класс предоставляет оболочки для **CreateWindow** и **CreateWindowEx**.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+class _U_MENUorID
 ```  
   
-class _U_MENUorID  
+## <a name="members"></a>Члены  
   
+### <a name="public-constructors"></a>Открытые конструкторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|Конструктор.|  
+  
+### <a name="public-data-members"></a>Открытые члены данных  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Дескриптор меню.|  
+  
+## <a name="remarks"></a>Примечания  
+ Этот класс адаптера аргумент позволяет либо идентификаторы ( **UINT**s) или маркеры меню ( `HMENU`s) должны быть переданы функции, без необходимости явного приведения со стороны вызывающего объекта.  
+  
+ Этот класс предназначен для реализации программы-оболочки для Windows API, особенно [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) и [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции, которые принимают `HMENU` аргумент, который может быть идентификатором дочернего окна ( **UINT**) вместо дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).  
+
+  
+ Этот класс определяет две перегрузки конструктора: одна принимает **UINT** аргумент, а другой принимает `HMENU` аргумент. **UINT** аргумент приводится только `HMENU` в конструктор и результат, хранящийся в едином члена класса, [m_hMenu](#_u_menuorid__m_hmenu). Аргумент `HMENU` конструктор сохраняется непосредственно, без преобразования.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlwin.h  
+  
+##  <a name="a-nameumenuoridmhmenua--umenuoridmhmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+ Класс содержит значение, передаваемое в любой из его конструкторов как открытый `HMENU` члена данных.  
+  
+```
+HMENU m_hMenu;
 ```  
   
-## Члены  
+##  <a name="a-nameumenuoridumenuorida--umenuoridumenuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+ **UINT** аргумент приводится только `HMENU` в конструктор и результат, хранящийся в едином члена класса, [m_hMenu](#_u_menuorid__m_hmenu).  
   
-### Открытые конструкторы  
+```
+_U_MENUorID(UINT nID);  
+_U_MENUorID(HMENU hMenu);
+```  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[\_U\_MENUorID::\_U\_MENUorID](../Topic/_U_MENUorID::_U_MENUorID.md)|Конструктор.|  
+### <a name="parameters"></a>Параметры  
+ `nID`  
+ Идентификатор дочернего окна.  
   
-### Открытые члены данных  
+ `hMenu`  
+ Дескриптор меню.  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[\_U\_MENUorID::m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md)|Дескриптор меню.|  
+### <a name="remarks"></a>Примечания  
+ Аргумент `HMENU` конструктор сохраняется непосредственно, без преобразования.  
   
-## Заметки  
- Этот класс адаптера аргумента, позволяет **UINT** или идентификаторы \(s\) или дескрипторы меню \(`HMENU` s\), передаваемые функции без необходимости явного приведения на части вызывающего объекта.  
-  
- Этот класс предназначен для реализации программы\-оболочки к функциям API, в частности [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) и [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows, оба они принимают аргумент `HMENU`, который может быть идентификатором дочернего окна \(**UINT**\), а не дескриптор меню.  Например, можно просмотреть этот класс используется как параметр в [CWindowImpl::Create](../Topic/CWindowImpl::Create.md).  
-  
- Класс определяет 2 перегруженные варианты конструктора: принять аргумент **UINT**, а второй принимает аргумент `HMENU`.  Аргумент **UINT** просто привести к `HMENU` в конструкторе, и результат, хранящиеся в элементе данных одного типа, [m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md).  Аргумент конструктора `HMENU` хранятся непосредственно без преобразования.  
-  
-## Требования  
- **Header:**  atlwin.h  
-  
-## См. также  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

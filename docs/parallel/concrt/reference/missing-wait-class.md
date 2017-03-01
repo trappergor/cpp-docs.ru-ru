@@ -1,63 +1,92 @@
 ---
-title: "Класс missing_wait | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::missing_wait"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "missing_wait - класс"
+title: "Класс missing_wait | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::missing_wait
+dev_langs:
+- C++
+helpviewer_keywords:
+- missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс missing_wait
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
+ms.lasthandoff: 02/24/2017
 
-Данный класс описывает исключение, которое выдается, когда имеются задачи, по\-прежнему запланированные объекту `task_group` или `structured_task_group` во время выполнения деструктора этого объекта.  Никогда не будет создано это исключение, если деструктор достигается из\-за очистки стека в результате исключения.  
+---
+# <a name="missingwait-class"></a>Класс missing_wait
+Этот класс описывает исключение, возникающее при наличии задач, для которых по-прежнему запланирован объект `task_group` или `structured_task_group` на момент выполнения деструктора объекта. Это исключение не создается, если деструктор достигается из-за освобождения стека в результате исключения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+class missing_wait : public std::exception;
 ```  
-class missing_wait : public std::exception;  
-```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Конструктор missing\_wait::missing\_wait](../Topic/missing_wait::missing_wait%20Constructor.md)|Перегружен.  Создает объект `missing_wait`.|  
+|----------|-----------------|  
+|[Конструктор missing_wait](#ctor)|Перегружен. Создает объект `missing_wait`.|  
   
-## Заметки  
- Если отсутствует поток исключения, вы должны вызвать метод `wait` или метод `run_and_wait` объекта `task_group` или `structured_task_group` до разрешения выполнения уничтожения этим объектом.  Среда выполнения выдает исключение как показатель того, что вы забыли вызывать метод `wait` или `run_and_wait`.  
+## <a name="remarks"></a>Примечания  
+ Отсутствует поток исключений, вы несете ответственность за вызов либо `wait` или `run_and_wait` метод `task_group` или `structured_task_group` объекта перед разрешением этого объекта для уничтожения. Среда выполнения создает это исключение, как это означает, что вы забыли вызывать `wait` или `run_and_wait` метод.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
   
  `missing_wait`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h  
   
  **Пространство имен:** concurrency  
   
-## См. также  
- [Пространство имен concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Класс task\_group](../Topic/task_group%20Class.md)   
- [Метод task\_group::wait](../Topic/task_group::wait%20Method.md)   
- [Метод task\_group::run\_and\_wait](../Topic/task_group::run_and_wait%20Method.md)   
- [Класс structured\_task\_group](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [Метод structured\_task\_group::wait](../Topic/structured_task_group::wait%20Method.md)   
- [Метод structured\_task\_group::run\_and\_wait](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+
+ Создает объект `missing_wait`.  
+  
+```
+explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
+
+missing_wait() throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Message`  
+ Описательное сообщение об ошибке.  
+  
+## <a name="see-also"></a>См. также  
+ [пространство имен Concurrency](concurrency-namespace.md)   
+ [Класс task_group](task-group-class.md)   
+ [wait-метод](task-group-class.md)   
+ [run_and_wait метод](task-group-class.md)   
+ [Класс structured_task_group](structured-task-group-class.md)
+

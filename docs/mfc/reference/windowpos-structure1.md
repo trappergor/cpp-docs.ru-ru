@@ -1,97 +1,114 @@
 ---
-title: "WINDOWPOS Structure1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WINDOWPOS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WINDOWPOS - структура"
+title: "WINDOWPOS Structure1 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WINDOWPOS
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINDOWPOS structure
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Структура WINDOWPOS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
+ms.lasthandoff: 02/24/2017
 
-Структура `WINDOWPOS` содержит сведения о размере и положения окна.  
+---
+# <a name="windowpos-structure1"></a>WINDOWPOS Structure1
+`WINDOWPOS` Структура содержит сведения о размере и положение окна.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      typedef struct tagWINDOWPOS { /* wp */  
-   HWND hwnd;  
-   HWND hwndInsertAfter;  
-   int x;  
-   int y;  
-   int cx;  
-   int cy;  
-   UINT flags;  
+typedef struct tagWINDOWPOS { /* wp */  
+    HWND hwnd;  
+    HWND hwndInsertAfter;  
+    int x;  
+    int y;  
+    int cx;  
+    int cy;  
+    UINT flags;  
 } WINDOWPOS;  
 ```  
   
-#### Параметры  
- *hwnd*  
+#### <a name="parameters"></a>Параметры  
+ *HWND*  
  Определяет окно.  
   
  *hwndInsertAfter*  
- Определяет окно за которым данное окно помещается.  
+ Определяет окно, за который помещается в этом окне.  
   
  *x*  
- Задает положение левого края окна.  
+ Задает позицию левого края окна.  
   
  *y*  
  Задает положение правого края окна.  
   
  `cx`  
- Задает ширину окна, в пикселях.  
+ Ширина окна в пикселях.  
   
  `cy`  
- Задает высоту окна, в пикселях.  
+ Высота окна в пикселях.  
   
  `flags`  
- Определяет параметры размещения окна.  Этот элемент может быть одним из следующих значений:  
+ Задает параметры размещения окна. Этот член может принимать одно из следующих значений:  
   
--   **SWP\_DRAWFRAME** рисуется кадр \(указанного в описании класса для окна\) вокруг окна.  Окно получает сообщение `WM_NCCALCSIZE`.  
+- **SWP_DRAWFRAME** рисует вокруг окна фрейма (определенной в описании класса окна). Получает окно `WM_NCCALCSIZE` сообщение.  
   
--   **SWP\_FRAMECHANGED** отправляет сообщение `WM_NCCALCSIZE` в окно, даже если не изменить размер окна.  Если этот флажок не указан, то `WM_NCCALCSIZE` отправляется только при изменении размера окна.  
+- **SWP_FRAMECHANGED** отправляет `WM_NCCALCSIZE` сообщения в окне, даже если не изменяется размер окна. Если этот флаг не задан, `WM_NCCALCSIZE` отправляется только при изменении размера окна.  
   
--   **SWP\_HIDEWINDOW** скрывает окно.  
+- **SWP_HIDEWINDOW** скрывает окно.  
   
--   `SWP_NOACTIVATE` не активирует окно.  
+- `SWP_NOACTIVATE`Не активируйте окно.  
   
--   **SWP\_NOCOPYBITS** отменяет все содержимое клиентской области.  Если этот флажок не указан, то допустимые содержимое клиентской области сохраняются и копируются назад в клиентскую область после изменения размера или перемещении окно.  
+- **SWP_NOCOPYBITS** удаляет все содержимое клиентской области. Если этот флаг не указан, сохраняются и копируются обратно в клиентской области окна размера или положения допустимое содержимое клиентской области.  
   
--   `SWP_NOMOVE` сохраняет текущее положение \(пропускает элементы **x** и **y** \).  
+- `SWP_NOMOVE`Сохраняет текущую позицию (игнорирует **x** и **y** членов).  
   
--   Метод **SWP\_NOOWNERZORDER** не меняет положение окна " в соответствии с z\-порядком.  
+- **SWP_NOOWNERZORDER** не изменяет положение окна-владельца в Z-порядке.  
   
--   `SWP_NOSIZE` сохраняет текущий размер \(пропускает элементы **cx** и **cy** \).  
+- `SWP_NOSIZE`Сохраняет текущий размер (не учитывает **cx** и **cy** членов).  
   
--   **SWP\_NOREDRAW** redraw изменения.  
+- **SWP_NOREDRAW** не будут перерисовываться изменения.  
   
--   **SWP\_NOREPOSITION** так же, как **SWP\_NOOWNERZORDER**.  
+- **SWP_NOREPOSITION** как **SWP_NOOWNERZORDER**.  
   
--   **SWP\_NOSENDCHANGING** предотвращает окно из получении сообщения `WM_WINDOWPOSCHANGING`.  
+- **SWP_NOSENDCHANGING** предотвращает получение окна `WM_WINDOWPOSCHANGING` сообщение.  
   
--   `SWP_NOZORDER` сохраняется порядок текущего игнорирует член \( **hwndInsertAfter** \).  
+- `SWP_NOZORDER`Сохраняет текущий порядок (игнорирует **hwndInsertAfter** члена).  
   
--   Отображение окна **SWP\_SHOWWINDOW**.  
+- **SWP_SHOWWINDOW** Отображение окна.  
   
-## Требования  
- **Header:** winuser.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** winuser.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnWindowPosChanging](../Topic/CWnd::OnWindowPosChanging.md)
+ [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
+
+
