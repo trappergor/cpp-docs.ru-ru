@@ -1,34 +1,50 @@
 ---
-title: "Ошибка компилятора C3834 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3834"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3834"
+title: "Ошибка компилятора C3834 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3834
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3834
 ms.assetid: 059e0dc4-300b-4e74-b6c2-41a57831fe2a
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C3834
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 2175483609a4c05cba7b02a2cd1693dd763e150e
+ms.lasthandoff: 02/24/2017
 
-недопустимое явное приведение к закрепленному указателю; вместо этого используйте закрепленную локальную переменную  
+---
+# <a name="compiler-error-c3834"></a>Ошибка компилятора C3834
+недопустимое явное приведение к закрепляющему указателю; вместо этого используйте закрепленную локальную переменную  
   
- Явное приведение к закрепленному указателю не допускается.  
+ Явное приведение указатель не допускаются.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3834.  
   
 ```  
@@ -41,25 +57,4 @@ int main() {
    pin_ptr<int> p2 = &x;   // OK  
 }  
 ```  
-  
-## Пример  
- Следующий пример приводит к возникновению ошибки C3834.  
-  
-```  
-// C3834_b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-  
-int main() {  
-   const __wchar_t * pS = reinterpret_cast<const __wchar_t __pin*>(S"hello");   // C3834  
-  
-   // OK   
-   // declare a pinning variable  
-   String __pin* ppin = S"Hello";  
-  
-   // cast pinning variable to unmanaged type  
-   const __wchar_t * pS2 = reinterpret_cast<__wchar_t*>(ppin);     
-  
-   pS2 += 6;  
-}  
-```
+

@@ -1,37 +1,53 @@
 ---
-title: "Ошибка компилятора C3821 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3821"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3821"
+title: "Ошибка компилятора C3821 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3821
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Ошибка компилятора C3821
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 24212b0df7b665f8c8ab2614b9a23e66f19586af
+ms.lasthandoff: 02/24/2017
 
-"функция": в неуправляемой функции нельзя использовать управляемые типы или функции  
+---
+# <a name="compiler-error-c3821"></a>Ошибка компилятора C3821
+«функция»: в неуправляемой функции нельзя использовать управляемого типа или функции  
   
- Функции, использующие [setjmp](../../c-runtime-library/reference/setjmp.md) или встроенный код на языке ассемблера, не могут содержать типы значения или управляемые классы.  Чтобы устранить эту ошибку, удалите функцию `setjmp` и встроенный код на языке ассемблера, либо удалите управляемые объекты.  
+ Функции со встроенной сборкой или [setjmp](../../c-runtime-library/reference/setjmp.md) не могут содержать типы значения или управляемые классы. Чтобы устранить эту ошибку, удалите встроенная сборка и `setjmp` или удалите управляемые объекты.  
   
- Ошибка C3821 также может возникать при попытке использования автоматического хранения в функции с переменным количеством аргументов.  Дополнительные сведения см. в разделах [Списки аргументов переменных \(...\) \(C\+\+\/CLI\)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) и [Семантика стека C\+\+ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ C3821 также может возникать при попытке использования автоматического хранения в функции с переменным количеством аргументов.  Дополнительные сведения см. в разделе [переменными списками аргументов (...) (C + +/ CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) и [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3821.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3821.  
   
 ```  
 // C3821a.cpp  
@@ -42,8 +58,8 @@ void test1(...) {
 }  
 ```  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3821.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3821.  
   
 ```  
 // C3821b.cpp  
@@ -63,25 +79,4 @@ int main() {
    }  
 } // C3821  
 ```  
-  
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3821.  
-  
-```  
-// C3821c.cpp  
-// compile with: /clr:oldSyntax  
-// processor: /x86  
-__gc  class A {  
-   public:  
-   int i;  
-};  
-  
-int main() {  
-   // cannot use managed classes in this function  
-   A *a;     
-  
-   __asm {  
-      nop  
-   }  
-} // C3821  
-```
+

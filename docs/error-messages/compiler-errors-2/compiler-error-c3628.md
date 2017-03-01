@@ -1,34 +1,50 @@
 ---
-title: "Ошибка компилятора C3628 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3628"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3628"
+title: "Ошибка компилятора C3628 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3628
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C3628
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: e8723f85289d1094a6969d2bf26c30a85ccf382b
+ms.lasthandoff: 02/24/2017
 
-«базовый класс»: управляемые классы или классы WinRT поддерживают наследование только открытых методов  
+---
+# <a name="compiler-error-c3628"></a>Ошибка компилятора C3628
+«базовый класс»: управляемый или WinRTclasses поддерживают только открытое наследование  
   
- Была предпринята попытка использовать управляемый класс или класс WinRT как [закрытый](../Topic/private%20\(C++\).md) или [защищенный](../Topic/protected%20\(C++\).md) базовый класс.  Управляемый класс или класс WinRT может использоваться только как базовый класс с [открытым](../../cpp/public-cpp.md) доступом.  
+Предпринята попытка использовать управляемый или WinRT классов как [частного](../../cpp/private-cpp.md) или [защищенных](../../cpp/protected-cpp.md) базового класса. Управляемый объект или класс WinRT можно использовать только как базовый класс с [открытый](../../cpp/public-cpp.md) доступа.  
   
- В следующем примере показано возникновение ошибки C3628 и приводятся сведения по ее устранению.  
+В следующем примере показано возникновение ошибки C3628 и приводятся сведения по ее устранению.  
   
 ```  
 // C3628a.cpp  
@@ -45,22 +61,4 @@ ref class D : private B {   // C3628
 int main() {  
 }  
 ```  
-  
- В следующем примере показано возникновение ошибки C3628 и приводятся сведения по ее устранению.  
-  
-```  
-// C3628b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-__gc class B {  
-};  
-  
-__gc class D : B {   // C3628, private is the default access level  
-  
-// The following line resolves the error.  
-// __gc class D : public B {  
-};  
-  
-int main() {  
-}  
-```
+

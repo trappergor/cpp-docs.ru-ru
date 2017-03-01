@@ -1,28 +1,44 @@
 ---
-title: "Ошибка компилятораs C2700 Through C2799 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Ошибки компилятора C2700 – C2799 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Ошибка компилятораs C2700 Through C2799
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: fd86815cb1f3ef215805bdb96449cb8b7a9b322a
+ms.lasthandoff: 02/24/2017
 
-Статьи из этой части документации содержат сведения о подразделе ошибок компилятора Visual C\+\+.  Информацию можно найти здесь, или можно выбрать номер ошибки в окне **Вывод** Visual Studio и нажать клавишу F1.  
+---
+# <a name="compiler-errors-c2700-through-c2799"></a>Ошибки компилятора C2700 – C2799
+Статьи из этой части документации содержат сведения о подразделе ошибок компилятора Visual C++. Информацию можно найти здесь, или можно выбрать номер ошибки в окне **Вывод** Visual Studio и нажать клавишу F1.  
   
- [Ошибка компилятора C2701](../Topic/Compiler%20Error%20C2701.md)  
+ [Ошибка компилятора C2701](../../error-messages/compiler-errors-2/compiler-error-c2701.md)  
   
  [Ошибка компилятора C2702](../../error-messages/compiler-errors-2/compiler-error-c2702.md)  
   
@@ -40,37 +56,31 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2711](../../error-messages/compiler-errors-2/compiler-error-c2711.md)  
   
- [Ошибка компилятора C2712](../Topic/Compiler%20Error%20C2712.md)  
+ [Ошибка компилятора C2712](../../error-messages/compiler-errors-2/compiler-error-c2712.md)  
   
  [Ошибка компилятора C2713](../../error-messages/compiler-errors-2/compiler-error-c2713.md)  
   
- [Ошибка компилятора C2714](../Topic/Compiler%20Error%20C2714.md)  
+ [Ошибка компилятора C2714](../../error-messages/compiler-errors-2/compiler-error-c2714.md)  
   
  [Ошибка компилятора C2715](../../error-messages/compiler-errors-2/compiler-error-c2715.md)  
   
- [Ошибка компилятора C2716](../Topic/Compiler%20Error%20C2716.md)  
-  
- [Ошибка компилятора C2717](../Topic/Compiler%20Error%20C2717.md)  
-  
  [Ошибка компилятора C2718](../../error-messages/compiler-errors-2/compiler-error-c2718.md)  
   
- [Ошибка компилятора C2719](../Topic/Compiler%20Error%20C2719.md)  
+ [Ошибка компилятора C2719](../../error-messages/compiler-errors-2/compiler-error-c2719.md)  
   
  [Ошибка компилятора C2720](../../error-messages/compiler-errors-2/compiler-error-c2720.md)  
   
  [Ошибка компилятора C2721](../../error-messages/compiler-errors-2/compiler-error-c2721.md)  
   
- [Ошибка компилятора C2722](../Topic/Compiler%20Error%20C2722.md)  
+ [Ошибка компилятора C2722](../../error-messages/compiler-errors-2/compiler-error-c2722.md)  
   
  [Ошибка компилятора C2723](../../error-messages/compiler-errors-2/compiler-error-c2723.md)  
   
- [Ошибка компилятора C2724](../Topic/Compiler%20Error%20C2724.md)  
+ [Ошибка компилятора C2724](../../error-messages/compiler-errors-2/compiler-error-c2724.md)  
   
- [Ошибка компилятора C2725](../Topic/Compiler%20Error%20C2725.md)  
+ [Ошибка компилятора C2725](../../error-messages/compiler-errors-2/compiler-error-c2725.md)  
   
  [Ошибка компилятора C2726](../../error-messages/compiler-errors-2/compiler-error-c2726.md)  
-  
- [Ошибка компилятора C2727](../Topic/Compiler%20Error%20C2727.md)  
   
  [Ошибка компилятора C2728](../../error-messages/compiler-errors-2/compiler-error-c2728.md)  
   
@@ -80,7 +90,7 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2733](../../error-messages/compiler-errors-2/compiler-error-c2733.md)  
   
- [Ошибка компилятора C2734](../Topic/Compiler%20Error%20C2734.md)  
+ [Ошибка компилятора C2734](../../error-messages/compiler-errors-2/compiler-error-c2734.md)  
   
  [Ошибка компилятора C2735](../../error-messages/compiler-errors-2/compiler-error-c2735.md)  
   
@@ -96,13 +106,13 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2748](../../error-messages/compiler-errors-2/compiler-error-c2748.md)  
   
- [Ошибка компилятора C2749](../Topic/Compiler%20Error%20C2749.md)  
+ [Ошибка компилятора C2749](../../error-messages/compiler-errors-2/compiler-error-c2749.md)  
   
  [Ошибка компилятора C2750](../../error-messages/compiler-errors-2/compiler-error-c2750.md)  
   
  [Ошибка компилятора C2751](../../error-messages/compiler-errors-2/compiler-error-c2751.md)  
   
- [Ошибка компилятора C2752](../Topic/Compiler%20Error%20C2752.md)  
+ [Ошибка компилятора C2752](../../error-messages/compiler-errors-2/compiler-error-c2752.md)  
   
  [Ошибка компилятора C2753](../../error-messages/compiler-errors-2/compiler-error-c2753.md)  
   
@@ -124,17 +134,17 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2764](../../error-messages/compiler-errors-2/compiler-error-c2764.md)  
   
- [Ошибка компилятора C2765](../Topic/Compiler%20Error%20C2765.md)  
+ [Ошибка компилятора C2765](../../error-messages/compiler-errors-2/compiler-error-c2765.md)  
   
- [Ошибка компилятора C2766](../Topic/Compiler%20Error%20C2766.md)  
+ [Ошибка компилятора C2766](../../error-messages/compiler-errors-2/compiler-error-c2766.md)  
   
  [Ошибка компилятора C2767](../../error-messages/compiler-errors-2/compiler-error-c2767.md)  
   
  [Ошибка компилятора C2768](../../error-messages/compiler-errors-2/compiler-error-c2768.md)  
   
- [Ошибка компилятора C2770](../Topic/Compiler%20Error%20C2770.md)  
+ [Ошибка компилятора C2770](../../error-messages/compiler-errors-2/compiler-error-c2770.md)  
   
- [Ошибка компилятора C2773](../Topic/Compiler%20Error%20C2773.md)  
+ [Ошибка компилятора C2773](../../error-messages/compiler-errors-2/compiler-error-c2773.md)  
   
  [Ошибка компилятора C2774](../../error-messages/compiler-errors-2/compiler-error-c2774.md)  
   
@@ -146,7 +156,7 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2778](../../error-messages/compiler-errors-2/compiler-error-c2778.md)  
   
- [Ошибка компилятора C2779](../Topic/Compiler%20Error%20C2779.md)  
+ [Ошибка компилятора C2779](../../error-messages/compiler-errors-2/compiler-error-c2779.md)  
   
  [Ошибка компилятора C2780](../../error-messages/compiler-errors-2/compiler-error-c2780.md)  
   
@@ -154,7 +164,7 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2782](../../error-messages/compiler-errors-2/compiler-error-c2782.md)  
   
- [Ошибка компилятора C2783](../Topic/Compiler%20Error%20C2783.md)  
+ [Ошибка компилятора C2783](../../error-messages/compiler-errors-2/compiler-error-c2783.md)  
   
  [Ошибка компилятора C2784](../../error-messages/compiler-errors-2/compiler-error-c2784.md)  
   
@@ -162,9 +172,9 @@ caps.handback.revision: 13
   
  [Ошибка компилятора C2786](../../error-messages/compiler-errors-2/compiler-error-c2786.md)  
   
- [Ошибка компилятора C2787](../Topic/Compiler%20Error%20C2787.md)  
+ [Ошибка компилятора C2787](../../error-messages/compiler-errors-2/compiler-error-c2787.md)  
   
- [Ошибка компилятора C2788](../Topic/Compiler%20Error%20C2788.md)  
+ [Ошибка компилятора C2788](../../error-messages/compiler-errors-2/compiler-error-c2788.md)  
   
  [Ошибка компилятора C2790](../../error-messages/compiler-errors-2/compiler-error-c2790.md)  
   

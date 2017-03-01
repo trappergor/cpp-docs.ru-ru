@@ -1,69 +1,87 @@
 ---
-title: "Структура CODBCFieldInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CODBCFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CODBCFieldInfo - структура"
-  - "ODBC, сведения об источнике данных"
+title: "Структура CODBCFieldInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CODBCFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- ODBC, data source information
+- CODBCFieldInfo structure
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Структура CODBCFieldInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1080eb323c599014d84acab94aee4622795fdb96
+ms.lasthandoff: 02/24/2017
 
-Структура `CODBCFieldInfo` содержит сведения о полях в источнике данных ODBC.  
+---
+# <a name="codbcfieldinfo-structure"></a>Структура CODBCFieldInfo
+`CODBCFieldInfo` Структура содержит сведения о полях в источник данных ODBC.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      struct CODBCFieldInfo  
+struct CODBCFieldInfo  
 {  
-   CString m_strName;  
-   SWORD m_nSQLType;  
-   UDWORD m_nPrecision;  
-   SWORD m_nScale;  
-   SWORD m_nNullability;  
+    CString m_strName;  
+    SWORD m_nSQLType;  
+    UDWORD m_nPrecision;  
+    SWORD m_nScale;  
+    SWORD m_nNullability;  
 };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `m_strName`  
  Имя поля.  
   
- *m\_nSQLType*  
- Тип данных SQL поля.  Это может быть типом данных ODBC SQL или типом данных SQL драйвер\- функции.  Типы данных SQL Для списка допустимых ODBC см. в разделе «типы данных SQL» в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  Дополнительные сведения о типах данных SQL драйвер\- см. в документации по драйвера.  
+ *m_nSQLType*  
+ Тип данных поля SQL. Это может быть тип данных SQL драйвера или типу данных ODBC SQL. Перечень допустимых типов данных ODBC SQL см. в разделе «Типы данных SQL» в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Сведения о типах данных SQL, специфические для драйвера драйвер документации.  
   
- *m\_nPrecision*  
- Максимальная точность поля.  Дополнительные сведения см. в разделе «точность, масштаб, длину, и размер отображения» в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ *m_nPrecision*  
+ Максимальная точность поля. Дополнительные сведения см. в разделе «Точность, масштаб, длина и отображаемый размер» в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- *m\_nScale*  
- Масштаб поля.  Дополнительные сведения см. в разделе «точность, масштаб, длину, и размер отображения» в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ *m_nScale*  
+ Масштаб поля. Дополнительные сведения см. в разделе «Точность, масштаб, длина и отображаемый размер» в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- *m\_nNullability*  
- Принимает ли поле значение NULL.  Это может быть одним из 2 значений: **SQL\_NULLABLE**, если поле допускает значения NULL, и значение **SQL\_NO\_NULLS**, если поле не допускает значения NULL.  
+ *m_nNullability*  
+ Является ли поле допускает значение Null. Это может быть одно из двух значений: **SQL_NULLABLE** Если поле может принимать значения Null или **SQL_NO_NULLS** Если поля не допускает значения Null.  
   
-## Заметки  
- Для получения этих сведений вызовите метод [CRecordset::GetODBCFieldInfo](../Topic/CRecordset::GetODBCFieldInfo.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы получить эти данные, вызовите [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
   
-## Требования  
- **Header:** afxdb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxdb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRecordset::GetODBCFieldInfo](../Topic/CRecordset::GetODBCFieldInfo.md)   
- [CRecordset::GetFieldValue](../Topic/CRecordset::GetFieldValue.md)
+ [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)   
+ [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
+
+
+

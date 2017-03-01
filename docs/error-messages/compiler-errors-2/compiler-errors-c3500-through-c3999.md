@@ -1,26 +1,43 @@
 ---
-title: "Ошибка компилятораs C3500 through C3999 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Ошибки компилятора C3500 до C3999 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Ошибка компилятораs C3500 through C3999
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: ec3dba4995e0df05a1871c73abfbbee5c24b5266
+ms.lasthandoff: 02/24/2017
 
-Статьи из этой части документации содержат сведения о подразделе ошибок компилятора Visual C\+\+. Информацию можно найти здесь, или можно выбрать номер ошибки в окне **Вывод** Visual Studio и нажать клавишу F1.  
+---
+# <a name="compiler-errors-c3500-through-c3999"></a>Ошибки компилятора C3500 до C3999
+Статьи из этой части документации содержат сведения о подразделе ошибок компилятора Visual C++. Информацию можно найти здесь, или можно выбрать номер ошибки в окне **Вывод** Visual Studio и нажать клавишу F1.  
   
  [Ошибка компилятора C3500](../../error-messages/compiler-errors-2/compiler-error-c3500.md)  
   
@@ -40,15 +57,13 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3519](../../error-messages/compiler-errors-2/compiler-error-c3519.md)  
   
- [Ошибка компилятора C3530](../Topic/Compiler%20Error%20C3530.md)  
+ [Ошибка компилятора C3530](../../error-messages/compiler-errors-2/compiler-error-c3530.md)  
   
  [Ошибка компилятора C3531](../../error-messages/compiler-errors-2/compiler-error-c3531.md)  
   
  [Ошибка компилятора C3532](../../error-messages/compiler-errors-2/compiler-error-c3532.md)  
   
- [Ошибка компилятора C3533](../Topic/Compiler%20Error%20C3533.md)  
-  
- [Ошибка компилятора C3534](../Topic/Compiler%20Error%20C3534.md)  
+ [Ошибка компилятора C3533](../../error-messages/compiler-errors-2/compiler-error-c3533.md)  
   
  [Ошибка компилятора C3535](../../error-messages/compiler-errors-2/compiler-error-c3535.md)  
   
@@ -58,13 +73,13 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3538](../../error-messages/compiler-errors-2/compiler-error-c3538.md)  
   
- [Ошибка компилятора C3539](../Topic/Compiler%20Error%20C3539.md)  
+ [Ошибка компилятора C3539](../../error-messages/compiler-errors-2/compiler-error-c3539.md)  
   
  [Ошибка компилятора C3540](../../error-messages/compiler-errors-2/compiler-error-c3540.md)  
   
  [Ошибка компилятора C3541](../../error-messages/compiler-errors-2/compiler-error-c3541.md)  
   
- [Compiler Error C3550](../Topic/Compiler%20Error%20C3550.md)  
+ [C3550 ошибки компилятора](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
   
  [Ошибка компилятора C3603](../../error-messages/compiler-errors-2/compiler-error-c3603.md)  
   
@@ -75,8 +90,6 @@ caps.handback.revision: 12
  [Ошибка компилятора C3611](../../error-messages/compiler-errors-2/compiler-error-c3611.md)  
   
  [Ошибка компилятора C3612](../../error-messages/compiler-errors-2/compiler-error-c3612.md)  
-  
- [Ошибка компилятора C3616](../Topic/Compiler%20Error%20C3616.md)  
   
  [Ошибка компилятора C3618](../../error-messages/compiler-errors-2/compiler-error-c3618.md)  
   
@@ -116,7 +129,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3642](../../error-messages/compiler-errors-2/compiler-error-c3642.md)  
   
- [Ошибка компилятора C3644](../Topic/Compiler%20Error%20C3644.md)  
+ [Ошибка компилятора C3644](../../error-messages/compiler-errors-2/compiler-error-c3644.md)  
   
  [Ошибка компилятора C3645](../../error-messages/compiler-errors-2/compiler-error-c3645.md)  
   
@@ -126,7 +139,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3650](../../error-messages/compiler-errors-2/compiler-error-c3650.md)  
   
- [Ошибка компилятора C3651](../Topic/Compiler%20Error%20C3651.md)  
+ [Ошибка компилятора C3651](../../error-messages/compiler-errors-2/compiler-error-c3651.md)  
   
  [Ошибка компилятора C3652](../../error-messages/compiler-errors-2/compiler-error-c3652.md)  
   
@@ -136,21 +149,19 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3655](../../error-messages/compiler-errors-2/compiler-error-c3655.md)  
   
- [Ошибка компилятора C3656](../Topic/Compiler%20Error%20C3656.md)  
+ [Ошибка компилятора C3656](../../error-messages/compiler-errors-2/compiler-error-c3656.md)  
   
  [Ошибка компилятора C3657](../../error-messages/compiler-errors-2/compiler-error-c3657.md)  
   
- [Ошибка компилятора C3658](../Topic/Compiler%20Error%20C3658.md)  
-  
- [Ошибка компилятора C3661](../Topic/Compiler%20Error%20C3661.md)  
+ [Ошибка компилятора C3661](../../error-messages/compiler-errors-2/compiler-error-c3661.md)  
   
  [Ошибка компилятора C3662](../../error-messages/compiler-errors-2/compiler-error-c3662.md)  
   
  [Ошибка компилятора C3665](../../error-messages/compiler-errors-2/compiler-error-c3665.md)  
   
- [Ошибка компилятора C3666](../Topic/Compiler%20Error%20C3666.md)  
+ [Ошибка компилятора C3666](../../error-messages/compiler-errors-2/compiler-error-c3666.md)  
   
- [Ошибка компилятора C3668](../Topic/Compiler%20Error%20C3668.md)  
+ [Ошибка компилятора C3668](../../error-messages/compiler-errors-2/compiler-error-c3668.md)  
   
  [Ошибка компилятора C3669](../../error-messages/compiler-errors-2/compiler-error-c3669.md)  
   
@@ -178,7 +189,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3704](../../error-messages/compiler-errors-2/compiler-error-c3704.md)  
   
- [Ошибка компилятора C3705](../Topic/Compiler%20Error%20C3705.md)  
+ [Ошибка компилятора C3705](../../error-messages/compiler-errors-2/compiler-error-c3705.md)  
   
  [Ошибка компилятора C3706](../../error-messages/compiler-errors-2/compiler-error-c3706.md)  
   
@@ -186,7 +197,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3708](../../error-messages/compiler-errors-2/compiler-error-c3708.md)  
   
- [Ошибка компилятора C3709](../Topic/Compiler%20Error%20C3709.md)  
+ [Ошибка компилятора C3709](../../error-messages/compiler-errors-2/compiler-error-c3709.md)  
   
  [Ошибка компилятора C3710](../../error-messages/compiler-errors-2/compiler-error-c3710.md)  
   
@@ -196,11 +207,11 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3713](../../error-messages/compiler-errors-2/compiler-error-c3713.md)  
   
- [Ошибка компилятора C3714](../Topic/Compiler%20Error%20C3714.md)  
+ [Ошибка компилятора C3714](../../error-messages/compiler-errors-2/compiler-error-c3714.md)  
   
- [Ошибка компилятора C3715](../Topic/Compiler%20Error%20C3715.md)  
+ [Ошибка компилятора C3715](../../error-messages/compiler-errors-2/compiler-error-c3715.md)  
   
- [Ошибка компилятора C3717](../Topic/Compiler%20Error%20C3717.md)  
+ [Ошибка компилятора C3717](../../error-messages/compiler-errors-2/compiler-error-c3717.md)  
   
  [Ошибка компилятора C3718](../../error-messages/compiler-errors-2/compiler-error-c3718.md)  
   
@@ -216,9 +227,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3727](../../error-messages/compiler-errors-2/compiler-error-c3727.md)  
   
- [Ошибка компилятора C3728](../Topic/Compiler%20Error%20C3728.md)  
-  
- [Ошибка компилятора C3730](../Topic/Compiler%20Error%20C3730.md)  
+ [Ошибка компилятора C3728](../../error-messages/compiler-errors-2/compiler-error-c3728.md)  
   
  [Ошибка компилятора C3731](../../error-messages/compiler-errors-2/compiler-error-c3731.md)  
   
@@ -226,7 +235,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3733](../../error-messages/compiler-errors-2/compiler-error-c3733.md)  
   
- [Ошибка компилятора C3734](../Topic/Compiler%20Error%20C3734.md)  
+ [Ошибка компилятора C3734](../../error-messages/compiler-errors-2/compiler-error-c3734.md)  
   
  [Ошибка компилятора C3736](../../error-messages/compiler-errors-2/compiler-error-c3736.md)  
   
@@ -240,7 +249,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3741](../../error-messages/compiler-errors-2/compiler-error-c3741.md)  
   
- [Ошибка компилятора C3743](../Topic/Compiler%20Error%20C3743.md)  
+ [Ошибка компилятора C3743](../../error-messages/compiler-errors-2/compiler-error-c3743.md)  
   
  [Ошибка компилятора C3744](../../error-messages/compiler-errors-2/compiler-error-c3744.md)  
   
@@ -272,7 +281,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3766](../../error-messages/compiler-errors-2/compiler-error-c3766.md)  
   
- [Ошибка компилятора C3767](../Topic/Compiler%20Error%20C3767.md)  
+ [Ошибка компилятора C3767](../../error-messages/compiler-errors-2/compiler-error-c3767.md)  
   
  [Ошибка компилятора C3768](../../error-messages/compiler-errors-2/compiler-error-c3768.md)  
   
@@ -286,27 +295,21 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3800](../../error-messages/compiler-errors-2/compiler-error-c3800.md)  
   
- [Ошибка компилятора C3802](../Topic/Compiler%20Error%20C3802.md)  
-  
  [Ошибка компилятора C3803](../../error-messages/compiler-errors-2/compiler-error-c3803.md)  
   
  [Ошибка компилятора C3804](../../error-messages/compiler-errors-2/compiler-error-c3804.md)  
   
  [Ошибка компилятора C3805](../../error-messages/compiler-errors-2/compiler-error-c3805.md)  
   
- [Ошибка компилятора C3807](../Topic/Compiler%20Error%20C3807.md)  
+ [Ошибка компилятора C3807](../../error-messages/compiler-errors-2/compiler-error-c3807.md)  
   
  [Ошибка компилятора C3808](../../error-messages/compiler-errors-2/compiler-error-c3808.md)  
   
- [Ошибка компилятора C3809](../Topic/Compiler%20Error%20C3809.md)  
+ [Ошибка компилятора C3809](../../error-messages/compiler-errors-2/compiler-error-c3809.md)  
   
- [Ошибка компилятора C3811](../Topic/Compiler%20Error%20C3811.md)  
-  
- [Ошибка компилятора C3812](../Topic/Compiler%20Error%20C3812.md)  
+ [Ошибка компилятора C3812](../../error-messages/compiler-errors-2/compiler-error-c3812.md)  
   
  [Ошибка компилятора C3813](../../error-messages/compiler-errors-2/compiler-error-c3813.md)  
-  
- [Ошибка компилятора C3814](../Topic/Compiler%20Error%20C3814.md)  
   
  [Ошибка компилятора C3815](../../error-messages/compiler-errors-2/compiler-error-c3815.md)  
   
@@ -314,25 +317,17 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3817](../../error-messages/compiler-errors-2/compiler-error-c3817.md)  
   
- [Ошибка компилятора C3818](../Topic/Compiler%20Error%20C3818.md)  
-  
- [Ошибка компилятора C3819](../Topic/Compiler%20Error%20C3819.md)  
+ [Ошибка компилятора C3818](../../error-messages/compiler-errors-2/compiler-error-c3818.md)  
   
  [Ошибка компилятора C3821](../../error-messages/compiler-errors-2/compiler-error-c3821.md)  
-  
- [Ошибка компилятора C3822](../Topic/Compiler%20Error%20C3822.md)  
-  
- [Ошибка компилятора C3823](../Topic/Compiler%20Error%20C3823.md)  
   
  [Ошибка компилятора C3824](../../error-messages/compiler-errors-2/compiler-error-c3824.md)  
   
  [Ошибка компилятора C3825](../../error-messages/compiler-errors-2/compiler-error-c3825.md)  
   
- [Ошибка компилятора C3826](../Topic/Compiler%20Error%20C3826.md)  
-  
  [Ошибка компилятора C3828](../../error-messages/compiler-errors-2/compiler-error-c3828.md)  
   
- [Ошибка компилятора C3830](../Topic/Compiler%20Error%20C3830.md)  
+ [Ошибка компилятора C3830](../../error-messages/compiler-errors-2/compiler-error-c3830.md)  
   
  [Ошибка компилятора C3831](../../error-messages/compiler-errors-2/compiler-error-c3831.md)  
   
@@ -346,9 +341,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3838](../../error-messages/compiler-errors-2/compiler-error-c3838.md)  
   
- [Ошибка компилятора C3839](../Topic/Compiler%20Error%20C3839.md)  
-  
- [Ошибка компилятора C3840](../Topic/Compiler%20Error%20C3840.md)  
+ [Ошибка компилятора C3839](../../error-messages/compiler-errors-2/compiler-error-c3839.md)  
   
  [Ошибка компилятора C3842](../../error-messages/compiler-errors-2/compiler-error-c3842.md)  
   
@@ -362,7 +355,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3851](../../error-messages/compiler-errors-2/compiler-error-c3851.md)  
   
- [Ошибка компилятора C3852](../Topic/Compiler%20Error%20C3852.md)  
+ [Ошибка компилятора C3852](../../error-messages/compiler-errors-2/compiler-error-c3852.md)  
   
  [Ошибка компилятора C3853](../../error-messages/compiler-errors-2/compiler-error-c3853.md)  
   
@@ -372,11 +365,11 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3856](../../error-messages/compiler-errors-2/compiler-error-c3856.md)  
   
- [Ошибка компилятора C3857](../Topic/Compiler%20Error%20C3857.md)  
+ [Ошибка компилятора C3857](../../error-messages/compiler-errors-2/compiler-error-c3857.md)  
   
  [Ошибка компилятора C3858](../../error-messages/compiler-errors-2/compiler-error-c3858.md)  
   
- [Ошибка компилятора C3859](../Topic/Compiler%20Error%20C3859.md)  
+ [Ошибка компилятора C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)  
   
  [Ошибка компилятора C3860](../../error-messages/compiler-errors-2/compiler-error-c3860.md)  
   
@@ -386,7 +379,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3865](../../error-messages/compiler-errors-2/compiler-error-c3865.md)  
   
- [Ошибка компилятора C3866](../Topic/Compiler%20Error%20C3866.md)  
+ [Ошибка компилятора C3866](../../error-messages/compiler-errors-2/compiler-error-c3866.md)  
   
  [Ошибка компилятора C3867](../../error-messages/compiler-errors-2/compiler-error-c3867.md)  
   
@@ -396,9 +389,9 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3872](../../error-messages/compiler-errors-2/compiler-error-c3872.md)  
   
- [Ошибка компилятора C3873](../../error-messages/compiler-errors-2/compiler-error-c3873.md)  
+ [C3873 ошибки компилятора](../../error-messages/compiler-errors-2/compiler-error-c3873.md)  
   
- [Ошибка компилятора C3874](../Topic/Compiler%20Error%20C3874.md)  
+ [Ошибка компилятора C3874](../../error-messages/compiler-errors-2/compiler-error-c3874.md)  
   
  [Ошибка компилятора C3880](../../error-messages/compiler-errors-2/compiler-error-c3880.md)  
   
@@ -408,7 +401,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3887](../../error-messages/compiler-errors-2/compiler-error-c3887.md)  
   
- [Ошибка компилятора C3890](../../error-messages/compiler-errors-2/compiler-error-c3890.md)  
+ [C3890 ошибки компилятора](../../error-messages/compiler-errors-2/compiler-error-c3890.md)  
   
  [Ошибка компилятора C3891](../../error-messages/compiler-errors-2/compiler-error-c3891.md)  
   
@@ -418,7 +411,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3894](../../error-messages/compiler-errors-2/compiler-error-c3894.md)  
   
- [Ошибка компилятора C3895](../../error-messages/compiler-errors-2/compiler-error-c3895.md)  
+ [Ошибка компилятора ошибка C3895](../../error-messages/compiler-errors-2/compiler-error-c3895.md)  
   
  [Ошибка компилятора C3896](../../error-messages/compiler-errors-2/compiler-error-c3896.md)  
   
@@ -446,7 +439,7 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3912](../../error-messages/compiler-errors-2/compiler-error-c3912.md)  
   
- [Ошибка компилятора C3913](../Topic/Compiler%20Error%20C3913.md)  
+ [Ошибка компилятора C3913](../../error-messages/compiler-errors-2/compiler-error-c3913.md)  
   
  [Ошибка компилятора C3914](../../error-messages/compiler-errors-2/compiler-error-c3914.md)  
   
@@ -460,8 +453,5 @@ caps.handback.revision: 12
   
  [Ошибка компилятора C3920](../../error-messages/compiler-errors-2/compiler-error-c3920.md)  
   
- [Ошибка компилятора C3921](../Topic/Compiler%20Error%20C3921.md)  
-  
  [Ошибка компилятора C3923](../../error-messages/compiler-errors-2/compiler-error-c3923.md)  
-  
- [Ошибка компилятора C3996](../Topic/Compiler%20Error%20C3996.md)
+

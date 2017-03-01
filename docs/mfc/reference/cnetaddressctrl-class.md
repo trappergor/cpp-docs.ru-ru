@@ -1,92 +1,239 @@
 ---
-title: "Класс CNetAddressCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс CNetAddressCtrl"
+title: "Класс CNetAddressCtrl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- CNetAddressCtrl class
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
 caps.latest.revision: 32
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 34
----
-# Класс CNetAddressCtrl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 03b08d13a9e456c5533b4dddce7f389a63a69c6d
+ms.lasthandoff: 02/24/2017
 
-Класс `CNetAddressCtrl` представляет элемент управления сетевого адреса, которое можно использовать для входных, так и проверять формат IPv4, IP версии 6 и именованных адресов DNS.  
+---
+# <a name="cnetaddressctrl-class"></a>Класс CNetAddressCtrl
+Класс `CNetAddressCtrl` представляет элемент управления сетевого адреса, который можно использовать для ввода и проверки формата IPv4, IPv6 и именованных адресов DNS.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CNetAddressCtrl : public CEdit  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CNetAddressCtrl::CNetAddressCtrl](../Topic/CNetAddressCtrl::CNetAddressCtrl.md)|Создает объект `CNetAddressCtrl`.|  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CNetAddressCtrl::Create](../Topic/CNetAddressCtrl::Create.md)|Создает элемент управления сетевого адреса с указанными стилями и вложение его к текущему объекту `CNetAddressCtrl`.|  
-|[CNetAddressCtrl::CreateEx](../Topic/CNetAddressCtrl::CreateEx.md)|Создает элемент управления сетевого адреса с указанными расширенных стилей и вложение его к текущему объекту `CNetAddressCtrl`.|  
-|[CNetAddressCtrl::DisplayErrorTip](../Topic/CNetAddressCtrl::DisplayErrorTip.md)|Отображает всплывающую подсказку ошибки, если пользователь вводит неподдерживаемый сетевой адрес в элемент управления адреса текущей сети.|  
-|[CNetAddressCtrl::GetAddress](../Topic/CNetAddressCtrl::GetAddress.md)|Извлекает включен и проанализированное представление сетевого адреса, связанного с элементом управления сетевого адреса текущей.|  
-|[CNetAddressCtrl::GetAllowType](../Topic/CNetAddressCtrl::GetAllowType.md)|Извлекает тип сетевого адреса, элемент управления сетевого адреса текущей может поддерживать.|  
-|[CNetAddressCtrl::SetAllowType](../Topic/CNetAddressCtrl::SetAllowType.md)|Задает тип сетевого адреса, элемент управления сетевого адреса текущей может поддерживать.|  
+|----------|-----------------|  
+|[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Создает объект `CNetAddressCtrl`.|  
   
-## Заметки  
- Элемент управления сетевого адреса проверяет правильность формата адреса ввод пользователя.  Элемент управления не подключается к сетевому адресу.  Метод [CNetAddressCtrl::SetAllowType](../Topic/CNetAddressCtrl::SetAllowType.md) указывает один или несколько типов адреса, метод [CNetAddressCtrl::GetAddress](../Topic/CNetAddressCtrl::GetAddress.md) может проанализировать и проверки.  Адрес может быть в формате IPv4, IP версии 6 или именованного адреса сервера сети узла или назначения широковещательного сообщения.  Если формат адресов неверен, то можно использовать метод [CNetAddressCtrl::DisplayErrorTip](../Topic/CNetAddressCtrl::DisplayErrorTip.md) для отображения окна сообщения подсказки, графически указывающий к текстовому полю управления сетевого адреса и отображает стандартное сообщение об ошибке.  
+### <a name="public-methods"></a>Открытые методы  
   
- Класс `CNetAddressCtrl` является производным от класса [CEdit](../Topic/CEdit%20Class.md).  Следовательно, элемент управления сетевого адреса предоставляет доступ ко всем сообщениям элемента управления "Поле ввода" Windows.  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CNetAddressCtrl::Create](#create)|Создает элемент управления network address с указанным стилем и присоединяет его к текущему `CNetAddressCtrl` объекта.|  
+|[CNetAddressCtrl::CreateEx](#createex)|Создает элемент управления network address с указанным расширенные стили и присоединяет его к текущему `CNetAddressCtrl` объекта.|  
+|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Отображает всплывающую подсказку ошибки при вводе адреса не поддерживаются в текущей управления сетевым адресом.|  
+|[CNetAddressCtrl::GetAddress](#getaddress)|Возвращает представление проверяются и разбора сетевой адрес, связанный с текущей управления сетевым адресом.|  
+|[CNetAddressCtrl::GetAllowType](#getallowtype)|Получает тип сетевой адрес, может поддерживать текущего управления сетевым адресом.|  
+|[CNetAddressCtrl::SetAllowType](#setallowtype)|Задает тип сетевой адрес, может поддерживать текущего управления сетевым адресом.|  
   
- Следующая диаграмма отображает диалоговое окно, содержащее элемент управления сетевого адреса.  Текстовое поле \(1\) для управления сетевого адреса содержит недопустимый сетевой адрес.  Сообщение подсказки \(2\) отображается, если сетевой адрес недопустим.  
+## <a name="remarks"></a>Примечания  
+ Элемент управления сетевого адреса проверяет правильность формата адреса, который вводит пользователь. Элемент управления не на самом деле подключиться к сетевой адрес. [CNetAddressCtrl::SetAllowType](#setallowtype) метод указывает один или несколько типов адресов, [CNetAddressCtrl::GetAddress](#getaddress) метод можно проанализировать и проверить. Адрес может быть в формате IPv4, IPv6 или для сервера, сети, узла или назначения широковещательное сообщение с указанным адресом. Неправильный формат адреса, можно использовать [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) метод, чтобы отобразить окно сообщения подсказку графически в текстовое поле элемент управления сетевого адреса и отображает сообщение об ошибке стандартных.  
   
- ![Диалог с элементом управления сетевым адресом и подсказкой.](../../mfc/reference/media/cnetaddctrl.png "CNetAddCtrl")  
+ `CNetAddressCtrl` Класс является производным от [CEdit](../../mfc/reference/cedit-class.md) класса. Таким образом элемент управления сетевого адреса предоставляет доступ ко всем сообщениям управления редактирования Windows.  
   
-## Пример  
- Следующий пример кода представляет собой часть диалогового окна, которое проверяет сетевой адрес.  Обработчики событий для переключателей 3 указывают, что сетевой адрес может иметь один из 3 типов адреса.  Вводе пользователем адреса в текстовом поле управления сети, а затем нажимает кнопку, чтобы проверить адрес.  Если адрес является допустимым, то сообщение об успешном выполнении отображается; в противном случае – стандартное сообщение об ошибке подсказки.  
+ На следующем рисунке показано диалоговое окно, содержащее управления сетевым адресом. Текстовое поле (1) для управления сетевым адресом содержит недопустимый сетевой адрес. Если Недопустимый сетевой адрес, отображается всплывающая подсказка сообщение (2).  
   
- [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/CPP/cnetaddressctrl-class_1.cpp)]  
+ ![Диалоговое окно с элементом управления сетевым адресом и подсказкой. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
-## Пример  
- В следующем примере кода из файла заголовка диалогового окна определяет переменные [NC\_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) и [NET\_ADDRESS\_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/bb773346), которые должны быть методом [CNetAddressCtrl::GetAddress](../Topic/CNetAddressCtrl::GetAddress.md).  
+## <a name="example"></a>Пример  
+ В следующем примере кода является часть диалогового окна, которое проверяет сетевой адрес. Обработчики событий для трех переключателей укажите, что сетевой адрес может быть один из трех типов адресов. Пользователь вводит в текстовом поле элемент управления сетевого адреса, а затем нажимает кнопку для проверки адреса. Если адрес является допустимым, отображается сообщение об успешном выполнении; в противном случае — отображается сообщение об ошибке предопределенные подсказку.  
   
- [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/CPP/cnetaddressctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CNetAddressCtrl_s&#1;1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="example"></a>Пример  
+ В следующем примере кода из файла заголовка диалогового окна определяется [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) и [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) переменных, которые требуются [CNetAddressCtrl::GetAddress](#getaddress) метод.  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+ [!code-cpp[NVC_MFC_CNetAddressCtrl_s&#1;2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
   
- [CWnd](../Topic/CWnd%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CEdit](../Topic/CEdit%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
+  
+ [CEdit](../../mfc/reference/cedit-class.md)  
   
  `CNetAddressCtrl`  
   
-## Требования  
- **заголовок:** afxcmn.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxcmn.h  
   
- Этот класс поддерживается в [!INCLUDE[windowsver](../Token/windowsver_md.md)] и более поздних версиях.  
+ Этот класс поддерживается в [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] и более поздних версий.  
   
- Дополнительные требования для этого класса см. в [Требования к сборке для использования стандартных элементов управления в Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
+ Дополнительные требования к этому классу, описаны в [построения требования для Windows Vista Общие элементы управления](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-## См. также  
- [CNetAddressCtrl Class](../../mfc/reference/cnetaddressctrl-class.md)   
+##  <a name="a-namecnetaddressctrla--cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+ Создает объект `CNetAddressCtrl`.  
+  
+```  
+CNetAddressCtrl();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте [CNetAddressCtrl::Create](#create) или [CNetAddressCtrl::CreateEx](#createex) способ создания элемента управления сети и присоединить его к `CNetAddressCtrl` объекта.  
+  
+##  <a name="a-namecreatea--cnetaddressctrlcreate"></a><a name="create"></a>CNetAddressCtrl::Create  
+ Создает элемент управления network address с указанным стилем и присоединяет его к текущему `CNetAddressCtrl` объекта.  
+  
+```  
+virtual BOOL Create(
+    DWORD dwStyle,   
+    const RECT& rect,   
+    CWnd* pParentWnd,   
+    UINT nID);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|[in] `dwStyle`|Побитовое сочетание стили, применяемые к элементу управления. Дополнительные сведения см. в разделе [изменить стили](../../mfc/reference/edit-styles.md).|  
+|[in] `rect`|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
+|[in] `pParentWnd`|Ненулевой указатель [CWnd](../../mfc/reference/cwnd-class.md) объекта, родительского окна элемента управления.|  
+|[in] `nID`|Идентификатор элемента управления.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `true`Если этот метод выполнен успешно; в противном случае — `false`.  
+  
+##  <a name="a-namecreateexa--cnetaddressctrlcreateex"></a><a name="createex"></a>CNetAddressCtrl::CreateEx  
+ Создает элемент управления network address с указанным расширенные стили и присоединяет его к текущему `CNetAddressCtrl` объекта.  
+  
+```  
+virtual BOOL CreateEx(
+    DWORD dwExStyle,   
+    DWORD dwStyle,   
+    const RECT& rect,   
+    CWnd* pParentWnd,   
+    UINT nID);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|[in] `dwExStyle`|Побитовое сочетание (или) расширенных стилей применяется к элементу управления. Дополнительные сведения см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции.|  
+|[in] `dwStyle`|Побитовое сочетание (или) стилей применяется к элементу управления. Дополнительные сведения см. в разделе [изменить стили](../../mfc/reference/edit-styles.md).|  
+|[in] `rect`|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
+|[in] `pParentWnd`|Ненулевой указатель [CWnd](../../mfc/reference/cwnd-class.md) объекта, родительского окна элемента управления.|  
+|[in] `nID`|Идентификатор элемента управления.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `true`Если этот метод выполнен успешно; в противном случае — `false`.  
+  
+##  <a name="a-namedisplayerrortipa--cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+ Отображает сообщение об ошибке в всплывающей подсказки, связанный с текущей управления сетевым адресом.  
+  
+```  
+HRESULT DisplayErrorTip();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение `S_OK` , если этот метод выполнен успешно; в противном случае — код ошибки.  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте [CNetAddressCtrl::SetAllowType](#setallowtype) метод для указания типов адресов, которые может поддерживать текущего управления сетевым адресом. Используйте [CNetAddressCtrl::GetAddress](#getaddress) метод для проверки и анализа сетевого адреса, введенного пользователем. Используйте [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) метод, чтобы отобразить всплывающую подсказку ошибки сообщения, если [CNetAddressCtrl::GetAddress](#getaddress) метод завершается неудачно.  
+  
+ Это сообщение вызывает [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_DISPLAYERRORTIP` сообщение.  
+  
+##  <a name="a-namegetaddressa--cnetaddressctrlgetaddress"></a><a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+ Возвращает представление проверяются и разбора сетевой адрес, связанный с текущей управления сетевым адресом.  
+  
+```  
+HRESULT GetAddress(PNC_ADDRESS pAddress) const;  
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|[in, out] `pAddress`|Указатель на [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) структуры.  Задайте `pAddrInfo` члена структуры по адресу [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) структуры перед вызовом метода GetAddress.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение `S_OK` , если этот метод выполнен успешно; в противном случае — код ошибки COM. Дополнительные сведения о кодах возможных ошибок, ознакомьтесь с разделом возвращают значение [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) макрос.  
+  
+### <a name="remarks"></a>Примечания  
+ Если этот метод выполнен успешно, [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) структура содержит дополнительные сведения о сетевом адресе.  
+  
+ Используйте [CNetAddressCtrl::SetAllowType](#setallowtype) метод для указания типов адресов может поддерживать текущего управления сетевым адресом. Используйте [CNetAddressCtrl::GetAddress](#getaddress) метод для проверки и анализа сетевого адреса, введенного пользователем. Используйте [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) метод, чтобы отобразить всплывающую подсказку ошибки сообщения, если [CNetAddressCtrl::GetAddress](#getaddress) метод завершается неудачно.  
+  
+ Этот метод вызывает [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_GETADDRESS` сообщение.  
+  
+##  <a name="a-namegetallowtypea--cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+ Получает тип сетевой адрес, может поддерживать текущего управления сетевым адресом.  
+  
+```  
+DWORD GetAllowType() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Побитовое сочетание (или) флагов, указывающее типы адресов может поддерживать элемент управления сетевого адреса. Дополнительные сведения см. в разделе [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
+  
+### <a name="remarks"></a>Примечания  
+ Это сообщение вызывает [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_GETALLOWTYPE` сообщение.  
+  
+##  <a name="a-namesetallowtypea--cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+ Задает тип сетевой адрес, может поддерживать текущего управления сетевым адресом.  
+  
+```  
+HRESULT SetAllowType(DWORD dwAddrMask);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|[in] `dwAddrMask`|Побитовое сочетание (или) флагов, указывающее типы адресов может поддерживать элемент управления сетевого адреса. Дополнительные сведения см. в разделе [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `S_OK`Если этот метод выполнен успешно; в противном случае — код ошибки COM.  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте [CNetAddressCtrl::SetAllowType](#setallowtype) метод для указания типов адресов, которые может поддерживать текущего управления сетевым адресом. Используйте [CNetAddressCtrl::GetAddress](#getaddress) метод для проверки и анализа сетевого адреса, введенного пользователем. Используйте [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) метод, чтобы отобразить всплывающую подсказку ошибки сообщения, если [CNetAddressCtrl::GetAddress](#getaddress) метод завершается неудачно.  
+  
+ Это сообщение вызывает [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_SETALLOWTYPE` сообщение.  
+  
+## <a name="see-also"></a>См. также  
+ [Класс CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CEdit Class](../Topic/CEdit%20Class.md)
+ [Класс CEdit](../../mfc/reference/cedit-class.md)
+

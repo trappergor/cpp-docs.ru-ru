@@ -1,26 +1,42 @@
 ---
-title: "Ошибка компилятораs C2500 Through C2599 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Ошибки компилятора C2500 – C2599 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Ошибка компилятораs C2500 Through C2599
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: bdce46b08d44226c3dedef076528d7e46d39365c
+ms.lasthandoff: 02/24/2017
 
-Статьи из этой части документации содержат сведения о подразделе ошибок компилятора Visual C\+\+.  Информацию можно найти здесь, или можно выбрать номер ошибки в окне **Вывод** Visual Studio и нажать клавишу F1.  
+---
+# <a name="compiler-errors-c2500-through-c2599"></a>Ошибки компилятора C2500 – C2599
+Статьи из этой части документации содержат сведения о подразделе ошибок компилятора Visual C++. Информацию можно найти здесь, или можно выбрать номер ошибки в окне **Вывод** Visual Studio и нажать клавишу F1.  
   
  [Ошибка компилятора C2500](../../error-messages/compiler-errors-2/compiler-error-c2500.md)  
   
@@ -30,7 +46,7 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2504](../../error-messages/compiler-errors-2/compiler-error-c2504.md)  
   
- [Ошибка компилятора C2505](../Topic/Compiler%20Error%20C2505.md)  
+ [Ошибка компилятора C2505](../../error-messages/compiler-errors-2/compiler-error-c2505.md)  
   
  [Ошибка компилятора C2506](../../error-messages/compiler-errors-2/compiler-error-c2506.md)  
   
@@ -48,7 +64,7 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2516](../../error-messages/compiler-errors-2/compiler-error-c2516.md)  
   
- [Ошибка компилятора C2517](../Topic/Compiler%20Error%20C2517.md)  
+ [Ошибка компилятора C2517](../../error-messages/compiler-errors-2/compiler-error-c2517.md)  
   
  [Ошибка компилятора C2518](../../error-messages/compiler-errors-2/compiler-error-c2518.md)  
   
@@ -60,11 +76,11 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2526](../../error-messages/compiler-errors-2/compiler-error-c2526.md)  
   
- [Ошибка компилятора C2528](../Topic/Compiler%20Error%20C2528.md)  
+ [Ошибка компилятора C2528](../../error-messages/compiler-errors-2/compiler-error-c2528.md)  
   
  [Ошибка компилятора C2529](../../error-messages/compiler-errors-2/compiler-error-c2529.md)  
   
- [Ошибка компилятора C2530](../Topic/Compiler%20Error%20C2530.md)  
+ [Ошибка компилятора C2530](../../error-messages/compiler-errors-2/compiler-error-c2530.md)  
   
  [Ошибка компилятора C2531](../../error-messages/compiler-errors-2/compiler-error-c2531.md)  
   
@@ -76,11 +92,9 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2535](../../error-messages/compiler-errors-2/compiler-error-c2535.md)  
   
- [Ошибка компилятора C2536](../Topic/Compiler%20Error%20C2536.md)  
-  
  [Ошибка компилятора C2537](../../error-messages/compiler-errors-2/compiler-error-c2537.md)  
   
- [Ошибка компилятора C2540](../Topic/Compiler%20Error%20C2540.md)  
+ [Ошибка компилятора C2540](../../error-messages/compiler-errors-2/compiler-error-c2540.md)  
   
  [Ошибка компилятора C2541](../../error-messages/compiler-errors-2/compiler-error-c2541.md)  
   
@@ -96,9 +110,9 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2549](../../error-messages/compiler-errors-2/compiler-error-c2549.md)  
   
- [Ошибка компилятора C2550](../Topic/Compiler%20Error%20C2550.md)  
+ [Ошибка компилятора C2550](../../error-messages/compiler-errors-2/compiler-error-c2550.md)  
   
- [Ошибка компилятора C2552](../../error-messages/compiler-errors-2/compiler-error-c2552.md)  
+ [C2552 ошибки компилятора](../../error-messages/compiler-errors-2/compiler-error-c2552.md)  
   
  [Ошибка компилятора C2553](../../error-messages/compiler-errors-2/compiler-error-c2553.md)  
   
@@ -114,11 +128,9 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2563](../../error-messages/compiler-errors-2/compiler-error-c2563.md)  
   
- [Ошибка компилятора C2564](../Topic/Compiler%20Error%20C2564.md)  
-  
  [Ошибка компилятора C2566](../../error-messages/compiler-errors-2/compiler-error-c2566.md)  
   
- [Ошибка компилятора C2567](../Topic/Compiler%20Error%20C2567.md)  
+ [Ошибка компилятора C2567](../../error-messages/compiler-errors-2/compiler-error-c2567.md)  
   
  [Ошибка компилятора C2568](../../error-messages/compiler-errors-2/compiler-error-c2568.md)  
   
@@ -136,7 +148,7 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2577](../../error-messages/compiler-errors-2/compiler-error-c2577.md)  
   
- [Ошибка компилятора C2579](../Topic/Compiler%20Error%20C2579.md)  
+ [Ошибка компилятора C2579](../../error-messages/compiler-errors-2/compiler-error-c2579.md)  
   
  [Ошибка компилятора C2581](../../error-messages/compiler-errors-2/compiler-error-c2581.md)  
   
@@ -146,17 +158,17 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2584](../../error-messages/compiler-errors-2/compiler-error-c2584.md)  
   
- [Ошибка компилятора C2585](../Topic/Compiler%20Error%20C2585.md)  
+ [Ошибка компилятора C2585](../../error-messages/compiler-errors-2/compiler-error-c2585.md)  
   
- [Ошибка компилятора C2586](../Topic/Compiler%20Error%20C2586.md)  
+ [Ошибка компилятора C2586](../../error-messages/compiler-errors-2/compiler-error-c2586.md)  
   
  [Ошибка компилятора C2587](../../error-messages/compiler-errors-2/compiler-error-c2587.md)  
   
  [Ошибка компилятора C2588](../../error-messages/compiler-errors-2/compiler-error-c2588.md)  
   
- [Ошибка компилятора C2589](../Topic/Compiler%20Error%20C2589.md)  
+ [Ошибка компилятора C2589](../../error-messages/compiler-errors-2/compiler-error-c2589.md)  
   
- [Ошибка компилятора C2592](../Topic/Compiler%20Error%20C2592.md)  
+ [Ошибка компилятора C2592](../../error-messages/compiler-errors-2/compiler-error-c2592.md)  
   
  [Ошибка компилятора C2593](../../error-messages/compiler-errors-2/compiler-error-c2593.md)  
   
@@ -166,4 +178,4 @@ caps.handback.revision: 15
   
  [Ошибка компилятора C2598](../../error-messages/compiler-errors-2/compiler-error-c2598.md)  
   
- [Ошибка компилятора C2599](../Topic/Compiler%20Error%20C2599.md)
+ [Ошибка компилятора C2599](../../error-messages/compiler-errors-2/compiler-error-c2599.md)

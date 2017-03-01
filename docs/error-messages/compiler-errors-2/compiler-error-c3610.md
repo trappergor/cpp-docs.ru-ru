@@ -1,50 +1,48 @@
 ---
-title: "Ошибка компилятора C3610 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3610"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3610"
+title: "Ошибка компилятора C3610 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3610
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3610
 ms.assetid: 9349a348-9d37-4a00-9eab-481039268d31
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3610
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 31cef33981bbc2063bf68e433f9d3ba32780363d
+ms.lasthandoff: 02/24/2017
 
-"типзначения": тип значения должен быть упакован перед вызовом метода "метод"  
+---
+# <a name="compiler-error-c3610"></a>Ошибка компилятора C3610
+'valuetype': тип значения должен быть «упаковать» перед вызовом метода «метод» может быть  
   
- По умолчанию тип значения не находится в управляемой куче.  Прежде чем можно будет вызывать методы классов среды выполнения .NET, например методы класса `Object`, необходимо переместить тип значения в управляемую кучу.  
+ По умолчанию тип значения не в управляемой куче. Перед вызовом методов из классов среды выполнения .NET, такие как `Object`, необходимо переместить тип значения в управляемую кучу.  
   
- Ошибка C3610 возникает только при использовании параметра **\/clr:oldSyntax**.  
-  
- Следующий пример приводит к возникновению ошибки C3610:  
-  
-```  
-// C3610.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__value class A {};  
-  
-int main() {  
-   A a;  
-   a.GetType(); // C3610  
-  
-   // OK  
-   __box A* ovar = __box(a);  
-   ovar->GetType();  
-}  
-```
+ C3610 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.  
+

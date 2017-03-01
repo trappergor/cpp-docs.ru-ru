@@ -1,36 +1,54 @@
 ---
-title: "Ошибка компилятора C3862 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3862"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3862"
+title: "Ошибка компилятора C3862 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3862
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ошибка компилятора C3862
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 48dbae62c367616a437db0607d84fa89e8006021
+ms.lasthandoff: 02/24/2017
 
-функция: неуправляемую функцию невозможно компилировать с параметрами \/clr:pure или \/clr:safe  
+---
+# <a name="compiler-error-c3862"></a>Ошибка компилятора C3862
+«функция»: не удается скомпилировать неуправляемой функции с параметром/clr: pure или/CLR: safe  
   
- Компиляция при помощи **\/clr:pure** or **\/clr:safe** может дать только изображение MSIL, изображение с немашинным \(неуправляемым\) кодом.  Следовательно, нельзя использовать директиву pragma `unmanaged` в компиляции **\/clr:pure** или **\/clr:safe** .  
+ **/CLR: pure** и **/CLR: safe** параметры компилятора в Visual Studio 2015 являются устаревшими.  
   
- Дополнительные сведения см. в разделах [\/clr \(компиляция CLR\)](../../build/reference/clr-common-language-runtime-compilation.md) и [managed, unmanaged](../../preprocessor/managed-unmanaged.md).  
+ Компиляция с помощью **/CLR: pure** или **/CLR: safe** может дать только изображение MSIL, изображение с без машинного (неуправляемого) кода.  Следовательно, нельзя использовать `unmanaged` прагма-директиву **/CLR: pure** или **/CLR: safe** компиляции.  
   
-## Пример  
+ Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).  
+  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3862:  
   
 ```  
