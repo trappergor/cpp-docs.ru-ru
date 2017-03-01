@@ -1,48 +1,65 @@
 ---
-title: "_CrtSetReportMode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportMode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtSetReportMode"
-  - "CrtSetReportMode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtSetReportMode - функция"
-  - "CrtSetReportMode - функция"
+title: "_CrtSetReportMode | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportMode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtSetReportMode
+- CrtSetReportMode
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtSetReportMode function
+- CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _CrtSetReportMode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dfd6e5fb1b8f8daa7e7693d3811c756c5509deb1
+ms.lasthandoff: 02/24/2017
 
-Задает назначение или назначения для определенного типа отчета, создаваемого `_CrtDbgReport` и всеми макросами, которые вызывают [\_CrtDbgReport, \_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), например [Макросы \_ASSERT, \_ASSERTE, \_ASSERT\_EXPR](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md), [Макросы \_ASSERT, \_ASSERTE, \_ASSERT\_EXPR](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md), [Макросы \_RPT, \_RPTF, \_RPTW, \_RPTFW](../Topic/_RPT,%20_RPTF,%20_RPTW,%20_RPTFW%20Macros.md) и [Макросы \_RPT, \_RPTF, \_RPTW, \_RPTFW](../Topic/_RPT,%20_RPTF,%20_RPTW,%20_RPTFW%20Macros.md) \(только отладочная версия\).  
+---
+# <a name="crtsetreportmode"></a>_CrtSetReportMode
+Определяет место или места назначения для определенного типа отчетов, создаваемых функцией `_CrtDbgReport`, а также для любых макросов, которые вызывают функции [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), таких как макросы [_ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) и [_RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) (только в отладочной версии).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _CrtSetReportMode(   
@@ -51,67 +68,67 @@ int _CrtSetReportMode(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `reportType`  
  Тип отчета: `_CRT_WARN`, `_CRT_ERROR` и `_CRT_ASSERT`.  
   
  `reportMode`  
  Новый режим или режимы отчетов для `reportType`.  
   
-## Возвращаемое значение  
- При успешном завершении `_CrtSetReportMode` возвращает предыдущий режим или режимы отчетов для определенного типа отчета в `reportType`.  Если недопустимое значение передается как `reportType` или недопустимый режим определен для `reportMode`, `_CrtSetReportMode` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция устанавливает `errno` в значение `EINVAL` и возвращает \-1.  Дополнительные сведения см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ При успешном завершении функция `_CrtSetReportMode` возвращает предыдущий режим или режимы отчетов для типа отчета, указанного в параметре `reportType`. Если в параметре `reportType` передано недопустимое значение или для параметра `reportMode` указан недопустимый режим, функция `_CrtSetReportMode` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функции задает для `errno` значение `EINVAL` и возвращает -1. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- `_CrtSetReportMode` определяет выходное назначение для `_CrtDbgReport`.  Поскольку макросы `_ASSERT`, `_ASSERTE`, `_RPT` и `_RPTF` вызывают `_CrtDbgReport`, `_CrtSetReportMode` определяет выходное назначение текста, определенного этими макросами.  
+## <a name="remarks"></a>Примечания  
+ Функция `_CrtSetReportMode` определяет место назначения вывода для функции `_CrtDbgReport`. Поскольку макросы `_ASSERT`, `_ASSERTE`, `_RPT` и `_RPTF` вызывают функцию `_CrtDbgReport`, функция `_CrtSetReportMode` определяет место назначения вывода текста, определенного этими макросами.  
   
- Если [\_DEBUG](../Topic/_DEBUG.md) не определен, то вызовы `_CrtSetReportMode` удаляются во время предварительной обработки.  
+ Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, вызовы `_CrtSetReportMode` удаляются на этапе предварительной обработки.  
   
- Если не вызывается `_CrtSetReportMode` для определения назначения вывода сообщений, используются следующие действия по умолчанию:  
+ Если функция `_CrtSetReportMode` не вызывается для определения места назначения вывода сообщений, используются следующие действия по умолчанию:  
   
 -   Ошибки и сбои проверочного утверждения направляются в окно сообщений отладчика.  
   
--   Предупреждения из Windows\-приложений отправляются в окно вывода отладчика.  
+-   Предупреждения из Windows-приложений направляются в окно вывода отладчика.  
   
 -   Предупреждения из консольных приложений не отображаются.  
   
- В следующей таблице перечислены типы сообщений, определенные в Crtdbg.h.  
+ В следующей таблице перечислены типы сообщений, определенные в файле Crtdbg.h.  
   
 |Тип отчета|Описание|  
-|----------------|--------------|  
+|-----------------|-----------------|  
 |`_CRT_WARN`|Предупреждения, сообщения и сведения, не требующие немедленного внимания.|  
 |`_CRT_ERROR`|Ошибки, неустранимые проблемы и ситуации, которые требуют немедленного внимания.|  
-|`_CRT_ASSERT`|Сбои проверочного утверждения \(выражения проверки, результат вычисления которых `FALSE`\).|  
+|`_CRT_ASSERT`|Сбои проверочного утверждения (выражения, вычисление которых дает значение `FALSE`).|  
   
- Функция `_CrtSetReportMode` присваивает новый режим отчета, указанный в `reportMode` типу отчета, указанному в `reportType`, и возвращает ранее определенный режим отчета для `reportType`.  В следующей таблице приведен список доступных вариантов для `reportMode` и результирующее поведение `_CrtDbgReport`.  Эти параметры задаются в виде битовых флагов в Crtdbg.h.  
+ Функция `_CrtSetReportMode` присваивает новый режим отчета, указанный в параметре `reportMode`, типу отчета, указанному в параметре `reportType`, и возвращает ранее определенный режим отчета для `reportType`. В следующей таблице приведен список доступных вариантов для параметра `reportMode` и соответствующее поведение функции `_CrtDbgReport`. Эти параметры задаются в виде битовых флагов в файле Crtdbg.h.  
   
-|Режим отчета|Поведение \_CrtDbgReport|  
-|------------------|------------------------------|  
-|`_CRTDBG_MODE_DEBUG`|Пишет сообщение в окно вывода отладчика.|  
-|`_CRTDBG_MODE_FILE`|Пишет сообщение в предоставленный пользователем обработчик файлов.  [\_CrtSetReportFile](../Topic/_CrtSetReportFile.md) должен быть вызван, чтобы определить конкретные файл или поток для использования в качестве места назначения.|  
+|Режим отчета|Поведение функции _CrtDbgReport|  
+|-----------------|-----------------------------|  
+|`_CRTDBG_MODE_DEBUG`|Выводит сообщение в окно вывода отладчика.|  
+|`_CRTDBG_MODE_FILE`|Выводит сообщение в предоставленный пользователем дескриптор файла. Для определения конкретного файла или потока, используемого в качестве места назначения, необходимо вызвать функцию [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md).|  
 |`_CRTDBG_MODE_WNDW`|Создает окно сообщения для отображения сообщения вместе с кнопками `Abort`, `Retry` и `Ignore`.|  
-|`_CRTDBG_REPORT_MODE`|Возвращает `reportMode` для заданного `reportType`:<br /><br /> 1   `_CRTDBG_MODE_FILE`<br /><br /> 2   `_CRTDBG_MODE_DEBUG`<br /><br /> 4   `_CRTDBG_MODE_WNDW`|  
+|`_CRTDBG_REPORT_MODE`|Возвращает `reportMode` для заданного `reportType`:<br /><br /> 1   `_CRTDBG_MODE_FILE`<br /><br /> 2   `_CRTDBG_MODE_DEBUG`<br /><br /> 4   `_CRTDBG_MODE_WNDW`|  
   
- Каждый тип отчета может быть использован с помощью одной, двух или трех моделей или без моделей вообще.  Следовательно, можно иметь несколько назначений, заданных для одного типа отчета.  Например, в следующем фрагменте кода сообщения о сбоях проверочного утверждения отправляются и в окно сообщений отладчика, и в `stderr`:  
+ Каждый тип отчета может создаваться с использованием одного, двух или трех режимов или вообще без режима. Следовательно, для одного типа отчета может быть задано несколько мест назначения. Например, в следующем фрагменте кода сообщения о сбоях проверочного утверждения отправляются как в окно сообщений отладчика, так и в поток `stderr`:  
   
 ```  
 _CrtSetReportMode( _CRT_ASSERT, _CRTDBG_MODE_FILE | _CRTDBG_MODE_WNDW );  
 _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );  
 ```  
   
- Кроме того, режимом или режимами отчетов можно управлять отдельно для каждого типа отчета.  Например, можно указать, что `reportType` `_CRT_WARN` отправляется в вывод отладочной строки, а `_CRT_ASSERT` отображается с помощью окна сообщений отладчика и отправляется в `stderr`, как показано ранее.  
+ Кроме того, режимом или режимами отчетов можно управлять отдельно для каждого типа отчета. Например, можно указать, что `reportType` `_CRT_WARN` отправляется в выходную отладочную строку, а `_CRT_ASSERT` отображается с помощью окна сообщений отладчика и отправляется в поток `stderr`, как показано ранее.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_CrtSetReportMode`|\<crtdbg.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
- Версии **Библиотеки:** Отладочные версии только для [Особенности библиотеки CRT](../../c-runtime-library/crt-library-features.md).  
+ **Библиотеки:** только отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Для получения дополнительной информации см. [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

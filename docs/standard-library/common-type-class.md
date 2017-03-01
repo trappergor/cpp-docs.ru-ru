@@ -1,68 +1,80 @@
 ---
-title: "Класс common_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.common_type"
-  - "common_type"
-  - "std::tr1::common_type"
-  - "std.common_type"
-  - "std::common_type"
-  - "type_traits/std::common_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "common_type - класс [TR1]"
-  - "common_type"
+title: "Класс common_type | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- common_type
+- std::common_type
+- type_traits/std::common_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- common_type class
+- common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Класс common_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="commontype-class"></a>Класс common_type
 Определяет общий тип одного или нескольких типов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```
 template <class... T>  
-   struct common_type;  
-  
+struct common_type;
+
 template <class T>  
-   struct common_type<T> {  
-      typedef typename decay<T>::type type;  
-};  
-  
+struct common_type<T> {
+    typedef typename decay<T>::type type;
+};
+
 template <class T, class U>  
-   struct common_type<T, U> {  
-      typedef typename decay<decltype(true ?  declval<T>() :  
-         declval<U>())>::type type;  
-};  
-  
+struct common_type<T, U> {
+    typedef typename decay<decltype(true declval<T>() :
+    declval<U>())>::type type;
+};
+
 template <class T, class U, class... V>  
-   struct common_type<T, U, V...> {  
-      typedef typename common_type<typename common_type<T, U>::type, V...>::type type;  
-};  
+struct common_type<T, U, V...> {
+    typedef typename common_type<typename common_type<T, U>::type, V...>::type type;
+};
 ```  
   
-#### Параметры  
- Список типов, которые могут быть [полными типами](../Topic/Incomplete%20Types.md) или void.  
+#### <a name="parameters"></a>Параметры  
+ Список типов, которые могут быть [полными типами](../c-language/incomplete-types.md) или void.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Член `type` является распространенным типом, в который можно преобразовать все типы в списке параметров.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующей программе демонстрируется несколько сценариев правильного использования и тестирование результатов.  
   
 ```cpp  
@@ -104,33 +116,36 @@ int main()
 }  
 ```  
   
-## Вывод  
+## <a name="output"></a>Вывод  
   
+```
+Test for typedefs of common_type int
+NumericType: true
+FloatType: false
+ModifiedIntType: true
+ClassType: false
+---------------------------
+Test for typedefs of common_type double
+NumericType: false
+FloatType: true
+ModifiedIntType: false
+ClassType: false
+---------------------------
+Test for typedefs of common_type Base
+NumericType: false
+FloatType: false
+ModifiedIntType: false
+ClassType: true
 ```  
-Test for typedefs of common_type int  
-NumericType: true  
-FloatType: false  
-ModifiedIntType: true  
-ClassType: false  
----------------------------  
-Test for typedefs of common_type double  
-NumericType: false  
-FloatType: true  
-ModifiedIntType: false  
-ClassType: false  
----------------------------  
-Test for typedefs of common_type Base  
-NumericType: false  
-FloatType: false  
-ModifiedIntType: false  
-ClassType: true  
   
-```  
-  
-## Требования  
- **Заголовок:** \<type\_traits\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<type_traits>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

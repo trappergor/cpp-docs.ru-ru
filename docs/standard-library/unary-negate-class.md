@@ -1,71 +1,81 @@
 ---
-title: "Класс unary_negate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unary_negate"
-  - "std::unary_negate"
-  - "std.unary_negate"
-  - "xfunctional/std::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate - класс"
+title: "Класс unary_negate | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unary_negate
+- std::unary_negate
+- std.unary_negate
+- xfunctional/std::unary_negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Класс unary_negate
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
+ms.lasthandoff: 02/24/2017
 
-Класс шаблона функции\-члена, обеспечивая инвертирует возвращаемое значение указанной унарной функции.  
+---
+# <a name="unarynegate-class"></a>Класс unary_negate
+Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной унарной функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class Predicate>
+class unary_negate
+    : public unaryFunction<typename Predicate::argument_type, bool>
+{
+public:
+    explicit unary_negate(const Predicate& Func);
+    bool operator()(const typename Predicate::argument_type& left) const;
+};
 ```  
   
-   template<class Predicate>  
-class unary_negate  
-   : public unary_function<  
-      typename Predicate::argument_type,  
-      bool>   
-{  
-public:  
-explicit unary_negate(  
-   const Predicate& _Func  
-);  
-bool operator()(  
-   const typename Predicate::argument_type& _Left ) const;  
-};  
-```  
+#### <a name="parameters"></a>Параметры  
+ `Func`  
+ Унарная функция, которая должна быть инвертирована.  
   
-#### Параметры  
- `_Func`  
- Функция, унарная инвертируемое.  
+ `left`  
+ Операнд унарной функции, которая должна быть инвертирована.  
   
- `_Left`  
- Операнд унарной функции, инвертируемое.  
-  
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Отрицание унарной функции.  
   
-## Заметки  
- Класс шаблона сохранить копию унарного \_Func *объекта функции.* Он определяет его функции\-члена `operator()` как возвращающий **\!**\_*Func\(\_Left\).*  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона сохраняет копию объекта унарной функции _ *Func.* В нем определяется функция-член `operator()`, которая возвращает **!**\_ *Func(left).*  
   
- Конструктор `unary_negate` используется редко напрямую.  Вспомогательная функция [not1](../Topic/not1%20Function.md) предоставляет более простой способ объявления и использования предикат переходники **unary\_negator**.  
+ Конструктор `unary_negate` редко используется напрямую. Вспомогательная функция [not1](../standard-library/functional-functions.md#not1_function) позволяет удобно объявить и использовать предикат адаптера **unary_negator**.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // functional_unary_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -108,16 +118,22 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 30 35 )  
+The number of elements in v1 greater than 10 is: 5.  
+The number of elements in v1 not greater than 10 is: 3.  
+*/  
 ```  
   
-  **Вектор v1 \= \(0 5 10 15 20 25 30 35\)**  
-**Количество элементов в v1 большего, чем 10 выглядит следующим образом: 5.**  
-**Количество элементов в v1 не более чем 10 самых выглядит следующим образом: 3.**   
-## Требования  
- **Заголовок:** \<functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

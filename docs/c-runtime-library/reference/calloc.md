@@ -1,48 +1,65 @@
 ---
-title: "calloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "calloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "calloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "выделение памяти, массивы"
-  - "Функция calloc"
+title: "calloc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- calloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- calloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, arrays
+- calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# calloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 574d1e8a48de3aa380b6d51ba71c28a953572013
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="calloc"></a>calloc
 Выделяет массив в памяти и инициализирует его элементы значением 0.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void *calloc(   
@@ -51,42 +68,42 @@ void *calloc(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `num`  
- Количество элементов.  
+ Число элементов.  
   
  `size`  
- Длина в байтах каждого элемента.  
+ Длина каждого элемента в байтах.  
   
-## Возвращаемое значение  
- `calloc` возвращает указатель на выделенную память.  Дисковое пространство, на которое указывает возвращаемое значение, гарантированно выравнено подходящим для хранения любого типа объекта образом.  Чтобы получить указатель на тип, отличный от `void`, используйте приведение типа для возвращаемого значения.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `calloc` возвращает указатель на выделенную память. Пространство в хранилище, на которое указывает возвращаемое значение, гарантированно выровнено подходящим для хранения любого типа объектов образом. Чтобы получить указатель на тип, отличный от `void`, используйте приведение типов для возвращаемого значения.  
   
-## Заметки  
- Функция `calloc` выделяет дисковое пространство для массива из `num` элементов, каждый из которых имеет размер `size`.  Каждый элемент инициализируется значением 0.  
+## <a name="remarks"></a>Примечания  
+ Функция `calloc` выделяет пространство для хранения массива из `num` элементов, каждый из которых имеет размер `size`. Каждый элемент инициализируется значением 0.  
   
- `calloc` задает для параметра `errno` значение `ENOMEM`, если выделение памяти завершается сбоем или количество запрошенной памяти превышает `_HEAP_MAXREQ`.  Сведения об этих и других кодах ошибок см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Функция `calloc` задает для параметра `errno` в значение `ENOMEM`, если выделение памяти завершается сбоем или количество запрошенной памяти превышает `_HEAP_MAXREQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `calloc` вызывает `malloc` для использования функции C\+\+ [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md), чтобы установить новый режим обработки.  Указывает, может ли новый режим обработки, при сбое вызова `malloc`, использовать новую процедуру обработчика как набор [\_set\_new\_handler](../Topic/_set_new_handler.md).  По умолчанию `malloc` не вызывает новую процедуру обработчика при сбое выделения памяти.  Можно переопределить это поведение по умолчанию, чтобы в случае сбоя предоставления памяти методом `calloc` метод `malloc` вызывал новую процедуру обработчика таким же образом, как это делает оператор `new` при сбое по той же причине.  Чтобы переопределить значение по умолчанию, вызовите  
+ Функция `calloc` вызывает функцию `malloc` для использования функции C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md), чтобы установить новый режим обработки. Новый режим обработки указывает, должна ли функция `malloc` при сбое вызывать новую подпрограмму обработчика, заданную функцией [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). По умолчанию в случае, если выделить память не удается, `malloc` не вызывает новую подпрограмму обработчика. Можно переопределить это поведение по умолчанию, чтобы в случае сбоя предоставления памяти функцией `calloc` функция `malloc` вызывала новую подпрограмму обработчика таким же образом, как это делает оператор `new` при сбое по той же причине. Чтобы переопределить значение по умолчанию, вызовите  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- на ранних этапах программы или компонуйте с использованием NEWMODE.OBJ \(см. [Параметры ссылок](../Topic/Link%20Options.md)\).  
+ на ранних этапах программы или выполните компоновку с использованием NEWMODE.OBJ (см. раздел [Параметры ссылок](../../c-runtime-library/link-options.md)).  
   
- Когда приложение связано с отладочной версией библиотек времени выполнения языка C, `calloc` соответствует [\_calloc\_dbg](../../c-runtime-library/reference/calloc-dbg.md).  Дополнительные сведения о том, как происходит управление кучей в процессе отладки см. в разделе [Отладочная куча CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Когда приложение связано с отладочной версией библиотек времени выполнения языка C, функция `calloc` соответствует функции [_calloc_dbg](../../c-runtime-library/reference/calloc-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `calloc` помечен `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним.  Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
+ Функция `calloc` имеет метки `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`calloc`|\<stdlib.h\> и \<malloc.h\>|  
+|-------------|---------------------|  
+|`calloc`|\<stdlib.h> и \<malloc.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_calloc.c  
@@ -109,11 +126,14 @@ int main( void )
 }  
 ```  
   
-  **Allocated 40 long integers**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocated 40 long integers  
+```  
   
-## См. также  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   

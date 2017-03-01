@@ -1,55 +1,72 @@
 ---
-title: "_dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tdupenv_s_dbg"
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tdupenv_s_dbg - функция"
-  - "dupenv_s_dbg - функция"
-  - "_wdupenv_s_dbg - функция"
-  - "переменные среды"
-  - "tdupenv_s_dbg - функция"
-  - "wdupenv_s_dbg - функция"
-  - "_dupenv_s_dbg - функция"
+title: "_dupenv_s_dbg, _wdupenv_s_dbg | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _tdupenv_s_dbg
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tdupenv_s_dbg function
+- dupenv_s_dbg function
+- _wdupenv_s_dbg function
+- environment variables
+- tdupenv_s_dbg function
+- wdupenv_s_dbg function
+- _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _dupenv_s_dbg, _wdupenv_s_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bfe2abe691a3f82b261f36f7581c4284aa1f6624
+ms.lasthandoff: 02/24/2017
 
-Получают значение из текущей среды.  Версии [\_dupenv\_s, \_wdupenv\_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md), которые выделяют память с [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) для предоставления дополнительных сведений об отладке.  
+---
+# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
+Получают значение из текущей среды.  Версии функций [_dupenv_s _wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md), которые выделяют память для предоставления дополнительных сведений об отладке с помощью функции [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _dupenv_s_dbg(  
@@ -70,7 +87,7 @@ errno_t _wdupenv_s_dbg(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Буфер для хранения значения переменной.  
   
@@ -84,39 +101,39 @@ errno_t _wdupenv_s_dbg(
  Запрошенный тип блока памяти: `_CLIENT_BLOCK` или `_NORMAL_BLOCK`.  
   
  `filename`  
- Указатель на имя файла исходного кода или `NULL`.  
+ Указатель на имя исходного файла или `NULL`.  
   
  `linenumber`  
- Номер строки в файле исходного кода или `NULL`.  
+ Номер строки в исходном файле или `NULL`.  
   
-## Возвращаемое значение  
- Ноль в случае успеха, код ошибки при сбое.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль при успешном выполнении, код ошибки при сбое.  
   
- Эти функции проверяют свои параметры; если `buffer` или `varname` равно `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают `EINVAL`.  
+ Эти функции проверяют свои параметры. Если `buffer` или `varname` имеют значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции задают для `errno` значение `EINVAL` и возвращают `EINVAL`.  
   
- Если эти функции не могут выделить достаточно памяти, они устанавливают `buffer` в значение `NULL` и `numberOfElements` в значение 0, и возвращают `ENOMEM`.  
+ Если этим функциям не удается выделить достаточно памяти, они задают для параметра `buffer` значение `NULL`, а для `numberOfElements` значение 0 и возвращают `ENOMEM`.  
   
-## Заметки  
- Функции `_dupenv_s_dbg` и `_wdupenv_s_dbg` совпадают с `_dupenv_s` и `_wdupenv_s` за исключением того, что если указано `_DEBUG`, эти функции используют отладочную версию [malloc](../../c-runtime-library/reference/malloc.md), [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md), чтобы выделить память для значения переменной среды.  Дополнительные сведения о возможностях для отладки `_malloc_dbg` см. в разделе [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+## <a name="remarks"></a>Примечания  
+ Функции `_dupenv_s_dbg` и `_wdupenv_s_dbg` идентичны `_dupenv_s` и `_wdupenv_s` за исключением того, что если определен флаг `_DEBUG`, эти функции используют отладочную версию функций [malloc](../../c-runtime-library/reference/malloc.md), [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) для выделения памяти для повторяющейся строки. Сведения о компонентах отладки `_malloc_dbg` см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
- В большинстве случаев не нужно вызывать эти функции явно.  Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`.  При определенном `_CRTDBG_MAP_ALLOC` вызовы `_dupenv_s` и `_wdupenv_s` отображаются в `_dupenv_s_dbg` и `_wdupenv_s_dbg` соответственно, с `blockType` установленным в `_NORMAL_BLOCK`.  Таким образом, нет необходимости явно вызывать эти функции, если не требуется пометить блоки кучи как `_CLIENT_BLOCK`.  Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`. Если определен флаг `_CRTDBG_MAP_ALLOC`, вызовы функций `_dupenv_s` и `_wdupenv_s` повторно сопоставляются с `_dupenv_s_dbg` и `_wdupenv_s_dbg` соответственно, а для параметра `blockType` задается флаг `_NORMAL_BLOCK`. Таким образом, не требуется явно вызывать эти функции, если только нет необходимости пометить блоки кучи как `_CLIENT_BLOCK`. Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_dupenv_s_dbg`|\<crtdbg.h\>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_dupenv_s_dbg`|\<crtdbg.h>|  
+|`_wdupenv_s_dbg`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_dupenv_s_dbg.c  
@@ -140,18 +157,18 @@ int main( void )
 }  
 ```  
   
-## Пример результатов выполнения  
+## <a name="sample-output"></a>Пример результатов выполнения  
   
 ```  
 pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
 nonexistentvariable = (null)  
 ```  
   
-## Эквивалент в .NET Framework  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
  [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   
  [Константы среды](../../c-runtime-library/environmental-constants.md)   
- [getenv\_s, \_wgetenv\_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [\_putenv\_s, \_wputenv\_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+ [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)

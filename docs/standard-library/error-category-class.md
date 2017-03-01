@@ -1,70 +1,232 @@
 ---
-title: "Класс error_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::error_category"
-  - "system_error/std::error_category"
-  - "error_category"
-  - "std.error_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "error_category - класс"
+title: "Класс error_category | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::error_category
+- system_error/std::error_category
+- error_category
+- std.error_category
+dev_langs:
+- C++
+helpviewer_keywords:
+- error_category class
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Класс error_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 7700ffce8b04f9caad33c08f03f0585c29a43efd
+ms.lasthandoff: 02/24/2017
 
-Представляет абстрактный, общий базовый класс для объектов, описывающий категорию кодов ошибок.  
+---
+# <a name="errorcategory-class"></a>Класс error_category
+Представляет абстрактный, общий базовый класс для объектов, который описывает категорию кодов ошибок.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+class error_category;
 ```  
-class error_category;  
-```  
   
-## Заметки  
- Реализация двух стандартных объектов `error_category`: [generic\_category](../Topic/generic_category.md) и [system\_category](../Topic/system_category.md).  
+## <a name="remarks"></a>Примечания  
+ `error_category` реализуют два стандартных объекта: [generic_category](../standard-library/system-error-functions.md#generic_category) и [system_category](../standard-library/system-error-functions.md#system_category).  
   
-### TypeDefs  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[value\_type](../Topic/error_category::value_type.md)|Тип, представляющий значение кода хранимых ошибки.|  
+|[value_type](#error_category__value_type)|Тип, представляющий сохраненное значение кода ошибки.|  
   
-### Функции\-члены  
-  
-|||  
-|-|-|  
-|[default\_error\_condition](../Topic/error_category::default_error_condition.md)|Сохраняет значение кода ошибки для объекта условия ошибки.|  
-|[equivalent](../Topic/error_category::equivalent.md)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|  
-|[сообщение](../Topic/error_category::message.md)|Возвращает имя указанного кода ошибки.|  
-|[имя](../Topic/error_category::name.md)|Возвращает имя категории.|  
-  
-### Операторы  
+### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[operator\=\=](../Topic/error_category::operator==.md)|Проверяет на равенство `error_category` объектов.|  
-|[operator\!\=](../Topic/error_category::operator!=.md)|Проверяет на неравенство между `error_category` объектов.|  
-|[operator\<](../Topic/error_category::operator%3C.md)|Проверяет, [error\_category](../standard-library/error-category-class.md) объект меньше, чем `error_category` переданный объект для сравнения.|  
+|[default_error_condition](#error_category__default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|  
+|[equivalent](#error_category__equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|  
+|[message](#error_category__message)|Возвращает имя указанного кода ошибки.|  
+|[name](#error_category__name)|Возвращает имя категории.|  
   
-## Требования  
- **Заголовок:** \<system\_error\>  
+### <a name="operators"></a>Операторы  
+  
+|||  
+|-|-|  
+|[оператор==](#error_category__operator_eq_eq)|Проверяет равенство между объектами `error_category`.|  
+|[оператор!=](#error_category__operator_neq)|Проверяет неравенство между объектами `error_category`.|  
+|[оператор<](#error_category__operator_lt_)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<system_error>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<system\_error\>](../standard-library/system-error.md)
+##  <a name="a-nameerrorcategorydefaulterrorconditiona--errorcategorydefaulterrorcondition"></a><a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
+ Сохраняет значение кода ошибки для объекта условия ошибки.  
+  
+```
+virtual error_condition default_error_condition(int _Errval) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`_Errval`|Значение кода ошибки для хранения в [error_condition](../standard-library/error-condition-class.md).|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает `error_condition(_Errval, *this)`.  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-nameerrorcategoryequivalenta--errorcategoryequivalent"></a><a name="error_category__equivalent"></a>  error_category::equivalent  
+ Возвращает значение, указывающее, эквивалентны ли объекты ошибок.  
+  
+```
+virtual bool equivalent(value_type _Errval,
+    const error_condition& _Cond) const;
+
+virtual bool equivalent(const error_code& _Code,
+    value_type _Errval) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`_Errval`|Значение кода ошибки для сравнения.|  
+|`_Cond`|Объект [error_condition](../standard-library/error-condition-class.md) для сравнения.|  
+|`_Code`|Объект [error_code](../standard-library/error-code-class.md) для сравнения.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `true`, если категории и значения равны; в противном случае — `false`.  
+  
+### <a name="remarks"></a>Примечания  
+ Первая функция-член возвращает значение `*this == _Cond.category() && _Cond.value() == _Errval`.  
+  
+ Вторая функция-член возвращает значение `*this == _Code.category() && _Code.value() == _Errval`.  
+  
+##  <a name="a-nameerrorcategorymessagea--errorcategorymessage"></a><a name="error_category__message"></a>  error_category::message  
+ Возвращает имя указанного кода ошибки.  
+  
+```
+virtual string message(error_code::value_type val) const = 0;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`val`|Значение кода ошибки для описания.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает описательное имя кода ошибки `val` для категории.  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-nameerrorcategorynamea--errorcategoryname"></a><a name="error_category__name"></a>  error_category::name  
+ Возвращает имя категории.  
+  
+```
+virtual const char *name() const = 0;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает имя категории как строку байтов, заканчивающуюся нулем.  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-nameerrorcategoryoperatoreqeqa--errorcategoryoperator"></a><a name="error_category__operator_eq_eq"></a>  error_category::operator==  
+ Проверяет равенство между объектами `error_category`.  
+  
+```
+bool operator==(const error_category& right) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`right`|Объект для проверки на равенство.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение **true**, если объекты равны, значение **false**, если объекты не равны.  
+  
+### <a name="remarks"></a>Примечания  
+ Этот оператор-член возвращает `this == &right`.  
+  
+##  <a name="a-nameerrorcategoryoperatorneqa--errorcategoryoperator"></a><a name="error_category__operator_neq"></a>  error_category::operator!=  
+ Проверяет неравенство между объектами `error_category`.  
+  
+```
+bool operator!=(const error_category& right) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`right`|Объект для проверки на неравенство.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение **true**, если объект `error_category` не равен объекту `error_category`, передаваемому в `right`; в противном случае — значение **false**.  
+  
+### <a name="remarks"></a>Примечания  
+ Оператор-член возвращает `(!*this == right)`.  
+  
+##  <a name="a-nameerrorcategoryoperatorlta--errorcategoryoperatorlt"></a><a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
+ Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.  
+  
+```
+bool operator<(const error_category& right) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`right`|Сравниваемый объект `error_category`.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение **true,** если объект `error_category` меньше, чем объект `error_category`, переданный для сравнения; в противном случае — значение **false**.  
+  
+### <a name="remarks"></a>Примечания  
+ Оператор-член возвращает `this < &right`.  
+  
+##  <a name="a-nameerrorcategoryvaluetypea--errorcategoryvaluetype"></a><a name="error_category__value_type"></a>  error_category::value_type  
+ Тип, представляющий сохраняемое значение кода ошибки.  
+  
+```
+typedef int value_type;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Это определение типа — синоним для `int`.  
+  
+## <a name="see-also"></a>См. также  
+ [<system_error>](../standard-library/system-error.md)
+
+
+
+

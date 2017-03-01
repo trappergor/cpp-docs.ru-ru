@@ -1,82 +1,98 @@
 ---
-title: "_heapmin | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapmin"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_heapmin"
-  - "heapmin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_heapmin - функция"
-  - "память в куче"
-  - "heapmin - функция"
-  - "кучи, освобождение неиспользуемой памяти"
-  - "память, освобождение"
-  - "уменьшение куч"
+title: "_heapmin | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapmin
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _heapmin
+- heapmin
+dev_langs:
+- C++
+helpviewer_keywords:
+- heap memory
+- minimizing heaps
+- memory, releasing
+- heaps, releasing unused memory
+- _heapmin function
+- heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _heapmin
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
+ms.lasthandoff: 02/24/2017
 
-Возвращает операционной системе неиспользованную память кучи.  
+---
+# <a name="heapmin"></a>_heapmin
+Освобождает неиспользуемую память кучи для операционной системы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _heapmin( void );  
 ```  
   
-## Возвращаемое значение  
- В случае успеха `_heapmin` возвращает 0; в противном случае функция возвращает –1 и устанавливает `errno` в `ENOSYS`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успешного выполнения `_heapmin` возвращает 0; в противном случае функция возвращает –1 и задает для `errno` значение `ENOSYS`.  
   
- Дополнительные сведения об этом и других кодах возврата см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `_heapmin` минимизирует кучу, возвращая неиспользуемую память кучи операционной системе.  Если операционная система не поддерживает `_heapmin`\(например, Windows 98\), функция возвращает –1 и устанавливает `errno` в `ENOSYS`.  
+## <a name="remarks"></a>Примечания  
+ Функция `_heapmin` устанавливает минимальный размер кучи, высвобождая неиспользуемую память для операционной системы. Если операционная система не поддерживает функцию `_heapmin` (например, Windows 98), эта функция возвращает -1 и устанавливает для параметра `errno` значение `ENOSYS`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_heapmin`|\<malloc.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_heapmin`|\<malloc.h>|\<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
  [free](../../c-runtime-library/reference/free.md)   
- [\_heapadd](../../c-runtime-library/heapadd.md)   
- [\_heapchk](../../c-runtime-library/reference/heapchk.md)   
- [\_heapset](../../c-runtime-library/heapset.md)   
- [\_heapwalk](../Topic/_heapwalk.md)   
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapchk](../../c-runtime-library/reference/heapchk.md)   
+ [_heapset](../../c-runtime-library/heapset.md)   
+ [_heapwalk](../../c-runtime-library/reference/heapwalk.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)

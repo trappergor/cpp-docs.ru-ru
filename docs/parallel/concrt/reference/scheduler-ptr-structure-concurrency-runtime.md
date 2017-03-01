@@ -1,63 +1,117 @@
 ---
-title: "Структура scheduler_ptr (среда выполнения с параллелизмом) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplinterface/concurrency::scheduler_ptr"
-dev_langs: 
-  - "C++"
+title: "Структура scheduler_ptr | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplinterface/concurrency::scheduler_ptr
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Структура scheduler_ptr (среда выполнения с параллелизмом)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
+ms.lasthandoff: 02/24/2017
 
-Представляет указатель на планировщик.  Этот класс существует для того, чтобы обеспечить возможность использования спецификации общего времени жизни путем применения shared\_ptr или простой ссылки с помощью необработанного указателя.  
+---
+# <a name="schedulerptr-structure"></a>Структура scheduler_ptr
+Представляет указатель на планировщик. Этот класс существует для того, чтобы обеспечить возможность использования спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+struct scheduler_ptr;
 ```  
-struct scheduler_ptr;  
-```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Конструктор scheduler\_ptr::scheduler\_ptr \(среда выполнения с параллелизмом\)](../Topic/scheduler_ptr::scheduler_ptr%20Constructor%20\(Concurrency%20Runtime\).md)|Перегружен.  Создает указатель планировщика из shared\_ptr планировщику|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Конструктор scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Метод scheduler\_ptr::get \(среда выполнения с параллелизмом\)](../Topic/scheduler_ptr::get%20Method%20\(Concurrency%20Runtime\).md)|Возвращает необработанный указатель планировщику|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод scheduler_ptr::Get](#get)|Возвращает необработанный указатель планировщику|  
   
-### Открытые операторы  
+### <a name="public-operators"></a>Открытые операторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Оператор scheduler\_ptr::operator bool \(среда выполнения с параллелизмом\)](../Topic/scheduler_ptr::operator%20bool%20Operator%20\(Concurrency%20Runtime\).md)|Проверьте, является ли указатель планировщика отличным от null|  
-|[Оператор scheduler\_ptr::operator\-\> \(среда выполнения с параллелизмом\)](../Topic/scheduler_ptr::operator-%3E%20Operator%20\(Concurrency%20Runtime\).md)|Поведение, как у указателя|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Оператор scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|  
+|[scheduler_ptr::operator -&gt; оператор](#operator_ptr)|Поведение, как у указателя|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `scheduler_ptr`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** pplinterface.h  
   
  **Пространство имен:** concurrency  
   
-## См. также  
- [Пространство имен concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>Метод scheduler_ptr::Get  
+ Возвращает необработанный указатель планировщику  
+  
+```
+scheduler_interface* get() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+  
+##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr::operator bool   
+ Проверьте, является ли указатель планировщика отличным от null  
+  
+''' bool() оператор const;
+```  
+  
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
+ Behave like a pointer  
+  
+```
+operator->() scheduler_interface * const;
+```  
+  
+### Return Value  
+  
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
+ Creates a scheduler pointer from shared_ptr to scheduler  
+  
+```
+явные scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);</scheduler_interface>
+
+явные scheduler_ptr (_In_opt_ pScheduler scheduler_interface *);
+```  
+  
+### Parameters  
+ `scheduler`  
+ `pScheduler`  
+  
+## See Also  
+ [concurrency Namespace](concurrency-namespace.md)
+

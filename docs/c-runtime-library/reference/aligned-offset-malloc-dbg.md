@@ -1,48 +1,65 @@
 ---
-title: "_aligned_offset_malloc_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_malloc_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_offset_malloc_dbg"
-  - "aligned_offset_malloc_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_offset_malloc_dbg - функция"
-  - "aligned_offset_malloc_dbg - функция"
+title: "_aligned_offset_malloc_dbg | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_malloc_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_offset_malloc_dbg
+- aligned_offset_malloc_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_offset_malloc_dbg function
+- aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _aligned_offset_malloc_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 67f314989e0069902ae983805a4f8ce839307ea5
+ms.lasthandoff: 02/24/2017
 
-Выделяет память по определенной границе выравнивания \(только отладочная версия\).  
+---
+# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+Размещение памяти на указанной границе выравнивания (только в отладочной версии).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void * _aligned_offset_malloc_dbg(  
@@ -54,53 +71,53 @@ void * _aligned_offset_malloc_dbg(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `size`  
+#### <a name="parameters"></a>Параметры  
+ [in] `size`  
  Размер запрошенного выделения памяти.  
   
- \[входящий\] `alignment`  
- Значение выравнивания, которое должно быть целочисленной степенью двойки.  
+ [входной] `alignment`  
+ Значение выравнивания, которое должно быть целой степенью числа 2.  
   
- \[входящий\] `offset`  
- Смещение в выделении памяти для обеспечения выравнивания.  
+ [входной] `offset`  
+ Смещение в выделение памяти для принудительного выполнения выравнивания.  
   
- \[входящий\] `filename`  
+ [in] `filename`  
  Указатель на имя исходного файла, который запросил операцию выделения, или NULL.  
   
- \[входящий\] `linenumber`  
- Номер строки в исходном файле, где была запрошена операция выделения, или NULL.  
+ [входной] `linenumber`  
+ Номер строки в исходном файле, в которой была запрошена операция выделения, или NULL.  
   
-## Возвращаемое значение  
- Указатель на блок памяти, который был выделен, или `NULL` , если операция завершилась неудачно.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на выделенный блок памяти или значение `NULL` в случае сбоя операции.  
   
-## Заметки  
- `_aligned_offset_malloc_dbg` \- отладочная версия функции [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  Если [\_DEBUG](../Topic/_DEBUG.md) не определена, каждый вызов `_aligned_offset_malloc_dbg` сводится к вызову `_aligned_offset_malloc`.  И `_aligned_offset_malloc`, и `_aligned_offset_malloc_dbg` выделяют блок памяти в базовой куче, но `_aligned_offset_malloc_dbg` предлагает несколько функций отладки: буферы по обеим сторонам пользовательского участка блока для проверки на наличие утечек, параметр типа блока для отслеживания определенных типов выделения и сведения по `filename`\/`linenumber` для определения источника запросов на выделение.  
+## <a name="remarks"></a>Примечания  
+ `_aligned_offset_malloc_dbg` — это отладочная версия функции [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_aligned_offset_malloc_dbg` сокращается до вызова функции `_aligned_offset_malloc`. И `_aligned_offset_malloc`, и `_aligned_offset_malloc_dbg` выполняют выделение блока памяти в основной куче, однако `_aligned_offset_malloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
   
- `_aligned_offset_malloc_dbg` выделяет блок памяти с немного большим пространством, чем требовал `size`.  Дополнительное место используется диспетчером отладочной кучи для связывания отладочных блоков памяти и обеспечения приложения сведениями заголовка отладки и буферами перезаписи.  При выделении блока, пользовательская часть блока заполняется значением 0xCD, а каждый из буферов перезаписи заполняется 0xFD.  
+ `_aligned_offset_malloc_dbg` выделяет блок памяти, добавив немного больше пространства, чем запрошено `size`. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. При выделении блока пользовательская часть блока заполняется значением 0xCD, а все буферы перезаписи — значением 0xFD.  
   
- `_aligned_offset_malloc_dbg` удобна, когда выравнивание необходимо во вложенном элементе; например, если выравнивание было необходимо во вложенном классе.  
+ `_aligned_offset_malloc_dbg` можно использовать в ситуациях, когда необходимо выравнивание вложенного элемента, например, если требуется выравнивание вложенного класса.  
   
- `_aligned_offset_malloc_dbg` основана на `malloc`; дополнительные сведения см. в разделе [malloc](../../c-runtime-library/reference/malloc.md).  
+ Функция `_aligned_offset_malloc_dbg` основана на функции `malloc`. Дополнительные сведения см. в разделе [malloc](../../c-runtime-library/reference/malloc.md).  
   
- Эта функция устанавливает `errno` в значение `ENOMEM`, выделение памяти завершилось неудачно, или если запрошенный размер был больше `_HEAP_MAXREQ`.  Дополнительные сведения о `errno` см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  Кроме того, `_aligned_offset_malloc` проверяет свои параметры.  Если `alignment` не степень двойки, или если `offset` больше или равно `size` и отлично от нуля, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция возвращает `NULL` и устанавливает `errno` в значение `EINVAL`.  
+ Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_offset_malloc` проверяет свои параметры. Если значение `alignment` не является степенью числа 2 или `offset` больше или равно `size` и не равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
- Сведения о том, как происходит выделение, инициализация и управление блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- Дополнительные сведения о типах блока выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ Дополнительные сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_aligned_offset_malloc_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_aligned_offset_malloc_dbg`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Только отладочные версии [Библиотеки времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

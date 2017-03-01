@@ -1,46 +1,66 @@
 ---
-title: "Потоки ввода/вывода | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ввод-вывод [C++], поток"
-  - "потоковый ввод-вывод"
+title: "Потоки ввода-вывода | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], stream
+- stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Потоки ввода/вывода
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4fdfb4ece713c071a4b740127428c16303c0ab10
+ms.lasthandoff: 02/24/2017
 
-`basic_iostream`, который определен в файле заголовка \<istream\>, шаблон класса для объектов, которые обрабатывают оба потока ВВОДА\-ВЫВОДА ввода и вывода символьно\-ориентированных.  
+---
+# <a name="inputoutput-streams"></a>Потоки ввода/вывода
+`basic_iostream`, который определен в файле заголовка \<istream>, является классом шаблона для объектов, обрабатывающих потоки ввода-вывода на основе входных и выходных символов.  
   
- 2 Typedef, определяющие специализации символ\- для `basic_iostream` и могут помочь сделать код более удобным для чтения. `iostream` \(не путать с файлом \<iostream\>заголовка\) поток ВВОДА\-ВЫВОДА на основе `basic_iostream<char>`; `wiostream` поток ВВОДА\-ВЫВОДА на основе `basic_iostream<wchar_t>`.  
+ Существуют два определения типов, определяющие специальные для символов специализации для `basic_iostream` и упрощающие чтение кода: `iostream` (не следует путать с файлом заголовка \<iostream>) — это поток ввода-вывода, основанный на `basic_iostream<char>`; `wiostream` — это поток ввода-вывода, основанный на `basic_iostream<wchar_t>`.  
   
- Дополнительные сведения см. в разделах [Класс basic\_iostream](../standard-library/basic-iostream-class.md), [iostream](../Topic/iostream.md) и [wiostream](../Topic/wiostream.md).  
+ Дополнительные сведения см. в разделах [Класс basic_iostream](../standard-library/basic-iostream-class.md), [iostream](../standard-library/basic-iostream-class.md) и [wiostream](../standard-library/basic-iostream-class.md).  
   
- Наследование от `basic_iostream` шаблон класса `basic_fstream`, используемый к символьным данным потока и наоборот файлов.  
+ Производным из `basic_iostream` является шаблон класса `basic_fstream`, который используется для потоковой передачи символьных данных в файлы и из них.  
   
- Также typedef, предоставляющие специализации символ\- для `basic_fstream`.  Они `fstream`, поток файлового ввода\-вывода на основе `char` и `wfstream`, поток файлового ввода\-вывода на основе `wchar_t`.  Дополнительные сведения см. в разделах [Класс basic\_fstream](../standard-library/basic-fstream-class.md), [fstream](../Topic/fstream.md) и [wfstream](../Topic/wfstream.md).  С помощью этих typedef требует включения файла заголовка \<fstream\>.  
+ Также имеются определения типов, которые предоставляют специальные для символов специализации для `basic_fstream`. К ним относятся `fstream`, представляющая собой поток файлового ввода-вывода, основанный на `char`, и `wfstream`, представляющая собой поток файлового ввода-вывода, основанный на `wchar_t`. Дополнительные сведения см. в разделах [Класс basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) и [wfstream](../standard-library/basic-fstream-class.md). Применение этих определений типов требует включения файла заголовка \<fstream>.  
   
 > [!NOTE]
->  Если объект `basic_fstream` используется для выполнения вводом\-выводом, хотя основной буфер содержит отдельные; позиции для чтения и записи, текущие позиции ввода и текущего уровня производства связаны друг с другом, поэтому при чтении перемещение некоторых данных позиция вывода.  
+>  Если объект `basic_fstream` используется для выполнения файлового ввода-вывода, хотя базовый буфер содержит отдельно назначенные позиции для чтения и записи, текущие позиции ввода и вывода связываются друг с другом, поэтому, чтение некоторых данных перемещает позицию вывода.  
   
- Шаблон класса `basic_stringstream` и его общая специализация, `stringstream`, часто используются для работы с объектами потока ВВОДА\-ВЫВОДА вставки и извлечь символьные данные.  Для получения дополнительной информации см. [Класс basic\_stringstream](../standard-library/basic-stringstream-class.md).  
+ Шаблон класса `basic_stringstream` и его общая специализация `stringstream` часто используются для работы с объектами потока ввода-вывода для вставки и извлечения символьных данных. Дополнительные сведения см. в разделе [Класс basic_stringstream](../standard-library/basic-stringstream-class.md).  
   
-## См. также  
- [stringstream](../Topic/stringstream.md)   
- [Класс basic\_stringstream](../standard-library/basic-stringstream-class.md)   
- [\<sstream\>](../standard-library/sstream.md)   
- [Программирование iostream](../Topic/iostream%20Programming.md)   
- [Стандартная библиотека C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [stringstream](../standard-library/basic-stringstream-class.md)   
+ [Класс basic_stringstream](../standard-library/basic-stringstream-class.md)   
+ [\<sstream>](../standard-library/sstream.md)   
+ [Программирование iostream](../standard-library/iostream-programming.md)   
+ [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

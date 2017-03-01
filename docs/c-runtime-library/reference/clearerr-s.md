@@ -1,49 +1,65 @@
 ---
-title: "clearerr_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "clearerr_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clearerr_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clearerr_s - функция"
-  - "индикатор ошибок для потоков"
-  - "перезадание индикатора ошибок в потоке"
+title: "clearerr_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- clearerr_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clearerr_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- error indicator for streams
+- resetting stream error indicator
+- clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# clearerr_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: a8904000ae9175f0f6d43b70bc8c6af5e5b572dc
+ms.lasthandoff: 02/24/2017
 
-Сбрасывает индикатор ошибки для потока.  Это версия [clearerr](../../c-runtime-library/reference/clearerr.md) с усовершенствованиями безопасности, как описано в [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="clearerrs"></a>clearerr_s
+Сбрасывает индикатор ошибки для потока. Это версия функции [clearerr](../../c-runtime-library/reference/clearerr.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t clearerr_s(  
@@ -51,27 +67,27 @@ errno_t clearerr_s(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE`  
   
-## Возвращаемое значение  
- Ноль в случае успешного завершения; `EINVAL`, если `stream` равен NULL.  
+## <a name="return-value"></a>Возвращаемое значение  
+ 0 при успешном завершении; `EINVAL`, если `stream` имеет нулевое значение.  
   
-## Заметки  
- Функция `clearerr_s` сбрасывает индикатор ошибки и индикатор конца файла для `stream`.  Индикаторы ошибки не очищаются автоматически; когда установлен индикатор ошибки для определенного потока, операции в этом потоке будут продолжать возвращать значение ошибки до вызова `clearerr_s`, `clearerr`, `fseek`, `fsetpos` или `rewind`  
+## <a name="remarks"></a>Примечания  
+ Функция `clearerr_s` сбрасывает индикатор ошибки и индикатор конечного файла для `stream`. Индикаторы ошибок автоматически не удаляются. После того как индикатор ошибки для указанного потока будет задан, операции в этом потоке будут возвращать значение ошибки до тех пор, пока не будет вызван `clearerr_s`, `clearerr`, `fseek`, `fsetpos` или `rewind`.  
   
- Если параметр `stream` имеет значение NULL, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, функция устанавливает `errno` в `EINVAL` и возвращает `EINVAL`.  
+ Если параметр `stream` имеет значение NULL, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EINVAL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`clearerr_s`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`clearerr_s`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_clearerr_s.c  
@@ -113,16 +129,26 @@ int main( void )
 }  
 ```  
   
-  **`n` `n`Write error: Bad file descriptor**  
-**Will input cause an error? n**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## См. также  
+n  
+  
+```  
+  
+```Output  
+  
+      nWrite error: Bad file descriptor  
+Will input cause an error? n  
+```  
+  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)   
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [\_eof](../../c-runtime-library/reference/eof.md)   
+ [_eof](../../c-runtime-library/reference/eof.md)   
  [feof](../../c-runtime-library/reference/feof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

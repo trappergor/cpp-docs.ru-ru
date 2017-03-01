@@ -1,69 +1,80 @@
 ---
-title: "Класс tuple | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1::tuple"
-  - "std.tr1.tuple"
-  - "tuple"
-  - "tr1.tuple"
-  - "std::tr1::tuple"
-  - "tuple/std::tr1::tuple"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tuple - класс"
-  - "tuple - класс [TR1]"
+title: "Класс tuple | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tuple
+- std::tuple
+- tuple/std::tuple
+- tuple/std::tuple::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс tuple
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 5a06cb149bd08f733f2b43692747d33d81ab7a7b
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="tuple-class"></a>Класс tuple
 Создает последовательность элементов фиксированной длины.  
   
-## Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис  
 ```  
-template<class T1, class T2, ..., class TN>  
 class tuple {  
 public:  
-    tuple();  
-    explicit tuple(P1, P2, ..., PN);              // 0 < N  
-    tuple(const tuple&);  
-    template <class U1, class U2, ..., class UN>  
-        tuple(const tuple<U1, U2, ..., UN>&);  
-    template <class U1, class U2>  
-        tuple(const pair<U1, U2>&);               // N == 2  
-    void swap(tuple& right);  
-    tuple& operator=(const tuple&);  
-    template <class U1, class U2, ..., class UN>  
-        tuple& operator=(const tuple<U1, U2, ..., UN>&);  
-    template <class U1, class U2>  
-        tuple& operator=(const pair<U1, U2>&);    // N == 2  
-    };  
-```  
+   tuple();
+   explicit tuple(P1, P2, ..., PN); // 0 < N  
+   tuple(const tuple&);
+   template <class U1, class U2, ..., class UN>  
+      tuple(const tuple<U1, U2, ..., UN>&);
+   template <class U1, class U2>  
+      tuple(const pair<U1, U2>&); // N == 2  
+
+   void swap(tuple& right);
+   tuple& operator=(const tuple&);
+   template <class U1, class U2, ..., class UN>  
+      tuple& operator=(const tuple<U1, U2, ..., UN>&);
+   template <class U1, class U2>  
+      tuple& operator=(const pair<U1, U2>&); // N == 2  
+   };  
   
-#### Параметры  
+#### Parameters  
  `TN`  
- Тип Nth элемента кортежа.  
+ The type of the Nth tuple element.  
   
-## Заметки  
- Класс шаблона описание объекта, который хранит объекты N типов `T1`, `T2`,…, `TN` соответственно, где, `0 <= N <= Nmax`.  Область экземпляра `tuple<T1, T2, ..., TN>` кортежа число `N` аргументов шаблона.  Индекс аргумента `Ti` шаблона и соответствующие сохраненного значения данного типа `i - 1`.  Таким образом, а не типы число от 1 до N в данной документации, значения соответствующего индекса выстраиваем в диапазоне от 0 до N — 1.  
+## Remarks  
+ The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.  
   
-## Пример  
+## Example  
   
-```  
+```cpp  
 // tuple.cpp  
 // compile with: /EHsc  
   
@@ -119,18 +130,232 @@ int main( )
 }  
 ```  
   
-  **Кортеж p1 выглядит следующим образом: \(10, 0.011, единица\).**  
-**Кортеж p2 выглядит следующим образом: \(10, 0.222, 2\).**  
-**Кортеж p3 выглядит следующим образом: \(10, 0.011, единица\).**  
-**Кортежи в векторе**  
-**\(10, 0.011, единица\).**  
-**\(10, 0.222, 2\).**  
-**\(3, 0.033, 3\).**   
-## Требования  
- **Заголовок:**\<tuple\>  
+```Output  
+The tuple p1 is: ( 10, 0.011, one ).  
+The tuple p2 is: ( 10, 0.222, two ).  
+The tuple p3 is: ( 10, 0.011, one ).  
+The tuples in the vector are  
+( 10, 0.011, one ).  
+( 10, 0.222, two ).  
+( 3, 0.033, three ).  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<tuple>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<tuple\>](../standard-library/tuple.md)   
- [Функция make\_tuple](../Topic/make_tuple%20Function.md)
+##  <a name="a-nametupleoperatoreqa--tupleoperator"></a><a name="tuple__operator_eq"></a>  tuple::operator=  
+ Назначает объект `tuple`.  
+  
+```  
+tuple& operator=(const tuple& right);
+
+template <class U1, class U2, ..., class UN>  
+   tuple& operator=(const tuple<U1, U2, ..., UN>& right);
+
+template <class U1, class U2>  
+   tuple& operator=(const pair<U1, U2>& right); // N == 2  
+
+tuple& operator=(tuple&& right);
+   
+template <class U1, class U2>  
+   tuple& operator=(pair<U1, U2>&& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `UN`  
+ Тип n-го скопированного элемента кортежа.  
+  
+ `right`  
+ Кортеж, из которого выполняется копирование.  
+  
+### <a name="remarks"></a>Примечания  
+ Первые два оператора-члена назначают элементы `right` соответствующим элементам `*this`. Третий оператор-член назначает `right.first` элементу с индексом 0 в `*this` и `right.second` — элементу с индексом 1. Все три оператора-члена возвращают значение `*this`.  
+  
+ Остальные операторы-члены являются аналогами более ранних версий, но с [деклараторами ссылок rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__tuple__tuple_operator_as.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+#include <utility>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main()   
+    {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1;   
+    c1 = c0;   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c1);   
+    std::cout << " " << std::get<1>(c1);   
+    std::cout << " " << std::get<2>(c1);   
+    std::cout << " " << std::get<3>(c1);   
+    std::cout << std::endl;   
+  
+    std::tuple<char, int> c2;   
+    c2 = std::make_pair('x', 4);   
+  
+// display contents " x 4"   
+    std::cout << " " << std::get<0>(c2);   
+    std::cout << " " << std::get<1>(c2);   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+x 4  
+```  
+  
+##  <a name="a-nametupleswapa--tupleswap"></a><a name="tuple_swap"></a>  tuple:swap  
+ Обмен элементами между двумя кортежами.  
+  
+```  
+template <class... Types>  
+   void swap(tuple<Types...&> left, tuple<Types...&> right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`left`|Кортеж, элементы которого должны быть заменены элементами кортежа `right`.|  
+|`right`|Кортеж, элементы которого должны быть заменены элементами кортежа `left`.|  
+  
+### <a name="remarks"></a>Примечания  
+ Функция выполняет `left.swap(right)`.  
+  
+##  <a name="a-nametupletuplea--tupletuple"></a><a name="tuple__tuple"></a>  tuple::tuple  
+ Создает объект `tuple`.  
+  
+```  
+constexpr tuple();
+explicit constexpr tuple(const Types&...); 
+template <class... UTypes>   
+   explicit constexpr tuple(UTypes&&...);
+  
+tuple(const tuple&) = default;  
+tuple(tuple&&) = default;  
+  
+template <class... UTypes>  
+   constexpr tuple(const tuple<UTypes...>&);
+template <class... UTypes>  
+   constexpr tuple(tuple<UTypes...>&&);
+  
+// only if sizeof...(Types) == 2  
+template <class U1, class U2>   
+   constexpr tuple(const pair<U1, U2>&);
+template <class U1, class U2>  
+   constexpr tuple(pair<U1, U2>&&);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `UN`  
+ Тип n-го скопированного элемента кортежа.  
+  
+ `right`  
+ Кортеж, из которого выполняется копирование.  
+  
+### <a name="remarks"></a>Примечания  
+ Первый конструктор создает объект, элементы которого создаются по умолчанию.  
+  
+ Второй конструктор создает объект, элементы которого представляют собой копии, созданные из аргументов `P1`, `P2`, ..., `PN`, при этом каждый `Pi` инициализирует элемент с индексом `i - 1`.  
+  
+ Третий и четвертый конструкторы создают объект, элементы которого представляют собой копии, созданные на основе соответствующего элемента `right`.  
+  
+ Пятый конструктор создает объект, элемент которого с индексом 0 создан с копированием на основе `right.first`, а элемент с индексом 1 — создан копированием из `right.second`.  
+  
+ Остальные конструкторы являются аналогами более ранних версий, но с [декларатором ссылок Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__tuple__tuple_tuple.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+#include <utility>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main()   
+    {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1;   
+    c1 = c0;   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c1);   
+    std::cout << " " << std::get<1>(c1);   
+    std::cout << " " << std::get<2>(c1);   
+    std::cout << " " << std::get<3>(c1);   
+    std::cout << std::endl;   
+  
+    std::tuple<char, int> c2(std::make_pair('x', 4));   
+  
+// display contents " x 4"   
+    std::cout << " " << std::get<0>(c2);   
+    std::cout << " " << std::get<1>(c2);   
+    std::cout << std::endl;   
+  
+    Mytuple c3(c0);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c3);   
+    std::cout << " " << std::get<1>(c3);   
+    std::cout << " " << std::get<2>(c3);   
+    std::cout << " " << std::get<3>(c3);   
+    std::cout << std::endl;   
+  
+    typedef std::tuple<int, float, int, float> Mytuple2;   
+    Mytuple c4(Mytuple2(4, 5, 6, 7));   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c4);   
+    std::cout << " " << std::get<1>(c4);   
+    std::cout << " " << std::get<2>(c4);   
+    std::cout << " " << std::get<3>(c4);   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+```  
+  
+```Output  
+ 0 1 2 3  
+ 0 1 2 3  
+ x 4  
+ 0 1 2 3  
+ 4 5 6 7  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [\<tuple>](../standard-library/tuple.md)   
+ [Функция make_tuple](../standard-library/tuple-functions.md#make_tuple_function)
+
+

@@ -1,48 +1,65 @@
 ---
-title: "_CrtSetReportHook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportHook"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtSetReportHook"
-  - "CrtSetReportHook"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtSetReportHook - функция"
-  - "_CrtSetReportHook - функция"
+title: "_CrtSetReportHook | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportHook
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtSetReportHook
+- CrtSetReportHook
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetReportHook function
+- _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _CrtSetReportHook
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0815dc124612d4f7d3acd3df147bbfb4e3a5fda0
+ms.lasthandoff: 02/24/2017
 
-Устанавливает определяемую клиентом функцию отчетов путём её прикрепления в процесс создания отчетов среды выполнения языка C \(только отладочная версия\).  
+---
+# <a name="crtsetreporthook"></a>_CrtSetReportHook
+Устанавливает определяемую клиентом функцию отчетов путем ее прикрепления к процессу создания отчетов среды выполнения языка C (только отладочная версия).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _CRT_REPORT_HOOK _CrtSetReportHook(   
@@ -50,47 +67,47 @@ _CRT_REPORT_HOOK _CrtSetReportHook(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `reportHook`  
- Новая определяемая клиентом функция отчетов, которую необходимо прикрепить в процесс создания отчетов среды выполнения языка C.  
+ Новая определяемая клиентом функция отчетов, которую необходимо прикрепить к процессу создания отчетов среды выполнения языка C.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Возвращает предыдущую определяемую клиентом функцию отчетов.  
   
-## Заметки  
- `_CrtSetReportHook` позволяет приложению использовать собственную сообщающую об ошибках функцию в процессе обработки ошибок отладочной библиотеки времени выполнения языка C.  В результате, всякий раз, когда вызывается [\_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) для создания отчета отладки, сначала вызывается функция отчетов приложения.  Эта функциональность позволяет приложению выполнять такие операции, как фильтрация отчетов отладки, чтобы отобрать выделения конкретного типа или отправить отчет в назначения, которые недоступны при использовании `_CrtDbgReport`.  Если [\_DEBUG](../Topic/_DEBUG.md) не определен, то вызовы `_CrtSetReportHook` удаляются во время предварительной обработки.  
+## <a name="remarks"></a>Примечания  
+ `_CrtSetReportHook` позволяет приложению использовать собственную функцию отчетов в процессе создания отчетов отладочной библиотеки времени выполнения языка C. В результате всякий раз, когда для создания отчета отладки вызывается функция [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), сначала вызывается функция отчетов приложения. Эта функциональность позволяет приложению выполнять такие операции, как фильтрация отчетов отладки, чтобы сосредоточиться на выделениях памяти конкретного типа или отправлять отчет в пункты назначения, которые недоступны при использовании `_CrtDbgReport`. Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, вызовы `_CrtSetReportHook` удаляются на этапе предварительной обработки.  
   
- Более надежную версию `_CrtSetReportHook` см. в разделе [\_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
+ Более надежную версию функции `_CrtSetReportHook` см. в разделе [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
   
- Функция `_CrtSetReportHook` устанавливает определяемую клиентом функцию отчетов, указанную в `reportHook` и возвращает предыдущую определенную клиентом функцию.  В следующем примере показано, как должна быть объявлена определяемая клиентом функция отчетов:  
+ Функция `_CrtSetReportHook` устанавливает новую определяемую клиентом функцию отчетов, указанную в параметре `reportHook`, и возвращает предыдущую определенную клиентом функцию-обработчик. В следующем примере показано, как должен быть объявлен прототип определяемого клиентом обработчика отчетов:  
   
 ```  
 int YourReportHook( int reportType, char *message, int *returnValue );  
 ```  
   
- где `reportType` \- тип отчета отладки \(`_CRT_WARN`, `_CRT_ERROR` или `_CRT_ASSERT`\), `message` \- полностью собранное пользовательское отладочное сообщение, которое будет содержаться в отчете, а `returnValue` \- значение, указанное определяемой клиентом функцией отчетов, которое должна быть возвращено `_CrtDbgReport`.  Полное описание доступных типов отчетов см. в разделе [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
+ где `reportType` — тип отчета отладки (`_CRT_WARN`, `_CRT_ERROR` или `_CRT_ASSERT`), `message` — полностью собранное пользовательское отладочное сообщение, которое будет содержаться в отчете, и `returnValue` — значение, указанное определяемой клиентом функцией отчетов, которое должно возвращаться функцией `_CrtDbgReport`. Полное описание доступных типов отчетов см. в описании функции [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
   
- Если определяемая клиентом функция отчетов полностью обрабатывает сообщение отладки так, что дальнейшая выдача отчета не требуется, то функция должна возвращать `TRUE`.  Если функция возвращает `FALSE`, `_CrtDbgReport` вызывается для создания отчета отладки с использованием текущих параметров для типа, режима и файла отчета.  Кроме того, указав возвращаемое значение `_CrtDbgReport` в `returnValue`, приложение может контролировать, происходит ли прерывание при отладке.  Полное описание настройки и создания отчета об отладке см. в разделах `_CrtSetReportMode`, [\_CrtSetReportFile](../Topic/_CrtSetReportFile.md) и `_CrtDbgReport`.  
+ Если определяемая клиентом функция отчетов полностью обрабатывает сообщение отладки и дальнейшая выдача отчета не требуется, функция должна возвращать значение `TRUE`. Если функция возвращает значение `FALSE`, для создания отчета отладки с использованием текущих параметров типа, режима и файла отчета вызывается функция `_CrtDbgReport`. Кроме того, указав возвращаемое значение функции `_CrtDbgReport` в параметре `returnValue`, приложение может контролировать, происходит ли прерывание при отладке. Полное описание настройки и создания отчета об отладке см. в описании функций `_CrtSetReportMode`, [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) и `_CrtDbgReport`.  
   
- Дополнительные сведения о других способных на обработку функциях среды выполнения и написании собственных определяемых клиентом функциях\-ловушках см. в разделе [Написание функций отладочных ловушек](../Topic/Debug%20Hook%20Function%20Writing.md).  
+ Дополнительные сведения о других допускающих подключение функциях среды выполнения и написании собственных определяемых клиентом функциях-ловушках см. в разделе [Написание функций отладочных ловушек](/visualstudio/debugger/debug-hook-function-writing).  
   
 > [!NOTE]
->  Если приложение компилировано с `/clr` и функциональность отчетов вызывается после того, как приложение покидает main, среда CLR вызывает исключение, если функции отчета вызывают какие\-либо функции CRT.  
+>  Если приложение компилировано с параметром `/clr` и функция отчетов вызывается после того, как приложение выходит из функции main, среда CLR вызывает исключение, если функция отчетов вызывает какие-либо функции CRT.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetReportHook`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Только отладочные версии [Библиотеки времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
- [\_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)
+ [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)

@@ -1,80 +1,95 @@
 ---
-title: "Структура atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic/std::atomic"
-dev_langs: 
-  - "C++"
+title: "Структура atomic | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Структура atomic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
+ms.lasthandoff: 02/24/2017
 
-Описывает объект, выполняющий атомарных операций, хранящиеся в значение типа `Ty`.  
+---
+# <a name="atomic-structure"></a>Структура atomic
+Описывает объект, который выполняет атомарные операции с сохраненным значением типа `Ty`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class Ty>
+struct atomic;
 ```  
-template <class Ty>  
-struct atomic;  
-```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Конструктор atomic::atomic](../Topic/atomic::atomic%20Constructor.md)|Построение атомарный объект.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Конструктор atomic::atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Создает атомарный объект.|  
   
-### Открытые операторы  
+### <a name="public-operators"></a>Открытые операторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Оператор atomic::operator Ty](../Topic/atomic::operator%20Ty%20Operator.md)|Считывает и возвращает сохраненный значение. \([Метод atomic::load](../Topic/atomic::load%20Method.md)\)|  
-|[Оператор atomic::operator\=](../Topic/atomic::operator=%20Operator.md)|Использует указанное значение, чтобы заменить, хранящееся значение. \([Метод atomic::store](../Topic/atomic::store%20Method.md)\)|  
-|||  
-|[Оператор atomic::operator\+\+](../Topic/atomic::operator++%20Operator.md)|Увеличивает хранящееся значение.  Используется только специализациями и всей указателя.|  
-|[Оператор atomic::operator\+\=](../Topic/atomic::operator+=%20Operator.md)|Добавляет указанное хранящееся значение.  Используется только специализациями и всей указателя.|  
-|[Оператор atomic::operator\-\-](../Topic/atomic::operator--%20Operator.md)|Уменьшает хранящееся значение.  Используется только специализациями и всей указателя.|  
-|[Оператор atomic::operator\-\=](../Topic/atomic::operator-=%20Operator.md)|Вычитает указанное значение из сохраненного значения.  Используется только специализациями и всей указателя.|  
-|[Оператор atomic::operator&\=](../Topic/atomic::operator&=%20Operator.md)|Выполняет операцию побитового `and` на заданном значении и хранимого значения.  Используется только целочисленными специализациями.|  
-|[Оператор atomic::operator&#124;\=](../Topic/atomic::operator%7C=%20Operator.md)|Выполняет операцию побитового `or` на заданном значении и хранимого значения.  Используется только целочисленными специализациями.|  
-|[Оператор atomic::operator^\=](../Topic/atomic::operator%5E=%20Operator.md)|Выполняет операцию побитового `exclusive or` на заданном значении и хранимого значения.  Используется только целочисленными специализациями.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[оператор atomic::operator Ty](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Считывает и возвращает сохраненное значение. ([Метод atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[оператор atomic::operator=](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Использует указанное значение для замены сохраненного значения. ([Метод atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[оператор atomic::operator++](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Увеличивает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|  
+|[оператор atomic::operator+=](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Добавляет указанное значение к сохраненному значению. Используется только специализациями для целочисленных типов и указателей.|  
+|[оператор atomic::operator--](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Уменьшает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|  
+|[оператор atomic::operator-=](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|Вычитает указанное значение из сохраненного значения. Используется только специализациями для целочисленных типов и указателей.|  
+|[оператор atomic::operator&=](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|Выполняет побитовую операцию `and` с указанным значением и сохраненным значением. Используется только специализациями для целочисленных типов.|  
+|[оператор atomic::operator&#124;=](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Выполняет побитовую операцию `or` с указанным значением и сохраненным значением. Используется только специализациями для целочисленных типов.|  
+|[оператор atomic::operator^=](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|Выполняет побитовую операцию `exclusive or` с указанным значением и сохраненным значением. Используется только специализациями для целочисленных типов.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Метод atomic::compare\_exchange\_strong](../Topic/atomic::compare_exchange_strong%20Method.md)|Выполняет операцию `atomic_compare_and_exchange` на `this` и возвращает результат.|  
-|[Метод atomic::compare\_exchange\_weak](../Topic/atomic::compare_exchange_weak%20Method.md)|Выполняет операцию `weak_atomic_compare_and_exchange` на `this` и возвращает результат.|  
-|[Метод atomic::fetch\_add](../Topic/atomic::fetch_add%20Method.md)|Добавляет указанное хранящееся значение.|  
-|[Метод atomic::fetch\_and](../Topic/atomic::fetch_and%20Method.md)|Выполняет операцию побитового `and` на заданном значении и хранимого значения.|  
-|[Метод atomic::fetch\_or](../Topic/atomic::fetch_or%20Method.md)|Выполняет операцию побитового `or` на заданном значении и хранимого значения.|  
-|[Метод atomic::fetch\_sub](../Topic/atomic::fetch_sub%20Method.md)|Вычитает указанное значение из сохраненного значения.|  
-|[Метод atomic::fetch\_xor](../Topic/atomic::fetch_xor%20Method.md)|Выполняет операцию побитового `exclusive or` на заданном значении и хранимого значения.|  
-|[Метод atomic::is\_lock\_free](../Topic/atomic::is_lock_free%20Method.md)|Определяет, является ли атомарных операций на `this`*блокировка не*.  Атомарный тип *блокировка не* при отсутствии атомарные операции с этими использовании типа не блокируют.|  
-|[Метод atomic::load](../Topic/atomic::load%20Method.md)|Считывает и возвращает сохраненный значение.|  
-|[Метод atomic::store](../Topic/atomic::store%20Method.md)|Использует указанное значение, чтобы заменить, хранящееся значение.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод atomic::compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Выполняет операцию `atomic_compare_and_exchange` с `this` и возвращает результат.|  
+|[Метод atomic::compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Выполняет операцию `weak_atomic_compare_and_exchange` с `this` и возвращает результат.|  
+|[Метод atomic::fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Добавляет указанное значение к сохраненному значению.|  
+|[Метод atomic::fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Выполняет побитовую операцию `and` с указанным значением и сохраненным значением.|  
+|[Метод atomic::fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Выполняет побитовую операцию `or` с указанным значением и сохраненным значением.|  
+|[Метод atomic::fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Вычитает указанное значение из сохраненного значения.|  
+|[Метод atomic::fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Выполняет побитовую операцию `exclusive or` с указанным значением и сохраненным значением.|  
+|[Метод atomic::is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Указывает, являются ли атомарные операции с `this` *неблокирующими*. Атомарный тип является *неблокирующим*, если никакие атомарные операции с этим типом не используют блокировки.|  
+|[Метод atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Считывает и возвращает сохраненное значение.|  
+|[Метод atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Использует указанное значение для замены сохраненного значения.|  
   
-## Заметки  
- Тип `Ty` должен быть *тривиальным копируемым*.  То есть, используя [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md), чтобы скопировать его в байтах должен создать допустимого объекта `Ty`, сравнивает равенство в исходный объект.  Функции\-члены `compare_exchange_weak` и `compare_exchange_strong` используют [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md), чтобы определить, является ли значения `Ty` равны 2.  Эти функции не используется `Ty`\- указанное `operator==`.  Функции\-члены `atomic` используют `memcpy` для копирования значений типа `Ty`.  
+## <a name="remarks"></a>Примечания  
+ Тип `Ty` должен быть *доступен для простого копирования*. То есть при использовании [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) для копирования его байтов должен создаваться допустимый объект `Ty`, эквивалентный исходному объекту. Функции-члены `compare_exchange_weak` и `compare_exchange_strong` используют [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) для определения, равны ли два значения `Ty`. Эти функции не будут использовать заданный в `Ty` `operator==`. Функции-члены `atomic` используют `memcpy` для копирования значений типа `Ty`.  
   
- Частично специализация, `atomic<Ty *>`, существует для всех типов указателя.  Специализация включает добавление смещения в управляемый указатель значение или вычитание смещения из нее.  Арифметические операции принимают аргумент типа `ptrdiff_t` и настройка этот аргумент в соответствии с размером `Ty`, чтобы быть согласованными с обычной арифметической операции адреса.  
+ Частичная специализация `atomic<Ty *>` существует для всех типов указателей. Специализация позволяет добавлять смещение к значению управляемого указателя или вычитать из него смещение. Арифметические операции принимают аргумент типа `ptrdiff_t` и настраивают этот аргумент в соответствии с размером `Ty` для согласования с обычным вычислением адресов.  
   
- Специализация существует для каждого целого типа, за исключением `bool`.  Каждая специализация предоставляет большой набор методов для атомарной арифметической операции и логических операций.  
+ Специализация существует для любого целочисленного типа, кроме `bool`. Каждая специализация предоставляет широкий набор методов для атомарных арифметических и логических операций.  
   
 ||||  
 |-|-|-|  
@@ -84,13 +99,17 @@ struct atomic;
 |`atomic<unsigned int>`|`atomic<long>`|`atomic<unsigned long>`|  
 |`atomic<long long>`|`atomic<unsigned long long>`|  
   
- Целочисленные специализации являются производными от соответствующих типов `atomic_``integral`.  Например, `atomic<unsigned int>` является производным от `atomic_uint`.  
+ Специализации для целочисленных типов являются производными от соответствующих типов `atomic_``integral`. Например, `atomic<unsigned int>` является производной от `atomic_uint`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atomic  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<atomic\>](../standard-library/atomic.md)   
- [Справочные материалы по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>См. также  
+ [\<atomic>](../standard-library/atomic.md)   
+ [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

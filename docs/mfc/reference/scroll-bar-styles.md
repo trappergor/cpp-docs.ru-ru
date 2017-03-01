@@ -1,67 +1,85 @@
 ---
-title: "Стили полосы прокрутки | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SBS_VERT"
-  - "SBS_SIZEBOXBOTTOMRIGHTALIGN"
-  - "SBS_LEFTALIGN"
-  - "SBS_RIGHTALIGN"
-  - "SBS_TOPALIGN"
-  - "SBS_SIZEBOXTOPLEFTALIGN"
-  - "SBS_BOTTOMALIGN"
-  - "SBS_SIZEBOX"
-  - "SBS_HORZ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SBS_BOTTOMALIGN - константа"
-  - "SBS_HORZ - константа"
-  - "SBS_LEFTALIGN - константа"
-  - "SBS_RIGHTALIGN - константа"
-  - "SBS_SIZEBOX - константа"
-  - "SBS_SIZEBOXBOTTOMRIGHTALIGN - константа"
-  - "SBS_SIZEBOXTOPLEFTALIGN - константа"
-  - "SBS_TOPALIGN - константа"
-  - "SBS_VERT - константа"
-  - "полосы прокрутки, стили"
+title: "Стили полосы прокрутки | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SBS_VERT
+- SBS_SIZEBOXBOTTOMRIGHTALIGN
+- SBS_LEFTALIGN
+- SBS_RIGHTALIGN
+- SBS_TOPALIGN
+- SBS_SIZEBOXTOPLEFTALIGN
+- SBS_BOTTOMALIGN
+- SBS_SIZEBOX
+- SBS_HORZ
+dev_langs:
+- C++
+helpviewer_keywords:
+- SBS_HORZ constant
+- SBS_TOPALIGN constant
+- SBS_SIZEBOX constant
+- SBS_BOTTOMALIGN constant
+- SBS_VERT constant
+- SBS_LEFTALIGN constant
+- SBS_SIZEBOXBOTTOMRIGHTALIGN constant
+- scroll bars, styles
+- SBS_SIZEBOXTOPLEFTALIGN constant
+- SBS_RIGHTALIGN constant
 ms.assetid: 8bcde35b-387d-49ae-bdd6-7cda9f5dae26
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Стили полосы прокрутки
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 778fe7b0f6f6319884df4ed9c5ccbe8e34bd8d42
+ms.lasthandoff: 02/24/2017
 
--   **SBS\_BOTTOMALIGN**, **SBS\_HORZ** со стилем.  Нижний край полосы прокрутки выравнивается с нижний край прямоугольника, определенного в функции\-члене **Создать**.  "Полоса прокрутки" имеет высоту по умолчанию для отображения полос прокрутки системы.  
+---
+# <a name="scroll-bar-styles"></a>Стили полосы прокрутки
+-   **SBS_BOTTOMALIGN** с **SBS_HORZ** стиль. Нижний край полоса прокрутки выравнивается нижний край прямоугольника, заданного в **создать** функции-члена. Полоса прокрутки имеет высоту по умолчанию для системы полосы прокрутки.  
   
--   **SBS\_HORZ** указывает горизонтальной полосы прокрутки.  Если ни стиль **SBS\_BOTTOMALIGN** и **SBS\_TOPALIGN** определен, полоса прокрутки имеет высоту, ширину и уступанную положение функцию\-член **Создать**.  
+-   **SBS_HORZ** обозначает горизонтальной полосы прокрутки. Если ни одна из **SBS_BOTTOMALIGN** , ни **SBS_TOPALIGN** указанный стиль, полоса прокрутки имеет высоту, ширину и положение в **создать** функции-члена.  
   
--   **SBS\_LEFTALIGN**, **SBS\_VERT** со стилем.  Левый край полосы прокрутки выравнивается с левый край прямоугольника, определенного в функции\-члене **Создать**.  "Полоса прокрутки" имеет ширину по умолчанию для отображения полос прокрутки системы.  
+-   **SBS_LEFTALIGN** с **SBS_VERT** стиль. В левой части полосы прокрутки выравнивается с левым краем прямоугольник, задаваемый в **создать** функции-члена. Полоса прокрутки имеет ширину по умолчанию для системы полосы прокрутки.  
   
--   **SBS\_RIGHTALIGN**, **SBS\_VERT** со стилем.  Правый край полосы прокрутки выравнивается с правым краем прямоугольника, определенного в функции\-члене **Создать**.  "Полоса прокрутки" имеет ширину по умолчанию для отображения полос прокрутки системы.  
+-   **SBS_RIGHTALIGN** с **SBS_VERT** стиль. Правый край полосы прокрутки выравнивается с правого края прямоугольника, заданного в **создать** функции-члена. Полоса прокрутки имеет ширину по умолчанию для системы полосы прокрутки.  
   
--   **SBS\_SIZEBOX** указывает размер окна.  Если ни стиль **SBS\_SIZEBOXBOTTOMRIGHTALIGN** и **SBS\_SIZEBOXTOPLEFTALIGN** определен, то окно размера имеет высоту, ширину и уступанную положение функцию\-член **Создать**.  
+-   **SBS_SIZEBOX** обозначает поле размер. Если ни одна из **SBS_SIZEBOXBOTTOMRIGHTALIGN** , ни **SBS_SIZEBOXTOPLEFTALIGN** указанный стиль, поле «размер» имеет высоту, ширину и положение в **создать** функции-члена.  
   
--   **SBS\_SIZEBOXBOTTOMRIGHTALIGN**, **SBS\_SIZEBOX** со стилем.  В нижнем правом углу окна размера выравнивается с нижним углом прямоугольника, определенного в функции\-члене **Создать**.  Окно размера имеет размер по умолчанию для окон размера системы.  
+-   **SBS_SIZEBOXBOTTOMRIGHTALIGN** с **SBS_SIZEBOX** стиль. В правом нижнем углу поле размер выравнивается в правом нижнем углу прямоугольник, задаваемый в **создать** функции-члена. Поле «размер» имеет размер по умолчанию для системы размер поля.  
   
--   **SBS\_SIZEBOXTOPLEFTALIGN**, **SBS\_SIZEBOX** со стилем.  Верхний левый угол окна размера выравнивается с верхний левый угол которого расположен прямоугольника, определенного в функции\-члене **Создать**.  Окно размера имеет размер по умолчанию для окон размера системы.  
+-   **SBS_SIZEBOXTOPLEFTALIGN** с **SBS_SIZEBOX** стиль. В верхний левый угол поле размер выравнивается с верхнего левого угла прямоугольника, заданного в **создать** функции-члена. Поле «размер» имеет размер по умолчанию для системы размер поля.  
   
--   **SBS\_SIZEGRIP** так же, как **SBS\_SIZEBOX**, но с созданным краем.  
+-   **SBS_SIZEGRIP** как **SBS_SIZEBOX**, но вызванного границу.  
   
--   **SBS\_TOPALIGN**, **SBS\_HORZ** со стилем.  Верхний край полосы прокрутки выравнивается с верхний край прямоугольника, определенного в функции\-члене **Создать**.  "Полоса прокрутки" имеет высоту по умолчанию для отображения полос прокрутки системы.  
+-   **SBS_TOPALIGN** с **SBS_HORZ** стиль. Верхний край полосы прокрутки выравнивается с верхним краем прямоугольник, задаваемый в **создать** функции-члена. Полоса прокрутки имеет высоту по умолчанию для системы полосы прокрутки.  
   
--   **SBS\_VERT** указывает вертикальную полосу прокрутки.  Если ни стиль **SBS\_RIGHTALIGN** и **SBS\_LEFTALIGN** определен, полоса прокрутки имеет высоту, ширину и уступанную положение функцию\-член **Создать**.  
+-   **SBS_VERT** обозначает вертикальной полосы прокрутки. Если ни одна из **SBS_RIGHTALIGN** , ни **SBS_LEFTALIGN** указанный стиль, полоса прокрутки имеет высоту, ширину и положение в **создать** функции-члена.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Стили, используемые MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CScrollBar::Create](../Topic/CScrollBar::Create.md)   
- [Scroll Bar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb787533)
+ [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)   
+ [Стили элемента управления полосы прокрутки](http://msdn.microsoft.com/library/windows/desktop/bb787533)
+
+

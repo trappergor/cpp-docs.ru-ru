@@ -1,70 +1,89 @@
 ---
-title: "Задание оптимизации компилятора для проекта ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.ATL.optimization"
-  - "vc.appwiz.ATL.vtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "проекты ATL, оптимизация компилятора"
-  - "ATL_DISABLE_NO_VTABLE - макрос"
-  - "ATL_NO_VTABLE - макрос"
+title: "Задание оптимизации компилятора для проекта ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.appwiz.ATL.optimization
+- vc.appwiz.ATL.vtable
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_DISABLE_NO_VTABLE macro
+- ATL projects, compiler optimization
+- ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Задание оптимизации компилятора для проекта ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: abdad4367e75c1971ba5d11af1a60992d1bb3dd4
+ms.lasthandoff: 02/24/2017
 
-По умолчанию [Мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md) создает новые классы с помощью макроса ATL\_NO\_VTABLE следующим образом:  
+---
+# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Задание оптимизации компилятора для проекта ATL
+По умолчанию [мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md) создает новые классы с помощью макроса ATL_NO_VTABLE следующим образом:  
   
 ```  
 class ATL_NO_VTABLE CProjName  
 {  
-   ...  
+ ...  
 };  
 ```  
   
- Затем библиотека ATL определяет макрос \_ATL\_NO\_VTABLE следующим образом:  
+ Затем библиотека ATL определяет макрос _ATL_NO_VTABLE следующим образом:  
   
 ```  
 #ifdef _ATL_DISABLE_NO_VTABLE  
-   #define ATL_NO_VTABLE  
+ #define ATL_NO_VTABLE  
 #else  
-   #define ATL_NO_VTABLE __declspec(novtable)  
+ #define ATL_NO_VTABLE __declspec(novtable)  
 #endif  
 ```  
   
- Если макрос \_ATL\_DISABLE\_NO\_VTABLE не определен, то макрос ATL\_NO\_VTABLE раскрывается в модификатора `declspec(novtable)`.  Использование модификатора `declspec(novtable)` в объявлении класса предотвращает инициализацию указателя vtable в конструкторе и деструкторе класса.  При построении проекта компоновщик исключает указатель vtable и все функции, на которые он указывает.  
+ Если _ATL_DISABLE_NO_VTABLE не определен, макрос ATL_NO_VTABLE развертывается `declspec(novtable)`. С помощью `declspec(novtable)`в классе объявление предотвращает указателя vtable инициализацию в конструкторе и деструкторе класса. При построении проекта компоновщик исключает указатель vtable и все функции, на которые он указывает.  
   
- Необходимо использовать макрос ATL\_NO\_VTABLE и, следовательно, модификатор `declspec(novtable)` только с базовыми классами, которые нельзя создать напрямую.  Нельзя использовать модификатор `declspec(novtable)` с производным классом, дальше всего отстоящим от базового в проекте, поскольку этот класс \(обычно это [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md) или [CComPolyObject](../../atl/reference/ccompolyobject-class.md)\) инициализирует указатель vtable для проекта.  
+ Необходимо использовать макрос ATL_NO_VTABLE и, следовательно, `declspec(novtable)`, с помощью только базовые классы, которые нельзя создать напрямую. Не следует использовать `declspec(novtable)` в классе самого дальнего в проекте, так как этот класс (обычно [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), или [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) инициализирует указателя vtable для проекта.  
   
- Нельзя вызывать виртуальные функции из конструктора любого объекта, использующего модификатор `declspec(novtable)`.  Необходимо перемещать эти вызовы в метод [FinalConstruct](../Topic/CComObjectRootEx::FinalConstruct.md).  
+ Нельзя вызывать виртуальные функции из конструктора любого объекта, использующего `declspec(novtable)`. Следует переместить эти вызовы [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) метод.  
+
   
- Если точно неизвестно, должен ли использоваться модификатор `declspec(novtable)`, то можно удалить макрос ATL\_NO\_VTABLE из определений всех классов, или отключить его глобально, указав:  
+ Если вы не уверены, следует ли использовать `declspec(novtable)` модификатор, то можно удалить макрос ATL_NO_VTABLE из определений всех классов, или вы можете глобально отключить, указав  
   
 ```  
 #define _ATL_DISABLE_NO_VTABLE  
 ```  
   
- В файле stdafx.h, перед включением всех других файлов заголовков ATL.  
+ Добавьте в файл stdafx.h перед другими ATL заголовочные файлы включены.  
   
-## См. также  
- [мастер проектов ATL](../Topic/ATL%20Project%20Wizard.md)   
- [Типы проектов Visual C\+\+](../../ide/visual-cpp-project-types.md)   
- [Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)   
+## <a name="see-also"></a>См. также  
+ [Мастер проекта ATL](../../atl/reference/atl-project-wizard.md)   
+ [Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)   
+ [Создание проектов для настольных ПК с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Программирование с использованием ATL и кода времени выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Основы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
  [novtable](../../cpp/novtable.md)   
- [Конфигурации по умолчанию проекта ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Конфигурации проекта ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)
+
+

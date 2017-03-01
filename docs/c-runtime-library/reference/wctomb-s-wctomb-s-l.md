@@ -1,55 +1,71 @@
 ---
-title: "wctomb_s, _wctomb_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wctomb_s_l"
-  - "wctomb_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctomb_s"
-  - "_wctomb_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wctomb_s_l - функция"
-  - "знаки, преобразование"
-  - "преобразование строк, многобайтовые строки символов"
-  - "преобразование строк, расширенные символы"
-  - "wctomb_s - функция"
-  - "wctomb_s_l - функция"
-  - "расширенные символы, преобразование"
+title: "wctomb_s _wctomb_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wctomb_s_l
+- wctomb_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wctomb_s
+- _wctomb_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- wctomb_s function
+- wctomb_s_l function
+- string conversion, wide characters
+- wide characters, converting
+- _wctomb_s_l function
+- characters, converting
+- string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# wctomb_s, _wctomb_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 94973bf59580354aed75b8c7a3a154f415060163
+ms.lasthandoff: 02/24/2017
 
-Преобразует расширенный символ в соответствующий многобайтовый символ.  Это версия [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) с усовершенствованиями безопасности, как описано в [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
+Преобразует расширенный символ в соответствующий многобайтовый символ. Версия функции [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t wctomb_s(  
@@ -67,52 +83,52 @@ errno_t _wctomb_s_l(
 );  
 ```  
   
-#### Параметры  
- \[исходящий\] `pRetValue`  
- Число байтов, или код, представляющий результат.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `pRetValue`  
+ Число байтов или код, указывающий результат.  
   
- \[исходящий\] `mbchar`  
- Адрес многобайтового символа.  
+ [выходной] `mbchar`  
+ Адрес последовательности многобайтовых символов.  
   
- \[входящий\] `sizeInBytes`  
+ [in] `sizeInBytes`  
  Размер буфера `mbchar`.  
   
- \[входящий\] `wchar`  
+ [in] `wchar`  
  Расширенный символ.  
   
- \[входящий\] `locale`  
+ [in] `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Нуль, если успешно; код ошибки при неудаче.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль в случае успеха или код ошибки в случае неудачи.  
   
- Условия возникновения ошибки  
+ Условия ошибок  
   
 |`mbchar`|`sizeInBytes`|Возвращаемое значение|`pRetValue`|  
-|--------------|-------------------|---------------------------|-----------------|  
-|`NULL`|\>0|`EINVAL`|без изменений|  
-|any|\>`INT_MAX`|`EINVAL`|без изменений|  
-|any|слишком мало|`EINVAL`|без изменений|  
+|--------------|-------------------|------------------|-----------------|  
+|`NULL`|>0|`EINVAL`|не изменено|  
+|любые|>`INT_MAX`|`EINVAL`|не изменено|  
+|any|слишком мало|`EINVAL`|не изменено|  
   
- Если случается какая\-либо из выше перечисленных ошибок, то вызывается обработчик недопустимых параметров, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, то `wctomb` возвращает `EINVAL` и устанавливает `errno` в `EINVAL`.  
+ Если выполняется какое-либо из приведенных выше условий возникновения ошибки, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция `wctomb` возвращает значение `EINVAL` и устанавливает параметр `errno` в значение `EINVAL`.  
   
-## Заметки  
- Функция `wctomb_s` преобразует свой аргумент `wchar` в соответствующие многобайтовые символы и сохраняет результат в `mbchar`.  Функцию можно вызвать из любого места в любой программе.  
+## <a name="remarks"></a>Примечания  
+ Функция `wctomb_s` преобразует свой аргумент `wchar` в соответствующий многобайтовый символ и сохраняет результат в `mbchar`. Эту функцию можно вызывать из любой точки в любой программе.  
   
- Если `wctomb_s` преобразует расширенный символ в многобайтовый символ, она помещает количество байтов \(которое никогда не превышает `MB_CUR_MAX`\) расширенного символа в целое число, указанное в `pRetValue`.  Если `wchar` расширенный нуль\-символ \(L'\\0\), `wctomb_s` помещает в `pRetValue` значение 1.  Если указатель на целевой объект `mbchar` равен NULL, `wctomb_s` помещает в `pRetValue` значение 0.  Если в текущем языковом стандарте преобразование невозможно, `wctomb_s` помещает в `pRetValue` значение \-1.  
+ Если функция `wctomb_s` преобразует расширенный символ в многобайтовый символ, она помещает число байтов (которое никогда не превышает `MB_CUR_MAX`) в расширенном символе в целое число со знаком, на которое указывает `pRetValue`. Если `wchar` является расширенным нуль-символом (L '\0'), `wctomb_s` заполняет `pRetValue` символом 1. Если целевой указатель `mbchar` имеет значение NULL, `wctomb_s` помещает 0 в `pRetValue`. Если преобразование невозможно в текущем языковом стандарте, `wctomb_s` помещает –1 в `pRetValue`.  
   
- `wctomb_s` использует текущий языковой стандарт для сведений, зависящих от языкового стандарта; `_wctomb_s_l` идентична за исключением того, что она использует переданный языковой стандарт.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `wctomb_s` использует текущий языковой стандарт для информации, обусловленной языковыми стандартами; функция `_wctomb_s_l` идентична за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`wctomb_s`|\<stdlib.h\>|  
-|`_wctomb_s_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`wctomb_s`|\<stdlib.h>|  
+|`_wctomb_s_l`|\<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Эта программа иллюстрирует поведение функции `wctomb`.  
   
 ```  
@@ -133,17 +149,20 @@ int main( void )
 }  
 ```  
   
-  **Convert a wide character:**  
- **Characters converted: 1**  
- **Multibyte character: a**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Convert a wide character:  
+   Characters converted: 1  
+   Multibyte character: a  
+```  
   
-## См. также  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, \_mbtowc\_l](../Topic/mbtowc,%20_mbtowc_l.md)   
- [wcstombs, \_wcstombs\_l](../Topic/wcstombs,%20_wcstombs_l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

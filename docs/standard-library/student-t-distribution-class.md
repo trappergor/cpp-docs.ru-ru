@@ -1,83 +1,103 @@
 ---
-title: "Класс student_t_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::student_t_distribution"
-  - "tr1::student_t_distribution"
-  - "std.tr1.student_t_distribution"
-  - "random/std::tr1::student_t_distribution"
-  - "tr1.student_t_distribution"
-  - "student_t_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "student_t_distribution - класс"
+title: "Класс student_t_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- student_t_distribution
+- std::student_t_distribution
+- random/std::student_t_distribution
+- random/std::student_t_distribution::result_type
+- random/std::student_t_distribution::reset
+- random/std::student_t_distribution::operator()
+- random/std::student_t_distribution::n
+- random/std::student_t_distribution::param
+- random/std::student_t_distribution::min
+- random/std::student_t_distribution::max
+dev_langs:
+- C++
+helpviewer_keywords:
+- student_t_distribution class
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Класс student_t_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 61781e74ed9cc5424255b8697800000f8de5eb30
+ms.lasthandoff: 02/24/2017
 
-Формирует *t*\-распределение Стьюдента.  
+---
+# <a name="studenttdistribution-class"></a>Класс student_t_distribution
+Формирует *t*-распределение Стьюдента.  
   
-## Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис  
 ```  
-template<class RealType = double>  
-class student_t_distribution  
-{  
+template<class RealType = double>
+class student_t_distribution {  
 public:  
-    // types  
-    typedef RealType result_type;  
-    struct param_type;  
-    // constructor and reset functions  
-    explicit student_t_distribution(RealType n = 1.0);  
-    explicit student_t_distribution(const param_type& parm);  
-    void reset();  
-    // generating functions  
-    template<class URNG>  
-    result_type operator()(URNG& gen);  
-    template<class URNG>  
-    result_type operator()(URNG& gen, const param_type& parm);  
-    // property functions  
-    RealType n() const;  
-    param_type param() const;  
-    void param(const param_type& parm);  
-    result_type min() const;  
-    result_type max() const;  
-};  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   
+   // constructor and reset functions  
+   explicit student_t_distribution(result_type n = 1.0);
+   explicit student_t_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type n() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+#### <a name="parameters"></a>Параметры  
+*RealType*  
+ По умолчанию тип с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-#### Параметры  
- `RealType`  
- По умолчанию тип с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random\>](../standard-library/random.md).  
-  
-## Заметки  
- Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `double` \(если тип не указан\), распределенные в соответствии с *t*\-распределением Стьюдента. В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `double` (если тип не указан), распределенные в соответствии с *t*-распределением Стьюдента. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[student\_t\_distribution::student\_t\_distribution](../Topic/student_t_distribution::student_t_distribution.md)|`student_t_distribution::n`|`student_t_distribution::param`|  
-|`student_t_distribution::operator()`||[student\_t\_distribution::param\_type](../Topic/student_t_distribution::param_type.md)|  
+|[student_t_distribution::student_t_distribution](#student_t_distribution__student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
+|`student_t_distribution::operator()`||[student_t_distribution::param_type](#student_t_distribution__param_type)|  
   
  Функция свойства `n()` возвращает значение для хранимого параметра распределения `n`.  
   
- Дополнительные сведения о классах распределений и их члены в разделе [\<random\>](../standard-library/random.md).  
+ Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
   
- Подробные сведения об учащихся *t*\-распространения, см. в статье Wolfram MathWorld [t распределение Стьюдента](http://go.microsoft.com/fwlink/?LinkId=401094).  
+ Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://go.microsoft.com/fwlink/LinkId=401094) на веб-сайте Wolfram MathWorld.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -129,36 +149,84 @@ int main()
   
     test(n_dist, samples);  
 }  
-  
 ```  
   
-## Вывод  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 n() == 1.0000000000  
 Distribution for 10 samples:  
-          1:  -1.3084956212  
-          2:  -1.0899518684  
-          3:  -0.9568771388  
-          4:  -0.9372088821  
-          5:  -0.7381334669  
-          6:  -0.2488074854  
-          7:  -0.2028714601  
-          8:   1.4013074495  
-          9:   5.3244792236  
-         10:  92.7084335614  
+    1: -1.3084956212  
+    2: -1.0899518684  
+    3: -0.9568771388  
+    4: -0.9372088821  
+    5: -0.7381334669  
+    6: -0.2488074854  
+    7: -0.2028714601  
+    8: 1.4013074495  
+    9: 5.3244792236  
+    10: 92.7084335614  
 ```  
   
-## Требования  
- **Заголовок:** \<random\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<random>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namestudenttdistributionstudenttdistributiona--studenttdistributionstudenttdistribution"></a><a name="student_t_distribution__student_t_distribution"></a>  student_t_distribution::student_t_distribution  
+ Формирует распределение.  
+  
+```  
+explicit student_t_distribution(RealType n = 1.0);
+explicit student_t_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*n*  
+ Параметр распределения `n`.  
+  
+*parm*  
+ Пакет параметров, используемый для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+ **Предусловие:** `0.0 < n`  
+  
+ Первый конструктор создает объект, хранимое значение `n` которого содержит значение *n*.  
+  
+ Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-namestudenttdistributionparamtypea--studenttdistributionparamtype"></a><a name="student_t_distribution__param_type"></a>  student_t_distribution::param_type  
+ Сохраняет все параметры распределения.  
+```cpp    
+struct param_type {  
+   typedef student_t_distribution<result_type> distribution_type;  
+   param_type(result_type n = 1.0);
+   result_type n() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Параметры  
+*n*  
+Параметр распределения `n`.  
+  
+*right*  
+Объект `param_type`, который требуется сравнить с данным объектом.  
+  
+### <a name="remarks"></a>Примечания  
+ **Предварительные условия:** `0.0 < n`  
+  
+ Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+ [\<random>](../standard-library/random.md)
+
+
+
+

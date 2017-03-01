@@ -1,57 +1,73 @@
 ---
-title: "fmax, fmaxf, fmaxl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fmax"
-  - "fmaxf"
-  - "fmaxl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fmax"
-  - "fmaxf"
-  - "fmaxl"
-  - "math/fmax"
-  - "math/fmaxf"
-  - "math/fmaxl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fmax - функция"
-  - "fmaxf - функция"
-  - "функция fmaxl"
+title: "fmax, fmaxf, fmaxl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fmax
+- fmaxf
+- fmaxl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fmax
+- fmaxf
+- fmaxl
+- math/fmax
+- math/fmaxf
+- math/fmaxl
+dev_langs:
+- C++
+helpviewer_keywords:
+- fmax function
+- fmaxf function
+- fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# fmax, fmaxf, fmaxl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
+ms.openlocfilehash: 2c8520367d07f0c42f9245421040cbc665771722
+ms.lasthandoff: 02/24/2017
 
-Определите большее из двух указанного числовых значений.  
+---
+# <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
+Определяет большее из двух указанных числовых значений.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double fmax(  
@@ -81,37 +97,37 @@ long double fmaxl(
   
 ```  
   
-#### Параметры  
- \[in\] `x`  
+#### <a name="parameters"></a>Параметры  
+ [in] `x`  
  Первое сравниваемое значение.  
   
- \[in\] `y`  
+ [in] `y`  
  Второе сравниваемое значение.  
   
-## Возвращаемое значение  
- В случае успешного выполнения возвращает большее из `x` или `y`. Значение, возвращаемое точное и не зависит от формы округления.  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успешного выполнения возвращает большее из значений `x` или `y`. Возвращает точное значение независимо от формы округления.  
   
- В противном случае может возвращать одно из следующих значений:  
+ В случае неудачи может возвращать одно из следующих значений:  
   
 |Проблеми|Назад|  
-|--------------|-----------|  
-|`x` \= NaN|`y`|  
-|`y` \= NaN|`x`|  
-|`x` и `y` \= NaN|NaN|  
+|-----------|------------|  
+|`x` = NaN|`y`|  
+|`y` = NaN|`x`|  
+|`x` и `y` = NaN|NaN|  
   
- Эта функция не использует ошибки, указанной в  [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Эта функция не использует ошибки, указанные в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки fmax, которые принимают и возвращают float и long double типов. В программе на языке C fmax всегда принимает и возвращает значение типа double.  
+## <a name="remarks"></a>Примечания  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки функции fmax, принимающие и возвращающие типы значений float и long double. В программе на языке C и fmax всегда принимает и возвращает значение типа double.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Функция|Заголовок C|Заголовок C\+\+|  
-|-------------|-----------------|---------------------|  
-|`fmax`, `fmaxf`, `fmaxl`|\<math.h\>|\<cmath\>|  
+|Функция|Заголовок C|Заголовок C++|  
+|--------------|--------------|------------------|  
+|`fmax`, `fmaxf`, `fmaxl`|\<math.h>|\<cmath> или \<math.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmin, fminf, fminl](../Topic/fmin,%20fminf,%20fminl1.md)
+ [fmin, fminf, fminl](fmin-fminf-fminl.md)  

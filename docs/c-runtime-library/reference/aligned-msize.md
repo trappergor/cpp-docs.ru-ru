@@ -1,49 +1,65 @@
 ---
-title: "_aligned_msize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_msize"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_msize"
-  - "aligned_msize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_msize - функция"
-  - "aligned_msize - функция"
+title: "_aligned_msize | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_msize
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_msize
+- aligned_msize
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_msize function
+- _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _aligned_msize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 375eb2921ac47be819eeb050fa87643c50a52289
+ms.lasthandoff: 02/24/2017
 
-Возвращает размер блока памяти, размещенного в куче.  
+---
+# <a name="alignedmsize"></a>_aligned_msize
+Возвращает размер блока памяти, выделенного в куче.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_t _msize(  
@@ -53,39 +69,39 @@ size_t _msize(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `memblock`  
+#### <a name="parameters"></a>Параметры  
+ [in] `memblock`  
  Указатель на блок памяти.  
   
- \[входящий\] `alignment`  
- Значение выравнивания, которое должно быть целочисленной степенью двойки.  
+ [in] `alignment`  
+ Значение выравнивания, которое должно быть целой степенью числа 2.  
   
- \[входящий\] `offset`  
- Смещение в выделении памяти для обеспечения выравнивания.  
+ [входной] `offset`  
+ Смещение в выделение памяти для принудительного выполнения выравнивания.  
   
-## Возвращаемое значение  
- Возвращает размер \(в байтах\) как целое число без знака.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает размер (в байтах) как целое число без знака.  
   
-## Заметки  
- Функция `_aligned_msize` возвращает размер \(в байтах\) блока памяти, выделенного вызовом [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [\_aligned\_realloc](../../c-runtime-library/reference/aligned-realloc.md).  Значения `alignment` и `offset` должны совпадать со значениями, которые были переданы функции, выделившей блок.  
+## <a name="remarks"></a>Примечания  
+ Функция `_aligned_msize` возвращает размер блока памяти, выделенного вызовом функции [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md) (байт). Значения `alignment` и `offset` должны совпадать со значениями, которые были переданы функции, выделившей блок.  
   
- Когда приложение связано с отладочной версией библиотек времени выполнения языка C, `_aligned_msize` соответствует [\_aligned\_msize\_dbg](../../c-runtime-library/reference/aligned-msize-dbg.md).  Дополнительные сведения о том, как происходит управление кучей в процессе отладки см. в разделе [Отладочная куча CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Когда приложение связано с отладочной версией библиотек среды выполнения языка C, функция `_aligned_msize` соответствует функции [_aligned_msize_dbg](../../c-runtime-library/reference/aligned-msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- Эта функция проверяет свой параметр.  Если `memblock` указатель на null, или `alignment` \- не степень двойки, `_msize` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если ошибка обработана, то функция устанавливает `errno` в `EINVAL` и возвращает \-1.  
+ Эта функция проверяет свои параметры. Если `memblock` является указателем NULL или `alignment` не является степенью двойки, функция `_msize` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает для параметра `errno` значение `EINVAL` и возвращает –1.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_msize`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_msize`|\<malloc.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)
