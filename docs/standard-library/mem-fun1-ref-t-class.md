@@ -1,73 +1,93 @@
 ---
-title: "Класс mem_fun1_ref_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::mem_fun1_ref_t"
-  - "std::mem_fun1_ref_t"
-  - "mem_fun1_ref_t"
-  - "std.mem_fun1_ref_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mem_fun1_ref_t - класс"
+title: "Класс mem_fun1_ref_t | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::mem_fun1_ref_t
+- std::mem_fun1_ref_t
+- mem_fun1_ref_t
+- std.mem_fun1_ref_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Класс mem_fun1_ref_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 32430ca2b66fc9772c01a29451986403c8d1d4b0
+ms.lasthandoff: 02/24/2017
 
-Класс адаптера, который позволяет функцию\-член **non\_const**, который принимает один аргумент, назначив как бинарный инициализированный объект функции с аргументом ссылки.  
+---
+# <a name="memfun1reft-class"></a>Класс mem_fun1_ref_t
+Класс адаптера, который позволяет вызывать функцию-член **non_const**, принимающую один аргумент как объект двоичной функции при инициализации с ссылочным аргументом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class Result, class Type, class Arg>
+class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
+    explicit mem_fun1_ref_t(
+    Result (Type::* _Pm)(Arg));
+
+    Result operator()(
+    Type& left,
+    Arg right) const;
+
+ };
 ```  
-template<class Result, class Type, class Arg>  
-   class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {  
-      explicit mem_fun1_ref_t(  
-         Result (Type::* _Pm )( Arg )  
-      );  
-      Result operator()(  
-         Type& _Left,   
-         Arg _Right  
-      ) const;  
-   };  
-```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_Pm`  
- Является указателем на функцию\-член класса **Тип**, чтобы преобразовать объект функции.  
+ Указатель на функцию-член класса **Type** для преобразования в объект функции.  
   
- `_Left`  
- Объект, `_Pm` вызывается функция\-член включен.  
+ `left`  
+ Объект, для которого вызывается функция-член `_Pm`.  
   
- `_Right`  
- Аргумент, который указан в `_Pm`.  
+ `right`  
+ Аргумент, который был передан в `_Pm`.  
   
-## Возвращаемое значение  
- Способная к адаптации бинарная функции.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Адаптируемая бинарная функция.  
   
-## Заметки  
- Класс шаблона сохранить копию `_Pm`, который должен быть указателем на функцию\-член класса **Тип** в объекте закрытого члена.  Он определяет свою функцию\-член `operator()` как возвращающий \(**\_Left**.\* `_Pm`\)\(**\_Right**\).  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона сохраняет в частном члене объекта копию `_Pm`, которая должна быть указателем на функцию-член класса **Type**. Он определяет свою функцию-член `operator()` как возвращающую ( **left**.\* `_Pm`)( **right**).  
   
-## Пример  
- Конструктор `mem_fun1_ref_t` обычно не должен использоваться напрямую; вспомогательная функция `mem_fun_ref` используется для размещения функции\-члены.  В разделе [mem\_fun\_ref](../Topic/mem_fun_ref%20Function.md) пример использования переходники функции\-члена.  
+## <a name="example"></a>Пример  
+ Конструктор `mem_fun1_ref_t` обычно не используется напрямую; для адаптации функций-членов используется вспомогательная функция `mem_fun_ref`. Пример использования адаптеров функций-членов см. в разделе [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function).  
   
-## Требования  
- **Заголовок:** \<functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,65 +1,81 @@
 ---
-title: "_mbclen, mblen, _mblen_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbclen"
-  - "mblen"
-  - "_mblen_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mblen"
-  - "ftclen"
-  - "_mbclen"
-  - "tclen"
-  - "_ftclen"
-  - "_tclen"
-  - "mbclen"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbclen - функция"
-  - "_mblen_l - функция"
-  - "_tclen - функция"
-  - "mbclen - функция"
-  - "mblen - функция"
-  - "mblen_l - функция"
-  - "tclen - функция"
+title: "_mbclen, mblen, _mblen_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbclen
+- mblen
+- _mblen_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mblen
+- ftclen
+- _mbclen
+- tclen
+- _ftclen
+- _tclen
+- mbclen
+dev_langs:
+- C++
+helpviewer_keywords:
+- tclen function
+- _mblen_l function
+- _tclen function
+- mblen_l function
+- _mbclen function
+- mbclen function
+- mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _mbclen, mblen, _mblen_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
+ms.lasthandoff: 02/24/2017
 
-Получает длину и определяет допустимость многобайтового символа.  
+---
+# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+Получает длину многобайтового символа и определяет его допустимость.  
   
 > [!IMPORTANT]
->  Этот API невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_t _mbclen(  
@@ -76,46 +92,46 @@ int _mblen_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
  Многобайтовый символ.  
   
  `mbstr`  
- Адрес последовательности байтов многобайтового символа.  
+ Адрес последовательности байтов (многобайтовый символ).  
   
  `count`  
- Число байтов для проверки.  
+ Число проверяемых байтов.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `_mbclen` возвращает 1 или 2 в зависимости от того, составляет ли длина многобайтового символа `c` 1 или 2.  Для `_mbclen` нет возвращаемой ошибки.  Если `mbstr` не `NULL`, `mblen` возвращает длину в байтах многобайтового символа.  Если `mbstr` имеет значение `NULL` или на расширенный нулевой символ, то `mblen` возвращает 0.  Если объект, на который указывает `mbstr` не формирует многобайтовый символ первым `count` байтов, `mblen` возвращает –1.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `_mbclen` возвращает 1 или 2 в зависимости от того, сколько байтов содержит многобайтовый символ `c` (1 или 2). Для функции `_mbclen` ошибки не возвращаются. Если `mbstr` не имеет значение `NULL`, функция `mblen` возвращает длину многобайтового символа в байтах. Если `mbstr` имеет значение `NULL` или указывает на расширенный нуль-символ, функция `mblen` возвращает 0. Если объект, на который указывает `mbstr`, не образует допустимый многобайтовый символ в первых `count` символах, функция `mblen` возвращает –1.  
   
-## Заметки  
- Функция `_mbclen` возвращает длину в байтах многобайтового символа `c`.  Если `c` не указывает на старший байт многобайтового символа, что определяется неявным вызовом `_ismbblead`, результат `_mbclen` невозможно предсказать.  
+## <a name="remarks"></a>Примечания  
+ Функция `_mbclen` возвращает длину многобайтового символа `c` в байтах. Если `c` не указывает на старший байт многобайтового символа, как определяется неявным вызовом функции `_ismbblead`, результат вызова функции `_mbclen` будет непредсказуемым.  
   
- `mblen` возвращает длину в байтах `mbstr`, если это допустимый многобайтовый символ и определено, что многобайтовый символ правильно связан с кодовой страницей.  `mblen` проверяет `count` или меньшее число байтов, содержащихся в `mbstr`, но не более, чем `MB_CUR_MAX` байтов.  
+ Функция `mblen` возвращает длину `mbstr` в байтах, если это многобайтовый символ, а также проверяет его допустимость в соответствии с кодовой страницей. Функция `mblen` проверяет `count` или меньшее число байтов, содержащихся в `mbstr`, но не более `MB_CUR_MAX` байтов.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версии с суффиксом `_l` идентичны, за исключением того, что они используют переданный параметр языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
-|`_tclen`|Сопоставляется макросу или встроенной функции|`_mbclen`|Сопоставляется макросу или встроенной функции|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_tclen`|Сопоставляется макросу или встроенной функции|`_mbclen`|Сопоставляется макросу или встраиваемой функции|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_mbclen`|\<mbstring.h\>|  
-|`mblen`|\<stdlib.h\>|  
-|`_mblen_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_mbclen`|\<mbstring.h>|  
+|`mblen`|\<stdlib.h>|  
+|`_mblen_l`|\<stdlib.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_mblen.c  
@@ -145,7 +161,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 Convert wide character to multibyte character:  
@@ -156,12 +172,12 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbccpy, \_mbccpy\_l](../Topic/_mbccpy,%20_mbccpy_l.md)   
- [strlen, wcslen, \_mbslen, \_mbslen\_l, \_mbstrlen, \_mbstrlen\_l](../Topic/strlen,%20wcslen,%20_mbslen,%20_mbslen_l,%20_mbstrlen,%20_mbstrlen_l.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [_mbccpy, _mbccpy_l](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
+ [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

@@ -1,49 +1,65 @@
 ---
-title: "_malloca | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_malloca"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "malloca"
-  - "_malloca"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_malloca - функция"
-  - "malloca - функция"
-  - "выделение памяти, стек"
+title: "_malloca | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _malloca
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- malloca
+- _malloca
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, stack
+- malloca function
+- _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _malloca
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 70a37640ec7f6024539ad1e2134152190e698133
+ms.lasthandoff: 02/24/2017
 
-Выделение памяти в стеке.  Это версия [\_alloca](../../c-runtime-library/reference/alloca.md) с усовершенствованиями безопасности, как описано в [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="malloca"></a>_malloca
+Выделение памяти в стеке. Это версия функции [_alloca](../../c-runtime-library/reference/alloca.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void *_malloca(   
@@ -51,40 +67,40 @@ void *_malloca(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `size`  
  Байты, которые нужно выделить из стека.  
   
-## Возвращаемое значение  
- Процедура `_malloca` возвращает `void` указатель на выделенное место, которое гарантированно будет подходящим образом выравнено для хранения любого типа объекта.  Если значение `size` равно 0, `_malloca` выделяет элемент нулевой длины и возвращает допустимый указатель на этот элемент.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Подпрограмма `_malloca` возвращает указатель `void` на выделенное место, которое гарантированно будет подходящим образом выровнено для хранения объекта любого типа. Если значение `size` равно 0, `_malloca` выделяет элемент нулевой длины и возвращает допустимый указатель на этот элемент.  
   
- Исключение переполнения стека создается, если место не может быть выделено.  Исключение переполнения стека \- не исключение C\+\+; это структурированное исключение.  Вместо использования обработки исключений C\+\+, необходимо использовать [Структурную обработку исключений](../../cpp/structured-exception-handling-c-cpp.md) \(SEH\).  
+ Если выделить место в памяти невозможно, создается исключение переполнения стека. Исключение переполнения стека не является исключением C++; это структурированное исключение. Вместо использования обработки исключений C++ необходимо использовать [структурированную обработку исключений](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
-## Заметки  
- `_malloca` выделяет `size` байтов из стека программы или кучи, если запрос превышает определенный размер в байтах, определяемый `_ALLOCA_S_THRESHOLD`.  Различие между `_malloca` и `_alloca` состоит в том, что `_alloca` всегда выделяет память из стека независимо от размера.  В отличие от `_alloca`, которая не требует или не позволяет вызывать `free` для освобождения памяти, выделенной таким образом, `_malloca` требует использования [\_freea](../../c-runtime-library/reference/freea.md) для освобождения памяти.  В режиме отладки `_malloca` всегда выделяет память из кучи.  
+## <a name="remarks"></a>Примечания  
+ `_malloca` выделяет `size` байтов из стека программы или кучи, если запрос превышает определенный размер в байтах, определяемый `_ALLOCA_S_THRESHOLD`. Различие между `_malloca` и `_alloca` состоит в том, что `_alloca` всегда выделяет память из стека независимо от размера. В отличие от функции `_alloca`, которая не требует или не позволяет вызывать `free` для освобождения памяти, выделенной таким образом, функция `_malloca` требует использования [_freea](../../c-runtime-library/reference/freea.md) для освобождения памяти. В режиме отладки `_malloca` всегда выделяет память из кучи.  
   
- Существуют ограничения для явного вызова `_malloca` в обработчике исключений \(EH\).  Процедуры EH, выполняющиеся на процессорах класса x86, работают в своем собственном кадре памяти: Они выполняют задачи в области памяти, не основанной на текущем положении указателя стека внешней функции.  Наиболее распространенные реализации включают выражения структурной обработки исключений \(SEH\) Windows NT и условные выражения catch языка C\+\+.  Поэтому явный вызов `_malloca` в любом из следующих сценариев приводит к сбою программы во время возврата к вызывающей процедуре EH:  
+ Существуют ограничения на явный вызов `_malloca` в обработчике исключений (EH). Подпрограммы обработки исключений, выполняющиеся на процессорах класса x86, работают в своем собственном кадре памяти: они выполняют задачи в области памяти, не основанной на текущем положении указателя стека внешней функции. Наиболее распространенные реализации включают выражения структурной обработки исключений (SEH) Windows NT и выражения catch языка C++. Поэтому явный вызов `_malloca` в любом из следующих сценариев приводит к сбою программы во время возврата к вызывающей подпрограмме EH:  
   
--   Выражение фильтрации исключений структурной обработки исключений Windows NT: `__except` \(`_malloca ()` \)  
+-   Выражение фильтрации исключений структурной обработки исключений Windows NT: `__except` (`_malloca ()`)  
   
--   Заключительный обработчик исключений структурной обработки исключений Windows NT: `__finally` {`_malloca ()` }  
+-   Заключительный обработчик исключений структурной обработки исключений Windows NT: `__finally` {`_malloca ()`}  
   
--   Условное выражение catch обработки исключений языка C\+\+  
+-   Выражение catch обработки исключений языка C++  
   
- Однако `_malloca` можно вызывать непосредственно из процедуры EH или предоставленного приложением обратного вызова, который вызывается одним из перечисленных выше сценариев EH.  
+ Однако `_malloca` можно вызывать непосредственно из подпрограммы обработки исключений или предоставленного приложением обратного вызова, который вызывается одним из перечисленных выше сценариев обработки исключений.  
   
 > [!IMPORTANT]
->  В Windows XP, если `_malloca` вызывается внутри блока try\/catch, необходимо вызвать метод [\_resetstkoflw](../Topic/_resetstkoflw.md) в блоке catch.  
+>  В Windows XP, если `_malloca` вызывается внутри блока try/catch, необходимо вызвать метод [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) в блоке catch.  
   
- Помимо вышеуказанным ограничений при использовании параметра [\/clr \(Компиляция CLR\)](../../build/reference/clr-common-language-runtime-compilation.md), `_malloca` нельзя использовать в блоках `__except`.  Дополнительные сведения см. в [Ограничения \/clr](../../build/reference/clr-restrictions.md).  
+ Помимо вышеуказанных ограничений при использовании параметра [/clr (компиляция для среды CLR)](../../build/reference/clr-common-language-runtime-compilation.md), функцию `_malloca` нельзя использовать в блоках `__except`. Дополнительные сведения см. в разделе [Ограничения среды /clr](../../build/reference/clr-restrictions.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_malloca`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_malloca`|\<malloc.h>|  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_malloca_simple.c  
@@ -104,7 +120,7 @@ int main()
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_malloca_exception.c  
@@ -164,24 +180,24 @@ int main()
 }  
 ```  
   
-## Ввод  
+## <a name="input"></a>Ввод  
   
 ```  
 1000  
 ```  
   
-## Пример результатов выполнения  
+## <a name="sample-output"></a>Пример результатов выполнения  
   
 ```  
 Enter the number of bytes to allocate using _malloca: 1000  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_resetstkoflw](../Topic/_resetstkoflw.md)
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)

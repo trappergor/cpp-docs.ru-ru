@@ -1,49 +1,66 @@
 ---
-title: "_msize_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_msize_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_msize_dbg"
-  - "msize_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "блоки памяти"
-  - "_msize_dbg - функция"
-  - "msize_dbg - функция"
+title: "_msize_dbg | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _msize_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _msize_dbg
+- msize_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks
+- _msize_dbg function
+- msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _msize_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 07f6fe031d7b0b3065cfe50d1ed0307c20a55509
+ms.lasthandoff: 02/24/2017
 
-Вычисляет размер блока памяти в куче \(только отладочная версия\).  
+---
+# <a name="msizedbg"></a>_msize_dbg
+Вычисляет размер блока памяти в куче (только в отладочной версии).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -53,35 +70,35 @@ caps.handback.revision: 15
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `userData`  
- Указатель на блок памяти для определения размера.  
+ Указатель на блок памяти, размер которого необходимо определить.  
   
  *blockType*  
- Тип указанного блока памяти: `_CLIENT_BLOCK` или **\_NORMAL\_BLOCK**.  
+ Тип указанного блока памяти: `_CLIENT_BLOCK` или **_NORMAL_BLOCK**.  
   
-## Возвращаемое значение  
- При успешном завершении `_msize_dbg` возвращает размер \(в байтах\) указанного блока памяти; в противном случае возвращается значение NULL.  
+## <a name="return-value"></a>Возвращаемое значение  
+ При успешном завершении `_msize_dbg` возвращает размер указанного блока памяти (в байтах); в противном случае возвращает значение NULL.  
   
-## Заметки  
- `_msize_dbg` \- отладочная версия функции \_[msize](../Topic/_msize.md).  Если [\_DEBUG](../Topic/_DEBUG.md) не определена, каждый вызов `_msize_dbg` сводится к вызову `_msize`.  И `_msize`, и `_msize_dbg` вычисляют размер блока памяти в куче, но `_msize_dbg` добавляет две функции отладки: Она включает буферы по обеим сторонам участка пользовательской части блоков памяти возвращенного размера, и она позволяет вычислять размер для определенных типов блоков.  
+## <a name="remarks"></a>Примечания  
+ Функция `_msize_dbg` — это отладочная версия функции _[msize](../../c-runtime-library/reference/msize.md). Если значение [_DEBUG](../../c-runtime-library/debug.md) не определено, каждый вызов функции `_msize_dbg` сокращается до вызова функции `_msize`. Обе функции `_msize` и `_msize_dbg` вычисляют размер блока памяти в основной куче, однако `_msize_dbg` добавляет две функции отладки: одна функция включает в возвращаемый размер буферы по обеим сторонам пользовательской части блока памяти, вторая позволяет рассчитать размер определенных типов блоков.  
   
- Сведения о том, как происходит выделение, инициализация и управление блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  Дополнительные сведения о типах блока выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в отладочной сборке приложения см. в разделе [Версии отладки функций выделения кучи](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md).  
+ Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
- Эта функция проверяет свой параметр.  Если `memblock` является указателем на null, `_msize` вызывает обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если ошибка обработана, то функция устанавливает `errno` в `EINVAL` и возвращает \-1.  
+ Эта функция проверяет свои параметры. Кроме того, если `memblock` является пустым указателем, функция `_msize` вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает для параметра `errno` значение `EINVAL` и возвращает –1.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_msize_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_msize_dbg`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Только отладочные версии [Библиотеки времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_msize_dbg.c  
@@ -133,16 +150,16 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 Size of block after _malloc_dbg of 40 longs: 160  
 Size of block after _realloc_dbg of 40 more longs: 320  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

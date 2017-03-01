@@ -1,58 +1,75 @@
 ---
-title: "Класс make_signed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::make_signed"
-  - "make_signed"
-  - "std.tr1.make_signed"
-  - "std.make_signed"
-  - "std::make_signed"
-  - "type_traits/std::make_signed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_signed - класс [TR1]"
-  - "make_signed"
+title: "Класс make_signed | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- make_signed
+- std::make_signed
+- type_traits/std::make_signed
+dev_langs:
+- C++
+helpviewer_keywords:
+- make_signed class
+- make_signed
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# Класс make_signed
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 43b41b7016faeb593af12d01f940c27d00882b9e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="makesigned-class"></a>Класс make_signed
 Создает тип или наименьшей знаковый тип, размер которого больше или равен размеру типа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class T>
+struct make_signed;
+
+template <class T>
+using make_signed_t = typename make_signed<T>::type;
 ```  
-template<class T>  
-    struct make_signed;  
   
-template<class T>  
-    using make_signed_t = typename make_signed<T>::type;  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Тип для изменения.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Экземпляр модификатора типа содержит модифицированный тип, т. е. `T`, если `is_signed<T>` содержит значение true. В противном случае это наименьший тип без знака `UT` для которого `sizeof (T) <= sizeof (UT)`.  
   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<type_traits>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

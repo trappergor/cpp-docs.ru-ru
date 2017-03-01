@@ -1,78 +1,90 @@
 ---
-title: "Структура logical_or | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.logical_or"
-  - "std::logical_or"
-  - "logical_or"
-  - "xfunctional/std::logical_or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_or - класс"
-  - "logical_or - структура"
+title: "Структура logical_or | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.logical_or
+- std::logical_or
+- logical_or
+- xfunctional/std::logical_or
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical_or class
+- logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Структура logical_or
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
+ms.lasthandoff: 02/24/2017
 
-Предопределенный объект функции, который выполняет логическую операцию рассеченности \(`operator||`\) на основе своих аргументов.  
+---
+# <a name="logicalor-struct"></a>Структура logical_or
+Предопределенный объект функции, который выполняет над своими аргументами операцию логического сложения ( `operator||`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template<class Type = void>  
-   struct logical_or : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator||  
-template<>  
-   struct logical_or<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            || std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct logical_or : public binary_function<Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+ };
+
+// specialized transparent functor for operator||
+template <>
+struct logical_or<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) || std::forward<U>(Right));
+ };
 ```  
   
-#### Параметры  
- `Type`, `Type1`, `Type2`  
- Любой тип, поддерживающий `operator||`, принимающую операнды определение или возвращаемого типа.  
+#### <a name="parameters"></a>Параметры  
+ `Type`, `T`, `U`  
+ Любой тип, поддерживающий `operator||`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд логические операции рассеченности.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type1`.  
+ Левый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд логические операции рассеченности.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type2`.  
+ Правый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
-## Возвращаемое значение  
- Результат `Left``||``Right`.  Представляет шаблон повышает препровождение результата, который имеет тип, который возвращается `operator||`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Результат `Left``||``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator||`.  
   
-## Заметки  
- Для пользовательских типов не допускающие сокращенные вычисления оценки операнда.  Оба аргумента вычисляются `operator||`.  
+## <a name="remarks"></a>Примечания  
+ Для определяемых пользователем типов нет сокращенного вычисления операнда. Оба аргумента вычисляются `operator||`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // functional_logical_or.cpp  
 // compile with: /EHsc  
 #include <deque>  
@@ -119,19 +131,26 @@ int main( )
       cout << *iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+Original deque:  
+ d1 = ( true true false false true false false )  
+Original deque:  
+ d2 = ( false false false true true true true )  
+The deque which is the disjuction of d1 & d2 is:  
+ d3 = ( true true false true true true true )  
+*\  
+  
 ```  
   
-  **Исходный deque:**  
- **d1 \= true \(фактическое значение false значение false фактическое значение false значение false\)**  
-**Исходный deque:**  
- **d2 \= false \(false значение false фактическое значение true фактическое значение true\)**  
-**Deque, disjuction d1 & d2 выглядит следующим образом:**  
- **d3 \= true \(фактическое значение false фактическое значение true фактическое значение true\)**   
-## Требования  
- **Заголовок:** \<functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,48 +1,64 @@
 ---
-title: "malloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "malloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "malloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "malloc - функция"
-  - "выделение памяти"
+title: "malloc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- malloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- malloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- malloc function
+- memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# malloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f259e869535e00bf0dd4f18e6a4d8d02e4054685
+ms.lasthandoff: 02/24/2017
 
-Выделяет блоки памяти.  
+---
+# <a name="malloc"></a>malloc
+Размещение блоков памяти  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void *malloc(  
@@ -50,59 +66,53 @@ void *malloc(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `size`  
- Байты, которые нужно выделить.  
+ Байты для размещения.  
   
-## Возвращаемое значение  
- `malloc` возвращает недействительный указатель в выделенное пространство или `NULL`, если недоступно достаточно памяти.  Чтобы восстановить для указателя тип, отличный от `void`, используйте приведение типа для возвращаемого значения.  Гарантируется, что пространство для хранения, на которое указало возвращенное значение, будет соответствующим образом выровнено для хранения любого типа объекта с требованием о выравнивании менее или равно стандартному выравниванию. \(В Visual C\+\+ основным выравниванием является выравнивание, необходимое для `double` или 8 байт.  В коде, который нацелен на 64\-разрядные платформы, это 16 байт.\) Используйте [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) для выделения памяти для объектов, которые имеют высокие требования к выравниванию — например, типы SSE [\_\_m128](../Topic/__m128.md) и `__m256` и типы, объявляемые с помощью `__declspec(align(``n``))`, где `n` больше 8.  Если значение `size` равно 0, `malloc` выделяет элемент нулевой длины в куче и возвращает допустимый указатель на этот элемент.  Всегда проверяйте возврат из `malloc`, даже если запрашиваемый объем памяти очень мал.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `malloc` возвращает указатель void на выделенное пространство или значение `NULL`, если памяти недостаточно. Чтобы вернуть указатель на тип, отличный от `void`, используйте приведение типов для возвращаемого значения. Дисковое пространство, на который указывает возвращаемое значение, будет гарантированно соответствовать требованиям к выравниванию для хранения объектов любого типа, если таковые требования не превышают базовые. (В Visual C++ в качестве базовых устанавливаются требования к выравниванию для типа `double` или 8 байтов. В коде для 64-разрядных платформ это ограничение составляет 16 байтов.) Функция [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) выделяет пространство для хранения объектов с более высокими требованиями к выравниванию. Например, это могут быть типы SSE [__m128](../../cpp/m128.md) и `__m256`, а также типы, объявленные с использованием `__declspec(align(``n``))`, где `n` больше 8. Если значение `size` равно 0, функция `malloc` выделяет элемент нулевой длины в куче и возвращает допустимый указатель на этот элемент. Всегда проверяйте возвращаемое функцией `malloc` значение, даже если объем запрошенной памяти мал.  
   
-## Заметки  
- Функция `malloc` выделяет блок памяти по крайней мере байтов `size`.  Блок может иметь несколько байтов `size` из\-за пространства, необходимый для выравнивания и данных обслуживания.  
+## <a name="remarks"></a>Примечания  
+ Функция `malloc` выделяет блок памяти размером не менее `size` байтов. Размер блока может превышать `size` байтов из-за дополнительных затрат места на хранение информации о выравнивании и обслуживании.  
   
- `malloc` задает для параметра `errno` значение `ENOMEM`, если выделение памяти завершается сбоем или количество запрошенной памяти превышает `_HEAP_MAXREQ`.  Сведения об этих и других кодах ошибок см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Функция `malloc` задает для параметра `errno` в значение `ENOMEM`, если выделение памяти завершается сбоем или количество запрошенной памяти превышает `_HEAP_MAXREQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Код запуска используется `malloc`, чтобы выделить хранилище для переменных `_environ`, `envp` и `argv`.  Следующие функции и их широкосимвольные аналоги также вызывают `malloc`.  
+ Код запуска использует функцию `malloc` для выделения пространства для переменных `_environ`, `envp` и `argv`. Функцию `malloc` также вызывают следующие функции и их аналоги для расширенных символов.  
   
 |||||  
 |-|-|-|-|  
-|[calloc](../../c-runtime-library/reference/calloc.md)|[fscanf](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[\_getw](../../c-runtime-library/reference/getw.md)|[setvbuf](../../c-runtime-library/reference/setvbuf.md)|  
-|[функции \_exec](../../c-runtime-library/exec-wexec-functions.md)|[fseek](../../c-runtime-library/reference/fseek-fseeki64.md)|[\_popen](../../c-runtime-library/reference/popen-wpopen.md)|[функции \_spawn](../Topic/_spawn,%20_wspawn%20Functions.md)|  
-|[fgetc](../Topic/fgetc,%20fgetwc.md)|[fsetpos](../Topic/fsetpos.md)|[printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[\_strdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md)|  
-|[\_fgetchar](../Topic/fgetc,%20fgetwc.md)|[\_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[putc](../../c-runtime-library/reference/putc-putwc.md)|[системный](../../c-runtime-library/reference/system-wsystem.md)|  
-|[fgets](../../c-runtime-library/reference/fgets-fgetws.md)|[fwrite](../Topic/fwrite.md)|[putchar](../../c-runtime-library/reference/putc-putwc.md)|[\_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-|[fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](../../c-runtime-library/reference/getc-getwc.md)|[\_putenv](../../c-runtime-library/reference/putenv-wputenv.md)|[ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md)|  
-|[fputc](../../c-runtime-library/reference/fputc-fputwc.md)|[getchar](../../c-runtime-library/reference/getc-getwc.md)|[puts](../Topic/puts,%20_putws.md)|[vfprintf](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|  
-|[\_fputchar](../../c-runtime-library/reference/fputc-fputwc.md)|[\_getcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[\_putw](../../c-runtime-library/reference/putw.md)|[vprintf](../../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|  
-|[fputs](../Topic/fputs,%20fputws.md)|[\_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
-|[fread](../../c-runtime-library/reference/fread.md)|[получает](../../c-runtime-library/gets-getws.md)|[\_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
+|[calloc](../../c-runtime-library/reference/calloc.md)|[fscanf](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](../../c-runtime-library/reference/getw.md)|[setvbuf](../../c-runtime-library/reference/setvbuf.md)|  
+|[Функции _exec](../../c-runtime-library/exec-wexec-functions.md)|[fseek](../../c-runtime-library/reference/fseek-fseeki64.md)|[_popen](../../c-runtime-library/reference/popen-wpopen.md)|[Функции _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|  
+|[fgetc](../../c-runtime-library/reference/fgetc-fgetwc.md)|[fsetpos](../../c-runtime-library/reference/fsetpos.md)|[printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[_strdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md)|  
+|[_fgetchar](../../c-runtime-library/reference/fgetc-fgetwc.md)|[_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[putc](../../c-runtime-library/reference/putc-putwc.md)|[system](../../c-runtime-library/reference/system-wsystem.md)|  
+|[fgets](../../c-runtime-library/reference/fgets-fgetws.md)|[fwrite](../../c-runtime-library/reference/fwrite.md)|[putchar](../../c-runtime-library/reference/putc-putwc.md)|[_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
+|[fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](../../c-runtime-library/reference/getc-getwc.md)|[_putenv](../../c-runtime-library/reference/putenv-wputenv.md)|[ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md)|  
+|[fputc](../../c-runtime-library/reference/fputc-fputwc.md)|[getchar](../../c-runtime-library/reference/getc-getwc.md)|[puts](../../c-runtime-library/reference/puts-putws.md)|[vfprintf](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|  
+|[_fputchar](../../c-runtime-library/reference/fputc-fputwc.md)|[_getcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[_putw](../../c-runtime-library/reference/putw.md)|[vprintf](../../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|  
+|[fputs](../../c-runtime-library/reference/fputs-fputws.md)|[_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
+|[fread](../../c-runtime-library/reference/fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
   
- Функция [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) C\+\+ задает новый режим обработчика события `malloc`.  Указывает, может ли новый режим обработки, при сбое вызова `malloc`, использовать новую процедуру обработчика как набор [\_set\_new\_handler](../Topic/_set_new_handler.md).  По умолчанию `malloc` не вызывает новую процедуру обработчика при сбое выделения памяти.  Можно переопределить это поведение по умолчанию, чтобы в случае сбоя предоставления памяти методом `malloc` метод `malloc` вызывал новую процедуру обработчика таким же образом, как это делает оператор `new` при сбое по той же причине.  Чтобы переопределить значение по умолчанию, вызовите  
+ Функция [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) C++ задает новый режим обработчика для `malloc`. Новый режим обработчика указывает, должна ли функция `malloc` при сбое вызывать новую подпрограмму обработчика, заданную функцией [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). По умолчанию в случае, если выделить память не удается, `malloc` не вызывает новую подпрограмму обработчика. Можно переопределить это поведение по умолчанию, чтобы в случае сбоя предоставления памяти функцией `malloc` функция `malloc` вызывала новую подпрограмму обработчика таким же образом, как это делает оператор `new` при сбое по той же причине. Чтобы переопределить значение по умолчанию, вызовите `_set_new_mode(1)` ранних этапах программы или связи с NEWMODE. OBJ (см. [параметры связи](../../c-runtime-library/link-options.md)).  
   
-```cpp  
-_set_new_mode(1)  
-```  
+ Когда приложение связано с отладочной версией библиотек времени выполнения языка C, функция `malloc` соответствует функции [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- на ранних этапах программы или компонуйте с использованием NEWMODE.OBJ \(см. [Параметры ссылок](../Topic/Link%20Options.md)\).  
+ Функция `malloc` имеет метки `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
   
- Когда приложение связано с отладочной версией библиотек времени выполнения языка C, `malloc` соответствует [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md).  Дополнительные сведения о том, как происходит управление кучей в процессе отладки см. в разделе [Сведения о куче отладки CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
-  
- `malloc` помечен `__declspec(noalias)` и `__declspec(restrict)`; это означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним.  Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
-  
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`malloc`|\<stdlib.h\> и \<malloc.h\>|  
+|-------------|---------------------|  
+|`malloc`|\<stdlib.h> и \<malloc.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```c  
+```C  
 // crt_malloc.c  
 // This program allocates memory with  
 // malloc, then frees the memory with free.  
@@ -132,14 +142,18 @@ int main( void )
 }  
 ```  
   
-  **Область памяти, выделенная для имени пути**  
-**Освобожденная память**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Для получения дополнительной информации см. [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Memory space allocated for path name  
+Memory freed  
+```  
   
-## См. также  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md)
+ [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
+

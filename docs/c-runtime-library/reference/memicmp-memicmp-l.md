@@ -1,53 +1,69 @@
 ---
-title: "_memicmp, _memicmp_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_memicmp_l"
-  - "_memicmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_memicmp"
-  - "memicmp_l"
-  - "_memicmp_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_memicmp - функция"
-  - "_memicmp_l - функция"
-  - "memicmp - функция"
-  - "memicmp_l - функция"
+title: "_memicmp, _memicmp_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _memicmp_l
+- _memicmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _memicmp
+- memicmp_l
+- _memicmp_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- memicmp function
+- _memicmp function
+- memicmp_l function
+- _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _memicmp, _memicmp_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e7547d6ff0e62e8bc4c449d55c5f06f1c9349092
+ms.lasthandoff: 02/24/2017
 
-Сравнивает символы в двух буферах \(регистр не учитывается\).  
+---
+# <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
+Сравнивает символы в двух буферах (без учета регистра).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _memicmp(  
@@ -63,7 +79,7 @@ int _memicmp_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buf1`  
  Первый буфер.  
   
@@ -71,38 +87,38 @@ int _memicmp_l(
  Второй буфер.  
   
  `count`  
- Число символов,  
+ Число символов.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение показывает связь между буферами.  
   
-|Возвращаемое значение|Связь первых байтов количества первого и второго буферов|  
-|---------------------------|--------------------------------------------------------------|  
-|\< 0|`buf1` меньше чем `buf2`.|  
-|0|`buf1` идентичен `buf2`.|  
-|\> 0|Параметр `buf1` больше значения свойства `buf2`.|  
+|Возвращаемое значение|Отношения между определенным числом начальных байтов буфера&1; и буфера&2;|  
+|------------------|--------------------------------------------------------|  
+|< 0|Значение `buf1` меньше значения `buf2`.|  
+|0|Значение `buf1` идентично значению `buf2`.|  
+|> 0|Значение `buf1` больше значения `buf2`.|  
 |`_NLSCMPERROR`|Произошла ошибка.|  
   
-## Заметки  
- Функция `_memicmp` сравнивает первые символы `count` двух буферов `buf1` и `buf2` побайтово.  Сравнение выполняется без учета регистра.  
+## <a name="remarks"></a>Примечания  
+ Функция `_memicmp` сравнивает первые символы (`count`) двух буферов `buf1` и `buf2` по байтам. Сравнение выполняется без учета регистра.  
   
- Если `buf1` или `buf2` является указателем null, то функция вызывает обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение разрешено для продолжить, функция возвращает `_NLSCMPERROR` и задает `errno` в `EINVAL`.  
+ Если `buf1` или `buf2` является пустым указателем, эта функция вызывает обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает `_NLSCMPERROR` и устанавливает для параметра `errno` значение `EINVAL`.  
   
- `_memicmp` использует текущий языковой стандарт для расширений, зависящих от языкового стандарта; `_memicmp_l` идентична за исключением того, что она использует переданный языковой стандарт.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_memicmp` использует текущий языковой стандарт для аспектов поведения, обусловленных языковыми стандартами; функция `_memicmp_l` идентична за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_memicmp`|\<memory.h\> или \<string.h\>|  
-|`_memicmp_l`|\<memory.h\> или \<string.h\>|  
+|-------------|---------------------|  
+|`_memicmp`|\<memory.h> или \<string.h>|  
+|`_memicmp_l`|\<memory.h> или \<string.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_memicmp.c  
@@ -132,17 +148,20 @@ int main( void )
 }  
 ```  
   
-  **Сравнение 'Those Who Will Not Learn from' с 'THOSE WHO WILL NOT LEARN FROM'**  
-**Первая строка равна второй.**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'  
+First is equal to second.  
+```  
   
-## См. также  
- [Манипуляция буфером](../Topic/Buffer%20Manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr](../Topic/memchr,%20wmemchr.md)   
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
+ [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [\_stricmp, \_wcsicmp, \_mbsicmp, \_stricmp\_l, \_wcsicmp\_l, \_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)

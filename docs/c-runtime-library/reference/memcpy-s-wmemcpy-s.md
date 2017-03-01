@@ -1,50 +1,66 @@
 ---
-title: "memcpy_s, wmemcpy_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memcpy_s"
-  - "wmemcpy_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wmemcpy_s"
-  - "memcpy_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memcpy_s - функция"
-  - "wmemcpy_s - функция"
+title: "memcpy_s, wmemcpy_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memcpy_s
+- wmemcpy_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wmemcpy_s
+- memcpy_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- memcpy_s function
+- wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# memcpy_s, wmemcpy_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 38381578b8a8bd66c857d26d12a775f2af702611
+ms.lasthandoff: 02/24/2017
 
-Копирует байты между буферами. Здесь представлены версии функций [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+Копирует байты между буферами. Это версии функций [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t memcpy_s(  
@@ -61,12 +77,12 @@ errno_t wmemcpy_s(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `dest`  
  Новый буфер.  
   
  `destSize`  
- Размер буфера назначения, в байтах для memcpy\_s и расширенные символы \(wchar\_t\) для wmemcpy\_s.  
+ Размер буфера назначения в байтах для функции memcpy_s и в расширенных символах (wchar_t) для wmemcpy_s.  
   
  `src`  
  Буфер, из которого происходит копирование.  
@@ -74,32 +90,33 @@ errno_t wmemcpy_s(
  `count`  
  Число копируемых символов.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Возвращает нуль в случае успеха или код ошибки в случае неудачи.  
   
-### Условия ошибок  
+### <a name="error-conditions"></a>Условия ошибок  
   
-|`dest`|`destSize`|`src`|Возвращаемое значение|Содержимое `dest`|  
-|------------|----------------|-----------|---------------------------|-----------------------|  
-|`NULL`|any|any|`EINVAL`|не изменено|  
-|any|any|`NULL`|`EINVAL`|`dest` обнуляется|  
-|any|\< `count`|any|`ERANGE`|`dest` обнуляется|  
+|`dest`|`destSize`|`src`|`count`|Возвращаемое значение|Содержимое `dest`|  
+|------------|----------------|-----------|---|------------------|------------------------|  
+|any|любые|любые|0|0|Без изменений|  
+|`NULL`|любые|любые|ненулевое значение|`EINVAL`|Без изменений|  
+|любые|любые|`NULL`|ненулевое значение|`EINVAL`|`dest` обнуляется|  
+|любые|< `count`|любые|ненулевое значение|`ERANGE`|`dest` обнуляется|  
   
-## Заметки  
- `memcpy_s` копирует `count` байт из `src` в `dest`; `wmemcpy_s` копирует `count` расширенных символов \(двухбайтовых\). При перекрытии исходного и конечного буферов поведение `memcpy_s` не определено. Используйте `memmove_s` для обработки перекрывающихся областей.  
+## <a name="remarks"></a>Примечания  
+ `memcpy_s` копирует `count` байт из `src` в `dest`; `wmemcpy_s` копирует `count` расширенных символов (двухбайтовых). При перекрытии исходного и конечного буферов поведение `memcpy_s` не определено. Используйте `memmove_s` для обработки перекрывающихся областей.  
   
- Эти функции проверяют свои параметры. Если `dest` или `src` является указателем null или `destSize` меньше, чем `count`, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` и устанавливают для `errno` значение `EINVAL`.  
+ Эти функции проверяют свои параметры. Если параметр `count` имеет ненулевое значение и `dest` или `src` является указателем NULL, либо если `destSize` меньше `count`, эти функции вызывают обработчик недопустимого параметра, как указано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` или `ERANGE` и присваивают параметру `errno` возвращаемое значение.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`memcpy_s`|\<memory.h\> или \<string.h\>|  
-|`wmemcpy_s`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memcpy_s`|\<memory.h> или \<string.h>|  
+|`wmemcpy_s`|\<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_memcpy_s.c  
@@ -139,16 +156,16 @@ int main()
 0 1 4 9 16 25 36 49 64 81   
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
- [Манипуляция буфером](../Topic/Buffer%20Manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr](../Topic/memchr,%20wmemchr.md)   
+## <a name="see-also"></a>См. также  
+ [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memmove, wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../Topic/strncpy_s,%20_strncpy_s_l,%20wcsncpy_s,%20_wcsncpy_s_l,%20_mbsncpy_s,%20_mbsncpy_s_l.md)
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
