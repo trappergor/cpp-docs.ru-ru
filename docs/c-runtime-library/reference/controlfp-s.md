@@ -1,52 +1,68 @@
 ---
-title: "_controlfp_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_controlfp_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "controlfp_s"
-  - "_controlfp_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_controlfp_s - функция"
-  - "controlfp_s - функция"
-  - "EM_AMBIGUOUS"
-  - "функции с плавающей запятой, задание контрольного слова"
-  - "числа с плавающей запятой, контрольное слово"
+title: "_controlfp_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _controlfp_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- controlfp_s
+- _controlfp_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point numbers, control word
+- controlfp_s function
+- floating-point functions, setting control word
+- EM_AMBIGUOUS
+- _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# _controlfp_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
+ms.lasthandoff: 02/24/2017
 
-Возвращает и задает управляющее слово с плавающей точкой.  В этой версии [\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md) усовершенствована безопасность, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="controlfps"></a>_controlfp_s
+Возвращает и задает управляющее слово блока операций с плавающей запятой. Это версия функции [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _controlfp_s(  
@@ -56,32 +72,32 @@ errno_t _controlfp_s(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `currentControl`  
- Текущее битовое значение управляющего слова.  
+ Значения битов в текущем управляющем слове.  
   
  `newControl`  
- Значения бит в новом управляющем слове.  
+ Значения битов в новом управляющем слове.  
   
  `mask`  
  Маска для установки битов нового управляющего слова.  
   
-## Возвращаемое значение  
- Ноль в случае успешного выполнения или значение `errno` кода ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль в случае успешного выполнения или код ошибки `errno`.  
   
-## Заметки  
- Функция `_controlfp_s` \- это платформонезависимая и более безопасная версия функции `_control87`, которая получает управляющее слово с плавающей точкой по адресу, который хранится в `currentControl` и устанавливает его с помощью `newControl`.  Биты в значениях указывают состояние управления с плавающей точкой.  Управляющее состояние с плавающей точкой позволяет программе изменять точность, округление и режимы бесконечности математического пакета чисел с плавающей точкой в зависимости от платформы.  Можно также использовать `_controlfp_s` в маскирования и демаскирования исключений с плавающей точкой.  
+## <a name="remarks"></a>Примечания  
+ Функция `_controlfp_s` — это независимая от платформы и более безопасная версия функции `_control87`, которая получает управляющее слово с плавающей запятой в адрес, хранящийся в `currentControl`, и задает его с помощью `newControl`. Биты в значениях показывают состояние элемента управления блоком операций с плавающей запятой. Состояние элемента управления блока операций с плавающей запятой позволяет программе изменять режимы точности, округления и бесконечности в пакете математических операций с числами с плавающей запятой в зависимости от платформы. Можно также использовать функцию `_controlfp_s` для маскирования и демаскирования исключений, связанных с операциями с плавающей запятой.  
   
- Если значение `mask` равно 0, то `_controlfp_s` получает управляющее слово с плавающей точкой и сохраняет полученное значение в `currentControl`.  
+ Если значение для `mask` равно 0, функция `_controlfp_s` получает управляющее слово блока операций с плавающей запятой и сохраняет извлеченное значение в `currentControl`.  
   
- Если `mask` отлично от нуля, задаётся новое значение управляющего слова: Для любого заданного бита \(то есть, равного 1\) в `mask`, соответствующий бит в `new` используется для обновления управляющего слова.  Другими словами, `fpcntrl` `=` \(\(`fpcntrl` `& ~mask`\) &#124; \(`new & mask`\)\), где `fpcntrl` \- управляющее слово с плавающей точкой.  В этом сценарии для `currentControl` задается значение после внесения изменений; это не старое битовое значение управляющего слова.  
+ Если значение `mask` отлично от нуля, задается новое значение управляющего слова: для любого включенного бита (то есть равного 1) в параметре `mask` соответствующий бит в параметре `new` используется для обновления управляющего слова. Другими словами, `fpcntrl` `=` ((`fpcntrl` `& ~mask`) &#124; (`new & mask`)), где `fpcntrl` — управляющее слово блока операций с плавающей запятой. В этом сценарии `currentControl` получает значение после завершения изменения; это не старое битовое значение управляющего слова.  
   
 > [!NOTE]
->  По умолчанию библиотеки времени выполнения маскируют все исключения с плавающей точкой.  
+>  По умолчанию библиотеки времени выполнения маскируют все исключения для операций с плавающей запятой .  
   
- `_controlfp_s` почти идентична функции `_control87` на Intel \(x86\), [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] и ARM платформах.  Если приложение разрабатывается для x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)], или ARM платформ, можно использовать `_control87` или `_controlfp_s`.  
+ Функция `_controlfp_s` почти идентична функции `_control87` на платформах Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] и ARM. Если приложение предназначено для платформы x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] или ARM, можно использовать функцию `_control87` или `_controlfp_s`.  
   
- Разница между `_control87` и `_controlfp_s` состоит в том, как они обрабатывают значения `DENORMAL`.  Для Intel \(x86\), [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] и ARM платформ `_control87` может устанавливать и убирать маску исключения DENORMAL OPERAND  `_controlfp_s` не изменяет маску исключения DENORMAL OPERAND  В следующем примере показано это различие.  
+ Разница между функциями `_control87` и `_controlfp_s` состоит в способе обработки значения `DENORMAL`. В случае платформ Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] и ARM функция `_control87` может устанавливать и очищать маску исключения DENORMAL OPERAND. Функция `_controlfp_s` не изменяет маску исключения DENORMAL OPERAND. В следующем примере показано это различие.  
   
 ```  
 _control87( _EM_INVALID, _MCW_EM );   
@@ -91,9 +107,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.  
 ```  
   
- Возможные значения константы маски \(`mask`\) и новые значения управления \(`newControl`\) показаны в следующей таблице шестнадцатеричных значений.  Вместо того, чтобы явно указывать шестнадцатеричные значения, следует использовать переносимые константы, перечисленные ниже \(`_MCW_EM`, `_EM_INVALID` и т д\) для аргументов к этим функциям.  
+ Возможные значения константы маски (`mask`) и новые управляющие значения (`newControl`) показаны в следующей таблице шестнадцатеричных значений. В аргументах этих функций вместо явных шестнадцатеричных значений следует использовать перечисленные ниже переносимые константы (`_MCW_EM`, `_EM_INVALID` и т. д.).  
   
- Производные от Intel \(x86\) платформы поддерживают в оборудовании значения DENORMAL во входных и выходных данных.  x86 сохраняет значения DENORMAL.  Платформа ARM и платформы [!INCLUDE[vcprx64](../Token/vcprx64_md.md)], обладающие поддержкой SSE2, включают сохранение операндов и результатов DENORMAL, или их приравнивание к нулю.  Функции `_controlfp_s`, `_controlfp` и `_control87` предоставляют маску для изменения такого поведения.  В следующем примере показано использование этой маски:  
+ Платформы на основе Intel (x86) аппаратно поддерживают входные и выходные значения DENORMAL. В случае x86 значения DENORMAL сохраняются. Платформа ARM и платформы [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], в которых имеется поддержка SSE2, позволяют сбрасывать операнды и результаты DENORMAL (т. е., принудительно задавать для них нулевые значения). Функции `_controlfp_s`, `_controlfp` и `_control87` предоставляют маску для изменения такого поведения. В следующем примере показано использование этой маски:  
   
 ```  
 unsigned int current_word = 0;  
@@ -105,38 +121,39 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.  
 ```  
   
- На платформах ARM, функция `_controlfp_s` применяется к регистру FPSCR.  В архитектурах [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] затрагивается только управляющее слово SSE2, хранящееся в регистре MXCSR.  На платформах Intel \(x86\) `_controlfp_s` влияет на управляющие слова как для x87, так и для SSE2, если они есть.  Два управляющих слова могут быть несогласованы друг с другом \(из\-за предыдущего вызова [\_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md), например\); если между двумя управляющими словами есть несогласованность, `_controlfp_s` устанавливает флаг `EM_AMBIGUOUS` в `currentControl`.  Это предупреждение о том, что возвращенное управляющее слово не может точно представлять состояние обоих управляющих слов с плавающей точкой.  
+ На платформах ARM функция `_controlfp_s` применяется к регистру FPSCR. В архитектурах [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] затрагивается только управляющее слово SSE2, хранящееся в регистре MXCSR. На платформах Intel (x86) функция `_controlfp_s` влияет на управляющие слова как для x87, так и для SSE2 (при наличии). Два управляющих слова могут быть разными (например, в результате предыдущего вызова функции [__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)); в случае, если между управляющими словами имеется расхождение, `_controlfp_s` устанавливает флаг `EM_AMBIGUOUS` и `currentControl`. Это предупреждение о том, что возвращенное управляющее слово может неточно представлять состояние обоих управляющих слов блоков операций с плавающей запятой.  
   
- В архитектурах ARM и [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] не поддерживается изменение режима бесконечности или точности чисел с плавающей точкой.  Если маска управления точностью используется на платформе [!INCLUDE[vcprx64](../Token/vcprx64_md.md)], то функция создает утверждение и вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
+ В архитектурах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] изменение режима бесконечности или точности чисел с плавающей запятой не поддерживается. Если маска управления точностью используется на платформе [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], функция создает утверждение и вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
- Если маска задана неправильно, эта функция создает исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция возвращает `EINVAL` и устанавливает `errno` в значение `EINVAL`.  
+ Если маска задана неправильно, эта функция создает исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `EINVAL` и задает для `errno` значение `EINVAL`.  
   
- Эта функция игнорируется в случае использования [\/clr \(компиляция CLR\)](../../build/reference/clr-common-language-runtime-compilation.md) или **\/clr:pure** для компилирования, поскольку среда CLR поддерживает только точность чисел с плавающей точкой по умолчанию.  
+ Эта функция учитывается при использовании [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) компиляции, поскольку общеязыковой среды выполнения (CLR) поддерживает только точность чисел с плавающей запятой по умолчанию.  
   
  **Шестнадцатеричные значения**  
   
- Для маски `_MCW_EM`, её очистка задает исключение, которое допускает аппаратное исключение; установка маски скрывает исключение.  Если возникает `_EM_UNDERFLOW` или `_EM_OVERFLOW`, не аппаратное исключение не создается до тех пор, пока не выполнится следующая инструкций с плавающей точкой.  Для создания аппаратного исключения сразу после `_EM_UNDERFLOW` или `_EM_OVERFLOW`, следует вызвать инструкцию MASM FWAIT.  
+ При очистке маски `_MCW_EM` задается исключение, которое допускает аппаратное исключение; установка маски скрывает это исключение. Если возникает исключение `_EM_UNDERFLOW` или `_EM_OVERFLOW`, аппаратное исключение не создается, пока не будет выполняться следующая операция с плавающей запятой. Чтобы аппаратное исключение возникало сразу после `_EM_UNDERFLOW` или `_EM_OVERFLOW`, следует вызвать инструкцию FWAIT MASM.  
   
 |Маска|Шестнадцатеричное значение|Константа|Шестнадцатеричное значение|  
-|-----------|--------------------------------|---------------|--------------------------------|  
-|`_MCW_DN` \(управление Denormal\)|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
-|`_MCW_EM` \(маска исключения прерывания\)|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
-|`_MCW_IC` \(управление бесконечностью\)<br /><br /> \(Не поддерживается на платформах [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] или ARM\).|0x00040000|`_IC_AFFINE`<br /><br /> `_IC_PROJECTIVE`|0x00040000<br /><br /> 0x00000000|  
-|`_MCW_RC` \(управление округлением\)|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
-|`_MCW_PC` \(управление точностью\)<br /><br /> \(Не поддерживается на платформах [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] или ARM\).|0x00030000|`_PC_24` \(24 бита\)<br /><br /> `_PC_53` \(53 бита\)<br /><br /> `_PC_64` \(64 бита\)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
+|----------|---------------|--------------|---------------|  
+|`_MCW_DN` (управление денормализацией)|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
+|`_MCW_EM` (маска исключения прерывания)|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
+|`_MCW_IC` (управление бесконечностью)<br /><br /> (Не поддерживается на платформах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].)|0x00040000|`_IC_AFFINE`<br /><br /> `_IC_PROJECTIVE`|0x00040000<br /><br /> 0x00000000|  
+|`_MCW_RC` (управление округлением)|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
+|`_MCW_PC` (управление точностью)<br /><br /> (Не поддерживается на платформах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].)|0x00030000|`_PC_24` (24 бита)<br /><br /> `_PC_53` (53 бита)<br /><br /> `_PC_64` (64 бита)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_controlfp_s`|\<float.h\>|  
+|-------------|---------------------|  
+|`_controlfp_s`|\<float.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
-// crt_contrlfp_s.c  
+  
+      // crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
@@ -176,7 +193,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 Original: 0x9001f  
@@ -187,11 +204,11 @@ Default:  0x9001f
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо.  Для вызова стандартной функции C используйте `PInvoke`.  Для получения дополнительной информации см. [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент в .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [\_clear87, \_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
- [\_status87, \_statusfp, \_statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
- [\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md)
+ [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
+ [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)

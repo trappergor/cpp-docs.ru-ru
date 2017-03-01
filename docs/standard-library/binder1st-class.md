@@ -1,83 +1,95 @@
 ---
-title: "Класс binder1st | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::binder1st"
-  - "std::binder1st"
-  - "binder1st"
-  - "std.binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st - класс"
+title: "Класс binder1st | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::binder1st
+- std::binder1st
+- binder1st
+- std.binder1st
+dev_langs:
+- C++
+helpviewer_keywords:
+- binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Класс binder1st
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 71d06115b1f6cc0df5a3dee9ce60482e641407ef
+ms.lasthandoff: 02/24/2017
 
-Шаблонный класс, предоставляющий данный конструктор, который выполняет преобразование бинарный объект функции в унарный объект функции путем связывания первый аргумент бинарной функции указанное значение.  
+---
+# <a name="binder1st-class"></a>Класс binder1st
+Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template<class Operation>  
-class binder1st  
-   : public unary_function <  
-      typename Operation::second_argument_type,  
-      typename Operation::result_type>   
-  {  
-   public:  
-   typedef typename Operation::argument_type argument_type;  
-   typedef typename Operation::result_type result_type;  
-   binder1st(  
-      const Operation & _Func,  
-      const typename Operation::first_argument_type& _Left  
-   );  
-   result_type operator()(  
-      const argument_type& _Right  
-   ) const;  
-   result_type operator()(  
-      const argument_type& _Right  
-   ) const;  
-   protected:  
-   Operation op;  
-   typename Operation::first_argument_type value;  
-   };  
+```
+template <class Operation>
+class binder1st
+    : public unaryFunction <typename Operation::second_argument_type,
+                             typename Operation::result_type>
+{
+public:
+    typedef typename Operation::argument_type argument_type;
+    typedef typename Operation::result_type result_type;
+    binder1st(
+        const Operation& Func,
+        const typename Operation::first_argument_type& left);
+
+    result_type operator()(const argument_type& right) const;
+    result_type operator()(const argument_type& right) const;
+
+protected:
+    Operation op;
+    typename Operation::first_argument_type value;
+};
 ```  
   
-#### Параметры  
- `_Func`  
- Бинарный объект функции, в который выполняется преобразование унарному объект функции.  
+#### <a name="parameters"></a>Параметры  
+ `Func`  
+ Объект бинарной функции, который необходимо преобразовать в объект унарной функции.  
   
- `_Left`  
- Значение, первый аргумент бинарного объекта функции быть привязанным.  
+ `left`  
+ Значение, к которому необходимо привязать первый аргумент объекта бинарной функции.  
   
- `_Right`  
- Значение аргумента, приспособленный бинарный сравнивает объект к фиксированному значению второго аргумента.  
+ `right`  
+ Значение аргумента, которое адаптированный объект бинарной функции сравнивает с фиксированным значением второго аргумента.  
   
-## Возвращаемое значение  
- Унарный объект функции, результаты из привязки первый аргумент бинарного объекта функции значение `_Left.`  
+## <a name="return-value"></a>Возвращаемое значение  
+ Объект унарной функции, полученный в результате привязки первого аргумента объекта бинарной функции к значению `left.`  
   
-## Заметки  
- Класс шаблона сохранить копию объекта функции `_Func` бинарный в **op**, и копия `_Left` в **value**.  Он определяет свою функцию\-член `operator()` как возвращающий **op**\(**value**, `_Right`\).  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона сохраняет копию объекта бинарной функции `Func` в **op** и копию `left` — в **value**. Он определяет свою функцию-член `operator()` как возвращающую **op**( **value**, `right`).  
   
- Если `_Func` объект типа **Операция** и `c` константа, [bind1st](../Topic/bind1st%20Function.md) \( `_Func`, `c` \) аналогичен конструктору `binder1st`\<**Операция**\> класса `binder1st` \( `_Func`, `c` \) и удобное.  
+ Если `Func` — объект типа **Operation**, а `c` — константа, то [bind1st](../standard-library/functional-functions.md#bind1st_function) ( `Func`, `c` ) — эквивалент конструктора `binder1st`\< **Operation**> ( `Func`, `c` ) класса `binder1st` и является более удобным.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // functional_binder1st.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -118,16 +130,22 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "  
          << result2 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+The number of elements in v1 less than 10 is: 2.  
+*\  
 ```  
   
-  **Вектор v1 \= \(0 5 10 15 20 25\)**  
-**Количество элементов в v1 большего, чем 10 выглядит следующим образом: 3.**  
-**Количество элементов в v1 меньше 10 выглядит следующим образом: 2.**   
-## Требования  
- **Заголовок:** \<functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

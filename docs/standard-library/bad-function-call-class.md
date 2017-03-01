@@ -1,88 +1,57 @@
 ---
-title: "Класс bad_function_call | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::bad_function_call"
-  - "functional/std::tr1::bad_function_call"
-  - "std.tr1.bad_function_call"
-  - "bad_function_call"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_function_call - класс [TR1]"
+title: "Класс bad_function_call | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- bad_function_call
+- std::bad_function_call
+- functional/std::bad_function_call
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_function_call class
 ms.assetid: b70a0268-43ff-4f3b-a283-faf1cb172d4c
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Класс bad_function_call
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: 89ec0f614151128decfbc2c0a451ca9f55f4e85e
+ms.lasthandoff: 02/24/2017
 
-Отчеты плохой вызов функции.  
+---
+# <a name="badfunctioncall-class"></a>Класс bad_function_call
+Сообщает о недопустимом вызове функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class bad_function_call  
-    : public std::exception {  
-    };  
+ : public std::exception {  
+ };  
 ```  
   
-## Заметки  
- Класс описывает исключение создается, чтобы указать, что вызов `operator()` в объекте [Класс function](../standard-library/function-class.md), так как объект не был пустым.  
-  
-## Пример  
-  
-```  
-// std_tr1__functional__bad_function_call.cpp   
-// compile with: /EHsc   
-#include <functional>   
-#include <iostream>   
-  
-typedef double (Fd)(double);   
-typedef std::function<Fd> Myfunc;   
-  
-double square(double x)   
-    {   
-    return (x * x);   
-    }   
-  
-int main()   
-    {   
-    Myfunc fd0(square);   
-    std::cout << "x * x == " << fd0(3) << std::endl;   
-  
-    try   
-        {   
-        Myfunc fd1;   
-        std::cout << fd1(3) << std::endl;   
-        }   
-    catch (const std::bad_function_call&)   
-        {   
-        std::cout << "bad function call" << std::endl;   
-        }   
-    catch (...)   
-        {   
-        std::cout << "unknown exception" << std::endl;   
-        }   
-  
-    return (0);   
-    }  
-  
-```  
-  
-  **x \* x \=\= 9**  
-**недопустимый вызов функции**   
-## Требования  
- **Заголовок:** \<functional\>  
-  
- **Пространство имен:** std
+## <a name="remarks"></a>Примечания  
+ Данный класс описывает создание исключения для указания, что вызывается `operator()` в [классе function](../standard-library/function-class.md).
+

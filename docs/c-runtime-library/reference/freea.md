@@ -1,49 +1,66 @@
 ---
-title: "_freea | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_freea"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "freea"
-  - "_freea"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_freea - функция"
-  - "freea - функция"
-  - "освобождение памяти"
+title: "_freea | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _freea
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- freea
+- _freea
+dev_langs:
+- C++
+helpviewer_keywords:
+- _freea function
+- freea function
+- memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _freea
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="freea"></a>_freea
 Освобождает блок памяти.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void _freea(   
@@ -51,46 +68,46 @@ void _freea(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `memblock`  
- Ранее выделенный блок памяти, который необходимо освободить.  
+ Ранее выделенный блок памяти, который требуется освободить.  
   
-## Возвращаемое значение  
- Нет.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Отсутствует.  
   
-## Заметки  
- Функция `_freea` освобождает блок памяти \(`memblock`\), который был выделен ранее вызовом [\_malloca](../../c-runtime-library/reference/malloca.md).  `_freea` проверяет, была ли выделена память в куче или в стеке.  Если была выделена в стеке, `_freea` не выполняет никаких действий.  Если была выделена в куче, число освобожденных байтов эквивалентно запрошенному при выделении блока количеству байтов.  Если `memblock` имеет значение `NULL`, указатель не обрабатывается и `_freea` немедленно возвращает управление.  Попытка освободить недопустимый указатель \(указатель на блок памяти, который не был выделен `_malloca`\) может повлиять на последующие запросы на выделение и вызывать ошибки.  
+## <a name="remarks"></a>Примечания  
+ Функция `_freea` освобождает блок памяти (`memblock`), который был выделен ранее вызовом функции [_malloca](../../c-runtime-library/reference/malloca.md). Функция `_freea` проверяет, была ли память выделена в стеке или в куче. Если она была выделена в стеке, функция `_freea` не выполняет никаких действий. Если память выделена в куче, число освобожденных байтов эквивалентно количеству байтов, запрошенному при выделении блока. Если `memblock` имеет значение `NULL`, указатель не обрабатывается и функция `_freea` немедленно возвращает управление. Попытка освободить недопустимый указатель (указатель на блок памяти, который не был выделен функцией `_malloca`) может повлиять на последующие запросы выделения памяти и вызвать ошибки.  
   
- \_`freea` вызывает `free` внутри, если обнаружит, что память выделена в куче.  Определение расположения памяти \(в куче или в стеке\) осуществляется с помощью маркера, размещенного в памяти по адресу непосредственно перед выделенной памятью.  
+ Если память выделена в куче, функция _`freea` выполняет внутренний вызов функции `free`. Информация о том, выделена ли память в куче или в стеке, определяется меткой, которая устанавливается в памяти по адресу, непосредственно предшествующему выделенному блоку памяти.  
   
- При возникновении ошибки освобождения памяти, в `errno` заносятся данные операционной системы, которые объясняют причину ошибки.  Для получения дополнительной информации см. [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ В случае возникновения ошибки при освобождении памяти для `errno` задаются сведения о характере сбоя, полученные от операционной системы. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- После освобождения блока памяти, [\_heapmin](../../c-runtime-library/reference/heapmin.md) минимизирует объем свободной памяти в куче путем объединения неиспользуемых областей и передачи их обратно операционной системе.  Освобожденная память, которая не возвращена операционной системе, возвращается в пул свободной памяти и снова доступна для выделения.  
+ После освобождения блока памяти функция [_heapmin](../../c-runtime-library/reference/heapmin.md) минимизирует объем свободной памяти в куче путем объединения неиспользуемых областей и возврата их операционной системе. Освобожденная память, которая не возвращена операционной системе, возвращается в пул свободной памяти и снова доступна для выделения.  
   
- Вызов `_freea` должен сопровождать все вызовы `_malloca`.  Вызов `_freea` дважды для одной и той же памяти является ошибкой.  Когда приложение скомпоновано с отладочной версией библиотеки времени выполнения C, особенно с возможностями [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md), активированными определением `_CRTDBG_MAP_ALLOC`, проще найти отсутствующие или дублированные вызовы `_freea`.  Дополнительные сведения о том, как происходит управление кучей в процессе отладки см. в разделе [Отладочная куча CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Вызов `_freea` должен сопровождать все вызовы `_malloca`. Повторный вызов функции `_freea` для того же блока памяти приведет к ошибке. Если приложение связано с отладочной версией библиотеки времени выполнения C, в особенности в том случае, если функции [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) включены посредством определения `_CRTDBG_MAP_ALLOC`, найти пропущенные или повторные вызовы функции `_freea` будет проще. Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `_freea` помечена как `__declspec(noalias)`; это означает, что функция гарантировано не изменяет глобальные переменные.  Дополнительные сведения см. в разделе [noalias](../../cpp/noalias.md).  
+ Функция `_freea` помечена как `__declspec(noalias)`; это означает, что функция гарантировано не изменяет глобальные переменные. Дополнительные сведения см. в разделе [noalias](../../cpp/noalias.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_freea`|\<stdlib.h\> и \<malloc.h\>|  
+|--------------|---------------------|  
+|`_freea`|\<stdlib.h> и \<malloc.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
- См. пример в разделе [\_malloca](../../c-runtime-library/reference/malloca.md).  
+## <a name="example"></a>Пример  
+ См. пример для функции [_malloca](../../c-runtime-library/reference/malloca.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
- [\_malloca](../../c-runtime-library/reference/malloca.md)   
+ [_malloca](../../c-runtime-library/reference/malloca.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_free\_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)
+ [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)

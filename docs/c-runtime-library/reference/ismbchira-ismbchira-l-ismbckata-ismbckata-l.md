@@ -1,69 +1,85 @@
 ---
-title: "_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbckata"
-  - "_ismbchira_l"
-  - "_ismbchira"
-  - "_ismbckata_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ismbckata_l"
-  - "_ismbckata_l"
-  - "ismbckata"
-  - "ismbchira"
-  - "_ismbckata"
-  - "ismbchira_l"
-  - "_ismbchira_l"
-  - "_ismbchira"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ismbchira - функция"
-  - "_ismbchira_l - функция"
-  - "_ismbckata - функция"
-  - "_ismbckata_l - функция"
-  - "Хирагана"
-  - "ismbchira - функция"
-  - "ismbchira_l - функция"
-  - "ismbckata - функция"
-  - "ismbdkata_l - функция"
-  - "Катакана"
+title: "_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbckata
+- _ismbchira_l
+- _ismbchira
+- _ismbckata_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ismbckata_l
+- _ismbckata_l
+- ismbckata
+- ismbchira
+- _ismbckata
+- ismbchira_l
+- _ismbchira_l
+- _ismbchira
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ismbckata function
+- _ismbchira function
+- _ismbckata_l function
+- Katakana
+- ismbchira function
+- _ismbchira_l function
+- ismbchira_l function
+- ismbdkata_l function
+- Hiragana
+- ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d4832edb810f480236b020ebfe5d620ce7eb8355
+ms.lasthandoff: 02/24/2017
 
-**Функции, специфичные для кодовой страницы 932**  
+---
+# <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
+**Функции, относящиеся к кодовой странице 932**  
   
 > [!IMPORTANT]
->  Этот API невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _ismbchira(  
@@ -82,47 +98,47 @@ int _ismbckata_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
  Символ, который требуется проверить.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет.  Если `c` \<\= 255 и есть соответствующая процедура `_ismbb` \(например, `_ismbcalnum` соответствует `_ismbbalnum`\), то результат равен возвращаемому значению соответствующей процедуры `_ismbb`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если `c` <= 255 и есть соответствующая подпрограмма `_ismbb` (например, `_ismbcalnum` соответствует `_ismbbalnum`), то результат равен возвращаемому значению соответствующей подпрограммы `_ismbb`.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.  
   
- Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-|Подпрограмма|Условие теста \(только для кодовой страницы 932\)|  
-|------------------|-------------------------------------------------------|  
-|`_ismbchira`|Двухбайтовая Хирагана: 0x829F\=\<`c`\<\=0x82F1.|  
-|`_ismbchira_l`|Двухбайтовая Хирагана: 0x829F\=\<`c`\<\=0x82F1.|  
-|`_ismbckata`|Двухбайтовая катакана: 0x8340\=\<`c`\<\=0x8396.|  
-|`_ismbckata_l`|Двухбайтовая катакана: 0x8340\=\<`c`\<\=0x8396.|  
+|Подпрограмма|Условие теста (только для кодовой страницы 932)|  
+|-------------|-------------------------------------------|  
+|`_ismbchira`|Двухбайтовые символы хираганы: 0x829F<=`c`<=0x82F1.|  
+|`_ismbchira_l`|Двухбайтовые символы хираганы: 0x829F<=`c`<=0x82F1.|  
+|`_ismbckata`|Двухбайтовые символы катаканы: 0x8340<=`c`<=0x8396.|  
+|`_ismbckata_l`|Двухбайтовые символы катаканы: 0x8340<=`c`<=0x8396.|  
   
- **Конец специфичных для кодовой страницы 932 функций**  
+ **Конец раздела для кодовой страницы 932**  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_ismbchira`|\<mbstring.h\>|  
-|`_ismbchira_l`|\<mbstring.h\>|  
-|`_ismbckata`|\<mbstring.h\>|  
-|`_ismbckata_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_ismbchira`|\<mbstring.h>|  
+|`_ismbchira_l`|\<mbstring.h>|  
+|`_ismbckata`|\<mbstring.h>|  
+|`_ismbckata_l`|\<mbstring.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   
- [Процедуры \_ismbc](../../c-runtime-library/ismbc-routines.md)   
- [Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)   
+ [Подпрограммы _ismbc](../../c-runtime-library/ismbc-routines.md)   
+ [Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

@@ -1,50 +1,67 @@
 ---
-title: "_get_timezone | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_timezone"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_timezone"
-  - "get_timezone"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "часовые пояса"
-  - "get_timezone - функция"
-  - "_get_timezone - функция"
+title: "_get_timezone | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_timezone
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_timezone
+- get_timezone
+dev_langs:
+- C++
+helpviewer_keywords:
+- time zones
+- get_timezone function
+- _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _get_timezone
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1810a9c79d21b6a0b19f5f4e4f2d4c59d286e5b7
+ms.lasthandoff: 02/24/2017
 
-Возвращает разницу в секундах между координируемым всемирным временем \(UTC\) и местным временем.  
+---
+# <a name="gettimezone"></a>_get_timezone
+Извлекает разницу в секундах между временем в формате UTC и местным временем.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -53,32 +70,32 @@ caps.handback.revision: 17
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `seconds`  
  Разница в секундах между временем в формате UTC и местным временем.  
   
-## Возвращаемое значение  
- Ноль при успехе или значение `errno` при возникновении ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль в случае успешного выполнения или значение `errno` при возникновении ошибки.  
   
-## Заметки  
- Функция `_get_timezone` извлекает разницу в секундах между временем в формате UTC и местным временем в виде целого числа.  Значение по умолчанию — 28,800 секунд для Стандартного тихоокеанского времени \(8 часов до времени в формате UTC\).  
+## <a name="remarks"></a>Примечания  
+ Функция `_get_timezone` извлекает целое число, представляющее разницу в секундах между временем UTC и местным временем. Значение по умолчанию — 28800 секунд (тихоокеанское время, на 8 часов отстающее от UTC).  
   
- Если параметр `seconds` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, функция устанавливает `errno` в `EINVAL` и возвращает `EINVAL`.  
+ Если параметр `seconds` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EINVAL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_get_timezone`|\<time.h\>|  
+|-------------|---------------------|  
+|`_get_timezone`|\<time.h>|  
   
- Для получения дополнительной информации см. [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   
- [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)   
- [\_get\_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_tzname](../../c-runtime-library/reference/get-tzname.md)
+ [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_tzname](../../c-runtime-library/reference/get-tzname.md)

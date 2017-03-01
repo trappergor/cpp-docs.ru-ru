@@ -1,65 +1,136 @@
 ---
-title: "Класс binomial_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::binomial_distribution"
-  - "std.tr1.binomial_distribution"
-  - "tr1::binomial_distribution"
-  - "random/std::tr1::binomial_distribution"
-  - "tr1.binomial_distribution"
-  - "binomial_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binomial_distribution - класс"
-  - "binomial_distribution - класс [TR1]"
+title: "Класс binomial_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- binomial_distribution
+- std::binomial_distribution
+- random/std::binomial_distribution
+- std::binomial_distribution::reset
+- random/std::binomial_distribution::reset
+- std::binomial_distribution::p
+- random/std::binomial_distribution::p
+- std::binomial_distribution::t
+- random/std::binomial_distribution::t
+- std::binomial_distribution::param
+- random/std::binomial_distribution::param
+- std::binomial_distribution::min
+- random/std::binomial_distribution::min
+- std::binomial_distribution::max
+- random/std::binomial_distribution::max
+- std::binomial_distribution::operator()
+- random/std::binomial_distribution::operator()
+- std::binomial_distribution::param_type
+- random/std::binomial_distribution::param_type
+- std::binomial_distribution::param_type::p
+- random/std::binomial_distribution::param_type::p
+- std::binomial_distribution::param_type::t
+- random/std::binomial_distribution::param_type::t
+- std::binomial_distribution::param_type::operator==
+- random/std::binomial_distribution::param_type::operator==
+- std::binomial_distribution::param_type::operator!=
+- random/std::binomial_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- binomial_distribution class
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Класс binomial_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8b334da1953b67965c95c8c61e9426d9020132ed
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="binomialdistribution-class"></a>Класс binomial_distribution
 Формирует биномиальное распределение.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<class IntType = int> class binomial_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructors and reset functions     explicit binomial_distribution(IntType t = 1, double p = 0.5);     explicit binomial_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     IntType t() const;     double p() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class IntType = int>
+class binomial_distribution  
+   {  
+public:  
+   // types  
+   typedef IntType result_type;  
+   struct param_type;  
+   
+   // constructors and reset functions  
+   explicit binomial_distribution(result_type t = 1, double p = 0.5);
+   explicit binomial_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type t() const;
+   double p() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+#### <a name="parameters"></a>Параметры  
+*IntType*  
+По умолчанию целочисленный тип результата имеет тип `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-#### Параметры  
- `IntType`  
- По умолчанию целочисленный тип результата имеет тип `int`.  Возможные типы см. в разделе [\<random\>](../standard-library/random.md).  
-  
-## Заметки  
- Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `int` \(если тип не указан\), распределенные в соответствии с дискретной функцией вероятности биномиального распределения.  В следующей таблице представлены ссылки на статьи об отдельных членах.  
+*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+
+## <a name="remarks"></a>Примечания  
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `int` (если тип не указан), распределенные в соответствии с дискретной функцией вероятности биномиального распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[binomial\_distribution::binomial\_distribution](../Topic/binomial_distribution::binomial_distribution.md)|`binomial_distribution::t`|`binomial_distribution::param`|  
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[binomial\_distribution::param\_type](../Topic/binomial_distribution::param_type.md)|  
+|[binomial_distribution::binomial_distribution](#binomial_distribution__binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
+|`binomial_distribution::operator()`|`binomial_distribution::p`|[binomial_distribution::param_type](#binomial_distribution__param_type)|  
   
- Члены свойств `t()` и `p()` возвращают текущие хранимые значения параметров распределения `t` и `p` соответственно.  
+Члены свойств `t()` и `p()` возвращают текущие хранимые значения параметров распределения `t` и `p` соответственно.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
   
- Дополнительные сведения о дискретной функции вероятности биномиального распределения см. в статье [Биномиальное распределение](http://go.microsoft.com/fwlink/?LinkId=398469) на веб\-сайте Wolfram MathWorld.  
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
   
-## Пример  
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+  
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+  
+Дополнительные сведения о дискретной функции вероятности биномиального распределения см. в статье [Биномиальное распределение](http://go.microsoft.com/fwlink/LinkId=398469) на веб-сайте Wolfram MathWorld.  
+  
+## <a name="example"></a>Пример  
   
 ```cpp  
- // compile with: /EHsc /W4  
+// compile with: /EHsc /W4  
 #include <random>   
 #include <iostream>  
 #include <iomanip>  
@@ -111,15 +182,14 @@ int main()
 }  
 ```  
   
-## Вывод  
- Первый запуск:  
+Первый запуск:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter an integer value for t distribution (where 0 <= t): 22  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .25  
 Enter an integer value for a sample count: 100  
-  
+ 
 p == 0.25  
 t == 22  
 Histogram for 100 samples:  
@@ -132,19 +202,18 @@ Histogram for 100 samples:
     7 :::::::::::::  
     8 ::::::  
     9 ::::::  
-   11 :  
-   12 :  
-  
+    11 :  
+    12 :  
 ```  
   
- Второй запуск:  
+Второй запуск:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter an integer value for t distribution (where 0 <= t): 22  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .5  
 Enter an integer value for a sample count: 100  
-  
+ 
 p == 0.5  
 t == 22  
 Histogram for 100 samples:  
@@ -152,42 +221,100 @@ Histogram for 100 samples:
     7 ::  
     8 :::::::::  
     9 ::::::::::  
-   10 ::::::::::::::::  
-   11 :::::::::::::::::::  
-   12 :::::::::::  
-   13 :::::::::::::  
-   14 :::::::::::::::  
-   15 ::  
-   16 ::  
-  
+    10 ::::::::::::::::  
+    11 :::::::::::::::::::  
+    12 :::::::::::  
+    13 :::::::::::::  
+    14 :::::::::::::::  
+    15 ::  
+    16 ::  
 ```  
   
- Третий запуск:  
+Третий запуск:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter an integer value for t distribution (where 0 <= t): 22  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .75  
 Enter an integer value for a sample count: 100  
-  
+ 
 p == 0.75  
 t == 22  
 Histogram for 100 samples:  
-   13 ::::  
-   14 :::::::::::  
-   15 :::::::::::::::  
-   16 :::::::::::::::::::::  
-   17 ::::::::::::::  
-   18 :::::::::::::::::  
-   19 :::::::::::  
-   20 ::::::  
-   21 :  
+    13 ::::  
+    14 :::::::::::  
+    15 :::::::::::::::  
+    16 :::::::::::::::::::::  
+    17 ::::::::::::::  
+    18 :::::::::::::::::  
+    19 :::::::::::  
+    20 ::::::  
+    21 :  
 ```  
   
-## Требования  
- **Заголовок:** \<random\>  
+## <a name="requirements"></a>Требования  
+**Заголовок:** \<random>  
   
- **Пространство имен:** std  
+**Пространство имен:** std  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namebinomialdistributionbinomialdistributiona--binomialdistributionbinomialdistribution"></a><a name="binomial_distribution__binomial_distribution"></a>  binomial_distribution::binomial_distribution  
+Формирует распределение.  
+  
+```  
+explicit binomial_distribution(result_type t = 1, double p = 0.5);
+explicit binomial_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*t*  
+Параметр распределения `t`.  
+  
+*p*  
+Параметр распределения `p`.  
+  
+*parm*  
+Структура `param_type`, используемая для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предусловие:** `0 ≤ t` и `0.0 ≤ p ≤ 1.0`  
+  
+Первый конструктор создает объект, хранимое значение `p` которого имеет значение *p*, а хранимое значение `t` — значение *t*.  
+  
+Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-namebinomialdistributionparamtypea--binomialdistributionparamtype"></a><a name="binomial_distribution__param_type"></a>  binomial_distribution::param_type  
+Сохраняет все параметры распределения.  
+  
+```cpp  
+struct param_type {  
+   typedef binomial_distribution<result_type> distribution_type;  
+   param_type(result_type t = 1, double p = 0.5);
+   result_type t() const;
+   double p() const;
+   .....  
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Параметры  
+*t*  
+Параметр распределения `t`.  
+  
+*p*  
+Параметр распределения `p`.  
+  
+*right*  
+ Объект `param_type`, который требуется сравнить с данным объектом.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0 ≤ t` и `0.0 ≤ p ≤ 1.0`  
+  
+Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+ [\<random>](../standard-library/random.md)
+
+
+
+

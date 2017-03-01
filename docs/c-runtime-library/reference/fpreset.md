@@ -1,69 +1,85 @@
 ---
-title: "_fpreset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpreset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fpreset"
-  - "fpreset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpreset - функция"
-  - "числа с плавающей запятой, перезадание математического пакета"
-  - "fpreset - функция"
+title: "_fpreset | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpreset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fpreset
+- fpreset
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpreset function
+- floating-point numbers, resetting math package
+- _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fpreset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
+ms.lasthandoff: 02/24/2017
 
-Сбрасывает пакет с плавающей запятой.  
+---
+# <a name="fpreset"></a>_fpreset
+Сбрасывает пакет вычислений с плавающей запятой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void _fpreset( void );  
 ```  
   
-## Заметки  
- Функция `_fpreset` повторно инициализирует математический пакет с плавающей запятой.  `_fpreset` обычно используется с `signal`, `system` или функциями `_exec` или `_spawn`.  Если программа улавливает сигналы ошибок с плавающей запятой \(`SIGFPE`\) с помощью `signal`, она может безопасно восстановиться от ошибок с плавающей запятой путем вызова `_fpreset` и использования `longjmp`.  
+## <a name="remarks"></a>Примечания  
+ Функция `_fpreset` повторно инициализирует пакет вычислений с плавающей запятой. Функция `_fpreset` обычно используется с функциями `signal`, `system`, `_exec` или `_spawn`. Если программа перехватывает сигналы ошибок в вычислениях с плавающей запятой (`SIGFPE`) с аргументом `signal`, для безопасного восстановления после таких ошибок необходимо вызвать функцию `_fpreset` с использованием `longjmp`.  
   
- Эту функцию не рекомендуется использовать при компилировании с [\/clr \(компиляция CLR\)](../../build/reference/clr-common-language-runtime-compilation.md) или `/clr:pure`, поскольку среда CLR поддерживает только точность чисел с плавающей точкой по умолчанию.  
+ Рекомендуется использовать эту функцию при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) потому, что общеязыковая среда выполнения поддерживает только точность чисел с плавающей запятой по умолчанию.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_fpreset`|\<float.h\>|  
+|--------------|---------------------|  
+|`_fpreset`|\<float.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_fpreset.c  
@@ -172,11 +188,14 @@ void fpcheck( void )
 }  
 ```  
   
-  **Dividing    5 by    0...**  
-**Error 131: Divide by zero**   
-## См. также  
+```Output  
+Dividing    5 by    0...  
+Error 131: Divide by zero  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [Функции \_exec, \_wexec](../../c-runtime-library/exec-wexec-functions.md)   
+ [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [Функции \_spawn, \_wspawn](../Topic/_spawn,%20_wspawn%20Functions.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

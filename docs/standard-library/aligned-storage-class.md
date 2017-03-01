@@ -1,60 +1,73 @@
 ---
-title: "Класс aligned_storage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "aligned_storage"
-  - "std::tr1::aligned_storage"
-  - "std.tr1.aligned_storage"
-  - "std.aligned_storage"
-  - "std::aligned_storage"
-  - "type_traits/std::aligned_storage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_storage - класс [TR1]"
-  - "aligned_storage"
+title: "Класс aligned_storage | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- aligned_storage
+- std::aligned_storage
+- type_traits/std::aligned_storage
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_storage class
+- aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Класс aligned_storage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 0da44c2fb505b2edbce9e5ccb028a6e167b4cf17
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="alignedstorage-class"></a>Класс aligned_storage
 Создает должным образом выровненный тип.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<std::size_t Len, std::size_t Align>  
-    struct aligned_storage;  
-  
+template <std::size_t Len, std::size_t Align>  
+struct aligned_storage;  
+ 
 template <std::size_t Len, std::size_t Align = alignment_of<max_align_t>::value>  
-    using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
+using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Len`  
  Размер объекта.  
   
  `Align`  
  Выравнивание объекта.  
   
-## Заметки  
- Typedef члена шаблона `type` является синонимом типа POD с выравниванием `Align` и размер `Len`.`Align` должно быть равно `alignment_of<T>::value` для определенного типа `T`, или выравнивание по умолчанию.  
+## <a name="remarks"></a>Примечания  
+ Определение типа `type` члена шаблона является синонимом типа POD с выравниванием `Align` и размером `Len`. `Align` должно быть равно `alignment_of<T>::value` для определенного типа `T` или выравниванию по умолчанию.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -73,14 +86,16 @@ int main()
 ```  
   
 ```Output  
-Выравнивание < int > == 4 выровнено по объекту double == 8  
+alignment_of<int> == 4  
+aligned to double == 8  
 ```  
   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<type_traits>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Класс alignment\_of](../standard-library/alignment-of-class.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Класс alignment_of](../standard-library/alignment-of-class.md)
+

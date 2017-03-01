@@ -1,76 +1,92 @@
 ---
-title: "strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcstok_s_l"
-  - "_mbstok_s_l"
-  - "_mbstok_s"
-  - "strtok_s"
-  - "wcstok_s"
-  - "_strtok_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcstok_s_l"
-  - "_wcstok_s_l"
-  - "_tcstok_s"
-  - "_mbstok_s_l"
-  - "strtok_s"
-  - "wcstok_s"
-  - "_mbstok_s"
-  - "_strtok_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstok_s - функция"
-  - "_mbstok_s_l - функция"
-  - "_strtok_s_l - функция"
-  - "_tcstok_s - функция"
-  - "_tcstok_s_l - функция"
-  - "_wcstok_s_l - функция"
-  - "mbstok_s - функция"
-  - "mbstok_s_l - функция"
-  - "строки [C++], поиск"
-  - "strtok_s - функция"
-  - "strtok_s_l - функция"
-  - "лексемы, поиск в строках"
-  - "wcstok_s - функция"
-  - "wcstok_s_l - функция"
+title: "Функции strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcstok_s_l
+- _mbstok_s_l
+- _mbstok_s
+- strtok_s
+- wcstok_s
+- _strtok_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcstok_s_l
+- _wcstok_s_l
+- _tcstok_s
+- _mbstok_s_l
+- strtok_s
+- wcstok_s
+- _mbstok_s
+- _strtok_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strtok_s_l function
+- _mbstok_s_l function
+- strings [C++], searching
+- mbstok_s_l function
+- wcstok_s_l function
+- _wcstok_s_l function
+- _tcstok_s function
+- _tcstok_s_l function
+- strtok_s_l function
+- wcstok_s function
+- tokens, finding in strings
+- mbstok_s function
+- _mbstok_s function
+- strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bd731aed33b3c05a55b9a6dc2a365f68a5d343dc
+ms.lasthandoff: 02/24/2017
 
-Находит следующий токен в строке, с помощью текущего или переданного языкового стандарта.  В этих версиях [strtok, \_strtok\_l, wcstok, \_wcstok\_l, \_mbstok, \_mbstok\_l](../Topic/strtok,%20_strtok_l,%20wcstok,%20_wcstok_l,%20_mbstok,%20_mbstok_l.md) усовершенствована безопасность, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
+Находит следующий токен в строке с использованием текущего или переданного языкового стандарта. Эти версии [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) отличаются повышенной безопасностью (см. раздел [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).  
   
 > [!IMPORTANT]
->  `_mbstok_s` и `_mbstok_s_l` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Функции  `_mbstok_s` и `_mbstok_s_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -109,62 +125,62 @@ _locale_tlocale
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `strToken`  
  Строка, содержащая токен или токены.  
   
  `strDelimit`  
- Набор разделителей.  
+ Набор символов-разделителей.  
   
  `context`  
- Используется для хранения данных о положении между вызовами метода `strtok_s`  
+ Используется для хранения данных о положении между вызовами функции `strtok_s`  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Возвращает указатель на следующий токен, найденный в `strToken`.  Они возвращают `NULL`, если ни одного токена больше не удается найти.  Каждый вызов изменяет `strToken`, заменяя символом `NULL` на первый разделитель, находящийся после возвращенного токена.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает указатель на следующий токен, найденный в `strToken`. Они возвращают `NULL`, если больше токенов не найдено. Каждый вызов изменяет строку `strToken`, заменяя символом `NULL` первый разделитель, находящийся после возвращенного токена.  
   
-### Условия возникновения ошибки  
+### <a name="error-conditions"></a>Условия ошибок  
   
 |`strToken`|`strDelimit`|`context`|Возвращаемое значение|`errno`|  
-|----------------|------------------|---------------|---------------------------|-------------|  
-|`NULL`|any|указатель на пустой указатель.|`NULL`|`EINVAL`|  
-|any|`NULL`|any|`NULL`|`EINVAL`|  
-|any|any|`NULL`|`NULL`|`EINVAL`|  
+|----------------|------------------|---------------|------------------|-------------|  
+|`NULL`|любые|указатель на указатель NULL|`NULL`|`EINVAL`|  
+|любые|`NULL`|любые|`NULL`|`EINVAL`|  
+|любые|любые|`NULL`|`NULL`|`EINVAL`|  
   
- Если `strToken` равен `NULL`, но контекст \- допустимый указатель на контекст, ошибки нет.  
+ Если `strToken` имеет значение `NULL`, но контекст — допустимый указатель на контекст, ошибки нет.  
   
-## Заметки  
- Функция `strtok_s` находит следующий токен в `strToken`.  Набор символов в `strDelimit` указывает возможные разделители токенов, которые необходимо найти в `strToken` во время текущего вызова.  `wcstok_s` и `_mbstok_s`являются версиями функции `strtok_s` для расширенных и многобайтовых символов.  Аргументы и возвращаемые значения `wcstok_s` и `_wcstok_s_l` представляют собой строки расширенных символов; аргументы и возвращаемые значения `_mbstok_s` и `_mbstok_s_l` представляют собой строки многобайтовых символов.  В остальных случаях эти три функции ведут себя идентично.  
+## <a name="remarks"></a>Примечания  
+ Функция `strtok_s` находит следующий токен в `strToken`. Набор символов в параметре `strDelimit` указывает возможные разделители токенов, которые требуется найти в `strToken` во время текущего вызова. Функции `wcstok_s` и `_mbstok_s` являются версиями функции `strtok_s` для расширенных и многобайтовых символов. Аргументы и возвращаемые значения функций `wcstok_s` и `_wcstok_s_l` представляют собой строки расширенных символов; аргументы и возвращаемые значения функций `_mbstok_s` и `_mbstok_s_l` представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.  
   
- Эта функция проверяет свои параметры.  Если возникает условие ошибки, которое показано в таблице условий ошибки, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают `NULL`.  
+ Эта функция проверяет свои параметры. При возникновении условия ошибки, описанного в таблице условий ошибок, вызывается обработчик недопустимого параметра. Это описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EINVAL` и возвращают значение `NULL`.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstok_s`|`strtok_s`|`_mbstok_s`|`wcstok_s`|  
 |`_tcstok_s_l`|`_strtok_s_l`|`_mbstok_s_l`|`_wcstok_s_l`|  
   
- При первом вызове `strtok_s` функция пропускает ведущие разделители и возвращает указатель на первый токен в `strToken`, ставя в конец токена нуль\-символ.  Из оставшейся части `strToken` можно выделить больше токенов с помощью серии вызовов `strtok_s`.  Каждый вызов `strtok_s` изменяет `strToken`, вставляя нуль\-символ после токена, возвращаемого этим вызовом.  Указатель `context` продолжает отслеживать то, какая строка читается и откуда в строку читать следующий токен.  Чтобы прочитать следующий токен из `strToken`, вызовите `strtok_s` со значением `NULL` для аргумента `strToken` и передайте тот же параметр `context`.  Аргумент `strToken` со значением `NULL` приводит к тому, что `strtok_s` ищет следующий токен в измененной  `strToken`.  Аргумент `strDelimit` может принимать любое значение из одного вызова к другому, чтобы набор разделителей мог меняться.  
+ При первом вызове функции `strtok_s` она пропускает ведущие разделители и возвращает указатель на первый токен в `strToken`, завершая токен нуль-символом. Из оставшейся части `strToken` можно выделить другие токены с помощью последовательных вызовов функции `strtok_s`. Каждый вызов функции `strtok_s` изменяет `strToken`, вставляя нуль-символ после токена, возвращенного этим вызовом. Указатель `context` продолжает отслеживать читаемую строку и место в строке, из которого следует считать следующий токен. Чтобы прочитать следующий токен из `strToken`, вызовите функцию `strtok_s` со значением `NULL` для аргумента `strToken` и передайте тот же параметр `context`. Значение `NULL` аргумента `strToken` приводит к тому, что функция `strtok_s` ищет следующий токен в измененной строке `strToken`. Аргумент `strDelimit` в разных вызовах может принимать любое значение, позволяя изменять набор разделителей.  
   
- Поскольку параметр `context` заменяет статические буферы, используемые в `strtok` и `_strtok_l`, можно проанализировать две строки одновременно в одном потоке.  
+ Поскольку параметр `context` заменяет статические буферы, используемые в функциях `strtok` и `_strtok_l`, в одном потоке можно анализировать две строки одновременно.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версии с суффиксом `_l` идентичны, за исключением того, что они используют переданный параметр языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strtok_s`|\<string.h\>|  
-|`_strtok_s_l`|\<string.h\>|  
-|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h\> или \<wchar.h\>|  
-|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strtok_s`|\<string.h>|  
+|`_strtok_s_l`|\<string.h>|  
+|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h> или \<wchar.h>|  
+|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_strtok_s.c  
@@ -212,28 +228,31 @@ int main( void )
 }  
 ```  
   
-  **Tokens:**  
- **A**  
- **Другое действие .**  
- **string**  
- **string**  
- **of**  
- **parsed**  
- **tokens**  
- **at**  
- **и**  
- **в разделе ,**  
- **some**  
- **same**  
- **more**  
- **времени.**  
- **tokens**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Tokens:  
+ A  
+        Another  
+ string  
+        string  
+ of  
+        parsed  
+ tokens  
+        at  
+ and  
+        the  
+ some  
+        same  
+ more  
+        time.  
+ tokens  
+```  
   
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../Topic/strcspn,%20wcscspn,%20_mbscspn,%20_mbscspn_l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
