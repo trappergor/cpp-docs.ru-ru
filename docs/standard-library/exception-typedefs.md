@@ -1,0 +1,73 @@
+---
+title: "Определения типов &lt;exception&gt; | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
+caps.latest.revision: 7
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f55867484f781f91dfb447d384223fbdeb370592
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="ltexceptiongt-typedefs"></a>Определения типов &lt;exception&gt;
+||||  
+|-|-|-|  
+|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
+  
+##  <a name="a-nameexceptionptra--exceptionptr"></a><a name="exception_ptr"></a>  exception_ptr  
+ Тип, который описывает указатель на исключение.  
+  
+```cpp  
+typedef unspecified exception_ptr;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.  
+  
+ Используйте объект `exception_ptr` для ссылки на текущее исключение или экземпляр указанного пользователем исключения. В реализации Майкрософт исключение представлено структурой [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082). Каждый объект `exception_ptr` содержит поле ссылки на исключение, указывающее на копию структуры `EXCEPTION_RECORD`, представляющую исключение.  
+  
+ При объявлении переменной `exception_ptr` эта переменная не связана ни с одним исключением. То есть в поле ссылки на исключение находится значение NULL. Такой объект `exception_ptr` называется *exception_ptr null*.  
+  
+ Используйте функцию `current_exception` или `make_exception_ptr` для назначения исключения объекту `exception_ptr`. При назначении исключения переменной `exception_ptr` поле ссылки на исключение переменной указывает на копию исключения. При нехватке памяти для копирования исключения поле ссылки на исключение указывает на копию исключения [std::bad_alloc](../standard-library/bad-alloc-class.md). Если функция `current_exception` или `make_exception_ptr` не может скопировать исключение по какой-либо другой причине, эта функция вызывает функцию CRT **terminate**, чтобы выйти из текущего процесса.  
+  
+ Несмотря на свое имя, объект `exception_ptr` не является указателем. Он не повинуется семантике указателя и не может использоваться с операторами доступа к членам указателей (`->`) или косвенного обращения (*). Объект `exception_ptr` не имеет открытых данных-членов и функций-членов.  
+  
+ **Сравнения:**  
+  
+ Можно использовать операторы равенства (`==`) и неравенства (`!=`) для сравнения двух объектов `exception_ptr`. Эти операторы не сравнивают бинарное значение (битовый шаблон) структур `EXCEPTION_RECORD`, которые представляют исключения. Вместо этого операторы сравнивают адреса в поле ссылки на исключение объектов `exception_ptr`. Поэтому `exception_ptr` со значением null и значение NULL при сравнении считаются равными.  
+  
+##  <a name="a-nameterminatehandlera--terminatehandler"></a><a name="terminate_handler"></a>  terminate_handler  
+ Тип, который описывает указатель на функцию, подходящую для использования в качестве `terminate_handler`.  
+  
+```
+typedef void (*terminate_handler)();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип, который описывает указатель на функцию, подходящую для использования в качестве обработчика завершения.  
+  
+### <a name="example"></a>Пример  
+  См. [set_terminate](../standard-library/exception-functions.md#set_terminate), чтобы ознакомиться с примером использования `terminate_handler`.  
+  
+##  <a name="a-nameunexpectedhandlera--unexpectedhandler"></a><a name="unexpected_handler"></a>  unexpected_handler  
+ Тип, который описывает указатель на функцию, подходящую для использования в качестве `unexpected_handler`.  
+  
+```
+typedef void (*unexpected_handler)();
+```  
+  
+### <a name="example"></a>Пример  
+  См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `unexpected_handler`.  
+  
+## <a name="see-also"></a>См. также  
+ [\<exception>](../standard-library/exception.md)
+
+
+
+

@@ -1,47 +1,63 @@
 ---
-title: "btowc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "btowc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "btowc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "btowc - функция"
+title: "btowc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- btowc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- btowc
+dev_langs:
+- C++
+helpviewer_keywords:
+- btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# btowc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce9c4250fef70323b4e1b899efc1e5fe2e593881
+ms.lasthandoff: 02/24/2017
 
-Определить, представляет ли целое число допустимый однобайтовый символ в начальном состоянии переноса.  
+---
+# <a name="btowc"></a>btowc
+Определяет, представляет ли целое число допустимый однобайтовый символ в начальном состоянии сдвига.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 wint_t btowc(  
@@ -49,23 +65,23 @@ wint_t btowc(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
- Целое число, которое требуется проверить.  
+ Проверяемое целое число.  
   
-## Возвращаемое значение  
- Возвращает представление символа в расширенных символах, если целое число представляет допустимый однобайтовый символ в начальном состоянии переноса.  Возвращает WEOF, если целое число является EOF или не является допустимым однобайтовым символом в начальном состоянии переноса.  Вывод этой функции зависит от текущего языкового стандарта `LC_TYPE`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает представление символа в виде расширенного символа, если целое число представляет допустимый однобайтовый символ в начальном состоянии сдвига. Возвращает символ WEOF, если целое число является символом EOF или не является допустимым однобайтовым символом в начальном состоянии сдвига. Выходные данные этой функции зависят от текущего языкового стандарта `LC_TYPE`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`btowc`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`btowc`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
- [mbtowc, \_mbtowc\_l](../Topic/mbtowc,%20_mbtowc_l.md)
+## <a name="see-also"></a>См. также  
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)

@@ -1,69 +1,74 @@
 ---
-title: "Структура pair | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "utility/std::pair"
-  - "pair"
-  - "std::pair"
-  - "std.pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pair - класс"
+title: "Структура pair | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- utility/std::pair
+- pair
+- std::pair
+- std.pair
+dev_langs:
+- C++
+helpviewer_keywords:
+- pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Структура pair
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f9f6574029dd40d0c8c2a2ff2a5f73f4744f5ffe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="pair-structure"></a>Структура pair
 Структура, позволяющая обрабатывать два объекта как один объект.  
   
-## Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис  
 ```  
-template<class T1, class T2>  
-   struct pair   
-   {  
-   typedef T1 first_type;  
-   typedef T2 second_type;  
-   T1 first;  
-   T2 second;  
-  
-   constexpr pair( );  
-   constexpr pair(  
-      const T1& Val1,   
-      const T2& Val2  
-   );  
-  
-   template<class Other1, class Other2>  
-      constexpr pair(  
-         const pair<Other1, Other2>& Right  
-      );  
-  
-template<class Other1, class Other2>  
-      constexpr pair(  
-        const pair <Other1 Val1, Other2 Val2>&& Right  
-      );  
-  
-   template<class Other1, class Other2>  
-      constexpr pair(  
-         Other1&& Val1, Other2&& Val2  
-      );  
-   };  
+struct pair
+{
+    typedef T1 first_type;
+    typedef T2 second_type;
+    T1 first;
+    T2 second;
+    constexpr pair();
+    constexpr pair(
+        const T1& Val1,
+        const T2& Val2);
+
+    template <class Other1, class Other2>
+    constexpr pair(const pair<Other1, Other2>& Right);
+
+    template <class Other1, class Other2>
+    constexpr pair(const pair <Other1 Val1, Other2 Val2>&& Right);
+
+    template <class Other1, class Other2>
+    constexpr pair(Other1&& Val1, Other2&& Val2);
+};
 ```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Val1`  
  Значение, которое инициализирует первый элемент `pair`.  
   
@@ -73,21 +78,21 @@ template<class Other1, class Other2>
  `Right`  
  Пара, значения которой будут использоваться для инициализации элементов другой пары.  
   
-## Возвращаемое значение  
- Первый конструктор \(по умолчанию\) инициализирует первый элемент пары как тип по умолчанию **T1**, а второй элемент — как тип по умолчанию **T2**.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Первый конструктор (по умолчанию) инициализирует первый элемент пары как тип по умолчанию **T1**, а второй элемент — как тип по умолчанию **T2**.  
   
- Второй конструктор инициализирует первый элемент пары как `Val1`, а второй элемент — как *Val2.*  
+ Второй конструктор инициализирует первый элемент пары как `Val1`, а второй элемент — как *Val2.*  
   
- Третий конструктор \(шаблон\) инициализирует первый элемент пары как `Right`.**first**, а второй элемент — как `Right`.**second**.  
+ Третий конструктор (шаблон) инициализирует первый элемент пары как `Right`. **first**, а второй — как `Right`. **second**.  
   
- Четвертый конструктор инициализирует первый элемент пары как `Val1`, а второй элемент — как *Val2*, используя [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Четвертый конструктор инициализирует первый элемент пары как `Val1`, а второй элемент — как *Val2*, используя [декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## Заметки  
- Структура шаблона хранит пары объектов типа **T1** и **T2** соответственно.  Тип **first\_type** совпадает с типом параметра шаблона **T1**, а тип **second\_type** — с типом параметра шаблона **T2**.  **T1** и **T2** должны предоставлять конструктор по умолчанию, конструктор с одним аргументом и деструктор.  Все члены типа `pair` являются открытыми, так как тип объявлен как `struct`, а не как **класс**.  Два наиболее распространенных способа применения пары — в качестве возвращаемых типов для функций, возвращающих два значения, и в качестве элементов для классов ассоциативных контейнеров [map](../Topic/map%20Class.md) и [multimap](../standard-library/multimap-class.md), у которых есть ключ и тип значения, связанные с каждым элементом.  Последний удовлетворяет требованиям для парного ассоциативного контейнера и имеет тип значения в формате `pair`\<**const** `key_type`, `mapped_type`\>.  
+## <a name="remarks"></a>Примечания  
+ Структура шаблона хранит пары объектов типа **T1** и **T2** соответственно. Тип **first_type** совпадает с параметром шаблона **T1**, а тип **second_type** — с параметром шаблона **T2**. **T1** и **T2** должны предоставлять только конструктор по умолчанию, конструктор с одним аргументом и деструктор. Все члены типа `pair` являются открытыми, так как тип объявлен как `struct`, а не как **класс**. Два наиболее распространенных способа применения пары — в качестве возвращаемых типов для функций, возвращающих два значения, и в качестве элементов для классов ассоциативных контейнеров [map](../standard-library/map-class.md) и [multimap](../standard-library/multimap-class.md), у которых есть ключ и тип значения, связанные с каждым элементом. Последнее удовлетворяет требованиям для парного ассоциативного контейнера и имеет тип значения в формате `pair`< **const**`key_type`, `mapped_type`>.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // utility_pair.cpp  
 // compile with: /EHsc  
 #include <utility>  
@@ -162,16 +167,26 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;  
    }  
 }  
+\* Output:   
+The pair p1 is: ( 10, 0.011 ).  
+The pair p2 is: ( 10, 0.222 ).  
+The pair p3 is: ( 10, 0.011 ).  
+The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).  
+The element (4,40) was inserted successfully in m1.  
+The element with a key value of  
+ ( (pr2.first) -> first ) = 1 is already in m1,  
+ so the insertion failed.  
+*\  
 ```  
   
-  **Пара p1: \( 10, 0.011 \).  Пара p2: \( 10, 0.222 \).  Пара p3: \( 10, 0.011 \).  Пары элементов из сопоставления m1: \( 1, 10 \) \( 2, 20 \) \( 3, 30 \).  Элемент \(4,40\) успешно вставлен в m1.  Элемент со значением ключа**  
- **\( \(pr2.first\) \-\> first \) \= 1 уже находится в m1,**  
- **поэтому вставка завершилась ошибкой.**    
-## Требования  
- **Заголовок:** \<utility\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<utility>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Логический оператор для пар](../misc/pair-logical-operator.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

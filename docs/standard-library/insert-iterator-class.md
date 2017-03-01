@@ -1,75 +1,442 @@
 ---
-title: "Класс insert_iterator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::insert_iterator"
-  - "iterator/std::insert_iterator"
-  - "std.insert_iterator"
-  - "insert_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert_iterator - класс"
-  - "insert_iterator - класс, синтаксис"
+title: "Класс insert_iterator | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::insert_iterator
+- iterator/std::insert_iterator
+- std.insert_iterator
+- insert_iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- insert_iterator class
+- insert_iterator class, syntax
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Класс insert_iterator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 9ff1d22bafa778db24fb489d33e83b1a553711e5
+ms.lasthandoff: 02/24/2017
 
-Описывает адаптер итератора, удовлетворяющий требованиям итератора вывода.  Вставляет, а не перезаписывает элементы в последовательность, тем самым предоставляя семантику, отличную от семантики перезаписи, предоставляемой итераторами контейнеров последовательности и ассоциативных контейнеров C\+\+.  Класс `insert_iterator` шаблонизируется в адаптируемом типе контейнера.  
+---
+# <a name="insertiterator-class"></a>Класс insert_iterator
+Описывает адаптер итератора, удовлетворяющий требованиям итератора вывода. Вставляет, а не перезаписывает элементы в последовательность, тем самым предоставляя семантику, отличную от семантики перезаписи, предоставляемой итераторами контейнеров последовательности и ассоциативных контейнеров C++. Класс `insert_iterator` шаблонизируется в адаптируемом типе контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class Container>  
+class insert_iterator;
 ```  
-template <class Container> class insert_iterator;  
-```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Container`  
  Тип контейнера, в который итератор `insert_iterator` вставит элементы.  
   
-## Заметки  
- Контейнер типа **Container** должен удовлетворять требованиям к контейнеру переменного размера и обладать функцией\-членом вставки с двумя аргументами, параметры которой относятся к типам **Container::iterator** и **Container::value\_type**, возвращающей тип **Container::iterator**.  Последовательность библиотеки стандартных шаблонов и упорядоченные ассоциативные контейнеры удовлетворяют данным требованиям и могут быть адаптированы к использованию в сочетании с итераторами `insert_iterator`.  Для ассоциативных контейнеров аргумент позиции обрабатывается как подсказка, которая потенциально может увеличить или снизить производительность в зависимости от эффективности подсказки.  Итератор `insert_iterator` всегда необходимо инициализировать с его контейнером.  
+## <a name="remarks"></a>Примечания  
+ Контейнер типа **Container** должен удовлетворять требованиям к контейнеру переменного размера и иметь функцию-член вставки с двумя аргументами, параметры которой имеют тип **Container::iterator** и **Container::value_type** и которая возвращает тип **Container::iterator**. Последовательности из стандартной библиотеки С++ и упорядоченные ассоциативные контейнеры удовлетворяют данным требованиям и могут быть адаптированы к использованию в сочетании с `insert_iterator`s. Для ассоциативных контейнеров аргумент позиции обрабатывается как подсказка, которая потенциально может увеличить или снизить производительность в зависимости от эффективности подсказки. Итератор `insert_iterator` всегда необходимо инициализировать с его контейнером.  
   
-### Конструкторы  
-  
-|||  
-|-|-|  
-|[insert\_iterator](../Topic/insert_iterator::insert_iterator.md)|Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.|  
-  
-### Определения типов  
+### <a name="constructors"></a>Конструкторы  
   
 |||  
 |-|-|  
-|[container\_type](../Topic/insert_iterator::container_type.md)|Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.|  
-|[reference](../Topic/insert_iterator::reference.md)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|  
+|[insert_iterator](#insert_iterator__insert_iterator)|Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.|  
   
-### Операторы  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator\*](../Topic/insert_iterator::operator*.md)|Оператор удаления ссылки, используемый для применения выражения итератора вывода \*`i` \= `x` для вставки общего типа.|  
-|[operator\+\+](../Topic/insert_iterator::operator++.md)|Увеличивает `insert_iterator` до следующего местоположения, в котором можно сохранить значение.|  
-|[operator\=](../Topic/insert_iterator::operator=.md)|Оператор присваивания, используемый для применения выражения итератора вывода \*`i` \= `x` для вставки общего типа.|  
+|[container_type](#insert_iterator__container_type)|Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.|  
+|[reference](#insert_iterator__reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|  
   
-## Требования  
- **Заголовок:** \<iterator\>  
+### <a name="operators"></a>Операторы  
+  
+|||  
+|-|-|  
+|[оператор*](#insert_iterator__operator_star)|Оператор разыменования используется для реализации выражения итератора вывода * `i` = `x` для вставки общего типа.|  
+|[оператор++](#insert_iterator__operator_add_add)|Увеличивает `insert_iterator` до следующего местоположения, в котором можно сохранить значение.|  
+|[оператор=](#insert_iterator__operator_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода * `i` = `x` для вставки общего типа.|  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<iterator\>](../standard-library/iterator.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+##  <a name="a-nameinsertiteratorcontainertypea--insertiteratorcontainertype"></a><a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
+ Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.  
+  
+```
+typedef Container container_type;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра-шаблона **Container**.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// insert_iterator_container_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   list<int> L1;  
+   insert_iterator<list<int> >::container_type L2 = L1;  
+   inserter ( L2, L2.end ( ) ) = 20;  
+   inserter ( L2, L2.end ( ) ) = 10;  
+   inserter ( L2, L2.begin ( ) ) = 40;  
+  
+   list <int>::iterator vIter;  
+   cout << "The list L2 is: ( ";  
+   for ( vIter = L2.begin ( ) ; vIter != L2.end ( ); vIter++ )  
+      cout << *vIter << " ";  
+   cout << ")." << endl;  
+}  
+\* Output:   
+The list L2 is: ( 40 20 10 ).  
+*\  
+```  
+  
+##  <a name="a-nameinsertiteratorinsertiteratora--insertiteratorinsertiterator"></a><a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
+ Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.  
+  
+```
+insert_iterator(Container& _Cont, typename Container::iterator _It);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Cont`  
+ Контейнер, в который `insert_iterator` вставляет элементы.  
+  
+ `_It`  
+ Позиция для вставки.  
+  
+### <a name="remarks"></a>Примечания  
+ Все контейнеры имеют функцию-член вставки, которая вызывается `insert_iterator`. Для ассоциативных контейнеров параметр позиции — это просто предложение. Функция вставки предоставляет удобный способ вставки значений.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// insert_iterator_insert_iterator.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   int i;  
+   list <int>::iterator L_Iter;  
+  
+   list<int> L;  
+   for (i = 1 ; i < 4 ; ++i )    
+   {  
+      L.push_back ( 10 * i );  
+   }  
+  
+   cout << "The list L is:\n ( ";  
+   for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++)  
+      cout << *L_Iter << " ";  
+   cout << ")." << endl;  
+  
+   // Using the member function to insert an element  
+   inserter ( L, L.begin ( ) ) = 2;  
+  
+   // Alternatively, you may use the template version  
+   insert_iterator< list < int> > Iter(L, L.end ( ) );  
+ *Iter = 300;  
+  
+   cout << "After the insertions, the list L is:\n ( ";  
+   for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )  
+      cout << *L_Iter << " ";  
+   cout << ")." << endl;  
+}  
+\* Output:   
+The list L is:  
+ ( 10 20 30 ).  
+After the insertions, the list L is:  
+ ( 2 10 20 30 300 ).  
+*\  
+```  
+  
+##  <a name="a-nameinsertiteratoroperatorstara--insertiteratoroperator"></a><a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
+ Разыменовывает итератор вставки и возвращает адреса элемента.  
+  
+```
+insert_iterator<Container>& operator*();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Функция-член возвращает значение адресованного элемента.  
+  
+### <a name="remarks"></a>Примечания  
+ Используется для применения выражения итератора вывода **\*Iter** = **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то ** \*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// insert_iterator_op_deref.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   int i;  
+   list <int>::iterator L_Iter;  
+  
+   list<int> L;  
+   for (i = 0 ; i < 4 ; ++i )    
+   {  
+      L.push_back ( 2 * i );  
+   }  
+  
+   cout << "The original list L is:\n ( ";  
+   for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )  
+      cout << *L_Iter << " ";  
+   cout << ")." << endl;  
+  
+   insert_iterator< list < int> > Iter(L, L.begin ( ) );  
+ *Iter = 10;  
+ *Iter = 20;  
+ *Iter = 30;  
+  
+   cout << "After the insertions, the list L is:\n ( ";  
+   for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )  
+      cout << *L_Iter << " ";  
+   cout << ")." << endl;  
+}  
+\* Output:   
+The original list L is:  
+ ( 0 2 4 6 ).  
+After the insertions, the list L is:  
+ ( 10 20 30 0 2 4 6 ).  
+*\  
+```  
+  
+##  <a name="a-nameinsertiteratoroperatoraddadda--insertiteratoroperator"></a><a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
+ Увеличивает **insert_iterator** до следующего местоположения, в котором можно сохранить значение.  
+  
+```
+insert_iterator<Container>& operator++();
+
+insert_iterator<Container> operator++(int);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `insert_iterator`, адресующий следующее местоположение, в котором можно сохранить значение.  
+  
+### <a name="remarks"></a>Примечания  
+ Операторы preincrementation и postincrementation возвращают одинаковый результат.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// insert_iterator_op_incr.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   int i;  
+  
+   vector<int> vec;  
+   for (i = 1 ; i < 5 ; ++i )   
+   {  
+      vec.push_back (  i );  
+   }  
+  
+   vector <int>::iterator vIter;  
+   cout << "The vector vec is:\n ( ";  
+   for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++ )  
+      cout << *vIter << " ";  
+   cout << ")." << endl;  
+  
+   insert_iterator<vector<int> > ii ( vec, vec.begin ( ) );  
+ *ii = 30;  
+   ii++;  
+ *ii = 40;  
+   ii++;  
+ *ii = 50;  
+  
+   cout << "After the insertions, the vector vec becomes:\n ( ";  
+   for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++ )  
+      cout << *vIter << " ";  
+   cout << ")." << endl;  
+}  
+\* Output:   
+The vector vec is:  
+ ( 1 2 3 4 ).  
+After the insertions, the vector vec becomes:  
+ ( 30 40 50 1 2 3 4 ).  
+*\  
+```  
+  
+##  <a name="a-nameinsertiteratoroperatoreqa--insertiteratoroperator"></a><a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
+ Вставляет значение в контейнер и возвращает итератор, который обновлен и указывает на новый элемент.  
+  
+```
+insert_iterator<Container>& operator=(
+    typename Container::const_reference val,);
+
+insert_iterator<Container>& operator=(
+    typename Container::value_type&& val);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `val`  
+ Значение, которое должно быть присвоено контейнеру.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ссылка на элемент, вставленный в контейнер.  
+  
+### <a name="remarks"></a>Примечания  
+ Первый оператор-член вычисляет  
+  
+ `Iter = container->insert(Iter, val)`;  
+  
+ `++Iter;`  
+  
+ затем возвращает `*this`.  
+  
+ Второй оператор-член вычисляет  
+  
+ `Iter = container->insert(Iter, std::move(val));`  
+  
+ `++Iter;`  
+  
+ затем возвращает `*this`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// insert_iterator_op_assign.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   int i;  
+   list <int>::iterator L_Iter;  
+  
+   list<int> L;  
+   for (i = 0 ; i < 4 ; ++i )   
+   {  
+      L.push_back ( 2 * i );  
+   }  
+  
+   cout << "The original list L is:\n ( ";  
+   for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )  
+      cout << *L_Iter << " ";  
+   cout << ")." << endl;  
+  
+   insert_iterator< list < int> > Iter(L, L.begin ( ) );  
+ *Iter = 10;  
+ *Iter = 20;  
+ *Iter = 30;  
+  
+   cout << "After the insertions, the list L is:\n ( ";  
+   for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )  
+      cout << *L_Iter << " ";  
+   cout << ")." << endl;  
+}  
+\* Output:   
+The original list L is:  
+ ( 0 2 4 6 ).  
+After the insertions, the list L is:  
+ ( 10 20 30 0 2 4 6 ).  
+*\  
+```  
+  
+##  <a name="a-nameinsertiteratorreferencea--insertiteratorreference"></a><a name="insert_iterator__reference"></a>  insert_iterator::reference  
+ Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.  
+  
+```
+typedef typename Container::reference reference;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип, который описывает ссылку на элемент последовательности под управлением связанного контейнера.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// insert_iterator_container_reference.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   list<int> L;  
+   insert_iterator<list<int> > iivIter( L , L.begin ( ) );  
+ *iivIter = 10;  
+ *iivIter = 20;  
+ *iivIter = 30;  
+  
+   list<int>::iterator LIter;  
+   cout << "The list L is: ( ";  
+   for ( LIter = L.begin ( ) ; LIter != L.end ( ); LIter++ )  
+      cout << *LIter << " ";  
+   cout << ")." << endl;  
+  
+   insert_iterator<list<int> >::reference   
+        RefFirst = *(L.begin ( ));  
+   cout << "The first element in the list L is: "   
+        << RefFirst << "." << endl;  
+}  
+\* Output:   
+The list L is: ( 10 20 30 ).  
+The first element in the list L is: 10.  
+*\  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [\<iterator>](../standard-library/iterator.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

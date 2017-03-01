@@ -1,51 +1,59 @@
 ---
-title: "Справочник по стандартной библиотеке C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "библиотеки, Стандартная C++"
-  - "Стандартная библиотека C++"
-  - "Стандартная библиотека C++, reference"
-  - "библиотеки шаблонов"
+title: "Справочник по стандартной библиотеке C++ | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, reference
+- C++ Standard Library
+- template libraries
+- libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
 caps.latest.revision: 19
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Справочник по стандартной библиотеке C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 73761e1f2d4eed0e12ab42d0f1b3a6dec0d66b10
+ms.lasthandoff: 02/24/2017
 
-Программа на C\+\+ может вызывать множество функций из этой реализации стандартной библиотеки C\+\+.  Данные функции выполняют важные задачи, например занимаются вводом и выводом, а также предоставляют эффективные реализации часто используемых операций.  
+---
+# <a name="c-standard-library-reference"></a>Справочник по стандартной библиотеке C++
+Программа на языке C++ может вызывать множество функций из этой реализации стандартной библиотеки C++. Данные функции выполняют важные задачи, например занимаются вводом и выводом, а также предоставляют эффективные реализации часто используемых операций.  
   
- Дополнительные сведения о библиотеках времени выполнения Visual C\+\+ см. в разделе [Особенности библиотеки CRT](../c-runtime-library/crt-library-features.md).  
+ Дополнительные сведения о библиотеках времени выполнения Visual C++ см. в разделе [Функции библиотеки CRT](../c-runtime-library/crt-library-features.md).  
   
-## В этом подразделе  
- [Обзор STL](../standard-library/cpp-standard-library-overview.md)  
- Обзор реализации стандартной библиотеки C\+\+ корпорации Майкрософт.  
+## <a name="in-this-section"></a>Содержание  
+ [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)  
+ Обзор реализации стандартной библиотеки C++ корпорации Майкрософт.  
   
- [Программирование iostream](../Topic/iostream%20Programming.md)  
+ [Программирование iostream](../standard-library/iostream-programming.md)  
  Общие сведения о программировании с использованием iostream.  
   
- [Справочные материалы по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)  
- Содержит ссылки на статьи, описывающие файлы заголовков стандартной библиотеки C\+\+ с примерами кода.  
+ [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)  
+ Содержит ссылки на справочные статьи, описывающие файлы заголовков стандартной библиотеки C++ с примерами кода.  
   
-## Связанные подразделы  
- [Справочные материалы по Visual C\+\+](http://msdn.microsoft.com/ru-ru/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Ссылки на разделы с описанием языков C и C\+\+, библиотек, предоставляемых с Visual C\+\+ и объектной моделью расширяемости Visual C\+\+, и ассемблера Microsoft Macro Assembler \(MASM\).  
-  
- [NIB: Samples Included in Visual C\+\+](http://msdn.microsoft.com/ru-ru/c9ec56b3-2bbd-49b4-8a4c-9ed4b78b7a84)  
- Ссылки на примеры кода, иллюстрирующие возможности языка Visual C\+\+, а также поддерживаемых им библиотек и технологий.  
-  
-## См. также  
- [Справочные материалы по библиотекам Visual C\+\+](http://msdn.microsoft.com/ru-ru/fec23c40-10c0-4857-9cdc-33a3b99b30ae)
+
+

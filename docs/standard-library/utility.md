@@ -1,80 +1,99 @@
 ---
-title: "&lt;utility&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<utility>"
-  - "utility/std::<utility>"
-  - "std.<utility>"
-  - "std::<utility>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "utility - заголовок"
+title: "&lt;utility&gt; | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <utility>
+- utility/std::<utility>
+- std.<utility>
+- std::<utility>
+dev_langs:
+- C++
+helpviewer_keywords:
+- utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# &lt;utility&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 67792e92a4a8336c025249a5d1322d00360a62c5
+ms.lasthandoff: 02/24/2017
 
-Определяет типы, функции и операторы библиотеки стандартных шаблонов \(STL\), которые помогают создавать и контролировать пары объектов, что полезно, когда два объекта должны рассматриваться как один.  
+---
+# <a name="ltutilitygt"></a>&lt;utility&gt;
+Определяет типы, функции и операторы стандартной библиотеки C++, которые помогают создавать пары объектов и управлять ими, что удобно, когда два объекта должны рассматриваться как один.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 #include <utility>  
   
 ```  
   
-## Заметки  
- Пары широко используются в стандартной библиотеке C\+\+.  Они необходимы как аргументы и возвращаемые значения для различных функций и как типы элементов для контейнеров, таких как [класс map](../Topic/map%20Class.md) и [класс multimap](../standard-library/multimap-class.md).  \<map\> автоматически включает заголовок \<utility\> для управления элементами типа пары «ключ — значение».  
+## <a name="remarks"></a>Примечания  
+ Пары широко используются в стандартной библиотеке C++. Они используются как аргументы и возвращаемые значения для различных функций и как типы элементов для контейнеров, таких как [класс map](../standard-library/map-class.md) и [класс multimap](../standard-library/multimap-class.md). \<map> автоматически включает заголовок \<utility> для управления их элементами, которые представляют собой пары "ключ — значение".  
   
-### Классы  
-  
-|||  
-|-|-|  
-|[tuple\_element](../standard-library/tuple-element-class-utility.md)|Класс, который заключает в оболочку тип элемента `pair`.|  
-|[tuple\_size](../standard-library/tuple-size-class-utility.md)|Класс, который заключает в оболочку счетчик элементов `pair`.|  
-  
-### Функции  
+### <a name="classes"></a>Классы  
   
 |||  
 |-|-|  
-|[forward](../Topic/forward.md)|Не позволяет изменить ссылочный тип \(`lvalue` или `rvalue`\) аргумента при точной пересылке.|  
-|[get](../Topic/get%20Function%20%3Cutility%3E.md)|Функция, которая возвращает элемент из объекта `pair`.|  
-|[make\_pair](../Topic/make_pair.md)|Вспомогательная функция шаблона, которую можно использовать для построения объектов типа `pair` на основе типов данных, переданных в качестве параметров.|  
-|[переместить](../Topic/move.md)|Возвращает переданный аргумент в виде ссылки `rvalue`.|  
-|[swap](../Topic/swap%20\(%3Cutility%3E\).md)|Меняет местами элементы двух объектов `pair`.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Класс, который заключает в оболочку тип элемента `pair`.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Класс, который заключает в оболочку счетчик элементов `pair`.|  
   
-### Операторы  
+### <a name="functions"></a>Функции  
   
 |||  
 |-|-|  
-|[operator\!\=](../Topic/operator!=%20\(%3Cutility%3E\).md)|Проверяет неравенство объекта pair слева от оператора объекту pair справа от оператора.|  
-|[operator\=\=](../Topic/operator==%20\(%3Cutility%3E\).md)|Проверяет равенство объекта pair слева от оператора объекту pair справа от оператора.|  
-|[Оператор \<](../Topic/operator%3C%20\(%3Cutility%3E\).md)|Проверяет, меньше ли объект pair слева от оператора объекта pair справа от оператора.|  
-|[Оператор \<\=](../Topic/operator%3C=%20\(%3Cutility%3E\).md)|Проверяет, что объект pair слева от оператора меньше или равен объекту pair справа от оператора.|  
-|[Оператор \>](../Topic/operator%3E%20\(%3Cutility%3E\).md)|Проверяет, больше ли объект pair слева от оператора объекта pair справа от оператора.|  
-|[Оператор \>\=](../Topic/operator%3E=%20\(%3Cutility%3E\).md)|Проверяет, что объект pair слева от оператора больше или равен объекту pair справа от оператора.|  
+|[forward](../standard-library/utility-functions.md#forward)|Не позволяет изменить ссылочный тип (`lvalue` или `rvalue`) аргумента при точной пересылке.|  
+|[get](../standard-library/utility-functions.md#get)|Функция, которая возвращает элемент из объекта `pair`.|  
+|[make_pair](../standard-library/utility-functions.md#make_pair)|Вспомогательная функция шаблона, которую можно использовать для построения объектов типа `pair` на основе типов данных, переданных в качестве параметров.|  
+|[move](../standard-library/utility-functions.md#move)|Возвращает переданный аргумент в виде ссылки `rvalue`.|  
+|[swap](../standard-library/utility-functions.md#swap)|Меняет местами элементы двух объектов `pair`.|  
   
-### Структуры  
+### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[удостоверение](../Topic/identity%20Structure.md)||  
+|[оператор!=](../standard-library/utility-operators.md#operator_neq)|Проверяет неравенство объекта pair слева от оператора объекту pair справа от оператора.|  
+|[оператор==](../standard-library/utility-operators.md#operator_eq_eq)|Проверяет равенство объекта pair слева от оператора объекту pair справа от оператора.|  
+|[оператор<](../standard-library/utility-operators.md#operator_lt_)|Проверяет, меньше ли объект pair слева от оператора объекта pair справа от оператора.|  
+|[оператор\<=](../standard-library/utility-operators.md#operator_lt__eq)|Проверяет, что объект pair слева от оператора меньше или равен объекту pair справа от оператора.|  
+|[оператор>](../standard-library/utility-operators.md#operator_gt_)|Проверяет, больше ли объект pair слева от оператора объекта pair справа от оператора.|  
+|[оператор>=](../standard-library/utility-operators.md#operator_gt__eq)|Проверяет, больше или равен ли объект pair слева от оператора объекту pair справа от оператора.|  
+  
+### <a name="structs"></a>Структуры  
+  
+|||  
+|-|-|  
+|[identity](../standard-library/identity-structure.md)||  
 |[pair](../standard-library/pair-structure.md)|Тип, позволяющий обрабатывать два объекта как один объект.|  
   
-## См. также  
- [Справочные материалы по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

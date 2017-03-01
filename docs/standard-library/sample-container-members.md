@@ -1,57 +1,74 @@
 ---
-title: "Члены образца контейнера | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы контейнеров"
+title: "Члены образца контейнера | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Члены образца контейнера
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 2d8485f7fa62f2aaf3d3e6be920620aaf14fd7ca
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="sample-container-members"></a>Члены образца контейнера
 > [!NOTE]
->  В этом разделе в документации Visual C\+\+ как нефункциональный пример контейнеров, используемых в стандартной библиотеке C\+\+.  Дополнительные сведения см. в разделе [Контейнеров STL](../standard-library/stl-containers.md).  
+>  Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
   
-## Определения типов  
-  
-|||  
-|-|-|  
-|[const\_iterator](../standard-library/container-class-const-iterator.md)|Описание объекта, который можно использовать в качестве константной итератор для контролируемой последовательности.|  
-|[const\_reference](../standard-library/container-class-const-reference.md)|Описание объекта, который можно использовать в качестве константной ссылки на элемент контролируемой последовательности.|  
-|[const\_reverse\_iterator](../standard-library/container-class-const-reverse-iterator.md)|Описание объекта, который можно использовать как постоянный обратный итератор для контролируемой последовательности.|  
-|[difference\_type](../Topic/Container%20Class::difference_type.md)|Описывает объект, который может представлять различие между адресами любого 2 элементов в контролируемой последовательности.|  
-|[итератор](../standard-library/container-class-iterator.md)|Описание объекта, который можно использовать как итератор для контролируемой последовательности.|  
-|[Ссылка](../Topic/Container%20Class::reference.md)|Описание объекта, который можно использовать как ссылку на элемент контролируемой последовательности.|  
-|[reverse\_iterator](../standard-library/container-class-reverse-iterator.md)|Описание объекта, который можно использовать в качестве обратного итератор для контролируемой последовательности.|  
-|[size\_type](../standard-library/container-class-size-type.md)|Описывает объект, который может представлять любой длины контролируемой последовательности.|  
-|[value\_type](../standard-library/container-class-value-type.md)|Синоним является шаблона для параметра **Ty**.|  
-  
-## Функции\-члены  
+## <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[begin](../standard-library/container-class-begin.md)|Возвращает итератор, указывающим на первый элемент последовательности \(или просто за пределы пустой последовательности\).|  
-|[clear](../standard-library/container-class-clear.md)|Вызывает функцию [erase](../standard-library/container-class-erase.md)\( [begin](../standard-library/container-class-begin.md), [end](../Topic/Container%20Class::end.md)\).|  
-|[empty](../standard-library/container-class-empty.md)|Возвращает **true**  для пустой контролируемой последовательности.|  
-|[end](../Topic/Container%20Class::end.md)|Возвращает итератор, указывающий только за пределы последовательности.|  
+|[const_iterator](../standard-library/container-class-const-iterator.md)|Описывает объект, который можно использовать в качестве постоянного итератора для управляемой последовательности.|  
+|[const_reference](../standard-library/container-class-const-reference.md)|Описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.|  
+|[const_reverse_iterator](../standard-library/container-class-const-reverse-iterator.md)|Описывает объект, который можно использовать в качестве постоянного обратного итератора для управляемой последовательности.|  
+|[difference_type](../standard-library/container-class-difference-type.md)|Описывает объект, который может представлять разницу между адресами любых двух элементов в управляемой последовательности.|  
+|[iterator](../standard-library/container-class-iterator.md)|Описывает объект, который можно использовать в качестве итератора для управляемой последовательности.|  
+|[reference](../standard-library/container-class-reference.md)|Описывает объект, который можно использовать в качестве ссылки на элемент управляемой последовательности.|  
+|[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|Описывает объект, который можно использовать в качестве обратного итератора для управляемой последовательности.|  
+|[size_type](../standard-library/container-class-size-type.md)|Описывает объект, который может представлять длину любой управляемой последовательности.|  
+|[value_type](../standard-library/container-class-value-type.md)|Функционирует в качестве синонима параметра-шаблона **Type**.|  
+  
+## <a name="member-functions"></a>Функции-члены  
+  
+|||  
+|-|-|  
+|[begin](../standard-library/container-class-begin.md)|Возвращает итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности).|  
+|[clear](../standard-library/container-class-clear.md)|Вызывает метод [erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|  
+|[empty](../standard-library/container-class-empty.md)|Возвращает значение **true** для пустой управляемой последовательности.|  
+|[end](../standard-library/container-class-end.md)|Возвращает итератор, который указывает на позицию непосредственно за концом последовательности.|  
 |[erase](../standard-library/container-class-erase.md)|Удаляет элемент.|  
-|[max\_size](../standard-library/container-class-max-size.md)|Возвращает длину самой длинной последовательности, объект может элемент управления, при расчете времени независимо от длины контролируемой последовательности.|  
-|[rbegin](../Topic/Container%20Class::rbegin.md)|Возвращает обратный итератор, который указывает только за пределы контролируемой последовательности, обозначая начало обратной последовательности.|  
-|[rend](../standard-library/container-class-rend.md)|Функция\-член возвращает обратный итератор, указывающим на первый элемент последовательности \(или просто за пределы пустой последовательности\), обозначая обратной конец последовательности.|  
-|[size](../standard-library/container-class-size.md)|Возвращает длину контролируемой последовательности, при расчете времени независимо от длины контролируемой последовательности.|  
-|[буфер обмена](../Topic/Container%20Class::swap.md)|Замена из последовательности между **\*this** и `_Right`.|
+|[max_size](../standard-library/container-class-max-size.md)|Возвращает длину самой длинной последовательности, которая может контролироваться объектом, в постоянном времени независимо от длины управляемой последовательности.|  
+|[rbegin](../standard-library/container-class-rbegin.md)|Возвращает обратный итератор, который указывает на позицию за концом управляемой последовательности, обозначая начало обратной последовательности.|  
+|[rend](../standard-library/container-class-rend.md)|Функция-член возвращает обратный итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности), обозначая конец обратной последовательности.|  
+|[size](../standard-library/container-class-size.md)|Возвращает длину управляемой последовательности в постоянном времени независимо от длины управляемой последовательности.|  
+|[swap](../standard-library/container-class-swap.md)
+

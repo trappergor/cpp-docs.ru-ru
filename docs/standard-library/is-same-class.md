@@ -1,58 +1,71 @@
 ---
-title: "Класс is_same | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_same"
-  - "std.tr1.is_same"
-  - "is_same"
-  - "std.is_same"
-  - "std::is_same"
-  - "type_traits/std::is_same"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_same - класс [TR1]"
-  - "is_same"
+title: "Класс is_same | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_same
+- std::is_same
+- type_traits/std::is_same
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_same class
+- is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс is_same
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 763b2b9e120976270ccdad8509e0d60f280f9344
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="issame-class"></a>Класс is_same
 Определяет, совпадают ли два типа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<class Ty1, class Ty2>  
-    struct is_same;  
+template <class Ty1, class Ty2>  
+struct is_same;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Ty1`  
  Первый запрашиваемый тип.  
   
  `Ty2`  
  Второй запрашиваемый тип.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Экземпляр предиката типа содержит значение true, если типы `Ty1` и `Ty2` совпадают, в противном случае — значение false.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
-// std_tr1__type_traits__is_same.cpp   
+```cpp  
+// std__type_traits__is_same.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -85,17 +98,21 @@ int main()
   
 ```  
   
-  **is\_same\<base, base\> \=\= true**  
-**is\_same\<base, derived\> \=\= false**  
-**is\_same\<derived, base\> \=\= false**  
-**is\_same\<int, int\> \=\= true**  
-**is\_same\<int, const int\> \=\= false**   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+```Output  
+is_same<base, base> == true  
+is_same<base, derived> == false  
+is_same<derived, base> == false  
+is_same<int, int> == true  
+is_same<int, const int> == false  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<type_traits>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Класс is\_convertible](../standard-library/is-convertible-class.md)   
- [Класс is\_base\_of](../standard-library/is-base-of-class.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Класс is_convertible](../standard-library/is-convertible-class.md)   
+ [Класс is_base_of](../standard-library/is-base-of-class.md)
+

@@ -1,80 +1,98 @@
 ---
-title: "_CrtSetBreakAlloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetBreakAlloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtSetBreakAlloc"
-  - "_CrtSetBreakAlloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtSetBreakAlloc - функция"
-  - "CrtSetBreakAlloc - функция"
+title: "_CrtSetBreakAlloc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetBreakAlloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtSetBreakAlloc
+- _CrtSetBreakAlloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetBreakAlloc function
+- _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtSetBreakAlloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7b60eb9cb0367136ee7e3f06cab22347486678cc
+ms.lasthandoff: 02/24/2017
 
-Задает точку останова для указанного порядкового номера выделения объекта \(только отладочная версия\).  
+---
+# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+Задает точку останова для указанного порядкового номера выделения объекта (только отладочная версия).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-long _CrtSetBreakAlloc(     long lBreakAlloc  );  
+      long _CrtSetBreakAlloc(   
+   long lBreakAlloc   
+);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *lBreakAlloc*  
  Порядковый номер выделения, для которого задается точка останова.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Возвращает предыдущий порядковый номер выделения объекта, для которого задана точка останова.  
   
-## Заметки  
- `_CrtSetBreakAlloc` позволяет приложению выполнять обнаружение утечки памяти путем останова в определенной точке выделения памяти и обратной трассировки до источника запроса.  Функция использует последовательный порядковый номер выделения объекта, назначенный блоку памяти во время выделения в куче.  Если [\_DEBUG](../Topic/_DEBUG.md) не определен, вызовы `_CrtSetBreakAlloc` удаляются на этапе предварительной обработки.  
+## <a name="remarks"></a>Примечания  
+ `_CrtSetBreakAlloc` позволяет приложению выполнять обнаружение утечки памяти путем останова в определенной точке выделения памяти и обратной трассировки до источника запроса. Функция использует последовательный порядковый номер выделения объекта, назначенный блоку памяти во время выделения в куче. Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, вызовы `_CrtSetBreakAlloc` удаляются на этапе предварительной обработки.  
   
- Порядковый номер выделения объекта хранится в поле *lRequest* структуры **\_CrtMemBlockHeader**, определенной в Crtdbg.h.  Когда данные о блоке памяти включаются в отчет одной из функций дампа отладки, этот номер заключается в фигурные скобки \(например, {36}\).  
+ Порядковый номер выделения объекта хранится в поле *lRequest* структуры **_CrtMemBlockHeader**, определенной в Crtdbg.h. Когда данные о блоке памяти включаются в отчет одной из функций дампа отладки, этот номер заключается в фигурные скобки (например, {36}).  
   
- Дополнительные сведения о том, как `_CrtSetBreakAlloc` можно использовать с другими функциями управления памятью, см. в разделе [Отслеживание запросов выделения кучи](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Track_Heap_Allocation_Requests).  Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии основной кучи см. в разделе [Сведения о куче отладки CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Дополнительные сведения о том, как `_CrtSetBreakAlloc` можно использовать с другими функциями управления памятью, см. в разделе [Отслеживание запросов выделения кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_CrtSetBreakAlloc`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
+## <a name="libraries"></a>Библиотеки  
  Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_setbrkal.c  
@@ -120,8 +138,8 @@ int main( )
 }  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

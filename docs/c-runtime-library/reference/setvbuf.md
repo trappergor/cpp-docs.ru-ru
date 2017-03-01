@@ -1,49 +1,65 @@
 ---
-title: "setvbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setvbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setvbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контроль потоковой буферизации"
-  - "setvbuf - функция"
-  - "потоковая буферизация"
+title: "setvbuf | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setvbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setvbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- controlling stream buffering
+- stream buffering
+- setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setvbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 34e35686b96ae6a2d0b27639d2d23b6d242fe4d4
+ms.lasthandoff: 02/24/2017
 
-Контролирует потоковую буферизацию и размер буфера.  
+---
+# <a name="setvbuf"></a>setvbuf
+Управляет потоковой буферизацией и размером буфера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int setvbuf(  
@@ -54,9 +70,9 @@ int setvbuf(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE` .  
   
  `buffer`  
  Выделенный пользователем буфер.  
@@ -65,41 +81,41 @@ int setvbuf(
  Режим буферизации.  
   
  `size`  
- Размер буфера в байтах.  Допустимый диапазон: 2 \<\= `size` \<\= INT\_MAX \(2147483647\).  По сути, значение, заданное для `size`, округляется вниз до ближайшего числа, кратного 2.  
+ Размер буфера в байтах. Допустимый диапазон: 2 <= `size` <= INT_MAX (2147483647). На внутреннем уровне значение, указанное для `size`, округляется вниз до ближайшего числа, кратного 2.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Возвращает 0 в случае успеха.  
   
- Если `stream` имеет значение `NULL` или если `mode` или `size` имеет недопустимое значение, то вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, функция возвращает \-1 и устанавливает `errno` в `EINVAL`.  
+ Если `stream` имеет значение `NULL` или `mode`, или `size` не входит в допустимый диапазон, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает –1 и задает для `errno` значение `EINVAL`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `setvbuf` позволяет программе контролировать и буферизацию, и размер буфера для `stream`.  `stream` должен ссылаться на открытый файл, в котором не происходило операций ввода\-вывода с момента открытия.  Массив, на который указывает `buffer` используется в качестве буфера, если он не принимает значение `NULL`; в этом случае `setvbuf` использует автоматически выделенный буфер размером `size`\/2 \* 2 байт.  
+## <a name="remarks"></a>Примечания  
+ Функция `setvbuf` позволяет программе управлять и буферизацией, и размером буфера для `stream`. Функция `stream` должна ссылаться на открытый файл, для которого не выполнялись операции ввода-вывода с момента его открытия. Массив, на который указывает функция `buffer`, используется в качестве буфера, если он не является `NULL`, в этом случае `setvbuf` использует автоматически выделенный буфер длиной `size`/2 * 2 байтов.  
   
- Режим должен быть `_IOFBF`, `_IOLBF` или `_IONBF`.  Если `mode` принимает значение `_IOFBF` или `_IOLBF`, то `size` используется как размер буфера.  Если `mode` принимает значение `_IONBF`, поток не буферизуется, и `size` и `buffer` игнорируются.  Значения для `mode` и их смысл:  
+ Должен быть установлен режим `_IOFBF`, `_IOLBF`, или `_IONBF`. Если `mode` имеет значение `_IOFBF` или `_IOLBF`, то `size` используется в качестве размера буфера. Если `mode` имеет значение `_IONBF`, для потока не используется буферизация, и `size` и `buffer` игнорируются. Переменные для функции `mode` и их значения:  
   
  `_IOFBF`  
- Полная буферизация; то есть `buffer` используется как буфер и `size` используется в качестве размера буфера.  Если `buffer` принимает значение `NULL`, используется автоматически выделенный буфер размером `size` байт.  
+ Полная буферизация; то есть `buffer` используется в качестве буфера и `size` используется в качестве размера буфера. Если `buffer`имеет значение `NULL`, используется автоматически выделенный буфер длиной в `size` байтов.  
   
  `_IOLBF`  
- Для некоторых систем это обеспечивает линейную буферизацию.  Однако, для Win32, поведение совпадает с `_IOFBF` \- полной буферизацией.  
+ В некоторых системах таким образом осуществляется линейная буферизация. Однако для Win32 такое поведение аналогично `_IOFBF`, то есть полной буферизации.  
   
  `_IONBF`  
- Буфер не используется независимо от `buffer` или `size`.  
+ Буфер не используется, независимо от функций `buffer` или `size`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`setvbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setvbuf`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_setvbuf.c  
@@ -131,14 +147,17 @@ int main( void )
 }  
 ```  
   
-  **'stream1' now has a buffer of 1024 bytes**  
-**'stream2' now has no buffer**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+'stream1' now has a buffer of 1024 bytes  
+'stream2' now has no buffer  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../Topic/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setbuf](../../c-runtime-library/reference/setbuf.md)

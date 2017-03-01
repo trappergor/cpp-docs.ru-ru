@@ -1,78 +1,90 @@
 ---
-title: "Структура not_equal_to | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.not_equal_to"
-  - "std::not_equal_to"
-  - "not_equal_to"
-  - "xfunctional/std::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_equal_to - функция"
-  - "not_equal_to - структура"
+title: "Структура not_equal_to | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.not_equal_to
+- std::not_equal_to
+- not_equal_to
+- xfunctional/std::not_equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- not_equal_to function
+- not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Структура not_equal_to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 741c899479f89845a2be8e68e133a48b7d99e7c3
+ms.lasthandoff: 02/24/2017
 
-Бинарный предикат, выполняет операцию неравенства \(`operator!=`\) на основе своих аргументов.  
+---
+# <a name="notequalto-struct"></a>Структура not_equal_to
+Двоичный предикат, который выполняет со своими аргументами операцию неравенства ( `operator!=`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template<class Type = void>  
-   struct not_equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator!=  
-template<>  
-   struct not_equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         != std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct not_equal_to : public binary_function<Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator!=
+template <>
+struct not_equal_to<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) != std::forward<U>(Right));
+};
 ```  
   
-#### Параметры  
- `Type`, `Type1`, `Type2`  
- Любой тип, поддерживающий `operator!=`, принимающую операнды определение или возвращаемого типа.  
+#### <a name="parameters"></a>Параметры  
+ `Type`, `T`, `U`  
+ Любой тип, поддерживающий `operator!=`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд операции неравенства.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type1`.  
+ Левый операнд в операции неравенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд операции неравенства.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type2`.  
+ Правый операнд в операции неравенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
-## Возвращаемое значение  
- Результат `Left``!=``Right`.  Представляет шаблон повышает препровождение результата, который имеет тип, который возвращается `operator!=`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Результат `Left``!=``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator!=`.  
   
-## Заметки  
- Объекты типа `Type` должны быть равенство\-соответствующими.  Для этого необходимо, чтобы `operator!=`, указанное для набора объектов удовлетворяет математически свойства отношения эквивалентности.  Все встроенные числовые типы указателей и удовлетворяют этим требованиям.  
+## <a name="remarks"></a>Примечания  
+ Объекты типа `Type` должны быть сравнимы. Для этого нужно, чтобы `operator!=`, определенный в наборе объектов, удовлетворял математическим свойствам отношения эквивалентности. Этим требованиям удовлетворяют все встроенные числовые типы и типы указателей.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // functional_not_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -121,16 +133,22 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise not_equal_to comparsion  
+between v1 & v2 is: ( 0 0 1 0 1 0 )  
+*/  
 ```  
   
-  **Вектор v1 \= \(0 1 4 5 8 9\)**  
-**Вектор v2 \= \(\-0 1 \-4 5 \-8 9\)**  
-**Результат — мудрого comparsion not\_equal\_to**  
-**между v1 & v2 выглядит следующим образом: \(0 0 1 0 1 0\)**   
-## Требования  
- **Заголовок:** \<functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,72 +1,88 @@
 ---
-title: "_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_snprintf_s"
-  - "_snprintf_s_l"
-  - "_snwprintf_s"
-  - "_snwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_snwprintf_s_l"
-  - "_sntprintf_s_l"
-  - "snprintf_s_l"
-  - "_snprintf_s_l"
-  - "_sntprintf_s"
-  - "_snprintf_s"
-  - "snprintf_s"
-  - "_snwprintf_s"
-  - "snwprintf_s_l"
-  - "snwprintf_s"
-  - "sntprintf_s"
-  - "sntprintf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_snprintf_s - функция"
-  - "_snprintf_s_l - функция"
-  - "_sntprintf_s - функция"
-  - "_sntprintf_s_l - функция"
-  - "_snwprintf_s - функция"
-  - "_snwprintf_s_l - функция"
-  - "форматированный текст [C++]"
-  - "snprintf_s - функция"
-  - "snprintf_s_l - функция"
-  - "sntprintf_s - функция"
-  - "sntprintf_s_l - функция"
-  - "snwprintf_s - функция"
-  - "snwprintf_s_l - функция"
+title: "_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _snprintf_s
+- _snprintf_s_l
+- _snwprintf_s
+- _snwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _snwprintf_s_l
+- _sntprintf_s_l
+- snprintf_s_l
+- _snprintf_s_l
+- _sntprintf_s
+- _snprintf_s
+- snprintf_s
+- _snwprintf_s
+- snwprintf_s_l
+- snwprintf_s
+- sntprintf_s
+- sntprintf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _snprintf_s_l function
+- _snwprintf_s_l function
+- _sntprintf_s_l function
+- snwprintf_s_l function
+- snprintf_s function
+- _snprintf_s function
+- snprintf_s_l function
+- _sntprintf_s function
+- sntprintf_s_l function
+- sntprintf_s function
+- snwprintf_s function
+- _snwprintf_s function
+- formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8a3e2cd1a9bff5c7cb08e30753e98b1769e0b7fa
+ms.lasthandoff: 02/24/2017
 
-Записывает форматированные данные в строку. Здесь представлены версии функций [snprintf, \_snprintf, \_snprintf\_l, \_snwprintf, \_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
+Записывает форматированные данные в строку. Это версии функций [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _snprintf_s(  
@@ -115,15 +131,15 @@ int _snwprintf_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Место хранения выходных данных.  
   
  `sizeOfBuffer`  
- Размер места хранения для выходных данных. Размер в `bytes` для `_snprintf_s` или размер в `words` для `_snwprintf_s`.  
+ Размер места хранения выходных данных. Размер в `bytes` для `_snprintf_s` или размер в `words` для `_snwprintf_s`.  
   
  `Count`  
- Максимальное количество символов для хранения, или [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ Максимальное число символов для хранения или [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
  `format`  
  Строка управления форматом.  
@@ -134,46 +150,46 @@ int _snwprintf_s(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `_snprintf_s` Возвращает число символов, сохраненных в `buffer`, не считая завершающий символ null.`_snwprintf_s` возвращает число расширенных символов, сохраненных в `buffer`, без учета завершающего расширенного символа null.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_snprintf_s` возвращает число сохраненных в `buffer` символов без учета знака завершения NULL. `_snwprintf_s` возвращает число расширенных символов, сохраненных в `buffer`, без учета завершающего расширенного символа null.  
   
- Если пространства, необходимого для хранения данных и завершающий превышает `sizeOfBuffer`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если после обработчика недопустимых параметров выполнение приложения продолжается, эти функции устанавливают значение параметра `buffer` равным пустой строке, устанавливают для `errno` значение `ERANGE` и возвращают значение –1.  
+ Если объем памяти, необходимый для хранения данных и конечного нуль-символа, превышает `sizeOfBuffer`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если после обработчика недопустимых параметров выполнение приложения продолжается, эти функции устанавливают значение параметра `buffer` равным пустой строке, устанавливают для `errno` значение `ERANGE` и возвращают значение –1.  
   
- Если параметр `buffer` или `format` является пустым \(`NULL`\) указателем или если значение параметра `count` меньше или равно нулю, вызывается обработчик недопустимых параметров. Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают \-1.  
+ Если параметр `buffer` или `format` является пустым (`NULL`) указателем или если значение параметра `count` меньше или равно нулю, вызывается обработчик недопустимых параметров. Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают -1.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- `_snprintf_s` Функция форматирует и сохраняет `count` или меньшее число символов в `buffer` и добавляет завершающий нуль. Каждый аргумент \(при наличии\) преобразуется и выводится согласно соответствующей спецификацией формата в `format`. Форматирование согласуется с `printf` семейство функций; см. в разделе [Синтаксис описания формата: функции printf и wprintf](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md). Если копирование производится между перекрывающимися строками, поведение не определено.  
+## <a name="remarks"></a>Примечания  
+ Функция `_snprintf_s` форматирует и сохраняет `count` или меньшее число символов в `buffer` и добавляет завершающий символ NULL. Каждый аргумент (если он есть) преобразуется и выводится согласно соответствующей спецификации формата в `format`. Форматирование согласуется с семейством функций `printf`; см. в разделе [Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Если копирование производится между перекрывающимися строками, поведение не определено.  
   
- Если `count` является [\_TRUNCATE](../../c-runtime-library/truncate.md), затем `_snprintf_s` записывает все строки в виде будет помещаться в `buffer` оставляя места для завершающего нуль. Если вся строка \(с учетом завершающего нуль\) помещается в `buffer`, то `_snprintf_s` возвращает число записанных символов \(не включая конечное значение null\); в противном случае — `_snprintf_s` возвращает \-1, чтобы указать, что усечение произошла.  
+ Если параметр `count` — [_TRUNCATE](../../c-runtime-library/truncate.md), эти `_snprintf_s` выполняет запись строки до тех пор, пока `buffer` не будет заполнен с учетом завершающего нуль-символа. Если вся строка (с учетом завершающего нуль-символа) помещается в `buffer`, `_snprintf_s` возвращает количество записанных символов (не включая завершающий символ NULL); в противном случае `_snprintf_s` возвращает значение –1, что указывает на то, что произошло усечение.  
   
 > [!IMPORTANT]
 >  Убедитесь, что `format` не является строкой, определяемой пользователем.  
   
- `_snwprintf_s` — это двухбайтовая версия `_snprintf_s`; аргументы указателя для `_snwprintf_s` представляют собой двухбайтовые строки. Обнаружение ошибок кодировки в `_snwprintf_s` может отличаться от обнаружения ошибок в `_snprintf_s`.`_snwprintf_s`, как `swprintf_s`, записывает выходные данные в строку, а не для назначения типа `FILE`.  
+ `_snwprintf_s` — это двухбайтовая версия `_snprintf_s`; аргументы указателя для `_snwprintf_s` представляют собой двухбайтовые строки. Обнаружение ошибок кодировки в `_snwprintf_s` может отличаться от обнаружения ошибок в `_snprintf_s`. `_snwprintf_s` так же, как `swprintf_s`, записывает выходные данные в строку вместо назначения типа `FILE`.  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
- В C\+\+ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера \(что исключает необходимость указания аргумента с размером буфера\), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Для получения дополнительной информации см. [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_sntprintf_s`|`_snprintf_s`|`_snprintf_s`|`_snwprintf_s`|  
 |`_sntprintf_s_l`|`_snprintf_s_l`|`_snprintf_s_l`|`_snwprintf_s_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h\>|  
-|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h>|  
+|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_snprintf_s.cpp  
@@ -271,17 +287,44 @@ int main( void )
   
 ```Output  
   
-Count = 8; 10-битным буфером, новое содержимое dest: "<<< 121 >>" count = 9; 10-битным буфером, новое содержимое dest: «<<< 121 >>>» count = 10; 10-битным буфером, новое содержимое dest: «<<< 121 >>>» буфер назначения слишком мал: количество = 10; вызывается обработчик недопустимого параметра 10-битным буфером: («Буфер слишком мал,» 0) новое содержимое dest: '' усечение примеры: 10-битным буфером; усечение семантику новое содержимое dest: "<<< 1221 >>" усечение происходило буфер байтов 10; усечение семантику новое содержимое dest: «<<< 121 >>>» усечение не было пример перегрузки безопасного шаблона: вызывается обработчик недопустимого параметра: («Буфер слишком мал,» 0) новое содержимое dest: ''  
+count = 8; 10-byte buffer  
+    new contents of dest: '<<<121>>'  
+  
+count = 9; 10-byte buffer  
+    new contents of dest: '<<<121>>>'  
+  
+count = 10; 10-byte buffer  
+    new contents of dest: '<<<121>>>'  
+  
+Destination buffer too small:  
+  
+count = 10; 10-byte buffer  
+Invalid parameter handler invoked: ("Buffer too small", 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+10-byte buffer; truncation semantics  
+    new contents of dest: '<<<1221>>'  
+    truncation did occur  
+  
+10-byte buffer; truncation semantics  
+    new contents of dest: '<<<121>>>'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: ("Buffer too small", 0)  
+    new contents of dest: ''  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [Функции vprintf](../../c-runtime-library/vprintf-functions.md)

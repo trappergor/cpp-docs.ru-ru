@@ -1,47 +1,63 @@
 ---
-title: "imaxdiv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "imaxdiv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "imaxdiv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "imaxdiv - функция"
+title: "imaxdiv | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- imaxdiv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- imaxdiv
+dev_langs:
+- C++
+helpviewer_keywords:
+- imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# imaxdiv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 1d86597d8ff759a1a388fea785ff864d47c823ae
+ms.lasthandoff: 02/24/2017
 
-Вычисляет частное и остаток двух целочисленных значений любого размера в единственной операции.  
+---
+# <a name="imaxdiv"></a>imaxdiv
+Вычисляет частное и остаток от деления двух целочисленных значений любого размера в рамках одной операции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 imaxdiv_t imaxdiv(   
@@ -50,28 +66,28 @@ imaxdiv_t imaxdiv(
 );   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `numer`  
  Числитель.  
   
  `denom`  
- Знаменатель  
+ Знаменатель.  
   
-## Возвращаемое значение  
- `imaxdiv` вызванный с аргументами типа [intmax\_t](../../c-runtime-library/standard-types.md) возвращает структуру типа [imaxdiv\_t](../../c-runtime-library/standard-types.md), которая представляет частное и остаток.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `imaxdiv`, вызванная с использованием аргументов типа [intmax_t](../../c-runtime-library/standard-types.md), возвращает структуру типа [imaxdiv_t](../../c-runtime-library/standard-types.md), состоящую из частного и остатка.  
   
-## Заметки  
- Функция `imaxdiv` делит `numer` на `denom` и таким образом вычисляет частное и остаток.  Структура `imaxdiv_t` содержит частное, `intmax_t`, `quot`, и остаток, `intmax_t` `rem`.  Знак частного совпадает со знаком математического частного.  Его абсолютное значение — наибольшее целое число, которое меньше абсолютного значения математического частного.  Если знаменатель — 0, программа завершается с сообщением об ошибке.  
+## <a name="remarks"></a>Примечания  
+ Функция `imaxdiv` производит деление `numer` на `denom`, вычисляя таким образом частное и остаток. Структура `imaxdiv_t` содержит частное (`intmax_t``quot`) и остаток (`intmax_t``rem`). Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`imaxdiv`|\<inttypes.h\>|  
+|-------------|---------------------|  
+|`imaxdiv`|\<inttypes.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_imaxdiv.c  
@@ -99,14 +115,17 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- Если выполнена сборка, а затем вызваны параметры командной строки `9460730470000000 8766`, код создает этот результат.  
+ При построении и последующем вызове с параметрами командной строки `9460730470000000 8766` код генерирует следующие выходные данные:  
   
-  **Вызов imaxdiv\(9460730470000000, 8766\)**  
-**дает частное 1079252848505 и остаток 5170**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Для получения дополнительной информации см. [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The call to imaxdiv(9460730470000000, 8766)  
+results in a quotient of 1079252848505, and a remainder of 5170  
+```  
   
-## См. также  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [div](../../c-runtime-library/reference/div.md)   
- [ldiv, lldiv](../Topic/ldiv,%20lldiv.md)
+ [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)

@@ -1,74 +1,90 @@
 ---
-title: "_snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_snwscanf"
-  - "_snscanf_l"
-  - "_snscanf"
-  - "_snwscanf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_snscanf"
-  - "_snscanf_l"
-  - "_snwscanf"
-  - "snscanf_l"
-  - "snscanf"
-  - "_sntscanf_l"
-  - "_sntscanf"
-  - "_snwscanf_l"
-  - "sntscanf_l"
-  - "sntscanf"
-  - "snwscanf"
-  - "snwscanf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_snscanf - функция"
-  - "_snscanf_l - функция"
-  - "_sntscanf - функция"
-  - "_sntscanf_l - функция"
-  - "_snwscanf - функция"
-  - "_snwscanf_l - функция"
-  - "чтение данных, строки"
-  - "snscanf - функция"
-  - "snscanf_l - функция"
-  - "sntscanf - функция"
-  - "sntscanf_l - функция"
-  - "snwscanf - функция"
-  - "snwscanf_l - функция"
-  - "строки [C++], чтение"
-  - "строки [C++], чтение данных из"
+title: "_snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _snwscanf
+- _snscanf_l
+- _snscanf
+- _snwscanf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _snscanf
+- _snscanf_l
+- _snwscanf
+- snscanf_l
+- snscanf
+- _sntscanf_l
+- _sntscanf
+- _snwscanf_l
+- sntscanf_l
+- sntscanf
+- snwscanf
+- snwscanf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- snscanf_l function
+- snwscanf function
+- _sntscanf_l function
+- sntscanf function
+- _snwscanf_l function
+- _sntscanf function
+- _snscanf_l function
+- sntscanf_l function
+- strings [C++], reading data from
+- snscanf function
+- snwscanf_l function
+- _snwscanf function
+- reading data, strings
+- strings [C++], reading
+- _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 79282200587a8c116bbcd44db68e809f6dcc0d9c
+ms.lasthandoff: 02/24/2017
 
-Считывает форматированные данные указанной длины из строки.  Существуют более безопасные версии этих функций; см. раздел [\_snscanf\_s, \_snscanf\_s\_l, \_snwscanf\_s, \_snwscanf\_s\_l](../../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).  
+---
+# <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
+Считывает форматированные данные указанной длины из строки. Существуют более безопасные версии этих функций; см. раздел [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int __cdecl _snscanf(  
@@ -99,51 +115,51 @@ int __cdecl _snwscanf_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `input`  
  Входная строка для анализа.  
   
  `length`  
- Количество символов для анализа в `input`.  
+ Количество символов для анализа в строке `input`.  
   
  `format`  
  Один или несколько описателей формата.  
   
  `... (optional)`  
- Переменные, которые будут использоваться для хранения извлеченных из входной строки значений с помощью описателей формата в `format`.  
+ Переменные, которые будут использоваться для хранения значений, извлеченных из входной строки с помощью описателей формата в параметре `format`.  
   
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает количество полей, которые успешно преобразуются и присваиваются; возвращаемое значение не включает поля, которые были считаны, но не присвоены.  Возвращаемое значение 0 указывает, что поля не были присвоены.  Возвращаемое значение равно `EOF` в случае ошибки или если конец строки достигнут до первого преобразования.  Дополнительные сведения см. в разделе [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Если до первого преобразования возникает ошибка или достигается конец строки, возвращается значение `EOF`. Дополнительные сведения см. в разделе [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
   
- Если `input` или `format` — указатель на `NULL`, или если `length` меньше или равен нулю, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают `EOF` и устанавливают для `errno` значение `EINVAL`.  
+ Если параметр `input` или `format` является указателем `NULL` или значение параметра `length` меньше или равно нулю, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EOF` и устанавливают для `errno` значение `EINVAL`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Эта функция аналогична `sscanf` за исключением того, что она обеспечивает возможность задать фиксированное число символов входной строки для анализа.  Дополнительные сведения см. в разделе [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция аналогична функции `sscanf`, за исключением того, что она обеспечивает возможность задать фиксированное число символов входной строки для анализа. Дополнительные сведения см. в разделе [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_sntscanf`|`_snscanf`|`_snscanf`|`_snwscanf`|  
 |`_sntscanf_l`|`_snscanf_l`|`_snscanf_l`|`_snwscanf_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_snscanf`, `_snscanf_l`|\<stdio.h\>|  
-|`_snwscanf`, `_snwscanf_l`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_snscanf`, `_snscanf_l`|\<stdio.h>|  
+|`_snwscanf`, `_snwscanf_l`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_snscanf.c  
@@ -171,10 +187,13 @@ int main( )
 }  
 ```  
   
-  **\_snscanf converted 2 fields: 15 and 12.000000**  
-**\_snwscanf converted 2 fields: 15 and 12.000000**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+_snscanf converted 2 fields: 15 and 12.000000  
+_snwscanf converted 2 fields: 15 and 12.000000  
+```  
   
-## См. также  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
  [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md)

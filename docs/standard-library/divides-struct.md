@@ -1,75 +1,87 @@
 ---
-title: "Структура divides | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::divides"
-  - "std::divides"
-  - "std.divides"
-  - "divides"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "divides - структура"
-  - "divides - класс"
+title: "Структура divides | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::divides
+- std::divides
+- std.divides
+- divides
+dev_langs:
+- C++
+helpviewer_keywords:
+- divides struct
+- divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Структура divides
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: a82ec380e3be786dfdac2b8ebe3b108d5776c3a9
+ms.lasthandoff: 02/24/2017
 
-Предопределенный объект функции, который выполняет операцию деления \(`operator/`\) на основе своих аргументов.  
+---
+# <a name="divides-struct"></a>Структура divides
+Стандартный объект функции, который применяет операцию деления (`operator/`) к своим аргументам.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template<class Type = void>  
-   struct divides : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right   
-         ) const;  
-   };  
-  
-// specialized transparent functor for operator/  
-template<>  
-   struct divides<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            / std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct divides : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator/
+template <>
+struct divides<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const
+    -> decltype(std::forward<T>(Left)*/ std::forward<U>(Right));
+ };
 ```  
   
-#### Параметры  
- `Type`, `Type1`, `Type2`  
- Тип, поддерживающий `operator/`, принимающую операнды определение или возвращаемого типа.  
+#### <a name="parameters"></a>Параметры  
+ `Type`, `T`, `U`  
+ Тип, поддерживающий `operator/`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд операции деления.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type1`.  
+ Левый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд операции деления.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type2`.  
+ Правый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
-## Возвращаемое значение  
- Результат `Left``/``Right`.  Представляет шаблон повышает препровождение результата, который имеет тип, который возвращается `operator/`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Результат `Left``/``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator/`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // functional_divides.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -115,16 +127,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+  
+/* Output:  
+The vector v1 = ( 0 7 14 21 28 35 )  
+The vector v2 = ( 2 4 6 8 10 12 )  
+The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )  
+*/  
 ```  
   
-  **Вектор v1 \= \(0 7 14 21 28 35\)**  
-**Вектор v2 \= \(2 4 6 8 10 12\)**  
-**\- Мудрые закрытые: \(0 1.75 2.33333 2.625 2.8 2.91667\)**   
-## Требования  
- **Заголовок:** \<functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

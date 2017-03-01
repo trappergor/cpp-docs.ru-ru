@@ -1,55 +1,67 @@
 ---
-title: "vector&lt;bool&gt;::reference::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "="
-  - "operator="
-  - "vector<bool>::reference::operator="
-  - "std::vector<bool>::reference::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= - оператор, с конкретными стандартными библиотечными объектами C++"
-  - "reference::operator="
+title: "vector&lt;bool&gt;::reference::operator= | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- =
+- operator=
+- vector<bool>::reference::operator=
+- std::vector<bool>::reference::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- = operator, with specific C++ Standard Library objects
+- reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
 caps.latest.revision: 20
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# vector&lt;bool&gt;::reference::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 82c542fff74866ac57d65dc25b8ee8f75d53415d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 Присваивает биту логическое значение или значение, которое содержит элемент со ссылкой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-reference& operator=(  
-   const reference& Right  
-);  
-reference& operator=(  
-   bool Val  
-);  
+reference& operator=(const reference& Right);
+
+reference& operator=(bool Val);
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Right`  
  Ссылка на элемент, значение которого должно быть присвоено биту.  
   
  `Val`  
  Логическое значение, которое должно быть присвоено биту.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // vector_bool_ref_op_assign.cpp  
@@ -108,14 +120,14 @@ int main()
   
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 The vector is: true false false true true  
 The original value of the 1st element stored in a bool: true  
 The original value of the 2nd element stored in a bool: false  
 The original value of the 3rd element stored in a bool: false  
-  
+ 
 The vector after assigning refelem1 to refelem2 is now: true true false true true  
 The vector after assigning false to refelem1 is now: true true true true true  
 The original value of the 1st element still stored in a bool: true  
@@ -123,11 +135,13 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-## Требования  
- **Заголовок:** \<vector\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<vector>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Класс vector\<bool\>::reference](../standard-library/vector-bool-reference-class.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ Класс [vector\<bool>::reference](../standard-library/vector-bool-reference-class.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+

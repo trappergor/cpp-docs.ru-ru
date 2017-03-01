@@ -1,50 +1,66 @@
 ---
-title: "_get_tzname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_tzname"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_tzname"
-  - "get_tzname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_tzname - функция"
-  - "get_tzname - функция"
-  - "часовые пояса"
+title: "_get_tzname | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_tzname
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_tzname
+- get_tzname
+dev_langs:
+- C++
+helpviewer_keywords:
+- _get_tzname function
+- time zones
+- get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _get_tzname
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 2a7712c311c5007b2d50578d78452d6c989a7ad1
+ms.lasthandoff: 02/24/2017
 
-Получает представление в виде символьной строки имени часового пояса или имени зоны стандартного летнего времени \(DST\).  
+---
+# <a name="gettzname"></a>_get_tzname
+Возвращает представление названия часового пояса или названия часового пояса с переходом на летнее время (DST) в виде строки символов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _get_tzname(  
@@ -55,62 +71,62 @@ errno_t _get_tzname(
 );  
 ```  
   
-#### Параметры  
- \[исходящий\] `pReturnValue`  
- Длина строки `timeZoneName`, включая конечный нуль\-символ.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `pReturnValue`  
+ Длина строки `timeZoneName` включая завершающий нуль-символ.  
   
- \[исходящий\] `timeZoneName`  
- Адрес символьной строки для представления имени часового пояса или имени зоны стандартного летнего времени \(DST\), в зависимости от `index`.  
+ [выходной] `timeZoneName`  
+ Адрес строки символов, представляющей название часового пояса или название часового пояса с переходом летнее время (DST), в зависимости от значения `index`.  
   
- \[входящий\] `sizeInBytes`  
- Размер символьной строки `timeZoneName` в байтах.  
+ [in] `sizeInBytes`  
+ Размер строки символов `timeZoneName` в байтах.  
   
- \[входящий\] `index`  
- Индекс одного из двух имен часового пояса, который необходимо извлечь.  
+ [in] `index`  
+ Индекс, определяющий извлечение одного или двух названий часовых поясов.  
   
-## Возвращаемое значение  
- Ноль в случае успеха, в противном случае значение типа `errno`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Ноль в случае успешного выполнения; в противном случае — значение типа `errno`.  
   
- Если либо `timeZoneName` равно `NULL`, либо `sizeInBytes` равно нулю или меньше нуля \(но не и то, и то\), вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, функция устанавливает `errno` в `EINVAL` и возвращает `EINVAL`.  
+ Если `timeZoneName` имеет значение `NULL`, либо значение `sizeInBytes` равно нулю или меньше нуля (но не одновременно), вызывается обработчик недопустимого параметра, как описывается в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EINVAL`.  
   
-### Условия возникновения ошибки  
+### <a name="error-conditions"></a>Условия ошибок  
   
-|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Возвращаемое значение|Содержимое `timeZoneName`.|  
-|--------------------|--------------------|-------------------|-------------|---------------------------|--------------------------------|  
-|размер имени TZ|`NULL`|0|0 или 1|0|без изменений|  
-|размер имени TZ|any|\> 0|0 или 1|0|имя TZ|  
-|без изменений|`NULL`|\> 0|any|`EINVAL`|без изменений|  
-|без изменений|any|нуль|any|`EINVAL`|без изменений|  
-|без изменений|any|\> 0|\> 1|`EINVAL`|без изменений|  
+|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Возвращаемое значение|Содержимое `timeZoneName`|  
+|--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
+|Длина названия часового пояса|`NULL`|0|0 или 1|0|не изменено|  
+|Длина названия часового пояса|any|> 0|0 или 1|0|Название часового пояса|  
+|не изменено|`NULL`|> 0|любые|`EINVAL`|не изменено|  
+|не изменено|any|нуль|любые|`EINVAL`|не изменено|  
+|не изменено|any|> 0|> 1|`EINVAL`|не изменено|  
   
-## Заметки  
- Функция `_get_tzname` извлекает представление в виде символьной строки имени часового пояса или имени зоны стандартного летнего времени \(DST\) в адрес `timeZoneName`, в зависимости от значения индекса, а также размера строки в `pReturnValue`.  Если `timeZoneName` равно `NULL`, и `sizeInBytes` равно нулю, размер строки в байтах любого часового пояса возвращается в `pReturnValue`.  Значения индекса должны быть либо 0 для зоны стандартного времени, либо 1 для зоны стандартного летнего времени; все остальные значения индекса приводят к неопределённым результатам.  
+## <a name="remarks"></a>Примечания  
+ Функция `_get_tzname` извлекает представление названия часового пояса или названия часового пояса с переходом на летнее время (DST) в виде строки символов по адресу параметра `timeZoneName` в зависимости от значения index, а также размер строки в `pReturnValue`. Если `timeZoneName` равно `NULL` и `sizeInBytes` равно нулю, в `pReturnValue` возвращается только размер строки соответствующего часового пояса в байтах. Значение индекса должно быть равно 0 для стандартного часового пояса или 1 для часового пояса с переходом на летнее время. Другие значения индекса дают неопределенные результаты.  
   
-### Значения индекса  
+### <a name="index-values"></a>Значения индекса  
   
-|`index`|Содержимое `timeZoneName`.|Значение `timeZoneName` по умолчанию|  
-|-------------|--------------------------------|------------------------------------------|  
-|0|Имя часового пояса|"PST"|  
-|1|Имя зоны стандартного летнего времени|"PDT"|  
-|\> 1 или \< 0|`errno` принимает значение `EINVAL`.|без изменений|  
+|`index`|Содержимое `timeZoneName`|Значение `timeZoneName` по умолчанию|  
+|-------------|--------------------------------|----------------------------------|  
+|0|Название часового пояса|"PST"|  
+|1|Название часового пояса с переходом на летнее время|"PDT"|  
+|> 1 или < 0|`errno` имеет значение `EINVAL`|не изменено|  
   
- Если значения явно не изменяются во время выполнения, значения по умолчанию равны «PST» и «PDT» соответственно.  Размеры этих массивов символов управляются значением `TZNAME_MAX`.  
+ Если значения не изменяются явным образом во время выполнения, по умолчанию используются значения "PST" и "PDT" соответственно.  Размеры этих массивов знаков регламентируются значением `TZNAME_MAX`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_get_tzname`|\<time.h\>|  
+|-------------|---------------------|  
+|`_get_tzname`|\<time.h>|  
   
- Для получения дополнительной информации см. [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   
- [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)   
- [\_get\_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [TZNAME\_MAX](../Topic/TZNAME_MAX.md)
+ [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
+ [TZNAME_MAX](../../c-runtime-library/tzname-max.md)

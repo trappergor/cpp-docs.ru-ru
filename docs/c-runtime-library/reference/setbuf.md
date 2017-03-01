@@ -1,48 +1,64 @@
 ---
-title: "setbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "setbuf - функция"
-  - "потоковая буферизация"
+title: "setbuf | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- setbuf function
+- stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce7ea86029a99b5727fa1d7bd033044431a1fbff
+ms.lasthandoff: 02/24/2017
 
-Контролирует потоковую буферизацию.  Эта функция не рекомендуется; вместо неё используйте [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
+---
+# <a name="setbuf"></a>setbuf
+Управляет буферизацией потока. Эта функция не рекомендуется; вместо нее используйте функцию [setvbuf](../../c-runtime-library/reference/setvbuf.md) .  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void setbuf(  
@@ -51,27 +67,27 @@ void setbuf(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE` .  
   
  `buffer`  
  Выделенный пользователем буфер.  
   
-## Заметки  
- Функция `setbuf` управляет буферизацией для `stream`.  Аргумент `stream` должен относиться к открытому файлов, в котором не производились чтение и запись.  Если аргумент `buffer` равен `NULL`, поток не буферизуется.  В противном случае буфер должен указывать на массив символов длиной `BUFSIZ`, где `BUFSIZ` \- размер буфера, как определено в STDIO.H.  Вместо буфера по умолчанию выделенного системой для данного потока для буферизации ввода\/вывода используется указанный пользователем буфер.  Поток `stderr` не буферизуется по умолчанию, но можно использовать `setbuf`, чтобы назначить буферы в `stderr`.  
+## <a name="remarks"></a>Примечания  
+ Функция `setbuf` управляет буферизацией для `stream`. Аргумент `stream` должен ссылаться на открытый файл, в котором не производились чтение и запись. Если аргумент `buffer` имеет значение `NULL`, поток не буферизуется. В противном случае буфер должен указывать на массив символов длиной `BUFSIZ`, где `BUFSIZ` — размер буфера, как определено в файле STDIO.H. Вместо буфера, по умолчанию выделенного системой для данного потока, для буферизации ввода-вывода используется указанный пользователем буфер. Поток `stderr` не буферизуется по умолчанию, но с помощью функции `setbuf` можно назначить буферы для потока `stderr`.  
   
- `setbuf` заменена [setvbuf](../../c-runtime-library/reference/setvbuf.md), которая является предпочтительной процедурой для нового кода.  `setbuf` сохраняется для обеспечения совместимости с существующим кодом.  
+ Функция `setbuf` заменена функцией [setvbuf](../../c-runtime-library/reference/setvbuf.md), которая является предпочтительной для нового кода. Функция `setbuf` сохранена для обеспечения совместимости с существующим кодом.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`setbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setbuf`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_setbuf.c  
@@ -105,14 +121,17 @@ int main( void )
 }  
 ```  
   
-  **stream1 set to user\-defined buffer at: 0012FCDC**  
-**stream2 buffering disabled**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+stream1 set to user-defined buffer at: 0012FCDC  
+stream2 buffering disabled  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../Topic/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

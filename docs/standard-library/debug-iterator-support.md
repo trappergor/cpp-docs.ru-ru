@@ -1,47 +1,64 @@
 ---
-title: "Поддержка отладки итераторов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "поддержка отладки итераторов"
-  - "несовместимые итераторы"
-  - "итераторы, поддержка отладки итераторов"
-  - "итераторы, несовместимые"
-  - "безопасные библиотеки"
-  - "безопасные библиотеки, Стандартная библиотека C++"
-  - "безопасная стандартная библиотека C++"
-  - "Стандартная библиотека C++, поддержка отладки итераторов"
+title: "Поддержка отладочных итераторов | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, C++ Standard Library
+- Safe C++ Standard Library
+- C++ Standard Library, debug iterator support
+- iterators, debug iterator support
+- iterators, incompatible
+- incompatible iterators
+- debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Поддержка отладки итераторов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
+ms.openlocfilehash: 37f3450fbd320105781fa5398e838d3a8e317879
+ms.lasthandoff: 02/24/2017
 
-Библиотека времени выполнения Visual C\+\+ обнаружено неверное использование итераторов и утверждения и отображает диалоговое окно во время выполнения.  Чтобы включить отладку поддержка итераторов, необходимо использовать версию отладки библиотеки времени выполнения C — A. чтобы компилировать программы.  Для получения дополнительной информации см. [Особенности библиотеки CRT](../c-runtime-library/crt-library-features.md).  Дополнительные сведения об использовании итераторы см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  
+---
+# <a name="debug-iterator-support"></a>Debug Iterator Support
+Библиотека времени выполнения Visual C++ обнаруживает некорректное использование итераторов, выполняет проверочное утверждение и отображает диалоговое окно во время выполнения. Чтобы включить поддержку отладочных итераторов, необходимо использовать отладочные версии стандартной библиотеки C++ и библиотеки времени выполнения C для компиляции программы. Дополнительные сведения см. в разделе [Функции библиотеки CRT](../c-runtime-library/crt-library-features.md). Сведения об использовании проверяемых итераторов см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  
   
- Стандарт C\+\+ описание функции\-члены могут вызвать итераторы в контейнер стать недопустимыми.  Пример: 2  
+ В стандарте языка C++ описано, как функции-члены могут сделать недействительными итераторы в контейнер. Ниже приведены два примера:  
   
--   Физического удаления элемента из контейнера итераторы приводит к элементу стать недопустимым.  
+-   В случае удаления элемента из контейнера итераторы в этот элемент становятся недействительными.  
   
--   Увеличение размера [vector](../standard-library/vector.md) \(внедрения или вставка\) вызывает итераторы в `vector` стать недопустимым.  
+-   Увеличение размера [вектора](../standard-library/vector.md) с помощью операции выталкивания или вставки делает недействительными итераторы в `vector`.  
   
-## Пример  
- Если компилировать следующая программа, в режиме отладки, во время выполнения, утверждение и заканчивается.  
+## <a name="example"></a>Пример  
+При компиляции данного примера программы в режиме отладки во время выполнения она выполняет подтверждение и прекращает выполнение.  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_0.cpp  
+// compile by using /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
   
@@ -58,25 +75,21 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
-  
 ```  
   
-## Пример  
- Можно использовать символ [\_HAS\_ITERATOR\_DEBUGGING](../Topic/_HAS_ITERATOR_DEBUGGING.md) отключены функции отладки итератора в отладочном построении.  Следующая программа не утверждения, но по\-прежнему триггеры не задан расширения функциональности.  
-  
-> [!IMPORTANT]
->  Используйте `_ITERATOR_DEBUG_LEVEL` к элементу управления `_HAS_ITERATOR_DEBUGGING`.  Для получения дополнительной информации см. [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).  
+## <a name="example"></a>Пример  
+Для выключения функции отладки итераторов в отладочной сборке можно использовать макрос препроцессора [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md). Эта программа не утверждает, но по-прежнему вызывает неопределенное поведение.  
   
 ```cpp  
-// iterator_debugging.cpp  
-// compile with: /EHsc /MDd  
-#define _HAS_ITERATOR_DEBUGGING 0  
+// iterator_debugging_1.cpp  
+// compile by using: /EHsc /MDd  
+#define _ITERATOR_DEBUG_LEVEL 0  
 #include <vector>  
 #include <iostream>  
   
@@ -93,23 +106,28 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
 ```  
   
-  **20**  
-**\-572662307**   
-## Пример  
- Подтверждение также происходит при попытке использования итератор до его инициализации, как показано ниже, выполните следующие действия.  
+```Output  
+20  
+-572662307  
+```  
+  
+## <a name="example"></a>Пример  
+Утверждение также возникает при попытке использования итератора до его инициализации, как показано ниже:  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_2.cpp  
+// compile by using: /EHsc /MDd  
 #include <string>  
 using namespace std;  
+  
 int main() {  
    string::iterator i1, i2;  
    if (i1 == i2)  
@@ -117,11 +135,12 @@ int main() {
 }  
 ```  
   
-## Пример  
- Следующий пример кода вызывает утверждение, поскольку 2 итератора с алгоритмом [for\_each](../Topic/for_each.md) несовместимы.  Алгоритмы проверяют, чтобы определить, ссылаются ли итераторы, предоставляются на них тот же контейнер.  
+## <a name="example"></a>Пример  
+Следующий пример кода вызывает проверочное утверждение, так как два итератора для алгоритма [for_each](../standard-library/algorithm-functions.md#for_each) несовместимы. Алгоритмы пытаются проверить, ссылаются ли предоставляемые в них итераторы на один и тот же контейнер.  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_3.cpp  
+// compile by using /EHsc /MDd  
 #include <algorithm>  
 #include <vector>  
 using namespace std;  
@@ -137,20 +156,20 @@ int main()
     v2.push_back(10);  
     v2.push_back(20);  
   
-    // The next line will assert because v1 and v2 are  
+    // The next line asserts because v1 and v2 are  
     // incompatible.  
     for_each(v1.begin(), v2.end(), [] (int& elem) { elem *= 2; } );  
 }  
 ```  
   
- Обратите внимание, что в этом примере лямбда\-выражение используется `[] (int& elem) { elem *= 2; }` вместо функтором.  Хотя этот вариант имеет подшипник на функтором сбоя — подтверждение, не приводит к те же сбой\- лямбда\-выражения очень удобный способ выполнения компактные задачи объекта функции.  Дополнительные сведения о лямбда\-выражениях см. в разделе [Лямбда\-выражения](../cpp/lambda-expressions-in-cpp.md).  
+Обратите внимание, что в примере используется лямбда-выражение `[] (int& elem) { elem *= 2; }`, а не функция. Несмотря на то что этот выбор никак не влияет на сбой утверждения (аналогичная функция приведет примерно к такому же сбою), лямбда-выражения являются очень полезным инструментом для выполнения задач с объектами функций. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../cpp/lambda-expressions-in-cpp.md).  
   
-## Пример  
- Отладка итератор проверки будет переменной итератора, объявляются, что в цикле `for` будет из области видимости, область цикла `for` закончена.  
+## <a name="example"></a>Пример  
+Проверки отладочных итераторов также приводят к выходу за пределы области переменной-итератора, которая объявлена в цикле `for`, когда область цикла `for` заканчивается.  
   
 ```cpp  
-// debug_iterator.cpp  
-// compile with: /EHsc /MDd  
+// iterator_debugging_4.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
 int main() {  
@@ -160,20 +179,21 @@ int main() {
    v.push_back(15);  
    v.push_back(20);  
   
-   for (std::vector<int>::iterator i = v.begin() ; i != v.end(); ++i)  
-   ;  
+   for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)  
+      ;   // do nothing  
    --i;   // C2065  
 }  
 ```  
   
-## Пример  
- Отладка итераторы имеют нетривиальные деструкторы.  Если деструктор не выполняется, что по какой\-либо причине, нарушения прав доступа и повреждение данных могут возникнуть.  Рассмотрим следующий пример.  
+## <a name="example"></a>Пример  
+Отладочные итераторы имеют нетривиальные деструкторы. Если деструктор не выполняется по какой-либо причине, может возникнуть нарушение прав доступа и повреждение данных. Рассмотрим следующий пример.  
   
 ```cpp  
-/* compile with: /EHsc /MDd */  
+// iterator_debugging_5.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 struct base {  
-   // FIX: uncomment the next line  
+   // TO FIX: uncomment the next line  
    // virtual ~base() {}  
 };  
   
@@ -191,5 +211,10 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Обзор STL](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>См. также  
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)
+
+
+
+
+

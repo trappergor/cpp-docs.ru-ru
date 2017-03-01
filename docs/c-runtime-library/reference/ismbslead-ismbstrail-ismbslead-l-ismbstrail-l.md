@@ -1,69 +1,85 @@
 ---
-title: "_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbstrail"
-  - "_ismbslead_l"
-  - "_ismbslead"
-  - "_ismbstrail_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ismbslead"
-  - "ismbs"
-  - "ismbslead_l"
-  - "_ismbs"
-  - "ismbstrail_l"
-  - "ismbslead"
-  - "_ismbstrail"
-  - "_ismbstrail_l"
-  - "ismbstrail"
-  - "_ismbslead_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ismbslead - функция"
-  - "_ismbslead_l - функция"
-  - "_ismbstrail - функция"
-  - "_ismbstrail_l - функция"
-  - "ismbslead - функция"
-  - "ismbslead_l - функция"
-  - "ismbstrail - функция"
-  - "ismbstrail_l - функция"
+title: "_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbstrail
+- _ismbslead_l
+- _ismbslead
+- _ismbstrail_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ismbslead
+- ismbs
+- ismbslead_l
+- _ismbs
+- ismbstrail_l
+- ismbslead
+- _ismbstrail
+- _ismbstrail_l
+- ismbstrail
+- _ismbslead_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- ismbstrail function
+- _ismbslead function
+- ismbslead function
+- ismbslead_l function
+- _ismbstrail function
+- _ismbslead_l function
+- ismbstrail_l function
+- _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
+ms.lasthandoff: 02/24/2017
 
-Выполняет контекстно\-зависимые тесты для старших и младших байтов многобайтовой символьной строки и определяет, указывает ли указатель данной подстроки старший или младший байт.  
+---
+# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+Выполняет контекстно-зависимые тесты для старших и младших байтов многобайтовой символьной строки и определяет, указывает ли указатель данной подстроки старший или младший байт.  
   
 > [!IMPORTANT]
->  Этот API не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Дополнительные сведения см. в разделе [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _ismbslead(  
@@ -86,7 +102,7 @@ int _ismbstrail_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
  Указатель на начало строки или на предыдущий известный старший байт.  
   
@@ -96,32 +112,32 @@ int _ismbstrail_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `_ismbslead` возвращает значение \-1, если символ является старшим байтом; `_ismbstrail` возвращает значение \-1, если символ является младшим байтом.  Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль.  Если один из аргументов имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают `NULL` и устанавливают для `errno` значение `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_ismbslead` возвращает значение -1, если символ является старшим байтом; `_ismbstrail` возвращает значение -1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если один из аргументов имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `NULL` и устанавливают для `errno` значение `EINVAL`.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  `_ismbslead` и `_ismbstrail` выполняются медленнее, чем версии `_ismbblead` и `_ismbbtrail`, так как учитывает контекст строки.  
   
- Версии этих функций с суффиксом `_l` идентичны за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` идентичны за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_ismbslead`|\<mbctype.h\> or \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
-|`_ismbstrail`|\<mbctype.h\> or \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
-|`_ismbslead_l`|\<mbctype.h\> or \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
-|`_ismbstrail_l`|\<mbctype.h\> or \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
+|-------------|---------------------|---------------------|  
+|`_ismbslead`|\<mbctype.h> или \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbstrail`|\<mbctype.h> или \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbslead_l`|\<mbctype.h> или \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbstrail_l`|\<mbctype.h> или \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
   
  \* Для констант манифестов, используемых в условиях проверки.  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   
- [Процедуры \_ismbc](../../c-runtime-library/ismbc-routines.md)   
- [Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)   
- [Процедуры \_ismbb](../../c-runtime-library/ismbb-routines.md)
+ [Подпрограммы _ismbc](../../c-runtime-library/ismbc-routines.md)   
+ [Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)   
+ [Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)

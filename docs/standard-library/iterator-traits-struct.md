@@ -1,108 +1,107 @@
 ---
-title: "Структура iterator_traits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::iterator_traits"
-  - "xutility/std::iterator_traits"
-  - "iterator_traits"
-  - "std.iterator_traits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator_traits - класс"
-  - "iterator_traits - структура"
+title: "Структура iterator_traits | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::iterator_traits
+- xutility/std::iterator_traits
+- iterator_traits
+- std.iterator_traits
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator_traits struct
+- iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Структура iterator_traits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 24cdef3317b1a2c982858a3832e0085ba7ba7d20
+ms.lasthandoff: 02/24/2017
 
-Структура вспомогательных шаблона, используемая для определения все критичные определения типов, которые итератор должен иметь.  
+---
+# <a name="iteratortraits-struct"></a>Структура iterator_traits
+Вспомогательная структура-шаблон, используется для указания всех критических определений типов, которые должен иметь итератор.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
+
+```    
+struct iterator_traits {
+   typedef typename Iterator::iterator_category iterator_category;
+   typedef typename Iterator::value_type value_type;
+   typedef typename Iterator::difference_type difference_type;
+   typedef difference_type distance_type;
+   typedef typename Iterator::pointer pointer;
+   typedef typename Iterator::reference reference;
+   };  
+```    
+## <a name="remarks"></a>Примечания  
+ Структура-шаблон определяет типы элементов  
   
-```  
-template<class Iterator>  
-    struct iterator_traits {  
-        typedef typename Iterator::iterator_category iterator_category;  
-        typedef typename Iterator::value_type value_type;  
-        typedef typename Iterator::difference_type difference_type;  
-        typedef difference_type distance_type;  
-        typedef typename Iterator::pointer pointer;  
-        typedef typename Iterator::reference reference;  
-    };  
-template<class Type>  
-    struct iterator_traits<Type*> {  
-        typedef random_access_iterator_tag iterator_category;  
-        typedef Type value_type;  
-        typedef ptrdiff_t difference_type;  
-        typedef difference_type distance_type;  
-        typedef Type *pointer;  
-        typedef Type& reference;  
-    };  
-template<class Type>  
-    struct iterator_traits<const Type*> {  
-        typedef random_access_iterator_tag iterator_category;  
-        typedef Type value_type;  
-        typedef ptrdiff_t difference_type;  
-        typedef difference_type distance_type;  
-        typedef const Type *pointer;  
-        typedef const Type& reference;  
-    };  
-```  
+- **iterator_category**: синонимом **Iterator::iterator_category**.  
   
-## Заметки  
- Структура шаблона определяет типы члена  
+- `value_type`: синоним **Iterator::value_type**.  
   
--   **iterator\_category**: синоним для **Iterator::iterator\_category**.  
+- `difference_type`: синоним **Iterator::difference_type**.  
   
--   `value_type`: синоним для **Iterator::value\_type**.  
+- `distance_type`: синоним **Iterator::difference_type.**  
   
--   `difference_type`: синоним для **Iterator::difference\_type**.  
+- **pointer**: синоним **Iterator::pointer**.  
   
--   `distance_type`: синоним для **Iterator::difference\_type.**  
+- **reference**: синоним **Iterator::reference**.  
   
--   **указатель**: синоним для **Iterator::pointer**.  
+ Частичные специализации определяют критические типы, связанные с указателем на объект типа **тип \* ** или const **тип \***.  
   
--   **reference**: синоним для **Iterator::reference**.  
+ В этой реализации вы также можете применить несколько шаблонов функций, которые не используют частичную специализацию:  
   
- Частично специализации определяют критические типы, связанные с указателем объекта типа const **Type \*** или **Type \***.  
-  
- В этой реализации можно также использовать шаблонных несколько функций, которые не используют частично специализацию:  
-  
-```  
-template<class Category, class Type, class Diff>  
-C _Iter_cat(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    random_access_iterator_tag _Iter_cat(const Ty *);  
-  
-template<class Category, class Ty, class Diff>  
-Ty *_Val_type(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    Ty *_Val_type(const Ty *);  
-  
-template<class Category, class Ty, class Diff>  
-Diff *_Dist_type(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    ptrdiff_t *_Dist_type(const Ty *);  
+```cpp  
+template <class Category, class Type, class Diff>
+C _Iter_cat(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+random_access_iterator_tag _Iter_cat(const Ty *);
+
+template <class Category, class Ty, class Diff>
+Ty *val_type(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+Ty *val_type(const Ty *);
+
+template <class Category, class Ty, class Diff>
+Diff *_Dist_type(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+ptrdiff_t *_Dist_type(const Ty *);
 ```  
   
- чтобы задать несколько тех же типов более косвенно.  Используются эти функции в качестве аргументов в вызове функции.  Их единственным назначением предоставляет полезный параметр шаблона класса вызываемой функции.  
+ что определяет некоторые из тех же типов более косвенно. Используйте эти функции как аргументы для вызова функции. Их единственная цель — предоставить полезный параметр шаблона класса в вызываемую функцию.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // iterator_traits.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -135,18 +134,24 @@ int main( )
    function( vc.begin( ), vc.end( ) );  
    function( li.begin( ), li.end( ) );  
 }  
+\* Output:   
+struct std::random_access_iterator_tag  
+a a a a a a a a a a   
+struct std::bidirectional_iterator_tag  
+0 0 0 0 0 0 0 0 0 0   
+*\  
 ```  
   
-  **std::random\_access\_iterator\_tag структуры**  
-**a**   
-**std::bidirectional\_iterator\_tag структуры**  
-**0 0 0 0 0 0 0 0 0 0**    
-## Требования  
- **Заголовок:**\<iterator\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<iterator\>](../standard-library/iterator.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [\<iterator>](../standard-library/iterator.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

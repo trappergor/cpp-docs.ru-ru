@@ -1,47 +1,69 @@
 ---
-title: "lfind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lfind"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lfind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lfind - функция"
+title: "_lfind | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lfind
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lfind
+- _lfind
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- lfind function
+- arrays [CRT], searching
+- searching, linear
+- finding keys in arrays
+- _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _lfind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4101348ee1344accb0a0117c997dceb1c79d0b40
+ms.lasthandoff: 02/24/2017
 
-Выполняет линейный поиск указанного ключа.  Существует более безопасная версия этой функции; см. раздел [\_lfind\_s](../Topic/_lfind_s.md).  
+---
+# <a name="lfind"></a>_lfind
+Выполняет линейный поиск указанного ключа. Существует более безопасная версия этой функции; см. раздел [_lfind_s](../../c-runtime-library/reference/lfind-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void *_lfind(  
@@ -53,39 +75,39 @@ void *_lfind(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `key`  
  Искомый объект.  
   
  `base`  
- Указатель на начало данных для поиска.  
+ Указатель на начало данных, где будет производиться поиск.  
   
  `num`  
- Количество элементов массива.  
+ Число элементов массива.  
   
  `width`  
  Ширина элементов массива.  
   
  `compare`  
- Указатель на процедуру сравнения.  Первый параметр — указатель на ключ для поиска.  Второй параметр — указатель на элемент массива, который будет сравниваться с ключом.  
+ Указатель на подпрограмму сравнения. Первый параметр — это указатель на ключ для поиска. Второй параметр — это указатель на элемент массива, который будет сравниваться с ключом.  
   
-## Возвращаемое значение  
- Если ключ найден, `_lfind` возвращает указатель на элемент массива `base`, соответствующий `key`.  Если ключ не найден, `_lfind` возвращает `NULL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Если ключ найден, функция `_lfind` возвращает указатель на элемент массива `base`, соответствующий `key`. Если ключ не найден, функция `_lfind` возвращает значение `NULL`.  
   
-## Заметки  
- Функция `_lfind` выполняет линейный поиск значения `key` в массиве из `num` элементов шириной `width`.  В отличие от `bsearch`, `_lfind` не требует сортированный массив.  Аргумент `base` является указателем на начало массива для поиска.  Аргумент `compare` является указателем на пользовательскую процедуру, которая сравнивает два элемента массива и возвращает значение, которое показывает, как соотносятся их значения.  `_lfind` вызывает процедуру `compare` один или несколько раз во время поиска, передавая указатели на два элемента массива при каждом вызове:  Процедура `compare` должна сравнивать элементы и возвращать или отличное от нуля \(то есть элементы различаются\) или 0 \(если элементы совпадают\).  
+## <a name="remarks"></a>Примечания  
+ Функция `_lfind` выполняет линейный поиск значения `key` в массиве из `num` элементов шириной `width` каждый. В отличие от функции `bsearch`, `_lfind` не требует, чтобы массив был отсортирован. Аргумент `base` является указателем на начало массива, в котором осуществляется поиск. Аргумент `compare` является указателем на пользовательскую подпрограмму, которая сравнивает два элемента массива и возвращает значение, показывающее, как соотносятся их значения. Во время поиска функция `_lfind` вызывает подпрограмму `compare` один или несколько раз, передавая указатели на два элемента массива при каждом вызове. Подпрограмма `compare` должна сравнивать элементы и возвращать либо отличное от нуля значение (если элементы различаются), либо 0 (если элементы идентичны).  
   
- Эта функция проверяет свои параметры.  Если `compare`, `key` или `num` имеют значение `NULL`, или если `base` имеет значение NULL и \*`num` отлично от нуля, или если `width` меньше нуля, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, то `errno` устанавливается в `EINVAL` и функция возвращает `NULL`.  
+ Эта функция проверяет свои параметры. Если параметр `compare`, `key` или `num` имеет значение `NULL`, или параметр `base` имеет значение NULL и параметр *`num` не равен нулю, или если `width` меньше нуля, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL` , и функция возвращает значение `NULL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_lfind`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lfind`|\<search.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_lfind.c  
@@ -118,13 +140,16 @@ int main( )
 }  
 ```  
   
-  **Hello found**   
-## Эквивалент в .NET Framework  
+```Output  
+Hello found  
+```  
+  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
  [System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)  
   
-## См. также  
- [Сортировка и поиск](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind\_s](../Topic/_lfind_s.md)   
+## <a name="see-also"></a>См. также  
+ [Поиск и сортировка](../../c-runtime-library/searching-and-sorting.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

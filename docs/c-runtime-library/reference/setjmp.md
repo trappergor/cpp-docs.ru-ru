@@ -1,48 +1,65 @@
 ---
-title: "setjmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setjmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setjmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "программы [C++], сохранение состояний"
-  - "текущее состояние"
-  - "Функция setjmp"
+title: "setjmp | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setjmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- setjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- programs [C++], saving states
+- current state
+- setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# setjmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d13a24974a6c722301c6361a13f9d9178cd70220
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="setjmp"></a>setjmp
 Сохраняет текущее состояние программы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int setjmp(  
@@ -50,39 +67,39 @@ int setjmp(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `env`  
- Переменная для хранения среды.  
+ Переменная, в которой хранится среда.  
   
-## Возвращаемое значение  
- Возвращает 0 после сохранения среды стека.  Если `setjmp` возвращается в результате вызова `longjmp`, она возвращает аргумент `value` функции `longjmp`, или если аргумент `value` функции `longjmp` равен 0, `setjmp` возвращает 1.  Нет какого\-либо возврата ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает 0 после сохранения среды стека. Если функция `setjmp` возвращается в результате вызова функции `longjmp`, она возвращает аргумент `value` функции `longjmp`, или, если аргумент `value` функции `longjmp` равен 0, функция `setjmp` возвращает 1. Ошибка не возвращается.  
   
-## Заметки  
- Функция `setjmp` сохраняет среду стека, которую можно впоследствии восстановить с помощью `longjmp`.  Когда `setjmp` и `longjmp` используются вместе, они предоставляют способ выполнения нелокального `goto`.  Обычно они используются для передачи управления выполнением в код обработки ошибок или восстановления в вызванной ранее подпрограмме без использования обычных соглашений вызова или возврата.  
+## <a name="remarks"></a>Примечания  
+ Функция `setjmp` сохраняет среду стека, которую можно впоследствии восстановить с помощью функции `longjmp`. При совместном использовании функции `setjmp` и `longjmp` предоставляют способ выполнения нелокального `goto`. Обычно они используются для передачи управления выполнением в код обработки ошибок или восстановления в вызванной ранее подпрограмме без использования обычных соглашений вызова или возврата.  
   
- Вызов `setjmp` сохраняет текущую среду стека в `env`.  Последующий вызов `longjmp` восстанавливает сохраненную среду и возвращает контроль управления в точку, следующей сразу за соответствующим вызовом `setjmp`.  Все переменные \(за исключением переменных регистра\), доступные для получившей контроль управления подпрограммы, содержат те значения, которые они имели при вызове `longjmp`.  
+ Вызов функции `setjmp` сохраняет текущую среду стека в параметре `env`. Последующий вызов функции `longjmp` восстанавливает сохраненную среду и возвращает управление в точку, следующую сразу за соответствующим вызовом функции `setjmp`. Все переменные (за исключением регистровых переменных), доступные для получившей управление подпрограммы, содержат те значения, которые они имели при вызове функции `longjmp`.  
   
- Невозможно использовать `setjmp`, чтобы перейти из машинного кода в управляемый.  
+ Функцию `setjmp` невозможно использовать для перехода из машинного кода в управляемый.  
   
- **Бумага для заметок** `setjmp` и `longjmp` не поддерживают семантики объекта C\+\+.  В программах на C\+\+ используйте механизм обработки исключений C\+\+.  
+ **Примечание.** Функции `setjmp` и `longjmp` не поддерживают семантику объекта C++. В программах на C++ используйте механизм обработки исключений C++.  
   
  Дополнительные сведения см. в разделе [Использование setjmp и longjmp](../../cpp/using-setjmp-longjmp.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`setjmp`|\<setjmp.h\>|  
+|-------------|---------------------|  
+|`setjmp`|\<setjmp.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
- Посмотрите следующий пример для [\_fpreset](../../c-runtime-library/reference/fpreset.md).  
+## <a name="example"></a>Пример  
+ См. пример для [_fpreset](../../c-runtime-library/reference/fpreset.md).  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   
  [longjmp](../../c-runtime-library/reference/longjmp.md)   
- [\_setjmp3](../../c-runtime-library/setjmp3.md)
+ [_setjmp3](../../c-runtime-library/setjmp3.md)

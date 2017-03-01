@@ -1,70 +1,87 @@
 ---
-title: "tan, tanf, tanl, tanh, tanhf, tanhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "tanhf"
-  - "tanh"
-  - "tan"
-  - "tanhl"
-  - "tanf"
-  - "tanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tanh"
-  - "tan"
-  - "_tanl"
-  - "tanl"
-  - "_tanhl"
-  - "tanf"
-  - "tanhf"
-  - "tanhl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tanl - функция"
-  - "tanhl - функция"
-  - "_tanl - функция"
-  - "_tanhl - функция"
-  - "tan - функция"
-  - "вычисление касательных"
-  - "тангенс"
-  - "tanh - функция"
-  - "tanhf - функция"
-  - "tanf - функция"
-  - "тригонометрические функции"
-  - "гиперболические функции"
+title: "tan, tanf, tanl, tanh, tanhf, tanhl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- tanhf
+- tanh
+- tan
+- tanhl
+- tanf
+- tanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tanh
+- tan
+- _tanl
+- tanl
+- _tanhl
+- tanf
+- tanhf
+- tanhl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tanl function
+- tanhl function
+- _tanl function
+- _tanhl function
+- tan function
+- calculating tangents
+- tangent
+- tanh function
+- tanhf function
+- tanf function
+- trigonometric functions
+- hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# tan, tanf, tanl, tanh, tanhf, tanhl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 94ad2866dc8b2284d674ccfa284646aac9a68efa
+ms.lasthandoff: 02/24/2017
 
-Вычисляет тангенс \(`tan`, `tanf` или `tanl`\) или гиперболический тангенс \(`tanh`, `tanhf` или `tanhl`\).  
+---
+# <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
+Вычисляет тангенс (`tan`, `tanf` или `tanl`) или гиперболический тангенс (`tanh`, `tanhf` или `tanhl`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double tan(  
@@ -99,32 +116,32 @@ long double tanhl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `x`  
  Угол в радианах.  
   
-## Возвращаемое значение  
- Функции `tan` возвращают тангенс `x`.  Если `x` больше или равно 263 или меньше или равно –263, в результате происходит потеря значимости.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функции `tan` возвращают тангенс `x`. Если значение параметра `x` больше или равно 263 или меньше или равно –263, в результате происходит потеря значимости.  
   
- Функции `tanh` возвращают гиперболический тангенс `x`.  Нет какого\-либо возврата ошибки.  
+ Функции `tanh` возвращают гиперболический тангенс `x`. Ошибка не возвращается.  
   
 |Ввод|Исключение SEH|Исключение `Matherr`|  
-|----------|--------------------|--------------------------|  
-|± QNAN,IND|Нет|\_DOMAIN|  
-|± ∞  \(`tan`, `tanf`\)|`INVALID`|\_DOMAIN|  
+|-----------|-------------------|-------------------------|  
+|± QNAN,IND|Нет|_DOMAIN|  
+|± ∞  (`tan`, `tanf`)|`INVALID`|_DOMAIN|  
   
-## Заметки  
- Поскольку C\+\+ позволяет перегрузки, можно вызывать перегрузки `tan` и `tanh`, принимающие и возвращающие значения `float` или `long double`.  В программе C `tan` и `tanh` всегда принимают и возвращают `double`.  
+## <a name="remarks"></a>Примечания  
+ Поскольку C++ допускает перегрузки, можно вызывать перегрузки функций `tan` и `tanh`, принимающие и возвращающие значения типа `float` или `long double`. В программе на языке C функции `tan` и `tanh` всегда принимают и возвращают значения типа `double`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h\>|  
+|-------------|---------------------|  
+|`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_tan.c  
@@ -147,20 +164,22 @@ int main( void )
 }  
 ```  
   
-  **tan\( 0.785398 \) \= 1.000000**  
-**tanh\( 1.000000 \) \= 0.761594**   
-## Эквивалент в .NET Framework  
+```Output  
+tan( 0.785398 ) = 1.000000  
+tanh( 1.000000 ) = 0.761594  
+```  
+  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
   
 -   [System::Math::Tan](https://msdn.microsoft.com/en-us/library/system.math.tan.aspx)  
   
 -   [System::Math::Tanh](https://msdn.microsoft.com/en-us/library/system.math.tanh.aspx)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [Long Double](../../misc/long-double.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [\_CItan](../../c-runtime-library/citan.md)
+ [_CItan](../../c-runtime-library/citan.md)

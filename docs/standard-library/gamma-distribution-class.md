@@ -1,62 +1,132 @@
 ---
-title: "Класс gamma_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "random/std::tr1::gamma_distribution"
-  - "std::tr1::gamma_distribution"
-  - "std.tr1.gamma_distribution"
-  - "tr1.gamma_distribution"
-  - "tr1::gamma_distribution"
-  - "gamma_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gamma_distribution - класс"
-  - "gamma_distribution - класс [TR1]"
+title: "Класс gamma_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- gamma_distribution
+- std::gamma_distribution
+- random/std::gamma_distribution
+- std::gamma_distribution::reset
+- random/std::gamma_distribution::reset
+- std::gamma_distribution::alpha
+- random/std::gamma_distribution::alpha
+- std::gamma_distribution::beta
+- random/std::gamma_distribution::beta
+- std::gamma_distribution::param
+- random/std::gamma_distribution::param
+- std::gamma_distribution::min
+- random/std::gamma_distribution::min
+- std::gamma_distribution::max
+- random/std::gamma_distribution::max
+- std::gamma_distribution::operator()
+- random/std::gamma_distribution::operator()
+- std::gamma_distribution::param_type
+- random/std::gamma_distribution::param_type
+- std::gamma_distribution::param_type::alpha
+- random/std::gamma_distribution::param_type::alpha
+- std::gamma_distribution::param_type::beta
+- random/std::gamma_distribution::param_type::beta
+- std::gamma_distribution::param_type::operator==
+- random/std::gamma_distribution::param_type::operator==
+- std::gamma_distribution::param_type::operator!=
+- random/std::gamma_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- gamma_distribution
+- gamma_distribution class
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# Класс gamma_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0194fbc3e45c270ca7537285c5c6b4e768c65a90
+ms.openlocfilehash: ed2b198b9bed7f67284691ca7ec00d09e17f15f7
+ms.lasthandoff: 02/24/2017
 
-Формирует гамма\-распределение.  
+---
+# <a name="gammadistribution-class"></a>Класс gamma_distribution
+Формирует гамма-распределение.  
   
-## Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис  
 ```  
-template<class RealType = double> class gamma_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructors and reset functions     explicit gamma_distribution(RealType alpha = 1.0, RealType beta = 1.0);     explicit gamma_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType alpha() const;     RealType beta() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+template<class RealType = double>
+class gamma_distribution {
+public:    
+    // types 
+    typedef RealType result_type;    
+    struct param_type;  
+
+    // constructors and reset functions 
+    explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
+    explicit gamma_distribution(const param_type& parm);
+    void reset();
+    
+    // generating functions
+    template <class URNG>  
+    result_type operator()(URNG& gen);
+    template <class URNG>
+    result_type operator()(URNG& gen, const param_type& parm);
+    
+    // property functions
+    result_type alpha() const;
+    result_type beta() const;
+    param_type param() const;
+    void param(const param_type& parm);
+    result_type min() const;
+    result_type max() const;
+};
+```    
+#### <a name="parameters"></a>Параметры  
+*RealType*  
+По умолчанию тип с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-#### Параметры  
- `RealType`  
- По умолчанию тип с плавающей запятой имеет тип `double`.  Возможные типы см. в разделе [\<random\>](../standard-library/random.md).  
+*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-## Заметки  
- Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `double` \(если тип не указан\), распределенные в соответствии с гамма\-распределением.  В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Примечания  
+Класс шаблона описывает гамма-распределение, которое формирует значения указанного пользователем типа с плавающей запятой или типа `double`, если тип не указан. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[gamma\_distribution::gamma\_distribution](../Topic/gamma_distribution::gamma_distribution.md)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[gamma\_distribution::param\_type](../Topic/gamma_distribution::param_type.md)|  
+|[gamma_distribution::gamma_distribution](#gamma_distribution__gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
+|`gamma_distribution::operator()`|`gamma_distribution::beta`|[gamma_distribution::param_type](#gamma_distribution__param_type)|  
   
- Функции свойств `alpha()` и `beta()` возвращают соответствующие значения для хранимых параметров распределения `alpha` и `beta`.  
+Функции свойств `alpha()` и `beta()` возвращают соответствующие значения для хранимых параметров распределения *alpha* и *beta*.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
   
- Дополнительные сведения о гамма\-распределении см. в статье [Гамма\-распределение](http://go.microsoft.com/fwlink/?LinkId=401111) на веб\-сайте Wolfram MathWorld.  
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
   
-## Пример  
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+  
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+  
+Подробные сведения о гамма-распределении см. в статье в Wolfram MathWorld [Гамма-распределение](http://go.microsoft.com/fwlink/LinkId=401111).  
+  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -114,38 +184,93 @@ int main()
   
     test(a_dist, b_dist, samples);  
 }  
-  
 ```  
   
-## Вывод  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'alpha' distribution parameter (must be greater than zero): 1  
 Enter a floating point value for the 'beta' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 4.94066e-324  
 max() == 1.79769e+308  
 alpha() == 1.0000000000  
 beta() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0936880533  
-          2:   0.1225944894  
-          3:   0.6443593183  
-          4:   0.6551171649  
-          5:   0.7313457551  
-          6:   0.7313557977  
-          7:   0.7590097389  
-          8:   1.4466885214  
-          9:   1.6434088411  
-         10:   2.1201210996  
+    1: 0.0936880533  
+    2: 0.1225944894  
+    3: 0.6443593183  
+    4: 0.6551171649  
+    5: 0.7313457551  
+    6: 0.7313557977  
+    7: 0.7590097389  
+    8: 1.4466885214  
+    9: 1.6434088411  
+    10: 2.1201210996  
 ```  
   
-## Требования  
- **Заголовок:** \<random\>  
+## <a name="requirements"></a>Требования  
+**Заголовок:** \<random>  
   
- **Пространство имен:** std  
+**Пространство имен:** std  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namegammadistributiongammadistributiona--gammadistributiongammadistribution"></a><a name="gamma_distribution__gamma_distribution"></a>  gamma_distribution::gamma_distribution  
+Формирует распределение.  
+  
+```  
+explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
+explicit gamma_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*alpha*  
+Параметр распределения `alpha`.  
+  
+*beta*  
+Параметр распределения `beta`.  
+  
+*parm*  
+Структура параметров, используемая для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0.0 < alpha` и `0.0 < beta`  
+  
+Первый конструктор создает объект, хранимое значение `alpha` которого содержит значение *alpha*, а хранимое значение `beta` — значение *beta*.  
+  
+Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-namegammadistributionparamtypea--gammadistributionparamtype"></a><a name="gamma_distribution__param_type"></a>  gamma_distribution::param_type  
+Сохраняет параметры распределения.  
+  
+```cpp   
+struct param_type {  
+   typedef gamma_distribution<result_type> distribution_type;  
+   param_type(result_type alpha = 1.0, result_type beta 1.0);
+   result_type alpha() const;
+   result_type beta() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+### <a name="parameters"></a>Параметры  
+*alpha*  
+Параметр распределения `alpha`.  
+  
+*beta*  
+Параметр распределения `beta`.  
+  
+*right*  
+Экземпляр `param_type` для сравнения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0.0 < alpha` и `0.0 < beta`  
+  
+Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+[\<random>](../standard-library/random.md)
+
+
+
+

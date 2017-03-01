@@ -1,51 +1,67 @@
 ---
-title: "_putw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putw"
-  - "putw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putw - функция"
-  - "целые числа, запись в потоки"
-  - "putw - функция"
-  - "потоки, запись целых чисел в"
+title: "_putw | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putw
+- putw
+dev_langs:
+- C++
+helpviewer_keywords:
+- integers, writing to streams
+- putw function
+- streams, writing integers to
+- _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _putw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ae689f0f299f307bdda9771d4929623e04a7196f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="putw"></a>_putw
 Записывает целое число в поток.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -55,33 +71,33 @@ caps.handback.revision: 14
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *binint*  
- Бинарное целое число, которое необходимо вывести.  
+ Двоичное целое число, которое требуется вывести.  
   
  `stream`  
  Указатель на структуру **FILE**.  
   
-## Возвращаемое значение  
- Возвращает записанное значение.  Возвращаемое значение `EOF` может указывать на ошибку.  Поскольку `EOF` также является допустимым целочисленным значением, используйте `ferror` для проверки на ошибку.  Если `stream` является пустым указателем, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, функция устанавливает `errno` в `EINVAL` и возвращает `EOF`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает записанное значение. Возвращаемое значение`EOF` может указывать на ошибку. Так как `EOF` также является допустимым целочисленным значением, используйте `ferror` для подтверждения ошибки. Если параметр `stream` является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EOF`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `_putw` записывает бинарное значение типа `int` в текущую позицию *потока.* `_putw` не влияет на выравнивание элементов в потоке и не предполагает какое\-либо выравнивание.  `_putw` предоставлена в основном для обеспечения совместимости с предыдущими библиотеками.  Проблемы переносимости могут возникать при использовании `_putw`, поскольку размер `int` и порядок байтов внутри `int` различны на разных системах.  
+## <a name="remarks"></a>Примечания  
+ Функция `_putw` записывает двоичное значение типа `int` для текущей позиции *потока.* Функция `_putw` не влияет на выравнивание элементов и не требует специального выравнивания элементов потока. Функция `_putw` предназначена в основном для обеспечения совместимости с предыдущими библиотеками. При использовании функции `_putw` могут возникнуть проблемы переносимости, связанные с размером `int` и порядком байтов в `int` в разных системах.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_putw`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_putw`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_putw.c  
@@ -113,15 +129,15 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 Wrote ten words  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [\_getw](../../c-runtime-library/reference/getw.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [_getw](../../c-runtime-library/reference/getw.md)

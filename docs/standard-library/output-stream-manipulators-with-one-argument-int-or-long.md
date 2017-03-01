@@ -1,32 +1,48 @@
 ---
-title: "Манипуляторы потока вывода с одним аргументом (int или long) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "потоки вывода, манипуляторы аргументов int или long"
+title: "Манипуляторы потока вывода с одним аргументом (int или long) | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, int or long argument manipulators
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Манипуляторы потока вывода с одним аргументом (int или long)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 84cbc5d016f6796a1cab208a1d77b51ea2ac6ecb
+ms.lasthandoff: 02/24/2017
 
-Библиотека классов iostream предлагает набор макросов для создания параметризованной манипуляторов.  Манипуляторов с отдельными `int` или аргументом `long` особый случай.  Для создания манипулятор потока вывода, который принимает одно `int` или аргумент `long` \(например, `setw`\), необходимо использовать макрос \_Smanip, который определен в \<iomanip\>.  В этом примере определяется манипулятора `fillblank`, который вставляет заданное количество пробелов в поток.  
+---
+# <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Манипуляторы потока вывода с одним аргументом (int или long)
+Библиотека классов iostream предоставляет набор макросов для создания параметризованных манипуляторов. Манипуляторы с одним аргументом `int` или `long` представляют собой особый случай. Для создания манипулятора потока вывода, принимающего один аргумент `int` или `long` (как `setw`), необходимо использовать макрос _Smanip, который определен в \<iomanip>. В этом примере определяется манипулятор `fillblank`, который вставляет в поток заданное число пробелов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // output_stream_manip.cpp  
 // compile with: /GR /EHsc  
 #include <iostream>  
@@ -55,5 +71,7 @@ int main( )
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пользовательские манипуляторы с аргументами](../standard-library/custom-manipulators-with-arguments.md)
+
+

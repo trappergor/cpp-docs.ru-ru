@@ -1,66 +1,82 @@
 ---
-title: "_rotl, _rotl64, _rotr, _rotr64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_rotr64"
-  - "_rotl"
-  - "_rotr"
-  - "_rotl64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_rotr64"
-  - "rotl64"
-  - "_rotl64"
-  - "rotr64"
-  - "rotr"
-  - "_rotr"
-  - "_rotl"
-  - "rotl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_rotl - функция"
-  - "_rotl64 - функция"
-  - "_rotr - функция"
-  - "_rotr64 - функция"
-  - "биты, поворот"
-  - "сдвигающиеся биты"
-  - "rotl - функция"
-  - "rotl64 - функция"
-  - "rotr - функция"
-  - "rotr64 - функция"
+title: "_rotl, _rotl64, _rotr, _rotr64 | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _rotr64
+- _rotl
+- _rotr
+- _rotl64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _rotr64
+- rotl64
+- _rotl64
+- rotr64
+- rotr
+- _rotr
+- _rotl
+- rotl
+dev_langs:
+- C++
+helpviewer_keywords:
+- rotl64 function
+- _rotl function
+- rotr function
+- rotr64 function
+- _rotr function
+- rotl function
+- _rotl64 function
+- rotating bits
+- _rotr64 function
+- bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _rotl, _rotl64, _rotr, _rotr64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 88d9d6937c75813709dd5558f67ed7e16b1da5c4
+ms.lasthandoff: 02/24/2017
 
-Циклически сдвигает биты влево \(`_rotl`\) или вправо \(`_rotr`\).  
+---
+# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+Циклически сдвигает биты влево (`_rotl`) или вправо (`_rotr`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -82,32 +98,32 @@ unsigned __int64 _rotr64(
 );  
 ```  
   
-#### Параметры  
- *значение*  
+#### <a name="parameters"></a>Параметры  
+ *value*  
  Значение для сдвига.  
   
  `shift`  
  Количество битов для сдвига.  
   
-## Возвращаемое значение  
- Итоговое значение.  Нет какого\-либо возврата ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Итоговое значение. Ошибка не возвращается.  
   
-## Заметки  
- Функции `_rotl` и `_rotr` циклически сдвигают *value* на `shift` битов.  `_rotl` выполняет циклический сдвиг влево.  `_rotr` выполняет циклический сдвиг вправо.  Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.  
+## <a name="remarks"></a>Примечания  
+ Функции `_rotl` и `_rotr` циклически сдвигают *value* на `shift` битов. `_rotl` выполняет циклический сдвиг влево. `_rotr` выполняет циклический сдвиг вправо. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|**\_rotl, \_rotl64**|\<stdlib.h\>|  
-|**\_rotr, \_rotr64**|\<stdlib.h\>|  
+|-------------|---------------------|  
+|**_rotl, _rotl64**|\<stdlib.h>|  
+|**_rotr, _rotr64**|\<stdlib.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_rot.c  
@@ -134,7 +150,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 0xfd93 rotated left three times is 0x7ec98  
@@ -143,9 +159,9 @@ int main( void )
 101010101010101 rotated right four times is 1010101010101010  
 ```  
   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [\_lrotl, \_lrotr](../../c-runtime-library/reference/lrotl-lrotr.md)
+ [_lrotl, _lrotr](../../c-runtime-library/reference/lrotl-lrotr.md)

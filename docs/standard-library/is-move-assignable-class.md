@@ -1,52 +1,72 @@
 ---
-title: "Класс is_move_assignable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_move_assignable"
-  - "std.is_move_assignable"
-  - "std::is_move_assignable"
-  - "type_traits/std::is_move_assignable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_move_assignable"
+title: "Класс is_move_assignable | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_move_assignable
+- std.is_move_assignable
+- std::is_move_assignable
+- type_traits/std::is_move_assignable
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Класс is_move_assignable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: db3e621e4638aab864fa897a6f046f81a6549daa
+ms.lasthandoff: 02/24/2017
 
-Проверяет тип можно переместить назначенного.  
+---
+# <a name="ismoveassignable-class"></a>Класс is_move_assignable
+Проверяет, является ли тип присваиваемым при перемещении.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class T>
+struct is_move_assignable;
 ```  
-template<class T>  
-    struct is_move_assignable;  
-```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Запрашиваемый тип.  
   
-## Заметки  
- Тип является присваиваемым перемещения, если ссылка rvalue на тип могут быть назначены ссылка на тип. Предикат типа эквивалентен `is_assignable<T&, T&&>`. Переместите назначаемых типов включают член, на который скалярных типов и типов классов, содержащих компилятором или определяемые пользователем операторы присваивания.  
+## <a name="remarks"></a>Примечания  
+ Тип является тип присваиваемым при перемещении, если ссылку rvalue на тип можно присвоить ссылке на тип. Предикат типа эквивалентен `is_assignable<T&, T&&>`. Присваиваемые при перемещении типы включают ссылочные скалярные типы и типы классов, в которых есть созданные компилятором или определяемые пользователем операторы присваивания перемещением.  
   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<type_traits>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

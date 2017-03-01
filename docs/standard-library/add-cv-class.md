@@ -1,80 +1,120 @@
 ---
-title: "Класс add_cv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.add_cv"
-  - "add_cv"
-  - "std::tr1::add_cv"
-  - "std.add_cv"
-  - "std::add_cv"
-  - "type_traits/std::add_cv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "add_cv - класс [TR1]"
-  - "add_cv"
+title: "Класс add_cv | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- add_cv
+- std::add_cv
+- type_traits/std::add_cv
+dev_langs:
+- C++
+helpviewer_keywords:
+- add_cv class
+- add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Класс add_cv
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
+ms.openlocfilehash: efa1d246eb793cb2d0a64347aa062e7ab908e7c4
+ms.lasthandoff: 02/24/2017
 
-Создает константный\/долговременный тип из типа.  
+---
+# <a name="addcv-class"></a>Класс add_cv
+Создает константный долговременный тип из типа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<class Ty>  
-    struct add_cv;  
-  
-template<class T>  
+template <class T>  
+struct add_cv;  
+ 
+template <class T>
 using add_cv_t = typename add_cv<T>::type;  
 ```  
   
-#### Параметры  
- `Ty`  
- Тип для изменения.  
+#### <a name="parameters"></a>Параметры  
+*T*  
+Тип для изменения.  
   
-## Заметки  
- Экземпляр модификатора типа содержит модифицированный тип [Класс add\_volatile](../standard-library/add-volatile-class.md)`<` [Класс add\_const](../Topic/add_const%20Class.md)`<Ty> >`.  
+## <a name="remarks"></a>Примечания  
+Экземпляр измененного типа `add_cv<T>` имеет определение типа члена `type`, эквивалентное *T*, измененному и [add_volatile](../standard-library/add-volatile-class.md), и [add_const](../standard-library/add-const-class.md), кроме случая, когда *T* уже имеет cv-квалификаторы, является ссылкой или функцией.  
   
-## Пример  
+Вспомогательный тип `add_cv_t<T>` является ярлыком для доступа к определению типа `type``add_cv<T>`.
   
-```  
+## <a name="example"></a>Пример  
+  
+```cpp  
+// add_cv.cpp
+// compile by using: cl /EHsc /W4 add_cv.cpp
 #include <type_traits>   
 #include <iostream>   
-  
-int main()   
-    {   
-    std::add_cv_t<int> *p = (const volatile int *)0;   
-  
-    p = p;  // to quiet "unused" warning   
-    std::cout << "add_cv<int> == "   
-        << typeid(*p).name() << std::endl;   
-  
-    return (0);   
-    }  
-  
+
+struct S {
+    void f() { 
+        std::cout << "invoked non-cv-qualified S.f()" << std::endl; 
+    }
+    void f() const { 
+        std::cout << "invoked const S.f()" << std::endl; 
+    }
+    void f() volatile { 
+        std::cout << "invoked volatile S.f()" << std::endl; 
+    }
+    void f() const volatile { 
+        std::cout << "invoked const volatile S.f()" << std::endl; 
+    }
+};
+
+template <class T>
+void invoke() {
+    T t;
+    ((T *)&t)->f(); 
+}
+
+int main()
+{
+    invoke<S>();
+    invoke<std::add_const<S>::type>();
+    invoke<std::add_volatile<S>::type>();
+    invoke<std::add_cv<S>::type>();
+}  
 ```  
   
-  **add\_cv\_t\<int\> \=\= int**   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+```Output  
+invoked non-cv-qualified S.f()
+invoked const S.f()
+invoked volatile S.f()
+invoked const volatile S.f()  
+```  
   
- **Пространство имен:** std  
+## <a name="requirements"></a>Требования  
+**Заголовок:** \<type_traits>  
+**Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Класс remove\_const](../standard-library/remove-const-class.md)   
- [Класс remove\_volatile](../Topic/remove_volatile%20Class.md)
+## <a name="see-also"></a>См. также  
+[<type_traits>](../standard-library/type-traits.md)   
+[Класс remove_const](../standard-library/remove-const-class.md)   
+[Класс remove_volatile](../standard-library/remove-volatile-class.md)
+

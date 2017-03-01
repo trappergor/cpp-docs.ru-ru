@@ -1,49 +1,67 @@
 ---
-title: "Запуск и завершение программ C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "управление текстовыми потоками"
-  - "процедуры функции Main"
-  - "main - функция, запуск программы"
-  - "Стандартная библиотека C++, запуск и завершение программ"
-  - "код запуска, и завершение программ C++"
-  - "прерывание выполнения"
+title: "Запуск и завершение программ C++ | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, program startup and termination
+- terminating execution
+- Function Main procedures
+- control text streams
+- startup code, and C++ program termination
+- main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
 caps.latest.revision: 9
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Запуск и завершение программ C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 53e31f3f3a175013a248401f4231bb87cf444681
+ms.lasthandoff: 02/24/2017
 
-Программа C\+\+ выполняет некоторые операции, программа C выполняется при запуске программы и при завершении работы программы, а также несколько более структура здесь.  
+---
+# <a name="c-program-startup-and-termination"></a>Запуск и завершение программ C++
+Программы на языке C++ выполняет те же операции, что и программы на языке C при запуске программы и при завершении программы, а также несколько дополнительных операций, описанных здесь.  
   
- Прежде чем среда целевого объекта вызывает функцию `main`, и после того, как она хранит все константы начальные значения, определяет во всех объектах, которые имеют статической длительность, программа выполняет все оставшиеся конструкторы для этих статических объектов.  Порядок выполнения не определен между модульными перевода, но при этом можно высказывать некоторые объекты [iostreams](../standard-library/iostreams-conventions.md) правильно инициализирован для использования этих статическими конструкторами.  Эти текстовые потоки элемента управления:  
+ Перед вызовом целевой средой функции `main` и после сохранения всех константных начальных значений, указанных вами во всех объектах, имеющих статическую длительность, программа выполняет все оставшиеся конструкторы для таких статических объектов. Порядок выполнения разных записей преобразования не указан, но тем не менее можно предположить, что некоторые объекты [iostreams](../standard-library/iostreams-conventions.md) правильно инициализированы для использования этими статическими конструкторами. Это следующие управляющие текстовые потоки.  
   
--   [cin](../Topic/cin.md) — для стандартного.  
+-   [cin](../standard-library/iostream.md#cin) — для стандартного ввода.  
   
--   [cout](../Topic/cout.md) — для стандартного вывода.  
+-   [cout](../standard-library/iostream.md#cout) — для стандартного вывода.  
   
--   [cerr](../Topic/cerr.md) — для стандартной небуферизованного вывода ошибок.  
+-   [cerr](../standard-library/iostream.md#cerr) — для стандартного вывода ошибки без буферизации.  
   
--   [clog](../Topic/clog.md) — для стандартной помещенного в буфер вывода ошибок.  
+-   [clog](../standard-library/iostream.md#clog) — для стандартного вывода ошибки буферизацией.  
   
- Можно также использовать эти объекты в деструкторы вызов статических объектов, во время завершения работы программы.  
+ Эти объекты также можно использовать в деструкторах, вызываемых для статических объектов, во время завершения программы.  
   
- Как и в C, возвращая из `main` или при вызове `exit` вызывает все функции, зарегистрированные с заказом `atexit` в обратном порядке реестра.  Исключение, вызванное в то, вызовы функций `terminate`.  
+ Как и в C, возврат из `main` или вызов `exit` вызывает все функции, зарегистрированные с `atexit`, в обратном порядке из реестра. Исключение, созданное такой зарегистрированной функцией, вызывает `terminate`.  
   
-## См. также  
- [Обзор STL](../standard-library/cpp-standard-library-overview.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

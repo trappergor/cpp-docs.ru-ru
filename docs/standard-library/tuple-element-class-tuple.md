@@ -1,69 +1,118 @@
 ---
-title: "Класс tuple_element &lt;tuple&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.tuple_element"
-  - "tuple_element"
-  - "std::tr1::tuple_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс tuple_element <tuple> (TR1)"
+title: "Класс tuple_element | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tuple_element
+- std::tuple_element
+- utility/std::tuple_element
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple_element Class
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Класс tuple_element &lt;tuple&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
+ms.lasthandoff: 02/24/2017
 
-Создает оболочку для `tuple` элемента.  
+---
+# <a name="tupleelement-class"></a>Класс tuple_element
+Создает оболочку для элемента `tuple` . Специализации создают программу-оболочку для элементов `array` и `pair`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
 // CLASS tuple_element (find element by index)  
 template <size_t Index, class Tuple>  
-struct tuple_element;  
+   struct tuple_element;  
  
 // tuple_element for const 
 template <size_t Index, class Tuple>  
-struct tuple_element<Index, const Tuple>;  
+   struct tuple_element<Index, const Tuple>;  
  
 // tuple_element for volatile  
 template <size_t Index, class Tuple>  
-struct tuple_element<Index, volatile Tuple>;  
+   struct tuple_element<Index, volatile Tuple>;  
  
 // tuple_element for const volatile  
 template <size_t Index, class Tuple>  
-struct tuple_element<Index, const volatile Tuple>;  
+   struct tuple_element<Index, const volatile Tuple>;  
  
+// Helper typedef
 template <size_t Index, class Tuple>  
-using tuple_element_t = typename tuple_element<Index, Tuple>::type;  
+   using tuple_element_t = typename tuple_element<Index, Tuple>::type; 
+
+// Specialization for arrays  
+template <size_t Index, class Elem, size_t Size>  
+   struct tuple_element<Index, array<Elem, Size>>;  
+  
+// Specializations for pairs
+// struct to determine type of element 0 in pair
+template <class T1, class T2>
+   struct tuple_element<0, pair<T1, T2>>;
+
+// struct to determine type of element 1 in pair
+template <class T1, class T2>
+   struct tuple_element<1, pair<T1, T2>>;
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `Index`  
- Индекс указанного элемента.  
+### <a name="parameters"></a>Параметры  
+*Индекс*  
+Индекс указанного элемента.  
   
- `Tuple`  
- Тип кортежа.  
+*Tuple*  
+Тип кортежа.  
   
-## <a name="remarks"></a>Заметки  
- Класс шаблона содержит вложенное определение `type` это синоним для типа индекса `Index` типа кортежа `Tuple`.  
+*Elem*  
+Тип элемента массива.  
+  
+*Size*  
+Размер массива.  
+
+*T1* Тип первого элемента в паре.
+  
+*T2*  
+Тип второго элемента в паре.
+
+## <a name="remarks"></a>Примечания  
+Класс шаблона `tuple_element` содержит вложенное определение типа `type`, которое является синонимом для типа по индексу `Index` типа кортежа `Tuple`.  
+
+Определение типа `tuple_element_t` является удобным псевдонимом для `tuple_element<Index, Tuple>::type`.  
+  
+Специализация класса шаблона для массивов предоставляет интерфейс для массива `array` в качестве кортежа элементов `Size`, каждый из которых имеет тот же тип. Каждая специализация содержит вложенное определение типа `type` , которое является синонимом для типа элемента `Index` массива `array`с сохранением всех квалификаторов const и volatile.  
+  
+Специализации шаблона для типов `pair` предоставляют по одному определению типа члена, `type`, которое является синонимом типа элемента в указанной позиции в паре с сохранением всех квалификаторов const и(или) volatile. Определение типа `tuple_element_t` является удобным псевдонимом для `tuple_element<N, pair<T1, T2>>::type`.  
+  
+Используйте [служебную функцию &lt;get&gt;](../standard-library/utility-functions.md#get) для возвращения элемента в указанной позиции или (в C++14 / Visual Studio 2015) указанного типа. 
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 #include <tuple>  
 #include <string>  
 #include <iostream>  
@@ -71,9 +120,7 @@ using tuple_element_t = typename tuple_element<Index, Tuple>::type;
 using namespace std;  
 typedef tuple<int, double, string> MyTuple;  
   
-int main()  
-{  
-  
+int main() {  
     MyTuple c0{ 0, 1.5, "Tail" };  
   
     tuple_element_t<0, MyTuple> val = get<0>(c0); //get by index  
@@ -82,19 +129,77 @@ int main()
   
     cout << val << " " << val2 << " " << val3 << endl;  
 }  
-  
-/*  
-Output:  
-0 1.5 Tail  
-*/  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \< кортежа>  
+```Output  
+0 1.5 Tail  
+```  
   
- **Пространство имен:** std  
+## <a name="example"></a>Пример  
+  
+```cpp  
+#include <array>   
+#include <iostream>   
+  
+using namespace std;  
+typedef array<int, 4> MyArray;  
+  
+int main()  
+{  
+    MyArray c0 { 0, 1, 2, 3 };  
+  
+    for (const auto& e : c0)  
+    {  
+        cout << " " << e;  
+    }  
+    cout << endl;  
+  
+    // display first element " 0"   
+    tuple_element<0, MyArray>::type val = c0.front();  
+    cout << " " << val << endl;  
+}  
+```  
+  
+```Output  
+ 0 1 2 3  
+ 0  
+```  
+  
+## <a name="example"></a>Пример  
+  
+```cpp  
+#include <utility>   
+#include <iostream>   
+  
+using namespace std;  
+  
+typedef pair<int, double> MyPair;  
+int main() {  
+    MyPair c0(0, 1.333);  
+  
+    // display contents " 0 1"   
+    cout << " " << get<0>(c0);  
+    cout << " " << get<1>(c0) << endl;  
+  
+    // display first element " 0" by index  
+    tuple_element<0, MyPair>::type val = get<0>(c0);  
+    cout << " " << val;  
+  
+    // display second element by type   
+    tuple_element<1, MyPair>::type val2 = get<double>(c0);  
+    cout << " " << val2 << endl;  
+}  
+```  
+  
+```Output  
+ 0 1.333  
+ 0 1.333  
+```  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<tuple>  
+ **Заголовок:** \<array> (для специализации массива)  **Заголовок:** \<utility> (для специализаций пар)  **Пространство имен:** std  
   
 ## <a name="see-also"></a>См. также  
-[кортеж ](../standard-library/tuple-class.md)
-    
- [tuple_element](../standard-library/tuple-element-class-tuple.md)
+[tuple ](../standard-library/tuple-class.md)
+

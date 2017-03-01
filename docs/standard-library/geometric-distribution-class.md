@@ -1,62 +1,128 @@
 ---
-title: "Класс geometric_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.geometric_distribution"
-  - "random/std::tr1::geometric_distribution"
-  - "tr1::geometric_distribution"
-  - "tr1.geometric_distribution"
-  - "geometric_distribution"
-  - "std::tr1::geometric_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "geometric_distribution - класс"
-  - "geometric_distribution - класс [TR1]"
+title: "Класс geometric_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- geometric_distribution
+- std::geometric_distribution
+- random/std::geometric_distribution
+- std::geometric_distribution::reset
+- random/std::geometric_distribution::reset
+- std::geometric_distribution::p
+- random/std::geometric_distribution::p
+- std::geometric_distribution::param
+- random/std::geometric_distribution::param
+- std::geometric_distribution::min
+- random/std::geometric_distribution::min
+- std::geometric_distribution::max
+- random/std::geometric_distribution::max
+- std::geometric_distribution::operator()
+- random/std::geometric_distribution::operator()
+- std::geometric_distribution::param_type
+- random/std::geometric_distribution::param_type
+- std::geometric_distribution::param_type::p
+- random/std::geometric_distribution::param_type::p
+- std::geometric_distribution::param_type::operator==
+- random/std::geometric_distribution::param_type::operator==
+- std::geometric_distribution::param_type::operator!=
+- random/std::geometric_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- geometric_distribution class
+- geometric_distribution
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Класс geometric_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
+ms.openlocfilehash: 51952b8649f73120b6a017ae9b64e3e01f42f70e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="geometricdistribution-class"></a>Класс geometric_distribution
 Формирует геометрическое распределение.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<class IntType = int> class geometric_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructors and reset functions     explicit geometric_distribution(double p = 0.5);     explicit geometric_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     double p() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class IntType = int>
+class geometric_distribution {
+public:    
+    // types 
+    typedef IntType result_type; 
+    struct param_type;   
+    
+    // constructors and reset functions 
+    explicit geometric_distribution(double p = 0.5);
+    explicit geometric_distribution(const param_type& parm);
+    void reset();
+    
+    // generating functions 
+    template <class URNG>  
+    result_type operator()(URNG& gen);
+    template <class URNG>
+    result_type operator()(URNG& gen, const param_type& parm);
+    
+    // property functions 
+    double p() const;
+    param_type param() const;
+    void param(const param_type& parm);
+    result_type min() const;
+    result_type max() const;
+}; 
 ```  
+#### <a name="parameters"></a>Параметры  
+*IntType*  
+По умолчанию целочисленный тип результата имеет тип `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-#### Параметры  
- `IntType`  
- По умолчанию целочисленный тип результата имеет тип `int`.  Возможные типы см. в разделе [\<random\>](../standard-library/random.md).  
+*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-## Заметки  
- Класс шаблона описывает распределение, получающее значения указанного пользователем целочисленного типа с геометрическим распределением.  В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Примечания  
+Класс шаблона описывает распределение, получающее значения указанного пользователем целочисленного типа с геометрическим распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[geometric\_distribution::geometric\_distribution](../Topic/geometric_distribution::geometric_distribution.md)|`geometric_distribution::p`|`geometric_distribution::param`|  
-|`geometric_distribution::operator()`||[geometric\_distribution::param\_type](../Topic/geometric_distribution::param_type.md)|  
+|[geometric_distribution::geometric_distribution](#geometric_distribution__geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
+|`geometric_distribution::operator()`||[geometric_distribution::param_type](#geometric_distribution__param_type)|  
   
- Функция свойства `p()` возвращает значение для хранимого параметра распределения `p`.  
+Функция свойства `p()` возвращает значение для хранимого параметра распределения `p`.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
   
- Подробные сведения о распределении хи\-квадрат см. в статье Wolfram MathWorld [Геометрическое распределение](http://go.microsoft.com/fwlink/?LinkId=400529).  
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
   
-## Пример  
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+  
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+  
+Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Геометрическое распределение](http://go.microsoft.com/fwlink/LinkId=400529).  
+  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -107,64 +173,118 @@ int main()
   
     test(p_dist, samples);  
 }  
-  
 ```  
   
-## Вывод  
- Первый тест.  
+Первый тест.  
   
-  **Для пропуска ввода данных и запуска со значениями по умолчанию нажмите CTRL\-Z.  Введите значение с плавающей запятой для параметра "p": 0,5**  
-**Введите целое число точек данных: 100**  
-**min\(\) \=\= 0**  
-**max\(\) \=\= 2147483647**  
-**p\(\) \=\= 0.5000000000**  
-**Распределение для 100 точек данных:**  
- **0 ::::::::::::::::::::::::::::::::::::::::::::::::::::**  
- **1 ::::::::::::::::::::::::**  
- **2 ::::::::::::::**  
- **3 :::::**  
- **4 ::**  
- **5 ::**  
- **6 :**  Второй тест.  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'p' distribution parameter: .5
+Enter an integer value for the sample count: 100
+
+min() == 0
+max() == 2147483647
+p() == 0.5000000000
+Distribution for 100 samples:
+    0 :::::::::::::::::::::::::::::::::::::::::::::::::::::
+    1 ::::::::::::::::::::::::::
+    2 ::::::::::::
+    3 ::::::
+    4 ::
+    5 :
+```  
   
-  **Для пропуска ввода данных и запуска со значениями по умолчанию нажмите CTRL\-Z.  Введите значение с плавающей запятой для параметра "p": 0,1**  
-**Введите целое число точек данных: 100**  
-**min\(\) \=\= 0**  
-**max\(\) \=\= 2147483647**  
-**p\(\) \=\= 0,1000000000**  
-**Распределение для 100 точек данных:**  
- **0 :::::::::**  
- **1 :::::::::::**  
- **2 :::::::**  
- **3 ::::::::**  
- **4 ::::::::**  
- **5 ::::::**  
- **6 :::::**  
- **7 ::::::**  
- **8 :::::**  
- **9 ::::**  
- **10 ::::**  
- **11 ::**  
- **12 :**  
- **13 :**  
- **14 :::**  
- **15 ::::**  
- **16 :::**  
- **17 :**  
- **18 :**  
- **19 :**  
- **20 ::**  
- **21 :**  
- **22 :**  
- **23 :**  
- **28 ::**  
- **33 :**  
- **35 :**  
- **40 :**    
-## Требования  
- **Заголовок:** \<random\>  
+Второй тест.  
   
- **Пространство имен:** std  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'p' distribution parameter: .1
+Enter an integer value for the sample count: 100
+
+min() == 0
+max() == 2147483647
+p() == 0.1000000000
+Distribution for 100 samples:
+    0 :::::::::
+    1 :::::::::::
+    2 ::::::::::
+    3 :::::::
+    4 :::::
+    5 ::::::::
+    6 :::
+    7 ::::::
+    8 :::::::
+    9 :::::
+   10 :::
+   11 :::
+   12 ::
+   13 :
+   14 :::
+   15 ::
+   16 :::
+   17 :::
+   20 :::::
+   21 :
+   29 :
+   32 :
+   35 :
+```  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+## <a name="requirements"></a>Требования  
+**Заголовок:** \<random>  
+  
+**Пространство имен:** std  
+  
+##  <a name="a-namegeometricdistributiongeometricdistributiona--geometricdistributiongeometricdistribution"></a><a name="geometric_distribution__geometric_distribution"></a>  geometric_distribution::geometric_distribution  
+Формирует распределение.  
+  
+```  
+explicit geometric_distribution(double p = 0.5);
+explicit geometric_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*p*  
+Параметр распределения `p`.  
+  
+*parm*  
+Структура параметров, используемая для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0.0 < p && p < 1.0`  
+  
+Первый конструктор создает объект, хранимое значение `p` которого содержит значение *p*.  
+  
+Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-namegeometricdistributionparamtypea--geometricdistributionparamtype"></a><a name="geometric_distribution__param_type"></a>  geometric_distribution::param_type  
+Сохраняет параметры распределения.  
+  
+```  
+struct param_type {  
+   typedef geometric_distribution<result_type> distribution_type;  
+   param_type(double p = 0.5);
+   double p() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Параметры  
+*p*  
+Параметр распределения `p`.  
+  
+*right*  
+Экземпляр `param_type` для сравнения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0.0 < p && p < 1.0`  
+  
+Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+[\<random>](../standard-library/random.md)
+
+
+

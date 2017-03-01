@@ -1,58 +1,71 @@
 ---
-title: "Класс is_convertible | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_convertible"
-  - "std.tr1.is_convertible"
-  - "std::tr1::is_convertible"
-  - "std.is_convertible"
-  - "std::is_convertible"
-  - "type_traits/std::is_convertible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_convertible - класс [TR1]"
-  - "is_convertible"
+title: "Класс is_convertible | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_convertible
+- std::is_convertible
+- type_traits/std::is_convertible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_convertible class
+- is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс is_convertible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 381fa9297dd9fad3efd84078a000fea65af0abfd
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isconvertible-class"></a>Класс is_convertible
 Проверяет, можно ли преобразовать один тип в другой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<class From, class To>  
-    struct is_convertible;  
+template <class From, class To>  
+struct is_convertible;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `From`  
  Преобразовываемый тип.  
   
  `Ty`  
  Целевой тип преобразования.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Экземпляр предиката типа содержит значение true, если выражение `To to = from;`, где `from` является объектом типа `From`, имеет правильный формат.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
-// std_tr1__type_traits__is_convertible.cpp   
+```cpp  
+// std__type_traits__is_convertible.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,14 +89,18 @@ int main()
   
 ```  
   
-  **is\_convertible\<trivial, int\> \=\= false**  
-**is\_convertible\<trivial, trivial\> \=\= true**  
-**is\_convertible\<char, int\> \=\= true**   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+```Output  
+is_convertible<trivial, int> == false  
+is_convertible<trivial, trivial> == true  
+is_convertible<char, int> == true  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<type_traits>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Класс is\_base\_of](../standard-library/is-base-of-class.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_base_of класса](../standard-library/is-base-of-class.md)
+

@@ -1,42 +1,58 @@
 ---
-title: "Класс контейнера::iterator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator - метод"
+title: "Класс контейнера::iterator | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Класс контейнера::iterator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 65d4a32b4b1215c89cfd4bd55e71a15ccf84200e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="container-classiterator"></a>Класс контейнера::iterator
 > [!NOTE]
->  В этом разделе в документации Visual C\+\+ как нефункциональный пример контейнеров, используемых в стандартной библиотеке C\+\+.  Дополнительные сведения см. в разделе [Контейнеров STL](../standard-library/stl-containers.md).  
+>  Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).  
   
- Описание объекта, который можно использовать как итератор для контролируемой последовательности.  
+ Описывает объект, который можно использовать в качестве итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
+ 
 typedef T5 iterator;  
-  
 ```  
   
-## Заметки  
- Он описанный здесь синонимом неспецифицированного типа **T5**.  Объект типа **iterator** можно привести к объекту типа [const\_iterator](../standard-library/container-class-const-iterator.md).  
+## <a name="remarks"></a>Примечания  
+ Он описан здесь как синоним для неопределенного типа **T5**. Объект типа **iterator** может быть приведен к объекту типа [const_iterator](../standard-library/container-class-const-iterator.md).  
   
-## См. также  
- [Пример класса контейнера](../Topic/Sample%20Container%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Пример класса контейнера](../standard-library/sample-container-class.md)
+

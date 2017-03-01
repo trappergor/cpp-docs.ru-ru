@@ -1,42 +1,58 @@
 ---
-title: "Класс контейнера::const_reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference - метод"
+title: "Класс контейнера::const_reference | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Класс контейнера::const_reference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 128311db068d1a34f0f8e3d68291209ed44462e4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="container-classconstreference"></a>Класс контейнера::const_reference
 > [!NOTE]
->  В этом разделе в документации Visual C\+\+ как нефункциональный пример контейнеров, используемых в стандартной библиотеке C\+\+.  Дополнительные сведения см. в разделе [Контейнеров STL](../standard-library/stl-containers.md).  
+>  Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).  
   
- Описание объекта, который можно использовать в качестве константной ссылки на элемент контролируемой последовательности.  
+ Описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
+ 
 typedef T3 const_reference;  
-  
 ```  
   
-## Заметки  
- Оно описана ниже синонимом типа обычно неспецифицированного **T3** \( **Alloc::const\_reference**\).  
+## <a name="remarks"></a>Примечания  
+ Он описан здесь как синоним для неопределенного типа **T3** (обычно **Alloc::const_reference**).  
   
-## См. также  
- [Пример класса контейнера](../Topic/Sample%20Container%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Пример класса контейнера](../standard-library/sample-container-class.md)
+

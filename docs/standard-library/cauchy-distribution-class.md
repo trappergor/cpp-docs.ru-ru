@@ -1,61 +1,133 @@
 ---
-title: "Класс cauchy_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cauchy_distribution"
-  - "random/std::tr1::cauchy_distribution"
-  - "std::tr1::cauchy_distribution"
-  - "std.tr1.cauchy_distribution"
-  - "tr1::cauchy_distribution"
-  - "tr1.cauchy_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cauchy_distribution - класс"
+title: "Класс cauchy_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cauchy_distribution
+- std::cauchy_distribution
+- random/std::cauchy_distribution
+- std::cauchy_distribution::reset
+- random/std::cauchy_distribution::reset
+- std::cauchy_distribution::a
+- random/std::cauchy_distribution::a
+- std::cauchy_distribution::b
+- random/std::cauchy_distribution::b
+- std::cauchy_distribution::param
+- random/std::cauchy_distribution::param
+- std::cauchy_distribution::min
+- random/std::cauchy_distribution::min
+- std::cauchy_distribution::max
+- random/std::cauchy_distribution::max
+- std::cauchy_distribution::operator()
+- random/std::cauchy_distribution::operator()
+- std::cauchy_distribution::param_type
+- random/std::cauchy_distribution::param_type
+- std::cauchy_distribution::param_type::a
+- random/std::cauchy_distribution::param_type::a
+- std::cauchy_distribution::param_type::b
+- random/std::cauchy_distribution::param_type::b
+- std::cauchy_distribution::param_type::operator==
+- random/std::cauchy_distribution::param_type::operator==
+- std::cauchy_distribution::param_type::operator!=
+- random/std::cauchy_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- cauchy_distribution class
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# Класс cauchy_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
+ms.openlocfilehash: 6cbe218a9bcac3b35952e6993cc496689e0290aa
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cauchydistribution-class"></a>Класс cauchy_distribution
 Формирует распределение Коши.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<class RealType = double> class cauchy_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     explicit cauchy_distribution(RealType a = 0.0, RealType b = 1.0);     explicit cauchy_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType a() const;     RealType b() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class RealType = double>  
+class cauchy_distribution {  
+public:  
+   // types 
+   typedef RealType result_type;  
+   struct param_type;  
+   
+   // constructor and reset functions  
+   explicit cauchy_distribution(result_type a = 0.0, result_type b = 1.0);
+   explicit cauchy_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions 
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions 
+   result_type a() const;
+   result_type b() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
   
-#### Параметры  
- `RealType`  
- По умолчанию тип с плавающей запятой имеет тип `double`.  Возможные типы см. в разделе [\<random\>](../standard-library/random.md).  
+### <a name="parameters"></a>Параметры  
+*RealType*  
+По умолчанию тип с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-## Заметки  
- Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `double` \(если тип не указан\), распределенные в соответствии с распределением Коши.  В следующей таблице представлены ссылки на статьи об отдельных членах.  
+*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+
+## <a name="remarks"></a>Примечания  
+Класс шаблона описывает распределение Коши, которое формирует значения указанного пользователем типа с плавающей запятой или типа `double`, если тип не указан. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[cauchy\_distribution::cauchy\_distribution](../Topic/cauchy_distribution::cauchy_distribution.md)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[cauchy\_distribution::param\_type](../Topic/cauchy_distribution::param_type.md)|  
+|[cauchy_distribution::cauchy_distribution](#cauchy_distribution__cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
+|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[cauchy_distribution::param_type](#cauchy_distribution__param_type)|  
   
- Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения `a` и `b`.  
+Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения `a` и `b`.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
   
- Дополнительные сведения о распределении Коши см. в статье [Распределение Коши](http://go.microsoft.com/fwlink/?LinkId=400523) на веб\-сайте Wolfram MathWorld.  
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
   
-## Пример  
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+  
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+  
+Подробные сведения о нормальном F-распределении см. в статье в Wolfram MathWorld [Распределение Коши](http://go.microsoft.com/fwlink/LinkId=400523).  
+  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -113,89 +185,146 @@ int main()
   
     test(a_dist, b_dist, samples);  
 }  
-  
 ```  
   
-## Вывод  
- Первый запуск:  
+Первый запуск:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'a' distribution parameter: 0  
 Enter a floating point value for the 'b' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 a() == 0.0000000000  
 b() == 1.0000000000  
 Distribution for 10 samples:  
-          1:  -3.4650392984  
-          2:  -2.6369564174  
-          3:  -0.0786978867  
-          4:  -0.0609632093  
-          5:   0.0589387400  
-          6:   0.0589539764  
-          7:   0.1004592006  
-          8:   1.0965724260  
-          9:   1.4389408122  
-         10:   2.5253154706  
+    1: -3.4650392984  
+    2: -2.6369564174  
+    3: -0.0786978867  
+    4: -0.0609632093  
+    5: 0.0589387400  
+    6: 0.0589539764  
+    7: 0.1004592006  
+    8: 1.0965724260  
+    9: 1.4389408122  
+    10: 2.5253154706  
 ```  
   
- Второй запуск:  
+Второй запуск:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'a' distribution parameter: 0  
 Enter a floating point value for the 'b' distribution parameter (must be greater than zero): 10  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 a() == 0.0000000000  
 b() == 10.0000000000  
 Distribution for 10 samples:  
-          1: -34.6503929840  
-          2: -26.3695641736  
-          3:  -0.7869788674  
-          4:  -0.6096320926  
-          5:   0.5893873999  
-          6:   0.5895397637  
-          7:   1.0045920062  
-          8:  10.9657242597  
-          9:  14.3894081218  
-         10:  25.2531547063  
+    1: -34.6503929840  
+    2: -26.3695641736  
+    3: -0.7869788674  
+    4: -0.6096320926  
+    5: 0.5893873999  
+    6: 0.5895397637  
+    7: 1.0045920062  
+    8: 10.9657242597  
+    9: 14.3894081218  
+    10: 25.2531547063  
 ```  
   
- Третий запуск:  
+Третий запуск:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'a' distribution parameter: 10  
 Enter a floating point value for the 'b' distribution parameter (must be greater than zero): 10  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 a() == 10.0000000000  
 b() == 10.0000000000  
 Distribution for 10 samples:  
-          1: -24.6503929840  
-          2: -16.3695641736  
-          3:   9.2130211326  
-          4:   9.3903679074  
-          5:  10.5893873999  
-          6:  10.5895397637  
-          7:  11.0045920062  
-          8:  20.9657242597  
-          9:  24.3894081218  
-         10:  35.2531547063  
+    1: -24.6503929840  
+    2: -16.3695641736  
+    3: 9.2130211326  
+    4: 9.3903679074  
+    5: 10.5893873999  
+    6: 10.5895397637  
+    7: 11.0045920062  
+    8: 20.9657242597  
+    9: 24.3894081218  
+    10: 35.2531547063  
 ```  
   
-## Требования  
- **Заголовок:** \<random\>  
+## <a name="requirements"></a>Требования  
+**Заголовок:** \<random>  
   
- **Пространство имен:** std  
+**Пространство имен:** std  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namecauchydistributioncauchydistributiona--cauchydistributioncauchydistribution"></a><a name="cauchy_distribution__cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
+Формирует распределение.  
+  
+```  
+explicit cauchy_distribution(result_type a = 0.0, result_type b = 1.0);
+explicit cauchy_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*a*  
+Параметр распределения `a`.  
+  
+*b*  
+Параметр распределения `b`.  
+  
+*parm*  
+Структура `param_type`, используемая для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предусловие:** `0.0 < b`  
+  
+Первый конструктор создает объект, хранимое значение `a` которого содержит значение *a*, а значение `b` содержит значение *b*.  
+  
+Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-namecauchydistributionparamtypea--cauchydistributionparamtype"></a><a name="cauchy_distribution__param_type"></a>  cauchy_distribution::param_type  
+Сохраняет все параметры распределения.  
+  
+```cpp    
+struct param_type {  
+   typedef cauchy_distribution<result_type> distribution_type;  
+   param_type(result_type a = 0.0, result_type b = 1.0);
+   result_type a() const;
+   result_type b() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Параметры  
+*a*  
+Параметр распределения `a`.  
+  
+*b*  
+Параметр распределения `b`.  
+  
+*right*  
+Объект `param_type`, который требуется сравнить с данным объектом.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0.0 < b`  
+  
+Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+[\<random>](../standard-library/random.md)
+
+
+
+

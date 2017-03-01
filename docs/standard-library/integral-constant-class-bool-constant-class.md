@@ -1,71 +1,82 @@
 ---
-title: "Класс bool_constant класс integral_constant | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.integral_constant"
-  - "integral_constant"
-  - "std::tr1::integral_constant"
-  - "std.integral_constant"
-  - "std::integral_constant"
-  - "type_traits/std::integral_constant"
-  - "std.bool_constant"
-  - "std::bool_constant"
-  - "type_traits/std::bool_constant"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "integral_constant - класс [TR1]"
-  - "integral_constant"
-  - "bool_constant"
+title: "Класс integral_constant, класс bool_constant | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- integral_constant
+- std::integral_constant
+- type_traits/std::integral_constant
+- XTR1COMMON/std::integral_constant
+- bool_constant
+- std::bool_constant
+- type_traits/std::bool_constant
+- XTR1COMMON/std::bool_constant
+dev_langs:
+- C++
+helpviewer_keywords:
+- integral_constant class
+- integral_constant
+- bool_constant
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Класс bool_constant класс integral_constant
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
+ms.openlocfilehash: 6c71c3571e19c57b13c827bbb84e347e3ff26b01
+ms.lasthandoff: 02/24/2017
 
-Делает из типа и значения постоянным целым.  
+---
+# <a name="integralconstant-class-boolconstant-class"></a>Класс integral_constant, класс bool_constant
+Создает целочисленную константу из типа и значения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template <class T, T v>  
-    struct integral_constant {  
-        static constexpr T value = v;  
-        typedef T value_type;  
-        typedef integral_constant<T, v> type;  
-        constexpr operator value_type() const noexcept { return (value); }  
-        constexpr value_type operator()() const noexcept { return (value); }  
-    };  
+```
+template<class T, T v>
+struct integral_constant {  
+   static constexpr T value = v;  
+   typedef T value_type;  
+   typedef integral_constant<T, v> type;  
+   constexpr operator value_type() const noexcept;  
+   constexpr value_type operator()() const noexcept;  
+   };  
+```
   
-template <bool v>  
-    using bool_constant = integral_constant<bool, v>;  
+### <a name="parameters"></a>Параметры  
+*T*  
+Тип константы.  
   
-```  
+*v*  
+Значение константы.  
   
-#### Параметры  
- `T`  
- Тип константы.  
+## <a name="remarks"></a>Примечания  
+Класс шаблона `integral_constant`, если он специализирован с целочисленным типом *T* и значением *v* этого типа, представляет объект, который содержит константу этого целочисленного типа с указанным значением. Член с именем `type` является псевдонимом для типа специализации созданного шаблона и член `value` хранит значение *v*, которое используется для создания специализации.  
   
- `v`  
- Значение константы.  
+Класс шаблона `bool_constant` — это явная частичная специализация `integral_constant`, который использует `bool` как аргумент *T*.  
   
-## Заметки  
- `integral_constant` Класс шаблона, когда определен с целочисленным типом `T` и значение `v` этого типа, представляющий объект, который содержит константу, целочисленного типа с указанным значением. Член с именем `type` является псевдонимом для специализации тип созданного шаблона и `value` член содержит значение `v` используется для создания специализации.  
-  
- `bool_constant` Класс шаблона является явная частичная специализация `integral_constant` использующий `bool` как `T` аргумент.  
-  
-## Пример  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // std__type_traits__integral_constant.cpp   
@@ -86,15 +97,19 @@ int main()
 ```  
   
 ```Output  
-integral_constant < int 5 > == 5 integral_constant < bool, false > == false  
+integral_constant<int, 5> == 5  
+integral_constant<bool, false> == false  
 ```  
   
-## Требования  
- **Заголовок:** \<type\_traits\>  
+## <a name="requirements"></a>Требования  
+
+**Заголовок:** \<type_traits>
   
- **Пространство имен:** std  
+**Пространство имен:** std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Определение типа \(Typedef\) false\_type](../Topic/false_type%20Typedef.md)   
- [Определение типа \(Typedef\) true\_type](../Topic/true_type%20Typedef.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Определение типа false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)   
+ [Определение типа true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)
+
+

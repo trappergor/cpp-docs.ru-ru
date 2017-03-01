@@ -1,88 +1,105 @@
 ---
-title: "_CrtCheckMemory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtCheckMemory"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtCheckMemory"
-  - "_CrtCheckMemory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtCheckMemory - функция"
-  - "CrtCheckMemory - функция"
+title: "_CrtCheckMemory | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtCheckMemory
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtCheckMemory
+- _CrtCheckMemory
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtCheckMemory function
+- CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtCheckMemory
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5563d618b0056de285f66cf428cbcfc6a717ce55
+ms.lasthandoff: 02/24/2017
 
-Подтверждает целостность блоков памяти, выделенных в отладочной куче \(только в отладочной версии\).  
+---
+# <a name="crtcheckmemory"></a>_CrtCheckMemory
+Проверяет целостность выделенных блоков памяти в отладочной куче (только в отладочной версии).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 int _CrtCheckMemory( void );  
 ```  
   
-## Возвращаемое значение  
- В случае успеха `_CrtCheckMemory` возвращает TRUE; в противном случае функция возвращает FALSE.  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успешного выполнения `_CrtCheckMemory` возвращает значение TRUE; в противном случае функция возвращает значение FALSE.  
   
-## Заметки  
- Функция `_CrtCheckMemory` проверяет память, выделенную диспетчером отладочной кучи, проверяя лежащую в основе базовую кучу и инспектируя каждый блок памяти.  Если в лежащей в основе базовой куче, данных заголовка отладки или буфере перезаписи обнаруживается ошибка или несоответствие памяти, то `_CrtCheckMemory` создает отчет об отладке со сведениями, описывающими условия ошибки.  Если [\_DEBUG](../Topic/_DEBUG.md) не определен, то вызовы `_CrtCheckMemory` удаляются во время предварительной обработки.  
+## <a name="remarks"></a>Примечания  
+ Функция `_CrtCheckMemory` проверяет память, выделенную диспетчеру отладочной кучи, проверяя основную кучу и каждый блок памяти. Если несогласованность памяти или ошибка возникают в базовой куче, сведениях о заголовке отладки или буферах перезаписи, `_CrtCheckMemory` создает отчет об отладке с информацией, описывающей условие возникновения ошибки. Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, вызовы `_CrtCheckMemory` удаляются на этапе предварительной обработки.  
   
- Поведение `_CrtCheckMemory` может управляться с помощью установки битовых полей флажка [\_crtDbgFlag](../Topic/_crtDbgFlag.md) с помощью функции [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md).  Включение битового поля **\_CRTDBG\_CHECK\_ALWAYS\_DF** приводит к тому, что `_CrtCheckMemory` вызывается каждый раз при запросе операции выделения памяти.  Хотя этот метод замедляет выполнение, он полезен для быстрого перехвата ошибок.  Выключение битового поля **\_CRTDBG\_ALLOC\_MEM\_DF** приводит к тому, что `_CrtCheckMemory` не проверяет кучу и немедленно возвращает значение **TRUE**.  
+ Поведением функции `_CrtCheckMemory` можно управлять, задав битовые поля флага [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) с помощью функции [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md). Если битовое поле **_CRTDBG_CHECK_ALWAYS_DF** включено, `_CrtCheckMemory` вызывается при каждом запросе операция выделения памяти. Несмотря на то, что этот метод замедляет выполнение, он позволяет быстро перехватывать ошибки. Если битовое поле **_CRTDBG_ALLOC_MEM_DF** отключено, `_CrtCheckMemory` не проверяет кучу, а сразу возвращает значение **TRUE**.  
   
- Поскольку эта функция возвращает **TRUE** или **FALSE**, она может быть передана одному из макросов [\_ASSERT](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md) для создания простого отладочного механизма обработки ошибок.  В следующем примере вызывается сбой проверочного утверждения в случае обнаружения повреждения в куче:  
+ Так как эта функция возвращает значение **TRUE** или **FALSE**, ее можно передать в один из макросов [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) для создания простого механизма обработки ошибок отладки. Следующий пример вызывает сбой утверждения, если в куче обнаружено повреждение.  
   
 ```  
 _ASSERTE( _CrtCheckMemory( ) );  
 ```  
   
- Дополнительные сведения о том, как можно использовать `_CrtCheckMemory` с другими функциями отладки, см. в разделе [Функции создания отчетов о состоянии кучи](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions).  Обзор управления памятью и отладочной кучи см. в разделе [Сведения о куче отладки CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Дополнительные сведения о том, как использовать `_CrtCheckMemory` с другими функциями отладки, см. в разделе [Функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Общие сведения об управлении памятью и отладочной куче см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_CrtCheckMemory`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtCheckMemory`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Только отладочные версии [Библиотеки времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
- Пример использования `_CrtCheckMemory` см. в разделе [crt\_dbg1](http://msdn.microsoft.com/ru-ru/17b4b20c-e849-48f5-8eb5-dca6509cbaf9).  
+## <a name="example"></a>Пример  
+ Пример использования `_CrtCheckMemory` см. в описании [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9).  
   
-## Эквивалент в .NET Framework  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
  [System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
- [\_crtDbgFlag](../Topic/_crtDbgFlag.md)   
- [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
+ [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)

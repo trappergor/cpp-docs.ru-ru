@@ -1,70 +1,86 @@
 ---
-title: "va_arg, va_copy, va_end, va_start | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "va_arg"
-  - "va_end"
-  - "va_copy"
-  - "va_start"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "va_arg"
-  - "va_start"
-  - "va_list"
-  - "va_alist"
-  - "va_dcl"
-  - "va_copy"
-  - "va_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "списки аргументов переменных, доступ к"
-  - "va_start - макрос"
-  - "va_arg - макрос"
-  - "va_end - макрос"
-  - "списки аргументов аргументы [C++]"
-  - "va_list - макрос"
-  - "va_dcl - макрос"
-  - "va_alist - макрос"
-  - "va_copy - макрос"
+title: "va_arg, va_copy, va_end, va_start | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- va_arg
+- va_end
+- va_copy
+- va_start
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- va_arg
+- va_start
+- va_list
+- va_alist
+- va_dcl
+- va_copy
+- va_end
+dev_langs:
+- C++
+helpviewer_keywords:
+- variable argument lists, accessing
+- va_start macro
+- va_arg macro
+- va_end macro
+- arguments [C++], argument lists
+- va_list macro
+- va_dcl macro
+- va_alist macro
+- va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# va_arg, va_copy, va_end, va_start
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 Обращается к списку с переменным количеством аргументов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      type va_arg(  
+type va_arg(  
    va_list arg_ptr,  
    type   
-);void va_copy(  
+);
+void va_copy(  
    va_list dest,  
    va_list src  
 ); // (ISO C99 and later)  
@@ -77,7 +93,7 @@ void va_start(
 ); // (ANSI C89 and later)  
 void va_start(  
    arg_ptr   
-);  // (Pre-ANSI C89 standardization version)  
+);  // (deprecated Pre-ANSI C89 standardization version)  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -99,7 +115,7 @@ void va_start(
 ## <a name="return-value"></a>Возвращаемое значение  
  `va_arg` возвращает текущий аргумент. `va_copy`, `va_start` и `va_end` не возвращают значений.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Макросы `va_arg`, `va_copy`, `va_end` и `va_start` предоставляют переносимый способ получения аргументов функции, которая принимает переменное число аргументов. Предусмотрены две версии макросов: макросы, определенные в STDARG.H, соответствуют стандарту ISO C99; макросы, определенные в VARARGS.H, не рекомендуется использовать, но они сохранены для обратной совместимости с кодом, написанным до появления стандарта ANSI C89.  
   
  Эти макросы предполагают, что функции принимают фиксированное число обязательных аргументов, за которыми следует переменное число необязательных аргументов. Обязательные аргументы объявляются как обычные параметры для функции и доступ к ним возможен через имена параметров. Доступ к необязательным аргументам осуществляется через макросы в STDARG.H (или VARARGS.H для кода, написанного до появления стандарта ANSI C89), которые задают указатель на первый необязательный аргумент в списке аргументов, извлекают аргументы из списка и сбрасывают указатель после завершения обработки аргументов.  
@@ -112,12 +128,12 @@ void va_start(
   
 -   `va_copy` делает копию списка аргументов в текущем состоянии. Параметр `src` должен быть уже инициализирован с помощью `va_start`; он может быть обновлен вызовами `va_arg`, но не должен быть сброшен с помощью `va_end`. Следующий аргумент, который извлекается `va_arg` из `dest`, совпадает со следующий аргументом, который извлекается из `src`.  
   
--   После получения всех аргументов `va_end` сбрасывает указатель на **NULL**. `va_end` должен вызываться для каждого списка аргументов, который инициализируется `va_start` или `va_copy`, до выполнения возврата функцией.  
+-   После извлечения всех аргументов `va_end` сбрасывает указатель в **NULL**. `va_end` должен вызываться для каждого списка аргументов, который инициализируется `va_start` или `va_copy`, до выполнения возврата функцией.  
   
 > [!NOTE]
 >  Макросы в VARARGS.H использовать не рекомендуется; они сохранены только для обратной совместимости с кодом, который написан до появления стандарта ANSI C89. Во всех остальных случаях используйте макросы из файла STDARGS.H.  
   
- При компиляции с помощью [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md), программы, использующие эти макросы могут давать непредвиденный результат из-за различий между системами типов машинном коде и среды выполнения (CLR). Рассмотрим следующую программу:  
+ При компилировании с параметром [/clr (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) программы, использующие эти макросы, могут давать непредвиденный результат из-за различий между собственной системой типов и системой типов среды CLR. Рассмотрим следующую программу:  
   
 ```  
 #include <stdio.h>  
@@ -138,6 +154,8 @@ void testit (int i, ...)
         char *s = va_arg(argptr, char*);  
         printf("%s\n", s);  
     }  
+
+    va_end(argptr);  
 }  
   
 int main()  
@@ -155,23 +173,13 @@ int main()
 (null)  
 ```  
   
- Однако, если программа скомпилирована с помощью **/CLR: pure**, несовпадения типов могут привести к созданию исключения. Решением является использование явного приведения типов:  
-  
-```  
-int main()  
-{  
-   testit( 0, (int)0xFFFFFFFF ); // cast unsigned to int  
-   testit( 1, (char*)NULL );     // cast int to char*  
-}  
-```  
-  
 ## <a name="requirements"></a>Требования  
- **Заголовок:** \< stdio.h > и \< stdarg.h >  
+ **Заголовок:** \<stdio.h> и \<stdarg.h>  
   
- **Нерекомендуемый заголовок:** \< varargs.h >  
+ **Нерекомендуемый заголовок:** \<varargs.h>  
   
 ## <a name="libraries"></a>Библиотеки  
- Все версии [библиотеки времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Пример  
   

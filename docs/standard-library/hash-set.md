@@ -1,69 +1,88 @@
 ---
-title: "&lt;hash_set&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<hash_set>"
-  - "std.<hash_set>"
-  - "std::<hash_set>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_set - заголовок"
+title: "&lt;hash_set&gt; | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <hash_set>
+- std.<hash_set>
+- std::<hash_set>
+dev_langs:
+- C++
+helpviewer_keywords:
+- hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# &lt;hash_set&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: cd8ab51b229f1c62cd6f3dd1862920d683834975
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="lthashsetgt"></a>&lt;hash_set&gt;
 > [!NOTE]
->  Этот заголовок устарел. Вместо него следует использовать [\<unordered\_set\>](../standard-library/unordered-set.md).  
+>  Этот заголовок устарел. Вместо него следует использовать [<unordered_set>](../standard-library/unordered-set.md).  
   
- Определяет контейнер шаблонных классов hash\_set и hash\_multiset и их поддерживаемые шаблоны.  
+ Определяет контейнер шаблонных классов hash_set и hash_multiset и их поддерживаемые шаблоны.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 #include <hash_set>  
   
 ```  
   
-## Заметки  
- В Visual C\+\+ .NET 2003 члены файлов заголовков [\<hash\_map\>](../standard-library/hash-map.md) и [\<hash\_set\>](#vclrfhash_set_header_file) больше не находятся в пространстве имен std. Они перемещены в пространство имен stdext. Дополнительные сведения см. в разделе [Пространство имен stdext](../Topic/stdext%20Namespace.md).  
+## <a name="remarks"></a>Примечания  
   
-### Операторы  
+### <a name="operators"></a>Операторы  
   
-|Версия hash\_set|Версия hash\_multiset|Описание|  
-|----------------------|---------------------------|--------------|  
-|[operator\!\= \(hash\_set\)](../Topic/operator!=%20\(hash_set\).md)|[operator\!\= \(hash\_multiset\)](../Topic/operator!=%20\(hash_multiset\).md)|Проверяет неравенство объекта hash\_set или hash\_multiset слева от оператора объекту hash\_set или hash\_multiset справа от оператора.|  
-|[operator\=\= \(hash\_set\)](http://msdn.microsoft.com/ru-ru/791b95bd-f917-4716-aea6-add50badbfac)|[operator\=\= \(hash\_multiset\)](http://msdn.microsoft.com/ru-ru/cfa9aa0c-d5f6-403a-9441-35c2a4cee0fb)|Проверяет равенство объекта hash\_set или hash\_multiset слева от оператора объекту hash\_set или hash\_multiset справа от оператора.|  
+|Версия hash_set|Версия hash_multiset|Описание|  
+|-----------------------|----------------------------|-----------------|  
+|[operator!= (hash_set)](../standard-library/hash-set-operators.md#operator_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#operator_neq__hash_multiset_)|Проверяет неравенство объекта hash_set или hash_multiset слева от оператора объекту hash_set или hash_multiset справа от оператора.|  
+|[operator== (hash_set)](http://msdn.microsoft.com/en-us/791b95bd-f917-4716-aea6-add50badbfac)|[operator== (hash_multiset)](http://msdn.microsoft.com/en-us/cfa9aa0c-d5f6-403a-9441-35c2a4cee0fb)|Проверяет равенство объекта hash_set или hash_multiset слева от оператора объекту hash_set или hash_multiset справа от оператора.|  
   
-### Специализированные функции шаблонов  
+### <a name="specialized-template-functions"></a>Специализированные функции шаблонов  
   
-|Версия hash\_set|Версия hash\_multiset|Описание|  
-|----------------------|---------------------------|--------------|  
-|[swap \(hash\_set\)](../Topic/swap%20\(hash_set\).md)|[swap \(hash\_multiset\)](../Topic/swap%20\(hash_multiset\).md)|Меняет местами элементы двух объектов hash\_set или hash\_multiset.|  
+|Версия hash_set|Версия hash_multiset|Описание|  
+|-----------------------|----------------------------|-----------------|  
+|[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap__hash_multiset_)|Меняет местами элементы двух объектов hash_set или hash_multiset.|  
   
-### Классы  
+### <a name="classes"></a>Классы  
   
 |||  
 |-|-|  
-|[Класс hash\_compare](../standard-library/hash-compare-class.md)|Описывает объект, который может использоваться любыми hash\-ассоциативными контейнерами \(hash\_map, hash\_multimap, hash\_set или hash\_multiset\) как объект параметра **Traits** по умолчанию для сортировки и хэширования элементов в них.|  
-|[Класс hash\_set](../standard-library/hash-set-class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|  
-|[Класс hash\_multiset](../Topic/hash_multiset%20Class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|  
+|[Класс hash_compare](../standard-library/hash-compare-class.md)|Описывает объект, который может использоваться любыми hash-ассоциативными контейнерами (hash_map, hash_multimap, hash_set или hash_multiset) как объект параметра **Traits** по умолчанию для сортировки и хэширования элементов в них.|  
+|[Класс hash_set](../standard-library/hash-set-class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|  
+|[Класс hash_multiset](../standard-library/hash-multiset-class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|  
   
-## См. также  
- [Справочные материалы по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Библиотека стандартных шаблонов](../misc/standard-template-library.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

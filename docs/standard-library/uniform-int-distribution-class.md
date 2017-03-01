@@ -1,59 +1,128 @@
 ---
-title: "Класс uniform_int_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1.uniform_int_distribution"
-  - "random/std::tr1::uniform_int_distribution"
-  - "uniform_int_distribution"
-  - "tr1::uniform_int_distribution"
-  - "std.tr1.uniform_int_distribution"
-  - "std::tr1::uniform_int_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uniform_int_distribution - класс"
+title: "Класс uniform_int_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- uniform_int_distribution
+- std::uniform_int_distribution
+- random/std::uniform_int_distribution
+- std::uniform_int_distribution::reset
+- random/std::uniform_int_distribution::reset
+- std::uniform_int_distribution::a
+- random/std::uniform_int_distribution::a
+- std::uniform_int_distribution::b
+- random/std::uniform_int_distribution::b
+- std::uniform_int_distribution::param
+- random/std::uniform_int_distribution::param
+- std::uniform_int_distribution::min
+- random/std::uniform_int_distribution::min
+- std::uniform_int_distribution::max
+- random/std::uniform_int_distribution::max
+- std::uniform_int_distribution::operator()
+- random/std::uniform_int_distribution::operator()
+- std::uniform_int_distribution::param_type
+- random/std::uniform_int_distribution::param_type
+- std::uniform_int_distribution::param_type::a
+- random/std::uniform_int_distribution::param_type::a
+- std::uniform_int_distribution::param_type::b
+- random/std::uniform_int_distribution::param_type::b
+- std::uniform_int_distribution::param_type::operator==
+- random/std::uniform_int_distribution::param_type::operator==
+- std::uniform_int_distribution::param_type::operator!=
+- random/std::uniform_int_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- uniform_int_distribution class
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Класс uniform_int_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 56ce46ec6b19a0ac5068193d5e1d3dfb0c9b4ee9
+ms.lasthandoff: 02/24/2017
 
-Формирует равномерное \(каждое значение одинаково вероятно\) распределение целых чисел в выходном инклюзивно\-эксклюзивном диапазоне.  
+---
+# <a name="uniformintdistribution-class"></a>Класс uniform_int_distribution
+Формирует равномерное (каждое значение одинаково вероятно) распределение целых чисел в выходном инклюзивно-эксклюзивном диапазоне.  
   
-## Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис  
 ```  
-template<class IntType = int> class uniform_int_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructors and reset functions     explicit uniform_int_distribution(IntType a = 0, IntType b = numeric_limits<IntType>::max());     explicit uniform_int_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     result_type a() const;     result_type b() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class IntType = int>
+   class uniform_int_distribution {
+public:    
+   // types 
+   typedef IntType result_type;    
+   struct param_type;    
+   
+   // constructors and reset functions 
+   explicit uniform_int_distribution(
+      result_type a = 0, result_type b = numeric_limits<result_type>::max());
+   explicit uniform_int_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions 
+   template <class URNG>  
+      result_type operator()(URNG& gen);
+   template <class URNG>  
+      result_type operator()(URNG& gen, const param_type& parm);
+
+   // property functions 
+   result_type a() const;
+   result_type b() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+};  
 ```  
+### <a name="parameters"></a>Параметры  
+*IntType*  
+По умолчанию целочисленный тип результата имеет тип `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-#### Параметры  
- `IntType`  
- По умолчанию целочисленный тип результата имеет тип `int`.  Возможные типы см. в разделе [\<random\>](../standard-library/random.md).  
-  
-## Заметки  
- Класс шаблона описывает инклюзивно\-инклюзивное распределение, которое формирует значения заданного пользователем целочисленного типа, вероятность получения каждого из которых одинакова.  В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Примечания  
+Класс шаблона описывает инклюзивно-инклюзивное распределение, которое формирует значения заданного пользователем целочисленного типа, вероятность получения каждого из которых одинакова. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[uniform\_int\_distribution::uniform\_int\_distribution](../Topic/uniform_int_distribution::uniform_int_distribution.md)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform\_int\_distribution::param\_type](../Topic/uniform_int_distribution::param_type.md)|  
+|[uniform_int_distribution::uniform_int_distribution](#uniform_int_distribution__uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform_int_distribution::param_type](#uniform_int_distribution__param_type)|  
   
- Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение.  Для класса распределения эти минимальные и максимальные значения совпадают со значениями, которые возвращаются функциями свойств `min()` и `max()`, описанными в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение. Для класса распределения эти минимальные и максимальные значения совпадают со значениями, которые возвращаются функциями свойств `min()` и `max()`.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `param()` устанавливает или возвращает пакет хранимого пакета распределения `param_type`.  
+
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
   
-## Пример  
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
+  
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+  
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -106,33 +175,95 @@ int main()
   
     test(a_dist, b_dist, samples);  
 }  
-  
 ```  
   
-## Вывод  
-  **Для пропуска ввода данных и запуска со значениями по умолчанию нажмите CTRL\-Z.  Введите целое значение для параметра нижнего порогового значения распределения: 0**  
-**Введите целое значение для параметра верхнего порогового значения распределения: 12**  
-**Введите целое число точек данных: 200**  
-**нижняя граница \=\= 0**  
-**верхняя граница \=\= 12**  
-**Распределение для 200 точек данных:**  
- **0 :::::::::::::::**  
- **1 :::::::::::::::::::::**  
- **2 ::::::::::::::::::**  
- **3 :::::::::::::::**  
- **4 :::::::**  
- **5 :::::::::::::::::::::**  
- **6 :::::::::::::**  
- **7 ::::::::::**  
- **8 :::::::::::::::**  
- **9 :::::::::::::**  
- **10 ::::::::::::::::::::::**  
- **11 :::::::::::::**  
- **12 :::::::::::::::::**    
-## Требования  
- **Заголовок:** \<random\>  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter an integer value for the lower bound of the distribution: 0
+Enter an integer value for the upper bound of the distribution: 12
+Enter an integer value for the sample count: 200
+lower bound == 0
+upper bound == 12
+Distribution for 200 samples:
+    0 :::::::::::::::
+    1 :::::::::::::::::::::
+    2 ::::::::::::::::::
+    3 :::::::::::::::
+    4 :::::::
+    5 :::::::::::::::::::::
+    6 :::::::::::::
+    7 ::::::::::
+    8 :::::::::::::::
+    9 :::::::::::::
+   10 ::::::::::::::::::::::
+   11 :::::::::::::
+   12 :::::::::::::::::
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<random>  
   
  **Пространство имен:** std  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-nameuniformintdistributionuniformintdistributiona--uniformintdistributionuniformintdistribution"></a><a name="uniform_int_distribution__uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
+Формирует распределение.  
+  
+```  
+explicit uniform_int_distribution(
+   result_type a = 0, result_type b = std::numeric_limits<result_type>::max());
+explicit uniform_int_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*a*  
+Нижняя граница случайных значений (инклюзивно).  
+  
+*b*  
+Верхняя граница случайных значений (инклюзивно).  
+  
+*parm*  
+Структура `param_type`, используемая для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+**Предусловие:** `a ≤ b`  
+  
+Первый конструктор создает объект, хранимое значение `a` которого содержит значение *a*, а значение `b` содержит значение *b*.  
+  
+Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-nameuniformintdistributionparamtypea--uniformintdistributionparamtype"></a><a name="uniform_int_distribution__param_type"></a>  uniform_int_distribution::param_type  
+ Сохраняет параметры распределения.  
+```cpp  
+struct param_type {  
+   typedef uniform_int_distribution<result_type> distribution_type;  
+   param_type(
+      result_type a = 0, result_type b = std::numeric_limits<result_type>::max());
+   result_type a() const;
+   result_type b() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+
+### <a name="parameters"></a>Параметры  
+*a*  
+Нижняя граница случайных значений (инклюзивно).  
+  
+*b*  
+Верхняя граница случайных значений (инклюзивно).  
+  
+*right*  
+Объект `param_type`, который требуется сравнить с данным объектом.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `a ≤ b`  
+  
+Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+ [\<random>](../standard-library/random.md)
+
+
+
+

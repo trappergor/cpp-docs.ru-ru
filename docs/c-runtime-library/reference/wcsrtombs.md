@@ -1,49 +1,66 @@
 ---
-title: "wcsrtombs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcsrtombs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcsrtombs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Функция wcsrtombs"
-  - "преобразование строк, расширенные символы"
-  - "расширенные символы, строки"
+title: "wcsrtombs | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcsrtombs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcsrtombs
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcsrtombs function
+- string conversion, wide characters
+- wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# wcsrtombs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8dcf86093b363bd890e15ba7eb326a4187e65999
+ms.lasthandoff: 02/24/2017
 
-Преобразовать строку расширенных символов в строку многобайтовых символов.  Существует более безопасная версия этой функции; см. раздел [wcsrtombs\_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
+---
+# <a name="wcsrtombs"></a>wcsrtombs
+Преобразует строку расширенных символов в соответствующее представление многобайтовой строки. Существует более безопасная версия этой функции; см. раздел [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_t wcsrtombs(  
@@ -61,37 +78,37 @@ size_t wcsrtombs(
 ); // C++ only  
 ```  
   
-#### Параметры  
- \[исходящий\] `mbstr`  
- Расположение адреса результирующей преобразованной многобайтовой символьной строки.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `mbstr`  
+ Расположение адреса итоговой преобразованной строки многобайтовых символов.  
   
- \[входящий\] `wcstr`  
- Косвенно указывает на расположение расширенной символьной строки, которую требуется преобразовать.  
+ [in] `wcstr`  
+ Косвенно указывает на расположение преобразуемой строки расширенных символов.  
   
- \[входящий\] `count`  
- Число символов для преобразования.  
+ [in] `count`  
+ Количество символов для преобразования.  
   
- \[входящий\] `mbstate`  
+ [in] `mbstate`  
  Указатель на объект состояния преобразования `mbstate_t`.  
   
-## Возвращаемое значение  
- Возвращает число успешно преобразованных байтов, не учитывая завершающий нулевой символ \(если есть\), или \-1, если возникла ошибка.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает число успешно преобразованных байтов, не включая завершающий байт NULL (если имеется); в противном случае — значение -1, если произошла ошибка.  
   
-## Заметки  
- Функция `wcsrtombs` преобразует строку расширенных символов, начиная в определенном состоянии преобразования, содержащемся в `mbstate`, из значений, косвенно указанных `wcstr`, в адрес `mbstr`.  Преобразование будет продолжаться для каждого символа до тех пор, пока: не встречен расширенный завершающий нулевой символ, не встречен несоответствующий символ или не превышено ограничение `count`.  Если `wcsrtombs` встречает расширенный нуль\-символ \(L'\\0\) либо перед, либо после `count` символов, она преобразовывает его в 8\-и битный 0 и останавливается.  
+## <a name="remarks"></a>Примечания  
+ Функция `wcsrtombs` преобразует строку расширенных символов, начиная с указанного состояния преобразования, содержащегося в `mbstate`, из значений, косвенно указанных в `wcstr`, в адрес `mbstr`. Преобразование будет продолжаться для каждого символа до тех пор, пока не встретится расширенный завершающий символ null, или не обнаружится несоответствующий символ, или когда следующий символ может превысить ограничение, указанное в `count`. Если функция `wcsrtombs` встречает расширенный нуль-символ (L"\0") перед или после `count` символов, она преобразовывает его в 8-битный 0 и останавливается.  
   
- Таким образом, символьная многобайтовая строка `mbstr` завершается нуль\-символом, только если `wcsrtombs` встречает расширенный нулевой символ во время преобразования.  Если последовательности, на которые указывают `wcstr` и `mbstr`, перекрываются, то поведение `wcsrtombs` не определено.  `wcsrtombs` зависит от категории LC\_TYPE текущего языкового стандарта.  
+ Таким образом, строка многобайтовых символов `mbstr` завершается символом NULL только в том случае, если функция `wcsrtombs` встречает расширенный нуль-символ во время преобразования. Если последовательности, на которые указывают параметры `wcstr` и `mbstr`, перекрываются, то поведение `wcsrtombs` не определено. На функцию `wcsrtombs` влияет категория LC_TYPE текущего языкового стандарта.  
   
- Функция `wcsrtombs` отличается от [wcstombs, \_wcstombs\_l](../Topic/wcstombs,%20_wcstombs_l.md) возможностью перезапуска.  Состояние преобразования хранится в `mbstate` для последующих вызовов тех же или других прерываемых функций.  Результаты не определены, когда происходит смешивание прерываемых и непрерываемых функций.  Например, приложение скорее будет использовать `wcsrlen` вместо `wcsnlen`, если последующий вызов `wcsrtombs` использовался вместо `wcstombs`.  
+ Функция `wcsrtombs` отличается от функции [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) возможностью перезапуска. Состояние преобразования хранится в переменной `mbstate` для последующих вызовов тех же или других перезапускаемых функций. При смешанном использовании перезапускаемых и неперезапускаемых функций результаты становятся неопределенными.  Например, в приложении следует использовать функцию `wcsrlen` вместо функции `wcsnlen`, если в последующем вызове используется функция `wcsrtombs`, а не функция `wcstombs`.  
   
- Если аргумент `mbstr` равен `NULL`, `wcsrtombs` возвращает необходимый размер в байтах строки назначения.  Если `mbstate` имеет значение NULL, используется внутреннее состояние преобразования `mbstate_t`.  Если последовательность знаков `wchar` не имеет соответствующего многобайтового представления, то возвращается \-1 и `errno` принимает значение `EILSEQ`.  
+ Если аргумент `mbstr` равен `NULL`, функция `wcsrtombs` возвращает необходимый размер строки назначения в байтах. Если `mbstate` имеет значение null, используется внутреннее состояние преобразования `mbstate_t`. Если у последовательности символов `wchar` нет соответствующего представления в виде многобайтовых символов, возвращается значение -1 и для `errno` устанавливается значение `EILSEQ`.  
   
- В C\+\+ эта функция имеет шаблонную перегрузку, которая вызывает более новые и безопасные аналоги этой функции.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ эта функция имеет шаблонную перегрузку, которая вызывает более новые и безопасные аналоги этой функции. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-## Исключения  
- Функция `wcsrtombs` безопасна с точки зрения многопоточности, если ни одна из функций в данном потоке не вызывает `setlocale`, когда эта функция выполняется и `mbstate` имеет значение не NULL.  
+## <a name="exceptions"></a>Исключения  
+ Функция `wcsrtombs` является потокобезопасной, если ни одна из функций в текущем потоке не вызывает `setlocale`, пока выполняется данная функция, и `mbstate` не имеет значение null.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_wcsrtombs.cpp  
@@ -133,22 +150,25 @@ int main()
 }  
 ```  
   
-  **The string was successfuly converted.**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The string was successfuly converted.  
+```  
   
-## Требования  
+## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
+ Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`wcsrtombs`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcsrtombs`|\<wchar.h>|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs, \_wcstombs\_l](../Topic/wcstombs,%20_wcstombs_l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

@@ -1,33 +1,49 @@
 ---
-title: "CType &lt; char &gt; класса | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ctype<char>"
-  - "locale/std::ctype<char>"
-  - "std::ctype<char>"
-  - "std.ctype<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс CType < char >"
+title: "Класс ctype&lt;char&gt; | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ctype<char>
+- locale/std::ctype<char>
+- std::ctype<char>
+- std.ctype<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CType &lt; char &gt; класса
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
+ms.lasthandoff: 02/24/2017
 
-Класс является явной специализации шаблона класса **ctype \< CharType**> ввода `char`, описывающий объект, который можно использовать как аспект языкового стандарта для характеристики различных свойств символа типа `char`.  
+---
+# <a name="ctypeltchargt-class"></a>Класс ctype&lt;char&gt;
+Этот класс представляет собой явную специализацию класса шаблона **ctype\<CharType**> для типа `char`, описывающего объект, который может использоваться в качестве аспекта языкового стандарта для характеристики различных свойств символа, относящегося к типу `char`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -129,30 +145,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>Заметки  
- Явная специализация отличается от шаблона класса несколькими способами:  
+## <a name="remarks"></a>Примечания  
+ Явная специализация отличается от класса шаблона несколькими аспектами.  
   
--   Объект класса ctype < `char`> сохраняет указатель на первый элемент Таблица маски ctype, массив UCHAR_MAX + 1 элементов типа **ctype_base::mask**. Он также хранит объект типа Boolean, указывающее, следует ли удалять массива (с помощью `operator delete[]`) при ctype \< **Elem**> объект уничтожается.  
+-   Объект класса ctype< `char`> сохраняет указатель на первый элемент таблицы маски ctype, массив UCHAR_MAX + 1 элементов типа **ctype_base::mask**. Он также хранит объект логического типа, указывающий, следует ли удалять массив (с помощью `operator delete[]`), когда удаляется объект ctype\< **Elem**>.  
   
--   Его единственный открытый конструктор позволяет указать **вкладке**, таблице маски ctype и **del**, объект Boolean, равное true, если массив должен быть удалены при ctype < `char`> объект уничтожается, а также refs параметра счетчик ссылок.  
+-   Его единственный открытый конструктор позволяет указать **tab**, таблицу маски ctype и **del**, логический объект, имеющий значение true, если массив должен удаляться при удалении объекта ctype< `char`>, настроек объект уничтожается, а также ссылки параметра reference-count.  
   
--   Функция-член, защищенный **таблицы** возвращает таблицу хранимых ctype маски.  
+-   Защищенная функция-член **table** возвращает сохраненную таблицу маски ctype.  
   
--   Статический член объекта **table_size** указывает минимальное количество элементов в таблице ctype маски.  
+-   Статический объект-член **table_size** указывает минимальное количество элементов в таблице маски ctype.  
   
--   Защищенные статическую функцию-член **classic_table**(таблица маски ctype возвращает соответствующий языковой стандарт «C».  
+-   Защищенная статическая функция-член **classic_table** (возвращает таблицу маски ctype, соответствующую языковому стандарту "C".  
   
--   Нет функций защищенный виртуальный член [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is), или [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Соответствующий открытый член функции выполнения эквивалентных операций самостоятельно.  
+-   Отсутствуют защищенные виртуальные функции-члены [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) или [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Соответствующие открытые функции-члены самостоятельно выполняют эквивалентные операции.  
   
- Функции-члены [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) и [do_widen](../standard-library/ctype-class.md#ctype__do_widen) Копировать элементы без изменений.  
+ Функции-члены [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) и [do_widen](../standard-library/ctype-class.md#ctype__do_widen) копируют элементы без изменений.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** \< языкового стандарта>  
+ **Заголовок:** \<locale>  
   
  **Пространство имен:** std  
   
 ## <a name="see-also"></a>См. также  
- [Класс Facet](../Topic/facet%20Class.md)   
+ [Класс facet](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
  [Класс ctype_base](../standard-library/ctype-base-class.md)   
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

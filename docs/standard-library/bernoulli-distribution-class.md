@@ -1,58 +1,126 @@
 ---
-title: "Класс bernoulli_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1.bernoulli_distribution"
-  - "random/std::tr1::bernoulli_distribution"
-  - "std.tr1.bernoulli_distribution"
-  - "bernoulli_distribution"
-  - "tr1::bernoulli_distribution"
-  - "std::tr1::bernoulli_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bernoulli_distribution - класс"
-  - "bernoulli_distribution - класс [TR1]"
+title: "Класс bernoulli_distribution | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- bernoulli_distribution
+- std::bernoulli_distribution
+- random/std::bernoulli_distribution
+- std::bernoulli_distribution::reset
+- random/std::bernoulli_distribution::reset
+- std::bernoulli_distribution::p
+- random/std::bernoulli_distribution::p
+- std::bernoulli_distribution::param
+- random/std::bernoulli_distribution::param
+- std::bernoulli_distribution::min
+- random/std::bernoulli_distribution::min
+- std::bernoulli_distribution::max
+- random/std::bernoulli_distribution::max
+- std::bernoulli_distribution::operator()
+- random/std::bernoulli_distribution::operator()
+- std::bernoulli_distribution::param_type
+- random/std::bernoulli_distribution::param_type
+- std::bernoulli_distribution::param_type::p
+- random/std::bernoulli_distribution::param_type::p
+- std::bernoulli_distribution::param_type::operator==
+- random/std::bernoulli_distribution::param_type::operator==
+- std::bernoulli_distribution::param_type::operator!=
+- random/std::bernoulli_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- bernoulli_distribution class
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Класс bernoulli_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
+ms.openlocfilehash: d8805d79029d30a374e80e85ba319581c3804d24
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="bernoullidistribution-class"></a>Класс bernoulli_distribution
 Формирует распределение Бернулли.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-class bernoulli_distribution { public:     // types     typedef bool result_type;     struct param_type;     // constructors and reset functions     explicit bernoulli_distribution(double p = 0.5);     explicit bernoulli_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     double p() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+class bernoulli_distribution  
+   {  
+public:  
+   // types  
+   typedef bool result_type;  
+   struct param_type;  
+
+   // constructors and reset functions  
+   explicit bernoulli_distribution(double p = 0.5);
+   explicit bernoulli_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   double p() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
+```
   
-## Заметки  
- Этот класс описывает распределение, которое формирует значения типа `bool`, распределенные в соответствии с дискретной функции вероятности распределения Бернулли.  В следующей таблице представлены ссылки на статьи об отдельных членах.  
+### <a name="parameters"></a>Параметры  
+  
+*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+  
+## <a name="remarks"></a>Примечания  
+Этот класс описывает распределение, которое формирует значения типа `bool`, распределенные в соответствии с дискретной функции вероятности распределения Бернулли. В следующей таблице представлены ссылки на статьи об отдельных членах.  
   
 ||||  
 |-|-|-|  
-|[bernoulli\_distribution::bernoulli\_distribution](../Topic/bernoulli_distribution::bernoulli_distribution.md)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
-|`bernoulli_distribution::operator()`||[bernoulli\_distribution::param\_type](../Topic/bernoulli_distribution::param_type.md)|  
+|[bernoulli_distribution::bernoulli_distribution](#bernoulli_distribution__bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
+|`bernoulli_distribution::operator()`||[bernoulli_distribution::param_type](#bernoulli_distribution__param_type)|  
   
- Член свойства `p()` возвращает текущее значение хранимого параметра распределения `p`.  
+Член свойства `p()` возвращает текущее значение хранимого параметра распределения `p`.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random\>](../standard-library/random.md).  
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
   
- Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](http://go.microsoft.com/fwlink/?LinkId=398467) на веб\-сайте Wolfram MathWorld.  
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
   
-## Пример  
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+  
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+  
+Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](http://go.microsoft.com/fwlink/LinkId=398467).  
+  
+## <a name="example"></a>Пример  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -100,25 +168,65 @@ int main()
   
     test(p_dist, samples);  
 }  
-  
 ```  
   
-## Вывод  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .45  
 Enter an integer value for a sample count: 100  
 p == 0.45  
 Histogram for 100 samples:  
-false :::::::::::::::::::::::::::::::::::::::::::::::::::::  
- true :::::::::::::::::::::::::::::::::::::::::::::::  
+false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ true :::::::::::::::::::::::::::::::::::::::::
 ```  
   
-## Требования  
- **Заголовок:** \<random\>  
+## <a name="requirements"></a>Требования  
+**Заголовок:** \<random>  
   
- **Пространство имен:** std  
+**Пространство имен:** std  
   
-## См. также  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namebernoullidistributionbernoullidistributiona--bernoullidistributionbernoullidistribution"></a><a name="bernoulli_distribution__bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
+Формирует распределение.  
+  
+```  
+explicit bernoulli_distribution(double p = 0.5);
+explicit bernoulli_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Параметры  
+*p*  
+ Хранимый параметр распределения `p`.  
+  
+*parm*  
+ Структура `param_type`, используемая для формирования распределения.  
+  
+### <a name="remarks"></a>Примечания  
+ **Предварительные условия:** `0.0 ≤ p ≤ 1.0`  
+  
+Первый конструктор создает объект, хранимое значение `p` которого содержит значение *p*.  
+  
+Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+  
+##  <a name="a-namebernoullidistributionparamtypea--bernoullidistributionparamtype"></a><a name="bernoulli_distribution__param_type"></a>  bernoulli_distribution::param_type  
+Содержит параметры распределения.  
+  
+struct param_type {  
+   typedef bernoulli_distribution distribution_type;  
+   param_type(double p = 0.5); double p() const;
+
+   bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };  
+  
+### <a name="parameters"></a>Параметры  
+*p*  
+Хранимый параметр распределения `p`.  
+  
+### <a name="remarks"></a>Примечания  
+**Предварительные условия:** `0.0 ≤ p ≤ 1.0`  
+  
+Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+  
+## <a name="see-also"></a>См. также  
+ [\<random>](../standard-library/random.md)
+
+
+
