@@ -1,34 +1,50 @@
 ---
-title: "Ошибка компилятора C3379 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3379"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3379"
+title: "Ошибка компилятора C3379 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3379
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C3379
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.lasthandoff: 02/24/2017
 
-"класс": вложенный класс не может содержать спецификатор уровня доступа сборки как часть объявления  
+---
+# <a name="compiler-error-c3379"></a>Ошибка компилятора C3379
+«класс»: вложенный класс не может иметь спецификатор доступа сборки как часть объявления  
   
- Ключевые слова [public](../../cpp/public-cpp.md) и [private](../Topic/private%20\(C++\).md), применяемые к управляемым типа, например к классам или структурам, определяют возможность предоставления класса посредством метаданных сборки.  Ключевые слова `public` и `private` не могут применяться к вложенному классу, наследующему уровень доступа сборки содержащего класса.  
+ При применении к управляемого типа, например класса или структуры, [открытый](../../cpp/public-cpp.md) и [частного](../../cpp/private-cpp.md) означают возможность предоставления класса посредством метаданных сборки. `public`или `private` не может применяться к вложенному классу, уровень доступа сборки, включающего класса.  
   
- При использовании с параметром [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) ключевые слова `ref` и `value` указывают на то, что класс является управляемым \(см. раздел [Классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)\).  
+ При использовании с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` и `value` означают, что класс является управляемым (см. [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
  Следующий пример приводит к возникновению ошибки C3379:  
   
@@ -58,32 +74,4 @@ int main() {
    Console::WriteLine(myBA->ii);  
 }  
 ```  
-  
- Следующий пример приводит к возникновению ошибки C3379:  
-  
-```  
-// C3379b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-public __gc class A {  
-public:  
-   static int i = 9;  
-  
-   public __gc class BA {   // C3379  
-   // try the following line instead  
-   // __gc class BA {  
-   public:  
-      static int ii = 8;  
-   };  
-};  
-  
-int main() {  
-  
-   A *myA = new A;  
-   Console::WriteLine(myA->i);  
-  
-   A::BA *myBA = new A::BA;  
-   Console::WriteLine(myBA->ii);  
-}  
-```
+

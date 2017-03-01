@@ -1,70 +1,129 @@
 ---
-title: "COleException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "COleException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleException class"
-  - "исключения, OLE"
+title: "Класс COleException | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- COleException
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleException class
+- exceptions, OLE
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# COleException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 059c92c8dc8796cf103cc02533ba5f3526720249
+ms.lasthandoff: 02/24/2017
 
-Представляет состояние исключения, относящиеся к OLE операции.  
+---
+# <a name="coleexception-class"></a>Класс COleException
+Представляет исключительное условие, связанное с операцией OLE.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class COleException : public CException  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[COleException::Process](../Topic/COleException::Process.md)|Преобразует обнаружено исключение в OLE кодом возврата.|  
-  
-### Открытые члены данных  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[COleException::m\_sc](../Topic/COleException::m_sc.md)|Содержит код состояния, обозначающий причину исключения.|  
+|----------|-----------------|  
+|[COleException::Process](#process)|Преобразует перехваченного исключения в код возврата OLE.|  
   
-## Заметки  
- Класс `COleException` включает общий член данных, содержащий код состояния, указывающий причину исключения.  
+### <a name="public-data-members"></a>Открытые члены данных  
   
- В общем случае не следует создать объект `COleException` напрямую; вместо этого необходимо вызвать [AfxThrowOleException](../Topic/AfxThrowOleException.md).  
+|Имя|Описание|  
+|----------|-----------------|  
+|[COleException::m_sc](#m_sc)|Содержит код состояния, который указывает причину возникновения исключения.|  
   
- Дополнительные сведения об исключениях см. в разделе статьи [Обработка исключений \(MFC\)](../../mfc/exception-handling-in-mfc.md) и [исключения: OLE исключения](../Topic/Exceptions:%20OLE%20Exceptions.md).  
+## <a name="remarks"></a>Примечания  
+ `COleException` Класс включает открытого члена данных, содержащий код состояния, указывающий причину исключения.  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+ В общем случае не следует создавать `COleException` объекта напрямую; вместо этого следует вызвать [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+  
+ Дополнительные сведения об исключениях см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключения: OLE исключения](../../mfc/exceptions-ole-exceptions.md).  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `COleException`  
   
-## Требования  
- **Header:**  afxdisp.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxdisp.h  
   
-## См. также  
- [Пример CALCDRIV MFC](../../top/visual-cpp-samples.md)   
- [CException Class](../../mfc/reference/cexception-class.md)   
+##  <a name="a-namemsca--coleexceptionmsc"></a><a name="m_sc"></a>COleException::m_sc  
+ Этот член данных содержит код состояния OLE, которое указывает причину возникновения исключения.  
+  
+```  
+SCODE m_sc;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Значение этой переменной устанавливается [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+  
+ Дополнительные сведения о `SCODE`, в разделе [структура кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCOleContainer&#22;](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
+  
+##  <a name="a-nameprocessa--coleexceptionprocess"></a><a name="process"></a>COleException::Process  
+ Вызов **процесс** функции-члена для преобразования в код состояния OLE перехваченное исключение.  
+  
+```  
+static SCODE PASCAL Process(const CException* pAnyException);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pAnyException*  
+ Указатель перехваченное исключение.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Код состояния OLE.  
+  
+### <a name="remarks"></a>Примечания  
+  
+> [!NOTE]
+>  Эта функция является **статических**.  
+  
+ Дополнительные сведения о `SCODE`, в разделе [структура кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="example"></a>Пример  
+  В примере показано [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
+  
+## <a name="see-also"></a>См. также  
+ [Пример MFC CALCDRIV](../../visual-cpp-samples.md)   
+ [CException-класс](../../mfc/reference/cexception-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+
+
+
+
