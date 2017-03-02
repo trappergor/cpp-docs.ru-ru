@@ -1,69 +1,85 @@
 ---
-title: "Структура CDaoParameterInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoParameterInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoParameterInfo - структура"
-  - "доступ к данным DAO.NET, Parameters - коллекция"
+title: "Структура CDaoParameterInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoParameterInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoParameterInfo structure
+- DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Структура CDaoParameterInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b41d26b736ea9f84c53f71dbd71949f74fb8ae52
+ms.lasthandoff: 02/24/2017
 
-Структура `CDaoParameterInfo` содержит сведения о конкретном объекте параметров \(DAO\) для объектов доступа к данным.  
+---
+# <a name="cdaoparameterinfo-structure"></a>Структура CDaoParameterInfo
+`CDaoParameterInfo` Структура содержит сведения о объект параметра, определенные для объектов доступа к данным (DAO).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      struct CDaoParameterInfo  
+struct CDaoParameterInfo  
 {  
-   CString m_strName;       // Primary  
-   short m_nType;           // Primary  
-   ColeVariant m_varValue;  // Secondary  
+    CString m_strName;       // Primary  
+    short m_nType;           // Primary  
+    ColeVariant m_varValue;  // Secondary  
 };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `m_strName`  
- Уникальные имена объект параметров.  Дополнительные сведения см. в разделе «свойство» Имя» в справке DAO.  
+ Дает уникальное название объект параметра. Дополнительные сведения см. в разделе «Свойства Name» в справке DAO.  
   
  `m_nType`  
- Значение, которое указывает тип данных объектов параметров.  Возможные значения Для списка участников `m_nType` структуры, см. в разделе [CDaoFieldInfo](../Topic/CDaoFieldInfo%20Structure.md).  Дополнительные сведения см. в разделе «свойство типа» в справке DAO.  
+ Значение, указывающее тип данных объекта parameter. Список возможных значений см. в разделе `m_nType` членом [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) структуры. Дополнительные сведения см. в разделе «Тип свойства» в справке DAO.  
   
- *m\_varValue*  
- Значение параметра, хранящийся в объекте [COleVariant](../../mfc/reference/colevariant-class.md).  
+ *m_varValue*  
+ Значение параметра, хранятся в [COleVariant](../../mfc/reference/colevariant-class.md) объекта.  
   
-## Заметки  
- Ссылки на первичное и дополнительное описанный выше показано, как сведения возвращаются функцией\-членом [GetParameterInfo](../Topic/CDaoQueryDef::GetParameterInfo.md) в классе `CDaoQueryDef`.  
+## <a name="remarks"></a>Примечания  
+ Ссылки на первичной и вторичной выше указывают, как возвращаются сведения по [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) функции-члена в классе `CDaoQueryDef`.  
   
- MFC не инкапсулирует объекты параметров DAO в классе.  Объекты DAO QueryDef основного объекты в основе MFC `CDaoQueryDef` хранятся параметры их в коллекциях параметров.  Для получения объектов параметров в объекте [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md), вызовите функцию\-член `GetParameterInfo` объекта QueryDef для определенного имени параметра или индекса в коллекцию параметров.  Можно использовать функцию\-член [CDaoQueryDef::GetParameterCount](../Topic/CDaoQueryDef::GetParameterCount.md) вместе с `GetParameterInfo` итерации коллекции параметров.  
+ MFC не инкапсулировать объекты DAO параметра в классе. Объекты DAO querydef MFC базового `CDaoQueryDef` объекты хранят параметры в коллекциях параметров. Доступ к объектам параметра в [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) объекта, вызов объекта querydef `GetParameterInfo` функции-члена имя определенного параметра или индекса в коллекции параметров. Можно использовать [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) функции-члена в сочетании с `GetParameterInfo` перебрать коллекцию параметров.  
   
- Сведения, функцией\-членом [CDaoQueryDef::GetParameterInfo](../Topic/CDaoQueryDef::GetParameterInfo.md) хранятся в структуре `CDaoParameterInfo`.  Вызовите `GetParameterInfo` для объекта QueryDef которого в коллекции параметров хранится объект параметров.  
+ Данные, полученные по [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) функции-члена хранится в `CDaoParameterInfo` структуру. Вызов `GetParameterInfo` для объекта querydef, в которых коллекции параметров хранится объект параметра.  
   
 > [!NOTE]
->  Если требуется получить или задать только значение параметра, используйте функций\-членов [GetParamValue](../Topic/CDaoRecordset::GetParamValue.md) и [SetParamValue](../Topic/CDaoRecordset::SetParamValue.md) класса `CDaoRecordset`.  
+>  Если вы хотите получить или задать значение параметра, используйте [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) и [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) функции-члены класса `CDaoRecordset`.  
   
- `CDaoParameterInfo` также определяет функции\-члена `Dump` выполняется в режиме построения.  Можно использовать `Dump` сбросить содержимое объекта `CDaoParameterInfo`.  
+ `CDaoParameterInfo`также определяет `Dump` создает функцию-член в режиме отладки. Можно использовать `Dump` для вывода содержимого из `CDaoParameterInfo` объекта.  
   
-## Требования  
- **Header:** afxdao.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxdao.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)
+ [Класс CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)
+
