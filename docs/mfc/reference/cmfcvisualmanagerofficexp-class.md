@@ -1,61 +1,78 @@
 ---
-title: "CMFCVisualManagerOfficeXP Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCVisualManagerOfficeXP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCVisualManagerOfficeXP class"
+title: "Класс преобразованный CMFCVisualManagerOfficeXP | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCVisualManagerOfficeXP
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCVisualManagerOfficeXP class
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
 caps.latest.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# CMFCVisualManagerOfficeXP Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: a32c76011a176997283d41e06aeef9530c619613
+ms.lasthandoff: 02/24/2017
 
-`CMFCVisualManagerOfficeXP` дает приложению представление Microsoft Office XP.  
+---
+# <a name="cmfcvisualmanagerofficexp-class"></a>Класс преобразованный CMFCVisualManagerOfficeXP
+`CMFCVisualManagerOfficeXP` Придает приложению внешний вид Microsoft Office XP.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CMFCVisualManagerOfficeXP : public CMFCVisualManager  
 ```  
   
-## Члены  
- Все члены этого класса виртуальные функции, которые наследуются от предка этого класса [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md).  
+## <a name="members"></a>Члены  
+ Все члены этого класса являются виртуальных функций, которые являются производными от предка этого класса [CMFCVisualManager класса](../../mfc/reference/cmfcvisualmanager-class.md).  
   
-## Заметки  
- Используется класс `CMFCVisualManagerOfficeXP` для изменения внешнего вида приложения напоминать из Microsoft Office XP.  
+## <a name="remarks"></a>Примечания  
+ Использовать `CMFCVisualManagerOfficeXP` классе, чтобы изменить внешний вид приложения, аналогично Microsoft Office XP.  
   
-## Пример  
- В следующем примере демонстрируется способ применения `CMFCVisualManagerOfficeXP`.  Этот фрагмент кода является частью [Пример demo рабочего стола предупреждений](../../top/visual-cpp-samples.md).  
+## <a name="example"></a>Пример  
+ В следующем примере демонстрируется использование `CMFCVisualManagerOfficeXP`. Этот фрагмент кода является частью [рабочего стола предупреждения демонстрационного](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/CPP/cmfcvisualmanagerofficexp-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo №&8;](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
   
  [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
   
- [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
+ [Преобразованный CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
   
-## Требования  
- **заголовок:** afxvisualmanagerofficexp.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxvisualmanagerofficexp.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../Topic/MFC%20Classes.md)   
- [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
+ [Классы](../../mfc/reference/mfc-classes.md)   
+ [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+

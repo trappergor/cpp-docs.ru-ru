@@ -1,71 +1,82 @@
 ---
-title: "CHeapPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CHeapPtrElementTraits"
-  - "CHeapPtrElementTraits"
-  - "ATL::CHeapPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeapPtrElementTraits class"
+title: "Класс CHeapPtrElementTraits | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CHeapPtrElementTraits
+- CHeapPtrElementTraits
+- ATL::CHeapPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CHeapPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: cf442a47a8f7f56a9563b73d03224165248232d5
+ms.lasthandoff: 02/24/2017
 
-Этот класс предоставляет методы, статические функции и typedef полезные создания коллекции указателей кучи.  
+---
+# <a name="cheapptrelementtraits-class"></a>Класс CHeapPtrElementTraits
+Этот класс предоставляет методы, статических функций и определения типов полезны при создании коллекции указателей кучи.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<typename T, class Allocator = ATL::CCRTAllocator>  
+class CHeapPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```  
   
-      template<  
-typename T,  
-class Allocator= ATL::CCRTAllocator  
->  
-class CHeapPtrElementTraits : public CDefaultElementTraits<  
-ATL::CHeapPtr< T, Allocator>  
->  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
- Тип объекта, который необходимо сохранить в классе коллекции.  
+ Тип объекта для сохранения в класс коллекции.  
   
  `Allocator`  
- Класс выделения памяти для использования.  Значение по умолчанию [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ Класс выделения памяти для использования. Значение по умолчанию — [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые определения типов  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CHeapPtrElementTraits::INARGTYPE](../Topic/CHeapPtrElementTraits::INARGTYPE.md)|Тип данных, используемый для суммирующих элементов к объекту класса коллекции.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](../Topic/CHeapPtrElementTraits::OUTARGTYPE.md)|Тип данных, используемый для извлечения элементов из объекта класса коллекции.|  
+|----------|-----------------|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Тип данных для добавления элементов в объекте класса коллекции.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных, использовать для получения элементов из объекта класса коллекции.|  
   
-## Заметки  
- Этот класс предоставляет методы, статические функции и typedef для содействия создания объектов класса коллекции, содержащие указатели кучи.  Класс `CHeapPtrList` является производным от `CHeapPtrElementTraits`.  
+## <a name="remarks"></a>Примечания  
+ Этот класс предоставляет методы, статических функций и определения типов для State и используется для создания объектов класса коллекции, содержащие указатели кучи. Класс `CHeapPtrList` является производным от `CHeapPtrElementTraits`.  
   
- Дополнительные сведения см. в разделе [Классы коллекций библиотеку ATL](../../atl/atl-collection-classes.md).  
+ Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -76,10 +87,25 @@ ATL::CHeapPtr< T, Allocator>
   
  `CHeapPtrElementTraits`  
   
-## Требования  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlcoll.h  
   
-## См. также  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CComHeapPtr Class](../../atl/reference/ccomheapptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+ Тип данных для добавления элементов в объекте класса коллекции.  
+  
+```
+typedef CHeapPtr<T, Allocator>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+ Тип данных, использовать для получения элементов из объекта класса коллекции.  
+  
+```
+typedef T *& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

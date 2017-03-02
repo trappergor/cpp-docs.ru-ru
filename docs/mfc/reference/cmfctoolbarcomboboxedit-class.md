@@ -1,72 +1,104 @@
 ---
-title: "CMFCToolBarComboBoxEdit Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCComboEdit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCToolBarComboBoxEdit class"
-  - "CMFCToolBarComboBoxEdit::PreTranslateMessage method"
+title: "Класс CMFCToolBarComboBoxEdit | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCComboEdit
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCToolBarComboBoxEdit class
+- CMFCToolBarComboBoxEdit::PreTranslateMessage method
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
 caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CMFCToolBarComboBoxEdit Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 3c0f2ade3292fb238a227e881951604606baec79
+ms.lasthandoff: 02/24/2017
 
-Инфраструктура использует класс `CMFCToolBarComboBoxEdit` для создания кнопки панели инструментов ведет себя как редактируемые элемент управления поля со списком.  
+---
+# <a name="cmfctoolbarcomboboxedit-class"></a>Класс CMFCToolBarComboBoxEdit
+Инфраструктура использует `CMFCToolBarComboBoxEdit` класса для создания кнопки панели инструментов, который ведет себя как редактируемое поле со списком.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CMFCToolBarComboBoxEdit : public CEdit  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit](../Topic/CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit.md)|Создает объект `CMFCToolBarComboBoxEdit`.|  
+|----------|-----------------|  
+|[CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit](#cmfctoolbarcomboboxedit)|Создает объект `CMFCToolBarComboBoxEdit`.|  
 |`CMFCToolBarComboBoxEdit::~CMFCToolBarComboBoxEdit`|Деструктор.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует сообщения окна до их посланы к функциям [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows.  \(Переопределяет [CWnd::PreTranslateMessage](../Topic/CWnd::PreTranslateMessage.md)\).|  
+|----------|-----------------|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует оконных сообщений перед их отправкой [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
   
-### Заметки  
- Создайте класс, наследуемый от класса `CMFCToolBarComboBoxEdit` настраивать свои операции правки.  
+### <a name="remarks"></a>Примечания  
+ Производный класс от `CMFCToolBarComboBoxEdit` класса для настройки операций редактирования.  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [CWnd](../Topic/CWnd%20Class.md)  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CEdit](../Topic/CEdit%20Class.md)  
+ [CEdit](../../mfc/reference/cedit-class.md)  
   
  [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)  
   
-## Требования  
- **заголовок:** afxtoolbarcomboboxbutton.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxtoolbarcomboboxbutton.h  
   
-## См. также  
+##  <a name="a-namecmfctoolbarcomboboxedita--cmfctoolbarcomboboxeditcmfctoolbarcomboboxedit"></a><a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit  
+ Создает объект `CMFCToolBarComboBoxEdit`.  
+  
+```  
+CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `combo`  
+ Ссылку на [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объект, который представляет кнопку панели инструментов, которая содержит поле со списком.  
+  
+### <a name="example"></a>Пример  
+ Следующий пример демонстрирует создания объекта `CMFCToolBarComboBoxEdit` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_IEDemo&#5;](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]  
+  
+## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../Topic/MFC%20Classes.md)   
- [CMFCToolBarComboBoxButton Class](../Topic/CMFCToolBarComboBoxButton%20Class.md)   
- [CMFCToolBarComboBoxButton::CreateEdit](../Topic/CMFCToolBarComboBoxButton::CreateEdit.md)
+ [Классы](../../mfc/reference/mfc-classes.md)   
+ [Класс CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+

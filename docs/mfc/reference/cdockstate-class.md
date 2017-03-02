@@ -1,78 +1,154 @@
 ---
-title: "CDockState Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CDockState"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDockState class"
-  - "dock state"
-  - "docking control bars"
-  - "docking tool windows"
-  - "положение, control bar"
-  - "размер"
-  - "размер, control bar"
-  - "состояния, dockable control bar"
+title: "Класс CDockState | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CDockState
+dev_langs:
+- C++
+helpviewer_keywords:
+- dock state
+- size
+- docking control bars
+- CDockState class
+- states, dockable control bar
+- position, control bar
+- size, control bar
+- docking tool windows
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CDockState Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: fc8beb80cc35c1816fbc305ece2bfbc5df2e7cd0
+ms.lasthandoff: 02/24/2017
 
-Сериализуемый класс `CObject`, загрузки, выгрузки или очищает состояние одного или нескольких закрепляющего панелей элементов управления в постоянной памяти \(файл\).  
+---
+# <a name="cdockstate-class"></a>Класс CDockState
+Сериализуемый класс `CObject` для загрузки, выгрузки или очистки состояния одной или нескольких закрепляемых панелей элементов управления в постоянной памяти (файле).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CDockState : public CObject  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CDockState::Clear](../Topic/CDockState::Clear.md)|Удаляет сведения о состоянии закрепления.|  
-|[CDockState::GetVersion](../Topic/CDockState::GetVersion.md)|Получает номер версии, сохраненного состояния панели.|  
-|[CDockState::LoadState](../Topic/CDockState::LoadState.md)|Сведения о состоянии извлечение из реестра или ini\-файла.|  
-|[CDockState::SaveState](../Topic/CDockState::SaveState.md)|Сохраняет сведения о состоянии в реестр или файлам INI.|  
-  
-### Открытые члены данных  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CDockState::m\_arrBarInfo](../Topic/CDockState::m_arrBarInfo.md)|Массив указателей на сохраненные сведений о состоянии закрепления с одной записью для каждой области элементов управления.|  
+|----------|-----------------|  
+|[CDockState::Clear](#clear)|Удаляет сведения о состоянии закрепления.|  
+|[CDockState::GetVersion](#getversion)|Извлекает номер версии сохраненного состояния панели.|  
+|[CDockState::LoadState](#loadstate)|Получает сведения о состоянии из реестра или. INI-файл.|  
+|[CDockState::SaveState](#savestate)|Сохраняет сведения о состоянии в реестре или INI-файл.|  
   
-## Заметки  
- Состояния закрепления включает размер и положение панели и закреплена ли она.  При восстановлении, сохраненного состояния закрепления, `CDockState` проверяет индекс и, если панель не отображается с текущими параметрами экрана, то положение панели `CDockState` панели масштабирует таким образом, что она будет видна.  Главная цель `CDockState` хранить все состояния несколько панелей элементов управления и разрешить то состояние для сохранения и нагрузила или в реестр ini\-файле приложения или в форме бинарной как часть содержимого объекта `CArchive`.  
+### <a name="public-data-members"></a>Открытые члены данных  
   
- Панель может быть любой закрепляемая панель элементов управления, в том числе панель инструментов, строк состояния или диалоговую панель.  Объекты `CDockState` записаны и считывают либо из файла через объект `CArchive`.  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Массив указателей на сохраненный закрепить сведения о состоянии по одной записи для каждой панели элементов управления.|  
   
- [CFrameWnd::GetDockState](../Topic/CFrameWnd::GetDockState.md) извлекает сведения о состоянии `CControlBar` полностью фреймового окна возражает и помещает его в объект `CDockState`.  Затем можно записывать содержимое объекта `CDockState` в хранилище с [Serialize](../Topic/CObject::Serialize.md) или [CDockState::SaveState](../Topic/CDockState::SaveState.md).  Если в дальнейшем потребуется восстановить состояние панелей элементов управления в фреймовом окне, можно загрузить состояние с `Serialize` или [CDockState::LoadState](../Topic/CDockState::LoadState.md), а затем использовать [CFrameWnd::SetDockState](../Topic/CFrameWnd::SetDockState.md) для применения сохраненное состояние панели элементов управления фреймового окна.  
+## <a name="remarks"></a>Примечания  
+ Состояние закрепления включает размер и положение в строке, и того, является ли она закреплена. При получении хранимую закрепить состояние, `CDockState` проверяет панель позиции и, если панель не отображается с текущими настройками экрана `CDockState` масштабирует панели размещения таким образом, он отображается. Основная цель `CDockState` проводить полное состояние из нескольких панелей элементов управления и разрешить это состояние для сохранения и загрузки, либо в реестре, приложения. INI-файл, или в двоичной форме как часть `CArchive` содержимое объекта.  
   
- Дополнительные сведения о закрепление панели элементов управления см. статьи [Панель элементов управления](../Topic/Control%20Bars.md), [Панели инструментов. Элемент закрепление и перемещаемый](../../mfc/docking-and-floating-toolbars.md) и [фреймовые окна](../../mfc/frame-windows.md).  
+ Панель может быть любой фиксируемый элемент управления панели, включая панель инструментов, строка состояния или диалогового окна. `CDockState`объекты записи и чтения или в файл с помощью `CArchive` объекта.  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+ [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) получает сведения о состоянии всех окна фрейма `CControlBar` объектов и помещает его в `CDockState` объекта. После этого можно написать содержимое `CDockState` объектов в хранилище с [сериализации](../../mfc/reference/cobject-class.md#serialize) или [CDockState::SaveState](#savestate). Если позже вы хотите восстановить состояние панелей элементов управления в фрейме окна, можно загрузить состояние с `Serialize` или [CDockState::LoadState](#loadstate), затем с помощью [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) для применения к панели элементов управления окна фрейма сохраненное состояние.  
+  
+ Дополнительные сведения о закрепления панели элементов управления, см. в статьях [панелей элементов управления](../../mfc/control-bars.md), [панели инструментов: закрепленные и плавающие](../../mfc/docking-and-floating-toolbars.md), и [окна фрейма](../../mfc/frame-windows.md).  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDockState`  
   
-## Требования  
- **Header:**  afxadv.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxadv.h  
   
-## См. также  
- [CObject Class](../Topic/CObject%20Class.md)   
+##  <a name="a-namecleara--cdockstateclear"></a><a name="clear"></a>CDockState::Clear  
+ Вызывайте эту функцию, чтобы очистить все сведения о закреплении, хранящиеся в `CDockState` объекта.  
+  
+```  
+void Clear();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Сюда входят не только ли панель закреплена или нет, но размер и положение панели и ли он отображается.  
+  
+##  <a name="a-namegetversiona--cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion  
+ Эта функция вызывается для получения номер версии сохраненного состояния панели.  
+  
+```  
+DWORD GetVersion();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ 1, если панели хранимые сведения старше текущей строке состояния. 2, если панели хранимой информации совпадает с текущей строке состояния.  
+  
+### <a name="remarks"></a>Примечания  
+ Поддержка версий позволяет исправленной строки для добавления новых свойств постоянные и по-прежнему может обнаруживать и загружать постоянное состояние, созданные в более ранней версии строки.  
+  
+##  <a name="a-nameloadstatea--cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState  
+ Эта функция вызывается для получения сведений о состоянии из реестра или. INI-файл.  
+  
+```  
+void LoadState(LPCTSTR lpszProfileName);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpszProfileName`  
+ Указатель null teminated строка, указывающая имя раздела в файле настройки или ключ в реестре Windows, где хранится информация о состоянии.  
+  
+### <a name="remarks"></a>Примечания  
+ Имя профиля — часть приложения. INI-файл или реестр, который содержит сведения о состоянии панели элементов. Панель сведений о состоянии элементов управления можно сохранить в реестре или. INI-файл с `SaveState`.  
+  
+##  <a name="a-namemarrbarinfoa--cdockstatemarrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
+ Объект `CPtrArray` объект, который представляет собой массив ссылки на сведения о панели управления хранимых для каждой панели элементов управления, который сохраненные сведения о состоянии в `CDockState` объекта.  
+  
+```  
+CPtrArray m_arrBarInfo;  
+```  
+  
+##  <a name="a-namesavestatea--cdockstatesavestate"></a><a name="savestate"></a>CDockState::SaveState  
+ Эта функция вызывается для сохранения сведений о состоянии в реестре или. INI-файл.  
+  
+```  
+void SaveState(LPCTSTR lpszProfileName);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpszProfileName`  
+ Указатель null teminated строка, указывающая имя раздела в файле настройки или ключ в реестре Windows, где хранится информация о состоянии.  
+  
+### <a name="remarks"></a>Примечания  
+ Имя профиля — часть приложения. INI-файла или реестра, содержащий сведения о состоянии на панели управления. `SaveState`Сохраняет текущий размер экрана. Сведения о панели управления можно получить из реестра или. INI-файл с `LoadState`.  
+  
+## <a name="see-also"></a>См. также  
+ [CObject-класс](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+
+

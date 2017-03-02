@@ -1,57 +1,73 @@
 ---
-title: "Функция обратного вызова для CDC::SetAbortProc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Callback Function for CDC::SetAbortProc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функции обратного вызова, для CDC::SetAbortProc"
+title: "Функция обратного вызова для CDC::SetAbortProc | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Callback Function for CDC::SetAbortProc
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback functions, for CDC::SetAbortProc
 ms.assetid: daa36d5d-15de-40fc-8d37-a865d06c4710
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Функция обратного вызова для CDC::SetAbortProc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1ba16ea60d8b18abd1962ded2da7e11ff2ef09a1
+ms.lasthandoff: 02/24/2017
 
-Имя *AbortFunc* заполнитель для приложения, переданного имени функции.  
+---
+# <a name="callback-function-for-cdcsetabortproc"></a>Функция обратного вызова для CDC::SetAbortProc
+Имя *AbortFunc* — это имя функции, предоставляемой приложением.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      BOOL CALLBACK EXPORT AbortFunc(   
-   HDC hPr,   
-   int code    
-);  
+BOOL CALLBACK EXPORT AbortFunc(
+    HDC hPr,  
+    int code);
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *hPr*  
- Задает контекст устройства.  
+ Определяет контекст устройства.  
   
  `code`  
- Определяет, произошла ли ошибка.  0, Если ошибка не происходила.  Значение **SP\_OUTOFDISK**, если диспетчер печати в данный момент нехватка места на диске и место на диске станет доступным, если приложение будет ожидать.  Если `code`**SP\_OUTOFDISK**, приложение не должно обрабатываться задание печати.  Если он не существует, он должен создать в диспетчер печати с помощью функции Windows **PeekMessage** или **GetMessage**.  
+ Указывает, является ли ошибка. Оно равно 0, если ошибки не произошло. Это **SP_OUTOFDISK** Если диспетчер печати находится свободного дискового пространства и больше места на диске станет доступной, если приложение ожидает. Если `code` — **SP_OUTOFDISK**, приложения не требуется прервать задание печати. Если нет, он должен уступить диспетчера печати путем вызова **PeekMessage** или **GetMessage** функции Windows.  
   
-## Возвращаемое значение  
- Возвращаемое значение функции прекращени\- обработчика отлично от нуля, если задание печати продолжить, и 0, если оно отменено.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращаемое значение функции обработчика прерывания ненулевым, если задание печати для продолжения и 0 после отмены.  
   
-## Заметки  
- Фактическое имя должны экспортироваться комментария, как описано в разделе [CDC::SetAbortProc](../Topic/CDC::SetAbortProc.md).  
+## <a name="remarks"></a>Примечания  
+ Фактическое имя необходимо экспортировать, как описано в подразделе "Примечания" [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::SetAbortProc](../Topic/CDC::SetAbortProc.md)
+ [CDC::SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc)
+
+

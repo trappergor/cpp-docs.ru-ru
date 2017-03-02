@@ -1,59 +1,75 @@
 ---
-title: "Класс CAnimationVariableIntegerChangeHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxanimationcontroller/CAnimationVariableIntegerChangeHandler"
-  - "CAnimationVariableIntegerChangeHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAnimationVariableIntegerChangeHandler - класс"
+title: "Класс CAnimationVariableIntegerChangeHandler | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxanimationcontroller/CAnimationVariableIntegerChangeHandler
+- CAnimationVariableIntegerChangeHandler
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAnimationVariableIntegerChangeHandler class
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс CAnimationVariableIntegerChangeHandler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 41062ddcf01d26a4897b7e7ab2fe254bca8a1b5d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="canimationvariableintegerchangehandler-class"></a>Класс CAnimationVariableIntegerChangeHandler
 Реализует обратный вызов, используемый API анимации при изменении значения переменной анимации.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntegerChangeHandlerBase<CAnimationVariableIntegerChangeHandler>;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](../Topic/CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler.md)|Создает объект `CAnimationVariableIntegerChangeHandler`.|  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CAnimationVariableIntegerChangeHandler::CreateInstance](../Topic/CAnimationVariableIntegerChangeHandler::CreateInstance.md)|Создает экземпляр обратного вызова `CAnimationVariableIntegerChangeHandler`.|  
-|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](../Topic/CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged.md)|Вызывается при изменении значения переменной анимации.  \(Переопределяет `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`\).|  
-|[CAnimationVariableIntegerChangeHandler::SetAnimationController](../Topic/CAnimationVariableIntegerChangeHandler::SetAnimationController.md)|Хранит указатель на контроллер анимации для маршрутизации событий.|  
+|----------|-----------------|  
+|[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|Создает объект `CAnimationVariableIntegerChangeHandler`.|  
   
-## Заметки  
- Этот обработчик событий создается и передается методу IUIAnimationVariable::SetVariableIntegerChangeHandler при вызове метода CAnimationVariable::EnableIntegerValueChangedEvent или CAnimationBaseObject::EnableIntegerValueChangedEvent \(который включает это событие для всех переменных анимации, инкапсулированных в объекте анимации\).  
+### <a name="public-methods"></a>Открытые методы  
   
-## Иерархия наследования  
- [Классы MFC](../Topic/MFC%20Classes.md)  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationVariableIntegerChangeHandler` обратного вызова.|  
+|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|  
+|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Хранит указатель на контроллер анимации для события маршрута.|  
+  
+## <a name="remarks"></a>Примечания  
+ Этот обработчик событий, который передается методу IUIAnimationVariable::SetVariableIntegerChangeHandler, при вызове CAnimationVariable::EnableIntegerValueChangedEvent или CAnimationBaseObject::EnableIntegerValueChangedEvent (включающее это событие для всех переменных анимации, инкапсулированный в объекте анимации).  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [Классы MFC](../../mfc/reference/mfc-classes.md)  
   
  `CUIAnimationCallbackBase`  
   
@@ -61,8 +77,72 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
   
  `CAnimationVariableIntegerChangeHandler`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-## См. также  
- [Классы](../Topic/MFC%20Classes.md)
+##  <a name="a-namecanimationvariableintegerchangehandlera--canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
+ Создает объект CAnimationVariableIntegerChangeHandler.  
+  
+```  
+CAnimationVariableIntegerChangeHandler ();
+```  
+  
+##  <a name="a-namecreateinstancea--canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance  
+ Создает экземпляр CAnimationVariableIntegerChangeHandler обратного вызова.  
+  
+```  
+static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
+    CAnimationController* pAnimationController,  
+    IUIAnimationVariableIntegerChangeHandler** ppHandler);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pAnimationController`  
+ Указатель на контроллер анимации, который будет получать события.  
+  
+ `ppHandler`  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Если метод завершается успешно, возвращается значение S_OK. В противном случае — возвращает код ошибки HRESULT.  
+  
+##  <a name="a-nameonintegervaluechangeda--canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
+ Вызывается при изменении значения переменной анимации.  
+  
+```  
+IFACEMETHOD(OnIntegerValueChanged) (
+    __in IUIAnimationStoryboard* storyboard,
+    __in IUIAnimationVariable* variable,
+    __in INT32 newValue,
+    __in INT32 previousValue);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `storyboard`  
+ Раскадровки, который выполняет анимацию переменной.  
+  
+ `variable`  
+ Переменная анимации, которая была обновлена.  
+  
+ `newValue`  
+ Новый округленное значение.  
+  
+ `previousValue`  
+ Предыдущие округленное значение.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL.  
+  
+##  <a name="a-namesetanimationcontrollera--canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController  
+ Хранит указатель на контроллер анимации для события маршрута.  
+  
+```  
+void SetAnimationController(CAnimationController* pAnimationController);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pAnimationController`  
+ Указатель на контроллер анимации, который будет получать события.  
+  
+## <a name="see-also"></a>См. также  
+ [Классы](../../mfc/reference/mfc-classes.md)
+

@@ -1,29 +1,45 @@
 ---
-title: "Класс array_view | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::array_view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array_view - класс"
+title: "Класс array_view | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::array_view
+dev_langs:
+- C++
+helpviewer_keywords:
+- array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Класс array_view
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: ec096dbcd485b9360d07d1b56511b13c13d1b4cf
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="arrayview-class"></a>Класс array_view
 Представляет представление N-мерный данные, хранящиеся в другой контейнер.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -55,58 +71,58 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор array_view::array_view](#array_view__array_view_constructor)|Инициализирует новый экземпляр класса `array_view`. Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы ограничены для запуска только в ЦП и не может быть выполнена на целевом Direct3D.|  
-|[array_view:: ~ array_view деструктор](#array_view___dtorarray_view_destructor)|Уничтожает `array_view` объекта.|  
+|[Конструктор array_view](#ctor)|Инициализирует новый экземпляр класса `array_view`. Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы ограничены для запуска только в ЦП и не может быть выполнена на целевом Direct3D.|  
+|[~ array_view деструктор](#ctor)|Уничтожает `array_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод array_view::copy_to](#array_view__copy_to_method)|Копирует содержимое `array_view` объект в указанное назначение путем вызова `copy(*this, dest)`.|  
-|[Метод array_view::Data](#array_view__data_method)|Возвращает указатель на необработанные данные `array_view`.|  
-|[Метод array_view::discard_data](#array_view__discard_data_method)|Удаляет текущий базовые данные этого представления.|  
-|[Метод array_view::get_extent](#array_view__get_extent_method)|Возвращает объект экстента array_view объекта.|  
-|[Метод array_view::get_ref](#array_view__get_ref_method)|Возвращает ссылку на индексированного элемента.|  
-|[Метод array_view::get_source_accelerator_view](#array_view__get_source_accelerator_view_method)|Возвращает [accelerator_view](../Topic/accelerator_view%20Class.md) где источник данных `array_view` находится.|  
-|[Метод array_view::Refresh](#array_view__refresh_method)|Уведомляет `array_view` объекта, привязанного памяти был изменен вне `array_view` интерфейса. Вызов этого метода отображает все кэшированные данные устаревшим.|  
-|[Метод array_view::reinterpret_as](#array_view__reinterpret_as_method)|Возвращает одномерный массив, содержащий все элементы в `array_view` объекта.|  
-|[Метод array_view::Section](#array_view__section_method)|Возвращает подраздел `array_view` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.|  
-|[Метод array_view::Synchronize](#array_view__synchronize_method)|Синхронизирует любые изменения, внесенные в `array_view` объекта обратно в исходные данные.|  
-|[Метод array_view::synchronize_async](#array_view__synchronize_async_method)|Асинхронно синхронизирует любые изменения, внесенные в [array_view](../../../parallel/amp/reference/array-view-class.md) объекта обратно в исходные данные.|  
-|[Метод array_view::synchronize_to](#array_view__synchronize_to_method)|Синхронизирует любые изменения, внесенные в `array_view` объекта на указанное [accelerator_view](../Topic/accelerator_view%20Class.md).|  
-|[Метод array_view::synchronize_to_async](#array_view__synchronize_to_async_method)|Асинхронно синхронизирует любые изменения, внесенные в `array_view` объекта на указанное [accelerator_view](../Topic/accelerator_view%20Class.md).|  
-|[Метод array_view::view_as](#array_view__view_as_method)|Создает `array_view` объекта с помощью другого ранга `array_view` данных объекта.|  
+|[copy_to метод](#copy_to)|Копирует содержимое `array_view` объект в указанное назначение путем вызова `copy(*this, dest)`.|  
+|[Метод данных](#data)|Возвращает указатель на необработанные данные `array_view`.|  
+|[Метод discard_data](#discard_data)|Удаляет текущий базовые данные этого представления.|  
+|[get_extent метод](#get_extent)|Возвращает объект экстента array_view объекта.|  
+|[Метод get_ref](#get_ref)|Возвращает ссылку на индексированного элемента.|  
+|[Метод get_source_accelerator_view](#get_source_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится.|  
+|[Метод обновления](#refresh)|Уведомляет `array_view` объекта, привязанного памяти был изменен вне `array_view` интерфейса. Вызов этого метода отображает все кэшированные данные устаревшим.|  
+|[reinterpret_as метод](#reinterpret_as)|Возвращает одномерный массив, содержащий все элементы в `array_view` объекта.|  
+|[раздел метод](#section)|Возвращает подраздел `array_view` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.|  
+|[Метод синхронизации](#synchronize)|Синхронизирует любые изменения, внесенные в `array_view` объекта обратно в исходные данные.|  
+|[Метод synchronize_async](#synchronize_async)|Асинхронно синхронизирует любые изменения, внесенные в `array_view` объекта обратно в исходные данные.|  
+|[Метод synchronize_to](#synchronize_to)|Синхронизирует любые изменения, внесенные в `array_view` объекта на указанное [accelerator_view](accelerator-view-class.md).|  
+|[Метод synchronize_to_async](#synchronize_to_async)|Асинхронно синхронизирует любые изменения, внесенные в `array_view` объекта на указанное [accelerator_view](accelerator-view-class.md).|  
+|[view_as метод](#view_as)|Создает `array_view` объектов с помощью другого ранга `array_view` данных объекта.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Оператор array_view:: operator()](#array_view__operator___operator)|Возвращает значение элемента, который определяется один или несколько параметров.|  
-|[Оператор array_view::operator]](#array_view__operator_at_operator)|Возвращает элемент, указанный в параметрах.|  
-|[array_view::operator =-оператор](#array_view__operator_eq_operator)|Копирует содержимое указанного `array_view` объекта в другой.|  
+|[Оператор Operator()](#operator_call)|Возвращает значение элемента, который определяется один или несколько параметров.|  
+|[Оператор Operator]](#operator_at)|Возвращает элемент, указанный в параметрах.|  
+|[оператор =-оператор](#operator_eq)|Копирует содержимое указанного `array_view` объекта в другой.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Константа array_view::Rank](#array_view__rank_constant)|Сохраняет ранг объекта `array_view` объекта.|  
+|[Ранг константа](#rank)|Сохраняет ранг объекта `array_view` объекта.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[элемент данных array_view::Extent](#array_view__extent_data_member)|Получает объект `extent`, который определяет форму объекта `array_view`.|  
-|[элемент данных array_view::source_accelerator_view](#array_view__source_accelerator_view_data_member)|Возвращает [accelerator_view](../Topic/accelerator_view%20Class.md) где источник данных `array_view` находится|  
-|[элемент данных array_view::value_type](#array_view__value_type_data_member)|Тип значения `array_view` и связанного массива.|  
+|[экстент элемент данных](#extent)|Получает объект `extent`, который определяет форму объекта `array_view`.|  
+|[source_accelerator_view элемент данных](#source_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится|  
+|[value_type элемент данных](#value_type)|Тип значения `array_view` и связанного массива.|  
   
 ## <a name="remarks"></a>Примечания  
-  `array_view` Класс представляет представление данных, которое содержится в [массива](../../../parallel/amp/reference/array-class.md) объекта или подраздел `array` объекта.  
+ `array_view` Класс представляет представление данных, которое содержится в [массива](array-class.md) объекта или подраздел `array` объекта.  
   
- Можно получить доступ к `array_view` объекта, где источник данных расположен (локально) или в различных сочетаний клавиш или домене согласованности (удаленно). Когда доступ к объекту удаленно, представления копируются и кэшируются при необходимости. За исключением эффекты автоматического кэширования `array_view` объекты имеют показатели производительности, аналогичен `array` объектов. При небольших производительности доступа к данным через представления.  
+ Можно получить доступ к `array_view` объекта, где источник данных расположен (локально) или на различных сочетаний клавиш или домен согласованности (удаленно). Когда доступ к объекту удаленно, представления копируются и кэшируются при необходимости. За исключением эффекты автоматического кэширования `array_view` объекты имеют показатели производительности, аналогичен `array` объектов. При небольших производительности доступа к данным через представления.  
   
  Существует три варианта пульт дистанционного управления:  
   
--   Представление указателя памяти системы передается с помощью параметра [parallel_for_each](concurrency%20namespace%20functions.md#parallel_for_each) вызов ускоритель и доступ осуществляется через сочетания клавиш.  
+-   Представление указателя памяти системы передается с помощью параметра [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each) вызов ускоритель и доступ осуществляется через сочетания клавиш.  
   
 -   Представление в массив, расположенных на ускоритель передается с помощью параметра `parallel_for_each` вызов другого сочетаний клавиш и осуществляется.  
   
@@ -120,9 +136,9 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 -   Все хорошо синхронизированный доступ к `array` объекта и `array_view` объекта на нем в порядке программы подчиняются последовательное происходит-перед связь.  
   
--   Хорошо синхронизированных доступ к перекрывающимся `array_view` объекты на же сочетания клавиш на одном `array` объекта используются псевдонимы через `array` объекта. Они вызывать всего происходит-перед отношение, которое подчиняется порядка в программе. Не выполняется кэширование. Если `array_view` объекты выполняются на разных ускорители, порядок доступа не определен, создание состояние гонки.  
+-   Хорошо синхронизированных доступ к перекрывающимся `array_view` объектов на же сочетания клавиш на одном `array` объекта используются псевдонимы через `array` объекта. Они вызывать всего происходит-перед отношение, которое подчиняется порядка в программе. Не выполняется кэширование. Если `array_view` объекты выполняются на разных ускорители, порядок доступа не определен, создание состояние гонки.  
   
- При создании `array_view` объекта с помощью указателя в системной памяти, необходимо изменить представление `array_view` только с помощью объекта `array_view` указателя. Кроме того, необходимо вызвать метод `refresh()` на одном из `array_view` объектов, присоединенных к указателю системы базовой внутренней памяти при изменении напрямую, а не через `array_view` объекта.  
+ При создании `array_view` объекта с помощью указателя в системной памяти, необходимо изменить представление `array_view` только с помощью объекта `array_view` указателя. Кроме того, необходимо вызвать `refresh()` на одном из `array_view` объектов, присоединенных к указателю системы базовой внутренней памяти при изменении напрямую, а не через `array_view` объекта.  
   
  В обоих случаях сообщает `array_view` объекта изменении базовых внутренней памяти и что все копии, которые находятся в ускоритель устарели. Если следовать рекомендациям представления на основе указателя идентичны для представления данных параллельными массивами.  
   
@@ -138,15 +154,17 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  **Пространство имен** : Concurrency  
   
-##  <a name="a-namearrayviewdtorarrayviewdestructora-arrayviewarrayview-destructor"></a><a name="array_view___dtorarray_view_destructor"></a>  array_view:: ~ array_view деструктор  
- Уничтожает [array_view](../../../parallel/amp/reference/array-view-class.md) объекта.  
+##  <a name="a-namedtora-arrayview"></a><a name="dtor"></a>~ array_view 
+
+ Уничтожает `array_view` объекта.  
   
 ```  
 ~array_view()restrict(amp,cpu);
 ```  
   
-##  <a name="a-namearrayviewarrayviewconstructora-arrayviewarrayview-constructor"></a><a name="array_view__array_view_constructor"></a>  Конструктор array_view::array_view  
- Инициализирует новый экземпляр [array_view](../../../parallel/amp/reference/array-view-class.md) класса.  
+##  <a name="a-namectora-arrayview"></a><a name="ctor"></a>array_view 
+
+ Инициализирует новый экземпляр класса `array_view`.  
   
 ```  
 array_view(
@@ -341,7 +359,7 @@ array_view(
  Тип элементов массива C-стиль, из которой данные передаются.  
   
  `_Container`  
- Аргумент шаблона, который необходимо указать линейной контейнера, который поддерживает `data()` и `size()` члены.  
+ Аргумент шаблона, который необходимо указать линейной контейнера, поддерживающего `data()` и `size()` члены.  
   
  `_E0`  
  Наиболее значимые компонент экстента в этом разделе.  
@@ -364,8 +382,9 @@ array_view(
  `_Src`  
  Указатель на исходные данные, которые будут скопированы в новый массив.  
   
-##  <a name="a-namearrayviewcopytomethoda-arrayviewcopyto-method"></a><a name="array_view__copy_to_method"></a>  Метод array_view::copy_to  
- Копирует содержимое [array_view](../../../parallel/amp/reference/array-view-class.md) в указанный конечный объект, вызвав `copy(*this, dest)`.  
+##  <a name="a-namecopytoa-copyto"></a><a name="copy_to"></a>copy_to 
+
+ Копирует содержимое `array_view` в указанный конечный объект, вызвав `copy(*this, dest)`.  
   
 ```  
 void copy_to(
@@ -383,8 +402,9 @@ void copy_to(
  `_Dest`  
  Объект для копирования.  
   
-##  <a name="a-namearrayviewdatamethoda-arrayviewdata-method"></a><a name="array_view__data_method"></a>  Метод array_view::Data  
- Возвращает указатель на необработанные данные [array_view](../../../parallel/amp/reference/array-view-class.md).  
+##  <a name="a-namedataa-data"></a><a name="data"></a>данные 
+
+ Возвращает указатель на необработанные данные `array_view`.  
   
 ```  
 value_type* data() const restrict(amp,
@@ -398,31 +418,35 @@ const value_type* data() const restrict(amp,
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на необработанные данные `array_view`.  
   
-##  <a name="a-namearrayviewdiscarddatamethoda-arrayviewdiscarddata-method"></a><a name="array_view__discard_data_method"></a>  Метод array_view::discard_data  
- Удаляет текущий базовые данные этого представления. Это позволяет избежать копирования текущее содержимое представления в целевой среде выполнения указание по оптимизации `accelerator_view` при доступе к, и его использование рекомендуется, если нет необходимости существующего содержимого. Этот метод является холостой при использовании в контексте restrict(amp)  
+##  <a name="a-namediscarddataa-discarddata"></a><a name="discard_data"></a>discard_data 
+
+ Удаляет текущий базовые данные этого представления. Это позволяет избежать копирования текущее содержимое представления в целевой среде выполнения указание по оптимизации `accelerator_view` , при доступе к, и его использование рекомендуется, если нет необходимости существующего содержимого. Этот метод является холостой при использовании в контексте restrict(amp)  
   
 ```  
 void discard_data() const restrict(cpu);
 ```  
   
-##  <a name="a-namearrayviewextentdatamembera-arrayviewextent-data-member"></a><a name="array_view__extent_data_member"></a>  элемент данных array_view::Extent  
+##  <a name="a-nameextenta-extent"></a><a name="extent"></a>экстент 
+
  Получает объект `extent`, который определяет форму объекта `array_view`.  
   
 ```  
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="a-namearrayviewgetextentmethoda-arrayviewgetextent-method"></a><a name="array_view__get_extent_method"></a>  Метод array_view::get_extent  
- Возвращает [область](../Topic/extent%20Class%20\(C++%20AMP\).md) объект [array_view](../../../parallel/amp/reference/array-view-class.md) объекта.  
+##  <a name="a-namegetextenta-getextent"></a><a name="get_extent"></a>get_extent 
+
+ Возвращает [экстент](extent-class.md) объекта `array_view` объекта.  
   
 ```  
 Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
-  `extent` Объект `array_view` объект  
+ `extent` Объекта `array_view` объекта  
   
-##  <a name="a-namearrayviewgetrefmethoda-arrayviewgetref-method"></a><a name="array_view__get_ref_method"></a>  Метод array_view::get_ref  
+##  <a name="a-namegetrefa-getref"></a><a name="get_ref"></a>get_ref 
+
  Получите ссылку на элемент с _Index индексом. В отличие от других индексирования операторов для доступа к array_view на ЦП этот метод не выполняет синхронизацию неявно содержимое этого array_view для ЦП. После доступа к array_view в удаленном расположении или выполнение операции копирования, включающие этот array_view пользователей отвечают явно синхронизации array_view для ЦП перед вызовом этого метода. Невыполнение этого требования приведет к неопределенному поведению.  
   
 ```  
@@ -437,7 +461,8 @@ value_type& get_ref(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на элемент с _Index индексом  
   
-##  <a name="a-namearrayviewgetsourceacceleratorviewmethoda-arrayviewgetsourceacceleratorview-method"></a><a name="array_view__get_source_accelerator_view_method"></a>  Метод array_view::get_source_accelerator_view  
+##  <a name="a-namegetsourceacceleratorviewa-getsourceacceleratorview"></a><a name="get_source_accelerator_view"></a>get_source_accelerator_view 
+
  Возвращает accelerator_view, где находится источник данных array_view. Если array_view имеет источник данных, этот интерфейс API вызывает runtime_exception  
   
 ```  
@@ -448,7 +473,8 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namearrayviewoperatoroperatora-arrayviewoperator-operator"></a><a name="array_view__operator___operator"></a>  Оператор array_view:: operator()  
+##  <a name="a-nameoperatorcalla-operator"></a><a name="operator_call"></a>Operator() 
+
  Возвращает значение элемента, который определяется один или несколько параметров.  
   
 ```  
@@ -494,7 +520,8 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента, который определяется один или несколько параметров.  
   
-##  <a name="a-namearrayviewoperatoratoperatora-arrayviewoperator-operator"></a><a name="array_view__operator_at_operator"></a>  Оператор array_view::operator]  
+##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>оператор] 
+
  Возвращает элемент, указанный в параметрах.  
   
 ```  
@@ -516,8 +543,9 @@ value_type& operator[] (
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента по индексу или `array_view` проецируется на наиболее значимых измерения.  
   
-##  <a name="a-namearrayviewoperatoreqoperatora-arrayviewoperator-operator"></a><a name="array_view__operator_eq_operator"></a>  array_view::operator =-оператор  
- Копирует содержимое указанного [array_view](../../../parallel/amp/reference/array-view-class.md) этого объекта.  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+
+ Копирует содержимое указанного `array_view` этого объекта.  
   
 ```  
 array_view& operator= (
@@ -530,27 +558,70 @@ array_view& operator= (
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
-  `array_view` Для копирования.  
+ `array_view` Для копирования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `array_view` объекта.  
   
-##  <a name="a-namearrayviewrankconstanta-arrayviewrank-constant"></a><a name="array_view__rank_constant"></a>  Константа array_view::Rank  
- Сохраняет ранг объекта [array_view](../../../parallel/amp/reference/array-view-class.md) объекта.  
+##  <a name="a-nameranka-rank"></a><a name="rank"></a>Ранг 
+
+ Сохраняет ранг объекта `array_view` объекта.  
   
 ```  
 static const int rank = _Rank;  
 ```  
   
-##  <a name="a-namearrayviewrefreshmethoda-arrayviewrefresh-method"></a><a name="array_view__refresh_method"></a>  Метод array_view::Refresh  
- Уведомляет [array_view](../../../parallel/amp/reference/array-view-class.md) объекта, привязанного памяти был изменен вне `array_view` интерфейса. Вызов этого метода отображает все кэшированные данные устаревшим.  
+##  <a name="a-namerefresha-refresh"></a><a name="refresh"></a>обновление 
+
+ Уведомляет `array_view` объекта, привязанного памяти был изменен вне `array_view` интерфейса. Вызов этого метода отображает все кэшированные данные устаревшим.  
   
 ```  
 void refresh() const restrict(cpu);
 ```  
+## <a name="a-namereinterpretasa-reinterpretas"></a><a name="reinterpret_as"></a>reinterpret_as 
+
+Повторно интерпретирует array_view через одномерный array_view, которой в качестве альтернативы может иметь тип другое значение, чем array_view источника.  
   
-##  <a name="a-namearrayviewsectionmethoda-arrayviewsection-method"></a><a name="array_view__section_method"></a>  Метод array_view::Section  
- Возвращает подраздел [array_view](../../../parallel/amp/reference/array-view-class.md) объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.  
+### <a name="syntax"></a>Синтаксис  
+  
+```  
+template <  
+    typename _Value_type2  
+>  
+array_view< _Value_type2, _Rank> reinterpret_as() const restrict(amp,cpu);  
+  
+template <  
+    typename _Value_type2  
+>  
+array_view<const _Value_type2, _Rank> reinterpret_as() const restrict(amp,cpu);  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Value_type2`  
+ Тип данных нового `array_view` объекта.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `array_view` Объекта или const `array_view` объекта, который основан на это `array_view`, с типом элемента, преобразованное из `T` для `_Value_type2`, и сократить ранг с *N* 1.  
+  
+### <a name="remarks"></a>Примечания  
+ Иногда бывает удобно просматривать многомерный массив — линейная одномерный массив, который может иметь тип отличается от исходного массива. Для этого на `array_view` с помощью этого метода.  
+  
+**Предупреждение** Reinterpeting array_view объекта с помощью другого значения типа является потенциально небезопасные операции. Эта функция должна использоваться с осторожностью.  
+  
+ Ниже приведен пример:  
+  
+```cpp  
+struct RGB { float r; float g; float b; };  
+  
+array<RGB,3>  a = ...;   
+array_view<float,1> v = a.reinterpret_as<float>();   
+  
+assert(v.extent == 3*a.extent);  
+```  
+    
+##  <a name="a-namesectiona-section"></a><a name="section"></a>раздел 
+
+ Возвращает подраздел `array_view` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.  
   
 ```  
 array_view section(
@@ -598,10 +669,10 @@ array_view section(
  Компонент младших экстента в этом разделе.  
   
  `_Ext`  
-  [Экстент](../Topic/extent%20Class%20\(C++%20AMP\).md) объекта, который задает область раздела. Источником является 0.  
+ [Экстент](extent-class.md) объекта, который задает область раздела. Источником является 0.  
   
  `_Idx`  
-  [Индекс](../../../parallel/amp/reference/index-class.md) объект, который указывает расположение начала координат. Подраздел является rest экстента.  
+ [Индекс](index-class.md) объект, который указывает расположение начала координат. Подраздел является rest экстента.  
   
  `_I0`  
  Наиболее значимые компонент источника в этом разделе.  
@@ -616,22 +687,24 @@ array_view section(
  Ранг раздела.  
   
  `_Section_extent`  
-  [Экстент](../Topic/extent%20Class%20\(C++%20AMP\).md) объекта, который задает область раздела.  
+ [Экстент](extent-class.md) объекта, который задает область раздела.  
   
  `_Section_origin`  
-  [Индекс](../../../parallel/amp/reference/index-class.md) объект, который указывает расположение начала координат.  
+ [Индекс](index-class.md) объект, который указывает расположение начала координат.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Подраздел `array_view` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область. Только если `index` объект указан, подраздел содержит все элементы в экстенте связанные, имеют индексы, превышающие индексы элементов в `index` объекта.  
+ Подраздел `array_view` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область. Только если `index` указан объект, подраздел содержит все элементы в экстенте связанные, имеют индексы, превышающие индексы элементов в `index` объекта.  
   
-##  <a name="a-namearrayviewsourceacceleratorviewdatamembera-arrayviewsourceacceleratorview-data-member"></a><a name="array_view__source_accelerator_view_data_member"></a>  элемент данных array_view::source_accelerator_view  
+##  <a name="a-namesourceacceleratorviewa-sourceacceleratorview"></a><a name="source_accelerator_view"></a>source_accelerator_view 
+
  Возвращает источник accelerator_view, связанный с этой array_view.  
   
 ```  
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;  
 ```  
   
-##  <a name="a-namearrayviewsynchronizemethoda-arrayviewsynchronize-method"></a><a name="array_view__synchronize_method"></a>  Метод array_view::Synchronize  
+##  <a name="a-namesynchronizea-synchronize"></a><a name="synchronize"></a>синхронизировать 
+
  Синхронизирует любые изменения, внесенные в `array_view` объекта обратно в исходные данные.  
   
 ```  
@@ -643,10 +716,11 @@ void synchronize() const restrict(cpu);
   
 ### <a name="parameters"></a>Параметры  
  `_Access_type`  
- Предполагаемого [access_type](concurrency%20namespace%20enums.md#access_type) на целевом [accelerator_view](../Topic/accelerator_view%20Class.md). Этот параметр имеет значение по умолчанию `access_type_read`.  
+ Предполагаемого [access_type](concurrency-namespace-enums-amp.md#access_type) на целевом [accelerator_view](accelerator-view-class.md). Этот параметр имеет значение по умолчанию `access_type_read`.  
   
-##  <a name="a-namearrayviewsynchronizeasyncmethoda-arrayviewsynchronizeasync-method"></a><a name="array_view__synchronize_async_method"></a>  Метод array_view::synchronize_async  
- Асинхронно синхронизирует любые изменения, внесенные в [array_view](../../../parallel/amp/reference/array-view-class.md) объекта обратно в исходные данные.  
+##  <a name="a-namesynchronizeasynca-synchronizeasync"></a><a name="synchronize_async"></a>synchronize_async 
+
+ Асинхронно синхронизирует любые изменения, внесенные в `array_view` объекта обратно в исходные данные.  
   
 ```  
 concurrency::completion_future synchronize_async(access_type _Access_type = access_type_read) const restrict(cpu);
@@ -657,12 +731,13 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
   
 ### <a name="parameters"></a>Параметры  
  `_Access_type`  
- Предполагаемого [access_type](concurrency%20namespace%20enums.md#access_type) на целевом [accelerator_view](../Topic/accelerator_view%20Class.md). Этот параметр имеет значение по умолчанию `access_type_read`.  
+ Предполагаемого [access_type](concurrency-namespace-enums-amp.md#access_type) на целевом [accelerator_view](accelerator-view-class.md). Этот параметр имеет значение по умолчанию `access_type_read`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Будущее, на которой будет ожидать завершения операции.  
   
-##  <a name="a-namearrayviewsynchronizetomethoda-arrayviewsynchronizeto-method"></a><a name="array_view__synchronize_to_method"></a>  Метод array_view::synchronize_to  
+##  <a name="a-namesynchronizetoa-synchronizeto"></a><a name="synchronize_to"></a>synchronize_to 
+
  Синхронизирует любые изменения, внесенные в этот array_view для указанного accelerator_view.  
   
 ```  
@@ -682,7 +757,8 @@ void synchronize_to(
  `_Access_type`  
  Требуемый access_type на целевой accelerator_view. Этот параметр имеет значение по умолчанию access_type_read.  
   
-##  <a name="a-namearrayviewsynchronizetoasyncmethoda-arrayviewsynchronizetoasync-method"></a><a name="array_view__synchronize_to_async_method"></a>  Метод array_view::synchronize_to_async  
+##  <a name="a-namesynchronizetoasynca-synchronizetoasync"></a><a name="synchronize_to_async"></a>synchronize_to_async 
+
  Асинхронно синхронизирует любые изменения, внесенные в этот array_view для указанного accelerator_view.  
   
 ```  
@@ -705,14 +781,16 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>Возвращаемое значение  
  Будущее, на которой будет ожидать завершения операции.  
   
-##  <a name="a-namearrayviewvaluetypedatamembera-arrayviewvaluetype-data-member"></a><a name="array_view__value_type_data_member"></a>  элемент данных array_view::value_type  
+##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>value_type 
+
  Тип значения array_view и связанного массива.  
   
 ```  
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="a-namearrayviewviewasmethoda-arrayviewviewas-method"></a><a name="array_view__view_as_method"></a>  Метод array_view::view_as  
+##  <a name="a-nameviewasa-viewas"></a><a name="view_as"></a>view_as 
+
  Повторно интерпретирует это `array_view` как `array_view` другого ранга.  
   
 ```  
@@ -738,10 +816,11 @@ array_view<const value_type,_New_rank> view_as(
  Изменение формы `extent`.  
   
  `value_type`  
- Тип данных элементов в исходные [массива](../../../parallel/amp/reference/array-class.md) объекта и возвращаемый `array_view` объекта.  
+ Тип данных элементов в исходные [массива](array-class.md) объекта и возвращаемый `array_view` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
-  [Array_view](../../../parallel/amp/reference/array-view-class.md) объект.  
+ `array_view` Объект.  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency (C++ AMP)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+ [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

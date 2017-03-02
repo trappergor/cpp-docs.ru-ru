@@ -1,76 +1,138 @@
 ---
-title: "IPointerInactiveImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPointerInactiveImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inactive objects"
-  - "IPointerInactive ATL implementation"
-  - "IPointerInactiveImpl class"
+title: "Класс IPointerInactiveImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPointerInactiveImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IPointerInactive ATL implementation
+- inactive objects
+- IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# IPointerInactiveImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 05cf4b2247cabe713cfc6b0dd54c95c01e5bbddc
+ms.lasthandoff: 02/24/2017
 
-Этот класс реализует **IUnknown** и методы интерфейса [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712).  
+---
+# <a name="ipointerinactiveimpl-class"></a>Класс IPointerInactiveImpl
+Этот класс реализует **IUnknown** и [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) методы интерфейса.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<class T>
+class IPointerInactiveImpl
 ```  
   
-      template< class   
-      T  
-      >  
-class IPointerInactiveImpl  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от `IPointerInactiveImpl`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[IPointerInactiveImpl::GetActivationPolicy](../Topic/IPointerInactiveImpl::GetActivationPolicy.md)|Извлекает текущая политика активации для объекта.  Реализация библиотеки ATL возвращает **E\_NOTIMPL**.|  
-|[IPointerInactiveImpl::OnInactiveMouseMove](../Topic/IPointerInactiveImpl::OnInactiveMouseMove.md)|Уведомляет объект, перемещенный указатель мыши над ним, указывающее объект может создать события мыши.  Реализация библиотеки ATL возвращает **E\_NOTIMPL**.|  
-|[IPointerInactiveImpl::OnInactiveSetCursor](../Topic/IPointerInactiveImpl::OnInactiveSetCursor.md)|Задает указатель мыши для неактивного объекта.  Реализация библиотеки ATL возвращает **E\_NOTIMPL**.|  
+|----------|-----------------|  
+|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Получает текущую политику активации для объекта. Возвращает реализацию ATL **E_NOTIMPL**.|  
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Уведомляет объект, указатель мыши наведен его, указав объект срабатывают события мыши. Возвращает реализацию ATL **E_NOTIMPL**.|  
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Задает указатель мыши для неактивного объекта. Возвращает реализацию ATL **E_NOTIMPL**.|  
   
-## Заметки  
- Бездействующий объект, просто загрузить или выполнить.  В отличие от активный объект, бездействующий объект не может получить сообщения мыши и клавиатуры Windows.  Таким образом, неактивные объекты используют меньше ресурсов и обычно является более эффективным.  
+## <a name="remarks"></a>Примечания  
+ Неактивные объекта, которое просто загрузить или запущена. В отличие от активного объекта неактивные объекта не может получать сообщения клавиатуры и мыши Windows. Таким образом Неактивные объекты используют меньше ресурсов и обычно более эффективны.  
   
- Интерфейс [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) позволяет объекту для поддержки минимальный уровень взаимодействия мыши еще остающ неактивен.  Эта функция особенно полезна для элементов управления.  
+ [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) интерфейс позволяет объекту для поддержки минимальный уровень взаимодействия с мышью, оставаясь неактивным. Эта функция особенно полезна для элементов управления.  
   
- Классифицируйте средства `IPointerInactiveImpl` методы `IPointerInactive` просто возвращать **E\_NOTIMPL**.  Однако в нем содержатся **IUnknown**, отправляя данные на устройство резервного копирования в отладочные построения.  
+ Класс `IPointerInactiveImpl` реализует `IPointerInactive` методы просто возвращая **E_NOTIMPL**. Тем не менее, он реализует **IUnknown** при отправке информации для дампа строит устройства в режиме отладки.  
   
- **Связанные статьи** [Учебник по библиотеке ATL](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md), [Создание проекта библиотеки ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [создается проект ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IPointerInactive`  
   
  `IPointerInactiveImpl`  
   
-## Требования  
- **Header:**  atlctl.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlctl.h  
   
-## См. также  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetactivationpolicya--ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+ Получает текущую политику активации для объекта.  
+  
+```
+HRESULT GetActivationPolicy(DWORD* pdwPolicy);
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Примечания  
+ В разделе [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameoninactivemousemovea--ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+ Уведомляет объект, указатель мыши наведен его, указав объект срабатывают события мыши.  
+  
+```
+HRESULT OnInactiveMouseMove(
+    LPCRECT pRectBounds,
+    long x,
+    long y,
+    DWORD dwMouseMsg);
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Примечания  
+ В разделе [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameoninactivesetcursora--ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+ Задает указатель мыши для неактивного объекта.  
+  
+```
+HRESULT OnInactiveSetCursor(
+    LPCRECT pRectBounds,
+    long x,
+    long y,
+    DWORD dwMouseMsg,
+    BOOL fSetAlways);
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Примечания  
+ В разделе [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

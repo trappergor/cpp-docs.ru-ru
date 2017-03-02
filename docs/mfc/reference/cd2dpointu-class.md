@@ -1,59 +1,106 @@
 ---
-title: "Класс CD2DPointU | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CD2DPointU"
-  - "afxrendertarget/CD2DPointU"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DPointU - класс"
+title: "Класс CD2DPointU | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CD2DPointU
+- afxrendertarget/CD2DPointU
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DPointU class
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс CD2DPointU
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 605415ad5a2739d8f8ac3a6a47c562796d55a813
+ms.lasthandoff: 02/24/2017
 
-Программа\-оболочка для `D2D1_POINT_2U`.  
+---
+# <a name="cd2dpointu-class"></a>Класс CD2DPointU
+Программа-оболочка для `D2D1_POINT_2U`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CD2DPointU : public D2D1_POINT_2U;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CD2DPointU::CD2DPointU](../Topic/CD2DPointU::CD2DPointU.md)|Перегружен.  Создает `CD2DPointU` из объекта `D2D1_POINT_2U` объекта.|  
-  
-### Открытые операторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CD2DPointU::operator CPoint](../Topic/CD2DPointU::operator%20CPoint.md)|Новообращенные `CD2DPointU` к объекту `CPoint`.|  
+|----------|-----------------|  
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|Перегружен. Создает `CD2DPointU` из объекта `D2D1_POINT_2U` объекта.|  
   
-## Иерархия наследования  
+### <a name="public-operators"></a>Открытые операторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CD2DPointU::operator CPoint](#operator_cpoint)|Преобразует `CD2DPointU` для `CPoint` объектов.|  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `D2D1_POINT_2U`  
   
- [CD2DPointU](../../mfc/reference/cd2dpointu-class.md)  
+ `CD2DPointU`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-## См. также  
- [Классы](../Topic/MFC%20Classes.md)
+##  <a name="a-namecd2dpointua--cd2dpointucd2dpointu"></a><a name="cd2dpointu"></a>CD2DPointU::CD2DPointU  
+ Создает объект CD2DPointU из CPoint объекта.  
+  
+```  
+CD2DPointU(const CPoint& pt);  
+CD2DPointU(const D2D1_POINT_2U& pt);  
+  CD2DPointU(const D2D1_POINT_2U* pt);  
+CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pt`  
+ исходной точки  
+  
+ `uX`  
+ Источник X  
+  
+ `uY`  
+ Источник Y  
+  
+##  <a name="a-nameoperatorcpointa--cd2dpointuoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointU::operator CPoint  
+ Преобразует CPoint CD2DPointU.  
+  
+```  
+operator CPoint();
+```   
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Текущее значение точки D2D.  
+  
+## <a name="see-also"></a>См. также  
+ [Классы](../../mfc/reference/mfc-classes.md)
+

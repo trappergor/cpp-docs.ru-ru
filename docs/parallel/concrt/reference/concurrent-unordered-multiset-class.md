@@ -1,115 +1,678 @@
 ---
-title: "Класс concurrent_unordered_multiset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concurrent_unordered_set/concurrency::concurrent_unordered_multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "concurrent_unordered_multiset - класс"
+title: "Класс concurrent_unordered_multiset | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concurrent_unordered_set/concurrency::concurrent_unordered_multiset
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Класс concurrent_unordered_multiset
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
+ms.openlocfilehash: 7a4b5edab0fdf1fcc18e223c859ca2859173154f
+ms.lasthandoff: 02/24/2017
 
-Класс `concurrent_unordered_multiset` — это безопасный в режиме параллелизма контейнер, который управляет последовательностью элементов типа \_Key\_type переменной длины.  Последовательность представлена таким образом, который позволяет параллельно\-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.  
+---
+# <a name="concurrentunorderedmultiset-class"></a>Класс concurrent_unordered_multiset
+`concurrent_unordered_multiset` Класс является контейнером параллельность, управляющий последовательностью элементов типа K. переменной длины Последовательность представляется в виде, позволяющем параллельность операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template <  
-   typename _Key_type,  
-   typename _Hasher = std::tr1::hash<_Key_type>,  
-   typename _Key_equality = std::equal_to<_Key_type>,  
-   typename _Allocator_type = std::allocator<_Key_type>  
->  
-, typename _Key_equality = std::equal_to<_Key_type>, typename _Allocator_type = std::allocator<_Key_type> > class concurrent_unordered_multiset : public details::_Concurrent_hash< details::_Concurrent_unordered_set_traits<_Key_type, details::_Hash_compare<_Key_type, _Hasher, _Key_equality>, _Allocator_type, true> >;  
-```  
+```
+template <typename K,
+    typename _Hasher = std::hash<K>,
+    typename key_equality = std::equal_to<K>,
+    typename _Allocator_type = std::allocator<K>
+>,
+    typename key_equality = std::equal_to<K>,
+    typename _Allocator_type = std::allocator<K>> class concurrent_unordered_multiset : public details::_Concurrent_hash<details::_Concurrent_unordered_set_traits<K,
+    details::_Hash_compare<K,
+ _Hasher,
+    key_equality>,
+ _Allocator_type,
+    true>>;
+```   
   
-#### Параметры  
- `_Key_type`  
+#### <a name="parameters"></a>Параметры  
+ `K`  
  Тип ключа.  
   
  `_Hasher`  
- Тип объекта хэш\-функции.  Этот аргумент является необязательным и значение по умолчанию — `std::tr1::hash<``_Key_type``>`.  
+ Тип объекта хэш-функции. Этот аргумент является необязательным, и значением по умолчанию является `std::hash<``K``>`.  
   
- `_Key_equality`  
- Тип объекта функции сравнения на предмет равенства.  Этот аргумент является необязательным и значение по умолчанию — `std::equal_to<``_Key_type``>`.  
+ `key_equality`  
+ Тип объекта функции сравнения на предмет равенства. Этот аргумент является необязательным, и значением по умолчанию является `std::equal_to<``K``>`.  
   
  `_Allocator_type`  
- Тип, представляющий хранимый объект распределителя, инкапсулирующий сведения о распределении и освобождении памяти для параллельного вектора.  Этот аргумент является необязательным и значение по умолчанию — `std::allocator<``_Key_type``>`.  
+ Тип, представляющий сохраненный объект распределителя, инкапсулирующий сведения о выделении и освобождении памяти для параллельного вектора. Этот аргумент является необязательным, и значением по умолчанию является `std::allocator<``K``>`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |`allocator_type`|Тип распределителя для управления хранилищем.|  
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|  
-|`const_local_iterator`|Тип постоянного итератора контейнера для управляемой последовательности.|  
+|`const_local_iterator`|Тип постоянного итератора блока для управляемой последовательности.|  
 |`const_pointer`|Тип постоянного указателя на элемент.|  
 |`const_reference`|Тип постоянной ссылки на элемент.|  
 |`difference_type`|Тип расстояния со знаком между двумя элементами.|  
-|`hasher`|Тип хэш\-функции.|  
+|`hasher`|Тип хэш-функции.|  
 |`iterator`|Тип итератора для управляемой последовательности.|  
 |`key_equal`|Тип функции сравнения.|  
 |`key_type`|Тип ключа упорядочения.|  
-|`local_iterator`|Тип итератора контейнера для управляемой последовательности.|  
+|`local_iterator`|Тип итератора блока для управляемой последовательности.|  
 |`pointer`|Тип указателя на элемент.|  
 |`reference`|Тип ссылки на элемент.|  
 |`size_type`|Тип беззнакового расстояния между двумя элементами.|  
 |`value_type`|Тип элемента.|  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Конструктор concurrent\_unordered\_multiset::concurrent\_unordered\_multiset](../Topic/concurrent_unordered_multiset::concurrent_unordered_multiset%20Constructor.md)|Перегружен.  Создает параллельное неупорядоченное мультимножество.|  
+|----------|-----------------|  
+|[Конструктор concurrent_unordered_multiset](#ctor)|Перегружен. Создает параллельного неупорядоченного мультинабора.|  
   
-### Открытые методы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[Метод concurrent\_unordered\_multiset::hash\_function](../Topic/concurrent_unordered_multiset::hash_function%20Method.md)|Возвращает объект сохраненной хэш\-функции.|  
-|[Метод concurrent\_unordered\_multiset::insert](../Topic/concurrent_unordered_multiset::insert%20Method.md)|Перегружен.  Добавляет элементы в объект `concurrent_unordered_multiset`.|  
-|[Метод concurrent\_unordered\_multiset::key\_eq](../Topic/concurrent_unordered_multiset::key_eq%20Method.md)|Сохраненный объект функции проверки равенства.|  
-|[Метод concurrent\_unordered\_multiset::swap](../Topic/concurrent_unordered_multiset::swap%20Method.md)|Меняет местами содержимое двух объектов `concurrent_unordered_multiset`.  Данный метод не безопасен в режиме параллелизма.|  
-|[Метод concurrent\_unordered\_multiset::unsafe\_erase](../Topic/concurrent_unordered_multiset::unsafe_erase%20Method.md)|Перегружен.  Удаляет элементы из `concurrent_unordered_multiset` в указанных положениях.  Данный метод не безопасен в режиме параллелизма.|  
-  
-### Открытые операторы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Оператор concurrent\_unordered\_multiset::operator\=](../Topic/concurrent_unordered_multiset::operator=%20Operator.md)|Перегружен.  Назначает содержимое другого объекта `concurrent_unordered_multiset` данному.  Данный метод не безопасен в режиме параллелизма.|  
+|----------|-----------------|  
+|[hash_function метод](#hash_function)|Возвращает сохраненный объект хэш-функции.|  
+|[INSERT-метод](#insert)|Перегружен. Добавляет элементы в `concurrent_unordered_multiset` объекта.|  
+|[key_eq метод](#key_eq)|Объект функции сравнения хранимых равенства.|  
+|[Swap-метод](#swap)|Меняет местами содержимое двух `concurrent_unordered_multiset` объектов. Этот метод не является безопасным в режиме параллелизма.|  
+|[unsafe_erase метод](#unsafe_erase)|Перегружен. Удаляет элементы из `concurrent_unordered_multiset` в указанных позициях. Этот метод не является безопасным в режиме параллелизма.|  
   
-## Заметки  
- Подробные сведения о классе `concurrent_unordered_multiset` содержатся в разделе [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  
+### <a name="public-operators"></a>Открытые операторы  
   
-## Иерархия наследования  
+|Имя|Описание|  
+|----------|-----------------|  
+|[оператор =-оператор](#operator_eq)|Перегружен. Назначает содержимое другого `concurrent_unordered_multiset` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
+  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о `concurrent_unordered_multiset` см. в разделе [параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `_Traits`  
   
  `_Concurrent_hash`  
   
  `concurrent_unordered_multiset`  
   
-## Требования  
- **Заголовок:** concurrent\_unordered\_set.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** concurrent_unordered_set.h  
   
  **Пространство имен:** concurrency  
   
-## См. также  
- [Пространство имен concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
+##  <a name="a-namebegina-begin"></a><a name="begin"></a>начать 
+
+ Возвращает итератор, указывающий на первый элемент в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
+  
+```
+iterator begin();
+
+const_iterator begin() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор на первый элемент в параллельном контейнере.  
+  
+##  <a name="a-namecbegina-cbegin"></a><a name="cbegin"></a>cbegin 
+
+ Возвращает константный итератор, указывающий на первый элемент в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
+  
+```
+const_iterator cbegin() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Константный итератор на первый элемент в параллельном контейнере.  
+  
+##  <a name="a-namecenda-cend"></a><a name="cend"></a>cend 
+
+ Возвращает константный итератор, указывающий на позицию после последнего элемента в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
+  
+```
+const_iterator cend() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор const на позицию после последнего элемента в параллельном контейнере.  
+  
+##  <a name="a-namecleara-clear"></a><a name="clear"></a>Очистка 
+
+ Удаляет все элементы в параллельном контейнере. Эта функция не безопасен в режиме параллелизма.  
+  
+```
+void clear();
+```  
+  
+##  <a name="a-namectora-concurrentunorderedmultiset"></a><a name="ctor"></a>concurrent_unordered_multiset 
+
+ Создает параллельного неупорядоченного мультинабора.  
+  
+```
+explicit concurrent_unordered_multiset(
+    size_type _Number_of_buckets = 8,
+    const hasher& _Hasher = hasher(),
+    const key_equal& key_equality = key_equal(),
+    const allocator_type& _Allocator = allocator_type());
+
+concurrent_unordered_multiset(
+    const allocator_type& _Allocator);
+
+template <typename _Iterator>
+concurrent_unordered_multiset(_Iterator first,
+    _Iterator last,
+    size_type _Number_of_buckets = 8,
+    const hasher& _Hasher = hasher(),
+    const key_equal& key_equality = key_equal(),
+    const allocator_type& _Allocator = allocator_type());
+
+concurrent_unordered_multiset(
+    const concurrent_unordered_multiset& _Uset);
+
+concurrent_unordered_multiset(
+    const concurrent_unordered_multiset& _Uset,
+    const allocator_type& _Allocator);
+
+concurrent_unordered_multiset(
+    concurrent_unordered_multiset&& _Uset);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Iterator`  
+ Тип итератора ввода.  
+  
+ `_Number_of_buckets`  
+ Начальное число блоков для этого неупорядоченного мультинабора.  
+  
+ `_Hasher`  
+ Хэш-функции для этого неупорядоченного мультинабора.  
+  
+ `key_equality`  
+ Функция сравнения на равенство для этого неупорядоченного мультинабора.  
+  
+ `_Allocator`  
+ Распределитель для этого неупорядоченного мультинабора.  
+  
+ `first`  
+ `last`  
+ `_Uset`  
+ Источник `concurrent_unordered_multiset` объект для перемещения элементов.  
+  
+### <a name="remarks"></a>Примечания  
+ Все конструкторы хранят объект распределителя `_Allocator` и инициализировать неупорядоченных мультинабора.  
+  
+ Первый конструктор задает пустой начальный мультинабор и явно задает число блоков, хэш-функцию, функцию равенства и тип распределителя для использования.  
+  
+ Второй конструктор определяет распределитель для неупорядоченного мультинабора.  
+  
+ Третий конструктор указывает значения, предоставляемых диапазоном итератора [ `_Begin`, `_End`).  
+  
+ Четвертый и пятый конструкторы определяют копию параллельного неупорядоченного мультинабор `_Uset`.  
+  
+ Последний конструктор определяет перемещение параллельного неупорядоченного мультинабор `_Uset`.  
+  
+##  <a name="a-namecounta-count"></a><a name="count"></a>число 
+
+ Подсчитывает количество элементов, соответствующих заданному ключу. Эта функция является безопасен в режиме параллелизма.  
+  
+```
+size_type count(const key_type& KVal) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `KVal`  
+ Ключ, который нужно найти.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Количество попыток, количество появлений ключа в контейнере.  
+  
+##  <a name="a-nameemptya-empty"></a><a name="empty"></a>пустой 
+
+ Проверяет отсутствие элементов. Данный метод безопасен в режиме параллелизма.  
+  
+```
+bool empty() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `true`Если параллельный контейнер пуст, `false` в противном случае.  
+  
+### <a name="remarks"></a>Примечания  
+ При наличии параллельных вставок пуст ли параллельный контейнер может измениться сразу после вызова этой функции, возвращаемое значение даже до чтения.  
+  
+##  <a name="a-nameenda-end"></a><a name="end"></a>конец 
+
+ Возвращает итератор, указывающий на позицию после последнего элемента в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
+  
+```
+iterator end();
+
+const_iterator end() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор на позицию после последнего элемента в параллельном контейнере.  
+  
+##  <a name="a-nameequalrangea-equalrange"></a><a name="equal_range"></a>equal_range 
+
+ Находит диапазон, соответствующий указанному ключу. Эта функция является безопасен в режиме параллелизма.  
+  
+```
+std::pair<iterator,
+    iterator> equal_range(
+    const key_type& KVal);
+
+std::pair<const_iterator,
+    const_iterator> equal_range(
+    const key_type& KVal) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `KVal`  
+ Значение ключа для поиска.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Объект [пару](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) где первый элемент является итератором до начала, а второй элемент — это итератор конец диапазона.  
+  
+### <a name="remarks"></a>Примечания  
+ Это возможно для одновременных операций вставки вызвать дополнительные ключи должны быть вставлены после начала итератора и до конечного итератора.  
+  
+##  <a name="a-namefinda-find"></a><a name="find"></a>найти 
+
+ Определяет элемент, соответствующий указанному ключу. Эта функция является безопасен в режиме параллелизма.  
+  
+```
+iterator find(const key_type& KVal);
+
+const_iterator find(const key_type& KVal) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `KVal`  
+ Значение ключа для поиска.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор, указывающий на расположение первый элемент, соответствующий ключ, предоставленный или итератор `end()` Если такого элемента не существует.  
+  
+##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+
+ Возвращает сохраненный объект распределителя для параллельной контейнера. Данный метод безопасен в режиме параллелизма.  
+  
+```
+allocator_type get_allocator() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Сохраненный объект распределителя для параллельной контейнера.  
+  
+##  <a name="a-namehashfunctiona-hashfunction"></a><a name="hash_function"></a>hash_function 
+
+ Возвращает сохраненный объект хэш-функции.  
+  
+```
+hasher hash_function() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Сохраненный объект хэш-функции.  
+  
+##  <a name="a-nameinserta-insert"></a><a name="insert"></a>Вставка 
+
+ Добавляет элементы в `concurrent_unordered_multiset` объекта.  
+  
+```
+iterator insert(
+    const value_type& value);
+
+iterator insert(
+    const_iterator _Where,
+    const value_type& value);
+
+template<class _Iterator>
+void insert(_Iterator first,
+    _Iterator last);
+
+template<class V>
+iterator insert(
+    V&& value);
+
+template<class V>
+typename std::enable_if<!std::is_same<const_iterator,
+    typename std::remove_reference<V>::type>::value,
+    iterator>::type insert(
+    const_iterator _Where,
+    V&& value);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Iterator`  
+ Тип итератора, который используется для вставки.  
+  
+ `V`  
+ Тип вставляемое значение.  
+  
+ `value`  
+ Значение для вставки.  
+  
+ `_Where`  
+ Начальное расположение для поиска точку вставки.  
+  
+ `first`  
+ Начало диапазона для вставки.  
+  
+ `last`  
+ Конец диапазона для вставки.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор, указывающий позицию вставки.  
+  
+### <a name="remarks"></a>Примечания  
+ Первая функция-член вставляет элемент `value` в управляемой последовательности, затем возвращает итератор, указывающий на вставленный элемент.  
+  
+ Вторая функция-член возвращает insert ( `value`), используя `_Where` в качестве отправной точки в управляемой последовательности для поиска курсор.  
+  
+ Третья функция-член вставляет последовательность значений элементов в диапазоне [ `first`, `last`).  
+  
+ Последние два члена функции ведут себя одинаково как первые два, за исключением того, что `value` , используемое для создания вставленного значения.  
+  
+##  <a name="a-namekeyeqa-keyeq"></a><a name="key_eq"></a>key_eq 
+
+ Объект функции сравнения хранимых равенства.  
+  
+```
+key_equal key_eq() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Объект функции сравнения хранимых равенства.  
+  
+##  <a name="a-nameloadfactora-loadfactor"></a><a name="load_factor"></a>load_factor 
+
+ Вычисляет и возвращает коэффициент текущей нагрузки контейнера. Фактор нагрузки — количество элементов в контейнере, деленное на количество сегментов.  
+  
+```
+float load_factor() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Коэффициент загрузки для контейнера.  
+  
+##  <a name="a-namemaxloadfactora-maxloadfactor"></a><a name="max_load_factor"></a>max_load_factor 
+
+ Возвращает или задает максимальный коэффициент нагрузки контейнера. Максимального коэффициента нагрузки является наибольшее количество элементов, чем может быть в одном контейнере оказывается перед контейнера роста своей внутренней таблицы.  
+  
+```
+float max_load_factor() const;
+
+void max_load_factor(float _Newmax);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Newmax`  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция-член возвращает значение, но вызывает [out_of_range](../../../standard-library/out-of-range-class.md) исключение при недопустимости коэффициент предоставленного загрузки...  
+  
+##  <a name="a-namemaxsizea-maxsize"></a><a name="max_size"></a>max_size 
+
+ Возвращает максимальное число одновременных контейнера, определяется распределителя. Данный метод безопасен в режиме параллелизма.  
+  
+```
+size_type max_size() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Максимальное количество элементов, которые могут быть вставлены в этом параллельном контейнере.  
+  
+### <a name="remarks"></a>Примечания  
+ Это значение верхней границы действительно может быть выше, чем то, что еще фактически может содержаться в контейнере.  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+
+ Назначает содержимое другого `concurrent_unordered_multiset` этого объекта. Этот метод не является безопасным в режиме параллелизма.  
+  
+```
+concurrent_unordered_multiset& operator= (const concurrent_unordered_multiset& _Uset);
+
+concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Uset`  
+ Исходный объект `concurrent_unordered_multiset`.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ссылку на это `concurrent_unordered_multiset` объекта.  
+  
+### <a name="remarks"></a>Примечания  
+ После удаления всех существующих элементов из параллельного неупорядоченного мультинабор `operator=` копирует или перемещает содержимое `_Uset` в параллельное неупорядоченное мультинабора.  
+  
+##  <a name="a-namerehasha-rehash"></a><a name="rehash"></a>rehash 
+
+ Повторно создает хэш-таблицу.  
+  
+```
+void rehash(size_type _Buckets);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Buckets`  
+ Требуемое количество сегментов.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член устанавливает число сегментов не менее `_Buckets` и при необходимости перестраивает хэш-таблицу. Число контейнеров должно быть степенью числа 2. Если не является степенью числа 2, оно будет округлено до следующего наибольшего степень числа 2.  
+  
+ Он выдает [out_of_range](../../../standard-library/out-of-range-class.md) исключение, если число контейнеров, является недопустимым (0 или больше, чем максимальное количество блоков).  
+  
+##  <a name="a-namesizea-size"></a><a name="size"></a>размер 
+
+ Возвращает число элементов в этом параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
+  
+```
+size_type size() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Число элементов в контейнере.  
+  
+### <a name="remarks"></a>Примечания  
+ При наличии параллельных вставок число элементов в параллельном контейнере может измениться сразу после вызова этой функции даже до чтения возвращаемого значения.  
+  
+##  <a name="a-nameswapa-swap"></a><a name="swap"></a>Переключение 
+
+ Меняет местами содержимое двух `concurrent_unordered_multiset` объектов. Этот метод не является безопасным в режиме параллелизма.  
+  
+```
+void swap(concurrent_unordered_multiset& _Uset);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Uset`  
+ Объект `concurrent_unordered_multiset` для обмена.  
+  
+##  <a name="a-nameunsafebegina-unsafebegin"></a><a name="unsafe_begin"></a>unsafe_begin 
+
+ Возвращает итератор на первый элемент в этом контейнере для конкретного сегмента.  
+  
+```
+local_iterator unsafe_begin(size_type _Bucket);
+
+const_local_iterator unsafe_begin(size_type _Bucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Bucket`  
+ Индекс сегмента.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор, указывающий начало сегмента.  
+  
+##  <a name="a-nameunsafebucketa-unsafebucket"></a><a name="unsafe_bucket"></a>unsafe_bucket 
+
+ Возвращает индекс сегмента, который сопоставляет указанный ключ в этом контейнере.  
+  
+```
+size_type unsafe_bucket(const key_type& KVal) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `KVal`  
+ Ключ элемента, поиск которого выполняется.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Индекс сегмента для ключа в этом контейнере.  
+  
+##  <a name="a-nameunsafebucketcounta-unsafebucketcount"></a><a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+
+ Возвращает текущее количество сегментов в этом контейнере.  
+  
+```
+size_type unsafe_bucket_count() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Текущее количество сегментов в этом контейнере.  
+  
+##  <a name="a-nameunsafebucketsizea-unsafebucketsize"></a><a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+
+ Возвращает количество элементов из конкретного сегмента этого контейнера.  
+  
+```
+size_type unsafe_bucket_size(size_type _Bucket);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Bucket`  
+ Контейнер для поиска.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Текущее количество сегментов в этом контейнере.  
+  
+##  <a name="a-nameunsafecbegina-unsafecbegin"></a><a name="unsafe_cbegin"></a>unsafe_cbegin 
+
+ Возвращает итератор на первый элемент в этом контейнере для конкретного сегмента.  
+  
+```
+const_local_iterator unsafe_cbegin(size_type _Bucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Bucket`  
+ Индекс сегмента.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор, указывающий начало сегмента.  
+  
+##  <a name="a-nameunsafecenda-unsafecend"></a><a name="unsafe_cend"></a>unsafe_cend 
+
+ Возвращает итератор на позицию после последнего элемента в конкретного сегмента.  
+  
+```
+const_local_iterator unsafe_cend(size_type _Bucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Bucket`  
+ Индекс сегмента.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор, указывающий начало сегмента.  
+  
+##  <a name="a-nameunsafeenda-unsafeend"></a><a name="unsafe_end"></a>unsafe_end 
+
+ Возвращает итератор на последний элемент в этом контейнере для конкретного сегмента.  
+  
+```
+local_iterator unsafe_end(size_type _Bucket);
+
+const_local_iterator unsafe_end(size_type _Bucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Bucket`  
+ Индекс сегмента.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор, указывающий на конец сегмента.  
+  
+##  <a name="a-nameunsafeerasea-unsafeerase"></a><a name="unsafe_erase"></a>unsafe_erase 
+
+ Удаляет элементы из `concurrent_unordered_multiset` в указанных позициях. Этот метод не является безопасным в режиме параллелизма.  
+  
+```
+iterator unsafe_erase(
+    const_iterator _Where);
+
+iterator unsafe_erase(
+    const_iterator first,
+    const_iterator last);
+
+size_type unsafe_erase(
+    const key_type& KVal);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Where`  
+ Положение итератора для удаления.  
+  
+ `first`  
+ `last`  
+ `KVal`  
+ Значение ключа для удаления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Первые два члена функции возвращают итератор, задающий первый элемент, находящийся за всеми удаленными элементами, или [завершить метод](#end)(), если такой элемент не существует. Третья функция-член возвращает число элементов, которые она удаляет.  
+  
+### <a name="remarks"></a>Примечания  
+ Первая функция-член удаляет элемент, на который указывает `_Where`. Вторая функция-член удаляет элементы в диапазоне [ `_Begin`, `_End`).  
+  
+ Третья функция-член удаляет элементы в диапазоне, ограниченном [equal_range метод](#equal_range)(KVal).  
+  
+##  <a name="a-nameunsafemaxbucketcounta-unsafemaxbucketcount"></a><a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+
+ Возвращает максимальное количество сегментов в этом контейнере.  
+  
+```
+size_type unsafe_max_bucket_count() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Максимальное количество сегментов в этом контейнере.  
+  
+## <a name="see-also"></a>См. также  
+ [пространство имен Concurrency](concurrency-namespace.md)   
  [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)
+
+
+
+

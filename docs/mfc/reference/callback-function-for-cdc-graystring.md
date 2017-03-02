@@ -1,61 +1,77 @@
 ---
-title: "Функция обратного вызова для CDC::GrayString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Callback Function for CDC::GrayString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функции обратного вызова, для CDC::GrayString"
+title: "Функция обратного вызова для CDC::GrayString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Callback Function for CDC::GrayString
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback functions, for CDC::GrayString
 ms.assetid: 5217e183-df48-426b-931b-6245022ca36f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Функция обратного вызова для CDC::GrayString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 3ce3afefae9618420a8a97b27994c33604745677
+ms.lasthandoff: 02/24/2017
 
-*OutputFunc* заполнитель для приложения, переданного имени функции обратного вызова.  
+---
+# <a name="callback-function-for-cdcgraystring"></a>Функция обратного вызова для CDC::GrayString
+*OutputFunc* — это имя функции обратного вызова, предоставляемую приложением.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      BOOL CALLBACK EXPORT OutputFunc(   
-   HDC hDC,   
-   LPARAM lpData,   
-   int nCount    
-);  
+BOOL CALLBACK EXPORT OutputFunc(
+    HDC hDC,  
+    LPARAM lpData,  
+    int nCount);
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `hDC`  
- Задает контекст устройством хранения с растровым изображением по крайней мере ширины и высоты, `nWidth` и `nHeight` в `GrayString`.  
+ Определяет контекст устройства памяти с растровым изображением, по меньшей мере ширину и высоту, определяемой `nWidth` и `nHeight` в `GrayString`.  
   
  `lpData`  
- Указывает на символьной строки, который необходимо создать.  
+ Указывает на строку символов, которую необходимо нарисовать.  
   
  `nCount`  
  Указывает число символов для вывода.  
   
-## Возвращаемое значение  
- Возвращаемое значение функции обратного вызова должно быть **TRUE** отображаются успешное завершение; в противном случае — значение **ЛОЖЬ**.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращаемое значение функции обратного вызова должен быть **TRUE** в случае успеха; в противном случае это **FALSE**.  
   
-## Заметки  
- Функция обратного вызова \(*OutputFunc*\) должна создать образ относительно координаты \(0,0\), а не \(*x*, *y*\).  
+## <a name="remarks"></a>Примечания  
+ Функция обратного вызова (*OutputFunc*) должен рисования изображения относительно координат (0,0) вместо (*x*, *y*).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GrayString](../Topic/CDC::GrayString.md)
+ [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
+
+

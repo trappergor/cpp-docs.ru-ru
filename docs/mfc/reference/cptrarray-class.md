@@ -1,103 +1,120 @@
 ---
-title: "CPtrArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPtrArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], универсальный"
-  - "CPtrArray class"
-  - "generic arrays"
+title: "Класс CPtrArray | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPtrArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], generic
+- CPtrArray class
+- generic arrays
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CPtrArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: d0cfa1ec60a6657403b3170c118ddc701946e308
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cptrarray-class"></a>Класс CPtrArray
 Поддерживает массивы пустых указателей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CPtrArray : public CObject  
 ```  
   
-## Члены  
- Функции\-члены `CPtrArray` похожи на функции\-членам класса [CObArray](../../mfc/reference/cobarray-class.md).  Сходство вследствие этого, можно использовать документации `CObArray` для особенностях функции\-члена.  Везде, где можно увидеть указатель `CObject` в качестве параметра или возвращаемого значения функции замените указатель на `void`.  
+## <a name="members"></a>Члены  
+ Функции-члены `CPtrArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- например, преобразуется в  
+ , например, преобразуется в  
   
  `void* CPtrArray::GetAt( int <nIndex> ) const;`  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|Создает пустой массив.|  
+|----------|-----------------|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|  
   
-### Открытые методы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|Добавляет элемент в конец массива; растет массив, если требуемый.|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|Добавляет другой массив в массив. растет массив, если требуемый.|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|Копирует другой массив в массив. растет массив, если требуемый.|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|Возвращает временной ссылку на указатель элемента в массиве.|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|Высвобождает всю неиспользуемую память над текущим границей.|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|Возвращает значение по заданному индексу.|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|Получает число элементов в данном массиве.|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|Разрешает доступ к элементам массива.  Может принимать значение `NULL`.|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|Получает число элементов в данном массиве.|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|Возвращает максимальный допустимый индекс.|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|Вставляет элемент \(или все элементы в других массив\) по указанному индексу.|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|Определяет, если массив пуст.|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|Удаляет все элементы из этого массива.|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|Удаляет элемент по указанному индексу.|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|Задает значение для данного индекса; массив не разрешенный увеличиваться.|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|Задает значение для данного индекса; растет массив, если требуемый.|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|Задает количество элементов, которое должно содержаться в этом массиве.|  
-  
-### Открытые операторы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|Получает или задает элемент по указанному индексу.|  
+|----------|-----------------|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может быть `NULL`.|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|  
   
-## Заметки  
- `CPtrArray` содержит макрос `IMPLEMENT_DYNAMIC` для поддержки доступа типа во время выполнения и сбрасывать на `CDumpContext` объект.  Если требуется дамп отдельных элементов массива указателей, необходимо установить глубину контекста дампа значение 1 или больше.  
+### <a name="public-operators"></a>Открытые операторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|  
+  
+## <a name="remarks"></a>Примечания  
+ `CPtrArray`включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель элементов массива, необходимо задать глубины контекста дампа 1 или выше.  
   
 > [!NOTE]
->  Перед использованием массива, используйте `SetSize` чтобы установить его размер и выделить память для него.  Если не используется `SetSize`, то добавление элементов в массив часто вызывают быть reallocated и скопировать его.  Частое переразмещение и копирование неработоспособны и может разделить память.  
+>  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  
   
  Массивы указателей не может быть сериализован.  
   
- Если массив указателей удаления или при его элементы удалены указатели, а не только удалены сущности, на который они ссылаются.  
+ При удалении указателя массива или его элементов, удаляются только указатели, не сущностями, которые они ссылаются.  
   
- Дополнительные сведения об использовании `CPtrArray` см. в статье [коллекции](../../mfc/collections.md).  
+ Дополнительные сведения об использовании `CPtrArray`, см. в статье [коллекции](../../mfc/collections.md).  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrArray`  
   
-## Требования  
- **Header:**  afxcoll.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxcoll.h  
   
-## См. также  
- [CObject Class](../Topic/CObject%20Class.md)   
+## <a name="see-also"></a>См. также  
+ [CObject-класс](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CObArray Class](../../mfc/reference/cobarray-class.md)
+ [Класс CObArray](../../mfc/reference/cobarray-class.md)
+

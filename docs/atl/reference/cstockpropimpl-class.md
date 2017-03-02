@@ -1,148 +1,161 @@
 ---
-title: "CStockPropImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CStockPropImpl"
-  - "ATL::CStockPropImpl"
-  - "ATL.CStockPropImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления [ATL], свойства хранения"
-  - "CStockPropImpl class"
-  - "свойства хранения, элементы управления ATL"
+title: "Класс CStockPropImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CStockPropImpl
+- ATL::CStockPropImpl
+- ATL.CStockPropImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStockPropImpl class
+- controls [ATL], stock properties
+- stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CStockPropImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 366da264f62364a39f6dfe9903a1a19a89266d33
+ms.lasthandoff: 02/24/2017
 
-Этот класс содержит методы для поддержки значения стандартные свойства.  
+---
+# <a name="cstockpropimpl-class"></a>Класс CStockPropImpl
+Этот класс предоставляет методы для поддержки стандартных свойств значения.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```
+template <class T, class InterfaceName,
+    const IID* piid = &_ATL_IIDOF(InterfaceName),
+    const GUID* plibid = &CComModule::m_libid,
+    WORD wMajor = 1,
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
+ plibid,
+    wMajor,
+ wMinor,
+    tihclass>
+```   
   
-      template <  
-class T,  
-class InterfaceName,   
-const IID* piid= &_ATL_IIDOF(InterfaceName),   
-const GUID* plibid= &CComModule::m_libid,   
-WORD wMajor= 1,  
-WORD wMinor= 0,   
-class tihclass= CcomTypeInfoHolder  
->  
-class ATL_NO_VTABLE CStockPropImpl :  
-public IDispatchImpl< InterfaceName, piid, plibid, wMajor,  
-   wMinor, tihclass>  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
- Класс, реализующий элемент управления, производный от `CStockPropImpl`.  
+ Реализация элемента управления и наследование от класса `CStockPropImpl`.  
   
  `InterfaceName`  
- Сдвоенный интерфейс, предоставляющими стандартные свойства.  
+ Предоставление доступа к свойствам акций сдвоенный интерфейс.  
   
  `piid`  
  Указатель на идентификатор IID `InterfaceName`.  
   
  `plibid`  
- Указатель на идентификатор LIBID библиотеки типов, содержащие определения `InterfaceName`.  
+ Указатель на идентификатор LIBID библиотеки типов, содержащий определение `InterfaceName`.  
   
  `wMajor`  
- Основной номер версии библиотеки типов.  Значение по умолчанию \- 1.  
+ Основной номер версии библиотеки типов. Значение по умолчанию — 1.  
   
  `wMinor`  
- Дополнительный номер версии библиотеки типов.  Значение по умолчанию \- 0.  
+ Дополнительный номер версии библиотеки типов. Значение по умолчанию — 0.  
   
  `tihclass`  
- Класс, используемый для управления сведения о типе для `T`.  Значение по умолчанию — `CComTypeInfoHolder`.  
+ Класс, используемый для управления сведения о типе `T`. Значение по умолчанию — `CComTypeInfoHolder`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|[get\_Appearance](../Topic/CStockPropImpl::get_Appearance.md)|Вызывайте этот метод для получения стиль рисования используемый элементом управления, например, квартирой или выпуклая граница.|  
-|[get\_AutoSize](../Topic/CStockPropImpl::get_AutoSize.md)|Вызовите этот метод, чтобы получить состояние пометить, указывающее, если элемент управления не может быть любым другим размером.|  
-|[get\_BackColor](../Topic/CStockPropImpl::get_BackColor.md)|Вызывайте этот метод для получения цвет фона элемента управления.|  
-|[get\_BackStyle](../Topic/CStockPropImpl::get_BackStyle.md)|Вызывайте этот метод для получения стиль фона элемента управления или прозрачного и непрозрачного.|  
-|[get\_BorderColor](../Topic/CStockPropImpl::get_BorderColor.md)|Вызывайте этот метод для получения цвет границы элемента управления.|  
-|[get\_BorderStyle](../Topic/CStockPropImpl::get_BorderStyle.md)|Вызывайте этот метод для получения стиль границы элемента управления.|  
-|[get\_BorderVisible](../Topic/CStockPropImpl::get_BorderVisible.md)|Вызовите этот метод, чтобы получить состояние если пометить который указывает границу элемента управления видимым или нет.|  
-|[get\_BorderWidth](../Topic/CStockPropImpl::get_BorderWidth.md)|Вызывайте этот метод для получения ширину \(в точках\) границы элемента управления.|  
-|[get\_Caption](../Topic/CStockPropImpl::get_Caption.md)|Вызовите этот метод, чтобы получить текст, указанный в заголовке объекта.|  
-|[get\_DrawMode](../Topic/CStockPropImpl::get_DrawMode.md)|Вызывайте этот метод для получения режима документа элемента управления, например, перо XOR или изменить цвета.|  
-|[get\_DrawStyle](../Topic/CStockPropImpl::get_DrawStyle.md)|Вызывайте этот метод для получения стиль рисования элемента управления, например, сплошная, пунктирная, либо.|  
-|[get\_DrawWidth](../Topic/CStockPropImpl::get_DrawWidth.md)|Вызывайте этот метод для получения ширину \(в точках\) используемый методами документа элемента управления.|  
-|[get\_Enabled](../Topic/CStockPropImpl::get_Enabled.md)|Вызовите этот метод, чтобы получить состояние пометить, указывающее, является ли элемент управления включен.|  
-|[get\_FillColor](../Topic/CStockPropImpl::get_FillColor.md)|Вызывайте этот метод для получения цвет заливки элемента управления.|  
-|[get\_FillStyle](../Topic/CStockPropImpl::get_FillStyle.md)|Вызывайте этот метод для получения стиль заливки элемента управления, например сплошная, прозрачный или крест\- насидел.|  
-|[get\_Font](../Topic/CStockPropImpl::get_Font.md)|Этот метод вызывается для получения указателя на свойства шрифта элемента управления.|  
-|[get\_ForeColor](../Topic/CStockPropImpl::get_ForeColor.md)|Вызовите этот метод, чтобы получить основной цвет элемента управления.|  
-|[get\_HWND](../Topic/CStockPropImpl::get_HWND.md)|Вызовите этот метод, чтобы получить дескриптор окна, связанный с элементом управления.|  
-|[get\_MouseIcon](../Topic/CStockPropImpl::get_MouseIcon.md)|Вызовите этот метод, чтобы получить свойства изображения изображения \(значка, растрового изображения или метафайлов\) была недоступна, когда указатель мыши находится над элементом управления.|  
-|[get\_MousePointer](../Topic/CStockPropImpl::get_MousePointer.md)|Вызовите этот метод, чтобы получить тип указателя мыши, отображаемый, когда указатель мыши находится над элементом управления, например стрелками крестом или часов.|  
-|[get\_Picture](../Topic/CStockPropImpl::get_Picture.md)|Вызовите этот метод, чтобы получить указатель на свойства изображения изображения \(значка, растрового изображения или метафайлов\).|  
-|[get\_ReadyState](../Topic/CStockPropImpl::get_ReadyState.md)|Вызовите этот метод, чтобы получить состояние элемента управления вместо этого например, загрузки и произвел загрузку.|  
-|[get\_TabStop](../Topic/CStockPropImpl::get_TabStop.md)|Вызывайте этот метод для получения пометить, указывающее, если элемент управления позицию табуляции или нет.|  
-|[get\_Text](../Topic/CStockPropImpl::get_Text.md)|Вызовите этот метод, чтобы получить текст, отображаемый с элементом управления.|  
-|[get\_Valid](../Topic/CStockPropImpl::get_Valid.md)|Вызовите этот метод, чтобы получить состояние пометить, указывающее, если элемент управления является допустимым.|  
-|[get\_Window](../Topic/CStockPropImpl::get_Window.md)|Вызовите этот метод, чтобы получить дескриптор окна, связанный с элементом управления.  [CStockPropImpl::get\_HWND](../Topic/CStockPropImpl::get_HWND.md), идентичный элементу.|  
-|[put\_Appearance](../Topic/CStockPropImpl::put_Appearance.md)|Вызовите этот метод, чтобы задать стиль рисования используемый элементом управления, например, квартирой или выпуклая граница.|  
-|[put\_AutoSize](../Topic/CStockPropImpl::put_AutoSize.md)|Вызовите этот метод, чтобы пометить установить значение, указывающее, если элемент управления не может быть любым другим размером.|  
-|[put\_BackColor](../Topic/CStockPropImpl::put_BackColor.md)|Вызовите этот метод, чтобы задать цвет фона элемента управления.|  
-|[put\_BackStyle](../Topic/CStockPropImpl::put_BackStyle.md)|Вызывайте этот метод для задания стиля фона элемента управления.|  
-|[put\_BorderColor](../Topic/CStockPropImpl::put_BorderColor.md)|Вызовите этот метод, чтобы задать цвет границы элемента управления.|  
-|[put\_BorderStyle](../Topic/CStockPropImpl::put_BorderStyle.md)|Вызовите этот метод, чтобы задать стиль границы элемента управления.|  
-|[put\_BorderVisible](../Topic/CStockPropImpl::put_BorderVisible.md)|Вызовите этот метод, чтобы установить значение, указывающее, если пометить границы элемента управления отображается.|  
-|[put\_BorderWidth](../Topic/CStockPropImpl::put_BorderWidth.md)|Вызовите этот метод, чтобы задать ширину границы элемента управления.|  
-|[put\_Caption](../Topic/CStockPropImpl::put_Caption.md)|Вызовите этот метод, чтобы задать текст, отображаемый с элементом управления.|  
-|[put\_DrawMode](../Topic/CStockPropImpl::put_DrawMode.md)|Вызовите этот метод, чтобы установить режим рисования элемента управления, например, перо XOR или изменить цвета.|  
-|[put\_DrawStyle](../Topic/CStockPropImpl::put_DrawStyle.md)|Вызовите этот метод, чтобы задать стиль рисования элемента управления, например, сплошная, пунктирная, либо.|  
-|[put\_DrawWidth](../Topic/CStockPropImpl::put_DrawWidth.md)|Вызовите этот метод, чтобы задать ширину \(в точках\) используемый методами документа элемента управления.|  
-|[put\_Enabled](../Topic/CStockPropImpl::put_Enabled.md)|Вызовите этот метод, чтобы пометить, указывающее, является ли элемент управления включен.|  
-|[put\_FillColor](../Topic/CStockPropImpl::put_FillColor.md)|Вызовите этот метод, чтобы установить цвет заливки элемента управления.|  
-|[put\_FillStyle](../Topic/CStockPropImpl::put_FillStyle.md)|Вызовите этот метод, чтобы задать стиль заливки элемента управления, например сплошная, прозрачный или крест\- насидел.|  
-|[put\_Font](../Topic/CStockPropImpl::put_Font.md)|Вызывайте этот метод для задания свойства шрифта элемента управления.|  
-|[put\_ForeColor](../Topic/CStockPropImpl::put_ForeColor.md)|Вызовите этот метод, чтобы установить цвет элемента управления.|  
-|[put\_HWND](../Topic/CStockPropImpl::put_HWND.md)|Этот метод вернет значение E\_FAIL.|  
-|[put\_MouseIcon](../Topic/CStockPropImpl::put_MouseIcon.md)|Вызывайте этот метод для задания свойств изображения изображения \(значка, растрового изображения или метафайлов\), отображаемый, когда указатель мыши находится над элементом управления.|  
-|[put\_MousePointer](../Topic/CStockPropImpl::put_MousePointer.md)|Вызывайте этот метод для задания типа указателя мыши, отображаемый, когда указатель мыши находится над элементом управления, например стрелками крестом или часов.|  
-|[put\_Picture](../Topic/CStockPropImpl::put_Picture.md)|Вызывайте этот метод для задания свойств изображения изображения \(значка, растрового изображения или метафайлов\) для отображения.|  
-|[put\_ReadyState](../Topic/CStockPropImpl::put_ReadyState.md)|Вызовите этот метод, чтобы установить состояние готовности элемента управления, например, загрузки и произвел загрузку.|  
-|[put\_TabStop](../Topic/CStockPropImpl::put_TabStop.md)|Вызовите этот метод, чтобы установить значение, указывающее, если пометить элемент управления позицию табуляции или нет.|  
-|[put\_Text](../Topic/CStockPropImpl::put_Text.md)|Вызовите этот метод, чтобы задать текст, отображаемый с элементом управления.|  
-|[put\_Valid](../Topic/CStockPropImpl::put_Valid.md)|Вызовите этот метод, чтобы пометить, указывающее, если элемент управления является допустимым.|  
-|[put\_Window](../Topic/CStockPropImpl::put_Window.md)|Этот метод вызывает [CStockPropImpl::put\_HWND](../Topic/CStockPropImpl::put_HWND.md), который возвращает E\_FAIL.|  
-|[putref\_Font](../Topic/CStockPropImpl::putref_Font.md)|Вызывайте этот метод для задания свойства шрифта элемента управления со счетчиком ссылок.|  
-|[putref\_MouseIcon](../Topic/CStockPropImpl::putref_MouseIcon.md)|Вызывайте этот метод для задания свойств изображения изображения \(значка, растрового изображения или метафайлов\), отображаемый, когда указатель мыши находится над элементом управления и счетчика ссылок.|  
-|[putref\_Picture](../Topic/CStockPropImpl::putref_Picture.md)|Вызывайте этот метод для задания свойств изображения изображения \(значка, растрового изображения или метафайлов\), отображаемый с счетчиком ссылок.|  
+|[get_Appearance](#get_appearance)|Этот метод используется для получения стиль рисования используется элементом управления, например, flat или 3D.|  
+|[get_AutoSize](#get_autosize)|Этот метод используется для получения состояния флаг, указывающий, если элемент управления не может быть любой другой размер.|  
+|[get_BackColor](#get_backcolor)|Этот метод используется для получения цвет фона элемента управления.|  
+|[get_BackStyle](#get_backstyle)|Этот метод используется для получения стиль фона элемента управления, либо прозрачный или непрозрачный.|  
+|[get_BorderColor](#get_bordercolor)|Этот метод используется для получения цвет границы элемента управления.|  
+|[get_BorderStyle](#get_borderstyle)|Этот метод используется для получения стиль границы элемента управления.|  
+|[get_BorderVisible](#get_bordervisible)|Этот метод используется для получения состояния флаг, указывающий, является ли границы элемента управления видимым.|  
+|[get_BorderWidth](#get_borderwidth)|Этот метод используется для получения ширину (в пикселях) границы элемента управления.|  
+|[get_Caption](#get_caption)|Вызовите этот метод, чтобы получить текст, указанный в заголовке объекта.|  
+|[get_DrawMode](#get_drawmode)|Этот метод служит для получения элемента управления режим рисования, например, XOR пера или обратить цвета.|  
+|[get_DrawStyle](#get_drawstyle)|Этот метод вызывается для получения стиль рисования элемента управления, например, сплошная, штриховая или пунктирная.|  
+|[get_DrawWidth](#get_drawwidth)|Этот метод используется для получения ширину (в пикселях) используемые методы для рисования элемента управления.|  
+|[get_Enabled](#get_enabled)|Этот метод используется для получения состояния флаг, указывающий, включен ли элемент управления.|  
+|[get_FillColor](#get_fillcolor)|Этот метод служит для получения элемента управления Цвет заливки.|  
+|[get_FillStyle](#get_fillstyle)|Этот метод вызывается для получения стиль заливки элемента управления, например, сплошная, прозрачный или клетчатого.|  
+|[get_Font](#get_font)|Вызовите этот метод, чтобы получить указатель свойства шрифта элемента управления.|  
+|[get_ForeColor](#get_forecolor)|Этот метод используется для получения основной цвет элемента управления.|  
+|[get_HWND](#get_hwnd)|Вызовите этот метод, чтобы получить дескриптор окна, связанный с элементом управления.|  
+|[get_MouseIcon](#get_mouseicon)|Этот метод вызывается для получения свойств рисунка рисунок (значок, битовую карту или метафайл), отображаемый, когда указатель мыши находится над элементом управления.|  
+|[get_MousePointer](#get_mousepointer)|Этот метод вызывается для получения типа курсор, отображаемый, когда указатель мыши находится над элементом управления, например, стрелки, между или песочные часы.|  
+|[get_Picture](#get_picture)|Вызовите этот метод, чтобы получить указатель свойства рисунка рисунок (значок, битовую карту или метафайл) для отображения.|  
+|[get_ReadyState](#get_readystate)|Этот метод для получения состояния готовности элемента управления, например, загрузка или загружен.|  
+|[get_TabStop](#get_tabstop)|Вызовите этот метод, чтобы получить флаг, указывающий, является ли элемент управления табуляции.|  
+|[get_Text](#get_text)|Этот метод используется для получения текста, который отображается с помощью элемента управления.|  
+|[getvalid](#get_valid)|Этот метод используется для получения состояния флаг, указывающий, является ли элемент управления допустимым.|  
+|[get_Window](#get_window)|Вызовите этот метод, чтобы получить дескриптор окна, связанный с элементом управления. Идентичен [CStockPropImpl::get_HWND](#get_hwnd).|  
+|[put_Appearance](#put_appearance)|Вызовите этот метод, чтобы задать стиль изображения, используемые элементом управления, например, flat или 3D.|  
+|[put_AutoSize](#put_autosize)|Этот метод используется для задания значения флаг, указывающий, если элемент управления не может быть любой другой размер.|  
+|[put_BackColor](#put_backcolor)|Вызовите этот метод, чтобы задать цвет фона элемента управления.|  
+|[put_BackStyle](#put_backstyle)|Вызовите этот метод, чтобы задать стиль фона элемента управления.|  
+|[put_BorderColor](#put_bordercolor)|Вызовите этот метод, чтобы задать цвет границы элемента управления.|  
+|[put_BorderStyle](#put_borderstyle)|Вызовите этот метод, чтобы задать стиль границы элемента управления.|  
+|[put_BorderVisible](#put_bordervisible)|Этот метод используется для установки значения флага, указывающее, является ли границы элемента управления видимым.|  
+|[put_BorderWidth](#put_borderwidth)|Вызовите этот метод, чтобы задать ширину границы элемента управления.|  
+|[put_Caption](#put_caption)|Этот метод используется для задания текста, отображаемого в элементе управления.|  
+|[put_DrawMode](#put_drawmode)|Этот метод используется для задания элемента управления режим рисования, например, XOR пера или обратить цвета.|  
+|[put_DrawStyle](#put_drawstyle)|Вызовите этот метод, чтобы задать стиль рисования элемента управления, например, сплошная, штриховая или пунктирная.|  
+|[put_DrawWidth](#put_drawwidth)|Этот метод служит для задания ширины (в пикселях), используемые методы для рисования элемента управления.|  
+|[put_Enabled](#put_enabled)|Вызовите этот метод, чтобы задать флаг, указывающий, включен ли элемент управления.|  
+|[put_FillColor](#put_fillcolor)|Этот метод служит для задания цвета заливки элемента управления.|  
+|[put_FillStyle](#put_fillstyle)|Вызовите этот метод, чтобы задать стиль заливки элемента управления, например, сплошная, прозрачный или клетчатого.|  
+|[put_Font](#put_font)|Вызовите этот метод, чтобы задать свойства шрифта элемента управления.|  
+|[put_ForeColor](#put_forecolor)|Вызовите этот метод, чтобы задать цвет переднего плана элемента управления.|  
+|[put_HWND](#put_hwnd)|Этот метод вернет значение E_FAIL.|  
+|[put_MouseIcon](#put_mouseicon)|Этот метод используется для задания свойства рисунка рисунок (значок, битовую карту или метафайл), отображаемый, когда указатель мыши находится над элементом управления.|  
+|[put_MousePointer](#put_mousepointer)|Вызовите этот метод, чтобы задать тип указателя мыши, отображаемый, когда указатель мыши находится над элементом управления, например, стрелки, между или песочные часы.|  
+|[put_Picture](#put_picture)|Этот метод используется для задания свойств рисунок (значок, битовую карту или метафайл) для отображения графики.|  
+|[put_ReadyState](#put_readystate)|Вызовите этот метод, чтобы задать состояние готовности элемента управления, например, загружается или загружается.|  
+|[put_TabStop](#put_tabstop)|Этот метод используется для установки значения флага, указывающее, является ли элемент управления табуляции.|  
+|[put_Text](#put_text)|Этот метод используется для задания текста, который отображается с помощью элемента управления.|  
+|[putvalid](#put_valid)|Вызовите этот метод, чтобы задать флаг, указывающий, является ли элемент управления допустимым.|  
+|[put_Window](#put_window)|Этот метод вызывает метод [CStockPropImpl::put_HWND](#put_hwnd), которое возвращает значение E_FAIL.|  
+|[putref_Font](#putref_font)|Вызовите этот метод, чтобы задать свойства шрифта элемента управления, с помощью счетчика ссылок.|  
+|[putref_MouseIcon](#putref_mouseicon)|Вызовите этот метод, чтобы задать свойства рисунка рисунок (значок, битовую карту или метафайл), отображаемый, когда указатель мыши находится над элементом управления с счетчик ссылок.|  
+|[putref_Picture](#putref_picture)|Вызовите этот метод, чтобы задать свойства рисунка рисунок (значок, битовую карту или метафайл) для отображения с счетчик ссылок.|  
   
-## Заметки  
- `CStockPropImpl` предоставляет **обращен** и методы **get** для каждого стандартные свойства.  Эти методы предоставляют код, необходимый для размещения или получил элемент данных, который связан с каждым свойством и уведомления и синхронизировать с контейнером при изменении любого свойства.  
+## <a name="remarks"></a>Примечания  
+ `CStockPropImpl`предоставляет **поместить** и **получить** методы для каждого стандартного свойства. Эти методы предоставляют код, необходимый для установки или получения данных элемент, связанный с каждого свойства для уведомления и синхронизация с контейнером при изменении любого свойства.  
   
- Visual C\+\+ предоставляет поддержку для стандартных свойств через ее мастера.  Дополнительные сведения о добавлении стандартные свойства в элемент управления см. в разделе [Учебник по библиотеке ATL](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md).  
+ Visual C++ поддерживает стандартные свойства через ее мастера. Дополнительные сведения о добавлении стандартных свойств элемента управления в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md).  
   
- Для обратной совместимости `CStockPropImpl` также предоставляет `get_Window` и методы `put_Window`, просто вызывает `get_HWND` и `put_HWND` соответственно.  Реализация по умолчанию `put_HWND` возвращает **E\_FAIL** поскольку `HWND` должен быть доступен только для чтения свойством.  
+ Для обеспечения обратной совместимости `CStockPropImpl` также предоставляет `get_Window` и `put_Window` методы, которые просто вызвать `get_HWND` и `put_HWND`соответственно. Реализация по умолчанию `put_HWND` возвращает **E_FAIL** поскольку `HWND` должен быть доступным только для чтения.  
   
- Следующие свойства также имеют реализации **putref**:  
+ Следующие свойства также имеют **putref** реализации:  
   
 -   Шрифт  
   
@@ -150,18 +163,804 @@ public IDispatchImpl< InterfaceName, piid, plibid, wMajor,
   
 -   Рисунок  
   
- 3 Одинаковых стандартные свойства требуют их соответствующий элемент данных типа `CComPtr` или несколько другого класса, который обеспечивает правильную ссылку интерфейса, подсчитывая посредством оператора назначения.  
+ Те же три стандартных свойства требуют их соответствующий член данных типа `CComPtr` или другой класс, который предоставляет ссылку на правильный интерфейс Инвентаризация с помощью оператора присваивания.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `T`  
   
  [IDispatchImpl](../../atl/reference/idispatchimpl-class.md)  
   
  `CStockPropImpl`  
   
-## Требования  
- **Header:**  atlctl.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlctl.h  
   
-## См. также  
- [Class Overview](../../atl/atl-class-overview.md)   
- [IDispatchImpl Class](../../atl/reference/idispatchimpl-class.md)
+##  <a name="a-namegetappearancea--cstockpropimplgetappearance"></a><a name="get_appearance"></a>CStockPropImpl::get_Appearance  
+ Этот метод используется для получения стиль рисования используется элементом управления, например, flat или 3D.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnAppearance*  
+ Переменная, которая получает стиль рисования элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetautosizea--cstockpropimplgetautosize"></a><a name="get_autosize"></a>CStockPropImpl::get_AutoSize  
+ Этот метод используется для получения состояния флаг, указывающий, если элемент управления не может быть любой другой размер.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pbAutoSize*  
+ Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления не может быть любой другой размер.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetbackcolora--cstockpropimplgetbackcolor"></a><a name="get_backcolor"></a>CStockPropImpl::get_BackColor  
+ Этот метод используется для получения цвет фона элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pclrBackColor*  
+ Переменная, которая получает цвет фона элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetbackstylea--cstockpropimplgetbackstyle"></a><a name="get_backstyle"></a>CStockPropImpl::get_BackStyle  
+ Этот метод используется для получения стиль фона элемента управления, либо прозрачный или непрозрачный.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnBackStyle*  
+ Переменная, которая получает стиль фона элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetbordercolora--cstockpropimplgetbordercolor"></a><a name="get_bordercolor"></a>CStockPropImpl::get_BorderColor  
+ Этот метод используется для получения цвет границы элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pclrBorderColor*  
+ Переменная, которая получает цвет границы элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetborderstylea--cstockpropimplgetborderstyle"></a><a name="get_borderstyle"></a>CStockPropImpl::get_BorderStyle  
+ Этот метод используется для получения стиль границы элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnBorderStyle*  
+ Переменная, которая получает стиль границы элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetbordervisiblea--cstockpropimplgetbordervisible"></a><a name="get_bordervisible"></a>CStockPropImpl::get_BorderVisible  
+ Этот метод используется для получения состояния флаг, указывающий, является ли границы элемента управления видимым.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pbBorderVisible*  
+ Переменная, которая получает состояние флага. Значение TRUE указывает, что границы элемента управления является видимым.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetborderwidtha--cstockpropimplgetborderwidth"></a><a name="get_borderwidth"></a>CStockPropImpl::get_BorderWidth  
+ Этот метод используется для получения ширину границы элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnBorderWidth*  
+ Переменная, которая получает ширину границы элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetcaptiona--cstockpropimplgetcaption"></a><a name="get_caption"></a>CStockPropImpl::get_Caption  
+ Вызовите этот метод, чтобы получить текст, указанный в заголовке объекта.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pbstrCaption*  
+ Текст, отображаемый в элементе управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetdrawmodea--cstockpropimplgetdrawmode"></a><a name="get_drawmode"></a>CStockPropImpl::get_DrawMode  
+ Этот метод служит для получения элемента управления режим рисования, например, XOR пера или обратить цвета.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnDrawMode*  
+ Переменная, получающая режим рисования элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetdrawstylea--cstockpropimplgetdrawstyle"></a><a name="get_drawstyle"></a>CStockPropImpl::get_DrawStyle  
+ Этот метод вызывается для получения стиль рисования элемента управления, например, сплошная, штриховая или пунктирная.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnDrawStyle*  
+ Переменная, которая получает стиль рисования элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetdrawwidtha--cstockpropimplgetdrawwidth"></a><a name="get_drawwidth"></a>CStockPropImpl::get_DrawWidth  
+ Этот метод используется для получения ширину (в пикселях) используемые методы для рисования элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnDrawWidth*  
+ Переменная, получающая значение ширины элемента управления в пикселях.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetenableda--cstockpropimplgetenabled"></a><a name="get_enabled"></a>CStockPropImpl::get_Enabled  
+ Этот метод используется для получения состояния флаг, указывающий, включен ли элемент управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pbEnabled`  
+ Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления включен.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetfillcolora--cstockpropimplgetfillcolor"></a><a name="get_fillcolor"></a>CStockPropImpl::get_FillColor  
+ Этот метод служит для получения элемента управления Цвет заливки.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pclrFillColor*  
+ Переменная, которая получает цвет заливки для элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetfillstylea--cstockpropimplgetfillstyle"></a><a name="get_fillstyle"></a>CStockPropImpl::get_FillStyle  
+ Этот метод вызывается для получения стиль заливки элемента управления, например, сплошная, прозрачный или crosshatched.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnFillStyle*  
+ Переменная, которая получает стиль заливки элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetfonta--cstockpropimplgetfont"></a><a name="get_font"></a>CStockPropImpl::get_Font  
+ Вызовите этот метод, чтобы получить указатель свойства шрифта элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `ppFont`  
+ Переменная, которая получает указатель свойства шрифта элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetforecolora--cstockpropimplgetforecolor"></a><a name="get_forecolor"></a>CStockPropImpl::get_ForeColor  
+ Этот метод используется для получения основной цвет элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pclrForeColor*  
+ Переменная, которая получает основной цвет элементов управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegethwnda--cstockpropimplgethwnd"></a><a name="get_hwnd"></a>CStockPropImpl::get_HWND  
+ Вызовите этот метод, чтобы получить дескриптор окна, связанный с элементом управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `phWnd`  
+ Дескриптор окна, связанный с элементом управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetmouseicona--cstockpropimplgetmouseicon"></a><a name="get_mouseicon"></a>CStockPropImpl::get_MouseIcon  
+ Этот метод вызывается для получения свойств рисунка рисунок (значок, битовую карту или метафайл), отображаемый, когда указатель мыши находится над элементом управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `ppPicture`  
+ Переменная, которая получает указатель свойства рисунка рисунка.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetmousepointera--cstockpropimplgetmousepointer"></a><a name="get_mousepointer"></a>CStockPropImpl::get_MousePointer  
+ Этот метод вызывается для получения типа курсор, отображаемый, когда указатель мыши находится над элементом управления, например, стрелки, между или песочные часы.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnMousePointer*  
+ Переменная, которая получает тип указателя мыши.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetpicturea--cstockpropimplgetpicture"></a><a name="get_picture"></a>CStockPropImpl::get_Picture  
+ Вызовите этот метод, чтобы получить указатель свойства рисунка рисунок (значок, битовую карту или метафайл) для отображения.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `ppPicture`  
+ Переменная, которая получает указатель свойства рисунка. В разделе [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) подробнее.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetreadystatea--cstockpropimplgetreadystate"></a><a name="get_readystate"></a>CStockPropImpl::get_ReadyState  
+ Этот метод для получения состояния готовности элемента управления, например, загрузка или загружен.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pnReadyState*  
+ Переменная, получающая состояние готовности элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegettabstopa--cstockpropimplgettabstop"></a><a name="get_tabstop"></a>CStockPropImpl::get_TabStop  
+ Этот метод используется для получения состояния флаг, указывающий, является ли элемент управления табуляции.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pbTabStop*  
+ Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления является позицией табуляции.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegettexta--cstockpropimplgettext"></a><a name="get_text"></a>CStockPropImpl::get_Text  
+ Этот метод используется для получения текста, который отображается с помощью элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pbstrText*  
+ Текст, отображаемый в элементе управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetvalida--cstockpropimplgetvalid"></a><a name="get_valid"></a>CStockPropImpl::getvalid  
+ Этот метод используется для получения состояния флаг, указывающий, является ли элемент управления допустимым.  
+  
+```
+HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *pbValid*  
+ Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления является допустимым.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-namegetwindowa--cstockpropimplgetwindow"></a><a name="get_window"></a>CStockPropImpl::get_Window  
+ Вызовите этот метод, чтобы получить дескриптор окна, связанный с элементом управления. Идентичен [CStockPropImpl::get_HWND](#get_hwnd).  
+  
+```
+HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `phWnd`  
+ Дескриптор окна, связанный с элементом управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputappearancea--cstockpropimplputappearance"></a><a name="put_appearance"></a>CStockPropImpl::put_Appearance  
+ Вызовите этот метод, чтобы задать стиль изображения, используемые элементом управления, например, flat или 3D.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nAppearance`  
+ Новый стиль рисования для использования элементом управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputautosizea--cstockpropimplputautosize"></a><a name="put_autosize"></a>CStockPropImpl::put_AutoSize  
+ Этот метод используется для задания значения флаг, указывающий, если элемент управления не может быть любой другой размер.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *bAutoSize*  
+ Значение TRUE, если элемент управления не может быть любой другой размер.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputbackcolora--cstockpropimplputbackcolor"></a><a name="put_backcolor"></a>CStockPropImpl::put_BackColor  
+ Вызовите этот метод, чтобы задать цвет фона элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *clrBackColor*  
+ Новый цвет фона элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputbackstylea--cstockpropimplputbackstyle"></a><a name="put_backstyle"></a>CStockPropImpl::put_BackStyle  
+ Вызовите этот метод, чтобы задать стиль фона элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nBackStyle*  
+ Новый стиль фона элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputbordercolora--cstockpropimplputbordercolor"></a><a name="put_bordercolor"></a>CStockPropImpl::put_BorderColor  
+ Вызовите этот метод, чтобы задать цвет границы элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *clrBorderColor*  
+ Новый цвет границы. Тип данных OLE_COLOR внутренне представлено как 32-разрядных длинное целое число.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputborderstylea--cstockpropimplputborderstyle"></a><a name="put_borderstyle"></a>CStockPropImpl::put_BorderStyle  
+ Вызовите этот метод, чтобы задать стиль границы элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nBorderStyle*  
+ Новый стиль границы.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputbordervisiblea--cstockpropimplputbordervisible"></a><a name="put_bordervisible"></a>CStockPropImpl::put_BorderVisible  
+ Этот метод используется для установки значения флага, указывающее, является ли границы элемента управления видимым.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *bBorderVisible*  
+ Значение TRUE, если границы видимым.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputborderwidtha--cstockpropimplputborderwidth"></a><a name="put_borderwidth"></a>CStockPropImpl::put_BorderWidth  
+ Вызовите этот метод, чтобы задать ширину границы элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nBorderWidth`  
+ Новая ширина границы элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputcaptiona--cstockpropimplputcaption"></a><a name="put_caption"></a>CStockPropImpl::put_Caption  
+ Этот метод используется для задания текста, отображаемого в элементе управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *bstrCaption*  
+ Текст, отображаемый в элементе управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputdrawmodea--cstockpropimplputdrawmode"></a><a name="put_drawmode"></a>CStockPropImpl::put_DrawMode  
+ Этот метод используется для задания элемента управления режим рисования, например, XOR пера или обратить цвета.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nDrawMode`  
+ Новый режим рисования элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputdrawstylea--cstockpropimplputdrawstyle"></a><a name="put_drawstyle"></a>CStockPropImpl::put_DrawStyle  
+ Вызовите этот метод, чтобы задать стиль рисования элемента управления, например, сплошная, штриховая или пунктирная.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nDrawStyle*  
+ Новый стиль рисования для элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputdrawwidtha--cstockpropimplputdrawwidth"></a><a name="put_drawwidth"></a>CStockPropImpl::put_DrawWidth  
+ Этот метод служит для задания ширины (в пикселях), используемые методы для рисования элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nDrawWidth*  
+ Новое значение ширины для использования элементом управления графические методы.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputenableda--cstockpropimplputenabled"></a><a name="put_enabled"></a>CStockPropImpl::put_Enabled  
+ Этот метод используется для установки значения флага, указывающее, включен ли элемент управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `bEnabled`  
+ Значение TRUE, если включен элемент управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputfillcolora--cstockpropimplputfillcolor"></a><a name="put_fillcolor"></a>CStockPropImpl::put_FillColor  
+ Этот метод служит для задания цвета заливки элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *clrFillColor*  
+ Новый цвет заливки для элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputfillstylea--cstockpropimplputfillstyle"></a><a name="put_fillstyle"></a>CStockPropImpl::put_FillStyle  
+ Вызовите этот метод, чтобы задать стиль заливки элемента управления, например, сплошная, прозрачный или клетчатого.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nFillStyle*  
+ Новый стиль заливки для элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputfonta--cstockpropimplputfont"></a><a name="put_font"></a>CStockPropImpl::put_Font  
+ Вызовите этот метод, чтобы задать свойства шрифта элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pFont`  
+ Указатель свойства шрифта элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputforecolora--cstockpropimplputforecolor"></a><a name="put_forecolor"></a>CStockPropImpl::put_ForeColor  
+ Вызовите этот метод, чтобы задать цвет переднего плана элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *clrForeColor*  
+ Новый цвет переднего плана элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputhwnda--cstockpropimplputhwnd"></a><a name="put_hwnd"></a>CStockPropImpl::put_HWND  
+ Этот метод вернет значение E_FAIL.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ */\*hWnd\*/*  
+ Зарезервировано.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение E_FAIL.  
+  
+### <a name="remarks"></a>Примечания  
+ Дескриптор окна является значение только для чтения.  
+  
+##  <a name="a-nameputmouseicona--cstockpropimplputmouseicon"></a><a name="put_mouseicon"></a>CStockPropImpl::put_MouseIcon  
+ Этот метод используется для задания свойства рисунка рисунок (значок, битовую карту или метафайл), отображаемый, когда указатель мыши находится над элементом управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pPicture`  
+ Указатель свойства рисунка рисунка.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputmousepointera--cstockpropimplputmousepointer"></a><a name="put_mousepointer"></a>CStockPropImpl::put_MousePointer  
+ Вызовите этот метод, чтобы задать тип указателя мыши, отображаемый, когда указатель мыши находится над элементом управления, например, стрелки, между или песочные часы.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nMousePointer*  
+ Тип указателя мыши.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputpicturea--cstockpropimplputpicture"></a><a name="put_picture"></a>CStockPropImpl::put_Picture  
+ Этот метод используется для задания свойств рисунок (значок, битовую карту или метафайл) для отображения графики.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pPicture`  
+ Указатель свойства рисунка. В разделе [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) подробнее.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputreadystatea--cstockpropimplputreadystate"></a><a name="put_readystate"></a>CStockPropImpl::put_ReadyState  
+ Вызовите этот метод, чтобы задать состояние готовности элемента управления, например, загружается или загружается.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *nReadyState*  
+ Состояние готовности элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputtabstopa--cstockpropimplputtabstop"></a><a name="put_tabstop"></a>CStockPropImpl::put_TabStop  
+ Вызовите этот метод, чтобы задать флаг, указывающий, является ли элемент управления табуляции.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *bTabStop*  
+ Значение TRUE, если элемент управления табуляции.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputtexta--cstockpropimplputtext"></a><a name="put_text"></a>CStockPropImpl::put_Text  
+ Этот метод используется для задания текста, который отображается с помощью элемента управления.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `bstrText`  
+ Текст, отображаемый в элементе управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputvalida--cstockpropimplputvalid"></a><a name="put_valid"></a>CStockPropImpl::putvalid  
+ Вызовите этот метод, чтобы задать флаг, указывающий, является ли элемент управления допустимым.  
+  
+```
+HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *bValid*  
+ Значение TRUE, если элемент управления является допустимым.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+##  <a name="a-nameputwindowa--cstockpropimplputwindow"></a><a name="put_window"></a>CStockPropImpl::put_Window  
+ Этот метод вызывает метод [CStockPropImpl::put_HWND](#put_hwnd), которое возвращает значение E_FAIL.  
+  
+```
+HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `hWnd`  
+ Дескриптор окна.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение E_FAIL.  
+  
+### <a name="remarks"></a>Примечания  
+ Дескриптор окна является значение только для чтения.  
+  
+##  <a name="a-nameputreffonta--cstockpropimplputreffont"></a><a name="putref_font"></a>CStockPropImpl::putref_Font  
+ Вызовите этот метод, чтобы задать свойства шрифта элемента управления, с помощью счетчика ссылок.  
+  
+```
+HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pFont`  
+ Указатель свойства шрифта элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+### <a name="remarks"></a>Примечания  
+ Таким же, как [CStockPropImpl::put_Font](#put_font), но счетчик ссылок.  
+  
+##  <a name="a-nameputrefmouseicona--cstockpropimplputrefmouseicon"></a><a name="putref_mouseicon"></a>CStockPropImpl::putref_MouseIcon  
+ Вызовите этот метод, чтобы задать свойства рисунка рисунок (значок, битовую карту или метафайл), отображаемый, когда указатель мыши находится над элементом управления с счетчик ссылок.  
+  
+```
+HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pPicture`  
+ Указатель свойства рисунка рисунка.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+### <a name="remarks"></a>Примечания  
+ Таким же, как [CStockPropImpl::put_MouseIcon](#put_mouseicon), но счетчик ссылок.  
+  
+##  <a name="a-nameputrefpicturea--cstockpropimplputrefpicture"></a><a name="putref_picture"></a>CStockPropImpl::putref_Picture  
+ Вызовите этот метод, чтобы задать свойства рисунка рисунок (значок, битовую карту или метафайл) для отображения с счетчик ссылок.  
+  
+```
+HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pPicture`  
+ Указатель свойства рисунка. В разделе [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) подробнее.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+  
+### <a name="remarks"></a>Примечания  
+ Таким же, как [CStockPropImpl::put_Picture](#put_picture), но счетчик ссылок.  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../../atl/atl-class-overview.md)   
+ [Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)
+

@@ -1,83 +1,109 @@
 ---
-title: "CAtlAutoThreadModuleT Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CAtlAutoThreadModuleT"
-  - "ATL::CAtlAutoThreadModuleT"
-  - "CAtlAutoThreadModuleT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAtlAutoThreadModuleT class"
+title: "Класс CAtlAutoThreadModuleT | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CAtlAutoThreadModuleT
+- ATL::CAtlAutoThreadModuleT
+- CAtlAutoThreadModuleT
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CAtlAutoThreadModuleT Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 86b35f0a6a3ab43c170ee710838ec9ba0e2fc5b0
+ms.lasthandoff: 02/24/2017
 
-Этот класс содержит методы для реализации поток\- пул, сервер модели COM модели изоляции.  
+---
+# <a name="catlautothreadmodulet-class"></a>Класс CAtlAutoThreadModuleT
+Этот класс предоставляет методы для реализации пула потоков, модели подразделения COM-сервера.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class T, 
+         class ThreadAllocator = CComSimpleThreadAllocator,
+         DWORD dwWait = INFINITE>  
+class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
-      template <  
-class T,  
-class ThreadAllocator= CComSimpleThreadAllocator,  
-DWORD dwWait= INFINITE   
->  
-class ATL_NO_VTABLE CAtlAutoThreadModuleT :  
-public IAtlAutoThreadModule  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
- Класс, который будет реализовывать сервер модели COM.  
+ Класс, который будет реализовывать COM-сервера.  
   
  `ThreadAllocator`  
- Класс, выделение потока.  Значение по умолчанию [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ Класс выбора потока управления. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
  `dwWait`  
- Указывает интервал времени ожидания в миллисекундах.  По умолчанию используется значение INFINITE, что означает, что время ожидания метода никогда не истекает.  
+ Задает интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, означающее интервал времени ожидания метод никогда не истекает.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](../Topic/CAtlAutoThreadModuleT::GetDefaultThreads.md)|Эта статическая функция динамически вычисляет и возвращает максимальное количество потоков для модуля EXE\-ФАЙЛА на основе количества процессоров.|  
+|----------|-----------------|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Эта статическая функция динамически вычисляет и возвращает максимальное количество потоков для модуля exe-файла, в зависимости от количества процессоров.|  
   
-## Заметки  
- Класс [Класса CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) является производным от `CAtlAutoThreadModuleT` для реализации поток\- пул, сервер модели COM модели изоляции.  Оно заменяет класс [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) устарел.  
+## <a name="remarks"></a>Примечания  
+ Класс [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) является производным от `CAtlAutoThreadModuleT` для реализации пула потоков, модели подразделения COM-сервера. Он заменяет устаревший класс [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
 > [!NOTE]
->  Этот класс не должен использоваться в библиотеке DLL, по умолчанию используется значение `dwWait` ИНФИНИТНОГО вызовет взаимоблокировку, когда библиотека DLL будет.  
+>  Этот класс должен не использоваться в библиотеке DLL, по умолчанию `dwWait` значение INFINITE вызовет взаимоблокировку при выгрузке библиотеки DLL.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IAtlAutoThreadModule`  
   
  `CAtlAutoThreadModuleT`  
   
-## Требования  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlbase.h  
   
-## См. также  
- [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)   
- [Модульные классы](../Topic/ATL%20Module%20Classes.md)
+##  <a name="a-namegetdefaultthreadsa--catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+ Эта статическая функция динамически вычисляет и возвращает максимальное количество потоков для модуля exe-файла, в зависимости от количества процессоров.  
+  
+```
+static int GetDefaultThreads();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Число потоков, создаваемых в модуле exe-файла.  
+  
+### <a name="remarks"></a>Примечания  
+ Переопределите этот метод, если вы хотите использовать другой метод для подсчета количества потоков. По умолчанию число потоков, основан на число процессоров.  
+  
+## <a name="see-also"></a>См. также  
+ [Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+ [Общие сведения о классе](../../atl/atl-class-overview.md)   
+ [Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+ [Классы модуля](../../atl/atl-module-classes.md)
+

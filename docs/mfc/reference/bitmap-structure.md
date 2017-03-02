@@ -1,72 +1,87 @@
 ---
-title: "Структура BITMAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BITMAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BITMAP - структура"
+title: "Структура точечный РИСУНОК | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BITMAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- BITMAP structure
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Структура BITMAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cd7e63cfe9e7a0f2305ca5c3cd7c2571a080a718
+ms.lasthandoff: 02/24/2017
 
-Структура **BITMAP** задает высоту и ширину, формат цвета и значения в логические растрового изображения **.**  
+---
+# <a name="bitmap-structure"></a>Структура BITMAP
+**Точечный РИСУНОК** структура определяет высоту, ширину, формат цвета и точечный рисунок логические значения битов**.**  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      typedef struct tagBITMAP {  /* bm */  
-   int bmType;  
-   int bmWidth;  
-   int bmHeight;  
-   int bmWidthBytes;  
-   BYTE bmPlanes;  
-   BYTE bmBitsPixel;  
-   LPVOID bmBits;  
+typedef struct tagBITMAP {  /* bm */  
+    int bmType;  
+    int bmWidth;  
+    int bmHeight;  
+    int bmWidthBytes;  
+    BYTE bmPlanes;  
+    BYTE bmBitsPixel;  
+    LPVOID bmBits;  
 } BITMAP;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *bmType*  
- Определяет тип растрового изображения.  Для логического растровых изображений этот элемент должен иметь значение 0.  
+ Указывает тип точечного рисунка. Для логических точечные рисунки этот член должно быть 0.  
   
  *bmWidth*  
- Задает ширину растрового изображения в пикселях.  Ширина должна быть больше 0.  
+ Ширина растрового изображения в пикселях. Ширина должна быть больше 0.  
   
  *bmHeight*  
- Задает высоту растрового изображения в линиях растра.  Высота должна быть больше 0.  
+ Высота растрового изображения в растровые строк. Высота должна быть больше 0.  
   
  *bmWidthBytes*  
- Указывает число байтов в каждой линии растра.  Это значение должно быть четным числом, поскольку приборный интерфейс \(GDI\) графики высказывать значения в формы растрового изображения массив значений целого числа 2 \(byte\).  Другими словами, **bmWidthBytes** \* 8 должны быть следующей несколько условных определений более 16 больше или равно значению получена после выбора **bmWidth** умножен членом **bmBitsPixel**.  
+ Указывает число байтов в каждой строке растровые. Это значение должно быть четным числом, поскольку интерфейс графических устройств (GDI) предполагает, что значения битов точечного рисунка форме массив (2-байтовые) целые значения. Другими словами **bmWidthBytes** \* 8 должен быть следующего размера, кратного 16 больше или равно значению, полученные при **bmWidth** умножается на член **bmBitsPixel** член.  
   
  *bmPlanes*  
- Указывает число самолетов цвета в различных форматах.  
+ Задается число цветовых плоскостей в битовой карте.  
   
  *bmBitsPixel*  
- Указывает количество соседних бит цветов в каждом плоскости, необходимом для определения пиксель.  
+ Указывает число битов на смежные цвета на каждой плоскости, необходимые для определения точки.  
   
  *bmBits*  
- Указывает на расположение значений бита для растрового изображения.  Элемент **bmBits** должен быть указателем длинным к массиву значений 1 байта.  
+ Указывает расположение битовые значения для точечного рисунка. **BmBits** элемент должен быть длинный указатель на массив 1-байтовых значений.  
   
-## Заметки  
- В настоящее время, используемые форматы растрового изображения монохромный и цвета.  Монохромное растровое изображение используется 1 бит, 1 плоский формат.  Каждое scan несколько раз 16 бит.  
+## <a name="remarks"></a>Примечания  
+ Форматы в настоящее время используется битовая карта, монохромный и цвет. Монохромный точечный рисунок отображается в формате 1-разрядной, плоскость 1. Каждая операция сканирования делится на 16 бит.  
   
- Проверяет организация следующим образом для монохромного растрового изображения высоты *n*:  
+ Просмотров упорядочены следующим образом для монохромный точечный рисунок высоты *n*:  
   
  `Scan 0`  
   
@@ -82,15 +97,16 @@ caps.handback.revision: 13
   
  `Scan n-1`  
   
- Монохромном пиксели на устройстве или черным или white.  Если соответствующий бит в растровом изображении равно 1 пиксель, включен \(white\).  Если соответствующий бит в растровом изображении равно 0, то пиксель выключен \(черным\).  
+ Пиксели на устройстве монохромный, либо черный или белый. Если 1, соответствующий бит в битовой карте пикселя включена (белый цвет). Если соответствующий бит в битовой карте равно 0, пикселя будет отключена (черный).  
   
- Все устройства поддерживают растровые изображения с установленным бит индекса **RC\_BITBLTRASTERCAPS** функции\-члена [CDC::GetDeviceCaps](../Topic/CDC::GetDeviceCaps.md).  
+ Все устройства поддерживают точечным рисункам, имеющим **RC_BITBLT** бит установлен в **RASTERCAPS** индекс [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) функции-члена.  
   
- Каждое устройство имеет свой собственный формат уникального цвета.  Чтобы перемещать растровое изображение из одного устройства с другими Windows, используйте функции [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) и [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973).  
+ Каждое устройство имеет собственный уникальный цвет формат. Чтобы перенести растрового изображения с одного устройства к другому, используйте [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) и [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) функции Windows.  
   
-## Требования  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** wingdi.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CBitmap::CreateBitmapIndirect](../Topic/CBitmap::CreateBitmapIndirect.md)
+ [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)
+

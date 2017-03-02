@@ -1,101 +1,160 @@
 ---
-title: "Класс CA2CAEX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CA2CAEX"
-  - "ATL.CA2CAEX<t_nBufferLength>"
-  - "ATLCONV/CA2CAEX"
-  - "ATL::CA2CAEX<t_nBufferLength>"
-  - "ATL::CA2CAEX"
-  - "CA2CAEX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CA2CAEX - класс"
+title: "Класс CA2CAEX | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CA2CAEX
+- ATL.CA2CAEX<t_nBufferLength>
+- ATLCONV/CA2CAEX
+- ATL::CA2CAEX<t_nBufferLength>
+- ATL::CA2CAEX
+- CA2CAEX
+dev_langs:
+- C++
+helpviewer_keywords:
+- CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Класс CA2CAEX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
+ms.lasthandoff: 02/24/2017
 
-Этот класс используется макросами `CA2CTEX` и `CT2CAEX` преобразования строки и typedef **CA2CA**.  
+---
+# <a name="ca2caex-class"></a>Класс CA2CAEX
+Этот класс используется макросы преобразования строк `CA2CTEX` и `CT2CAEX`и typedef **CA2CA**.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<int t_nBufferLength = 128>  
+class CA2CAEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CA2CAEX  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `t_nBufferLength`  
- Размер буфера, используемого в процессе перевода.  По умолчанию длина составляет 128 байт.  
+ Размер буфера, используемого в процессе перевода. Длина по умолчанию равна 128 байт.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CA2CAEX::CA2CAEX](../Topic/CA2CAEX::CA2CAEX.md)|Конструктор.|  
-|[CA2CAEX::~CA2CAEX](../Topic/CA2CAEX::~CA2CAEX.md)|Деструктор.|  
-  
-### Открытые операторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CA2CAEX::operator LPCSTR](../Topic/CA2CAEX::operator%20LPCSTR.md)|Оператор преобразования.|  
+|----------|-----------------|  
+|[CA2CAEX::CA2CAEX](#ca2caex)|Конструктор.|  
+|[CA2CAEX:: ~ CA2CAEX](#dtor)|Деструктор|  
   
-### Открытые члены данных  
+### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CA2CAEX::m\_psz](../Topic/CA2CAEX::m_psz.md)|Элемент данных, в котором хранится строка источника.|  
+|----------|-----------------|  
+|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|Оператор преобразования.|  
   
-## Заметки  
- Если требуется, используйте `CA2CTEX` дополнительную функциональность, `CT2CAEX` или **CA2CA** в собственном коде.  
+### <a name="public-data-members"></a>Открытые члены данных  
   
- Этот класс является безопасным для использования в циклах и не переполнит стек.  По умолчанию классы преобразования библиотеки ATL и макросы, будут использовать кодовую страницу ANSI текущую потока для преобразования.  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CA2CAEX::m_psz](#m_psz)|Член данных, хранит исходную строку.|  
   
- Следующие макросы основаны на этом классе.  
+## <a name="remarks"></a>Примечания  
+ Если дополнительные функциональные возможности не требуется, используйте `CA2CTEX`, `CT2CAEX`, или **CA2CA** в собственном коде.  
   
--   `CA2CTEX`  
+ Этот класс можно безопасно использовать в циклах и не приводят к переполнению стека. По умолчанию классы и макросы преобразования ATL используют для преобразования кодовую страницу ANSI текущего потока.  
   
--   `CT2CAEX`  
+ Следующие макросы, основаны на этот класс.  
   
- Следующее определение типа на основе этого класса.  
+- `CA2CTEX`  
   
--   **CA2CA**  
+- `CT2CAEX`  
   
- Обсуждение этих макросов преобразования текста см. в разделе [Макросы преобразования строки библиотеки ATL и MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+ Следующие typedef зависит от этого класса:  
   
-## Пример  
- См. раздел [Макросы преобразования строки библиотеки ATL и MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) пример использования этих макросов преобразования строки.  
+- **CA2CA**  
   
-## Требования  
- **Header:** atlconv.h  
+ Обсуждение этих макросов текстового преобразования см. в разделе [ATL и MFC макросы преобразования строк](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
   
-## См. также  
+## <a name="example"></a>Пример  
+ В разделе [ATL и MFC макросы преобразования строк](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) пример использования эти макросы преобразования строк.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlconv.h  
+  
+##  <a name="a-nameca2caexa--ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+ Конструктор.  
+  
+```
+CA2CAEX(LPCSTR psz, UINT nCodePage) throw(...);
+CA2CAEX(LPCSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `psz`  
+ Текстовая строка для преобразования.  
+  
+ `nCodePage`  
+ Не используется в этом классе.  
+  
+### <a name="remarks"></a>Примечания  
+ Создает буфер, необходимый для перевода.  
+  
+##  <a name="a-namedtora--ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+ Деструктор  
+  
+```
+~CA2CAEX() throw();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Освобождает выделенный буфер.  
+  
+##  <a name="a-namempsza--ca2caexmpsz"></a><a name="m_psz"></a>CA2CAEX::m_psz  
+ Член данных, хранит исходную строку.  
+  
+```
+LPCSTR m_psz;
+```  
+  
+##  <a name="a-nameoperatorlpcstra--ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+ Оператор преобразования.  
+  
+```  
+operator LPCSTR() const throw();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает текстовую строку в качестве типа `LPCSTR`.  
+  
+## <a name="see-also"></a>См. также  
  [Класс CA2AEX](../../atl/reference/ca2aex-class.md)   
  [Класс CA2WEX](../../atl/reference/ca2wex-class.md)   
  [Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

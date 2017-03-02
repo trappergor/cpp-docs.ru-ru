@@ -1,70 +1,134 @@
 ---
-title: "CComCritSecLock Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComCritSecLock"
-  - "ATL.CComCritSecLock<TLock>"
-  - "ATL::CComCritSecLock<TLock>"
-  - "ATL.CComCritSecLock"
-  - "CComCritSecLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComCritSecLock class"
+title: "Класс CComCritSecLock | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComCritSecLock
+- ATL.CComCritSecLock<TLock>
+- ATL::CComCritSecLock<TLock>
+- ATL.CComCritSecLock
+- CComCritSecLock
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComCritSecLock Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 71b9ab8b11adc946656c2192c2f0f06555ef1254
+ms.lasthandoff: 02/24/2017
 
-Этот класс содержит методы для блокирования и разблокирования объект критической секции.  
+---
+# <a name="ccomcritseclock-class"></a>Класс CComCritSecLock
+Этот класс предоставляет методы для блокировки и разблокировки объекта критической секции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<class TLock> class CComCritSecLock
 ```  
   
-      template<  
-   class TLock  
-> class CComCritSecLock  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *TLock*  
- Разблокированный объект, который требуется блокировать и.  
+ Объект для блокировки и разблокирован.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CComCritSecLock::CComCritSecLock](../Topic/CComCritSecLock::CComCritSecLock.md)|Конструктор.|  
-|[CComCritSecLock::~CComCritSecLock](../Topic/CComCritSecLock::~CComCritSecLock.md)|Деструктор.|  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CComCritSecLock::Lock](../Topic/CComCritSecLock::Lock.md)|Этот метод вызывается для блокирования объект критической секции.|  
-|[CComCritSecLock::Unlock](../Topic/CComCritSecLock::Unlock.md)|Вызовите этот метод, чтобы Разблокировать объект критической секции.|  
+|----------|-----------------|  
+|[CComCritSecLock::CComCritSecLock](#ctor)|Конструктор.|  
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Деструктор|  
   
-## Заметки  
- Этот класс используется для блокирования и разблокирования объекты в более безопасным способом, чем с [класс CComCriticalSection](../Topic/CComCriticalSection%20Class.md) или [класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).  
+### <a name="public-methods"></a>Открытые методы  
   
-## Требования  
- **Header:** atlbase.h  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CComCritSecLock::Lock](#lock)|Этот метод используется для блокировки объекта критической секции.|  
+|[CComCritSecLock::Unlock](#unlock)|Этот метод вызывается для разблокировки объекта критической секции.|  
   
-## См. также  
- [CComCriticalSection Class](../Topic/CComCriticalSection%20Class.md)   
- [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)
+## <a name="remarks"></a>Примечания  
+ Этот класс используется для блокирования и разблокирования объектов более безопасным способом, чем с [класса CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) или [CComAutoCriticalSection класса](../../atl/reference/ccomautocriticalsection-class.md).  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlbase.h  
+  
+##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+ Конструктор.  
+  
+```
+CComCritSecLock(TLock& cs, bool bInitialLock = true);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *CS*  
+ Объект критической секции.  
+  
+ `bInitialLock`  
+ Состояние блокировки начальной: **true** означает заблокирован.  
+  
+### <a name="remarks"></a>Примечания  
+ Инициализирует объект критической секции.  
+  
+##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+ Деструктор  
+  
+```
+~CComCritSecLock() throw();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Разблокирует объект критической секции.  
+  
+##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+ Этот метод используется для блокировки объекта критической секции.  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение S_OK, если объект успешно заблокирован или ошибку HRESULT при сбое.  
+  
+### <a name="remarks"></a>Примечания  
+ Если объект уже заблокирован, ASSERT приводит к ошибке в отладочных сборках.  
+  
+##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+ Этот метод вызывается для разблокировки объекта критической секции.  
+  
+```
+void Unlock() throw();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Если объект уже разблокирован, произойдет ошибка ASSERT в отладочных сборках.  
+  
+## <a name="see-also"></a>См. также  
+ [Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+ [Класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)
+

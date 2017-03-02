@@ -1,38 +1,55 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4917 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4917"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4917"
+title: "Предупреждение (уровень 1) C4917 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4917
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Предупреждение компилятора (уровень 1) C4917
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
+ms.openlocfilehash: 43dce460fb336b09ce39d3e4c0e52b43a175ea36
+ms.lasthandoff: 02/24/2017
 
-"декларатор" : идентификатор GUID может связываться только с классом, интерфейсом или пространством имен  
+---
+# <a name="compiler-warning-level-1-c4917"></a>Предупреждение компилятора (уровень 1) C4917
+«декларатор»: идентификатор GUID может связываться только с классом, интерфейсом или пространства имен  
   
- Пользовательские структуры, отличные от [классов](../../cpp/class-cpp.md), [интерфейсов](../Topic/__interface.md) и [пространств имен](../Topic/namespace%20Declaration.md), не могут иметь идентификатор GUID.  
+Пользовательские структуры, отличных от [класса](../../cpp/class-cpp.md), [интерфейс](../../cpp/interface.md), или [имен](../../cpp/namespaces-cpp.md) не могут иметь идентификатор GUID.  
   
- Данное предупреждение по умолчанию отключено.  Дополнительные сведения см. в разделе [Отключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+Это предупреждение отключено по умолчанию. В разделе [компилятора предупреждения, — это отключение по умолчанию](../../preprocessor/compiler-warnings-that-are-off-by-default.md) подробнее.  
   
- Следующий пример приводит к возникновению предупреждения C4917:  
+## <a name="example"></a>Пример  
+Следующий пример кода создает C4917:  
   
-```  
+```cpp  
 // C4917.cpp  
 // compile with: /W1  
 #pragma warning(default : 4917)  

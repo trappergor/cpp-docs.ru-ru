@@ -1,70 +1,86 @@
 ---
-title: "CMFCRibbonFontComboBox Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonFontComboBox"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonFontComboBox class"
+title: "Класс CMFCRibbonFontComboBox | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonFontComboBox
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonFontComboBox class
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CMFCRibbonFontComboBox Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 851ef15013ca62012931fd92baf277d5db96033d
+ms.lasthandoff: 02/24/2017
 
-Реализует поле со списком, содержащее список шрифтов.  Необходимо задать поле со списком на панели ленты.  
+---
+# <a name="cmfcribbonfontcombobox-class"></a>Класс CMFCRibbonFontComboBox
+Реализует поле со списком, содержащее список шрифтов. Необходимо задать поле со списком на панели ленты.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CMFCRibbonFontComboBox : public CMFCRibbonComboBox  
 ```  
   
-## Участники  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|Деструктор.|  
   
-### Защищенные конструкторы  
+### <a name="protected-constructors"></a>Защищенные конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](../Topic/CMFCRibbonFontComboBox::CMFCRibbonFontComboBox.md)|Создает и инициализирует объект `CMFCRibbonFontComboBox`.|  
+|----------|-----------------|  
+|[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Создает и инициализирует объект `CMFCRibbonFontComboBox`.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CMFCRibbonFontComboBox::BuildFonts](../Topic/CMFCRibbonFontComboBox::BuildFonts.md)|Заполняет поле со списком шрифтов на ленте на основе таких заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
+|----------|-----------------|  
+|[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Заполняет поле со списком шрифтов на ленте на основе таких заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
 |`CMFCRibbonFontComboBox::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|[CMFCRibbonFontComboBox::GetCharSet](../Topic/CMFCRibbonFontComboBox::GetCharSet.md)|Возвращает указанный набор символов.|  
-|[CMFCRibbonFontComboBox::GetFontDesc](../Topic/CMFCRibbonFontComboBox::GetFontDesc.md)||  
-|[CMFCRibbonFontComboBox::GetFontType](../Topic/CMFCRibbonFontComboBox::GetFontType.md)|Возвращает типы шрифтов, отображаемые в поле со списком.  Допустимые значения: DEVICE\_FONTTYPE, RASTER\_FONTTYPE и TRUETYPE\_FONTTYPE, а также любые их битовые комбинации.|  
-|[CMFCRibbonFontComboBox::GetPitchAndFamily](../Topic/CMFCRibbonFontComboBox::GetPitchAndFamily.md)|Возвращает шаг и семейство шрифтов, отображаемых в поле со списком.|  
-|`CMFCRibbonFontComboBox::GetThisClass`|Используется платформой для получения указателя на объект [CRuntimeClass](../Topic/CRuntimeClass%20Structure.md), связанный с этим типом класса.|  
-|[CMFCRibbonFontComboBox::RebuildFonts](../Topic/CMFCRibbonFontComboBox::RebuildFonts.md)|Заполняет поле со списком шрифтов на ленте на основе таких ранее заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
-|[CMFCRibbonFontComboBox::SetFont](../Topic/CMFCRibbonFontComboBox::SetFont.md)|Выбирает указанный шрифт в поле со списком.|  
+|[CMFCRibbonFontComboBox::GetCharSet](#getcharset)|Возвращает указанный набор символов.|  
+|[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||  
+|[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Возвращает типы шрифтов, отображаемые в поле со списком. Допустимые значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE, а также любые их битовые комбинации.|  
+|[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Возвращает шаг и семейство шрифтов, отображаемых в поле со списком.|  
+|`CMFCRibbonFontComboBox::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Заполняет поле со списком шрифтов на ленте на основе таких ранее заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
+|[CMFCRibbonFontComboBox::SetFont](#setfont)|Выбирает указанный шрифт в поле со списком.|  
   
-## Заметки  
- После создания объекта `CMFCRibbonFontComboBox` добавьте его на панель ленты, вызвав метод [CMFCRibbonPanel::Add](../Topic/CMFCRibbonPanel::Add.md).  
+## <a name="remarks"></a>Примечания  
+ После создания `CMFCRibbonFontComboBox` , добавьте ее на панель ленты, вызвав [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -76,10 +92,149 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
  [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxRibbonComboBox.h  
   
-## См. также  
+##  <a name="a-namebuildfontsa--cmfcribbonfontcomboboxbuildfonts"></a><a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+ Заполняет поле со списком на ленте с шрифтами.  
+  
+```  
+void BuildFonts(
+    int nFontType = DEVICE_FONTTYPE | RASTER_FONTTYPE | TRUETYPE_FONTTYPE,  
+    BYTE nCharSet = DEFAULT_CHARSET,  
+    BYTE nPitchAndFamily = DEFAULT_PITCH);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `nFontType`  
+ Указывает тип шрифта шрифтов для добавления.  
+  
+ [in] `nCharSet`  
+ Указывает кодировку шрифтов для добавления.  
+  
+ [in] `nPitchAndFamily`  
+ Указывает шаг и семейство шрифтов для добавления.  
+  
+##  <a name="a-namecmfcribbonfontcomboboxa--cmfcribbonfontcomboboxcmfcribbonfontcombobox"></a><a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+ Создает и инициализирует [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) объекта.  
+  
+```  
+CMFCRibbonFontComboBox(
+    UINT nID,  
+    int nFontType = DEVICE_FONTTYPE | RASTER_FONTTYPE | TRUETYPE_FONTTYPE,  
+    BYTE nCharSet = DEFAULT_CHARSET,  
+    BYTE nPitchAndFamily = DEFAULT_PITCH,  
+    int nWidth = -1);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `nID`  
+ Идентификатор команды команду, которая выполняется, когда пользователь выбирает элемент в поле со списком.  
+  
+ [in] `nFontType`  
+ Указывает, какой шрифт типы для отображения в поле со списком. Допустимые параметры: **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, и **TRUETYPE_FONTTYPE**, или их побитовой комбинации.  
+  
+ [in] `nCharSet`  
+ Фильтрует шрифты теми, которые принадлежат набору указанный символ в поле со списком...  
+  
+ [in] `nPitchAndFamily`  
+ Указывает шаг и семейство шрифтов, которые отображаются в поле со списком.  
+  
+ [in] `nWidth`  
+ Ширина в пикселях поле со списком.  
+  
+### <a name="remarks"></a>Примечания  
+ Дополнительные сведения о возможных `nFontType` значения параметров в разделе [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) в документации по Windows SDK.  
+  
+ Дополнительные сведения о допустимых кодировок, которые могут быть назначены `nCharSet,` и допустимые значения, которые могут быть назначены `nPitchAndFamily`, в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) документации по пакету Windows SDK.  
+  
+##  <a name="a-namegetfontdesca--cmfcribbonfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `iIndex`  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-namerebuildfontsa--cmfcribbonfontcomboboxrebuildfonts"></a><a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+ Заполняет поле со списком на ленте с шрифтами ранее указанного шрифта, набор символов и шаг и семейства.  
+  
+```  
+void RebuildFonts();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Можно указать тип шрифта, набор символов и шаг и семейство шрифтов для включения в поле со списком шрифта ленты в [конструктор](#cmfcribbonfontcombobox) для этого класса или путем вызова [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
+  
+##  <a name="a-namesetfonta--cmfcribbonfontcomboboxsetfont"></a><a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+ Выбирает указанный шрифт в поле со списком.  
+  
+```  
+BOOL SetFont(
+    LPCTSTR lpszName,  
+    BYTE nCharSet = DEFAULT_CHARSET,  
+    BOOL bExact = FALSE);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpszName`  
+ Задает имя шрифта для выбора.  
+  
+ `nCharSet`  
+ Указывает кодировку для выбранного шрифта.  
+  
+ `bExact`  
+ `TRUE`Чтобы указать, что набор символов должно соответствовать при выборе шрифта; `FALSE` для указания, что при выборе шрифта наборе символов может быть проигнорирован.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ненулевое значение, если указанный шрифт был найден и установлен; в противном случае — нуль.  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-namegetcharseta--cmfcribbonfontcomboboxgetcharset"></a><a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+ Возвращает указанный набор символов.  
+  
+```  
+BYTE GetCharSet() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Набор символов (см. LOGFONT документации по пакету Windows SDK).  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-namegetfonttypea--cmfcribbonfontcomboboxgetfonttype"></a><a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+ Возвращает типы шрифтов, отображаемые в поле со списком. Допустимые значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE, а также любые их битовые комбинации.  
+  
+```  
+int GetFontType() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Типы шрифтов (см. EnumFontFamProc в документации по Windows SDK).  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-namegetpitchandfamilya--cmfcribbonfontcomboboxgetpitchandfamily"></a><a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+ Возвращает шаг и семейство шрифтов, отображаемых в поле со списком.  
+  
+```  
+BYTE GetPitchAndFamily() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Шаг и семейство (см. LOGFONT документации по пакету Windows SDK).  
+  
+### <a name="remarks"></a>Примечания  
+  
+## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../Topic/MFC%20Classes.md)   
- [CMFCRibbonComboBox Class](../../mfc/reference/cmfcribboncombobox-class.md)
+ [Классы](../../mfc/reference/mfc-classes.md)   
+ [Класс CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)
+

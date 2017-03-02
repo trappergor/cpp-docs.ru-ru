@@ -1,74 +1,96 @@
 ---
-title: "ATL Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, глобальные функции"
-  - "функции [ATL]"
+title: "Функции библиотеки ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [ATL]
+- ATL, global functions
 ms.assetid: 69db0cb2-de1d-445b-b692-020d6e8c2173
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# ATL Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 646ddebf5069b9e10d5a2a0fe147186f7cb35ae7
+ms.openlocfilehash: 80458a3f9e95ead1fbe34f564271b01dc56390b3
+ms.lasthandoff: 02/24/2017
 
-Чтобы найти функция библиотеки ATL по категориям см. в следующих подразделах.  
+---
+# <a name="atl-functions"></a>Функции библиотеки ATL
+
+
+Чтобы найти функцию ATL по категории, в следующих разделах.  
   
- [Функции глобального сопоставления модели COM](../../atl/reference/com-map-global-functions.md)  
- Предоставление поддержки для реализации **IUnknown** сопоставления модели COM.  
+ [Путь к функциям библиотеки ATL](../../atl/reference/com-map-global-functions.md)  
+ Поддержка обработки путей к файлам.
+ 
+ [Глобальные функции сопоставления COM](../../atl/reference/com-map-global-functions.md)  
+ Поддержка сопоставления COM **IUnknown** реализации.  
   
- [функции глобального составного элемента управления](../../atl/reference/composite-control-global-functions.md)  
- Предоставление поддержки для создания диалоговые окна, а также для создания, места и лицензирование элементов управления ActiveX.  
+ [Глобальные функции составного элемента управления](../../atl/reference/composite-control-global-functions.md)  
+ Обеспечивают поддержку для создания диалоговых окнах, а также для создания, размещения и лицензирование элементов управления ActiveX.  
   
- [функции глобального точки подключения](../Topic/Connection%20Point%20Global%20Functions.md)  
- Предоставление поддержки для точек подключения и утоните сопоставления.  
+ [Точка подключения глобальные функции](../../atl/reference/connection-point-global-functions.md)  
+ Поддерживает точки подключения и схемы приемников.  
   
- [Глобальные функции отладки и отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
- Предоставляет полезный средства отладки и трассировки.  
+ [Отладка и глобальные функции отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
+ Предоставляет полезные средства отладки и трассировки.  
   
- [функции глобального контекста устройства](../../atl/reference/device-context-global-functions.md)  
+ [Глобальные функции контекста устройства](../../atl/reference/device-context-global-functions.md)  
  Создает контекст устройства для заданного устройства.  
   
- [Обработка событий глобальные функции](../../atl/reference/event-handling-global-functions.md)  
+ [Глобальные функции обработки событий](../../atl/reference/event-handling-global-functions.md)  
  Предоставляет обработчик событий.  
   
- [функции глобального маршалинга](../Topic/Marshaling%20Global%20Functions.md)  
- Предоставление поддержки для маршалинга и преобразования сведения о маршалинге в указатели интерфейса.  
+ [Маршалинг глобальные функции](../../atl/reference/marshaling-global-functions.md)  
+ Поддержка маршалинг и преобразование, маршалинг данных в указатели на интерфейс.  
   
- [Глобальные функции преобразования Pixel\/HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
- Предоставление поддержки для преобразования в и из точки и единиц HIMETRIC.  
+ [Глобальные функции преобразования пикселей или HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
+ Предоставляет поддержку для преобразования в и из пикселей и единицы HIMETRIC.  
   
- [реестр и функции глобального TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)  
- Предоставление поддержки для загрузки и зарегистрировать библиотеку типов.  
+ [Глобальные функции реестра и библиотеки типов](../../atl/reference/registry-and-typelib-global-functions.md)  
+ Поддержка загрузки и регистрации библиотеки типов.  
   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)  
- Предоставление поддержки для изменения объектов идентификатор безопасности и ACL.  
+ Предоставляет поддержку для изменения идентификатора SID и ACL объектов.  
   
- [функции глобального идентификатора безопасности](../../atl/reference/security-identifier-global-functions.md)  
- Возвращает общие известные объекты идентификатор безопасности.  
+ [Глобальные функции идентификатор безопасности](../../atl/reference/security-identifier-global-functions.md)  
+ Возвращает объекты общих хорошо известного SID.  
   
- [функции глобального регистрации сервера](../../atl/reference/server-registration-global-functions.md)  
- Предоставляет поддержку при регистрации и отмены регистрации объектов сервера в сопоставлении объекта.  
+ [Глобальные функции регистрации сервера](../../atl/reference/server-registration-global-functions.md)  
+ Поддержка регистрации и отмены регистрации серверных объектов в карте объектов.  
   
- [функции глобального WinModule](../../atl/reference/winmodule-global-functions.md)  
- Предоставление поддержки для операций структуры `_AtlCreateWndData`.  
+ [Глобальные функции WinModule](../../atl/reference/winmodule-global-functions.md)  
+ Обеспечивает поддержку для `_AtlCreateWndData` структуры операций.  
   
-## См. также  
- [ATL Functions Alphabetical Reference](../Topic/ATL%20Functions%20Alphabetical%20Reference.md)   
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)   
- [Macros](../../atl/reference/atl-macros.md)   
- [Global Variables](../Topic/ATL%20Global%20Variables.md)   
+## <a name="see-also"></a>См. также  
+    
+ [Компоненты COM Desktop ATL](../../atl/atl-com-desktop-components.md)   
+ [Макросы](../../atl/reference/atl-macros.md)   
+ [Глобальные переменные](../../atl/reference/atl-global-variables.md)   
  [Структуры](../../atl/reference/atl-structures.md)   
- [Typedefs](../../atl/reference/atl-typedefs.md)   
+ [Определения типов](../../atl/reference/atl-typedefs.md)   
  [Классы](../../atl/reference/atl-classes.md)
+

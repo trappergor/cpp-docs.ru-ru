@@ -1,56 +1,72 @@
 ---
-title: "CResourceException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CResourceException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CResourceException class"
-  - "исключения, ресурс"
-  - "resource allocation exception"
-  - "resource exceptions"
-  - "ресурсы [C++], выделение"
+title: "Класс CResourceException | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CResourceException
+dev_langs:
+- C++
+helpviewer_keywords:
+- resource allocation exception
+- resources [C++], allocating
+- resource exceptions
+- exceptions, resource
+- CResourceException class
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CResourceException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2013a73f91687277df9dd1e6747aba2dd02a4346
+ms.lasthandoff: 02/24/2017
 
-Созданный при Windows не может найти или выделения запрошенного ресурса.  
+---
+# <a name="cresourceexception-class"></a>Класс CResourceException
+Генерируется, когда Windows не может найти или выбрать запрошенный ресурс.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CResourceException : public CSimpleException  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CResourceException::CResourceException](../Topic/CResourceException::CResourceException.md)|Создает объект `CResourceException`.|  
+|----------|-----------------|  
+|[CResourceException::CResourceException](#cresourceexception)|Создает объект `CResourceException`.|  
   
-## Заметки  
- Добавочная квалификация не более не требуется или невозможна.  
+## <a name="remarks"></a>Примечания  
+ Без дальнейшего уточнения необходимые или невозможна.  
   
- Дополнительные сведения об использовании `CResourceException` см. в статье [Обработка исключений \(MFC\)](../../mfc/exception-handling-in-mfc.md).  
+ Дополнительные сведения об использовании `CResourceException`, см. в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
@@ -58,9 +74,22 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-## См. также  
- [CException Class](../../mfc/reference/cexception-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+##  <a name="a-namecresourceexceptiona--cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>CResourceException::CResourceException  
+ Создает объект `CResourceException`.  
+  
+```  
+CResourceException();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Не используйте этот конструктор, непосредственно, но вместо этого вызовите глобальную функцию [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). Дополнительные сведения об исключениях см. в статье [обработка исключений в MFC](../exception-handling-in-mfc.md).  
+  
+## <a name="see-also"></a>См. также  
+ [CException-класс](cexception-class.md)   
+ [Диаграмма иерархии](../hierarchy-chart.md)
+
+
+

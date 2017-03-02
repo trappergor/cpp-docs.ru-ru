@@ -1,54 +1,68 @@
 ---
-title: "CInvalidArgException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CInvalidArgException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CInvalidArgException class"
+title: "Класс CInvalidArgException | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CInvalidArgException
+dev_langs:
+- C++
+helpviewer_keywords:
+- CInvalidArgException class
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CInvalidArgException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4091c0e8a35320482eba193c89c90982c7e4fca9
+ms.lasthandoff: 02/24/2017
 
-Этот класс представляет состояние исключения несостоятельного довода.  
+---
+# <a name="cinvalidargexception-class"></a>Класс CInvalidArgException
+Этот класс представляет условие исключения, связанного с недопустимым аргументом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 class CInvalidArgException : public CSimpleException  
-  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CInvalidArgException::CInvalidArgException](../Topic/CInvalidArgException::CInvalidArgException.md)|Конструктор.|  
+|----------|-----------------|  
+|[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|Конструктор.|  
   
-## Заметки  
- Объект `CInvalidArgException` представляет условия исключения несостоятельного довода.  
+## <a name="remarks"></a>Примечания  
+ Объект `CInvalidArgException` объект представляет условие исключения недопустимый аргумент.  
   
- Дополнительные сведения об обработке ошибок см. в разделе [класс CException](../../mfc/reference/cexception-class.md) и [Обработка исключений \(MFC\)](../../mfc/exception-handling-in-mfc.md).  
+ Дополнительные сведения об обработке исключений см. в разделе [класса CException](../../mfc/reference/cexception-class.md) раздела и [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
@@ -56,9 +70,20 @@ class CInvalidArgException : public CSimpleException
   
  `CInvalidArgException`  
   
-## Требования  
- **Header:** afx.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afx.h  
   
-## См. также  
+##  <a name="a-namecinvalidargexceptiona--cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a>CInvalidArgException::CInvalidArgException  
+ Конструктор.  
+  
+```  
+CInvalidArgException();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Не используйте этот конструктор напрямую. Вызовите глобальную функцию **AfxThrowInvalidArgException**.  
+  
+## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CSimpleException Class](../../mfc/reference/csimpleexception-class.md)
+ [Класс CSimpleException](../../mfc/reference/csimpleexception-class.md)
+

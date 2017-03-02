@@ -1,65 +1,121 @@
 ---
-title: "CHtmlEditDoc Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CHtmlEditDoc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHtmlEditDoc class"
+title: "Класс CHtmlEditDoc | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CHtmlEditDoc
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHtmlEditDoc class
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CHtmlEditDoc Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 1d9651c5009fd8f4c742c6b9bf08e32bd67c7d30
+ms.lasthandoff: 02/24/2017
 
-С [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) предоставляет функциональные возможности WebBrowser в контексте редактирования платформы документ\- вид архитектуры MFC.  
+---
+# <a name="chtmleditdoc-class"></a>Класс CHtmlEditDoc
+С [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), предоставляет функции платформы редактирования WebBrowser в контексте архитектуры представления документов MFC.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class AFX_NOVTABLE CHtmlEditDoc : public CDocument  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CHtmlEditDoc::CHtmlEditDoc](../Topic/CHtmlEditDoc::CHtmlEditDoc.md)|Создает объект `CHtmlEditDoc`.|  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CHtmlEditDoc::GetView](../Topic/CHtmlEditDoc::GetView.md)|Получает вложенный объект `CHtmlEditView` к данному документу.|  
-|[CHtmlEditDoc::IsModified](../Topic/CHtmlEditDoc::IsModified.md)|Возвращает значение, показывающее, содержит ли элемент управления WebBrowser связанного представления документ, который был изменен пользователем.|  
-|[CHtmlEditDoc::OpenURL](../Topic/CHtmlEditDoc::OpenURL.md)|Открывают URL\-адрес.|  
+|----------|-----------------|  
+|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Создает объект `CHtmlEditDoc`.|  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+### <a name="public-methods"></a>Открытые методы  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CHtmlEditDoc::GetView](#getview)|Извлекает `CHtmlEditView` объект присоединен к этому документу.|  
+|[CHtmlEditDoc::IsModified](#ismodified)|Возвращает значение, содержит ли элемент управления WebBrowser связанное представление документа, которые были изменены пользователем.|  
+|[CHtmlEditDoc::OpenURL](#openurl)|Открытие URL-адреса.|  
   
- [CDocument](../Topic/CDocument%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CDocument](../../mfc/reference/cdocument-class.md)  
   
  `CHtmlEditDoc`  
   
-## Требования  
- **Header:** afxhtml.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxhtml.h  
   
-## См. также  
- [Образца HTMLEdit](../../top/visual-cpp-samples.md)   
+##  <a name="a-namechtmleditdoca--chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
+ Создает **CHtmlEditDoc** объекта.  
+  
+```  
+CHtmlEditDoc();
+```  
+  
+##  <a name="a-namegetviewa--chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView  
+ Извлекает [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) объект присоединен к этому документу.  
+  
+```  
+virtual CHtmlEditView* GetView() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает указатель на документ **CHtmlEditView** объекта.  
+  
+##  <a name="a-nameismodifieda--chtmleditdocismodified"></a><a name="ismodified"></a>CHtmlEditDoc::IsModified  
+ Возвращает значение, содержит ли элемент управления WebBrowser связанное представление документа, которые были изменены пользователем.  
+  
+```  
+virtual BOOL IsModified();
+```  
+  
+##  <a name="a-nameopenurla--chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL  
+ Открытие URL-адреса.  
+  
+```  
+virtual BOOL OpenURL(LPCTSTR lpszURL);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpszURL`  
+ URL-адрес, чтобы открыть.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **TRUE** в случае успешного выполнения **FALSE** в случае сбоя.  
+  
+## <a name="see-also"></a>См. также  
+ [Образец HTMLEdit](../../visual-cpp-samples.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+
+

@@ -1,78 +1,105 @@
 ---
-title: "IPropertyPage2Impl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPropertyPage2Impl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPropertyPage2 ATL implementation"
-  - "IPropertyPage2Impl class"
-  - "страницы свойств"
+title: "Класс IPropertyPage2Impl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPropertyPage2Impl
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages
+- IPropertyPage2 ATL implementation
+- IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# IPropertyPage2Impl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 43680d12febbd94137009f66242198129d4b3630
+ms.lasthandoff: 02/24/2017
 
-Этот класс реализует **IUnknown** и наследует реализацию по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
+---
+# <a name="ipropertypage2impl-class"></a>Класс IPropertyPage2Impl
+Этот класс реализует **IUnknown** и наследует реализация по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<class T>  
+class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```  
   
-      template< class   
-      T  
-      >  
-class IPropertyPage2Impl : public IPropertyPageImpl< T>  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от `IPropertyPage2Impl`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[IPropertyPage2Impl::EditProperty](../Topic/IPropertyPage2Impl::EditProperty.md)|Определяет свойства, элемент управления получает фокус, когда страница свойств будет активируется.  Реализация библиотеки ATL возвращает **E\_NOTIMPL**.|  
+|----------|-----------------|  
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Указывает, какой элемент управления свойства получит фокус при активации страницы свойств. Возвращает реализацию ATL **E_NOTIMPL**.|  
   
-## Заметки  
- Интерфейс [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) расширяет [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) путем добавления метода `EditProperty`.  Этот метод позволяет клиенту выбрать конкретное свойство в объекте страницы свойств.  
+## <a name="remarks"></a>Примечания  
+ [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) расширяет интерфейс [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) , добавив `EditProperty` метод. Этот метод позволяет клиенту выбрать конкретного свойства в объект страницы свойств.  
   
- Класс `IPropertyPage2Impl` просто возвращает **E\_NOTIMPL** для **IPropertyPage2::EditProperty**.  Однако он наследует реализацию по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) и реализует **IUnknown**, отправляя данные на устройство резервного копирования в отладочные построения.  
+ Класс `IPropertyPage2Impl` просто возвращает **E_NOTIMPL** для **IPropertyPage2::EditProperty**. Тем не менее, он наследует реализация по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) и реализует **IUnknown** при отправке информации для дампа строит устройства в режиме отладки.  
   
- При создании страницы свойств класс обычно является производным от `IPropertyPageImpl`.  Чтобы обеспечить дополнительную поддержку **IPropertyPage2** измените определение класса, и переопределить метод `EditProperty`.  
+ При создании страницы свойств класса обычно является производным от `IPropertyPageImpl`. Для дополнительной поддержки **IPropertyPage2**, измените определение класса и переопределить `EditProperty` метод.  
   
- **Связанные статьи** [Учебник по библиотеке ATL](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md), [Создание проекта библиотеки ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [создается проект ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IPropertyPage`  
   
  [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)  
   
  `IPropertyPage2Impl`  
   
-## Требования  
- **Header:**  atlctl.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlctl.h  
   
-## См. также  
- [IPerPropertyBrowsingImpl Class](../Topic/IPerPropertyBrowsingImpl%20Class.md)   
- [ISpecifyPropertyPagesImpl Class](../Topic/ISpecifyPropertyPagesImpl%20Class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameeditpropertya--ipropertypage2impleditproperty"></a><a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
+ Указывает, какой элемент управления свойства получит фокус при активации страницы свойств.  
+  
+```
+HRESULT EditProperty(DISPID dispID);
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Примечания  
+ В разделе [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>См. также  
+ [Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

@@ -1,55 +1,85 @@
 ---
-title: "Класс default_scheduler_exists | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::default_scheduler_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default_scheduler_exists - класс"
+title: "Класс default_scheduler_exists | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::default_scheduler_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс default_scheduler_exists
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
+ms.lasthandoff: 02/24/2017
 
-Данный класс описывает исключение, которое выдается, когда метод `Scheduler::SetDefaultSchedulerPolicy` вызывается, когда планировщик по умолчанию уже существует внутри процесса.  
+---
+# <a name="defaultschedulerexists-class"></a>Класс default_scheduler_exists
+Этот класс описывает исключение, возникающее при вызове метода `Scheduler::SetDefaultSchedulerPolicy`, когда планировщик по умолчанию уже существует в процессе.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+class default_scheduler_exists : public std::exception;
 ```  
-class default_scheduler_exists : public std::exception;  
-```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Конструктор default\_scheduler\_exists::default\_scheduler\_exists](../Topic/default_scheduler_exists::default_scheduler_exists%20Constructor.md)|Перегружен.  Создает объект `default_scheduler_exists`.|  
+|----------|-----------------|  
+|[Конструктор default_scheduler_exists](#ctor)|Перегружен. Создает объект `default_scheduler_exists`.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
   
  `default_scheduler_exists`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h  
   
  **Пространство имен:** concurrency  
   
-## См. также  
- [Пространство имен concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Метод Scheduler::SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md)
+##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+
+ Создает объект `default_scheduler_exists`.  
+  
+```
+explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
+
+default_scheduler_exists() throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Message`  
+ Описательное сообщение об ошибке.  
+  
+## <a name="see-also"></a>См. также  
+ [пространство имен Concurrency](concurrency-namespace.md)
+

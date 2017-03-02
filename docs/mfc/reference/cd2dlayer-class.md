@@ -1,80 +1,209 @@
 ---
-title: "Класс CD2DLayer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CD2DLayer"
-  - "CD2DLayer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DLayer - класс"
+title: "Класс CD2DLayer | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DLayer
+- CD2DLayer
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DLayer class
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс CD2DLayer
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d0034c37da7fa61c10cf6c7662ba361de8313aa0
+ms.lasthandoff: 02/24/2017
 
-Оболочка для ID2D1Layer.  
+---
+# <a name="cd2dlayer-class"></a>Класс CD2DLayer
+Программа-оболочка для ID2D1Layer.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CD2DLayer : public CD2DResource;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CD2DLayer::CD2DLayer](../Topic/CD2DLayer::CD2DLayer.md)|Создает объект CD2DLayer.|  
-|[CD2DLayer::~CD2DLayer](../Topic/CD2DLayer::~CD2DLayer.md)|Деструктор.  Вызывается при уничтожении объекта слоя D2D.|  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CD2DLayer::Attach](../Topic/CD2DLayer::Attach.md)|Присоединяет интерфейс существующего ресурса к объекту|  
-|[CD2DLayer::Create](../Topic/CD2DLayer::Create.md)|Создает объект CD2DLayer.  \(Переопределяет [CD2DResource::Create](../Topic/CD2DResource::Create.md).\)|  
-|[CD2DLayer::Destroy](../Topic/CD2DLayer::Destroy.md)|Уничтожает объект CD2DLayer.  \(Переопределяет [CD2DResource::Destroy](../Topic/CD2DResource::Destroy.md).\)|  
-|[CD2DLayer::Detach](../Topic/CD2DLayer::Detach.md)|Отсоединяет интерфейс ресурса от объекта|  
-|[CD2DLayer::Get](../Topic/CD2DLayer::Get.md)|Возвращает интерфейс ID2D1Layer|  
-|[CD2DLayer::GetSize](../Topic/CD2DLayer::GetSize.md)|Возвращает размер целевого буфера визуализации в аппаратно\-независимых пикселях|  
-|[CD2DLayer::IsValid](../Topic/CD2DLayer::IsValid.md)|Проверяет допустимость ресурса \(переопределяет [CD2DResource::IsValid](../Topic/CD2DResource::IsValid.md).\)|  
+|----------|-----------------|  
+|[CD2DLayer::CD2DLayer](#cd2dlayer)|Создает объект CD2DLayer.|  
+|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Деструктор Вызывается при уничтожении объекта D2D слоя.|  
   
-### Открытые операторы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CD2DLayer::operator ID2D1Layer\*](../Topic/CD2DLayer::operator%20ID2D1Layer*.md)|Возвращает интерфейс ID2D1Layer|  
+|----------|-----------------|  
+|[CD2DLayer::Attach](#attach)|Присоединение существующих ресурсов интерфейса в объект|  
+|[CD2DLayer::CREATE](#create)|Создает CD2DLayer. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DLayer::destroy](#destroy)|Уничтожает объект CD2DLayer. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DLayer::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|  
+|[CD2DLayer::Get](#get)|Возвращает интерфейс ID2D1Layer|  
+|[CD2DLayer::GetSize](#getsize)|Возвращает размер целевого объекта отрисовки в аппаратно независимые пиксели|  
+|[CD2DLayer::IsValid](#isvalid)|Проверяет допустимость ресурсов (переопределяет [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
   
-### Защищенные члены данных  
+### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CD2DLayer::m\_pLayer](../Topic/CD2DLayer::m_pLayer.md)|Хранит указатель на объект ID2D1Layer.|  
+|----------|-----------------|  
+|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|Возвращает интерфейс ID2D1Layer|  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+### <a name="protected-data-members"></a>Защищенные члены данных  
   
- [CD2DResource](../Topic/CD2DResource%20Class.md)  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CD2DLayer::m_pLayer](#m_player)|Хранит указатель на объект ID2D1Layer.|  
   
- [CD2DLayer](../../mfc/reference/cd2dlayer-class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
-## Требования  
+ [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
+  
+ `CD2DLayer`  
+  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-## См. также  
- [Классы](../Topic/MFC%20Classes.md)
+##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+ Деструктор Вызывается при уничтожении объекта D2D слоя.  
+  
+```  
+virtual ~CD2DLayer();
+```  
+  
+##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+ Присоединение существующих ресурсов интерфейса в объект  
+  
+```  
+void Attach(ID2D1Layer* pResource);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pResource`  
+ Существующий интерфейс ресурсов. Не может иметь значение NULL  
+  
+##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+ Создает объект CD2DLayer.  
+  
+```  
+CD2DLayer(
+    CRenderTarget* pParentTarget,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pParentTarget`  
+ Указатель на целевой объект отрисовки.  
+  
+ `bAutoDestroy`  
+ Указывает, что объект будет уничтожен владельцем (pParentTarget).  
+  
+##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::CREATE  
+ Создает CD2DLayer.  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pRenderTarget`  
+ Указатель на целевой объект отрисовки.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Если метод завершается успешно, возвращается значение S_OK. В противном случае — возвращает код ошибки HRESULT.  
+  
+##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::destroy  
+ Уничтожает объект CD2DLayer.  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+ Отсоединяет интерфейс ресурса из объекта  
+  
+```  
+ID2D1Layer* Detach();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на интерфейс отсоединенных ресурсов.  
+  
+##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+ Возвращает интерфейс ID2D1Layer  
+  
+```  
+ID2D1Layer* Get();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на интерфейс ID2D1Layer или значение NULL, если объект еще не инициализирован.  
+  
+##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+ Возвращает размер целевого объекта отрисовки в аппаратно независимые пиксели  
+  
+```  
+CD2DSizeF GetSize() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Текущий размер целевого объекта отрисовки в аппаратно независимые пиксели  
+  
+##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+ Проверяет допустимость ресурсов  
+  
+```  
+virtual BOOL IsValid() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
+  
+##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+ Хранит указатель на объект ID2D1Layer.  
+  
+```  
+ID2D1Layer* m_pLayer;  
+```  
+  
+##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+ Возвращает интерфейс ID2D1Layer  
+  
+```  
+operator ID2D1Layer* ();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на интерфейс ID2D1Layer или значение NULL, если объект еще не инициализирован.  
+  
+## <a name="see-also"></a>См. также  
+ [Классы](../../mfc/reference/mfc-classes.md)
+

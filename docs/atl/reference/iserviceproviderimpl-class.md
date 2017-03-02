@@ -1,75 +1,134 @@
 ---
-title: "IServiceProviderImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::IServiceProviderImpl<T>"
-  - "ATL.IServiceProviderImpl<T>"
-  - "ATL.IServiceProviderImpl"
-  - "ATL::IServiceProviderImpl"
-  - "IServiceProviderImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IServiceProvider - интерфейс, ATL -реализация"
-  - "IServiceProviderImpl class"
+title: "Класс IServiceProviderImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::IServiceProviderImpl<T>
+- ATL.IServiceProviderImpl<T>
+- ATL.IServiceProviderImpl
+- ATL::IServiceProviderImpl
+- IServiceProviderImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IServiceProviderImpl class
+- IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# IServiceProviderImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 69a59fe23b3ca787dee86b1bbdc6775a44903f91
+ms.lasthandoff: 02/24/2017
 
-Этот класс предоставляет реализацию по умолчанию для интерфейса `IServiceProvider`.  
+---
+# <a name="iserviceproviderimpl-class"></a>Класс IServiceProviderImpl
+Этот класс предоставляет реализацию по умолчанию `IServiceProvider` интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class T>  
+class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ```  
   
-      template <  
-   class T  
->   
-class ATL_NO_VTABLE IServiceProviderImpl :  
-   public IServiceProvider  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от `IServiceProviderImpl`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[IServiceProviderImpl::QueryService](../Topic/IServiceProviderImpl::QueryService.md)|Создает или получает доступ к конкретной службе и возвращает указатель интерфейса на указанный интерфейс для службы.|  
+|----------|-----------------|  
+|[IServiceProviderImpl::QueryService](#queryservice)|Создает или получает доступ к указанной службе и возвращает указатель интерфейса, заданный интерфейс для службы.|  
   
-## Заметки  
- Интерфейс `IServiceProvider` находящий службу, определенному его GUID и возвращает указатель интерфейса для запрашиваемого интерфейса на стороне службы.  Класс `IServiceProviderImpl` предоставляет реализацию по умолчанию для интерфейса.  
+## <a name="remarks"></a>Примечания  
+ `IServiceProvider` Интерфейс определяет службу, указанного по его идентификатору GUID и возвращает указатель на интерфейс для запрошенного интерфейса службы. Класс `IServiceProviderImpl` предоставляет стандартную реализацию этого интерфейса.  
   
- **IServiceProviderImpl**  определяет один метод: [QueryService](../Topic/IServiceProviderImpl::QueryService.md), который создает или получает доступ к конкретной службе и возвращает указатель интерфейса на указанный интерфейс для службы.  
+ **IServiceProviderImpl** указывает один метод: [QueryService](#queryservice), который создает или получает доступ к указанной службе и возвращает указатель интерфейса, заданный интерфейс для службы.  
   
- `IServiceProviderImpl` использует сопоставление службы, начиная с [BEGIN\_SERVICE\_MAP](../Topic/BEGIN_SERVICE_MAP.md) и законцовкой с [END\_SERVICE\_MAP](../Topic/END_SERVICE_MAP.md).  
+ `IServiceProviderImpl`использует схему службы, начиная с [BEGIN_SERVICE_MAP](http://msdn.microsoft.com/library/3c6ae156-8776-4588-8227-2d234daec236) и заканчивая [END_SERVICE_MAP](http://msdn.microsoft.com/library/9a35d02a-014c-413a-bb0b-bcca11ab45a6).  
   
- Сопоставление службы содержащий 2 записей. [SERVICE\_ENTRY](../Topic/SERVICE_ENTRY.md), указывающее идентификатор конкретной службы \(sid\), поддерживаемых объектом, и [SERVICE\_ENTRY\_CHAIN](../Topic/SERVICE_ENTRY_CHAIN.md), который вызывает `QueryService` для привязан к другому объекту.  
+ Служба содержит две записи: [SERVICE_ENTRY](http://msdn.microsoft.com/library/e65ff9cc-15e8-41cf-b686-f99eb6686ca9), указывающая идентификатор указанной службы (SID), поддерживаемые объектом, и [SERVICE_ENTRY_CHAIN](http://msdn.microsoft.com/library/09be4ce4-3ccd-4ff2-a95e-a9d5275354c1), какие вызовы `QueryService` цепь к другому объекту.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IServiceProvider`  
   
  `IServiceProviderImpl`  
   
-## Требования  
- **Header:**  atlcom.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** файле atlcom.h  
   
-## См. также  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService  
+ Создает или получает доступ к указанной службе и возвращает указатель интерфейса, заданный интерфейс для службы.  
+  
+```
+STDMETHOD(QueryService)(
+    REFGUID guidService,
+    REFIID riid,
+    void** ppvObject);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [IN]`guidService`  
+ Указатель на идентификатор службы (SID).  
+  
+ [IN]`riid`  
+ Идентификатор интерфейса, к которому вызывающий объект для получения доступа.  
+  
+ [OUT]`ppvObj`  
+ Косвенный указатель на запрошенный интерфейс.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращаемый `HRESULT` значение является одним из следующих:  
+  
+|Возвращаемое значение|Значение|  
+|------------------|-------------|  
+|S_OK|Служба успешно создана или получить.|  
+|E_INVALIDARG|Один или несколько аргументов являются недопустимыми.|  
+|E_OUTOFMEMORY|Не хватает памяти для создания службы.|  
+|E_UNEXPECTED|Произошла неизвестная ошибка.|  
+|E_NOINTERFACE|Запрошенный интерфейс не является частью этой службы или службы неизвестно.|  
+  
+### <a name="remarks"></a>Примечания  
+ `QueryService`Возвращает косвенный указатель на запрошенный интерфейс в указанной службе. Вызывающий объект отвечает за освобождение этого указателя, когда он больше не требуется.  
+  
+ При вызове `QueryService`, передайте идентификатор службы ( `guidService`) и идентификатор интерфейса ( `riid`). `guidService` Указывает службу, для которой требуется доступ, и `riid` определяет интерфейс, который является частью службы. В ответ вы получите косвенный указатель на интерфейс.  
+  
+ Объект, реализующий интерфейс также может реализовывать интерфейсы, которые являются частью других служб. Рассмотрим следующий пример.  
+  
+-   Некоторые из этих интерфейсов может быть необязательным. Не все интерфейсы, определенные в описании службы всегда присутствуют в каждой реализации службы или для каждого возвращаемого объекта.  
+  
+-   В отличие от вызовов `QueryInterface`, передав идентификатор другой службе не обязательно означает, что возвращается другой объект модели компонентных объектов (COM).  
+  
+-   Возвращенный объект может иметь дополнительные интерфейсы, которые не являются частью определения службы.  
+  
+ Две разные службы, такие как SID_SMyService и SID_SYourService, оба задается использование один и тот же интерфейс, несмотря на то, что общего между двумя службами будет нечего реализацию интерфейса. Это работает, так как вызов `QueryService` (SID_SMyService, IID_IDispatch) может возвращать объектом, отличным от `QueryService` (SID_SYourService, IID_IDispatch). Удостоверение объекта не предполагается, что при указании идентификатора другую службу.  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

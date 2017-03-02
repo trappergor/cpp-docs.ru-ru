@@ -1,109 +1,175 @@
 ---
-title: "Класс CW2AEX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CW2AEX<t_nBufferLength>"
-  - "CW2AEX"
-  - "ATL.CW2AEX<t_nBufferLength>"
-  - "ATL::CW2AEX"
-  - "ATL.CW2AEX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CW2AEX - класс"
+title: "Класс CW2AEX | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CW2AEX<t_nBufferLength>
+- CW2AEX
+- ATL.CW2AEX<t_nBufferLength>
+- ATL::CW2AEX
+- ATL.CW2AEX
+dev_langs:
+- C++
+helpviewer_keywords:
+- CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Класс CW2AEX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 8bf433224396f54b81fb5310ec29dfed213c6855
+ms.lasthandoff: 02/24/2017
 
-Этот класс используется макросами `CT2AEX`, `CW2TEX`, `CW2CTEX` и `CT2CAEX` и typedef **CW2A** преобразования строки.  
+---
+# <a name="cw2aex-class"></a>Класс CW2AEX
+Этот класс используется макросы преобразования строк `CT2AEX`, `CW2TEX`, `CW2CTEX`, и `CT2CAEX`и typedef **CW2A**.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<int t_nBufferLength = 128>  
+class CW2AEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CW2AEX  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `t_nBufferLength`  
- Размер буфера, используемого в процессе перевода.  По умолчанию длина составляет 128 байт.  
+ Размер буфера, используемого в процессе перевода. Длина по умолчанию равна 128 байт.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CW2AEX::CW2AEX](../Topic/CW2AEX::CW2AEX.md)|Конструктор.|  
-|[CW2AEX::~CW2AEX](../Topic/CW2AEX::~CW2AEX.md)|Деструктор.|  
-  
-### Открытые операторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CW2AEX::operator LPSTR](../Topic/CW2AEX::operator%20LPSTR.md)|Оператор преобразования.|  
+|----------|-----------------|  
+|[CW2AEX::CW2AEX](#cw2aex)|Конструктор.|  
+|[CW2AEX:: ~ CW2AEX](#dtor)|Деструктор|  
   
-### Открытые члены данных  
+### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CW2AEX::m\_psz](../Topic/CW2AEX::m_psz.md)|Элемент данных, в котором хранится строка источника.|  
-|[CW2AEX::m\_szBuffer](../Topic/CW2AEX::m_szBuffer.md)|Статический буфер, используемый для хранения преобразованная строка.|  
+|----------|-----------------|  
+|[CW2AEX::operator LPSTR](#operator_lpstr)|Оператор преобразования.|  
   
-## Заметки  
- Если требуется, используйте `CT2AEX` дополнительную функциональность, `CW2TEX`, `CW2CTEX`, `CT2CAEX` или **CW2A** в коде.  
+### <a name="public-data-members"></a>Открытые члены данных  
   
- Этот класс содержит буфер фиксированного размера статический, который используется для хранения результата преобразования.  Если результат слишком велик, чтобы поместить в буфер статический класс выделяет память с помощью `malloc`, освобождая память, если объект выходит из области.  Это гарантирует, что, в отличие от макросы преобразования текста, доступные в предыдущих версиях библиотеки ATL этот класс является безопасным для использования в циклах и что он не переполнит стек.  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CW2AEX::m_psz](#m_psz)|Член данных, хранит исходную строку.|  
+|[CW2AEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения Преобразованная строка.|  
   
- Если класс пытается выделить память в куче и происходит сбой, то он будет вызывать `AtlThrow` с аргументом **E\_OUTOFMEMORY**.  
+## <a name="remarks"></a>Примечания  
+ Если дополнительные функциональные возможности не требуется, используйте `CT2AEX`, `CW2TEX`, `CW2CTEX`, `CT2CAEX`, или **CW2A** в коде.  
   
- По умолчанию классы преобразования библиотеки ATL и макросы, используют кодовую страницу ANSI текущую потока для преобразования.  Если необходимо переопределить этой функциональности для определенного преобразования, укажите кодовую страницу в качестве второго параметра в конструктор класса.  
+ Этот класс содержит статический буфер фиксированного размера, который используется для хранения результата преобразования. Если результат слишком большой для помещения в статический буфер, класс выделяет память с помощью `malloc`, освобождая ее, когда объект выходит за пределы области. Это гарантирует, что, в отличие от текста макросы преобразования, доступных в предыдущих версиях библиотеки ATL, этот класс можно безопасно использовать в циклах, и что он не приводят к переполнению стека.  
   
- Следующие макросы основаны на этом классе.  
+ Если класс пытается выделить память для кучи и завершается неудачей, он будет вызывать `AtlThrow` с аргументом **E_OUTOFMEMORY**.  
   
--   `CT2AEX`  
+ По умолчанию ATL классы и макросы преобразования используют кодовую страницу ANSI текущего потока для преобразования. Если требуется переопределить это поведение для определенного преобразования, укажите кодовую страницу как второй параметр конструктора для класса.  
   
--   `CW2TEX`  
+ Следующие макросы, основаны на этот класс.  
   
--   `CW2CTEX`  
+- `CT2AEX`  
   
--   `CT2CAEX`  
+- `CW2TEX`  
   
- Следующее определение типа на основе этого класса.  
+- `CW2CTEX`  
   
--   **CW2A**  
+- `CT2CAEX`  
   
- Обсуждение этих макросов преобразования текста см. в разделе [Макросы преобразования строки библиотеки ATL и MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+ Следующие typedef зависит от этого класса:  
   
-## Пример  
- См. раздел [Макросы преобразования строки библиотеки ATL и MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) пример использования этих макросов преобразования строки.  
+- **CW2A**  
   
-## Требования  
- **Header:** atlconv.h  
+ Обсуждение этих макросов текстового преобразования см. в разделе [ATL и MFC макросы преобразования строк](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
   
-## См. также  
+## <a name="example"></a>Пример  
+ В разделе [ATL и MFC макросы преобразования строк](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) пример использования эти макросы преобразования строк.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlconv.h  
+  
+##  <a name="a-namecw2aexa--cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX  
+ Конструктор.  
+  
+```
+CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2AEX(LPCWSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `psz`  
+ Текстовая строка для преобразования.  
+  
+ `nCodePage`  
+ Кодовая страница, используемая для выполнения преобразования. Обсуждение параметров страницы кода для [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] функция [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) подробнее.  
+  
+### <a name="remarks"></a>Примечания  
+ Выделяет буфер, используемый в процессе перевода.  
+  
+##  <a name="a-namedtora--cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+ Деструктор  
+  
+```
+~CW2AEX() throw();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Освобождает выделенный буфер.  
+  
+##  <a name="a-namempsza--cw2aexmpsz"></a><a name="m_psz"></a>CW2AEX::m_psz  
+ Член данных, хранит исходную строку.  
+  
+```
+LPSTR m_psz;
+```  
+  
+##  <a name="a-namemszbuffera--cw2aexmszbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+ Статический буфер, используемый для хранения Преобразованная строка.  
+  
+```
+char m_szBuffer[t_nBufferLength];
+```  
+  
+##  <a name="a-nameoperatorlpstra--cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+ Оператор преобразования.  
+  
+```  
+operator LPSTR() const throw();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает текстовую строку в качестве типа **LPSTR.**  
+  
+## <a name="see-also"></a>См. также  
  [Класс CA2AEX](../../atl/reference/ca2aex-class.md)   
  [Класс CA2CAEX](../../atl/reference/ca2caex-class.md)   
  [Класс CA2WEX](../../atl/reference/ca2wex-class.md)   
  [Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

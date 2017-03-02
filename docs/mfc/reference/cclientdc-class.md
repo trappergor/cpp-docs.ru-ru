@@ -1,73 +1,120 @@
 ---
-title: "CClientDC Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CClientDC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CClientDC class"
-  - "CDC - класс, device contexts for client areas"
-  - "client-area device context"
-  - "device contexts, клиентская область"
+title: "Класс CClientDC | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CClientDC
+dev_langs:
+- C++
+helpviewer_keywords:
+- CClientDC class
+- device contexts, client area
+- client-area device context
+- CDC class, device contexts for client areas
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CClientDC Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 619bed4d31994bde8464ad710e9f050d6ba0696a
+ms.lasthandoff: 02/24/2017
 
-Позаботит о вызове функции Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время разработки и во время [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) удаления.  
+---
+# <a name="cclientdc-class"></a>CClientDC-класс
+Отвечает за вызов функций Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) во время удаления.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 class CClientDC : public CDC  
-  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CClientDC::CClientDC](../Topic/CClientDC::CClientDC.md)|Создает объект `CClientDC` подключенный к `CWnd`.|  
-  
-### Защищенные члены данных  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CClientDC::m\_hWnd](../Topic/CClientDC::m_hWnd.md)|`HWND` окна, для которого данный `CClientDC` допустимо.|  
+|----------|-----------------|  
+|[CClientDC::CClientDC](#cclientdc)|Создает `CClientDC` подключен объект `CWnd`.|  
   
-## Заметки  
- Это означает, что контекст устройства, связанный с объектом `CClientDC` клиентской области окна.  
+### <a name="protected-data-members"></a>Защищенные члены данных  
   
- Дополнительные сведения о `CClientDC` см. в разделе [контексты устройства](../Topic/Device%20Contexts.md).  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CClientDC::m_hWnd](#m_hwnd)|`HWND` Окна, для которого данный `CClientDC` является допустимым.|  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="remarks"></a>Примечания  
+ Это означает, что контекст устройства, связанный с `CClientDC` объект является клиентской области окна.  
   
- [CDC](../Topic/CDC%20Class.md)  
+ Дополнительные сведения о `CClientDC`, в разделе [контексты устройств](../../mfc/device-contexts.md).  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CDC](../../mfc/reference/cdc-class.md)  
   
  `CClientDC`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-## См. также  
- [MFC, пытается интерфейс MDI](../../top/visual-cpp-samples.md)   
- [Класс CDC](../Topic/CDC%20Class.md)   
+##  <a name="a-namecclientdca--cclientdccclientdc"></a><a name="cclientdc"></a>CClientDC::CClientDC  
+ Создает `CClientDC` объекта, который обращается к клиентской области [CWnd](../../mfc/reference/cwnd-class.md) указывает `pWnd`.  
+  
+```  
+explicit CClientDC(CWnd* pWnd);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pWnd`  
+ Окно которого клиентской области, будет получать доступ к объекту контекста устройства.  
+  
+### <a name="remarks"></a>Примечания  
+ Конструктор вызывает функцию Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+  
+ Исключения (типа `CResourceException`) возникает, если Windows `GetDC` вызов завершается с ошибкой. Контекст устройства доступны не в том случае, если все его контексты устройств доступны уже выделена Windows. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCDocView&#42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
+  
+##  <a name="a-namemhwnda--cclientdcmhwnd"></a><a name="m_hwnd"></a>CClientDC::m_hWnd  
+ `HWND` Из `CWnd` указатель, используемый для создания `CClientDC` объекта.  
+  
+```  
+HWND m_hWnd;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ `m_hWnd`является защищенной переменной.  
+  
+### <a name="example"></a>Пример  
+  В примере показано [CClientDC::CClientDC](#cclientdc).  
+  
+## <a name="see-also"></a>См. также  
+ [Пример MFC MDI](../../visual-cpp-samples.md)   
+ [CDC-класс](../../mfc/reference/cdc-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CDC](../Topic/CDC%20Class.md)
+ [CDC-класс](../../mfc/reference/cdc-class.md)
+

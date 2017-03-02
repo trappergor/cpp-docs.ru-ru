@@ -1,65 +1,96 @@
 ---
-title: "Структура IUMSScheduler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::IUMSScheduler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IUMSScheduler - структура"
+title: "Структура IUMSScheduler | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::IUMSScheduler
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# Структура IUMSScheduler
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 658c0d0c9ddb9bbe51134f0a7ea0211be9c39815
+ms.lasthandoff: 02/24/2017
 
-Интерфейс к абстракции планировщика работы, который хочет, чтобы диспетчер ресурсов среда параллелизма передал ему планируемые пользовательским режимом потоки \(UMS\).  Диспетчер ресурсов использует этот интерфейс для связи с планировщиками UMS\-потоков.  Интерфейс `IUMSScheduler` наследует от интерфейса `IScheduler`.  
+---
+# <a name="iumsscheduler-structure"></a>Структура IUMSScheduler
+Интерфейс абстракции планировщика, которому требуется, чтобы диспетчер ресурсов среды выполнения с параллелизмом передал ему потоки планировщика в пользовательском режиме (UMS). Диспетчер ресурсов среды выполнения с параллелизмом использует этот интерфейс для взаимодействия с планировщиками потоков UMS. Интерфейс `IUMSScheduler` наследует от интерфейса `IScheduler`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+struct IUMSScheduler : public IScheduler;
 ```  
-struct IUMSScheduler : public IScheduler;  
-```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Метод IUMSScheduler::SetCompletionList](../Topic/IUMSScheduler::SetCompletionList%20Method.md)|Назначает интерфейс `IUMSCompletionList` планировщику потоков UMS.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод IUMSScheduler::SetCompletionList](#setcompletionlist)|Назначает `IUMSCompletionList` интерфейс в планировщике потоков UMS.|  
   
-## Заметки  
- Если при реализации пользовательских планировщика, который взаимодействует с диспетчер ресурсов, требуется, чтобы потоки UMS передавались планировщику вместо обычных потоков Win32, необходимо предоставить реализацию интерфейса `IUMSScheduler`.  Кроме того следует установить значение политики для ключа политики планировщика `SchedulerKind` как `UmsThreadDefault`.  Если политика указывает UMS\-поток, интерфейс `IScheduler`, переданный в качестве параметра методу [IResourceManager::RegisterScheduler](../Topic/IResourceManager::RegisterScheduler%20Method.md) должен быть интерфейсом `IUMSScheduler`.  
+## <a name="remarks"></a>Примечания  
+ При реализации пользовательских планировщика, который взаимодействует с диспетчером ресурсов, и требуется, чтобы потоки UMS передавались планировщику вместо обычных потоков Win32, необходимо предоставить реализацию `IUMSScheduler` интерфейса. Кроме того, следует задать значение политики для ключа политики планировщика `SchedulerKind` быть `UmsThreadDefault`. Если параметр политики указывает потока UMS `IScheduler` интерфейс, который передается в качестве параметра [IResourceManager::RegisterScheduler](iresourcemanager-structure.md#registerscheduler) метод должен быть `IUMSScheduler` интерфейса.  
   
- Диспетчер ресурсов может передать потоки UMS только в операционных системах, поддерживающих UMS. 64\-разрядные операционные системы Windows 7 и выше поддерживают потоки UMS.  Если создать политику планировщика с ключом `SchedulerKind`, которому присвоено значение `UmsThreadDefault` и базовая платформа не поддерживает UMS, значение ключа `SchedulerKind` на этой политике будет изменено на значение `ThreadScheduler`.  Следует всегда читать это значение политики обратно перед тем, как ожидать получения потоков UMS.  
+ Диспетчер ресурсов может передать потоки UMS только в операционных системах, поддерживающих UMS. 64-разрядных операционных системах с версией Windows 7 и выше поддерживают потоки UMS. При создании политики планировщика с `SchedulerKind` ключа задано значение `UmsThreadDefault` и базовой платформы поддерживает UMS значение `SchedulerKind` ключ для этой политики будет изменено на значение `ThreadScheduler`. Следует всегда читать обратно значение этой политики перед ожидать получения потоков UMS.  
   
- Интерфейс `IUMSScheduler` — это один конец двустороннего канала связи между планировщиком и диспетчер ресурсов.  Другой конец представляется интерфейсами `IResourceManager` и `ISchedulerProxy`, которые реализуются диспетчером ресурсов.  
+ `IUMSScheduler` Интерфейс — это один конец двустороннего канала связи между планировщиком и диспетчер ресурсов. Представленный другой конец `IResourceManager` и `ISchedulerProxy` интерфейсы, используемые диспетчером ресурсов.  
   
-## Иерархия наследования  
- [IScheduler](../../../parallel/concrt/reference/ischeduler-structure.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [IScheduler](ischeduler-structure.md)  
   
  `IUMSScheduler`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** concrtrm.h  
   
  **Пространство имен:** concurrency  
   
-## См. также  
- [Пространство имен concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Перечисление PolicyElementKey](../Topic/PolicyElementKey%20Enumeration.md)   
- [Структура IScheduler](../../../parallel/concrt/reference/ischeduler-structure.md)   
- [Структура IUMSCompletionList](../../../parallel/concrt/reference/iumscompletionlist-structure.md)   
- [Структура IResourceManager](../../../parallel/concrt/reference/iresourcemanager-structure.md)
+##  <a name="a-namesetcompletionlista--iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>Метод IUMSScheduler::SetCompletionList  
+ Назначает `IUMSCompletionList` интерфейс в планировщике потоков UMS.  
+  
+```
+virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pCompletionList`  
+ Интерфейс списка завершения для планировщика. Имеется один список для каждого планировщика.  
+  
+### <a name="remarks"></a>Примечания  
+ Диспетчер ресурсов будет вызывать этот метод на планировщика, который указывает, что ему нужны UMS-потоки, после того, планировщик запросил начального распределения ресурсов. Можно использовать планировщик `IUMSCompletionList` интерфейс, чтобы определить, когда разблокировать UMS прокси-поток. Он допустим только для доступа к этот интерфейс из прокси потоков, выполняющихся на корневой виртуальный процессор, присвоенный планировщику UMS.  
+  
+## <a name="see-also"></a>См. также  
+ [пространство имен Concurrency](concurrency-namespace.md)   
+ [Перечисление PolicyElementKey](concurrency-namespace-enums.md)   
+ [Структура IScheduler](ischeduler-structure.md)   
+ [Структура IUMSCompletionList](iumscompletionlist-structure.md)   
+ [Структура IResourceManager](iresourcemanager-structure.md)
+

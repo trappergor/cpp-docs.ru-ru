@@ -1,118 +1,133 @@
 ---
-title: "Структура CDaoDatabaseInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoDatabaseInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoDatabaseInfo - структура"
-  - "доступ к данным DAO.NET, коллекция баз данных"
+title: "Структура CDaoDatabaseInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoDatabaseInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoDatabaseInfo structure
+- DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Структура CDaoDatabaseInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ed7eb8612099daf59cb7e722434102095122f3d1
+ms.lasthandoff: 02/24/2017
 
-Структура `CDaoDatabaseInfo` содержит сведения об объекте базы данных, указанном для объектов \(DAO\) доступа к данным.  
+---
+# <a name="cdaodatabaseinfo-structure"></a>Структура CDaoDatabaseInfo
+`CDaoDatabaseInfo` Структура содержит сведения об объекте базы данных, определенные для объектов доступа к данным (DAO).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      struct CDaoDatabaseInfo  
+struct CDaoDatabaseInfo  
 {  
-   CString m_strName;       // Primary  
-   BOOL m_bUpdatable;       // Primary  
-   BOOL m_bTransactions;    // Primary  
-   CString m_strVersion;    // Secondary  
-   long m_lCollatingOrder;  // Secondary  
-   short m_nQueryTimeout;   // Secondary  
-   CString m_strConnect;    // All  
+    CString m_strName;       // Primary  
+    BOOL m_bUpdatable;       // Primary  
+    BOOL m_bTransactions;    // Primary  
+    CString m_strVersion;    // Secondary  
+    long m_lCollatingOrder;  // Secondary  
+    short m_nQueryTimeout;   // Secondary  
+    CString m_strConnect;    // All  
 };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `m_strName`  
- Уникальные имена объекта базы данных.  Непосредственно для извлечения это свойство, вызовите метод [CDaoDatabase::GetName](../Topic/CDaoDatabase::GetName.md).  Дополнительные сведения см. в разделе «свойство» Имя» в справке DAO.  
+ Однозначно имена объектов базы данных. Для получения этого свойства непосредственно вызвать [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Дополнительные сведения см. в разделе «Свойства Name» в справке DAO.  
   
  `m_bUpdatable`  
- Указывает, является ли изменения можно внести в базе данных.  Непосредственно для извлечения это свойство, вызовите метод [CDaoDatabase::CanUpdate](../Topic/CDaoDatabase::CanUpdate.md).  Дополнительные сведения см. в разделе «обновляемого свойства» в справке DAO.  
+ Указывает, может ли внесены изменения в базу данных. Для получения этого свойства непосредственно вызвать [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Дополнительные сведения см. в разделе «Обновляемые свойства» в справке DAO.  
   
- *m\_bTransactions*  
- Указывает, поддерживает ли источник данных транзакции — запись последовательности изменений, можно будет отменено откатить \(\) или сохранить \(сохраненный\).  Если база данных основана на ядра СУБД Microsoft Jet, свойство транзакций отлично от нуля и можно использовать транзакции.  Другие ядра СУБД не поддерживают транзакции.  Непосредственно для извлечения это свойство, вызовите метод [CDaoDatabase::CanTransact](../Topic/CDaoDatabase::CanTransact.md).  Дополнительные сведения см. в разделе «свойство транзакций» в справке DAO.  
+ *m_bTransactions*  
+ Указывает, поддерживает ли источник данных транзакций — запись ряд изменений, которые можно позднее откат (отменено) или фиксации (Сохранить). Если база данных основана на базы данных Microsoft Jet, свойство транзакции имеет ненулевое значение, и транзакции можно использовать. Другие ядра СУБД может не поддерживать транзакции. Для получения этого свойства непосредственно вызвать [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). Дополнительные сведения см. в разделе «Свойство транзакции» в справке DAO.  
   
- *m\_strVersion*  
- Отображает версию ядра СУБД Microsoft Jet.  Для получения значения этого свойства непосредственно вызовите функцию\-член [GetVersion](../Topic/CDaoDatabase::GetVersion.md) объекта базы данных.  Дополнительные сведения см. в разделе «свойство версии» в справке DAO.  
+ *m_strVersion*  
+ Указывает версию базы данных Microsoft Jet. Чтобы получить значение этого свойства напрямую, вызовите объект базы данных [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) функции-члена. Дополнительные сведения см. в разделе «Свойство Version» в справке DAO.  
   
  `m_lCollatingOrder`  
- Определяет последовательность порядка сортировки в текст для сравнения строк или сортировки.  Возможные допустимые значения приведены ниже.  
+ Указывает последовательность сортировки в текст для сравнения строк или сортировки. Возможные допустимые значения приведены ниже.  
   
--   использование **dbSortGeneral** общий \(английский, французский, немецкий, итальянский, португалка и современный испанский язык\) порядок сортировки.  
+- **dbSortGeneral** использовать общий порядок сортировки (английский, французский, немецкий, португальский, итальянский и испанский современных).  
   
--   использование **dbSortArabic** арабский порядок сортировки.  
+- **dbSortArabic** используется порядок сортировки для арабского языка.  
   
--   использование **dbSortCyrillic** русский порядок сортировки.  
+- **dbSortCyrillic** используется порядок сортировки русский.  
   
--   использование **dbSortCzech** чешский порядок сортировки.  
+- **dbSortCzech** используется порядок сортировки чешский.  
   
--   использование **dbSortDutch**  голландский порядок сортировки.  
+- **dbSortDutch** использовать голландский сортировку.  
   
--   использование **dbSortGreek** греческий порядок сортировки.  
+- **dbSortGreek** использовать греческие сортировку.  
   
--   использование **dbSortHebrew** иврит порядок сортировки.  
+- **dbSortHebrew** используется порядок сортировки иврита.  
   
--   использование **dbSortHungarian** венгерский порядок сортировки.  
+- **dbSortHungarian** используется порядок сортировки венгерский.  
   
--   использование **dbSortIcelandic** исландский порядок сортировки.  
+- **dbSortIcelandic** использовать Исландский сортировку.  
   
--   использование **dbSortNorwdan** норвежский или датский порядок сортировки.  
+- **dbSortNorwdan** использовать порядок сортировки норвежский или датского языка.  
   
--   использование **dbSortPDXIntl** порядок сортировки международная paradox.  
+- **dbSortPDXIntl** используется порядок сортировки Paradox International.  
   
--   использование **dbSortPDXNor** порядок сортировки paradox норвежский или датский.  
+- **dbSortPDXNor** использовать Paradox норвежский или порядок сортировки для датского языка.  
   
--   использование **dbSortPDXSwe** порядок сортировки paradox шведский или финский.  
+- **dbSortPDXSwe** использовать Paradox шведский или финский сортировку.  
   
--   использование **dbSortPolish** польский порядок сортировки.  
+- **dbSortPolish** использовать порядок сортировки для польского языка.  
   
--   использование **dbSortSpanish** испанский порядок сортировки.  
+- **dbSortSpanish** используется порядок сортировки.  
   
--   использование **dbSortSwedFin** шведский или финский порядок сортировки.  
+- **dbSortSwedFin** используется порядок сортировки на шведский или финский язык.  
   
--   использование **dbSortTurkish** турецкий порядок сортировки.  
+- **dbSortTurkish** используется порядок сортировки для турецкого языка.  
   
--   не указано **dbSortUndefined** порядок сортировки или неисвестне.  
+- **dbSortUndefined** порядок сортировки не определено или unknown.  
   
- Дополнительные сведения см. в разделе «настраивая параметры реестра Windows для доступа к данным» в справке DAO.  
+ Дополнительные сведения см. в разделе «Настройка Windows реестра параметры для доступа к данным» в справке DAO.  
   
- *m\_nQueryTimeout*  
- Количество секунд ядра СУБД Microsoft Jet ожидает до возникновения ошибки истечения времени ожидания происходит при выполнении запроса на базе данных ODBC.  Значение времени ожидания по умолчанию составляет 60 секунд.  Когда QueryTimeout присвоено значение 0, время ожидания не происходит. это может вызвать программу перестать отвечать.  Для получения значения этого свойства непосредственно вызовите функцию\-член [GetQueryTimeout](../Topic/CDaoDatabase::GetQueryTimeout.md) объекта базы данных.  Дополнительные сведения см. в разделе «свойство QueryTimeout» в справке DAO.  
+ *m_nQueryTimeout*  
+ Количество секунд ожидания перед тайм-аута базы данных Microsoft Jet возникает при запуске запроса в базе данных ODBC. Значение времени ожидания по умолчанию составляет 60 секунд. Когда QueryTimeout равным 0, происходит без времени ожидания; Это может привести к зависанию программы. Чтобы получить значение этого свойства напрямую, вызовите объект базы данных [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) функции-члена. Дополнительные сведения см. в разделе «QueryTimeout свойство» в справке DAO.  
   
  `m_strConnect`  
- Сведения об источнике открытой базы данных.  Дополнительные сведения о подключении строки, а также сведения о извлечь значение этого свойства непосредственно см. в описании функции\-члена [CDaoDatabase::GetConnect](../Topic/CDaoDatabase::GetConnect.md).  Дополнительные сведения см. в разделе «свойства соединения» в справке DAO.  
+ Предоставляет сведения об источнике открыть базу данных. Для получения сведений о объединение строк и сведения о получении значения этого свойства непосредственно в разделе [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) функции-члена. Дополнительные сведения см. в разделе «Свойства подключения», в справке DAO.  
   
-## Заметки  
- База данных объект DAO основного объекта в основе MFC класса [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md).  Ссылки на первичный, вторичный и всем выше показано, как сведения возвращаются функцией\-членом [CDaoWorkspace::GetDatabaseInfo](../Topic/CDaoWorkspace::GetDatabaseInfo.md).  
+## <a name="remarks"></a>Примечания  
+ База данных является объект DAO базового объекта MFC класса [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Ссылки на основной, дополнительный и все указанные выше указывают, как возвращаются сведения по [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) функции-члена.  
   
- Сведения, функцией\-членом [CDaoWorkspace::GetDatabaseInfo](../Topic/CDaoWorkspace::GetDatabaseInfo.md) хранятся в структуре `CDaoDatabaseInfo`.  Вызовите `GetDatabaseInfo` для объекта `CDaoWorkspace`, в котором коллекции баз данных хранится объект базы данных.  `CDaoDatabaseInfo` также определяет функции\-члена `Dump` выполняется в режиме построения.  Можно использовать `Dump` сбросить содержимое объекта `CDaoDatabaseInfo`.  
+ Данные, полученные по [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) функции-члена хранится в `CDaoDatabaseInfo` структуру. Вызов `GetDatabaseInfo` для `CDaoWorkspace` объектов, в которых коллекции баз данных хранится объект базы данных. `CDaoDatabaseInfo`также определяет `Dump` создает функцию-член в режиме отладки. Можно использовать `Dump` для вывода содержимого из `CDaoDatabaseInfo` объекта.  
   
-## Требования  
- **Header:** afxdao.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxdao.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
- [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoWorkspace::GetDatabaseCount](../Topic/CDaoWorkspace::GetDatabaseCount.md)
+ [Класс CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)   
+ [Класс CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)
+

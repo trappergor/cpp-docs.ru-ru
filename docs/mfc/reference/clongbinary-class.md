@@ -1,76 +1,117 @@
 ---
-title: "CLongBinary Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "BLOB"
-  - "CLongBinary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB-объект"
-  - "BLOB-объект, CLongBinary - класс"
-  - "CLongBinary - класс"
+title: "CLongBinary-класс | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- BLOB
+- CLongBinary
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB (binary large object)
+- CLongBinary class
+- BLOB (binary large object), CLongBinary class
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CLongBinary Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: bb73604ee4d15f3a71be8514f348ad265064928a
+ms.lasthandoff: 02/24/2017
 
-Simplifies работы с очень большие двоичные объекты часто Позвонимые данных \(Большим Двоичным Объектом или "большими двоичными объектами\) в базе данных.  
+---
+# <a name="clongbinary-class"></a>CLongBinary-класс
+Упрощает работу с очень большими объектами двоичных данных (BLOB-объектами) в базе данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CLongBinary : public CObject  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CLongBinary::CLongBinary](../Topic/CLongBinary::CLongBinary.md)|Создает объект `CLongBinary`.|  
-  
-### Открытые члены данных  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CLongBinary::m\_dwDataLength](../Topic/CLongBinary::m_dwDataLength.md)|Содержит фактический размер в байтах объекта данных, дескриптор которого хранится в `m_hData`.|  
-|[CLongBinary::m\_hData](../Topic/CLongBinary::m_hData.md)|Содержит маркер Windows `HGLOBAL` к фактическому объект изображения.|  
+|----------|-----------------|  
+|[CLongBinary::CLongBinary](#clongbinary)|Создает объект `CLongBinary`.|  
   
-## Заметки  
- Например, запись поле в таблице SQL server может содержать растровое изображение, представляющий изображение.  Объект `CLongBinary` хранит такой объект и отслеживает его размера.  
+### <a name="public-data-members"></a>Открытые члены данных  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CLongBinary::m_dwDataLength](#m_dwdatalength)|Содержит реальный размер в байтах, дескриптор которого хранится в объект данных `m_hData`.|  
+|[CLongBinary::m_hData](#m_hdata)|Содержит Windows `HGLOBAL` дескриптор объекта самого изображения.|  
+  
+## <a name="remarks"></a>Примечания  
+ Например поле записи в таблице SQL может содержать точечный рисунок, представляющий изображение. Объект `CLongBinary` объект сохраняет такой объект и отслеживает его размер.  
   
 > [!NOTE]
->  Как правило, лучше использовать [CByteArray](../../mfc/reference/cbytearray-class.md) использовать совместно с функцией [DFX\_Binary](../Topic/DFX_Binary.md).  Можно по\-прежнему использовать `CLongBinary`, но обычно `CByteArray` предоставляет больше функциональных возможностей в Win32, поскольку больше нет ограничений размера, присутствующего в 16\-разрядных `CByteArray`.  Эта консультация применяется к программированию с DAO \(DAO\), а также ODBC \(ODBC\).  
+>  Как правило, это лучше теперь будет использовать [CByteArray](../../mfc/reference/cbytearray-class.md) в сочетании с [DFX_Binary](http://msdn.microsoft.com/library/678021a3-2e46-44d7-8528-71bb692dcc07) функции. Вы можете использовать `CLongBinary`, но в целом `CByteArray` предоставляет больше функциональных возможностей, в разделе Win32, так как нет больше не обнаружил 16-разрядных ограничение на размер `CByteArray`. Эта рекомендация относится к программированию с помощью объектов доступа к данным (DAO), а также Open Database Connectivity (ODBC).  
   
- Чтобы использовать объект `CLongBinary` объявите член данных поля типа `CLongBinary` в классе набора записей.  Этот элемент является внедренным членом класса набора записей и набор записей будет построен, когда будет создан.  После того как объект `CLongBinary` построен, механизм обмена полями записей \(RFX\) загружает объект данных из поля текущей записи в источнике данных и сохраняет его обратно к записи, когда запись будет обновлена.  RFX запрашивает источник данных для размера большого двоичного объекта, выберите хранилище для него \(с помощью элемента данных `m_hData` объекта `CLongBinary` \) и магазины дескриптор `HGLOBAL` к данным в `m_hData`.  RFX также хранит фактический размер объекта данных в элементе данных `m_dwDataLength`.  Работа с данными в объекте с помощью `m_hData`, используя те же методы, как правило, пользуются конструктором для работы с данными, хранящимися в маркере Windows `HGLOBAL`.  
+ Для использования `CLongBinary` объекта, объявить элемент данных поля типа `CLongBinary` в классе набора записей. Этот член будет внедренные элементы класса записей и будут созданы при создании набора записей. После `CLongBinary` объект создан, механизм обмена (полями записей RFX) поле записи загружает объект данных из поля в текущей записи в источнике данных и сохраняет его обратно к записи, при обновлении записи. RFX запрашивает источник данных размер большой двоичный объект выделяет память для него (через `CLongBinary` объекта `m_hData` элемент данных) и сохраняет `HGLOBAL` обработки данных в `m_hData`. RFX также хранит фактический размер объекта данных в `m_dwDataLength` элемент данных. Работа с данными в объекте через `m_hData`, с помощью тех же методов, обычно используется для обработки данных, хранящихся в Windows `HGLOBAL` обработки.  
   
- При разрушаете набор записей, внедренный объект `CLongBinary` также уничтожается, и его отмены выделения деструктора данные `HGLOBAL` обрабатывают.  
+ После удаления набора записей, встроенный `CLongBinary` объект также удаляется, и освобождает его деструктор `HGLOBAL` маркер данных.  
   
- Дополнительные сведения о больших объектах и использования `CLongBinary` см. в разделе статьи [набор записей \(ODBC\)](../../data/odbc/recordset-odbc.md) и [Набор записей. работа с большими элементами данных \(ODBC\)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
+ Дополнительные сведения о больших объектов и использование `CLongBinary`, см. в статьях [записей (ODBC)](../../data/odbc/recordset-odbc.md) и [набор записей: работа с большой элементов данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CLongBinary`  
   
-## Требования  
- **Header:**  afxdb\_.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxdb_.h  
   
-## См. также  
- [CObject Class](../Topic/CObject%20Class.md)   
+##  <a name="a-nameclongbinarya--clongbinaryclongbinary"></a><a name="clongbinary"></a>CLongBinary::CLongBinary  
+ Создает объект `CLongBinary`.  
+  
+```  
+CLongBinary();
+```  
+  
+##  <a name="a-namemdwdatalengtha--clongbinarymdwdatalength"></a><a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+ Хранит фактический размер в байтах данных, хранящихся в `HGLOBAL` обработки в `m_hData`.  
+  
+```  
+SQLULEN m_dwDataLength;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот размер может быть меньше, чем размер блока памяти, выделенной для данных. Вызов Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) функции, чтобы получить выделенный размер.  
+  
+##  <a name="a-namemhdataa--clongbinarymhdata"></a><a name="m_hdata"></a>CLongBinary::m_hData  
+ Windows хранит `HGLOBAL` дескриптор фактический большой двоичный объект данных.  
+  
+```  
+HGLOBAL m_hData;  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [CObject-класс](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CRecordset Class](../Topic/CRecordset%20Class.md)
+ [Класс CRecordset](../../mfc/reference/crecordset-class.md)
+

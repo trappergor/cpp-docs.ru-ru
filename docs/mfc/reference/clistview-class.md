@@ -1,79 +1,127 @@
 ---
-title: "CListView Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CListView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListView class"
-  - "представления, and common controls"
+title: "CListView-класс | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CListView
+dev_langs:
+- C++
+helpviewer_keywords:
+- views, and common controls
+- CListView class
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CListView Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: ebf6c93aa6d88d1942af4ecb9e3373fa57d84b65
+ms.lasthandoff: 02/24/2017
 
-Упрощает использование элемента управления "Список" и [CListCtrl](../Topic/CListCtrl%20Class.md), класса, который инкапсулирует функциональные возможности элемента управления "Список" с архитектурой документ\- вид MFC.  
+---
+# <a name="clistview-class"></a>CListView-класс
+Упрощает использование элемента управления списком и [CListCtrl](../../mfc/reference/clistctrl-class.md), класс, инкапсулирующий функциональные возможности управления списком, архитектуру представления документов MFC.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CListView : public CCtrlView  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CListView::CListView](../Topic/CListView::CListView.md)|Создает объект `CListView`.|  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CListView::GetListCtrl](../Topic/CListView::GetListCtrl.md)|Возвращает элемент управления "Список", связанного с представлением.|  
+|----------|-----------------|  
+|[CListView::CListView](#clistview)|Создает объект `CListView`.|  
   
-### Защищенные методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CListView::RemoveImageList](../Topic/CListView::RemoveImageList.md)|Удаляет указанный список образа из списка.|  
+|----------|-----------------|  
+|[CListView::GetListCtrl](#getlistctrl)|Возвращает список элементов управления, связанный с представлением.|  
   
-## Заметки  
- Дополнительные сведения об этой архитектуры см. в обзоре класса [CView](../Topic/CView%20Class.md) и крест\- ссылок процитированных существует.  
+### <a name="protected-methods"></a>Защищенные методы  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CListView::RemoveImageList](#removeimagelist)|Удаляет список указанное изображение в представлении списка.|  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения об этой архитектуре см [CView](../../mfc/reference/cview-class.md) класс и перекрестные ссылки, Цитируемые существует.  
   
- [CWnd](../Topic/CWnd%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CView](../Topic/CView%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
+  
+ [CView](../../mfc/reference/cview-class.md)  
   
  [CCtrlView](../../mfc/reference/cctrlview-class.md)  
   
  `CListView`  
   
-## Требования  
- **Header:**  afxcview.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxcview.h  
   
-## См. также  
- [В образце ROWLIST MFC](../../top/visual-cpp-samples.md)   
- [CCtrlView Class](../../mfc/reference/cctrlview-class.md)   
+##  <a name="a-nameclistviewa--clistviewclistview"></a><a name="clistview"></a>CListView::CListView  
+ Создает объект `CListView`.  
+  
+```  
+CListView();
+```  
+  
+##  <a name="a-namegetlistctrla--clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl  
+ Вызовите эту функцию-член для получения ссылки на элемент управления списка, связанный с представлением.  
+  
+```  
+CListCtrl& GetListCtrl() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ссылка на элемент управления списка, связанный с представлением.  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCListView&#7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
+  
+##  <a name="a-nameremoveimagelista--clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList  
+ Удаляет список указанное изображение в представлении списка.  
+  
+```  
+void RemoveImageList(int nImageList);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nImageList`  
+ Отсчитываемый от нуля индекс образа для удаления.  
+  
+## <a name="see-also"></a>См. также  
+ [Пример MFC ROWLIST](../../visual-cpp-samples.md)   
+ [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CCtrlView Class](../../mfc/reference/cctrlview-class.md)
+ [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)
+

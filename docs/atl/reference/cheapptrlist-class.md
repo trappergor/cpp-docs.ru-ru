@@ -1,78 +1,104 @@
 ---
-title: "CHeapPtrList Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CHeapPtrList"
-  - "CHeapPtrList"
-  - "ATL.CHeapPtrList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeapPtrList class"
+title: "Класс CHeapPtrList | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CHeapPtrList
+- CHeapPtrList
+- ATL.CHeapPtrList
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CHeapPtrList Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 9acf18d0e0a72f27a335cefca81341c95d530ae5
+ms.lasthandoff: 02/24/2017
 
-Этот класс предоставляет методы полезных для построения списка указателей кучи.  
+---
+# <a name="cheapptrlist-class"></a>Класс CHeapPtrList
+Этот класс предоставляет методы, используемые при создании список указателей кучи.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<typename E, class Allocator = ATL::CCRTAllocator>  
+class CHeapPtrList 
+   : public CAtlList<ATL::CHeapPtr<E, Allocator>,
+                     CHeapPtrElementTraits<E, Allocator>>
 ```  
   
-      template<  
-typename E,  
-class Allocator = ATL::CCRTAllocator  
->  
-class CHeapPtrList : public CAtlList<  
-ATL::CHeapPtr< E, Allocator>,  
-CHeapPtrElementTraits< E, Allocator>  
->  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `E`  
- Тип объекта, который необходимо сохранить в классе коллекции.  
+ Тип объекта для сохранения в класс коллекции.  
   
  `Allocator`  
- Класс выделения памяти для использования.  Значение по умолчанию [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ Класс выделения памяти для использования. Значение по умолчанию — [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CHeapPtrList::CHeapPtrList](../Topic/CHeapPtrList::CHeapPtrList.md)|Конструктор.|  
+|----------|-----------------|  
+|[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Конструктор.|  
   
-## Заметки  
- Этот класс предоставляет конструктор наследуется от [CAtlList](../Topic/CAtlList%20Class.md) и методы и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) для содействия создания объекта класса коллекции хранения указателей кучи.  
+## <a name="remarks"></a>Примечания  
+ Этот класс предоставляет конструктор и производным методов из [CAtlList](../../atl/reference/catllist-class.md) и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) для упрощения создания объекта класса коллекции хранения указателей кучи.  
   
-## Иерархия наследования  
- [CAtlList](../Topic/CAtlList%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CAtlList](../../atl/reference/catllist-class.md)  
   
  `CHeapPtrList`  
   
-## Требования  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlcoll.h  
   
-## См. также  
- [CAtlList Class](../Topic/CAtlList%20Class.md)   
- [CHeapPtr Class](../../atl/reference/cheapptr-class.md)   
- [CHeapPtrElementTraits Class](../../atl/reference/cheapptrelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namecheapptrlista--cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList  
+ Конструктор.  
+  
+```
+CHeapPtrList(UINT nBlockSize = 10) throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nBlockSize`  
+ Размер блока.  
+  
+### <a name="remarks"></a>Примечания  
+ Размер блока измеряется объем памяти, выделяемый при новый элемент является обязательным. Размер блока снизить вызовы процедур выделения памяти, но использует больше ресурсов.  
+  
+## <a name="see-also"></a>См. также  
+ [Класс CAtlList](../../atl/reference/catllist-class.md)   
+ [Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
+ [Класс CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)   
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+
