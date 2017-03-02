@@ -1,57 +1,75 @@
 ---
-title: "Конфигурации по умолчанию проекта ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "проекты ATL, конфигурация по умолчанию"
+title: "Конфигурации проекта ATL по умолчанию | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Конфигурации по умолчанию проекта ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: 41ab65c411bef478d063e5165d3167f58ace37d7
+ms.lasthandoff: 02/24/2017
 
-В данном разделе сравниваются конфигурации по умолчанию проектов Visual C\+\+ .NET и Visual C\+\+ 6.0.  
+---
+# <a name="default-atl-project-configurations"></a>Конфигурации проекта ATL по умолчанию
+В этом разделе сравнивается ATL конфигурации проектов по умолчанию в Visual C++ .NET с помощью конфигурации проектов по умолчанию в Visual C++ 6.0.  
   
-## Конфигурации по умолчанию в Visual C\+\+ .NET  
- В Visual C\+\+ .NET мастер проектов ATL по умолчанию создает два варианта конфигурации проекта.  
+## <a name="visual-c-net-default-configurations"></a>Конфигурации по умолчанию Visual C++ .NET  
+ В Visual C++ .NET мастер проектов ATL по умолчанию создает два варианта конфигурации проекта.  
   
-### Конфигурации в Visual C\+\+ .NET  
+### <a name="visual-c-net-configurations"></a>Visual C++ .NET конфигураций  
   
-|Конфигурация.|Набор символов|Использование ATL|  
-|-------------------|--------------------|-----------------------|  
+|Конфигурация|Набор знаков|Использование ATL|  
+|-------------------|-------------------|----------------|  
 |Release|MBCS|DLL|  
-|Отладочная информация|MBCS|DLL|  
+|Отладка|MBCS|DLL|  
   
- Параметры **Набор символов** и **Использование ATL** можно изменить во вкладке **Общие** диалогового окна **Параметры проекта**.  Можно также добавить собственные конфигурации, воспользовавшись диалоговым окном "Диспетчер конфигураций".  Дополнительные сведения см. в разделе [Построение конфигураций](../Topic/Understanding%20Build%20Configurations.md).  
+ **Набор символов**, **использование ATL** и все изменения в **параметры проекта** диалоговом окне под **Общие** вкладки. Можно также добавить собственные конфигурации с помощью Configuration Manager. Дополнительные сведения см. в разделе [конфигураций построения](/visualstudio/ide/understanding-build-configurations).  
   
-## Конфигурации по умолчанию в версии 6.0  
- В Visual C\+\+ версии 6.0 мастер приложений COM ATL \(ATL COM AppWizard\) \(теперь называемый мастером проектов ATL\) по умолчанию создавал шесть конфигураций для проекта.  Эти конфигурации отличались параметрами Release, Debug, Unicode, и использованием параметров CRT и ATL.  При желании все эти конфигурации можно воссоздать в Visual C\+\+ .NET, воспользовавшись диалоговым окном "Диспетчер конфигураций".  
+## <a name="version-60-default-configurations"></a>Конфигурации по умолчанию в версии 6.0  
+ В Visual C++ версии 6.0 мастер приложений COM ATL (теперь называется ATL Project Wizard) создается шесть конфигураций для проекта по умолчанию. Конфигурации не были вариации на выпуск, отладки, Юникода и параметры CRT и ATL для использования. Эти конфигурации могут дублироваться в Visual C++ .NET с помощью Configuration Manager, при желании.  
   
-### Конфигурации в версии 6.0  
+### <a name="version-60-configurations"></a>Конфигурации в версии 6.0  
   
-|Конфигурация.|Набор символов|Использование ATL|  
-|-------------------|--------------------|-----------------------|  
-|Отладочная информация|MBCS|Статический|  
-|Debug Unicode|UNICODE|Статический|  
-|Release Min Dependency|MBCS|Статический|  
-|Release Min Dependency Unicode|UNICODE|Статический|  
-|Release Min Size|MBCS|DLL|  
-|Release Min Size Unicode|UNICODE|DLL|  
+|Конфигурация|Набор знаков|Использование ATL|  
+|-------------------|-------------------|----------------|  
+|Отладка|MBCS|Static|  
+|Отладка Юникода|ЮНИКОД|Static|  
+|Выпуск Min зависимостей|MBCS|Static|  
+|Выпуск Min зависимостей Юникода|ЮНИКОД|Static|  
+|Размер выпуска мин.|MBCS|DLL|  
+|Размер Юникода версии мин.|ЮНИКОД|DLL|  
   
-## См. также  
- [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Работа со свойствами проектов](../../ide/working-with-project-properties.md)   
- [Configuration Manager Dialog Box](http://msdn.microsoft.com/ru-ru/fa182dca-282e-4ae5-bf37-e155344ca18b)   
- [Построение приложений в Visual Studio](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>См. также  
+ [Программирование с использованием ATL и кода времени выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Работа со свойствами проекта](../../ide/working-with-project-properties.md)   
+ [Диалоговое окно диспетчера конфигурации](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Компилирование и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio)
+
+

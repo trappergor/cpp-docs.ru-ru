@@ -1,84 +1,149 @@
 ---
-title: "CSingleDocTemplate Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CSingleDocTemplate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSingleDocTemplate class"
-  - "шаблоны документов, single"
-  - "однооконный интерфейс (SDI), приложения"
-  - "шаблоны, SDI"
+title: "Класс CSingleDocTemplate | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSingleDocTemplate
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates, SDI
+- document templates, single
+- single document interface (SDI), applications
+- CSingleDocTemplate class
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CSingleDocTemplate Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: 78e288dd958e73495a8d513d7fe3427ccc956a61
+ms.lasthandoff: 02/24/2017
 
-Определяет шаблон документа, реализующий интерфейс одинарного \(SDI\).  
+---
+# <a name="csingledoctemplate-class"></a>Класс CSingleDocTemplate
+Определяет шаблон документа, реализующий интерфейс одного документа (SDI).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CSingleDocTemplate : public CDocTemplate  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CSingleDocTemplate::CSingleDocTemplate](../Topic/CSingleDocTemplate::CSingleDocTemplate.md)|Создает объект `CSingleDocTemplate`.|  
+|----------|-----------------|  
+|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Создает объект `CSingleDocTemplate`.|  
   
-## Заметки  
- Приложение SDI использует главное фреймовое окно для отображения документа; только один документ может быть открыт синхронно.  
+## <a name="remarks"></a>Примечания  
+ Приложения SDI фрейма главного окна используется для отображения документа; одновременно может быть открыт только один документ.  
   
- Шаблон документа определяет связь между типами классов: 3  
+ Шаблон документа определяет связь между три типа классов:  
   
--   Класс документа, который наследуется от **CDocument**.  
+-   Класс документа, который необходимо наследовать от **CDocument**.  
   
--   Класс представления, отображающий данные из класса документа, перечисленные выше.  Можно наследовать этот класс `CView`, `CScrollView`, `CFormView` или `CEditView`.  \(Можно также использовать `CEditView` напрямую\).  
+-   Класс представления отображает данные из класса документа, перечисленных выше. Можно наследовать этот класс из `CView`, `CScrollView`, `CFormView`, или `CEditView`. (Можно также использовать `CEditView` напрямую.)  
   
--   Класс фреймового окна, который содержит представление.  Для шаблонов документов SDI можно наследовать этот класс `CFrameWnd`; если не нужно настраивать функциональности главного фреймового окна, можно использовать напрямую без создания производного `CFrameWnd` собственный класс.  
+-   Класс фрейм окна, который содержит представление. SDI шаблона документа, необходимо наследовать от этого класса `CFrameWnd`, если не нужно настраивать поведение главного фрейма окна, можно использовать `CFrameWnd` напрямую без создания собственного производного класса.  
   
- Приложение SDI обычно поддерживает один тип документа, поэтому он содержит только один объект `CSingleDocTemplate`.  Только один документ может быть открыт синхронно.  
+ SDI-приложения обычно поддерживает один тип документа, так, чтобы только один `CSingleDocTemplate` объекта. Одновременно может быть открыт только один документ.  
   
- Не нужно вызывать `CSingleDocTemplate` за исключением функций\-членов все конструктора.  Границы обрабатывают объекты `CSingleDocTemplate` для внутреннего использования.  
+ Не нужно вызвать любой член функции `CSingleDocTemplate` конструктора, за исключением. Дескрипторы framework `CSingleDocTemplate` внутри объектов.  
   
- Дополнительные сведения об использовании `CSingleDocTemplate` см. в разделе [Шаблоны документов и процесс создания документов и представлений](../../mfc/document-templates-and-the-document-view-creation-process.md).  
+ Дополнительные сведения об использовании `CSingleDocTemplate`, в разделе [шаблоны документов и процесс создания документов и представлений](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## Иерархия наследования  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)  
   
  `CSingleDocTemplate`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-## См. также  
- [Образец DOCKTOOL MFC](../../top/visual-cpp-samples.md)   
- [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+##  <a name="a-namecsingledoctemplatea--csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
+ Создает объект `CSingleDocTemplate`.  
+  
+```  
+CSingleDocTemplate(
+    UINT nIDResource,  
+    CRuntimeClass* pDocClass,  
+    CRuntimeClass* pFrameClass,  
+    CRuntimeClass* pViewClass);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nIDResource`  
+ Указывает идентификатор ресурсов, используемых с типом документа. Это может включать меню, значок, таблицы сочетаний клавиш и строковые ресурсы.  
+  
+ Строковый ресурс состоит из до семи подстрок, разделенных символом «\n» (символ «\n» требуется как заполнитель, если подстрока не включено; тем не менее, конечные символы «\n» не обязательны); Эти подстроки описания типа документа. Сведения о подстроках, см. в разделе [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Этот строковый ресурс находится в файле ресурсов приложения. Пример:  
+  
+ `// MYCALC.RC`  
+  
+ `STRINGTABLE PRELOAD DISCARDABLE`  
+  
+ `BEGIN`  
+  
+ `IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"`  
+  
+ `END`  
+  
+ Можно изменить эту строку в редакторе строк; вся строка представляется как одна запись в редакторе строк не семь отдельные записи.  
+  
+ Дополнительные сведения об этих типах ресурсов см. в разделе [редактор строк](../../windows/string-editor.md).  
+  
+ `pDocClass`  
+ Указывает `CRuntimeClass` объекта класса документа. Этот класс является **CDocument**-производный класс, определенный для представления документов.  
+  
+ `pFrameClass`  
+ Указывает `CRuntimeClass` объекта класс фреймового окна. Этот класс может быть `CFrameWnd`-производного класса, или он может быть `CFrameWnd` себя, если требуется поведение по умолчанию для главного окна фрейма.  
+  
+ `pViewClass`  
+ Указывает `CRuntimeClass` объекта класса представления. Этот класс является `CView`-производного класса можно определить для отображения документов.  
+  
+### <a name="remarks"></a>Примечания  
+ Динамически выделять `CSingleDocTemplate` объект и передать его в `CWinApp::AddDocTemplate` из `InitInstance` функции-члена класса приложения.  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCDocViewSDI&#13;](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
+  
+ [!code-cpp[NVC_MFCDocViewSDI&#14;](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
+  
+## <a name="see-also"></a>См. также  
+ [Пример MFC DOCKTOOL ПОКАЗАНА](../../visual-cpp-samples.md)   
+ [CDocTemplate-класс](../../mfc/reference/cdoctemplate-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
- [CDocument Class](../Topic/CDocument%20Class.md)   
- [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
- [CMultiDocTemplate Class](../../mfc/reference/cmultidoctemplate-class.md)   
- [CView Class](../Topic/CView%20Class.md)   
- [CWinApp Class](../../mfc/reference/cwinapp-class.md)
+ [CDocTemplate-класс](../../mfc/reference/cdoctemplate-class.md)   
+ [CDocument-класс](../../mfc/reference/cdocument-class.md)   
+ [CFrameWnd-класс](../../mfc/reference/cframewnd-class.md)   
+ [Класс CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)   
+ [CView-класс](../../mfc/reference/cview-class.md)   
+ [CWinApp-класс](../../mfc/reference/cwinapp-class.md)
+

@@ -1,89 +1,264 @@
 ---
-title: "CWin32Heap Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CWin32Heap"
-  - "ATL.CWin32Heap"
-  - "CWin32Heap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWin32Heap class"
+title: "Класс CWin32Heap | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CWin32Heap
+- ATL.CWin32Heap
+- CWin32Heap
+dev_langs:
+- C++
+helpviewer_keywords:
+- CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CWin32Heap Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 407f777b52529a333251c7d00481fdbfb14db619
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cwin32heap-class"></a>Класс CWin32Heap
 Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций выделения кучи Win32.  
   
 > [!IMPORTANT]
->  Этот класс и его члены нельзя использовать в приложениях, выполняемых в этой среде выполнения Windows.  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+class CWin32Heap : public IAtlMemMgr
 ```  
   
-class CWin32Heap : public IAtlMemMgr  
+## <a name="members"></a>Члены  
   
-```  
-  
-## Члены  
-  
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CWin32Heap::CWin32Heap](../Topic/CWin32Heap::CWin32Heap.md)|Конструктор.|  
-|[CWin32Heap::~CWin32Heap](../Topic/CWin32Heap::~CWin32Heap.md)|Деструктор.|  
+|----------|-----------------|  
+|[CWin32Heap::CWin32Heap](#cwin32heap)|Конструктор.|  
+|[CWin32Heap:: ~ CWin32Heap](#dtor)|Деструктор|  
   
-### Открытые методы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[CWin32Heap::Allocate](../Topic/CWin32Heap::Allocate.md)|Выделяет блок памяти из кучи объекта.|  
-|[CWin32Heap::Attach](../Topic/CWin32Heap::Attach.md)|Вложение объект кучи в существующей куче.|  
-|[CWin32Heap::Detach](../Topic/CWin32Heap::Detach.md)|Наконец удаляет объект кучи из существующей кучи.|  
-|[CWin32Heap::Free](../Topic/CWin32Heap::Free.md)|Освобождает ранее выбранную память из кучи.|  
-|[CWin32Heap::GetSize](../Topic/CWin32Heap::GetSize.md)|Возвращает размер выделенного блока памяти из кучи объекта.|  
-|[CWin32Heap::Reallocate](../Topic/CWin32Heap::Reallocate.md)|Reallocates блок памяти из кучи объекта.|  
-  
-### Открытые члены данных  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CWin32Heap::m\_bOwnHeap](../Topic/CWin32Heap::m_bOwnHeap.md)|Пометить, используемый для определения текущего владельца дескриптора кучи.|  
-|[CWin32Heap::m\_hHeap](../Topic/CWin32Heap::m_hHeap.md)|Дескриптор объекта в куче.|  
+|----------|-----------------|  
+|[CWin32Heap::Allocate](#allocate)|Выделяет блок памяти из кучи объекта.|  
+|[CWin32Heap::Attach](#attach)|Присоединяет объект кучи в существующую кучу.|  
+|[CWin32Heap::Detach](#detach)|Отсоединяет объект кучи от существующую кучу.|  
+|[CWin32Heap::Free](#free)|Освобождает память, выделенную ранее из кучи.|  
+|[CWin32Heap::GetSize](#getsize)|Возвращает размер блока памяти, выделенный из объектов кучи.|  
+|[CWin32Heap::Reallocate](#reallocate)|Повторно выделяет блок памяти из кучи объекта.|  
   
-## Заметки  
- Методы выделения памяти инструментов `CWin32Heap` с помощью Win32 наваливают для функции, включая [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) и [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701).  В отличие от других классов кучи, `CWin32Heap` требует допустимый дескриптор кучи предоставлен, прежде чем память выделена: другие классы имеют значения по умолчанию к использованию кучи процесса.  Дескриптор может быть передано конструктору или к методу [CWin32Heap::Attach](../Topic/CWin32Heap::Attach.md).  См. в описании метода [CWin32Heap::CWin32Heap](../Topic/CWin32Heap::CWin32Heap.md) дополнительные сведения.  
+### <a name="public-data-members"></a>Открытые члены данных  
   
-## Пример  
- См. пример для [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Флаг, используемый для определения текущего владельца дескриптора кучи.|  
+|[CWin32Heap::m_hHeap](#m_hheap)|Дескриптор объекта кучи.|  
   
-## Иерархия наследования  
+## <a name="remarks"></a>Примечания  
+ `CWin32Heap`реализует методы выделения памяти с помощью функций выделения кучи Win32, включая [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) и [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). В отличие от других классов кучи `CWin32Heap` требует действительным дескриптором кучи должен предоставляться до выделения памяти: другие классы по умолчанию с помощью кучу процесса. Дескриптор может быть передано в конструктор, или к [CWin32Heap::Attach](#attach) метод. В разделе [CWin32Heap::CWin32Heap](#cwin32heap) метод для получения дополнительных сведений.  
+  
+## <a name="example"></a>Пример  
+ В примере показано [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IAtlMemMgr`  
   
  `CWin32Heap`  
   
-## Требования  
- **Header:** atlmem.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlmem.h  
   
-## См. также  
- [Class Overview](../../atl/atl-class-overview.md)   
- [IAtlMemMgr Class](../../atl/reference/iatlmemmgr-class.md)   
- [CLocalHeap Class](../../atl/reference/clocalheap-class.md)   
- [CGlobalHeap Class](../../atl/reference/cglobalheap-class.md)   
- [CCRTHeap Class](../../atl/reference/ccrtheap-class.md)   
- [CComHeap Class](../../atl/reference/ccomheap-class.md)
+##  <a name="a-nameallocatea--cwin32heapallocate"></a><a name="allocate"></a>CWin32Heap::Allocate  
+ Выделяет блок памяти из кучи объекта.  
+  
+```
+virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nBytes`  
+ Запрошенное число байтов в новом блоке памяти.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает указатель на начало выделенного блока памяти.  
+  
+### <a name="remarks"></a>Примечания  
+ Вызов [CWin32Heap::Free](#free) или [CWin32Heap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью данного метода.  
+  
+ Реализовано с помощью [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+  
+##  <a name="a-nameattacha--cwin32heapattach"></a><a name="attach"></a>CWin32Heap::Attach  
+ Присоединяет объект кучи в существующую кучу.  
+  
+```
+void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `hHeap`  
+ Дескриптор существующей кучи.  
+  
+ `bTakeOwnership`  
+ Флаг, указывающий, в том случае, если `CWin32Heap` объект будет распоряжаться ресурсами кучи.  
+  
+### <a name="remarks"></a>Примечания  
+ Если `bTakeOwnership` имеет значение TRUE, `CWin32Heap` объект отвечает за удаление дескриптором кучи.  
+  
+##  <a name="a-namecwin32heapa--cwin32heapcwin32heap"></a><a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+ Конструктор.  
+  
+```
+CWin32Heap() throw();
+CWin32Heap( HANDLE  hHeap) throw();
+CWin32Heap(
+    DWORD  dwFlags,
+    size_t nInitialSize,
+    size_t nMaxSize = 0);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `hHeap`  
+ Существующий объект кучи.  
+  
+ `dwFlags`  
+ Флаги, используемые при создании кучи.  
+  
+ *nInitialSize*  
+ Начальный размер кучи.  
+  
+ `nMaxSize`  
+ Максимальный размер кучи.  
+  
+### <a name="remarks"></a>Примечания  
+ Перед выделением памяти необходимо предоставить объект `CWin32Heap` с действительным дескриптором кучи. Для этого проще всего использовать кучу процесса:  
+  
+ [!code-cpp[NVC_ATL_Utilities&#92;](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]  
+  
+ Также можно указать в конструкторе дескриптор существующей кучи; в этом случае новый объект не становится владельцем кучи. После удаления объекта `CWin32Heap` исходный дескриптор кучи будет по-прежнему действителен.  
+  
+ Существующую кучу можно присоединяются к новому объекту с помощью [CWin32Heap::Attach](#attach).  
+  
+ Если куча требуется в ситуации, когда все операции выполняются из единственного потока, лучше всего создать объект следующим образом:  
+  
+ [!code-cpp[NVC_ATL_Utilities&#93;](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]  
+  
+ Параметр **HEAP_NO_SERIALIZE** указывает, что взаимное исключение не будет использоваться, когда функции кучи выделяют и освобождают память, с соответствующим увеличением производительности.  
+  
+ Третий параметр по умолчанию равен 0, что обеспечивает рост размера кучи по мере необходимости. В разделе [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) объяснение объемы памяти и флаги.  
+  
+##  <a name="a-namedtora--cwin32heapcwin32heap"></a><a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+ Деструктор  
+  
+```
+~CWin32Heap() throw();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Уничтожает дескриптор кучи, если `CWin32Heap` объект имеет владельцем кучи.  
+  
+##  <a name="a-namedetacha--cwin32heapdetach"></a><a name="detach"></a>CWin32Heap::Detach  
+ Отсоединяет объект кучи от существующую кучу.  
+  
+```
+HANDLE Detach() throw();
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает дескриптор в кучу, в который ранее был присоединен объект.  
+  
+##  <a name="a-namefreea--cwin32heapfree"></a><a name="free"></a>CWin32Heap::Free  
+ Освобождает память, выделенную ранее из кучи, [CWin32Heap::Allocate](#allocate) или [CWin32Heap::Reallocate](#reallocate).  
+  
+```
+virtual void Free(void* p) throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `p`  
+ Указатель на блок памяти для освобождения. Значение NULL является допустимым значением и не выполняет никаких действий.  
+  
+##  <a name="a-namegetsizea--cwin32heapgetsize"></a><a name="getsize"></a>CWin32Heap::GetSize  
+ Возвращает размер блока памяти, выделенный из объектов кучи.  
+  
+```
+virtual size_t GetSize(void* p) throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `p`  
+ Указатель на блок памяти, размер которого будет получать метод. Это указатель, возвращенный [CWin32Heap::Allocate](#allocate) или [CWin32Heap::Reallocate](#reallocate).  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает размер в байтах, выделенный блок памяти.  
+  
+##  <a name="a-namembownheapa--cwin32heapmbownheap"></a><a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+ Флаг, используемый для определения текущего владельца дескриптора кучи, хранящиеся в [m_hHeap](#m_hheap).  
+  
+```
+bool m_bOwnHeap;
+```  
+  
+##  <a name="a-namemhheapa--cwin32heapmhheap"></a><a name="m_hheap"></a>CWin32Heap::m_hHeap  
+ Дескриптор объекта кучи.  
+  
+```
+HANDLE m_hHeap;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Переменная, используемая для хранения дескриптора объекта.  
+  
+##  <a name="a-namereallocatea--cwin32heapreallocate"></a><a name="reallocate"></a>CWin32Heap::Reallocate  
+ Повторно выделяет блок памяти из кучи объекта.  
+  
+```
+virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `p`  
+ Указатель на блок памяти для перераспределения.  
+  
+ `nBytes`  
+ Новый размер выделенного блока в байтах. Блок можно увеличить или уменьшить.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает указатель на начало выделенного блока памяти.  
+  
+### <a name="remarks"></a>Примечания  
+ Если `p` равно NULL, предполагается, что блок памяти еще не выделен и [CWin32Heap::Allocate](#allocate) вызывается с аргументом `nBytes`.  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../../atl/atl-class-overview.md)   
+ [Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)   
+ [Класс CLocalHeap](../../atl/reference/clocalheap-class.md)   
+ [Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
+ [Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+ [Класс CComHeap](../../atl/reference/ccomheap-class.md)
+

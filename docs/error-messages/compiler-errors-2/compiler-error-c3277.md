@@ -1,32 +1,48 @@
 ---
-title: "Ошибка компилятора C3277 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3277"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3277"
+title: "Ошибка компилятора C3277 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3277
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3277
 ms.assetid: 8ac5f476-e30c-4879-92c6-f03cdbd74045
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3277
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: b52f33b8d671c839fbeae249a1c2d728543e9cb3
+ms.lasthandoff: 02/24/2017
 
-невозможно определить неуправляемый enum "перечисление" в пределах управляемого "тип"  
+---
+# <a name="compiler-error-c3277"></a>Ошибка компилятора C3277
+Невозможно определить неуправляемый enum «перечисление» в пределах управляемого «тип»  
   
- Недопустимое определение перечисления в пределах управляемого типа.  
+ Перечисление был неправильно определен внутри управляемого типа.  
   
  Следующий пример приводит к возникновению ошибки C3277:  
   
@@ -44,21 +60,4 @@ int main()
 {  
 }  
 ```  
-  
- Следующий пример приводит к возникновению ошибки C3277:  
-  
-```  
-// C3277b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-__gc class A  
-{  
-   enum E {e1,e2};   // C3277  
-   // try the following line instead  
-   // __value enum E {e1,e2};  
-};  
-  
-int main()  
-{  
-}  
-```
+

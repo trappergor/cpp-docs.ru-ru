@@ -1,52 +1,69 @@
 ---
-title: "Пространство имен Concurrency::graphics::direct3d | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_graphics/Concurrency::graphics::direct3d"
-  - "amp_short_vectors/Concurrency::graphics::direct3d"
-dev_langs: 
-  - "C++"
+title: "Пространство имен Concurrency::Graphics:: Direct3D | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d
+- amp_short_vectors/Concurrency::graphics::direct3d
+dev_langs:
+- C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Пространство имен Concurrency::graphics::direct3d
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
+ms.lasthandoff: 02/24/2017
 
-Предоставляет методы [get\_texture](../Topic/get_texture%20Function.md) и [make\_texture](../Topic/make_texture%20Function.md).  
+---
+# <a name="concurrencygraphicsdirect3d-namespace"></a>Пространство имен Concurrency::graphics::direct3d
+Предоставляет [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) и [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) методы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 namespace direct3d;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Функции  
+### <a name="functions"></a>Функции  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Функция get\_sampler](../Topic/get_sampler%20Function.md)|Получите интерфейс состояния дискретизатора Direct3D для заданного представления ускорителя, представляющее указанный объект дискретизатора.|  
-|[Функция get\_texture](../Topic/get_texture%20Function.md)|Получает интерфейс текстуры Direct3D, лежащий в основе заданного объекта [текстуры](../Topic/texture%20Class.md).|  
-|[Функция make\_sampler](../Topic/make_sampler%20Function.md)|Создайте дискретизатор из указателя интерфейса состояния дискретизатора Direct3D.|  
-|[Функция make\_texture](../Topic/make_texture%20Function.md)|Создает объект [текстуры](../Topic/texture%20Class.md), используя указанные параметры.|  
-|[Функция msad4](../Topic/msad4%20Function.md)|Сравнивает 4\-байтное ссылочное значение и 8\-байтное исходное значение и накапливает вектор 4 сумм.|  
+|Имя<br /><br /> Описание|  
+|--------------------------|  
+|[Функция get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get интерфейс состояния Direct3D пробы данного сочетания клавиш просмотра, представляющий указанный образец объекта.|  
+|[Функция get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Возвращает указанный базовый интерфейс текстуры Direct3D [текстуры](texture-class.md) объекта.|  
+|[Функция make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Создание образца из указателя на интерфейс состояния Direct3D пробы.|  
+|[Функция make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Создает [текстуры](texture-class.md) объекта, используя заданные параметры.|  
+|[Функция msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Сравнивает значение 4-байтовое ссылки и 8-байтовое исходного значения и собирает вектора 4 сумм.|  
   
-## Требования  
- **Заголовок:** amp\_graphics.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** amp_graphics.h  
   
  **Пространство имен:** Concurrency::graphics  
   
-## См. также  
- [Пространство имен Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+## <a name="see-also"></a>См. также  
+ [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+

@@ -1,56 +1,96 @@
 ---
-title: "Класс invalid_compute_domain | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amprt/Concurrency::invalid_compute_domain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_compute_domain - класс"
+title: "Класс invalid_compute_domain | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amprt/Concurrency::invalid_compute_domain
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Класс invalid_compute_domain
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: e37012f62a40649876d043c3a0e89a1655c40455
+ms.lasthandoff: 02/24/2017
 
-Исключение, выдаваемое в том случае, если среда выполнения не может запустить ядро с использованием домена вычислений указанного в месте вызова [parallel\_for\_each](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md).  
+---
+# <a name="invalidcomputedomain-class"></a>Класс invalid_compute_domain
+Исключение, возникающее, когда среде выполнения не удается запустить ядра с помощью вычислений домена, указанного в [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) вызова.  
+
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class invalid_compute_domain : public runtime_exception;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Конструктор invalid\_compute\_domain::invalid\_compute\_domain](../Topic/invalid_compute_domain::invalid_compute_domain%20Constructor.md)|Инициализирует новый экземпляр класса `invalid_compute_domain`.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Конструктор invalid_compute_domain](#ctor)|Инициализирует новый экземпляр класса `invalid_compute_domain`.|  
+
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
   
  `runtime_exception`  
   
  `invalid_compute_domain`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** amprt.h  
   
- **Пространство имен:** Concurrency  
+ **Пространство имен** : Concurrency  
+
+## <a name="a-namectora-invalidcomputedomain"></a><a name="ctor"></a>invalid_compute_domain 
+
+Инициализирует новый экземпляр класса.  
   
-## См. также  
- [Пространство имен Concurrency \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+explicit invalid_compute_domain(  
+    const char * _Message ) throw();  
+  
+invalid_compute_domain() throw();  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Message`  
+ Описание ошибки.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Экземпляр `invalid_compute_domain` класса  
+    
+## <a name="see-also"></a>См. также  
+ [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

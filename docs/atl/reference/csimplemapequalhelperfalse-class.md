@@ -1,58 +1,107 @@
 ---
-title: "CSimpleMapEqualHelperFalse Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CSimpleMapEqualHelperFalse"
-  - "CSimpleMapEqualHelperFalse"
-  - "ATL.CSimpleMapEqualHelperFalse"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSimpleMapEqualHelperFalse class"
+title: "Класс CSimpleMapEqualHelperFalse | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CSimpleMapEqualHelperFalse
+- CSimpleMapEqualHelperFalse
+- ATL.CSimpleMapEqualHelperFalse
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CSimpleMapEqualHelperFalse Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 68a08ffc0ba126c523a779e3d1a72217dead6235
+ms.lasthandoff: 02/24/2017
 
-Этот класс вспомогательного метода для класса [CSimpleMap](../../atl/reference/csimplemap-class.md).  
+---
+# <a name="csimplemapequalhelperfalse-class"></a>Класс CSimpleMapEqualHelperFalse
+Этот класс представляет вспомогательный класс для [CSimpleMap](../../atl/reference/csimplemap-class.md) класса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class TKey, class TVal>  
+class CSimpleMapEqualHelperFalse
 ```  
   
-template < class TKey, class TVal > class CSimpleMapEqualHelperFalse  
+## <a name="members"></a>Члены  
   
-```  
-  
-## Члены  
-  
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[CSimpleMapEqualHelperFalse::IsEqualKey](../Topic/CSimpleMapEqualHelperFalse::IsEqualKey.md)|\(Статический\) Проверяет равенство 2 ключей.|  
-|[CSimpleMapEqualHelperFalse::IsEqualValue](../Topic/CSimpleMapEqualHelperFalse::IsEqualValue.md)|\(Статический\) Возвращает значение false.|  
+|----------|-----------------|  
+|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Статический) Проверяет равенство двух ключей.|  
+|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Статический) Возвращает значение false.|  
   
-## Заметки  
- Этот класс признаков дополнение к классу `CSimpleMap`.  Она предоставляет метод для сравнения 2 элементов, содержащихся в объекте `CSimpleMap`, 2 или 2 значений ключа элемента позиции.  
+## <a name="remarks"></a>Примечания  
+ Этот класс признаков является дополнением к `CSimpleMap` класса. Он предоставляет метод для сравнения двух элементов, содержащихся в `CSimpleMap` объекта, в частности два значения элемента или два основных элементов.  
   
- Сравнение значения всегда возвращает значение false, а кроме того, будут вызывать `ATLASSERT` с аргументом false, если он всегда производится ссылка.  В ситуациях, когда тест равенства не указан, этот класс обеспечивает сопоставление, содержащий пары " ключ\-значение ", чтобы правильно работать для большинства методов завершается ошибкой только в чётком образом, методов сравнения который зависит от того, как [CSimpleMap::FindVal](../Topic/CSimpleMap::FindVal.md).  
+ Сравнение значений всегда будет возвращать значение false, а кроме того, будет вызывать `ATLASSERT` с аргументом значение false, если когда-либо ссылки на него. В ситуациях, где проверку равенства не определен достаточно, этот класс позволяет карты, содержащий пары ключ значение для правильной работы в большинстве методов, но не в форме четко определенные методы, зависящие от сравнения, таких как [CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval).  
   
-## Требования  
- **Header:** atlsimpcoll.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlsimpcoll.h  
   
-## См. также  
- [CSimpleMapEqualHelper Class](../../atl/reference/csimplemapequalhelper-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameisequalkeya--csimplemapequalhelperfalseisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelperFalse::IsEqualKey  
+ Проверяет равенство двух ключей.  
+  
+```
+static bool IsEqualKey(const TKey& k1, const TKey& k2);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `k1`  
+ Первый ключ.  
+  
+ `k2`  
+ Второй ключ.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение true, если ключи равны false в противном случае.  
+  
+### <a name="remarks"></a>Примечания  
+ Этот метод вызывает метод [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md).  
+  
+##  <a name="a-nameisequalvaluea--csimplemapequalhelperfalseisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelperFalse::IsEqualValue  
+ Возвращает значение false.  
+  
+```
+static bool IsEqualValue(const TVal&, const TVal&);
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает значение false.  
+  
+### <a name="remarks"></a>Примечания  
+ Этот метод всегда возвращает значение false и будет вызывать `ATLASSERT` с аргументом значение false, если когда-либо ссылки на него. Назначение `CSimpleMapEqualHelperFalse::IsEqualValue` — заставить методы с помощью сравнения сбой в форме четко определенные тесты на равенство не заданы правильно.  
+  
+## <a name="see-also"></a>См. также  
+ [Класс CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)   
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

@@ -1,64 +1,140 @@
 ---
-title: "ICommandUI Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ICommandUI"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandUI interface"
+title: "Интерфейс ICommandUI | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ICommandUI
+dev_langs:
+- C++
+helpviewer_keywords:
+- ICommandUI interface
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# ICommandUI Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1db6b3fa58639140322816c37103566353b15633
+ms.lasthandoff: 02/24/2017
 
-Управляет команды пользовательского интерфейса.  
+---
+# <a name="icommandui-interface"></a>Интерфейс ICommandUI
+Управляет команд пользовательского интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 interface class ICommandUI  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[ICommandUI::Check](../Topic/ICommandUI::Check.md)|Задает элемент пользовательского интерфейса для этой команды соответствующее состояние флажка.|  
-|[ICommandUI::ContinueRouting](../Topic/ICommandUI::ContinueRouting.md)|Заставляет механизм маршрутизации команда\- продолжает перенаправления текущее сообщение на цепочки обработчиков.|  
-|[ICommandUI::Enabled](../Topic/ICommandUI::Enabled.md)|Включение или отключение элемент пользовательского интерфейса для этой команды.|  
-|[ICommandUI::ID](../Topic/ICommandUI::ID.md)|Возвращает идентификатор объекта пользовательского интерфейса, представленного объектом `ICommandUI`.|  
-|[ICommandUI::Index](../Topic/ICommandUI::Index.md)|Возвращает индекс объекта пользовательского интерфейса, представленного объектом `ICommandUI`.|  
-|[ICommandUI::Radio](../Topic/ICommandUI::Radio.md)|Задает элемент пользовательского интерфейса для этой команды соответствующее состояние флажка.|  
-|[ICommandUI::Text](../Topic/ICommandUI::Text.md)|Задает текст элемента пользовательского интерфейса для этой команды.|  
+|----------|-----------------|  
+|[icommandui__Check](#check)|Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.|  
+|[ICommandUI::ContinueRouting](#continuerouting)|Указывает механизму маршрутизации команд для продолжения рассылки текущее сообщение по цепочке обработчиков.|  
+|[ICommandUI::Enabled](#enabled)|Включает или отключает элемент интерфейса пользователя для этой команды.|  
+|[ICommandUI::ID](#id)|Получает идентификатор объекта интерфейса пользователя, представленного `ICommandUI` объекта.|  
+|[ICommandUI::Index](#index)|Возвращает индекс объекта интерфейса пользователя, представленного `ICommandUI` объекта.|  
+|[ICommandUI::Radio](#radio)|Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.|  
+|[ICommandUI::Text](#text)|Задает текст элемента интерфейса пользователя для этой команды.|  
   
-## Заметки  
- Этот интерфейс предоставляет методы и свойства, которые управляют команды пользовательского интерфейса.  `ICommandUI` аналогично [CCmdUI Class](../Topic/CCmdUI%20Class.md), за исключением того, что `ICommandUI` используется для приложений MFC, которые взаимодействуют с компонентами .NET.  
+## <a name="remarks"></a>Примечания  
+ Этот интерфейс предоставляет методы и свойства, которые управляют команд пользовательского интерфейса. `ICommandUI`Аналогично [класс CCmdUI](../../mfc/reference/ccmdui-class.md), за исключением того, что `ICommandUI` используется для приложений MFC, взаимодействие с компонентами .NET.  
   
- `ICommandUI` используется внутри обработчика в [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)\- производный класс `ON_UPDATE_COMMAND_UI`.  Когда пользователь выбирает пункт, чтобы активировать приложения \(или\) меню, каждый пункт меню отображается как включать или отключен.  Целевой объект каждой команды меню предоставляет эти сведения с помощью реализации обработчика `ON_UPDATE_COMMAND_UI`.  Для каждого из объектов пользовательского интерфейса в приложении, используйте окно свойств, чтобы создать местозаполнитель записи и функции сообщение\- сопоставления для каждого обработчика.  
+ `ICommandUI`используется в `ON_UPDATE_COMMAND_UI` обработчик в [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-производного класса. При активировании пользователем приложения (выбирает или щелчков мышью) меню, каждый элемент меню отображается как включен или отключен. Цель каждой команде меню предоставляет эти сведения при реализации `ON_UPDATE_COMMAND_UI` обработчика. Для каждого объекты команд пользовательского интерфейса в приложении используйте окно свойств для создания записи сопоставления сообщений и прототип функции для каждого обработчика.  
   
- Дополнительные сведения о том, как интерфейс `ICommandUI` используется для маршрутизации команд см. в разделе [Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
+ Дополнительные сведения о том, как `ICommandUI` интерфейс используется маршрутизация команд см. в разделе [Практическое руководство: Добавление маршрутизации команд для элемента управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Дополнительные сведения об использовании Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- Дополнительные сведения о том, как команды пользовательского интерфейса управляются в MFC см. в разделе [CCmdUI Class](../Topic/CCmdUI%20Class.md).  
+ Дополнительные сведения об управлении команд пользовательского интерфейса в MFC см. в разделе [CCmdUI-класс](../../mfc/reference/ccmdui-class.md).  
   
-## Требования  
- **заголовок:** afxwinforms.h \(определенный в сборке atlmfc\\lib\\mfcmifc80.dll\)  
+## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.
+```
+property UICheckState Check;
+```
+## <a name="remarks"></a>Примечания  
+Это свойство задает элемент интерфейса пользователя для этой команды для соответствующих проверки состояния. Настроить проверку следующие значения:  
+- Снимите флажок&0;  
+- Проверка&1;  
+- Неопределенное значение&2;  
+
+## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+Указывает механизму маршрутизации команд для продолжения рассылки текущее сообщение по цепочке обработчиков.
+```
+void ContinueRouting();
+```
+## <a name="remarks"></a>Примечания
+Это функция-член дополнительно, следует использовать в сочетании с обработчиком ON_COMMAND_EX, который возвращает значение FALSE. Дополнительные сведения см. в разделе технических TN006 Примечание: схемы сообщений.
+
+## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+Включает или отключает элемент интерфейса пользователя для этой команды.
+```
+property bool Enabled;
+```
+## <a name="remarks"></a>Примечания
+Это свойство включает или отключает элемент интерфейса пользователя для этой команды. Включено в значение true, чтобы включить элемент, значение FALSE, чтобы отключить его.
+
+## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+Возвращает идентификатор объекта интерфейса пользователя, представленного объектом ICommandUI.
+```
+property unsigned int ID;
+```
+## <a name="remarks"></a>Примечания
+Это свойство возвращает идентификатор элемента меню, кнопки панели инструментов или другой объект интерфейса пользователя, представленный объектом ICommandUI (дескриптор).
+
+## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+Возвращает индекс объекта интерфейса пользователя, представленного объектом ICommandUI.
+```
+property unsigned int Index;
+```
+## <a name="remarks"></a>Примечания
+Это свойство возвращает индекс (дескриптор) элемент меню, кнопки панели инструментов или другой объект интерфейса пользователя, представленный объектом ICommandUI.
+
+## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.
+```
+property bool Radio;
+```
+## <a name="remarks"></a>Примечания
+Это свойство задает элемент интерфейса пользователя для этой команды для соответствующих проверки состояния. Установите переключатель в true, чтобы включить элемент; в противном случае — значение FALSE.
+
+## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+Задает текст элемента интерфейса пользователя для этой команды.
+```
+property String^ Text;
+```
+## <a name="remarks"></a>Примечания
+Это свойство задает текст элемента интерфейса пользователя для этой команды. Задать текст дескриптор строки текста.
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxwinforms.h (определенный в сборке atlmfc\lib\mfcmifc80.dll)  
   
-## См. также  
- [CCmdUI Class](../Topic/CCmdUI%20Class.md)
+## <a name="see-also"></a>См. также  
+ [CCmdUI-класс](../../mfc/reference/ccmdui-class.md)
+

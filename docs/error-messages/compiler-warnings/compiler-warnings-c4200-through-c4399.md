@@ -1,509 +1,237 @@
 ---
-title: "Предупреждения компилятора C4200 через C4399 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4203"
-  - "C4274"
-  - "C4277"
-  - "C4279"
-  - "C4298"
-  - "C4299"
-  - "C4301"
-  - "C4303"
-  - "C4314"
-  - "C4315"
-  - "C4316"
-  - "C4317"
-  - "C4318"
-  - "C4321"
-  - "C4322"
-  - "C4323"
-  - "C4327"
-  - "C4328"
-  - "C4330"
-  - "C4338"
-  - "C4343"
-  - "C4352"
-  - "C4362"
-  - "C4367"
-  - "C4370"
-  - "C4371"
-  - "C4373"
-  - "C4380"
-  - "C4387"
-  - "C4388"
-  - "C4396"
-dev_langs: 
-  - "C++"
+title: "Предупреждения компилятора C4200 через C4399 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4203
+- C4274
+- C4277
+- C4279
+- C4298
+- C4299
+- C4301
+- C4303
+- C4314
+- C4315
+- C4316
+- C4317
+- C4318
+- C4321
+- C4322
+- C4323
+- C4327
+- C4328
+- C4330
+- C4338
+- C4343
+- C4352
+- C4362
+- C4367
+- C4370
+- C4371
+- C4373
+- C4380
+- C4387
+- C4388
+- C4396
+dev_langs:
+- C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Предупреждение компилятораs C4200 Through C4584
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
+ms.openlocfilehash: ad9b1c3569fcb5afb117fab130ca7463a3275fbb
+ms.lasthandoff: 02/24/2017
 
-Статьи из этой части документации содержат сведения о подразделе предупреждений компилятора Visual C\+\+.  Информацию можно найти здесь или можно выбрать номер предупреждения в окне **Выходные данные** Visual Studio и нажать клавишу F1.  
-  
- [Предупреждение компилятора \(уровеньs 2 and 4\) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4201](../Topic/Compiler%20Warning%20\(level%204\)%20C4201.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4204](../Topic/Compiler%20Warning%20\(level%204\)%20C4204.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4205](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4206](../../error-messages/compiler-warnings/compiler-warning-level-4-c4206.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4207](../Topic/Compiler%20Warning%20\(level%204\)%20C4207.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4208](../../error-messages/compiler-warnings/compiler-warning-level-4-c4208.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4210](../../error-messages/compiler-warnings/compiler-warning-level-4-c4210.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4211](../../error-messages/compiler-warnings/compiler-warning-level-4-c4211.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4212](../../error-messages/compiler-warnings/compiler-warning-level-4-c4212.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4213](../../error-messages/compiler-warnings/compiler-warning-level-4-c4213.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4214](../../error-messages/compiler-warnings/compiler-warning-level-4-c4214.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4215](../../error-messages/compiler-warnings/compiler-warning-level-1-c4215.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4218](../Topic/Compiler%20Warning%20\(level%201\)%20C4218.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)  
-  
- [Предупреждение компилятора \(уровень 1 and 4\) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4228](../Topic/Compiler%20Warning%20\(level%201\)%20C4228.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4240](../Topic/Compiler%20Warning%20\(level%203\)%20C4240.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4243](../Topic/Compiler%20Warning%20\(level%203\)%20C4243.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)  
-  
- [Предупреждение компилятора \(уровеньs 3 and 4\) C4244](../Topic/Compiler%20Warning%20\(levels%203%20and%204\)%20C4244.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4255](../Topic/Compiler%20Warning%20\(level%204\)%20C4255.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4258](../Topic/Compiler%20Warning%20\(level%201\)%20C4258.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4276](../Topic/Compiler%20Warning%20\(level%201\)%20C4276.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4282](../Topic/Compiler%20Warning%20\(level%203\)%20C4282.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4295](../Topic/Compiler%20Warning%20\(level%204\)%20C4295.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4297](../Topic/Compiler%20Warning%20\(level%201\)%20C4297.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4306](../Topic/Compiler%20Warning%20\(level%203\)%20C4306.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4310](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4319](../Topic/Compiler%20Warning%20\(level%201\)%20C4319.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4324](../Topic/Compiler%20Warning%20\(level%204\)%20C4324.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4326](../Topic/Compiler%20Warning%20\(level%201\)%20C4326.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)  
-  
- [Предупреждение компилятора C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4342](../Topic/Compiler%20Warning%20\(level%201\)%20C4342.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4350](../Topic/Compiler%20Warning%20\(level%201\)%20C4350.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4351](../Topic/Compiler%20Warning%20\(level%201\)%20C4351.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)  
-  
- [Предупреждение компилятора C4355](../Topic/Compiler%20Warning%20C4355.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4358](../Topic/Compiler%20Warning%20\(level%201\)%20C4358.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)  
-  
- [Предупреждение компилятора C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4381](../Topic/Compiler%20Warning%20\(level%201\)%20C4381.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4390](../Topic/Compiler%20Warning%20\(level%203\)%20C4390.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4391](../Topic/Compiler%20Warning%20\(level%201\)%20C4391.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)  
-  
- [Предупреждение компилятора C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4402](../Topic/Compiler%20Warning%20\(level%201\)%20C4402.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4403](../Topic/Compiler%20Warning%20\(level%201\)%20C4403.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4404](../../error-messages/compiler-warnings/compiler-warning-level-3-c4404.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)  
-  
- [Предупреждение компилятора \(уровень 2\) C4412](../Topic/Compiler%20Warning%20\(level%202\)%20C4412.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4420](../../error-messages/compiler-warnings/compiler-warning-level-1-c4420.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)  
-  
- [Предупреждение компилятора C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4432](../Topic/Compiler%20Warning%20\(level%204\)%20C4432.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4433](../Topic/Compiler%20Warning%20\(level%204\)%20C4433.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4435](../Topic/Compiler%20Warning%20\(level%204\)%20C4435.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)  
-  
- [Предупреждение компилятора C4439](../Topic/Compiler%20Warning%20C4439.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4440](../Topic/Compiler%20Warning%20\(level%201\)%20C4440.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4445](../Topic/Compiler%20Warning%20\(level%201\)%20C4445.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)  
-  
- [Предупреждение компилятора C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)  
-  
- [Предупреждение компилятора C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4489](../../error-messages/compiler-warnings/compiler-warning-level-1-c4489.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4490](../../error-messages/compiler-warnings/compiler-warning-level-1-c4490.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4505](../../error-messages/compiler-warnings/compiler-warning-level-4-c4505.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4506](../../error-messages/compiler-warnings/compiler-warning-level-1-c4506.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4508](../Topic/Compiler%20Warning%20\(level%201\)%20C4508.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4510](../../error-messages/compiler-warnings/compiler-warning-level-4-c4510.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4511](../../error-messages/compiler-warnings/compiler-warning-level-3-c4511.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4512](../../error-messages/compiler-warnings/compiler-warning-level-4-c4512.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4513](../../error-messages/compiler-warnings/compiler-warning-level-4-c4513.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4514](../../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4515](../../error-messages/compiler-warnings/compiler-warning-level-4-c4515.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4516](../../error-messages/compiler-warnings/compiler-warning-level-4-c4516.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4517](../../error-messages/compiler-warnings/compiler-warning-level-4-c4517.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4518](../../error-messages/compiler-warnings/compiler-warning-level-1-c4518.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4520](../../error-messages/compiler-warnings/compiler-warning-level-3-c4520.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4521](../Topic/Compiler%20Warning%20\(level%203\)%20C4521.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4522](../../error-messages/compiler-warnings/compiler-warning-level-3-c4522.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4523](../../error-messages/compiler-warnings/compiler-warning-level-3-c4523.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4530](../../error-messages/compiler-warnings/compiler-warning-level-1-c4530.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4538](../Topic/Compiler%20Warning%20\(level%203\)%20C4538.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4539](../Topic/Compiler%20Warning%20\(level%201\)%20C4539.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4541](../../error-messages/compiler-warnings/compiler-warning-level-1-c4541.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4543](../../error-messages/compiler-warnings/compiler-warning-level-3-c4543.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4544](../../error-messages/compiler-warnings/compiler-warning-level-1-c4544.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4545](../../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4546](../../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4547](../../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4548](../../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4549](../../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4550](../Topic/Compiler%20Warning%20\(level%201\)%20C4550.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4551](../../error-messages/compiler-warnings/compiler-warning-level-1-c4551.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4552](../Topic/Compiler%20Warning%20\(level%201\)%20C4552.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4553](../../error-messages/compiler-warnings/compiler-warning-level-1-c4553.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4554](../Topic/Compiler%20Warning%20\(level%203\)%20C4554.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4555](../Topic/Compiler%20Warning%20\(level%201\)%20C4555.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4556](../../error-messages/compiler-warnings/compiler-warning-level-1-c4556.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4557](../../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4558](../../error-messages/compiler-warnings/compiler-warning-level-1-c4558.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4559](../../error-messages/compiler-warnings/compiler-warning-level-4-c4559.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4561](../../error-messages/compiler-warnings/compiler-warning-level-1-c4561.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4564](../../error-messages/compiler-warnings/compiler-warning-level-4-c4564.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4565](../Topic/Compiler%20Warning%20\(level%204\)%20C4565.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4566](../../error-messages/compiler-warnings/compiler-warning-level-1-c4566.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)  
-  
- [Предупреждение компилятора \(уровень 4\) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)  
-  
- [Предупреждение компилятора \(уровень 3\) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)  
-  
- [Предупреждение компилятора \(уровень 1\) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)
+---
+# <a name="compiler-warnings-c4200-through-c4399"></a>Предупреждения компилятора C4200 через C4399
+Статьи в этой части документации содержат сведения о подмножество предупреждений компилятора Visual C++. Доступны приведенные здесь сведения либо в **вывода** окна в Visual Studio можно выбрать номер предупреждения и нажмите клавишу F1.  
+  
+## <a name="in-this-section"></a>Содержание  
+  
+|Предупреждение|Сообщение|  
+|-------------|-------------|  
+|[Предупреждение (уровни 2 и 4) C4200 компилятора](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|нестандартное расширение: массив нулевого размера в структуре (объединении)|  
+|[Компилятор C4201 предупреждение (уровень 4)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|нестандартное расширение: структура (объединение) без имени|  
+|[Предупреждение (уровень 4) C4202 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|нестандартное расширение: "...": недопустимый параметр прототипа в списке имен|  
+|Предупреждение C4203 компилятора|нестандартное расширение: объединение со статической переменной-членом|  
+|[Предупреждение (уровень 4) C4204 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4204.md)|нестандартное расширение: неконстантный составной инициализатор|  
+|[Предупреждение (уровень 4) C4205 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)|нестандартное расширение: объявление статической функции в области видимости функции|  
+|[Предупреждение (уровень 4) C4206 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4206.md)|нестандартное расширение: пустая запись преобразования|  
+|[Предупреждение (уровень 4) C4207 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4207.md)|нестандартное расширение: расширенная форма инициализатора|  
+|[Предупреждение (уровень 4) C4208 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4208.md)|использовано нестандартное расширение: delete [exp] — exp вычислено, но игнорируется|  
+|[Предупреждение (уровень 4) C4210 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4210.md)|нестандартное расширение: функция видима в пределах файла|  
+|[Предупреждение (уровень 4) C4211 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4211.md)|нестандартное расширение: переопределение extern в static|  
+|[Предупреждение (уровень 4) C4212 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4212.md)|нестандартное расширение: в объявлении функции используется многоточие|  
+|[Предупреждение (уровень 4) C4213 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4213.md)|нестандартное расширение: приведение типов для левостороннего значения|  
+|[Компилятор C4214 предупреждение (уровень 4)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4214.md)|нестандартное расширение: типы битовых полей, отличные от int|  
+|[Предупреждение (уровень 1) C4215 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4215.md)|нестандартное расширение: long float|  
+|[Предупреждение (уровень 1) C4216 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|нестандартное расширение: float long|  
+|[Предупреждение (уровень 1) C4218 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|нестандартное расширение: необходимо указать по крайней мере класс хранения или тип|  
+|[Предупреждение (уровень 4) C4220 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|varargs соответствует оставшимся параметрам|  
+|[Предупреждение (уровень 4) C4221 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|использовано нестандартное расширение: «идентификатор»: не удается инициализировать с помощью адреса автоматической переменной «переменная»|  
+|[Предупреждение компилятора (уровень 1 и 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|нестандартное расширение: преобразование массива не с левосторонними значениями в указатель|  
+|[Предупреждение (уровень 1) C4224 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|использовано нестандартное расширение: формальный параметр «identifier» был ранее определен как тип|  
+|[Предупреждение (уровень 1) C4226 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|использовано нестандартное расширение: «ключевое слово» является устаревшим|  
+|[Компилятор C4227 предупреждение (уровень 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|устаревший элемент: пропуск квалификаторов для ссылки|  
+|[Компилятор C4228 предупреждение (уровень 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|нестандартное расширение: квалификаторы после запятой в списке объявлений игнорируются|  
+|[Предупреждение (уровень 1) C4229 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|устаревший элемент: пропуск модификаторов для данных|  
+|[Предупреждение (уровень 1) C4230 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|устаревший элемент: смешение модификаторов и квалификаторов; пропуск квалификатора|  
+|[Предупреждение (уровень 4) C4232 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|использовано нестандартное расширение: «идентификатор»: адрес dllimport «dllimport» не является статическим, идентичность не гарантируется|  
+|[Предупреждение (уровень 4) C4233 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|использовано нестандартное расширение: «ключевое слово» поддерживается только в C++, C не|  
+|[Предупреждение (уровень 4) C4234 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|использовано нестандартное расширение: «ключевое слово» зарезервировано для будущего использования|  
+|[Предупреждение (уровень 4) C4235 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|использовано нестандартное расширение: «ключевое слово» не поддерживается в этой архитектуре|  
+|[Предупреждение (уровень 1) C4237 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|Ключевое слово «ключевое слово» еще не поддерживается, но зарезервировано для будущего использования|  
+|[Предупреждение (уровень 4) C4238 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|нестандартное расширение: использование правостороннего значения класса в качестве левостороннего значения|  
+|[Предупреждение (уровень 4) C4239 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|использовано нестандартное расширение: «лексема»: преобразование из «типа1» в «тип2»|  
+|[Предупреждение (уровень 3) C4240 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|использовано нестандартное расширение: уровень доступа «имя_класса» теперь задан acess_specifier1, ранее он был определен как «access_specifier2»|  
+|[Предупреждение (уровень 4) C4242 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|«идентификатора»: преобразование из «типа1» в «тип&1;», возможна потеря данных|  
+|[Предупреждение (уровень 3) C4243 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|Преобразование «conversion_type» из «типа1» в «тип&1;» существует, но недоступно|  
+|[Предупреждение (уровень 2) C4244 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|«conversion_type»: преобразование из «типа1» в «тип2», возможна потеря данных|  
+|[Предупреждение (уровни 3 и 4) C4244 компилятора](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|«conversion_type»: преобразование из «типа1» в «тип2», возможна потеря данных|  
+|[Предупреждение (уровень 4) C4245 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|«conversion_type»: преобразование из «типа1» в «тип2», несоответствие со знаком или без|  
+|[Предупреждение (уровень 2) C4250 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|«имя_класса»: наследуется «base_classname::member» через превосходство|  
+|[Предупреждение (уровень 1) C4251 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|«Идентификатор»: «object_type1» «identifier1» должен иметь dll интерфейс для использования клиентами object_type «» «identfier2»|  
+|[Предупреждение (уровень 4) C4254 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|«operator»: преобразование из «type1:field_bits» в «type2:field_bits», возможна потеря данных|  
+|[Предупреждение (уровень 4) C4255 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|"function": не представлен прототип функции: преобразование "()" в "(void)"|  
+|[Предупреждение (уровень 4) C4256 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|«функция»: конструктор класса с виртуальными базами содержит «...»; вызовы могут оказаться несовместимыми с более ранними версиями Visual C++|  
+|[Предупреждение (уровень 1) C4258 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|«переменная»: определение из цикла игнорируется; используется определение из внешней области видимости|  
+|[Предупреждение (уровень 4) C4263 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|"function": функция-член не переопределяет ни одной виртуальной функции-члена базового класса|  
+|[Предупреждение (уровень 1) C4264 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|«virtual_function»: нет доступного переопределения для виртуальной функции-члена из базового «имя_класса»; функция скрыта|  
+|[Предупреждение (уровень 3) C4265 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|«имя_класса»: класс имеет виртуальные функции, но деструктор не является virtual\n экземпляры этого класса не могут быть уничтожены правильно|  
+|[Предупреждение (уровень 4) C4266 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|«virtual_function»: нет доступного переопределения для виртуальной функции-члена из базового «имя_класса»; функция скрыта|  
+|[Предупреждение (уровень 3) C4267 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|«переменная»: преобразование из «size_t» в «тип», возможна потеря данных|  
+|[Предупреждение (уровень 4) C4268 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|«Идентификатор»: «const» статическое или глобальное данные, инициализированные конструктором по умолчанию, созданные компилятором заполняет объект нулями|  
+|[Компилятор C4269 предупреждение (уровень 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|«Идентификатор»: «const» автоматические данные, инициализируемые конструктором по умолчанию, созданные компилятором выводятся ненадежные результаты|  
+|[Предупреждение компилятора (уровень 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|«функция»: помечен __declspec(dllimport); необходимо указать машинное соглашение о вызове при импорте функции.|  
+|[Предупреждение (уровень 1) C4273 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|«функция»: компоновка библиотеки dll не согласована|  
+|Предупреждение компилятора (уровень 1) C4274|#Идентификатор — игнорировать; в документации #pragma comment (exestr, 'строка')|  
+|[Предупреждение (уровень 2) C4275 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|не-интерфейс dll «classkey» «identifier1» используется в качестве основы для dll интерфейс «classkey» «идентификатор2»|  
+|[Предупреждение (уровень 1) C4276 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|«функция»: не предоставлен прототип; предполагается отсутствие параметров|  
+|Предупреждение компилятора (уровень 1) C4277|импортированный элемент «classname::member» существует в виде элемента данных и функции-члена; элемент данных игнорируется|  
+|[Предупреждение (уровень 3) C4278 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|«Идентификатор»: идентификатор в библиотеке типов «библиотека» уже макроса; использовать квалификатор «rename»|  
+|Предупреждение компилятора (уровень 3 и уровень 4) C4279|«Идентификатор»: идентификатор в библиотеке типов «библиотека» является ключевым словом; использовать квалификатор «rename»|  
+|[Предупреждение (уровень 3) C4280 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|«operator->» был собственный рекурсивное типа «тип»|  
+|[Предупреждение (уровень 3) C4281 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|произошла рекурсия «оператор->» через тип «тип&1;»|  
+|[Предупреждение (уровень 3) C4282 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|затем через тип «type2»|  
+|[Предупреждение (уровень 3) C4283 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|и через тип «typeN»|  
+|[Предупреждение (уровень 2) C4285 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|Тип возвращаемого значения для «identifier::operator->» является рекурсивным, если используется нотация infix|  
+|[Предупреждение (уровень 1) C4286 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|«производный_тип»: перехватывается базового класса (base_type) в строке «номер_строки»|  
+|[Предупреждение (уровень 3) C4287 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|"operator": несовпадение отрицательной константы и константы без знака|  
+|[Предупреждение (уровень 1) C4288 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|использовано нестандартное расширение: «переменная»: переменная управления циклом, объявленная в цикле for, используется вне цикла; это противоречит объявлению во внешней области|  
+|[Предупреждение (уровень 4) C4289 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|использовано нестандартное расширение: «переменная»: переменная управления циклом, объявленная в цикле for, используется вне цикла for|  
+|[Предупреждение (уровень 3) C4290 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|спецификация исключений C++ игнорируется, кроме случая, когда указывается, что функция не является __declspec(nothrow)|  
+|[Предупреждение (уровень 1) C4291 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|«объявление»: не обнаружен; соответствующий оператор delete память не будет освобожден при инициализации возникнет исключение|  
+|[Предупреждение (уровень 1) C4293 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|«shift_operator»: смещение отрицательное или слишком большое, поведение не определено|  
+|[Предупреждение (уровень 4) C4295 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|«Массив»: массив слишком мал, чтобы включить конечный символ null|  
+|[Предупреждение (уровень 4) C4296 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|«operator»: выражение всегда имеет значение «boolean_value»|  
+|[Предупреждение (уровень 1) C4297 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|«функция»: ожидается, что функция не будет выдавать исключение, но не|  
+|Предупреждение компилятора (уровень 4) C4298|«Идентификатор»: идентификатор в библиотеке типов «библиотека» уже макроса; переименовать в «__identifier»|  
+|Предупреждение компилятора (уровень 4) C4299|«Идентификатор»: идентификатор в библиотеке типов «библиотека» является ключевым словом; переименовать в «__identifier»|  
+|Предупреждение C4301 компилятора|«derived_class::function»: переопределение виртуальной функции отличается от «base_class:function» квалификатором const или volatile|  
+|[Предупреждение (уровень 2) C4302 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|"conversion": усечение от "type1" к "type2"|  
+|Предупреждение C4303 компилятора|C-style_cast "из «типа1» в «тип2» является устаревшим, используйте оператор static_cast, __try_cast или dynamic_cast|  
+|[Предупреждение (уровень 1) C4305 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|"conversion": усечение от "type1" к "type2"|  
+|[Компилятор C4306 предупреждение (уровень 3)](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|«Преобразование»: преобразование из «типа1» в «тип2» большего размера|  
+|[Предупреждение (уровень 2) C4307 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|«operator»: переполнение целой константы|  
+|[Предупреждение (уровень 2) C4308 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|отрицательная целая константа преобразована в тип без знака|  
+|[Предупреждение (уровень 2) C4309 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|«Преобразование»: усечение константного значения|  
+|[Предупреждение (уровень 3) C4310 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)|приведение обуславливает усечение постоянного значения|  
+|[Предупреждение (уровень 1) C4311 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|«переменная»: усечение указателя из «типа1» в «тип2»|  
+|[Предупреждение (уровень 1) C4312 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|«Операция»: преобразование из «типа1» в «тип2» большего размера|  
+|[Предупреждение (уровень 1) C4313 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|«функция»: «format_specifier» в строке формата конфликтует с аргументом «argument_number» типа «тип»|  
+|Предупреждение C4314 компилятора|требуется параметр директивы pragma: "32" или "64"|  
+|Предупреждение компилятора (уровень 4) C4315|«имя_класса»: указатель «this» для «член» могут не быть выровненным «выравнивание» ожидается конструктором|  
+|Предупреждение компилятора (уровень 3) C4316|«Идентификатор»: объект, размещенный в куче может оказаться выровненных «выравнивание»|  
+|Предупреждение компилятора (уровень 1) C4317|«printf_family»: передано недостаточное число аргументов для строки формата|  
+|Предупреждение C4318 компилятора|передача нулевой константы в качестве длины memset|  
+|[Предупреждение (уровень 1) C4319 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|«operator»: ноль расширение «типа1» в «тип2» большего размера|  
+|Предупреждение компилятора (уровень 1) C4321|автоматическое создание IID для интерфейса "%$S"|  
+|Предупреждение компилятора (уровень 1) C4322|автоматическое создание CLSID для класса "%$S"|  
+|Предупреждение компилятора (уровень 1) C4323|повторное использование CLSID для класса "%$S"|  
+|[Предупреждение (уровень 4) C4324 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|«structname»: структура была значение __declspec(align())|  
+|[Предупреждение (уровень 1) C4325 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|атрибуты для стандартного раздела «раздел» игнорируется|  
+|[Предупреждение (уровень 1) C4326 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|возвращаемый тип «функция» должен быть «тип&1;» вместо «тип2»|  
+|Предупреждение C4327 компилятора|«Назначение»: выравнивание косвенного обращения LHS (alignment1) больше, чем RHS (alignment2)|  
+|Предупреждение C4328 компилятора|«функция»: выравнивание косвенного обращения для формального параметра номер_параметра (parameter_alignment) больше, чем выравнивание реального аргумента (argument_alignment)|  
+|[Компилятор C4329 предупреждение (уровень 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) игнорируется для перечисления|  
+|Предупреждение компилятора (уровень 1) C4330|атрибут "%s" для раздела "%s" игнорируется|  
+|[Предупреждение (уровень 1) C4333 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|«shift_operator»: сдвиг вправо слишком большое значение, потери данных|  
+|[Предупреждение (уровень 3) C4334 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|«shift_operator»: результат 32-разрядного смещения неявно преобразуется в 64 бита (ранее 64-разрядное смещение?)|  
+|[Предупреждение компилятора C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Обнаружен файл в формате Mac: преобразуйте исходный файл в формат DOS или UNIX|  
+|[Предупреждение (уровень 4) C4336 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Импорт типов библиотеки «library1» перед импортом «library2»|  
+|[Предупреждение (уровень 4) C4337 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|библиотеки типов «library1» в «library2» автоматически импортируется|  
+|Предупреждение компилятора (уровень 4) C4338|#используется директива pragma % s: стандартного раздела «%s»|  
+|[Предупреждение (уровень 4) C4339 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|«Тип»: использование неопределенного типа обнаружен в "WinRT | CLR "метаданных применение этого типа может привести к исключение времени выполнения|  
+|[Предупреждение (уровень 1) C4340 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|«значение»: значение из положительного на отрицательное значение|  
+|[Предупреждение (уровень 1) C4342 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|изменение поведения: вызвана "функция", но в предыдущих версиях был вызван оператор-член|  
+|Предупреждение компилятора (уровень 4) C4343|#Директива #pragma optimize("g",off) переопределяет /Og-параметр|  
+|[Предупреждение (уровень 1) C4344 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Изменение поведения: использование явный шаблон аргументов приводит к вызову «функции»|  
+|[Предупреждение (уровень 1) C4346 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|«Имя»: зависимое имя не является типом|  
+|[Предупреждение (уровень 1) C4348 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|«Тип»: переопределение параметра по умолчанию: параметр «номер_параметра»|  
+|[Предупреждение (уровень 1) C4350 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|изменение поведения: "член&1;" был вызван вместо "член&2;"|  
+|Предупреждение компилятора (уровень 1) C4352|%$I: подставляемая функция уже определена|  
+|[Предупреждение (уровень 1) C4353 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|использовано нестандартное расширение: константа 0 в качестве выражения функции.  Вместо этого используйте функцию «__noop» встроенная функция|  
+|[C4355 Предупреждение компилятора](../../error-messages/compiler-warnings/compiler-warning-c4355.md)Предупреждение компилятора (уровень 1 и уровень 4) C4355|this: использован в списке инициализации базового класса|  
+|[Предупреждение (уровень 2) C4356 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|«член»: статические данные-член не может инициализироваться посредством производного класса|  
+|[Предупреждение (уровень 3) C4357 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|Аргумент array в списке формальных аргументов для делегата «делегат» игнорироваться при создании «функция»|  
+|[Предупреждение (уровень 1) C4358 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|«operator»: возвращаемый тип значения объединенных делегатов не «void»; Возвращаемое значение не определено|  
+|[Предупреждение (уровень 3) C4359 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|«Тип»: выравнивание описатель меньше, чем текущее выравнивание (выравнивание) и будет игнорироваться.|  
+|Предупреждение компилятора (уровень 2) C4362|%$S: выравнивание, превышающее 8 байт, не поддерживается CLR|  
+|[Компилятор C4364 предупреждение (уровень 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#Использование для сборки «сборка», отображенного в ранее "location'('line_number') без атрибута as_friend; as_friend не применяется|  
+|[Предупреждение (уровень 4) C4365 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|«выражение»: преобразование из «типа1» в «тип2», несоответствие со знаком или без|  
+|[Предупреждение (уровень 4) C4366 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Результатом унарного оператора «оператор» может быть невыровненным|  
+|Предупреждение компилятора (уровень 3) C4367|Преобразование из "%$T" в "%$T" может вызвать исключение неверного выравнивания типа данных|  
+|[Предупреждение компилятора C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|Невозможно определить «член» в качестве члена управляемого «тип»: смешанные типы не поддерживаются.|  
+|[Предупреждение (уровень 1) C4369 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|«Перечислитель»: значение перечислителя не представлены в виде «тип», значение — «новое_значение»|  
+|Предупреждение C4370 компилятора|«имя_класса»: размещение класса изменилось с предыдущей версии компилятора из-за улучшенной упаковки|  
+|Предупреждение компилятора (уровень 3) C4371|«имя_класса»: размещение класса могло измениться с предыдущей версии компилятора из-за улучшенной упаковки члена «member»|  
+|Предупреждение компилятора (уровень 3) C4373|«derived_class::function»: «base_class::function» переопределения виртуальных функций, когда параметры различаются только квалификаторами const или volatile не переопределяет предыдущие версии компилятора|  
+|[Предупреждение (уровень 1) C4374 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|«функция1»: метод интерфейса не будет реализован и виртуальным методом «функция2»|  
+|[Предупреждение (уровень 1) C4375 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|закрытые метод «метод&2;» не переопределяет «метод&2;»|  
+|[Предупреждение (уровень 1) C4376 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|спецификатор доступа "old_specifier:" больше не поддерживается: используйте "новый_спецификатор:" вместо|  
+|[Предупреждение (уровень 1) C4377 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|собственные типы по умолчанию являются частными; параметр -d1PrivateNativeTypes запрещен|  
+|[Предупреждение (уровень 1) C4378 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Для запуска инициализаторов необходимо получить указатели функций; рассмотрите вариант System::ModuleHandle::ResolveMethodHandle|  
+|[Предупреждение (уровень 1) C4379 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Версия «version_number» среды CLR не поддерживается на этом компьютере. С помощью данной версии может привести к непредвиденным результатам|  
+|Предупреждение компилятора (уровень 1) C4380|"%$S": конструктор по умолчанию не может быть нерекомендуемым|  
+|[Предупреждение (уровень 1) C4381 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|«функция1»: метод интерфейса не будет реализован закрытым методом «функция2»|  
+|[Предупреждение (уровень 1) C4382 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|генерация исключения «тип»: тип с деструктором __clrcall или конструктором копирования может быть перехвачен только в/CLR: pure модуля|  
+|[Предупреждение (уровень 1) C4383 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|«оператор_разыменовывания_экземпляра»: значение разыменовывания дескриптора может измениться, если существует оператор определяемых пользователем «оператор_разыменовывания_экземпляра»; Запишите оператор как статическую функцию, чтобы явно операнд|  
+|[Предупреждение (уровень 1) C4384 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|#Директива #pragma «make_public» следует использовать только в глобальной области видимости|  
+|Предупреждение компилятора (уровень 3) C4387|%s: рассмотрено|  
+|Предупреждение компилятора (уровень 4) C4388|%$L: несоответствие типов со знаком и без знака|  
+|[Предупреждение (уровень 4) C4389 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|«operator»: несоответствие со знаком или без|  
+|[Предупреждение (уровень 3) C4390 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4390.md)|";": обнаружен пустой контролируемый оператор; это правильно?|  
+|[Предупреждение (уровень 1) C4391 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|«сигнатуры_функции»: неверный тип возвращаемого значения для встроенной функции, ожидается «тип»|  
+|[Предупреждение (уровень 1) C4392 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|«сигнатуры_функции»: неверное число аргументов для подставляемой функции аргументы ожидаемого «argument_count»|  
+|[Предупреждение (уровень 1) C4393 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|«переменная»: const не влияет на элемент данных «литерал»; игнорировать|  
+|[Предупреждение компилятора C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|«функция»: символ на уровне домена приложения не должны быть помечены __declspec('dllexport')|  
+|[Предупреждение компилятора (уровень 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|«функция»: функция-член будет вызван на копию данных initonly «член»|  
+|Предупреждение компилятора (уровень 2) C4396|%$S: если дружественное объявление ссылается на специализацию функции-шаблона, встроенный спецификатор использовать невозможно|  
+|[Предупреждение компилятора (уровень 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute игнорируется|  
+|[Предупреждение (уровень 3) C4398 компилятора](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|«переменная»: глобальный объект для каждого процесса может работать неправильно с несколькими доменами приложений; следует использовать __declspec(appdomain)|  
+|[Предупреждение компилятора (уровень 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|«символ»: символ для каждого процесса не следует помечать с __declspec('dllimport') при компиляции с параметром/clr: pure|

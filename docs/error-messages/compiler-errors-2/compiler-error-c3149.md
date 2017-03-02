@@ -1,36 +1,52 @@
 ---
-title: "Ошибка компилятора C3149 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3149"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3149"
+title: "Ошибка компилятора C3149 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3149
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Ошибка компилятора C3149
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.lasthandoff: 02/24/2017
 
-"тип" : этот тип нельзя использовать здесь без "знака" верхнего уровня  
+---
+# <a name="compiler-error-c3149"></a>Ошибка компилятора C3149
+«Тип»: невозможно использовать этот тип без верхнего уровня «char»  
   
- Объявление задано неправильно.  
+ Объявление не указан правильно.  
   
- Например, в глобальной области видимости мог быть определен тип CLR, после чего в составе определения была произведена попытка создания переменной этого типа.  Поскольку существование глобальных переменных типов CLR не допускается, компилятор создаст ошибку C3149.  
+ Например может быть определен тип CLR в глобальной области видимости и предпринята попытка создать переменную типа как часть определения. Поскольку глобальные переменные типов CLR не допускаются, компилятор создаст ошибку C3149.  
   
- Для устранения данной ошибки переменные типов CLR следует объявлять в определениях функций и типов.  
+ Чтобы устранить эту ошибку, объявите переменные типов CLR в определении функции или типа.  
   
  Следующий пример приводит к возникновению ошибки C3149:  
   
@@ -54,20 +70,4 @@ delegate int MyDelegate(const int, int);
 void Test1(MyDelegate m) {}   // C3149  
 void Test2(MyDelegate ^ m) {}   // OK  
 ```  
-  
- **Управляемые расширения для C\+\+**  
-  
- Управляемый объект использован неправильно.  
-  
- Следующий пример приводит к возникновению ошибки C3149:  
-  
-```  
-// C3149c.cpp  
-// compile with: /clr:oldSyntax  
-__gc class A {};  
-  
-int main() {  
-   A a = new A;   // C3149  
-   A *a = new A;   // OK  
-}  
-```
+
