@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 718aac826916b977eec4fb8400da81b5e32d4afa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: dd14e5c941da5383dce19e9f7f539bfb9909759f
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Класс CComMultiThreadModelNoCS
@@ -72,7 +72,7 @@ class CComMultiThreadModelNoCS
 ## <a name="remarks"></a>Примечания  
  `CComMultiThreadModelNoCS`Аналогично [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) в том, что он предоставляет методы поточно ориентированные увеличивать и уменьшать переменной. Тем не менее, когда требуется сослаться через класс критический раздел `CComMultiThreadModelNoCS`, методов, таких как `Lock` и `Unlock` не выполняет никаких действий.  
   
- Как правило, используется `CComMultiThreadModelNoCS` через `ThreadModelNoCS``typedef` имя. Это `typedef` определяется в `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, и [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).  
+ Как правило, используется `CComMultiThreadModelNoCS` через `ThreadModelNoCS` `typedef` имя. Это `typedef` определяется в `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, и [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).  
   
 > [!NOTE]
 >  Глобальная `typedef` имена [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) и [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel) ссылка не `CComMultiThreadModelNoCS`.  

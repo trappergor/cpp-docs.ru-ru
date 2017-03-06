@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>Класс CStringT
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Строка интерпретируется как набор символов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Подстроки, содержит символы в строке, в `pszCharSet`, начиная с первого символа в строке и заканчивается, когда символ находится в строке, которая не находится в `pszCharSet.``SpanIncluding` возвращает пустой подстрокой, если первый символ в строке не существует в указанном наборе.  
+ Подстроки, содержит символы в строке, в `pszCharSet`, начиная с первого символа в строке и заканчивается, когда символ находится в строке, которая не находится в `pszCharSet`. `SpanIncluding`Возвращает пустой подстрокой, если первый символ в строке не существует в указанном наборе.  
   
 ### <a name="remarks"></a>Примечания  
  Если первый символ строки не в набор символов, то `SpanIncluding` возвращает пустую строку. В противном случае — возвращает последовательность последовательных символов, которые находятся в наборе.  

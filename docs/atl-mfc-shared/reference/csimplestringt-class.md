@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>Класс CSimpleStringT
@@ -121,7 +121,7 @@ class CSimpleStringT
 |[CSimpleStringT::operator =](#operator_eq)|Присваивает новое значение для `CSimpleStringT` объекта.|  
   
 ### <a name="remarks"></a>Примечания  
- `CSimpleStringT`является базовым классом для различных классов строки, поддерживаемые Visual C++. Он предоставляет минимальную поддержку для управления памятью объект string и манипуляции базовый буфер. Более сложные строковых объектов, см. [CStringT класса](../../atl-mfc-shared/reference/cstringt-class.md).  
+ `CSimpleStringT`является базовым классом для различных классов строки, поддерживаемые Visual C++. Он предоставляет минимальную поддержку для управления памятью объект string и манипуляции основные буфера. Более сложные строковых объектов, см. [CStringT класса](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsimpstr.h  
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  Создать новый `CSimpleStringT` объекта. Поскольку конструкторы скопировать входных данных в новое хранилище, выделенное, может привести к памяти исключения.  
   
 ### <a name="example"></a>Пример  
- В следующем примере показано использование `CSimpleStringT::CSimpleStringT` с использованием библиотеки ATL `typedef``CSimpleString`. `CSimpleString`Представляет часто используемые специализации шаблона класса `CSimpleStringT`.  
+ В следующем примере показано использование `CSimpleStringT::CSimpleStringT` с использованием библиотеки ATL `typedef` `CSimpleString`. `CSimpleString`Представляет часто используемые специализации шаблона класса `CSimpleStringT`.  
   
 ```cpp  
 CSimpleString s1(pMgr);
