@@ -1,4 +1,4 @@
-# [Ошибки построения C-C++](c-cpp-build-errors.md)
+# [Ошибки сборки C/C++](c-cpp-build-errors.md)
 # [Неустранимые ошибки компилятора (C999–C1999)](compiler-fatal-errors-c999-through-c1999.md)
 ## [Неустранимая ошибка C999](fatal-error-c999.md)
 ## [Неустранимая ошибка C1001](fatal-error-c1001.md)

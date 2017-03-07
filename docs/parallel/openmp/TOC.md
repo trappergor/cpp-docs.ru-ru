@@ -102,6 +102,6 @@
 ### [C.1 Нотация](c-1-notation.md)
 ### [C.2 Правила](c-2-rules.md)
 ## [D. Использование предложения schedule](d-using-the-schedule-clause.md)
-## [E. Поведения, определяемые реализацией в OpenMP C-C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+## [E. Поведения, определяемые реализацией, в OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F. Новые функции и разъяснения в версии 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 # [Ссылки](reference/toc.md)
