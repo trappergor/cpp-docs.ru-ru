@@ -1,38 +1,54 @@
 ---
-title: "Справочник по библиотеке времени выполнения C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRT - библиотека"
-  - "CRT - библиотека, справочник"
-  - "библиотеки времени выполнения"
+title: "Справочник по библиотеке времени выполнения C | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT
+- run-time libraries
+- CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Справочник по библиотеке времени выполнения C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.lasthandoff: 02/24/2017
 
-Библиотека времени выполнения Microsoft предоставляет процедуры для программирования для операционной системы Microsoft Windows.  Эти процедуры автоматизируют многие часто встречающиеся задачи программирования, которые не реализованы в языках C и C\+\+.  
+---
+# <a name="c-run-time-library-reference"></a>Справочник по библиотеке времени выполнения C
+Библиотека времени выполнения Microsoft предоставляет подпрограммы для программирования для операционной системы Microsoft Windows. Эти процедуры автоматизируют многие часто встречающиеся задачи программирования, которые не реализованы в языках C и C++.  
   
- В справочные разделы включены примеры программ для большинства процедур в библиотеке.  
+ В справочные разделы включены примеры программ для большинства подпрограмм из библиотеки.  
   
-## В этом подразделе  
- [C Run\-Time Libraries](../c-runtime-library/crt-library-features.md)  
- Описывает lib\-файлы, которые входят в библиотеки времени выполнения C.  
+## <a name="in-this-section"></a>Содержание  
+ [CRT Library Features](../c-runtime-library/crt-library-features.md) (Функции библиотек времени выполнения)  
+ Описывает LIB-файлы, которые входят в библиотеки времени выполнения C.  
   
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)  
  Содержит ссылки на библиотеки времени выполнения по категориям.  
@@ -44,29 +60,29 @@ caps.handback.revision: 9
  Содержит ссылки на глобальные константы, определенные в библиотеке времени выполнения.  
   
  [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
- Предоставляет оглавление списка всех функций библиотеки времени выполнения C по алфавиту.  
+ Содержит алфавитный список всех функций библиотеки времени выполнения C.  
   
  [Универсальные текстовые сопоставления](../c-runtime-library/generic-text-mappings.md)  
- Предоставляет ссылки на универсальные текстовые сопоставления, определенные в файле Tchar.h.  
+ Содержит ссылки на универсальные текстовые сопоставления, определенные в файле Tchar.h.  
   
- [Строки языка и страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
+ [Locale Names, Languages, and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md) (Строки страны или региона и языка)  
  Описывает способы использования функции `setlocale` для задания языка и строк страны или региона.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Процедуры отладки](../c-runtime-library/debug-routines.md)  
- Предоставляет ссылки на отладочные версии процедур библиотеки времени выполнения.  
+ Содержит ссылки на отладочные версии подпрограмм библиотеки времени выполнения.  
   
- [Проверка ошибок во время выполнения](../Topic/Run-Time%20Error%20Checking.md)  
+ [Проверка ошибок во время выполнения](../c-runtime-library/run-time-error-checking.md)  
  Содержит ссылки на функции, поддерживающие проверку ошибок во время выполнения.  
   
- [Поведение библиотеки времени выполнения](../build/run-time-library-behavior.md)  
+ [Run-Time Library Behavior](../build/run-time-library-behavior.md) (Поведение библиотеки времени выполнения)  
  Описывает точку входа в библиотеку CRT DLL.  
   
- [Библиотеки Visual C\+\+](http://msdn.microsoft.com/ru-ru/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Содержит ссылки на различные библиотеки, входящие в состав Visual C\+\+, включая шаблоны ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C\+\+.  
+ [Справочные материалы по библиотекам Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ Содержит ссылки на различные библиотеки, входящие в состав Visual C++, включая шаблоны ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C++.  
   
- [Отладка](../Topic/Debugging%20in%20Visual%20Studio.md)  
+ [Отладка](/visualstudio/debugger/debugging-in-visual-studio)  
  Ссылки на разделы, описывающие использование отладчика Visual Studio для устранения логических ошибок в приложениях и хранимых процедурах.  
   
-## См. также  
- [Справочные материалы по библиотекам Visual C\+\+](http://msdn.microsoft.com/ru-ru/fec23c40-10c0-4857-9cdc-33a3b99b30ae)
+## <a name="see-also"></a>См. также  
+ [Справочные материалы по библиотекам Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)

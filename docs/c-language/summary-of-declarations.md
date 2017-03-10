@@ -1,58 +1,74 @@
 ---
-title: "Общие сведения об объявлениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Сводные сведения об объявлениях | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Общие сведения об объявлениях
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: cf1442e98cdd7489a395bec211cda1bbb037bae2
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="summary-of-declarations"></a>Общие сведения об объявлениях
 `declaration`:  
- *спецификаторы\-объявления последовательность\-атрибутов*  необ *список\-инициализаторов\-и\-деклараторов* необ**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list*opt**;**  
   
- \/\* Компонент *attribute\-seq* относится только к системам Майкрософт \*\/  
+ /\* *attribute-seq* относится только к системам Microsoft */  
   
- *спецификаторы\-объявления*:  
- *спецификатор\-класса\-хранения спецификаторы\-объявления* необ  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers*opt  
   
- *спецификатор\-типа спецификаторы\-объявления* необ  
+ *type-specifier declaration-specifiers*opt  
   
- *квалификатор\-типа спецификаторы\-объявления* необ  
+ *type-qualifier declaration-specifiers*opt  
   
- *последовательность\-атрибутов*:            \/\* Элемент *последовательность\-атрибутов* относится только к системам Microsoft \*\/  
- *атрибут последовательность\-атрибутов* необ  
+ *attribute-seq* :            /\* *attribute-seq* относится только к системам Microsoft \*/  
+ *attribute attribute-seq* opt  
   
- *атрибут* : один из указанных ниже      \/\* Относится только к системам Microsoft \*\/  
+ *attribute* : one of      /* Microsoft Specific \*/  
  ||||  
 |-|-|-|  
-|[\_\_asm](../assembler/inline/asm.md)|[\_\_clrcall](../cpp/clrcall.md)|[\_\_stdcall](../cpp/stdcall.md)|  
-|[\_\_based](../cpp/based-grammar.md)|[\_\_fastcall](../cpp/fastcall.md)|[\_\_thiscall](../cpp/thiscall.md)|  
-|[\_\_cdecl](../Topic/__cdecl.md)|[\_\_inline](../misc/inline-inline-forceinline.md)|[\_\_vectorcall](../Topic/__vectorcall.md)|  
+|[__asm](../assembler/inline/asm.md)|[__clrcall](../cpp/clrcall.md)|[__stdcall](../cpp/stdcall.md)|  
+|[__based](../cpp/based-grammar.md)|[__fastcall](../cpp/fastcall.md)|[__thiscall](../cpp/thiscall.md)|  
+|[__cdecl](../cpp/cdecl.md)|[__inline](../cpp/inline-functions-cpp.md)|[__vectorcall](../cpp/vectorcall.md)|  
   
- *список\-инициализаторов\-и\-деклараторов*:  
- *инициализатор\-декларатор*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *список\-инициализаторов\-и\-деклараторов*  **,**  *инициализатор\-декларатор*  
+ *init-declarator-list*  **,**  *init-declarator*  
   
- *инициализатор\-декларатор*:  
- *декларатор*  
+ *init-declarator*:  
+ *declarator*  
   
- *декларатор*  **\=**  *инициализатор* \/\* Для инициализации скалярных переменных \*\/  
+ *declarator*  **=**  *initializer* /* Для инициализации скалярных переменных \*/  
   
- *спецификатор\-класса\-хранения*:  
+ *storage-class-specifier*:  
  **auto**  
   
  **register**  
@@ -63,9 +79,9 @@ caps.handback.revision: 11
   
  **typedef**  
   
- **\_\_declspec \(**  *последовательность\-модификаторов\-расширенного\-объявления*  **\)** \/\* Относится только к системам Microsoft \*\/  
+ **__declspec (**  *extended-decl-modifier-seq*  **)** /* Относится только к системам Microsoft \*/  
   
- *спецификатор\-типа*:  
+ *type-specifier*:  
  **void**  
   
  **char**  
@@ -74,13 +90,13 @@ caps.handback.revision: 11
   
  **int**  
   
- `__int8` \/\* Относится только к системам Microsoft \*\/  
+ `__int8` /* Относится только к системам Microsoft \*/  
   
- `__int16` \/\* Относится только к системам Microsoft \*\/  
+ `__int16` /* Относится только к системам Microsoft \*/  
   
- `__int32` \/\* Относится только к системам Microsoft \*\/  
+ `__int32` /* Относится только к системам Microsoft \*/  
   
- `__int64` \/\* Относится только к системам Microsoft \*\/  
+ `__int64` /* Относится только к системам Microsoft \*/  
   
  **long**  
   
@@ -90,146 +106,146 @@ caps.handback.revision: 11
   
  **signed**  
   
- **без знака**  
+ **unsigned**  
   
- *спецификатор\-struct\-или\-union*  
+ *struct-or-union-specifier*  
   
- *спецификатор\-enum*  
+ *enum-specifier*  
   
- *имя\-typedef*  
+ *typedef-name*  
   
- *квалификатор\-типа*:  
+ *type-qualifier*:  
  **const**  
   
  `volatile`  
   
  `declarator`:  
- `pointer` необ *прямой\-декларатор*  
+ `pointer`opt*direct-declarator*  
   
- *прямой\-декларатор*:  
- *идентификатор*  
+ *direct-declarator*:  
+ *identifier*  
   
- **\(**  *декларатор*  **\)**  
+ **(**  *declarator*  **)**  
   
- *прямой\-декларатор*  **\[**  *константное\-выражение*  необ **\]**  
+ *direct-declarator*  **[**  *constant-expression* opt**]**  
   
- *прямой\-декларатор*  **\(**  *список\-типов\-параметров*  **\)** \/\* Декларатор нового стиля \*\/  
+ *direct-declarator*  **(**  *parameter-type-list*  **)** /* Декларатор нового стиля \*/  
   
- *прямой\-декларатор*  **\(**  *список\-идентификаторов* необ **\)** \/\* Декларатор устаревшего стиля \*\/  
+ *direct-declarator*  **(**  *identifier-list*opt**)** /* Декларатор устаревшего стиля \*/  
   
  `pointer`:  
- **\*** *список\-квалификаторов\-типа* необ  
+ **\*** *type-qualifier-list*opt  
   
- **\*** *список\-квалификаторов\-типа* необ `pointer`  
+ **\*** *type-qualifier-list*opt`pointer`  
   
- *список\-типов\-параметров*:                           \/\* Список параметров \*\/  
- *список\-параметров*  
+ *parameter-type-list*:                           /\* Список параметров \*/  
+ *parameter-list*  
   
- *список\-параметров* **, ...**  
+ *parameter-list* **, ...**  
   
- *список\-параметров*:  
- *объявление\-параметров*  
+ *parameter-list*:  
+ *parameter-declaration*  
   
- *список\-параметров*  **,**  *объявление\-параметров*  
+ *parameter-list*  **,**  *parameter-declaration*  
   
- *список\-квалификаторов\-типа*:  
- *квалификатор\-типа*  
+ *type-qualifier-list*:  
+ *type-qualifier*  
   
- *список\-квалификаторов\-типа квалификатор\-типа*  
+ *type-qualifier-list type-qualifier*  
   
- *спецификатор\-перечисления*:  
- **перечисление**  *идентификатор* необ **{** *список\-перечислителей* **}**  
+ *enum-specifier*:  
+ **enum**  *identifier*opt**{** *enumerator-list* **}**  
   
- **enum**  *идентификатор*  
+ **enum**  *identifier*  
   
- *список\-перечислителей*:  
- *перечислитель*  
+ *enumerator-list*:  
+ *enumerator*  
   
- *список\-перечислителей*  **,**  `enumerator`  
+ *enumerator-list*  **,**  `enumerator`  
   
  `enumerator`:  
- *константа\-перечисления*  
+ *enumeration-constant*  
   
- *константа\-перечисления*  **\=**  *константное\-выражение*  
+ *enumeration-constant*  **=**  *constant-expression*  
   
- *константа\-перечисления*:  
- *идентификатор*  
+ *enumeration-constant*:  
+ *identifier*  
   
- *спецификатор\-структуры\-или\-объединения*:  
- *идентификатор\-структуры\-или\-объединения* необ **{** *список\-объявлений\-структуры* **}** *идентификатор\-структуры\-или\-объединения*  
+ *спецификатор-структуры-или-объединения*:  
+ *struct-or-union identifier*opt**{** *struct-declaration-list* **}** *struct-or-union identifier*  
   
- *структура\-или\-объединение*:  
+ *структура-или-объединение*:  
  **struct**  
   
- **union**  
+ **объединение**  
   
- *список\-объявлений\-структуры*:  
- *объявление\-структуры*  
+ *список-объявлений-структуры*:  
+ *объявление-структуры*  
   
- *список\-объявлений\-структуры объявление\-структуры*  
+ *список-объявлений-структуры объявление-структуры*  
   
- *объявление\-структуры*:  
- *список\-спецификаторов\-и\-квалификаторов список\-деклараторов\-структуры*  **;**  
+ *объявление-структуры*:  
+ *список-спецификаторов-и-квалификаторов список-деклараторов-структуры* **;**  
   
- *список\-спецификаторов\-и\-квалификаторов*:  
- *спецификатор\-типа список\-спецификаторов\-и\-квалификаторов* необ  
+ *список-спецификаторов-и-квалификаторов*:  
+ *type-specifier specifier-qualifier-list*opt  
   
- *квалификатор\-типа список\-спецификаторов\-и\-квалификаторов* необ  
+ *type-qualifier specifier-qualifier-list*opt  
   
- *список\-деклараторов\-структуры*:  
- *декларатор\-структуры список\-деклараторов\-структуры*  **,**  *декларатор\-структуры*  
+ *список-деклараторов-структуры*:  
+ *struct-declarator struct-declarator-list*  **,**  *struct-declarator*  
   
- *декларатор\-структуры*:  
- *декларатор*  
+ *декларатор-структуры*:  
+ *declarator*  
   
- *спецификатор\-типа декларатор* необ **:** *константное\-выражение*  
+ *type-specifier declarator*opt**:** *constant-expression*  
   
- *объявление\-параметров*:  
- *спецификаторы\-объявления декларатор* \/\* Именованный декларатор \*\/  
+ *parameter-declaration*:  
+ *declaration-specifiers declarator* /* Именованный декларатор \*/  
   
- *спецификаторы\-объявления абстрактный\-декларатор* необ **\/\*** Анонимный декларатор **\*\/**  
+ *declaration-specifiers abstract-declarator*opt**/\*** Анонимный декларатор **\*/**  
   
- *список\-идентификаторов*: **\/\*** Для декларатора устаревшего стиля **\* \/**  
- *идентификатор*  
+ *identifier-list*: **/\*** Для декларатора устаревшего стиля **\* /**  
+ *identifier*  
   
- *список\-идентификаторов*  **,**  *идентификатор*  
+ *identifier-list*  **,**  *identifier*  
   
- *абстрактный\-декларатор*: **\/\*** Используется с анонимными деклараторами **\*\/**  
- *указатель*  
+ *abstract-declarator*: **/\*** Используется с анонимными деклараторами **\*/**  
+ *pointer*  
   
- `pointer` необ *прямой\-абстрактный\-декларатор*  
+ `pointer`opt*direct-abstract-declarator*  
   
- *прямой\-абстрактный\-декларатор*:  
- **\(**  *абстрактный\-декларатор*  **\)**  
+ *direct-abstract-declarator*:  
+ **(**  *abstract-declarator*  **)**  
   
- *прямой\-абстрактный\-декларатор* необ **\[** *константное\-выражение* необ **\]**  
+ *direct-abstract-declarator*opt**[** *constant-expression*opt**]**  
   
- *прямой\-абстрактный\-декларатор* необ **\(** *список\-типов\-параметров* необ **\)**  
+ *direct-abstract-declarator*opt**(** *parameter-type-list* opt**)**  
   
- *инициализатор*:  
- *выражение\-присваивания*  
+ *initializer*:  
+ *assignment-expression*  
   
- **{**  *список\-инициализаторов*  **}** \/\* Для агрегатной инициализации \*\/  
+ **{**  *initializer-list*  **}** /* Для агрегатной инициализации \*/  
   
- **{**  *список\-инициализаторов*  **, }**  
+ **{**  *initializer-list*  **, }**  
   
- *список\-инициализаторов*:  
- *инициализатор*  
+ *initializer-list*:  
+ *initializer*  
   
- *список\-инициализаторов*  **,**  *инициализатор*  
+ *initializer-list*  **,**  *initializer*  
   
- *имя\-типа*:  
- *список\-спецификаторов\-и\-квалификаторов абстрактный\-декларатор* необ  
+ *type-name*:  
+ *specifier-qualifier-list abstract-declarator*opt  
   
- *имя\-определения\-типа*:  
- *идентификатор*  
+ *typedef-name*:  
+ *identifier*  
   
- *последовательность\-модификаторов\-расширенного\-объявления*:\/\*    Относится только к системам Microsoft \*\/  
- *модификатор\-расширенного\-объявления* необ  
+ *extended-decl-modifier-seq*:/\*    Относится только к системам Microsoft \*/  
+ *extended-decl-modifier*opt  
   
- *последовательность\-модификаторов\-расширенного\-объявления модификатор\-расширенного\-объявления*  
+ *extended-decl-modifier-seq extended-decl-modifier*  
   
- *модификатор\-расширенного\-объявления*:   \/\* Относится только к системам Microsoft \*\/  
+ *extended-decl-modifier*:   /\* Относится только к системам Microsoft \*/  
  **thread**  
   
  **naked**  
@@ -238,7 +254,7 @@ caps.handback.revision: 11
   
  `dllexport`  
   
-## См. также  
- [Соглашения о вызовах](../Topic/Calling%20Conventions.md)   
+## <a name="see-also"></a>См. также  
+ [Соглашения о вызовах](../cpp/calling-conventions.md)   
  [Грамматика структуры фразы](../c-language/phrase-structure-grammar.md)   
  [Устаревшие соглашения о вызовах](../cpp/obsolete-calling-conventions.md)
