@@ -1,0 +1,113 @@
+---
+title: "Класс CSplitterWndEx | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSplitterWndEx
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSplitterWndEx
+ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
+caps.latest.revision: 24
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
+ms.openlocfilehash: 08b26bc2321485181941dbaaa9a903de9a401ef8
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="csplitterwndex-class"></a>Класс CSplitterWndEx
+
+
+
+Представляет настроенное окно-разделитель.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+class CSplitterWndEx : public CSplitterWnd  
+```  
+  
+## <a name="members"></a>Члены  
+  
+### <a name="public-constructors"></a>Открытые конструкторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|`CSplitterWndEx::CSplitterWndEx`|Конструктор по умолчанию.|  
+|`CSplitterWndEx::~CSplitterWndEx`|Деструктор.|  
+  
+### <a name="public-methods"></a>Открытые методы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Вызывается платформой для рисования окна-разделителя. (Переопределяет [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
+  
+## <a name="remarks"></a>Примечания  
+ Переопределение `OnDrawSplitter` метод для настройки внешнего вида графических компонентов окна-разделителя.  
+  
+ `CSplitterWndEx` Класс используется совместно с [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), и [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) методы, которые реализуются диспетчер визуального представления. Чтобы диспетчер визуального представления для отрисовки в приложении окна-разделителя, замените объявления `CSplitterWnd` класса `CSplitterWndEx` класса. Для рамки окна приложения класс окна разделителей объявляется в классе CMainFrame, расположенный в mainfrm.h. Например, в разделе `OutlookDemo` образца в каталог образцов.  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](cobject-class.md)  
+  
+ [CCmdTarget](ccmdtarget-class.md)  
+  
+ [CWnd](cwnd-class.md)  
+  
+ [CSplitterWnd](csplitterwnd-class.md)  
+   
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxsplitterwndex.h  
+  
+##  <a name="a-nameondrawsplittera--csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
+ Вызывается платформой для рисования окна-разделителя.  
+  
+```  
+virtual void OnDrawSplitter(  
+   CDC* pDC,  
+   ESplitType nType,  
+   const CRect& rect   
+);  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `pDC`  
+ Указатель на контекст устройства. Если этот параметр равен `NULL`, платформа перерисовывает активного окна.  
+  
+ [in] `nType`  
+ Один из `CSplitterWnd::ESplitType` значений перечисления, определяющее элемент окна разделителя для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection`, и `splitBorder`.  
+  
+ [in] `rect`  
+ Ограничивающий прямоугольник, который указывает размеры и расположение окна элемент заданного разделителя.  
+  
+### <a name="remarks"></a>Примечания  
+  
+## <a name="see-also"></a>См. также  
+ [Диаграмма иерархии](../hierarchy-chart.md)   
+ [Классы](mfc-classes.md)   
+ [Класс CSplitterWnd](csplitterwnd-class.md)   
+ [Класс CMFCVisualManager](cmfcvisualmanager-class.md)

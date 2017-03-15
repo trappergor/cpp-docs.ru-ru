@@ -1,0 +1,294 @@
+---
+title: "Класс CStdioFile | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CStdioFile
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStdioFile class
+- I/O [MFC], stream
+- stream I/O
+ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
+caps.latest.revision: 22
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f3f036b409067676fdf12db9751cac1ea8025140
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cstdiofile-class"></a>Класс CStdioFile
+Представляет файл потока среды выполнения C, как открытые с помощью функции времени выполнения [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+class CStdioFile : public CFile  
+```  
+  
+## <a name="members"></a>Члены  
+  
+### <a name="public-constructors"></a>Открытые конструкторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CStdioFile::CStdioFile](#cstdiofile)|Создает `CStdioFile` объекта из указателя на путь или файл.|  
+  
+### <a name="public-methods"></a>Открытые методы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CStdioFile::Open](#open)|Перегружен. Откройте предназначен для использования по умолчанию `CStdioFile` конструктор (переопределяет [CFile::Open](../../mfc/reference/cfile-class.md#open)).|  
+|[CStdioFile::ReadString](#readstring)|Считывает одну строку текста.|  
+|[CStdioFile::Seek](#seek)|Устанавливает текущий указатель файла.|  
+|[CStdioFile::WriteString](#writestring)|Записывает одну строку текста.|  
+  
+### <a name="public-data-members"></a>Открытые члены данных  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CStdioFile::m_pStream](#m_pstream)|Содержит указатель на открытый файл.|  
+  
+## <a name="remarks"></a>Примечания  
+ Поток файлы помещаются в буфер и можно открыть в текстовом режиме (по умолчанию) или двоичном режиме.  
+  
+ Текстовый режим предоставляет специальной обработки для пар перевода каретки. При создании новой строки символов в текстовом режиме (0x0A) `CStdioFile` объект, пару байтов (0x0D, 0x0A) отправляется в файл. При чтении, пара байт (0x0D, 0x0A) преобразуется в один байт 0x0A.  
+  
+ [CFile](../../mfc/reference/cfile-class.md) функции [дублировать](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), и [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) не поддерживается для `CStdioFile`.  
+  
+ При вызове этих функций для `CStdioFile`, вы получите [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+  
+ Дополнительные сведения об использовании `CStdioFile`, см. в статьях [файлы в MFC](../../mfc/files-in-mfc.md) и [обработка файлов](../../c-runtime-library/file-handling.md) в *Справочник по библиотеке времени выполнения*.  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CFile](../../mfc/reference/cfile-class.md)  
+  
+ `CStdioFile`  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afx.h  
+  
+##  <a name="a-namecstdiofilea--cstdiofilecstdiofile"></a><a name="cstdiofile"></a>CStdioFile::CStdioFile  
+ Создает и инициализирует объект `CStdioFile`.  
+  
+```  
+CStdioFile();  
+CStdioFile(CAtlTransactionManager* pTM);  
+  CStdioFile(FILE* pOpenStream);
+
+ 
+CStdioFile(
+    LPCTSTR lpszFileName,  
+    UINT nOpenFlags);
+
+ 
+CStdioFile(
+    LPCTSTR lpszFileName,
+    UINT nOpenFlags,
+    CAtlTransactionManager* pTM);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `pOpenStream`  
+ Задает указатель файла, возвращенного вызовом функции времени выполнения C [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
+  
+ `lpszFileName`  
+ Указывает строку, которая представляет путь к нужному файлу. Путь может быть относительным или абсолютным.  
+  
+ `nOpenFlags`  
+ Задает параметры для создания файла, общий доступ к файлам и режима доступа к файлам. Можно указать несколько параметров с помощью побитового или ( `|`) оператор.  
+  
+ Один параметр режима доступа file является обязательным; другие режимы являются необязательными. В разделе [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) список параметров режима и другие флаги. В MFC 3.0 и более поздних версий допускаются флаги общего ресурса.  
+  
+ `pTM`  
+ Указатель на объект catltransactionmanager..  
+  
+### <a name="remarks"></a>Примечания  
+ Конструктор по умолчанию не присоединяет файл к `CStdioFile` объекта. При использовании этого конструктора, необходимо использовать `CStdioFile::Open` метод, чтобы открыть файл и присоединить его к `CStdioFile` объекта.  
+  
+ Присоединяет единственного параметра конструктора откройте файлового потока, чтобы `CStdioFile` объекта. Допустимые значения указателя — указатели стандартных файлов ввода вывода `stdin`, `stdout`, или `stderr`.  
+  
+ Два параметра конструктор создает `CStdioFile` объекта и открывает соответствующий файл с указанным путем.  
+  
+ Если передать `NULL` для любого `pOpenStream` или `lpszFileName`, конструктор вызывает `CInvalidArgException*`.  
+  
+ Если не удается открыть или создать файл, конструктор создает исключение `CFileException*`.  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCFiles&#37;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
+  
+##  <a name="a-namempstreama--cstdiofilempstream"></a><a name="m_pstream"></a>CStdioFile::m_pStream  
+ `m_pStream` Член данных — указатель на открытый файл, возвращенный функции времени выполнения C `fopen`.  
+  
+```  
+FILE* m_pStream;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Это **NULL** Если файл не был открыт или закрыт.  
+  
+##  <a name="a-nameopena--cstdiofileopen"></a><a name="open"></a>CStdioFile::Open  
+ Перегружен. Откройте предназначен для использования по умолчанию `CStdioFile` конструктор.  
+  
+```  
+virtual BOOL Open(
+    LPCTSTR lpszFileName,  
+    UINT nOpenFlags,  
+    CFileException* pError = NULL);
+
+ 
+virtual BOOL Open(
+    LPCTSTR lpszFileName,  
+    UINT nOpenFlags,  
+    CAtlTransactionManager* pTM,  
+    CFileException* pError = NULL);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpszFileName`  
+ Строка, представляющая путь к нужному файлу. Путь может быть относительным или абсолютным.  
+  
+ `nOpenFlags`  
+ Совместное использование и режимом доступа. Указывает действие, выполняемое при открытии файла. Параметры можно объединить с помощью оператора побитового или (|). Разрешение на доступ один параметр одной общей папки требуются и; режимы modeCreate и modeNoInherit являются необязательными.  
+  
+ `pError`  
+ Указатель на объект исключения файлов, получит состояние сбоя операции.  
+  
+ `pTM`  
+ Указатель на `CAtlTransactionManager` объект.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение `TRUE` в случае успешного выполнения; в противном случае — значение `FALSE`.  
+  
+### <a name="remarks"></a>Примечания  
+  
+##  <a name="a-namereadstringa--cstdiofilereadstring"></a><a name="readstring"></a>CStdioFile::ReadString  
+ Считывает текстовые данные в буфер, в пределах `nMax`–&1;, символы из файла, связанного с `CStdioFile` объекта.  
+  
+```  
+virtual LPTSTR ReadString(
+    LPTSTR lpsz,  
+    UINT nMax);  
+  
+virtual BOOL ReadString(CString& rString);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpsz`  
+ Задает указатель на пользовательские буфера, который будет принимать строку текста с символом null.  
+  
+ `nMax`  
+ Указывает максимальное число символов для чтения, не считая завершающий символ null.  
+  
+ `rString`  
+ Ссылку на `CString` объект, который будет содержать строку, когда функция возвращает значение.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на буфер, содержащий текстовые данные. **NULL** Если был достигнут конец файла не считывая все данные, или если логическое, **FALSE** Если был достигнут конец файла не считывая все данные.  
+  
+### <a name="remarks"></a>Примечания  
+ Чтение останавливается с первого символа. Если в этом случае меньше, чем `nMax`считаны символы –&1;, символ сохраняется в буфере. В любом случае добавляется символ null («\0»).  
+  
+ [CFile::Read](../../mfc/reference/cfile-class.md#read) также доступна для ввода в текстовом режиме, но не завершает работу на пару перевода каретки.  
+  
+> [!NOTE]
+>  `CString` Удаляет версия этой функции `'\n'` при его наличии; `LPTSTR` версии не должно.  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCFiles&#38;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
+  
+##  <a name="a-nameseeka--cstdiofileseek"></a><a name="seek"></a>CStdioFile::Seek  
+ Перемещает указатель в уже открытого файла.  
+  
+```  
+virtual ULONGLONG Seek(
+    LONGLONG lOff,  
+    UINT nFrom);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lOff`  
+ Число байтов для перемещения указателя.  
+  
+ `nFrom`  
+ Режим перемещения указателя. Должно быть одно из следующих значений:  
+  
+- `CFile::begin`: Перемещение указателя файла `lOff` байтов вперед от начала файла.  
+  
+- `CFile::current`: Перемещение указателя файла `lOff` байт, начиная с текущей позиции в файле.  
+  
+- `CFile::end`: Перемещение указателя файла `lOff` байт в конце файла. Обратите внимание, что `lOff` должен быть отрицательное для поиска в существующий файл; положительные значения выполнит поиск за концом файла.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Если допустимо запрошенной позиции, `Seek` возвращает новый смещение в байтах от начала файла. В противном случае — возвращаемое значение не определено и `CFileException` объекта создается исключение.  
+  
+### <a name="remarks"></a>Примечания  
+ `Seek` Функция позволяет произвольный доступ к содержимому файла, перемещая указатель указанного значения, имеет абсолютного или относительного. На самом деле нет данных считывается в процессе поиска. Если запрошенный позиция больше, чем размер файла, длина файла будет расширен в соответствующее положение и не создается исключение.  
+  
+ При открытии файла указатель файла помещается со смещением 0, в начало файла.  
+  
+ Эта реализация `Seek` основана на функции библиотеки времени выполнения (CRT) `fseek`. Существуют некоторые ограничения на использование `Seek` для потоков, открытых в текстовом режиме. Дополнительные сведения см. в разделе [fseek _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).  
+  
+### <a name="example"></a>Пример  
+ В следующем примере показано, как использовать `Seek` для перемещения указателя 1000 байтов от начала `cfile` файла. Обратите внимание, что `Seek` не поддерживает чтение данных, поэтому необходимо впоследствии вызвать [CStdioFile::ReadString](#readstring) для чтения данных.  
+  
+ [!code-cpp[NVC_MFCFiles&#39;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
+  
+##  <a name="a-namewritestringa--cstdiofilewritestring"></a><a name="writestring"></a>CStdioFile::WriteString  
+ Записывает данные из буфера для файла, связанного с `CStdioFile` объекта.  
+  
+```  
+virtual void WriteString(LPCTSTR lpsz);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `lpsz`  
+ Задает указатель на буфер, содержащий строку, завершающуюся значением null.  
+  
+### <a name="remarks"></a>Примечания  
+ Завершающий символ null ( `\0`) не записываются в файл. Этот метод записывает символы новой строки `lpsz` файл как пара возврата каретки.  
+  
+ Если вы хотите записывать данные, не является символом null в файл с помощью `CStdioFile::Write` или [CFile::Write](../../mfc/reference/cfile-class.md#write).  
+  
+ Этот метод создает исключение `CInvalidArgException*` при указании `NULL` для `lpsz` параметр.  
+  
+ Этот метод создает исключение `CFileException*` в ответ на системные ошибки.  
+  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCFiles&#40;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
+  
+## <a name="see-also"></a>См. также  
+ [CFile-класс](../../mfc/reference/cfile-class.md)   
+ [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+ [CFile-класс](../../mfc/reference/cfile-class.md)   
+ [CFile::Duplicate](../../mfc/reference/cfile-class.md#duplicate)   
+ [CFile::LockRange](../../mfc/reference/cfile-class.md#lockrange)   
+ [CFile::UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)   
+ [Класс CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)
+

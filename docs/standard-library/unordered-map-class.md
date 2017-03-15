@@ -1,0 +1,2773 @@
+---
+title: "Класс unordered_map | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unordered_map
+- std::unordered_map
+- unordered_map/std::unordered_map
+- std::unordered_map::allocator_type
+- unordered_map/std::unordered_map::allocator_type
+- std::unordered_map::const_iterator
+- unordered_map/std::unordered_map::const_iterator
+- std::unordered_map::const_local_iterator
+- unordered_map/std::unordered_map::const_local_iterator
+- std::unordered_map::const_pointer
+- unordered_map/std::unordered_map::const_pointer
+- std::unordered_map::const_reference
+- unordered_map/std::unordered_map::const_reference
+- std::unordered_map::difference_type
+- unordered_map/std::unordered_map::difference_type
+- std::unordered_map::hasher
+- unordered_map/std::unordered_map::hasher
+- std::unordered_map::iterator
+- unordered_map/std::unordered_map::iterator
+- std::unordered_map::key_equal
+- unordered_map/std::unordered_map::key_equal
+- std::unordered_map::key_type
+- unordered_map/std::unordered_map::key_type
+- std::unordered_map::local_iterator
+- unordered_map/std::unordered_map::local_iterator
+- std::unordered_map::mapped_type
+- unordered_map/std::unordered_map::mapped_type
+- std::unordered_map::pointer
+- unordered_map/std::unordered_map::pointer
+- std::unordered_map::reference
+- unordered_map/std::unordered_map::reference
+- std::unordered_map::size_type
+- unordered_map/std::unordered_map::size_type
+- std::unordered_map::value_type
+- unordered_map/std::unordered_map::value_type
+- std::unordered_map::at
+- unordered_map/std::unordered_map::at
+- std::unordered_map::begin
+- unordered_map/std::unordered_map::begin
+- std::unordered_map::bucket
+- unordered_map/std::unordered_map::bucket
+- std::unordered_map::bucket_count
+- unordered_map/std::unordered_map::bucket_count
+- std::unordered_map::bucket_size
+- unordered_map/std::unordered_map::bucket_size
+- std::unordered_map::cbegin
+- unordered_map/std::unordered_map::cbegin
+- std::unordered_map::cend
+- unordered_map/std::unordered_map::cend
+- std::unordered_map::clear
+- unordered_map/std::unordered_map::clear
+- std::unordered_map::count
+- unordered_map/std::unordered_map::count
+- std::unordered_map::emplace
+- unordered_map/std::unordered_map::emplace
+- std::unordered_map::emplace_hint
+- unordered_map/std::unordered_map::emplace_hint
+- std::unordered_map::empty
+- unordered_map/std::unordered_map::empty
+- std::unordered_map::end
+- unordered_map/std::unordered_map::end
+- std::unordered_map::equal_range
+- unordered_map/std::unordered_map::equal_range
+- std::unordered_map::erase
+- unordered_map/std::unordered_map::erase
+- std::unordered_map::find
+- unordered_map/std::unordered_map::find
+- std::unordered_map::get_allocator
+- unordered_map/std::unordered_map::get_allocator
+- std::unordered_map::hash_function
+- unordered_map/std::unordered_map::hash_function
+- std::unordered_map::insert
+- unordered_map/std::unordered_map::insert
+- std::unordered_map::key_eq
+- unordered_map/std::unordered_map::key_eq
+- std::unordered_map::load_factor
+- unordered_map/std::unordered_map::load_factor
+- std::unordered_map::max_bucket_count
+- unordered_map/std::unordered_map::max_bucket_count
+- std::unordered_map::max_load_factor
+- unordered_map/std::unordered_map::max_load_factor
+- std::unordered_map::max_size
+- unordered_map/std::unordered_map::max_size
+- std::unordered_map::rehash
+- unordered_map/std::unordered_map::rehash
+- std::unordered_map::size
+- unordered_map/std::unordered_map::size
+- std::unordered_map::swap
+- unordered_map/std::unordered_map::swap
+- std::unordered_map::unordered_map
+- unordered_map/std::unordered_map::unordered_map
+dev_langs:
+- C++
+helpviewer_keywords:
+- unordered_map class
+ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
+caps.latest.revision: 20
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 82ef90b457ea875cc9237ad4aae73202c13ad4ea
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="unorderedmap-class"></a>Класс unordered_map
+Этот шаблонный класс описывает объект, управляющий последовательностью элементов типа `std::pair<const Key, Ty>` переменной длины. Последовательность слабо упорядочена хэш-функцией, которая разделяет последовательность в упорядоченный набор подпоследовательностей, называемых блоками. В каждом блоке функция сравнения определяет, упорядочена ли каждая пара элементов соответствующим образом. Каждый элемент содержит два объекта: ключ и значение сортировки. Последовательность представляется в виде, позволяющем выполнять поиск, вставку и удаление произвольного элемента несколькими операциями, которые могут не зависеть от числа элементов в последовательности (постоянное время), по крайней мере, когда все блоки имеют примерно одинаковую длину. В худшем случае, когда все элементы находятся в одном блоке, количество операций пропорционально количеству элементов в последовательности (линейное время). Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+template <class Key,  
+    class Ty,  
+    class Hash = std::hash<Key>,  
+    class Pred = std::equal_to<Key>,  
+    class Alloc = std::allocator<std::pair<const Key, Ty>>>  
+class unordered_map;  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`Key`|Тип ключа.|  
+|`Ty`|Сопоставленный тип.|  
+|`Hash`|Тип объекта хэш-функции.|  
+|`Pred`|Тип объекта функции сравнения на предмет равенства.|  
+|`Alloc`|Класс распределителя.|  
+  
+## <a name="members"></a>Члены  
+  
+|||  
+|-|-|  
+|Определение типа|Описание|  
+|[unordered_map::allocator_type](#unordered_map__allocator_type)|Тип распределителя для управления хранилищем.|  
+|[unordered_map::const_iterator](#unordered_map__const_iterator)|Тип постоянного итератора для управляемой последовательности.|  
+|[unordered_map::const_local_iterator](#unordered_map__const_local_iterator)|Тип постоянного итератора блока для управляемой последовательности.|  
+|[unordered_map::const_pointer](#unordered_map__const_pointer)|Тип постоянного указателя на элемент.|  
+|[unordered_map::const_reference](#unordered_map__const_reference)|Тип постоянной ссылки на элемент.|  
+|[unordered_map::difference_type](#unordered_map__difference_type)|Тип расстояния со знаком между двумя элементами.|  
+|[unordered_map::hasher](#unordered_map__hasher)|Тип хэш-функции.|  
+|[unordered_map::iterator](#unordered_map__iterator)|Тип итератора для управляемой последовательности.|  
+|[unordered_map::key_equal](#unordered_map__key_equal)|Тип функции сравнения.|  
+|[unordered_map::key_type](#unordered_map__key_type)|Тип ключа упорядочения.|  
+|[unordered_map::local_iterator](#unordered_map__local_iterator)|Тип итератора блока для управляемой последовательности.|  
+|[unordered_map::mapped_type](#unordered_map__mapped_type)|Тип сопоставленного значения, связанного с каждым ключом.|  
+|[unordered_map::pointer](#unordered_map__pointer)|Тип указателя на элемент.|  
+|[unordered_map::reference](#unordered_map__reference)|Тип ссылки на элемент.|  
+|[unordered_map::size_type](#unordered_map__size_type)|Тип беззнакового расстояния между двумя элементами.|  
+|[unordered_map::value_type](#unordered_map__value_type)|Тип элемента.|  
+  
+|||  
+|-|-|  
+|Функция-член|Описание|  
+|[unordered_map::at](#unordered_map__at)|Поиск элемента с заданным ключом.|  
+|[unordered_map::begin](#unordered_map__begin)|Задает начало управляемой последовательности.|  
+|[unordered_map::bucket](#unordered_map__bucket)|Получает номер блока для значения ключа.|  
+|[unordered_map::bucket_count](#unordered_map__bucket_count)|Получает количество блоков.|  
+|[unordered_map::bucket_size](#unordered_map__bucket_size)|Получает размер блока.|  
+|[unordered_map::cbegin](#unordered_map__cbegin)|Задает начало управляемой последовательности.|  
+|[unordered_map::cend](#unordered_map__cend)|Задает конец управляемой последовательности.|  
+|[unordered_map::clear](#unordered_map__clear)|Удаляет все элементы.|  
+|[unordered_map::count](#unordered_map__count)|Определяет количество элементов, соответствующих заданному ключу.|  
+|[unordered_map::emplace](#unordered_map__emplace)|Добавляет элемент, созданный на месте.|  
+|[unordered_map::emplace_hint](#unordered_map__emplace_hint)|Добавляет элемент, созданный на месте, с подсказкой.|  
+|[unordered_map::empty](#unordered_map__empty)|Проверяет отсутствие элементов.|  
+|[unordered_map::end](#unordered_map__end)|Задает конец управляемой последовательности.|  
+|[unordered_map::equal_range](#unordered_map__equal_range)|Находит диапазон, соответствующий указанному ключу.|  
+|[unordered_map::erase](#unordered_map__erase)|Удаляет элементы в указанных позициях.|  
+|[unordered_map::find](#unordered_map__find)|Определяет элемент, соответствующий указанному ключу.|  
+|[unordered_map::get_allocator](#unordered_map__get_allocator)|Возвращает сохраненный объект распределителя.|  
+|[unordered_map::hash_function](#unordered_map__hash_function)|Получает сохраненный объект хэш-функции.|  
+|[unordered_map::insert](#unordered_map__insert)|Добавляет элементы.|  
+|[unordered_map::key_eq](#unordered_map__key_eq)|Получает сохраненный объект функции сравнения.|  
+|[unordered_map::load_factor](#unordered_map__load_factor)|Подсчитывает среднее число элементов в блоке.|  
+|[unordered_map::max_bucket_count](#unordered_map__max_bucket_count)|Получает максимальное количество блоков.|  
+|[unordered_map::max_load_factor](#unordered_map__max_load_factor)|Возвращает или задает максимальное количество элементов в блоке.|  
+|[unordered_map::max_size](#unordered_map__max_size)|Возвращает максимальный размер управляемой последовательности.|  
+|[unordered_map::rehash](#unordered_map__rehash)|Повторно создает хэш-таблицу.|  
+|[unordered_map::size](#unordered_map__size)|Подсчитывает количество элементов.|  
+|[unordered_map::swap](#unordered_map__swap)|Меняет местами содержимое двух контейнеров.|  
+|[unordered_map::unordered_map](#unordered_map__unordered_map)|Создает объект контейнера.|  
+  
+|||  
+|-|-|  
+|Оператор|Описание|  
+|[unordered_map::operator[]](#unordered_map__operator_at)|Находит или вставляет элемент с указанным ключом.|  
+|[unordered_map::operator=](#unordered_map__operator_eq)|Копирует хэш-таблицу.|  
+  
+## <a name="remarks"></a>Примечания  
+ Объект упорядочивает управляемую им последовательность путем вызова двух сохраненных объектов, объекта функции сравнения типа [unordered_map::key_equal](#unordered_map__key_equal) и объекта хэш-функции типа [unordered_map::hasher](#unordered_map__hasher). Доступ к первому сохраненному объекту можно получить, вызвав функцию-член [unordered_map::key_eq](#unordered_map__key_eq)`()`; доступ ко второму сохраненному объекту выполняется путем вызова функции-члена [unordered_map::hash_function](#unordered_map__hash_function)`()`. В частности, для всех значений `X` и `Y` типа `Key` вызов `key_eq()(X, Y)` возвращает значение true, только если два значения аргументов имеют соответствующий порядок; вызов `hash_function()(keyval)` создает распределение значений типа `size_t`. В отличие от класса шаблона [unordered_map](../standard-library/unordered-multimap-class.md) объект класса шаблона `unordered_map` гарантирует, что `key_eq()(X, Y)` всегда имеет значение false для любых двух элементов управляемой последовательности. (Ключи уникальны).  
+  
+ Объект также хранит максимальный коэффициент нагрузки, который определяет максимальное желаемое среднее количество элементов в блоке. Если вставка элемента приводит к тому, что значение [unordered_map::load_factor](#unordered_map__load_factor)`()` превышает максимальный коэффициент нагрузки, контейнер увеличивает количество блоков и перестраивает хэш-таблицу по мере необходимости.  
+  
+ Фактический порядок элементов в управляемой последовательности зависит от хэш-функции, функции сравнения, порядка вставки, максимального коэффициента нагрузки и текущего числа блоков. Обычно невозможно предсказать порядок элементов в управляемой последовательности. Однако всегда можно сохранять уверенность, что любое подмножество элементов, имеющих соответствующий порядок, будет расположено по соседству в управляемой последовательности.  
+  
+ Объект выделяет и освобождает хранилище для управляемой им последовательности с помощью сохраненного объекта распределителя типа [unordered_map::allocator_type](#unordered_map__allocator_type). Такой объект распределителя должен иметь такой же внешний интерфейс, как объект шаблонного класса `allocator`. Обратите внимание, что сохраненный объект распределителя не копируется, когда назначается объект контейнера.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<unordered_map>  
+  
+ **Пространство имен:** std  
+  
+##  <a name="a-nameunorderedmapallocatortypea--unorderedmapallocatortype"></a><a name="unordered_map__allocator_type"></a>  unordered_map::allocator_type  
+ Тип распределителя для управления хранилищем.  
+  
+```  
+typedef Alloc allocator_type;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Alloc`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_allocator_type.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+typedef std::allocator<std::pair<const char, int> > Myalloc;
+int main()
+{
+    Mymap c1;
+
+    Mymap::allocator_type al = c1.get_allocator();
+    std::cout << "al == std::allocator() is "
+        << std::boolalpha << (al == Myalloc()) << std::endl;
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+al == std::allocator() is true  
+```  
+  
+##  <a name="a-nameunorderedmapata--unorderedmapat"></a><a name="unordered_map__at"></a>  unordered_map::at  
+ Находит элемент в unordered_map с указанным значением ключа.  
+  
+```  
+Ty& at(const Key& key);
+const Ty& at(const Key& key) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|` key`|Значение ключа, которое необходимо найти.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ссылка на значение данных найденного элемента.  
+  
+### <a name="remarks"></a>Примечания  
+ Если значение ключа аргумента не найдено, функция создает объект класса `out_of_range`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// unordered_map_at.cpp  
+// compile with: /EHsc  
+#include <unordered_map>  
+#include <iostream>  
+  
+typedef std::unordered_map<char, int> Mymap;   
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // find and show elements  
+    std::cout << "c1.at('a') == " << c1.at('a') << std::endl;
+    std::cout << "c1.at('b') == " << c1.at('b') << std::endl;
+    std::cout << "c1.at('c') == " << c1.at('c') << std::endl;
+
+    return (0);
+}  
+```  
+  
+##  <a name="a-nameunorderedmapbegina--unorderedmapbegin"></a><a name="unordered_map__begin"></a>  unordered_map::begin  
+ Задает начало управляемой последовательности или сегмента.  
+  
+```  
+iterator begin();
+const_iterator begin() const; 
+local_iterator begin(size_type nbucket);
+const_local_iterator begin(size_type nbucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`nbucket`|Номер сегмента.|  
+  
+### <a name="remarks"></a>Примечания  
+ Первые две функции-члены возвращают прямой итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности). Последние две функции-члены возвращают прямой итератор, указывающий на первый элемент сегмента `nbucket` (или на место сразу за концом пустого сегмента).  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_begin.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+#typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // inspect first two items " [c 3] [b 2]"   
+    Mymap::iterator it2 = c1.begin();
+    std::cout << " [" << it2->first << ", " << it2->second << "]";
+    ++it2;
+    std::cout << " [" << it2->first << ", " << it2->second << "]";
+    std::cout << std::endl;
+
+    // inspect bucket containing 'a'   
+    Mymap::const_local_iterator lit = c1.begin(c1.bucket('a'));
+    std::cout << " [" << lit->first << ", " << lit->second << "]";
+
+    return (0);
+}
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[c, 3] [b, 2]  
+[a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapbucketa--unorderedmapbucket"></a><a name="unordered_map__bucket"></a>  unordered_map::bucket  
+ Получает номер блока для значения ключа.  
+  
+```  
+size_type bucket(const Key& keyval) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `keyval`  
+ Значение ключа для сопоставления.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает номер контейнера, который в настоящий момент соответствует значению ключа `keyval`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_bucket.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // display buckets for keys   
+    Mymap::size_type bs = c1.bucket('a');
+    std::cout << "bucket('a') == " << bs << std::endl;
+    std::cout << "bucket_size(" << bs << ") == " << c1.bucket_size(bs)
+        << std::endl;
+
+    return (0);
+}
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+bucket('a') == 7  
+bucket_size(7) == 1  
+```  
+  
+##  <a name="a-nameunorderedmapbucketcounta--unorderedmapbucketcount"></a><a name="unordered_map__bucket_count"></a>  unordered_map::bucket_count  
+ Получает количество блоков.  
+  
+```  
+size_type bucket_count() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает текущее число блоков.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_bucket_count.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // inspect current parameters   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;
+    std::cout << "max_bucket_count() == "
+        << c1.max_bucket_count() << std::endl;
+    std::cout << "max_load_factor() == "
+        << c1.max_load_factor() << std::endl;
+    std::cout << std::endl;
+
+    // change max_load_factor and redisplay   
+    c1.max_load_factor(0.10f);
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;
+    std::cout << "max_bucket_count() == "
+        << c1.max_bucket_count() << std::endl;
+    std::cout << "max_load_factor() == "
+        << c1.max_load_factor() << std::endl;
+    std::cout << std::endl;
+
+    // rehash and redisplay   
+    c1.rehash(100);
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;
+    std::cout << "max_bucket_count() == "
+        << c1.max_bucket_count() << std::endl;
+    std::cout << "max_load_factor() == "
+        << c1.max_load_factor() << std::endl;
+    std::cout << std::endl;
+
+    return (0);
+}
+
+```
+
+```Output
+[c, 3][b, 2][a, 1]
+bucket_count() == 8
+load_factor() == 0.375
+max_bucket_count() == 8
+max_load_factor() == 4
+
+bucket_count() == 8
+load_factor() == 0.375
+max_bucket_count() == 8
+max_load_factor() == 0.1
+
+bucket_count() == 128
+load_factor() == 0.0234375
+max_bucket_count() == 128
+max_load_factor() == 0.1
+
+```  
+  
+##  <a name="a-nameunorderedmapbucketsizea--unorderedmapbucketsize"></a><a name="unordered_map__bucket_size"></a>  unordered_map::bucket_size  
+ Получает размер сегмента.  
+  
+```  
+size_type bucket_size(size_type nbucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nbucket`  
+ Номер сегмента.  
+  
+### <a name="remarks"></a>Примечания  
+ Функции-члены возвращают размер номера сегмента `nbucket`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_bucket_size.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // display buckets for keys   
+    Mymap::size_type bs = c1.bucket('a');
+    std::cout << "bucket('a') == " << bs << std::endl;
+    std::cout << "bucket_size(" << bs << ") == " << c1.bucket_size(bs)
+        << std::endl;
+
+    return (0);
+}
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+bucket('a') == 7  
+bucket_size(7) == 1  
+```  
+  
+##  <a name="a-nameunorderedmapcbegina--unorderedmapcbegin"></a><a name="unordered_map__cbegin"></a>  unordered_map::cbegin  
+ Возвращает итератор `const`, направленный на первый элемент в диапазоне.  
+  
+```  
+const_iterator cbegin() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор прямого доступа `const`, который указывает на первый элемент диапазона или расположение прямо за концом пустого диапазона (`cbegin() == cend()` для пустого диапазона).  
+  
+### <a name="remarks"></a>Примечания  
+ Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.  
+  
+ Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `begin()` и `cbegin()`.  
+  
+```cpp  
+auto i1 = Container.begin();
+// i1 is Container<T>::iterator   
+auto i2 = Container.cbegin();
+
+// i2 is Container<T>::const_iterator  
+```  
+  
+##  <a name="a-nameunorderedmapcenda--unorderedmapcend"></a><a name="unordered_map__cend"></a>  unordered_map::cend  
+ Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
+  
+```  
+const_iterator cend() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор `const` прямого доступа, который указывает на позицию сразу за концом диапазона.  
+  
+### <a name="remarks"></a>Примечания  
+ `cend` используется для проверки того, прошел ли итератор конец диапазона.  
+  
+ Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `end()` и `cend()`.  
+  
+```cpp  
+auto i1 = Container.end();
+// i1 is Container<T>::iterator   
+auto i2 = Container.cend();
+// i2 is Container<T>::const_iterator  
+```  
+  
+ Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
+  
+##  <a name="a-nameunorderedmapcleara--unorderedmapclear"></a><a name="unordered_map__clear"></a>  unordered_map::clear  
+ Удаляет все элементы.  
+  
+```  
+void clear();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член вызывает [unordered_map::erase](#unordered_map__erase)`(` [unordered_map::begin](#unordered_map__begin)`(),` [unordered_map::end](#unordered_map__end)`())`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_clear.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // clear the container and reinspect   
+    c1.clear();
+    std::cout << "size == " << c1.size() << std::endl;
+    std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
+    std::cout << std::endl;
+
+    c1.insert(Mymap::value_type('d', 4));
+    c1.insert(Mymap::value_type('e', 5));
+
+    // display contents " [e 5] [d 4]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    std::cout << "size == " << c1.size() << std::endl;
+    std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+size == 0  
+empty() == true  
+  
+ [e, 5] [d, 4]  
+size == 2  
+empty() == false  
+```  
+  
+##  <a name="a-nameunorderedmapconstiteratora--unorderedmapconstiterator"></a><a name="unordered_map__const_iterator"></a>  unordered_map::const_iterator  
+ Тип постоянного итератора для управляемой последовательности.  
+  
+```  
+typedef T1 const_iterator;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип описывает объект, который можно использовать в качестве постоянного прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа `T1`, определяемого реализацией.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_const_iterator.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapconstlocaliteratora--unorderedmapconstlocaliterator"></a><a name="unordered_map__const_local_iterator"></a>  unordered_map::const_local_iterator  
+ Тип постоянного итератора блока для управляемой последовательности.  
+  
+```  
+typedef T5 const_local_iterator;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип описывает объект, который можно использовать в качестве постоянного прямого итератора для блока. Он описан здесь как синоним для типа `T5`, определяемого реализацией.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_const_local_iterator.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // inspect bucket containing 'a'   
+    Mymap::const_local_iterator lit = c1.begin(c1.bucket('a'));
+    std::cout << " [" << lit->first << ", " << lit->second << "]";
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapconstpointera--unorderedmapconstpointer"></a><a name="unordered_map__const_pointer"></a>  unordered_map::const_pointer  
+ Тип постоянного указателя на элемент.  
+  
+```  
+typedef Alloc::const_pointer const_pointer;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип описывает объект, который можно использовать в качестве постоянного указателя на элемент управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_const_pointer.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::iterator it = c1.begin();
+        it != c1.end(); ++it)
+    {
+        Mymap::const_pointer p = &*it;
+        std::cout << " [" << p->first << ", " << p->second << "]";
+    }
+    std::cout << std::endl;
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapconstreferencea--unorderedmapconstreference"></a><a name="unordered_map__const_reference"></a>  unordered_map::const_reference  
+ Тип постоянной ссылки на элемент.  
+  
+```  
+typedef Alloc::const_reference const_reference;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_const_reference.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::iterator it = c1.begin();
+        it != c1.end(); ++it)
+    {
+        Mymap::const_reference ref = *it;
+        std::cout << " [" << ref.first << ", " << ref.second << "]";
+    }
+    std::cout << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapcounta--unorderedmapcount"></a><a name="unordered_map__count"></a>  unordered_map::count  
+ Определяет количество элементов, соответствующих заданному ключу.  
+  
+```  
+size_type count(const Key& keyval) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `keyval`  
+ Искомое значение ключа.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает число элементов в диапазоне, ограниченном [unordered_map::equal_range](#unordered_map__equal_range)`(keyval)`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_count.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    std::cout << "count('A') == " << c1.count('A') << std::endl;
+    std::cout << "count('b') == " << c1.count('b') << std::endl;
+    std::cout << "count('C') == " << c1.count('C') << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+count('A') == 0  
+count('b') == 1  
+count('C') == 0  
+```  
+  
+##  <a name="a-nameunorderedmapdifferencetypea--unorderedmapdifferencetype"></a><a name="unordered_map__difference_type"></a>  unordered_map::difference_type  
+ Тип расстояния со знаком между двумя элементами.  
+  
+```  
+typedef T3 difference_type;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип целого числа со знаком описывает объект, который может представлять разницу между адресами любых двух элементов в управляемой последовательности. Он описан здесь как синоним для типа `T3`, определяемого реализацией.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_difference_type.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // compute positive difference   
+    Mymap::difference_type diff = 0;
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        ++diff;
+    std::cout << "end()-begin() == " << diff << std::endl;
+
+    // compute negative difference   
+    diff = 0;
+    for (Mymap::const_iterator it = c1.end();
+        it != c1.begin(); --it)
+        --diff;
+    std::cout << "begin()-end() == " << diff << std::endl;
+
+    return (0);
+}
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+end()-begin() == 3  
+begin()-end() == -3  
+```  
+  
+##  <a name="a-nameunorderedmapemplacea--unorderedmapemplace"></a><a name="unordered_map__emplace"></a>  unordered_map::emplace  
+ Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) в объекте unordered_map.  
+  
+```  
+template <class... Args>  
+pair<iterator, bool>  emplace( Args&&... args);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`args`|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Объект `pair`, компонент `bool` которого возвращает значение true, если была осуществлена вставка, и false, если `unordered_map` уже содержал элемент, ключ которого имел эквивалентное значение порядка, и компонент итератора которого возвращает адрес нового вставленного элемента или адрес местонахождения элемента, если он уже существовал.  
+  
+ Для доступа к компоненту итератора пары `pr`, возвращенной этой функцией-членом, используйте `pr.first` и разыменуйте ее с помощью `*(pr.first)`. Для доступа к компоненту `bool` пары `pr`, возвращенной этой функцией-членом, используйте `pr.second`.  
+  
+### <a name="remarks"></a>Примечания  
+ Эта функция не делает недействительными итераторы, указатели или ссылки.  
+  
+ Если во время вставки возникает исключение, но оно произошло не в хэш-функции контейнера, контейнер не изменяется. Если исключение вызывается в хэш-функции, результат не определен.  
+  
+ Пример кода см. в разделе [map::emplace](../standard-library/map-class.md#map__emplace).  
+  
+##  <a name="a-nameunorderedmapemplacehinta--unorderedmapemplacehint"></a><a name="unordered_map__emplace_hint"></a>  unordered_map::emplace_hint  
+ Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.  
+  
+```  
+template <class... Args>  
+iterator emplace_hint(const_iterator where, Args&&... args);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`args`|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если объект unordered_map не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|  
+|`where`|Подсказка о месте начала поиска правильной точки вставки.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Итератор на вставленный элемент.  
+  
+ Если не удалось вставить элемент, так как он уже существует, возвращается итератор на существующий элемент.  
+  
+### <a name="remarks"></a>Примечания  
+ Эта функция не делает ссылки недействительными.  
+  
+ Если во время вставки возникает исключение, но оно произошло не в хэш-функции контейнера, контейнер не изменяется. Если исключение вызывается в хэш-функции, результат не определен.  
+  
+ Значение [value_type](../standard-library/map-class.md#map__value_type) элемента — это пара. Таким образом, значение элемента будет упорядоченной парой, в которой первый компонент равен значению ключа, а второй компонент — значению данных элемента.  
+  
+ Пример кода см. в разделе [map::emplace_hint](../standard-library/map-class.md#map__emplace_hint).  
+  
+##  <a name="a-nameunorderedmapemptya--unorderedmapempty"></a><a name="unordered_map__empty"></a>  unordered_map::empty  
+ Проверяет отсутствие элементов.  
+  
+```  
+bool empty() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Эта функция-член возвращает значение true для пустой управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_empty.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // clear the container and reinspect   
+    c1.clear();
+    std::cout << "size == " << c1.size() << std::endl;
+    std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
+    std::cout << std::endl;
+
+    c1.insert(Mymap::value_type('d', 4));
+    c1.insert(Mymap::value_type('e', 5));
+
+    // display contents " [e 5] [d 4]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    std::cout << "size == " << c1.size() << std::endl;
+    std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
+
+    return (0);
+}
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+size == 0  
+empty() == true  
+  
+ [e, 5] [d, 4]  
+size == 2  
+empty() == false  
+```  
+  
+##  <a name="a-nameunorderedmapenda--unorderedmapend"></a><a name="unordered_map__end"></a>  unordered_map::end  
+ Задает конец управляемой последовательности.  
+  
+```  
+iterator end();
+const_iterator end() const; 
+local_iterator end(size_type nbucket);
+const_local_iterator end(size_type nbucket) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`nbucket`|Номер сегмента.|  
+  
+### <a name="remarks"></a>Примечания  
+ Первые две функции-члены возвращают прямой итератор, указывающий на место сразу за концом последовательности. Последние две функции-члены возвращают прямой итератор, указывающий на место сразу за концом сегмента `nbucket`.  
+  
+##  <a name="a-nameunorderedmapequalrangea--unorderedmapequalrange"></a><a name="unordered_map__equal_range"></a>  unordered_map::equal_range  
+ Находит диапазон, соответствующий указанному ключу.  
+  
+```  
+std::pair<iterator, iterator>  equal_range(const Key& keyval);
+std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `keyval`  
+ Искомое значение ключа.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает пару итераторов `X` , таких, что `[X.first, X.second)` отделяет только те элементы управляемой последовательности, которые имеют эквивалентное упорядочение с `keyval`. Если таких элементов не существует, оба итератора имеют значение `end()`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_equal_range.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // display results of failed search   
+    std::pair<Mymap::iterator, Mymap::iterator> pair1 =
+        c1.equal_range('x');
+    std::cout << "equal_range('x'):";
+    for (; pair1.first != pair1.second; ++pair1.first)
+        std::cout << " [" << pair1.first->first
+        << ", " << pair1.first->second << "]";
+    std::cout << std::endl;
+
+    // display results of successful search   
+    pair1 = c1.equal_range('b');
+    std::cout << "equal_range('b'):";
+    for (; pair1.first != pair1.second; ++pair1.first)
+        std::cout << " [" << pair1.first->first
+        << ", " << pair1.first->second << "]";
+    std::cout << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+equal_range('x'):  
+equal_range('b'): [b, 2]  
+```  
+  
+##  <a name="a-nameunorderedmaperasea--unorderedmaperase"></a><a name="unordered_map__erase"></a>  unordered_map::erase  
+ Удаляет элемент или диапазон элементов в объекте unordered_map с заданных позиций или удаляет элементы, соответствующие заданному ключу.  
+  
+```  
+iterator erase(const_iterator Where);
+iterator erase(const_iterator First, const_iterator Last);
+size_type erase(const key_type& Key);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `Where`  
+ Положение удаляемого элемента.  
+  
+ `First`  
+ Положение первого удаляемого элемента.  
+  
+ `Last`  
+ Положение перед последним удаляемым элементом.  
+  
+ `Key`  
+ Значение ключа удаляемых элементов.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Для первых двух функций-членов двунаправленный итератор, указывающий на первый элемент, оставшийся после удаления элементов, или на последний элемент сопоставления, если такого элемента не существует.  
+  
+ Для третьей функции-члена возвращает число элементов, которые были удалены из объекта unordered_map.  
+  
+### <a name="remarks"></a>Примечания  
+ Пример кода см. в разделе [map::erase](../standard-library/map-class.md#map__erase).  
+  
+##  <a name="a-nameunorderedmapfinda--unorderedmapfind"></a><a name="unordered_map__find"></a>  unordered_map::find  
+ Определяет элемент, соответствующий указанному ключу.  
+  
+```  
+const_iterator find(const Key& keyval) const;
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `keyval`  
+ Искомое значение ключа.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает [unordered_map::equal_range](#unordered_map__equal_range)`(keyval).first`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_find.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // try to find and fail   
+    std::cout << "find('A') == "
+        << std::boolalpha << (c1.find('A') != c1.end()) << std::endl;
+
+    // try to find and succeed   
+    Mymap::iterator it = c1.find('b');
+    std::cout << "find('b') == "
+        << std::boolalpha << (it != c1.end())
+        << ": [" << it->first << ", " << it->second << "]" << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+find('A') == false  
+find('b') == true: [b, 2]  
+```  
+  
+##  <a name="a-nameunorderedmapgetallocatora--unorderedmapgetallocator"></a><a name="unordered_map__get_allocator"></a>  unordered_map::get_allocator  
+ Возвращает сохраненный объект распределителя.  
+  
+```  
+Alloc get_allocator() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает сохраненный объект распределителя.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_get_allocator.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+typedef std::allocator<std::pair<const char, int> > Myalloc;
+int main()
+{
+    Mymap c1;
+
+    Mymap::allocator_type al = c1.get_allocator();
+    std::cout << "al == std::allocator() is "
+        << std::boolalpha << (al == Myalloc()) << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+al == std::allocator() is true  
+```  
+  
+##  <a name="a-nameunorderedmaphashfunctiona--unorderedmaphashfunction"></a><a name="unordered_map__hash_function"></a>  unordered_map::hash_function  
+ Получает сохраненный объект хэш-функции.  
+  
+```  
+Hash hash_function() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает сохраненный объект хэш-функции.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_hash_function.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    Mymap::hasher hfn = c1.hash_function();
+    std::cout << "hfn('a') == " << hfn('a') << std::endl;
+    std::cout << "hfn('b') == " << hfn('b') << std::endl;
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+hfn('a') == 1630279  
+hfn('b') == 1647086  
+```  
+  
+##  <a name="a-nameunorderedmaphashera--unorderedmaphasher"></a><a name="unordered_map__hasher"></a>  unordered_map::hasher  
+ Тип хэш-функции.  
+  
+```  
+typedef Hash hasher;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Hash`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_hasher.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    Mymap::hasher hfn = c1.hash_function();
+    std::cout << "hfn('a') == " << hfn('a') << std::endl;
+    std::cout << "hfn('b') == " << hfn('b') << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+hfn('a') == 1630279  
+hfn('b') == 1647086  
+```  
+  
+##  <a name="a-nameunorderedmapinserta--unorderedmapinsert"></a><a name="unordered_map__insert"></a>  unordered_map::insert  
+ Вставляет элемент или диапазон элементов в unordered_map.  
+  
+```  
+// (1) single element  
+pair<iterator, bool> insert(    const value_type& Val);
+
+ 
+// (2) single element, perfect forwarded  
+template <class ValTy>  
+pair<iterator, bool>  
+insert(    ValTy&& Val);
+
+ 
+// (3) single element with hint  
+iterator insert(    const_iterator Where,  
+    const value_type& Val);
+
+ 
+// (4) single element, perfect forwarded, with hint  
+template <class ValTy>  
+iterator insert(    const_iterator Where,  
+    ValTy&& Val);
+
+ 
+// (5) range   
+template <class InputIterator>   
+void insert(InputIterator First,  
+    InputIterator Last);
+
+ 
+// (6) initializer list  
+void insert(initializer_list<value_type>  
+IList);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`Val`|Значение элемента, вставляемого в unordered_map, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.|  
+|`Where`|Место начала поиска правильной точки вставки.|  
+|`ValTy`|Параметр шаблона, определяющий тип аргумента, с помощью которого unordered_map формирует элемент типа [value_type](../standard-library/map-class.md#map__value_type) и точно пересылает `Val` как аргумент.|  
+|`First`|Позиция первого элемента, который следует скопировать.|  
+|`Last`|Позиция непосредственно перед последним элементом, который следует скопировать.|  
+|`InputIterator`|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#map__value_type).|  
+|`IList`|[initializer_list](../standard-library/initializer-list.md), из которого нужно скопировать элементы.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Одноэлементные функции-члены (1) и (2) возвращают [пару](../standard-library/pair-structure.md), компонент `bool` которой имеет значение true, если была выполнена вставка, и значение false, если объект unordered_map уже содержал элемент с эквивалентным порядковым значением ключа. Компонент итератора пары возвращаемых значений указывает на вставленный элемент, если значение компонента `bool` равно true, или на существующий элемент, если значение компонента `bool` равно false.  
+  
+ Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, который указывает на позицию, где новый элемент был вставлен, или, если элемент с эквивалентным ключом уже существует, указывает на существующий элемент.  
+  
+### <a name="remarks"></a>Примечания  
+ Эта функция не делает никакие итераторы, указатели или ссылки недействительными.  
+  
+ Если исключение вызывается во время вставки одного элемента, но оно не вызывается в хэш-функции контейнера, состояние контейнера не изменяется. Если исключение вызывается в хэш-функции, результат не определен. Если во время вставки нескольких элементов вызывается исключение, контейнер остается в неопределенном, но допустимом состоянии.  
+  
+ Для доступа к компоненту итератора `pair``pr`, возвращаемого одноэлементными функциями-членами, используйте `pr.first`. Для разыменования итератора в возвращенной паре используйте `*pr.first` (эта функция возвращает сам элемент). Для доступа к компоненту `bool` используйте `pr.second`. См. пример кода далее в этой статье.  
+  
+ [value_type](../standard-library/map-class.md#map__value_type) контейнера — это определение типа, который принадлежит контейнеру. Для сопоставления `map<K, V>::value_type` — это `pair<const K, V>`. Значение элемента — это упорядоченная пара, в которой первый компонент эквивалентен значению ключа, а второй компонент — значению данных элемента.  
+  
+ Функция-член с диапазоном (5) вставляет последовательность значений элементов в unordered_map, соответствующее каждому элементу, адресованному итератором в диапазоне `[First, Last)`. Следовательно, `Last` не вставляется. Контейнер функции-члена `end()` ссылается на позицию сразу после последнего элемента в контейнере. Например, оператор `m.insert(v.begin(), v.end());` пытается вставить все элементы `v` в `m`. Вставляются только элементы с уникальными значениями в диапазоне. Повторяющиеся значения игнорируются. Чтобы увидеть, какие элементы отклонены, используйте одноэлементные версии `insert`.  
+  
+ Функция — член списка инициализаторов (6) использует [initializer_list](../standard-library/initializer-list.md) для копирования элементов в объект unordered_map.  
+  
+ Сведения о вставке элемента, созданного на месте (т. е. без выполнения операций копирования или перемещения), см. в описании функций [unordered_map::emplace](#unordered_map__emplace) и [unordered_map::emplace_hint](#unordered_map__emplace_hint).  
+  
+ Пример кода см. в разделе [map::insert](../standard-library/map-class.md#map__insert).  
+  
+##  <a name="a-nameunorderedmapiteratora--unorderedmapiterator"></a><a name="unordered_map__iterator"></a>  unordered_map::iterator  
+ Тип итератора для управляемой последовательности.  
+  
+```  
+typedef T0 iterator;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип описывает объект, который можно использовать в качестве прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа `T0`, определяемого реализацией.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_iterator.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapkeyeqa--unorderedmapkeyeq"></a><a name="unordered_map__key_eq"></a>  unordered_map::key_eq  
+ Получает сохраненный объект функции сравнения.  
+  
+```  
+Pred key_eq() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает сохраненный объект функции сравнения.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_key_eq.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    Mymap::key_equal cmpfn = c1.key_eq();   
+    std::cout << "cmpfn('a', 'a') == "   
+        << std::boolalpha << cmpfn('a', 'a') << std::endl;   
+    std::cout << "cmpfn('a', 'b') == "   
+        << std::boolalpha << cmpfn('a', 'b') << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+cmpfn('a', 'a') == true  
+cmpfn('a', 'b') == false  
+```  
+  
+##  <a name="a-nameunorderedmapkeyequala--unorderedmapkeyequal"></a><a name="unordered_map__key_equal"></a>  unordered_map::key_equal  
+ Тип функции сравнения.  
+  
+```  
+typedef Pred key_equal;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Pred`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_key_equal.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    Mymap::key_equal cmpfn = c1.key_eq();   
+    std::cout << "cmpfn('a', 'a') == "   
+        << std::boolalpha << cmpfn('a', 'a') << std::endl;   
+    std::cout << "cmpfn('a', 'b') == "   
+        << std::boolalpha << cmpfn('a', 'b') << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+cmpfn('a', 'a') == true  
+cmpfn('a', 'b') == false  
+```  
+  
+##  <a name="a-nameunorderedmapkeytypea--unorderedmapkeytype"></a><a name="unordered_map__key_type"></a>  unordered_map::key_type  
+ Тип ключа упорядочения.  
+  
+```  
+typedef Key key_type;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Key`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_key_type.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// add a value and reinspect   
+    Mymap::key_type key = 'd';   
+    Mymap::mapped_type mapped = 4;   
+    Mymap::value_type val = Mymap::value_type(key, mapped);   
+    c1.insert(val);   
+  
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[d, 4] [c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmaploadfactora--unorderedmaploadfactor"></a><a name="unordered_map__load_factor"></a>  unordered_map::load_factor  
+ Подсчитывает среднее число элементов в блоке.  
+  
+```  
+float load_factor() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает `(float)` [unordered_map::size](#unordered_map__size)`() / (float)`[unordered_map::bucket_count](#unordered_map__bucket_count)`()`, среднее количество элементов на сегмент.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_load_factor.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// inspect current parameters   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.10f);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_bucket_count() == 8  
+max_load_factor() == 4  
+  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_bucket_count() == 8  
+max_load_factor() == 0.1  
+  
+bucket_count() == 128  
+load_factor() == 0.0234375  
+max_bucket_count() == 128  
+max_load_factor() == 0.1  
+  
+```  
+  
+##  <a name="a-nameunorderedmaplocaliteratora--unorderedmaplocaliterator"></a><a name="unordered_map__local_iterator"></a>  unordered_map::local_iterator  
+ Тип итератора контейнера.  
+  
+```  
+typedef T4 local_iterator;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип описывает объект, который можно использовать в качестве прямого итератора для контейнера. Он описан здесь как синоним для типа `T4`, определяемого реализацией.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_local_iterator.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// inspect bucket containing 'a'   
+    Mymap::local_iterator lit = c1.begin(c1.bucket('a'));   
+    std::cout << " [" << lit->first << ", " << lit->second << "]";   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapmappedtypea--unorderedmapmappedtype"></a><a name="unordered_map__mapped_type"></a>  unordered_map::mapped_type  
+ Тип сопоставленного значения, связанного с каждым ключом.  
+  
+```  
+typedef Ty mapped_type;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Ty`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_mapped_type.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// add a value and reinspect   
+    Mymap::key_type key = 'd';   
+    Mymap::mapped_type mapped = 4;   
+    Mymap::value_type val = Mymap::value_type(key, mapped);   
+    c1.insert(val);   
+  
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[d, 4] [c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapmaxbucketcounta--unorderedmapmaxbucketcount"></a><a name="unordered_map__max_bucket_count"></a>  unordered_map::max_bucket_count  
+ Получает максимальное количество блоков.  
+  
+```  
+size_type max_bucket_count() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает максимальное количество блоков, которое разрешено в настоящее время.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_max_bucket_count.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// inspect current parameters   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.10f);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_bucket_count() == 8  
+max_load_factor() == 4  
+  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_bucket_count() == 8  
+max_load_factor() == 0.1  
+  
+bucket_count() == 128  
+load_factor() == 0.0234375  
+max_bucket_count() == 128  
+max_load_factor() == 0.1  
+  
+```  
+  
+##  <a name="a-nameunorderedmapmaxloadfactora--unorderedmapmaxloadfactor"></a><a name="unordered_map__max_load_factor"></a>  unordered_map::max_load_factor  
+ Возвращает или задает максимальное количество элементов в блоке.  
+  
+```  
+float max_load_factor() const;
+
+ 
+void max_load_factor(float factor);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `factor`  
+ Новый коэффициент максимальной нагрузки.  
+  
+### <a name="remarks"></a>Примечания  
+ Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция-член заменяет сохраненный коэффициент максимальной нагрузки `factor`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_max_load_factor.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// inspect current parameters   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.10f);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_bucket_count() == "   
+        << c1.max_bucket_count() << std::endl;   
+    std::cout << "max_load_factor() == "   
+        << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_bucket_count() == 8  
+max_load_factor() == 4  
+  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_bucket_count() == 8  
+max_load_factor() == 0.1  
+  
+bucket_count() == 128  
+load_factor() == 0.0234375  
+max_bucket_count() == 128  
+max_load_factor() == 0.1  
+  
+```  
+  
+##  <a name="a-nameunorderedmapmaxsizea--unorderedmapmaxsize"></a><a name="unordered_map__max_size"></a>  unordered_map::max_size  
+ Возвращает максимальный размер управляемой последовательности.  
+  
+```  
+size_type max_size() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает длину самой длинной последовательности, которой объект может управлять.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_max_size.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    std::cout << "max_size() == " << c1.max_size() << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+max_size() == 536870911  
+```  
+  
+##  <a name="a-nameunorderedmapoperatorata--unorderedmapoperator"></a><a name="unordered_map__operator_at"></a>  unordered_map::operator[]  
+ Находит или вставляет элемент с указанным ключом.  
+  
+```  
+Ty& operator[](const Key& keyval);
+
+Ty& operator[](Key&& keyval);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`Keyval`|Значение ключа, которое необходимо найти или вставить.|  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ссылка на значение данных вставленного элемента.  
+  
+### <a name="remarks"></a>Примечания  
+ Если значение ключа аргумента не найдено, он вставляется вместе со значением по умолчанию для такого типа данных.  
+  
+ `operator[]` может использоваться для вставки элементов в сопоставление *m* с помощью *m*[_*Key*] = `DataValue`; где `DataValue` представляет собой значение `mapped_type` элемента со значением \_ ключа _*Key*.  
+  
+ При использовании `operator[]` для вставки элементов возвращаемая ссылка не отображает, меняет ли вставка уже существующий элемент или создает новый. Функции-члены [find](../standard-library/map-class.md#map__find) и [insert](../standard-library/map-class.md#map__insert) можно использовать для определения перед вставкой того, существует ли уже элемент с указанным ключом.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_operator_sub.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+#include <string>  
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// try to find and fail   
+    std::cout << "c1['A'] == " << c1['A'] << std::endl;   
+  
+// try to find and succeed   
+    std::cout << "c1['a'] == " << c1['a'] << std::endl;   
+  
+// redisplay contents   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// insert by moving key  
+    std::unordered_map<string, int> c2;  
+    std::string str("abc");  
+    std::cout << "c2[std::move(str)] == " << c2[std::move(str)] << std::endl;  
+    std::cout << "c2["abc"] == " << c2["abc"] << std::endl;  
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+c1['A'] == 0  
+c1['a'] == 1  
+ [c, 3] [b, 2] [A, 0] [a, 1]  
+c2[move(str)] == 0  
+c2["abc"] == 1  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член определяет итератор `where` в качестве возвращаемого значения [unordered_map::insert](#unordered_map__insert)`(` [unordered_map::value_type](#unordered_map__value_type)`(keyval, Ty())`. (Вставляет элемент с указанным ключом, если такого элемента не существует.) Затем возвращает ссылку на `(*where).second`.  
+  
+##  <a name="a-nameunorderedmapoperatoreqa--unorderedmapoperator"></a><a name="unordered_map__operator_eq"></a>  unordered_map::operator=  
+ Заменяет элементы этого контейнера unordered_map, используя элементы из другого контейнера unordered_map.  
+  
+```  
+unordered_map& operator=(const unordered_map& right);
+
+unordered_map& operator=(unordered_map&& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|` right`|Контейнер unordered_map, из которого функция оператора назначает содержимое.|  
+  
+### <a name="remarks"></a>Примечания  
+ Первая версия копирует все элементы из ` right` в этот объект unordered_map.  
+  
+ Вторая версия перемещает все элементы из ` right` в этот объект unordered_map.  
+  
+ Все элементы в этом контейнере unordered_map до выполнения `operator`= отбрасываются.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// unordered_map_operator_as.cpp  
+// compile with: /EHsc  
+#include <unordered_map>  
+#include <iostream>  
+  
+int main( )  
+   {  
+   using namespace std;  
+   unordered_map<int, int> v1, v2, v3;  
+   unordered_map<int, int>::iterator iter;  
+  
+   v1.insert(pair<int, int>(1, 10));  
+  
+   cout << "v1 = " ;  
+   for (iter = v1.begin(); iter != v1.end(); iter++)  
+      cout << iter->second << " ";  
+   cout << endl;  
+  
+   v2 = v1;  
+   cout << "v2 = ";  
+   for (iter = v2.begin(); iter != v2.end(); iter++)  
+      cout << iter->second << " ";  
+   cout << endl;  
+  
+// move v1 into v2  
+   v2.clear();  
+   v2 = move(v1);  
+   cout << "v2 = ";  
+   for (iter = v2.begin(); iter != v2.end(); iter++)  
+      cout << iter->second << " ";  
+   cout << endl;  
+   }  
+```  
+  
+##  <a name="a-nameunorderedmappointera--unorderedmappointer"></a><a name="unordered_map__pointer"></a>  unordered_map::pointer  
+ Тип указателя на элемент.  
+  
+```  
+typedef Alloc::pointer pointer;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот тип описывает объект, который можно использовать в качестве указателя на элемент управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_pointer.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        {   
+        Mymap::pointer p = &*it;   
+        std::cout << " [" << p->first << ", " << p->second << "]";   
+        }   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapreferencea--unorderedmapreference"></a><a name="unordered_map__reference"></a>  unordered_map::reference  
+ Тип ссылки на элемент.  
+  
+```  
+typedef Alloc::reference reference;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип описывает объект, который можно использовать в качестве ссылки на элемент управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_reference.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        {   
+        Mymap::reference ref = *it;   
+        std::cout << " [" << ref.first << ", " << ref.second << "]";   
+        }   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmaprehasha--unorderedmaprehash"></a><a name="unordered_map__rehash"></a>  unordered_map::rehash  
+ Повторно создает хэш-таблицу.  
+  
+```  
+void rehash(size_type nbuckets);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `nbuckets`  
+ Требуемое число сегментов.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член устанавливает число сегментов не менее `nbuckets` и при необходимости перестраивает хэш-таблицу.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_rehash.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// inspect current parameters   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_load_factor() == " << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.10f);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_load_factor() == " << c1.max_load_factor() << std::endl;   
+    std::cout << std::endl;   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;   
+    std::cout << "load_factor() == " << c1.load_factor() << std::endl;   
+    std::cout << "max_load_factor() == " << c1.max_load_factor() << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_load_factor() == 4  
+  
+bucket_count() == 8  
+load_factor() == 0.375  
+max_load_factor() == 0.1  
+  
+bucket_count() == 128  
+load_factor() == 0.0234375  
+max_load_factor() == 0.1  
+```  
+  
+##  <a name="a-nameunorderedmapsizea--unorderedmapsize"></a><a name="unordered_map__size"></a>  unordered_map::size  
+ Подсчитывает количество элементов.  
+  
+```  
+size_type size() const;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член возвращает длину управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_size.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    std::cout << "size == " << c1.size() << std::endl;   
+    std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;   
+    std::cout << std::endl;   
+  
+    c1.insert(Mymap::value_type('d', 4));   
+    c1.insert(Mymap::value_type('e', 5));   
+  
+// display contents " [e 5] [d 4]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    std::cout << "size == " << c1.size() << std::endl;   
+    std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [c, 3] [b, 2] [a, 1]  
+size == 0  
+empty() == true  
+  
+ [e, 5] [d, 4]  
+size == 2  
+empty() == false  
+```  
+  
+##  <a name="a-nameunorderedmapsizetypea--unorderedmapsizetype"></a><a name="unordered_map__size_type"></a>  unordered_map::size_type  
+ Тип беззнакового расстояния между двумя элементами.  
+  
+```  
+typedef T2 size_type;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Целочисленный тип без знака описывает объект, который может представлять длину любой управляемой последовательности. Он описан здесь как синоним для типа `T2`, определяемого реализацией.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_size_type.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    Mymap::size_type sz = c1.size();   
+  
+    std::cout << "size == " << sz << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+size == 0  
+```  
+  
+##  <a name="a-nameunorderedmapswapa--unorderedmapswap"></a><a name="unordered_map__swap"></a>  unordered_map::swap  
+ Меняет местами содержимое двух контейнеров.  
+  
+```  
+void swap(unordered_map& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `right`  
+ Контейнер для замены.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член меняет местами управляемые последовательности между `*this` и `right`. Если используется функция [unordered_map::get_allocator](#unordered_map__get_allocator)`() == right.get_allocator()`, она делает это в постоянном времени, создает исключение только в результате копирования сохраненного объекта признаков типа `Tr` и не делает недействительными ссылки, указатели или итераторы, которые указывают на элементы в двух управляемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_swap.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+  
+    c1.insert(Mymap::value_type('a', 1));   
+    c1.insert(Mymap::value_type('b', 2));   
+    c1.insert(Mymap::value_type('c', 3));   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    Mymap c2;   
+  
+    c2.insert(Mymap::value_type('d', 4));   
+    c2.insert(Mymap::value_type('e', 5));   
+    c2.insert(Mymap::value_type('f', 6));   
+  
+    c1.swap(c2);   
+  
+// display contents " [f 6] [e 5] [d 4]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    swap(c1, c2);   
+  
+// display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        std::cout << " [" << it->first << ", " << it->second << "]";   
+    std::cout << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[f, 6] [e, 5] [d, 4]  
+[c, 3] [b, 2] [a, 1]  
+```  
+  
+##  <a name="a-nameunorderedmapunorderedmapa--unorderedmapunorderedmap"></a><a name="unordered_map__unordered_map"></a>  unordered_map::unordered_map  
+ Создает объект контейнера.  
+  
+```  
+unordered_map(const unordered_map& Right);
+
+explicit unordered_map(
+    size_type Bucket_count = N0,  
+    const Hash& Hash = Hash(),  
+    const Comp& Comp = Comp(),  
+    const Allocator& Al = Allocator());
+
+unordered_map(unordered_map&& Right);
+unordered_map(initializer_list<Type> IList);
+unordered_map(initializer_list<Type> IList, size_type Bucket_count);
+
+unordered_map(
+    initializer_list<Type> IList,   
+    size_type Bucket_count,   
+    const Hash& Hash);
+
+unordered_map(
+    initializer_list<Type> IList,   
+    size_type Bucket_count,   
+    const Hash& Hash,  
+    KeyEqual& equal);
+
+unordered_map(
+    initializer_list<Type> IList,   
+    size_type Bucket_count,  
+    const Hash& Hash,  
+    KeyEqual& Equal  
+    const Allocator& Al);
+
+template <class InIt>  
+unordered_map(
+ InputIterator First,   
+    InputIterator Last,  
+    size_type Bucket_count = N0,  
+    const Hash& Hash = Hash(),  
+    const Comp& Comp = Comp(),  
+    const Allocator& Al = Alloc());
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|||  
+|-|-|  
+|Параметр|Описание|  
+|`Al`|Объект распределителя для сохранения.|  
+|`Comp`|Объект функции сравнения для сохранения.|  
+|`Hash`|Объект хэш-функции для сохранения.|  
+|`Bucket_count`|Минимальное количество блоков.|  
+|`Right`|Контейнер для копирования.|  
+|`First`||  
+|`Last`||  
+|`IList`|Список initializer_list с элементами, которые необходимо скопировать.|  
+  
+### <a name="remarks"></a>Примечания  
+ Первый конструктор определяет копию последовательности, управляемой `right`. Второй конструктор определяет управляемую пустую последовательность. Третий конструктор добавляет последовательность значений элементов `[first, last)`. Четвертый конструктор задает копию последовательности путем перемещения `right`.  
+  
+ Все конструкторы также инициализируют ряд сохраненных значений. Для конструктора копии значения извлекаются из элемента `Right`. В противном случае:  
+  
+ Минимальное число блоков — это аргумент `Bucket_count`, если он существует; в противном случае это значение по умолчанию, представленное здесь как значение `N0`, определенное реализацией.  
+  
+ Объект хэш-функции — это аргумент `Hash`, если он существует; в противном случае это `Hash()`.  
+  
+ Объект функции сравнения — это аргумент `Comp`, если он существует; в противном случае это `Pred()`.  
+  
+ Объект функции распределителя — это аргумент `Al`, если он существует; в противном случае это `Alloc()`.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_construct.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+#include <initializer_list>  
+  
+using namespace std;  
+  
+using Mymap = unordered_map<char, int>;  
+  
+int main()  
+{  
+    Mymap c1;  
+  
+    c1.insert(Mymap::value_type('a', 1));  
+    c1.insert(Mymap::value_type('b', 2));  
+    c1.insert(Mymap::value_type('c', 3));  
+  
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (const auto& c : c1) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+  
+    Mymap c2(8,  
+        hash<char>(),  
+        equal_to<char>(),  
+        allocator<pair<const char, int> >());  
+  
+    c2.insert(Mymap::value_type('d', 4));  
+    c2.insert(Mymap::value_type('e', 5));  
+    c2.insert(Mymap::value_type('f', 6));  
+  
+    // display contents " [f 6] [e 5] [d 4]"   
+    for (const auto& c : c2) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+  
+    Mymap c3(c1.begin(),  
+        c1.end(),  
+        8,  
+        hash<char>(),  
+        equal_to<char>(),  
+        allocator<pair<const char, int> >());  
+  
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (const auto& c : c3) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+  
+    Mymap c4(move(c3));  
+  
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (const auto& c : c4) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+    cout << endl;  
+  
+    // Construct with an initializer_list  
+    unordered_map<int, char> c5({ { 5, 'g' }, { 6, 'h' }, { 7, 'i' }, { 8, 'j' } });  
+    for (const auto& c : c5) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+  
+    // Initializer_list plus size  
+    unordered_map<int, char> c6({ { 5, 'g' }, { 6, 'h' }, { 7, 'i' }, { 8, 'j' } }, 4);  
+    for (const auto& c : c1) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+    cout << endl;  
+  
+    // Initializer_list plus size and hash  
+    unordered_map<int, char, hash<char>> c7(  
+        { { 5, 'g' }, { 6, 'h' }, { 7, 'i' }, { 8, 'j' } },   
+        4,   
+        hash<char>()  
+    );  
+  
+    for (const auto& c : c1) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+  
+    // Initializer_list plus size, hash, and key_equal  
+    unordered_map<int, char, hash<char>, equal_to<char>> c8(  
+        { { 5, 'g' }, { 6, 'h' }, { 7, 'i' }, { 8, 'j' } },   
+        4,   
+        hash<char>(),   
+        equal_to<char>()  
+    );  
+  
+    for (const auto& c : c1) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+  
+    // Initializer_list plus size, hash, key_equal, and allocator  
+    unordered_map<int, char, hash<char>, equal_to<char>> c9(  
+        { { 5, 'g' }, { 6, 'h' }, { 7, 'i' }, { 8, 'j' } },  
+        4,  
+        hash<char>(),  
+        equal_to<char>(),  
+        allocator<pair<const char, int> >()  
+    );  
+  
+    for (const auto& c : c1) {  
+        cout << " [" << c.first << ", " << c.second << "]";  
+    }  
+    cout << endl;  
+}  
+```  
+  
+```Output  
+ [a, 1] [b, 2] [c, 3]
+ [d, 4] [e, 5] [f, 6]
+ [a, 1] [b, 2] [c, 3]
+ [a, 1] [b, 2] [c, 3]
+
+ [5, g] [6, h] [7, i] [8, j]
+ [a, 1] [b, 2] [c, 3]
+
+ [a, 1] [b, 2] [c, 3]
+ [a, 1] [b, 2] [c, 3]
+ [a, 1] [b, 2] [c, 3]
+ ```  
+  
+##  <a name="a-nameunorderedmapvaluetypea--unorderedmapvaluetype"></a><a name="unordered_map__value_type"></a>  unordered_map::value_type  
+ Тип элемента.  
+  
+```  
+typedef std::pair<const Key, Ty> value_type;  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Тип описывает элемент управляемой последовательности.  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// std__unordered_map__unordered_map_value_type.cpp   
+// compile with: /EHsc   
+#include <unordered_map>   
+#include <iostream>   
+  
+typedef std::unordered_map<char, int> Mymap;
+int main()
+{
+    Mymap c1;
+
+    c1.insert(Mymap::value_type('a', 1));
+    c1.insert(Mymap::value_type('b', 2));
+    c1.insert(Mymap::value_type('c', 3));
+
+    // display contents " [c 3] [b 2] [a 1]"   
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    // add a value and reinspect   
+    Mymap::key_type key = 'd';
+    Mymap::mapped_type mapped = 4;
+    Mymap::value_type val = Mymap::value_type(key, mapped);
+    c1.insert(val);
+
+    for (Mymap::const_iterator it = c1.begin();
+        it != c1.end(); ++it)
+        std::cout << " [" << it->first << ", " << it->second << "]";
+    std::cout << std::endl;
+
+    return (0);
+}
+
+```  
+  
+```Output  
+[c, 3] [b, 2] [a, 1]  
+[d, 4] [c, 3] [b, 2] [a, 1]  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [<unordered_map>](../standard-library/unordered-map.md)   
+ [Контейнеры](../cpp/containers-modern-cpp.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+
+

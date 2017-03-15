@@ -1,0 +1,312 @@
+---
+title: "Класс CMFCMaskedEdit | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCMaskedEdit
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCMaskedEdit class
+- CMFCMaskedEdit constructor
+ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
+caps.latest.revision: 30
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 174551ecd75df8691d2a6086cbc074516f6d2045
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cmfcmaskededit-class"></a>Класс CMFCMaskedEdit
+`CMFCMaskedEdit` Класс поддерживает элемент управления masked edit, который проверяет введенные пользователем данные, соответствие маске и отображает установленные результаты в соответствии с шаблоном.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+class CMFCMaskedEdit : public CEdit  
+```  
+  
+## <a name="members"></a>Члены  
+  
+### <a name="public-constructors"></a>Открытые конструкторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|`CMFCMaskedEdit::CMFCMaskedEdit`|Конструктор по умолчанию.|  
+|`CMFCMaskedEdit::~CMFCMaskedEdit`|Деструктор.|  
+  
+### <a name="public-methods"></a>Открытые методы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CMFCMaskedEdit::DisableMask](#disablemask)|Отключение проверки ввода пользователя.|  
+|[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.|  
+|[CMFCMaskedEdit::EnableMask](#enablemask)|Инициализирует скрытого поля ввода.|  
+|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Указывает, выделяет ли элемент управления masked edit определенным группам вводимых пользователем данных или всех вводимых пользователем данных.|  
+|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Указывает текст проверяется только замаскированы символов, или для всей маски.|  
+|`CMFCMaskedEdit::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|[CMFCMaskedEdit::GetWindowText](#getwindowtext)|Получает проверку текста в элемент управления masked edit.|  
+|[CMFCMaskedEdit::SetValidChars](#setvalidchars)|Задает строку допустимых символов, которые пользователь может ввести.|  
+|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Отображает приглашение в элемент управления masked edit.|  
+  
+### <a name="protected-methods"></a>Защищенные методы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Вызывается платформой для проверки указанного знака от соответствующего символа маски.|  
+  
+## <a name="remarks"></a>Примечания  
+ Выполните следующие действия для использования `CMFCMaskedEdit` элемента управления в приложении:  
+  
+ 1. Внедрение `CMFCMaskedEdit` объект в классе окна.  
+  
+ 2. Вызов [CMFCMaskedEdit::EnableMask](#enablemask) метод, чтобы задать маску.  
+  
+ 3. Вызов [CMFCMaskedEdit::SetValidChars](#setvalidchars) метод, чтобы указать список допустимых символов.  
+  
+ 4. Вызов [CMFCMaskedEdit::SetWindowText](#setwindowtext) метод, чтобы задать текст по умолчанию для управления masked edit.  
+  
+ 5. Вызов [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод для извлечения текста, проверяется.  
+  
+ Если не вызвать один или несколько методов для инициализации маски, допустимые символы и текст по умолчанию, элемент управления masked edit ведет себя так же, как ведет себя стандартного элемента управления правки.  
+  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как настроить маску (например, номер телефона) с помощью `EnableMask` метод для создания маски для скрытого элемента управления, измените `SetValidChars` метод для указания строки допустимых символов, которые пользователь может ввести, и `SetWindowText` метод для отображения запроса в скрытый элемент управления. Этот пример является частью [пример создания новых элементов управления](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_NewControls&11;](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls&#12;](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
+  
+ [CEdit](../../mfc/reference/cedit-class.md)  
+  
+ [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** afxmaskededit.h  
+  
+##  <a name="a-namedisablemaska--cmfcmaskededitdisablemask"></a><a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
+ Отключение проверки ввода пользователя.  
+  
+```  
+void DisableMask();
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Если отключена проверка введенных пользователем данных, элемент управления masked edit ведет себя как стандартный элемент управления.  
+  
+##  <a name="a-nameenablegetmaskedcharsonlya--cmfcmaskededitenablegetmaskedcharsonly"></a><a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
+ Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.  
+  
+```  
+void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `bEnable`  
+ `TRUE`Чтобы указать, что [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод получения маскируются только символы; `FALSE` для указания, что метод получить весь текст. Значение по умолчанию — `TRUE`.  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте этот метод, чтобы включить получение маскированные символы. Создайте элемент управления masked edit, соответствующий номер телефона, например (425) 555-0187. При вызове `GetWindowText` метода, он возвращает «4255550187». Если отключить получение маскированные символы `GetWindowText` метод возвращает текст, отображаемый в элементе управления редактированием, например «(425) 555-0187».  
+  
+##  <a name="a-nameenablemaska--cmfcmaskededitenablemask"></a><a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
+ Инициализирует скрытого поля ввода.  
+  
+```  
+void EnableMask(
+    LPCTSTR lpszMask,  
+    LPCTSTR lpszInputTemplate,  
+    TCHAR chMaskInputTemplate=_T('_'),  
+    LPCTSTR lpszValid=NULL);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `lpszMask`  
+ Маска строка, указывающая тип символа, который может отображаться в каждой позиции пользовательского ввода. Длина `lpszInputTemplate` и `lpszMask` строки параметров должны быть одинаковыми. Для получения дополнительных сведений о символах маска см.  
+  
+ [in] `lpszInputTemplate`  
+ Маска шаблонную строку, которая указывает, что литерал символов, которое может использоваться в каждой позиции в пользовательский ввод. Используйте символ подчеркивания (_) в качестве заполнителя знак. Длина `lpszInputTemplate` и `lpszMask` строки параметров должны быть одинаковыми.  
+  
+ [in] `chMaskInputTemplate`  
+ Символ по умолчанию, платформа заменяющий каждого недопустимого символа в пользовательский ввод. Значение этого параметра по умолчанию является символ подчеркивания (_).  
+  
+ [in] `lpszValid`  
+ Строка, содержащая набор допустимых символов. `NULL`Указывает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте этот метод для создания маски для элемент управления masked edit. Производный класс от `CMFCMaskedEdit` класса и переопределить [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) метод, чтобы использовать собственный код для обработки пользовательских маски.  
+  
+ В следующей таблице перечислены символы маски по умолчанию:  
+  
+|Символ маски|Определение|  
+|--------------------|----------------|  
+|Н|Цифра.|  
+|d|Цифра или пробел.|  
+|+|Плюс ('+ '), минус ("-"), или на диске.|  
+|C|Буквы.|  
+|c|Алфавитный символ или пробел.|  
+|А|Буквенно-цифровой символ.|  
+|a|Буквенно-цифровой символ или пробел.|  
+|*|Печатные символы.|  
+  
+##  <a name="a-nameenableselectbygroupa--cmfcmaskededitenableselectbygroup"></a><a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
+ Указывает, допускает ли элемент управления masked edit пользователю ввода выберите определенных групп или для всех входных данных.  
+  
+```  
+void EnableSelectByGroup(BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `bEnable`  
+ `TRUE`Чтобы выбрать группы; `FALSE` выделите весь текст. Значение по умолчанию — `TRUE`.  
+  
+### <a name="remarks"></a>Примечания  
+ Эту функцию можно используйте для указания ли элемент управления masked edit позволяет пользователю выбирать по группам или весь текст.  
+  
+ По умолчанию при включении возможности выбора по группам. В этом случае пользователь может выбрать только непрерывные группы допустимых символов.  
+  
+ Например следующий элемент управления masked edit может использовать для проверки телефонный номер:  
+  
+ `m_wndMaskEdit.EnableMask(`  
+  
+ `_T(" ddd  ddd dddd"),// Mask string`  
+  
+ `_T("(___) ___-____"),// Template string`  
+  
+ `_T(' '));// Default char`  
+  
+ `m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.`  
+  
+ `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
+  
+ Если выбор группой включен, пользователь может извлечь только «425», «555» или «0187» строки группы. Если отключить Выбор группы пользователя можно получить весь текст номер телефона: «(425) 555-0187».  
+  
+##  <a name="a-nameenablesetmaskedcharsonlya--cmfcmaskededitenablesetmaskedcharsonly"></a><a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
+ Указывает, проверяется ли текст для только маскированные символы, или для всей маски.  
+  
+```  
+void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `bEnable`  
+ `TRUE`для проверки пользователя введенные данные на соответствие только замаскированы символов. `FALSE` для проверки на соответствие маске целиком. Значение по умолчанию — `TRUE`.  
+  
+##  <a name="a-namegetwindowtexta--cmfcmaskededitgetwindowtext"></a><a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
+ Получает проверку текста в элемент управления masked edit.  
+  
+```  
+int GetWindowText(
+    LPTSTR lpszStringBuf,  
+    int nMaxCount) const;  
+  
+void GetWindowText(CString& rstrString) const;  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [выходной] `lpszStringBuf`  
+ Указатель на буфер, получающий текст из элемента управления поля ввода.  
+  
+ [in] `nMaxCount`  
+ Максимальное количество символов для получения.  
+  
+ [выходной] `rstrString`  
+ Ссылка на строковый объект, который получает текст из элемента управления поля ввода.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Первая перегрузка метода возвращает число байтов строки, которые были скопированы `lpszStringBuf` параметр буфера; 0, если элемент управления masked edit не содержит текста.  
+  
+### <a name="remarks"></a>Примечания  
+ Этот метод копирует текст в элемент управления masked edit для `lpszStringBuf` буфера или `rstrString` строку.  
+  
+ Этот метод переопределяет [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
+  
+##  <a name="a-nameismaskedchara--cmfcmaskededitismaskedchar"></a><a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
+ Вызывается платформой для проверки указанного знака от соответствующего символа маски.  
+  
+```  
+virtual BOOL IsMaskedChar(
+    TCHAR chChar,  
+    TCHAR chMaskChar) const;  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `chChar`  
+ Проверяемый символ.  
+  
+ [in] `chMaskChar`  
+ Соответствующий символ в строке маски.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ `TRUE`Если `chChar` параметр имеет тип символа, допускаемой `chMaskChar` параметр; в противном случае — `FALSE`.  
+  
+### <a name="remarks"></a>Примечания  
+ Переопределите этот метод для проверки ввода символов самостоятельно. Дополнительные сведения о символах маска см [CMFCMaskedEdit::EnableMask](#enablemask) метод.  
+  
+##  <a name="a-namesetvalidcharsa--cmfcmaskededitsetvalidchars"></a><a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
+ Задает строку допустимых символов, которые пользователь может ввести.  
+  
+```  
+void SetValidChars(LPCTSTR lpszValid=NULL);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `lpszValid`  
+ Строка, содержащая набор допустимых входных символов. `NULL`означает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте этот метод для определения списка допустимых символов. Если входной символ не является в этом списке, он не будет принимать в элемент управления masked edit.  
+  
+ В следующем примере кода принимается только шестнадцатеричные цифры.  
+  
+ `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
+  
+##  <a name="a-namesetwindowtexta--cmfcmaskededitsetwindowtext"></a><a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
+ Отображает приглашение в элемент управления masked edit.  
+  
+```  
+void SetWindowText(LPCTSTR lpszString);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ [in] `lpszString`  
+ Точки нулем строку, которая будет использоваться в качестве запроса.  
+  
+### <a name="remarks"></a>Примечания  
+ Этот метод задает текст элемента управления.  
+  
+ Этот метод переопределяет [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
+  
+## <a name="see-also"></a>См. также  
+ [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+ [Классы](../../mfc/reference/mfc-classes.md)   
+ [Класс CEdit](../../mfc/reference/cedit-class.md)
+
