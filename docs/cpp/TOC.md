@@ -399,7 +399,6 @@
 ## [Нестандартное поведение](nonstandard-behavior.md)
 ### [Ограничения компилятора](compiler-limits.md)
 # [Возвращение к C++ (современный C++)](welcome-back-to-cpp-modern-cpp.md)
-## [Поддержка возможностей C++11-14-17 (современный C++)](support-for-cpp11-14-17-features-modern-cpp.md)
 ## [Тип системы C++ (современный C++)](cpp-type-system-modern-cpp.md)
 ### [Типы значений (современный C++)](value-types-modern-cpp.md)
 ### [Преобразования типов и безопасность типов (современный C++)](type-conversions-and-type-safety-modern-cpp.md)
