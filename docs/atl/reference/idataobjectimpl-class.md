@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl::DAdvise
+- ATLCTL/ATL::IDataObjectImpl::DUnadvise
+- ATLCTL/ATL::IDataObjectImpl::EnumDAdvise
+- ATLCTL/ATL::IDataObjectImpl::EnumFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::FireDataChange
+- ATLCTL/ATL::IDataObjectImpl::GetCanonicalFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::GetData
+- ATLCTL/ATL::IDataObjectImpl::GetDataHere
+- ATLCTL/ATL::IDataObjectImpl::QueryGetData
+- ATLCTL/ATL::IDataObjectImpl::SetData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +104,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="a-namedadvisea--idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
  Устанавливает соединение между объектом данных и приемника уведомлений.  
   
 ```
@@ -111,7 +122,7 @@ HRESULT DAdvise(
   
  В разделе [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedunadvisea--idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
  Завершает соединение, установленное ранее при помощи [DAdvise](#dadvise).  
   
 ```
@@ -121,7 +132,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>Примечания  
  В разделе [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumdadvisea--idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
  Создает перечислитель для перебора текущих соединений для рекомендаций.  
   
 ```
@@ -135,7 +146,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>Примечания  
  В разделе [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumformatetca--idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
  Создает перечислитель для перебора **FORMATETC** структуры, поддерживаемые объектом данных.  
   
 ```
@@ -150,7 +161,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
   
-##  <a name="a-namefiredatachangea--idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
  Отправляет уведомление об изменении каждый приемник уведомлений, который управляется в настоящее время.  
   
 ```
@@ -160,7 +171,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namegetcanonicalformatetca--idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
  Извлекает логически эквивалентных **FORMATETC** структуры на ту, которая является более сложным.  
   
 ```
@@ -173,7 +184,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>Примечания  
  В разделе [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdataa--idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>IDataObjectImpl::GetData  
  Передает данные из объекта данных клиенту.  
   
 ```
@@ -187,7 +198,7 @@ HRESULT GetData(
   
  В разделе [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdataherea--idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
  Аналогично `GetData`, за исключением клиент должен выделить **STGMEDIUM** структуры.  
   
 ```
@@ -202,7 +213,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>Примечания  
  В разделе [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namequerygetdataa--idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
  Определяет, поддерживает ли объект данных определенной **FORMATETC** структуры для передачи данных.  
   
 ```
@@ -215,7 +226,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>Примечания  
  В разделе [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetdataa--idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>IDataObjectImpl::SetData  
  Передает данные из клиента в объект данных.  
   
 ```

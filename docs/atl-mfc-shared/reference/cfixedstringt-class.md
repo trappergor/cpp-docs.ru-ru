@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
+- CSTRINGT/ATL::CFixedStringT
+- CSTRINGT/ATL::CFixedStringT::CFixedStringT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +96,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Требования  
  **Заголовок:** cstringt.h  
   
-##  <a name="a-namecfixedstringta--cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
  Создает объект `CFixedStringT`.  
   
 ```
@@ -120,7 +122,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Примечания  
  Поскольку конструкторы скопировать входных данных в новое хранилище, выделенное, следует иметь в виду памяти может привести к исключения. Обратите внимание, что некоторые из этих конструкторов выступать в качестве функции преобразования.  
   
-##  <a name="a-nameoperatoreqa--cfixedstringtoperator-"></a><a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>CFixedStringT::operator =  
  Повторно инициализирует существующий `CFixedStringT` объекта с новыми данными.  
   
 ```

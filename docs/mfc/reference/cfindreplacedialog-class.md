@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFindReplaceDialog
+- AFXDLGS/CFindReplaceDialog
+- AFXDLGS/CFindReplaceDialog::CFindReplaceDialog
+- AFXDLGS/CFindReplaceDialog::Create
+- AFXDLGS/CFindReplaceDialog::FindNext
+- AFXDLGS/CFindReplaceDialog::GetFindString
+- AFXDLGS/CFindReplaceDialog::GetNotifier
+- AFXDLGS/CFindReplaceDialog::GetReplaceString
+- AFXDLGS/CFindReplaceDialog::IsTerminating
+- AFXDLGS/CFindReplaceDialog::MatchCase
+- AFXDLGS/CFindReplaceDialog::MatchWholeWord
+- AFXDLGS/CFindReplaceDialog::ReplaceAll
+- AFXDLGS/CFindReplaceDialog::ReplaceCurrent
+- AFXDLGS/CFindReplaceDialog::SearchDown
+- AFXDLGS/CFindReplaceDialog::m_fr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +134,7 @@ class CFindReplaceDialog : public CCommonDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdlgs.h  
   
-##  <a name="a-namecfindreplacedialoga--cfindreplacedialogcfindreplacedialog"></a><a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
+##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
  Создает объект `CFindReplaceDialog`.  
   
 ```  
@@ -137,7 +151,7 @@ CFindReplaceDialog();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#170;](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cfindreplacedialogcreate"></a><a name="create"></a>CFindReplaceDialog::Create  
+##  <a name="create"></a>CFindReplaceDialog::Create  
  Создает и отображает поиска или найти и заменить объект диалогового окна, в зависимости от значения `bFindDialogOnly`.  
   
 ```  
@@ -182,7 +196,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
   В примере показано [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="a-namefindnexta--cfindreplacedialogfindnext"></a><a name="findnext"></a>CFindReplaceDialog::FindNext  
+##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
  Эта функция вызывается из функции обратного вызова для определения, является ли пользователь хочет найти следующее вхождение искомой строки.  
   
 ```  
@@ -192,7 +206,7 @@ BOOL FindNext() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователю необходимо найти следующее вхождение искомой строки; в противном случае — 0.  
   
-##  <a name="a-namegetfindstringa--cfindreplacedialoggetfindstring"></a><a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
+##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
  Эта функция вызывается из функции обратного вызова для получения строки по умолчанию для поиска.  
   
 ```  
@@ -205,7 +219,7 @@ CString GetFindString() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#69;](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="a-namegetnotifiera--cfindreplacedialoggetnotifier"></a><a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
+##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
  Эта функция вызывается для получения указателя на текущий поиск и замена диалоговым окном.  
   
 ```  
@@ -227,7 +241,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
   
  [!code-cpp[NVC_MFCDocView&#69;](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="a-namegetreplacestringa--cfindreplacedialoggetreplacestring"></a><a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
+##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
  Эта функция вызывается для получения текущей строки замены.  
   
 ```  
@@ -240,7 +254,7 @@ CString GetReplaceString() const;
 ### <a name="example"></a>Пример  
   В примере показано [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="a-nameisterminatinga--cfindreplacedialogisterminating"></a><a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
+##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
  Вызов этой функции внутри функции обратного вызова для определения ли пользователь решил завершить диалоговое окно.  
   
 ```  
@@ -256,7 +270,7 @@ BOOL IsTerminating() const;
 ### <a name="example"></a>Пример  
   В примере показано [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="a-namemfra--cfindreplacedialogmfr"></a><a name="m_fr"></a>CFindReplaceDialog::m_fr  
+##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
  Используется для настройки `CFindReplaceDialog` объекта.  
   
 ```  
@@ -271,7 +285,7 @@ FINDREPLACE m_fr;
 ### <a name="example"></a>Пример  
   В примере показано [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="a-namematchcasea--cfindreplacedialogmatchcase"></a><a name="matchcase"></a>CFindReplaceDialog::MatchCase  
+##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
  Эта функция используется для определения, является ли пользователь хочет точно соответствовать регистру строки поиска.  
   
 ```  
@@ -281,7 +295,7 @@ BOOL MatchCase() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователь желает найти вхождения строки поиска, точно соответствовать регистру строки поиска. в противном случае — 0.  
   
-##  <a name="a-namematchwholeworda--cfindreplacedialogmatchwholeword"></a><a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
+##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
  Эта функция вызывается для определения, хочет ли пользователь слова целиком.  
   
 ```  
@@ -291,7 +305,7 @@ BOOL MatchWholeWord() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователю необходимо сопоставить только целые слова строки поиска. в противном случае — 0.  
   
-##  <a name="a-namereplacealla--cfindreplacedialogreplaceall"></a><a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
+##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
  Эта функция вызывается для определения ли пользователю все вхождения строки замены.  
   
 ```  
@@ -301,7 +315,7 @@ BOOL ReplaceAll() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователь запросил, чтобы заменить все строки, соответствующие строке замены; в противном случае — 0.  
   
-##  <a name="a-namereplacecurrenta--cfindreplacedialogreplacecurrent"></a><a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
+##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
  Эта функция вызывается для определения ли пользователю текущее слово для замены.  
   
 ```  
@@ -311,7 +325,7 @@ BOOL ReplaceCurrent() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователь запросил заменяться что текущей выбранной строки в строку замены; в противном случае — 0.  
   
-##  <a name="a-namesearchdowna--cfindreplacedialogsearchdown"></a><a name="searchdown"></a>CFindReplaceDialog::SearchDown  
+##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
  Эта функция вызывается для определения, хочет ли пользователь поиска, чтобы перейти вниз.  
   
 ```  

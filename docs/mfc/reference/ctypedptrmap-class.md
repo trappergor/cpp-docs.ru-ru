@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap::GetNextAssoc
+- AFXTEMPL/CTypedPtrMap::Lookup
+- AFXTEMPL/CTypedPtrMap::RemoveKey
+- AFXTEMPL/CTypedPtrMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtempl.h  
   
-##  <a name="a-namegetnextassoca--ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
  Извлекает элемент карты по `rNextPosition`, затем обновляет `rNextPosition` для обращения к следующему элементу в схеме.  
   
 ```  
@@ -128,7 +133,7 @@ void GetNextAssoc(
   
  Это встроенная функция вызывает `BASE_CLASS` **:: GetNextAssoc**.  
   
-##  <a name="a-namelookupa--ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup  
+##  <a name="lookup"></a>CTypedPtrMap::Lookup  
  `Lookup`использует алгоритм хэширования для быстрого поиска элемента карты с ключом, который соответствует в точности.  
   
 ```  
@@ -154,7 +159,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>Примечания  
  Это встроенная функция вызывает `BASE_CLASS` **:: поиска**.  
   
-##  <a name="a-nameoperatorata--ctypedptrmapoperator--"></a><a name="operator_at"></a>[CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>[CTypedPtrMap::operator]  
  Этот оператор может использоваться только в левой части оператора присваивания (l значение).  
   
 ```  
@@ -174,7 +179,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>Примечания  
  Если ни один элемент карты с указанным ключом, создается новый элемент. Существует не «справа» (r-значение) эквивалентен этот оператор, так как существует вероятность, что ключ может быть не найдена в схеме. Используйте `Lookup` функции-члена для извлечения элементов.  
   
-##  <a name="a-nameremovekeya--ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
  Эта функция-член вызывает `BASE_CLASS` **:: RemoveKey**.  
   
 ```  
@@ -194,7 +199,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="a-namesetata--ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>CTypedPtrMap::SetAt  
  Эта функция-член вызывает `BASE_CLASS` **:: SetAt**.  
   
 ```  

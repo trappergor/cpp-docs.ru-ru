@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::m_Cache
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +100,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="a-nameccacheddatapathpropertya--ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
  Создает объект `CCachedDataPathProperty`.  
   
 ```  
@@ -119,7 +122,7 @@ CCachedDataPathProperty(
 ### <a name="remarks"></a>Примечания  
  `COleControl` Объекта, на который указывает `pControl` используется [откройте](../../mfc/reference/cdatapathproperty-class.md#open) и получить производными классами. Если `pControl` — **NULL**, элемент управления, используемый с **откройте** должно быть задано значение [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Если `lpszPath` — **NULL**, можно передать путь через **откройте** или настроить ее с помощью [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="a-namemcachea--ccacheddatapathpropertymcache"></a><a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
  Содержит имя класса в файл памяти, в который кэшируются данные.  
   
 ```  

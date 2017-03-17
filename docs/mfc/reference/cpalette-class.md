@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPalette
-- HPALETTE
+- AFXWIN/CPalette
+- AFXWIN/CPalette::CPalette
+- AFXWIN/CPalette::AnimatePalette
+- AFXWIN/CPalette::CreateHalftonePalette
+- AFXWIN/CPalette::CreatePalette
+- AFXWIN/CPalette::FromHandle
+- AFXWIN/CPalette::GetEntryCount
+- AFXWIN/CPalette::GetNearestPaletteIndex
+- AFXWIN/CPalette::GetPaletteEntries
+- AFXWIN/CPalette::ResizePalette
+- AFXWIN/CPalette::SetPaletteEntries
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CPalette : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameanimatepalettea--cpaletteanimatepalette"></a><a name="animatepalette"></a>CPalette::AnimatePalette  
+##  <a name="animatepalette"></a>CPalette::AnimatePalette  
  Заменяет записи в логической палитре, присоединенные к `CPalette` объекта.  
   
 ```  
@@ -121,7 +131,7 @@ void AnimatePalette(
   
  `AnimatePalette` Функция изменится только операции с **PC_RESERVED** флаг в соответствующем **palPaletteEntry** членом [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) структуры, к которому присоединена `CPalette` объекта. В разделе **LOGPALETTE** в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Дополнительные сведения о структуре.  
   
-##  <a name="a-namecpalettea--cpalettecpalette"></a><a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>CPalette::CPalette  
  Создает объект `CPalette`.  
   
 ```  
@@ -131,7 +141,7 @@ CPalette();
 ### <a name="remarks"></a>Примечания  
  Объект не имеет подключенных палитры до вызова метода `CreatePalette` присоединить один.  
   
-##  <a name="a-namecreatehalftonepalettea--cpalettecreatehalftonepalette"></a><a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
  Создает полутоновой палитры для контекста устройства.  
   
 ```  
@@ -150,7 +160,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  В разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Дополнительные сведения о `CreateHalftonePalette` и **StretchDIBits**.  
   
-##  <a name="a-namecreatepalettea--cpalettecreatepalette"></a><a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>CPalette::CreatePalette  
  Инициализирует `CPalette` объектов путем создания логической цветовую палитру Windows и подключения его к `CPalette` объекта.  
   
 ```  
@@ -167,7 +177,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>Примечания  
  В разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Дополнительные сведения о **LOGPALETTE** структуры.  
   
-##  <a name="a-namefromhandlea--cpalettefromhandle"></a><a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>CPalette::FromHandle  
  Возвращает указатель на `CPalette` объект для заданного дескриптора объекта палитры Windows.  
   
 ```  
@@ -184,7 +194,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>Примечания  
  Если `CPalette` объект еще не присоединен к палитре Windows временный `CPalette` объект создается и прикрепляется. Этот временный `CPalette` допустимо только до следующей приложение имеет время простоя в свой цикл событий, после чего график все временные объекты удаляются. Другими словами временный объект является допустимым только во время обработки одного окна сообщения.  
   
-##  <a name="a-namegetentrycounta--cpalettegetentrycount"></a><a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>CPalette::GetEntryCount  
  Вызовите эту функцию-член для получения числа записей в данной логической палитре.  
   
 ```  
@@ -194,7 +204,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>Возвращаемое значение  
  Число записей в логической палитре.  
   
-##  <a name="a-namegetnearestpaletteindexa--cpalettegetnearestpaletteindex"></a><a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
  Возвращает индекс записи в логической палитры, который наиболее близко соответствует значению указанного цвета.  
   
 ```  
@@ -208,7 +218,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс записи в логической палитре. Запись содержит цвет, наиболее точно соответствующий указанным цветом.  
   
-##  <a name="a-namegetpaletteentriesa--cpalettegetpaletteentries"></a><a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
  Извлекает диапазона записей палитры в логической палитре.  
   
 ```  
@@ -231,7 +241,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество записей, полученных из логической палитры; 0, если сбой функции.  
   
-##  <a name="a-nameoperatorhpalettea--cpaletteoperator-hpalette"></a><a name="operator_hpalette"></a>CPalette::operator HPALETTE  
+##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
  Этот оператор используется получить дескриптор вложенного Windows GDI `CPalette` объекта.  
   
 ```  
@@ -246,7 +256,7 @@ operator HPALETTE() const;
   
  Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameresizepalettea--cpaletteresizepalette"></a><a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>CPalette::ResizePalette  
  Изменяет размер логической палитры, присоединенные к `CPalette` объекта числу записей, определяемое `nNumEntries`.  
   
 ```  
@@ -265,7 +275,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Дополнительные сведения об Windows API `ResizePalette`, в разделе [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetpaletteentriesa--cpalettesetpaletteentries"></a><a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
  Задает флаги и значения цвета RGB в диапазоне элементов в логической палитре.  
   
 ```  

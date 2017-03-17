@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
+- AFXINET/CFtpConnection
+- AFXINET/CFtpConnection::CFtpConnection
+- AFXINET/CFtpConnection::Command
+- AFXINET/CFtpConnection::CreateDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectoryAsURL
+- AFXINET/CFtpConnection::GetFile
+- AFXINET/CFtpConnection::OpenFile
+- AFXINET/CFtpConnection::PutFile
+- AFXINET/CFtpConnection::Remove
+- AFXINET/CFtpConnection::RemoveDirectory
+- AFXINET/CFtpConnection::Rename
+- AFXINET/CFtpConnection::SetCurrentDirectory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +108,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="a-namecftpconnectiona--cftpconnectioncftpconnection"></a><a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
  Эта функция-член вызывается для создания `CFtpConnection` объекта.  
   
 ```  
@@ -151,7 +164,7 @@ CFtpConnection(
 ### <a name="remarks"></a>Примечания  
  Никогда не создавать `CFtpConnection` напрямую. Вместо этого необходимо вызвать [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), который создает **CFptConnection** объекта.  
   
-##  <a name="a-namecommanda--cftpconnectioncommand"></a><a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>CFtpConnection::Command  
  Отправляет команду напрямую на FTP-сервер.  
   
 ```  
@@ -187,7 +200,7 @@ CInternetFile* Command(
   
  Если возникает ошибка, MFC создает исключение типа [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
-##  <a name="a-namecreatedirectorya--cftpconnectioncreatedirectory"></a><a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
  Вызовите эту функцию-член для создания каталога на подключенном сервере.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
   
  `pstrDirName` Параметр может быть либо частично или полное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/), которые могут использоваться в качестве разделителя каталогов для либо имя. `CreateDirectory`Преобразует имя разделителей каталогов в соответствующие символы перед их использованием.  
   
-##  <a name="a-namegetcurrentdirectorya--cftpconnectiongetcurrentdirectory"></a><a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory  
+##  <a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory  
  Вызовите эту функцию-член для получения имени текущего каталога.  
   
 ```  
@@ -240,7 +253,7 @@ BOOL GetCurrentDirectory(
   
  Параметры `pstrDirName` или `strDirName` может быть либо частичные имена файлов относительно текущего каталога или полное имя. Обратная косая черта (\\) или косой черты (/), которые могут использоваться в качестве разделителя каталогов для либо имя. `GetCurrentDirectory`Преобразует имя разделителей каталогов в соответствующие символы перед их использованием.  
   
-##  <a name="a-namegetcurrentdirectoryasurla--cftpconnectiongetcurrentdirectoryasurl"></a><a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
+##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
  Вызовите эту функцию-член для получения имени текущего каталога URL-адреса.  
   
 ```  
@@ -274,7 +287,7 @@ BOOL GetCurrentDirectoryAsURL(
   
  Параметр `strDirName` может быть либо частичные имена файлов относительно текущего каталога или полное имя. Обратная косая черта (\\) или косой черты (/), которые могут использоваться в качестве разделителя каталогов для либо имя. `GetCurrentDirectoryAsURL`Преобразует имя разделителей каталогов в соответствующие символы перед их использованием.  
   
-##  <a name="a-namegetfilea--cftpconnectiongetfile"></a><a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>CFtpConnection::GetFile  
  Вызовите эту функцию-член для получения файла с FTP-сервера и сохранить его на локальном компьютере.  
   
 ```  
@@ -334,7 +347,7 @@ BOOL GetFile(
   
  Переопределение `dwContext` по умолчанию для идентификатора контекста параметру значение по своему выбору. Идентификатор контекста связан с этой конкретной операции `CFtpConnection` объект, созданный его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) для предоставления состояния операции, с помощью которого определяется. См. в статье [Интернет первые шаги: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="a-nameopenfilea--cftpconnectionopenfile"></a><a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>CFtpConnection::OpenFile  
  Вызовите эту функцию-член для открытия файла, расположенного на сервере FTP для чтения или записи.  
   
 ```  
@@ -380,7 +393,7 @@ CInternetFile* OpenFile(
   
  Переопределение `dwContext` по умолчанию для идентификатора контекста параметру значение по своему выбору. Идентификатор контекста связан с этой конкретной операции `CFtpConnection` объект, созданный его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) для предоставления состояния операции, с помощью которого определяется. См. в статье [Интернет первые шаги: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="a-nameputfilea--cftpconnectionputfile"></a><a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>CFtpConnection::PutFile  
  Вызовите эту функцию-член для хранения файла с FTP-сервера.  
   
 ```  
@@ -412,7 +425,7 @@ BOOL PutFile(
   
  Переопределение `dwContext` по умолчанию для идентификатора контекста параметру значение по своему выбору. Идентификатор контекста связан с этой конкретной операции `CFtpConnection` объект, созданный его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) для предоставления состояния операции, с помощью которого определяется. См. в статье [Интернет первые шаги: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="a-nameremovea--cftpconnectionremove"></a><a name="remove"></a>CFtpConnection::Remove  
+##  <a name="remove"></a>CFtpConnection::Remove  
  Вызовите эту функцию-член для удаления указанного файла из подключенного сервера.  
   
 ```  
@@ -429,7 +442,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>Примечания  
  `pstrFileName` Параметр может быть либо частично определенное имя файла относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/), которые могут использоваться в качестве разделителя каталогов для либо имя. **Удаление** функция преобразует имя разделителей каталогов в соответствующие символы перед их использованием.  
   
-##  <a name="a-nameremovedirectorya--cftpconnectionremovedirectory"></a><a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
  Вызовите эту функцию-член для удаления указанного каталога из подключенного сервера.  
   
 ```  
@@ -448,7 +461,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
  `pstrDirName` Параметр может быть либо частичное или полное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/), которые могут использоваться в качестве разделителя каталогов для либо имя. `RemoveDirectory`Преобразует имя разделителей каталогов в соответствующие символы перед их использованием.  
   
-##  <a name="a-namerenamea--cftpconnectionrename"></a><a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>CFtpConnection::Rename  
  Вызовите эту функцию-член Переименование указанного файла на подключенном сервере.  
   
 ```  
@@ -470,7 +483,7 @@ BOOL Rename(
 ### <a name="remarks"></a>Примечания  
  `pstrExisting` И `pstrNew` параметры могут быть либо частично определенное имя файла относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/), которые могут использоваться в качестве разделителя каталогов для либо имя. **Переименование** преобразует разделители имя каталога в соответствующие символы, прежде чем их использовать.  
   
-##  <a name="a-namesetcurrentdirectorya--cftpconnectionsetcurrentdirectory"></a><a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
+##  <a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
  Вызовите эту функцию-член для изменения в другой каталог на FTP-сервере.  
   
 ```  

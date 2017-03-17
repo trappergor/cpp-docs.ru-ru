@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAxDialogImpl
-- ATL.CAxDialogImpl
 - CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl::AdviseSinkMap
+- ATLWIN/ATL::CAxDialogImpl::Create
+- ATLWIN/ATL::CAxDialogImpl::DestroyWindow
+- ATLWIN/ATL::CAxDialogImpl::DoModal
+- ATLWIN/ATL::CAxDialogImpl::EndDialog
+- ATLWIN/ATL::CAxDialogImpl::GetDialogProc
+- ATLWIN/ATL::CAxDialogImpl::GetIDD
+- ATLWIN/ATL::CAxDialogImpl::IsDialogMessage
+- ATLWIN/ATL::CAxDialogImpl::m_bModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +122,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="a-nameadvisesinkmapa--caxdialogimpladvisesinkmap"></a><a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
  Этот метод используется для соединения или разъединения всех записей в схеме событий карты приемника объекта.  
   
 ```
@@ -128,7 +136,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-namecreatea--caxdialogimplcreate"></a><a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>CAxDialogImpl::Create  
  Этот метод используется для создания немодального диалогового окна.  
   
 ```
@@ -154,7 +162,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  Второй переопределение предоставляется только в том случае, чтобы можно было использовать диалоговые окна с [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--caxdialogimpldestroywindow"></a><a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
  Этот метод служит для уничтожения немодального диалогового окна.  
   
 ```
@@ -167,7 +175,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Примечания  
  Не следует вызывать `DestroyWindow` для уничтожения модального диалогового окна. Вызов [EndDialog](#enddialog) вместо.  
   
-##  <a name="a-namedomodala--caxdialogimpldomodal"></a><a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>CAxDialogImpl::DoModal  
  Этот метод используется для создания модального диалогового окна.  
   
 ```
@@ -191,7 +199,7 @@ INT_PTR DoModal(
   
  Чтобы создать немодального диалогового окна, вызовите [создать](#create).  
   
-##  <a name="a-nameenddialoga--caxdialogimplenddialog"></a><a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
  Этот метод служит для уничтожения модального диалогового окна.  
   
 ```
@@ -211,7 +219,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  Не следует вызывать `EndDialog` для уничтожения немодального диалогового окна. Вызов [DestroyWindow](#destroywindow) вместо.  
   
-##  <a name="a-namegetdialogproca--caxdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
  Этот метод вызывается для получения указателя на `DialogProc` функции обратного вызова.  
   
 ```
@@ -224,7 +232,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Примечания  
  `DialogProc` Функция является функцией обратного вызова, определяемые приложением.  
   
-##  <a name="a-namegetidda--caxdialogimplgetidd"></a><a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
  Вызовите этот метод, чтобы получить идентификатор ресурса шаблона диалогового окна  
   
 ```
@@ -234,7 +242,7 @@ int GetIDD();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает идентификатор ресурса шаблона диалогового окна  
   
-##  <a name="a-nameisdialogmessagea--caxdialogimplisdialogmessage"></a><a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
  Вызывать этот метод для определения, предназначено ли сообщение для этого диалогового и если это так, обработки сообщения.  
   
 ```
@@ -251,7 +259,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Примечания  
  Этот метод предназначен для вызова из в цикл обработки сообщений.  
   
-##  <a name="a-namembmodala--caxdialogimplmbmodal"></a><a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
  Переменную, которая существует только в отладочных построений и задано значение true, если окно является модальным.  
   
 ```

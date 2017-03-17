@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCaptionButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCloseButton
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +104,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdesktopalertwnd.h  
   
-##  <a name="a-nameiscaptionbuttona--cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
  Определяет, отображается ли кнопка в области заголовка диалогового окна предупреждения.  
   
 ```  
@@ -111,7 +114,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если данная кнопка отображается в области заголовка диалогового окна предупреждения; в противном случае — 0.  
   
-##  <a name="a-nameisclosebuttona--cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
  Определяет, является ли кнопки закрывает диалоговое окно предупреждения.  
   
 ```  

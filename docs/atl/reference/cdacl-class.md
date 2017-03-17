@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDacl
 - CDacl
-- ATL.CDacl
+- ATLSECURITY/ATL::CDacl
+- ATLSECURITY/ATL::CDacl::CDacl
+- ATLSECURITY/ATL::CDacl::AddAllowedAce
+- ATLSECURITY/ATL::CDacl::AddDeniedAce
+- ATLSECURITY/ATL::CDacl::GetAceCount
+- ATLSECURITY/ATL::CDacl::RemoveAce
+- ATLSECURITY/ATL::CDacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="a-nameaddallowedacea--cdacladdallowedace"></a><a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
  Добавляет допустимое ACE (записи управления доступом) `CDacl` объекта.  
   
 ```
@@ -139,7 +144,7 @@ bool AddAllowedAce(
   
  В разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно установить в `AceFlags` параметр.  
   
-##  <a name="a-nameadddeniedacea--cdacladddeniedace"></a><a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
  Добавляет запрещенного ACE (записи управления доступом) `CDacl` объекта.  
   
 ```
@@ -183,7 +188,7 @@ bool AddDeniedAce(
   
  В разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно установить в `AceFlags` параметр.  
   
-##  <a name="a-namecdacla--cdaclcdacl"></a><a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>CDacl::CDacl  
  Конструктор.  
   
 ```
@@ -198,7 +203,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Примечания  
  `CDacl` Объект может быть также создан с помощью существующего **ACL** структуры. Важно отметить, что только список DACL (список управления доступом), а не системный список управления ДОСТУПОМ (список управления доступом системы), следует передать в качестве этого параметра. В отладочных построениях передача SACL вызывает метод ASSERT. В сборке выпуска передачи SACL вызовет записи ACE (элементы управления доступом) в ACL игнорируются, и ошибок не происходит.  
   
-##  <a name="a-namedtora--cdaclcdacl"></a><a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>CDacl:: ~ CDacl  
  Деструктор  
   
 ```
@@ -208,7 +213,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все ресурсы, полученные с помощью объекта, включая все элементы управления доступом (элементы управления доступом) с помощью [CDacl::RemoveAllAces](#removeallaces).  
   
-##  <a name="a-namegetacecounta--cdaclgetacecount"></a><a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>CDacl::GetAceCount  
  Возвращает количество элементов управления доступом (элементы управления доступом) в `CDacl` объекта.  
   
 ```
@@ -218,7 +223,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество элементов управления доступом, содержащиеся в `CDacl` объекта.  
   
-##  <a name="a-nameoperatoreqa--cdacloperator-"></a><a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>CDacl::operator =  
  Оператор присвоения.  
   
 ```
@@ -235,7 +240,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  Необходимо обеспечить передать DACL (список управления доступом) только для этой функции. Передача SACL (системный список управления доступом) Эта функция вызовет УТВЕРЖДЕНИЕ в отладочных построениях, но вызовет без ошибок в сборке выпуска.  
   
-##  <a name="a-nameremoveacea--cdaclremoveace"></a><a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>CDacl::RemoveAce  
  Удаляет из конкретного элемента управления ДОСТУПОМ (записи управления доступом) `CDacl` объекта.  
   
 ```
@@ -249,7 +254,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод является производным от [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="a-nameremoveallacesa--cdaclremoveallaces"></a><a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
  Удаляет все элементы ACE (элементы управления доступом), содержащихся в `CDacl` объекта.  
   
 ```

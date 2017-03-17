@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSacl
-- ATL::CSacl
 - CSacl
+- ATLSECURITY/ATL::CSacl
+- ATLSECURITY/ATL::CSacl::CSacl
+- ATLSECURITY/ATL::CSacl::AddAuditAce
+- ATLSECURITY/ATL::CSacl::GetAceCount
+- ATLSECURITY/ATL::CSacl::RemoveAce
+- ATLSECURITY/ATL::CSacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="a-nameaddauditacea--csacladdauditace"></a><a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>CSacl::AddAuditAce  
  Добавляет запись управления доступом (ACE) аудита `CSacl` объекта.  
   
 ```
@@ -145,7 +149,7 @@ bool AddAuditAce(
   
  В разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно установить в `AceFlags` параметр.  
   
-##  <a name="a-namecsacla--csaclcsacl"></a><a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>CSacl::CSacl  
  Конструктор.  
   
 ```
@@ -160,7 +164,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  `CSacl` Объект может быть также создан с помощью существующего **ACL** структуры. Убедитесь, что этот параметр является системный список управления доступом (SACL), а не список управления доступом (DACL). В отладочных построениях, если предоставляется список DACL утверждение будет выполняться. В окончательных построениях игнорируются все записи из списка DACL.  
   
-##  <a name="a-namedtora--csaclcsacl"></a><a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>CSacl:: ~ CSacl  
  Деструктор  
   
 ```
@@ -170,7 +174,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все ресурсы, полученные с помощью объекта, включая все записи управления доступом (ACE).  
   
-##  <a name="a-namegetacecounta--csaclgetacecount"></a><a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>CSacl::GetAceCount  
  Возвращает количество записей управления доступом (ACE) в `CSacl` объекта.  
   
 ```
@@ -180,7 +184,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество элементов управления доступом, содержащиеся в `CSacl` объекта.  
   
-##  <a name="a-nameoperatoreqa--csacloperator-"></a><a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>CSacl::operator =  
  Оператор присвоения.  
   
 ```
@@ -194,7 +198,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ссылку на обновленный `CSacl` объекта. Убедитесь, что **ACL** параметр является на самом деле система список управления доступом (SACL), а не список управления доступом (DACL). В отладочных построениях, утверждение будет выполняться и в сборке выпуска **ACL** параметр будет игнорироваться.  
   
-##  <a name="a-nameremoveacea--csaclremoveace"></a><a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>CSacl::RemoveAce  
  Удаляет из конкретного элемента управления ДОСТУПОМ (записи управления доступом) **CSacl** объекта.  
   
 ```
@@ -208,7 +212,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод является производным от [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="a-nameremoveallacesa--csaclremoveallaces"></a><a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
  Удаляет все записи управления доступом (ACE), содержащихся в `CSacl` объекта.  
   
 ```

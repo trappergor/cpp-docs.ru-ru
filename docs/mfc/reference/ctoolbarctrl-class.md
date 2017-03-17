@@ -10,6 +10,95 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CToolBarCtrl
+- AFXCMN/CToolBarCtrl
+- AFXCMN/CToolBarCtrl::CToolBarCtrl
+- AFXCMN/CToolBarCtrl::AddBitmap
+- AFXCMN/CToolBarCtrl::AddButtons
+- AFXCMN/CToolBarCtrl::AddString
+- AFXCMN/CToolBarCtrl::AddStrings
+- AFXCMN/CToolBarCtrl::AutoSize
+- AFXCMN/CToolBarCtrl::ChangeBitmap
+- AFXCMN/CToolBarCtrl::CheckButton
+- AFXCMN/CToolBarCtrl::CommandToIndex
+- AFXCMN/CToolBarCtrl::Create
+- AFXCMN/CToolBarCtrl::CreateEx
+- AFXCMN/CToolBarCtrl::Customize
+- AFXCMN/CToolBarCtrl::DeleteButton
+- AFXCMN/CToolBarCtrl::EnableButton
+- AFXCMN/CToolBarCtrl::GetAnchorHighlight
+- AFXCMN/CToolBarCtrl::GetBitmap
+- AFXCMN/CToolBarCtrl::GetBitmapFlags
+- AFXCMN/CToolBarCtrl::GetButton
+- AFXCMN/CToolBarCtrl::GetButtonCount
+- AFXCMN/CToolBarCtrl::GetButtonInfo
+- AFXCMN/CToolBarCtrl::GetButtonSize
+- AFXCMN/CToolBarCtrl::GetColorScheme
+- AFXCMN/CToolBarCtrl::GetDisabledImageList
+- AFXCMN/CToolBarCtrl::GetDropTarget
+- AFXCMN/CToolBarCtrl::GetExtendedStyle
+- AFXCMN/CToolBarCtrl::GetHotImageList
+- AFXCMN/CToolBarCtrl::GetHotItem
+- AFXCMN/CToolBarCtrl::GetImageList
+- AFXCMN/CToolBarCtrl::GetInsertMark
+- AFXCMN/CToolBarCtrl::GetInsertMarkColor
+- AFXCMN/CToolBarCtrl::GetItemRect
+- AFXCMN/CToolBarCtrl::GetMaxSize
+- AFXCMN/CToolBarCtrl::GetMaxTextRows
+- AFXCMN/CToolBarCtrl::GetMetrics
+- AFXCMN/CToolBarCtrl::GetPadding
+- AFXCMN/CToolBarCtrl::GetPressedImageList
+- AFXCMN/CToolBarCtrl::GetRect
+- AFXCMN/CToolBarCtrl::GetRows
+- AFXCMN/CToolBarCtrl::GetState
+- AFXCMN/CToolBarCtrl::GetString
+- AFXCMN/CToolBarCtrl::GetStyle
+- AFXCMN/CToolBarCtrl::GetToolTips
+- AFXCMN/CToolBarCtrl::HideButton
+- AFXCMN/CToolBarCtrl::HitTest
+- AFXCMN/CToolBarCtrl::Indeterminate
+- AFXCMN/CToolBarCtrl::InsertButton
+- AFXCMN/CToolBarCtrl::InsertMarkHitTest
+- AFXCMN/CToolBarCtrl::IsButtonChecked
+- AFXCMN/CToolBarCtrl::IsButtonEnabled
+- AFXCMN/CToolBarCtrl::IsButtonHidden
+- AFXCMN/CToolBarCtrl::IsButtonHighlighted
+- AFXCMN/CToolBarCtrl::IsButtonIndeterminate
+- AFXCMN/CToolBarCtrl::IsButtonPressed
+- AFXCMN/CToolBarCtrl::LoadImages
+- AFXCMN/CToolBarCtrl::MapAccelerator
+- AFXCMN/CToolBarCtrl::MarkButton
+- AFXCMN/CToolBarCtrl::MoveButton
+- AFXCMN/CToolBarCtrl::PressButton
+- AFXCMN/CToolBarCtrl::ReplaceBitmap
+- AFXCMN/CToolBarCtrl::RestoreState
+- AFXCMN/CToolBarCtrl::SaveState
+- AFXCMN/CToolBarCtrl::SetAnchorHighlight
+- AFXCMN/CToolBarCtrl::SetBitmapSize
+- AFXCMN/CToolBarCtrl::SetButtonInfo
+- AFXCMN/CToolBarCtrl::SetButtonSize
+- AFXCMN/CToolBarCtrl::SetButtonStructSize
+- AFXCMN/CToolBarCtrl::SetButtonWidth
+- AFXCMN/CToolBarCtrl::SetCmdID
+- AFXCMN/CToolBarCtrl::SetColorScheme
+- AFXCMN/CToolBarCtrl::SetDisabledImageList
+- AFXCMN/CToolBarCtrl::SetDrawTextFlags
+- AFXCMN/CToolBarCtrl::SetExtendedStyle
+- AFXCMN/CToolBarCtrl::SetHotImageList
+- AFXCMN/CToolBarCtrl::SetHotItem
+- AFXCMN/CToolBarCtrl::SetImageList
+- AFXCMN/CToolBarCtrl::SetIndent
+- AFXCMN/CToolBarCtrl::SetInsertMark
+- AFXCMN/CToolBarCtrl::SetInsertMarkColor
+- AFXCMN/CToolBarCtrl::SetMaxTextRows
+- AFXCMN/CToolBarCtrl::SetMetrics
+- AFXCMN/CToolBarCtrl::SetOwner
+- AFXCMN/CToolBarCtrl::SetPadding
+- AFXCMN/CToolBarCtrl::SetPressedImageList
+- AFXCMN/CToolBarCtrl::SetRows
+- AFXCMN/CToolBarCtrl::SetState
+- AFXCMN/CToolBarCtrl::SetStyle
+- AFXCMN/CToolBarCtrl::SetToolTips
+- AFXCMN/CToolBarCtrl::SetWindowTheme
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -201,7 +290,7 @@ class CToolBarCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-nameaddbitmapa--ctoolbarctrladdbitmap"></a><a name="addbitmap"></a>CToolBarCtrl::AddBitmap  
+##  <a name="addbitmap"></a>CToolBarCtrl::AddBitmap  
  Добавляет одно или несколько изображений кнопки в список изображений кнопок в панели инструментов.  
   
 ```  
@@ -231,7 +320,7 @@ int AddBitmap(
 ### <a name="remarks"></a>Примечания  
  Можно использовать интерфейс Windows API [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467) для сопоставления цветов перед добавлением растровое изображение в панели инструментов. Если передать указатель на **CBitMap** объекта, необходимо убедиться, что точечный рисунок не удаляются до, после удаления панели инструментов.  
   
-##  <a name="a-nameaddbuttonsa--ctoolbarctrladdbuttons"></a><a name="addbuttons"></a>CToolBarCtrl::AddButtons  
+##  <a name="addbuttons"></a>CToolBarCtrl::AddButtons  
  Добавляет одну или несколько кнопок в элемент управления панели инструментов.  
   
 ```  
@@ -313,7 +402,7 @@ BOOL AddButtons(
   
  Список с изображения или строки, индекс которого можно предоставить необходимо ранее были добавлены в элемент управления toolbar с помощью [AddBitmap](#addbitmap), [AddString](#addstring), или [AddStrings](#addstrings).  
   
-##  <a name="a-nameaddstringa--ctoolbarctrladdstring"></a><a name="addstring"></a>CToolBarCtrl::AddString  
+##  <a name="addstring"></a>CToolBarCtrl::AddString  
  Добавляет новые строки, переданной в качестве идентификатора ресурса панели инструментов внутренний список строк.  
   
 ```  
@@ -327,7 +416,7 @@ int AddString(UINT nStringID);
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс первого новые строки, добавленной в случае успешного выполнения; в противном случае — значение -1.  
   
-##  <a name="a-nameaddstringsa--ctoolbarctrladdstrings"></a><a name="addstrings"></a>CToolBarCtrl::AddStrings  
+##  <a name="addstrings"></a>CToolBarCtrl::AddStrings  
  Добавляет новую строку или строки в список строк, доступных для элемента управления панели инструментов.  
   
 ```  
@@ -352,7 +441,7 @@ int AddStrings(LPCTSTR lpszStrings);
   
  Не следует передавать `CString` объекта для этой функции, поскольку он не может быть более одного символа null `CString`.  
   
-##  <a name="a-nameautosizea--ctoolbarctrlautosize"></a><a name="autosize"></a>CToolBarCtrl::AutoSize  
+##  <a name="autosize"></a>CToolBarCtrl::AutoSize  
  Изменяет элемент управления в панель инструментов полностью.  
   
 ```  
@@ -362,7 +451,7 @@ void AutoSize();
 ### <a name="remarks"></a>Примечания  
  Эту функцию следует вызывать при изменении размера родительского окна или при изменении размера панели инструментов (например, при установке размера кнопки или растрового изображения или добавить строки).  
   
-##  <a name="a-namechangebitmapa--ctoolbarctrlchangebitmap"></a><a name="changebitmap"></a>CToolBarCtrl::ChangeBitmap  
+##  <a name="changebitmap"></a>CToolBarCtrl::ChangeBitmap  
  Изменение точечного рисунка для кнопки в текущий элемент управления панели инструментов.  
   
 ```  
@@ -391,7 +480,7 @@ BOOL ChangeBitmap(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;1](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_3.cpp)]  
   
-##  <a name="a-namecheckbuttona--ctoolbarctrlcheckbutton"></a><a name="checkbutton"></a>CToolBarCtrl::CheckButton  
+##  <a name="checkbutton"></a>CToolBarCtrl::CheckButton  
  Проверяет, или удаляет заданную кнопку в панели инструментов.  
   
 ```  
@@ -413,7 +502,7 @@ BOOL CheckButton(
 ### <a name="remarks"></a>Примечания  
  Когда переключатель кажется нажатия. Если вы хотите изменить более одного состояния кнопки, рассмотрите возможность вызова [SetState](#setstate) вместо.  
   
-##  <a name="a-namecommandtoindexa--ctoolbarctrlcommandtoindex"></a><a name="commandtoindex"></a>CToolBarCtrl::CommandToIndex  
+##  <a name="commandtoindex"></a>CToolBarCtrl::CommandToIndex  
  Возвращает отсчитываемый от нуля индекс для кнопки, связанной с указанным идентификатором команды.  
   
 ```  
@@ -429,7 +518,7 @@ UINT CommandToIndex(UINT nID) const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecreatea--ctoolbarctrlcreate"></a><a name="create"></a>CToolBarCtrl::Create  
+##  <a name="create"></a>CToolBarCtrl::Create  
  Создает элемент управления панели инструментов и присоединяет его к `CToolBarCtrl` объекта.  
   
 ```  
@@ -475,7 +564,7 @@ virtual BOOL Create(
   
  Панели инструментов автоматически задает размер и положение окна инструментов. Высота основана на высоте кнопок на панели инструментов. Ширина является таким же, как Ширина клиентской области родительского окна. `CCS_TOP` И `CCS_BOTTOM` стили определяют, расположено ли вдоль верхней или нижней части клиентской области панели инструментов. По умолчанию панель инструментов имеет `CCS_TOP` стиль.  
   
-##  <a name="a-namecreateexa--ctoolbarctrlcreateex"></a><a name="createex"></a>CToolBarCtrl::CreateEx  
+##  <a name="createex"></a>CToolBarCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CToolBarCtrl` объекта.  
   
 ```  
@@ -509,7 +598,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**. **CreateEx** создает элемент управления с помощью расширенных стилей Windows, заданные `dwExStyle`. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle). Например, используйте `CreateEx` установка стилей, таких как **WS_EX_CONTEXTHELP**, но использовать `SetExtendedStyle` установка стилей, таких как **TBSTYLE_EX_DRAWDDARROWS**. Дополнительные сведения см. в разделе стили, описанные в [расширенные стили панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760430) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namectoolbarctrla--ctoolbarctrlctoolbarctrl"></a><a name="ctoolbarctrl"></a>CToolBarCtrl::CToolBarCtrl  
+##  <a name="ctoolbarctrl"></a>CToolBarCtrl::CToolBarCtrl  
  Создает объект `CToolBarCtrl`.  
   
 ```  
@@ -519,7 +608,7 @@ CToolBarCtrl();
 ### <a name="remarks"></a>Примечания  
  Необходимо вызвать [создать](#create) необходимо разрешить использование панели инструментов.  
   
-##  <a name="a-namecustomizea--ctoolbarctrlcustomize"></a><a name="customize"></a>CToolBarCtrl::Customize  
+##  <a name="customize"></a>CToolBarCtrl::Customize  
  Отображает диалоговое окно Настройка панели инструментов.  
   
 ```  
@@ -531,7 +620,7 @@ void Customize();
   
  Дополнительные сведения см. в статье базы знаний Q241850: PRB: вызов CToolBarCtrl::Customize не остается видимым настройки диалогового окна.  
   
-##  <a name="a-namedeletebuttona--ctoolbarctrldeletebutton"></a><a name="deletebutton"></a>CToolBarCtrl::DeleteButton  
+##  <a name="deletebutton"></a>CToolBarCtrl::DeleteButton  
  Удаление кнопки с панели инструментов.  
   
 ```  
@@ -547,7 +636,7 @@ BOOL DeleteButton(int nIndex);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameenablebuttona--ctoolbarctrlenablebutton"></a><a name="enablebutton"></a>CToolBarCtrl::EnableButton  
+##  <a name="enablebutton"></a>CToolBarCtrl::EnableButton  
  Включает или отключает указанную кнопку в панели инструментов.  
   
 ```  
@@ -569,7 +658,7 @@ BOOL EnableButton(
 ### <a name="remarks"></a>Примечания  
  При включении кнопки можно нажата и проверки. Если вы хотите изменить более одного состояния кнопки, рассмотрите возможность вызова [SetState](#setstate) вместо.  
   
-##  <a name="a-namegetanchorhighlighta--ctoolbarctrlgetanchorhighlight"></a><a name="getanchorhighlight"></a>CToolBarCtrl::GetAnchorHighlight  
+##  <a name="getanchorhighlight"></a>CToolBarCtrl::GetAnchorHighlight  
  Получает выделение привязки, Настройка панели инструментов.  
   
 ```  
@@ -582,7 +671,7 @@ BOOL GetAnchorHighlight() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetbitmapa--ctoolbarctrlgetbitmap"></a><a name="getbitmap"></a>CToolBarCtrl::GetBitmap  
+##  <a name="getbitmap"></a>CToolBarCtrl::GetBitmap  
  Извлекает индекс растровое изображение, связанное с кнопкой на панели инструментов.  
   
 ```  
@@ -599,7 +688,7 @@ int GetBitmap(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Реализует функции [TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetbitmapflagsa--ctoolbarctrlgetbitmapflags"></a><a name="getbitmapflags"></a>CToolBarCtrl::GetBitmapFlags  
+##  <a name="getbitmapflags"></a>CToolBarCtrl::GetBitmapFlags  
  Получает флаги точечный рисунок из панели инструментов.  
   
 ```  
@@ -612,7 +701,7 @@ UINT GetBitmapFlags() const;
 ### <a name="remarks"></a>Примечания  
  Его следует вызывать после создания панели инструментов, но перед добавлением растровые изображения панели инструментов. Возвращаемое значение указывает, поддерживает ли отображение большие точечные рисунки. Если отображение поддерживает большие точечные рисунки и выберите их, вызовите [SetBitmapSize](#setbitmapsize) и [SetButtonSize](#setbuttonsize) перед добавлением большую битовую карту с помощью [AddBitmap](#addbitmap).  
   
-##  <a name="a-namegetbuttona--ctoolbarctrlgetbutton"></a><a name="getbutton"></a>CToolBarCtrl::GetButton  
+##  <a name="getbutton"></a>CToolBarCtrl::GetButton  
  Извлекает сведения о указанную кнопку в панели инструментов.  
   
 ```  
@@ -631,7 +720,7 @@ BOOL GetButton(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе —&0;.  
   
-##  <a name="a-namegetbuttoncounta--ctoolbarctrlgetbuttoncount"></a><a name="getbuttoncount"></a>CToolBarCtrl::GetButtonCount  
+##  <a name="getbuttoncount"></a>CToolBarCtrl::GetButtonCount  
  Получает число кнопок панели инструментов.  
   
 ```  
@@ -641,7 +730,7 @@ int GetButtonCount() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число кнопок.  
   
-##  <a name="a-namegetbuttoninfoa--ctoolbarctrlgetbuttoninfo"></a><a name="getbuttoninfo"></a>CToolBarCtrl::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>CToolBarCtrl::GetButtonInfo  
  Возвращает сведения о кнопке на панели инструментов.  
   
 ```  
@@ -663,7 +752,7 @@ int GetButtonInfo(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetbuttonsizea--ctoolbarctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CToolBarCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>CToolBarCtrl::GetButtonSize  
  Возвращает размер кнопки панели инструментов.  
   
 ```  
@@ -673,7 +762,7 @@ DWORD GetButtonSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  A `DWORD` значение, которое содержит значения ширины и высоты в LOWORD и HIWORD, соответственно.  
   
-##  <a name="a-namegetbuttontexta--ctoolbarctrlgetbuttontext"></a><a name="getbuttontext"></a>CToolBarCtrl::GetButtonText  
+##  <a name="getbuttontext"></a>CToolBarCtrl::GetButtonText  
  Получает отображаемый текст указанную кнопку на текущий элемент управления панели инструментов.  
   
 ```  
@@ -692,7 +781,7 @@ CString GetButtonText(int idButton) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) сообщения, которое описано в пакете Windows SDK.  
   
-##  <a name="a-namegetcolorschemea--ctoolbarctrlgetcolorscheme"></a><a name="getcolorscheme"></a>CToolBarCtrl::GetColorScheme  
+##  <a name="getcolorscheme"></a>CToolBarCtrl::GetColorScheme  
  Возвращает цветовую схему текущего элемента управления панели инструментов.  
   
 ```  
@@ -711,7 +800,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdisabledimagelista--ctoolbarctrlgetdisabledimagelist"></a><a name="getdisabledimagelist"></a>CToolBarCtrl::GetDisabledImageList  
+##  <a name="getdisabledimagelist"></a>CToolBarCtrl::GetDisabledImageList  
  Получает список изображений, управления панели инструментов для отображения неактивных кнопок.  
   
 ```  
@@ -724,7 +813,7 @@ CImageList* GetDisabledImageList() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Реализация MFC `GetDisabledImageList` использует `CImageList` изображения объекта, содержащего кнопки панели инструментов вместо дескриптор списка изображений.  
   
-##  <a name="a-namegetdroptargeta--ctoolbarctrlgetdroptarget"></a><a name="getdroptarget"></a>CToolBarCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>CToolBarCtrl::GetDropTarget  
  Извлекает [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) интерфейс для элемента управления панели инструментов.  
   
 ```  
@@ -741,7 +830,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetextendedstylea--ctoolbarctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CToolBarCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CToolBarCtrl::GetExtendedStyle  
  Извлекает расширенные стили для элемента управления панели инструментов.  
   
 ```  
@@ -754,7 +843,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegethotimagelista--ctoolbarctrlgethotimagelist"></a><a name="gethotimagelist"></a>CToolBarCtrl::GetHotImageList  
+##  <a name="gethotimagelist"></a>CToolBarCtrl::GetHotImageList  
  Получает список изображений, управления панели инструментов используется для отображения кнопок «горячей». Кнопку в активном состоянии выделяется, когда указатель мыши находится над ним.  
   
 ```  
@@ -767,7 +856,7 @@ CImageList* GetHotImageList() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Кнопку в активном состоянии выделяется, когда указатель мыши находится над ним.  
   
-##  <a name="a-namegethotitema--ctoolbarctrlgethotitem"></a><a name="gethotitem"></a>CToolBarCtrl::GetHotItem  
+##  <a name="gethotitem"></a>CToolBarCtrl::GetHotItem  
  Извлекает индекс модной на панели инструментов.  
   
 ```  
@@ -780,7 +869,7 @@ int GetHotItem() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetimagelista--ctoolbarctrlgetimagelist"></a><a name="getimagelist"></a>CToolBarCtrl::GetImageList  
+##  <a name="getimagelist"></a>CToolBarCtrl::GetImageList  
  Получает список изображений, управления панели инструментов используется для отображения кнопки в состоянии по умолчанию.  
   
 ```  
@@ -793,7 +882,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetinsertmarka--ctoolbarctrlgetinsertmark"></a><a name="getinsertmark"></a>CToolBarCtrl::GetInsertMark  
+##  <a name="getinsertmark"></a>CToolBarCtrl::GetInsertMark  
  Получает текущий знак вставки для панели инструментов.  
   
 ```  
@@ -807,7 +896,7 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetinsertmarkcolora--ctoolbarctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CToolBarCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>CToolBarCtrl::GetInsertMarkColor  
  Получает цвет, используемый для рисования знак вставки для панели инструментов.  
   
 ```  
@@ -820,7 +909,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemrecta--ctoolbarctrlgetitemrect"></a><a name="getitemrect"></a>CToolBarCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CToolBarCtrl::GetItemRect  
  Возвращает прямоугольник, ограничивающий кнопки в панели инструментов.  
   
 ```  
@@ -842,7 +931,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Примечания  
  Эта функция не извлекает ограничивающий прямоугольник для кнопки, состояние которого имеет значение `TBSTATE_HIDDEN`.  
   
-##  <a name="a-namegetmaxsizea--ctoolbarctrlgetmaxsize"></a><a name="getmaxsize"></a>CToolBarCtrl::GetMaxSize  
+##  <a name="getmaxsize"></a>CToolBarCtrl::GetMaxSize  
  Возвращает общий размер всех видимой кнопки и разделители в панели инструментов.  
   
 ```  
@@ -859,7 +948,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetmaxtextrowsa--ctoolbarctrlgetmaxtextrows"></a><a name="getmaxtextrows"></a>CToolBarCtrl::GetMaxTextRows  
+##  <a name="getmaxtextrows"></a>CToolBarCtrl::GetMaxTextRows  
  Получает максимальное количество строк текста, отображаемый на кнопке панели инструментов.  
   
 ```  
@@ -869,7 +958,7 @@ int GetMaxTextRows() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Максимальное количество строк текста, отображаемый на кнопке панели инструментов.  
   
-##  <a name="a-namegetmetricsa--ctoolbarctrlgetmetrics"></a><a name="getmetrics"></a>CToolBarCtrl::GetMetrics  
+##  <a name="getmetrics"></a>CToolBarCtrl::GetMetrics  
  Получает метрики из `CToolBarCtrl` объекта.  
   
 ```  
@@ -883,7 +972,7 @@ void GetMetrics(LPTBMETRICS ptbm) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342) сообщений, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetpaddinga--ctoolbarctrlgetpadding"></a><a name="getpadding"></a>CToolBarCtrl::GetPadding  
+##  <a name="getpadding"></a>CToolBarCtrl::GetPadding  
  Возвращает горизонтальное и вертикальное заполнения текущего элемента управления панели инструментов.  
   
 ```  
@@ -905,7 +994,7 @@ BOOL GetPadding(
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetpressedimagelista--ctoolbarctrlgetpressedimagelist"></a><a name="getpressedimagelist"></a>CToolBarCtrl::GetPressedImageList  
+##  <a name="getpressedimagelist"></a>CToolBarCtrl::GetPressedImageList  
  Получает список изображений, текущий элемент управления панели инструментов используется для представления кнопки в нажатом состоянии.  
   
 ```  
@@ -918,7 +1007,7 @@ CImageList* GetPressedImageList();
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetrecta--ctoolbarctrlgetrect"></a><a name="getrect"></a>CToolBarCtrl::GetRect  
+##  <a name="getrect"></a>CToolBarCtrl::GetRect  
  Возвращает ограничивающий прямоугольник для указанной кнопки.  
   
 ```  
@@ -940,7 +1029,7 @@ BOOL GetRect(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetrowsa--ctoolbarctrlgetrows"></a><a name="getrows"></a>CToolBarCtrl::GetRows  
+##  <a name="getrows"></a>CToolBarCtrl::GetRows  
  Получает число строк, кнопок, отображаемых элементом управления панели инструментов.  
   
 ```  
@@ -953,7 +1042,7 @@ int GetRows() const;
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что количество строк всегда один, если не был создан панели инструментов `TBSTYLE_WRAPABLE` стиль.  
   
-##  <a name="a-namegetstatea--ctoolbarctrlgetstate"></a><a name="getstate"></a>CToolBarCtrl::GetState  
+##  <a name="getstate"></a>CToolBarCtrl::GetState  
  Получает сведения о состоянии от указанной кнопки в элементе управления панели инструментов, например ли он включен, нажата или проверки.  
   
 ```  
@@ -970,7 +1059,7 @@ int GetState(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция особенно полезна, если вы хотите получить несколько состояний кнопки. Чтобы просто получить одно состояние, используйте один из следующих функций-членов: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), или [IsButtonIndeterminate](#isbuttonindeterminate). Тем не менее `GetState` функция-член является единственным способом обнаружения `TBSTATE_WRAP` кнопку состояние.  
   
-##  <a name="a-namegetstringa--ctoolbarctrlgetstring"></a><a name="getstring"></a>CToolBarCtrl::GetString  
+##  <a name="getstring"></a>CToolBarCtrl::GetString  
  Извлекает строку, панели инструментов.  
   
 ```  
@@ -1003,7 +1092,7 @@ int GetString(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstylea--ctoolbarctrlgetstyle"></a><a name="getstyle"></a>CToolBarCtrl::GetStyle  
+##  <a name="getstyle"></a>CToolBarCtrl::GetStyle  
  Возвращает стили, примененные к элементу управления панели инструментов.  
   
 ```  
@@ -1013,7 +1102,7 @@ DWORD GetStyle() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `DWORD` содержащий сочетание [стили элемента управления панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760439), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettooltipsa--ctoolbarctrlgettooltips"></a><a name="gettooltips"></a>CToolBarCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CToolBarCtrl::GetToolTips  
  Получает дескриптор элемента управления всплывающей подсказки, если имеется, сопоставленный с элементом управления панели инструментов.  
   
 ```  
@@ -1026,7 +1115,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>Примечания  
  Поскольку элемент управления toolbar обычно создает и обслуживает собственный управления всплывающей подсказки, большинство программ не требуется для вызова этой функции.  
   
-##  <a name="a-namehittesta--ctoolbarctrlhittest"></a><a name="hittest"></a>CToolBarCtrl::HitTest  
+##  <a name="hittest"></a>CToolBarCtrl::HitTest  
  Определяет, где находится точка в элементе управления панели инструментов.  
   
 ```  
@@ -1045,7 +1134,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehidebuttona--ctoolbarctrlhidebutton"></a><a name="hidebutton"></a>CToolBarCtrl::HideButton  
+##  <a name="hidebutton"></a>CToolBarCtrl::HideButton  
  Скрытие или отображение указанную кнопку в панели инструментов.  
   
 ```  
@@ -1067,7 +1156,7 @@ BOOL HideButton(
 ### <a name="remarks"></a>Примечания  
  Если вы хотите изменить более одного состояния кнопки, рассмотрите возможность вызова [SetState](#setstate) вместо.  
   
-##  <a name="a-nameindeterminatea--ctoolbarctrlindeterminate"></a><a name="indeterminate"></a>CToolBarCtrl::Indeterminate  
+##  <a name="indeterminate"></a>CToolBarCtrl::Indeterminate  
  Устанавливает или снимает неопределенное состояние указанную кнопку в панели инструментов.  
   
 ```  
@@ -1089,7 +1178,7 @@ BOOL Indeterminate(
 ### <a name="remarks"></a>Примечания  
  Неопределенный кнопки отображаются серым цветом, такие, как будет выглядеть как кнопки «Полужирный» на панели инструментов текстового редактора при выделение текста содержит символы полужирным и обычным. Если вы хотите изменить более одного состояния кнопки, рассмотрите возможность вызова [SetState](#setstate) вместо.  
   
-##  <a name="a-nameinsertbuttona--ctoolbarctrlinsertbutton"></a><a name="insertbutton"></a>CToolBarCtrl::InsertButton  
+##  <a name="insertbutton"></a>CToolBarCtrl::InsertButton  
  Вставляет кнопку в панели инструментов.  
   
 ```  
@@ -1111,7 +1200,7 @@ BOOL InsertButton(
 ### <a name="remarks"></a>Примечания  
  Список с изображения или строки, индекс которого можно предоставить необходимо ранее были добавлены в элемент управления toolbar с помощью [AddBitmap](#addbitmap), [AddString](#addstring), или [AddStrings](#addstrings).  
   
-##  <a name="a-nameinsertmarkhittesta--ctoolbarctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CToolBarCtrl::InsertMarkHitTest  
+##  <a name="insertmarkhittest"></a>CToolBarCtrl::InsertMarkHitTest  
  Извлекает сведения о знак вставки для точки в панели инструментов.  
   
 ```  
@@ -1133,7 +1222,7 @@ BOOL InsertMarkHitTest(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisbuttoncheckeda--ctoolbarctrlisbuttonchecked"></a><a name="isbuttonchecked"></a>CToolBarCtrl::IsButtonChecked  
+##  <a name="isbuttonchecked"></a>CToolBarCtrl::IsButtonChecked  
  Определяет, проверяется ли указанную кнопку в панели инструментов.  
   
 ```  
@@ -1150,7 +1239,7 @@ BOOL IsButtonChecked(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Рассмотрите возможность вызова [GetState](#getstate) Если вы хотите получить несколько состояний кнопки.  
   
-##  <a name="a-nameisbuttonenableda--ctoolbarctrlisbuttonenabled"></a><a name="isbuttonenabled"></a>CToolBarCtrl::IsButtonEnabled  
+##  <a name="isbuttonenabled"></a>CToolBarCtrl::IsButtonEnabled  
  Определяет, включена ли кнопка, указанного в элементе управления панели инструментов.  
   
 ```  
@@ -1167,7 +1256,7 @@ BOOL IsButtonEnabled(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Рассмотрите возможность вызова [GetState](#getstate) Если вы хотите получить несколько состояний кнопки.  
   
-##  <a name="a-nameisbuttonhiddena--ctoolbarctrlisbuttonhidden"></a><a name="isbuttonhidden"></a>CToolBarCtrl::IsButtonHidden  
+##  <a name="isbuttonhidden"></a>CToolBarCtrl::IsButtonHidden  
  Определяет, является ли скрытым указанную кнопку в панели инструментов.  
   
 ```  
@@ -1184,7 +1273,7 @@ BOOL IsButtonHidden(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Рассмотрите возможность вызова [GetState](#getstate) Если вы хотите получить несколько состояний кнопки.  
   
-##  <a name="a-nameisbuttonhighlighteda--ctoolbarctrlisbuttonhighlighted"></a><a name="isbuttonhighlighted"></a>CToolBarCtrl::IsButtonHighlighted  
+##  <a name="isbuttonhighlighted"></a>CToolBarCtrl::IsButtonHighlighted  
  Проверяет состояние выделения кнопки панели инструментов.  
   
 ```  
@@ -1198,7 +1287,7 @@ BOOL IsButtonHighlighted(int nID) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Положительное целое число, если выделена кнопка, 0, если не выделена кнопка или -1, если ошибка возникает.  
   
-##  <a name="a-nameisbuttonindeterminatea--ctoolbarctrlisbuttonindeterminate"></a><a name="isbuttonindeterminate"></a>CToolBarCtrl::IsButtonIndeterminate  
+##  <a name="isbuttonindeterminate"></a>CToolBarCtrl::IsButtonIndeterminate  
  Определяет, является ли указанный кнопки элемента управления toolbar неопределенным.  
   
 ```  
@@ -1215,7 +1304,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Неопределенный кнопки отображаются серым цветом, такие, как будет выглядеть следующим образом кнопки «Полужирный» на панели инструментов текстового редактора, если выделенный текст содержит символы полужирным и обычным. Рассмотрите возможность вызова [GetState](#getstate) Если вы хотите получить несколько состояний кнопки.  
   
-##  <a name="a-nameisbuttonpresseda--ctoolbarctrlisbuttonpressed"></a><a name="isbuttonpressed"></a>CToolBarCtrl::IsButtonPressed  
+##  <a name="isbuttonpressed"></a>CToolBarCtrl::IsButtonPressed  
  Определяет, нажата ли указанную кнопку в панели инструментов.  
   
 ```  
@@ -1232,7 +1321,7 @@ BOOL IsButtonPressed(int nID) const;
 ### <a name="remarks"></a>Примечания  
  Рассмотрите возможность вызова [GetState](#getstate) Если вы хотите получить несколько состояний кнопки.  
   
-##  <a name="a-nameloadimagesa--ctoolbarctrlloadimages"></a><a name="loadimages"></a>CToolBarCtrl::LoadImages  
+##  <a name="loadimages"></a>CToolBarCtrl::LoadImages  
  Загружает растровых изображений в список изображений элемента управления панели инструментов.  
   
 ```  
@@ -1260,7 +1349,7 @@ void LoadImages(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemapacceleratora--ctoolbarctrlmapaccelerator"></a><a name="mapaccelerator"></a>CToolBarCtrl::MapAccelerator  
+##  <a name="mapaccelerator"></a>CToolBarCtrl::MapAccelerator  
  Сопоставляет символ сочетаний клавиш для кнопки панели инструментов.  
   
 ```  
@@ -1282,7 +1371,7 @@ BOOL MapAccelerator(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemarkbuttona--ctoolbarctrlmarkbutton"></a><a name="markbutton"></a>CToolBarCtrl::MarkButton  
+##  <a name="markbutton"></a>CToolBarCtrl::MarkButton  
  Задает состояние выделения данной кнопки элемента управления toolbar.  
   
 ```  
@@ -1304,7 +1393,7 @@ BOOL MarkButton(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemovebuttona--ctoolbarctrlmovebutton"></a><a name="movebutton"></a>CToolBarCtrl::MoveButton  
+##  <a name="movebutton"></a>CToolBarCtrl::MoveButton  
  Перемещение кнопки из одного индекса на другой.  
   
 ```  
@@ -1326,7 +1415,7 @@ BOOL MoveButton(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namepressbuttona--ctoolbarctrlpressbutton"></a><a name="pressbutton"></a>CToolBarCtrl::PressButton  
+##  <a name="pressbutton"></a>CToolBarCtrl::PressButton  
  Нажимает или отпускает указанную кнопку в панели инструментов.  
   
 ```  
@@ -1348,7 +1437,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
   
  Этот метод отправляет [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereplacebitmapa--ctoolbarctrlreplacebitmap"></a><a name="replacebitmap"></a>CToolBarCtrl::ReplaceBitmap  
+##  <a name="replacebitmap"></a>CToolBarCtrl::ReplaceBitmap  
  Заменяет точечного существующего точечного рисунка в текущий элемент управления панели инструментов.  
   
 ```  
@@ -1372,7 +1461,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;2](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_4.cpp)]  
   
-##  <a name="a-namerestorestatea--ctoolbarctrlrestorestate"></a><a name="restorestate"></a>CToolBarCtrl::RestoreState  
+##  <a name="restorestate"></a>CToolBarCtrl::RestoreState  
  Восстанавливает состояние панели инструментов из расположения в реестре, указанными параметрами.  
   
 ```  
@@ -1400,7 +1489,7 @@ void RestoreState(
  `lpszValueName`  
  Указывает строку, содержащую имя извлекаемого значения. Если значение с таким именем не существует в ключе, функция добавляет его ключ.  
   
-##  <a name="a-namesavestatea--ctoolbarctrlsavestate"></a><a name="savestate"></a>CToolBarCtrl::SaveState  
+##  <a name="savestate"></a>CToolBarCtrl::SaveState  
  Сохраняет состояние элемента панели инструментов в расположение в реестре, указанными параметрами.  
   
 ```  
@@ -1428,7 +1517,7 @@ void SaveState(
  `lpszValueName`  
  Указывает строку, содержащую имя задаваемое значение. Если значение с таким именем не существует в ключе, функция добавляет его ключ.  
   
-##  <a name="a-namesetanchorhighlighta--ctoolbarctrlsetanchorhighlight"></a><a name="setanchorhighlight"></a>CToolBarCtrl::SetAnchorHighlight  
+##  <a name="setanchorhighlight"></a>CToolBarCtrl::SetAnchorHighlight  
  Задает привязки выделения, Настройка панели инструментов.  
   
 ```  
@@ -1445,7 +1534,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ### <a name="remarks"></a>Примечания  
  Этот метод реализует поведение сообщения Win32 [TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetbitmapsizea--ctoolbarctrlsetbitmapsize"></a><a name="setbitmapsize"></a>CToolBarCtrl::SetBitmapSize  
+##  <a name="setbitmapsize"></a>CToolBarCtrl::SetBitmapSize  
  Задает размер фактических точечных рисунков для добавления элемента управления панели инструментов.  
   
 ```  
@@ -1462,7 +1551,7 @@ BOOL SetBitmapSize(CSize size);
 ### <a name="remarks"></a>Примечания  
  Эта функция должна вызываться только перед добавлением любые точечные рисунки в панели инструментов. Если приложение явно не задавать размер точечного рисунка, по умолчанию до 15, 16 пикселей.  
   
-##  <a name="a-namesetbuttoninfoa--ctoolbarctrlsetbuttoninfo"></a><a name="setbuttoninfo"></a>CToolBarCtrl::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>CToolBarCtrl::SetButtonInfo  
  Задает сведения для существующей кнопки в панели инструментов.  
   
 ```  
@@ -1484,7 +1573,7 @@ BOOL SetButtonInfo(
 ### <a name="remarks"></a>Примечания  
  Функция-член реализует поведение сообщения Win32 [TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetbuttonsizea--ctoolbarctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CToolBarCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>CToolBarCtrl::SetButtonSize  
  Задает размер кнопок в панели инструментов.  
   
 ```  
@@ -1504,7 +1593,7 @@ BOOL SetButtonSize(CSize size);
 ### <a name="example"></a>Пример  
   В примере показано [CToolBar::GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
-##  <a name="a-namesetbuttonstructsizea--ctoolbarctrlsetbuttonstructsize"></a><a name="setbuttonstructsize"></a>CToolBarCtrl::SetButtonStructSize  
+##  <a name="setbuttonstructsize"></a>CToolBarCtrl::SetButtonStructSize  
  Указывает размер `TBBUTTON` структуры.  
   
 ```  
@@ -1520,7 +1609,7 @@ void SetButtonStructSize(int nSize);
   
  В разделе [CToolBarCtrl::AddButtons](#addbuttons) Дополнительные сведения о `TBBUTTON` структуры.  
   
-##  <a name="a-namesetbuttonwidtha--ctoolbarctrlsetbuttonwidth"></a><a name="setbuttonwidth"></a>CToolBarCtrl::SetButtonWidth  
+##  <a name="setbuttonwidth"></a>CToolBarCtrl::SetButtonWidth  
  Задает кнопку минимальное и максимальное значения ширины в панели инструментов.  
   
 ```  
@@ -1542,7 +1631,7 @@ BOOL SetButtonWidth(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetcmdida--ctoolbarctrlsetcmdid"></a><a name="setcmdid"></a>CToolBarCtrl::SetCmdID  
+##  <a name="setcmdid"></a>CToolBarCtrl::SetCmdID  
  Задает идентификатор команды, отправляемое окна-владельца, при нажатии указанной кнопки.  
   
 ```  
@@ -1561,7 +1650,7 @@ BOOL SetCmdID(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ненулевое значение, если выполнено успешно; в противном случае — нуль.  
   
-##  <a name="a-namesetcolorschemea--ctoolbarctrlsetcolorscheme"></a><a name="setcolorscheme"></a>CToolBarCtrl::SetColorScheme  
+##  <a name="setcolorscheme"></a>CToolBarCtrl::SetColorScheme  
  Задает цвет элемента панели инструментов.  
   
 ```  
@@ -1584,7 +1673,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;3](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_5.cpp)]  
   
-##  <a name="a-namesetdisabledimagelista--ctoolbarctrlsetdisabledimagelist"></a><a name="setdisabledimagelist"></a>CToolBarCtrl::SetDisabledImageList  
+##  <a name="setdisabledimagelist"></a>CToolBarCtrl::SetDisabledImageList  
  Задает список изображений, который будет использоваться элементом управления панели инструментов для отображения неактивных кнопок.  
   
 ```  
@@ -1601,7 +1690,7 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Реализация MFC `SetDisabledImageList` использует `CImageList` изображения объекта, содержащего отключенной кнопки панели инструментов вместо дескриптор списка изображений.  
   
-##  <a name="a-namesetdrawtextflagsa--ctoolbarctrlsetdrawtextflags"></a><a name="setdrawtextflags"></a>CToolBarCtrl::SetDrawTextFlags  
+##  <a name="setdrawtextflags"></a>CToolBarCtrl::SetDrawTextFlags  
  Задает флаги в функцию Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), который используется для отрисовки текста в указываемом прямоугольнике, отформатированное в соответствии со установке флагов.  
   
 ```  
@@ -1623,7 +1712,7 @@ DWORD SetDrawTextFlags(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Эта функция-член задает флаги в функцию Win32 `DrawText`, который рисует текст в указанном прямоугольнике, отформатированное в соответствии со установке флагов.  
   
-##  <a name="a-namesetextendedstylea--ctoolbarctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CToolBarCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CToolBarCtrl::SetExtendedStyle  
  Задает расширенные стили для элемента управления панели инструментов.  
   
 ```  
@@ -1640,7 +1729,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesethotimagelista--ctoolbarctrlsethotimagelist"></a><a name="sethotimagelist"></a>CToolBarCtrl::SetHotImageList  
+##  <a name="sethotimagelist"></a>CToolBarCtrl::SetHotImageList  
  Задает список изображений, используемый элементом управления панели инструментов для отображения кнопок «горячей».  
   
 ```  
@@ -1659,7 +1748,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
   
  Реализация MFC `SetHotImageList` использует `CImageList` объект, содержащий кнопку панели инструментов в активном состоянии образы, а не дескриптор списка изображений. Кнопку в активном состоянии выделяется, когда указатель находится над ним.  
   
-##  <a name="a-namesethotitema--ctoolbarctrlsethotitem"></a><a name="sethotitem"></a>CToolBarCtrl::SetHotItem  
+##  <a name="sethotitem"></a>CToolBarCtrl::SetHotItem  
  Задает горячей элемента панели инструментов.  
   
 ```  
@@ -1676,7 +1765,7 @@ int SetHotItem(int nHot);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetimagelista--ctoolbarctrlsetimagelist"></a><a name="setimagelist"></a>CToolBarCtrl::SetImageList  
+##  <a name="setimagelist"></a>CToolBarCtrl::SetImageList  
  Задает список изображений, панели инструментов будет использовать для отображения кнопок, которые находятся в состоянии по умолчанию.  
   
 ```  
@@ -1695,7 +1784,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  Реализация MFC `SetImageList` использует `CImageList` изображения объекта, содержащего кнопки панели инструментов вместо дескриптор списка изображений.  
   
-##  <a name="a-namesetindenta--ctoolbarctrlsetindent"></a><a name="setindent"></a>CToolBarCtrl::SetIndent  
+##  <a name="setindent"></a>CToolBarCtrl::SetIndent  
  Задает отступ для первой кнопки элемента управления toolbar.  
   
 ```  
@@ -1709,7 +1798,7 @@ BOOL SetIndent(int iIndent);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе —&0;.  
   
-##  <a name="a-namesetinsertmarka--ctoolbarctrlsetinsertmark"></a><a name="setinsertmark"></a>CToolBarCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>CToolBarCtrl::SetInsertMark  
  Задает текущий знак вставки для панели инструментов.  
   
 ```  
@@ -1723,7 +1812,7 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetinsertmarkcolora--ctoolbarctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CToolBarCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>CToolBarCtrl::SetInsertMarkColor  
  Задает цвет, используемый для рисования знак вставки для панели инструментов.  
   
 ```  
@@ -1740,7 +1829,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetmaxtextrowsa--ctoolbarctrlsetmaxtextrows"></a><a name="setmaxtextrows"></a>CToolBarCtrl::SetMaxTextRows  
+##  <a name="setmaxtextrows"></a>CToolBarCtrl::SetMaxTextRows  
  Задает максимальное количество строк текста, отображаемый на кнопке панели инструментов.  
   
 ```  
@@ -1754,7 +1843,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе —&0;.  
   
-##  <a name="a-namesetmetricsa--ctoolbarctrlsetmetrics"></a><a name="setmetrics"></a>CToolBarCtrl::SetMetrics  
+##  <a name="setmetrics"></a>CToolBarCtrl::SetMetrics  
  Задает метрики из `CToolBarCtrl` объекта.  
   
 ```  
@@ -1768,7 +1857,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446) сообщений, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetownera--ctoolbarctrlsetowner"></a><a name="setowner"></a>CToolBarCtrl::SetOwner  
+##  <a name="setowner"></a>CToolBarCtrl::SetOwner  
  Задает для элемента управления панели инструментов окна-владельца.  
   
 ```  
@@ -1782,7 +1871,7 @@ void SetOwner(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Окна-владельца — это окно, получающий уведомления от панели инструментов.  
   
-##  <a name="a-namesetpaddinga--ctoolbarctrlsetpadding"></a><a name="setpadding"></a>CToolBarCtrl::SetPadding  
+##  <a name="setpadding"></a>CToolBarCtrl::SetPadding  
  Задает горизонтальное и вертикальное заполнение текущего элемента управления панели инструментов.  
   
 ```  
@@ -1809,7 +1898,7 @@ DWORD SetPadding(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;4](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_6.cpp)]  
   
-##  <a name="a-namesetpressedimagelista--ctoolbarctrlsetpressedimagelist"></a><a name="setpressedimagelist"></a>CToolBarCtrl::SetPressedImageList  
+##  <a name="setpressedimagelist"></a>CToolBarCtrl::SetPressedImageList  
  Задает список изображений, текущий элемент управления панели инструментов используется для представления кнопки в нажатом состоянии.  
   
 ```  
@@ -1836,7 +1925,7 @@ CImagelist* SetPressedImageList(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;5](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_7.cpp)]  
   
-##  <a name="a-namesetrowsa--ctoolbarctrlsetrows"></a><a name="setrows"></a>CToolBarCtrl::SetRows  
+##  <a name="setrows"></a>CToolBarCtrl::SetRows  
  Запрашивает панели инструментов для изменения размера самого запрашиваемое количество строк.  
   
 ```  
@@ -1869,7 +1958,7 @@ void SetRows(
   
  Эта функция может вызываться только для панели инструментов, которые были созданы с помощью `TBSTYLE_WRAPABLE` стиль.  
   
-##  <a name="a-namesetstatea--ctoolbarctrlsetstate"></a><a name="setstate"></a>CToolBarCtrl::SetState  
+##  <a name="setstate"></a>CToolBarCtrl::SetState  
  Задает состояние для указанной кнопки в панели инструментов.  
   
 ```  
@@ -1891,7 +1980,7 @@ BOOL SetState(
 ### <a name="remarks"></a>Примечания  
  Эта функция особенно полезна, если требуется задать более чем одно из состояний кнопки. Просто установите для одного состояния, используйте один из следующих функций-членов: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [неопределенный](#indeterminate), или [PressButton](#pressbutton).  
   
-##  <a name="a-namesetstylea--ctoolbarctrlsetstyle"></a><a name="setstyle"></a>CToolBarCtrl::SetStyle  
+##  <a name="setstyle"></a>CToolBarCtrl::SetStyle  
  Задает стили для элемента управления панели инструментов.  
   
 ```  
@@ -1902,7 +1991,7 @@ void SetStyle(DWORD dwStyle);
  `dwStyle`  
  Объект `DWORD` содержащий сочетание [стили элемента управления панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760439), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesettooltipsa--ctoolbarctrlsettooltips"></a><a name="settooltips"></a>CToolBarCtrl::SetToolTips  
+##  <a name="settooltips"></a>CToolBarCtrl::SetToolTips  
  Связывает управления всплывающей подсказки с элементом управления панели инструментов.  
   
 ```  
@@ -1913,7 +2002,7 @@ void SetToolTips(CToolTipCtrl* pTip);
  *pTip*  
  Указатель на [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) объекта.  
   
-##  <a name="a-namesetwindowthemea--ctoolbarctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolBarCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CToolBarCtrl::SetWindowTheme  
  Задает стиль оформления `CToolBarCtrl` объекта.  
   
 ```  

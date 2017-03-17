@@ -10,7 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
-- afxanimationcontroller/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::Create
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="a-namecdiscretetransitiona--cdiscretetransitioncdiscretetransition"></a><a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
  Создает объект отдельный переход и инициализирует его параметры.  
   
 ```  
@@ -104,7 +109,7 @@ CDiscreteTransition(
  `hold`  
  Количество времени, в котором для хранения переменной в свое последнее значение.  
   
-##  <a name="a-namecreatea--cdiscretetransitioncreate"></a><a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>CDiscreteTransition::Create  
  Вызывает переход библиотеку для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если переход создано успешно; в противном случае — значение FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--cdiscretetransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
  Значение переменной анимации в конце перехода.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdelaya--cdiscretetransitionmdelay"></a><a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
  Количество времени, на который мгновенно переключиться на окончательное значение задержки.  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="a-namemholda--cdiscretetransitionmhold"></a><a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
  Количество времени, в котором для хранения переменной в свое последнее значение.  
   
 ```  

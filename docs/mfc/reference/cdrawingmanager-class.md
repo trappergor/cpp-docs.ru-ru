@@ -10,6 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CreateBitmap_32
+- AFXDRAWMANAGER/CDrawingManager::DrawAlpha
+- AFXDRAWMANAGER/CDrawingManager::DrawRotated
+- AFXDRAWMANAGER/CDrawingManager::DrawEllipse
+- AFXDRAWMANAGER/CDrawingManager::DrawGradientRing
+- AFXDRAWMANAGER/CDrawingManager::DrawRect
+- AFXDRAWMANAGER/CDrawingManager::DrawShadow
+- AFXDRAWMANAGER/CDrawingManager::Fill4ColorsGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient2
+- AFXDRAWMANAGER/CDrawingManager::GrayRect
+- AFXDRAWMANAGER/CDrawingManager::HighlightRect
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_ONE
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_TWO
+- AFXDRAWMANAGER/CDrawingManager::HSVtoRGB
+- AFXDRAWMANAGER/CDrawingManager::HuetoRGB
+- AFXDRAWMANAGER/CDrawingManager::MirrorRect
+- AFXDRAWMANAGER/CDrawingManager::PixelAlpha
+- AFXDRAWMANAGER/CDrawingManager::PrepareShadowMask
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSL
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSV
+- AFXDRAWMANAGER/CDrawingManager::SetAlphaPixel
+- AFXDRAWMANAGER/CDrawingManager::SetPixel
+- AFXDRAWMANAGER/CDrawingManager::SmartMixColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +123,7 @@ class CDrawingManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdrawmanager.h  
   
-##  <a name="a-namecdrawingmanagera--cdrawingmanagercdrawingmanager"></a><a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
+##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
  Создает [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) объекта.  
   
 ```  
@@ -108,7 +134,7 @@ CDrawingManager(CDC& dc);
  [in] `dc`  
  Ссылка на контекст устройства. `CDrawingManager` Использует этот контекст для рисования.  
   
-##  <a name="a-namecreatebitmap32a--cdrawingmanagercreatebitmap32"></a><a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
+##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
  Создает 32-разрядных аппаратно независимые точечный рисунок (DIB), приложения могут записывать напрямую.  
   
 ```  
@@ -137,7 +163,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о способах создания растрового изображения DIB см. в разделе [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
   
-##  <a name="a-namedrawalphaa--cdrawingmanagerdrawalpha"></a><a name="drawalpha"></a>CDrawingManager::DrawAlpha  
+##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
  Отображает точечным рисункам, имеющим прозрачным или полупрозрачным пикселей.  
   
 ```  
@@ -164,7 +190,7 @@ void DrawAlpha(
 ### <a name="remarks"></a>Примечания  
  Этот метод выполняет альфа смешения для двух растровых изображений. Дополнительные сведения о альфа смешения. в разделе [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) в Windows SDK.  
   
-##  <a name="a-namedrawellipsea--cdrawingmanagerdrawellipse"></a><a name="drawellipse"></a>CDrawingManager::DrawEllipse  
+##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
  Рисование эллипса с предоставленным цвета заливки и границ.  
   
 ```  
@@ -187,7 +213,7 @@ void DrawEllipse(
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращается без Рисование эллипса, если любого цвета равно-1. Он также возвращает без Рисование эллипса 0 в случае любого размера, ограничивающего прямоугольника.  
   
-##  <a name="a-namedrawgradientringa--cdrawingmanagerdrawgradientring"></a><a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
+##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
  Рисует кольцо и заполняет его с цветным градиентом.  
   
 ```  
@@ -229,7 +255,7 @@ BOOL DrawGradientRing(
 ### <a name="remarks"></a>Примечания  
  Прямоугольник, определяемый `rect` должен быть по крайней мере 5 пикселов шириной и 5 пикселов в высоту.  
   
-##  <a name="a-namedrawlinecdrawingmanagerdrawlineaa--cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
  Проводит линию.  
   
 ```  
@@ -262,7 +288,7 @@ void DrawLineA(
 ### <a name="remarks"></a>Примечания  
  Этот метод не выполняется, если `clrLine` равно -1.  
   
-##  <a name="a-namedrawrecta--cdrawingmanagerdrawrect"></a><a name="drawrect"></a>CDrawingManager::DrawRect  
+##  <a name="drawrect"></a>CDrawingManager::DrawRect  
  Рисование прямоугольника с предоставленным цвета заливки и границ.  
   
 ```  
@@ -285,7 +311,7 @@ void DrawRect(
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращается без Рисование прямоугольника, если любого цвета равно-1. Также возвращается, если либо измерения прямоугольника — 0.  
   
-##  <a name="a-namedrawshadowa--cdrawingmanagerdrawshadow"></a><a name="drawshadow"></a>CDrawingManager::DrawShadow  
+##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
  Рисует тень прямоугольной области.  
   
 ```  
@@ -340,7 +366,7 @@ BOOL DrawShadow(
   
  [!code-cpp[NVC_MFC_PropSheetDemo&#1;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="a-namefill4colorsgradienta--cdrawingmanagerfill4colorsgradient"></a><a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
+##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
  Заполняет прямоугольную область два цвета градиента.  
   
 ```  
@@ -381,7 +407,7 @@ void Fill4ColorsGradient(
   
  Этот метод создает ошибку подтверждения, если `nPercentage` меньше 0 или больше 100.  
   
-##  <a name="a-namefillgradienta--cdrawingmanagerfillgradient"></a><a name="fillgradient"></a>CDrawingManager::FillGradient  
+##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
  Заполняет указанный цвет градиента прямоугольной области.  
   
 ```  
@@ -418,7 +444,7 @@ void FillGradient(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo&#12;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="a-namefillgradient2a--cdrawingmanagerfillgradient2"></a><a name="fillgradient2"></a>CDrawingManager::FillGradient2  
+##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
  Заполняет указанный цвет градиента прямоугольной области.  
   
 ```  
@@ -450,7 +476,7 @@ void FillGradient2 (
   
  [!code-cpp[NVC_MFC_NewControls&#37;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="a-namegrayrecta--cdrawingmanagergrayrect"></a><a name="grayrect"></a>CDrawingManager::GrayRect  
+##  <a name="grayrect"></a>CDrawingManager::GrayRect  
  Заполняет прямоугольник заданным серым цветом.  
   
 ```  
@@ -482,7 +508,7 @@ BOOL GrayRect(
   
  Максимальное значение для `nPercentage` равно 200. Значение, превышающее 200 не изменяется внешний вид прямоугольника. Если значение равно -1, этот метод использует `clrDisabled` для ограничения насыщенность прямоугольника.  
   
-##  <a name="a-namehighlightrecta--cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a>CDrawingManager::HighlightRect  
+##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
  Выделяет прямоугольную область.  
   
 ```  
@@ -518,7 +544,7 @@ BOOL HighlightRect(
   
  Метод использует параметр `nTolerance` для определения необходимости выделите прямоугольную область. Чтобы выделить прямоугольник, разница между цвет фона для приложения и `clrTransparent` должно быть меньше, чем `nTolerance` каждого компонента цвета (красный, зеленый и синий).  
   
-##  <a name="a-namehlstorgbonea--cdrawingmanagerhlstorgbone"></a><a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
+##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
  Преобразует цвет из представления HLS в формате RGB.  
   
 ```  
@@ -546,7 +572,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
   
  Этот метод и `CDrawingManager::HLStoRGB_TWO` способ выполнить ту же операцию, но требуются разные значения для `H` параметр. В этом методе `H` круга в процентах. В `CDrawingManager::HLStoRGB_TWO` метода `H` значение степени от 0 до 360, представляющие обе красным. Например, при использовании `HLStoRGB_ONE`, значение 0,25 для `H` эквивалентен значению 90 с `HLStoRGB_TWO`.  
   
-##  <a name="a-namehlstorgbtwoa--cdrawingmanagerhlstorgbtwo"></a><a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
  Преобразует цвет из представления HLS в формате RGB.  
   
 ```  
@@ -574,7 +600,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
   
  Этот метод и [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) способ выполнить ту же операцию, но требуются разные значения для `H` параметр. В этом методе `H` значение степени от 0 до 360, представляющие обе красным. В [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) метода `H` в процентах от круга. Например, при использовании `HLStoRGB_ONE`, значение 0,25 для `H` эквивалентен значению 90 с `HLStoRGB_TWO`.  
   
-##  <a name="a-namehsvtorgba--cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
+##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
  Преобразует цвет из представления HSV в формате RGB.  
   
 ```  
@@ -599,7 +625,7 @@ static COLORREF __stdcall HSVtoRGB(
 ### <a name="remarks"></a>Примечания  
  Цвет может быть представлено как HSV (оттенок, насыщенность и значение), (цветового тона, насыщенности и яркости) HSL или RGB (красный, зеленый и синий). Дополнительные сведения о разных представления цвета в разделе [цвет](http://go.microsoft.com/fwlink/linkid=119126).  
   
-##  <a name="a-namehuetorgba--cdrawingmanagerhuetorgb"></a><a name="huetorgb"></a>CDrawingManager::HuetoRGB  
+##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  Преобразует значение оттенка красного, зеленого или синего компонента.  
   
 ```  
@@ -648,7 +674,7 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="a-namemirrorrecta--cdrawingmanagermirrorrect"></a><a name="mirrorrect"></a>CDrawingManager::MirrorRect  
+##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
  Зеркальное отражение прямоугольной области.  
   
 ```  
@@ -667,7 +693,7 @@ void MirrorRect(
 ### <a name="remarks"></a>Примечания  
  Этот метод можно перевернуть любую область контекста устройства, принадлежащие `CDrawingManager` класса. Если `bHorz` равен `TRUE`, этот метод горизонтальное зеркальное отражение области. В противном случае — он Вертикальное зеркальное отражение области.  
   
-##  <a name="a-namepixelalphaa--cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
+##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
  Вычисляет конечный цвет для полупрозрачными пикселей.  
   
 ```  
@@ -714,7 +740,7 @@ static COLORREF __stdcall PixelAlpha(
   
  При использовании версии метода, который имеет `dstPixel`, окончательный цвет представляет собой сочетание `dstPixel` и `srcPixel`. `srcPixel` Имеет частично прозрачный цвет через базовый цвет `dstPixel`.  
   
-##  <a name="a-nameprepareshadowmaska--cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
+##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
  Создает точечный рисунок, который можно использовать в качестве тень.  
   
 ```  
@@ -744,7 +770,7 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="remarks"></a>Примечания  
  Если `nDepth` имеет значение 0, этот метод завершает работу и возвращает `NULL`. Если `nDepth` меньше 3, ширину и высоту тени равным 3 пикселя.  
   
-##  <a name="a-namergbtohsla--cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
+##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
  Преобразует цвет из представления красного, зеленого и синего (RGB) цветового тона, насыщенности и яркости (HSL) представление.  
   
 ```  
@@ -770,7 +796,7 @@ static void __stdcall RGBtoHSL(
   
  Возвращаемое значение для `H` представляется в виде дробного числа от 0 до 1, где 0 и 1 представляют красный. Возвращаемые значения для `S` и `L` являются числами от 0 до 1.  
   
-##  <a name="a-namergbtohsva--cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
+##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
  Преобразует цвет из представления RGB в HSV.  
   
 ```  
@@ -799,7 +825,7 @@ static void __stdcall RGBtoHSV(
   
  Возвращаемое значение для `H` — число от 0 до 360, где 0 до 360 указываем красным. Возвращаемые значения для `S` и `V` являются числами от 0 до 1.  
   
-##  <a name="a-namesetalphapixela--cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
+##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
  Цвета прозрачность пикселов в точечном рисунке.  
   
 ```  
@@ -844,7 +870,7 @@ static void __stdcall SetAlphaPixel(
   
  Если `bIsRight` равен `TRUE`, цвет пикселя измеряется `x` пикселей от правого края `rect`. Если это `FALSE`, цвет пикселя измеряется `x` пикселей от левого края `rect`.  
   
-##  <a name="a-namesetpixela--cdrawingmanagersetpixel"></a><a name="setpixel"></a>CDrawingManager::SetPixel  
+##  <a name="setpixel"></a>CDrawingManager::SetPixel  
  Изменение одной точки в точечном рисунке указанный цвет.  
   
 ```  
@@ -869,7 +895,7 @@ static void __stdcall SetPixel(
 |[in] `y`|Координата y точки в растровое изображение, чтобы изменить.|  
 |[in] `color`|Новый цвет пикселя определяется заданными координатами.|  
   
-##  <a name="a-namesmartmixcolorsa--cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
+##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
  Объединяет два цвета на основе взвешенных коэффициента.  
   
 ```  
@@ -900,7 +926,7 @@ static COLORREF __stdcall SmartMixColors(
   
  Взвешенное отношение вычисляется по следующей формуле: (color1 * k1 + цвет2 \* k2) /(k1 + k2). После определения взвешенного отношение, метод вычисляет яркость для смешанных цвета. Умножает яркость, `dblLumRatio`. Если значение больше, чем 1.0, метод задает яркость цвета смешанного новое значение. В противном случае — яркость равен 1.0.  
   
-##  <a name="a-namedrawrotateda--cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a>CDrawingManager::DrawRotated  
+##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
  Поворачивает исходного контроллера домена содержимого внутри данного прямоугольника на 90 градусов.  
   
 ```  

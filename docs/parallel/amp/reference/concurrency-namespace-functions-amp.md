@@ -6,6 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::all_memory_fence
+- amp/Concurrency::atomic_compare_exchange
+- amp/Concurrency::atomic_fetch_dec
+- amp/Concurrency::atomic_fetch_max
+- amp/Concurrency::atomic_fetch_min
+- amp/Concurrency::copy
+- amp/Concurrency::direct3d_abort
+- amp/Concurrency::direct3d_printf
+- amp/Concurrency::global_memory_fence
+- amp/Concurrency::tile_static_memory_fence
+dev_langs:
+- C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 caps.latest.revision: 9
 author: mikeblome
@@ -28,7 +41,7 @@ ms.lasthandoff: 02/24/2017
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|  
 |[global_memory_fence](#global_memory_fence)|[Функция parallel_for_each (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
   
-##  <a name="a-nameallmemoryfencea--allmemoryfence"></a><a name="all_memory_fence"></a>all_memory_fence  
+##  <a name="all_memory_fence"></a>all_memory_fence  
  Блокирует выполнение всех потоков в мозаике, пока не будут завершены все обращения к памяти. Это гарантирует, что все обращения к памяти являются видимыми для других потоков в мозаике потоков и выполняются в порядке программы.  
   
 ```  
@@ -39,14 +52,14 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Объект `tile_barrier`.  
   
-##  <a name="a-nameampuninitializea--ampuninitialize"></a><a name="amp_uninitialize"></a>amp_uninitialize  
+##  <a name="amp_uninitialize"></a>amp_uninitialize  
  Отменяет инициализацию среды выполнения C++ AMP. Эта функция вызывается несколько раз за время существования приложения допустимо. Вызов любого afer C++ AMP API, вызов этой функции будет повторная инициализация среды выполнения C++ AMP. Обратите внимание, что не допускается использование объектов C++ AMP через вызовы этой функции, и это приведет к неопределенному поведению. Кроме того одновременно вызов этой функции и другие интерфейсы API AMP недопустим и приведет к неопределенному поведению.  
   
 ```  
 void __cdecl amp_uninitialize();
 ```  
   
-##  <a name="a-nameatomiccompareexchangea--atomiccompareexchange"></a><a name="atomic_compare_exchange"></a>atomic_compare_exchange  
+##  <a name="atomic_compare_exchange"></a>atomic_compare_exchange  
  Атомарным образом сравнивает значение, хранящееся в памяти в первый аргумент на равенство со значением второго заданного аргумента, и если значения совпадают, в область памяти изменяется значение для третьего задан аргумент.  
   
 ```  
@@ -78,7 +91,7 @@ inline bool atomic_compare_exchange(
  Значение `true`, если операция выполнена успешно; в противном случае — значение `false`.  
   
 
-##  <a name="a-nameatomicexchangea--atomicexchange-function-c-amp"></a><a name="atomic_exchange"></a>Функция atomic_exchange (C++ AMP)  
+##  <a name="atomic_exchange"></a>Функция atomic_exchange (C++ AMP)  
  Задает значение место назначения в виде атомарной операции.  
   
 ```  
@@ -111,7 +124,7 @@ inline float atomic_exchange(
  Исходное значение целевого расположения.  
   
 
-##  <a name="a-nameatomicfetchadda--atomicfetchadd-function-c-amp"></a><a name="atomic_fetch_add"></a>Функция atomic_fetch_add (C++ AMP)  
+##  <a name="atomic_fetch_add"></a>Функция atomic_fetch_add (C++ AMP)  
  Атомарным образом добавьте значение к значению ячейки памяти.  
   
 ```  
@@ -137,7 +150,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="a-nameatomicfetchanda--atomicfetchand-function-c-amp"></a><a name="atomic_fetch_and"></a>Функция atomic_fetch_and (C++ AMP)  
+##  <a name="atomic_fetch_and"></a>Функция atomic_fetch_and (C++ AMP)  
  Единым блоком выполняет побитовую операцию и значение и значение ячейки памяти.  
   
 ```  
@@ -163,7 +176,7 @@ inline unsigned int atomic_fetch_and(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="a-nameatomicfetchdeca--atomicfetchdec"></a><a name="atomic_fetch_dec"></a>atomic_fetch_dec  
+##  <a name="atomic_fetch_dec"></a>atomic_fetch_dec  
  Атомарным образом уменьшает значение, хранящееся в заданном расположении памяти.  
   
 ```  
@@ -181,7 +194,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение, хранящееся в расположение в памяти.  
   
-##  <a name="a-nameatomicfetchinca--atomicfetchinc"></a><a name="atomic_fetch_inc"></a>atomic_fetch_inc  
+##  <a name="atomic_fetch_inc"></a>atomic_fetch_inc  
  Атомарным образом увеличивает значение, хранящееся в заданном расположении памяти.  
   
 ```  
@@ -198,7 +211,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение, хранящееся в расположение в памяти.  
   
-##  <a name="a-nameatomicfetchmaxa--atomicfetchmax"></a><a name="atomic_fetch_max"></a>atomic_fetch_max  
+##  <a name="atomic_fetch_max"></a>atomic_fetch_max  
  Автоматически вычисляет максимальное значение между значением, хранящимся в памяти расположении, указанном в первого аргумента и значения, указанного в качестве второго аргумента и сохраняет его в том же расположении памяти.  
   
 ```  
@@ -224,7 +237,7 @@ inline unsigned int atomic_fetch_max(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение, хранящиеся в указанном расположении расположении.  
   
-##  <a name="a-nameatomicfetchmina--atomicfetchmin"></a><a name="atomic_fetch_min"></a>atomic_fetch_min  
+##  <a name="atomic_fetch_min"></a>atomic_fetch_min  
  Автоматически вычисляет минимальное значение между значением, хранящимся в памяти расположении, указанном в первого аргумента и значения, указанного в качестве второго аргумента и сохраняет его в том же расположении памяти.  
   
 ```  
@@ -250,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение, хранящиеся в указанном расположении расположении.  
   
-##  <a name="a-nameatomicfetchora--atomicfetchor-function-c-amp"></a><a name="atomic_fetch_or"></a>Функция atomic_fetch_or (C++ AMP)  
+##  <a name="atomic_fetch_or"></a>Функция atomic_fetch_or (C++ AMP)  
  Единым блоком выполняет операцию побитового или со значением и значение ячейки памяти.  
   
 ```  
@@ -276,7 +289,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="a-nameatomicfetchsuba--atomicfetchsub-function-c-amp"></a><a name="atomic_fetch_sub"></a>Функция atomic_fetch_sub (C++ AMP)  
+##  <a name="atomic_fetch_sub"></a>Функция atomic_fetch_sub (C++ AMP)  
  Атомарным образом вычитает значение из ячейки памяти.  
   
 ```  
@@ -302,7 +315,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="a-nameatomicfetchxora--atomicfetchxor-function-c-amp"></a><a name="atomic_fetch_xor"></a>Функция atomic_fetch_xor (C++ AMP)  
+##  <a name="atomic_fetch_xor"></a>Функция atomic_fetch_xor (C++ AMP)  
  Атомарным образом WordRight действует операции побитового исключающего или значения и расположение в памяти.  
   
 ```  
@@ -328,7 +341,7 @@ inline unsigned int atomic_fetch_xor(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a>  copy  
+##  <a name="copy"></a>  copy  
  Копирует объект C++ AMP. Все синхронные данные передачи требований. Не удается скопировать данные при выполнении кода в ускорителя. Эта функция выглядит `copy(src, dest)`.  
   
 ```  
@@ -434,7 +447,7 @@ void copy(
  `value_type`  
  Тип данных элементов, которые будут скопированы.  
   
-##  <a name="a-namecopyasynca--copyasync"></a><a name="copy_async"></a>copy_async  
+##  <a name="copy_async"></a>copy_async  
  Копирует объект C++ AMP и возвращает [completion_future](completion-future-class.md) объект, который может быть ожидаемым. Не удается скопировать данные при выполнении кода в ускорителя.  Эта функция выглядит `copy(src, dest)`.  
   
 ```  
@@ -535,14 +548,14 @@ concurrency::completion_future copy_async(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `future<void>` , можно ожидать.  
   
-##  <a name="a-namedirect3daborta--direct3dabort"></a><a name="direct3d_abort"></a>direct3d_abort  
+##  <a name="direct3d_abort"></a>direct3d_abort  
  Прерывает выполнение функции с предложением ограничения `restrict(amp)` . Когда AMP среда выполнения обнаруживает вызов, он выдает [runtime_exception](runtime-exception-class.md) исключение появляется сообщение об ошибке «прорисовки: шейдера прервать попадание в инструкции».  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
-##  <a name="a-namedirect3derrorfa--direct3derrorf"></a><a name="direct3d_errorf"></a>direct3d_errorf  
+##  <a name="direct3d_errorf"></a>direct3d_errorf  
  Выводит форматированную строку в окне вывода Visual Studio. Он вызывается из функции с `restrict(amp)` предложения ограничения. Когда среда выполнения AMP обнаруживает вызов, он выдает [runtime_exception](runtime-exception-class.md) исключение с ту же строку форматирования.  
   
 ```  
@@ -551,7 +564,7 @@ void direct3d_errorf(
  ...) restrict(amp);
 ```  
   
-##  <a name="a-namedirect3dprintfa--direct3dprintf"></a><a name="direct3d_printf"></a>direct3d_printf  
+##  <a name="direct3d_printf"></a>direct3d_printf  
  Выводит форматированную строку в окне вывода Visual Studio. Он вызывается из функции с `restrict(amp)` предложения ограничения.  
   
 ```  
@@ -560,7 +573,7 @@ void direct3d_printf(
  ...) restrict(amp);
 ```  
   
-##  <a name="a-nameglobalmemoryfencea--globalmemoryfence"></a><a name="global_memory_fence"></a>global_memory_fence  
+##  <a name="global_memory_fence"></a>global_memory_fence  
  Блокирует выполнение всех потоков в мозаике до обращения к памяти все глобальные завершена. Это гарантирует, что доступ к глобальной памяти являются видимыми для других потоков в мозаике потоков и выполняются в порядке программы.  
   
 ```  
@@ -571,7 +584,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Объект tile_barrier  
   
-##  <a name="a-nameparallelforeacha--parallelforeach-function-c-amp"></a><a name="parallel_for_each"></a>Функция parallel_for_each (C++ AMP)  
+##  <a name="parallel_for_each"></a>Функция parallel_for_each (C++ AMP)  
  Выполняет функцию домене вычислений. Дополнительные сведения см. в разделе [Обзор C++ AMP](../../../parallel/amp/cpp-amp-overview.md).  
   
 ```  
@@ -652,7 +665,7 @@ void parallel_for_each(
  `_Rank`  
  Ранг экстента.  
   
-##  <a name="a-nametilestaticmemoryfencea--tilestaticmemoryfence"></a><a name="tile_static_memory_fence"></a>tile_static_memory_fence  
+##  <a name="tile_static_memory_fence"></a>tile_static_memory_fence  
  Блокирует выполнение всех потоков в мозаике, пока все необработанные `tile_static` завершили доступов к памяти. Это гарантирует, что `tile_static` доступов к памяти являются видимыми для других потоков в мозаике потоков и обращается к выполняются в порядке программы.  
   
 ```  

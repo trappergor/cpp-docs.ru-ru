@@ -10,7 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DBrush
-- afxrendertarget/CD2DBrush
+- AFXRENDERTARGET/CD2DBrush
+- AFXRENDERTARGET/CD2DBrush::CD2DBrush
+- AFXRENDERTARGET/CD2DBrush::Attach
+- AFXRENDERTARGET/CD2DBrush::Destroy
+- AFXRENDERTARGET/CD2DBrush::Detach
+- AFXRENDERTARGET/CD2DBrush::Get
+- AFXRENDERTARGET/CD2DBrush::GetOpacity
+- AFXRENDERTARGET/CD2DBrush::GetTransform
+- AFXRENDERTARGET/CD2DBrush::IsValid
+- AFXRENDERTARGET/CD2DBrush::SetOpacity
+- AFXRENDERTARGET/CD2DBrush::SetTransform
+- AFXRENDERTARGET/CD2DBrush::m_pBrush
+- AFXRENDERTARGET/CD2DBrush::m_pBrushProperties
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,14 +107,14 @@ class CD2DBrush : public CD2DResource;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dbrusha--cd2dbrushcd2dbrush"></a><a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
+##  <a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
  Деструктор Вызывается при уничтожении объекта D2D кисти.  
   
 ```  
 virtual ~CD2DBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dbrushattach"></a><a name="attach"></a>CD2DBrush::Attach  
+##  <a name="attach"></a>CD2DBrush::Attach  
  Присоединение существующих ресурсов интерфейса в объект  
   
 ```  
@@ -113,7 +125,7 @@ void Attach(ID2D1Brush* pResource);
  `pResource`  
  Существующий интерфейс ресурсов. Не может иметь значение NULL  
   
-##  <a name="a-namecd2dbrusha--cd2dbrushcd2dbrush"></a><a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
+##  <a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
  Создает объект CD2DBrush.  
   
 ```  
@@ -133,14 +145,14 @@ CD2DBrush(
  `bAutoDestroy`  
  Указывает, что объект будет уничтожен владельцем (pParentTarget).  
   
-##  <a name="a-namedestroya--cd2dbrushdestroy"></a><a name="destroy"></a>CD2DBrush::destroy  
+##  <a name="destroy"></a>CD2DBrush::destroy  
  Уничтожает объект CD2DBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dbrushdetach"></a><a name="detach"></a>CD2DBrush::Detach  
+##  <a name="detach"></a>CD2DBrush::Detach  
  Отсоединяет интерфейс ресурса из объекта  
   
 ```  
@@ -150,7 +162,7 @@ ID2D1Brush* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс отсоединенных ресурсов.  
   
-##  <a name="a-namegeta--cd2dbrushget"></a><a name="get"></a>CD2DBrush::Get  
+##  <a name="get"></a>CD2DBrush::Get  
  Возвращает интерфейс ID2D1Brush  
   
 ```  
@@ -160,7 +172,7 @@ ID2D1Brush* Get();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Brush или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="a-namegetopacitya--cd2dbrushgetopacity"></a><a name="getopacity"></a>CD2DBrush::GetOpacity  
+##  <a name="getopacity"></a>CD2DBrush::GetOpacity  
  Возвращает степень непрозрачности этой кисти  
   
 ```  
@@ -170,7 +182,7 @@ FLOAT GetOpacity() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение между 0 и 1, указывающее, непрозрачность кисти. Это значение является константой множитель, линейно масштабирует значение альфа-канала все пиксели, заполненные кистью. Значение непрозрачности сжимается в диапазоне от 0 до 1, перед их вместе умножения  
   
-##  <a name="a-namegettransforma--cd2dbrushgettransform"></a><a name="gettransform"></a>CD2DBrush::GetTransform  
+##  <a name="gettransform"></a>CD2DBrush::GetTransform  
  Возвращает текущее преобразование целевого объекта отрисовки  
   
 ```  
@@ -181,7 +193,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
  `transform`  
  По возвращении из этого содержит текущее преобразование целевого объекта отрисовки. Этот параметр передается неинициализированным  
   
-##  <a name="a-nameisvalida--cd2dbrushisvalid"></a><a name="isvalid"></a>CD2DBrush::IsValid  
+##  <a name="isvalid"></a>CD2DBrush::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -191,21 +203,21 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="a-namempbrusha--cd2dbrushmpbrush"></a><a name="m_pbrush"></a>CD2DBrush::m_pBrush  
+##  <a name="m_pbrush"></a>CD2DBrush::m_pBrush  
  Хранит указатель на объект ID2D1Brush.  
   
 ```  
 ID2D1Brush* m_pBrush;  
 ```  
   
-##  <a name="a-namempbrushpropertiesa--cd2dbrushmpbrushproperties"></a><a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
+##  <a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
  Свойства кисти.  
   
 ```  
 CD2DBrushProperties* m_pBrushProperties;  
 ```  
   
-##  <a name="a-nameoperatorid2d1brushstara--cd2dbrushoperator-id2d1brush"></a><a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
+##  <a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
  Возвращает интерфейс ID2D1Brush  
   
 ```  
@@ -215,7 +227,7 @@ operator ID2D1Brush*();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Brush или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="a-namesetopacitya--cd2dbrushsetopacity"></a><a name="setopacity"></a>CD2DBrush::SetOpacity  
+##  <a name="setopacity"></a>CD2DBrush::SetOpacity  
  Задает степень непрозрачности этой кисти  
   
 ```  
@@ -226,7 +238,7 @@ void SetOpacity(FLOAT opacity);
  `opacity`  
  Значение между 0 и 1, указывающее, непрозрачность кисти. Это значение является константой множитель, линейно масштабирует значение альфа-канала все пиксели, заполненные кистью. Значение непрозрачности сжимается в диапазоне от 0 до 1, перед их вместе умножения  
   
-##  <a name="a-namesettransforma--cd2dbrushsettransform"></a><a name="settransform"></a>CD2DBrush::SetTransform  
+##  <a name="settransform"></a>CD2DBrush::SetTransform  
  Применяет указанное преобразование в объект рендеринга, заменив существующее преобразование. Все последующие операции рисования происходят в преобразованные места  
   
 ```  

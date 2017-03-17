@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStorageImpl
-- ATL::IPersistStorageImpl<T>
-- ATL.IPersistStorageImpl<T>
 - IPersistStorageImpl
-- ATL.IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl::GetClassID
+- ATLCOM/ATL::IPersistStorageImpl::HandsOffStorage
+- ATLCOM/ATL::IPersistStorageImpl::InitNew
+- ATLCOM/ATL::IPersistStorageImpl::IsDirty
+- ATLCOM/ATL::IPersistStorageImpl::Load
+- ATLCOM/ATL::IPersistStorageImpl::Save
+- ATLCOM/ATL::IPersistStorageImpl::SaveCompleted
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststorageimplgetclassid"></a><a name="getclassid"></a>IPersistStorageImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID  
  Извлекает идентификатор CLSID объекта.  
   
 ```
@@ -100,7 +104,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Примечания  
  В разделе [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehandsoffstoragea--ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
+##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
  Указывает, что объект освободить все объекты хранилища и режим HandsOff.  
   
 ```
@@ -113,7 +117,7 @@ STDMETHOD(HandsOffStorage)(void);
 ### <a name="remarks"></a>Примечания  
  В разделе [IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitnewa--ipersiststorageimplinitnew"></a><a name="initnew"></a>IPersistStorageImpl::InitNew  
+##  <a name="initnew"></a>IPersistStorageImpl::InitNew  
  Инициализирует новое хранилище.  
   
 ```
@@ -125,7 +129,7 @@ STDMETHOD(InitNew)(IStorage*);
   
  В разделе [IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdirtya--ipersiststorageimplisdirty"></a><a name="isdirty"></a>IPersistStorageImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStorageImpl::IsDirty  
  Проверяет, изменялся ли данные объекта с момента последнего сохранения.  
   
 ```
@@ -137,7 +141,7 @@ STDMETHOD(IsDirty)(void);
   
  В разделе [IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloada--ipersiststorageimplload"></a><a name="load"></a>IPersistStorageImpl::Load  
+##  <a name="load"></a>IPersistStorageImpl::Load  
  Загружает свойства объекта из указанного хранилища.  
   
 ```
@@ -149,7 +153,7 @@ STDMETHOD(Load)(IStorage* pStorage);
   
  В разделе [IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavea--ipersiststorageimplsave"></a><a name="save"></a>IPersistStorageImpl::Save  
+##  <a name="save"></a>IPersistStorageImpl::Save  
  Сохраняет свойства объекта в указанном хранилище.  
   
 ```
@@ -161,7 +165,7 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
   
  В разделе [IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavecompleteda--ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
+##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
  Уведомляет объект, который может возвращаться в нормальный режим для записи в объект хранилища.  
   
 ```

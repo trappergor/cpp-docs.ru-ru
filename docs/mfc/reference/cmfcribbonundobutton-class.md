@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::AddUndoAction
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CleanUpUndoList
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::GetActionNumber
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::HasMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +93,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxribbonundobutton.h  
   
-##  <a name="a-nameaddundoactiona--cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
  Добавляет новое действие в списке действий.  
   
 ```  
@@ -98,14 +104,14 @@ void AddUndoAction(LPCTSTR lpszLabel);
  [in] `lpszLabel`  
  Метка действия, которое будет отображаться в раскрывающемся списке.  
   
-##  <a name="a-namecleanupundolista--cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
  Очищает список действий, который представляет раскрывающегося списка.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="a-namecmfcribbonundobuttona--cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
  Создает новый `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указать, текстовую метку и изображений из списка изображений родительского объекта.  
   
 ```  
@@ -138,7 +144,7 @@ CMFCRibbonUndoButton(
  [in] `hIcon`  
  Дескриптор для значка, который можно использовать в качестве изображения кнопки.  
   
-##  <a name="a-namegetactionnumbera--cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
  Определяет количество элементов, которые пользователь выбрал из раскрывающегося списка.  
   
 ```  
@@ -148,7 +154,7 @@ int GetActionNumber() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов, которые выбрал пользователь.  
   
-##  <a name="a-namehasmenua--cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
  Указывает, содержит ли объект меню.  
   
 ```  

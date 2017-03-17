@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIChildWnd
+- AFXWIN/CMDIChildWnd
+- AFXWIN/CMDIChildWnd::CMDIChildWnd
+- AFXWIN/CMDIChildWnd::Create
+- AFXWIN/CMDIChildWnd::GetMDIFrame
+- AFXWIN/CMDIChildWnd::MDIActivate
+- AFXWIN/CMDIChildWnd::MDIDestroy
+- AFXWIN/CMDIChildWnd::MDIMaximize
+- AFXWIN/CMDIChildWnd::MDIRestore
+- AFXWIN/CMDIChildWnd::SetHandles
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +127,7 @@ class CMDIChildWnd : public CFrameWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecmdichildwnda--cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
+##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
  Вызов для создания `CMDIChildWnd` объекта.  
   
 ```  
@@ -131,7 +140,7 @@ CMDIChildWnd();
 ### <a name="example"></a>Пример  
   В примере показано [CMDIChildWnd::Create](#create).  
   
-##  <a name="a-namecreatea--cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd::Create  
+##  <a name="create"></a>CMDIChildWnd::Create  
  Вызов этой функции-члена для создания дочернего окна Windows MDI и присоединить его к `CMDIChildWnd` объекта.  
   
 ```  
@@ -183,7 +192,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFCWindowing №&9;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]  
   
-##  <a name="a-namegetmdiframea--cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
+##  <a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
  Эта функция вызывается для возврата родительского фрейма MDI.  
   
 ```  
@@ -199,7 +208,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="example"></a>Пример  
   В примере показано [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).  
   
-##  <a name="a-namemdiactivatea--cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
  Вызовите эту функцию-член для активации дочернего окна MDI независимо от окно области MDI.  
   
 ```  
@@ -212,7 +221,7 @@ void MDIActivate();
 ### <a name="example"></a>Пример  
   В примере показано [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).  
   
-##  <a name="a-namemdidestroya--cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
+##  <a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
  Вызовите эту функцию-член для уничтожения дочернего окна MDI.  
   
 ```  
@@ -225,7 +234,7 @@ void MDIDestroy();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#10;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
-##  <a name="a-namemdimaximizea--cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
  Вызовите эту функцию-член для максимизации дочернего окна MDI.  
   
 ```  
@@ -238,7 +247,7 @@ void MDIMaximize();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&11;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
-##  <a name="a-namemdirestorea--cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
  Вызовите эту функцию-член для восстановления из развернутой или свернутой размер дочернего окна MDI.  
   
 ```  
@@ -248,7 +257,7 @@ void MDIRestore();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#12;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
-##  <a name="a-namesethandlesa--cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd::SetHandles  
+##  <a name="sethandles"></a>CMDIChildWnd::SetHandles  
  Задает маркеры для ресурсов меню и сочетаний клавиш.  
   
 ```  

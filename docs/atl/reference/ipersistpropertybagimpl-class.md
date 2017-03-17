@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPersistPropertyBagImpl
-- ATL.IPersistPropertyBagImpl<T>
-- ATL::IPersistPropertyBagImpl
-- ATL::IPersistPropertyBagImpl<T>
-- ATL.IPersistPropertyBagImpl
+- ATLCOM/ATL::IPersistPropertyBagImpl
+- ATLCOM/ATL::IPersistPropertyBagImpl::GetClassID
+- ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
+- ATLCOM/ATL::IPersistPropertyBagImpl::Load
+- ATLCOM/ATL::IPersistPropertyBagImpl::Save
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +87,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-namegetclassida--ipersistpropertybagimplgetclassid"></a><a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
  Извлекает идентификатор CLSID объекта.  
   
 ```
@@ -96,7 +97,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Примечания  
  В разделе [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitnewa--ipersistpropertybagimplinitnew"></a><a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Инициализирует только что созданный объект.  
   
 ```
@@ -109,7 +110,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Примечания  
  В разделе [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloada--ipersistpropertybagimplload"></a><a name="load"></a>IPersistPropertyBagImpl::Load  
+##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  Загружает свойства объекта из контейнера свойств, предоставленное клиентом.  
   
 ```
@@ -121,7 +122,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
   
  В разделе [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavea--ipersistpropertybagimplsave"></a><a name="save"></a>IPersistPropertyBagImpl::Save  
+##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  Сохраняет свойства объекта в контейнер свойств, предоставленное клиентом.  
   
 ```

@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
-- ATL.CRBMultiMap
-- ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::FindFirstWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextValueWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextWithKey
+- ATLCOLL/ATL::CRBMultiMap::Insert
+- ATLCOLL/ATL::CRBMultiMap::RemoveKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +112,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="a-namecrbmultimapa--crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
  Конструктор.  
   
 ```
@@ -126,7 +131,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#85;](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
  Деструктор  
   
 ```
@@ -138,7 +143,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  См. в документации базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
-##  <a name="a-namefindfirstwithkeya--crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
  Вызовите этот метод, чтобы определить позицию первого элемента с помощью данного ключа.  
   
 ```
@@ -160,7 +165,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>Пример  
  В примере показано [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="a-namegetnextvaluewithkeya--crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
  Этот метод возвращает значение, связанное с помощью данного ключа и обновите значение позиции.  
   
 ```
@@ -190,7 +195,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>Пример  
  В примере показано [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="a-namegetnextwithkeya--crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
  Этот метод вызывается для получения элемента, связанного с помощью данного ключа и обновите значение позиции.  
   
 ```
@@ -217,7 +222,7 @@ CPair* GetNextWithKey(
   
  См. в документации базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
-##  <a name="a-nameinserta--crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>CRBMultiMap::Insert  
  Этот метод используется для вставки пары элементов в схеме.  
   
 ```
@@ -240,7 +245,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>Пример  
  В примере показано [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="a-nameremovekeya--crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
  Этот метод используется для удаления всех элементов ключ значение для заданного ключа.  
   
 ```

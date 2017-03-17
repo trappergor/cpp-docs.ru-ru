@@ -9,11 +9,35 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSimpleStringT
-- ATL::CSimpleStringT
-- ATL::CSimpleStringT<BaseType>
-- ATL.CSimpleStringT<BaseType>
 - CSimpleStringT
+- ATLSIMPSTR/ATL::CSimpleStringT
+- ATLSIMPSTR/ATL::CSimpleStringT::PCXSTR
+- ATLSIMPSTR/ATL::CSimpleStringT::PXSTR
+- ATLSIMPSTR/ATL::CSimpleStringT::CSimpleStringT
+- ATLSIMPSTR/ATL::CSimpleStringT::Append
+- ATLSIMPSTR/ATL::CSimpleStringT::AppendChar
+- ATLSIMPSTR/ATL::CSimpleStringT::CopyChars
+- ATLSIMPSTR/ATL::CSimpleStringT::CopyCharsOverlapped
+- ATLSIMPSTR/ATL::CSimpleStringT::Empty
+- ATLSIMPSTR/ATL::CSimpleStringT::FreeExtra
+- ATLSIMPSTR/ATL::CSimpleStringT::GetAllocLength
+- ATLSIMPSTR/ATL::CSimpleStringT::GetAt
+- ATLSIMPSTR/ATL::CSimpleStringT::GetBuffer
+- ATLSIMPSTR/ATL::CSimpleStringT::GetBufferSetLength
+- ATLSIMPSTR/ATL::CSimpleStringT::GetLength
+- ATLSIMPSTR/ATL::CSimpleStringT::GetManager
+- ATLSIMPSTR/ATL::CSimpleStringT::GetString
+- ATLSIMPSTR/ATL::CSimpleStringT::IsEmpty
+- ATLSIMPSTR/ATL::CSimpleStringT::LockBuffer
+- ATLSIMPSTR/ATL::CSimpleStringT::Preallocate
+- ATLSIMPSTR/ATL::CSimpleStringT::ReleaseBuffer
+- ATLSIMPSTR/ATL::CSimpleStringT::ReleaseBufferSetLength
+- ATLSIMPSTR/ATL::CSimpleStringT::SetAt
+- ATLSIMPSTR/ATL::CSimpleStringT::SetManager
+- ATLSIMPSTR/ATL::CSimpleStringT::SetString
+- ATLSIMPSTR/ATL::CSimpleStringT::StringLength
+- ATLSIMPSTR/ATL::CSimpleStringT::Truncate
+- ATLSIMPSTR/ATL::CSimpleStringT::UnlockBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -127,7 +151,7 @@ class CSimpleStringT
  **Заголовок:** atlsimpstr.h  
 
 
-## <a name="a-nameappenda-csimplestringtappend"></a><a name="append"></a>CSimpleStringT::Append
+## <a name="append"></a>CSimpleStringT::Append
 Добавляет `CSimpleStringT` объекта к существующему `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -161,7 +185,7 @@ str1.Append(str2);
 ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
   
-##  <a name="a-nameappendchara-csimplestringtappendchar"></a><a name="appendchar"></a>CSimpleStringT::AppendChar
+##  <a name="appendchar"></a>CSimpleStringT::AppendChar
 Добавляет знак в существующий `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -176,7 +200,7 @@ void AppendChar(XCHAR ch);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для добавления указанный символ к концу существующего `CSimpleStringT` объекта.  
   
-##  <a name="a-namecopycharsa-csimplestringtcopychars"></a><a name="copychars"></a>CSimpleStringT::CopyChars  
+##  <a name="copychars"></a>CSimpleStringT::CopyChars  
  Копирует символ или символы `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -211,7 +235,7 @@ str.CopyChars(str.GetBuffer(), pszSrc, 12);
 _tprintf_s(_T("%s\n"), str);
 ```
   
-##  <a name="a-namecopycharsoverlappeda--csimplestringtcopycharsoverlapped"></a><a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
+##  <a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
 Копирует символ или символы `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -238,7 +262,7 @@ static void CopyCharsOverlapped(
 ### <a name="example"></a>Пример  
  В примере показано [CSimpleStringT::CopyChars](#copychars), или исходный код для `CSimpleStringT::SetString` (находится в atlsimpstr.h).  
   
-##  <a name="a-namectora--csimplestringtcsimplestringt"></a><a name="ctor"></a>CSimpleStringT::CSimpleStringT  
+##  <a name="ctor"></a>CSimpleStringT::CSimpleStringT  
  Создает объект `CSimpleStringT`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -287,7 +311,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 ```
 
   
-##  <a name="a-nameemptya--csimplestringtempty"></a><a name="empty"></a>CSimpleStringT::Empty
+##  <a name="empty"></a>CSimpleStringT::Empty
 Это делает `CSimpleStringT` объекта пустую строку и освобождает память, соответствующим образом.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -306,7 +330,7 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());  
 ```  
   
-##  <a name="a-namefreeextraa--csimplestringtfreeextra"></a><a name="freeextra"></a>CSimpleStringT::FreeExtra
+##  <a name="freeextra"></a>CSimpleStringT::FreeExtra
 Освобождает все дополнительной памяти ранее выделенной строкой, но больше не нужен.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -352,7 +376,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
   
  `Alloc length is 15, String length is 15`  
   
-##  <a name="a-namegetalloclengtha--csimplestringtgetalloclength"></a><a name="getalloclength"></a>CSimpleStringT::GetAllocLength  
+##  <a name="getalloclength"></a>CSimpleStringT::GetAllocLength  
 Получает длину выделенного `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -366,7 +390,7 @@ int GetAllocLength() const throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается для определения числа символов, выделенных для этого `CSimpleStringT` объекта. В разделе [FreeExtra](#freeextra) пример вызова этой функции.  
   
-##  <a name="a-namegetata--csimplestringtgetat"></a><a name="getat"></a>CSimpleStringT::GetAt  
+##  <a name="getat"></a>CSimpleStringT::GetAt  
 Возвращает один знак из `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -392,7 +416,7 @@ CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
   
-##  <a name="a-namegetbuffera--csimplestringtgetbuffer"></a><a name="getbuffer"></a>CSimpleStringT::GetBuffer  
+##  <a name="getbuffer"></a>CSimpleStringT::GetBuffer  
 Возвращает указатель на буфер внутренних символов для `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -435,7 +459,7 @@ ASSERT(_tcscmp(s, _T("Hello")) == 0);
 s.ReleaseBuffer();   
 ```
   
-##  <a name="a-namegetbuffersetlengtha--csimplestringtgetbuffersetlength"></a><a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength  
+##  <a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength  
 Возвращает указатель на буфер внутренних символов для `CSimpleStringT` объекта усечение или его длина растет, при необходимости точно соответствовать длине, заданной в `nLength`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -486,7 +510,7 @@ str += _T(" soccer is best!");
 ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ```
   
-##  <a name="a-namegetlengtha--csimplestringtgetlength"></a><a name="getlength"></a>CSimpleStringT::GetLength  
+##  <a name="getlength"></a>CSimpleStringT::GetLength  
 Возвращает количество символов в `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -502,7 +526,7 @@ int GetLength() const throw();
   
  Для многобайтовых кодировок (MBCS), `GetLength` числа каждый 8-разрядных символов, то есть, интереса и следа байт один Многобайтовый символ, считаются двумя байтами. В разделе [FreeExtra](#freeextra) пример вызова этой функции.  
   
-##  <a name="a-namegetmanagera--csimplestringtgetmanager"></a><a name="getmanager"></a>CSimpleStringT::GetManager  
+##  <a name="getmanager"></a>CSimpleStringT::GetManager  
 Получает диспетчер памяти `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -516,7 +540,7 @@ IAtlStringMgr* GetManager() const throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается для получения памяти используется диспетчер `CSimpleStringT` объекта. Дополнительные сведения о диспетчеры памяти и строковых объектов в разделе [управление памятью и CStringT](../memory-management-with-cstringt.md).  
   
-##  <a name="a-namegetstringa--csimplestringtgetstring"></a><a name="getstring"></a>CSimpleStringT::GetString
+##  <a name="getstring"></a>CSimpleStringT::GetString
 Получает строку символов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -542,7 +566,7 @@ str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
 ```
   
-##  <a name="a-nameisemptya--csimplestringtisempty"></a><a name="isempty"></a>CSimpleStringT::IsEmpty  
+##  <a name="isempty"></a>CSimpleStringT::IsEmpty  
 Тесты `CSimpleStringT` объект пустым условием.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -564,7 +588,7 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
   
-##  <a name="a-namelockbuffera--csimplestringtlockbuffer"></a><a name="lockbuffer"></a>CSimpleStringT::LockBuffer  
+##  <a name="lockbuffer"></a>CSimpleStringT::LockBuffer  
 Отключает подсчета ссылок и защищает строки в буфере.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -610,7 +634,7 @@ _tprintf_s(_T("%c"), ch);
 str.UnlockBuffer();
 ```
   
-##  <a name="a-nameoperatorata--csimplestringtoperator"></a><a name="operator_at"></a>CSimpleStringT::operator\[\]  
+##  <a name="operator_at"></a>CSimpleStringT::operator\[\]  
 Эта функция вызывается для доступа к отдельного символа в массиве символов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -636,7 +660,7 @@ CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
   
-## <a name="a-nameoperatorata--csimplestringtoperator-"></a><a name="operator_at"></a>CSimpleStringT::operator\[\]
+## <a name="operator_at"></a>CSimpleStringT::operator\[\]
 Эта функция вызывается для доступа к отдельного символа в массиве символов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -656,7 +680,7 @@ XCHAR operator[](int iChar) const;
 >  Можно использовать индекс (`[]`) оператор получить значение символа в `CSimpleStringT`, но его нельзя использовать для изменения значение символа в `CSimpleStringT`.  
   
   
-##  <a name="a-nameoperatoraddeqa--csimplestringtoperator-"></a><a name="operator_add_eq"></a>CSimpleStringT::operator +=  
+##  <a name="operator_add_eq"></a>CSimpleStringT::operator +=  
 Присоединяет новую строку или символ в конец существующей строки.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -691,7 +715,7 @@ CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
   
-##  <a name="a-nameoperatoreqa--csimplestringtoperator-"></a><a name="operator_eq"></a>CSimpleStringT::operator =  
+##  <a name="operator_eq"></a>CSimpleStringT::operator =  
 Присваивает новое значение для `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -733,7 +757,7 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
   
-##  <a name="a-nameoperatorpcxstra--csimplestringtoperator-pcxstr"></a><a name="operator_pcxstr"></a>CSimpleStringT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>CSimpleStringT::operator PCXSTR  
 
  Напрямую обращается к символов, сохраненных в `CSimpleStringT` объект в виде строки в стиле C.  
   
@@ -781,7 +805,7 @@ wcout << strSports;
 wcout << (PCWSTR)strSports;   
 ``` 
   
-##  <a name="a-namepcxstra--csimplestringtpcxstr"></a><a name="pcxstr"></a>CSimpleStringT::PCXSTR
+##  <a name="pcxstr"></a>CSimpleStringT::PCXSTR
 Указатель на строковую константу.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -789,7 +813,7 @@ wcout << (PCWSTR)strSports;
 ```  
 typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;    
 ```  
-##  <a name="a-namepreallocatea--csimplestringtpreallocate"></a><a name="preallocate"></a>CSimpleStringT::Preallocate  
+##  <a name="preallocate"></a>CSimpleStringT::Preallocate  
 Выделяет определенный объем байт для `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -816,7 +840,7 @@ str.Preallocate(100);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ```
   
-##  <a name="a-namepxstra--csimplestringtpxstr"></a><a name="pxstr"></a>CSimpleStringT::PXSTR  
+##  <a name="pxstr"></a>CSimpleStringT::PXSTR  
 Указатель на строку.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -824,7 +848,7 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ```  
 typedef ChTraitsBase< BaseType >::PXSTR PXSTR;  
 ```  
-##  <a name="a-namereleasebuffera--csimplestringtreleasebuffer"></a><a name="releasebuffer"></a>CSimpleStringT::ReleaseBuffer  
+##  <a name="releasebuffer"></a>CSimpleStringT::ReleaseBuffer  
 Передает управление буфер, выделенный с [GetBuffer](#getbuffer).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -860,7 +884,7 @@ ASSERT(s.GetLength() == 3);
 // Length still 3
 ```
   
-##  <a name="a-namereleasebuffersetlengtha--csimplestringtreleasebuffersetlength"></a><a name="releasebuffersetlength"></a>CSimpleStringT::ReleaseBufferSetLength
+##  <a name="releasebuffersetlength"></a>CSimpleStringT::ReleaseBufferSetLength
 
 Передает управление буфер, выделенный с [GetBuffer](#getbuffer).  
   
@@ -876,7 +900,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ### <a name="remarks"></a>Примечания  
  Эта функция аналогична функционально [ReleaseBuffer](#releasebuffer) за исключением того, что должен быть передан допустимой длиной для строкового объекта.  
   
-##  <a name="a-namesetata--csimplestringtsetat"></a><a name="setat"></a>CSimpleStringT::SetAt  
+##  <a name="setat"></a>CSimpleStringT::SetAt  
 Задает одиночный знак из `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -903,7 +927,7 @@ s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ``` 
   
-##  <a name="a-namesetmanagera--csimplestringtsetmanager"></a><a name="setmanager"></a>CSimpleStringT::SetManager  
+##  <a name="setmanager"></a>CSimpleStringT::SetManager  
 Указывает, то диспетчер памяти `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -926,7 +950,7 @@ CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
   
-##  <a name="a-namesetstringa--csimplestringtsetstring"></a><a name="setstring"></a>CSimpleStringT::SetString  
+##  <a name="setstring"></a>CSimpleStringT::SetString  
 Задает строку `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -963,7 +987,7 @@ s.SetString(_T("Soccer"), 6);
 ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
   
-##  <a name="a-namestringlengtha--csimplestringtstringlength"></a><a name="stringlength"></a>CSimpleStringT::StringLength  
+##  <a name="stringlength"></a>CSimpleStringT::StringLength  
 Возвращает число символов в указанной строке.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -988,7 +1012,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ``` 
   
-##  <a name="a-nametruncatea--csimplestringttruncate"></a><a name="truncate"></a>CSimpleStringT::Truncate
+##  <a name="truncate"></a>CSimpleStringT::Truncate
 Усекает строки до новой длины.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -1018,7 +1042,7 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
 ``` 
   
-##  <a name="a-nameunlockbuffera--csimplestringtunlockbuffer"></a><a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
+##  <a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
  Разблокирует буфер `CSimpleStringT` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -1031,7 +1055,7 @@ void UnlockBuffer() throw();
   
  `CSimpleStringT` Автоматически вызывает деструктор `UnlockBuffer` чтобы убедиться, что буфер не заблокирован при вызове деструктора. Пример этого метода см. в разделе [LockBuffer](#lockbuffer).  
   
-##  <a name="a-namedtora--csimplestringtcsimplestringt"></a><a name="dtor"></a>CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>CSimpleStringT:: ~ CSimpleStringT
 Уничтожает объект `CSimpleStringT`.  
   
 ### <a name="syntax"></a>Синтаксис  

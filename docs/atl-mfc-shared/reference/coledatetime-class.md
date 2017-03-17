@@ -10,8 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDateTime
-- ATL.COleDateTime
-- ATL::COleDateTime
+- ATLCOMTIME/ATL::COleDateTime
+- ATLCOMTIME/ATL::COleDateTime::COleDateTime
+- ATLCOMTIME/ATL::COleDateTime::Format
+- ATLCOMTIME/ATL::COleDateTime::GetAsDBTIMESTAMP
+- ATLCOMTIME/ATL::COleDateTime::GetAsSystemTime
+- ATLCOMTIME/ATL::COleDateTime::GetAsUDATE
+- ATLCOMTIME/ATL::COleDateTime::GetCurrentTime
+- ATLCOMTIME/ATL::COleDateTime::GetDay
+- ATLCOMTIME/ATL::COleDateTime::GetDayOfWeek
+- ATLCOMTIME/ATL::COleDateTime::GetDayOfYear
+- ATLCOMTIME/ATL::COleDateTime::GetHour
+- ATLCOMTIME/ATL::COleDateTime::GetMinute
+- ATLCOMTIME/ATL::COleDateTime::GetMonth
+- ATLCOMTIME/ATL::COleDateTime::GetSecond
+- ATLCOMTIME/ATL::COleDateTime::GetStatus
+- ATLCOMTIME/ATL::COleDateTime::GetYear
+- ATLCOMTIME/ATL::COleDateTime::ParseDateTime
+- ATLCOMTIME/ATL::COleDateTime::SetDate
+- ATLCOMTIME/ATL::COleDateTime::SetDateTime
+- ATLCOMTIME/ATL::COleDateTime::SetStatus
+- ATLCOMTIME/ATL::COleDateTime::SetTime
+- ATLCOMTIME/ATL::COleDateTime::m_dt
+- ATLCOMTIME/ATL::COleDateTime::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -142,7 +163,7 @@ class COleDateTime
 ## <a name="requirements"></a>Требования  
  **Заголовок:** ATLComTime.h  
   
-##  <a name="a-namecoledatetimerelationaloperatorsa--coledatetime-relational-operators"></a><a name="coledatetime_relational_operators"></a>Реляционные операторы COleDateTime  
+##  <a name="coledatetime_relational_operators"></a>Реляционные операторы COleDateTime  
  Операторы сравнения.  
   
 ```
@@ -171,7 +192,7 @@ bool operator>=(const COleDateTime& date) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities&#170;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]  
   
-##  <a name="a-namecoledatetimea--coledatetimecoledatetime"></a><a name="coledatetime"></a>COleDateTime::COleDateTime  
+##  <a name="coledatetime"></a>COleDateTime::COleDateTime  
  Создает объект `COleDateTime`.  
   
 ```
@@ -269,7 +290,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#2;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]  
   
-##  <a name="a-nameformata--coledatetimeformat"></a><a name="format"></a>COleDateTime::Format  
+##  <a name="format"></a>COleDateTime::Format  
  Создает отформатированное представление значения даты и времени.  
   
 ```
@@ -325,7 +346,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#3;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_5.cpp)]  
   
-##  <a name="a-namegetasdbtimestampa--coledatetimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
  Этот метод вызывается для получения времени в `COleDateTime` объекта в виде **DBTIMESTAMP** структуру данных.  
   
 ```
@@ -345,7 +366,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#4;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_6.cpp)]  
   
-##  <a name="a-namegetassystemtimea--coledatetimegetassystemtime"></a><a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
  Этот метод вызывается для получения времени в `COleDateTime` объекта в виде `SYSTEMTIME` структуру данных.  
   
 ```
@@ -364,7 +385,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
   
  В разделе [GetStatus](#getstatus) для содержатся дополнительные сведения о состоянии в `COleDateTime` объекта.  
   
-##  <a name="a-namegetasudatea--coledatetimegetasudate"></a><a name="getasudate"></a>COleDateTime::GetAsUDATE  
+##  <a name="getasudate"></a>COleDateTime::GetAsUDATE  
  Этот метод вызывается для получения времени в `COleDateTime` объекта в виде **UDATE** структуру данных.  
   
 ```
@@ -381,7 +402,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 ### <a name="remarks"></a>Примечания  
  Объект **UDATE** структура представляет дату «Распакованная».  
   
-##  <a name="a-namegetcurrenttimea--coledatetimegetcurrenttime"></a><a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
  Вызовите это статическая функция-член для возврата значения текущей даты и времени.  
   
 ```
@@ -391,7 +412,7 @@ static COleDateTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#5;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_7.cpp)]  
   
-##  <a name="a-namegetdaya--coledatetimegetday"></a><a name="getday"></a>COleDateTime::GetDay  
+##  <a name="getday"></a>COleDateTime::GetDay  
  Возвращает день месяца, представленный это значение даты и времени.  
   
 ```
@@ -423,7 +444,7 @@ int GetDay() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities №&6;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_8.cpp)]  
   
-##  <a name="a-namegetdayofweeka--coledatetimegetdayofweek"></a><a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
  Возвращает день месяца, представленный это значение даты и времени.  
   
 ```
@@ -455,7 +476,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#7;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_9.cpp)]  
   
-##  <a name="a-namegetdayofyeara--coledatetimegetdayofyear"></a><a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
+##  <a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
  Возвращает день года, представленный это значение даты и времени.  
   
 ```
@@ -487,7 +508,7 @@ int GetDayOfYear() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities №&8;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_10.cpp)]  
   
-##  <a name="a-namegethoura--coledatetimegethour"></a><a name="gethour"></a>COleDateTime::GetHour  
+##  <a name="gethour"></a>COleDateTime::GetHour  
  Возвращает час, представляемое этим значением даты и времени.  
   
 ```
@@ -519,7 +540,7 @@ int GetHour() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities №&9;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_11.cpp)]  
   
-##  <a name="a-namegetminutea--coledatetimegetminute"></a><a name="getminute"></a>COleDateTime::GetMinute  
+##  <a name="getminute"></a>COleDateTime::GetMinute  
  Возвращает минуты, представляемое этим значением даты и времени.  
   
 ```
@@ -551,7 +572,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetHour](#gethour).  
   
-##  <a name="a-namegetmontha--coledatetimegetmonth"></a><a name="getmonth"></a>COleDateTime::GetMonth  
+##  <a name="getmonth"></a>COleDateTime::GetMonth  
  Возвращает месяц, представляемое этим значением даты и времени.  
   
 ```
@@ -583,7 +604,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetDay](#getday).  
   
-##  <a name="a-namegetseconda--coledatetimegetsecond"></a><a name="getsecond"></a>COleDateTime::GetSecond  
+##  <a name="getsecond"></a>COleDateTime::GetSecond  
  Возвращает второй, представляемое этим значением даты и времени.  
   
 ```
@@ -620,7 +641,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetHour](#gethour).  
   
-##  <a name="a-namegetstatusa--coledatetimegetstatus"></a><a name="getstatus"></a>COleDateTime::GetStatus  
+##  <a name="getstatus"></a>COleDateTime::GetStatus  
  Возвращает состояние (действия) заданного `COleDateTime` объекта.  
   
 ```
@@ -686,7 +707,7 @@ DateTimeStatus GetStatus() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#10;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_12.cpp)]  
   
-##  <a name="a-namegetyeara--coledatetimegetyear"></a><a name="getyear"></a>COleDateTime::GetYear  
+##  <a name="getyear"></a>COleDateTime::GetYear  
  Возвращает год, представляемое этим значением даты и времени.  
   
 ```
@@ -720,7 +741,7 @@ int GetYear() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetDay](#getday).  
   
-##  <a name="a-namemdta--coledatetimemdt"></a><a name="m_dt"></a>COleDateTime::m_dt  
+##  <a name="m_dt"></a>COleDateTime::m_dt  
  Базовый **даты** структуры для этого `COleDateTime` объекта.  
   
 ```
@@ -734,7 +755,7 @@ DATE m_dt;
   
  Дополнительные сведения о реализации **даты** объекта, см. в статье [даты и времени: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="a-namemstatusa--coledatetimemstatus"></a><a name="m_status"></a>COleDateTime::m_status  
+##  <a name="m_status"></a>COleDateTime::m_status  
  Содержит состояние данного объекта `COleDateTime` объекта.  
   
 ```
@@ -747,7 +768,7 @@ DateTimeStatus m_status;
 > [!CAUTION]
 >  Этот член данных — для сложных ситуациях программирования. Следует использовать встроенные функции-члены [GetStatus](#getstatus) и [SetStatus](#setstatus). В разделе `SetStatus` для дальнейшего предостережения о явном задании этого элемента данных.  
   
-##  <a name="a-nameoperatoreqa--coledatetimeoperator-"></a><a name="operator_eq"></a>COleDateTime::operator =  
+##  <a name="operator_eq"></a>COleDateTime::operator =  
  Копирует `COleDateTime` значение.  
   
 ```
@@ -785,7 +806,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
  Дополнительные сведения о границы `COleDateTime` значения, см. в статье [даты и времени: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="a-nameoperatoradd-a--coledatetimeoperator---"></a><a name="operator_add_-"></a>COleDateTime::operator +, -  
+##  <a name="operator_add_-"></a>COleDateTime::operator +, -  
  Добавление и вычитание **ColeDateTime** значения.  
   
 ```
@@ -812,7 +833,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#12;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--coledatetimeoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDateTime::operator +=-=  
+##  <a name="operator_add_eq_-_eq"></a>COleDateTime::operator +=-=  
  Добавление и вычитание **ColeDateTime** значение из этого `COleDateTime` объекта.  
   
 ```
@@ -833,7 +854,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  Дополнительные сведения о границы `COleDateTime` значения, см. в статье [даты и времени: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="a-nameoperatordatea--coledatetimeoperator-date"></a><a name="operator_date"></a>COleDateTime::operator даты  
+##  <a name="operator_date"></a>COleDateTime::operator даты  
  Преобразует **ColeDateTime** значение в **даты**.  
   
 ```
@@ -845,7 +866,7 @@ operator DATE() const throw();
   
  **Даты** оператор проверяет Если `COleDateTime` объекта задано значение null. В разделе [COleDateTime реляционные операторы](#coledatetime_relational_operators) пример.  
   
-##  <a name="a-nameparsedatetimea--coledatetimeparsedatetime"></a><a name="parsedatetime"></a>COleDateTime::ParseDateTime  
+##  <a name="parsedatetime"></a>COleDateTime::ParseDateTime  
  Анализирует строку для чтения значения даты и времени.  
   
 ```
@@ -904,7 +925,7 @@ bool ParseDateTime(
   
  Дополнительные сведения о границах и реализацию `COleDateTime` значения, см. в статье [даты и времени: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="a-namesetdatea--coledatetimesetdate"></a><a name="setdate"></a>COleDateTime::SetDate  
+##  <a name="setdate"></a>COleDateTime::SetDate  
  Задает дату `COleDateTime` объекта.  
   
 ```
@@ -970,7 +991,7 @@ int SetDate(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&11;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_14.cpp)]  
   
-##  <a name="a-namesetdatetimea--coledatetimesetdatetime"></a><a name="setdatetime"></a>COleDateTime::SetDateTime  
+##  <a name="setdatetime"></a>COleDateTime::SetDateTime  
  Задает дату и время `COleDateTime` объект.  
   
 ```
@@ -1049,7 +1070,7 @@ int SetDateTime(
 ### <a name="example"></a>Пример  
  В примере показано [GetStatus](#getstatus).  
   
-##  <a name="a-namesetstatusa--coledatetimesetstatus"></a><a name="setstatus"></a>COleDateTime::SetStatus  
+##  <a name="setstatus"></a>COleDateTime::SetStatus  
  Задает состояние данного объекта `COleDateTime` объекта.  
   
 ```
@@ -1069,7 +1090,7 @@ void SetStatus(DateTimeStatus status) throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetStatus](#getstatus).  
   
-##  <a name="a-namesettimea--coledatetimesettime"></a><a name="settime"></a>COleDateTime::SetTime  
+##  <a name="settime"></a>COleDateTime::SetTime  
  Задает время `COleDateTime` объект.  
   
 ```

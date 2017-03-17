@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::AddFormat
+- AFXODLGS/COlePasteSpecialDialog::AddLinkEntry
+- AFXODLGS/COlePasteSpecialDialog::AddStandardFormats
+- AFXODLGS/COlePasteSpecialDialog::CreateItem
+- AFXODLGS/COlePasteSpecialDialog::DoModal
+- AFXODLGS/COlePasteSpecialDialog::GetDrawAspect
+- AFXODLGS/COlePasteSpecialDialog::GetIconicMetafile
+- AFXODLGS/COlePasteSpecialDialog::GetPasteIndex
+- AFXODLGS/COlePasteSpecialDialog::GetSelectionType
+- AFXODLGS/COlePasteSpecialDialog::m_ps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +116,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="a-nameaddformata--colepastespecialdialogaddformat"></a><a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
  Эта функция вызывается для добавления новых форматов в список форматов, которые приложение может поддерживать в Специальная вставка операции.  
   
 ```  
@@ -158,7 +170,7 @@ void AddFormat(
   
  Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечислимый тип в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameaddlinkentrya--colepastespecialdialogaddlinkentry"></a><a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
  Добавляет новую запись в список поддерживаемых форматов буфера обмена.  
   
 ```  
@@ -172,7 +184,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>Возвращаемое значение  
  [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) структуру, содержащую сведения для новой записи ссылки.  
   
-##  <a name="a-nameaddstandardformatsa--colepastespecialdialogaddstandardformats"></a><a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
  Вызовите эту функцию, чтобы добавить следующие форматы буфера обмена в список форматов, которые приложение может поддерживать в Специальная вставка операции:  
   
 ```  
@@ -197,7 +209,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  Эти форматы используются для поддержки внедрения и связывания.  
   
-##  <a name="a-namecolepastespecialdialoga--colepastespecialdialogcolepastespecialdialog"></a><a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
  Создает объект `COlePasteSpecialDialog`.  
   
 ```  
@@ -230,7 +242,7 @@ COlePasteSpecialDialog(
   
  Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечислимый тип в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreateitema--colepastespecialdialogcreateitem"></a><a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
  Создает новый элемент, который был выбран в диалоговом окне Специальная вставка.  
   
 ```  
@@ -247,7 +259,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>Примечания  
  Эта функция должна вызываться только после [DoModal](#domodal) возвращает **IDOK**.  
   
-##  <a name="a-namedomodala--colepastespecialdialogdomodal"></a><a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
  Отображает диалоговое окно OLE Специальная вставка.  
   
 ```  
@@ -268,7 +280,7 @@ virtual INT_PTR DoModal();
   
  Если `DoModal` возвращает **IDOK**, можно вызвать другой член функции для получения параметров или данные, введенные пользователем в диалоговом окне.  
   
-##  <a name="a-namegetdrawaspecta--colepastespecialdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
  Определяет, если пользователь выбрал для отображения выбранного элемента в виде значка.  
   
 ```  
@@ -287,7 +299,7 @@ DVASPECT GetDrawAspect() const;
   
  Дополнительные сведения о рисовании аспект см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegeticonicmetafilea--colepastespecialdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
  Возвращает метафайла, связанные с элемента, выбранного пользователем.  
   
 ```  
@@ -297,7 +309,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор метафайла, содержащий значками аспектом выбранного элемента, если был установлен флажок виде значка при отклонении диалоговое окно, выбрав **ОК**; в противном случае **NULL**.  
   
-##  <a name="a-namegetpasteindexa--colepastespecialdialoggetpasteindex"></a><a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
  Возвращает индекс значение, связанное с записью выбранного пользователя.  
   
 ```  
@@ -310,7 +322,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetselectiontypea--colepastespecialdialoggetselectiontype"></a><a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
  Определяет тип выбора, сделанного пользователем.  
   
 ```  
@@ -347,7 +359,7 @@ UINT GetSelectionType() const;
   
 - **COlePasteSpecialDialog::pasteStatic** выбранный формат был метафайл.  
   
-##  <a name="a-namempsa--colepastespecialdialogmps"></a><a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
  Структура типа **OLEUIPASTESPECIAL** используется для управления поведением диалогового окна «Специальная вставка».  
   
 ```  

@@ -10,8 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
-- ATL.CDialogImpl
-- ATL::CDialogImpl
+- ATLWIN/ATL::CDialogImpl
+- ATLWIN/ATL::Create
+- ATLWIN/ATL::DestroyWindow
+- ATLWIN/ATL::DoModal
+- ATLWIN/ATL::EndDialog
+- ATLWIN/ATL::GetDialogProc
+- ATLWIN/ATL::MapDialogRect
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::DialogProc
+- ATLWIN/ATL::StartDialogProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +123,7 @@ template <class T,
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="a-namecreatea--cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>CDialogImpl::Create  
  Создает немодальное диалоговое окно.  
   
 ```  
@@ -145,7 +153,7 @@ HWND Create(
 ### <a name="remarks"></a>Примечания  
  Автоматически присоединяется к этому диалоговому окну `CDialogImpl` объекта. Для создания модального диалогового окна, вызовите [DoModal](#domodal). Второй переопределение выше используется только с [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  Уничтожает немодального диалогового окна.  
   
 ```  
@@ -161,7 +169,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Примечания  
  Возвращает **TRUE** Если диалоговое окно было успешно уничтожено; в противном случае **FALSE**.  
   
-##  <a name="a-namedialogproca--cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
  Эта статическая функция реализует процедуру диалогового окна.  
   
 ```  
@@ -196,7 +204,7 @@ static LRESULT CALLBACK DialogProc(
   
  Можно переопределить `DialogProc` для предоставления другой механизм для обработки сообщений.  
   
-##  <a name="a-namedomodala--cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>CDialogImpl::DoModal  
  Создает модальное диалоговое окно.  
   
 ```   
@@ -220,7 +228,7 @@ INT_PTR DoModal(
   
  Чтобы создать немодального диалогового окна, вызовите [создать](#create).  
   
-##  <a name="a-nameenddialoga--cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CDialogImpl::EndDialog  
  Уничтожает модального диалогового окна.  
   
 ```   
@@ -240,7 +248,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  Не следует вызывать `EndDialog` для уничтожения немодального диалогового окна. Вызов [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) вместо.  
   
-##  <a name="a-namegetdialogproca--cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
  Возвращает `DialogProc`, процедура текущего диалогового окна.  
   
 ```   
@@ -253,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для замены процедуры диалога на свои собственные.  
   
-##  <a name="a-namemapdialogrecta--cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
  Преобразует единицы (maps) единицы диалогового указанного прямоугольника экрана (в пикселях).  
   
 ```   
@@ -270,7 +278,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>Примечания  
  Функция заменяет координаты в указанном `RECT` структура с преобразованные координаты, что позволяет структура, которая будет использоваться для создания диалогового окна или разместить элемент управления в диалоговое окно.  
   
-##  <a name="a-nameonfinalmessagea--cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  Вызывается после получения последнего сообщения (обычно `WM_NCDESTROY`).  
   
 ```   
@@ -284,7 +292,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что если вы хотите автоматически удалить объект после уничтожение окна, можно вызвать `delete this;` здесь.  
   
-##  <a name="a-namestartdialogproca--cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
  Вызывается только один раз при получении первого сообщения для обработки сообщений, отправляемых в диалоговое окно.  
   
 ```   

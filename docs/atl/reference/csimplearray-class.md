@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSimpleArray
-- ATL::CSimpleArray
 - CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::Add
+- ATLSIMPCOLL/ATL::CSimpleArray::Find
+- ATLSIMPCOLL/ATL::CSimpleArray::GetData
+- ATLSIMPCOLL/ATL::CSimpleArray::GetSize
+- ATLSIMPCOLL/ATL::CSimpleArray::Remove
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleArray::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +109,7 @@ class CSimpleArray
 ## <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#86;](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplearrayadd"></a><a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>CSimpleArray::Add  
  Добавляет новый элемент в массиве.  
   
 ```
@@ -118,7 +126,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#87;](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="a-namecsimplearraya--csimplearraycsimplearray"></a><a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
  Конструктор для объекта массива.  
   
 ```
@@ -133,7 +141,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Примечания  
  Инициализирует элементы данных, создать новый пустой `CSimpleArray` объекта или копии существующего `CSimpleArray` объекта.  
   
-##  <a name="a-namedtora--csimplearraycsimplearray"></a><a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
  Деструктор  
   
 ```
@@ -143,7 +151,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы.  
   
-##  <a name="a-namefinda--csimplearrayfind"></a><a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>CSimpleArray::Find  
  Поиск элемента в массиве.  
   
 ```
@@ -160,7 +168,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#88;](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="a-namegetdataa--csimplearraygetdata"></a><a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>CSimpleArray::GetData  
  Возвращает указатель на данные, хранящиеся в массиве.  
   
 ```
@@ -170,7 +178,7 @@ T* GetData() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на данные в массиве.  
   
-##  <a name="a-namegetsizea--csimplearraygetsize"></a><a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>CSimpleArray::GetSize  
  Возвращает количество элементов, хранящихся в массиве.  
   
 ```
@@ -180,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество элементов, хранящихся в массиве.  
   
-##  <a name="a-nameoperatorata--csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
  Получает элемент из массива.  
   
 ```
@@ -197,7 +205,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#89;](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="a-nameoperatoreqa--csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>CSimpleArray::operator =  
  Оператор присвоения.  
   
 ```
@@ -219,7 +227,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#90;](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="a-nameremovea--csimplearrayremove"></a><a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>CSimpleArray::Remove  
  Удаляет заданный элемент из массива.  
   
 ```
@@ -236,7 +244,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>Примечания  
  Когда элемент удаляется, оставшиеся элементы в массиве будут перенумерованы для заполнения пустого места.  
   
-##  <a name="a-nameremovealla--csimplearrayremoveall"></a><a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>CSimpleArray::RemoveAll  
  Удаляет все элементы из массива.  
   
 ```
@@ -246,7 +254,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Примечания  
  Удаляет все элементы, которые в настоящее время хранятся в массиве.  
   
-##  <a name="a-nameremoveata--csimplearrayremoveat"></a><a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>CSimpleArray::RemoveAt  
  Удаляет указанный элемент из массива.  
   
 ```
@@ -263,7 +271,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>Примечания  
  Когда элемент удаляется, оставшиеся элементы в массиве будут перенумерованы для заполнения пустого места.  
   
-##  <a name="a-namesetatindexa--csimplearraysetatindex"></a><a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
  Значение указанного элемента в массиве.  
   
 ```

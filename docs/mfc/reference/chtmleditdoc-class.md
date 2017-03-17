@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditDoc
+- AFXHTML/CHtmlEditDoc
+- AFXHTML/CHtmlEditDoc::CHtmlEditDoc
+- AFXHTML/CHtmlEditDoc::GetView
+- AFXHTML/CHtmlEditDoc::IsModified
+- AFXHTML/CHtmlEditDoc::OpenURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,14 +81,14 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxhtml.h  
   
-##  <a name="a-namechtmleditdoca--chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
+##  <a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
  Создает **CHtmlEditDoc** объекта.  
   
 ```  
 CHtmlEditDoc();
 ```  
   
-##  <a name="a-namegetviewa--chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView  
+##  <a name="getview"></a>CHtmlEditDoc::GetView  
  Извлекает [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) объект присоединен к этому документу.  
   
 ```  
@@ -93,14 +98,14 @@ virtual CHtmlEditView* GetView() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на документ **CHtmlEditView** объекта.  
   
-##  <a name="a-nameismodifieda--chtmleditdocismodified"></a><a name="ismodified"></a>CHtmlEditDoc::IsModified  
+##  <a name="ismodified"></a>CHtmlEditDoc::IsModified  
  Возвращает значение, содержит ли элемент управления WebBrowser связанное представление документа, которые были изменены пользователем.  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
-##  <a name="a-nameopenurla--chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL  
+##  <a name="openurl"></a>CHtmlEditDoc::OpenURL  
  Открытие URL-адреса.  
   
 ```  

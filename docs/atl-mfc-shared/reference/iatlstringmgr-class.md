@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAtlStringMgr
+- ATLSIMPSTR/ATL::IAtlStringMgr
+- ATLSIMPSTR/ATL::Allocate
+- ATLSIMPSTR/ATL::Clone
+- ATLSIMPSTR/ATL::Free
+- ATLSIMPSTR/ATL::GetNilString
+- ATLSIMPSTR/ATL::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +76,7 @@ __interface IAtlStringMgr
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsimpstr.h  
   
-##  <a name="a-nameallocatea--iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr::Allocate  
+##  <a name="allocate"></a>IAtlStringMgr::Allocate  
  Выделяет новую структуру строки данных.  
   
 ```
@@ -96,7 +102,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 >  Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-nameclonea--iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr::Clone  
+##  <a name="clone"></a>IAtlStringMgr::Clone  
  Возвращает указатель на новый диспетчер строку для использования с другим экземпляром `CSimpleStringT`.  
   
 ```
@@ -114,7 +120,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 >  Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namefreea--iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr::Free  
+##  <a name="free"></a>IAtlStringMgr::Free  
  Освобождает структуры данных строки.  
   
 ```
@@ -131,7 +137,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 >  Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namegetnilstringa--iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString  
+##  <a name="getnilstring"></a>IAtlStringMgr::GetNilString  
  Возвращает указатель на структуру строки данных для пустой строки.  
   
 ```
@@ -150,7 +156,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 >  Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namereallocatea--iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr::Reallocate  
+##  <a name="reallocate"></a>IAtlStringMgr::Reallocate  
  Перераспределяет структуру строки данных.  
   
 ```

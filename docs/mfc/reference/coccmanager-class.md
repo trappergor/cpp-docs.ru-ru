@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COccManager
+- AFXOCC/COccManager
+- AFXOCC/COccManager::CreateContainer
+- AFXOCC/COccManager::CreateDlgControls
+- AFXOCC/COccManager::CreateSite
+- AFXOCC/COccManager::GetDefBtnCode
+- AFXOCC/COccManager::IsDialogMessage
+- AFXOCC/COccManager::IsLabelControl
+- AFXOCC/COccManager::IsMatchingMnemonic
+- AFXOCC/COccManager::OnEvent
+- AFXOCC/COccManager::PostCreateDialog
+- AFXOCC/COccManager::PreCreateDialog
+- AFXOCC/COccManager::SetDefaultButton
+- AFXOCC/COccManager::SplitDialogTemplate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +94,7 @@ class COccManager : public CNoTrackObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxocc.h  
   
-##  <a name="a-namecreatecontainera--coccmanagercreatecontainer"></a><a name="createcontainer"></a>COccManager::CreateContainer  
+##  <a name="createcontainer"></a>COccManager::CreateContainer  
  Вызывается платформой для создания контейнера элемента управления.  
   
 ```  
@@ -98,7 +111,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о создании пользовательских узлов см. в разделе [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="a-namecreatedlgcontrolsa--coccmanagercreatedlgcontrols"></a><a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
+##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
  Эта функция вызывается для создания элементов управления ActiveX, определяемое `pOccDialogInfo` параметр.  
   
 ```  
@@ -130,7 +143,7 @@ virtual BOOL CreateDlgControls(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если элемент управления был создан успешно. в противном случае — нуль.  
   
-##  <a name="a-namecreatesitea--coccmanagercreatesite"></a><a name="createsite"></a>COccManager::CreateSite  
+##  <a name="createsite"></a>COccManager::CreateSite  
  Вызывается платформой для создания узла управления, размещенные в качестве контейнера, на который указывает `pCtrlCont`.  
   
 ```  
@@ -149,7 +162,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
  Каждый контейнер элемента управления может размещаться несколько узлов. Создайте дополнительные сайты с несколькими вызовами в `CreateSite`.  
   
-##  <a name="a-namegetdefbtncodea--coccmanagergetdefbtncode"></a><a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
  Эта функция вызывается для определения, является ли элемент управления является кнопкой по умолчанию.  
   
 ```  
@@ -169,7 +182,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
   
 - **0** элемент управления не является кнопкой.  
   
-##  <a name="a-nameisdialogmessagea--coccmanagerisdialogmessage"></a><a name="isdialogmessage"></a>COccManager::IsDialogMessage  
+##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
  Вызывается платформой для определения ли сообщение предназначено для указанного диалогового и, если это так, обрабатывает сообщение.  
   
 ```  
@@ -193,7 +206,7 @@ virtual BOOL IsDialogMessage(
   
  Переопределите эту функцию, чтобы обеспечить пользовательское поведение для отправки сообщений на указанное диалоговое окно.  
   
-##  <a name="a-nameislabelcontrola--coccmanagerislabelcontrol"></a><a name="islabelcontrol"></a>COccManager::IsLabelControl  
+##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
  Вызывайте эту функцию, чтобы определить, является ли указанный элемент управления элемент управления label.  
   
 ```  
@@ -211,7 +224,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Элемент управления label, которое действует как метка для любой элемент управления является следующим в порядок.  
   
-##  <a name="a-nameismatchingmnemonica--coccmanagerismatchingmnemonic"></a><a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
+##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
  Эта функция вызывается для определения текущего назначенный соответствия, представленного элементом управления.  
   
 ```  
@@ -237,7 +250,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameoneventa--coccmanageronevent"></a><a name="onevent"></a>COccManager::OnEvent  
+##  <a name="onevent"></a>COccManager::OnEvent  
  Вызывается платформой для обработки указанного события.  
   
 ```  
@@ -267,7 +280,7 @@ virtual BOOL OnEvent(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для настройки процесса обработки событий по умолчанию.  
   
-##  <a name="a-nameprecreatedialoga--coccmanagerprecreatedialog"></a><a name="precreatedialog"></a>COccManager::PreCreateDialog  
+##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
  Вызывается платформой для обработки шаблона диалогового окна для элементов управления ActiveX перед созданием фактическое диалоговым окном.  
   
 ```  
@@ -291,7 +304,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
  Переопределите эту функцию для настройки процесса создания диалогового окна, размещение элементов управления ActiveX.  
   
-##  <a name="a-namepostcreatedialoga--coccmanagerpostcreatedialog"></a><a name="postcreatedialog"></a>COccManager::PostCreateDialog  
+##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
  Вызывается платформой для освобождения памяти, выделенной для шаблона диалогового окна.  
   
 ```  
@@ -307,7 +320,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
  Переопределите эту функцию для настройки процесса очистки все ресурсы, используемые объект диалогового окна.  
   
-##  <a name="a-namesetdefaultbuttona--coccmanagersetdefaultbutton"></a><a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
  Вызывайте эту функцию, чтобы задать элемент управления как кнопка по умолчанию.  
   
 ```  
@@ -331,7 +344,7 @@ static void AFX_CDECL SetDefaultButton(
 > [!NOTE]
 >  Элемент управления должен иметь **OLEMISC_ACTSLIKEBUTTON** бит состояния. Дополнительные сведения о **OLEMISC, ПОЗВОЛЯЯ** флаги, в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) раздел в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesplitdialogtemplatea--coccmanagersplitdialogtemplate"></a><a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
+##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
  Вызывается платформой для разделения элементов управления ActiveX из общих элементов управления диалогового окна.  
   
 ```  

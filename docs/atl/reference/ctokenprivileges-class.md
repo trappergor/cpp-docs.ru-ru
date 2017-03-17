@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CTokenPrivileges
 - CTokenPrivileges
-- ATL.CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::Add
+- ATLSECURITY/ATL::CTokenPrivileges::Delete
+- ATLSECURITY/ATL::CTokenPrivileges::DeleteAll
+- ATLSECURITY/ATL::CTokenPrivileges::GetCount
+- ATLSECURITY/ATL::CTokenPrivileges::GetDisplayNames
+- ATLSECURITY/ATL::CTokenPrivileges::GetLength
+- ATLSECURITY/ATL::CTokenPrivileges::GetLuidsAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
+- ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="a-nameadda--ctokenprivilegesadd"></a><a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>CTokenPrivileges::Add  
  Добавляет один или несколько прав для `CTokenPrivileges` объекта маркера доступа.  
   
 ```
@@ -117,7 +127,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  В первой форме этот метод возвращает true, если права доступа успешно добавлены, значение false в противном случае.  
   
-##  <a name="a-namectokenprivilegesa--ctokenprivilegesctokenprivileges"></a><a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
  Конструктор.  
   
 ```
@@ -136,7 +146,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>Примечания  
  `CTokenPrivileges` Объекта при необходимости могут создаваться с помощью **TOKEN_PRIVILEGES** структуры или ранее определенный `CTokenPrivileges` объекта.  
   
-##  <a name="a-namedtora--ctokenprivilegesctokenprivileges"></a><a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
  Деструктор  
   
 ```
@@ -146,7 +156,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все выделенные ресурсы.  
   
-##  <a name="a-namedeletea--ctokenprivilegesdelete"></a><a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>CTokenPrivileges::Delete  
  Удаление прав из `CTokenPrivileges` объекта маркера доступа.  
   
 ```
@@ -163,7 +173,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод полезен в качестве средства для создания маркеров ограниченного доступа в Windows 2000.  
   
-##  <a name="a-namedeletealla--ctokenprivilegesdeleteall"></a><a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  Удаляет все разрешения из `CTokenPrivileges` объекта маркера доступа.  
   
 ```
@@ -173,7 +183,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>Примечания  
  Удаляет все привилегии, содержащихся в `CTokenPrivileges` объекта маркера доступа.  
   
-##  <a name="a-namegetdisplaynamesa--ctokenprivilegesgetdisplaynames"></a><a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
  Получает отображаемые имена для прав доступа, содержащихся в `CTokenPrivileges` объекта маркера доступа.  
   
 ```
@@ -189,7 +199,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  Этот метод возвращает отображаемое имя: например, если имя атрибута SE_REMOTE_SHUTDOWN_NAME, отображаемое имя — «Принудительное завершение работы с удаленной системы.» Чтобы получить имя системы, используйте [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
-##  <a name="a-namegetcounta--ctokenprivilegesgetcount"></a><a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>CTokenPrivileges::GetCount  
  Возвращает количество записей прав доступа в `CTokenPrivileges` объекта.  
   
 ```
@@ -199,7 +209,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество привилегии, содержащихся в `CTokenPrivileges` объекта.  
   
-##  <a name="a-namegetlengtha--ctokenprivilegesgetlength"></a><a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>CTokenPrivileges::GetLength  
  Возвращает длину `CTokenPrivileges` объекта.  
   
 ```
@@ -209,7 +219,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает число байтов, необходимых для хранения **TOKEN_PRIVILEGES** структура представлена `CTokenPrivileges` объекта, включая все записи прав доступа, он содержит.  
   
-##  <a name="a-namegetluidsandattributesa--ctokenprivilegesgetluidsandattributes"></a><a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
  Получает локально уникальные коды и флаги атрибутов из `CTokenPrivileges` объекта.  
   
 ```
@@ -228,7 +238,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>Примечания  
  Этот метод перечисляет все привилегии, содержащихся в `CTokenPrivileges` объекта маркера доступа и помещения отдельных LUID и (необязательно) флаги атрибутов в массив объектов.  
   
-##  <a name="a-namegetnamesandattributesa--ctokenprivilegesgetnamesandattributes"></a><a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
  Получает имя, а атрибут флаги из `CTokenPrivileges` объекта.  
   
 ```
@@ -249,7 +259,7 @@ void GetNamesAndAttributes(
   
  Этот метод получает имя атрибута, а не отображаемое имя: например, если имя атрибута SE_REMOTE_SHUTDOWN_NAME, имя системы будет «SeRemoteShutdownPrivilege.» Чтобы получить отображаемое имя, используйте метод [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
-##  <a name="a-namegetptokenprivilegesa--ctokenprivilegesgetptokenprivileges"></a><a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  Возвращает указатель на **TOKEN_PRIVILEGES** структуры.  
   
 ```
@@ -259,7 +269,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры.  
   
-##  <a name="a-namelookupprivilegea--ctokenprivilegeslookupprivilege"></a><a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
  Извлекает атрибут, связанный с именем конкретное право доступа.  
   
 ```
@@ -278,7 +288,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если атрибут успешно извлечен, и false в противном случае.  
   
-##  <a name="a-nameoperatoreqa--ctokenprivilegesoperator-"></a><a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
  Оператор присвоения.  
   
 ```
@@ -296,7 +306,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CTokenPrivileges` объекта.  
   
-##  <a name="a-nameoperatorconsttokenprivilegesstara--ctokenprivilegesoperator-const-tokenprivileges-"></a><a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  Приводит значение к указателю на **TOKEN_PRIVILEGES** структуры.  
   
 ```  

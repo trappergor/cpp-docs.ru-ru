@@ -9,22 +9,31 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- OnDrawOnCustomizeList
-- OnDraw
-- CMFCToolBarEditBoxButton::OnDrawOnCustomizeList
-- CMFCToolBarEditBoxButton.SetACCData
-- CMFCToolBarEditBoxButton::OnDraw
-- OnCalculateSize
-- SetACCData
 - CMFCToolBarEditBoxButton
-- CMFCToolBarEditBoxButton::SetACCData
-- CMFCToolBarEditBoxButton::Serialize
-- CMFCToolBarEditBoxButton.OnDraw
-- CMFCToolBarEditBoxButton.OnDrawOnCustomizeList
-- CMFCToolBarEditBoxButton::OnCalculateSize
-- Serialize
-- CMFCToolBarEditBoxButton.Serialize
-- CMFCToolBarEditBoxButton.OnCalculateSize
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::CanBeStretched
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::CopyFrom
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::GetByCmd
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::GetContentsAll
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::GetContextMenuID
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::GetEditBorder
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::GetHwnd
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::GetInvalidateRect
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::HaveHotBorder
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::IsFlatMode
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::NotifyCommand
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnAddToCustomizePage
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnChangeParentWnd
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnClick
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnCtlColor
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnGlobalFontsChanged
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnMove
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnShow
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnSize
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnUpdateToolTip
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::SetContextMenuID
+- AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::SetFlatMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -142,7 +151,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtoolbareditboxbutton.h  
   
-##  <a name="a-namecanbestretcheda--cmfctoolbareditboxbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCToolBarEditBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCToolBarEditBoxButton::CanBeStretched  
  Указывает, может ли пользователь растянуть кнопки во время настройки.  
   
 ```  
@@ -155,7 +164,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="remarks"></a>Примечания  
  По умолчанию платформа не разрешается растянуть кнопки панели инструментов во время настройки. Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)), позволяя пользователю растянуть во время настройки панели инструментов кнопку «Изменить поле».  
   
-##  <a name="a-namecmfctoolbareditboxbuttona--cmfctoolbareditboxbuttoncmfctoolbareditboxbutton"></a><a name="cmfctoolbareditboxbutton"></a>CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
+##  <a name="cmfctoolbareditboxbutton"></a>CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
  Создает [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) объекта.  
   
 ```  
@@ -186,7 +195,7 @@ CMFCToolBarEditBoxButton(
   
  Ширина элемента управления по умолчанию — 150 пикселей.  
   
-##  <a name="a-namecopyfroma--cmfctoolbareditboxbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCToolBarEditBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCToolBarEditBoxButton::CopyFrom  
  Копирует свойства кнопки панели инструментов, для текущей кнопки.  
   
 ```  
@@ -200,7 +209,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>Примечания  
  Этот метод служит для копирования другой кнопки панели инструментов эта кнопка панели инструментов. `src`должен быть типа `CMFCToolBarEditBoxButton`.  
   
-##  <a name="a-namecreateedita--cmfctoolbareditboxbuttoncreateedit"></a><a name="createedit"></a>CMFCToolBarEditBoxButton::CreateEdit  
+##  <a name="createedit"></a>CMFCToolBarEditBoxButton::CreateEdit  
  Создает новый элемент управления кнопки.  
   
 ```  
@@ -222,7 +231,7 @@ virtual CEdit* CreateEdit(
 ### <a name="remarks"></a>Примечания  
  Создании `CMFCToolBarEditBoxButton`объекта в два этапа. Сначала вызовите конструктор, а затем вызвать `CreateEdit,` которого управления редактированием Windows создает и присоединяет его к `CMFCToolBarEditBoxButton` объекта.  
   
-##  <a name="a-namegetbycmda--cmfctoolbareditboxbuttongetbycmd"></a><a name="getbycmd"></a>CMFCToolBarEditBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>CMFCToolBarEditBoxButton::GetByCmd  
  Извлекает первый `CMFCToolBarEditBoxButton` объект в приложении, которое имеет идентификатор указанной команды.  
   
 ```  
@@ -239,7 +248,7 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ### <a name="remarks"></a>Примечания  
  Этот метод служебной программы используется методы, такие как [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall) и [CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall) задать или получить текст элемента управления панели инструментов первого изменения с идентификатором указанную команду.  
   
-##  <a name="a-namegetcontentsalla--cmfctoolbareditboxbuttongetcontentsall"></a><a name="getcontentsall"></a>CMFCToolBarEditBoxButton::GetContentsAll  
+##  <a name="getcontentsall"></a>CMFCToolBarEditBoxButton::GetContentsAll  
  Получает текст элемента управления панели инструментов первого изменения с идентификатором указанную команду.  
   
 ```  
@@ -256,7 +265,7 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает пустую строку, если не `CMFCToolBarEditBoxButton` объекты имеют идентификатор указанной команды.  
   
-##  <a name="a-namegetcontextmenuida--cmfctoolbareditboxbuttongetcontextmenuid"></a><a name="getcontextmenuid"></a>CMFCToolBarEditBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>CMFCToolBarEditBoxButton::GetContextMenuID  
  Получает идентификатор ресурса в контекстном меню, связанное с кнопкой.  
   
 ```  
@@ -269,7 +278,7 @@ UINT GetContextMenuID();
 ### <a name="remarks"></a>Примечания  
  Платформа использует идентификатор ресурса для создания в контекстном меню при щелчке на кнопке.  
   
-##  <a name="a-namegeteditbordera--cmfctoolbareditboxbuttongeteditborder"></a><a name="geteditborder"></a>CMFCToolBarEditBoxButton::GetEditBorder  
+##  <a name="geteditborder"></a>CMFCToolBarEditBoxButton::GetEditBorder  
  Возвращает прямоугольник, ограничивающий части изменить поле «изменить».  
   
 ```  
@@ -285,7 +294,7 @@ virtual void GetEditBorder(CRect& rectBorder);
   
  [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder) метод вызывает этот метод, когда он рисовал границу вокруг `CMFCToolBarEditBoxButton` объекта.  
   
-##  <a name="a-namegeteditboxa--cmfctoolbareditboxbuttongeteditbox"></a><a name="geteditbox"></a>CMFCToolBarEditBoxButton::GetEditBox  
+##  <a name="geteditbox"></a>CMFCToolBarEditBoxButton::GetEditBox  
  Возвращает указатель на [CEdit Class](../../mfc/reference/cedit-class.md) управления, внедренный в кнопку.  
   
 ```  
@@ -298,7 +307,7 @@ CEdit* GetEditBox() const;
 ### <a name="remarks"></a>Примечания  
  Можно создать `CEdit` управления путем вызова [CMFCToolBarEditBoxButton::CreateEdit](#createedit).  
   
-##  <a name="a-namegethwnda--cmfctoolbareditboxbuttongethwnd"></a><a name="gethwnd"></a>CMFCToolBarEditBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>CMFCToolBarEditBoxButton::GetHwnd  
  Получает дескриптор окна, связанный с кнопкой панели инструментов.  
   
 ```  
@@ -311,7 +320,7 @@ virtual HWND GetHwnd();
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) метод возвращает дескриптор окна элемента управления редактирования части кнопки edit.  
   
-##  <a name="a-namegetinvalidaterecta--cmfctoolbareditboxbuttongetinvalidaterect"></a><a name="getinvalidaterect"></a>CMFCToolBarEditBoxButton::GetInvalidateRect  
+##  <a name="getinvalidaterect"></a>CMFCToolBarEditBoxButton::GetInvalidateRect  
  Получает область клиентской области кнопки, которые должны быть перерисованы.  
   
 ```  
@@ -324,7 +333,7 @@ virtual const CRect GetInvalidateRect() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса, [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect), включив в регионе области текста метки.  
   
-##  <a name="a-namehavehotbordera--cmfctoolbareditboxbuttonhavehotborder"></a><a name="havehotborder"></a>CMFCToolBarEditBoxButton::HaveHotBorder  
+##  <a name="havehotborder"></a>CMFCToolBarEditBoxButton::HaveHotBorder  
  Определяет, отображается ли границы кнопки, когда пользователь нажимает кнопку.  
   
 ```  
@@ -337,7 +346,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса, [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder), возвращая ненулевое значение, если элемент управления является видимым.  
   
-##  <a name="a-nameisflatmodea--cmfctoolbareditboxbuttonisflatmode"></a><a name="isflatmode"></a>CMFCToolBarEditBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>CMFCToolBarEditBoxButton::IsFlatMode  
  Определяет, имеют ли поле кнопки edit плоский стиль.  
   
 ```  
@@ -350,7 +359,7 @@ static BOOL __stdcall IsFlatMode();
 ### <a name="remarks"></a>Примечания  
  По умолчанию кнопки изменения поля имеют плоский стиль. Используйте [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) метод, чтобы изменить плоский внешний вид для вашего приложения.  
   
-##  <a name="a-namenotifycommanda--cmfctoolbareditboxbuttonnotifycommand"></a><a name="notifycommand"></a>CMFCToolBarEditBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCToolBarEditBoxButton::NotifyCommand  
  Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение.  
   
 ```  
@@ -369,7 +378,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
   
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)), обрабатывая [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) уведомления. Для каждого поля ввода с тем же Идентификатором команды, что и данный объект он задает его текст метки текстовую метку для этого объекта.  
   
-##  <a name="a-nameonaddtocustomizepagea--cmfctoolbareditboxbuttononaddtocustomizepage"></a><a name="onaddtocustomizepage"></a>CMFCToolBarEditBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  Вызывается инфраструктурой при добавлении кнопки **Настройка** диалоговое окно.  
   
 ```  
@@ -381,7 +390,7 @@ virtual void OnAddToCustomizePage();
   
  Дополнительные сведения о **Настройка** диалоговом разделе [CMFCToolBarsCustomizeDialog класса](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="a-nameonchangeparentwnda--cmfctoolbareditboxbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarEditBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCToolBarEditBoxButton::OnChangeParentWnd  
  Вызывается инфраструктурой при вставке кнопки в панели инструментов.  
   
 ```  
@@ -395,7 +404,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию базового класса ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)), повторно создав внутренний `CEdit` объекта.  
   
-##  <a name="a-nameonclicka--cmfctoolbareditboxbuttononclick"></a><a name="onclick"></a>CMFCToolBarEditBoxButton::OnClick  
+##  <a name="onclick"></a>CMFCToolBarEditBoxButton::OnClick  
  Вызывается инфраструктурой при нажатии кнопки мыши.  
   
 ```  
@@ -417,7 +426,7 @@ virtual BOOL OnClick(
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию базового класса ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)), возвращая ненулевое значение, если внутренний `CEdit` объект является видимым.  
   
-##  <a name="a-nameonctlcolora--cmfctoolbareditboxbuttononctlcolor"></a><a name="onctlcolor"></a>CMFCToolBarEditBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>CMFCToolBarEditBoxButton::OnCtlColor  
  Вызывается инфраструктурой при обработке родительского инструментов `WM_CTLCOLOR` сообщение.  
   
 ```  
@@ -441,7 +450,7 @@ virtual HBRUSH OnCtlColor(
   
  Дополнительные сведения о глобальных параметров, доступных для вашего приложения, в разделе [структура AFX_GLOBAL_DATA](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="a-nameonglobalfontschangeda--cmfctoolbareditboxbuttononglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBarEditBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>CMFCToolBarEditBoxButton::OnGlobalFontsChanged  
  Вызывается инфраструктурой при изменении глобальных шрифта.  
   
 ```  
@@ -453,7 +462,7 @@ virtual void OnGlobalFontsChanged();
   
  Дополнительные сведения о глобальных параметров, доступных для вашего приложения, в разделе [структура AFX_GLOBAL_DATA](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="a-nameonmovea--cmfctoolbareditboxbuttononmove"></a><a name="onmove"></a>CMFCToolBarEditBoxButton::OnMove  
+##  <a name="onmove"></a>CMFCToolBarEditBoxButton::OnMove  
  Вызывается инфраструктурой при перемещении родительского инструментов.  
   
 ```  
@@ -463,7 +472,7 @@ virtual void OnMove();
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию класса по умолчанию ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)), обновив положение внутренний `CEdit` объекта  
   
-##  <a name="a-nameonshowa--cmfctoolbareditboxbuttononshow"></a><a name="onshow"></a>CMFCToolBarEditBoxButton::OnShow  
+##  <a name="onshow"></a>CMFCToolBarEditBoxButton::OnShow  
  Вызывается инфраструктурой при кнопка становится видимым или невидимым.  
   
 ```  
@@ -477,7 +486,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)), отображая кнопку, если `bShow` — `TRUE`. В противном случае этот метод скрывает кнопку.  
   
-##  <a name="a-nameonsizea--cmfctoolbareditboxbuttononsize"></a><a name="onsize"></a>CMFCToolBarEditBoxButton::OnSize  
+##  <a name="onsize"></a>CMFCToolBarEditBoxButton::OnSize  
  Вызывается инфраструктурой при инструментов родительской изменении ее размера или положения и это изменение приводит к изменить размер кнопки.  
   
 ```  
@@ -491,7 +500,7 @@ virtual void OnSize(int iSize);
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию класса по умолчанию, [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize), обновив размер и положение внутреннего `CEdit` объекта.  
   
-##  <a name="a-nameonupdatetooltipa--cmfctoolbareditboxbuttononupdatetooltip"></a><a name="onupdatetooltip"></a>CMFCToolBarEditBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>CMFCToolBarEditBoxButton::OnUpdateToolTip  
  Вызывается средой во время обновления инструментов родительской его текст всплывающей подсказки.  
   
 ```  
@@ -521,7 +530,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)), отображая текст подсказки, связанный с изменить части кнопки. Если внутренний `CEdit` объект `NULL` или дескриптор `CEdit` объекта не может определить существующему окну, этот метод не выполняет никаких действий и возвращает `FALSE`.  
   
-##  <a name="a-namesetcontentsa--cmfctoolbareditboxbuttonsetcontents"></a><a name="setcontents"></a>CMFCToolBarEditBoxButton::SetContents  
+##  <a name="setcontents"></a>CMFCToolBarEditBoxButton::SetContents  
  Задает текст в текстовом поле.  
   
 ```  
@@ -532,7 +541,7 @@ virtual void SetContents(const CString& sContents);
  `[in] sContents`  
  Определяет новый текст, чтобы задать.  
   
-##  <a name="a-namesetcontentsalla--cmfctoolbareditboxbuttonsetcontentsall"></a><a name="setcontentsall"></a>CMFCToolBarEditBoxButton::SetContentsAll  
+##  <a name="setcontentsall"></a>CMFCToolBarEditBoxButton::SetContentsAll  
  Находит [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) объекта, идентификатор указанной команды и задает указанный текст в его текстовое поле.  
   
 ```  
@@ -551,7 +560,7 @@ static BOOL SetContentsAll(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если текст был задан; 0, если `CMFCToolBarEditBoxButton` элемента управления с заданным Идентификатором команды не существует.  
   
-##  <a name="a-namesetcontextmenuida--cmfctoolbareditboxbuttonsetcontextmenuid"></a><a name="setcontextmenuid"></a>CMFCToolBarEditBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>CMFCToolBarEditBoxButton::SetContextMenuID  
  Указывает идентификатор ресурса в контекстном меню, связанное с кнопкой.  
   
 ```  
@@ -565,7 +574,7 @@ void SetContextMenuID(UINT uiResID);
 ### <a name="remarks"></a>Примечания  
  Платформа использует идентификатор ресурса для создания в контекстном меню при щелчке кнопки панели инструментов.  
   
-##  <a name="a-namesetflatmodea--cmfctoolbareditboxbuttonsetflatmode"></a><a name="setflatmode"></a>CMFCToolBarEditBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>CMFCToolBarEditBoxButton::SetFlatMode  
  Задает плоский внешний вид для кнопки изменения поля в приложении.  
   
 ```  
@@ -579,7 +588,7 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ### <a name="remarks"></a>Примечания  
  Плоский стиль по умолчанию для кнопки поле редактирования является `TRUE`. Используйте [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) метод для извлечения плоский внешний вид для вашего приложения.  
   
-##  <a name="a-namesetstylea--cmfctoolbareditboxbuttonsetstyle"></a><a name="setstyle"></a>CMFCToolBarEditBoxButton::SetStyle  
+##  <a name="setstyle"></a>CMFCToolBarEditBoxButton::SetStyle  
  Задает стиль панели инструментов редактирования поля элемента управления.  
   
 ```  

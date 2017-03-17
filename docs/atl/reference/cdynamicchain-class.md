@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDynamicChain
-- ATL.CDynamicChain
 - CDynamicChain
+- ATLWIN/ATL::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CallChain
+- ATLWIN/ATL::CDynamicChain::RemoveChainEntry
+- ATLWIN/ATL::CDynamicChain::SetChainEntry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +101,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="a-namecallchaina--cdynamicchaincallchain"></a><a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>CDynamicChain::CallChain  
  Направляет сообщение Windows для сопоставления сообщений другим объектом.  
   
 ```
@@ -138,14 +141,14 @@ BOOL CallChain(
   
  `CallChain`требуется предыдущего вызова [SetChainEntry](#setchainentry) для связывания `dwChainID` значение с помощью объекта и его сопоставления сообщений.  
   
-##  <a name="a-namecdynamicchaina--cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
  Конструктор.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="a-namedtora--cdynamicchaincdynamicchain"></a><a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
  Деструктор  
   
 ```
@@ -155,7 +158,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы.  
   
-##  <a name="a-nameremovechainentrya--cdynamicchainremovechainentry"></a><a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
  Удаляет указанное сообщение карты из коллекции.  
   
 ```
@@ -169,7 +172,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>Возвращаемое значение  
  **Значение TRUE,** Если в схеме сообщений успешно удален из коллекции. В противном случае — **FALSE**.  
   
-##  <a name="a-namesetchainentrya--cdynamicchainsetchainentry"></a><a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
  Добавляет в коллекцию указанное сообщение карты.  
   
 ```

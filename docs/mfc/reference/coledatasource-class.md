@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDataSource
+- AFXOLE/COleDataSource
+- AFXOLE/COleDataSource::COleDataSource
+- AFXOLE/COleDataSource::CacheData
+- AFXOLE/COleDataSource::CacheGlobalData
+- AFXOLE/COleDataSource::DelayRenderData
+- AFXOLE/COleDataSource::DelayRenderFileData
+- AFXOLE/COleDataSource::DelaySetData
+- AFXOLE/COleDataSource::DoDragDrop
+- AFXOLE/COleDataSource::Empty
+- AFXOLE/COleDataSource::FlushClipboard
+- AFXOLE/COleDataSource::GetClipboardOwner
+- AFXOLE/COleDataSource::OnRenderData
+- AFXOLE/COleDataSource::OnRenderFileData
+- AFXOLE/COleDataSource::OnRenderGlobalData
+- AFXOLE/COleDataSource::OnSetData
+- AFXOLE/COleDataSource::SetClipboard
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +118,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="a-namecachedataa--coledatasourcecachedata"></a><a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>COleDataSource::CacheData  
  Эта функция позволяет задать формат, в котором данные предлагается данных операций передачи.  
   
 ```  
@@ -135,7 +151,7 @@ void CacheData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecacheglobaldataa--coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
  Эта функция позволяет задать формат, в котором данные предлагается данных операций передачи.  
   
 ```  
@@ -164,14 +180,14 @@ void CacheGlobalData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecoledatasourcea--coledatasourcecoledatasource"></a><a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
  Создает объект `COleDataSource`.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="a-namedelayrenderdataa--coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
  Эта функция позволяет задать формат, в котором данные предлагается данных операций передачи.  
   
 ```  
@@ -198,7 +214,7 @@ void DelayRenderData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedelayrenderfiledataa--coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
  Эта функция позволяет задать формат, в котором данные предлагается данных операций передачи.  
   
 ```  
@@ -225,7 +241,7 @@ void DelayRenderFileData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedelaysetdataa--coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
  Эта функция поддерживает изменение содержимого источника данных.  
   
 ```  
@@ -248,7 +264,7 @@ void DelaySetData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedodragdropa--coledatasourcedodragdrop"></a><a name="dodragdrop"></a>COleDataSource::DoDragDrop  
+##  <a name="dodragdrop"></a>COleDataSource::DoDragDrop  
  Вызов `DoDragDrop` функции-члена для выполнения операции и перетащите для этого источника данных, обычно в [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) обработчика.  
   
 ```  
@@ -294,7 +310,7 @@ DROPEFFECT DoDragDrop(
   
  Дополнительные сведения см. в статье [перетаскивание: реализация источника Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="a-nameemptya--coledatasourceempty"></a><a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>COleDataSource::Empty  
  Эта функция вызывается для пустой `COleDataSource` объект данных.  
   
 ```  
@@ -306,7 +322,7 @@ void Empty();
   
  Дополнительные сведения см. в разделе [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameflushclipboarda--coledatasourceflushclipboard"></a><a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
  Готовится к просмотру данных в буфере обмена, а затем позволяет вставлять данные из буфера обмена после завершения работы вашего приложения.  
   
 ```  
@@ -316,7 +332,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>Примечания  
  Используйте [SetClipboard](#setclipboard) для помещения данных в буфер обмена.  
   
-##  <a name="a-namegetclipboardownera--coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
  Определяет, является ли данные в буфере обмена была изменена с момента [SetClipboard](#setclipboard) последнего вызова и если да, определяет текущий владелец.  
   
 ```  
@@ -326,7 +342,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>Возвращаемое значение  
  Источник данных, в данный момент в буфере обмена или **NULL** Если нет ничего в буфер обмена или буфер обмена не является владельцем вызывающего приложения.  
   
-##  <a name="a-nameonrenderdataa--coledatasourceonrenderdata"></a><a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
  Вызывается платформой для получения данных в указанном формате.  
   
 ```  
@@ -354,7 +370,7 @@ virtual BOOL OnRenderData(
   
  Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) тип перечисления, и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-nameonrenderfiledataa--coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
  Вызывается платформой для получения данных в указанном формате, если указанный носитель является файл.  
   
 ```  
@@ -380,7 +396,7 @@ virtual BOOL OnRenderFileData(
   
  Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-nameonrenderglobaldataa--coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
  Вызывается платформой для получения данных в указанном формате, если указанный носитель является глобальной памяти.  
   
 ```  
@@ -408,7 +424,7 @@ virtual BOOL OnRenderGlobalData(
   
  Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-nameonsetdataa--coledatasourceonsetdata"></a><a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>COleDataSource::OnSetData  
  Вызывается платформой для установки или замены данных в `COleDataSource` объекта в указанном формате.  
   
 ```  
@@ -438,7 +454,7 @@ virtual BOOL OnSetData(
   
  Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) функции в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-namesetclipboarda--coledatasourcesetclipboard"></a><a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
  Помещает данные, содержащиеся в `COleDataSource` объектов в буфере обмена после вызова одного из следующих функций: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), или [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
+- AFXWINFORMS/CWinFormsView
+- AFXWINFORMS/CWinFormsView::CWinFormsView
+- AFXWINFORMS/CWinFormsView::GetControl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +87,7 @@ class CWinFormsView : public CView;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwinforms.h  
   
-##  <a name="a-namecwinformsviewa--cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
  Создает объект `CWinFormsView`.  
   
 ```  
@@ -102,7 +105,7 @@ CWinFormsView(System::Type^ pManagedViewType);
   
  [!code-cpp[NVC_MFC_Managed&#2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="a-namegetcontrola--cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>CWinFormsView::GetControl  
  Извлекает указатель на элемент управления Windows Forms.  
   
 ```  
@@ -115,7 +118,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>Примечания  
  Пример использования Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameoperatorcontrola--cwinformsviewoperator-control"></a><a name="operator_control"></a>Элемент управления CWinFormsView::operator ^  
+##  <a name="operator_control"></a>Элемент управления CWinFormsView::operator ^  
  Приведение типа как указатель на элемент управления Windows Forms.  
   
 ```  

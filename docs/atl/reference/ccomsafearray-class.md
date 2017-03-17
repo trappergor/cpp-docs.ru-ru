@@ -10,6 +10,28 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSafeArray
+- ATLSAFE/ATL::CComSafeArray
+- ATLSAFE/ATL::CComSafeArray::CComSafeArray
+- ATLSAFE/ATL::CComSafeArray::Add
+- ATLSAFE/ATL::CComSafeArray::Attach
+- ATLSAFE/ATL::CComSafeArray::CopyFrom
+- ATLSAFE/ATL::CComSafeArray::CopyTo
+- ATLSAFE/ATL::CComSafeArray::Create
+- ATLSAFE/ATL::CComSafeArray::Destroy
+- ATLSAFE/ATL::CComSafeArray::Detach
+- ATLSAFE/ATL::CComSafeArray::GetAt
+- ATLSAFE/ATL::CComSafeArray::GetCount
+- ATLSAFE/ATL::CComSafeArray::GetDimensions
+- ATLSAFE/ATL::CComSafeArray::GetLowerBound
+- ATLSAFE/ATL::CComSafeArray::GetSafeArrayPtr
+- ATLSAFE/ATL::CComSafeArray::GetType
+- ATLSAFE/ATL::CComSafeArray::GetUpperBound
+- ATLSAFE/ATL::CComSafeArray::IsSizable
+- ATLSAFE/ATL::CComSafeArray::MultiDimGetAt
+- ATLSAFE/ATL::CComSafeArray::MultiDimSetAt
+- ATLSAFE/ATL::CComSafeArray::Resize
+- ATLSAFE/ATL::CComSafeArray::SetAt
+- ATLSAFE/ATL::CComSafeArray::m_psa
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -137,7 +159,7 @@ class CComSafeArray
 ## <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#75;](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--ccomsafearrayadd"></a><a name="add"></a>CComSafeArray::Add  
+##  <a name="add"></a>CComSafeArray::Add  
  Добавляет один или несколько элементов или структуру **SAFEARRAY** в `CComSafeArray`.  
   
 ```
@@ -170,7 +192,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
  `bCopy` Флаг учитываться при элементов типа `BSTR` или **VARIANT** добавляются в массив. Значение по умолчанию **TRUE** гарантирует новую копию данных, когда элемент добавляется в массив.  
   
-##  <a name="a-nameattacha--ccomsafearrayattach"></a><a name="attach"></a>CComSafeArray::Attach  
+##  <a name="attach"></a>CComSafeArray::Attach  
  Прикрепляет структуру **SAFEARRAY** к объекту `CComSafeArray` .  
   
 ```
@@ -187,7 +209,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Примечания  
  Присоединяет **SAFEARRAY** структуру `CComSafeArray` объекта, делая ее `CComSafeArray` доступные методы.  
   
-##  <a name="a-nameccomsafearraya--ccomsafearrayccomsafearray"></a><a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
+##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
  Конструктор.  
   
 ```
@@ -225,7 +247,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Примечания  
  Создает объект `CComSafeArray`.  
   
-##  <a name="a-namedtora--ccomsafearrayccomsafearray"></a><a name="dtor"></a>Класса CComSafeArray:: ~ класса CComSafeArray  
+##  <a name="dtor"></a>Класса CComSafeArray:: ~ класса CComSafeArray  
  Деструктор  
   
 ```
@@ -235,7 +257,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы.  
   
-##  <a name="a-namecopyfroma--ccomsafearraycopyfrom"></a><a name="copyfrom"></a>CComSafeArray::CopyFrom  
+##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
  Копирует содержимое структуры **SAFEARRAY** в объект `CComSafeArray` .  
   
 ```
@@ -252,7 +274,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Примечания  
  Этот метод копирует содержимое **SAFEARRAY** в текущий `CComSafeArray` объекта. Существующее содержимое массива заменяются.  
   
-##  <a name="a-namecopytoa--ccomsafearraycopyto"></a><a name="copyto"></a>CComSafeArray::CopyTo  
+##  <a name="copyto"></a>CComSafeArray::CopyTo  
  Создает копию объекта `CComSafeArray`.  
   
 ```
@@ -269,7 +291,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Примечания  
  Этот метод копирует содержимое `CComSafeArray` объекта в **SAFEARRAY** структуры.  
   
-##  <a name="a-namecreatea--ccomsafearraycreate"></a><a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>CComSafeArray::Create  
  Создает объект `CComSafeArray`.  
   
 ```
@@ -296,7 +318,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Примечания  
  Объект `CComSafeArray` объект может быть создан из существующего **SAFEARRAYBOUND** структура и количество измерений или путем указания числа элементов в массиве и нижняя граница. Если массив является доступным с Visual C++, нижняя граница должно быть равно 0. Другие языки могут разрешить другие значения для нижней границы (например, Visual Basic поддерживает массивы с элементами в диапазоне, например 10 до 10).  
   
-##  <a name="a-namedestroya--ccomsafearraydestroy"></a><a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>CComSafeArray::Destroy  
  Уничтожает объект `CComSafeArray`.  
   
 ```
@@ -309,7 +331,7 @@ HRESULT Destroy();
 ### <a name="remarks"></a>Примечания  
  Удаляет существующий `CComSafeArray` объект и все данные, которые он содержит.  
   
-##  <a name="a-namedetacha--ccomsafearraydetach"></a><a name="detach"></a>CComSafeArray::Detach  
+##  <a name="detach"></a>CComSafeArray::Detach  
  Отсоединяет структуру **SAFEARRAY** от объекта `CComSafeArray` .  
   
 ```
@@ -322,7 +344,7 @@ LPSAFEARRAY Detach();
 ### <a name="remarks"></a>Примечания  
  Этот метод отсоединяет **SAFEARRAY** объекта из `CComSafeArray` объекта.  
   
-##  <a name="a-namegetata--ccomsafearraygetat"></a><a name="getat"></a>CComSafeArray::GetAt  
+##  <a name="getat"></a>CComSafeArray::GetAt  
  Получает один элемент из одномерного массива.  
   
 ```
@@ -336,7 +358,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ссылку на элемент массива требуется.  
   
-##  <a name="a-namegetcounta--ccomsafearraygetcount"></a><a name="getcount"></a>CComSafeArray::GetCount  
+##  <a name="getcount"></a>CComSafeArray::GetCount  
  Возвращает число элементов в массиве.  
   
 ```
@@ -353,7 +375,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="remarks"></a>Примечания  
  При использовании с многомерного массива, этот метод возвращает количество элементов в определенное измерение.  
   
-##  <a name="a-namegetdimensionsa--ccomsafearraygetdimensions"></a><a name="getdimensions"></a>CComSafeArray::GetDimensions  
+##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
  Возвращает число измерений в массиве.  
   
 ```
@@ -363,7 +385,7 @@ UINT GetDimensions() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает число измерений в массиве.  
   
-##  <a name="a-namegetlowerbounda--ccomsafearraygetlowerbound"></a><a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
  Возвращает нижнюю границу заданного измерения массива.  
   
 ```
@@ -380,7 +402,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>Примечания  
  Если нижняя граница — 0, это указывает массивом типа C, первым элементом является элемент с номером 0. В случае возникновения ошибки, например, аргумента Недопустимое измерение, этот метод вызывает метод `AtlThrow` с описанием ошибки HRESULT.  
   
-##  <a name="a-namegetsafearrayptra--ccomsafearraygetsafearrayptr"></a><a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
+##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
  Возвращает адрес элемента данных `m_psa` .  
   
 ```
@@ -390,7 +412,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на [CComSafeArray::m_psa](#m_psa) данные-член.  
   
-##  <a name="a-namegettypea--ccomsafearraygettype"></a><a name="gettype"></a>CComSafeArray::GetType  
+##  <a name="gettype"></a>CComSafeArray::GetType  
  Возвращает тип данных, хранящихся в массиве.  
   
 ```
@@ -418,7 +440,7 @@ VARTYPE GetType() const;
 |VT_VARIANT|указатель типа variant|  
 |VT_CY|Currency - тип данных|  
   
-##  <a name="a-namegetupperbounda--ccomsafearraygetupperbound"></a><a name="getupperbound"></a>CComSafeArray::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound  
  Возвращает верхнюю границу любого измерения массива.  
   
 ```
@@ -435,7 +457,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>Примечания  
  В случае возникновения ошибки, например, аргумента Недопустимое измерение, этот метод вызывает метод `AtlThrow` с описанием ошибки HRESULT.  
   
-##  <a name="a-nameissizablea--ccomsafearrayissizable"></a><a name="issizable"></a>CComSafeArray::IsSizable  
+##  <a name="issizable"></a>CComSafeArray::IsSizable  
  Проверяет, можно ли изменить размер объекта `CComSafeArray` .  
   
 ```
@@ -445,14 +467,14 @@ bool IsSizable() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если `CComSafeArray` можно изменять, **false** в противном случае.  
   
-##  <a name="a-namempsaa--ccomsafearraympsa"></a><a name="m_psa"></a>CComSafeArray::m_psa  
+##  <a name="m_psa"></a>CComSafeArray::m_psa  
  Содержит адрес **SAFEARRAY** доступ к структуре.  
   
 ```
 LPSAFEARRAY m_psa;
 ```  
   
-##  <a name="a-namemultidimgetata--ccomsafearraymultidimgetat"></a><a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
+##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
  Получает один элемент из многомерного массива.  
   
 ```
@@ -469,7 +491,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-namemultidimsetata--ccomsafearraymultidimsetat"></a><a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
+##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
  Задает значение элемента в многомерном массиве.  
   
 ```
@@ -489,7 +511,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="remarks"></a>Примечания  
  Это многомерный версия [CComSafeArray::SetAt](#setat).  
   
-##  <a name="a-nameoperatorata--ccomsafearrayoperator-"></a><a name="operator_at"></a>CComSafeArray::operator\[\]  
+##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
  Получает элемент из массива.  
   
 ```
@@ -507,7 +529,7 @@ T& operator[]int nindex) const;
 ### <a name="remarks"></a>Примечания  
  Выполняет те же функции для [CComSafeArray::GetAt](#getat), однако этот оператор работает только с одномерные массивы.  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayoperator-"></a><a name="operator_eq"></a>CComSafeArray::operator =  
+##  <a name="operator_eq"></a>CComSafeArray::operator =  
  Оператор присвоения.  
   
 ```
@@ -525,7 +547,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает тип данных, хранящихся в массиве.  
   
-##  <a name="a-nameoperatorlpsafearraya--ccomsafearrayoperator-lpsafearray"></a><a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
+##  <a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
  Приводит значение к указателю **SAFEARRAY** .  
   
 ```
@@ -535,7 +557,7 @@ operator LPSAFEARRAY() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Приводит значение к указателю **SAFEARRAY** .  
   
-##  <a name="a-nameresizea--ccomsafearrayresize"></a><a name="resize"></a>CComSafeArray::Resize  
+##  <a name="resize"></a>CComSafeArray::Resize  
  Изменяет размер объекта `CComSafeArray` .  
   
 ```
@@ -559,7 +581,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="remarks"></a>Примечания  
  Этот метод изменяет только самой правой размерности. Массивы, которые возвращают размер не будет **IsResizable** как **false**.  
   
-##  <a name="a-namesetata--ccomsafearraysetat"></a><a name="setat"></a>CComSafeArray::SetAt  
+##  <a name="setat"></a>CComSafeArray::SetAt  
  Задает значение элемента в одномерном массиве.  
   
 ```

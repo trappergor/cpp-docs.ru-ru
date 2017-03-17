@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CUserTool
+- AFXUSERTOOL/CUserTool
+- AFXUSERTOOL/CUserTool::CopyIconToClipboard
+- AFXUSERTOOL/CUserTool::DrawToolIcon
+- AFXUSERTOOL/CUserTool::GetCommand
+- AFXUSERTOOL/CUserTool::GetCommandId
+- AFXUSERTOOL/CUserTool::Invoke
+- AFXUSERTOOL/CUserTool::Serialize
+- AFXUSERTOOL/CUserTool::SetCommand
+- AFXUSERTOOL/CUserTool::SetToolIcon
+- AFXUSERTOOL/CUserTool::LoadDefaultIcon
+- AFXUSERTOOL/CUserTool::m_strArguments
+- AFXUSERTOOL/CUserTool::m_strInitialDirectory
+- AFXUSERTOOL/CUserTool::m_strLabel
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +106,7 @@ class CUserTool : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxusertool.h  
   
-##  <a name="a-namecopyicontoclipboarda--cusertoolcopyicontoclipboard"></a><a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -104,7 +117,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namedrawtoolicona--cusertooldrawtoolicon"></a><a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
  Значок средства пользователь рисует в центре заданного прямоугольника.  
   
 ```  
@@ -120,7 +133,7 @@ void DrawToolIcon(
  [in] `rectImage`  
  Задает координаты области для отображения значка.  
   
-##  <a name="a-namegetcommanda--cusertoolgetcommand"></a><a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>CUserTool::GetCommand  
  Возвращает строку, содержащую текст команды, связанные с инструментом пользователя.  
   
 ```  
@@ -130,7 +143,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на `CString` объект, содержащий текст команды, связанные с инструментом пользователя.  
   
-##  <a name="a-namegetcommandida--cusertoolgetcommandid"></a><a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>CUserTool::GetCommandId  
  Возвращает идентификатор команды инструмента пользователя.  
   
 ```  
@@ -140,7 +153,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор команды этого средства пользователя.  
   
-##  <a name="a-nameinvokea--cusertoolinvoke"></a><a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>CUserTool::Invoke  
  Выполняет команду, связанную со средством пользователя.  
   
 ```  
@@ -153,7 +166,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>Примечания  
  Вызовы [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) для выполнения команды, связанные с инструментом пользователя. Операция завершается ошибкой, если команда является пустым или [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) завершается ошибкой.  
   
-##  <a name="a-nameloaddefaulticona--cusertoolloaddefaulticon"></a><a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
  Загружает значок по умолчанию для пользовательский инструмент.  
   
 ```  
@@ -168,7 +181,7 @@ virtual HICON LoadDefaultIcon();
   
  Переопределите этот метод, чтобы предоставить собственный значок средства по умолчанию.  
   
-##  <a name="a-namemstrargumentsa--cusertoolmstrarguments"></a><a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
  Аргументы командной строки для средства пользователя.  
   
 ```  
@@ -178,7 +191,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>Примечания  
  Эта строка передается средству при вызове [CUserTool::Invoke](#invoke) или когда пользователь щелкает команду, связанную с помощью этого средства.  
   
-##  <a name="a-namemstrinitialdirectorya--cusertoolmstrinitialdirectory"></a><a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
  Задает начальный каталог для пользователя средства.  
   
 ```  
@@ -188,14 +201,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>Примечания  
  Эта переменная определяет начальный каталог, эта программа выполняется в при вызове [CUserTool::Invoke](#invoke) или когда пользователь щелкает команду, связанную с помощью этого средства.  
   
-##  <a name="a-namemstrlabela--cusertoolmstrlabel"></a><a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
  Метка, которая отображается в меню программы.  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="a-nameserializea--cusertoolserialize"></a><a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -207,7 +220,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetcommanda--cusertoolsetcommand"></a><a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>CUserTool::SetCommand  
  Задает приложение, которое запускает средство пользователя.  
   
 ```  
@@ -221,7 +234,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для установки нового приложения, которое запускается средство пользователя. Этот метод удаляет старые значок и загружает новый значок из данного приложения. Если его не удается загрузить значок из приложения, он загружает значок по умолчанию для пользователя средства путем вызова [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
-##  <a name="a-namesettoolicona--cusertoolsettoolicon"></a><a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
  Загружает значок программы пользователя из приложения, который используется средством.  
   
 ```  

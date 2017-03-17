@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar::CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar::ContextToSize
+- AFXCOLORBAR/CMFCColorBar::CreateControl
+- AFXCOLORBAR/CMFCColorBar::Create
+- AFXCOLORBAR/CMFCColorBar::EnableAutomaticButton
+- AFXCOLORBAR/CMFCColorBar::EnableOtherButton
+- AFXCOLORBAR/CMFCColorBar::GetColor
+- AFXCOLORBAR/CMFCColorBar::GetCommandID
+- AFXCOLORBAR/CMFCColorBar::GetHighlightedColor
+- AFXCOLORBAR/CMFCColorBar::GetHorzMargin
+- AFXCOLORBAR/CMFCColorBar::GetVertMargin
+- AFXCOLORBAR/CMFCColorBar::IsTearOff
+- AFXCOLORBAR/CMFCColorBar::SetColor
+- AFXCOLORBAR/CMFCColorBar::SetColorName
+- AFXCOLORBAR/CMFCColorBar::SetCommandID
+- AFXCOLORBAR/CMFCColorBar::SetDocumentColors
+- AFXCOLORBAR/CMFCColorBar::SetHorzMargin
+- AFXCOLORBAR/CMFCColorBar::SetVertMargin
+- AFXCOLORBAR/CMFCColorBar::AdjustLocations
+- AFXCOLORBAR/CMFCColorBar::AllowChangeTextLabels
+- AFXCOLORBAR/CMFCColorBar::AllowShowOnList
+- AFXCOLORBAR/CMFCColorBar::CalcSize
+- AFXCOLORBAR/CMFCColorBar::CreatePalette
+- AFXCOLORBAR/CMFCColorBar::GetColorGridSize
+- AFXCOLORBAR/CMFCColorBar::GetExtraHeight
+- AFXCOLORBAR/CMFCColorBar::InitColors
+- AFXCOLORBAR/CMFCColorBar::OnKey
+- AFXCOLORBAR/CMFCColorBar::OnSendCommand
+- AFXCOLORBAR/CMFCColorBar::OnUpdateCmdUI
+- AFXCOLORBAR/CMFCColorBar::OpenColorDialog
+- AFXCOLORBAR/CMFCColorBar::Rebuild
+- AFXCOLORBAR/CMFCColorBar::SelectPalette
+- AFXCOLORBAR/CMFCColorBar::SetPropList
+- AFXCOLORBAR/CMFCColorBar::ShowCommandMessageString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -211,7 +246,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcolorbar.h  
   
-##  <a name="a-nameadjustlocationsa--cmfccolorbaradjustlocations"></a><a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
+##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
  Регулирует положение кнопки цветов на цветовой шкале управления.  
   
 ```  
@@ -221,7 +256,7 @@ virtual void AdjustLocations();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается средой во время `WM_SIZE` обработки сообщений.  
   
-##  <a name="a-nameallowchangetextlabelsa--cmfccolorbarallowchangetextlabels"></a><a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
  Указывает, можно ли изменить текстовую метку цветные кнопки.  
   
 ```  
@@ -234,7 +269,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод всегда возвращает `FALSE`, что означает текстовые метки не может быть изменен. Переопределите этот метод, чтобы включить изменение текстовых меток.  
   
-##  <a name="a-nameallowshowonlista--cmfccolorbarallowshowonlist"></a><a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
  Указывает ли объект управления цветовую шкалу может отображаться в списке панели инструментов в процессе настройки.  
   
 ```  
@@ -247,7 +282,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод всегда возвращает `TRUE`, означающее платформы можно отобразить элемент управления цветовую шкалу в процессе настройки. Переопределите этот метод, чтобы реализовать другое поведение.  
   
-##  <a name="a-namecalcsizea--cmfccolorbarcalcsize"></a><a name="calcsize"></a>CMFCColorBar::CalcSize  
+##  <a name="calcsize"></a>CMFCColorBar::CalcSize  
  Вызывается средой в процессе вычисления макета.  
   
 ```  
@@ -261,7 +296,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер массива цвет кнопок в элементе управления цветовой шкалы.  
   
-##  <a name="a-namecmfccolorbara--cmfccolorbarcmfccolorbar"></a><a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
+##  <a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
  Создает объект `CMFCColorBar`.  
   
 ```  
@@ -345,7 +380,7 @@ CMFCColorBar(
  [in] `uiCommandID`  
  Идентификатор команды.  
   
-##  <a name="a-namecontexttosizea--cmfccolorbarcontexttosize"></a><a name="contexttosize"></a>CMFCColorBar::ContextToSize  
+##  <a name="contexttosize"></a>CMFCColorBar::ContextToSize  
  Вычисляет вертикальное и горизонтальное поля, необходимые для размещения кнопок на цветовой шкале управления и корректирует положение этих кнопок.  
   
 ```  
@@ -363,7 +398,7 @@ void ContextToSize(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecreatea--cmfccolorbarcreate"></a><a name="create"></a>CMFCColorBar::Create  
+##  <a name="create"></a>CMFCColorBar::Create  
  Создает окно управления цветовую шкалу и присоединяет его к `CMFCColorBar` объекта.  
   
 ```  
@@ -405,7 +440,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  Для создания `CMFCColorBar` объекта, вызовите конструктор класса, а затем этот метод. `Create` Метод создает элемент управления Windows и инициализирует список цветов.  
   
-##  <a name="a-namecreatecontrola--cmfccolorbarcreatecontrol"></a><a name="createcontrol"></a>CMFCColorBar::CreateControl  
+##  <a name="createcontrol"></a>CMFCColorBar::CreateControl  
  Создает окно управления цветовую шкалу, присоединяется к `CMFCColorBar` объекта и изменяет размер окна элемента управления, содержащий указанный палитры цветов.  
   
 ```  
@@ -439,7 +474,7 @@ virtual BOOL CreateControl(
 ### <a name="remarks"></a>Примечания  
  Этот метод использует `rect`, `nColumns`, и `pPalette` параметры для расчета соответствующий номер или строки и столбцы в цветовой шкале управления, а затем вызывает [CMFCColorBar::Create](#create) метод.  
   
-##  <a name="a-namecreatepalettea--cmfccolorbarcreatepalette"></a><a name="createpalette"></a>CMFCColorBar::CreatePalette  
+##  <a name="createpalette"></a>CMFCColorBar::CreatePalette  
  Инициализирует палитры цветов в указанном массиве цветов.  
   
 ```  
@@ -458,7 +493,7 @@ static BOOL CreatePalette(
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если этот метод выполнен успешно; в противном случае — `FALSE`.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfccolorbarenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
  Показывает или скрывает кнопку автоматического.  
   
 ```  
@@ -483,7 +518,7 @@ void EnableAutomaticButton(
 ### <a name="remarks"></a>Примечания  
  Текстовая метка кнопки автоматического удаляется, если `lpszLabel` параметр `NULL` или `bEnable` параметр `FALSE`.  
   
-##  <a name="a-nameenableotherbuttona--cmfccolorbarenableotherbutton"></a><a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
  Включает или отключает отображение диалогового окна, позволяющий пользователю выбрать дополнительные цвета.  
   
 ```  
@@ -505,7 +540,7 @@ void EnableOtherButton(
  [in] `bEnable`  
  `TRUE`для включения кнопки. `FALSE` для выключения кнопки. Значение по умолчанию — `TRUE`.  
   
-##  <a name="a-namegetcolora--cmfccolorbargetcolor"></a><a name="getcolor"></a>CMFCColorBar::GetColor  
+##  <a name="getcolor"></a>CMFCColorBar::GetColor  
  Получает текущий выбранный цвет.  
   
 ```  
@@ -515,7 +550,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Выбранный цвет.  
   
-##  <a name="a-namegetcolorgridsizea--cmfccolorbargetcolorgridsize"></a><a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
+##  <a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
  Вычисляет количество строк и столбцов в сетке управления цветовой шкалы.  
   
 ```  
@@ -531,7 +566,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) которого `cx` компонент содержит количество столбцов, для которых `cy` компонент содержит количество строк.  
   
-##  <a name="a-namegetcommandida--cmfccolorbargetcommandid"></a><a name="getcommandid"></a>CMFCColorBar::GetCommandID  
+##  <a name="getcommandid"></a>CMFCColorBar::GetCommandID  
  Извлекает идентификатор команды текущий цвет элемента управления.  
   
 ```  
@@ -544,7 +579,7 @@ UINT GetCommandID() const;
 ### <a name="remarks"></a>Примечания  
  Когда пользователь выбирает новый цвет, платформа отправляет идентификатор команды в `WM_COMMAND` сообщения для уведомления родительский `CMFCColorBar` объекта.  
   
-##  <a name="a-namegetextraheighta--cmfccolorbargetextraheight"></a><a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
+##  <a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
  Вычисляет дополнительных высоту, текущий цветовую шкалу для отображения элементов прочие пользовательского интерфейса, такие как **других** цвета кнопки или документа.  
   
 ```  
@@ -560,7 +595,7 @@ int GetExtraHeight(int nNumColumns) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Вычисляемые дополнительных высоту, является обязательным.  
   
-##  <a name="a-namegethighlightedcolora--cmfccolorbargethighlightedcolor"></a><a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
  Получает цвет, который означает, что кнопка цвета имеет фокус; кнопка является *горячей*.  
   
 ```  
@@ -572,7 +607,7 @@ COLORREF GetHighlightedColor() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegethorzmargina--cmfccolorbargethorzmargin"></a><a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
+##  <a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
  Возвращает горизонтальное поле представляет собой пространство между влево или вправо цвет ячейки и границы области клиента.  
   
 ```  
@@ -582,7 +617,7 @@ int GetHorzMargin();
 ### <a name="return-value"></a>Возвращаемое значение  
  Поля по горизонтали.  
   
-##  <a name="a-namegetvertmargina--cmfccolorbargetvertmargin"></a><a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
+##  <a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
  Возвращает вертикальное поле, которое представляет собой пространство между верхней или нижней ячейке цвет и границы области клиента.  
   
 ```  
@@ -592,7 +627,7 @@ int GetVertMargin() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Вертикальное поле.  
   
-##  <a name="a-nameinitcolorsa--cmfccolorbarinitcolors"></a><a name="initcolors"></a>CMFCColorBar::InitColors  
+##  <a name="initcolors"></a>CMFCColorBar::InitColors  
  Инициализирует массив цветов, цвета в палитру указанного или с палитре системы по умолчанию.  
   
 ```  
@@ -611,7 +646,7 @@ static int InitColors(
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов в массиве цветов.  
   
-##  <a name="a-nameistearoffa--cmfccolorbaristearoff"></a><a name="istearoff"></a>CMFCColorBar::IsTearOff  
+##  <a name="istearoff"></a>CMFCColorBar::IsTearOff  
  Указывает, является ли текущий цветовую шкалу Закрепляемое.  
   
 ```  
@@ -624,7 +659,7 @@ BOOL IsTearOff() const;
 ### <a name="remarks"></a>Примечания  
  Если фиксируемый элемент управления цветовую шкалу, его можно обрыва выключить панель элементов управления и закреплено в другом месте.  
   
-##  <a name="a-nameonkeya--cmfccolorbaronkey"></a><a name="onkey"></a>CMFCColorBar::OnKey  
+##  <a name="onkey"></a>CMFCColorBar::OnKey  
  Вызывается платформой, когда пользователь нажимает клавишу клавиатуры.  
   
 ```  
@@ -638,7 +673,7 @@ virtual BOOL OnKey(UINT nChar);
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если этот метод обрабатывает заданный ключ. в противном случае — `FALSE`.  
   
-##  <a name="a-nameonsendcommanda--cmfccolorbaronsendcommand"></a><a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
+##  <a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
  Вызывается средой, чтобы закрывать всплывающие элементы иерархии.  
   
 ```  
@@ -654,7 +689,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если этот метод выполнен успешно; в противном случае — `FALSE`.  
   
-##  <a name="a-nameonupdatecmduia--cmfccolorbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
  Вызывается средой, чтобы включить или отключить элемент пользовательского интерфейса элемента управления цветовую шкалу, перед отображением элемента.  
   
 ```  
@@ -673,7 +708,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>Примечания  
  По щелчку элемента пользовательского интерфейса пользователя приложения элемента необходимо знать ли он должен отображаться как включен или отключен. Цель сообщения команда предоставляет эти сведения при реализации `ON_UPDATE_COMMAND_UI` обработчик команды. Используйте этот метод для обработки команды. Дополнительные сведения см. в разделе [CCmdUI-класс](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="a-nameopencolordialoga--cmfccolorbaropencolordialog"></a><a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
+##  <a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
  Откроется диалоговое окно.  
   
 ```  
@@ -694,14 +729,14 @@ virtual BOOL OpenColorDialog(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namerebuilda--cmfccolorbarrebuild"></a><a name="rebuild"></a>CMFCColorBar::Rebuild  
+##  <a name="rebuild"></a>CMFCColorBar::Rebuild  
  Полностью перерисовывает цветовой панели управления.  
   
 ```  
 virtual void Rebuild();
 ```  
   
-##  <a name="a-nameselectpalettea--cmfccolorbarselectpalette"></a><a name="selectpalette"></a>CMFCColorBar::SelectPalette  
+##  <a name="selectpalette"></a>CMFCColorBar::SelectPalette  
  Задает логический палитры заданного контекста устройств палитре кнопку родительского элемента цветовую шкалу.  
   
 ```  
@@ -717,7 +752,7 @@ CPalette* SelectPalette(CDC* pDC);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на палитре, заменяемые палитре кнопку родительского элемента цветовой шкалы.  
   
-##  <a name="a-namesetcolora--cmfccolorbarsetcolor"></a><a name="setcolor"></a>CMFCColorBar::SetColor  
+##  <a name="setcolor"></a>CMFCColorBar::SetColor  
  Задает цвет, который выбран в данный момент.  
   
 ```  
@@ -728,7 +763,7 @@ void SetColor(COLORREF color);
  [in] `color`  
  Значение цвета RGB.  
   
-##  <a name="a-namesetcolornamea--cmfccolorbarsetcolorname"></a><a name="setcolorname"></a>CMFCColorBar::SetColorName  
+##  <a name="setcolorname"></a>CMFCColorBar::SetColorName  
  Задает новое имя для выбранного цвета.  
   
 ```  
@@ -747,7 +782,7 @@ static void SetColorName(
 ### <a name="remarks"></a>Примечания  
  Этот метод изменяет имя указанного цвета во всех `CMFCColorBar` объектов в приложении.  
   
-##  <a name="a-namesetcommandida--cmfccolorbarsetcommandid"></a><a name="setcommandid"></a>CMFCColorBar::SetCommandID  
+##  <a name="setcommandid"></a>CMFCColorBar::SetCommandID  
  Задает новый идентификатор команды для управления цветовой шкалы.  
   
 ```  
@@ -761,7 +796,7 @@ void SetCommandID(UINT nCommandID);
 ### <a name="remarks"></a>Примечания  
  Этот метод для изменения идентификатор команды управления цветовую шкалу и уведомить родительского окна элемента управления, который был изменен идентификатор.  
   
-##  <a name="a-namesetdocumentcolorsa--cmfccolorbarsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
  Задает список цветов, используемых в текущем документе.  
   
 ```  
@@ -784,7 +819,7 @@ void SetDocumentColors(
 ### <a name="remarks"></a>Примечания  
  *Цвета документа* цветов, которые в настоящее время используются в документе. Платформа framework автоматически поддерживает список цветов документа, но этот метод можно использовать для изменения списка.  
   
-##  <a name="a-namesethorzmargina--cmfccolorbarsethorzmargin"></a><a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
+##  <a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
  Задает горизонтальное поле, которое представляет собой пространство между влево или вправо цвет ячейки и границы клиентской области.  
   
 ```  
@@ -798,7 +833,7 @@ void SetHorzMargin(int nHorzMargin);
 ### <a name="remarks"></a>Примечания  
  По умолчанию [CMFCColorBar::CMFCColorBar](#cmfccolorbar) конструктор задает горизонтальное поле 4 пикселей.  
   
-##  <a name="a-namesetproplista--cmfccolorbarsetproplist"></a><a name="setproplist"></a>CMFCColorBar::SetPropList  
+##  <a name="setproplist"></a>CMFCColorBar::SetPropList  
  Наборы `m_pWndPropList` защищенный член данных в заданный указатель в сетке свойств.  
   
 ```  
@@ -811,7 +846,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 |---------------|-----------------|  
 |[in] `pWndList`|Указатель на объект элемента управления сетки свойств.|  
   
-##  <a name="a-namesetvertmargina--cmfccolorbarsetvertmargin"></a><a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
+##  <a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
  Задает вертикальное поле, которое представляет собой пространство между верхней или нижней ячейке цвет и границы области клиента.  
   
 ```  
@@ -825,7 +860,7 @@ void SetVertMargin(int nVertMargin);
 ### <a name="remarks"></a>Примечания  
  По умолчанию [CMFCColorBar::CMFCColorBar](#cmfccolorbar) конструктор задает вертикальное поле для 4 пикселей.  
   
-##  <a name="a-nameshowcommandmessagestringa--cmfccolorbarshowcommandmessagestring"></a><a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
  Запрашивает фрейме окна, которому принадлежит управления цветовую шкалу для обновления строки сообщения в строке состояния.  
   
 ```  

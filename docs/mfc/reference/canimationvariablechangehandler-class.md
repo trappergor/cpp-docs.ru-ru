@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationVariableChangeHandler
 - CAnimationVariableChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="a-nameonvaluechangeda--canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
+##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
  Вызывается при изменении значения переменной анимации.  
   
 ```  
@@ -105,7 +107,7 @@ IFACEMETHOD(OnValueChanged) (
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод завершается успешно, возвращается значение S_OK. В противном случае — возвращает код ошибки HRESULT.  
   
-##  <a name="a-namesetanimationcontrollera--canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
  Хранит указатель на контроллер анимации для события маршрута.  
   
 ```  

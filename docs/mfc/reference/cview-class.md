@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CView
+- AFXWIN/CView
+- AFXWIN/CView::CView
+- AFXWIN/CView::DoPreparePrinting
+- AFXWIN/CView::GetDocument
+- AFXWIN/CView::IsSelected
+- AFXWIN/CView::OnDragEnter
+- AFXWIN/CView::OnDragLeave
+- AFXWIN/CView::OnDragOver
+- AFXWIN/CView::OnDragScroll
+- AFXWIN/CView::OnDrop
+- AFXWIN/CView::OnDropEx
+- AFXWIN/CView::OnInitialUpdate
+- AFXWIN/CView::OnPrepareDC
+- AFXWIN/CView::OnScroll
+- AFXWIN/CView::OnScrollBy
+- AFXWIN/CView::OnActivateFrame
+- AFXWIN/CView::OnActivateView
+- AFXWIN/CView::OnBeginPrinting
+- AFXWIN/CView::OnDraw
+- AFXWIN/CView::OnEndPrinting
+- AFXWIN/CView::OnEndPrintPreview
+- AFXWIN/CView::OnPreparePrinting
+- AFXWIN/CView::OnPrint
+- AFXWIN/CView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +173,7 @@ class AFX_NOVTABLE CView : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecviewa--cviewcview"></a><a name="cview"></a>CView::CView  
+##  <a name="cview"></a>CView::CView  
  Создает объект `CView`.  
   
 ```  
@@ -159,7 +183,7 @@ CView();
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает конструктор при создании нового окна области или разбить окно. Переопределение [OnInitialUpdate](#oninitialupdate) функции-члена для инициализации представления после присоединения документа.  
   
-##  <a name="a-namedoprepareprintinga--cviewdoprepareprinting"></a><a name="doprepareprinting"></a>CView::DoPreparePrinting  
+##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
  Эта функция вызывается из переопределение метода [OnPreparePrinting](#onprepareprinting) для вызова диалогового окна «Печать» и создать принтер контекста устройства.  
   
 ```  
@@ -178,7 +202,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
   
  При просмотре файла, эта функция создает контекст устройства принтера с использованием текущих параметров печати; Этот контекст устройства используется для имитации принтер во время предварительного просмотра.  
   
-##  <a name="a-namegetdocumenta--cviewgetdocument"></a><a name="getdocument"></a>CView::GetDocument  
+##  <a name="getdocument"></a>CView::GetDocument  
  Эта функция вызывается для получения указателя на просмотр документа.  
   
 ```  
@@ -191,7 +215,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Примечания  
  Это позволяет вызывать функции-члены документа.  
   
-##  <a name="a-nameisselecteda--cviewisselected"></a><a name="isselected"></a>CView::IsSelected  
+##  <a name="isselected"></a>CView::IsSelected  
  Вызывается платформой для проверки того, выбран ли элемент указанного документа.  
   
 ```  
@@ -208,7 +232,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию эта функция возвращает **FALSE**. Переопределить эту функцию, если вы реализуете выделения с помощью [CDocItem](../../mfc/reference/cdocitem-class.md) объектов. Необходимо переопределить эту функцию, если представление содержит OLE-элементы.  
   
-##  <a name="a-nameonactivateframea--cviewonactivateframe"></a><a name="onactivateframe"></a>CView::OnActivateFrame  
+##  <a name="onactivateframe"></a>CView::OnActivateFrame  
  Вызывается платформой, когда рамка окна, содержащего представление, активируется или деактивируется.  
   
 ```  
@@ -233,7 +257,7 @@ virtual void OnActivateFrame(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию-член, если требуется выполнять специальную обработку при окна фрейма, связанный с представлением, активируется или деактивируется. Например [CFormView](../../mfc/reference/cformview-class.md) выполняет это переопределение, когда он сохраняет и восстанавливает элемент управления, имеющий фокус.  
   
-##  <a name="a-nameonactivateviewa--cviewonactivateview"></a><a name="onactivateview"></a>CView::OnActivateView  
+##  <a name="onactivateview"></a>CView::OnActivateView  
  Вызывается платформой, когда представление активируется или деактивируется.  
   
 ```  
@@ -260,7 +284,7 @@ virtual void OnActivateView(
   
  Эти параметры отличаются при [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) вызывается с представлением, отличается от что [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) вернет. Чаще всего это происходит с помощью окна-разделители.  
   
-##  <a name="a-nameonbeginprintinga--cviewonbeginprinting"></a><a name="onbeginprinting"></a>CView::OnBeginPrinting  
+##  <a name="onbeginprinting"></a>CView::OnBeginPrinting  
  Вызывается платформой в начале задания печати или предварительного просмотра после вызова `OnPreparePrinting` .  
   
 ```  
@@ -281,7 +305,7 @@ virtual void OnBeginPrinting(
   
  Эту функцию также можно использовать для инициализаций, которые зависят от свойств контекста принтера. Например, число страниц, необходимых для печати документа, может зависеть от параметров, заданных пользователем в диалоговом окне печати (например, длина страницы). В таком случае нельзя указать длине документа в [OnPreparePrinting](#onprepareprinting) функция-член, где это обычно делается так, дождитесь, пока контекст устройства принтера был создан на основе параметров поля диалогового окна. [OnBeginPrinting](#onbeginprinting) Первая функция overridable, предоставляющий доступ к [CDC](../../mfc/reference/cdc-class.md) объект, представляющий контекст устройства принтера, чтобы длина документа можно задать из данной функции. Обратите внимание, что если к этому моменту длина документа не указана, во время предварительного просмотра полоса прокрутки отображаться не будет.  
   
-##  <a name="a-nameondragentera--cviewondragenter"></a><a name="ondragenter"></a>CView::OnDragEnter  
+##  <a name="ondragenter"></a>CView::OnDragEnter  
  Вызывается платформой, когда указатель мыши впервые входит области без прокрутки окна цели перетаскивания.  
   
 ```  
@@ -319,7 +343,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Переопределить эту функцию для подготовки для будущих вызовов [OnDragOver](#ondragover) функции-члена. Все данные, необходимые из объекта данных, которые должны быть получены в данный момент для последующего использования в `OnDragOver` функции-члена. Представления также должны обновляться в данный момент, чтобы дать пользователю визуальную обратную связь. Дополнительные сведения см. в статье [перетаскивание: реализация объекта-приемника](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="a-nameondragleavea--cviewondragleave"></a><a name="ondragleave"></a>CView::OnDragLeave  
+##  <a name="ondragleave"></a>CView::OnDragLeave  
  Вызывается средой во время операции перетаскивания при перемещении указателя мыши за пределы допустимой области для этого окна.  
   
 ```  
@@ -329,7 +353,7 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию, если требуется очистить все действия, предпринятые во время текущего представления [OnDragEnter](#ondragenter) или [OnDragOver](#ondragover) вызовам, такие как удаление любые отзывы пользователей visual, пока объект был перетаскивать.  
   
-##  <a name="a-nameondragovera--cviewondragover"></a><a name="ondragover"></a>CView::OnDragOver  
+##  <a name="ondragover"></a>CView::OnDragOver  
  Вызывается средой во время операции перетаскивания при перемещении указателя мыши по окна цели перетаскивания.  
   
 ```  
@@ -367,7 +391,7 @@ virtual DROPEFFECT OnDragOver(
   
  Переопределите эту функцию, чтобы дать пользователю визуальную обратную связь во время операции перетаскивания. Так как эта функция вызывается непрерывно, любой код, содержащийся в ней необходимо оптимизировать максимальной. Дополнительные сведения см. в статье [перетаскивание: реализация объекта-приемника](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="a-nameondragscrolla--cviewondragscroll"></a><a name="ondragscroll"></a>CView::OnDragScroll  
+##  <a name="ondragscroll"></a>CView::OnDragScroll  
  Вызывается средой перед вызовом метода [OnDragEnter](#ondragenter) или [OnDragOver](#ondragover) для определения, является ли точка находится в области прокрутки.  
   
 ```  
@@ -401,7 +425,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если вы хотите предоставить специальное поведение для данного события. Реализация по умолчанию автоматически прокручивается windows, когда курсор перетаскивается в область прокрутки по умолчанию внутри границы каждого окна. Дополнительные сведения см. в статье [перетаскивание: реализация объекта-приемника](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="a-nameondrawa--cviewondraw"></a><a name="ondraw"></a>CView::OnDraw  
+##  <a name="ondraw"></a>CView::OnDraw  
  Вызывается платформой для визуализации изображения документа.  
   
 ```  
@@ -419,7 +443,7 @@ virtual void OnDraw(CDC* pDC) = 0;
   
  Чтобы оптимизировать Рисование, вызовите [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) контекст устройства, чтобы узнать, является ли данный прямоугольник будет отображаться функцию-член. Если необходимо различать отображения стандартного экрана и печати, вызвать [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) функцию-член контекст устройства.  
   
-##  <a name="a-nameondropa--cviewondrop"></a><a name="ondrop"></a>CView::OnDrop  
+##  <a name="ondrop"></a>CView::OnDrop  
  Вызывается платформой, когда пользователь отпускает объект данных через является допустимой целью перетаскивания.  
   
 ```  
@@ -456,7 +480,7 @@ virtual BOOL OnDrop(
 > [!NOTE]
 >  Платформа не вызывайте эту функцию, если существует переопределение, чтобы [OnDropEx](#ondropex) в этом классе представления.  
   
-##  <a name="a-nameondropexa--cviewondropex"></a><a name="ondropex"></a>CView::OnDropEx  
+##  <a name="ondropex"></a>CView::OnDropEx  
  Вызывается платформой, когда пользователь отпускает объект данных через является допустимой целью перетаскивания.  
   
 ```  
@@ -516,7 +540,7 @@ virtual DROPEFFECT OnDropEx(
   
  Дополнительные сведения о задании команду меню по умолчанию в разделе [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] и [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) в этом томе.  
   
-##  <a name="a-nameonendprintinga--cviewonendprinting"></a><a name="onendprinting"></a>CView::OnEndPrinting  
+##  <a name="onendprinting"></a>CView::OnEndPrinting  
  Вызывается платформой после документа печати или предварительном просмотре.  
   
 ```  
@@ -535,7 +559,7 @@ virtual void OnEndPrinting(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию этой функции не выполняет никаких действий. Переопределить эту функцию для освобождения любых ресурсов GDI, выделенных в [OnBeginPrinting](#onbeginprinting) функции-члена.  
   
-##  <a name="a-nameonendprintpreviewa--cviewonendprintpreview"></a><a name="onendprintpreview"></a>CView::OnEndPrintPreview  
+##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
  Вызывается платформой, когда пользователь выходит из режима предварительного просмотра.  
   
 ```  
@@ -564,7 +588,7 @@ virtual void OnEndPrintPreview(
   
  Всегда вызывайте метод версию базового класса `OnEndPrintPreview` из переопределения, обычно в конце функции.  
   
-##  <a name="a-nameoninitialupdatea--cviewoninitialupdate"></a><a name="oninitialupdate"></a>CView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>CView::OnInitialUpdate  
  Вызывается платформой после представления впервые присоединяется к документу, но до первоначального отображения представления.  
   
 ```  
@@ -574,7 +598,7 @@ virtual void OnInitialUpdate();
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию эта функция вызывает [OnUpdate](#onupdate) функции-члена без указания информации (то есть, используя значения по умолчанию 0 `lHint` параметр и **NULL** для `pHint` параметр). Переопределите эту функцию, чтобы выполнить однократную инициализацию, которая требует сведений о документе. Например если приложение содержит документы фиксированного размера, можно использовать эту функцию для инициализации представления прокрутки ограничения, исходя из размера документа. Если приложение поддерживает документы переменного размера, используйте [OnUpdate](#onupdate) обновление прокрутки ограничивает каждый раз изменения документа.  
   
-##  <a name="a-nameonpreparedca--cviewonpreparedc"></a><a name="onpreparedc"></a>CView::OnPrepareDC  
+##  <a name="onpreparedc"></a>CView::OnPrepareDC  
  Вызывается средой перед [OnDraw](#ondraw) для просмотра на экране и перед вызовом функции-члена [OnPrint](#onprint) функция-член вызывается для каждой страницы во время предварительного просмотра печати или печати.  
   
 ```  
@@ -608,7 +632,7 @@ virtual void OnPrepareDC(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#183;](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="a-nameonprepareprintinga--cviewonprepareprinting"></a><a name="onprepareprinting"></a>CView::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>CView::OnPreparePrinting  
  Вызывается платформой до печати или просмотра документа.  
   
 ```  
@@ -642,7 +666,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  [!code-cpp[NVC_MFCDocView&#185;](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="a-nameonprinta--cviewonprint"></a><a name="onprint"></a>CView::OnPrint  
+##  <a name="onprint"></a>CView::OnPrint  
  Вызывается платформой для печати или просмотра страницы документа.  
   
 ```  
@@ -682,7 +706,7 @@ virtual void OnPrint(
   
  Еще один пример см. в разделе [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).  
   
-##  <a name="a-nameonscrolla--cviewonscroll"></a><a name="onscroll"></a>CView::OnScroll  
+##  <a name="onscroll"></a>CView::OnScroll  
  Вызывается средой, чтобы определить, является ли прокрутка возможна.  
   
 ```  
@@ -722,7 +746,7 @@ virtual BOOL OnScroll(
 ### <a name="remarks"></a>Примечания  
  В первом случае эта функция вызывается платформой с `bDoScroll` значение **TRUE** когда представление получает сообщение полосы прокрутки. В этом случае следует фактически прокрутки представления. В другом случае эта функция вызывается с `bDoScroll` значение **FALSE** при элемент OLE изначально перетаскивается в область автоматическая прокрутка конечного места перетаскивания до выполнения прокрутки на самом деле. В этом случае вы должны не прокрутки на самом деле.  
   
-##  <a name="a-nameonscrollbya--cviewonscrollby"></a><a name="onscrollby"></a>CView::OnScrollBy  
+##  <a name="onscrollby"></a>CView::OnScrollBy  
  Вызывается инфраструктурой при просмотре пользователем область за пределами имеется представление документа, либо путем перетаскивания объекта OLE с границами текущего представления, управляя вертикальной или горизонтальной полосы прокрутки.  
   
 ```  
@@ -748,7 +772,7 @@ virtual BOOL OnScrollBy(
   
  Если высота или ширина документа превышает 32767 пикселов, прокручивать за 32767 завершится ошибкой, поскольку `OnScrollBy` вызван с недопустимым `sizeScroll` аргумент.  
   
-##  <a name="a-nameonupdatea--cviewonupdate"></a><a name="onupdate"></a>CView::OnUpdate  
+##  <a name="onupdate"></a>CView::OnUpdate  
  Вызывается платформой после изменения просмотр документа; Эта функция вызывается [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) и позволяет представлению обновления экрана для отражения этих изменений.  
   
 ```  

@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::Create
+- AFXCMN/CSpinButtonCtrl::CreateEx
+- AFXCMN/CSpinButtonCtrl::GetAccel
+- AFXCMN/CSpinButtonCtrl::GetBase
+- AFXCMN/CSpinButtonCtrl::GetBuddy
+- AFXCMN/CSpinButtonCtrl::GetPos
+- AFXCMN/CSpinButtonCtrl::GetRange
+- AFXCMN/CSpinButtonCtrl::SetAccel
+- AFXCMN/CSpinButtonCtrl::SetBase
+- AFXCMN/CSpinButtonCtrl::SetBuddy
+- AFXCMN/CSpinButtonCtrl::SetPos
+- AFXCMN/CSpinButtonCtrl::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +116,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-namecreatea--cspinbuttonctrlcreate"></a><a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>CSpinButtonCtrl::Create  
  Регулятор создает и присоединяет его к `CSpinButtonCtrl` объекта...  
   
 ```  
@@ -134,7 +148,7 @@ virtual BOOL Create(
   
  Чтобы создать регулятор с расширенные стили окна, вызовите [CSpinButtonCtrl::CreateEx](#createex) вместо **создать**.  
   
-##  <a name="a-namecreateexa--cspinbuttonctrlcreateex"></a><a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CSpinButtonCtrl` объекта.  
   
 ```  
@@ -168,14 +182,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="a-namecspinbuttonctrla--cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  Создает объект `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cspinbuttonctrlgetaccel"></a><a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
  Извлекает сведения о ускорение для регулятор.  
   
 ```  
@@ -194,7 +208,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Возвращаемое значение  
  Получить число структур сочетаний клавиш.  
   
-##  <a name="a-namegetbasea--cspinbuttonctrlgetbase"></a><a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
  Извлекает текущей базы для регулятор.  
   
 ```  
@@ -204,7 +218,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее базовое значение.  
   
-##  <a name="a-namegetbuddya--cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
  Извлекает указатель на текущее окно контактов.  
   
 ```  
@@ -214,7 +228,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель текущего окна контактов.  
   
-##  <a name="a-namegetposa--cspinbuttonctrlgetpos"></a><a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
  Получает текущее положение регулятор.  
   
 ```  

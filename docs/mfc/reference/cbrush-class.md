@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBrush
+- AFXWIN/CBrush
+- AFXWIN/CBrush::CBrush
+- AFXWIN/CBrush::CreateBrushIndirect
+- AFXWIN/CBrush::CreateDIBPatternBrush
+- AFXWIN/CBrush::CreateHatchBrush
+- AFXWIN/CBrush::CreatePatternBrush
+- AFXWIN/CBrush::CreateSolidBrush
+- AFXWIN/CBrush::CreateSysColorBrush
+- AFXWIN/CBrush::FromHandle
+- AFXWIN/CBrush::GetLogBrush
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +103,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecbrusha--cbrushcbrush"></a><a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>CBrush::CBrush  
  Создает объект `CBrush`.  
   
 ```  
@@ -139,7 +149,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="a-namecreatebrushindirecta--cbrushcreatebrushindirect"></a><a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
  Инициализирует кисть с стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.  
   
 ```  
@@ -161,7 +171,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="a-namecreatedibpatternbrusha--cbrushcreatedibpatternbrush"></a><a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
  Инициализирует кисти шаблону, определяемому аппаратно независимые точечный рисунок (DIB).  
   
 ```  
@@ -216,7 +226,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="a-namecreatehatchbrusha--cbrushcreatehatchbrush"></a><a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
  Инициализирует кисть с заданным шаблоном заштрихованного и цвет.  
   
 ```  
@@ -253,7 +263,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="a-namecreatepatternbrusha--cbrushcreatepatternbrush"></a><a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
  Инициализирует кисти с шаблоном, определяемое точечного рисунка.  
   
 ```  
@@ -281,7 +291,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="a-namecreatesolidbrusha--cbrushcreatesolidbrush"></a><a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
  Инициализирует кисти указанного сплошным цветом.  
   
 ```  
@@ -303,7 +313,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Пример  
   В примере показано [CBrush::CBrush](#cbrush).  
   
-##  <a name="a-namecreatesyscolorbrusha--cbrushcreatesyscolorbrush"></a><a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
  Инициализирует цвет кисти.  
   
 ```  
@@ -325,7 +335,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#26;](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="a-namefromhandlea--cbrushfromhandle"></a><a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>CBrush::FromHandle  
  Возвращает указатель на `CBrush` объект для заданного дескриптора окна [HBRUSH](#operator_hbrush) объекта.  
   
 ```  
@@ -347,7 +357,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Пример  
   В примере показано [CBrush::CBrush](#cbrush).  
   
-##  <a name="a-namegetlogbrusha--cbrushgetlogbrush"></a><a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
  Вызовите эту функцию-член для получения `LOGBRUSH` структуры.  
   
 ```  
@@ -373,7 +383,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="a-nameoperatorhbrusha--cbrushoperator-hbrush"></a><a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
  Этот оператор используется получить дескриптор вложенного Windows GDI `CBrush` объекта.  
   
 ```  

@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CRBMap
 - CRBMap
-- ATL::CRBMap
+- ATLCOLL/ATL::CRBMap
+- ATLCOLL/ATL::CRBMap::CRBMap
+- ATLCOLL/ATL::CRBMap::Lookup
+- ATLCOLL/ATL::CRBMap::RemoveKey
+- ATLCOLL/ATL::CRBMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +108,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="a-namecrbmapa--crbmapcrbmap"></a><a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>CRBMap::CRBMap  
  Конструктор.  
   
 ```
@@ -124,7 +127,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#81;](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmapcrbmap"></a><a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
  Деструктор  
   
 ```
@@ -136,7 +139,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  См. в документации базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
-##  <a name="a-namelookupa--crbmaplookup"></a><a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>CRBMap::Lookup  
  Этот метод вызывается для поиска разделов или значений в `CRBMap` объекта.  
   
 ```
@@ -161,7 +164,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#82;](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="a-nameremovekeya--crbmapremovekey"></a><a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>CRBMap::RemoveKey  
  Этот метод вызывается для удаления элемента из `CRBMap` объекту, заданному ключу.  
   
 ```
@@ -181,7 +184,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#83;](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="a-namesetata--crbmapsetat"></a><a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>CRBMap::SetAt  
  Этот метод используется для вставки пары элементов в схеме.  
   
 ```

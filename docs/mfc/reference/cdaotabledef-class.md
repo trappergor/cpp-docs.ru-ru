@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoTableDef
+- AFXDAO/CDaoTableDef
+- AFXDAO/CDaoTableDef::CDaoTableDef
+- AFXDAO/CDaoTableDef::Append
+- AFXDAO/CDaoTableDef::CanUpdate
+- AFXDAO/CDaoTableDef::Close
+- AFXDAO/CDaoTableDef::Create
+- AFXDAO/CDaoTableDef::CreateField
+- AFXDAO/CDaoTableDef::CreateIndex
+- AFXDAO/CDaoTableDef::DeleteField
+- AFXDAO/CDaoTableDef::DeleteIndex
+- AFXDAO/CDaoTableDef::GetAttributes
+- AFXDAO/CDaoTableDef::GetConnect
+- AFXDAO/CDaoTableDef::GetDateCreated
+- AFXDAO/CDaoTableDef::GetDateLastUpdated
+- AFXDAO/CDaoTableDef::GetFieldCount
+- AFXDAO/CDaoTableDef::GetFieldInfo
+- AFXDAO/CDaoTableDef::GetIndexCount
+- AFXDAO/CDaoTableDef::GetIndexInfo
+- AFXDAO/CDaoTableDef::GetName
+- AFXDAO/CDaoTableDef::GetRecordCount
+- AFXDAO/CDaoTableDef::GetSourceTableName
+- AFXDAO/CDaoTableDef::GetValidationRule
+- AFXDAO/CDaoTableDef::GetValidationText
+- AFXDAO/CDaoTableDef::IsOpen
+- AFXDAO/CDaoTableDef::Open
+- AFXDAO/CDaoTableDef::RefreshLink
+- AFXDAO/CDaoTableDef::SetAttributes
+- AFXDAO/CDaoTableDef::SetConnect
+- AFXDAO/CDaoTableDef::SetName
+- AFXDAO/CDaoTableDef::SetSourceTableName
+- AFXDAO/CDaoTableDef::SetValidationRule
+- AFXDAO/CDaoTableDef::SetValidationText
+- AFXDAO/CDaoTableDef::m_pDAOTableDef
+- AFXDAO/CDaoTableDef::m_pDatabase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +183,7 @@ class CDaoTableDef : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  
   
-##  <a name="a-nameappenda--cdaotabledefappend"></a><a name="append"></a>CDaoTableDef::Append  
+##  <a name="append"></a>CDaoTableDef::Append  
  Вызовите эту функцию-член, после вызова метода [создать](#create) для создания нового объекта tabledef сохранить tabledef в базе данных.  
   
 ```  
@@ -164,7 +198,7 @@ virtual void Append();
   
  Дополнительные сведения см. в разделе «Добавить метод» в справке DAO.  
   
-##  <a name="a-namecanupdatea--cdaotabledefcanupdate"></a><a name="canupdate"></a>CDaoTableDef::CanUpdate  
+##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
  Вызов этой функции-члена для определения ли определение базовой таблицы `CDaoTableDef` объект может быть изменен.  
   
 ```  
@@ -179,7 +213,7 @@ BOOL CanUpdate();
   
  Дополнительные сведения см. в разделе «Обновляемые свойства» в справке DAO.  
   
-##  <a name="a-namecdaotabledefa--cdaotabledefcdaotabledef"></a><a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
+##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
  Создает **CDaoTableDef** объекта.  
   
 ```  
@@ -193,7 +227,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="remarks"></a>Примечания  
  После создания объекта, необходимо вызвать [создать](#create) или [откройте](#open) функции-члена. После завершения работы с объектом, необходимо вызвать его [закрыть](#close) члена функции и уничтожать `CDaoTableDef` объекта.  
   
-##  <a name="a-nameclosea--cdaotabledefclose"></a><a name="close"></a>CDaoTableDef::Close  
+##  <a name="close"></a>CDaoTableDef::Close  
  Вызовите эту функцию-член закрыть и освободить объект tabledef.  
   
 ```  
@@ -207,7 +241,7 @@ virtual void Close();
   
  Дополнительные сведения см. в разделе «Метод Close» в справке DAO.  
   
-##  <a name="a-namecreatea--cdaotabledefcreate"></a><a name="create"></a>CDaoTableDef::Create  
+##  <a name="create"></a>CDaoTableDef::Create  
  Вызовите эту функцию-член для создания новых сохраненных таблицы.  
   
 ```  
@@ -243,7 +277,7 @@ virtual void Create(
   
  Дополнительные сведения см. в разделе «Метод CreateTableDef» в справке DAO.  
   
-##  <a name="a-namecreatefielda--cdaotabledefcreatefield"></a><a name="createfield"></a>CDaoTableDef::CreateField  
+##  <a name="createfield"></a>CDaoTableDef::CreateField  
  Вызовите эту функцию-член для добавления поля в таблицу.  
   
 ```  
@@ -313,7 +347,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
  Дополнительные сведения см. в разделе «Метод CreateField» в справке DAO.  
   
-##  <a name="a-namecreateindexa--cdaotabledefcreateindex"></a><a name="createindex"></a>CDaoTableDef::CreateIndex  
+##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
  Эта функция вызывается для добавления таблицы индекса.  
   
 ```  
@@ -339,7 +373,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
  Оставшиеся члены не учитывается, если указывается **FALSE**. Кроме того **m_lDistinctCount** игнорируется во время создания индекса.  
   
-##  <a name="a-namedeletefielda--cdaotabledefdeletefield"></a><a name="deletefield"></a>CDaoTableDef::DeleteField  
+##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
  Вызовите эту функцию-член для удаления поля и сделать недоступными.  
   
 ```  
@@ -359,7 +393,7 @@ void DeleteField(int nIndex);
   
  Дополнительные сведения см. в разделе «Метод Delete», в справке DAO.  
   
-##  <a name="a-namedeleteindexa--cdaotabledefdeleteindex"></a><a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
+##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
  Вызовите эту функцию-член для удаления индекса в базовой таблице.  
   
 ```  
@@ -379,7 +413,7 @@ void DeleteIndex(int nIndex);
   
  Дополнительные сведения см. в разделе «Метод Delete», в справке DAO.  
   
-##  <a name="a-namegetattributesa--cdaotabledefgetattributes"></a><a name="getattributes"></a>CDaoTableDef::GetAttributes  
+##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
  Для `CDaoTableDef` объекта, возвращаемое значение определяет характеристики таблицы, представленной `CDaoTableDef` объекта и может быть сумма из этих констант:  
   
 ```  
@@ -406,7 +440,7 @@ long GetAttributes();
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namegetconnecta--cdaotabledefgetconnect"></a><a name="getconnect"></a>CDaoTableDef::GetConnect  
+##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
  Вызовите эту функцию-член для получения строки соединения для источника данных.  
   
 ```  
@@ -429,7 +463,7 @@ CString GetConnect();
   
  Дополнительные сведения см. в разделе «Свойства подключения», в справке DAO.  
   
-##  <a name="a-namegetdatecreateda--cdaotabledefgetdatecreated"></a><a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
  Эта функция вызывается для определения даты и времени базовой таблицы `CDaoTableDef` был создан объект.  
   
 ```  
@@ -444,7 +478,7 @@ COleDateTime GetDateCreated();
   
  Дополнительные сведения см. в разделе «DateCreated свойства LastUpdated» в справке DAO.  
   
-##  <a name="a-namegetdatelastupdateda--cdaotabledefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
  Эта функция вызывается для определения даты и времени базовой таблицы **CDaoTableDef** последнего обновления объекта.  
   
 ```  
@@ -459,7 +493,7 @@ COleDateTime GetDateLastUpdated();
   
  Дополнительные сведения см. в разделе «DateCreated свойства LastUpdated» в справке DAO.  
   
-##  <a name="a-namegetfieldcounta--cdaotabledefgetfieldcount"></a><a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
  Вызовите эту функцию-член для получения количества полей, определенных в таблице.  
   
 ```  
@@ -474,7 +508,7 @@ short GetFieldCount();
   
  Дополнительные сведения см. в разделе «Свойство Count» в справке DAO.  
   
-##  <a name="a-namegetfieldinfoa--cdaotabledefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
  Вызовите эту функцию-член для получения различных типов сведений о поле, определенное в tabledef.  
   
 ```  
@@ -516,7 +550,7 @@ void GetFieldInfo(
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namegetindexcounta--cdaotabledefgetindexcount"></a><a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
+##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
  Вызовите эту функцию-член для получения числа индексов для таблицы.  
   
 ```  
@@ -531,7 +565,7 @@ short GetIndexCount();
   
  Дополнительные сведения см. в разделе «Свойство Count» в справке DAO.  
   
-##  <a name="a-namegetindexinfoa--cdaotabledefgetindexinfo"></a><a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
+##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
  Вызовите эту функцию-член для получения различные виды информации о индекс, определенный в tabledef.  
   
 ```  
@@ -573,7 +607,7 @@ void GetIndexInfo(
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namegetnamea--cdaotabledefgetname"></a><a name="getname"></a>CDaoTableDef::GetName  
+##  <a name="getname"></a>CDaoTableDef::GetName  
  Вызовите эту функцию-член для получения определяемое пользователем имя базовой таблицы.  
   
 ```  
@@ -588,7 +622,7 @@ CString GetName();
   
  Дополнительные сведения см. в разделе «Свойства Name» в справке DAO.  
   
-##  <a name="a-namegetrecordcounta--cdaotabledefgetrecordcount"></a><a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
+##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
  Вызовите эту функцию-член, чтобы узнать, сколько записей в `CDaoTableDef` объекта.  
   
 ```  
@@ -603,7 +637,7 @@ long GetRecordCount();
   
  Дополнительные сведения см. в разделе «RecordCount свойство» в справке DAO.  
   
-##  <a name="a-namegetsourcetablenamea--cdaotabledefgetsourcetablename"></a><a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
+##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
  Вызовите эту функцию-член для извлечения имени подключенной таблицы в исходной базе данных.  
   
 ```  
@@ -618,7 +652,7 @@ CString GetSourceTableName();
   
  Дополнительные сведения см. в разделе «SourceTableName свойство» в справке DAO.  
   
-##  <a name="a-namegetvalidationrulea--cdaotabledefgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
+##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
  Вызовите эту функцию-член для получения для tabledef правила проверки.  
   
 ```  
@@ -633,7 +667,7 @@ CString GetValidationRule();
   
  Дополнительные сведения см. в разделе «Свойства ValidationRule» в справке DAO.  
   
-##  <a name="a-namegetvalidationtexta--cdaotabledefgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
+##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
  Эта функция вызывается для получения строки для отображения, когда пользователь вводит данные, соответствующие правила проверки.  
   
 ```  
@@ -648,7 +682,7 @@ CString GetValidationText();
   
  Дополнительные сведения см. в разделе «Свертыванию» в справке DAO.  
   
-##  <a name="a-nameisopena--cdaotabledefisopen"></a><a name="isopen"></a>CDaoTableDef::IsOpen  
+##  <a name="isopen"></a>CDaoTableDef::IsOpen  
  Вызов этой функции-члена для определения ли `CDaoTableDef` объект открыт в данный момент.  
   
 ```  
@@ -660,18 +694,18 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namempdatabasea--cdaotabledefmpdatabase"></a><a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
  Содержит указатель на [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) объект для этой таблицы.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namempdaotabledefa--cdaotabledefmpdaotabledef"></a><a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
+##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
  Содержит указатель на интерфейс OLE для базового объекта DAO tabledef `CDaoTableDef` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот указатель, если требуется прямой доступ к интерфейсу DAO.  
   
-##  <a name="a-nameopena--cdaotabledefopen"></a><a name="open"></a>CDaoTableDef::Open  
+##  <a name="open"></a>CDaoTableDef::Open  
  Вызов этой функции-члена для открытия tabledef сохраненные в базе данных, TableDef элемента коллекции.  
   
 ```  
@@ -684,7 +718,7 @@ virtual void Open(LPCTSTR lpszName);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namerefreshlinka--cdaotabledefrefreshlink"></a><a name="refreshlink"></a>CDaoTableDef::RefreshLink  
+##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
  Вызовите эту функцию-член обновить сведения о соединении для подключенной таблицы.  
   
 ```  
@@ -698,7 +732,7 @@ void RefreshLink();
   
  Дополнительные сведения см. в разделе «Метод RefreshLink» в справке DAO.  
   
-##  <a name="a-namesetattributesa--cdaotabledefsetattributes"></a><a name="setattributes"></a>CDaoTableDef::SetAttributes  
+##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
  Задает значение, указывающее один или несколько характеристик `CDaoTableDef` объекта.  
   
 ```  
@@ -725,7 +759,7 @@ void SetAttributes(long lAttributes);
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namesetconnecta--cdaotabledefsetconnect"></a><a name="setconnect"></a>CDaoTableDef::SetConnect  
+##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
  Для `CDaoTableDef` , представляющий вложенные таблицы, строковый объект состоит из одной или двух частей (описатель типа базы данных и путь к базе данных).  
   
 ```  
@@ -774,7 +808,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Дополнительные сведения см. в разделе «Свойства подключения», в справке DAO.  
   
-##  <a name="a-namesetnamea--cdaotabledefsetname"></a><a name="setname"></a>CDaoTableDef::SetName  
+##  <a name="setname"></a>CDaoTableDef::SetName  
  Вызовите эту функцию-член, чтобы задать пользовательское имя для таблицы.  
   
 ```  
@@ -790,7 +824,7 @@ void SetName(LPCTSTR lpszName);
   
  Дополнительные сведения см. в разделе «Свойства Name» в справке DAO.  
   
-##  <a name="a-namesetsourcetablenamea--cdaotabledefsetsourcetablename"></a><a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
+##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
  Вызовите эту функцию-член, чтобы указать имя подключенной таблицы или имя базовой таблицы, на котором `CDaoTableDef` основан объект, как оно существует в исходном источнике данных.  
   
 ```  
@@ -806,7 +840,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
   
  Дополнительные сведения см. в разделе «SourceTableName свойство» в справке DAO.  
   
-##  <a name="a-namesetvalidationrulea--cdaotabledefsetvalidationrule"></a><a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
+##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
  Вызовите эту функцию-член правила проверки для tabledef.  
   
 ```  
@@ -828,7 +862,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  Дополнительные сведения см. в разделе «Свойства ValidationRule» в справке DAO.  
   
-##  <a name="a-namesetvalidationtexta--cdaotabledefsetvalidationtext"></a><a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
+##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
  Эта функция-член для задания текста исключения правила проверки для вызова `CDaoTableDef` объект с базовой таблицы поддерживается ядром базы данных Microsoft Jet.  
   
 ```  

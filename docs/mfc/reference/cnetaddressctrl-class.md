@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::Create
+- AFXCMN/CNetAddressCtrl::CreateEx
+- AFXCMN/CNetAddressCtrl::DisplayErrorTip
+- AFXCMN/CNetAddressCtrl::GetAddress
+- AFXCMN/CNetAddressCtrl::GetAllowType
+- AFXCMN/CNetAddressCtrl::SetAllowType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class CNetAddressCtrl : public CEdit
   
  Дополнительные требования к этому классу, описаны в [построения требования для Windows Vista Общие элементы управления](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="a-namecnetaddressctrla--cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
  Создает объект `CNetAddressCtrl`.  
   
 ```  
@@ -112,7 +122,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>Примечания  
  Используйте [CNetAddressCtrl::Create](#create) или [CNetAddressCtrl::CreateEx](#createex) способ создания элемента управления сети и присоединить его к `CNetAddressCtrl` объекта.  
   
-##  <a name="a-namecreatea--cnetaddressctrlcreate"></a><a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>CNetAddressCtrl::Create  
  Создает элемент управления network address с указанным стилем и присоединяет его к текущему `CNetAddressCtrl` объекта.  
   
 ```  
@@ -135,7 +145,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если этот метод выполнен успешно; в противном случае — `false`.  
   
-##  <a name="a-namecreateexa--cnetaddressctrlcreateex"></a><a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
  Создает элемент управления network address с указанным расширенные стили и присоединяет его к текущему `CNetAddressCtrl` объекта.  
   
 ```  
@@ -160,7 +170,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если этот метод выполнен успешно; в противном случае — `false`.  
   
-##  <a name="a-namedisplayerrortipa--cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
  Отображает сообщение об ошибке в всплывающей подсказки, связанный с текущей управления сетевым адресом.  
   
 ```  
@@ -175,7 +185,7 @@ HRESULT DisplayErrorTip();
   
  Это сообщение вызывает [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_DISPLAYERRORTIP` сообщение.  
   
-##  <a name="a-namegetaddressa--cnetaddressctrlgetaddress"></a><a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
  Возвращает представление проверяются и разбора сетевой адрес, связанный с текущей управления сетевым адресом.  
   
 ```  
@@ -198,7 +208,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  Этот метод вызывает [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_GETADDRESS` сообщение.  
   
-##  <a name="a-namegetallowtypea--cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
  Получает тип сетевой адрес, может поддерживать текущего управления сетевым адресом.  
   
 ```  
@@ -211,7 +221,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>Примечания  
  Это сообщение вызывает [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) макрос, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Отправляет этот макрос `NCM_GETALLOWTYPE` сообщение.  
   
-##  <a name="a-namesetallowtypea--cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
  Задает тип сетевой адрес, может поддерживать текущего управления сетевым адресом.  
   
 ```  

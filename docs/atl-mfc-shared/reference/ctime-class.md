@@ -9,9 +9,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CTime
 - CTime
-- ATL::CTime
+- ATLTIME/ATL::CTime
+- ATLTIME/ATL::CTime::CTime
+- ATLTIME/ATL::CTime::Format
+- ATLTIME/ATL::CTime::FormatGmt
+- ATLTIME/ATL::CTime::GetAsDBTIMESTAMP
+- ATLTIME/ATL::CTime::GetAsSystemTime
+- ATLTIME/ATL::CTime::GetCurrentTime
+- ATLTIME/ATL::CTime::GetDay
+- ATLTIME/ATL::CTime::GetDayOfWeek
+- ATLTIME/ATL::CTime::GetGmtTm
+- ATLTIME/ATL::CTime::GetHour
+- ATLTIME/ATL::CTime::GetLocalTm
+- ATLTIME/ATL::CTime::GetMinute
+- ATLTIME/ATL::CTime::GetMonth
+- ATLTIME/ATL::CTime::GetSecond
+- ATLTIME/ATL::CTime::GetTime
+- ATLTIME/ATL::CTime::GetYear
+- ATLTIME/ATL::CTime::Serialize64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +127,7 @@ class CTime
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltime.h  
   
-##  <a name="a-namectimecomparisonoperatorsa--ctime-comparison-operators"></a><a name="ctime_comparison_operators"></a>Операторы сравнения CTime  
+##  <a name="ctime_comparison_operators"></a>Операторы сравнения CTime  
  Операторы сравнения.  
   
 ```  
@@ -133,7 +149,7 @@ bool operator>=(CTime time) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#161;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
   
-##  <a name="a-namectimea--ctimectime"></a><a name="ctime"></a>CTime::CTime  
+##  <a name="ctime"></a>CTime::CTime  
  Создает новый `CTime` объект инициализируется с указанного времени.  
   
 ```  
@@ -216,7 +232,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#148;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
   
-##  <a name="a-nameformata--ctimeformat"></a><a name="format"></a>CTime::Format  
+##  <a name="format"></a>CTime::Format  
  Вызовите эту функцию-член для создания отформатированное представление значения даты и времени.  
   
 ```  
@@ -242,7 +258,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#149;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
   
-##  <a name="a-nameformatgmta--ctimeformatgmt"></a><a name="formatgmt"></a>CTime::FormatGmt  
+##  <a name="formatgmt"></a>CTime::FormatGmt  
  Создает форматированную строку, соответствующий этому `CTime` объекта.  
   
 ```  
@@ -268,7 +284,7 @@ CString FormatGmt(UINT nFormatID) const;
 ### <a name="example"></a>Пример  
  В примере показано [CTime::Format](#format).  
   
-##  <a name="a-namegetasdbtimestampa--ctimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
  Вызов этой функции-члена для преобразования времени сведения, хранящиеся в `CTime` объекта на структуру Win32, совместимой с DBTIMESTAMP.  
   
 ```  
@@ -288,7 +304,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#150;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
-##  <a name="a-namegetassystemtimea--ctimegetassystemtime"></a><a name="getassystemtime"></a>CTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>CTime::GetAsSystemTime  
  Вызов этой функции-члена для преобразования времени сведения, хранящиеся в `CTime` в Win32-совместимый [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.  
   
 ```  
@@ -308,7 +324,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#151;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
   
-##  <a name="a-namegetcurrenttimea--ctimegetcurrenttime"></a><a name="getcurrenttime"></a>CTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>CTime::GetCurrentTime  
  Возвращает `CTime` , представляющий текущее время.  
   
 ```  
@@ -321,7 +337,7 @@ static CTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#152;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
   
-##  <a name="a-namegetdaya--ctimegetday"></a><a name="getday"></a>CTime::GetDay  
+##  <a name="getday"></a>CTime::GetDay  
  Возвращает день представляют по `CTime` объекта.  
   
 ```  
@@ -337,7 +353,7 @@ int GetDay() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#153;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
   
-##  <a name="a-namegetdayofweeka--ctimegetdayofweek"></a><a name="getdayofweek"></a>CTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>CTime::GetDayOfWeek  
  Возвращает день недели, представленный `CTime` объекта.  
   
 ```  
@@ -353,7 +369,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#154;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
   
-##  <a name="a-namegetgmttma--ctimegetgmttm"></a><a name="getgmttm"></a>CTime::GetGmtTm  
+##  <a name="getgmttm"></a>CTime::GetGmtTm  
  Возвращает **структура tm** , содержащий декомпозиции времени, содержащихся в данном `CTime` объекта.  
   
 ```  
@@ -375,7 +391,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#155;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
   
-##  <a name="a-namegethoura--ctimegethour"></a><a name="gethour"></a>CTime::GetHour  
+##  <a name="gethour"></a>CTime::GetHour  
  Возвращает час, представленный `CTime` объекта.  
   
 ```  
@@ -391,7 +407,7 @@ int GetHour() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#156;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
   
-##  <a name="a-namegetlocaltma--ctimegetlocaltm"></a><a name="getlocaltm"></a>CTime::GetLocalTm  
+##  <a name="getlocaltm"></a>CTime::GetLocalTm  
  Возвращает **структура tm** содержащий декомпозиции времени, содержащихся в данном `CTime` объекта.  
   
 ```  
@@ -413,7 +429,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#157;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
   
-##  <a name="a-namegetminutea--ctimegetminute"></a><a name="getminute"></a>CTime::GetMinute  
+##  <a name="getminute"></a>CTime::GetMinute  
  Возвращается значение минут, представленного `CTime` объекта.  
   
 ```  
@@ -429,7 +445,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetHour](#gethour).  
   
-##  <a name="a-namegetmontha--ctimegetmonth"></a><a name="getmonth"></a>CTime::GetMonth  
+##  <a name="getmonth"></a>CTime::GetMonth  
  Возвращает значение месяца, представленного `CTime` объекта.  
   
 ```  
@@ -445,7 +461,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetDay](#getday).  
   
-##  <a name="a-namegetseconda--ctimegetsecond"></a><a name="getsecond"></a>CTime::GetSecond  
+##  <a name="getsecond"></a>CTime::GetSecond  
  Возвращает второй, представленного `CTime` объекта.  
   
 ```  
@@ -461,7 +477,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [GetHour](#gethour).  
   
-##  <a name="a-namegettimea--ctimegettime"></a><a name="gettime"></a>CTime::GetTime  
+##  <a name="gettime"></a>CTime::GetTime  
  Возвращает **__time64_t** значение для данного `CTime` объекта.  
   
 ```  
@@ -474,7 +490,7 @@ __time64_t GetTime() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#158;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
   
-##  <a name="a-namegetyeara--ctimegetyear"></a><a name="getyear"></a>CTime::GetYear  
+##  <a name="getyear"></a>CTime::GetYear  
  Возвращает год, представленный `CTime` объекта.  
   
 ```  
@@ -490,7 +506,7 @@ int GetYear();
 ### <a name="example"></a>Пример  
  В примере показано [GetDay](#getday).  
   
-##  <a name="a-nameoperatoreqa--ctimeoperator-"></a><a name="operator_eq"></a>CTime::operator =  
+##  <a name="operator_eq"></a>CTime::operator =  
  Оператор присваивания.  
   
 ```  
@@ -507,7 +523,7 @@ CTime& operator=(__time64_t time) throw();
 ### <a name="remarks"></a>Примечания  
  Этот оператор назначения перегруженных копирует время источника в это `CTime` объекта. Внутреннее время хранения в `CTime` объекта не зависит от часового пояса. Преобразование часового пояса нет необходимости во время назначения.  
   
-##  <a name="a-nameoperatoradd-a--ctimeoperator---"></a><a name="operator_add_-"></a>CTime::operator +, -  
+##  <a name="operator_add_-"></a>CTime::operator +, -  
  Эти операторы сложения и вычитания `CTimeSpan` и `CTime` объектов.  
   
 ```  
@@ -532,7 +548,7 @@ CTimeSpan operator-(CTime time) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#159;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--ctimeoperator---"></a><a name="operator_add_eq_-_eq"></a>CTime::operator +=-=  
+##  <a name="operator_add_eq_-_eq"></a>CTime::operator +=-=  
  Эти операторы сложения и вычитания `CTimeSpan` и обратно это `CTime` объекта.  
   
 ```  
@@ -553,7 +569,7 @@ CTime& operator-=(CTimeSpan span) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#160;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
   
-##  <a name="a-nameserialize64a--ctimeserialize64"></a><a name="serialize64"></a>CTime::Serialize64  
+##  <a name="serialize64"></a>CTime::Serialize64  
   
 > [!NOTE]
 >  Этот метод доступен только в проектах MFC.  

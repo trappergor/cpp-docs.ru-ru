@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::GetWrappedWnd
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::LoadState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SaveState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SetWrappedWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxDockablePaneAdapter.h  
   
-##  <a name="a-namegetwrappedwnda--cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
  Возвращает окна для закрепляемой области адаптера.  
   
 ```  
@@ -87,7 +92,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>Примечания  
  Эту функцию можно используйте для доступа к окну оболочку.  
   
-##  <a name="a-nameloadstatea--cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
  Загружает состояние области из реестра.  
   
 ```  
@@ -111,7 +116,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesavestatea--cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
  Сохраняет состояние области реестра.  
   
 ```  
@@ -135,7 +140,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetwrappedwnda--cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
  Задает нижележащего окна для закрепляемой области адаптера.  
   
 ```  

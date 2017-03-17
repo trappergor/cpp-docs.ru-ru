@@ -9,13 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CMFCPropertyGridToolTipCtrl::PreTranslateMessage
-- ~CMFCPropertyGridToolTipCtrl
-- PreTranslateMessage
-- CMFCPropertyGridToolTipCtrl.~CMFCPropertyGridToolTipCtrl
 - CMFCPropertyGridToolTipCtrl
-- CMFCPropertyGridToolTipCtrl.PreTranslateMessage
-- CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Create
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Deactivate
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::GetLastRect
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Hide
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::SetTextMargin
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Track
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,14 +104,14 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxpropertygridtooltipctrl.h  
   
-##  <a name="a-namecmfcpropertygridtooltipctrla--cmfcpropertygridtooltipctrlcmfcpropertygridtooltipctrl"></a><a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
  Создает объект `CMFCPropertyGridToolTipCtrl`.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="a-namecreatea--cmfcpropertygridtooltipctrlcreate"></a><a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
  Создает окно для элемента управления всплывающей подсказки.  
   
 ```  
@@ -123,7 +125,7 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если окно был успешно создан; в противном случае — значение FALSE.  
   
-##  <a name="a-namedeactivatea--cmfcpropertygridtooltipctrldeactivate"></a><a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
  Отключает и скрывает элемент управления всплывающей подсказки.  
   
 ```  
@@ -133,7 +135,7 @@ void Deactivate();
 ### <a name="remarks"></a>Примечания  
  Этот метод задает текст и положение последнего пустые значения, чтобы вызовы будущего [CMFCPropertyGridToolTipCtrl::Track](#track) отображения всплывающей подсказки.  
   
-##  <a name="a-namegetlastrecta--cmfcpropertygridtooltipctrlgetlastrect"></a><a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
  Возвращает координаты последней позиции элемента управления всплывающей подсказки.  
   
 ```  
@@ -144,14 +146,14 @@ void GetLastRect(CRect& rect) const;
  [выходной] `rect`  
  Содержит последней позиции элемента управления всплывающей подсказки.  
   
-##  <a name="a-namehidea--cmfcpropertygridtooltipctrlhide"></a><a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
  Скрывает элемент управления всплывающей подсказки.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="a-namesettextmargina--cmfcpropertygridtooltipctrlsettextmargin"></a><a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
  Задает расстояние между текст подсказки и границы окна всплывающей подсказки.  
   
 ```  
@@ -162,7 +164,7 @@ void SetTextMargin(int nTextMargin);
  [in] `nTextMargin`  
  Задает расстояние между текст всплывающей подсказки элемента управления и границей окна всплывающей подсказки. Значение по умолчанию — 10 точек.  
   
-##  <a name="a-nametracka--cmfcpropertygridtooltipctrltrack"></a><a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
  Отображает элемент управления всплывающей подсказки.  
   
 ```  

@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CDCRenderTarget
 - CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::Attach
+- AFXRENDERTARGET/CDCRenderTarget::BindDC
+- AFXRENDERTARGET/CDCRenderTarget::Create
+- AFXRENDERTARGET/CDCRenderTarget::Detach
+- AFXRENDERTARGET/CDCRenderTarget::GetDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::m_pDCRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +96,7 @@ class CDCRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Attach  
+##  <a name="attach"></a>CDCRenderTarget::Attach  
  Присоединяет существующую отображения интерфейса целевой объект  
   
 ```  
@@ -100,7 +107,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
  `pTarget`  
  Существующий интерфейс целевой отрисовки. Не может иметь значение NULL  
   
-##  <a name="a-namebinddca--cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC  
+##  <a name="binddc"></a>CDCRenderTarget::BindDC  
  Привязывает объект рендеринга контекста устройства, к которому она выдает команд рисования  
   
 ```  
@@ -119,14 +126,14 @@ BOOL BindDC(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
   
-##  <a name="a-namecdcrendertargeta--cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
  Создает объект CDCRenderTarget.  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="a-namecreatea--cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Create  
+##  <a name="create"></a>CDCRenderTarget::Create  
  Создает CDCRenderTarget.  
   
 ```  
@@ -140,7 +147,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
   
-##  <a name="a-namedetacha--cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach  
+##  <a name="detach"></a>CDCRenderTarget::Detach  
  Отсоединяет визуализации интерфейса целевого объекта  
   
 ```  
@@ -150,7 +157,7 @@ ID2D1DCRenderTarget* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на отсоединенные отображения интерфейса целевой.  
   
-##  <a name="a-namegetdcrendertargeta--cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
  Возвращает интерфейс ID2D1DCRenderTarget  
   
 ```  
@@ -160,14 +167,14 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1DCRenderTarget или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="a-namempdcrendertargeta--cdcrendertargetmpdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
  Указатель на объект ID2D1DCRenderTarget.  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1dcrendertargetstara--cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
  Возвращает интерфейс ID2D1DCRenderTarget  
   
 ```  

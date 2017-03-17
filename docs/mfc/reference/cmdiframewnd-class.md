@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CreateClient
+- AFXWIN/CMDIFrameWnd::CreateNewChild
+- AFXWIN/CMDIFrameWnd::GetWindowMenuPopup
+- AFXWIN/CMDIFrameWnd::MDIActivate
+- AFXWIN/CMDIFrameWnd::MDICascade
+- AFXWIN/CMDIFrameWnd::MDIGetActive
+- AFXWIN/CMDIFrameWnd::MDIIconArrange
+- AFXWIN/CMDIFrameWnd::MDIMaximize
+- AFXWIN/CMDIFrameWnd::MDINext
+- AFXWIN/CMDIFrameWnd::MDIPrev
+- AFXWIN/CMDIFrameWnd::MDIRestore
+- AFXWIN/CMDIFrameWnd::MDISetMenu
+- AFXWIN/CMDIFrameWnd::MDITile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +141,7 @@ class CMDIFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecmdiframewnda--cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
+##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
  Создает объект `CMDIFrameWnd`.  
   
 ```  
@@ -139,7 +154,7 @@ CMDIFrameWnd();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#13;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="a-namecreateclienta--cmdiframewndcreateclient"></a><a name="createclient"></a>CMDIFrameWnd::CreateClient  
+##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
  Создает окно MDI-приложения клиента, которое управляет `CMDIChildWnd` объектов.  
   
 ```  
@@ -164,7 +179,7 @@ virtual BOOL CreateClient(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#14;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="a-namecreatenewchilda--cmdiframewndcreatenewchild"></a><a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
+##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
  Создание нового дочернего окна.  
   
 ```  
@@ -196,7 +211,7 @@ CMDIChildWnd* CreateNewChild(
   
  Данный пример является выдержкой из статьи базы знаний Q201045, «Практическое руководство: добавлять несколько типов окна MDI без документов и представлений приложение.» Статьи базы знаний, доступны в документации по Visual Studio библиотеки MSDN или в [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namegetwindowmenupopupa--cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
+##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
  Вызовите эту функцию-член для получения дескриптора для текущего контекстного меню с именем «Окно» (всплывающее меню с элементами для управления окном MDI).  
   
 ```  
@@ -218,7 +233,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing №&16;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="a-namemdiactivatea--cmdiframewndmdiactivate"></a><a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
  Активирует различных дочернего окна MDI.  
   
 ```  
@@ -240,7 +255,7 @@ void MDIActivate(CWnd* pWndActivate);
 ### <a name="example"></a>Пример  
  В примере показано [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).  
   
-##  <a name="a-namemdicascadea--cmdiframewndmdicascade"></a><a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
+##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
  Упорядочивает все дочерние окна MDI в формате cascade.  
   
 ```  
@@ -258,7 +273,7 @@ void MDICascade(int nType);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&17;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="a-namemdigetactivea--cmdiframewndmdigetactive"></a><a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
+##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
  Получает текущий активную дочернюю MDI, а также флаг, указывающий, развернута ли дочернего окна.  
   
 ```  
@@ -275,7 +290,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="example"></a>Пример  
  В примере показано [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="a-namemdiiconarrangea--cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
+##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
  Располагает все свернутые документа дочерние окна.  
   
 ```  
@@ -288,7 +303,7 @@ void MDIIconArrange();
 ### <a name="example"></a>Пример  
  В примере показано [CMDIFrameWnd::MDICascade](#mdicascade).  
   
-##  <a name="a-namemdimaximizea--cmdiframewndmdimaximize"></a><a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
  Разворачивает указанного дочернего окна MDI.  
   
 ```  
@@ -307,7 +322,7 @@ void MDIMaximize(CWnd* pWnd);
 ### <a name="example"></a>Пример  
  В примере показано [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="a-namemdinexta--cmdiframewndmdinext"></a><a name="mdinext"></a>CMDIFrameWnd::MDINext  
+##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
  Активирует дочернее окно сразу же за текущей активной дочернего окна и помещает активного дочернее окно за все дочерние окна.  
   
 ```  
@@ -320,7 +335,7 @@ void MDINext();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&18;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="a-namemdipreva--cmdiframewndmdiprev"></a><a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
+##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
  Активирует предыдущего дочернего окна и помещает активной дочернего окна сразу под ним.  
   
 ```  
@@ -330,7 +345,7 @@ void MDIPrev();
 ### <a name="remarks"></a>Примечания  
  Если развернуто дочернее окно текущего активного MDI, функция-член восстанавливает текущей активной дочерней и увеличивает вновь активированные дочерних.  
   
-##  <a name="a-namemdirestorea--cmdiframewndmdirestore"></a><a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
  Восстанавливает дочернего окна MDI из развернутой или свернутой размер.  
   
 ```  
@@ -344,7 +359,7 @@ void MDIRestore(CWnd* pWnd);
 ### <a name="example"></a>Пример  
  В примере показано [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).  
   
-##  <a name="a-namemdisetmenua--cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
+##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
  Заменяет в окне фрейма MDI меню и контекстного меню окна.  
   
 ```  
@@ -377,7 +392,7 @@ CMenu* MDISetMenu(
   
  [!code-cpp[NVC_MFCWindowing&20;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="a-namemditilea--cmdiframewndmditile"></a><a name="mditile"></a>CMDIFrameWnd::MDITile  
+##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
  Упорядочивает все дочерние окна в виде мозаики.  
   
 ```  

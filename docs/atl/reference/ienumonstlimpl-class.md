@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
-- ATL.IEnumOnSTLImpl
-- ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl::Clone
+- ATLCOM/ATL::IEnumOnSTLImpl::Init
+- ATLCOM/ATL::IEnumOnSTLImpl::Next
+- ATLCOM/ATL::IEnumOnSTLImpl::Reset
+- ATLCOM/ATL::IEnumOnSTLImpl::Skip
+- ATLCOM/ATL::IEnumOnSTLImpl::m_iter
+- ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
+- ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +113,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-nameinita--ienumonstlimplinit"></a><a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>IEnumOnSTLImpl::Init  
  Инициализирует перечислитель.  
   
 ```
@@ -130,7 +137,7 @@ HRESULT Init(
   
  Прежде чем передать указатель на интерфейс перечислителя обратно для любых клиентов, необходимо вызвать этот метод.  
   
-##  <a name="a-nameclonea--ienumonstlimplclone"></a><a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
  Этот метод предоставляет реализацию [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) метод путем создания объекта типа `CComEnumOnSTL`, инициализирует его с тем же коллекции и итераторов, используемые текущим объектом и возвращает интерфейс на вновь созданный объект.  
   
 ```
@@ -144,7 +151,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namemspunka--ienumonstlimplmspunk"></a><a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
  **IUnknown** указатель объекта, указав коллекцию.  
   
 ```
@@ -154,7 +161,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Примечания  
  Этого интеллектуального указателя содержит ссылку на объект, передаваемый в [IEnumOnSTLImpl::Init](#init), гарантируя, что он остается активным в течение времени существования перечислителя.  
   
-##  <a name="a-namempcollectiona--ienumonstlimplmpcollection"></a><a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
  Этот элемент указывает коллекцию, которая содержит данные, представленные реализацию интерфейса перечислителя.  
   
 ```
@@ -164,14 +171,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Примечания  
  Этот член инициализируется путем вызова [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="a-namemitera--ienumonstlimplmiter"></a><a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
  Этот член содержит итератора, который используется для маркировки текущую позицию в коллекции и перехода на последующие элементы.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="a-namenexta--ienumonstlimplnext"></a><a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>IEnumOnSTLImpl::Next  
  Этот метод предоставляет реализацию [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) метод.  
   
 ```
@@ -194,7 +201,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namereseta--ienumonstlimplreset"></a><a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
  Этот метод предоставляет реализацию [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) метод.  
   
 ```
@@ -204,7 +211,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-nameskipa--ienumonstlimplskip"></a><a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
  Этот метод предоставляет реализацию [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) метод.  
   
 ```

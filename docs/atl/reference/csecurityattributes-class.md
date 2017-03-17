@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSecurityAttributes
-- ATL::CSecurityAttributes
 - CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +81,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="a-namecsecurityattributesa--csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
  Конструктор.  
   
 ```
@@ -95,7 +96,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.  
   
-##  <a name="a-nameseta--csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set  
+##  <a name="set"></a>CSecurityAttributes::Set  
  Вызовите этот метод, чтобы задать атрибуты `CSecurityAttributes` объекта.  
   
 ```

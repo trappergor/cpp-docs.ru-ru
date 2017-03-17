@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
+- AFXCTL/CDataPathProperty
+- AFXCTL/CDataPathProperty::CDataPathProperty
+- AFXCTL/CDataPathProperty::GetControl
+- AFXCTL/CDataPathProperty::GetPath
+- AFXCTL/CDataPathProperty::Open
+- AFXCTL/CDataPathProperty::ResetData
+- AFXCTL/CDataPathProperty::SetControl
+- AFXCTL/CDataPathProperty::SetPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="a-namecdatapathpropertya--cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
  Создает объект `CDataPathProperty`.  
   
 ```  
@@ -115,7 +123,7 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ### <a name="remarks"></a>Примечания  
  `COleControl` Объекта, на который указывает `pControl` используется **откройте** и получить производными классами. Если `pControl` — **NULL**, элемент управления, используемый с **откройте** должно быть задано значение `SetControl`. Если `lpszPath` — **NULL**, можно передать путь через **откройте** или настроить ее с помощью `SetPath`.  
   
-##  <a name="a-namegetcontrola--cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
  Вызовите эту функцию-член для получения `COleControl` объекта, связанного с `CDataPathProperty` объекта.  
   
 ```  
@@ -125,7 +133,7 @@ COleControl* GetControl();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на элемент управления OLE, связанных с `CDataPathProperty` объекта. **NULL** Если управления не связан.  
   
-##  <a name="a-namegetpatha--cdatapathpropertygetpath"></a><a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>CDataPathProperty::GetPath  
  Вызов этой функции-члена для получения пути, устанавливается, когда `CDataPathProperty` объект был создан или указанные в **откройте**, или указанный в предыдущем вызове `SetPath` функции-члена.  
   
 ```  
@@ -135,7 +143,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает путь к самому свойству. Может быть пустым, если путь не был указан.  
   
-##  <a name="a-nameopena--cdatapathpropertyopen"></a><a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>CDataPathProperty::Open  
  Вызовите эту функцию-член, чтобы инициировать загрузку асинхронного свойства связанного элемента управления.  
   
 ```  
@@ -179,7 +187,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  Все перегрузки [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) также доступны из `CDataPathProperty`.  
   
-##  <a name="a-nameresetdataa--cdatapathpropertyresetdata"></a><a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>CDataPathProperty::ResetData  
  Эта функция вызывается для получения `CAsyncMonikerFile::OnDataAvailable` для уведомления контейнера изменились свойства элемента управления, что все сведения, загрузить асинхронно не используется.  
   
 ```  
@@ -189,7 +197,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>Примечания  
  Открытие следует перезапустить. Производные классы могут переопределять эту функцию для различные значения по умолчанию.  
   
-##  <a name="a-namesetcontrola--cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
  Вызовите эту функцию-член, чтобы связать элемент управления асинхронной OLE с `CDataPathProperty` объекта.  
   
 ```  
@@ -200,7 +208,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  Указатель для управления асинхронной OLE, сопоставляемое со свойством.  
   
-##  <a name="a-namesetpatha--cdatapathpropertysetpath"></a><a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>CDataPathProperty::SetPath  
  Вызовите эту функцию-член, чтобы задать путь к свойству.  
   
 ```  

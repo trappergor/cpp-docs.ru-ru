@@ -10,6 +10,101 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlView
+- AFXHTML/CHtmlView
+- AFXHTML/CHtmlView::Create
+- AFXHTML/CHtmlView::CreateControlSite
+- AFXHTML/CHtmlView::ExecFormsCommand
+- AFXHTML/CHtmlView::ExecWB
+- AFXHTML/CHtmlView::GetAddressBar
+- AFXHTML/CHtmlView::GetApplication
+- AFXHTML/CHtmlView::GetBusy
+- AFXHTML/CHtmlView::GetContainer
+- AFXHTML/CHtmlView::GetFullName
+- AFXHTML/CHtmlView::GetFullScreen
+- AFXHTML/CHtmlView::GetHeight
+- AFXHTML/CHtmlView::GetHtmlDocument
+- AFXHTML/CHtmlView::GetLeft
+- AFXHTML/CHtmlView::GetLocationName
+- AFXHTML/CHtmlView::GetLocationURL
+- AFXHTML/CHtmlView::GetMenuBar
+- AFXHTML/CHtmlView::GetOffline
+- AFXHTML/CHtmlView::GetParentBrowser
+- AFXHTML/CHtmlView::GetProperty
+- AFXHTML/CHtmlView::GetReadyState
+- AFXHTML/CHtmlView::GetRegisterAsBrowser
+- AFXHTML/CHtmlView::GetRegisterAsDropTarget
+- AFXHTML/CHtmlView::GetSilent
+- AFXHTML/CHtmlView::GetSource
+- AFXHTML/CHtmlView::GetStatusBar
+- AFXHTML/CHtmlView::GetTheaterMode
+- AFXHTML/CHtmlView::GetToolBar
+- AFXHTML/CHtmlView::GetTop
+- AFXHTML/CHtmlView::GetTopLevelContainer
+- AFXHTML/CHtmlView::GetType
+- AFXHTML/CHtmlView::GetVisible
+- AFXHTML/CHtmlView::GetWidth
+- AFXHTML/CHtmlView::GoBack
+- AFXHTML/CHtmlView::GoForward
+- AFXHTML/CHtmlView::GoHome
+- AFXHTML/CHtmlView::GoSearch
+- AFXHTML/CHtmlView::LoadFromResource
+- AFXHTML/CHtmlView::Navigate
+- AFXHTML/CHtmlView::Navigate2
+- AFXHTML/CHtmlView::OnBeforeNavigate2
+- AFXHTML/CHtmlView::OnCommandStateChange
+- AFXHTML/CHtmlView::OnDocumentComplete
+- AFXHTML/CHtmlView::OnDocWindowActivate
+- AFXHTML/CHtmlView::OnDownloadBegin
+- AFXHTML/CHtmlView::OnDownloadComplete
+- AFXHTML/CHtmlView::OnEnableModeless
+- AFXHTML/CHtmlView::OnFilterDataObject
+- AFXHTML/CHtmlView::OnFrameWindowActivate
+- AFXHTML/CHtmlView::OnFullScreen
+- AFXHTML/CHtmlView::OnGetDropTarget
+- AFXHTML/CHtmlView::OnGetExternal
+- AFXHTML/CHtmlView::OnGetHostInfo
+- AFXHTML/CHtmlView::OnGetOptionKeyPath
+- AFXHTML/CHtmlView::OnHideUI
+- AFXHTML/CHtmlView::OnMenuBar
+- AFXHTML/CHtmlView::OnNavigateComplete2
+- AFXHTML/CHtmlView::OnNavigateError
+- AFXHTML/CHtmlView::OnNewWindow2
+- AFXHTML/CHtmlView::OnProgressChange
+- AFXHTML/CHtmlView::OnPropertyChange
+- AFXHTML/CHtmlView::OnQuit
+- AFXHTML/CHtmlView::OnResizeBorder
+- AFXHTML/CHtmlView::OnShowContextMenu
+- AFXHTML/CHtmlView::OnShowUI
+- AFXHTML/CHtmlView::OnStatusBar
+- AFXHTML/CHtmlView::OnStatusTextChange
+- AFXHTML/CHtmlView::OnTheaterMode
+- AFXHTML/CHtmlView::OnTitleChange
+- AFXHTML/CHtmlView::OnToolBar
+- AFXHTML/CHtmlView::OnTranslateAccelerator
+- AFXHTML/CHtmlView::OnTranslateUrl
+- AFXHTML/CHtmlView::OnUpdateUI
+- AFXHTML/CHtmlView::OnVisible
+- AFXHTML/CHtmlView::PutProperty
+- AFXHTML/CHtmlView::QueryFormsCommand
+- AFXHTML/CHtmlView::QueryStatusWB
+- AFXHTML/CHtmlView::Refresh
+- AFXHTML/CHtmlView::Refresh2
+- AFXHTML/CHtmlView::SetAddressBar
+- AFXHTML/CHtmlView::SetFullScreen
+- AFXHTML/CHtmlView::SetHeight
+- AFXHTML/CHtmlView::SetLeft
+- AFXHTML/CHtmlView::SetMenuBar
+- AFXHTML/CHtmlView::SetOffline
+- AFXHTML/CHtmlView::SetRegisterAsBrowser
+- AFXHTML/CHtmlView::SetRegisterAsDropTarget
+- AFXHTML/CHtmlView::SetSilent
+- AFXHTML/CHtmlView::SetStatusBar
+- AFXHTML/CHtmlView::SetTheaterMode
+- AFXHTML/CHtmlView::SetToolBar
+- AFXHTML/CHtmlView::SetTop
+- AFXHTML/CHtmlView::SetVisible
+- AFXHTML/CHtmlView::SetWidth
+- AFXHTML/CHtmlView::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -199,7 +294,7 @@ class CHtmlView : public CFormView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxhtml.h  
   
-##  <a name="a-namecreatea--chtmlviewcreate"></a><a name="create"></a>CHtmlView::Create  
+##  <a name="create"></a>CHtmlView::Create  
  Вызовите эту функцию-член для создания элемента управления WebBrowser или контейнер для Internet Explorer исполняемого файла.  
   
 ```  
@@ -235,7 +330,7 @@ virtual BOOL Create(
  `pContext`  
  Указатель на [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **Значение NULL,** по умолчанию.  
   
-##  <a name="a-namecreatecontrolsitea--chtmlviewcreatecontrolsite"></a><a name="createcontrolsite"></a>CHtmlView::CreateControlSite  
+##  <a name="createcontrolsite"></a>CHtmlView::CreateControlSite  
  Переопределяемый класс, используемый для создания экземпляра сайта элемента управления для размещения элемента управления на форме.  
   
 ```  
@@ -265,7 +360,7 @@ virtual BOOL CreateControlSite(
 ### <a name="remarks"></a>Примечания  
  Можно переопределить эту функцию-член для возврата экземпляра класса сайта собственного элемента управления.  
   
-##  <a name="a-nameexecformscommanda--chtmlviewexecformscommand"></a><a name="execformscommand"></a>CHtmlView::ExecFormsCommand  
+##  <a name="execformscommand"></a>CHtmlView::ExecFormsCommand  
  Выполняет указанную команду с помощью метода `IOleCommandTarget::Exec` .  
   
 ```  
@@ -291,7 +386,7 @@ HRESULT ExecFormsCommand(
 ### <a name="remarks"></a>Примечания  
  **ExecFormsCommand** реализует поведение [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) метод.  
   
-##  <a name="a-nameexecwba--chtmlviewexecwb"></a><a name="execwb"></a>CHtmlView::ExecWB  
+##  <a name="execwb"></a>CHtmlView::ExecWB  
  Вызовите эту функцию-член для выполнения команды WebBrowser или Internet Explorer.  
   
 ```  
@@ -318,7 +413,7 @@ void ExecWB(
 ### <a name="remarks"></a>Примечания  
  В разделе [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetaddressbara--chtmlviewgetaddressbar"></a><a name="getaddressbar"></a>CHtmlView::GetAddressBar  
+##  <a name="getaddressbar"></a>CHtmlView::GetAddressBar  
  Вызовите эту функцию-член для получения адресной строки обозревателя Internet Explorer.  
   
 ```  
@@ -331,7 +426,7 @@ BOOL GetAddressBar() const;
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namegetapplicationa--chtmlviewgetapplication"></a><a name="getapplication"></a>CHtmlView::GetApplication  
+##  <a name="getapplication"></a>CHtmlView::GetApplication  
  Вызовите эту функцию-член для получения объекта автоматизации, поддерживаемых приложением, который содержит элемент управления WebBrowser.  
   
 ```  
@@ -344,7 +439,7 @@ LPDISPATCH GetApplication() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetbusya--chtmlviewgetbusy"></a><a name="getbusy"></a>CHtmlView::GetBusy  
+##  <a name="getbusy"></a>CHtmlView::GetBusy  
  Вызовите эту функцию-член для определения, участвует ли элемент управления WebBrowser в навигации или операции загрузки.  
   
 ```  
@@ -357,7 +452,7 @@ BOOL GetBusy() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetcontainera--chtmlviewgetcontainer"></a><a name="getcontainer"></a>CHtmlView::GetContainer  
+##  <a name="getcontainer"></a>CHtmlView::GetContainer  
  Вызовите эту функцию-член для получения объекта, результатом которого является контейнер веб-браузера.  
   
 ```  
@@ -370,7 +465,7 @@ LPDISPATCH GetContainer() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetfullnamea--chtmlviewgetfullname"></a><a name="getfullname"></a>CHtmlView::GetFullName  
+##  <a name="getfullname"></a>CHtmlView::GetFullName  
  Вызов этой функции-члена для получения полного пути файла, который в данный момент отображает Internet Explorer.  
   
 ```  
@@ -383,7 +478,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namegetfullscreena--chtmlviewgetfullscreen"></a><a name="getfullscreen"></a>CHtmlView::GetFullScreen  
+##  <a name="getfullscreen"></a>CHtmlView::GetFullScreen  
  Вызовите эту функцию-член, чтобы определить, работает ли элемент управления WebBrowser в полноэкранном режиме или в режиме обычного окна.  
   
 ```  
@@ -398,7 +493,7 @@ BOOL GetFullScreen() const;
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetheighta--chtmlviewgetheight"></a><a name="getheight"></a>CHtmlView::GetHeight  
+##  <a name="getheight"></a>CHtmlView::GetHeight  
  Вызовите эту функцию-член для получения высоту в пикселях фрейм окна элемента управления WebBrowser.  
   
 ```  
@@ -408,7 +503,7 @@ long GetHeight() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Высота элемента управления фрейм окна, в пикселях.  
   
-##  <a name="a-namegethtmldocumenta--chtmlviewgethtmldocument"></a><a name="gethtmldocument"></a>CHtmlView::GetHtmlDocument  
+##  <a name="gethtmldocument"></a>CHtmlView::GetHtmlDocument  
  Вызовите эту функцию-член для получения HTML-документ для активного документа.  
   
 ```  
@@ -421,7 +516,7 @@ LPDISPATCH GetHtmlDocument() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetlefta--chtmlviewgetleft"></a><a name="getleft"></a>CHtmlView::GetLeft  
+##  <a name="getleft"></a>CHtmlView::GetLeft  
  Вызовите эту функцию-член для получения расстояние между внутренним левым краем элемента управления WebBrowser и левым краем его контейнера.  
   
 ```  
@@ -434,7 +529,7 @@ long GetLeft() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetlocationnamea--chtmlviewgetlocationname"></a><a name="getlocationname"></a>CHtmlView::GetLocationName  
+##  <a name="getlocationname"></a>CHtmlView::GetLocationName  
  Вызовите эту функцию-член для получения имени ресурса, отображаемый в браузер.  
   
 ```  
@@ -449,7 +544,7 @@ CString GetLocationName() const;
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetlocationurla--chtmlviewgetlocationurl"></a><a name="getlocationurl"></a>CHtmlView::GetLocationURL  
+##  <a name="getlocationurl"></a>CHtmlView::GetLocationURL  
  Вызовите эту функцию-член для получения URL-адрес ресурса, который в данный момент отображает элемент управления WebBrowser.  
   
 ```  
@@ -464,7 +559,7 @@ CString GetLocationURL() const;
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetmenubara--chtmlviewgetmenubar"></a><a name="getmenubar"></a>CHtmlView::GetMenuBar  
+##  <a name="getmenubar"></a>CHtmlView::GetMenuBar  
  Вызовите эту функцию-член для определения того, отображается ли меню.  
   
 ```  
@@ -477,7 +572,7 @@ BOOL GetMenuBar() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetofflinea--chtmlviewgetoffline"></a><a name="getoffline"></a>CHtmlView::GetOffline  
+##  <a name="getoffline"></a>CHtmlView::GetOffline  
  Вызовите эту функцию-член для определения, работает ли веб-браузере вне сети.  
   
 ```  
@@ -490,7 +585,7 @@ BOOL GetOffline() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetparentbrowsera--chtmlviewgetparentbrowser"></a><a name="getparentbrowser"></a>CHtmlView::GetParentBrowser  
+##  <a name="getparentbrowser"></a>CHtmlView::GetParentBrowser  
  Вызовите эту функцию-член, чтобы получить указатель на родительский объект элемента управления WebBrowser.  
   
 ```  
@@ -503,7 +598,7 @@ LPDISPATCH GetParentBrowser() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetpropertya--chtmlviewgetproperty"></a><a name="getproperty"></a>CHtmlView::GetProperty  
+##  <a name="getproperty"></a>CHtmlView::GetProperty  
  Вызовите эту функцию-член для получения значения свойства, которые в данный момент связанный с элементом управления.  
   
 ```  
@@ -527,7 +622,7 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetreadystatea--chtmlviewgetreadystate"></a><a name="getreadystate"></a>CHtmlView::GetReadyState  
+##  <a name="getreadystate"></a>CHtmlView::GetReadyState  
  Вызовите эту функцию-член для получения состояния готовности объекта WebBrowser.  
   
 ```  
@@ -540,7 +635,7 @@ READYSTATE GetReadyState() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetregisterasbrowsera--chtmlviewgetregisterasbrowser"></a><a name="getregisterasbrowser"></a>CHtmlView::GetRegisterAsBrowser  
+##  <a name="getregisterasbrowser"></a>CHtmlView::GetRegisterAsBrowser  
  Вызовите эту функцию-член для определения того, зарегистрирован ли объект WebBrowser в качестве обозревателя верхнего уровня для разрешения имен целевой.  
   
 ```  
@@ -553,7 +648,7 @@ BOOL GetRegisterAsBrowser() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetregisterasdroptargeta--chtmlviewgetregisterasdroptarget"></a><a name="getregisterasdroptarget"></a>CHtmlView::GetRegisterAsDropTarget  
+##  <a name="getregisterasdroptarget"></a>CHtmlView::GetRegisterAsDropTarget  
  Вызовите эту функцию-член, чтобы определить, зарегистрирован ли элемент управления WebBrowser в качестве назначения для навигации.  
   
 ```  
@@ -566,7 +661,7 @@ BOOL GetRegisterAsDropTarget() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetsilenta--chtmlviewgetsilent"></a><a name="getsilent"></a>CHtmlView::GetSilent  
+##  <a name="getsilent"></a>CHtmlView::GetSilent  
  Вызовите эту функцию-член для определения, может ли отображаться в элементе управления WebBrowser все диалоговые окна.  
   
 ```  
@@ -579,7 +674,7 @@ BOOL GetSilent() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetsourcea--chtmlviewgetsource"></a><a name="getsource"></a>CHtmlView::GetSource  
+##  <a name="getsource"></a>CHtmlView::GetSource  
  Вызовите эту функцию-член для получения исходного кода HTML, веб-страницы.  
   
 ```  
@@ -596,7 +691,7 @@ BOOL GetSource(CString& strRef);
 ### <a name="remarks"></a>Примечания  
  Эта функция эквивалентна команде «Просмотр исходного кода» в Internet Explorer, за исключением того, что исходный код возвращается в `CString`.  
   
-##  <a name="a-namegetstatusbara--chtmlviewgetstatusbar"></a><a name="getstatusbar"></a>CHtmlView::GetStatusBar  
+##  <a name="getstatusbar"></a>CHtmlView::GetStatusBar  
  Вызовите эту функцию-член для определения того, отображается ли элемент управления WebBrowser в строке состояния.  
   
 ```  
@@ -609,7 +704,7 @@ BOOL GetStatusBar() const;
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namegettheatermodea--chtmlviewgettheatermode"></a><a name="gettheatermode"></a>CHtmlView::GetTheaterMode  
+##  <a name="gettheatermode"></a>CHtmlView::GetTheaterMode  
  Вызовите эту функцию-член, чтобы определить, является ли веб-браузера в режиме театра.  
   
 ```  
@@ -624,7 +719,7 @@ BOOL GetTheaterMode() const;
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegettoolbara--chtmlviewgettoolbar"></a><a name="gettoolbar"></a>CHtmlView::GetToolBar  
+##  <a name="gettoolbar"></a>CHtmlView::GetToolBar  
  Вызовите эту функцию-член для определения, видима ли панель инструментов.  
   
 ```  
@@ -634,7 +729,7 @@ int GetToolBar() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, указывающее, видима ли панель инструментов. Ненулевое значение, если панель инструментов отображается на экране; в противном случае — нуль.  
   
-##  <a name="a-namegettopa--chtmlviewgettop"></a><a name="gettop"></a>CHtmlView::GetTop  
+##  <a name="gettop"></a>CHtmlView::GetTop  
  Вызовите эту функцию-член для получения координаты экрана верхнего края элемента управления WebBrowser главного окна.  
   
 ```  
@@ -647,7 +742,7 @@ long GetTop() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegettoplevelcontainera--chtmlviewgettoplevelcontainer"></a><a name="gettoplevelcontainer"></a>CHtmlView::GetTopLevelContainer  
+##  <a name="gettoplevelcontainer"></a>CHtmlView::GetTopLevelContainer  
  Вызовите эту функцию-член для определения верхнего уровня контейнера элемента управления WebBrowser Internet Explorer.  
   
 ```  
@@ -660,7 +755,7 @@ BOOL GetTopLevelContainer() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegettypea--chtmlviewgettype"></a><a name="gettype"></a>CHtmlView::GetType  
+##  <a name="gettype"></a>CHtmlView::GetType  
  Вызовите эту функцию-член для получения имени типа автономной активного документа.  
   
 ```  
@@ -673,7 +768,7 @@ CString GetType() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetvisiblea--chtmlviewgetvisible"></a><a name="getvisible"></a>CHtmlView::GetVisible  
+##  <a name="getvisible"></a>CHtmlView::GetVisible  
  Вызовите эту функцию-член для определения, является ли видимым содержащегося объекта.  
   
 ```  
@@ -686,7 +781,7 @@ BOOL GetVisible() const;
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegetwidtha--chtmlviewgetwidth"></a><a name="getwidth"></a>CHtmlView::GetWidth  
+##  <a name="getwidth"></a>CHtmlView::GetWidth  
  Получает ширину главного окна Internet Explorer.  
   
 ```  
@@ -696,7 +791,7 @@ long GetWidth() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущая ширина окна в пикселях.  
   
-##  <a name="a-namegobacka--chtmlviewgoback"></a><a name="goback"></a>CHtmlView::GoBack  
+##  <a name="goback"></a>CHtmlView::GoBack  
  Переходит назад один элемент в списке журнала.  
   
 ```  
@@ -706,14 +801,14 @@ void GoBack();
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegoforwarda--chtmlviewgoforward"></a><a name="goforward"></a>CHtmlView::GoForward  
+##  <a name="goforward"></a>CHtmlView::GoForward  
  Переход вперед один элемент в списке журнала.  
   
 ```  
 void GoForward();
 ```  
   
-##  <a name="a-namegohomea--chtmlviewgohome"></a><a name="gohome"></a>CHtmlView::GoHome  
+##  <a name="gohome"></a>CHtmlView::GoHome  
  Переходит к текущей домашней или начальной странице, указанной в диалоговом окне "Свойства браузера" в Internet Explorer или в диалоговом окне "Свойства Интернета", доступном из панели управления.  
   
 ```  
@@ -723,7 +818,7 @@ void GoHome();
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namegosearcha--chtmlviewgosearch"></a><a name="gosearch"></a>CHtmlView::GoSearch  
+##  <a name="gosearch"></a>CHtmlView::GoSearch  
  Переходит к текущей странице поиска, как указано в диалоговом окне Свойства обозревателя Internet Explorer или в диалоговом окне Свойства Интернета доступны из панели управления.  
   
 ```  
@@ -733,7 +828,7 @@ void GoSearch();
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-nameloadfromresourcea--chtmlviewloadfromresource"></a><a name="loadfromresource"></a>CHtmlView::LoadFromResource  
+##  <a name="loadfromresource"></a>CHtmlView::LoadFromResource  
  Вызовите эту функцию-член для загрузки указанного ресурса в элемент управления WebBrowser.  
   
 ```  
@@ -754,7 +849,7 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namenavigatea--chtmlviewnavigate"></a><a name="navigate"></a>CHtmlView::Navigate  
+##  <a name="navigate"></a>CHtmlView::Navigate  
  Вызовите эту функцию-член для перехода к ресурсу, определяемому URL-адрес.  
   
 ```  
@@ -789,7 +884,7 @@ void Navigate(
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namenavigate2a--chtmlviewnavigate2"></a><a name="navigate2"></a>CHtmlView::Navigate2  
+##  <a name="navigate2"></a>CHtmlView::Navigate2  
  Вызовите эту функцию-член для перемещения ресурса, указанного в URL-адрес или файл, указанный параметром полный путь.  
   
 ```  
@@ -849,7 +944,7 @@ void Navigate2(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCHtmlHttp&#7;](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]  
   
-##  <a name="a-nameonbeforenavigate2a--chtmlviewonbeforenavigate2"></a><a name="onbeforenavigate2"></a>CHtmlView::OnBeforeNavigate2  
+##  <a name="onbeforenavigate2"></a>CHtmlView::OnBeforeNavigate2  
  Эта функция-член вызывается платформой для вызывают события, возникающего перед его выполнением в веб-браузере.  
   
 ```  
@@ -881,7 +976,7 @@ virtual void OnBeforeNavigate2(
  `pbCancel`  
  Указатель на флаг "Отмена". Приложение может задать этот параметр на ненулевое значение, для отмены операции навигации или равным нулю, чтобы позволить приложению продолжить.  
   
-##  <a name="a-nameoncommandstatechangea--chtmlviewoncommandstatechange"></a><a name="oncommandstatechange"></a>CHtmlView::OnCommandStateChange  
+##  <a name="oncommandstatechange"></a>CHtmlView::OnCommandStateChange  
  Эта функция-член вызывается платформой для оповещения приложения, что изменилось состояние команды браузера веб-узел.  
   
 ```  
@@ -897,7 +992,7 @@ virtual void OnCommandStateChange(
  `bEnable`  
  Состояние включения. Этот параметр имеет ненулевое значение, если команда включена, или нуль, если она отключена.  
   
-##  <a name="a-nameondocumentcompletea--chtmlviewondocumentcomplete"></a><a name="ondocumentcomplete"></a>CHtmlView::OnDocumentComplete  
+##  <a name="ondocumentcomplete"></a>CHtmlView::OnDocumentComplete  
  Эта функция-член вызывается платформой для оповещения приложения, что документ был достигнут `READYSTATE_COMPLETE` состояния.  
   
 ```  
@@ -913,7 +1008,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
   
  Указывает URL-адрес `lpszURL` может отличаться от URL-адрес, браузер посоветовали перейдите к, поскольку этот URL-адрес является каноническому и полные URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» при обращении к [перехода](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет «http://www.microsoft.com/». Кроме того Если сервер обозреватель перенаправлен на другой URL-адрес, URL-адреса перенаправления будут отражены здесь.  
   
-##  <a name="a-nameondocwindowactivatea--chtmlviewondocwindowactivate"></a><a name="ondocwindowactivate"></a>CHtmlView::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>CHtmlView::OnDocWindowActivate  
  Вызывается из реализованного в Internet Explorer или MSHTML метода **IOleInPlaceActiveObject::OnDocWindowActivate**, который уведомляет активный встроенный объект об активации или отключении окна документа контейнера.  
   
 ```  
@@ -930,7 +1025,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnDocWindowActivate` реагировать на `OnDocWindowActivate` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameondownloadbegina--chtmlviewondownloadbegin"></a><a name="ondownloadbegin"></a>CHtmlView::OnDownloadBegin  
+##  <a name="ondownloadbegin"></a>CHtmlView::OnDownloadBegin  
  Эта функция-член вызывается платформой для начала загрузки документа.  
   
 ```  
@@ -940,14 +1035,14 @@ virtual void OnDownloadBegin();
 ### <a name="remarks"></a>Примечания  
  Это событие возникает сразу после [OnBeforeNavigate2](#onbeforenavigate2) событие, если переход отменяется. Любой анимации или «занят» означает, что необходимо отобразить контейнер должен быть подключен к этому событию.  
   
-##  <a name="a-nameondownloadcompletea--chtmlviewondownloadcomplete"></a><a name="ondownloadcomplete"></a>CHtmlView::OnDownloadComplete  
+##  <a name="ondownloadcomplete"></a>CHtmlView::OnDownloadComplete  
  Эта функция-член вызывается платформой для указания, что операция перехода закончилась, была остановлена или не удалось.  
   
 ```  
 virtual void OnDownloadComplete();
 ```  
   
-##  <a name="a-nameonenablemodelessa--chtmlviewonenablemodeless"></a><a name="onenablemodeless"></a>CHtmlView::OnEnableModeless  
+##  <a name="onenablemodeless"></a>CHtmlView::OnEnableModeless  
  Вызывается, когда Internet Explorer или MSHTML отображает модальный пользовательский Интерфейс.  
   
 ```  
@@ -964,7 +1059,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>Примечания  
  Включает или отключает безрежимные диалоговые окна, когда контейнер создает или удаляет модального диалогового окна. Переопределение `OnEnableModeless` реагировать на `EnableModeless` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonfilterdataobjecta--chtmlviewonfilterdataobject"></a><a name="onfilterdataobject"></a>CHtmlView::OnFilterDataObject  
+##  <a name="onfilterdataobject"></a>CHtmlView::OnFilterDataObject  
  Вызывается Internet Explorer или MSHTML в основном приложении, чтобы разрешить ему заменить объект данных Internet Explorer или MSHTML.  
   
 ```  
@@ -986,7 +1081,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnFilterDataObject` реагировать на `FilterDataObject` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonframewindowactivatea--chtmlviewonframewindowactivate"></a><a name="onframewindowactivate"></a>CHtmlView::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>CHtmlView::OnFrameWindowActivate  
  Вызывается из [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) уведомлять объект контейнера верхнего уровня окно активируется или деактивируется.  
   
 ```  
@@ -1003,7 +1098,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnFrameWindowActivate` реагировать на `OnFrameWindowActivate` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonfullscreena--chtmlviewonfullscreen"></a><a name="onfullscreen"></a>CHtmlView::OnFullScreen  
+##  <a name="onfullscreen"></a>CHtmlView::OnFullScreen  
  Эта функция-член вызывается инфраструктурой при [во весь экран](https://msdn.microsoft.com/library/aa752119.aspx) измененное свойство.  
   
 ```  
@@ -1014,7 +1109,7 @@ virtual void OnFullScreen(BOOL bFullScreen);
  *bFullScreen*  
  Ненулевое значение, если Internet Explorer в полноэкранном режиме; в противном случае — нуль.  
   
-##  <a name="a-nameongetdroptargeta--chtmlviewongetdroptarget"></a><a name="ongetdroptarget"></a>CHtmlView::OnGetDropTarget  
+##  <a name="ongetdroptarget"></a>CHtmlView::OnGetDropTarget  
  Вызывается Internet Explorer или MSHTML при использовании в качестве целевого объекта перетаскивания, чтобы разрешить основному приложению предоставить альтернативный интерфейс `IDropTarget`.  
   
 ```  
@@ -1036,7 +1131,7 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnGetDropTarget` реагировать на `GetDropTarget` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameongetexternala--chtmlviewongetexternal"></a><a name="ongetexternal"></a>CHtmlView::OnGetExternal  
+##  <a name="ongetexternal"></a>CHtmlView::OnGetExternal  
  Вызывается Internet Explorer или MSHTML для получения интерфейса `IDispatch` основного приложения.  
   
 ```  
@@ -1053,7 +1148,7 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnGetExternal` реагировать на `GetExternal` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameongethostinfoa--chtmlviewongethostinfo"></a><a name="ongethostinfo"></a>CHtmlView::OnGetHostInfo  
+##  <a name="ongethostinfo"></a>CHtmlView::OnGetHostInfo  
  Возвращает возможности пользовательского интерфейса основного приложения Internet Explorer или MSHTML.  
   
 ```  
@@ -1070,7 +1165,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnGetHostInfo` реагировать на `GetHostInfo` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameongetoptionkeypatha--chtmlviewongetoptionkeypath"></a><a name="ongetoptionkeypath"></a>CHtmlView::OnGetOptionKeyPath  
+##  <a name="ongetoptionkeypath"></a>CHtmlView::OnGetOptionKeyPath  
  Вызовите эту функцию-член для получения раздела реестра, в котором Internet Explorer или MSHTML сохраняет настройки пользователя.  
   
 ```  
@@ -1092,7 +1187,7 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnGetOptionKeyPath` реагировать на `GetOptionKeyPath` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonhideuia--chtmlviewonhideui"></a><a name="onhideui"></a>CHtmlView::OnHideUI  
+##  <a name="onhideui"></a>CHtmlView::OnHideUI  
  Эта функция-член вызывается платформой, когда Internet Explorer или MSHTML удаляет его меню и панели инструментов.  
   
 ```  
@@ -1105,7 +1200,7 @@ virtual HRESULT OnHideUI();
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnHideUI` реагировать на `HideUI` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonmenubara--chtmlviewonmenubar"></a><a name="onmenubar"></a>CHtmlView::OnMenuBar  
+##  <a name="onmenubar"></a>CHtmlView::OnMenuBar  
  Эта функция-член вызывается инфраструктурой при [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) измененное свойство.  
   
 ```  
@@ -1116,7 +1211,7 @@ virtual void OnMenuBar(BOOL bMenuBar);
  *bMenuBar*  
  Ненулевое значение, если Internet Explorer меню является видимым. в противном случае — нуль.  
   
-##  <a name="a-nameonnavigatecomplete2a--chtmlviewonnavigatecomplete2"></a><a name="onnavigatecomplete2"></a>CHtmlView::OnNavigateComplete2  
+##  <a name="onnavigatecomplete2"></a>CHtmlView::OnNavigateComplete2  
  Эта функция-член вызывается платформой после завершения перехода по гиперссылке (в элементе окно или рамка).  
   
 ```  
@@ -1132,7 +1227,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
   
  Обратите внимание, что URL-адрес содержится в *strURL* может отличаться от URL-адрес, браузер посоветовали перейдите к, поскольку этот URL-адрес является каноническому и полные URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» при обращении к [перехода](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет «http://www.microsoft.com/». Кроме того Если сервер обозреватель перенаправлен на другой URL-адрес, URL-адреса перенаправления будут отражены здесь.  
   
-##  <a name="a-nameonnavigateerrora--chtmlviewonnavigateerror"></a><a name="onnavigateerror"></a>CHtmlView::OnNavigateError  
+##  <a name="onnavigateerror"></a>CHtmlView::OnNavigateError  
  Вызывается платформой, если переход по гиперссылке завершается ошибкой.  
   
 ```  
@@ -1161,7 +1256,7 @@ virtual void OnNavigateError(
   
  Дополнительные сведения см. в разделе [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)  
   
-##  <a name="a-nameonnewwindow2a--chtmlviewonnewwindow2"></a><a name="onnewwindow2"></a>CHtmlView::OnNewWindow2  
+##  <a name="onnewwindow2"></a>CHtmlView::OnNewWindow2  
  Эта функция-член вызывается инфраструктурой при новом окне должны быть созданы для отображения ресурса.  
   
 ```  
@@ -1180,7 +1275,7 @@ virtual void OnNewWindow2(
 ### <a name="remarks"></a>Примечания  
  Это событие предшествует созданию нового окна из элемента управления WebBrowser.  
   
-##  <a name="a-nameonprogresschangea--chtmlviewonprogresschange"></a><a name="onprogresschange"></a>CHtmlView::OnProgressChange  
+##  <a name="onprogresschange"></a>CHtmlView::OnProgressChange  
  Эта функция-член вызывается платформой для оповещения приложения, что ход выполнения операции загрузки был обновлен.  
   
 ```  
@@ -1199,7 +1294,7 @@ virtual void OnProgressChange(
 ### <a name="remarks"></a>Примечания  
  Контейнер можно использовать сведения, предоставляемые это событие для отображения количество загруженных байт или обновлять индикатор хода выполнения.  
   
-##  <a name="a-nameonpropertychangea--chtmlviewonpropertychange"></a><a name="onpropertychange"></a>CHtmlView::OnPropertyChange  
+##  <a name="onpropertychange"></a>CHtmlView::OnPropertyChange  
  Эта функция-член вызывается платформой для оповещения приложения, [PutProperty](#putproperty) изменилось значение свойства.  
   
 ```  
@@ -1210,14 +1305,14 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
  `lpszProperty`  
  Указатель на строку, содержащую имя свойства.  
   
-##  <a name="a-nameonquita--chtmlviewonquit"></a><a name="onquit"></a>CHtmlView::OnQuit  
+##  <a name="onquit"></a>CHtmlView::OnQuit  
  Эта функция-член вызывается платформой для оповещения приложения, что приложение Internet Explorer Готово закрыться.  
   
 ```  
 virtual void OnQuit();
 ```  
   
-##  <a name="a-nameonresizebordera--chtmlviewonresizeborder"></a><a name="onresizeborder"></a>CHtmlView::OnResizeBorder  
+##  <a name="onresizeborder"></a>CHtmlView::OnResizeBorder  
  Вызывается из Internet Explorer или MSHTML реализацию [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), предупреждающее, если нужно изменить размер пространства границы объекта.  
   
 ```  
@@ -1243,7 +1338,7 @@ virtual HRESULT OnResizeBorder(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnResizeBorder` реагировать на `ResizeBorder` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonshowcontextmenua--chtmlviewonshowcontextmenu"></a><a name="onshowcontextmenu"></a>CHtmlView::OnShowContextMenu  
+##  <a name="onshowcontextmenu"></a>CHtmlView::OnShowContextMenu  
  Вызывается из Internet Explorer или MSHTML перед отображением контекстного меню.  
   
 ```  
@@ -1273,7 +1368,7 @@ virtual HRESULT OnShowContextMenu(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnShowContextMenu` реагировать на `ShowContextMenu` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonshowuia--chtmlviewonshowui"></a><a name="onshowui"></a>CHtmlView::OnShowUI  
+##  <a name="onshowui"></a>CHtmlView::OnShowUI  
  Вызывается перед отображением меню и панелей инструментов в Internet Explorer или MSHTML.  
   
 ```  
@@ -1307,7 +1402,7 @@ virtual HRESULT OnShowUI(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnShowUI` реагировать на `ShowUI` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonstatusbara--chtmlviewonstatusbar"></a><a name="onstatusbar"></a>CHtmlView::OnStatusBar  
+##  <a name="onstatusbar"></a>CHtmlView::OnStatusBar  
  Эта функция-член вызывается инфраструктурой при [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) измененное свойство.  
   
 ```  
@@ -1318,7 +1413,7 @@ virtual void OnStatusBar(BOOL bStatusBar);
  *bStatusBar*  
  Ненулевое значение, если отображается в строке состояния Internet Explorer или в противном случае — нуль.  
   
-##  <a name="a-nameonstatustextchangea--chtmlviewonstatustextchange"></a><a name="onstatustextchange"></a>CHtmlView::OnStatusTextChange  
+##  <a name="onstatustextchange"></a>CHtmlView::OnStatusTextChange  
  Эта функция-член вызывается платформой для уведомления приложения, измененного текста в строке состояния, связанный с элементом управления WebBrowser.  
   
 ```  
@@ -1329,7 +1424,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
  `lpszText`  
  Строка, содержащая новый текст строки состояния.  
   
-##  <a name="a-nameontheatermodea--chtmlviewontheatermode"></a><a name="ontheatermode"></a>CHtmlView::OnTheaterMode  
+##  <a name="ontheatermode"></a>CHtmlView::OnTheaterMode  
  Эта функция-член вызывается инфраструктурой при [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) измененное свойство.  
   
 ```  
@@ -1340,7 +1435,7 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
  *bTheaterMode*  
  Ненулевое значение, если Internet Explorer находится в режиме театра. в противном случае — нуль.  
   
-##  <a name="a-nameontitlechangea--chtmlviewontitlechange"></a><a name="ontitlechange"></a>CHtmlView::OnTitleChange  
+##  <a name="ontitlechange"></a>CHtmlView::OnTitleChange  
  Эта функция-член вызывается платформой для оповещения приложения, если заголовок документа в элементе управления WebBrowser становится доступным или изменения.  
   
 ```  
@@ -1354,7 +1449,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ### <a name="remarks"></a>Примечания  
  Заголовок для HTML, может измениться; пока еще загружается HTML, URL-адрес документа задается как заголовок. После реальных title (если таковой имеется) анализируется от HTML, заголовок изменены фактическое название.  
   
-##  <a name="a-nameontoolbara--chtmlviewontoolbar"></a><a name="ontoolbar"></a>CHtmlView::OnToolBar  
+##  <a name="ontoolbar"></a>CHtmlView::OnToolBar  
  Эта функция-член вызывается инфраструктурой при [инструментов](https://msdn.microsoft.com/library/aa768274.aspx) измененное свойство.  
   
 ```  
@@ -1365,7 +1460,7 @@ virtual void OnToolBar(BOOL bToolBar);
  *bToolBar*  
  Ненулевое значение, если отображается панель инструментов Internet Explorer или в противном случае — нуль.  
   
-##  <a name="a-nameontranslateacceleratora--chtmlviewontranslateaccelerator"></a><a name="ontranslateaccelerator"></a>CHtmlView::OnTranslateAccelerator  
+##  <a name="ontranslateaccelerator"></a>CHtmlView::OnTranslateAccelerator  
  Вызывается Internet Explorer или MSHTML при [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) или [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) вызывается для обработки сообщений сочетаний клавиш меню из контейнера очереди сообщений.  
   
 ```  
@@ -1391,7 +1486,7 @@ virtual HRESULT OnTranslateAccelerator(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnTranslateAccelerator` реагировать на `TranslateAccelerator` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameontranslateurla--chtmlviewontranslateurl"></a><a name="ontranslateurl"></a>CHtmlView::OnTranslateUrl  
+##  <a name="ontranslateurl"></a>CHtmlView::OnTranslateUrl  
  Вызывается Internet Explorer или MSHTML, чтобы разрешить основному приложению изменять URL-адрес, который нужно загрузить.  
   
 ```  
@@ -1417,7 +1512,7 @@ virtual HRESULT OnTranslateUrl(
 ### <a name="remarks"></a>Примечания  
  Переопределение `OnTranslateUrl` реагировать на `TranslateUrl` уведомления из элемента управления веб-обозревателем Майкрософт. В разделе [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
   
-##  <a name="a-nameonupdateuia--chtmlviewonupdateui"></a><a name="onupdateui"></a>CHtmlView::OnUpdateUI  
+##  <a name="onupdateui"></a>CHtmlView::OnUpdateUI  
  Уведомляет основное приложение об изменении состояния команды.  
   
 ```  
@@ -1430,7 +1525,7 @@ virtual HRESULT OnUpdateUI();
 ### <a name="remarks"></a>Примечания  
  Узел должен обновить состояние кнопки панели инструментов. Этот метод вызывается независимо от возвращаемого значения из `ShowUI`. Переопределение `OnUpdateUI` реагировать на `UpdateUI` уведомления из элемента управления веб-обозревателем Майкрософт.  
   
-##  <a name="a-nameonvisiblea--chtmlviewonvisible"></a><a name="onvisible"></a>CHtmlView::OnVisible  
+##  <a name="onvisible"></a>CHtmlView::OnVisible  
  Эта функция-член вызывается инфраструктурой при окна для элемента управления WebBrowser должны быть отображены или скрыты.  
   
 ```  
@@ -1444,7 +1539,7 @@ virtual void OnVisible(BOOL bVisible);
 ### <a name="remarks"></a>Примечания  
  Это позволяет главного окна управления объекта вести себя так же, как будет вести себя окно Internet Explorer.  
   
-##  <a name="a-nameputpropertya--chtmlviewputproperty"></a><a name="putproperty"></a>CHtmlView::PutProperty  
+##  <a name="putproperty"></a>CHtmlView::PutProperty  
  Вызовите эту функцию-член для задания свойства, связанные с данным объектом.  
   
 ```  
@@ -1498,7 +1593,7 @@ void PutProperty(
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namequeryformscommanda--chtmlviewqueryformscommand"></a><a name="queryformscommand"></a>CHtmlView::QueryFormsCommand  
+##  <a name="queryformscommand"></a>CHtmlView::QueryFormsCommand  
  Запрашивает состояние одной или нескольких команд, созданных событиями пользовательского интерфейса.  
   
 ```  
@@ -1528,7 +1623,7 @@ HRESULT QueryFormsCommand(
 ### <a name="remarks"></a>Примечания  
  `QueryFormsCommand`реализует поведение [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) метод.  
   
-##  <a name="a-namequerystatuswba--chtmlviewquerystatuswb"></a><a name="querystatuswb"></a>CHtmlView::QueryStatusWB  
+##  <a name="querystatuswb"></a>CHtmlView::QueryStatusWB  
  Вызовите эту функцию-член для запроса состояния команды.  
   
 ```  
@@ -1547,7 +1642,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namerefresha--chtmlviewrefresh"></a><a name="refresh"></a>CHtmlView::Refresh  
+##  <a name="refresh"></a>CHtmlView::Refresh  
  Перезагружает URL-адрес или файл, который веб-браузера в настоящее время отображения.  
   
 ```  
@@ -1559,7 +1654,7 @@ void Refresh();
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namerefresh2a--chtmlviewrefresh2"></a><a name="refresh2"></a>CHtmlView::Refresh2  
+##  <a name="refresh2"></a>CHtmlView::Refresh2  
  Повторно загружает файл, который в данный момент отображает Internet Explorer.  
   
 ```  
@@ -1575,7 +1670,7 @@ void Refresh2(int nLevel);
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetaddressbara--chtmlviewsetaddressbar"></a><a name="setaddressbar"></a>CHtmlView::SetAddressBar  
+##  <a name="setaddressbar"></a>CHtmlView::SetAddressBar  
  Вызовите эту функцию-член для отображения или скрытия в адресной строке Internet Explorer объекта.  
   
 ```  
@@ -1589,7 +1684,7 @@ void SetAddressBar(BOOL bNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namesetfullscreena--chtmlviewsetfullscreen"></a><a name="setfullscreen"></a>CHtmlView::SetFullScreen  
+##  <a name="setfullscreen"></a>CHtmlView::SetFullScreen  
  Вызовите эту функцию-член для установки Internet Explorer в либо окно Полноэкранный или обычный режим.  
   
 ```  
@@ -1605,7 +1700,7 @@ void SetFullScreen(BOOL bNewValue);
   
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namesetheighta--chtmlviewsetheight"></a><a name="setheight"></a>CHtmlView::SetHeight  
+##  <a name="setheight"></a>CHtmlView::SetHeight  
  Вызовите эту функцию-член устанавливать высоту главного окна Internet Explorer.  
   
 ```  
@@ -1619,7 +1714,7 @@ void SetHeight(long nNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetlefta--chtmlviewsetleft"></a><a name="setleft"></a>CHtmlView::SetLeft  
+##  <a name="setleft"></a>CHtmlView::SetLeft  
  Задает положение главного окна Internet Explorer по горизонтали.  
   
 ```  
@@ -1630,7 +1725,7 @@ void SetLeft(long nNewValue);
  `nNewValue`  
  Экранная координата левой части главного окна.  
   
-##  <a name="a-namesetmenubara--chtmlviewsetmenubar"></a><a name="setmenubar"></a>CHtmlView::SetMenuBar  
+##  <a name="setmenubar"></a>CHtmlView::SetMenuBar  
  Вызовите эту функцию-член для отображения или скрытия меню Internet Explorer.  
   
 ```  
@@ -1644,7 +1739,7 @@ void SetMenuBar(BOOL bNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namesetofflinea--chtmlviewsetoffline"></a><a name="setoffline"></a>CHtmlView::SetOffline  
+##  <a name="setoffline"></a>CHtmlView::SetOffline  
  Эта функция элемента значение, указывающее, работает ли в данный момент элемента управления WebBrowser в автономном режиме.  
   
 ```  
@@ -1660,7 +1755,7 @@ void SetOffline(BOOL bNewValue);
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetregisterasbrowsera--chtmlviewsetregisterasbrowser"></a><a name="setregisterasbrowser"></a>CHtmlView::SetRegisterAsBrowser  
+##  <a name="setregisterasbrowser"></a>CHtmlView::SetRegisterAsBrowser  
  Эта функция элемента значение, указывающее, зарегистрирован ли элемент управления WebBrowser верхнего уровня браузера для разрешения имен целевой.  
   
 ```  
@@ -1676,7 +1771,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetregisterasdroptargeta--chtmlviewsetregisterasdroptarget"></a><a name="setregisterasdroptarget"></a>CHtmlView::SetRegisterAsDropTarget  
+##  <a name="setregisterasdroptarget"></a>CHtmlView::SetRegisterAsDropTarget  
  Эта функция элемента значение, указывающее, зарегистрирован ли элемент управления WebBrowser в качестве назначения для навигации.  
   
 ```  
@@ -1690,7 +1785,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetsilenta--chtmlviewsetsilent"></a><a name="setsilent"></a>CHtmlView::SetSilent  
+##  <a name="setsilent"></a>CHtmlView::SetSilent  
  Эта функция элемента значение, указывающее, может ли отображаться все диалоговые окна.  
   
 ```  
@@ -1704,7 +1799,7 @@ void SetSilent(BOOL bNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetstatusbara--chtmlviewsetstatusbar"></a><a name="setstatusbar"></a>CHtmlView::SetStatusBar  
+##  <a name="setstatusbar"></a>CHtmlView::SetStatusBar  
  Вызовите эту функцию-член для отображения в строке состояния.  
   
 ```  
@@ -1718,7 +1813,7 @@ void SetStatusBar(BOOL bNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namesettheatermodea--chtmlviewsettheatermode"></a><a name="settheatermode"></a>CHtmlView::SetTheaterMode  
+##  <a name="settheatermode"></a>CHtmlView::SetTheaterMode  
  Эта функция элемента значение, указывающее, является ли элемент управления WebBrowser в режиме театра.  
   
 ```  
@@ -1734,7 +1829,7 @@ void SetTheaterMode(BOOL bNewValue);
   
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesettoolbara--chtmlviewsettoolbar"></a><a name="settoolbar"></a>CHtmlView::SetToolBar  
+##  <a name="settoolbar"></a>CHtmlView::SetToolBar  
  Вызовите эту функцию-член для отображения или скрытия панели инструментов Internet Explorer.  
   
 ```  
@@ -1748,7 +1843,7 @@ void SetToolBar(int nNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется к Internet Explorer. При использовании этот вызов с помощью элемента управления WebBrowser, ошибка не возвращается, но он будет игнорировать этот вызов.  
   
-##  <a name="a-namesettopa--chtmlviewsettop"></a><a name="settop"></a>CHtmlView::SetTop  
+##  <a name="settop"></a>CHtmlView::SetTop  
  Эта функция члена, чтобы задать расстояние между внутренним верхним краем элемента управления WebBrowser и верхним краем его контейнера  
   
 ```  
@@ -1762,7 +1857,7 @@ void SetTop(long nNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetvisiblea--chtmlviewsetvisible"></a><a name="setvisible"></a>CHtmlView::SetVisible  
+##  <a name="setvisible"></a>CHtmlView::SetVisible  
  Вызовите эту функцию-член для задания состояния видимости элемента управления WebBrowser.  
   
 ```  
@@ -1776,7 +1871,7 @@ void SetVisible(BOOL bNewValue);
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  
   
-##  <a name="a-namesetwidtha--chtmlviewsetwidth"></a><a name="setwidth"></a>CHtmlView::SetWidth  
+##  <a name="setwidth"></a>CHtmlView::SetWidth  
  Задает ширину главного окна Internet Explorer.  
   
 ```  
@@ -1787,7 +1882,7 @@ void SetWidth(long nNewValue);
  `nNewValue`  
  Ширина в пикселях главного окна Internet Explorer.  
   
-##  <a name="a-namestopa--chtmlviewstop"></a><a name="stop"></a>CHtmlView::Stop  
+##  <a name="stop"></a>CHtmlView::Stop  
  Вызовите эту функцию-член для отмены все незаконченные переходы или загрузки операции и остановить все динамические элементы страниц, такие как фоновые звуки и анимации.  
   
 ```  

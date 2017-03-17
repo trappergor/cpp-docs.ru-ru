@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCmdUI
+- AFXWIN/CCmdUI
+- AFXWIN/CCmdUI::ContinueRouting
+- AFXWIN/CCmdUI::Enable
+- AFXWIN/CCmdUI::SetCheck
+- AFXWIN/CCmdUI::SetRadio
+- AFXWIN/CCmdUI::SetText
+- AFXWIN/CCmdUI::m_nID
+- AFXWIN/CCmdUI::m_nIndex
+- AFXWIN/CCmdUI::m_pMenu
+- AFXWIN/CCmdUI::m_pOther
+- AFXWIN/CCmdUI::m_pSubMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +116,7 @@ class CCmdUI
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecontinueroutinga--ccmduicontinuerouting"></a><a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
  Вызовите эту функцию-член определить механизм маршрутизации команд для продолжения рассылки текущее сообщение по цепочке обработчиков.  
   
 ```  
@@ -115,7 +126,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Примечания  
  Это функция дополнительный член, который должен использоваться в сочетании с `ON_COMMAND_EX` обработчик, который возвращает **FALSE**. Дополнительные сведения см. в разделе [технические примечание 6](../../mfc/tn006-message-maps.md).  
   
-##  <a name="a-nameenablea--ccmduienable"></a><a name="enable"></a>CCmdUI::Enable  
+##  <a name="enable"></a>CCmdUI::Enable  
  Вызовите эту функцию-член для включения или отключения элементов пользовательского интерфейса для этой команды.  
   
 ```  
@@ -131,21 +142,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView&#47;](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="a-namemnida--ccmduimnid"></a><a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>CCmdUI::m_nID  
  Идентификатор элемента меню, кнопки панели инструментов или другого объекта пользовательского интерфейса, представленного `CCmdUI` объекта.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="a-namemnindexa--ccmduimnindex"></a><a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
  Индекс элемента меню, кнопки панели инструментов или другого объекта пользовательского интерфейса, представленного `CCmdUI` объекта.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="a-namempmenua--ccmduimpmenu"></a><a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
  Указатель (из `CMenu` типа) в меню, представленного `CCmdUI` объекта.  
   
 ```  
@@ -155,7 +166,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>Примечания  
  **NULL** Если элемент не меню.  
   
-##  <a name="a-namempsubmenua--ccmduimpsubmenu"></a><a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
  Указатель (из `CMenu` типа) для автономной подменю представленного `CCmdUI` объекта.  
   
 ```  
@@ -165,7 +176,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>Примечания  
  **NULL** Если элемент не меню. Если меню «sub» — это всплывающее окно `m_nID` содержит идентификатор первого элемента в контекстном меню. Дополнительные сведения см. в разделе [Технические заметки 21](../../mfc/tn021-command-and-message-routing.md).  
   
-##  <a name="a-namempothera--ccmduimpother"></a><a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>CCmdUI::m_pOther  
  Указатель (типа `CWnd`) на объект окна, например панель инструментов или состояния, который отправил уведомление.  
   
 ```  
@@ -175,7 +186,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>Примечания  
  **NULL** , является ли элемент меню или значение, отличное от `CWnd` объекта.  
   
-##  <a name="a-namesetchecka--ccmduisetcheck"></a><a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>CCmdUI::SetCheck  
  Вызовите эту функцию-член присвоено состояние флажка соответствующий элемент пользовательского интерфейса для этой команды.  
   
 ```  
@@ -189,7 +200,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член работает для элементов меню и кнопки панели инструментов. Неопределенное состояние применяется только к кнопкам панели инструментов.  
   
-##  <a name="a-namesetradioa--ccmduisetradio"></a><a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>CCmdUI::SetRadio  
  Вызовите эту функцию-член присвоено состояние флажка соответствующий элемент пользовательского интерфейса для этой команды.  
   
 ```  
@@ -203,7 +214,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член работает как `SetCheck`, за исключением того, что он работает на элементы пользовательского интерфейса, действующий как часть группы переключателей. Сняв флажок других элементов в группе не выполняется автоматически, если не сами элементы однородной работы группы переключателей.  
   
-##  <a name="a-namesettexta--ccmduisettext"></a><a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>CCmdUI::SetText  
  Вызовите эту функцию-член для задания текста элемента пользовательского интерфейса для этой команды.  
   
 ```  

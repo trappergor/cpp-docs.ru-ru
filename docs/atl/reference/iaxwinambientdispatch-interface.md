@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatch
+- No header/ATL::IAxWinAmbientDispatch
+- No header/ATL::get_AllowContextMenu
+- No header/ATL::get_AllowShowUI
+- No header/ATL::get_AllowWindowlessActivation
+- No header/ATL::get_BackColor
+- No header/ATL::get_DisplayAsDefault
+- No header/ATL::get_DocHostDoubleClickFlags
+- No header/ATL::get_DocHostFlags
+- No header/ATL::get_Font
+- No header/ATL::get_ForeColor
+- No header/ATL::get_LocaleID
+- No header/ATL::get_MessageReflect
+- No header/ATL::get_OptionKeyPath
+- No header/ATL::get_ShowGrabHandles
+- No header/ATL::get_ShowHatching
+- No header/ATL::get_UserMode
+- No header/ATL::put_AllowContextMenu
+- No header/ATL::put_AllowShowUI
+- No header/ATL::put_AllowWindowlessActivation
+- No header/ATL::put_BackColor
+- No header/ATL::put_DisplayAsDefault
+- No header/ATL::put_DocHostDoubleClickFlags
+- No header/ATL::put_DocHostFlags
+- No header/ATL::put_Font
+- No header/ATL::put_ForeColor
+- No header/ATL::put_LocaleID
+- No header/ATL::put_MessageReflect
+- No header/ATL::put_OptionKeyPath
+- No header/ATL::put_UserMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +133,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |Библиотека типов|ATL.dll|  
 |C++|насколько (также входит в ATLBase.h)|  
   
-##  <a name="a-namegetallowcontextmenua--iaxwinambientdispatchgetallowcontextmenu"></a><a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
+##  <a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
  **Контекстное меню** свойство указывает, разрешены ли размещенный элемент управления для отображения контекстного меню.  
   
 ```
@@ -121,7 +150,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetallowshowuia--iaxwinambientdispatchgetallowshowui"></a><a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
+##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
  **AllowShowUI** свойство указывает, разрешено ли размещенный элемент управления отображать пользовательский интерфейс.  
   
 ```
@@ -138,7 +167,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **VARIANT_FALSE** как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetallowwindowlessactivationa--iaxwinambientdispatchgetallowwindowlessactivation"></a><a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
+##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
  **AllowWindowlessActivation** свойство указывает, будет ли контейнер давать возможность активации без окна.  
   
 ```
@@ -155,7 +184,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetbackcolora--iaxwinambientdispatchgetbackcolor"></a><a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
+##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
  `BackColor` Свойство задает цвет фона окружения контейнера.  
   
 ```
@@ -172,7 +201,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **COLOR_BTNFACE** или **COLOR_WINDOW** как значение по умолчанию этого свойства (в зависимости от родительского главного окна диалога или нет).  
   
-##  <a name="a-namegetdisplayasdefaulta--iaxwinambientdispatchgetdisplayasdefault"></a><a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
+##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
  **DisplayAsDefault** — это внешнее свойство, которое позволяет элементу управления проверить, является ли элемент управления по умолчанию.  
   
 ```
@@ -189,7 +218,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **VARIANT_FALSE** как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetdochostdoubleclickflagsa--iaxwinambientdispatchgetdochostdoubleclickflags"></a><a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
+##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags** свойство определяет операцию, которая должна быть выполнена в ответ на двойным щелчком.  
   
 ```
@@ -206,7 +235,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **DOCHOSTUIDBLCLK_DEFAULT** как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetdochostflagsa--iaxwinambientdispatchgetdochostflags"></a><a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
+##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
  **DocHostFlags** свойство определяет возможности интерфейса пользователя объекта узла.  
   
 ```
@@ -223,7 +252,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **DOCHOSTUIFLAG_NO3DBORDER** как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetfonta--iaxwinambientdispatchgetfont"></a><a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
+##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
  **Шрифта** свойство задает шрифт окружения контейнера.  
   
 ```
@@ -240,7 +269,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта узла ATL использует шрифт графического интерфейса пользователя по умолчанию или системный шрифт как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetforecolora--iaxwinambientdispatchgetforecolor"></a><a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
+##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
  `ForeColor` Свойство определяет цвет переднего плана окружения контейнера.  
   
 ```
@@ -257,7 +286,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует системный цвет окон как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetlocaleida--iaxwinambientdispatchgetlocaleid"></a><a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
+##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
  **LocaleID** свойство указывает идентификатор языкового стандарта внешней контейнера.  
   
 ```
@@ -276,7 +305,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
   
  С помощью этого метода можно обнаружить LocalID окружающей среды, то есть LocaleID программы управления используется в. Узнав код языка, можно вызвать код для загрузки заголовков языковому стандарту, текст сообщения об ошибке, и т. д из файла ресурсов или вспомогательной библиотеке DLL.  
   
-##  <a name="a-namegetmessagereflecta--iaxwinambientdispatchgetmessagereflect"></a><a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
+##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
  **MessageReflect** внешнее свойство указывает ли контейнер будет отражать сообщений для размещенного элемента управления.  
   
 ```
@@ -293,7 +322,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-namegetoptionkeypatha--iaxwinambientdispatchgetoptionkeypath"></a><a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
+##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
  **OptionKeyPath** свойство указывает путь к разделу реестра для параметров пользователя.  
   
 ```
@@ -307,7 +336,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namegetshowgrabhandlesa--iaxwinambientdispatchgetshowgrabhandles"></a><a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
+##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
  **ShowGrabHandles** внешнее свойство позволяет элементу управления узнать, если она должна нарисовать сам с ручки.  
   
 ```
@@ -324,7 +353,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ### <a name="remarks"></a>Примечания  
  ATL узла объекта реализация всегда возвращает **VARIANT_FALSE** в качестве значения этого свойства.  
   
-##  <a name="a-namegetshowhatchinga--iaxwinambientdispatchgetshowhatching"></a><a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
+##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
  **ShowHatching** внешнее свойство позволяет узнать, если она должна нарисовать сам hatched элементу управления.  
   
 ```
@@ -341,7 +370,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ### <a name="remarks"></a>Примечания  
  ATL узла объекта реализация всегда возвращает **VARIANT_FALSE** в качестве значения этого свойства.  
   
-##  <a name="a-namegetusermodea--iaxwinambientdispatchgetusermode"></a><a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
+##  <a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
  **UserMode** свойство задает режим внешнего пользователя контейнера.  
   
 ```
@@ -358,7 +387,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputallowcontextmenua--iaxwinambientdispatchputallowcontextmenu"></a><a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
+##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
  **Контекстное меню** свойство указывает, разрешены ли размещенный элемент управления для отображения контекстного меню.  
   
 ```
@@ -375,7 +404,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputallowshowuia--iaxwinambientdispatchputallowshowui"></a><a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
+##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
  **AllowShowUI** свойство указывает, разрешено ли размещенный элемент управления отображать пользовательский интерфейс.  
   
 ```
@@ -392,7 +421,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **VARIANT_FALSE** как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputallowwindowlessactivationa--iaxwinambientdispatchputallowwindowlessactivation"></a><a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
+##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
  **AllowWindowlessActivation** свойство указывает, будет ли контейнер давать возможность активации без окна.  
   
 ```
@@ -409,7 +438,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputbackcolora--iaxwinambientdispatchputbackcolor"></a><a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
+##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
  `BackColor` Свойство задает цвет фона окружения контейнера.  
   
 ```
@@ -426,7 +455,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **COLOR_BTNFACE** или **COLOR_WINDOW** как значение по умолчанию этого свойства (в зависимости от родительского главного окна диалога или нет).  
   
-##  <a name="a-nameputdisplayasdefaulta--iaxwinambientdispatchputdisplayasdefault"></a><a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
+##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
  **DisplayAsDefault** — это внешнее свойство, которое позволяет элементу управления проверить, является ли элемент управления по умолчанию.  
   
 ```
@@ -443,7 +472,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **VARIANT_FALSE** как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputdochostdoubleclickflagsa--iaxwinambientdispatchputdochostdoubleclickflags"></a><a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
+##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags** свойство определяет операцию, которая должна быть выполнена в ответ на двойным щелчком.  
   
 ```
@@ -460,7 +489,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **DOCHOSTUIDBLCLK_DEFAULT** как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputdochostflagsa--iaxwinambientdispatchputdochostflags"></a><a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
+##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
  **DocHostFlags** свойство определяет возможности интерфейса пользователя объекта узла.  
   
 ```
@@ -477,7 +506,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует **DOCHOSTUIFLAG_NO3DBORDER** как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputfonta--iaxwinambientdispatchputfont"></a><a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
+##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
  **Шрифта** свойство задает шрифт окружения контейнера.  
   
 ```
@@ -494,7 +523,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта узла ATL использует шрифт графического интерфейса пользователя по умолчанию или системный шрифт как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputforecolora--iaxwinambientdispatchputforecolor"></a><a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
+##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
  `ForeColor` Свойство определяет цвет переднего плана окружения контейнера.  
   
 ```
@@ -511,7 +540,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует системный цвет окон как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputlocaleida--iaxwinambientdispatchputlocaleid"></a><a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
+##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
  **LocaleID** свойство указывает идентификатор языкового стандарта внешней контейнера.  
   
 ```
@@ -528,7 +557,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узла использует локаль по умолчанию как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputmessagereflecta--iaxwinambientdispatchputmessagereflect"></a><a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
+##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
  **MessageReflect** внешнее свойство указывает ли контейнер будет отражать сообщений для размещенного элемента управления.  
   
 ```
@@ -545,7 +574,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="remarks"></a>Примечания  
  Реализация объекта ATL узел использует `VARIANT_TRUE` как значение этого свойства по умолчанию.  
   
-##  <a name="a-nameputoptionkeypatha--iaxwinambientdispatchputoptionkeypath"></a><a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
+##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
  **OptionKeyPath** свойство указывает путь к разделу реестра для параметров пользователя.  
   
 ```
@@ -559,7 +588,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-nameputusermodea--iaxwinambientdispatchputusermode"></a><a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
+##  <a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
  **UserMode** свойство задает режим внешнего пользователя контейнера.  
   
 ```

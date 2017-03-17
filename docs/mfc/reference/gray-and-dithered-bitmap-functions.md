@@ -8,6 +8,11 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- AFXWIN/AfxDrawGrayBitmap
+- AFXWIN/AfxGetGrayBitmap
+- AFXWIN/AfxDrawDitheredBitmap
+- AFXWIN/AfxGetDitheredBitmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -60,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Рисует растровое изображение со сглаженным фоном.|  
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Копирует растровое изображение со сглаженным фоном.|  
   
-##  <a name="a-nameafxdrawgraybitmapa--afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
+##  <a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
  Рисует серую версию растрового изображения.  
   
 ```   
@@ -99,7 +104,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
 
-##  <a name="a-nameafxgetgraybitmapa--afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
+##  <a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
  Копирует серую версию растрового изображения.  
   
 ```   
@@ -130,7 +135,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameafxdrawditheredbitmapa--afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
+##  <a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
  Рисуется растровое изображение, заменив его фона узора сглаживания (проверка).  
   
 ```   
@@ -174,7 +179,7 @@ void AFXAPI AfxDrawDitheredBitmap(
  **Заголовок:** afxwin.h  
 
 
-##  <a name="a-nameafxgetditheredbitmapa--afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
+##  <a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
  Копирует точечный рисунок, заменив его фона узора сглаживания (проверка).  
   
 ```   

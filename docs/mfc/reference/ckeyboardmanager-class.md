@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager::CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager::CleanUp
+- AFXKEYBOARDMANAGER/CKeyboardManager::FindDefaultAccelerator
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyHandled
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyPrintable
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsShowAllAccelerators
+- AFXKEYBOARDMANAGER/CKeyboardManager::LoadState
+- AFXKEYBOARDMANAGER/CKeyboardManager::ResetAll
+- AFXKEYBOARDMANAGER/CKeyboardManager::SaveState
+- AFXKEYBOARDMANAGER/CKeyboardManager::ShowAllAccelerators
+- AFXKEYBOARDMANAGER/CKeyboardManager::TranslateCharToUpper
+- AFXKEYBOARDMANAGER/CKeyboardManager::UpdateAccelTable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +105,7 @@ class CKeyboardManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxkeyboardmanager.h  
   
-##  <a name="a-nameckeyboardmanagera--ckeyboardmanagerckeyboardmanager"></a><a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
+##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
  Создает объект `CKeyboardManager`.  
   
 ```  
@@ -102,7 +115,7 @@ CKeyboardManager();
 ### <a name="remarks"></a>Примечания  
  В большинстве случаев не нужно создавать `CKeyboardManager` напрямую. По умолчанию платформа создает его автоматически. Чтобы получить указатель на `CKeyboardManager`, вызовите [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). При создании одной вручную, его необходимо инициализировать с помощью метода [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="a-namecleanupa--ckeyboardmanagercleanup"></a><a name="cleanup"></a>CKeyboardManager::CleanUp  
+##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
  Освобождает `CKeyboardManager` ресурсы и очищает все сопоставлений сочетаний клавиш.  
   
 ```  
@@ -114,7 +127,7 @@ static void CleanUp();
   
  Эта функция вызывается, когда приложение завершает работу, так как платформа вызывает функцию его автоматически во время выхода приложения нет.  
   
-##  <a name="a-namefinddefaultacceleratora--ckeyboardmanagerfinddefaultaccelerator"></a><a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
+##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
  Получает сочетание клавиш по умолчанию для указанной команды и окна.  
   
 ```  
@@ -144,7 +157,7 @@ static BOOL FindDefaultAccelerator(
 ### <a name="remarks"></a>Примечания  
  Этот метод выполняет поиск по указанной команды `uiCmd` и получает сочетание клавиш по умолчанию. Затем этот метод принимает строку, связанную с этого сочетания клавиш и записывает значение `str` параметр.  
   
-##  <a name="a-nameiskeyhandleda--ckeyboardmanageriskeyhandled"></a><a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
+##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
  Определяет, обрабатывается ли указанный ключ [CKeyboardManager класса](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
@@ -171,7 +184,7 @@ static BOOL __stdcall IsKeyHandled(
 ### <a name="remarks"></a>Примечания  
  Входные параметры должны соответствовать записи в таблице сочетаний клавиш как для `nKey` и `fVirt` для определения того, обрабатывается ли сочетания клавиш в `pWndFrame`.  
   
-##  <a name="a-nameiskeyprintablea--ckeyboardmanageriskeyprintable"></a><a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
+##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
  Указывает, является ли символ печатные.  
   
 ```  
@@ -191,7 +204,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ### <a name="remarks"></a>Примечания  
  Этот метод не выполняется, если вызов [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) завершается ошибкой.  
   
-##  <a name="a-nameisshowallacceleratorsa--ckeyboardmanagerisshowallaccelerators"></a><a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
+##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
  Указывает, отображать ли меню, сочетания клавиш, связанные с командами меню или сочетания клавиш по умолчанию.  
   
 ```  
@@ -204,7 +217,7 @@ static BOOL IsShowAllAccelerators();
 ### <a name="remarks"></a>Примечания  
  Приложение перечислены сочетания клавиш для команды меню в строке меню. Используйте функцию [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) для управления ли приложение выводит список всех сочетаний клавиш или только сочетания клавиш по умолчанию.  
   
-##  <a name="a-nameloadstatea--ckeyboardmanagerloadstate"></a><a name="loadstate"></a>CKeyboardManager::LoadState  
+##  <a name="loadstate"></a>CKeyboardManager::LoadState  
  Загружает таблицы сочетания ключа из реестра Windows.  
   
 ```  
@@ -228,7 +241,7 @@ BOOL LoadState(
   
  Если окно по умолчанию не задан, будет использоваться фрейма главного окна приложения.  
   
-##  <a name="a-nameresetalla--ckeyboardmanagerresetall"></a><a name="resetall"></a>CKeyboardManager::ResetAll  
+##  <a name="resetall"></a>CKeyboardManager::ResetAll  
  Перезагружает таблиц сочетания ключа из ресурсов приложения.  
   
 ```  
@@ -238,7 +251,7 @@ void ResetAll();
 ### <a name="remarks"></a>Примечания  
  Эта функция удаляет ярлыки, хранящиеся в `CKeyboardManager` экземпляра. Затем он перезагрузит состояние диспетчера клавиатуры из ресурсов приложения.  
   
-##  <a name="a-namesavestatea--ckeyboardmanagersavestate"></a><a name="savestate"></a>CKeyboardManager::SaveState  
+##  <a name="savestate"></a>CKeyboardManager::SaveState  
  Сохранение ярлыка ключа таблицы в реестр Windows.  
   
 ```  
@@ -262,7 +275,7 @@ BOOL SaveState(
   
  Если окно по умолчанию не указано, как окна по умолчанию будет использоваться фрейма главного окна.  
   
-##  <a name="a-nameshowallacceleratorsa--ckeyboardmanagershowallaccelerators"></a><a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
+##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
  Показывает все сочетания клавиш, связанные с командами меню.  
   
 ```  
@@ -283,7 +296,7 @@ static void ShowAllAccelerators(
   
  Сочетания клавиш отображается рядом с командой в строке меню. Если отображаются все сочетания клавиш, предоставляемые строка `lpszDelimiter` разделения отдельных сочетания клавиш.  
   
-##  <a name="a-nametranslatechartouppera--ckeyboardmanagertranslatechartoupper"></a><a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
+##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
  Преобразует символ в его верхний регистр.  
   
 ```  
@@ -297,7 +310,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="return-value"></a>Возвращаемое значение  
  Символ, который представляет верхнем регистре входного параметра.  
   
-##  <a name="a-nameupdateacceltablea--ckeyboardmanagerupdateacceltable"></a><a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
+##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
  Обновляет таблицу ключа ярлык с новой таблицей ключа ярлык.  
   
 ```  

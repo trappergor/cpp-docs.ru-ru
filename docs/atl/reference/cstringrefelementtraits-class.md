@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
-- ATL.CStringRefElementTraits
-- ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElements
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered
+- ATLCOLL/ATL::CStringRefElementTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
  Эта функция статических для сравнения на равенство двух элементов строки.  
   
 ```
@@ -95,7 +97,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если элементы равны false в противном случае.  
   
-##  <a name="a-namecompareelementsordereda--cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
  Эта функция статических для сравнения двух элементов строки.  
   
 ```
@@ -112,7 +114,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Нуль, если строки идентичны, < 0="" if=""> `str1` — меньше, чем `str2`, или настроек 0, если `str1` больше, чем `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
   
-##  <a name="a-namehasha--cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>CStringRefElementTraits::Hash  
  Эта функция статических для вычисления хэш-значение для заданной строки элемента.  
   
 ```

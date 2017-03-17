@@ -10,6 +10,80 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditCtrl
+- AFXCMN/CRichEditCtrl
+- AFXCMN/CRichEditCtrl::CRichEditCtrl
+- AFXCMN/CRichEditCtrl::CanPaste
+- AFXCMN/CRichEditCtrl::CanRedo
+- AFXCMN/CRichEditCtrl::CanUndo
+- AFXCMN/CRichEditCtrl::CharFromPos
+- AFXCMN/CRichEditCtrl::Clear
+- AFXCMN/CRichEditCtrl::Copy
+- AFXCMN/CRichEditCtrl::Create
+- AFXCMN/CRichEditCtrl::CreateEx
+- AFXCMN/CRichEditCtrl::Cut
+- AFXCMN/CRichEditCtrl::DisplayBand
+- AFXCMN/CRichEditCtrl::EmptyUndoBuffer
+- AFXCMN/CRichEditCtrl::FindText
+- AFXCMN/CRichEditCtrl::FindWordBreak
+- AFXCMN/CRichEditCtrl::FormatRange
+- AFXCMN/CRichEditCtrl::GetCharPos
+- AFXCMN/CRichEditCtrl::GetDefaultCharFormat
+- AFXCMN/CRichEditCtrl::GetEventMask
+- AFXCMN/CRichEditCtrl::GetFirstVisibleLine
+- AFXCMN/CRichEditCtrl::GetIRichEditOle
+- AFXCMN/CRichEditCtrl::GetLimitText
+- AFXCMN/CRichEditCtrl::GetLine
+- AFXCMN/CRichEditCtrl::GetLineCount
+- AFXCMN/CRichEditCtrl::GetModify
+- AFXCMN/CRichEditCtrl::GetOptions
+- AFXCMN/CRichEditCtrl::GetParaFormat
+- AFXCMN/CRichEditCtrl::GetPunctuation
+- AFXCMN/CRichEditCtrl::GetRect
+- AFXCMN/CRichEditCtrl::GetRedoName
+- AFXCMN/CRichEditCtrl::GetSel
+- AFXCMN/CRichEditCtrl::GetSelectionCharFormat
+- AFXCMN/CRichEditCtrl::GetSelectionType
+- AFXCMN/CRichEditCtrl::GetSelText
+- AFXCMN/CRichEditCtrl::GetTextLength
+- AFXCMN/CRichEditCtrl::GetTextLengthEx
+- AFXCMN/CRichEditCtrl::GetTextMode
+- AFXCMN/CRichEditCtrl::GetTextRange
+- AFXCMN/CRichEditCtrl::GetUndoName
+- AFXCMN/CRichEditCtrl::GetWordWrapMode
+- AFXCMN/CRichEditCtrl::HideSelection
+- AFXCMN/CRichEditCtrl::LimitText
+- AFXCMN/CRichEditCtrl::LineFromChar
+- AFXCMN/CRichEditCtrl::LineIndex
+- AFXCMN/CRichEditCtrl::LineLength
+- AFXCMN/CRichEditCtrl::LineScroll
+- AFXCMN/CRichEditCtrl::Paste
+- AFXCMN/CRichEditCtrl::PasteSpecial
+- AFXCMN/CRichEditCtrl::PosFromChar
+- AFXCMN/CRichEditCtrl::Redo
+- AFXCMN/CRichEditCtrl::ReplaceSel
+- AFXCMN/CRichEditCtrl::RequestResize
+- AFXCMN/CRichEditCtrl::SetAutoURLDetect
+- AFXCMN/CRichEditCtrl::SetBackgroundColor
+- AFXCMN/CRichEditCtrl::SetDefaultCharFormat
+- AFXCMN/CRichEditCtrl::SetEventMask
+- AFXCMN/CRichEditCtrl::SetModify
+- AFXCMN/CRichEditCtrl::SetOLECallback
+- AFXCMN/CRichEditCtrl::SetOptions
+- AFXCMN/CRichEditCtrl::SetParaFormat
+- AFXCMN/CRichEditCtrl::SetPunctuation
+- AFXCMN/CRichEditCtrl::SetReadOnly
+- AFXCMN/CRichEditCtrl::SetRect
+- AFXCMN/CRichEditCtrl::SetSel
+- AFXCMN/CRichEditCtrl::SetSelectionCharFormat
+- AFXCMN/CRichEditCtrl::SetTargetDevice
+- AFXCMN/CRichEditCtrl::SetTextMode
+- AFXCMN/CRichEditCtrl::SetUndoLimit
+- AFXCMN/CRichEditCtrl::SetWordCharFormat
+- AFXCMN/CRichEditCtrl::SetWordWrapMode
+- AFXCMN/CRichEditCtrl::StopGroupTyping
+- AFXCMN/CRichEditCtrl::StreamIn
+- AFXCMN/CRichEditCtrl::StreamOut
+- AFXCMN/CRichEditCtrl::Undo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -165,7 +239,7 @@ class CRichEditCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-namecanpastea--cricheditctrlcanpaste"></a><a name="canpaste"></a>CRichEditCtrl::CanPaste  
+##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
  Определяет, если элемент управления форматированием можно вставить указанный формат буфера обмена.  
   
 ```  
@@ -187,7 +261,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#1;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
   
-##  <a name="a-namecanredoa--cricheditctrlcanredo"></a><a name="canredo"></a>CRichEditCtrl::CanRedo  
+##  <a name="canredo"></a>CRichEditCtrl::CanRedo  
  Определяет, содержит ли очереди повторного выполнения каких-либо действий.  
   
 ```  
@@ -202,7 +276,7 @@ BOOL CanRedo() const;
   
  Дополнительные сведения см. в разделе [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecanundoa--cricheditctrlcanundo"></a><a name="canundo"></a>CRichEditCtrl::CanUndo  
+##  <a name="canundo"></a>CRichEditCtrl::CanUndo  
  Определяет, может ли отменить последнюю операцию редактирования.  
   
 ```  
@@ -218,7 +292,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#2;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
-##  <a name="a-namecharfromposa--cricheditctrlcharfrompos"></a><a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
+##  <a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
  Извлекает сведения о символа в позиции, заданным в параметре `pt`.  
   
 ```  
@@ -237,7 +311,7 @@ int CharFromPos(CPoint pt) const;
   
  Дополнительные сведения см. в разделе [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecleara--cricheditctrlclear"></a><a name="clear"></a>CRichEditCtrl::Clear  
+##  <a name="clear"></a>CRichEditCtrl::Clear  
  (Очистка) удаляет текущее выделение (если таковые имеются) в богатую возможностями редактирования.  
   
 ```  
@@ -254,7 +328,7 @@ void Clear();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#3;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
   
-##  <a name="a-namecopya--cricheditctrlcopy"></a><a name="copy"></a>CRichEditCtrl::Copy  
+##  <a name="copy"></a>CRichEditCtrl::Copy  
  Копирует текущее выделение (если таковые имеются) в элементе управления форматированным редактированием в буфер обмена.  
   
 ```  
@@ -267,7 +341,7 @@ void Copy();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#4;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
   
-##  <a name="a-namecreatea--cricheditctrlcreate"></a><a name="create"></a>CRichEditCtrl::Create  
+##  <a name="create"></a>CRichEditCtrl::Create  
  В текстовом режиме Windows создает и связывает его с этим `CRichEditCtrl` объекта.  
   
 ```  
@@ -320,7 +394,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#5;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
   
-##  <a name="a-namecreateexa--cricheditctrlcreateex"></a><a name="createex"></a>CRichEditCtrl::CreateEx  
+##  <a name="createex"></a>CRichEditCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CRichEditCtrl` объекта.  
   
 ```  
@@ -354,7 +428,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо **создать** для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="a-namecricheditctrla--cricheditctrlcricheditctrl"></a><a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
+##  <a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
  Создает объект `CRichEditCtrl`.  
   
 ```  
@@ -367,7 +441,7 @@ CRichEditCtrl();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl №&6;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
   
-##  <a name="a-namecuta--cricheditctrlcut"></a><a name="cut"></a>CRichEditCtrl::Cut  
+##  <a name="cut"></a>CRichEditCtrl::Cut  
  Удаление (сокращает) текущее выделение (если таковые имеются) в широкий набор функций управления edit и копирует удаленный текст в буфер обмена.  
   
 ```  
@@ -384,7 +458,7 @@ void Cut();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#7;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
   
-##  <a name="a-namedisplaybanda--cricheditctrldisplayband"></a><a name="displayband"></a>CRichEditCtrl::DisplayBand  
+##  <a name="displayband"></a>CRichEditCtrl::DisplayBand  
  Отображает часть содержимого элемента управления "rich edit" (текст и элементы OLE), отформатированные в соответствии с ранее [FormatRange](#formatrange).  
   
 ```  
@@ -406,7 +480,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="example"></a>Пример  
   В примере показано [CRichEditCtrl::FormatRange](#formatrange).  
   
-##  <a name="a-nameemptyundobuffera--cricheditctrlemptyundobuffer"></a><a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
  Сбрасывает флаг отмены этого управления rich edit (clear).  
   
 ```  
@@ -423,7 +497,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl №&8;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
   
-##  <a name="a-namefindtexta--cricheditctrlfindtext"></a><a name="findtext"></a>CRichEditCtrl::FindText  
+##  <a name="findtext"></a>CRichEditCtrl::FindText  
  Поиск текста в элементе управления форматированным редактированием.  
   
 ```  
@@ -450,7 +524,7 @@ long FindText(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl №&9;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
-##  <a name="a-namefindwordbreaka--cricheditctrlfindwordbreak"></a><a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
+##  <a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
  Поиск следующего слова разрыва до или после позиции, указанной параметром `nStart`.  
   
 ```  
@@ -472,7 +546,7 @@ DWORD FindWordBreak(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член можно использовать для получения сведений о символа в заданной позиции.  
   
-##  <a name="a-nameformatrangea--cricheditctrlformatrange"></a><a name="formatrange"></a>CRichEditCtrl::FormatRange  
+##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
  Форматирует диапазон текста в элементе управления "rich edit" для конкретного устройства.  
   
 ```  
@@ -499,7 +573,7 @@ long FormatRange(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#10;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
   
-##  <a name="a-namegetcharposa--cricheditctrlgetcharpos"></a><a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
+##  <a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
  Возвращает позицию (верхний левый угол) определенный символ в рамках этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -518,7 +592,7 @@ CPoint GetCharPos(long lChar) const;
   
  Дополнительные сведения см. в разделе [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdefaultcharformata--cricheditctrlgetdefaultcharformat"></a><a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
+##  <a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
  Возвращает символ по умолчанию форматирование атрибуты этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -709,7 +783,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) константу;  DWORD GetParaFormat(PAR
 ### <a name="example"></a>Пример  
   В примере показано [CRichEditCtrl::SetParaFormat](#setparaformat).  
   
-##  <a name="a-namegetpunctuationa--cricheditctrlgetpunctuation"></a><a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
+##  <a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
  Возвращает текущий знаков препинания в элементе управления rich edit.  
   
 ```  
@@ -731,7 +805,7 @@ BOOL GetPunctuation(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член доступен только в версиях азиатских языков операционной системы.  
   
-##  <a name="a-namegetrecta--cricheditctrlgetrect"></a><a name="getrect"></a>CRichEditCtrl::GetRect  
+##  <a name="getrect"></a>CRichEditCtrl::GetRect  
  Возвращает прямоугольник, форматирования для данного `CRichEditCtrl` объекта.  
   
 ```  
@@ -750,7 +824,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>Пример  
   В примере показано [LimitText](#limittext).  
   
-##  <a name="a-namegetredonamea--cricheditctrlgetredoname"></a><a name="getredoname"></a>CRichEditCtrl::GetRedoName  
+##  <a name="getredoname"></a>CRichEditCtrl::GetRedoName  
  Получает тип следующего доступного действия в очереди повторов, если таковые имеются.  
   
 ```  
@@ -763,7 +837,7 @@ UNDONAMEID GetRedoName() const;
 ### <a name="remarks"></a>Примечания  
  Типы действий, которые можно отменить или повторить включают ввода, удаления, перемещения, вырезания и вставки. Эта информация может быть полезна для приложений, которые предоставляют расширенный пользовательский интерфейс для отмены и повтора операций, таких как окно раскрывающегося списка redoable действий.  
   
-##  <a name="a-namegetsela--cricheditctrlgetsel"></a><a name="getsel"></a>CRichEditCtrl::GetSel  
+##  <a name="getsel"></a>CRichEditCtrl::GetSel  
  Возвращает границы текущего выделенного фрагмента в этом `CRichEditCtrl` объекта.  
   
 ```  
@@ -798,7 +872,7 @@ void GetSel(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#15;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
   
-##  <a name="a-namegetselectioncharformata--cricheditctrlgetselectioncharformat"></a><a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
+##  <a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
  Возвращает символ форматирования атрибуты текущего выделенного фрагмента.  
   
 ```  
@@ -872,7 +946,7 @@ GetSelectionType() слова const;
 ### <a name="example"></a>Пример  
   В примере показано [CRichEditCtrl::GetSelectionType](#getselectiontype).  
   
-##  <a name="a-namegettextlengtha--cricheditctrlgettextlength"></a><a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
+##  <a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
  Получает длину текста в знаках в этом `CRichEditCtrl` объекта, не включая завершающий символ null.  
   
 ```  
@@ -888,7 +962,7 @@ long GetTextLength() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&17;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
   
-##  <a name="a-namegettextlengthexa--cricheditctrlgettextlengthex"></a><a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
  Вычисляет длину текста в элементе управления форматированным редактированием.  
   
 ```  
@@ -910,7 +984,7 @@ long GetTextLengthEx(
 ### <a name="remarks"></a>Примечания  
  `GetTextLengthEx`предоставляет дополнительные способы определения длины текста. Он поддерживает 2.0 Изменить расширенные функциональные возможности. В разделе [о широкие возможности изменять элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb787873) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]для получения дополнительной информации.  
   
-##  <a name="a-namegettextmodea--cricheditctrlgettextmode"></a><a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
+##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
  Возвращает текущий текстовый режим и отмены уровень управления rich edit.  
   
 ```  
@@ -920,7 +994,7 @@ UINT GetTextMode() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Набор битовых флагов из [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) тип перечисления, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Флаги указывают текущий текстовый режим и отмены уровень элемента управления.  
   
-##  <a name="a-namegettextrangea--cricheditctrlgettextrange"></a><a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
+##  <a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
  Возвращает указанный диапазон символов.  
   
 ```  
@@ -948,7 +1022,7 @@ int GetTextRange(
   
  `GetTextRange`поддерживает 2.0 Изменить расширенные функциональные возможности. В разделе [о широкие возможности изменять элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb787873) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]для получения дополнительной информации.  
   
-##  <a name="a-namegetundonamea--cricheditctrlgetundoname"></a><a name="getundoname"></a>CRichEditCtrl::GetUndoName  
+##  <a name="getundoname"></a>CRichEditCtrl::GetUndoName  
  Получает тип следующего доступного действия в очереди отмены при их наличии.  
   
 ```  
@@ -961,7 +1035,7 @@ UNDONAMEID GetUndoName() const;
 ### <a name="remarks"></a>Примечания  
  Типы действий, которые можно отменить или повторить включают ввода, удаления, перемещения, вырезания и вставки. Эта информация может быть полезна для приложений, которые предоставляют расширенный пользовательский интерфейс для отмены и повтора операций, таких как раскрывающийся список действий, которые могут быть отменены.  
   
-##  <a name="a-namegetwordwrapmodea--cricheditctrlgetwordwrapmode"></a><a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
+##  <a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
  Получает текущий перенос слов и параметров разбиения на слова для управления rich edit.  
   
 ```  
@@ -974,7 +1048,7 @@ UINT GetWordWrapMode() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член доступен только для азиатских языков версий операционной системы.  
   
-##  <a name="a-namehideselectiona--cricheditctrlhideselection"></a><a name="hideselection"></a>CRichEditCtrl::HideSelection  
+##  <a name="hideselection"></a>CRichEditCtrl::HideSelection  
  Изменение видимости выделения.  
   
 ```  
@@ -998,7 +1072,7 @@ void HideSelection(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&18;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
   
-##  <a name="a-namelimittexta--cricheditctrllimittext"></a><a name="limittext"></a>CRichEditCtrl::LimitText  
+##  <a name="limittext"></a>CRichEditCtrl::LimitText  
  Ограничивает длину текста, который пользователь может ввести в элемент управления.  
   
 ```  
@@ -1020,7 +1094,7 @@ void LimitText(long nChars = 0);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&19;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
   
-##  <a name="a-namelinefromchara--cricheditctrllinefromchar"></a><a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
+##  <a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
  Получает номер строки, содержащей символ с указанным индексом.  
   
 ```  
@@ -1042,7 +1116,7 @@ long LineFromChar(long nIndex) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&20;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
   
-##  <a name="a-namelineindexa--cricheditctrllineindex"></a><a name="lineindex"></a>CRichEditCtrl::LineIndex  
+##  <a name="lineindex"></a>CRichEditCtrl::LineIndex  
  Получает индекс строки в рамках этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -1064,7 +1138,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#21;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
   
-##  <a name="a-namelinelengtha--cricheditctrllinelength"></a><a name="linelength"></a>CRichEditCtrl::LineLength  
+##  <a name="linelength"></a>CRichEditCtrl::LineLength  
  Получает длину строки в элементе управления rich edit.  
   
 ```  
@@ -1086,7 +1160,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>Пример  
   В примере показано [LineIndex](#lineindex).  
   
-##  <a name="a-namelinescrolla--cricheditctrllinescroll"></a><a name="linescroll"></a>CRichEditCtrl::LineScroll  
+##  <a name="linescroll"></a>CRichEditCtrl::LineScroll  
  Прокрутка текста элемента управления редактированием несколько строк.  
   
 ```  
@@ -1112,7 +1186,7 @@ void LineScroll(
 ### <a name="example"></a>Пример  
   В примере показано [GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="a-namepastea--cricheditctrlpaste"></a><a name="paste"></a>CRichEditCtrl::Paste  
+##  <a name="paste"></a>CRichEditCtrl::Paste  
  Вставляет данные из буфера обмена в `CRichEditCtrl` в точку вставки положением курсора в редакторе.  
   
 ```  
@@ -1127,7 +1201,7 @@ void Paste();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#22;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
   
-##  <a name="a-namepastespeciala--cricheditctrlpastespecial"></a><a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
+##  <a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
  Вставка данных в определенном формате буфера обмена в это `CRichEditCtrl` объекта.  
   
 ```  
@@ -1155,7 +1229,7 @@ void PasteSpecial(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#23;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
   
-##  <a name="a-nameposfromchara--cricheditctrlposfromchar"></a><a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
+##  <a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
  Возвращает координаты области клиента указанного символа в элемент управления редактированием.  
   
 ```  
@@ -1172,7 +1246,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameredoa--cricheditctrlredo"></a><a name="redo"></a>CRichEditCtrl::Redo  
+##  <a name="redo"></a>CRichEditCtrl::Redo  
  Повтор следующего действия в очереди повторного выполнения элемента управления.  
   
 ```  
@@ -1185,7 +1259,7 @@ BOOL Redo();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereplacesela--cricheditctrlreplacesel"></a><a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
+##  <a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
  Заменяет текущее выделение в этом `CRichEditCtrl` объект с указанным текстом.  
   
 ```  
@@ -1213,7 +1287,7 @@ void ReplaceSel(
 ### <a name="example"></a>Пример  
   В примере показано [LineIndex](#lineindex).  
   
-##  <a name="a-namerequestresizea--cricheditctrlrequestresize"></a><a name="requestresize"></a>CRichEditCtrl::RequestResize  
+##  <a name="requestresize"></a>CRichEditCtrl::RequestResize  
  Это заставляет `CRichEditCtrl` объект для отправки **EN_REQUESTRESIZE** уведомления для родительского окна.  
   
 ```  
@@ -1225,7 +1299,7 @@ void RequestResize();
   
  Дополнительные сведения см. в разделе [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) сообщений и **элементов управления без дна широкие возможности изменить** раздел [о широкие возможности изменять элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb787873) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetautourldetecta--cricheditctrlsetautourldetect"></a><a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
+##  <a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
  Задает элемент управления форматированием автоматически определить URL-адрес.  
   
 ```  
@@ -1245,7 +1319,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 > [!NOTE]
 >  Не устанавливайте `SetAutoURLDetect` для **TRUE** Если используется элемент управления редактирование **CFE_LINK** эффект для текста, отличный от URL-адреса. `SetAutoURLDetect`включает этот эффект для URL-адресов и отключает его для всего текста. В разделе [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) Дополнительные сведения о **CFE_LINK** эффект.  
   
-##  <a name="a-namesetbackgroundcolora--cricheditctrlsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
  Задает цвет фона для этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -1272,7 +1346,7 @@ COLORREF SetBackgroundColor(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#24;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
   
-##  <a name="a-namesetdefaultcharformata--cricheditctrlsetdefaultcharformat"></a><a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
+##  <a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
  Задает символ, форматирование атрибуты для нового текста в этом `CRichEditCtrl` объекта.  
   
 ```  
@@ -1297,7 +1371,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#25;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
   
-##  <a name="a-nameseteventmaska--cricheditctrlseteventmask"></a><a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
+##  <a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
  Задает маску события для этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -1319,7 +1393,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#26;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
   
-##  <a name="a-namesetmodifya--cricheditctrlsetmodify"></a><a name="setmodify"></a>CRichEditCtrl::SetModify  
+##  <a name="setmodify"></a>CRichEditCtrl::SetModify  
  Устанавливает или снимает измененного флага для элемента управления.  
   
 ```  
@@ -1338,7 +1412,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>Пример  
   В примере показано [GetModify](#getmodify).  
   
-##  <a name="a-namesetolecallbacka--cricheditctrlsetolecallback"></a><a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
+##  <a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
  Это дает `CRichEditCtrl` объект **IRichEditOleCallback** объект, используемый для доступа к ресурсам, связанным с OLE и сведения.  
   
 ```  
@@ -1357,7 +1431,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
   
  Дополнительные сведения см. в разделе [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) сообщений и [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) интерфейс [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetoptionsa--cricheditctrlsetoptions"></a><a name="setoptions"></a>CRichEditCtrl::SetOptions  
+##  <a name="setoptions"></a>CRichEditCtrl::SetOptions  
  Задает параметры для этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -1405,7 +1479,7 @@ void SetOptions(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#27;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
   
-##  <a name="a-namesetparaformata--cricheditctrlsetparaformat"></a><a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
+##  <a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
  Задает атрибуты для текущего выбора в этом форматирования абзаца `CRichEditCtrl` объекта.  
   
 ```  
@@ -1430,7 +1504,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#28;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
   
-##  <a name="a-namesetpunctuationa--cricheditctrlsetpunctuation"></a><a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
+##  <a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
  Задает знаки препинания в элементе управления rich edit.  
   
 ```  
@@ -1452,7 +1526,7 @@ BOOL SetPunctuation(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член доступен для азиатских языков только версии операционной системы.  
   
-##  <a name="a-namesetreadonlya--cricheditctrlsetreadonly"></a><a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
+##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
  Изменения `ECO_READONLY` возможность `CRichEditCtrl` объекта.  
   
 ```  
@@ -1474,7 +1548,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#29;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
   
-##  <a name="a-namesetrecta--cricheditctrlsetrect"></a><a name="setrect"></a>CRichEditCtrl::SetRect  
+##  <a name="setrect"></a>CRichEditCtrl::SetRect  
  Задает для этого прямоугольника форматирования `CRichEditCtrl` объекта.  
   
 ```  
@@ -1493,7 +1567,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#30;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
   
-##  <a name="a-namesetsela--cricheditctrlsetsel"></a><a name="setsel"></a>CRichEditCtrl::SetSel  
+##  <a name="setsel"></a>CRichEditCtrl::SetSel  
  Задает выбранный в рамках этого `CRichEditCtrl` объекта.  
   
 ```  
@@ -1530,7 +1604,7 @@ void SetSel(CHARRANGE& cr);
 ### <a name="example"></a>Пример  
   В примере показано [GetSel](#getsel).  
   
-##  <a name="a-namesetselectioncharformata--cricheditctrlsetselectioncharformat"></a><a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
+##  <a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
  Задает символ, форматирование атрибуты для текста в выделенном фрагменте в этом `CRichEditCtrl` объекта.  
   
 ```  
@@ -1555,7 +1629,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#31;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
   
-##  <a name="a-namesettargetdevicea--cricheditctrlsettargetdevice"></a><a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
+##  <a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
  Задает ширину целевого устройства и строки для WYSIWYG (отображаемые получается) форматирования в этом `CRichEditCtrl` объекта.  
   
 ```  
@@ -1590,7 +1664,7 @@ BOOL SetTargetDevice(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#32;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
   
-##  <a name="a-namesettextmodea--cricheditctrlsettextmode"></a><a name="settextmode"></a>CRichEditCtrl::SetTextMode  
+##  <a name="settextmode"></a>CRichEditCtrl::SetTextMode  
  Задает уровень текстовый режим или отмены и повтора для элемента управления rich edit.  
   
 ```  
@@ -1609,7 +1683,7 @@ BOOL SetTextMode(UINT fMode);
   
  Эта функция-член не выполняется, если элемент управления содержит текст. Убедитесь, что элемент управления является пустым, отправлять [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) сообщений с пустой строкой.  
   
-##  <a name="a-namesetundolimita--cricheditctrlsetundolimit"></a><a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
+##  <a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
  Задает максимальное число действий, которые могут храниться в очереди отмены.  
   
 ```  
@@ -1626,7 +1700,7 @@ UINT SetUndoLimit(UINT nLimit);
 ### <a name="remarks"></a>Примечания  
  По умолчанию максимальное количество действий в очереди отмены — 100. Если увеличить это число должно существовать недостаточно памяти для размещения новой. Для повышения производительности ограничить до минимально допустимое значение.  
   
-##  <a name="a-namesetwordcharformata--cricheditctrlsetwordcharformat"></a><a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
+##  <a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
  Задает символ, форматирование атрибуты для выбранного слова в этом `CRichEditCtrl` объекта.  
   
 ```  
@@ -1651,7 +1725,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl&#33;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
   
-##  <a name="a-namesetwordwrapmodea--cricheditctrlsetwordwrapmode"></a><a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
+##  <a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
  Установка параметров переноса слов и разбиение по словам для сложных поля ввода.  
   
 ```  
@@ -1668,7 +1742,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="remarks"></a>Примечания  
  Это сообщение является доступны только в азиатских языках версий операционной системы.  
   
-##  <a name="a-namestopgrouptypinga--cricheditctrlstopgrouptyping"></a><a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
+##  <a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
  Остановка управления сбор дополнительных ввода в действие отмены текущего действия.  
   
 ```  
@@ -1680,7 +1754,7 @@ void StopGroupTyping();
   
  Дополнительные сведения см. в разделе [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namestreamina--cricheditctrlstreamin"></a><a name="streamin"></a>CRichEditCtrl::StreamIn  
+##  <a name="streamin"></a>CRichEditCtrl::StreamIn  
  Заменяет текст в этой `CRichEditCtrl` вместе с текстом из указанного входного потока.  
   
 ```  
@@ -1717,7 +1791,7 @@ long StreamIn(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl&#35;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
   
-##  <a name="a-namestreamouta--cricheditctrlstreamout"></a><a name="streamout"></a>CRichEditCtrl::StreamOut  
+##  <a name="streamout"></a>CRichEditCtrl::StreamOut  
  Записывает содержимое данного `CRichEditCtrl` объект в указанный выходной поток.  
   
 ```  
@@ -1758,7 +1832,7 @@ long StreamOut(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl&#37;](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
   
-##  <a name="a-nameundoa--cricheditctrlundo"></a><a name="undo"></a>CRichEditCtrl::Undo  
+##  <a name="undo"></a>CRichEditCtrl::Undo  
  Отменяет последнюю операцию в управления rich edit.  
   
 ```  

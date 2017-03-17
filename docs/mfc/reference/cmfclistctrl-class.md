@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
+- AFXLISTCTRL/CMFCListCtrl
+- AFXLISTCTRL/CMFCListCtrl::EnableMarkSortedColumn
+- AFXLISTCTRL/CMFCListCtrl::EnableMultipleSort
+- AFXLISTCTRL/CMFCListCtrl::GetHeaderCtrl
+- AFXLISTCTRL/CMFCListCtrl::IsMultipleSort
+- AFXLISTCTRL/CMFCListCtrl::OnCompareItems
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellBkColor
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellFont
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellTextColor
+- AFXLISTCTRL/CMFCListCtrl::RemoveSortColumn
+- AFXLISTCTRL/CMFCListCtrl::SetSortColumn
+- AFXLISTCTRL/CMFCListCtrl::Sort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +101,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxlistctrl.h  
   
-##  <a name="a-nameenablemarksortedcolumna--cmfclistctrlenablemarksortedcolumn"></a><a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
  Помечает отсортированных столбцов с другой цвет фона.  
   
 ```  
@@ -108,7 +120,7 @@ void EnableMarkSortedColumn(
 ### <a name="remarks"></a>Примечания  
  `EnableMarkSortedColumn`использует метод `CDrawingManager::PixelAlpha` для расчета цвета, которые используются для сортировки столбцов. Выбрать цвет основан регулярного фонового цвета.  
   
-##  <a name="a-nameenablemultiplesorta--cmfclistctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
  Обеспечивает сортировку по нескольким столбцам строки данных в элементе управления списком.  
   
 ```  
@@ -122,7 +134,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Примечания  
  При использовании сортировки на основе нескольких столбцов, столбцы имеют иерархию. Строки данных будут отсортированы сначала по столбцу первичного. Затем все эквивалентные значения сортируются по каждого последующего столбца на основе приоритета.  
   
-##  <a name="a-namegetheaderctrla--cmfclistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
  Возвращает ссылку на элемент управления заголовка.  
   
 ```  
@@ -135,7 +147,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>Примечания  
  Заголовок элемента управления для элемента управления списка — это окно, содержащее заголовки столбцов. Обычно располагается непосредственно над столбцами.  
   
-##  <a name="a-nameismultiplesorta--cmfclistctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
  Проверяет ли элемент управления списком в настоящее время поддерживает сортировку по нескольким столбцам.  
   
 ```  
@@ -148,7 +160,7 @@ BOOL IsMultipleSort() const;
 ### <a name="remarks"></a>Примечания  
  Когда [CMFCListCtrl класс](../../mfc/reference/cmfclistctrl-class.md) поддерживает несколько сортировку, пользователь может сортировать данные в элементе управления списком по нескольким столбцам. Чтобы включить несколько сортировки, вызовите [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="a-nameoncompareitemsa--cmfclistctrloncompareitems"></a><a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
  Платформа вызывает этот метод, когда он сравнивает два элемента.  
   
 ```  
@@ -174,7 +186,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию всегда возвращает значение 0. Необходимо переопределить эту функцию, чтобы указать алгоритм сортировки.  
   
-##  <a name="a-nameongetcellbkcolora--cmfclistctrlongetcellbkcolor"></a><a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
  Платформа вызывает этот метод, когда он должен определить цвет фона отдельной ячейки.  
   
 ```  
@@ -196,7 +208,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию `OnGetCellBkColor` не используют предоставленных входных параметров и вместо этого просто вызывает `GetBkColor`. Таким образом по умолчанию весь список управления будет иметь тот же цвет фона. Можно переопределить `OnGetCellBkColor` в производном классе, чтобы пометить отдельные ячейки с отдельным фоновым цветом.  
   
-##  <a name="a-nameongetcellfonta--cmfclistctrlongetcellfont"></a><a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
  Платформа вызывает этот метод, когда он получает шрифт для всех ячеек.  
   
 ```  
@@ -222,7 +234,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод возвращает `NULL`. Все ячейки в элементе управления списком имеют тот же шрифт. Переопределите этот метод, чтобы предоставить различные шрифты для различных ячеек.  
   
-##  <a name="a-nameongetcelltextcolora--cmfclistctrlongetcelltextcolor"></a><a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
  Платформа вызывает этот метод, когда он должен определить цвет текста отдельной ячейке.  
   
 ```  
@@ -244,7 +256,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод вызывает метод `GetTextColor` вне зависимости от входных параметров. Полный список управления будет иметь тот же цвет текста. Можно переопределить `OnGetCellTextColor` в производном классе, чтобы пометить отдельные ячейки разделитель цветом.  
   
-##  <a name="a-nameremovesortcolumna--cmfclistctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
  Удаляет столбец сортировки из списка отсортированных столбцов.  
   
 ```  
@@ -258,7 +270,7 @@ void RemoveSortColumn(int iColumn);
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет столбец сортировки из заголовка элемента управления. Он вызывает [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="a-namesetsortcolumna--cmfclistctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
  Задает текущий столбец сортировки и порядок сортировки.  
   
 ```  
@@ -281,7 +293,7 @@ void SetSortColumn(
 ### <a name="remarks"></a>Примечания  
  Этот метод передает входные параметры управления заголовка с помощью метода [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="a-namesorta--cmfclistctrlsort"></a><a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>CMFCListCtrl::Sort  
  Сортировка списка элемента управления.  
   
 ```  

@@ -10,6 +10,51 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEdit
+- AFXWIN/CEdit
+- AFXWIN/CEdit::CEdit
+- AFXWIN/CEdit::CanUndo
+- AFXWIN/CEdit::CharFromPos
+- AFXWIN/CEdit::Clear
+- AFXWIN/CEdit::Copy
+- AFXWIN/CEdit::Create
+- AFXWIN/CEdit::Cut
+- AFXWIN/CEdit::EmptyUndoBuffer
+- AFXWIN/CEdit::FmtLines
+- AFXWIN/CEdit::GetCueBanner
+- AFXWIN/CEdit::GetFirstVisibleLine
+- AFXWIN/CEdit::GetHandle
+- AFXWIN/CEdit::GetHighlight
+- AFXWIN/CEdit::GetLimitText
+- AFXWIN/CEdit::GetLine
+- AFXWIN/CEdit::GetLineCount
+- AFXWIN/CEdit::GetMargins
+- AFXWIN/CEdit::GetModify
+- AFXWIN/CEdit::GetPasswordChar
+- AFXWIN/CEdit::GetRect
+- AFXWIN/CEdit::GetSel
+- AFXWIN/CEdit::HideBalloonTip
+- AFXWIN/CEdit::LimitText
+- AFXWIN/CEdit::LineFromChar
+- AFXWIN/CEdit::LineIndex
+- AFXWIN/CEdit::LineLength
+- AFXWIN/CEdit::LineScroll
+- AFXWIN/CEdit::Paste
+- AFXWIN/CEdit::PosFromChar
+- AFXWIN/CEdit::ReplaceSel
+- AFXWIN/CEdit::SetCueBanner
+- AFXWIN/CEdit::SetHandle
+- AFXWIN/CEdit::SetHighlight
+- AFXWIN/CEdit::SetLimitText
+- AFXWIN/CEdit::SetMargins
+- AFXWIN/CEdit::SetModify
+- AFXWIN/CEdit::SetPasswordChar
+- AFXWIN/CEdit::SetReadOnly
+- AFXWIN/CEdit::SetRect
+- AFXWIN/CEdit::SetRectNP
+- AFXWIN/CEdit::SetSel
+- AFXWIN/CEdit::SetTabStops
+- AFXWIN/CEdit::ShowBalloonTip
+- AFXWIN/CEdit::Undo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -177,7 +222,7 @@ class CEdit : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecanundoa--ceditcanundo"></a><a name="canundo"></a>CEdit::CanUndo  
+##  <a name="canundo"></a>CEdit::CanUndo  
  Эта функция вызывается для определения, если можно отменить последнюю операцию редактирования.  
   
 ```  
@@ -193,7 +238,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::Undo](#undo).  
   
-##  <a name="a-namecedita--ceditcedit"></a><a name="cedit"></a>CEdit::CEdit  
+##  <a name="cedit"></a>CEdit::CEdit  
  Создает объект `CEdit`.  
   
 ```  
@@ -206,7 +251,7 @@ CEdit();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#1;](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
-##  <a name="a-namecharfromposa--ceditcharfrompos"></a><a name="charfrompos"></a>CEdit::CharFromPos  
+##  <a name="charfrompos"></a>CEdit::CharFromPos  
  Эта функция вызывается для получения отсчитываемый от нуля и индексы символ знака ближайшего заданная точка в этом `CEdit` управления  
   
 ```  
@@ -230,7 +275,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#3;](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
-##  <a name="a-namecleara--ceditclear"></a><a name="clear"></a>CEdit::Clear  
+##  <a name="clear"></a>CEdit::Clear  
  Эта функция вызывается для удаления (clear) текущее выделение (если таковые имеются) в элементе управления.  
   
 ```  
@@ -247,7 +292,7 @@ void Clear();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#4;](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
-##  <a name="a-namecopya--ceditcopy"></a><a name="copy"></a>CEdit::Copy  
+##  <a name="copy"></a>CEdit::Copy  
  Эта функция вызывается для копирование текущего выделенного фрагмента (если таковые имеются) в буфер обмена в элементе управления **CF_TEXT** формат.  
   
 ```  
@@ -260,7 +305,7 @@ void Copy();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#5;](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
-##  <a name="a-namecreatea--ceditcreate"></a><a name="create"></a>CEdit::Create  
+##  <a name="create"></a>CEdit::Create  
  Управления редактированием Windows создает и присоединяет его к `CEdit` объекта.  
   
 ```  
@@ -309,7 +354,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#2;](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
-##  <a name="a-namecuta--ceditcut"></a><a name="cut"></a>CEdit::Cut  
+##  <a name="cut"></a>CEdit::Cut  
  Эта функция вызывается для удаления (Вырезать) текущее выделение (если таковые имеются) в элементе управления и скопируйте удаленный текст в буфер обмена в **CF_TEXT** формат.  
   
 ```  
@@ -326,7 +371,7 @@ void Cut();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit №&6;](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
-##  <a name="a-nameemptyundobuffera--ceditemptyundobuffer"></a><a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
  Эта функция вызывается для сброса (Очистить) флаг отмены элемента управления.  
   
 ```  
@@ -343,7 +388,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#7;](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
-##  <a name="a-namefmtlinesa--ceditfmtlines"></a><a name="fmtlines"></a>CEdit::FmtLines  
+##  <a name="fmtlines"></a>CEdit::FmtLines  
  Вызовите эту функцию для задания включения мягкого разрыва строки символов или отключить в элементе управления многострочного редактирования.  
   
 ```  
@@ -369,7 +414,7 @@ BOOL FmtLines(BOOL bAddEOL);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit №&8;](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
-##  <a name="a-namegetcuebannera--ceditgetcuebanner"></a><a name="getcuebanner"></a>CEdit::GetCueBanner  
+##  <a name="getcuebanner"></a>CEdit::GetCueBanner  
  Получает текст, который отображается в виде текста подсказки или совет, в элемент управления редактированием при пустом элементе управления.  
   
 ```  
@@ -395,7 +440,7 @@ CString GetCueBanner() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Дополнительные сведения см. в разделе [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) макрос.  
   
-##  <a name="a-namegetfirstvisiblelinea--ceditgetfirstvisibleline"></a><a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
  Эта функция используется для определения верхней строкой видимым в элементе управления редактирования.  
   
 ```  
@@ -411,7 +456,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit №&9;](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
-##  <a name="a-namegethandlea--ceditgethandle"></a><a name="gethandle"></a>CEdit::GetHandle  
+##  <a name="gethandle"></a>CEdit::GetHandle  
  Эта функция вызывается для получения дескриптора для памяти, выделенной для редактирования многострочного элемента управления.  
   
 ```  
@@ -436,7 +481,7 @@ HLOCAL GetHandle() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#10;](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
-##  <a name="a-namegethighlighta--ceditgethighlight"></a><a name="gethighlight"></a>CEdit::GetHighlight  
+##  <a name="gethighlight"></a>CEdit::GetHighlight  
  Возвращает индексы первый и последний символы в диапазоне текста, который выделен в текущем элементе управления.  
   
 ```  
@@ -458,7 +503,7 @@ BOOL GetHighlight(
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetlimittexta--ceditgetlimittext"></a><a name="getlimittext"></a>CEdit::GetLimitText  
+##  <a name="getlimittext"></a>CEdit::GetLimitText  
  Эта функция-член для получения текста ограничение для этого вызова `CEdit` объекта.  
   
 ```  
@@ -479,7 +524,7 @@ UINT GetLimitText() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&11;](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
-##  <a name="a-namegetlinea--ceditgetline"></a><a name="getline"></a>CEdit::GetLine  
+##  <a name="getline"></a>CEdit::GetLine  
  Эта функция вызывается для получения строки текста из элемента управления и помещает его в `lpszBuffer`.  
   
 ```  
@@ -514,7 +559,7 @@ int GetLine(
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::GetLineCount](#getlinecount).  
   
-##  <a name="a-namegetlinecounta--ceditgetlinecount"></a><a name="getlinecount"></a>CEdit::GetLineCount  
+##  <a name="getlinecount"></a>CEdit::GetLineCount  
  Эта функция используется для получения числа строк в элементе управления edit несколько строк.  
   
 ```  
@@ -532,7 +577,7 @@ int GetLineCount() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#12;](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
-##  <a name="a-namegetmarginsa--ceditgetmargins"></a><a name="getmargins"></a>CEdit::GetMargins  
+##  <a name="getmargins"></a>CEdit::GetMargins  
  Вызовите эту функцию-член для получения левого и правого полей поля ввода.  
   
 ```  
@@ -553,7 +598,7 @@ DWORD GetMargins() const;
 ### <a name="example"></a>Пример  
   В примере показано [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="a-namegetmodifya--ceditgetmodify"></a><a name="getmodify"></a>CEdit::GetModify  
+##  <a name="getmodify"></a>CEdit::GetModify  
  Эта функция вызывается для определения, были ли изменены содержимое элемента управления.  
   
 ```  
@@ -571,7 +616,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#13;](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
-##  <a name="a-namegetpasswordchara--ceditgetpasswordchar"></a><a name="getpasswordchar"></a>CEdit::GetPasswordChar  
+##  <a name="getpasswordchar"></a>CEdit::GetPasswordChar  
  Эта функция вызывается для получения пароля символ, который отображается в элемент управления, когда пользователь вводит текст.  
   
 ```  
@@ -589,7 +634,7 @@ TCHAR GetPasswordChar() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#14;](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
-##  <a name="a-namegetrecta--ceditgetrect"></a><a name="getrect"></a>CEdit::GetRect  
+##  <a name="getrect"></a>CEdit::GetRect  
  Эта функция вызывается для получения прямоугольника форматирования из элемента управления.  
   
 ```  
@@ -610,7 +655,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::LimitText](#limittext).  
   
-##  <a name="a-namegetsela--ceditgetsel"></a><a name="getsel"></a>CEdit::GetSel  
+##  <a name="getsel"></a>CEdit::GetSel  
  Эта функция вызывается для получения начала и окончания позиций символов текущее выделение (если таковые имеются) в элемент управления, с помощью возвращаемого значения или параметров.  
   
 ```  
@@ -637,7 +682,7 @@ void GetSel(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#15;](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
-##  <a name="a-namehideballoontipa--cedithideballoontip"></a><a name="hideballoontip"></a>CEdit::HideBalloonTip  
+##  <a name="hideballoontip"></a>CEdit::HideBalloonTip  
  Скрывает все всплывающей подсказки, связанный с текущего элемента управления редактирования.  
   
 ```  
@@ -650,7 +695,7 @@ BOOL HideBalloonTip();
 ### <a name="remarks"></a>Примечания  
  Эта функция отправляет [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namelimittexta--ceditlimittext"></a><a name="limittext"></a>CEdit::LimitText  
+##  <a name="limittext"></a>CEdit::LimitText  
  Эта функция вызывается для ограничения длины текста, который пользователь может ввести в элемент управления.  
   
 ```  
@@ -672,7 +717,7 @@ void LimitText(int nChars = 0);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&17;](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
-##  <a name="a-namelinefromchara--ceditlinefromchar"></a><a name="linefromchar"></a>CEdit::LineFromChar  
+##  <a name="linefromchar"></a>CEdit::LineFromChar  
  Эта функция вызывается для получения номер строки, содержащей символ с указанным индексом.  
   
 ```  
@@ -696,7 +741,7 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&18;](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
-##  <a name="a-namelineindexa--ceditlineindex"></a><a name="lineindex"></a>CEdit::LineIndex  
+##  <a name="lineindex"></a>CEdit::LineIndex  
  Эта функция вызывается для извлечения индекса символа строки внутри многострочного редактирования элемента управления.  
   
 ```  
@@ -720,7 +765,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&19;](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
-##  <a name="a-namelinelengtha--ceditlinelength"></a><a name="linelength"></a>CEdit::LineLength  
+##  <a name="linelength"></a>CEdit::LineLength  
  Получает длину строки в элемент управления редактированием.  
   
 ```  
@@ -748,7 +793,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::LineIndex](#lineindex).  
   
-##  <a name="a-namelinescrolla--ceditlinescroll"></a><a name="linescroll"></a>CEdit::LineScroll  
+##  <a name="linescroll"></a>CEdit::LineScroll  
  Эта функция вызывается для прокрутки элемента управления редактированием многострочный текст.  
   
 ```  
@@ -776,7 +821,7 @@ void LineScroll(
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="a-namepastea--ceditpaste"></a><a name="paste"></a>CEdit::Paste  
+##  <a name="paste"></a>CEdit::Paste  
  Эта функция вызывается для вставки данных из буфера обмена в `CEdit` в позиции курсора.  
   
 ```  
@@ -791,7 +836,7 @@ void Paste();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&20;](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
-##  <a name="a-nameposfromchara--ceditposfromchar"></a><a name="posfromchar"></a>CEdit::PosFromChar  
+##  <a name="posfromchar"></a>CEdit::PosFromChar  
  Эта функция вызывается для получения позиции (верхний левый угол) определенный символ в рамках этого `CEdit` объекта.  
   
 ```  
@@ -816,7 +861,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::LineFromChar](#linefromchar).  
   
-##  <a name="a-namereplacesela--ceditreplacesel"></a><a name="replacesel"></a>CEdit::ReplaceSel  
+##  <a name="replacesel"></a>CEdit::ReplaceSel  
  Вызывайте эту функцию, чтобы заменить текущее выделение в элемент управления текст, заданный параметром `lpszNewText`.  
   
 ```  
@@ -840,7 +885,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::LineIndex](#lineindex).  
   
-##  <a name="a-namesetcuebannera--ceditsetcuebanner"></a><a name="setcuebanner"></a>CEdit::SetCueBanner  
+##  <a name="setcuebanner"></a>CEdit::SetCueBanner  
  Задает текст, который отображается в виде подсказки текст или совет, изменения управления, когда элемент управления является пустым.  
   
 ```  
@@ -874,7 +919,7 @@ BOOL SetCueBanner(
   
  [!code-cpp[NVC_MFC_CEdit_s&#1;2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
-##  <a name="a-namesethandlea--ceditsethandle"></a><a name="sethandle"></a>CEdit::SetHandle  
+##  <a name="sethandle"></a>CEdit::SetHandle  
  Эта функция вызывается для задания к локальной памяти, который будет использоваться элементом управления многострочного редактирования.  
   
 ```  
@@ -904,7 +949,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#22;](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
-##  <a name="a-namesethighlighta--ceditsethighlight"></a><a name="sethighlight"></a>CEdit::SetHighlight  
+##  <a name="sethighlight"></a>CEdit::SetHighlight  
  Основные особенности диапазон текста, отображаемого в текущем поля ввода.  
   
 ```  
@@ -923,7 +968,7 @@ void SetHighlight(
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetlimittexta--ceditsetlimittext"></a><a name="setlimittext"></a>CEdit::SetLimitText  
+##  <a name="setlimittext"></a>CEdit::SetLimitText  
  Вызовите эту функцию-член ограничение текст для этого `CEdit` объекта.  
   
 ```  
@@ -946,7 +991,7 @@ void SetLimitText(UINT nMax);
 ### <a name="example"></a>Пример  
   В примере показано [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="a-namesetmarginsa--ceditsetmargins"></a><a name="setmargins"></a>CEdit::SetMargins  
+##  <a name="setmargins"></a>CEdit::SetMargins  
  Вызовите этот метод, чтобы задать левое и правое поля поля ввода.  
   
 ```  
@@ -972,7 +1017,7 @@ void SetMargins(
 ### <a name="example"></a>Пример  
   В примере показано [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="a-namesetmodifya--ceditsetmodify"></a><a name="setmodify"></a>CEdit::SetModify  
+##  <a name="setmodify"></a>CEdit::SetModify  
  Эта функция используется для установки или снятия измененного флага для элемента управления.  
   
 ```  
@@ -991,7 +1036,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::GetModify](#getmodify).  
   
-##  <a name="a-namesetpasswordchara--ceditsetpasswordchar"></a><a name="setpasswordchar"></a>CEdit::SetPasswordChar  
+##  <a name="setpasswordchar"></a>CEdit::SetPasswordChar  
  Эта функция используется для установки или удаления знака пароля отображается в элементе управления редактирования при вводе пользователем текста.  
   
 ```  
@@ -1016,7 +1061,7 @@ void SetPasswordChar(TCHAR ch);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit №&16;](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
-##  <a name="a-namesetreadonlya--ceditsetreadonly"></a><a name="setreadonly"></a>CEdit::SetReadOnly  
+##  <a name="setreadonly"></a>CEdit::SetReadOnly  
  Вызывает эту функцию для задания состояния элемента управления только для чтения.  
   
 ```  
@@ -1038,7 +1083,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#23;](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
-##  <a name="a-namesetrecta--ceditsetrect"></a><a name="setrect"></a>CEdit::SetRect  
+##  <a name="setrect"></a>CEdit::SetRect  
  Эта функция вызывается для указания размеров прямоугольника с помощью по указанным координатам.  
   
 ```  
@@ -1063,7 +1108,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CEdit&#24;](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
-##  <a name="a-namesetrectnpa--ceditsetrectnp"></a><a name="setrectnp"></a>CEdit::SetRectNP  
+##  <a name="setrectnp"></a>CEdit::SetRectNP  
  Вызовите эту функцию для задания прямоугольника форматирования элемента управления редактированием несколько строк.  
   
 ```  
@@ -1090,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::SetRect](#setrect).  
   
-##  <a name="a-namesetsela--ceditsetsel"></a><a name="setsel"></a>CEdit::SetSel  
+##  <a name="setsel"></a>CEdit::SetSel  
  Эта функция используется для выбора диапазона символов в элемент управления редактированием.  
   
 ```  
@@ -1124,7 +1169,7 @@ void SetSel(
 ### <a name="example"></a>Пример  
   В примере показано [CEdit::GetSel](#getsel).  
   
-##  <a name="a-namesettabstopsa--ceditsettabstops"></a><a name="settabstops"></a>CEdit::SetTabStops  
+##  <a name="settabstops"></a>CEdit::SetTabStops  
  Вызывайте эту функцию, чтобы установить позицию табуляции в элементе управления edit несколько строк.  
   
 ```  
@@ -1164,7 +1209,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>Пример  
   В примере показано [CEditView::SetTabStops](ceditview-class.md#settabstops).  
   
-##  <a name="a-nameshowballoontipa--ceditshowballoontip"></a><a name="showballoontip"></a>CEdit::ShowBalloonTip  
+##  <a name="showballoontip"></a>CEdit::ShowBalloonTip  
  Отображает всплывающую подсказку, связанный с текущего элемента управления редактирования.  
   
 ```  
@@ -1202,7 +1247,7 @@ BOOL ShowBalloonTip(
   
  [!code-cpp[NVC_MFC_CEdit_s&#1;3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
-##  <a name="a-nameundoa--ceditundo"></a><a name="undo"></a>CEdit::Undo  
+##  <a name="undo"></a>CEdit::Undo  
  Эта функция вызывается для отмены последней операции управления редактированием.  
   
 ```  

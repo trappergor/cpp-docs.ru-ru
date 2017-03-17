@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactoryAutoThread
-- ATL.CComClassFactoryAutoThread
 - CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
+- ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  Создает объект для указанного идентификатора CLSID и получает указатель интерфейса на этот объект.  
   
 ```
@@ -109,7 +110,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>Примечания  
  Если модуль является производным от [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` сначала выбирает поток для создания объекта в подразделении связанных.  
   
-##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
  Увеличение и уменьшение счетчик блокировок модуля путем вызова **_Module::Lock** и **_Module::Unlock**соответственно.  
   
 ```

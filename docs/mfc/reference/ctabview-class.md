@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabView
+- AFXTABVIEW/CTabView
+- AFXTABVIEW/CTabView::AddView
+- AFXTABVIEW/CTabView::FindTab
+- AFXTABVIEW/CTabView::GetActiveView
+- AFXTABVIEW/CTabView::GetTabControl
+- AFXTABVIEW/CTabView::RemoveView
+- AFXTABVIEW/CTabView::SetActiveView
+- AFXTABVIEW/CTabView::IsScrollBar
+- AFXTABVIEW/CTabView::OnActivateView
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +92,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxTabView.h  
   
-##  <a name="a-nameaddviewa--ctabviewaddview"></a><a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>CTabView::AddView  
  Добавляет представление вкладок элемента управления.  
   
 ```  
@@ -113,7 +122,7 @@ int AddView(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для добавления представления вкладок, внедренный в кадре.  
   
-##  <a name="a-namefindtaba--ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>CTabView::FindTab  
  Возвращает индекс указанного представления в элементе управления вкладками.  
   
 ```  
@@ -130,7 +139,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения индекса представления с указанным дескриптором.  
   
-##  <a name="a-namegetactiveviewa--ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>CTabView::GetActiveView  
  Возвращает указатель активного представления.  
   
 ```  
@@ -142,7 +151,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegettabcontrola--ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
  Возвращает ссылку на вкладок, связанный с представлением.  
   
 ```  
@@ -152,7 +161,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на вкладок, связанный с представлением.  
   
-##  <a name="a-nameisscrollbara--ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
  Вызывается инфраструктурой при создании представление вкладки, чтобы определить, имеет ли представление вкладки общей горизонтальной полосы прокрутки.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL IsScrollBar() const;
   
  Переопределение `IsScrollBar` метод в `CTabView`-производного класса и возврата `TRUE` Если вы хотите создать представление, имеющее общей горизонтальной полосы прокрутки.  
   
-##  <a name="a-nameonactivateviewa--ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>CTabView::OnActivateView  
  Вызывается платформой, когда представление вкладки становится активным или неактивным.  
   
 ```  
@@ -181,7 +190,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию не выполняет никаких действий. Переопределите этот метод в `CTabView`-производный класс для обработки этого уведомления.  
   
-##  <a name="a-nameremoveviewa--ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>CTabView::RemoveView  
  Удаляет представление из вкладок элемента управления.  
   
 ```  
@@ -197,7 +206,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetactiveviewa--ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>CTabView::SetActiveView  
  Активизация представления.  
   
 ```  

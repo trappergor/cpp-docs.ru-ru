@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrimitiveElementTraits<T>
 - CPrimitiveElementTraits
-- ATL.CPrimitiveElementTraits
-- ATL::CPrimitiveElementTraits<T>
-- ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE
+- ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +84,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
  Тип данных для добавления элементов в объекте класса коллекции.  
   
 ```
 typedef T INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
  Тип данных, использовать для получения элементов из объекта класса коллекции.  
   
 ```

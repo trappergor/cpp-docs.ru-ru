@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrElementTraits
 - CHeapPtrElementTraits
-- ATL::CHeapPtrElementTraits
+- ATLCOLL/ATL::CHeapPtrElementTraits
+- ATLCOLL/ATL::CHeapPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CHeapPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,14 +91,14 @@ class CHeapPtrElementTraits :
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
  Тип данных для добавления элементов в объекте класса коллекции.  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
  Тип данных, использовать для получения элементов из объекта класса коллекции.  
   
 ```

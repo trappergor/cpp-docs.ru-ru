@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabCtrl
+- AFXCMN/CTabCtrl
+- AFXCMN/CTabCtrl::CTabCtrl
+- AFXCMN/CTabCtrl::AdjustRect
+- AFXCMN/CTabCtrl::Create
+- AFXCMN/CTabCtrl::CreateEx
+- AFXCMN/CTabCtrl::DeleteAllItems
+- AFXCMN/CTabCtrl::DeleteItem
+- AFXCMN/CTabCtrl::DeselectAll
+- AFXCMN/CTabCtrl::DrawItem
+- AFXCMN/CTabCtrl::GetCurFocus
+- AFXCMN/CTabCtrl::GetCurSel
+- AFXCMN/CTabCtrl::GetExtendedStyle
+- AFXCMN/CTabCtrl::GetImageList
+- AFXCMN/CTabCtrl::GetItem
+- AFXCMN/CTabCtrl::GetItemCount
+- AFXCMN/CTabCtrl::GetItemRect
+- AFXCMN/CTabCtrl::GetItemState
+- AFXCMN/CTabCtrl::GetRowCount
+- AFXCMN/CTabCtrl::GetToolTips
+- AFXCMN/CTabCtrl::HighlightItem
+- AFXCMN/CTabCtrl::HitTest
+- AFXCMN/CTabCtrl::InsertItem
+- AFXCMN/CTabCtrl::RemoveImage
+- AFXCMN/CTabCtrl::SetCurFocus
+- AFXCMN/CTabCtrl::SetCurSel
+- AFXCMN/CTabCtrl::SetExtendedStyle
+- AFXCMN/CTabCtrl::SetImageList
+- AFXCMN/CTabCtrl::SetItem
+- AFXCMN/CTabCtrl::SetItemExtra
+- AFXCMN/CTabCtrl::SetItemSize
+- AFXCMN/CTabCtrl::SetItemState
+- AFXCMN/CTabCtrl::SetMinTabWidth
+- AFXCMN/CTabCtrl::SetPadding
+- AFXCMN/CTabCtrl::SetToolTips
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +148,7 @@ class CTabCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-nameadjustrecta--ctabctrladjustrect"></a><a name="adjustrect"></a>CTabCtrl::AdjustRect  
+##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
  Вычисляет набор вкладок площади указанным прямоугольником окна или вычисляет, будет соответствовать области отображения данного прямоугольника окна.  
   
 ```  
@@ -131,7 +165,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CTabCtrl&#1;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="a-namecreatea--ctabctrlcreate"></a><a name="create"></a>CTabCtrl::Create  
+##  <a name="create"></a>CTabCtrl::Create  
  Создает элемент управления вкладки и присоединяет его к экземпляру `CTabCtrl` объекта.  
   
 ```  
@@ -178,7 +212,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CTabCtrl&#2;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="a-namecreateexa--ctabctrlcreateex"></a><a name="createex"></a>CTabCtrl::CreateEx  
+##  <a name="createex"></a>CTabCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CTabCtrl` объекта.  
   
 ```  
@@ -214,14 +248,14 @@ virtual BOOL CreateEx(
   
  `CreateEx`Создает элемент управления с помощью расширенных стилей Windows, заданные `dwExStyle`. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle). Например, используйте `CreateEx` установка стилей, таких как **WS_EX_CONTEXTHELP**, но использовать `SetExtendedStyle` установка стилей, таких как **TCS_EX_FLATSEPARATORS**. Дополнительные сведения см. в разделе стили, описанные в [вкладка управления расширенные стили](http://msdn.microsoft.com/library/windows/desktop/bb760546) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namectabctrla--ctabctrlctabctrl"></a><a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
+##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
  Создает объект `CTabCtrl`.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="a-namedeleteallitemsa--ctabctrldeleteallitems"></a><a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
  Удаляет все элементы из элемента управления вкладками.  
   
 ```  
@@ -231,7 +265,7 @@ BOOL DeleteAllItems();
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="a-namedeleteitema--ctabctrldeleteitem"></a><a name="deleteitem"></a>CTabCtrl::DeleteItem  
+##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
  Удаляет заданный элемент из элемента управления вкладками.  
   
 ```  
@@ -248,7 +282,7 @@ BOOL DeleteItem(int nItem);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CTabCtrl&#3;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="a-namedeselectalla--ctabctrldeselectall"></a><a name="deselectall"></a>CTabCtrl::DeselectAll  
+##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
  Сбрасывает элементы в элементе управления вкладками, очистки, которые были нажаты.  
   
 ```  
@@ -262,7 +296,7 @@ void DeselectAll(BOOL fExcludeFocus);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedrawitema--ctabctrldrawitem"></a><a name="drawitem"></a>CTabCtrl::DrawItem  
+##  <a name="drawitem"></a>CTabCtrl::DrawItem  
  Вызывается инфраструктурой при изменении внешнего вида изменения рисование владельцем элемента управления.  
   
 ```  
@@ -280,7 +314,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Приложение должно восстановить всех графических устройств интерфейс (GDI) выбранных объектов в контексте отображения указано в `lpDrawItemStruct` перед этим членом завершении функции.  
   
-##  <a name="a-namegetcurfocusa--ctabctrlgetcurfocus"></a><a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
+##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
  Возвращает индекс текущей вкладки.  
   
 ```  
@@ -290,7 +324,7 @@ int GetCurFocus() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс текущей вкладки.  
   
-##  <a name="a-namegetcursela--ctabctrlgetcursel"></a><a name="getcursel"></a>CTabCtrl::GetCurSel  
+##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
  Получает текущую выбранную вкладку в наборе вкладок.  
   
 ```  
@@ -300,7 +334,7 @@ int GetCurSel() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс выбранной вкладки в случае успешного выполнения или – 1, если выбрана вкладка «нет».  
   
-##  <a name="a-namegetextendedstylea--ctabctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
  Извлекает расширенные стили, используемые в данный момент используется для управления "Вкладка".  
   
 ```  
@@ -313,7 +347,7 @@ DWORD GetExtendedStyle();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetimagelista--ctabctrlgetimagelist"></a><a name="getimagelist"></a>CTabCtrl::GetImageList  
+##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
  Получает список изображений, связанной с вкладок.  
   
 ```  
@@ -323,7 +357,7 @@ CImageList* GetImageList() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на список изображений на вкладке управления, в случае успешного выполнения; в противном случае — **NULL**.  
   
-##  <a name="a-namegetitema--ctabctrlgetitem"></a><a name="getitem"></a>CTabCtrl::GetItem  
+##  <a name="getitem"></a>CTabCtrl::GetItem  
  Извлекает сведения о вкладке в элементе управления вкладками.  
   
 ```  
@@ -371,7 +405,7 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CTabCtrl&#4;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="a-namegetitemcounta--ctabctrlgetitemcount"></a><a name="getitemcount"></a>CTabCtrl::GetItemCount  
+##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
  Получает число вкладок в элементе управления вкладками.  
   
 ```  
@@ -384,7 +418,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Пример  
   В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="a-namegetitemrecta--ctabctrlgetitemrect"></a><a name="getitemrect"></a>CTabCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
  Возвращает ограничивающий прямоугольник для указанной вкладки в элементе управления вкладками.  
   
 ```  
@@ -404,7 +438,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ### <a name="example"></a>Пример  
   В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="a-namegetitemstatea--ctabctrlgetitemstate"></a><a name="getitemstate"></a>CTabCtrl::GetItemState  
+##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
  Получает состояние элемента управления вкладки, идентифицируемый `nItem`.  
   
 ```  
@@ -431,7 +465,7 @@ DWORD GetItemState(
 ### <a name="remarks"></a>Примечания  
  Состояние элемента определяется **dwState** членом `TCITEM` структуры.  
   
-##  <a name="a-namegetrowcounta--ctabctrlgetrowcount"></a><a name="getrowcount"></a>CTabCtrl::GetRowCount  
+##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
  Возвращает текущее число строк в наборе вкладок.  
   
 ```  
@@ -444,7 +478,7 @@ int GetRowCount() const;
 ### <a name="remarks"></a>Примечания  
  Только вкладку элементы управления, имеющие **TCS_MULTILINE** стиль может занимать несколько строк вкладок.  
   
-##  <a name="a-namegettooltipsa--ctabctrlgettooltips"></a><a name="gettooltips"></a>CTabCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
  Получает дескриптор управления всплывающей подсказки, связанный с элементом управления вкладки.  
   
 ```  
@@ -457,7 +491,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>Примечания  
  Создает набор вкладок элемента управления всплывающей подсказки, при наличии **TCS_TOOLTIPS** стиль. Можно также назначить управления всплывающей подсказки для элемента управления tab с помощью `SetToolTips` функции-члена.  
   
-##  <a name="a-namehighlightitema--ctabctrlhighlightitem"></a><a name="highlightitem"></a>CTabCtrl::HighlightItem  
+##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
  Задает состояние выделения элемента вкладки.  
   
 ```  
@@ -477,7 +511,7 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует сообщение Win32 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehittesta--ctabctrlhittest"></a><a name="hittest"></a>CTabCtrl::HitTest  
+##  <a name="hittest"></a>CTabCtrl::HitTest  
  Определяет, какая вкладка, позиции заданного экрана.  
   
 ```  
@@ -491,7 +525,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает отсчитываемый от нуля индекс вкладки или – 1, если в указанной позиции.  
   
-##  <a name="a-nameinsertitema--ctabctrlinsertitem"></a><a name="insertitem"></a>CTabCtrl::InsertItem  
+##  <a name="insertitem"></a>CTabCtrl::InsertItem  
  Вставляет новую вкладку в существующий элемент управления вкладки.  
   
 ```  
@@ -570,7 +604,7 @@ LONG InsertItem(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CTabCtrl&#5;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="a-nameremoveimagea--ctabctrlremoveimage"></a><a name="removeimage"></a>CTabCtrl::RemoveImage  
+##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
  Удаляет указанный образ из списка изображений набор вкладок.  
   
 ```  
@@ -584,7 +618,7 @@ void RemoveImage(int nImage);
 ### <a name="remarks"></a>Примечания  
  Вкладок обновляет индекс изображения каждой вкладки, чтобы каждая вкладка остаются связанными с одного изображения.  
   
-##  <a name="a-namesetcurfocusa--ctabctrlsetcurfocus"></a><a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
+##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
  Устанавливает фокус на указанной вкладки в элементе управления вкладками.  
   
 ```  
@@ -598,7 +632,7 @@ void SetCurFocus(int nItem);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetcursela--ctabctrlsetcursel"></a><a name="setcursel"></a>CTabCtrl::SetCurSel  
+##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
  Выбор вкладки в элементе управления вкладками.  
   
 ```  
@@ -615,7 +649,7 @@ int SetCurSel(int nItem);
 ### <a name="remarks"></a>Примечания  
  Набор вкладок не отправляет **TCN_SELCHANGING** или **TCN_SELCHANGE** уведомление при выборе вкладки с помощью этой функции. Эти уведомления отправляются с помощью **WM_NOTIFY**, когда пользователь нажимает кнопку или клавиатурой для изменения табуляции.  
   
-##  <a name="a-namesetextendedstylea--ctabctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
  Задает расширенные стили для элемента управления tab.  
   
 ```  
@@ -635,7 +669,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ### <a name="return-value"></a>Возвращаемое значение  
  Эта функция-член реализует поведение сообщения Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetimagelista--ctabctrlsetimagelist"></a><a name="setimagelist"></a>CTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
  Назначает списка изображений для элемента управления tab.  
   
 ```  
@@ -649,7 +683,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на список предыдущих изображений или **NULL** Если нет предыдущего списка изображений.  
   
-##  <a name="a-namesetitema--ctabctrlsetitem"></a><a name="setitem"></a>CTabCtrl::SetItem  
+##  <a name="setitem"></a>CTabCtrl::SetItem  
  Задает некоторые или все атрибуты вкладки.  
   
 ```  
@@ -669,7 +703,7 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ### <a name="example"></a>Пример  
   В примере показано [GetItem](#getitem).  
   
-##  <a name="a-namesetitemextraa--ctabctrlsetitemextra"></a><a name="setitemextra"></a>CTabCtrl::SetItemExtra  
+##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
  Задает число байтов на вкладке зарезервировано для определяемых приложением данных в элементе управления вкладками.  
   
 ```  
@@ -686,7 +720,7 @@ BOOL SetItemExtra(int nBytes);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemsizea--ctabctrlsetitemsize"></a><a name="setitemsize"></a>CTabCtrl::SetItemSize  
+##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
  Задает ширину и высоту элементов набора вкладок.  
   
 ```  
@@ -700,7 +734,7 @@ CSize SetItemSize(CSize size);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает старую ширину и высоту элементов набора вкладок.  
   
-##  <a name="a-namesetitemstatea--ctabctrlsetitemstate"></a><a name="setitemstate"></a>CTabCtrl::SetItemState  
+##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
  Задает состояние элемента управления вкладки, идентифицируемый `nItem`.  
   
 ```  
@@ -728,7 +762,7 @@ BOOL SetItemState(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="a-namesetmintabwidtha--ctabctrlsetmintabwidth"></a><a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
+##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
  Задает минимальную ширину элементов в элементе управления вкладками.  
   
 ```  
@@ -745,7 +779,7 @@ int SetMinTabWidth(int cx);
 ### <a name="return-value"></a>Возвращаемое значение  
  Эта функция-член реализует поведение сообщения Win32 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetpaddinga--ctabctrlsetpadding"></a><a name="setpadding"></a>CTabCtrl::SetPadding  
+##  <a name="setpadding"></a>CTabCtrl::SetPadding  
  Задает объем пространства (заполнения) вокруг каждой вкладке значок и метку в наборе вкладок.  
   
 ```  
@@ -756,7 +790,7 @@ void SetPadding(CSize size);
  `size`  
  Задает объем пространства (заполнения) вокруг каждой вкладке значок и метку в наборе вкладок.  
   
-##  <a name="a-namesettooltipsa--ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips  
+##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
  Присваивает набор вкладок элемента управления всплывающей подсказки.  
   
 ```  

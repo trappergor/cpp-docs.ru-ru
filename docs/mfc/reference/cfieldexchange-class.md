@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
+- AFXDB/CFieldExchange
+- AFXDB/CFieldExchange::IsFieldType
+- AFXDB/CFieldExchange::SetFieldType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class CFieldExchange
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="a-nameisfieldtypea--cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
  При написании собственной функции RFX вызвать `IsFieldType` в начале функции, чтобы определить, можно выполнить текущую операцию для определенного поля или параметра член типа данных ( **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, или **CFieldExchange::inoutParam**).  
   
 ```  
@@ -106,7 +109,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>Примечания  
  Следуйте модели для существующих функций RFX.  
   
-##  <a name="a-namesetfieldtypea--cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
  Необходим вызов `SetFieldType` в классе записей [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) или [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) переопределить.  
   
 ```  

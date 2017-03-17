@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAutoCriticalSection
-- ATL::CComAutoCriticalSection
 - CComAutoCriticalSection
+- ATLCORE/ATL::CComAutoCriticalSection
+- ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +75,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcore.h  
   
-##  <a name="a-nameccomautocriticalsectiona--ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
+##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
  Конструктор.  
   
 ```
@@ -85,7 +85,7 @@ CComAutoCriticalSection();
 ### <a name="remarks"></a>Примечания  
  Вызывает функцию Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), который инициализирует объект критической секции.  
   
-##  <a name="a-namedtora--ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  Деструктор  
   
 ```

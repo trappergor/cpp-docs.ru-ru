@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMouseManager
+- AFXMOUSEMANAGER/CMouseManager
+- AFXMOUSEMANAGER/CMouseManager::AddView
+- AFXMOUSEMANAGER/CMouseManager::GetViewDblClickCommand
+- AFXMOUSEMANAGER/CMouseManager::GetViewIconId
+- AFXMOUSEMANAGER/CMouseManager::GetViewIdByName
+- AFXMOUSEMANAGER/CMouseManager::GetViewNames
+- AFXMOUSEMANAGER/CMouseManager::LoadState
+- AFXMOUSEMANAGER/CMouseManager::SaveState
+- AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +85,7 @@ class CMouseManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmousemanager.h  
   
-##  <a name="a-nameaddviewa--cmousemanageraddview"></a><a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>CMouseManager::AddView  
  Регистрирует [CView](../../mfc/reference/cview-class.md) объекта с [CMouseManager класса](../../mfc/reference/cmousemanager-class.md) для поддержки поведения пользовательского мыши.  
   
 ```  
@@ -123,7 +132,7 @@ BOOL AddView(
   
  [!code-cpp[NVC_MFC_StateCollection&#4;](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="a-namegetviewdblclickcommanda--cmousemanagergetviewdblclickcommand"></a><a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
+##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
  Возвращает команду, которая выполняется, когда пользователь дважды щелкает внутри указанного представления.  
   
 ```  
@@ -137,7 +146,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор команды, если представление связано с помощью команды; в противном случае — 0.  
   
-##  <a name="a-namegetviewiconida--cmousemanagergetviewiconid"></a><a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
  Получает значок, связанный с идентификатором представления.  
   
 ```  
@@ -154,7 +163,7 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод завершится ошибкой, если представление сначала не зарегистрирован с помощью [CMouseManager::AddView](#addview).  
   
-##  <a name="a-namegetviewidbynamea--cmousemanagergetviewidbyname"></a><a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
+##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
  Извлекает идентификатор представления, связанные с именем представления.  
   
 ```  
@@ -171,7 +180,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод выполняет поиск через представления, зарегистрированные с помощью [CMouseManager::AddView](#addview).  
   
-##  <a name="a-namegetviewnamesa--cmousemanagergetviewnames"></a><a name="getviewnames"></a>CMouseManager::GetViewNames  
+##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
  Получает список имен всех зарегистрированных представления.  
   
 ```  
@@ -185,7 +194,7 @@ void GetViewNames(CStringList& listOfNames) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод заполняет параметр `listOfNames` с именами всех представлений, которые зарегистрированы с помощью [CMouseManager::AddView](#addview).  
   
-##  <a name="a-nameloadstatea--cmousemanagerloadstate"></a><a name="loadstate"></a>CMouseManager::LoadState  
+##  <a name="loadstate"></a>CMouseManager::LoadState  
  Загружает состояние [CMouseManager класса](../../mfc/reference/cmousemanager-class.md) из реестра.  
   
 ```  
@@ -204,7 +213,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  В большинстве случаев не нужно непосредственно вызвать эту функцию. Он вызывается как часть процесса инициализации рабочей области. Дополнительные сведения о процессе инициализации рабочей области в разделе [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="a-namesavestatea--cmousemanagersavestate"></a><a name="savestate"></a>CMouseManager::SaveState  
+##  <a name="savestate"></a>CMouseManager::SaveState  
  Записывает состояние [CMouseManager класса](../../mfc/reference/cmousemanager-class.md) в реестре.  
   
 ```  
@@ -223,7 +232,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  В большинстве случаев не нужно непосредственно вызвать эту функцию. Он вызывается как часть процесса сериализации рабочей области. Дополнительные сведения о рабочей области процесса сериализации см. в разделе [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="a-namesetcommandfordblclka--cmousemanagersetcommandfordblclk"></a><a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
+##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
  Связывает команду с представлением, сначала зарегистрированной в диспетчере мыши.  
   
 ```  

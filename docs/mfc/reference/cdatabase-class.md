@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDatabase
+- AFXDB/CDatabase
+- AFXDB/CDatabase::CDatabase
+- AFXDB/CDatabase::BeginTrans
+- AFXDB/CDatabase::BindParameters
+- AFXDB/CDatabase::Cancel
+- AFXDB/CDatabase::CanTransact
+- AFXDB/CDatabase::CanUpdate
+- AFXDB/CDatabase::Close
+- AFXDB/CDatabase::CommitTrans
+- AFXDB/CDatabase::ExecuteSQL
+- AFXDB/CDatabase::GetBookmarkPersistence
+- AFXDB/CDatabase::GetConnect
+- AFXDB/CDatabase::GetCursorCommitBehavior
+- AFXDB/CDatabase::GetCursorRollbackBehavior
+- AFXDB/CDatabase::GetDatabaseName
+- AFXDB/CDatabase::IsOpen
+- AFXDB/CDatabase::OnSetOptions
+- AFXDB/CDatabase::Open
+- AFXDB/CDatabase::OpenEx
+- AFXDB/CDatabase::Rollback
+- AFXDB/CDatabase::SetLoginTimeout
+- AFXDB/CDatabase::SetQueryTimeout
+- AFXDB/CDatabase::m_hdbc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +133,7 @@ class CDatabase : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="a-namebegintransa--cdatabasebegintrans"></a><a name="begintrans"></a>CDatabase::BeginTrans  
+##  <a name="begintrans"></a>CDatabase::BeginTrans  
  Вызовите эту функцию-член для начала транзакции с подключенного источника данных.  
   
 ```  
@@ -142,7 +165,7 @@ BOOL BeginTrans();
 ### <a name="example"></a>Пример  
   См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="a-namebindparametersa--cdatabasebindparameters"></a><a name="bindparameters"></a>CDatabase::BindParameters  
+##  <a name="bindparameters"></a>CDatabase::BindParameters  
  Переопределение `BindParameters` при необходимости привязки параметров перед вызовом метода [помощью функции CDatabase::ExecuteSQL](#executesql).  
   
 ```  
@@ -158,7 +181,7 @@ virtual void BindParameters(HSTMT hstmt);
   
  Во время переопределения вызвать **SQLBindParameters** и связанных функций ODBC для привязки параметров. MFC вызывает переопределение до обращения к `ExecuteSQL`. Необходимо вызвать **SQLPrepare**; `ExecuteSQL` вызовов **SQLExecDirect** и уничтожает **hstmt**, который используется только один раз.  
   
-##  <a name="a-namecancela--cdatabasecancel"></a><a name="cancel"></a>CDatabase::Cancel  
+##  <a name="cancel"></a>CDatabase::Cancel  
  Вызовите эту функцию-член для запроса, что источник данных отменить асинхронные операции или процесса из второго потока.  
   
 ```  
@@ -168,7 +191,7 @@ void Cancel();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что классы MFC ODBC больше не использовать асинхронную обработку; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Дополнительные сведения см. в разделе [асинхронное выполнение](https://msdn.microsoft.com/library/ms713563.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecantransacta--cdatabasecantransact"></a><a name="cantransact"></a>CDatabase::CanTransact  
+##  <a name="cantransact"></a>CDatabase::CanTransact  
  Вызовите эту функцию-член для определения того, допускает ли базы данных транзакции.  
   
 ```  
@@ -181,7 +204,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Примечания  
  Сведения о транзакциях см. в статье [транзакции (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="a-namecanupdatea--cdatabasecanupdate"></a><a name="canupdate"></a>CDatabase::CanUpdate  
+##  <a name="canupdate"></a>CDatabase::CanUpdate  
  Вызов этой функции-члена для определения ли `CDatabase` объект позволяет обновлений.  
   
 ```  
@@ -194,7 +217,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Примечания  
  Не все драйверы поддерживают обновления.  
   
-##  <a name="a-namecdatabasea--cdatabasecdatabase"></a><a name="cdatabase"></a>CDatabase::CDatabase  
+##  <a name="cdatabase"></a>CDatabase::CDatabase  
  Создает объект `CDatabase`.  
   
 ```  
@@ -213,7 +236,7 @@ CDatabase();
   
  [!code-cpp[NVC_MFCDatabase&#10;](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="a-nameclosea--cdatabaseclose"></a><a name="close"></a>CDatabase::Close  
+##  <a name="close"></a>CDatabase::Close  
  Вызовите эту функцию-член, если необходимо разорвать соединение с источником данных.  
   
 ```  
@@ -228,7 +251,7 @@ virtual void Close();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase&#12;](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="a-namecommittransa--cdatabasecommittrans"></a><a name="committrans"></a>CDatabase::CommitTrans  
+##  <a name="committrans"></a>CDatabase::CommitTrans  
  Вызовите эту функцию-член по завершении транзакции.  
   
 ```  
@@ -248,7 +271,7 @@ BOOL CommitTrans();
 ### <a name="example"></a>Пример  
   См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="a-nameexecutesqla--cdatabaseexecutesql"></a><a name="executesql"></a>Помощью функции CDatabase::ExecuteSQL  
+##  <a name="executesql"></a>Помощью функции CDatabase::ExecuteSQL  
  При необходимости выполнить команду SQL непосредственно, вызовите эту функцию-член.  
   
 ```  
@@ -267,7 +290,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase&#13;](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="a-namegetbookmarkpersistencea--cdatabasegetbookmarkpersistence"></a><a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
+##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
  Вызовите эту функцию-член, чтобы определить наличие закладок в объекте recordset после определенных операций.  
   
 ```  
@@ -294,7 +317,7 @@ DWORD GetBookmarkPersistence() const;
   
  Дополнительные сведения об этом значении см. в разделе функции ODBC API **SQLGetInfo** в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Дополнительные сведения о закладках см. в статье [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="a-namegetconnecta--cdatabasegetconnect"></a><a name="getconnect"></a>CDatabase::GetConnect  
+##  <a name="getconnect"></a>CDatabase::GetConnect  
  Вызов этой функции-члена для получения строки подключения, используемые при вызове `OpenEx` или `Open` , подключенный `CDatabase` объекта к источнику данных.  
   
 ```  
@@ -307,7 +330,7 @@ const CString GetConnect() const;
 ### <a name="remarks"></a>Примечания  
  В разделе [CDatabase::Open](#open) Описание способа создания строки подключения.  
   
-##  <a name="a-namegetcursorcommitbehaviora--cdatabasegetcursorcommitbehavior"></a><a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
+##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
  Вызов этой функции-члена для определения способа [CommitTrans](#committrans) операция затрагивает курсоры объектов откройте набор записей.  
   
 ```  
@@ -328,7 +351,7 @@ int GetCursorCommitBehavior() const;
   
  Дополнительные сведения об этом значении см. в разделе функции ODBC API **SQLGetInfo** в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Дополнительные сведения о транзакциях см. в статье [транзакции (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="a-namegetcursorrollbackbehaviora--cdatabasegetcursorrollbackbehavior"></a><a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
+##  <a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
  Вызов этой функции-члена для определения как [отката](#rollback) операция затрагивает курсоры объектов откройте набор записей.  
   
 ```  
@@ -349,7 +372,7 @@ int GetCursorRollbackBehavior() const;
   
  Дополнительные сведения об этом значении см. в разделе функции ODBC API **SQLGetInfo** в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Дополнительные сведения о транзакциях см. в статье [транзакции (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="a-namegetdatabasenamea--cdatabasegetdatabasename"></a><a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
  Вызовите эту функцию-член для извлечения имени текущей подключенной базы данных (при условии, что источник данных определяет именованный объект, называемый «базы данных»).  
   
 ```  
@@ -364,7 +387,7 @@ CString GetDatabaseName() const;
   
  Например, можно отобразить это имя в заголовке. Если произошла ошибка при получении имени из ODBC, `GetDatabaseName` возвращает пустую коллекцию **Cstring**.  
   
-##  <a name="a-nameisopena--cdatabaseisopen"></a><a name="isopen"></a>CDatabase::IsOpen  
+##  <a name="isopen"></a>CDatabase::IsOpen  
  Вызов этой функции-члена для определения ли `CDatabase` объект в данный момент подключен к источнику данных.  
   
 ```  
@@ -374,7 +397,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если `CDatabase` объект в данный момент подключен; в противном случае — 0.  
   
-##  <a name="a-namemhdbca--cdatabasemhdbc"></a><a name="m_hdbc"></a>CDatabase::m_hdbc  
+##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
  Содержит открытый дескриптор для соединения с источником данных ODBC â €» «дескриптор подключения».  
   
 ### <a name="remarks"></a>Примечания  
@@ -385,7 +408,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase&#15;](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="a-nameonsetoptionsa--cdatabaseonsetoptions"></a><a name="onsetoptions"></a>CDatabase::OnSetOptions  
+##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
  Платформа вызывает эту функцию-член, если выполнение инструкции SQL с `ExecuteSQL` функции-члена.  
   
 ```  
@@ -408,7 +431,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  Переопределение `OnSetOptions` Если вы хотите установить дополнительные параметры. Переопределение должно вызвать базовый класс `OnSetOptions` до или после вызова функции ODBC API **SQLSetStmtOption**. Выполните метод, проиллюстрированный в реализации по умолчанию платформа framework `OnSetOptions`.  
   
-##  <a name="a-nameopena--cdatabaseopen"></a><a name="open"></a>CDatabase::Open  
+##  <a name="open"></a>CDatabase::Open  
  Вызов этой функции-члена для инициализации нового созданного `CDatabase` объекта.  
   
 ```  
@@ -456,7 +479,7 @@ virtual BOOL Open(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase&#14;](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="a-nameopenexa--cdatabaseopenex"></a><a name="openex"></a>CDatabase::OpenEx  
+##  <a name="openex"></a>CDatabase::OpenEx  
  Вызов этой функции-члена для инициализации нового созданного `CDatabase` объекта.  
   
 ```  
@@ -499,7 +522,7 @@ virtual BOOL OpenEx(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase&11;](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="a-namerollbacka--cdatabaserollback"></a><a name="rollback"></a>CDatabase::Rollback  
+##  <a name="rollback"></a>CDatabase::Rollback  
  Вызов этой функции-члена для отмены изменений, внесенных во время транзакции.  
   
 ```  
@@ -519,7 +542,7 @@ BOOL Rollback();
 ### <a name="example"></a>Пример  
   См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="a-namesetlogintimeouta--cdatabasesetlogintimeout"></a><a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
  Вызовите этот член функции â €» перед вызовом метода `OpenEx` или **откройте** â €«переопределить значение по умолчанию в секундах до попытки данных соединения с источником времени ожидания.  
   
 ```  
@@ -535,7 +558,7 @@ void SetLoginTimeout(DWORD dwSeconds);
   
  Значение по умолчанию для времени ожидания входа составляет 15 секунд. Не все источники данных поддерживают возможность задать значение времени ожидания входа в систему. Если источник данных не поддерживает время ожидания, вы получите выходные данные трассировки, но не исключение. Значение 0 означает «бесконечность».  
   
-##  <a name="a-namesetquerytimeouta--cdatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
  Вызов этой функции-члена для переопределения количество секунд перед выполнением последующих операций на время ожидания источника данных по умолчанию.  
   
 ```  

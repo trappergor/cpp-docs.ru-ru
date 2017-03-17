@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DRectF
 - CD2DRectF
+- AFXRENDERTARGET/CD2DRectF
+- AFXRENDERTARGET/CD2DRectF::CD2DRectF
+- AFXRENDERTARGET/CD2DRectF::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DRectF : public D2D1_RECT_F;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-namecd2drectfa--cd2drectfcd2drectf"></a><a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
+##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
  Создает объект CD2DRectF из CRect объекта.  
   
 ```  
@@ -109,7 +111,7 @@ CD2DRectF(
  `fBottom`  
  Нижняя координата источника  
   
-##  <a name="a-nameisnulla--cd2drectfisnull"></a><a name="isnull"></a>CD2DRectF::ISNULL  
+##  <a name="isnull"></a>CD2DRectF::ISNULL  
  Возвращает логическое значение, указывающее, содержит ли выражение недопустимые данные (Null).  
   
 ```  
@@ -119,7 +121,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если прямоугольника верхней, левой, нижней и правильные значения все равно 0; в противном случае — значение FALSE.  
   
-##  <a name="a-nameoperatorcrecta--cd2drectfoperator-crect"></a><a name="operator_crect"></a>CD2DRectF::operator CRect  
+##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
  Преобразует CD2DRectF CRect.  
   
 ```  

@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWin32Heap
-- ATL.CWin32Heap
 - CWin32Heap
+- ATLMEM/ATL::CWin32Heap
+- ATLMEM/ATL::CWin32Heap::CWin32Heap
+- ATLMEM/ATL::CWin32Heap::Allocate
+- ATLMEM/ATL::CWin32Heap::Attach
+- ATLMEM/ATL::CWin32Heap::Detach
+- ATLMEM/ATL::CWin32Heap::Free
+- ATLMEM/ATL::CWin32Heap::GetSize
+- ATLMEM/ATL::CWin32Heap::Reallocate
+- ATLMEM/ATL::CWin32Heap::m_bOwnHeap
+- ATLMEM/ATL::CWin32Heap::m_hHeap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlmem.h  
   
-##  <a name="a-nameallocatea--cwin32heapallocate"></a><a name="allocate"></a>CWin32Heap::Allocate  
+##  <a name="allocate"></a>CWin32Heap::Allocate  
  Выделяет блок памяти из кучи объекта.  
   
 ```
@@ -113,7 +121,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Реализовано с помощью [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
   
-##  <a name="a-nameattacha--cwin32heapattach"></a><a name="attach"></a>CWin32Heap::Attach  
+##  <a name="attach"></a>CWin32Heap::Attach  
  Присоединяет объект кучи в существующую кучу.  
   
 ```
@@ -130,7 +138,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>Примечания  
  Если `bTakeOwnership` имеет значение TRUE, `CWin32Heap` объект отвечает за удаление дескриптором кучи.  
   
-##  <a name="a-namecwin32heapa--cwin32heapcwin32heap"></a><a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
  Конструктор.  
   
 ```
@@ -172,7 +180,7 @@ CWin32Heap(
   
  Третий параметр по умолчанию равен 0, что обеспечивает рост размера кучи по мере необходимости. В разделе [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) объяснение объемы памяти и флаги.  
   
-##  <a name="a-namedtora--cwin32heapcwin32heap"></a><a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
  Деструктор  
   
 ```
@@ -182,7 +190,7 @@ CWin32Heap(
 ### <a name="remarks"></a>Примечания  
  Уничтожает дескриптор кучи, если `CWin32Heap` объект имеет владельцем кучи.  
   
-##  <a name="a-namedetacha--cwin32heapdetach"></a><a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>CWin32Heap::Detach  
  Отсоединяет объект кучи от существующую кучу.  
   
 ```
@@ -192,7 +200,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор в кучу, в который ранее был присоединен объект.  
   
-##  <a name="a-namefreea--cwin32heapfree"></a><a name="free"></a>CWin32Heap::Free  
+##  <a name="free"></a>CWin32Heap::Free  
  Освобождает память, выделенную ранее из кучи, [CWin32Heap::Allocate](#allocate) или [CWin32Heap::Reallocate](#reallocate).  
   
 ```
@@ -203,7 +211,7 @@ virtual void Free(void* p) throw();
  `p`  
  Указатель на блок памяти для освобождения. Значение NULL является допустимым значением и не выполняет никаких действий.  
   
-##  <a name="a-namegetsizea--cwin32heapgetsize"></a><a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>CWin32Heap::GetSize  
  Возвращает размер блока памяти, выделенный из объектов кучи.  
   
 ```
@@ -217,14 +225,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает размер в байтах, выделенный блок памяти.  
   
-##  <a name="a-namembownheapa--cwin32heapmbownheap"></a><a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
  Флаг, используемый для определения текущего владельца дескриптора кучи, хранящиеся в [m_hHeap](#m_hheap).  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="a-namemhheapa--cwin32heapmhheap"></a><a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
  Дескриптор объекта кучи.  
   
 ```
@@ -234,7 +242,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>Примечания  
  Переменная, используемая для хранения дескриптора объекта.  
   
-##  <a name="a-namereallocatea--cwin32heapreallocate"></a><a name="reallocate"></a>CWin32Heap::Reallocate  
+##  <a name="reallocate"></a>CWin32Heap::Reallocate  
  Повторно выделяет блок памяти из кучи объекта.  
   
 ```

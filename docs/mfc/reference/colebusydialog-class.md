@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
+- AFXODLGS/COleBusyDialog
+- AFXODLGS/COleBusyDialog::COleBusyDialog
+- AFXODLGS/COleBusyDialog::DoModal
+- AFXODLGS/COleBusyDialog::GetSelectionType
+- AFXODLGS/COleBusyDialog::m_bz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +104,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="a-namecolebusydialoga--colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
  Эта функция создает только `COleBusyDialog` объекта.  
   
 ```  
@@ -134,7 +139,7 @@ explicit COleBusyDialog(
   
  Дополнительные сведения см. в разделе [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedomodala--colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>COleBusyDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна OLE, сервер занят или сервер не отвечает.  
   
 ```  
@@ -155,7 +160,7 @@ virtual INT_PTR DoModal();
   
  Если `DoModal` возвращает **IDOK**, можно вызвать другой член функции для получения параметров или данных, введенных пользователем в диалоговом окне.  
   
-##  <a name="a-namegetselectiontypea--colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
  Эта функция вызывается для получения тип выбора, выбранного пользователем в диалоговом окне, сервер занят.  
   
 ```  
@@ -188,7 +193,7 @@ UINT GetSelectionType() const;
   
 - **COleBusyDialog::callUnblocked** вызова для активации сервера уже разблокирован.  
   
-##  <a name="a-namembza--colebusydialogmbz"></a><a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>COleBusyDialog::m_bz  
  Структура типа **OLEUIBUSY** используется для управления поведением диалогового окна «сервер занят».  
   
 ```  

@@ -9,8 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- Picture
 - CPictureHolder
+- AFXCTL/CPictureHolder
+- AFXCTL/CPictureHolder::CPictureHolder
+- AFXCTL/CPictureHolder::CreateEmpty
+- AFXCTL/CPictureHolder::CreateFromBitmap
+- AFXCTL/CPictureHolder::CreateFromIcon
+- AFXCTL/CPictureHolder::CreateFromMetafile
+- AFXCTL/CPictureHolder::GetDisplayString
+- AFXCTL/CPictureHolder::GetPictureDispatch
+- AFXCTL/CPictureHolder::GetType
+- AFXCTL/CPictureHolder::Render
+- AFXCTL/CPictureHolder::SetPictureDispatch
+- AFXCTL/CPictureHolder::m_pPict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +104,14 @@ class CPictureHolder
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="a-namecpictureholdera--cpictureholdercpictureholder"></a><a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
  Создает объект `CPictureHolder`.  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="a-namecreateemptya--cpictureholdercreateempty"></a><a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
  Создает пустой `CPictureHolder` объекта и подключает его к `IPicture` интерфейс.  
   
 ```  
@@ -110,7 +121,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если объект успешно создан; в противном случае — 0.  
   
-##  <a name="a-namecreatefrombitmapa--cpictureholdercreatefrombitmap"></a><a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
  Использует растровое изображение для инициализации объекта рисунка в `CPictureHolder`.  
   
 ```  
@@ -155,7 +166,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>Примечания  
  Если `bTransferOwnership` — **TRUE**, вызывающий код не должен использовать растровое изображение или возвращает объект палитры каким-либо образом после этого вызова. Если `bTransferOwnership` — **FALSE**, вызывающий объект отвечает за обеспечение точечного рисунка и палитру объекты остаются действительными в течение времени существования объекта-рисунка.  
   
-##  <a name="a-namecreatefromicona--cpictureholdercreatefromicon"></a><a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
  Используется для инициализации объекта рисунка в значок `CPictureHolder`.  
   
 ```  
@@ -184,7 +195,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>Примечания  
  Если `bTransferOwnership` — **TRUE**, вызывающий объект не следует использовать значок объекта каким-либо образом после возвращения этого вызова. Если `bTransferOwnership` — **FALSE**, вызывающий объект отвечает за обеспечение объекта значок остается действительным в течение времени существования объекта-рисунка.  
   
-##  <a name="a-namecreatefrommetafilea--cpictureholdercreatefrommetafile"></a><a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
  Используется для инициализации объекта рисунка в метафайл `CPictureHolder`.  
   
 ```  
@@ -214,7 +225,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>Примечания  
  Если `bTransferOwnership` — **TRUE**, вызывающий объект не следует использовать объекты metafile каким-либо образом после возвращения этого вызова. Если `bTransferOwnership` — **FALSE**, вызывающий объект отвечает за обеспечение метафайла объект остается действительным в течение времени существования объекта-рисунка.  
   
-##  <a name="a-namegetdisplaystringa--cpictureholdergetdisplaystring"></a><a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
  Получает строку, которая отображается в обозревателе свойств контейнера.  
   
 ```  
@@ -228,7 +239,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если строка успешно извлечено; в противном случае — 0.  
   
-##  <a name="a-namegetpicturedispatcha--cpictureholdergetpicturedispatch"></a><a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
  Эта функция возвращает указатель на `CPictureHolder` объекта `IPictureDisp` интерфейса.  
   
 ```  
@@ -241,7 +252,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>Примечания  
  Вызывающий объект должен вызвать **версии** для этого указателя, после завершения работы с ним.  
   
-##  <a name="a-namegettypea--cpictureholdergettype"></a><a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>CPictureHolder::GetType  
  Указывает, является ли рисунок точечный рисунок, метафайла или значка.  
   
 ```  
@@ -259,14 +270,14 @@ short GetType();
 |**PICTYPE_METAFILE**|Рисунок является метафайл.|  
 |**PICTYPE_ICON**|Изображен значок.|  
   
-##  <a name="a-namemppicta--cpictureholdermppict"></a><a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
  Указатель на `CPictureHolder` объекта `IPicture` интерфейса.  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="a-namerendera--cpictureholderrender"></a><a name="render"></a>CPictureHolder::Render  
+##  <a name="render"></a>CPictureHolder::Render  
  Отображает изображение в прямоугольнике, который ссылается `rcRender`.  
   
 ```  
@@ -286,7 +297,7 @@ void Render(
  *rcWBounds*  
  Прямоугольник, представляющий прямоугольник, ограничивающий объект визуализации изображения. Для управления этот прямоугольник определяется `rcBounds` параметр, передаваемый переопределение [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
-##  <a name="a-namesetpicturedispatcha--cpictureholdersetpicturedispatch"></a><a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
  Подключается `CPictureHolder` объект `IPictureDisp` интерфейса.  
   
 ```  

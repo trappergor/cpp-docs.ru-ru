@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontcomboboxa--cmfctoolbarfontcomboboxcmfctoolbarfontcombobox"></a><a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  Создает [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) объекта.  
   
 ```  
@@ -158,7 +162,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad&#7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="a-namegetfontdesca--cmfctoolbarfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
  Возвращает указатель на `CMFCFontInfo` объект для указанного индекса в поле со списком.  
   
 ```  
@@ -172,7 +176,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на объект `CMFCFontInfo`. Если `iIndex` указывается индекс допустимый элемент, возвращается значение `NULL`.  
   
-##  <a name="a-namemnfontheighta--cmfctoolbarfontcomboboxmnfontheight"></a><a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
  Высота в пикселях символов в поле со списком шрифта, если поле со списком имеет стиль рисования владельцем.  
   
 ```  
@@ -182,7 +186,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>Примечания  
  Если `m_nFontHeight` переменной равно 0, высота вычисляется автоматически в соответствии со списком шрифт по умолчанию. Высота относятся как восхождение символов выше базовых показателей и спуск символов под базовых показателей.  
   
-##  <a name="a-namesetfonta--cmfctoolbarfontcomboboxsetfont"></a><a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
  Выбирает шрифт в поле со списком Шрифт согласно имя шрифта и символ набор, указываются в параметрах.  
   
 ```  

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModuleT<T>
-- ATL.CAtlModuleT
-- ATL.CAtlModuleT<T>
-- ATL::CAtlModuleT
 - CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::InitLibId
+- ATLBASE/ATL::CAtlModuleT::RegisterAppId
+- ATLBASE/ATL::CAtlModuleT::RegisterServer
+- ATLBASE/ATL::CAtlModuleT::UnregisterAppId
+- ATLBASE/ATL::CAtlModuleT::UnregisterServer
+- ATLBASE/ATL::CAtlModuleT::UpdateRegistryAppId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +96,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="a-namecatlmoduleta--catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
  Конструктор.  
   
 ```
@@ -102,7 +106,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [CAtlModuleT::InitLibId](#initlibid).  
   
-##  <a name="a-nameinitlibida--catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
  Инициализирует элемент данных, содержащая GUID текущего модуля.  
   
 ```
@@ -112,7 +116,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>Примечания  
  Вызывается конструктор [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
-##  <a name="a-nameregisterappida--catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
  Exe-ФАЙЛ, добавляет в реестр.  
   
 ```
@@ -122,7 +126,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-nameregisterservera--catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
  Добавляет службу в реестре.  
   
 ```
@@ -141,7 +145,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-nameunregisterappida--catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
  Удаление exe-файла из реестра.  
   
 ```
@@ -151,7 +155,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-nameunregisterservera--catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
  Удаляет службу из реестра.  
   
 ```
@@ -170,7 +174,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-nameupdateregistryappida--catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
  Обновляет сведения о exe-файла в реестре.  
   
 ```

@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactory2<license>
 - CComClassFactory2
-- ATL.CComClassFactory2<license>
-- ATL::CComClassFactory2
-- ATL.CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2::CreateInstance
+- ATLCOM/ATL::CComClassFactory2::CreateInstanceLic
+- ATLCOM/ATL::CComClassFactory2::GetLicInfo
+- ATLCOM/ATL::CComClassFactory2::LockServer
+- ATLCOM/ATL::CComClassFactory2::RequestLicKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +106,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactory2createinstance"></a><a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
  Создает объект для указанного идентификатора CLSID и получает указатель интерфейса на этот объект.  
   
 ```
@@ -127,7 +129,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>Примечания  
  Необходимо иметь лицензию полностью компьютера. Если лицензия полного не существует, вызов [CreateInstanceLic](#createinstancelic).  
   
-##  <a name="a-namecreateinstancelica--ccomclassfactory2createinstancelic"></a><a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
  Аналогично [CreateInstance](#createinstance), за исключением того, что `CreateInstanceLic` требует лицензионный ключ.  
   
 ```
@@ -162,7 +164,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>Примечания  
  Вы можете получить лицензионного ключа использовать [RequestLicKey](#requestlickey). Чтобы создать объект на машине нелицензионных, необходимо вызвать метод `CreateInstanceLic`.  
   
-##  <a name="a-namegetlicinfoa--ccomclassfactory2getlicinfo"></a><a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
  Заполняет [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структуры сведения, описывающие фабрика классов по лицензированию возможности.  
   
 ```
@@ -179,7 +181,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>Примечания  
  `fRuntimeKeyAvail` Этой структуры указывает, учитывая лицензионный ключ, фабрика классов позволяет ли объекты для создания на машине нелицензионного. *FLicVerified* элемент указывает, существует ли полного лицензии.  
   
-##  <a name="a-namelockservera--ccomclassfactory2lockserver"></a><a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>CComClassFactory2::LockServer  
  Увеличение и уменьшение счетчик блокировок модуля путем вызова **_Module::Lock** и **_Module::Unlock**соответственно.  
   
 ```
@@ -198,7 +200,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  Вызов `LockServer` позволяет клиенту удерживать фабрики класса, чтобы быстро создать несколько объектов.  
   
-##  <a name="a-namerequestlickeya--ccomclassfactory2requestlickey"></a><a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
  Создает и возвращает лицензионный ключ, при условии, что `fRuntimeKeyAvail` членом [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структура **TRUE**.  
   
 ```

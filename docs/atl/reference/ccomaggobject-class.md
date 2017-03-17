@@ -9,11 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComAggObject<contained>
-- ATL.CComAggObject
-- ATL.CComAggObject<contained>
 - CComAggObject
-- ATL::CComAggObject
+- ATLCOM/ATL::CComAggObject
+- ATLCOM/ATL::CComAggObject::CComAggObject
+- ATLCOM/ATL::CComAggObject::AddRef
+- ATLCOM/ATL::CComAggObject::CreateInstance
+- ATLCOM/ATL::CComAggObject::FinalConstruct
+- ATLCOM/ATL::CComAggObject::FinalRelease
+- ATLCOM/ATL::CComAggObject::QueryInterface
+- ATLCOM/ATL::CComAggObject::Release
+- ATLCOM/ATL::CComAggObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +108,7 @@ class CComAggObject : public IUnknown,
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomaggobjectaddref"></a><a name="addref"></a>CComAggObject::AddRef  
+##  <a name="addref"></a>CComAggObject::AddRef  
  Увеличивает значение счетчика ссылок на объект статистические.  
   
 ```
@@ -113,7 +118,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, которое может быть полезно для диагностики и тестирования.  
   
-##  <a name="a-nameccomaggobjecta--ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>CComAggObject::CComAggObject  
+##  <a name="ccomaggobject"></a>CComAggObject::CComAggObject  
  Конструктор.  
   
 ```
@@ -129,7 +134,7 @@ CComAggObject(void* pv);
   
  Деструктор уменьшает счетчик блокировок модуля.  
   
-##  <a name="a-namedtora--ccomaggobjectccomaggobject"></a><a name="dtor"></a>CComAggObject:: ~ CComAggObject  
+##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject  
  Деструктор  
   
 ```
@@ -139,7 +144,7 @@ CComAggObject(void* pv);
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы, вызовы [FinalRelease](#finalrelease), и уменьшает счетчик блокировки модуля.  
   
-##  <a name="a-namecreateinstancea--ccomaggobjectcreateinstance"></a><a name="createinstance"></a>CComAggObject::CreateInstance  
+##  <a name="createinstance"></a>CComAggObject::CreateInstance  
  Эта статическая функция позволяет создать новую **CComAggObject** `contained` ** > ** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -160,7 +165,7 @@ static HRESULT WINAPI CreateInstance(
   
  Если не требуется прямой доступ к объекту, но по-прежнему необходимо создать новый объект без использования `CoCreateInstance`, используйте [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо.  
   
-##  <a name="a-namefinalconstructa--ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>CComAggObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComAggObject::FinalConstruct  
  Вызывается во время последних этапов создания объекта, этот метод выполняет инициализацию окончательный [m_contained](#m_contained) член.  
   
 ```
@@ -170,14 +175,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namefinalreleasea--ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>CComAggObject::FinalRelease  
+##  <a name="finalrelease"></a>CComAggObject::FinalRelease  
  Вызывается во время удаления объекта, этот метод освобождает [m_contained](#m_contained) член.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccomaggobjectmcontained"></a><a name="m_contained"></a>CComAggObject::m_contained  
+##  <a name="m_contained"></a>CComAggObject::m_contained  
  Объект [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) объект, производный от класса.  
   
 ```
@@ -191,7 +196,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>Примечания  
  Все **IUnknown** вызывается с помощью `m_contained` делегируются внешнего неизвестно.  
   
-##  <a name="a-namequeryinterfacea--ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>CComAggObject::QueryInterface  
+##  <a name="queryinterface"></a>CComAggObject::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -216,7 +221,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="remarks"></a>Примечания  
  Если запрошенный интерфейс **IUnknown**, `QueryInterface` возвращает объединенные объекта собственный указатель **IUnknown** и увеличивает значение счетчика ссылок. В противном случае, этот метод запрашивает интерфейс через `CComContainedObject` член, [m_contained](#m_contained).  
   
-##  <a name="a-namereleasea--ccomaggobjectrelease"></a><a name="release"></a>CComAggObject::Release  
+##  <a name="release"></a>CComAggObject::Release  
  Уменьшает счетчик ссылок на объект статистические.  
   
 ```

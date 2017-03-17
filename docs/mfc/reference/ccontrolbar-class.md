@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CControlBar
+- AFXEXT/CControlBar
+- AFXEXT/CControlBar::CControlBar
+- AFXEXT/CControlBar::CalcDynamicLayout
+- AFXEXT/CControlBar::CalcFixedLayout
+- AFXEXT/CControlBar::CalcInsideRect
+- AFXEXT/CControlBar::DoPaint
+- AFXEXT/CControlBar::DrawBorders
+- AFXEXT/CControlBar::DrawGripper
+- AFXEXT/CControlBar::EnableDocking
+- AFXEXT/CControlBar::GetBarStyle
+- AFXEXT/CControlBar::GetBorders
+- AFXEXT/CControlBar::GetCount
+- AFXEXT/CControlBar::GetDockingFrame
+- AFXEXT/CControlBar::IsFloating
+- AFXEXT/CControlBar::OnUpdateCmdUI
+- AFXEXT/CControlBar::SetBarStyle
+- AFXEXT/CControlBar::SetBorders
+- AFXEXT/CControlBar::SetInPlaceOwner
+- AFXEXT/CControlBar::m_bAutoDelete
+- AFXEXT/CControlBar::m_pInPlaceOwner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +135,7 @@ class CControlBar : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле afxext.h  
   
-##  <a name="a-namecalcdynamiclayouta--ccontrolbarcalcdynamiclayout"></a><a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
+##  <a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
  Платформа вызывает эту функцию-член для вычисления измерений динамическую панель инструментов.  
   
 ```  
@@ -147,7 +167,7 @@ virtual CSize CalcDynamicLayout(
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию-член для предоставления динамический макет в классы, производные от `CControlBar`. MFC-классы, производные от `CControlBar`, такие как [CToolbar](../../mfc/reference/ctoolbar-class.md), переопределить эту функцию-член и предоставить свою собственную реализацию.  
   
-##  <a name="a-namecalcfixedlayouta--ccontrolbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
  Вызовите эту функцию-член для вычисления горизонтальный размер панели элементов управления.  
   
 ```  
@@ -178,7 +198,7 @@ virtual CSize CalcFixedLayout(
 |**ЗНАЧЕНИЕ FALSE**|**ЗНАЧЕНИЕ TRUE**|Без растягивания доступны|Горизонтально|Закрепление|  
 |**ЗНАЧЕНИЕ FALSE**|**ЗНАЧЕНИЕ FALSE**|Без растягивания доступны|Вертикально|Закрепление|  
   
-##  <a name="a-namecalcinsiderecta--ccontrolbarcalcinsiderect"></a><a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
+##  <a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
  Платформа вызывает эту функцию для расчета клиентской области элемента панели управления.  
   
 ```  
@@ -199,14 +219,14 @@ virtual void CalcInsideRect(
   
  Переопределите эту функцию для настройки отображения границы и полосе захвата панели элементов управления.  
   
-##  <a name="a-nameccontrolbara--ccontrolbarccontrolbar"></a><a name="ccontrolbar"></a>CControlBar::CControlBar  
+##  <a name="ccontrolbar"></a>CControlBar::CControlBar  
  Создает объект `CControlBar`.  
   
 ```  
 CControlBar();
 ```  
   
-##  <a name="a-namedopainta--ccontrolbardopaint"></a><a name="dopaint"></a>CControlBar::DoPaint  
+##  <a name="dopaint"></a>CControlBar::DoPaint  
  Вызывается платформой для отображения границы и полосе захвата панели элементов управления.  
   
 ```  
@@ -222,7 +242,7 @@ virtual void DoPaint(CDC* pDC);
   
  Другой способ настройки является переопределение `DrawBorders` и `DrawGripper` функции и добавьте пользовательский код рисования границ и захвата. Поскольку эти методы вызываются по умолчанию `DoPaint` метод, переопределенный `DoPaint` не требуется.  
   
-##  <a name="a-namedrawbordersa--ccontrolbardrawborders"></a><a name="drawborders"></a>CControlBar::DrawBorders  
+##  <a name="drawborders"></a>CControlBar::DrawBorders  
  Вызывается платформой для визуализации границ панели управления.  
   
 ```  
@@ -241,7 +261,7 @@ virtual void DrawBorders(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы настроить внешний вид границы панели управления.  
   
-##  <a name="a-namedrawgrippera--ccontrolbardrawgripper"></a><a name="drawgripper"></a>CControlBar::DrawGripper  
+##  <a name="drawgripper"></a>CControlBar::DrawGripper  
  Вызывается платформой для отображения захвата панели управления.  
   
 ```  
@@ -260,7 +280,7 @@ virtual void DrawGripper(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для настройки внешнего вида границу панели управления.  
   
-##  <a name="a-nameenabledockinga--ccontrolbarenabledocking"></a><a name="enabledocking"></a>CControlBar::EnableDocking  
+##  <a name="enabledocking"></a>CControlBar::EnableDocking  
  Эта функция вызывается для включения закреплять панели элементов управления.  
   
 ```  
@@ -288,7 +308,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>Примечания  
  Указанных сторон должна соответствовать одной из сторон включено закрепление в фрейме окна назначения или нельзя закрепить панель элементов управления, окно.  
   
-##  <a name="a-namegetbarstylea--ccontrolbargetbarstyle"></a><a name="getbarstyle"></a>CControlBar::GetBarStyle  
+##  <a name="getbarstyle"></a>CControlBar::GetBarStyle  
  Эта функция вызывается для определения того, какие **CBRS_** (стили панель управления) в настоящее время настроек панели управления.  
   
 ```  
@@ -301,7 +321,7 @@ DWORD GetBarStyle();
 ### <a name="remarks"></a>Примечания  
  Не обрабатывает **WS_** стили (стиль окна).  
   
-##  <a name="a-namegetbordersa--ccontrolbargetborders"></a><a name="getborders"></a>CControlBar::GetBorders  
+##  <a name="getborders"></a>CControlBar::GetBorders  
  Возвращает текущие значения границы панели управления.  
   
 ```  
@@ -311,7 +331,7 @@ CRect GetBorders() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CRect` , содержащий текущей ширины (в пикселях) каждого края объекта панели управления. Например, значение `left` член из [CRect](../../atl-mfc-shared/reference/crect-class.md) , представляет ширину левой границы.  
   
-##  <a name="a-namegetcounta--ccontrolbargetcount"></a><a name="getcount"></a>CControlBar::GetCount  
+##  <a name="getcount"></a>CControlBar::GetCount  
  Возвращает число не `HWND` элементам на `CControlBar` объект.  
   
 ```  
@@ -324,7 +344,7 @@ int GetCount() const;
 ### <a name="remarks"></a>Примечания  
  Тип элемента зависит от производного объекта: области для [CStatusBar](../../mfc/reference/cstatusbar-class.md) объектов и кнопки и разделители для [CToolBar](../../mfc/reference/ctoolbar-class.md) объектов.  
   
-##  <a name="a-namegetdockingframea--ccontrolbargetdockingframe"></a><a name="getdockingframe"></a>CControlBar::GetDockingFrame  
+##  <a name="getdockingframe"></a>CControlBar::GetDockingFrame  
  Вызовите эту функцию-член для получения указателя в текущее окно фрейма, к которому прикреплено панели управления.  
   
 ```  
@@ -339,7 +359,7 @@ CFrameWnd* GetDockingFrame() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о закрепляемых панелей см. в разделе [CControlBar::EnableDocking](#enabledocking) и [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
-##  <a name="a-nameisfloatinga--ccontrolbarisfloating"></a><a name="isfloating"></a>CControlBar::IsFloating  
+##  <a name="isfloating"></a>CControlBar::IsFloating  
  Вызовите эту функцию-член для определения плавающая или закрепленная панели управления.  
   
 ```  
@@ -352,7 +372,7 @@ BOOL IsFloating() const;
 ### <a name="remarks"></a>Примечания  
  Чтобы изменить состояние панели элементов управления из закрепленного станет плавающим, следует вызвать [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).  
   
-##  <a name="a-namembautodeletea--ccontrolbarmbautodelete"></a><a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
+##  <a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
  Если значение ненулевое, `CControlBar` объект удаляется при удалении на панели управления Windows.  
   
 ```  
@@ -366,14 +386,14 @@ BOOL m_bAutoDelete;
   
  Присвойте этой переменной значение ненулевое значение, если выделить `CControlBar` объектов в куче и вы не планируете вызвать **удаление**.  
   
-##  <a name="a-namempinplaceownera--ccontrolbarmpinplaceowner"></a><a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
+##  <a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
  Владелец на месте панели управления.  
   
 ```  
 CWnd* m_pInPlaceOwner;  
 ```  
   
-##  <a name="a-nameonupdatecmduia--ccontrolbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
  Эта функция-член вызывается платформой для обновления состояния панели инструментов или состояния.  
   
 ```  
@@ -394,7 +414,7 @@ virtual void OnUpdateCmdUI(
   
  `OnUpdateCmdUI`Вызывается средой во время простоя приложения. Окна фрейма обновления должны иметь дочернего окна, по крайней мере косвенно отображается окно. `OnUpdateCmdUI`существует расширенная переопределяемыми.  
   
-##  <a name="a-namesetbarstylea--ccontrolbarsetbarstyle"></a><a name="setbarstyle"></a>CControlBar::SetBarStyle  
+##  <a name="setbarstyle"></a>CControlBar::SetBarStyle  
  Эта функция вызывается для задайте требуемую **CBRS_** стилей для панели управления.  
   
 ```  
@@ -434,7 +454,7 @@ void SetBarStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Примечания  
  Не влияет на **WS_** параметры (стиль окна).  
   
-##  <a name="a-namesetbordersa--ccontrolbarsetborders"></a><a name="setborders"></a>CControlBar::SetBorders  
+##  <a name="setborders"></a>CControlBar::SetBorders  
  Вызывайте эту функцию, чтобы задать размер границы панели управления.  
   
 ```  
@@ -468,7 +488,7 @@ void SetBorders(LPCRECT lpRect);
   
  [!code-cpp[NVC_MFCControlLadenDialog&#61;](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
   
-##  <a name="a-namesetinplaceownera--ccontrolbarsetinplaceowner"></a><a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
+##  <a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
  Изменяет владельца на месте панели элементов управления.  
   
 ```  

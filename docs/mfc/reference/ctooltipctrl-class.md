@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CToolTipCtrl
+- AFXCMN/CToolTipCtrl
+- AFXCMN/CToolTipCtrl::CToolTipCtrl
+- AFXCMN/CToolTipCtrl::Activate
+- AFXCMN/CToolTipCtrl::AddTool
+- AFXCMN/CToolTipCtrl::AdjustRect
+- AFXCMN/CToolTipCtrl::Create
+- AFXCMN/CToolTipCtrl::CreateEx
+- AFXCMN/CToolTipCtrl::DelTool
+- AFXCMN/CToolTipCtrl::GetBubbleSize
+- AFXCMN/CToolTipCtrl::GetCurrentTool
+- AFXCMN/CToolTipCtrl::GetDelayTime
+- AFXCMN/CToolTipCtrl::GetMargin
+- AFXCMN/CToolTipCtrl::GetMaxTipWidth
+- AFXCMN/CToolTipCtrl::GetText
+- AFXCMN/CToolTipCtrl::GetTipBkColor
+- AFXCMN/CToolTipCtrl::GetTipTextColor
+- AFXCMN/CToolTipCtrl::GetTitle
+- AFXCMN/CToolTipCtrl::GetToolCount
+- AFXCMN/CToolTipCtrl::GetToolInfo
+- AFXCMN/CToolTipCtrl::HitTest
+- AFXCMN/CToolTipCtrl::Pop
+- AFXCMN/CToolTipCtrl::Popup
+- AFXCMN/CToolTipCtrl::RelayEvent
+- AFXCMN/CToolTipCtrl::SetDelayTime
+- AFXCMN/CToolTipCtrl::SetMargin
+- AFXCMN/CToolTipCtrl::SetMaxTipWidth
+- AFXCMN/CToolTipCtrl::SetTipBkColor
+- AFXCMN/CToolTipCtrl::SetTipTextColor
+- AFXCMN/CToolTipCtrl::SetTitle
+- AFXCMN/CToolTipCtrl::SetToolInfo
+- AFXCMN/CToolTipCtrl::SetToolRect
+- AFXCMN/CToolTipCtrl::SetWindowTheme
+- AFXCMN/CToolTipCtrl::Update
+- AFXCMN/CToolTipCtrl::UpdateTipText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +152,7 @@ class CToolTipCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-nameactivatea--ctooltipctrlactivate"></a><a name="activate"></a>CToolTipCtrl::Activate  
+##  <a name="activate"></a>CToolTipCtrl::Activate  
  Эта функция вызывается для активации или деактивации управления всплывающей подсказки.  
   
 ```  
@@ -137,7 +171,7 @@ void Activate(BOOL bActivate);
 ### <a name="example"></a>Пример  
   В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="a-nameaddtoola--ctooltipctrladdtool"></a><a name="addtool"></a>CToolTipCtrl::AddTool  
+##  <a name="addtool"></a>CToolTipCtrl::AddTool  
  Регистрирует средство управления всплывающей подсказки.  
   
 ```  
@@ -185,7 +219,7 @@ BOOL AddTool(
 ### <a name="example"></a>Пример  
   В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="a-nameadjustrecta--ctooltipctrladjustrect"></a><a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
+##  <a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
  Преобразование между текст всплывающей подсказки элемента управления отображения прямоугольника и ее прямоугольника окна.  
   
 ```  
@@ -209,7 +243,7 @@ BOOL AdjustRect(
   
  Эта функция-член реализует поведение сообщения Win32 [TTM_ADJUSTRECT](http://msdn.microsoft.com/library/windows/desktop/bb760352), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatea--ctooltipctrlcreate"></a><a name="create"></a>CToolTipCtrl::Create  
+##  <a name="create"></a>CToolTipCtrl::Create  
  Создание элемента управления всплывающей подсказки и присоединяет его к `CToolTipCtrl` объекта.  
   
 ```  
@@ -243,7 +277,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="example"></a>Пример  
   В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="a-namecreateexa--ctooltipctrlcreateex"></a><a name="createex"></a>CToolTipCtrl::CreateEx  
+##  <a name="createex"></a>CToolTipCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связать его с `CToolTipCtrl` объекта.  
   
 ```  
@@ -269,7 +303,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо **создать** для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="a-namectooltipctrla--ctooltipctrlctooltipctrl"></a><a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl  
+##  <a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl  
  Создает объект `CToolTipCtrl`.  
   
 ```  
@@ -282,7 +316,7 @@ CToolTipCtrl();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog&#74;](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
-##  <a name="a-namedeltoola--ctooltipctrldeltool"></a><a name="deltool"></a>CToolTipCtrl::DelTool  
+##  <a name="deltool"></a>CToolTipCtrl::DelTool  
  Удаляет заданные инструмент `pWnd` и `nIDTool` из коллекции средств, поддерживаемых элементом управления всплывающей подсказки.  
   
 ```  
@@ -298,7 +332,7 @@ void DelTool(
  `nIDTool`  
  Идентификатор средства.  
   
-##  <a name="a-namegetbubblesizea--ctooltipctrlgetbubblesize"></a><a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize  
+##  <a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize  
  Получает размер всплывающей подсказки.  
   
 ```  
@@ -315,7 +349,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_GETBUBBLESIZE](http://msdn.microsoft.com/library/windows/desktop/bb760387), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcurrenttoola--ctooltipctrlgetcurrenttool"></a><a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool  
+##  <a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool  
  Извлекает сведения, такие как размер, положение и текст окна всплывающей подсказки, отображаемый элементом текущего элемента управления всплывающей подсказки.  
   
 ```  
@@ -339,7 +373,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1 №&6;](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
   
-##  <a name="a-namegetdelaytimea--ctooltipctrlgetdelaytime"></a><a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime  
+##  <a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime  
  Получает начальный всплывающем и reshow длительности, установленный для элемента управления всплывающей подсказки.  
   
 ```  
@@ -362,7 +396,7 @@ int GetDelayTime(DWORD dwDuration) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_GETDELAYTIME](http://msdn.microsoft.com/library/windows/desktop/bb760390), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetmargina--ctooltipctrlgetmargin"></a><a name="getmargin"></a>CToolTipCtrl::GetMargin  
+##  <a name="getmargin"></a>CToolTipCtrl::GetMargin  
  Извлекает верхней, левой, нижней и правое поля для подсказки.  
   
 ```  
@@ -383,7 +417,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetmaxtipwidtha--ctooltipctrlgetmaxtipwidth"></a><a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth  
+##  <a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth  
  Получает максимальную ширину для подсказки.  
   
 ```  
@@ -396,7 +430,7 @@ int GetMaxTipWidth() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_GETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760392), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettexta--ctooltipctrlgettext"></a><a name="gettext"></a>CToolTipCtrl::GetText  
+##  <a name="gettext"></a>CToolTipCtrl::GetText  
  Получает текст, который поддерживает средство управления всплывающей подсказки.  
   
 ```  
@@ -419,7 +453,7 @@ void GetText(
 ### <a name="remarks"></a>Примечания  
  `pWnd` И `nIDTool` параметры определяют средство. Если это средство прежде зарегистрированы с элементом управления всплывающей подсказки по предыдущим вызовом **CToolTipCtrl::AddTool**, объект ссылается `str` средство текст назначен параметр.  
   
-##  <a name="a-namegettipbkcolora--ctooltipctrlgettipbkcolor"></a><a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor  
+##  <a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor  
  Получает цвет фона в подсказки.  
   
 ```  
@@ -432,7 +466,7 @@ COLORREF GetTipBkColor() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_GETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760394), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettiptextcolora--ctooltipctrlgettiptextcolor"></a><a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor  
+##  <a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor  
  Получает цвет текста в окне подсказки инструментов.  
   
 ```  
@@ -445,7 +479,7 @@ COLORREF GetTipTextColor() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_GETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760395), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettitlea--ctooltipctrlgettitle"></a><a name="gettitle"></a>CToolTipCtrl::GetTitle  
+##  <a name="gettitle"></a>CToolTipCtrl::GetTitle  
  Возвращает название текущего элемента управления всплывающей подсказки.  
   
 ```  
@@ -461,7 +495,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettoolcounta--ctooltipctrlgettoolcount"></a><a name="gettoolcount"></a>CToolTipCtrl::GetToolCount  
+##  <a name="gettoolcount"></a>CToolTipCtrl::GetToolCount  
  Получает количество средств, зарегистрированные с элементом управления всплывающей подсказки.  
   
 ```  
@@ -471,7 +505,7 @@ int GetToolCount() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число средств зарегистрирован с элементом управления всплывающей подсказки.  
   
-##  <a name="a-namegettoolinfoa--ctooltipctrlgettoolinfo"></a><a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo  
+##  <a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo  
  Возвращает сведения, поддерживающий управления всплывающей подсказки о средстве.  
   
 ```  
@@ -497,7 +531,7 @@ BOOL GetToolInfo(
 ### <a name="remarks"></a>Примечания  
  **Hwnd** и **uId** члены [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) ссылается структура *CToolInfo* средство идентификации. Если этот инструмент был зарегистрирован с элементом управления всплывающей подсказки по предыдущим вызовом `AddTool`, `TOOLINFO` структура заполняется сведения об этом средстве.  
   
-##  <a name="a-namehittesta--ctooltipctrlhittest"></a><a name="hittest"></a>CToolTipCtrl::HitTest  
+##  <a name="hittest"></a>CToolTipCtrl::HitTest  
  Проверяет точку, чтобы определить, является ли оно внутри ограничивающего прямоугольника данное средство и если да, получить сведения о средстве.  
   
 ```  
@@ -544,7 +578,7 @@ BOOL HitTest(
  **TI**  
  Сведения о средстве. Дополнительные сведения о `TOOLINFO` структуры см. в разделе [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
-##  <a name="a-namepopa--ctooltipctrlpop"></a><a name="pop"></a>CToolTipCtrl::Pop  
+##  <a name="pop"></a>CToolTipCtrl::Pop  
  Удаляет отображаемые подсказки из представления.  
   
 ```  
@@ -554,7 +588,7 @@ void Pop();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_POP](http://msdn.microsoft.com/library/windows/desktop/bb760401), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namepopupa--ctooltipctrlpopup"></a><a name="popup"></a>CToolTipCtrl::Popup  
+##  <a name="popup"></a>CToolTipCtrl::Popup  
  Вызывает текущий элемент управления всплывающей подсказки для отображения в координатах последнего сообщения мыши.  
   
 ```  
@@ -569,7 +603,7 @@ void Popup();
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
   
-##  <a name="a-namerelayeventa--ctooltipctrlrelayevent"></a><a name="relayevent"></a>CToolTipCtrl::RelayEvent  
+##  <a name="relayevent"></a>CToolTipCtrl::RelayEvent  
  Передает сообщение мыши элементом управления всплывающей подсказки для обработки.  
   
 ```  
@@ -592,7 +626,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="example"></a>Пример  
   В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="a-namesetdelaytimea--ctooltipctrlsetdelaytime"></a><a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  
+##  <a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  
  Задает время задержки для элемента управления всплывающей подсказки.  
   
 ```  
@@ -617,7 +651,7 @@ void SetDelayTime(
 ### <a name="remarks"></a>Примечания  
  Время задержки — это время, должны оставаться курсор над средством, до появления подсказки. Время задержки по умолчанию — 500 миллисекунд.  
   
-##  <a name="a-namesetmargina--ctooltipctrlsetmargin"></a><a name="setmargin"></a>CToolTipCtrl::SetMargin  
+##  <a name="setmargin"></a>CToolTipCtrl::SetMargin  
  Задает начало, левую, нижнюю и правого поля для подсказки.  
   
 ```  
@@ -631,7 +665,7 @@ void SetMargin(LPRECT lprc);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_SETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760406), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetmaxtipwidtha--ctooltipctrlsetmaxtipwidth"></a><a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth  
+##  <a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth  
  Задает максимальную ширину для подсказки.  
   
 ```  
@@ -648,7 +682,7 @@ int SetMaxTipWidth(int iWidth);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_SETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760408), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesettipbkcolora--ctooltipctrlsettipbkcolor"></a><a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor  
+##  <a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor  
  Задает цвет фона в подсказки.  
   
 ```  
@@ -662,7 +696,7 @@ void SetTipBkColor(COLORREF clr);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_SETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760411), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesettiptextcolora--ctooltipctrlsettiptextcolor"></a><a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor  
+##  <a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor  
  Задает цвет текста в окне подсказки инструментов.  
   
 ```  
@@ -676,7 +710,7 @@ void SetTipTextColor(COLORREF clr);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_SETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760413), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesettitlea--ctooltipctrlsettitle"></a><a name="settitle"></a>CToolTipCtrl::SetTitle  
+##  <a name="settitle"></a>CToolTipCtrl::SetTitle  
  Добавляет стандартную строку значок и заголовок подсказки.  
   
 ```  
@@ -698,7 +732,7 @@ BOOL SetTitle(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesettoolinfoa--ctooltipctrlsettoolinfo"></a><a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo  
+##  <a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo  
  Задает сведения, которые поддерживает всплывающей подсказки для инструмента.  
   
 ```  
@@ -709,7 +743,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
  `lpToolInfo`  
  Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структура, содержащая сведения для установки.  
   
-##  <a name="a-namesettoolrecta--ctooltipctrlsettoolrect"></a><a name="settoolrect"></a>CToolTipCtrl::SetToolRect  
+##  <a name="settoolrect"></a>CToolTipCtrl::SetToolRect  
  Задает ограничивающий прямоугольник для средства.  
   
 ```  
@@ -729,7 +763,7 @@ void SetToolRect(
  `lpRect`  
  Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура ограничивающий прямоугольник.  
   
-##  <a name="a-namesetwindowthemea--ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme  
  Задает стиль оформления подсказки.  
   
 ```  
@@ -746,14 +780,14 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу [TTM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb760418) сообщений, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameupdatea--ctooltipctrlupdate"></a><a name="update"></a>CToolTipCtrl::Update  
+##  <a name="update"></a>CToolTipCtrl::Update  
  Вызывает перерисовку текущего инструмента.  
   
 ```  
 void Update();
 ```  
   
-##  <a name="a-nameupdatetiptexta--ctooltipctrlupdatetiptext"></a><a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText  
+##  <a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText  
  Обновляет текст подсказки для элемента управления средств.  
   
 ```  

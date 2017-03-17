@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CKeyFrame
 - CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAfterTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAtOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetExistingKeyframe
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class CKeyFrame : public CBaseKeyFrame;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
  Добавляет раскадровку опорного кадра.  
   
 ```  
@@ -111,7 +121,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>Примечания  
  Этот метод добавляет опорный кадр на раскадровку. Если он зависит от других опорного кадра или перехода и bDeepAdd имеет значение TRUE, этот метод пытается рекурсивно добавьте их.  
   
-##  <a name="a-nameaddtostoryboardaftertransitiona--ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
+##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
  Добавляет кадр на раскадровку после перехода.  
   
 ```  
@@ -133,7 +143,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается платформой, чтобы добавить опорный кадр на раскадровку после перехода.  
   
-##  <a name="a-nameaddtostoryboardatoffseta--ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
+##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
  Добавляет кадр на раскадровку смещением.  
   
 ```  
@@ -155,7 +165,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается платформой, чтобы добавить опорный кадр на раскадровку смещением.  
   
-##  <a name="a-nameckeyframea--ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
+##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
  Создает ключевой кадр, который зависит от перехода.  
   
 ```  
@@ -180,7 +190,7 @@ CKeyFrame(
 ### <a name="remarks"></a>Примечания  
  Сконструированный опорный кадр будет представлять на момент времени в раскадровке, после окончания указанного перехода.  
   
-##  <a name="a-namegetexistingkeyframea--ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
+##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
  Возвращает указатель на ключевой кадр, от которых зависит этот кадр.  
   
 ```  
@@ -193,7 +203,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="remarks"></a>Примечания  
  Это метод доступа для опорного кадра, от которых зависит этот кадр.  
   
-##  <a name="a-namegetoffseta--ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset  
+##  <a name="getoffset"></a>CKeyFrame::GetOffset  
  Возвращает смещение от других опорного кадра.  
   
 ```  
@@ -206,7 +216,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="remarks"></a>Примечания  
  Этот метод должен вызываться для определения смещения в секундах от других опорного кадра.  
   
-##  <a name="a-namegettransitiona--ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition  
+##  <a name="gettransition"></a>CKeyFrame::GetTransition  
  Возвращает указатель на переход, от которых зависит этот кадр.  
   
 ```  
@@ -219,21 +229,21 @@ CBaseTransition* GetTransition();
 ### <a name="remarks"></a>Примечания  
  Это метод доступа для перехода, от которых зависит этот кадр.  
   
-##  <a name="a-namemoffseta--ckeyframemoffset"></a><a name="m_offset"></a>CKeyFrame::m_offset  
+##  <a name="m_offset"></a>CKeyFrame::m_offset  
  Задает смещение этот кадр из опорный кадр, хранящиеся в m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="a-namempexistingkeyframea--ckeyframempexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
+##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
  Хранит указатель на существующих keframe. Этот ключевой кадр добавляется раскадровки с m_offset существующий ключевой кадр.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="a-namemptransitiona--ckeyframemptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition  
+##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
  Хранит указатель для перехода, которая начинается с этой ключевой кадр.  
   
 ```  

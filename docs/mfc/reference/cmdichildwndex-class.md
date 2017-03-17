@@ -10,20 +10,60 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIChildWndEx
-- GetThisClass
-- CMDIChildWndEx::PreTranslateMessage
-- CMDIChildWndEx::ActivateFrame
-- CMDIChildWndEx.GetThisClass
-- CMDIChildWndEx::AddDockSite
-- CMDIChildWndEx.CreateObject
-- CMDIChildWndEx::CreateObject
-- CMDIChildWndEx.ActivateFrame
-- CMDIChildWndEx::GetThisClass
-- CMDIChildWndEx.PreTranslateMessage
-- PreTranslateMessage
-- ActivateFrame
-- CreateObject
-- CMDIChildWndEx.AddDockSite
+- AFXMDICHILDWNDEX/CMDIChildWndEx
+- AFXMDICHILDWNDEX/CMDIChildWndEx::ActivateTopLevelFrame
+- AFXMDICHILDWNDEX/CMDIChildWndEx::AddPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::AddTabbedPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::AdjustDockingLayout
+- AFXMDICHILDWNDEX/CMDIChildWndEx::CanShowOnMDITabs
+- AFXMDICHILDWNDEX/CMDIChildWndEx::CanShowOnTaskBarTabs
+- AFXMDICHILDWNDEX/CMDIChildWndEx::CanShowOnWindowsList
+- AFXMDICHILDWNDEX/CMDIChildWndEx::DockPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::DockPaneLeftOf
+- AFXMDICHILDWNDEX/CMDIChildWndEx::EnableAutoHidePanes
+- AFXMDICHILDWNDEX/CMDIChildWndEx::EnableDocking
+- AFXMDICHILDWNDEX/CMDIChildWndEx::EnableTaskbarThumbnailClipRect
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetDockingManager
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetDocumentName
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetFrameIcon
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetFrameText
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetRelatedTabGroup
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetTabbedPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetTabProxyWnd
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetTaskbarPreviewWnd
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetTaskbarThumbnailClipRect
+- AFXMDICHILDWNDEX/CMDIChildWndEx::GetToolbarButtonToolTipText
+- AFXMDICHILDWNDEX/CMDIChildWndEx::InsertPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::InvalidateIconicBitmaps
+- AFXMDICHILDWNDEX/CMDIChildWndEx::IsPointNearDockSite
+- AFXMDICHILDWNDEX/CMDIChildWndEx::IsReadOnly
+- AFXMDICHILDWNDEX/CMDIChildWndEx::IsRegisteredWithTaskbarTabs
+- AFXMDICHILDWNDEX/CMDIChildWndEx::IsTabbedPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::IsTaskbarTabsSupportEnabled
+- AFXMDICHILDWNDEX/CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled
+- AFXMDICHILDWNDEX/CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnGetIconicLivePreviewBitmap
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnGetIconicThumbnail
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnMoveMiniFrame
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnSetPreviewMode
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnTaskbarTabThumbnailActivate
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnTaskbarTabThumbnailStretch
+- AFXMDICHILDWNDEX/CMDIChildWndEx::OnUpdateFrameTitle
+- AFXMDICHILDWNDEX/CMDIChildWndEx::PaneFromPoint
+- AFXMDICHILDWNDEX/CMDIChildWndEx::RecalcLayout
+- AFXMDICHILDWNDEX/CMDIChildWndEx::RegisterTaskbarTab
+- AFXMDICHILDWNDEX/CMDIChildWndEx::RemovePaneFromDockManager
+- AFXMDICHILDWNDEX/CMDIChildWndEx::SetRelatedTabGroup
+- AFXMDICHILDWNDEX/CMDIChildWndEx::SetTaskbarTabActive
+- AFXMDICHILDWNDEX/CMDIChildWndEx::SetTaskbarTabOrder
+- AFXMDICHILDWNDEX/CMDIChildWndEx::SetTaskbarTabProperties
+- AFXMDICHILDWNDEX/CMDIChildWndEx::SetTaskbarThumbnailClipRect
+- AFXMDICHILDWNDEX/CMDIChildWndEx::ShowPane
+- AFXMDICHILDWNDEX/CMDIChildWndEx::UnregisterTaskbarTab
+- AFXMDICHILDWNDEX/CMDIChildWndEx::UpdateTaskbarTabIcon
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -155,7 +195,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxMDIChildWndEx.h  
   
-##  <a name="a-nameaddpanea--cmdichildwndexaddpane"></a><a name="addpane"></a>CMDIChildWndEx::AddPane  
+##  <a name="addpane"></a>CMDIChildWndEx::AddPane  
  Добавляет панель.  
   
 ```  
@@ -174,7 +214,7 @@ BOOL AddPane(
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если области успешно зарегистрирован с диспетчером, закрепления; в противном случае — `FALSE`.  
   
-##  <a name="a-nameaddtabbedpanea--cmdichildwndexaddtabbedpane"></a><a name="addtabbedpane"></a>CMDIChildWndEx::AddTabbedPane  
+##  <a name="addtabbedpane"></a>CMDIChildWndEx::AddTabbedPane  
  Добавляет область с вкладками.  
   
 ```  
@@ -185,7 +225,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
  [in] `pControlBar`  
  Указатель на область.  
   
-##  <a name="a-nameadjustdockinglayouta--cmdichildwndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
  Настройка макета закрепления.  
   
 ```  
@@ -196,7 +236,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  [in] `hdwp`  
  Дескриптор структуру позиции отложенное окна.  
   
-##  <a name="a-namecanshowonmditabsa--cmdichildwndexcanshowonmditabs"></a><a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
+##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -207,7 +247,7 @@ virtual BOOL CanShowOnMDITabs();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecanshowonwindowslista--cmdichildwndexcanshowonwindowslist"></a><a name="canshowonwindowslist"></a>CMDIChildWndEx::CanShowOnWindowsList  
+##  <a name="canshowonwindowslist"></a>CMDIChildWndEx::CanShowOnWindowsList  
  Задает отображение имя дочернего окна MDI в [CMFCWindowsManagerDialog класса](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) диалоговое окно.  
   
 ```  
@@ -220,7 +260,7 @@ virtual BOOL CanShowOnWindowsList();
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе и вернуть `FALSE` Если окно не будет отображаться в **Windows** диалоговое окно. Эта функция вызывается из `CMFCWindowsManagerDialog`.  
   
-##  <a name="a-namedockpanea--cmdichildwndexdockpane"></a><a name="dockpane"></a>CMDIChildWndEx::DockPane  
+##  <a name="dockpane"></a>CMDIChildWndEx::DockPane  
  Закрепляет область.  
   
 ```  
@@ -243,7 +283,7 @@ void DockPane(
 ### <a name="remarks"></a>Примечания  
  `lpRect` Параметр не используется.  
   
-##  <a name="a-namedockpaneleftofa--cmdichildwndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf  
  Закрепляет одну область слева от другой области.  
   
 ```  
@@ -267,7 +307,7 @@ BOOL DockPaneLeftOf(
   
  Этот метод вызывается, когда нужно закрепить несколько областей в заранее определенному порядку.  
   
-##  <a name="a-nameenableautohidepanesa--cmdichildwndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CMDIChildWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>CMDIChildWndEx::EnableAutoHidePanes  
  Включает автоматическое скрытие режим для области при они закрепляются в указанной границы окна.  
   
 ```  
@@ -289,7 +329,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
   
-##  <a name="a-nameenabledockinga--cmdichildwndexenabledocking"></a><a name="enabledocking"></a>CMDIChildWndEx::EnableDocking  
+##  <a name="enabledocking"></a>CMDIChildWndEx::EnableDocking  
  Включает закрепление дочернего окна в главном фрейме.  
   
 ```  
@@ -306,7 +346,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается для закрепления выравнивание для главного фрейма. Вы можете передать сочетание флагов CBRS_ALIGN_ (Дополнительные сведения см. в разделе [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
-##  <a name="a-namegetdockingmanagera--cmdichildwndexgetdockingmanager"></a><a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -317,7 +357,7 @@ CDockingManager* GetDockingManager();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetdocumentnamea--cmdichildwndexgetdocumentname"></a><a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName  
+##  <a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName  
  Возвращает имя документа, отображаемое в дочернего окна MDI.  
   
 ```  
@@ -341,7 +381,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo&17;](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
-##  <a name="a-namegetframeicona--cmdichildwndexgetframeicon"></a><a name="getframeicon"></a>CMDIChildWndEx::GetFrameIcon  
+##  <a name="getframeicon"></a>CMDIChildWndEx::GetFrameIcon  
  Вызывается платформой для получения значок дочернего окна MDI.  
   
 ```  
@@ -356,7 +396,7 @@ virtual HICON GetFrameIcon() const;
   
  По умолчанию этот метод возвращает значок окна. Переопределение `GetFrameIcon` в `CMDIChildWndEx`-производного класса, чтобы настроить это поведение.  
   
-##  <a name="a-namegetframetexta--cmdichildwndexgetframetext"></a><a name="getframetext"></a>CMDIChildWndEx::GetFrameText  
+##  <a name="getframetext"></a>CMDIChildWndEx::GetFrameText  
  Вызывается платформой для получения текста для дочернего окна MDI.  
   
 ```  
@@ -371,7 +411,7 @@ virtual CString GetFrameText() const;
   
  По умолчанию этот метод возвращает текст окна. Переопределение `GetFrameText` в `CMDIChildWndEx`-производного класса, чтобы настроить это поведение.  
   
-##  <a name="a-namegetpanea--cmdichildwndexgetpane"></a><a name="getpane"></a>CMDIChildWndEx::GetPane  
+##  <a name="getpane"></a>CMDIChildWndEx::GetPane  
  Находит панели с помощью идентификатора указанного элемента управления.  
   
 ```  
@@ -385,7 +425,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на область Если найдено, в противном случае `NULL`.  
   
-##  <a name="a-namegetrelatedtabgroupa--cmdichildwndexgetrelatedtabgroup"></a><a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
+##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -396,7 +436,7 @@ CMFCTabCtrl* GetRelatedTabGroup();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegettabbedpanea--cmdichildwndexgettabbedpane"></a><a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane  
+##  <a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane  
  Возвращает указатель на закрепляемой области, который является частью группы MDI с вкладками документов.  
   
 ```  
@@ -406,7 +446,7 @@ CDockablePane* GetTabbedPane() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на закрепляемой области, который является частью группы MDI с вкладками документов.  
   
-##  <a name="a-namegettoolbarbuttontooltiptexta--cmdichildwndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::GetToolbarButtonToolTipText  
  Вызывается платформой для получения всплывающей подсказки для кнопки панели инструментов.  
   
 ```  
@@ -421,7 +461,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, если требуется отображать пользовательские всплывающие подсказки для кнопки панели инструментов.  
   
-##  <a name="a-nameinsertpanea--cmdichildwndexinsertpane"></a><a name="insertpane"></a>CMDIChildWndEx::InsertPane  
+##  <a name="insertpane"></a>CMDIChildWndEx::InsertPane  
  Регистрация указанной области закрепления диспетчером.  
   
 ```  
@@ -444,7 +484,7 @@ BOOL InsertPane(
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если метод выполнен успешно, `FALSE` в противном случае.  
   
-##  <a name="a-nameispointneardocksitea--cmdichildwndexispointneardocksite"></a><a name="ispointneardocksite"></a>CMDIChildWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>CMDIChildWndEx::IsPointNearDockSite  
  Определяет, является ли указанная точка рядом с сайта закрепления.  
   
 ```  
@@ -470,7 +510,7 @@ BOOL IsPointNearDockSite(
 ### <a name="remarks"></a>Примечания  
  Точка расположено сайта закрепления, когда он находится в пределах чувствительности, установите в диспетчере закрепления. По умолчанию учет — 15 точек.  
   
-##  <a name="a-nameisreadonlya--cmdichildwndexisreadonly"></a><a name="isreadonly"></a>CMDIChildWndEx::IsReadOnly  
+##  <a name="isreadonly"></a>CMDIChildWndEx::IsReadOnly  
  Указывает, является ли документ, который отображается в дочернем окне только для чтения.  
   
 ```  
@@ -488,7 +528,7 @@ virtual BOOL IsReadOnly();
   
  [!code-cpp[NVC_MFC_VisualStudioDemo&#2;](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
-##  <a name="a-nameistabbedpanea--cmdichildwndexistabbedpane"></a><a name="istabbedpane"></a>CMDIChildWndEx::IsTabbedPane  
+##  <a name="istabbedpane"></a>CMDIChildWndEx::IsTabbedPane  
  Указывает, содержит ли дочернего окна MDI закрепляемой области.  
   
 ```  
@@ -498,7 +538,7 @@ BOOL IsTabbedPane() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если дочернего окна MDI содержит закрепляемой области, который был преобразован в документ с вкладками. в противном случае `FALSE`.  
   
-##  <a name="a-nameonmoveminiframea--cmdichildwndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CMDIChildWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>CMDIChildWndEx::OnMoveMiniFrame  
  Вызывается платформой для перемещения окна области.  
   
 ```  
@@ -512,7 +552,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если метод завершается успешно `FALSE`.  
   
-##  <a name="a-nameonsetpreviewmodea--cmdichildwndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CMDIChildWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>CMDIChildWndEx::OnSetPreviewMode  
  Вызывается платформой для включения и выключения режима предварительного просмотра.  
   
 ```  
@@ -528,7 +568,7 @@ virtual void OnSetPreviewMode(
  [in] `pState`  
  Указатель на структуру состояния предварительного просмотра.  
   
-##  <a name="a-nameonupdateframetitlea--cmdichildwndexonupdateframetitle"></a><a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
  Вызывается платформой для обновления название рамки.  
   
 ```  
@@ -539,7 +579,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
  [in] `bAddToTitle`  
  Если `TRUE`, добавьте к заголовку имя документа.  
   
-##  <a name="a-namepanefrompointa--cmdichildwndexpanefrompoint"></a><a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
  Возвращает область, содержащую заданной точки.  
   
 ```  
@@ -580,7 +620,7 @@ CBasePane* PaneFromPoint(
   
  Если функция возвращает и область найден, `dwAlignment` содержит выравнивание заданной точке. Например, если точка находится ближайший к верхней части области `dwAlignment` равен `CBRS_ALIGN_TOP`.  
   
-##  <a name="a-namerecalclayouta--cmdichildwndexrecalclayout"></a><a name="recalclayout"></a>CMDIChildWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>CMDIChildWndEx::RecalcLayout  
  Повторно вычисляет макет окна.  
   
 ```  
@@ -591,7 +631,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
  [in] `bNotify`  
  Если `TRUE`, активный элемент в месте окна получает уведомление об изменении макета.  
   
-##  <a name="a-nameremovepanefromdockmanagera--cmdichildwndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
  Удаление панели из диспетчера закрепления.  
   
 ```  
@@ -619,7 +659,7 @@ void RemovePaneFromDockManager(
  [in] `pBarReplacement`  
  Указатель на область, которая заменит область удален.  
   
-##  <a name="a-namesetrelatedtabgroupa--cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
+##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -631,7 +671,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameshowpanea--cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::ShowPane  
+##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -650,7 +690,7 @@ void ShowPane(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameupdatetaskbartabicona--cmdichildwndexupdatetaskbartabicon"></a><a name="updatetaskbartabicon"></a>CMDIChildWndEx::UpdateTaskbarTabIcon  
+##  <a name="updatetaskbartabicon"></a>CMDIChildWndEx::UpdateTaskbarTabIcon  
  Обновляет вкладки значок на панели задач Windows 7.  
   
 ```  
@@ -663,7 +703,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameunregistertaskbartaba--cmdichildwndexunregistertaskbartab"></a><a name="unregistertaskbartab"></a>CMDIChildWndEx::UnregisterTaskbarTab  
+##  <a name="unregistertaskbartab"></a>CMDIChildWndEx::UnregisterTaskbarTab  
  Удаляет дочерней MDI-формы из вкладки панели задач Windows 7.  
   
 ```  
@@ -676,7 +716,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettaskbarthumbnailcliprecta--cmdichildwndexsettaskbarthumbnailcliprect"></a><a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::SetTaskbarThumbnailClipRect  
+##  <a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::SetTaskbarThumbnailClipRect  
  Вызывается платформой для задания прямоугольник отсечения для выбора часть клиентской области окна, чтобы отобразить в виде эскиза этого окна на панели задач.  
   
 ```  
@@ -692,7 +732,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettaskbartabpropertiesa--cmdichildwndexsettaskbartabproperties"></a><a name="settaskbartabproperties"></a>CMDIChildWndEx::SetTaskbarTabProperties  
+##  <a name="settaskbartabproperties"></a>CMDIChildWndEx::SetTaskbarTabProperties  
  Задает свойства для вкладки панели задач Windows 7.  
   
 ```  
@@ -705,7 +745,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettaskbartabordera--cmdichildwndexsettaskbartaborder"></a><a name="settaskbartaborder"></a>CMDIChildWndEx::SetTaskbarTabOrder  
+##  <a name="settaskbartaborder"></a>CMDIChildWndEx::SetTaskbarTabOrder  
  Вставляет дочерней MDI-формы до указанного окна на вкладках панели задач Windows 7.  
   
 ```  
@@ -718,7 +758,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettaskbartabactivea--cmdichildwndexsettaskbartabactive"></a><a name="settaskbartabactive"></a>CMDIChildWndEx::SetTaskbarTabActive  
+##  <a name="settaskbartabactive"></a>CMDIChildWndEx::SetTaskbarTabActive  
  Активирует соответствующие вкладки панели задач Windows 7.  
   
 ```  
@@ -727,7 +767,7 @@ void SetTaskbarTabActive();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameregistertaskbartaba--cmdichildwndexregistertaskbartab"></a><a name="registertaskbartab"></a>CMDIChildWndEx::RegisterTaskbarTab  
+##  <a name="registertaskbartab"></a>CMDIChildWndEx::RegisterTaskbarTab  
  Регистрирует дочерней MDI-формы вкладки панели задач Windows 7.  
   
 ```  
@@ -740,7 +780,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameontaskbartabthumbnailstretcha--cmdichildwndexontaskbartabthumbnailstretch"></a><a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
+##  <a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
  Вызывается платформой, когда это необходимо растянуть растровое изображение для Windows 7 панель задач вкладку эскиз дочерней MDI-формы.  
   
 ```  
@@ -767,7 +807,7 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ### <a name="remarks"></a>Примечания  
  Requirementher или ему ему ему ему ему ему ему **:** afxmdichildwndex.h  
   
-##  <a name="a-nameontaskbartabthumbnailmouseactivatea--cmdichildwndexontaskbartabthumbnailmouseactivate"></a><a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
+##  <a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
  Вызывается инфраструктурой при эскиз вкладки панели задач должен обработать сообщение WM_MOUSEACTIVATE.  
   
 ```  
@@ -790,7 +830,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию активирует связанных дочернего фрейма MDI.  
   
-##  <a name="a-nameontaskbartabthumbnailactivatea--cmdichildwndexontaskbartabthumbnailactivate"></a><a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
+##  <a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
  Вызывается инфраструктурой при эскиз вкладки панели задач должен обработать сообщение WM_ACTIVATE.  
   
 ```  
@@ -813,7 +853,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию активирует связанных дочернего фрейма MDI.  
   
-##  <a name="a-nameonpresstaskbarthmbnailclosebuttona--cmdichildwndexonpresstaskbarthmbnailclosebutton"></a><a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
+##  <a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
  Вызывается платформой, когда пользователь нажимает кнопку Закрыть на вкладке эскиза на панели задач.  
   
 ```  
@@ -822,7 +862,7 @@ virtual void OnPressTaskbarThmbnailCloseButton();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameongeticonicthumbnaila--cmdichildwndexongeticonicthumbnail"></a><a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconicThumbnail  
+##  <a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconicThumbnail  
  Вызывается платформой, когда необходимо получить растровое изображение для значками эскиз дочерней MDI-формы.  
   
 ```  
@@ -840,7 +880,7 @@ virtual HBITMAP OnGetIconicThumbnail(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameongeticoniclivepreviewbitmapa--cmdichildwndexongeticoniclivepreviewbitmap"></a><a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
+##  <a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
  Вызывается платформой, когда необходимо получить растровое изображение для интерактивный просмотр дочерней MDI-формы.  
   
 ```  
@@ -862,7 +902,7 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе и возвращать допустимое 32 bpp растровое изображение для интерактивный просмотр дочерней MDI-формы. Этот метод вызывается только в том случае, когда дочерней MDI-формы отображаются на вкладках панели задач Windows 7. Если возвращается `NULL`, MFC вызывает обработчики по умолчанию и получает точечные рисунки с помощью `PrintClient` или `PrintWindow`.  
   
-##  <a name="a-namemdwdefaulttaskbartabpropertyflagsa--cmdichildwndexmdwdefaulttaskbartabpropertyflags"></a><a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
+##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
  Сочетание флагов, который передается платформой для `SetTaskbarTabProperties` метод, когда вкладка (дочерней MDI-формы) регистрируется с вкладки панели задач Windows 7.  
   
 ```  
@@ -872,7 +912,7 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
 ### <a name="remarks"></a>Примечания  
  Комбинация по умолчанию является STPF_USEAPPTHUMBNAILWHENACTIVE | STPF_USEAPPPEEKWHENACTIVE.  
   
-##  <a name="a-nameistaskbarthumbnailcliprectenableda--cmdichildwndexistaskbarthumbnailcliprectenabled"></a><a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
+##  <a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
  Указывает, включен ли автоматический выбор часть клиентской области окна, чтобы отобразить в виде эскиза этого окна на панели задач.  
   
 ```  
@@ -884,7 +924,7 @@ BOOL IsTaskbarThumbnailClipRectEnabled() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameistaskbartabssupportenableda--cmdichildwndexistaskbartabssupportenabled"></a><a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
+##  <a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
  Указывает, может ли дочерней MDI-формы отображаются на вкладках панели задач Windows 7.  
   
 ```  
@@ -896,7 +936,7 @@ BOOL IsTaskbarTabsSupportEnabled();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameisregisteredwithtaskbartabsa--cmdichildwndexisregisteredwithtaskbartabs"></a><a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
+##  <a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
  Возвращает `TRUE` Если дочерней MDI-формы успешно зарегистрирован вкладки панели задач Windows 7.  
   
 ```  
@@ -908,7 +948,7 @@ BOOL IsRegisteredWithTaskbarTabs();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameinvalidateiconicbitmapsa--cmdichildwndexinvalidateiconicbitmaps"></a><a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::InvalidateIconicBitmaps  
+##  <a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::InvalidateIconicBitmaps  
  Делает недействительной значками растровое представление дочерней MDI-формы.  
   
 ```  
@@ -921,7 +961,7 @@ BOOL InvalidateIconicBitmaps();
 ### <a name="remarks"></a>Примечания  
  Должен вызываться при изменении содержимого в реальном времени или размер дочерней MDI-формы.  
   
-##  <a name="a-namegettaskbarthumbnailcliprecta--cmdichildwndexgettaskbarthumbnailcliprect"></a><a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::GetTaskbarThumbnailClipRect  
+##  <a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::GetTaskbarThumbnailClipRect  
  Вызывается платформой, когда следует выбрать часть клиентской области окна, чтобы отобразить в виде эскиза этого окна на панели задач.  
   
 ```  
@@ -933,7 +973,7 @@ virtual CRect GetTaskbarThumbnailClipRect() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegettaskbarpreviewwnda--cmdichildwndexgettaskbarpreviewwnd"></a><a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbarPreviewWnd  
+##  <a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbarPreviewWnd  
  Вызывается платформой, когда необходимо получить дочернего окна (обычно окно представления или разделитель) отображается эскиз вкладки панели задач Windows 7.  
   
 ```  
@@ -945,7 +985,7 @@ virtual CWnd* GetTaskbarPreviewWnd();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegettabproxywnda--cmdichildwndexgettabproxywnd"></a><a name="gettabproxywnd"></a>CMDIChildWndEx::GetTabProxyWnd  
+##  <a name="gettabproxywnd"></a>CMDIChildWndEx::GetTabProxyWnd  
  Возвращает окно прокси вкладки, зарегистрированные с помощью вкладки панели задач Windows 7.  
   
 ```  
@@ -957,7 +997,7 @@ CMDITabProxyWnd* GetTabProxyWnd();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameenabletaskbarthumbnailcliprecta--cmdichildwndexenabletaskbarthumbnailcliprect"></a><a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
+##  <a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
  Включает или отключает автоматический выбор часть клиентской области окна, чтобы отобразить в виде эскиза этого окна на панели задач.  
   
 ```  
@@ -970,7 +1010,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecanshowontaskbartabsa--cmdichildwndexcanshowontaskbartabs"></a><a name="canshowontaskbartabs"></a>CMDIChildWndEx::CanShowOnTaskBarTabs  
+##  <a name="canshowontaskbartabs"></a>CMDIChildWndEx::CanShowOnTaskBarTabs  
  Указывает среде этой дочерней MDI-формы могут отображаться на вкладках панели задач Windows 7.  
   
 ```  
@@ -983,7 +1023,7 @@ virtual BOOL CanShowOnTaskBarTabs();
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе и возвращают `FALSE` отключить отображение этой дочерней MDI-формы на вкладках панели задач Windows 7.  
   
-##  <a name="a-nameactivatetoplevelframea--cmdichildwndexactivatetoplevelframe"></a><a name="activatetoplevelframe"></a>CMDIChildWndEx::ActivateTopLevelFrame  
+##  <a name="activatetoplevelframe"></a>CMDIChildWndEx::ActivateTopLevelFrame  
  Вызывается платформой для активации окна верхнего уровня при активации приложения из вкладки панели задач.  
   
 ```  

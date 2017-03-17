@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CBitmapRenderTarget
 - CBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget::CBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget::Attach
+- AFXRENDERTARGET/CBitmapRenderTarget::Detach
+- AFXRENDERTARGET/CBitmapRenderTarget::GetBitmap
+- AFXRENDERTARGET/CBitmapRenderTarget::GetBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget::m_pBitmapRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +94,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cbitmaprendertargetattach"></a><a name="attach"></a>CBitmapRenderTarget::Attach  
+##  <a name="attach"></a>CBitmapRenderTarget::Attach  
  Присоединяет существующую отображения интерфейса целевой объект  
   
 ```  
@@ -99,14 +105,14 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
  `pTarget`  
  Существующий интерфейс целевой отрисовки. Не может иметь значение NULL  
   
-##  <a name="a-namecbitmaprendertargeta--cbitmaprendertargetcbitmaprendertarget"></a><a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
+##  <a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
  Создает объект CBitmapRenderTarget.  
   
 ```  
 CBitmapRenderTarget();
 ```  
   
-##  <a name="a-namedetacha--cbitmaprendertargetdetach"></a><a name="detach"></a>CBitmapRenderTarget::Detach  
+##  <a name="detach"></a>CBitmapRenderTarget::Detach  
  Отсоединяет визуализации интерфейса целевого объекта  
   
 ```  
@@ -116,7 +122,7 @@ ID2D1BitmapRenderTarget* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на отсоединенные отображения интерфейса целевой.  
   
-##  <a name="a-namegetbitmapa--cbitmaprendertargetgetbitmap"></a><a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
+##  <a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
  Возвращает битовую карту для этой цели визуализации. Возвращаемый точечный рисунок можно использовать для операций рисования.  
   
 ```  
@@ -130,7 +136,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
   
-##  <a name="a-namegetbitmaprendertargeta--cbitmaprendertargetgetbitmaprendertarget"></a><a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
+##  <a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
  Возвращает интерфейс ID2D1BitmapRenderTarget  
   
 ```  
@@ -140,14 +146,14 @@ ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1BitmapRenderTarget или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="a-namempbitmaprendertargeta--cbitmaprendertargetmpbitmaprendertarget"></a><a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
+##  <a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
  Указатель на объект ID2D1BitmapRenderTarget.  
   
 ```  
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1bitmaprendertargetstara--cbitmaprendertargetoperator-id2d1bitmaprendertarget"></a><a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
  Возвращает интерфейс ID2D1BitmapRenderTarget  
   
 ```  

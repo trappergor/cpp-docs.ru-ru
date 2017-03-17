@@ -9,9 +9,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlArray
-- ATL.CAtlArray
 - CAtlArray
+- ATLCOLL/ATL::CAtlArray
+- ATLCOLL/ATL::Add
+- ATLCOLL/ATL::Append
+- ATLCOLL/ATL::AssertValid
+- ATLCOLL/ATL::CAtlArray
+- ATLCOLL/ATL::Copy
+- ATLCOLL/ATL::FreeExtra
+- ATLCOLL/ATL::GetAt
+- ATLCOLL/ATL::GetCount
+- ATLCOLL/ATL::GetData
+- ATLCOLL/ATL::InsertArrayAt
+- ATLCOLL/ATL::InsertAt
+- ATLCOLL/ATL::IsEmpty
+- ATLCOLL/ATL::RemoveAll
+- ATLCOLL/ATL::RemoveAt
+- ATLCOLL/ATL::SetAt
+- ATLCOLL/ATL::SetAtGrow
+- ATLCOLL/ATL::SetCount
+- ATLCOLL/ATL::INARGTYPE
+- ATLCOLL/ATL::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +127,7 @@ class CAtlArray
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="a-nameadda--catlarrayadd"></a><a name="add"></a>CAtlArray::Add  
+##  <a name="add"></a>CAtlArray::Add  
  Вызовите этот метод, чтобы добавить элемент в массиве.  
   
 ```
@@ -130,7 +148,7 @@ size_t Add();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#1;](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
-##  <a name="a-nameappenda--catlarrayappend"></a><a name="append"></a>CAtlArray::Append  
+##  <a name="append"></a>CAtlArray::Append  
  Этот метод используется для добавления содержимого одного массива в конец другого.  
   
 ```
@@ -154,7 +172,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#2;](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
-##  <a name="a-nameassertvalida--catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray::AssertValid  
+##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  Вызовите этот метод, чтобы подтвердить допустимость объекта массива.  
   
 ```
@@ -167,7 +185,7 @@ void AssertValid() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#3;](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
-##  <a name="a-namecatlarraya--catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray::CAtlArray  
+##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  Конструктор.  
   
 ```
@@ -180,7 +198,7 @@ CAtlArray() throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#4;](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
-##  <a name="a-namedtora--catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray  
+##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  Деструктор  
   
 ```
@@ -190,7 +208,7 @@ CAtlArray() throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает все ресурсы, используемые в массиве.  
   
-##  <a name="a-namecopya--catlarraycopy"></a><a name="copy"></a>CAtlArray::Copy  
+##  <a name="copy"></a>CAtlArray::Copy  
  Этот метод служит для копирования элементов одного массива в другой.  
   
 ```
@@ -214,7 +232,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#5;](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
-##  <a name="a-namefreeextraa--catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray::FreeExtra  
+##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  Вызовите этот метод, чтобы удалить все пустые элементы из массива.  
   
 ```
@@ -226,7 +244,7 @@ void FreeExtra() throw();
   
  В отладочных построениях ATLASSERT возникает, если недопустимый CAtlArray объект или массив приведет к превышению максимального размера.  
   
-##  <a name="a-namegetata--catlarraygetat"></a><a name="getat"></a>CAtlArray::GetAt  
+##  <a name="getat"></a>CAtlArray::GetAt  
  Вызов, что этот метод, чтобы возвращает один элемент из объекта массива.  
   
 ```
@@ -247,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities №&6;](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
-##  <a name="a-namegetcounta--catlarraygetcount"></a><a name="getcount"></a>CAtlArray::GetCount  
+##  <a name="getcount"></a>CAtlArray::GetCount  
  Этот метод используется для возврата числа элементов, хранящихся в массиве.  
   
 ```
@@ -263,7 +281,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>Пример  
  В примере показано [CAtlArray::GetAt](#getat).  
   
-##  <a name="a-namegetdataa--catlarraygetdata"></a><a name="getdata"></a>CAtlArray::GetData  
+##  <a name="getdata"></a>CAtlArray::GetData  
  Этот метод используется для возврата указателя на первый элемент в массиве.  
   
 ```
@@ -277,14 +295,14 @@ const E* GetData() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#7;](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
-##  <a name="a-nameinargtypea--catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray::INARGTYPE  
+##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  Тип данных, используемый для добавления элементов в массив.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="a-nameinsertarrayata--catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
+##  <a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
  Этот метод служит для вставки одного массива в другой.  
   
 ```
@@ -309,7 +327,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities №&8;](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
-##  <a name="a-nameinsertata--catlarrayinsertat"></a><a name="insertat"></a>CAtlArray::InsertAt  
+##  <a name="insertat"></a>CAtlArray::InsertAt  
  Этот метод вызывается для вставки нового элемента (или несколько копий элемента) в объект array.  
   
 ```
@@ -334,7 +352,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities №&9;](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
-##  <a name="a-nameisemptya--catlarrayisempty"></a><a name="isempty"></a>CAtlArray::IsEmpty  
+##  <a name="isempty"></a>CAtlArray::IsEmpty  
  Этот метод используется для проверки, если массив пуст.  
   
 ```
@@ -350,7 +368,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#10;](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
-##  <a name="a-nameoperatorata--catlarrayoperator-"></a><a name="operator_at"></a>[CAtlArray::operator]  
+##  <a name="operator_at"></a>[CAtlArray::operator]  
  Вызовите этот оператор возвращает ссылку на элемент в массиве.  
   
 ```
@@ -370,14 +388,14 @@ const E& operator[](size_t ielement) const throw();
   
  В отладочных построениях, ATLASSERT будет создано, если `iElement` превышает общее число элементов в массиве. В розничных сборках недопустимого параметра может привести к непредсказуемым результатам.  
   
-##  <a name="a-nameoutargtypea--catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray::OUTARGTYPE  
+##  <a name="outargtype"></a>CAtlArray::OUTARGTYPE  
  Тип данных, использовать для получения элементов из массива.  
   
 ```
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```  
   
-##  <a name="a-nameremovealla--catlarrayremoveall"></a><a name="removeall"></a>CAtlArray::RemoveAll  
+##  <a name="removeall"></a>CAtlArray::RemoveAll  
  Этот метод используется для удаления всех элементов из объекта массива.  
   
 ```
@@ -392,7 +410,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>Пример  
  В примере показано [CAtlArray::IsEmpty](#isempty).  
   
-##  <a name="a-nameremoveata--catlarrayremoveat"></a><a name="removeat"></a>CAtlArray::RemoveAt  
+##  <a name="removeat"></a>CAtlArray::RemoveAt  
  Вызовите этот метод, чтобы удалить один или несколько элементов из массива.  
   
 ```
@@ -414,7 +432,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&11;](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
-##  <a name="a-namesetata--catlarraysetat"></a><a name="setat"></a>CAtlArray::SetAt  
+##  <a name="setat"></a>CAtlArray::SetAt  
  Этот метод используется для задания значения элемента объекта массива.  
   
 ```
@@ -434,7 +452,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 ### <a name="example"></a>Пример  
  В примере показано [CAtlArray::GetAt](#getat).  
   
-##  <a name="a-namesetcounta--catlarraysetcount"></a><a name="setcount"></a>CAtlArray::SetCount  
+##  <a name="setcount"></a>CAtlArray::SetCount  
  Вызовите этот метод, чтобы задать размер объекта массива.  
   
 ```
@@ -459,7 +477,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ### <a name="example"></a>Пример  
  В примере показано [CAtlArray::GetData](#getdata).  
   
-##  <a name="a-namesetatgrowa--catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray::SetAtGrow  
+##  <a name="setatgrow"></a>CAtlArray::SetAtGrow  
  Этот метод используется для задания значения элемента объекта массива, расширение массива, при необходимости.  
   
 ```

@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetPos
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMax
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMin
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRegularSize
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::IsInfiniteMode
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::OnDraw
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetInfiniteMode
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetPos
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +99,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxRibbonProgressBar.h  
   
-##  <a name="a-namecmfcribbonprogressbara--cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
+##  <a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
  Создает и инициализирует [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) объекта.  
   
 ```  
@@ -111,7 +122,7 @@ CMFCRibbonProgressBar(
  [in] `nHeight`  
  Высота в пикселях индикатор ленты.  
   
-##  <a name="a-namegetposa--cmfcribbonprogressbargetpos"></a><a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
+##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
  Возвращает текущую позицию индикатора хода выполнения.  
   
 ```  
@@ -124,7 +135,7 @@ int GetPos () const;
 ### <a name="remarks"></a>Примечания  
  Диапазон должен быть в диапазоне, определяемом [CMFCRibbonProgressBar::SetRange](#setrange) метод.  
   
-##  <a name="a-namegetrangemaxa--cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
+##  <a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
  Возвращает текущий индикатор максимальное значение.  
   
 ```  
@@ -136,7 +147,7 @@ int GetRangeMax() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetrangemina--cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
+##  <a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
  Возвращает текущий индикатор минимальное значение диапазона.  
   
 ```  
@@ -146,7 +157,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Минимальное значение текущего диапазона.  
   
-##  <a name="a-namegetregularsizea--cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -160,7 +171,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameisinfinitemodea--cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
+##  <a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
  Указывает, работает ли индикатор хода выполнения в режиме бесконечного.  
   
 ```  
@@ -173,7 +184,7 @@ BOOL IsInfiniteMode() const;
 ### <a name="remarks"></a>Примечания  
  В режиме бесконечного индикатор заполняет несколько раз с минимального значения максимальное значение. Бесконечный режим можно использовать для указания, что операция является постоянной, но неизвестно, время завершения.  
   
-##  <a name="a-nameondrawa--cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +196,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetinfinitemodea--cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
+##  <a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
  Задает индикатор для работы в режиме бесконечной.  
   
 ```  
@@ -199,7 +210,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ### <a name="remarks"></a>Примечания  
  Обычно в случае индикатор хода выполнения в режиме бесконечного его означает, что операция является постоянной, но неизвестно, время завершения. Таким образом индикатор заполняет несколько раз с минимального значения до максимального значения.  
   
-##  <a name="a-namesetposa--cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
+##  <a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
  Задает текущую позицию индикатора хода выполнения.  
   
 ```  
@@ -218,7 +229,7 @@ void SetPos(
 ### <a name="remarks"></a>Примечания  
  Диапазон должен быть в диапазоне, определяемом [CMFCRibbonProgressBar::SetRange](#setrange) метод.  
   
-##  <a name="a-namesetrangea--cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
+##  <a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
  Задает минимальное и максимальное значения для индикатора.  
   
 ```  

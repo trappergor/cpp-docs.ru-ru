@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrivateObjectSecurityDesc
-- ATL::CPrivateObjectSecurityDesc
 - CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::ConvertToAutoInherit
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="a-nameconverttoautoinherita--cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  Этот метод используется для преобразования в формат, который поддерживает автоматическое распространение записи наследуемые управления доступом (ACE) дескриптора безопасности и ее списки управления доступом (ACL).  
   
 ```
@@ -117,7 +121,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>Примечания  
  Этот метод пытается определить список ли элементы управления доступом в управления доступом (DACL) и системный список управления доступом (SACL) текущего дескриптора безопасности были унаследованы от родительского дескриптора безопасности. Он вызывает [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) функции.  
   
-##  <a name="a-namecprivateobjectsecuritydesca--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Конструктор.  
   
 ```
@@ -127,7 +131,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Примечания  
  Инициализирует `CPrivateObjectSecurityDesc` объекта.  
   
-##  <a name="a-namedtora--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
  Деструктор  
   
 ```
@@ -137,7 +141,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все выделенные ресурсы и удаляет закрытый объект дескриптора безопасности.  
   
-##  <a name="a-namecreatea--cprivateobjectsecuritydesccreate"></a><a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
  Этот метод используется для размещения и инициализации дескриптор безопасности в относительный для закрытого объекта, созданного путем вызова диспетчера ресурсов.  
   
 ```
@@ -194,7 +198,7 @@ bool Create(
 > [!NOTE]
 >  Дескриптор безопасности в относительный является дескриптор безопасности, который хранит все свои сведения о безопасности в непрерывном блоке памяти.  
   
-##  <a name="a-namegeta--cprivateobjectsecuritydescget"></a><a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
  Этот метод используется для извлечения сведений из дескриптора безопасности закрытый объект.  
   
 ```
@@ -216,7 +220,7 @@ bool Get(
 ### <a name="remarks"></a>Примечания  
  Дескриптор безопасности не является структуры и связанных данных, содержащий сведения о безопасности для защищаемого объекта.  
   
-##  <a name="a-nameoperatoreqa--cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
  Оператор присвоения.  
   
 ```
@@ -230,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CPrivateObjectSecurityDesc` объекта.  
   
-##  <a name="a-nameseta--cprivateobjectsecuritydescset"></a><a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
  Вызовите этот метод, чтобы изменить дескриптор безопасности закрытый объект.  
   
 ```

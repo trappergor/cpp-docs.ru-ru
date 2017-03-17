@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
+- AFXODLGS/COleLinksDialog
+- AFXODLGS/COleLinksDialog::COleLinksDialog
+- AFXODLGS/COleLinksDialog::DoModal
+- AFXODLGS/COleLinksDialog::m_el
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +103,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="a-namedomodala--colelinksdialogdomodal"></a><a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>COleLinksDialog::DoModal  
  Отображение диалогового окна OLE изменить ссылки.  
   
 ```  
@@ -118,7 +122,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Примечания  
  Если требуется инициализировать различные диалоговыми окнами, задав члены [m_el](#m_el) структуры, необходимо сделать это до вызова метода `DoModal`, но после создания объекта диалогового окна.  
   
-##  <a name="a-namecolelinksdialoga--colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
  Создает объект `COleLinksDialog`.  
   
 ```  
@@ -145,7 +149,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>Примечания  
  Эта функция создает только `COleLinksDialog` объекта. Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
-##  <a name="a-namemela--colelinksdialogmel"></a><a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>COleLinksDialog::m_el  
  Структура типа **OLEUIEDITLINKS** используется для управления поведением диалоговое окно Изменение связей.  
   
 ```  

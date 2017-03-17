@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
+- AFXDLGS/CPageSetupDialog
+- AFXDLGS/CPageSetupDialog::CPageSetupDialog
+- AFXDLGS/CPageSetupDialog::CreatePrinterDC
+- AFXDLGS/CPageSetupDialog::DoModal
+- AFXDLGS/CPageSetupDialog::GetDeviceName
+- AFXDLGS/CPageSetupDialog::GetDevMode
+- AFXDLGS/CPageSetupDialog::GetDriverName
+- AFXDLGS/CPageSetupDialog::GetMargins
+- AFXDLGS/CPageSetupDialog::GetPaperSize
+- AFXDLGS/CPageSetupDialog::GetPortName
+- AFXDLGS/CPageSetupDialog::OnDrawPage
+- AFXDLGS/CPageSetupDialog::PreDrawPage
+- AFXDLGS/CPageSetupDialog::m_psd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +122,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdlgs.h  
   
-##  <a name="a-namecpagesetupdialoga--cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
  Эта функция вызывается для создания `CPageSetupDialog` объекта.  
   
 ```  
@@ -167,7 +180,7 @@ CPageSetupDialog(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#94;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateprinterdca--cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
  Создает контекст устройства принтера из [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.  
   
 ```  
@@ -177,7 +190,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор контекста устройства (DC), созданного принтера.  
   
-##  <a name="a-namedomodala--cpagesetupdialogdomodal"></a><a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>CPageSetupDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна Windows Общие параметры OLE страницы и разрешить пользователю выбирать различные варианты настройки печати, например поля печати, размер и ориентация бумаги и принтер назначения.  
   
 ```  
@@ -201,7 +214,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Пример  
   В примере показано [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="a-namegetdevicenamea--cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
  Вызывайте эту функцию после `DoModal` для извлечения имени выбранного принтера.  
   
 ```  
@@ -211,7 +224,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Имя устройства, используемые **CPageSetupDialog** объекта.  
   
-##  <a name="a-namegetdevmodea--cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
  Эта функция вызывается после вызова метода `DoModal` для получения информации о контексте устройства принтера `CPageSetupDialog` объекта.  
   
 ```  
@@ -221,7 +234,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуру данных, которая содержит сведения об инициализации устройства и среде драйвер принтера. Необходимо разблокировать память, занимаемую структурой с Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) функции, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdrivernamea--cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
  Эта функция вызывается после вызова метода [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) получить имя драйвера принтера, определяемые системой.  
   
 ```  
@@ -234,7 +247,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>Примечания  
  Использование указателя для `CString` объект, возвращаемый `GetDriverName` в качестве значения `lpszDriverName` в вызове [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="a-namegetmarginsa--cpagesetupdialoggetmargins"></a><a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
  Эта функция вызывается после вызова метода `DoModal` для извлечения полей драйвера принтера.  
   
 ```  
@@ -250,7 +263,7 @@ void GetMargins(
  *lpRectMinMargins*  
  Указатель на `RECT` структуры или `CRect` объект, описывающий (в дюймах 1/1000 или 1/100 мм) минимальные поля печати для выбранного принтера. Передайте **NULL** для этого параметра, если вы не заинтересованы в этот прямоугольник.  
   
-##  <a name="a-namegetpapersizea--cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
  Эта функция вызывается для получения размера бумаги, выбранного для печати.  
   
 ```  
@@ -260,7 +273,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) объект, содержащий размер бумаги (в дюймах 1/1000 или 1/100 мм), выбранные для печати.  
   
-##  <a name="a-namegetportnamea--cpagesetupdialoggetportname"></a><a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
  Эта функция вызывается после вызова метода `DoModal` для извлечения имени выбранного порта.  
   
 ```  
@@ -270,7 +283,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Имя выбранного порта.  
   
-##  <a name="a-namempsda--cpagesetupdialogmpsd"></a><a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
  Структура типа **PAGESETUPDLG**, члены которого хранения характеристики объекта диалогового окна.  
   
 ```  
@@ -286,7 +299,7 @@ PAGESETUPDLG m_psd;
   
  В примере показано [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="a-nameondrawpagea--cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
  Вызывается платформой для рисования изображение экрана на печатной странице.  
   
 ```  
@@ -330,7 +343,7 @@ virtual UINT OnDrawPage(
   
  Обратите внимание, не нужно обработать каждый случай из `nMessage`. Можно обрабатывать один компонент изображения, несколько компонентов изображения или всю область.  
   
-##  <a name="a-namepredrawpagea--cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
  Вызывается средой перед рисованием изображения экрана на печатной странице.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragEnter
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragLeave
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragOver
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDropEx
+- AFXBASETABCTRL/CMFCTabDropTarget::Register
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +96,7 @@ class CMFCTabDropTarget : public COleDropTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxbasetabctrl.h  
   
-##  <a name="a-nameondragentera--cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
  Вызывается платформой, когда пользователь перетаскивает объект в окно вкладки.  
   
 ```  
@@ -129,7 +135,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Дополнительные сведения о режиме настройки в разделе [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Дополнительные сведения о форматах данных буфера обмена в разделе [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameondragleavea--cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
  Вызывается инфраструктурой при перетаскивании объекта за пределами вкладки окна, имеющий фокус.  
   
 ```  
@@ -146,7 +152,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод `CMFCBaseTabCtrl::OnDragLeave` метод для выполнения операции перетаскивания.  
   
-##  <a name="a-nameondragovera--cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
  Вызывается инфраструктурой при перетаскивании объекта на вкладке окна, имеющий фокус.  
   
 ```  
@@ -185,7 +191,7 @@ virtual DROPEFFECT OnDragOver(
   
  Дополнительные сведения о режиме настройки в разделе [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Дополнительные сведения о форматах данных буфера обмена в разделе [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameondropexa--cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
+##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
  Вызывается платформой, когда пользователь отпускает кнопку мыши в конце операции перетаскивания.  
   
 ```  
@@ -226,7 +232,7 @@ virtual DROPEFFECT OnDropEx(
   
  Дополнительные сведения о режиме настройки в разделе [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Дополнительные сведения о форматах данных буфера обмена в разделе [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameregistera--cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Register  
+##  <a name="register"></a>CMFCTabDropTarget::Register  
  Регистрирует элемент управления как элемент, который может быть целевым объектом операции и перетаскивания OLE.  
   
 ```  

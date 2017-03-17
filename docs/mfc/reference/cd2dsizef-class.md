@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DSizeF
 - CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF::CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-namecd2dsizefa--cd2dsizefcd2dsizef"></a><a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
+##  <a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
  Создает объект CD2DSizeF из CSize объекта.  
   
 ```  
@@ -101,7 +103,7 @@ CD2DSizeF(
  `cy`  
  Исходная высота  
   
-##  <a name="a-nameisnulla--cd2dsizefisnull"></a><a name="isnull"></a>CD2DSizeF::ISNULL  
+##  <a name="isnull"></a>CD2DSizeF::ISNULL  
  Возвращает логическое значение, указывающее, содержит ли выражение недопустимые данные (Null).  
   
 ```  
@@ -111,7 +113,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ширина и Высота пустой. в противном случае — значение FALSE.  
   
-##  <a name="a-nameoperatorcsizea--cd2dsizefoperator-csize"></a><a name="operator_csize"></a>CD2DSizeF::operator CSize  
+##  <a name="operator_csize"></a>CD2DSizeF::operator CSize  
  Преобразует CD2DSizeF CSize.  
   
 ```  

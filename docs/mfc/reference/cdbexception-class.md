@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBException
+- AFXDB/CDBException
+- AFXDB/CDBException::m_nRetCode
+- AFXDB/CDBException::m_strError
+- AFXDB/CDBException::m_strStateNativeOrigin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="a-namemnretcodea--cdbexceptionmnretcode"></a><a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
  Содержит код ошибки ODBC типа **RETCODE** возвращенный функции API-интерфейс программирования приложений ODBC.  
   
 ### <a name="remarks"></a>Примечания  
@@ -134,13 +138,13 @@ class CDBException : public CException
   
  Коды префиксом SQL определены в ODBC. Коды префиксом AFX определены в файле AFXDB. H в MFC\INCLUDE.  
   
-##  <a name="a-namemstrerrora--cdbexceptionmstrerror"></a><a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>CDBException::m_strError  
  Содержит строку, описывающую ошибку, вызвавшую исключение.  
   
 ### <a name="remarks"></a>Примечания  
  Строка описывает ошибку в терминах буквенно-цифровых. Более подробные сведения и пример см. в разделе **m_strStateNativeOrigin**.  
   
-##  <a name="a-namemstrstatenativeorigina--cdbexceptionmstrstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  Содержит строку, описывающую ошибку, вызвавшую исключение.  
   
 ### <a name="remarks"></a>Примечания  

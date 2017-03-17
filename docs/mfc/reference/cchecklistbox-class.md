@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
+- AFXWIN/CCheckListBox
+- AFXWIN/CCheckListBox::CCheckListBox
+- AFXWIN/CCheckListBox::Create
+- AFXWIN/CCheckListBox::DrawItem
+- AFXWIN/CCheckListBox::Enable
+- AFXWIN/CCheckListBox::GetCheck
+- AFXWIN/CCheckListBox::GetCheckStyle
+- AFXWIN/CCheckListBox::IsEnabled
+- AFXWIN/CCheckListBox::MeasureItem
+- AFXWIN/CCheckListBox::OnGetCheckPosition
+- AFXWIN/CCheckListBox::SetCheck
+- AFXWIN/CCheckListBox::SetCheckStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +125,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecchecklistboxa--cchecklistboxcchecklistbox"></a><a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
  Создает объект `CCheckListBox`.  
   
 ```  
@@ -126,7 +138,7 @@ CCheckListBox();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog&#60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cchecklistboxcreate"></a><a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>CCheckListBox::Create  
  Поле контрольного списка Windows создает и присоединяет его к `CCheckListBox` объекта.  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** чтобы разрешить переход к этому элементу управления  
   
-##  <a name="a-namedrawitema--cchecklistboxdrawitem"></a><a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>CCheckListBox::DrawItem  
  Вызывается инфраструктурой при изменении внешнего вида изменяется определяемые владельцем контрольный список.  
   
 ```  
@@ -196,7 +208,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Если контрольный список элементов не ту же высоту, контрольный список поле стиль (указанного в **создать**) должны быть **LBS_OWNERVARIABLE**, и необходимо переопределить [MeasureItem](#measureitem) функции.  
   
-##  <a name="a-nameenablea--cchecklistboxenable"></a><a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>CCheckListBox::Enable  
  Эта функция вызывается для включения или отключения элемент поля контрольный список.  
   
 ```  
@@ -212,7 +224,7 @@ void Enable(
  `bEnabled`  
  Указывает, включен ли элемент.  
   
-##  <a name="a-namegetchecka--cchecklistboxgetcheck"></a><a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>CCheckListBox::GetCheck  
  Получает состояние указанного флажок.  
   
 ```  
@@ -232,7 +244,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|Флажок не установлен.|  
 |`BST_INDETERMINATE`|Состояние флажка не определено.|  
   
-##  <a name="a-namegetcheckstylea--cchecklistboxgetcheckstyle"></a><a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
  Эта функция вызывается для получения стиля поле контрольного списка.  
   
 ```  
@@ -245,7 +257,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>Примечания  
  Сведения о возможных стилей см. в разделе [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="a-nameisenableda--cchecklistboxisenabled"></a><a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
  Эта функция вызывается для определения, включен ли элемент.  
   
 ```  
@@ -259,7 +271,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если элемент включен; в противном случае — 0.  
   
-##  <a name="a-namemeasureitema--cchecklistboxmeasureitem"></a><a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
  Вызывается инфраструктурой при создании нестандартных стиль поля со списком.  
   
 ```  
@@ -273,7 +285,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>Примечания  
  По умолчанию эта функция-член не выполняет никаких действий. Переопределить эту функцию-член и заполните `MEASUREITEMSTRUCT` структуры для информирования Windows измерений поле контрольного списка элементов. Если поле контрольного списка создается с [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) стиль, платформа вызывает эту функцию-член для каждого элемента в списке. В противном случае этот член вызывается только один раз.  
   
-##  <a name="a-nameongetcheckpositiona--cchecklistboxongetcheckposition"></a><a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
  Платформа вызывает эту функцию для получения позиции и размера флажка в элементе.  
   
 ```  
@@ -295,7 +307,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию возвращает только по умолчанию положение и размер флажка ( `rectCheckBox`). По умолчанию флажок выравнивается в левом верхнем углу элемента и размер стандартный флажок. Возможны случаи, когда требуется флажки справа или хотите флажок больше или меньше. В этих случаях переопределить `OnGetCheckPosition` изменение флажок положение и размер в элементе.  
   
-##  <a name="a-namesetchecka--cchecklistboxsetcheck"></a><a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>CCheckListBox::SetCheck  
  Задает состояние указанного флажок.  
   
 ```  
@@ -320,7 +332,7 @@ void SetCheck(
 |**BST_UNCHECKED**|Снимите указанный флажок.|  
 |**BST_INDETERMINATE**|Установите неопределенное состояние указанный флажок.<br /><br /> Это состояние доступна, только если флажок стиль `BS_AUTO3STATE` или `BS_3STATE`. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/button-styles.md).|  
   
-##  <a name="a-namesetcheckstylea--cchecklistboxsetcheckstyle"></a><a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
  Эта функция вызывается для задания стиля флажков в окне контрольного списка.  
   
 ```  

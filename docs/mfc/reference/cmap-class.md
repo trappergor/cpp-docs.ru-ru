@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMap
+- AFXTEMPL/CMap
+- AFXTEMPL/CMap::CPair
+- AFXTEMPL/CMap::CMap
+- AFXTEMPL/CMap::GetCount
+- AFXTEMPL/CMap::GetHashTableSize
+- AFXTEMPL/CMap::GetNextAssoc
+- AFXTEMPL/CMap::GetSize
+- AFXTEMPL/CMap::GetStartPosition
+- AFXTEMPL/CMap::InitHashTable
+- AFXTEMPL/CMap::IsEmpty
+- AFXTEMPL/CMap::Lookup
+- AFXTEMPL/CMap::PGetFirstAssoc
+- AFXTEMPL/CMap::PGetNextAssoc
+- AFXTEMPL/CMap::PLookup
+- AFXTEMPL/CMap::RemoveAll
+- AFXTEMPL/CMap::RemoveKey
+- AFXTEMPL/CMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -125,7 +142,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtempl.h  
   
-##  <a name="a-namecmapa--cmapcmap"></a><a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>CMap::CMap  
  Создает пустое сопоставление.  
   
 ```  
@@ -142,7 +159,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections&#56;](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="a-namecpaira--cmapcpair"></a><a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>CMap::CPair  
  Содержит ключевое значение и значение связанного объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -159,7 +176,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Пример  
  Пример использования см. пример для [CMap::PLookup](#plookup).  
   
-##  <a name="a-namegetcounta--cmapgetcount"></a><a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>CMap::GetCount  
  Получает число элементов в сопоставлении.  
   
 ```  
@@ -172,7 +189,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Пример  
  В примере показано [CMap::Lookup](#lookup).  
   
-##  <a name="a-namegethashtablesizea--cmapgethashtablesize"></a><a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
  Определяет число элементов в хэш-таблицу для карты.  
   
 ```  
@@ -185,7 +202,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections&#57;](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="a-namegetnextassoca--cmapgetnextassoc"></a><a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
  Извлекает элемент карты по `rNextPosition`, затем обновляет `rNextPosition` для обращения к следующему элементу в схеме.  
   
 ```  
@@ -219,7 +236,7 @@ void GetNextAssoc(
 ### <a name="example"></a>Пример  
  В примере показано [CMap::SetAt](#setat).  
   
-##  <a name="a-namegetsizea--cmapgetsize"></a><a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>CMap::GetSize  
  Возвращает количество элементов карты.  
   
 ```  
@@ -235,7 +252,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections&#58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapgetstartposition"></a><a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>CMap::GetStartPosition  
  Начинает итерацию карты, возвращая **положение** значение, которое может быть передан `GetNextAssoc` вызова.  
   
 ```  
@@ -251,7 +268,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Пример  
  В примере показано [CMap::SetAt](#setat).  
   
-##  <a name="a-nameinithashtablea--cmapinithashtable"></a><a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>CMap::InitHashTable  
  Инициализирует хэш-таблицы.  
   
 ```  
@@ -271,7 +288,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUEÂ);
 ### <a name="example"></a>Пример  
  В примере показано [CMap::Lookup](#lookup).  
   
-##  <a name="a-nameisemptya--cmapisempty"></a><a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>CMap::IsEmpty  
  Определяет, пуст ли карты.  
   
 ```  
@@ -284,7 +301,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Пример  
  В примере показано [CMap::RemoveAll](#removeall).  
   
-##  <a name="a-namelookupa--cmaplookup"></a><a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>CMap::Lookup  
  Ищет значение сопоставляется с помощью данного ключа.  
   
 ```  
@@ -313,7 +330,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections&#58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-nameoperatorata--cmapoperator--"></a><a name="operator_at"></a>[CMap::operator]  
+##  <a name="operator_at"></a>[CMap::operator]  
  Удобный заменой `SetAt` функции-члена.  
   
 ```  
@@ -338,7 +355,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>Пример  
  В примере показано [CMap::Lookup](#lookup).  
   
-##  <a name="a-namepgetfirstassoca--cmappgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
  Возвращает первый элемент объекта map.  
   
 ```  
@@ -354,7 +371,7 @@ const CPair* PGetFirstAssoc() const;Â CPair* PGetFirstAssoc();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections&#59;](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmappgetnextassoc"></a><a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
  Извлекает элемент карты, на который указывает `pAssocRec`.  
   
 ```  
@@ -376,7 +393,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>Пример  
  В примере показано [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="a-nameplookupa--cmapplookup"></a><a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>CMap::PLookup  
  Находит значение сопоставляется с помощью данного ключа.  
   
 ```  

@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileTimeSpan
-- ATL.CFileTimeSpan
-- ATL::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::GetTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::SetTimeSpan
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +93,7 @@ class CFileTimeSpan
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltime.h  
   
-##  <a name="a-namecfiletimespana--cfiletimespancfiletimespan"></a><a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
+##  <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
  Конструктор.  
   
 ```
@@ -110,7 +112,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 ### <a name="remarks"></a>Примечания  
  `CFileTimeSpan` Объект может быть создан с помощью существующего `CFileTimeSpan` объекта или выражается как 64-разрядное значение. Конструктор по умолчанию задает интервал времени, равным 0.  
   
-##  <a name="a-namegettimespana--cfiletimespangettimespan"></a><a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
+##  <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
  Этот метод вызывается для получения интервал времени из `CFileTimeSpan` объекта.  
   
 ```
@@ -120,7 +122,7 @@ LONGLONG GetTimeSpan() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает интервал времени в миллисекундах.  
   
-##  <a name="a-nameoperator-a--cfiletimespanoperator--"></a><a name="operator_-"></a>CFileTimeSpan::operator-  
+##  <a name="operator_-"></a>CFileTimeSpan::operator-  
  Выполняет вычитание **CFileTimeSpan** объекта.  
   
 ```
@@ -134,7 +136,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `CFileTimeSpan` объект, представляющий результат разницу между двумя промежутками времени.  
   
-##  <a name="a-nameoperatorneqa--cfiletimespanoperator-"></a><a name="operator_neq"></a>CFileTimeSpan::operator! =  
+##  <a name="operator_neq"></a>CFileTimeSpan::operator! =  
  Проверяет неравенство двух объектов `CFileTimeSpan`.  
   
 ```
@@ -148,7 +150,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если сравниваемые элемента не равен `CFileTimeSpan` объекта; в противном случае **false**.  
   
-##  <a name="a-nameoperatoradda--cfiletimespanoperator-"></a><a name="operator_add"></a>CFileTimeSpan::operator +  
+##  <a name="operator_add"></a>CFileTimeSpan::operator +  
  Выполняет сложение `CFileTimeSpan` объекта.  
   
 ```
@@ -162,7 +164,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `CFileTimeSpan` объект, содержащий сумму два временных диапазонов.  
   
-##  <a name="a-nameoperatoraddeqa--cfiletimespanoperator-"></a><a name="operator_add_eq"></a>CFileTimeSpan::operator +=  
+##  <a name="operator_add_eq"></a>CFileTimeSpan::operator +=  
  Выполняет сложение на `CFileTimeSpan` объект и присваивает результат на текущий объект.  
   
 ```
@@ -176,7 +178,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CFileTimeSpan` объект, содержащий сумму два временных диапазонов.  
   
-##  <a name="a-nameoperatorlta--cfiletimespanoperator-lt"></a><a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
+##  <a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
  Сравнивает два `CFileTimeSpan` объектов, чтобы определить меньшее значение.  
   
 ```
@@ -190,7 +192,7 @@ bool operator<(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если первый объект меньше (то есть, представляет более короткий период времени) второго, в противном случае **false**.  
   
-##  <a name="a-nameoperatorlteqa--cfiletimespanoperator-lt"></a><a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
  Сравнивает два `CFileTimeSpan` объектов для определения равенства или меньшее значение.  
   
 ```
@@ -204,7 +206,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если первый объект меньше, чем (то есть, представляет более короткий период времени) или равен второму, в противном случае **false**.  
   
-##  <a name="a-nameoperatoreqa--cfiletimespanoperator-"></a><a name="operator_eq"></a>CFileTimeSpan::operator =  
+##  <a name="operator_eq"></a>CFileTimeSpan::operator =  
  Оператор присваивания.  
   
 ```
@@ -218,7 +220,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CFileTimeSpan` объекта.  
   
-##  <a name="a-nameoperator-eqa--cfiletimespanoperator--"></a><a name="operator_-_eq"></a>CFileTimeSpan::operator-=  
+##  <a name="operator_-_eq"></a>CFileTimeSpan::operator-=  
  Выполняет вычитание `CFileTimeSpan` объекта и присваивает результат на текущий объект.  
   
 ```
@@ -232,7 +234,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CFileTimeSpan` объекта.  
   
-##  <a name="a-nameoperatoreqeqa--cfiletimespanoperator-"></a><a name="operator_eq_eq"></a>CFileTimeSpan::operator ==  
+##  <a name="operator_eq_eq"></a>CFileTimeSpan::operator ==  
  Сравнивает два объекта `CFileTimeSpan` на равенство.  
   
 ```
@@ -246,7 +248,7 @@ bool operator==(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если объекты равны; в противном случае **false**.  
   
-##  <a name="a-nameoperatorgta--cfiletimespanoperator-gt"></a><a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
+##  <a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
  Сравнивает два `CFileTimeSpan` объектов, чтобы определить большее.  
   
 ```
@@ -260,7 +262,7 @@ bool operator>(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если первый объект больше, чем (то есть, представляет длительного периода времени) второго, в противном случае **false**.  
   
-##  <a name="a-nameoperatorgteqa--cfiletimespanoperator-gt"></a><a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
  Сравнивает два `CFileTimeSpan` объектов для определения равенства или большее.  
   
 ```
@@ -274,7 +276,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если первый объект больше, чем (то есть, представляет длительного периода времени) или равен второму, в противном случае **false**.  
   
-##  <a name="a-namesettimespana--cfiletimespansettimespan"></a><a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
+##  <a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
  Вызовите этот метод, чтобы задать период `CFileTimeSpan` объекта.  
   
 ```

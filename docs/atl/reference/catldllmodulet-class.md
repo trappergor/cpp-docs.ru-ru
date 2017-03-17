@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlDllModuleT
-- ATL::CAtlDllModuleT<T>
-- ATL::CAtlDllModuleT
-- ATL.CAtlDllModuleT<T>
 - CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::DllCanUnloadNow
+- ATLBASE/ATL::CAtlDllModuleT::DllGetClassObject
+- ATLBASE/ATL::CAtlDllModuleT::DllMain
+- ATLBASE/ATL::CAtlDllModuleT::DllRegisterServer
+- ATLBASE/ATL::CAtlDllModuleT::DllUnregisterServer
+- ATLBASE/ATL::CAtlDllModuleT::GetClassObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,21 +99,21 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="a-namecatldllmoduleta--catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
+##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
  Конструктор.  
   
 ```
 CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedtora--catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
+##  <a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
  Деструктор  
   
 ```
 ~CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedllcanunloadnowa--catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
+##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
  Проверяет DLL может быть выгружена.  
   
 ```
@@ -119,7 +123,7 @@ HRESULT DllCanUnloadNow() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK, если библиотека DLL может быть выгружен или S_FALSE, если это невозможно.  
   
-##  <a name="a-namedllgetclassobjecta--catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
+##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
  Возвращает фабрику классов.  
   
 ```
@@ -142,7 +146,7 @@ HRESULT DllGetClassObject(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-namedllmaina--catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT::DllMain  
+##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
  Точка входа необязательно в библиотеку динамической компоновки (DLL).  
   
 ```
@@ -162,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="remarks"></a>Примечания  
  Отключение DLL_THREAD_ATTACH и DLL_THREAD_DETACH вызовы уведомлений может быть полезным оптимизации для многопоточных приложений, имеющих многие библиотеки DLL, часто создания и удаления потоков и эти уведомления уровня потока вложения или отсоединение не обязательно, для библиотек DLL.  
   
-##  <a name="a-namedllregisterservera--catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
+##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
  Добавляет записи в системный реестр для объектов в библиотеке DLL.  
   
 ```
@@ -176,7 +180,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-namedllunregisterservera--catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
+##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
  Удаляет записи в системном реестре для объектов в библиотеке DLL.  
   
 ```
@@ -190,7 +194,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
   
-##  <a name="a-namegetclassobjecta--catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
+##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
  Создает объект для указанного идентификатора CLSID.  
   
 ```

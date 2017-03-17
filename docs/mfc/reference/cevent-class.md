@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEvent
+- AFXMT/CEvent
+- AFXMT/CEvent::CEvent
+- AFXMT/CEvent::PulseEvent
+- AFXMT/CEvent::ResetEvent
+- AFXMT/CEvent::SetEvent
+- AFXMT/CEvent::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmt.h  
   
-##  <a name="a-nameceventa--ceventcevent"></a><a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>CEvent::CEvent  
  Создает именованные `CEvent` объекта.  
   
 ```  
@@ -131,7 +137,7 @@ CEvent(
 > [!IMPORTANT]
 >  После создания `CEvent` , используйте [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) чтобы убедиться, что объект взаимного исключения не существует. Если мьютекс существовал неожиданно, это может означать нелегальные процессы — занятие и может вы собираетесь использовать мьютекса злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжается как, если произошел сбой при создании объекта.  
   
-##  <a name="a-namepulseeventa--ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>CEvent::PulseEvent  
  Задает состояние сигнала события (доступно), освобождает все ожидающие потоки и сбрасывает ее несигнальное (недоступно) автоматически.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL PulseEvent();
   
  `PulseEvent`использует базовый Win32 `PulseEvent` функции, которая может ненадолго удален из состояния ожидания при вызове асинхронных процедур в режиме ядра. Таким образом `PulseEvent` является ненадежным и должен использоваться не новые приложения. Дополнительные сведения см. в разделе [PulseEvent функция](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="a-namereseteventa--ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>CEvent::ResetEvent  
  Задает состояние события несигнальное до явно задать до получения сигнала, [SetEvent](#setevent) функции-члена.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL ResetEvent();
   
  Эта функция-член не используется автоматическое событиями.  
   
-##  <a name="a-nameseteventa--ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>CEvent::SetEvent  
  Задает состояние события, получает сигнал, освобождая все ожидающие потоки.  
   
 ```  
@@ -176,7 +182,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Примечания  
  Если событие вручную, это событие будет оставаться сигнал до [ResetEvent](#resetevent) вызывается. В этом случае могут поставляться более чем одним потоком. События выполняется автоматически, события остается сигнальным до освобождения одного потока. Система затем установит несигнальное состояние события. Если нет ожидающих потоков, состояние остается в сигнальном состоянии до освобождения одного потока.  
   
-##  <a name="a-nameunlocka--ceventunlock"></a><a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>CEvent::Unlock  
  Освобождает объект события.  
   
 ```  

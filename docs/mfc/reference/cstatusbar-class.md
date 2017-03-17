@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatusBar
+- AFXEXT/CStatusBar
+- AFXEXT/CStatusBar::CStatusBar
+- AFXEXT/CStatusBar::CommandToIndex
+- AFXEXT/CStatusBar::Create
+- AFXEXT/CStatusBar::CreateEx
+- AFXEXT/CStatusBar::DrawItem
+- AFXEXT/CStatusBar::GetItemID
+- AFXEXT/CStatusBar::GetItemRect
+- AFXEXT/CStatusBar::GetPaneInfo
+- AFXEXT/CStatusBar::GetPaneStyle
+- AFXEXT/CStatusBar::GetPaneText
+- AFXEXT/CStatusBar::GetStatusBarCtrl
+- AFXEXT/CStatusBar::SetIndicators
+- AFXEXT/CStatusBar::SetPaneInfo
+- AFXEXT/CStatusBar::SetPaneStyle
+- AFXEXT/CStatusBar::SetPaneText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +138,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле afxext.h  
   
-##  <a name="a-namecommandtoindexa--cstatusbarcommandtoindex"></a><a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
  Возвращает индекс индикатор с заданным идентификатором.  
   
 ```  
@@ -139,7 +155,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>Примечания  
  Индекс первого индикатора равно 0.  
   
-##  <a name="a-namecreatea--cstatusbarcreate"></a><a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>CStatusBar::Create  
  Состояние панели (дочернее окно) создает и связывает его с `CStatusBar` объекта.  
   
 ```  
@@ -171,7 +187,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  Также задает начальное шрифт и устанавливает состояние высоту строки на значение по умолчанию.  
   
-##  <a name="a-namecreateexa--cstatusbarcreateex"></a><a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>CStatusBar::CreateEx  
  Эта функция вызывается для создания состояния панели (дочернего окна) и связать его с `CStatusBar` объекта.  
   
 ```  
@@ -209,14 +225,14 @@ virtual BOOL CreateEx(
   
  Используйте `CreateEx`, вместо [создать](#create), когда определенные стили должны присутствовать во время создания внедренные строки состояния. Например, задать `dwCtrlStyle` для **SBT_TOOLTIPS** для отображения всплывающих подсказок в объекте строки состояния.  
   
-##  <a name="a-namecstatusbara--cstatusbarcstatusbar"></a><a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
  Создает `CStatusBar` , создает шрифт по умолчанию строка состояния при необходимости и задается характеристики шрифта для значения по умолчанию.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="a-namedrawitema--cstatusbardrawitem"></a><a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>CStatusBar::DrawItem  
  Эта функция-член вызывается инфраструктурой при изменении внешнего вида строка пользовательского состояния.  
   
 ```  
@@ -230,7 +246,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Примечания  
  **ItemAction** членом `DRAWITEMSTRUCT` структура определяет рисования действие, которое должно быть выполнено. Переопределить эту функцию-член для реализации отрисовки рисование владельцем `CStatusBar` объекта. Приложение должно восстановить всех графических устройств интерфейс (GDI) выбранных объектов в контексте отображения указано в `lpDrawItemStruct` до завершения работы этой функции-члена.  
   
-##  <a name="a-namegetitemida--cstatusbargetitemid"></a><a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>CStatusBar::GetItemID  
  Возвращает идентификатор индикатора, определяемое `nIndex`.  
   
 ```  
@@ -244,7 +260,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор определяемого индикатора `nIndex`.  
   
-##  <a name="a-namegetitemrecta--cstatusbargetitemrect"></a><a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
  Копирует координат индикатора, определяемое `nIndex` в структуру, на который указывает `lpRect`.  
   
 ```  
@@ -263,7 +279,7 @@ void GetItemRect(
 ### <a name="remarks"></a>Примечания  
  Координаты измеряются в пикселях относительно верхнего левого угла строки состояния.  
   
-##  <a name="a-namegetpaneinfoa--cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
  Наборы `nID`, `nStyle`, и `cxWidth` идентификатор, стиль и ширину области индикатора в расположении, заданном `nIndex`.  
   
 ```  
@@ -287,7 +303,7 @@ void GetPaneInfo(
  `cxWidth`  
  Ссылка на целое число, равное ширину области.  
   
-##  <a name="a-namegetpanestylea--cstatusbargetpanestyle"></a><a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
  Вызовите эту функцию-член для получения стиль панели строки состояния.  
   
 ```  
@@ -306,7 +322,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  Список стилей, доступных для строки состояния, в разделе [создать](#create).  
   
-##  <a name="a-namegetpanetexta--cstatusbargetpanetext"></a><a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
  Вызовите эту функцию-член для извлечения текста, отображаемая на панели строки состояния.  
   
 ```  

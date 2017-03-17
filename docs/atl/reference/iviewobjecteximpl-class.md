@@ -9,11 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IViewObjectExImpl<T>
-- ATL.IViewObjectExImpl
-- ATL::IViewObjectExImpl
-- ATL.IViewObjectExImpl<T>
 - IViewObjectExImpl
+- ATLCTL/ATL::IViewObjectExImpl
+- ATLCTL/ATL::IViewObjectExImpl::Draw
+- ATLCTL/ATL::IViewObjectExImpl::Freeze
+- ATLCTL/ATL::IViewObjectExImpl::GetAdvise
+- ATLCTL/ATL::IViewObjectExImpl::GetColorSet
+- ATLCTL/ATL::IViewObjectExImpl::GetExtent
+- ATLCTL/ATL::IViewObjectExImpl::GetNaturalExtent
+- ATLCTL/ATL::IViewObjectExImpl::GetRect
+- ATLCTL/ATL::IViewObjectExImpl::GetViewStatus
+- ATLCTL/ATL::IViewObjectExImpl::QueryHitPoint
+- ATLCTL/ATL::IViewObjectExImpl::QueryHitRect
+- ATLCTL/ATL::IViewObjectExImpl::SetAdvise
+- ATLCTL/ATL::IViewObjectExImpl::Unfreeze
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +103,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="a-namedrawa--iviewobjecteximpldraw"></a><a name="draw"></a>IViewObjectExImpl::Draw  
+##  <a name="draw"></a>IViewObjectExImpl::Draw  
  Рисует представление элемента управления на контекст устройства.  
   
 ```
@@ -115,7 +124,7 @@ STDMETHOD(Draw)(
   
  В разделе [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namefreezea--iviewobjecteximplfreeze"></a><a name="freeze"></a>IViewObjectExImpl::Freeze  
+##  <a name="freeze"></a>IViewObjectExImpl::Freeze  
  Замораживает формируемого представление элемента управления, он не изменится до `Unfreeze`. Возвращает реализацию ATL **E_NOTIMPL**.  
   
 ```
@@ -129,7 +138,7 @@ STDMETHOD(Freeze)(
 ### <a name="remarks"></a>Примечания  
  В разделе [IViewObject::Freeze](http://msdn.microsoft.com/library/windows/desktop/ms688728) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetadvisea--iviewobjecteximplgetadvise"></a><a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
+##  <a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
  Извлекает подключение приемнике уведомлений на элементе управления, при наличии.  
   
 ```
@@ -144,7 +153,7 @@ STDMETHOD(GetAdvise)(
   
  В разделе [IViewObject::GetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692772) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcolorseta--iviewobjecteximplgetcolorset"></a><a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
+##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
  Возвращает логический палитры, используемого элементом управления для рисования. Возвращает реализацию ATL **E_NOTIMPL**.  
   
 ```
@@ -160,7 +169,7 @@ STDMETHOD(GetColorSet)(
 ### <a name="remarks"></a>Примечания  
  В разделе [IViewObject::GetColorSet](http://msdn.microsoft.com/library/windows/desktop/ms686553) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetextenta--iviewobjecteximplgetextent"></a><a name="getextent"></a>IViewObjectExImpl::GetExtent  
+##  <a name="getextent"></a>IViewObjectExImpl::GetExtent  
  Получает размер отображения элемента управления в единицы HIMETRIC (0,01 мм на единицу) из элемента управления класса данных [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
 ```
@@ -174,7 +183,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Примечания  
  В разделе [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetnaturalextenta--iviewobjecteximplgetnaturalextent"></a><a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
+##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
  Предоставляет контейнер для объекта для использования при изменении размеров его подсказки.  
   
 ```
@@ -192,7 +201,7 @@ STDMETHOD(GetNaturalExtent)(
   
  В разделе [IViewObjectEx::GetNaturalExtent](http://msdn.microsoft.com/library/windows/desktop/ms683718) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetrecta--iviewobjecteximplgetrect"></a><a name="getrect"></a>IViewObjectExImpl::GetRect  
+##  <a name="getrect"></a>IViewObjectExImpl::GetRect  
  Возвращает прямоугольник, описывающий запрошенный вид рисования. Возвращает реализацию ATL **E_NOTIMPL**.  
   
 ```
@@ -202,7 +211,7 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ### <a name="remarks"></a>Примечания  
  В разделе [IViewObjectEx::GetRect](http://msdn.microsoft.com/library/windows/desktop/ms695246) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetviewstatusa--iviewobjecteximplgetviewstatus"></a><a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
+##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
  Возвращает информацию о размытости объекта и какие рисования поддерживаются.  
   
 ```
@@ -214,7 +223,7 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
   
  В разделе [IViewObjectEx::GetViewStatus](http://msdn.microsoft.com/library/windows/desktop/ms693371) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namequeryhitpointa--iviewobjecteximplqueryhitpoint"></a><a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
+##  <a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
  Проверяет, если заданная точка находится в заданном прямоугольнике и возвращает [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) значение в `pHitResult`.  
   
 ```
@@ -233,7 +242,7 @@ STDMETHOD(QueryHitPoint)(
   
  В разделе [IViewObjectEx::QueryHitPoint](http://msdn.microsoft.com/library/windows/desktop/ms691209) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namequeryhitrecta--iviewobjecteximplqueryhitrect"></a><a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
+##  <a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
  Проверяет ли прямоугольник отображения элемента управления перекрывается любую точку в указанное расположение прямоугольника и возвращает [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) значение в `pHitResult`.  
   
 ```
@@ -252,7 +261,7 @@ STDMETHOD(QueryHitRect)(
   
  В разделе [IViewObjectEx::QueryHitRect](http://msdn.microsoft.com/library/windows/desktop/ms693797) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetadvisea--iviewobjecteximplsetadvise"></a><a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
+##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
  Устанавливает соединение между элементом управления и приемника уведомлений приемник может уведомления об изменениях в представлении элемента управления.  
   
 ```
@@ -269,7 +278,7 @@ STDMETHOD(SetAdvise)(
   
  В разделе [IViewObject::SetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms683950) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameunfreezea--iviewobjecteximplunfreeze"></a><a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
+##  <a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
  Снимает формируемого представление элемента управления. Возвращает реализацию ATL **E_NOTIMPL**.  
   
 ```
@@ -279,7 +288,7 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ### <a name="remarks"></a>Примечания  
  В разделе [IViewObject::Unfreeze](http://msdn.microsoft.com/library/windows/desktop/ms686641) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameclosehandlea--iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
  Реализация этого метода, чтобы закрыть дескриптор, связанный с данным объектом.  
   
 ```
@@ -301,7 +310,7 @@ HRESULT CloseHandle(HANDLE hHandle);
   
  [!code-cpp[NVC_ATL_Utilities&#135;](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]  
   
-##  <a name="a-nameexecutea--iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>IWorkerThreadClient::Execute  
  Реализация этого метода для выполнения кода при оповещенным, дескриптор, связанный с данным объектом.  
   
 ```

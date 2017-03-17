@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSyncObject
+- AFXMT/CSyncObject
+- AFXMT/CSyncObject::CSyncObject
+- AFXMT/CSyncObject::Lock
+- AFXMT/CSyncObject::Unlock
+- AFXMT/CSyncObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmt.h  
   
-##  <a name="a-namecsyncobjecta--csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
  Создает объект синхронизации с предоставленным именем.  
   
 ```  
@@ -101,7 +106,7 @@ virtual ~CSyncObject();
  `pstrName`  
  Имя объекта. Если **NULL**, *pstrName* будет иметь значение null.  
   
-##  <a name="a-namelocka--csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>CSyncObject::Lock  
  Эта функция вызывается для доступа к ресурсу, контролируются объекта синхронизации.  
   
 ```  
@@ -118,14 +123,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>Примечания  
  Если объект синхронизации, получает сигнал, `Lock` успешного возвращения и поток теперь принадлежит объект. Если объект синхронизации является несигнальным (недоступна), `Lock` ожидает объекта синхронизации в сигнальное вплоть до указанного числа миллисекунд в *dwTimeOut* параметр. Если объект синхронизации не был отправлен сигнал в заданного количества времени, `Lock` возвращает сбой.  
   
-##  <a name="a-namemhobjecta--csyncobjectmhobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>CSyncObject::m_hObject  
  Дескриптор базового объекта синхронизации.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorhandlea--csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator ДЕСКРИПТОРА  
+##  <a name="operator_handle"></a>CSyncObject::operator ДЕСКРИПТОРА  
  Этот оператор используется для получения дескриптора `CSyncObject` объекта.  
   
 ```  
@@ -138,7 +143,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Примечания  
  Дескриптор можно использовать для прямого вызова API-интерфейсов Windows.  
   
-##  <a name="a-nameunlocka--csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>CSyncObject::Unlock  
  Объявление `Unlock` без параметров является чисто виртуальную функцию и должны быть переопределены все классы, производные от `CSyncObject`.  
   
 ```  

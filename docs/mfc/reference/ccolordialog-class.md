@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CColorDialog
+- AFXDLGS/CColorDialog
+- AFXDLGS/CColorDialog::CColorDialog
+- AFXDLGS/CColorDialog::DoModal
+- AFXDLGS/CColorDialog::GetColor
+- AFXDLGS/CColorDialog::GetSavedCustomColors
+- AFXDLGS/CColorDialog::SetCurrentColor
+- AFXDLGS/CColorDialog::OnColorOK
+- AFXDLGS/CColorDialog::m_cc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +127,7 @@ class CColorDialog : public CCommonDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdlgs.h  
   
-##  <a name="a-nameccolordialoga--ccolordialogccolordialog"></a><a name="ccolordialog"></a>CColorDialog::CColorDialog  
+##  <a name="ccolordialog"></a>CColorDialog::CColorDialog  
  Создает объект `CColorDialog`.  
   
 ```  
@@ -142,7 +150,7 @@ CColorDialog(
 ### <a name="example"></a>Пример  
  [!code-cpp[№&49; NVC_MFCDocView](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
   
-##  <a name="a-namedomodala--ccolordialogdomodal"></a><a name="domodal"></a>CColorDialog::DoModal  
+##  <a name="domodal"></a>CColorDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна Windows общих цветов и позволяет пользователю выбрать цвет.  
   
 ```  
@@ -162,7 +170,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Пример  
   В примере показано [CColorDialog::CColorDialog](#ccolordialog).  
   
-##  <a name="a-namegetcolora--ccolordialoggetcolor"></a><a name="getcolor"></a>CColorDialog::GetColor  
+##  <a name="getcolor"></a>CColorDialog::GetColor  
  Эта функция вызывается после вызова метода `DoModal` для получения информации о выбранный пользователем цвет.  
   
 ```  
@@ -175,7 +183,7 @@ COLORREF GetColor() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#50;](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
   
-##  <a name="a-namegetsavedcustomcolorsa--ccolordialoggetsavedcustomcolors"></a><a name="getsavedcustomcolors"></a>CColorDialog::GetSavedCustomColors  
+##  <a name="getsavedcustomcolors"></a>CColorDialog::GetSavedCustomColors  
  `CColorDialog`объекты позволяют пользователю, помимо выбора цвета, для определения пользовательских цветов до 16.  
   
 ```  
@@ -193,7 +201,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#51;](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
-##  <a name="a-namemcca--ccolordialogmcc"></a><a name="m_cc"></a>CColorDialog::m_cc  
+##  <a name="m_cc"></a>CColorDialog::m_cc  
  Структура типа [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), члены которого хранения характеристики и значения диалогового окна.  
   
 ```  
@@ -206,7 +214,7 @@ CHOOSECOLOR m_cc;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#53;](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
   
-##  <a name="a-nameoncoloroka--ccolordialogoncolorok"></a><a name="oncolorok"></a>CColorDialog::OnColorOK  
+##  <a name="oncolorok"></a>CColorDialog::OnColorOK  
  Переопределение для проверки введенных в диалоговом окне цвет.  
   
 ```  
@@ -234,7 +242,7 @@ virtual BOOL OnColorOK();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#52;](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
-##  <a name="a-namesetcurrentcolora--ccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor  
  Эта функция вызывается после вызова метода `DoModal` для принудительного выбранный цвет, цвет значение, указанное в `clr`.  
   
 ```  

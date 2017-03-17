@@ -10,10 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
-- ATL::CComObjectGlobal<Base>
-- ATL::CComObjectGlobal
-- ATL.CComObjectGlobal
-- ATL.CComObjectGlobal<Base>
+- ATLCOM/ATL::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::AddRef
+- ATLCOM/ATL::CComObjectGlobal::QueryInterface
+- ATLCOM/ATL::CComObjectGlobal::Release
+- ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +95,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>CComObjectGlobal::AddRef  
  Увеличивает счетчик ссылок объекта на 1.  
   
 ```
@@ -106,7 +108,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Примечания  
  По умолчанию `AddRef` вызовов **_Module::Lock**, где **_Module** — глобальный экземпляр [CComModule](../../atl/reference/ccommodule-class.md) или класс, производный от него.  
   
-##  <a name="a-nameccomobjectglobala--ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
  Конструктор. Вызовы `FinalConstruct` , а затем присваивает [m_hResFinalConstruct](#m_hresfinalconstruct) для `HRESULT` возвращаемый `FinalConstruct`.  
   
 ```
@@ -116,7 +118,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>Примечания  
  Если не иметь производные от базового класса [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), необходимо предоставить свои собственные `FinalConstruct` метод. Деструктор вызывает `FinalRelease`.  
   
-##  <a name="a-namedtora--ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  Деструктор  
   
 ```
@@ -126,14 +128,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы и вызывает [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="a-namemhresfinalconstructa--ccomobjectglobalmhresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
  Содержит `HRESULT` из телефонной `FinalConstruct` во время создания `CComObjectGlobal` объекта.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="a-namequeryinterfacea--ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
  Извлекает указатель на указатель на запрошенный интерфейс.  
   
 ```
@@ -153,7 +155,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Примечания  
  `QueryInterface` обрабатывает интерфейсы только в таблице сопоставлений COM.  
   
-##  <a name="a-namereleasea--ccomobjectglobalrelease"></a><a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>CComObjectGlobal::Release  
  Уменьшает счетчик ссылок объекта на 1.  
   
 ```

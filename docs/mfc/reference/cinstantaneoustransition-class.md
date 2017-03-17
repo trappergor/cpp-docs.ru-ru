@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInstantaneousTransition
 - CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::Create
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::m_dblFinalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CInstantaneousTransition : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="a-namecinstantaneoustransitiona--cinstantaneoustransitioncinstantaneoustransition"></a><a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
  Создает объект перехода и инициализирует его конечное значение.  
   
 ```  
@@ -93,7 +96,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  `dblFinalValue`  
  Значение переменной анимации в конце перехода.  
   
-##  <a name="a-namecreatea--cinstantaneoustransitioncreate"></a><a name="create"></a>CInstantaneousTransition::Create  
+##  <a name="create"></a>CInstantaneousTransition::Create  
  Вызывает переход библиотеку для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -110,7 +113,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если переход создано успешно; в противном случае — значение FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--cinstantaneoustransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
  Значение переменной анимации в конце перехода.  
   
 ```  

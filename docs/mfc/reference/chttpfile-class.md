@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHttpFile
+- AFXINET/CHttpFile
+- AFXINET/CHttpFile::CHttpFile
+- AFXINET/CHttpFile::AddRequestHeaders
+- AFXINET/CHttpFile::EndRequest
+- AFXINET/CHttpFile::GetFileURL
+- AFXINET/CHttpFile::GetObject
+- AFXINET/CHttpFile::GetVerb
+- AFXINET/CHttpFile::QueryInfo
+- AFXINET/CHttpFile::QueryInfoStatusCode
+- AFXINET/CHttpFile::SendRequest
+- AFXINET/CHttpFile::SendRequestEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +102,7 @@ class CHttpFile : public CInternetFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="a-nameaddrequestheadersa--chttpfileaddrequestheaders"></a><a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
+##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
  Вызов этой функции-члена для добавления одного или обрабатывать дополнительные заголовки HTTP-запросов в HTTP-запрос.  
   
 ```  
@@ -136,7 +147,7 @@ BOOL AddRequestHeaders(
 > [!NOTE]
 >  Можно передать в нескольких заголовков в `pstrHeaders` или `str` для `AddRequestHeaders` вызов с использованием `HTTP_ADDREQ_FLAG_ADD` или `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Если приложение пытается удалить или заменить заголовок с помощью **HTTP_ADDREQ_FLAG_REMOVE** или `HTTP_ADDREQ_FLAG_REPLACE`, могут быть заданы только один заголовок в `lpszHeaders`.  
   
-##  <a name="a-namechttpfilea--chttpfilechttpfile"></a><a name="chttpfile"></a>CHttpFile::CHttpFile  
+##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
  Эта функция-член вызывается для создания `CHttpFile` объекта.  
   
 ```  
@@ -183,7 +194,7 @@ CHttpFile(
   
  Значение по умолчанию для `dwContext` отправленных MFC для `CHttpFile` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) создания объекта `CHttpFile` объекта. При вызове `CInternetSession::OpenURL` или `CHttpConnection` для создания `CHttpFile` объекта, можно переопределить значение по умолчанию для идентификатора контекста параметру значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) для предоставления состояния объекта, с помощью которого определяется. См. в статье [Интернет первые шаги: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="a-nameendrequesta--chttpfileendrequest"></a><a name="endrequest"></a>CHttpFile::EndRequest  
+##  <a name="endrequest"></a>CHttpFile::EndRequest  
  Вызов этой функции-члена для завершения запроса, отправленного на HTTP-сервер с [SendRequestEx](#sendrequestex) функции-члена.  
   
 ```  
@@ -209,7 +220,7 @@ BOOL EndRequest(
 ### <a name="remarks"></a>Примечания  
  Значение по умолчанию для `dwContext` отправленных MFC для `CHttpFile` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) создания объекта `CHttpFile` объекта. При вызове [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) или [CHttpConnection](../../mfc/reference/chttpconnection-class.md) для создания `CHttpFile` объекта, можно переопределить значение по умолчанию для идентификатора контекста параметру значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) для предоставления состояния объекта, с помощью которого определяется. В статье [Интернет первые шаги: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="a-namegetfileurla--chttpfilegetfileurl"></a><a name="getfileurl"></a>CHttpFile::GetFileURL  
+##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
  Вызовите эту функцию-член для получения имени файла HTTP URL-адреса.  
   
 ```  
@@ -222,7 +233,7 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>Примечания  
  Использовать только после успешного вызова функции-члена [SendRequest](#sendrequest) или `CHttpFile` объект успешно создан, [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="a-namegetobjecta--chttpfilegetobject"></a><a name="getobject"></a>CHttpFile::GetObject  
+##  <a name="getobject"></a>CHttpFile::GetObject  
  Вызовите эту функцию-член для получения имени объекта, связанного с этим `CHttpFile`.  
   
 ```  
@@ -235,7 +246,7 @@ CString GetObject() const;
 ### <a name="remarks"></a>Примечания  
  Использовать только после успешного вызова функции-члена [SendRequest](#sendrequest) или `CHttpFile` объект успешно создан, [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="a-namegetverba--chttpfilegetverb"></a><a name="getverb"></a>CHttpFile::GetVerb  
+##  <a name="getverb"></a>CHttpFile::GetVerb  
  Вызовите эту функцию-член для получения HTTP команды (или метода) связанный с этим `CHttpFile`.  
   
 ```  
@@ -248,7 +259,7 @@ CString GetVerb() const;
 ### <a name="remarks"></a>Примечания  
  Использовать только после успешного вызова функции-члена [SendRequest](#sendrequest) или `CHttpFile` объект успешно создан, [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="a-namequeryinfoa--chttpfilequeryinfo"></a><a name="queryinfo"></a>CHttpFile::QueryInfo  
+##  <a name="queryinfo"></a>CHttpFile::QueryInfo  
  Вызовите эту функцию-член для возврата ответа или заголовки запроса из HTTP-запроса.  
   
 ```  
@@ -365,7 +376,7 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="a-namequeryinfostatuscodea--chttpfilequeryinfostatuscode"></a><a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
+##  <a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
  Вызовите эту функцию-член для получения код состояния, связанный с HTTP-запроса и поместите его в предоставленном `dwStatusCode` параметр.  
   
 ```  
@@ -402,7 +413,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 |500|Неизвестная ошибка сервера|  
 |503|Достигнут емкости сервера|  
   
-##  <a name="a-namesendrequesta--chttpfilesendrequest"></a><a name="sendrequest"></a>CHttpFile::SendRequest  
+##  <a name="sendrequest"></a>CHttpFile::SendRequest  
  Вызовите эту функцию-член для отправки запроса на HTTP-сервер.  
   
 ```  
@@ -438,7 +449,7 @@ BOOL SendRequest(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается сбоем, определите причину сбоя, изучив вызванное [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.  
   
-##  <a name="a-namesendrequestexa--chttpfilesendrequestex"></a><a name="sendrequestex"></a>CHttpFile::SendRequestEx  
+##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
  Вызовите эту функцию-член для отправки запроса на HTTP-сервер.  
   
 ```  

@@ -9,9 +9,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleMap
-- ATL.CSimpleMap
 - CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap::_ArrayElementType
+- ATLSIMPCOLL/ATL::CSimpleMap::_ArrayKeyType
+- ATLSIMPCOLL/ATL::CSimpleMap::CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap::Add
+- ATLSIMPCOLL/ATL::CSimpleMap::FindKey
+- ATLSIMPCOLL/ATL::CSimpleMap::FindVal
+- ATLSIMPCOLL/ATL::CSimpleMap::GetKeyAt
+- ATLSIMPCOLL/ATL::CSimpleMap::GetSize
+- ATLSIMPCOLL/ATL::CSimpleMap::GetValueAt
+- ATLSIMPCOLL/ATL::CSimpleMap::Lookup
+- ATLSIMPCOLL/ATL::CSimpleMap::Remove
+- ATLSIMPCOLL/ATL::CSimpleMap::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleMap::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleMap::ReverseLookup
+- ATLSIMPCOLL/ATL::CSimpleMap::SetAt
+- ATLSIMPCOLL/ATL::CSimpleMap::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +125,7 @@ class CSimpleMap
 ## <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities&#91;](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplemapadd"></a><a name="add"></a>CSimpleMap::Add  
+##  <a name="add"></a>CSimpleMap::Add  
  Добавляет ключ и соответствующее значение в массив сопоставлений.  
   
 ```
@@ -130,21 +145,21 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="remarks"></a>Примечания  
  Каждая пара ключ-значение добавить сопоставление массива памяти освобождается и повторно, чтобы убедиться, что данные для каждой всегда сохраняются последовательно причины. То есть второй ключевой элемент всегда сразу после первого ключа элемента в памяти и т. д.  
   
-##  <a name="a-namearrayelementtypea--csimplemaparrayelementtype"></a><a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
  Typedef для типа ключа.  
   
 ```
 typedef TVal _ArrayElementType;
 ```  
   
-##  <a name="a-namearraykeytypea--csimplemaparraykeytype"></a><a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+##  <a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
  Typedef для типа значения.  
   
 ```
 typedef TKey _ArrayKeyType;
 ```  
   
-##  <a name="a-namecsimplemapa--csimplemapcsimplemap"></a><a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+##  <a name="csimplemap"></a>CSimpleMap::CSimpleMap  
  Конструктор.  
   
 ```
@@ -154,7 +169,7 @@ CSimpleMap();
 ### <a name="remarks"></a>Примечания  
  Инициализирует элементы данных.  
   
-##  <a name="a-namedtora--csimplemapcsimplemap"></a><a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
  Деструктор  
   
 ```
@@ -164,7 +179,7 @@ CSimpleMap();
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы.  
   
-##  <a name="a-namefindkeya--csimplemapfindkey"></a><a name="findkey"></a>CSimpleMap::FindKey  
+##  <a name="findkey"></a>CSimpleMap::FindKey  
  Находит указанный ключ.  
   
 ```
@@ -178,7 +193,7 @@ int FindKey(const TKey& key) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает индекс ключа, если объект найден, в противном случае возвращает значение -1.  
   
-##  <a name="a-namefindvala--csimplemapfindval"></a><a name="findval"></a>CSimpleMap::FindVal  
+##  <a name="findval"></a>CSimpleMap::FindVal  
  Поиск конкретного значения.  
   
 ```
@@ -192,7 +207,7 @@ int FindVal(const TVal& val) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает индекс значения, если он найден, в противном случае возвращает значение -1.  
   
-##  <a name="a-namegetkeyata--csimplemapgetkeyat"></a><a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+##  <a name="getkeyat"></a>CSimpleMap::GetKeyAt  
  Получает ключ по указанному индексу.  
   
 ```
@@ -209,7 +224,7 @@ TKey& GetKeyAt(int nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Индекс, переданный `nIndex` должен быть допустимым для возвращаемого значения будут иметь значения.  
   
-##  <a name="a-namegetsizea--csimplemapgetsize"></a><a name="getsize"></a>CSimpleMap::GetSize  
+##  <a name="getsize"></a>CSimpleMap::GetSize  
  Возвращает число записей в массиве сопоставления.  
   
 ```
@@ -219,7 +234,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество записей (ключ и значение представляет одну запись) в массиве сопоставления.  
   
-##  <a name="a-namegetvalueata--csimplemapgetvalueat"></a><a name="getvalueat"></a>CSimpleMap::GetValueAt  
+##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
  Получает значение по указанному индексу.  
   
 ```
@@ -236,7 +251,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Индекс, переданный `nIndex` должен быть допустимым для возвращаемого значения будут иметь значения.  
   
-##  <a name="a-namelookupa--csimplemaplookup"></a><a name="lookup"></a>CSimpleMap::Lookup  
+##  <a name="lookup"></a>CSimpleMap::Lookup  
  Возвращает значение, связанное с указанным ключом.  
   
 ```
@@ -250,7 +265,7 @@ TVal Lookup(const TKey& key) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает соответствующее значение. Если такой ключ не найден, значение NULL возвращается.  
   
-##  <a name="a-nameremovea--csimplemapremove"></a><a name="remove"></a>CSimpleMap::Remove  
+##  <a name="remove"></a>CSimpleMap::Remove  
  Удаляет ключ и соответствующее значение.  
   
 ```
@@ -264,7 +279,7 @@ BOOL Remove(const TKey& key);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если ключа и соответствующего значения были успешно удален, и FALSE в противном случае.  
   
-##  <a name="a-nameremovealla--csimplemapremoveall"></a><a name="removeall"></a>CSimpleMap::RemoveAll  
+##  <a name="removeall"></a>CSimpleMap::RemoveAll  
  Удаляет все ключи и значения.  
   
 ```
@@ -274,7 +289,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Примечания  
  Удаляет все ключи и значения из массива объекта сопоставления.  
   
-##  <a name="a-nameremoveata--csimplemapremoveat"></a><a name="removeat"></a>CSimpleMap::RemoveAt  
+##  <a name="removeat"></a>CSimpleMap::RemoveAt  
  Удаляет ключ и соответствующее значение по указанному индексу.  
   
 ```
@@ -288,7 +303,7 @@ BOOL RemoveAt(int nIndex);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успеха, FALSE, если индекс указан недопустимый индекс.  
   
-##  <a name="a-namereverselookupa--csimplemapreverselookup"></a><a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+##  <a name="reverselookup"></a>CSimpleMap::ReverseLookup  
  Возвращает ключ, связанный с заданным значением.  
   
 ```
@@ -302,7 +317,7 @@ TKey ReverseLookup(const TVal& val) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает связанный ключ. Если такой ключ не найден, значение NULL возвращается.  
   
-##  <a name="a-namesetata--csimplemapsetat"></a><a name="setat"></a>CSimpleMap::SetAt  
+##  <a name="setat"></a>CSimpleMap::SetAt  
  Задает значение, связанное с указанным ключом.  
   
 ```
@@ -319,7 +334,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если ключ найден и значение было успешно изменена, и FALSE в противном случае.  
   
-##  <a name="a-namesetatindexa--csimplemapsetatindex"></a><a name="setatindex"></a>CSimpleMap::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleMap::SetAtIndex  
  Задает ключ и значение по указанному индексу.  
   
 ```

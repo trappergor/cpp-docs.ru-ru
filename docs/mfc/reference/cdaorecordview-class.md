@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
+- AFXDAO/CDaoRecordView
+- AFXDAO/CDaoRecordView::CDaoRecordView
+- AFXDAO/CDaoRecordView::IsOnFirstRecord
+- AFXDAO/CDaoRecordView::IsOnLastRecord
+- AFXDAO/CDaoRecordView::OnGetRecordset
+- AFXDAO/CDaoRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +112,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  
   
-##  <a name="a-namecdaorecordviewa--cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
  При создании объекта типа производным от `CDaoRecordView`, вызовите конструктор для инициализации объекта представления и определения ресурса диалогового окна, лежащие в основе представления либо форме.  
   
 ```  
@@ -134,7 +140,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase&#35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
  Вызовите эту функцию-член, чтобы определить, является ли текущая запись первой записи в объекте набора записей, связанный с этим представлением записи.  
   
 ```  
@@ -149,7 +155,7 @@ BOOL IsOnFirstRecord();
   
  Если пользователь переходит к первой записи, отключает framework, пользовательский интерфейс объекты (например, элементы меню или кнопки панели инструментов) необходимо для перемещения к первому или предыдущей записи.  
   
-##  <a name="a-nameisonlastrecorda--cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
  Вызовите эту функцию-член, чтобы определить, является ли текущая запись последней записи в объекте набора записей, связанный с этим представлением записи.  
   
 ```  
@@ -165,7 +171,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Результат этой функции надежен, за исключением того, что представление не удается обнаружить конца набора данных, пока пользователь уже прошел его. Пользователь может потребоваться переместить за пределы последней записи, прежде чем представления записей можно указать, что его нужно отключить любые объекты пользовательского интерфейса для перемещения к следующей или последней записи. Если пользователь перемещает за последней записью и затем обратно до последней записи (или перед ним), представление записей можно отслеживать положение пользователя в наборе записей и правильно отключить объекты пользовательского интерфейса.  
   
-##  <a name="a-nameongetrecordseta--cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
  Возвращает указатель на `CDaoRecordset`-производный объект, связанный с представлением записи.  
   
 ```  
@@ -180,7 +186,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>CDaoRecordView::OnMove  
  Вызовите эту функцию-член для перемещения к другой записи в наборе записей и отобразить ее поля в элементах управления представления записей.  
   
 ```  

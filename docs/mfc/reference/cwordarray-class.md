@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWordArray
+- AFXCOLL/CWordArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +133,7 @@ class CWordArray : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcoll.h  
   
-##  <a name="a-nameicommandsourceinterfacea--icommandsource-interface"></a><a name="icommandsource_interface"></a>Интерфейс ICommandSource  
+##  <a name="icommandsource_interface"></a>Интерфейс ICommandSource  
  Управляет команды, отправляемые из исходного объекта команды пользовательского элемента управления.  
   
 ```  
@@ -128,7 +147,7 @@ interface class ICommandSource
   
  Дополнительные сведения об использовании Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
  Добавляет обработчик команды объект источника команды.  
   
 ```  
@@ -149,7 +168,7 @@ void AddCommandHandler(
   
  В разделе [Практическое руководство: Добавление маршрутизации команд для элемента управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример использования `AddCommandHandler`.  
   
-##  <a name="a-nameaddcommandrangehandlera--icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
  Добавляет группу обработчиков команд объект источника команды.  
   
 ```  
@@ -172,7 +191,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>Примечания  
  Этот метод сопоставляет непрерывный диапазон идентификаторов команд обработчику одно сообщение и добавляет его к объекту источника команды. Используется для обработки нескольких связанных кнопок с одного метода.  
   
-##  <a name="a-nameaddcommandrangeuihandlera--icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
  Добавляет группу обработчики сообщений команды интерфейса пользователя на объект источника команды.  
   
 ```  
@@ -195,7 +214,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>Примечания  
  Этот метод непрерывный диапазон идентификаторов команд сопоставляется сообщение обработчика команды интерфейса одного пользователя и добавляет его к объекту источника команды. Используется для обработки нескольких связанных кнопок с одного метода.  
   
-##  <a name="a-nameaddcommanduihandlera--icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
  Добавляет обработчик сообщений команды интерфейса пользователя объект источника команды.  
   
 ```  
@@ -214,7 +233,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>Примечания  
  Этот метод добавляет обработчик пользовательского интерфейса команды сообщение `cmdHandler` с исходным объектом команды и сопоставляет обработчика `cmdID`.  
   
-##  <a name="a-namepostcommanda--icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand  
+##  <a name="postcommand"></a>ICommandSource::PostCommand  
  Посылает сообщение, не дожидаясь его обработки.  
   
 ```  
@@ -228,7 +247,7 @@ void PostCommand(unsigned int command);
 ### <a name="remarks"></a>Примечания  
  Этот метод асинхронно отправляет сообщение, сопоставляется с Идентификатором, указанным параметром `command`. Он вызывает [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) чтобы поместить сообщение в очередь сообщений и затем возвращает окно без ожидания соответствующее окно для обработки сообщения.  
   
-##  <a name="a-nameremovecommandhandlera--icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
  Удаляет обработчик команды из исходного объекта команды.  
   
 ```  
@@ -242,7 +261,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет обработчик команды сопоставляется `cmdID` из исходного объекта команды.  
   
-##  <a name="a-nameremovecommandrangehandlera--icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
  Удаляет группу обработчиков команд из исходного объекта команды.  
   
 ```  
@@ -261,7 +280,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет группу обработчиков сообщений, сопоставляется с указанных идентификаторов команд, `cmdIDMin` и `cmdIDMax`, из объекта источника команды.  
   
-##  <a name="a-nameremovecommandrangeuihandlera--icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
  Удаляет группу обработчики сообщений команды интерфейса пользователя из исходного объекта команды.  
   
 ```  
@@ -280,7 +299,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет группу пользователя интерфейс сообщения обработчиков команд, сопоставляется с указанных идентификаторов команд, `cmdIDMin` и `cmdIDMax`, из объекта источника команды.  
   
-##  <a name="a-nameremovecommanduihandlera--icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
  Удаляет обработчик сообщений команды интерфейса пользователя из исходного объекта команды.  
   
 ```  
@@ -294,7 +313,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет сопоставлен обработчик сообщений команд пользовательского интерфейса `cmdID` из исходного объекта команды.  
   
-##  <a name="a-namesendcommanda--icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand  
+##  <a name="sendcommand"></a>ICommandSource::SendCommand  
  Отправляет сообщение и ожидает его для обработки перед возвратом.  
   
 ```  
@@ -308,7 +327,7 @@ void SendCommand(unsigned int command);
 ### <a name="remarks"></a>Примечания  
  Этот метод синхронно отправляет сообщение сопоставляется с Идентификатором, указанным параметром `command`. Он вызывает [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) чтобы поместить сообщение в очередь сообщений окна и ожидает, пока процедуры окна обработала сообщение перед возвратом.  
   
-##  <a name="a-nameicommandtargetinterfacea--icommandtarget-interface"></a><a name="icommandtarget_interface"></a>Интерфейс ICommandTarget  
+##  <a name="icommandtarget_interface"></a>Интерфейс ICommandTarget  
  Предоставляет интерфейс для получения команд из исходного объекта команды пользовательского элемента управления.  
   
 ```  
@@ -322,7 +341,7 @@ interface class ICommandTarget
   
  Дополнительные сведения об использовании Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameinitializea--icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a>ICommandTarget::Initialize  
  Инициализирует целевой объект команды.  
   
 ```  
@@ -338,7 +357,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  Этот метод инициализирует целевой объект команды и связывает его с исходным объектом указанную команду `cmdSource`. Он должен быть вызван в реализацию класса пользовательского элемента управления. При инициализации, необходимо зарегистрировать обработчики команд в исходный объект команды путем вызова [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) в `Initialize` реализации. В разделе [Практическое руководство: Добавление маршрутизации команд для элемента управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример использования `Initialize` для этого.  
   
-##  <a name="a-nameicommanduiinterfacea--icommandui-interface"></a><a name="icommandui_interface"></a>Интерфейс ICommandUI  
+##  <a name="icommandui_interface"></a>Интерфейс ICommandUI  
  Управляет команд пользовательского интерфейса.  
   
 ```  
@@ -356,7 +375,7 @@ interface class ICommandUI
   
  Дополнительные сведения об управлении команд пользовательского интерфейса в MFC см. в разделе [CCmdUI-класс](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="a-namechecka--icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+##  <a name="check"></a>ICommandUI::Check  
  Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.  
   
 ```  
@@ -372,7 +391,7 @@ property UICheckState Check;
 |1|Установить|  
 |2|Неопределенное значение|  
   
-##  <a name="a-namecontinueroutinga--icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting  
+##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
  Указывает механизму маршрутизации команд для продолжения рассылки текущее сообщение по цепочке обработчиков.  
   
 ```  
@@ -382,7 +401,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Примечания  
  Это функция дополнительный член, который должен использоваться в сочетании с [ON_COMMAND_EX](http://msdn.microsoft.com/library/0bb49090-aee8-4203-87c8-dd001d3dd26e) обработчик, который возвращает `FALSE`. Дополнительные сведения см. в разделе техническое Примечание [TN006: схемы сообщений](../../mfc/tn006-message-maps.md).  
   
-##  <a name="a-nameenableda--icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled  
+##  <a name="enabled"></a>ICommandUI::Enabled  
  Включает или отключает элемент интерфейса пользователя для этой команды.  
   
 ```  
@@ -392,7 +411,7 @@ property bool Enabled;
 ### <a name="remarks"></a>Примечания  
  Это свойство включает или отключает элемент интерфейса пользователя для этой команды. Задайте `Enabled` для `TRUE` для включения элемента, `FALSE` его отключить.  
   
-##  <a name="a-nameida--icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+##  <a name="id"></a>ICommandUI::ID  
  Получает идентификатор объекта интерфейса пользователя, представленного `ICommandUI` объекта.  
   
 ```  
@@ -402,7 +421,7 @@ property unsigned int ID;
 ### <a name="remarks"></a>Примечания  
  Это свойство возвращает идентификатор пункта меню, кнопки панели инструментов (дескриптор) или другой объект интерфейса пользователя, представленного `ICommandUI` объекта.  
   
-##  <a name="a-nameindexa--icommanduiindex"></a><a name="index"></a>ICommandUI::Index  
+##  <a name="index"></a>ICommandUI::Index  
  Возвращает индекс объекта интерфейса пользователя, представленного `ICommandUI` объекта.  
   
 ```  
@@ -412,7 +431,7 @@ property unsigned int Index;
 ### <a name="remarks"></a>Примечания  
  Это свойство возвращает индекс (дескриптор) пункта меню, кнопки панели инструментов или другой объект интерфейса пользователя, представленного `ICommandUI` объекта.  
   
-##  <a name="a-nameradioa--icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio  
+##  <a name="radio"></a>ICommandUI::Radio  
  Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.  
   
 ```  
@@ -422,7 +441,7 @@ property bool Radio;
 ### <a name="remarks"></a>Примечания  
  Это свойство задает элемент интерфейса пользователя для этой команды для соответствующих проверки состояния. Задайте `Radio` для `TRUE` для включения элемента; в противном случае `FALSE`.  
   
-##  <a name="a-nametexta--icommanduitext"></a><a name="text"></a>ICommandUI::Text  
+##  <a name="text"></a>ICommandUI::Text  
  Задает текст элемента интерфейса пользователя для этой команды.  
   
 ```  
@@ -432,7 +451,7 @@ property String^ Text;
 ### <a name="remarks"></a>Примечания  
  Это свойство задает текст элемента интерфейса пользователя для этой команды. Задайте `Text` дескриптор строки текста.  
   
-##  <a name="a-nameiviewinterfacea--iview-interface"></a><a name="iview_interface"></a>Интерфейс IView  
+##  <a name="iview_interface"></a>Интерфейс IView  
  Реализует несколько методов, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) использует для отправки уведомлений элемента управления.  
   
 ```  
@@ -446,7 +465,7 @@ interface class IView
   
  Дополнительные сведения об использовании Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameonactivateviewa--iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+##  <a name="onactivateview"></a>IView::OnActivateView  
  Вызывается по MFC, когда представление активируется или деактивируется.  
   
 ```  
@@ -457,14 +476,14 @@ void OnActivateView(bool activate);
  `activate`  
  Указывает, является ли представление активируется или деактивируется.  
   
-##  <a name="a-nameoninitialupdatea--iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>IView::OnInitialUpdate  
  Вызывается платформой после представления впервые присоединяется к документу, но до первоначального отображения представления.  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="a-nameonupdatea--iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate  
+##  <a name="onupdate"></a>IView::OnUpdate  
  После изменения просмотр документа вызван MFC.  
   
 ```  

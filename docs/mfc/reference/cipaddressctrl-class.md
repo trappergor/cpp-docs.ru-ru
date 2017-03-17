@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl::CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl::ClearAddress
+- AFXCMN/CIPAddressCtrl::Create
+- AFXCMN/CIPAddressCtrl::CreateEx
+- AFXCMN/CIPAddressCtrl::GetAddress
+- AFXCMN/CIPAddressCtrl::IsBlank
+- AFXCMN/CIPAddressCtrl::SetAddress
+- AFXCMN/CIPAddressCtrl::SetFieldFocus
+- AFXCMN/CIPAddressCtrl::SetFieldRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +103,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-namecipaddressctrla--cipaddressctrlcipaddressctrl"></a><a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
  Создает объект `CIPAddressCtrl`.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="a-nameclearaddressa--cipaddressctrlclearaddress"></a><a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
  Удаляет содержимое контроль IP-адресов.  
   
 ```  
@@ -110,7 +120,7 @@ void ClearAddress();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatea--cipaddressctrlcreate"></a><a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>CIPAddressCtrl::Create  
  Контроль IP-адресов создает и присоединяет его к `CIPAddressCtrl` объекта.  
   
 ```  
@@ -146,7 +156,7 @@ virtual BOOL Create(
   
  Если вы хотите использовать с элементом управления windows расширенные стили, вызвать [CreateEx](#createex) вместо **создать**.  
   
-##  <a name="a-namecreateexa--cipaddressctrlcreateex"></a><a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
  Эта функция вызывается для создания элемента управления (дочернего окна) и связать его с `CIPAddressCtrl` объекта.  
   
 ```  
@@ -180,7 +190,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="a-namegetaddressa--cipaddressctrlgetaddress"></a><a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
  Извлекает адрес значения для всех четырех полей в контроль IP-адресов.  
   
 ```  
@@ -222,7 +232,7 @@ int GetAddress(DWORD& dwAddress);
 |2|от 8 до 15|  
 |3|от 0 до 7|  
   
-##  <a name="a-nameisblanka--cipaddressctrlisblank"></a><a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
  Определяет, будут ли пустые все поля в контроль IP-адресов.  
   
 ```  
@@ -235,7 +245,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetaddressa--cipaddressctrlsetaddress"></a><a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
  Задает адрес значения для всех четырех полях в контроль IP-адресов.  
   
 ```  
@@ -274,7 +284,7 @@ void SetAddress(DWORD dwAddress);
 |2|от 8 до 15|  
 |3|от 0 до 7|  
   
-##  <a name="a-namesetfieldfocusa--cipaddressctrlsetfieldfocus"></a><a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
  Задает фокус клавиатуры для указанного поля в контроль IP-адресов.  
   
 ```  
@@ -288,7 +298,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetfieldrangea--cipaddressctrlsetfieldrange"></a><a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
  Задает диапазон в указанном поле в контроль IP-адресов.  
   
 ```  

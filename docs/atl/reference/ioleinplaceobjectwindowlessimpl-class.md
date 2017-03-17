@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetDropTarget
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::SetObjectRects
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::UIDeactivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class IOleInPlaceObjectWindowlessImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
  Возвращает **E_NOTIMPL**.  
   
 ```
@@ -99,7 +108,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Примечания  
  В разделе [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdroptargeta--ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
+##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
  Возвращает **E_NOTIMPL**.  
   
 ```
@@ -109,7 +118,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ### <a name="remarks"></a>Примечания  
  В разделе [IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowa--ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
  Контейнер вызывает эту функцию, чтобы получить дескриптор окна элемента управления.  
   
 ```
@@ -121,7 +130,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  В разделе [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinplacedeactivatea--ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
+##  <a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
  Вызвать с помощью контейнера, чтобы деактивировать активный элемент управления на месте.  
   
 ```
@@ -133,7 +142,7 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
   
  В разделе [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonwindowmessagea--ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
+##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
  Отправляет сообщение в другой контейнер безоконный элемент управления, который является активным на месте.  
   
 ```
@@ -147,7 +156,7 @@ HRESULT OnWindowMessage(
 ### <a name="remarks"></a>Примечания  
  В разделе [IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereactivateandundoa--ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
  Возвращает **E_NOTIMPL**.  
   
 ```
@@ -157,7 +166,7 @@ HRESULT ReactivateAndUndo();
 ### <a name="remarks"></a>Примечания  
  В разделе [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetobjectrectsa--ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
+##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
  Вызывается контейнером для информирования управления об изменении его размера и положения.  
   
 ```
@@ -169,7 +178,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
   
  В разделе [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameuideactivatea--ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
+##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
  Отключает и удаляет пользовательский интерфейс элемента управления, который поддерживает активацию на месте.  
   
 ```

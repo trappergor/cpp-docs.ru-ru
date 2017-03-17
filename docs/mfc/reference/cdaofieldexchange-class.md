@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange::IsValidOperation
+- AFXDAO/CDaoFieldExchange::SetFieldType
+- AFXDAO/CDaoFieldExchange::m_nOperation
+- AFXDAO/CDaoFieldExchange::m_prs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +102,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  
   
-##  <a name="a-nameisvalidoperationa--cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
  При написании собственной функции DFX вызвать `IsValidOperation` в начале функции, чтобы определить, можно ли выполнить текущую операцию на определенный тип члена данных ( **CDaoFieldExchange::outputColumn** или **CDaoFieldExchange::param**).  
   
 ```  
@@ -112,7 +117,7 @@ BOOL IsValidOperation();
   
  Дополнительные сведения о создании пользовательские процедуры DFX разделе [53 Технические заметки](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-##  <a name="a-namemnoperationa--cdaofieldexchangemnoperation"></a><a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
  Определяет операцию, выполняемую на [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) связанный с объектом exchange поля.  
   
 ### <a name="remarks"></a>Примечания  
@@ -141,12 +146,12 @@ BOOL IsValidOperation();
 |**DumpField**|Выводит содержимое поля (Отладка).|  
 |**MaxDFXOperation**|Используется для проверки ввода.|  
   
-##  <a name="a-namemprsa--cdaofieldexchangemprs"></a><a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
  Содержит указатель на [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта, связанного с `CDaoFieldExchange` объекта.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetfieldtypea--cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
  Вызов `SetFieldType` в ваш `CDaoRecordset` класса `DoFieldExchange` переопределить.  
   
 ```  

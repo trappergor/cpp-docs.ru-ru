@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
+- No header/ATL::IAxWinHostWindow
+- No header/ATL::AttachControl
+- No header/ATL::CreateControl
+- No header/ATL::CreateControlEx
+- No header/ATL::QueryControl
+- No header/ATL::SetExternalDispatch
+- No header/ATL::SetExternalUIHandler
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +82,7 @@ interface IAxWinHostWindow : IUnknown
 |IDL|ATLIFace.idl|  
 |C++|Насколько (также входит в ATLBase.h)|  
   
-##  <a name="a-nameattachcontrola--iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
+##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
  Присоединяет существующего (и предварительно инициализированных) элемента управления к объекту главного приложения с помощью окна определяется `hWnd`.  
   
 ```
@@ -92,7 +99,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namecreatecontrola--iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
  Создает элемент управления, инициализирует его и размещает в окне, идентифицируемый `hWnd`.  
   
 ```
@@ -122,7 +129,7 @@ STDMETHOD(CreateControl)(
   
  Создание лицензированный элемент управления ActiveX, в разделе [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="a-namecreatecontrolexa--iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
  Создает элемент управления ActiveX, инициализирует его и размещает в указанном окне аналогично [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
@@ -162,7 +169,7 @@ STDMETHOD(CreateControlEx)(
   
  Создание лицензированный элемент управления ActiveX, в разделе [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="a-namequerycontrola--iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
  Возвращает заданный указатель интерфейса предоставляемых размещенного элемента управления.  
   
 ```
@@ -181,7 +188,7 @@ STDMETHOD(QueryControl)(
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namesetexternaldispatcha--iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
  Задает внешний disp-интерфейс, доступный в контейнере элементов управления через [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) метод.  
   
 ```
@@ -195,7 +202,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namesetexternaluihandlera--iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
  Вызовите эту функцию для задания внешние [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) интерфейс для `CAxWindow` объекта.  
   
 ```

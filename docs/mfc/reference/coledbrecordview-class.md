@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
+- AFXOLEDB/COleDBRecordView
+- AFXOLEDB/COleDBRecordView::COleDBRecordView
+- AFXOLEDB/COleDBRecordView::OnGetRowset
+- AFXOLEDB/COleDBRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxoledb.h  
   
-##  <a name="a-namecoledbrecordviewa--coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
  Создает объект `COleDBRecordView`.  
   
 ```  
@@ -115,7 +119,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  Производный класс *необходимо* предоставить свой собственный конструктор. В конструкторе, вызвав конструктор, `COleDBRecordView::COleDBRecordView`, имя ресурса или идентификатор в качестве аргумента.  
   
-##  <a name="a-nameongetrowseta--coledbrecordviewongetrowset"></a><a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
  Возвращает дескриптор для **CRowset<> </> ** объект, связанный с представлением записи.  
   
 ```  
@@ -137,7 +141,7 @@ virtual CRowset<>* OnGetRowset(Â) = 0;
   
  Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--coledbrecordviewonmove"></a><a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>COleDBRecordView::OnMove  
  Переход к другой записи в набор строк и отображения его поля в элементах управления записи просмотра.  
   
 ```  

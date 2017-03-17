@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
+- AFXTOOLTIPMANAGER/CTooltipManager
+- AFXTOOLTIPMANAGER/CTooltipManager::CreateToolTip
+- AFXTOOLTIPMANAGER/CTooltipManager::DeleteToolTip
+- AFXTOOLTIPMANAGER/CTooltipManager::SetTooltipParams
+- AFXTOOLTIPMANAGER/CTooltipManager::SetTooltipText
+- AFXTOOLTIPMANAGER/CTooltipManager::UpdateTooltips
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +77,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtooltipmanager.h  
   
-##  <a name="a-namecreatetooltipa--ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
  Создает элемент управления всплывающей подсказки.  
   
 ```  
@@ -115,7 +121,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Панель инструментов.|CMFCToolBar CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Панель элементов.|Отсутствует.|  
   
-##  <a name="a-namedeletetooltipa--ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
  Удаляет элемент управления "Всплывающая подсказка".  
   
 ```  
@@ -129,7 +135,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается для каждого [CToolTipCtrl-класс](../../mfc/reference/ctooltipctrl-class.md) , созданного с [CTooltipManager::CreateToolTip](#createtooltip). Родительский элемент управления должен вызывать этот метод из его `OnDestroy` обработчика. Это необходимо для правильного удаления подсказки от платформы. Этот метод задает `pToolTip` для `NULL` перед возвратом.  
   
-##  <a name="a-namesettooltipparamsa--ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
+##  <a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
  Настраивает внешний вид элемента управления всплывающей подсказки для указанного типов элементов управления Windows.  
   
 ```  
@@ -161,7 +167,7 @@ void SetTooltipParams(
   
  [!code-cpp[NVC_MFC_DrawClient&11;](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="a-namesettooltiptexta--ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
  Задает текст и описание для всплывающей подсказки.  
   
 ```  
@@ -192,7 +198,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>Примечания  
  Значение `nType` должно быть то же значение, что `nType` параметр [CTooltipManager::CreateToolTip](#createtooltip) при создании всплывающей подсказки.  
   
-##  <a name="a-nameupdatetooltipsa--ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

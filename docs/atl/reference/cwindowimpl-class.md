@@ -9,9 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWindowImpl
-- ATL.CWindowImpl
 - CWindowImpl
+- ATLWIN/ATL::CWindowImpl
+- ATLWIN/ATL::CWindowImpl::Create
+- ATLWIN/ATL::DefWindowProc
+- ATLWIN/ATL::GetCurrentMessage
+- ATLWIN/ATL::GetWindowProc
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::SubclassWindow
+- ATLWIN/ATL::UnsubclassWindow
+- ATLWIN/ATL::GetWndClassInfo
+- ATLWIN/ATL::WindowProc
+- ATLWIN/ATL::m_pfnSuperWindowProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +147,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="a-namecreatea--cwindowimplcreate"></a><a name="create"></a>CWindowImpl::Create  
+##  <a name="create"></a>CWindowImpl::Create  
  Создает окно, в зависимости от нового класса окна.  
   
 ```
@@ -188,7 +197,7 @@ HWND Create(
 > [!NOTE]
 >  Если 0 служит значением для `MenuOrID` параметр, он должен быть указан как 0U (значение по умолчанию), чтобы избежать ошибки компилятора.  
   
-##  <a name="a-namedefwindowproca--cwindowimpldefwindowproc"></a><a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
+##  <a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
  Вызывается методом [WindowProc](#windowproc) для обработки сообщений, не обрабатываются в схеме сообщений.  
   
 ```
@@ -218,7 +227,7 @@ LRESULT DefWindowProc();
   
  Функция без параметров автоматически извлекает необходимые параметры из текущего сообщения.  
   
-##  <a name="a-namegetcurrentmessagea--cwindowimplgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
  Возвращает текущее сообщение, упакованные в `MSG` структуру.  
   
 ```
@@ -228,7 +237,7 @@ const MSG* GetCurrentMessage();
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее сообщение.  
   
-##  <a name="a-namegetwindowproca--cwindowimplgetwindowproc"></a><a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
+##  <a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
  Возвращает `WindowProc`, текущую процедуру окна.  
   
 ```
@@ -241,7 +250,7 @@ virtual WNDPROC GetWindowProc();
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для замены процедуры окна на свои собственные.  
   
-##  <a name="a-namegetwndclassinfoa--cwindowimplgetwndclassinfo"></a><a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
+##  <a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
  Вызывается методом [создать](#create) для доступа к данным класса окна.  
   
 ```
@@ -258,7 +267,7 @@ static CWndClassInfo& GetWndClassInfo();
   
  Помимо использования `DECLARE_WND_CLASS` и `DECLARE_WND_SUPERCLASS` макросы, можно переопределить `GetWndClassInfo` с собственной реализации.  
   
-##  <a name="a-namempfnsuperwindowproca--cwindowimplmpfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
  В зависимости от окна указывает на одну из следующих процедур окна.  
   
 ```
@@ -275,7 +284,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [CWindowImpl::DefWindowProc](#defwindowproc) отправляет сообщение сведения, сохраненные в процедуре окна `m_pfnSuperWindowProc`.  
   
-##  <a name="a-nameonfinalmessagea--cwindowimplonfinalmessage"></a><a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
  Вызывается после получения последнего сообщения (обычно `WM_NCDESTROY`).  
   
 ```
@@ -289,7 +298,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию `OnFinalMessage` не выполняет никаких действий, но можно переопределить эту функцию для обработки очистки перед удалением окна. Если вы хотите автоматически удалить объект после уничтожение окна, можно вызвать `delete this;` в этой функции.  
   
-##  <a name="a-namesubclasswindowa--cwindowimplsubclasswindow"></a><a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
+##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
  Подклассы окна определяется `hWnd` и присоединяет его к `CWindowImpl` объекта.  
   
 ```
@@ -309,7 +318,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  Не следует вызывать `SubclassWindow` Если уже был вызван [создать](#create).  
   
-##  <a name="a-nameunsubclasswindowa--cwindowimplunsubclasswindow"></a><a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
  Отсоединяет подклассов в окне `CWindowImpl` объекта и восстанавливает исходную процедуру окна, сохраненные в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
@@ -319,7 +328,7 @@ HWND UnsubclassWindow();
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор окна ранее подкласса.  
   
-##  <a name="a-namewindowproca--cwindowimplwindowproc"></a><a name="windowproc"></a>CWindowImpl::WindowProc  
+##  <a name="windowproc"></a>CWindowImpl::WindowProc  
  Эта статическая функция реализует процедуру окна.  
   
 ```

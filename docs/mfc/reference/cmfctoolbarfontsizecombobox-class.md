@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::GetTwipSize
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::RebuildFontSizes
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::SetTwipSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +93,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontsizecomboboxa--cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  Создает объект `CMFCToolBarFontSizeComboBox`.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="a-namegettwipsizea--cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
  Получает размер шрифта в твипах из текстового поля со списком размер шрифта.  
   
 ```  
@@ -105,7 +110,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Если возвращаемое значение является положительным, это размер шрифта в твипах. Это значение -1, если текстовое поле со списком будет пустым. Это -2, если произошла ошибка.  
   
-##  <a name="a-namerebuildfontsizesa--cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  Заполняет поле со списком размер шрифта все допустимые размеры данного шрифта.  
   
 ```  
@@ -119,7 +124,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается, когда вы хотите синхронизировать между выбор в поле со списком шрифта и поле со списком размер шрифта, такие как [CMFCToolBarFontComboBox класса](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="a-namesettwipsizea--cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
  Округляет указанный размер (в твипах) до ближайшего размера в точки и затем задает выбранный размер в поле со списком с этим значением.  
   
 ```  

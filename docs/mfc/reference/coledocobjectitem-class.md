@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
+- AFXOLE/COleDocObjectItem
+- AFXOLE/COleDocObjectItem::COleDocObjectItem
+- AFXOLE/COleDocObjectItem::DoDefaultPrinting
+- AFXOLE/COleDocObjectItem::ExecCommand
+- AFXOLE/COleDocObjectItem::GetActiveView
+- AFXOLE/COleDocObjectItem::GetPageCount
+- AFXOLE/COleDocObjectItem::OnPreparePrinting
+- AFXOLE/COleDocObjectItem::OnPrint
+- AFXOLE/COleDocObjectItem::QueryCommand
+- AFXOLE/COleDocObjectItem::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="a-namecoledocobjectitema--coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
  Вызов этой функции-члена для инициализации `COleDocObjectItem` объекта.  
   
 ```  
@@ -113,7 +123,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Указатель на `COleDocument` объект выступает в качестве контейнера активных документов. Этот параметр должен быть **NULL** для включения **IMPLEMENT_SERIALIZE**. Обычно OLE-элементы создаются с не поддерживающими **NULL** указатель документа.  
   
-##  <a name="a-namedodefaultprintinga--coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
  Вызывается платформой для документа, используя параметры по умолчанию.  
   
 ```  
@@ -129,7 +139,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объект, который содержит описание задания печати.  
   
-##  <a name="a-nameexeccommanda--coledocobjectitemexeccommand"></a><a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
  Вызовите эту функцию-член для выполнения команды, заданные пользователем.  
   
 ```  
@@ -166,7 +176,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Примечания  
  `pguidCmdGroup` И `nCmdID` параметры вместе уникально идентифицировать вызываемой команды. `nCmdExecOpt` Параметр указывает точное действие.  
   
-##  <a name="a-namegetactiveviewa--coledocobjectitemgetactiveview"></a><a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
  Вызов этой функции-члена для получения указателя на `IOleDocumentView` интерфейс активного представления.  
   
 ```  
@@ -179,7 +189,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Примечания  
  Счетчик ссылок для возвращенного `IOleDocumentView` указатель не увеличивается, возвращаемую этой функцией.  
   
-##  <a name="a-namegetpagecounta--coledocobjectitemgetpagecount"></a><a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
  Вызовите эту функцию-член для получения числа страниц в документе.  
   
 ```  
@@ -198,7 +208,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="a-nameonprepareprintinga--coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
  Эта функция-член вызывается платформой для подготовки к печати документа.  
   
 ```  
@@ -221,7 +231,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="a-nameonprinta--coledocobjectitemonprint"></a><a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
  Эта функция-член вызывается платформой для печати документа.  
   
 ```  
@@ -241,7 +251,7 @@ static void OnPrint(
  `bPrintAll`  
  Указывает, является ли весь документ для печати.  
   
-##  <a name="a-namequerycommanda--coledocobjectitemquerycommand"></a><a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
  Запрашивает состояние одной или нескольких команд, созданных событиями пользовательского интерфейса.  
   
 ```  
@@ -271,7 +281,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) метода, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereleasea--coledocobjectitemrelease"></a><a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>COleDocObjectItem::Release  
  Освобождает соединение для связанного элемента OLE и закрывает его, если он был открыт. Не разрушает клиентский элемент.  
   
 ```  

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl::FreezeEvents
+- ATLCTL/ATL::IOleControlImpl::GetControlInfo
+- ATLCTL/ATL::IOleControlImpl::OnAmbientPropertyChange
+- ATLCTL/ATL::IOleControlImpl::OnMnemonic
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +85,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="a-namefreezeeventsa--iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
  В реализации библиотеки ATL `FreezeEvents` увеличивает класс элемента управления `m_nFreezeEvents` член данных при `bFreeze` — **TRUE**и уменьшает `m_nFreezeEvents` Если `bFreeze` — **FALSE**.  
   
 ```
@@ -92,7 +97,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
   
  В разделе [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcontrolinfoa--iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
  Заполняет сведения о поведении клавиатуры элемента управления.  
   
 ```
@@ -105,7 +110,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
   
-##  <a name="a-nameonambientpropertychangea--iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
  Информирует элемент управления один или несколько свойств внешнего контейнера изменилось.  
   
 ```
@@ -118,7 +123,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>Примечания  
  В разделе [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonmnemonica--iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
  Информирует элемент управления, пользователь нажал указанного нажатия клавиши.  
   
 ```

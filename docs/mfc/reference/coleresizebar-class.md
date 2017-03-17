@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
+- AFXOLE/COleResizeBar
+- AFXOLE/COleResizeBar::COleResizeBar
+- AFXOLE/COleResizeBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="a-namecoleresizebara--coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
  Создает объект `COleResizeBar`.  
   
 ```  
@@ -98,7 +101,7 @@ COleResizeBar();
 ### <a name="remarks"></a>Примечания  
  Вызов **создать** для создания объекта панель изменения размера.  
   
-##  <a name="a-namecreatea--coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>COleResizeBar::Create  
  Создает дочернего окна и связывает его с `COleResizeBar` объекта.  
   
 ```  

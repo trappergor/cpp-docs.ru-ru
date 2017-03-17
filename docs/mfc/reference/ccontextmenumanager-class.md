@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CContextMenuManager
+- AFXCONTEXTMENUMANAGER/CContextMenuManager
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::CContextMenuManager
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::AddMenu
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::GetMenuById
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::GetMenuByName
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::GetMenuNames
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::LoadState
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::ResetState
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::SaveState
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::SetDontCloseActiveMenu
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::ShowPopupMenu
+- AFXCONTEXTMENUMANAGER/CContextMenuManager::TrackPopupMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +106,7 @@ class CContextMenuManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcontextmenumanager.h  
   
-##  <a name="a-nameaddmenua--ccontextmenumanageraddmenu"></a><a name="addmenu"></a>CContextMenuManager::AddMenu  
+##  <a name="addmenu"></a>CContextMenuManager::AddMenu  
  Добавление контекстного меню, чтобы [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
@@ -124,7 +136,7 @@ BOOL AddMenu(
 ### <a name="remarks"></a>Примечания  
  Этот метод не выполняется, если `uiMenuResId` недопустим или если другое меню с тем же именем уже присутствует в `CContextMenuManager`.  
   
-##  <a name="a-nameccontextmenumanagera--ccontextmenumanagerccontextmenumanager"></a><a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager  
+##  <a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager  
  Создает [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) объекта.  
   
 ```  
@@ -134,7 +146,7 @@ CContextMenuManager();
 ### <a name="remarks"></a>Примечания  
  В большинстве случаев не следует создавать `CContextMenuManager` вручную. Платформа приложения создает `CContextMenuManager` объекта. Следует вызвать [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) во время инициализации приложения. Чтобы получить указатель диспетчера контекста, вызовите [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).  
   
-##  <a name="a-namegetmenubyida--ccontextmenumanagergetmenubyid"></a><a name="getmenubyid"></a>CContextMenuManager::GetMenuById  
+##  <a name="getmenubyid"></a>CContextMenuManager::GetMenuById  
  Возвращает дескриптор меню, связанного с идентификатором определенного ресурса.  
   
 ```  
@@ -148,7 +160,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор связанным меню или `NULL` Если меню не найден.  
   
-##  <a name="a-namegetmenubynamea--ccontextmenumanagergetmenubyname"></a><a name="getmenubyname"></a>CContextMenuManager::GetMenuByName  
+##  <a name="getmenubyname"></a>CContextMenuManager::GetMenuByName  
  Возвращает дескриптор для конкретного меню.  
   
 ```  
@@ -170,7 +182,7 @@ HMENU GetMenuByName(
 ### <a name="remarks"></a>Примечания  
  Если этот метод находит меню, которое соответствует `lpszName`, `GetMenuByName` сохраняет идентификатор ресурса меню в параметре `puiOrigResID`.  
   
-##  <a name="a-namegetmenunamesa--ccontextmenumanagergetmenunames"></a><a name="getmenunames"></a>CContextMenuManager::GetMenuNames  
+##  <a name="getmenunames"></a>CContextMenuManager::GetMenuNames  
  Возвращает список имен меню Добавить [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
@@ -181,7 +193,7 @@ void GetMenuNames(CStringList& listOfNames) const;
  [выходной] `listOfNames`  
  Ссылку на [CStringList](../../mfc/reference/cstringlist-class.md) параметр. Этот метод записывает список названий меню для этого параметра.  
   
-##  <a name="a-nameloadstatea--ccontextmenumanagerloadstate"></a><a name="loadstate"></a>CContextMenuManager::LoadState  
+##  <a name="loadstate"></a>CContextMenuManager::LoadState  
  Загружает сведения, связанные с [CContextMenuManager класса](../../mfc/reference/ccontextmenumanager-class.md) из реестра Windows.  
   
 ```  
@@ -200,7 +212,7 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  Используйте метод [CContextMenuManager::SaveState](#savestate) сохранить контекстные меню в реестре.  
   
-##  <a name="a-nameresetstatea--ccontextmenumanagerresetstate"></a><a name="resetstate"></a>CContextMenuManager::ResetState  
+##  <a name="resetstate"></a>CContextMenuManager::ResetState  
  Удаляет все элементы из контекстных меню, связанные с [CContextMenuManager класса](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
@@ -213,7 +225,7 @@ virtual BOOL ResetState();
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет всплывающие меню и удаляет их из `CContextMenuManager`.  
   
-##  <a name="a-namesavestatea--ccontextmenumanagersavestate"></a><a name="savestate"></a>CContextMenuManager::SaveState  
+##  <a name="savestate"></a>CContextMenuManager::SaveState  
  Сохраняет сведения, связанные с [CContextMenuManager класса](../../mfc/reference/ccontextmenumanager-class.md) в реестре Windows.  
   
 ```  
@@ -232,7 +244,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  Используйте метод [CContextMenuManager::LoadState](#loadstate) для загрузки контекстных меню из реестра.  
   
-##  <a name="a-namesetdontcloseactivemenua--ccontextmenumanagersetdontcloseactivemenu"></a><a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu  
+##  <a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu  
  Элементы управления ли [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) закрывает active всплывающего меню, при отображении новой всплывающего меню.  
   
 ```  
@@ -246,7 +258,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ### <a name="remarks"></a>Примечания  
  По умолчанию `CContextMenuManager` закрывает активный во всплывающем меню.  
   
-##  <a name="a-nameshowpopupmenua--ccontextmenumanagershowpopupmenu"></a><a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu  
+##  <a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu  
  Отображает указанное контекстное меню.  
   
 ```  
@@ -302,7 +314,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
   
  Если параметр `bAutoDestroy` — `FALSE`, необходимо вручную вызвать наследуемый `DestroyMenu` метод для освобождения ресурсов памяти. Реализация по умолчанию `ShowPopupMenu` , не используйте параметр `bAutoDestroy`. Он предоставляется для использования в будущем или для пользовательских классов, производных от `CContextMenuManager` класса.  
   
-##  <a name="a-nametrackpopupmenua--ccontextmenumanagertrackpopupmenu"></a><a name="trackpopupmenu"></a>CContextMenuManager::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>CContextMenuManager::TrackPopupMenu  
  Отображает указанное контекстное меню и возвращает индекс команды выбранного контекстного меню.  
   
 ```  

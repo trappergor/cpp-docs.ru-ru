@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CURRENCY
 - COleCurrency
+- AFXDISP/COleCurrency
+- AFXDISP/COleCurrency::COleCurrency
+- AFXDISP/COleCurrency::Format
+- AFXDISP/COleCurrency::GetStatus
+- AFXDISP/COleCurrency::ParseCurrency
+- AFXDISP/COleCurrency::SetCurrency
+- AFXDISP/COleCurrency::SetStatus
+- AFXDISP/COleCurrency::m_cur
+- AFXDISP/COleCurrency::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +112,7 @@ class COleCurrency
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
   
-##  <a name="a-namecolecurrencya--colecurrencycolecurrency"></a><a name="colecurrency"></a>COleCurrency::COleCurrency  
+##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
  Создает **COleCurrency** объекта.  
   
 ```  
@@ -152,7 +160,7 @@ COleCurrency(
   
  [!code-cpp[NVC_MFCOleContainer&#10;](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="a-nameformata--colecurrencyformat"></a><a name="format"></a>COleCurrency::Format  
+##  <a name="format"></a>COleCurrency::Format  
  Вызовите эту функцию-член для создания форматированное представление значения валюты.  
   
 ```  
@@ -177,7 +185,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&11;](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="a-namegetstatusa--colecurrencygetstatus"></a><a name="getstatus"></a>COleCurrency::GetStatus  
+##  <a name="getstatus"></a>COleCurrency::GetStatus  
  Вызов этой функции-члена для получения состояния (действия) данного **COleCurrency** объекта.  
   
 ```  
@@ -235,7 +243,7 @@ CurrencyStatus GetStatus() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&#12;](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="a-namemcura--colecurrencymcur"></a><a name="m_cur"></a>COleCurrency::m_cur  
+##  <a name="m_cur"></a>COleCurrency::m_cur  
  Базовый [валюты](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) структуры для этого **COleCurrency** объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -245,7 +253,7 @@ CurrencyStatus GetStatus() const;
   
  Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) запись в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemstatusa--colecurrencymstatus"></a><a name="m_status"></a>COleCurrency::m_status  
+##  <a name="m_status"></a>COleCurrency::m_status  
  Тип этого элемента данных — перечислимый тип `CurrencyStatus`, которая определена в **COleCurrency** класса.  
   
 ```  
@@ -292,7 +300,7 @@ enum CurrencyStatus{
     > [!CAUTION]
     >  Этот член данных — для сложных ситуациях программирования. Следует использовать встроенные функции-члены [GetStatus](#getstatus) и [SetStatus](#setstatus). В разделе `SetStatus` для дальнейшего предостережения о явном задании этого элемента данных.  
   
-##  <a name="a-nameoperatoreqa--colecurrencyoperator-"></a><a name="operator_eq"></a>COleCurrency::operator =  
+##  <a name="operator_eq"></a>COleCurrency::operator =  
  Эти перегруженных операторах присваивания копирования исходного значения валюты в это **COleCurrency** объекта.  
   
 ```  
@@ -315,7 +323,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&#15;](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="a-nameoperatorplusminusa--colecurrencyoperator---"></a><a name="operator_plus_minus"></a>COleCurrency::operator +, -  
+##  <a name="operator_plus_minus"></a>COleCurrency::operator +, -  
  Эти операторы позволяют добавлять и вычитать два **COleCurrency** значениями друг от друга и изменить знак **COleCurrency** значение.  
   
 ```  
@@ -336,7 +344,7 @@ COleCurrency operator-() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer №&16;](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="a-nameoperatorplusminuseqa--colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a>COleCurrency::operator +=-=  
+##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator +=-=  
  Разрешить добавление и вычитание **COleCurrency** значение в и из этого **COleCurrency** объекта.  
   
 ```  
@@ -356,7 +364,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&17;](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="a-nameoperatorstara--colecurrencyoperator--and-"></a><a name="operator_star"></a>COleCurrency::operator * и /  
+##  <a name="operator_star"></a>COleCurrency::operator * и /  
  Позволяют масштабировать **COleCurrency** значение с целочисленным значением.  
   
 ```  
@@ -376,7 +384,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&18;](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="a-nameoperatorstardiveqa--colecurrencyoperator--"></a><a name="operator_star_div_eq"></a>COleCurrency::operator * = и =  
+##  <a name="operator_star_div_eq"></a>COleCurrency::operator * = и =  
  Позволяют масштаба **COleCurrency** значение с целочисленным значением.  
   
 ```  
@@ -396,7 +404,7 @@ const COleCurrency& operator/=(long nOperand);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&19;](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="a-nameoperatorstreama--colecurrencyoperator-ltlt-gtgt"></a><a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
  Поддерживает формирование дампа диагностики и хранение в архив.  
   
 ```  
@@ -416,7 +424,7 @@ friend CArchive& operator>>(
 ### <a name="remarks"></a>Примечания  
  Извлечение ( ** >> **) оператор поддерживает загрузку из архива.  
   
-##  <a name="a-nameoperatorcurrencya--colecurrencyoperator-currency"></a><a name="operator_currency"></a>COleCurrency::operator ВАЛЮТ  
+##  <a name="operator_currency"></a>COleCurrency::operator ВАЛЮТ  
  Возвращает `CURRENCY` структуры, значение которого копируется из этого **COleCurrency** объекта.  
   
 ```  
@@ -425,7 +433,7 @@ operator CURRENCY() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameparsecurrencya--colecurrencyparsecurrency"></a><a name="parsecurrency"></a>COleCurrency::ParseCurrency  
+##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
  Вызовите эту функцию-член для разбора строки для чтения значения валюты.  
   
 ```  
@@ -467,7 +475,7 @@ throw(COleException*);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&#13;](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="a-namecolecurrencyrelationaloperatorsa--colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a>Реляционные операторы COleCurrency  
+##  <a name="colecurrency_relational_operators"></a>Реляционные операторы COleCurrency  
  Сравнение двух значений валют и возвращает ненулевое значение, если условие равно true; в противном случае — 0.  
   
 ```  
@@ -487,7 +495,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&20;](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="a-namesetcurrencya--colecurrencysetcurrency"></a><a name="setcurrency"></a>COleCurrency::SetCurrency  
+##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
  Вызов этой функции-члена для задания единиц измерения и дробная часть **COleCurrency** объекта.  
   
 ```  
@@ -508,7 +516,7 @@ void SetCurrency(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer&#14;](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="a-namesetstatusa--colecurrencysetstatus"></a><a name="setstatus"></a>COleCurrency::SetStatus  
+##  <a name="setstatus"></a>COleCurrency::SetStatus  
  Вызовите эту функцию-член для задания состояния (действия) это **COleCurrency** объекта.  
   
 ```  

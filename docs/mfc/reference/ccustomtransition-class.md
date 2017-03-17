@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CCustomTransition
 - CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition::CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition::Create
+- AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialValue
+- AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialVelocity
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialValueSpecified
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialVelocitySpecified
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +97,7 @@ class CCustomTransition : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="a-nameccustomtransitiona--ccustomtransitionccustomtransition"></a><a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
+##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
  Создает объект пользовательский переход.  
   
 ```  
@@ -99,7 +108,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Указатель на пользовательские интерполятор.  
   
-##  <a name="a-namecreatea--ccustomtransitioncreate"></a><a name="create"></a>CCustomTransition::Create  
+##  <a name="create"></a>CCustomTransition::Create  
  Вызывает переход библиотеку для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -117,42 +126,42 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  Этот метод также можно задать начальное значение и Начальная скорость для применения к переменной анимации, связанный с этого перехода. Для этого необходимо вызвать SetInitialValue и SetInitialVelocity, прежде чем платформа создает инкапсулированный перехода COM-объект (это происходит при вызове CAnimationController::AnimateGroup).  
   
-##  <a name="a-namembinitialvaluespecifieda--ccustomtransitionmbinitialvaluespecified"></a><a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
+##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
  Указывает, задан ли параметр начального значения с SetInitialValue.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="a-namembinitialvelocityspecifieda--ccustomtransitionmbinitialvelocityspecified"></a><a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
+##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
  Указывает, задан ли Начальная скорость с SetInitialVelocity.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="a-nameminitialvaluea--ccustomtransitionminitialvalue"></a><a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
+##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
  Хранит начальное значение.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="a-nameminitialvelocitya--ccustomtransitionminitialvelocity"></a><a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
  Хранит начальной скоростью.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="a-namempinterpolatora--ccustomtransitionmpinterpolator"></a><a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
+##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
  Хранит указатель на пользовательские интерполятор.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="a-namesetinitialvaluea--ccustomtransitionsetinitialvalue"></a><a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
+##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
  Задает начальное значение будет применяться к переменной анимации, связанные с этого перехода.  
   
 ```  
@@ -162,7 +171,7 @@ void SetInitialValue(DOUBLE initialValue);
 ### <a name="parameters"></a>Параметры  
  `initialValue`  
   
-##  <a name="a-namesetinitialvelocitya--ccustomtransitionsetinitialvelocity"></a><a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
+##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
  Задает начальную скорость, которой будет назначен переменной анимации, связанные с этого перехода.  
   
 ```  

@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
-- ATL.CSocketAddr
-- ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::FindAddr
+- ATLSOCKET/ATL::CSocketAddr::FindINET4Addr
+- ATLSOCKET/ATL::CSocketAddr::FindINET6Addr
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfo
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +83,7 @@ class CSocketAddr
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsocket.h  
   
-##  <a name="a-namecsocketaddra--csocketaddrcsocketaddr"></a><a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
  Конструктор.  
   
 ```
@@ -88,7 +93,7 @@ CSocketAddr();
 ### <a name="remarks"></a>Примечания  
  Создает новый `CSocketAddr` объекта и инициализирует связанный список, содержащий ответ сведения об узле.  
   
-##  <a name="a-namefindaddra--csocketaddrfindaddr"></a><a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>CSocketAddr::FindAddr  
  Вызовите этот метод, чтобы преобразовать указанное имя узла в адрес узла.  
   
 ```
@@ -137,7 +142,7 @@ int FindAddr(
 ### <a name="remarks"></a>Примечания  
  Параметр имени узла может быть в формате IPv4 или IPv6. Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
-##  <a name="a-namefindinet4addra--csocketaddrfindinet4addr"></a><a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
  Этот метод используется для преобразования имени узла IPv4 адрес узла.  
   
 ```
@@ -167,7 +172,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
-##  <a name="a-namefindinet6addra--csocketaddrfindinet6addr"></a><a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
  Этот метод используется для преобразования имени узла IPv6 адрес узла.  
   
 ```
@@ -197,7 +202,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
-##  <a name="a-namegetaddrinfoa--csocketaddrgetaddrinfo"></a><a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
  Вызовите этот метод для возврата указателя на определенный элемент в **addrinfo** списка.  
   
 ```
@@ -211,7 +216,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на **addrinfo** ссылается структура `nIndex` в связанный список, содержащий ответ сведения об узле.  
   
-##  <a name="a-namegetaddrinfolista--csocketaddrgetaddrinfolist"></a><a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
  Вызовите этот метод для возврата указателя на **addrinfo** списка.  
   
 ```

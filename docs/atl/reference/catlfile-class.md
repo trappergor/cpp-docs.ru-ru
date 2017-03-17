@@ -10,8 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlFile
-- ATL::CAtlFile
-- ATL.CAtlFile
+- ATLFILE/ATL::CAtlFile
+- ATLFILE/ATL::CAtlFile::CAtlFile
+- ATLFILE/ATL::CAtlFile::Create
+- ATLFILE/ATL::CAtlFile::Flush
+- ATLFILE/ATL::CAtlFile::GetOverlappedResult
+- ATLFILE/ATL::CAtlFile::GetPosition
+- ATLFILE/ATL::CAtlFile::GetSize
+- ATLFILE/ATL::CAtlFile::LockRange
+- ATLFILE/ATL::CAtlFile::Read
+- ATLFILE/ATL::CAtlFile::Seek
+- ATLFILE/ATL::CAtlFile::SetSize
+- ATLFILE/ATL::CAtlFile::UnlockRange
+- ATLFILE/ATL::CAtlFile::Write
+- ATLFILE/ATL::CAtlFile::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +106,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlfile.h  
   
-##  <a name="a-namecatlfilea--catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>CAtlFile::CAtlFile  
  Конструктор.  
   
 ```
@@ -117,7 +129,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Примечания  
  Конструктор копии владение дескриптора файла из исходного `CAtlFile` объекта на вновь созданный объект.  
   
-##  <a name="a-namecreatea--catlfilecreate"></a><a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>CAtlFile::Create  
  Этот метод используется для создания или открытия файла.  
   
 ```
@@ -159,7 +171,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Примечания  
  Вызовы [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) для создания или открытия файла.  
   
-##  <a name="a-nameflusha--catlfileflush"></a><a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>CAtlFile::Flush  
  Этот метод вызывается для удаления буферов для файла и к потере всех буферизованных данных записываются в файл.  
   
 ```
@@ -172,7 +184,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) очистки буферизованных данных в файл.  
   
-##  <a name="a-namegetoverlappedresulta--catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
  Этот метод вызывается для получения результатов перекрывающуюся операцию в файле.  
   
 ```
@@ -198,7 +210,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Примечания  
  Вызовы [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) для получения результатов перекрывающуюся операцию в файле.  
   
-##  <a name="a-namegetpositiona--catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>CAtlFile::GetPosition  
  Этот метод используется для получения указателя позиции в текущем файле.  
   
 ```
@@ -215,7 +227,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) для получения указателя позиции в текущем файле.  
   
-##  <a name="a-namegetsizea--catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>CAtlFile::GetSize  
  Этот метод вызывается для получения размера файла в байтах.  
   
 ```
@@ -232,7 +244,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) для получения размера файла в байтах.  
   
-##  <a name="a-namelockrangea--catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>CAtlFile::LockRange  
  Вызовите этот метод, чтобы заблокировать регион, в файле, чтобы предотвратить доступ к нему других процессов.  
   
 ```
@@ -252,7 +264,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) снять блокировку с области файла. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Можно заблокировать более одной области файла, но разрешено не перекрывающихся областей. При снятии блокировки области, с помощью [CAtlFile::UnlockRange](#unlockrange), диапазон байтов должен точно соответствовать регион, который ранее был заблокирован. `LockRange`не объединять смежных областей; Если два заблокированные области являются смежными, необходимо разблокировать каждого отдельно.  
   
-##  <a name="a-namemptma--catlfilemptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>CAtlFile::m_pTM  
  Указатель на `CAtlTransactionManager` объект.  
   
 ```
@@ -261,7 +273,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namereada--catlfileread"></a><a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>CAtlFile::Read  
  Этот метод используется для чтения данных из файла, начиная с позиции указателя файла.  
   
 ```
@@ -308,7 +320,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Примечания  
  Первые три формы вызвать [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), последний [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) для чтения данных из файла. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.  
   
-##  <a name="a-nameseeka--catlfileseek"></a><a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>CAtlFile::Seek  
  Этот метод используется для перемещения указателя файла файла.  
   
 ```
@@ -330,7 +342,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Примечания  
  Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) для перемещения указателя файла.  
   
-##  <a name="a-namesetsizea--catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>CAtlFile::SetSize  
  Вызовите этот метод, чтобы задать размер файла.  
   
 ```
@@ -347,7 +359,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) и [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) размер файла. При возвращении указатель файла помещается в конец файла.  
   
-##  <a name="a-nameunlockrangea--catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
  Этот метод вызывается для разблокировки области файла.  
   
 ```
@@ -367,7 +379,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) для разблокировки области файла.  
   
-##  <a name="a-namewritea--catlfilewrite"></a><a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>CAtlFile::Write  
  Этот метод используется для записи данных в файл, начиная с позиции указателя файла.  
   
 ```

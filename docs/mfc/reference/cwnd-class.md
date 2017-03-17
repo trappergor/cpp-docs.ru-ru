@@ -10,6 +10,413 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWnd
+- AFXWIN/CWnd
+- AFXWIN/CWnd::CWnd
+- AFXWIN/CWnd::accDoDefaultAction
+- AFXWIN/CWnd::accHitTest
+- AFXWIN/CWnd::accLocation
+- AFXWIN/CWnd::accNavigate
+- AFXWIN/CWnd::accSelect
+- AFXWIN/CWnd::AnimateWindow
+- AFXWIN/CWnd::ArrangeIconicWindows
+- AFXWIN/CWnd::Attach
+- AFXWIN/CWnd::BeginModalState
+- AFXWIN/CWnd::BeginPaint
+- AFXWIN/CWnd::BindDefaultProperty
+- AFXWIN/CWnd::BindProperty
+- AFXWIN/CWnd::BringWindowToTop
+- AFXWIN/CWnd::CalcWindowRect
+- AFXWIN/CWnd::CancelToolTips
+- AFXWIN/CWnd::CenterWindow
+- AFXWIN/CWnd::ChangeClipboardChain
+- AFXWIN/CWnd::CheckDlgButton
+- AFXWIN/CWnd::CheckRadioButton
+- AFXWIN/CWnd::ChildWindowFromPoint
+- AFXWIN/CWnd::ClientToScreen
+- AFXWIN/CWnd::CloseWindow
+- AFXWIN/CWnd::ContinueModal
+- AFXWIN/CWnd::Create
+- AFXWIN/CWnd::CreateAccessibleProxy
+- AFXWIN/CWnd::CreateCaret
+- AFXWIN/CWnd::CreateControl
+- AFXWIN/CWnd::CreateEx
+- AFXWIN/CWnd::CreateGrayCaret
+- AFXWIN/CWnd::CreateSolidCaret
+- AFXWIN/CWnd::DeleteTempMap
+- AFXWIN/CWnd::DestroyWindow
+- AFXWIN/CWnd::Detach
+- AFXWIN/CWnd::DlgDirList
+- AFXWIN/CWnd::DlgDirListComboBox
+- AFXWIN/CWnd::DlgDirSelect
+- AFXWIN/CWnd::DlgDirSelectComboBox
+- AFXWIN/CWnd::DragAcceptFiles
+- AFXWIN/CWnd::DragDetect
+- AFXWIN/CWnd::DrawAnimatedRects
+- AFXWIN/CWnd::DrawCaption
+- AFXWIN/CWnd::DrawMenuBar
+- AFXWIN/CWnd::EnableActiveAccessibility
+- AFXWIN/CWnd::EnableDynamicLayout
+- AFXWIN/CWnd::EnableD2DSupport
+- AFXWIN/CWnd::EnableScrollBar
+- AFXWIN/CWnd::EnableScrollBarCtrl
+- AFXWIN/CWnd::EnableToolTips
+- AFXWIN/CWnd::EnableTrackingToolTips
+- AFXWIN/CWnd::EnableWindow
+- AFXWIN/CWnd::EndModalLoop
+- AFXWIN/CWnd::EndModalState
+- AFXWIN/CWnd::EndPaint
+- AFXWIN/CWnd::ExecuteDlgInit
+- AFXWIN/CWnd::FilterToolTipMessage
+- AFXWIN/CWnd::FindWindow
+- AFXWIN/CWnd::FindWindowEx
+- AFXWIN/CWnd::FlashWindow
+- AFXWIN/CWnd::FlashWindowEx
+- AFXWIN/CWnd::FromHandle
+- AFXWIN/CWnd::FromHandlePermanent
+- AFXWIN/CWnd::get_accChild
+- AFXWIN/CWnd::get_accChildCount
+- AFXWIN/CWnd::get_accDefaultAction
+- AFXWIN/CWnd::get_accDescription
+- AFXWIN/CWnd::get_accFocus
+- AFXWIN/CWnd::get_accHelp
+- AFXWIN/CWnd::get_accHelpTopic
+- AFXWIN/CWnd::get_accKeyboardShortcut
+- AFXWIN/CWnd::get_accName
+- AFXWIN/CWnd::get_accParent
+- AFXWIN/CWnd::get_accRole
+- AFXWIN/CWnd::get_accSelection
+- AFXWIN/CWnd::get_accState
+- AFXWIN/CWnd::get_accValue
+- AFXWIN/CWnd::GetActiveWindow
+- AFXWIN/CWnd::GetAncestor
+- AFXWIN/CWnd::GetCapture
+- AFXWIN/CWnd::GetCaretPos
+- AFXWIN/CWnd::GetCheckedRadioButton
+- AFXWIN/CWnd::GetClientRect
+- AFXWIN/CWnd::GetClipboardOwner
+- AFXWIN/CWnd::GetClipboardViewer
+- AFXWIN/CWnd::GetControlUnknown
+- AFXWIN/CWnd::GetDC
+- AFXWIN/CWnd::GetDCEx
+- AFXWIN/CWnd::GetDCRenderTarget
+- AFXWIN/CWnd::GetDescendantWindow
+- AFXWIN/CWnd::GetDesktopWindow
+- AFXWIN/CWnd::GetDlgCtrlID
+- AFXWIN/CWnd::GetDlgItem
+- AFXWIN/CWnd::GetDlgItemInt
+- AFXWIN/CWnd::GetDlgItemText
+- AFXWIN/CWnd::GetDSCCursor
+- AFXWIN/CWnd::GetDynamicLayout
+- AFXWIN/CWnd::GetExStyle
+- AFXWIN/CWnd::GetFocus
+- AFXWIN/CWnd::GetFont
+- AFXWIN/CWnd::GetForegroundWindow
+- AFXWIN/CWnd::GetIcon
+- AFXWIN/CWnd::GetLastActivePopup
+- AFXWIN/CWnd::GetLayeredWindowAttributes
+- AFXWIN/CWnd::GetMenu
+- AFXWIN/CWnd::GetNextDlgGroupItem
+- AFXWIN/CWnd::GetNextDlgTabItem
+- AFXWIN/CWnd::GetNextWindow
+- AFXWIN/CWnd::GetOleControlSite
+- AFXWIN/CWnd::GetOpenClipboardWindow
+- AFXWIN/CWnd::GetOwner
+- AFXWIN/CWnd::GetParent
+- AFXWIN/CWnd::GetParentFrame
+- AFXWIN/CWnd::GetParentOwner
+- AFXWIN/CWnd::GetProperty
+- AFXWIN/CWnd::GetRenderTarget
+- AFXWIN/CWnd::GetSafeHwnd
+- AFXWIN/CWnd::GetSafeOwner
+- AFXWIN/CWnd::GetScrollBarCtrl
+- AFXWIN/CWnd::GetScrollBarInfo
+- AFXWIN/CWnd::GetScrollInfo
+- AFXWIN/CWnd::GetScrollLimit
+- AFXWIN/CWnd::GetScrollPos
+- AFXWIN/CWnd::GetScrollRange
+- AFXWIN/CWnd::GetStyle
+- AFXWIN/CWnd::GetSystemMenu
+- AFXWIN/CWnd::GetTitleBarInfo
+- AFXWIN/CWnd::GetTopLevelFrame
+- AFXWIN/CWnd::GetTopLevelOwner
+- AFXWIN/CWnd::GetTopLevelParent
+- AFXWIN/CWnd::GetTopWindow
+- AFXWIN/CWnd::GetUpdateRect
+- AFXWIN/CWnd::GetUpdateRgn
+- AFXWIN/CWnd::GetWindow
+- AFXWIN/CWnd::GetWindowContextHelpId
+- AFXWIN/CWnd::GetWindowDC
+- AFXWIN/CWnd::GetWindowedChildCount
+- AFXWIN/CWnd::GetWindowInfo
+- AFXWIN/CWnd::GetWindowlessChildCount
+- AFXWIN/CWnd::GetWindowPlacement
+- AFXWIN/CWnd::GetWindowRect
+- AFXWIN/CWnd::GetWindowRgn
+- AFXWIN/CWnd::GetWindowText
+- AFXWIN/CWnd::GetWindowTextLength
+- AFXWIN/CWnd::HideCaret
+- AFXWIN/CWnd::HiliteMenuItem
+- AFXWIN/CWnd::HtmlHelp
+- AFXWIN/CWnd::Invalidate
+- AFXWIN/CWnd::InvalidateRect
+- AFXWIN/CWnd::InvalidateRgn
+- AFXWIN/CWnd::InvokeHelper
+- AFXWIN/CWnd::IsChild
+- AFXWIN/CWnd::IsD2DSupportEnabled
+- AFXWIN/CWnd::IsDialogMessage
+- AFXWIN/CWnd::IsDlgButtonChecked
+- AFXWIN/CWnd::IsDynamicLayoutEnabled
+- AFXWIN/CWnd::IsIconic
+- AFXWIN/CWnd::IsTouchWindow
+- AFXWIN/CWnd::IsWindowEnabled
+- AFXWIN/CWnd::IsWindowVisible
+- AFXWIN/CWnd::IsZoomed
+- AFXWIN/CWnd::KillTimer
+- AFXWIN/CWnd::LockWindowUpdate
+- AFXWIN/CWnd::MapWindowPoints
+- AFXWIN/CWnd::MessageBox
+- AFXWIN/CWnd::ModifyStyle
+- AFXWIN/CWnd::ModifyStyleEx
+- AFXWIN/CWnd::MoveWindow
+- AFXWIN/CWnd::NotifyWinEvent
+- AFXWIN/CWnd::OnAmbientProperty
+- AFXWIN/CWnd::OnDrawIconicThumbnailOrLivePreview
+- AFXWIN/CWnd::OnHelp
+- AFXWIN/CWnd::OnHelpFinder
+- AFXWIN/CWnd::OnHelpIndex
+- AFXWIN/CWnd::OnHelpUsing
+- AFXWIN/CWnd::OnToolHitTest
+- AFXWIN/CWnd::OpenClipboard
+- AFXWIN/CWnd::PaintWindowlessControls
+- AFXWIN/CWnd::PostMessage
+- AFXWIN/CWnd::PreCreateWindow
+- AFXWIN/CWnd::PreSubclassWindow
+- AFXWIN/CWnd::PreTranslateMessage
+- AFXWIN/CWnd::Print
+- AFXWIN/CWnd::PrintClient
+- AFXWIN/CWnd::PrintWindow
+- AFXWIN/CWnd::RedrawWindow
+- AFXWIN/CWnd::RegisterTouchWindow
+- AFXWIN/CWnd::ReleaseDC
+- AFXWIN/CWnd::RepositionBars
+- AFXWIN/CWnd::RunModalLoop
+- AFXWIN/CWnd::ScreenToClient
+- AFXWIN/CWnd::ScrollWindow
+- AFXWIN/CWnd::ScrollWindowEx
+- AFXWIN/CWnd::SendChildNotifyLastMsg
+- AFXWIN/CWnd::SendDlgItemMessage
+- AFXWIN/CWnd::SendMessage
+- AFXWIN/CWnd::SendMessageToDescendants
+- AFXWIN/CWnd::SendNotifyMessage
+- AFXWIN/CWnd::SetActiveWindow
+- AFXWIN/CWnd::SetCapture
+- AFXWIN/CWnd::SetCaretPos
+- AFXWIN/CWnd::SetClipboardViewer
+- AFXWIN/CWnd::SetDlgCtrlID
+- AFXWIN/CWnd::SetDlgItemInt
+- AFXWIN/CWnd::SetDlgItemText
+- AFXWIN/CWnd::SetFocus
+- AFXWIN/CWnd::SetFont
+- AFXWIN/CWnd::SetForegroundWindow
+- AFXWIN/CWnd::SetIcon
+- AFXWIN/CWnd::SetLayeredWindowAttributes
+- AFXWIN/CWnd::SetMenu
+- AFXWIN/CWnd::SetOwner
+- AFXWIN/CWnd::SetParent
+- AFXWIN/CWnd::SetProperty
+- AFXWIN/CWnd::SetRedraw
+- AFXWIN/CWnd::SetScrollInfo
+- AFXWIN/CWnd::SetScrollPos
+- AFXWIN/CWnd::SetScrollRange
+- AFXWIN/CWnd::SetTimer
+- AFXWIN/CWnd::SetWindowContextHelpId
+- AFXWIN/CWnd::SetWindowPlacement
+- AFXWIN/CWnd::SetWindowPos
+- AFXWIN/CWnd::SetWindowRgn
+- AFXWIN/CWnd::SetWindowText
+- AFXWIN/CWnd::ShowCaret
+- AFXWIN/CWnd::ShowOwnedPopups
+- AFXWIN/CWnd::ShowScrollBar
+- AFXWIN/CWnd::ShowWindow
+- AFXWIN/CWnd::SubclassDlgItem
+- AFXWIN/CWnd::SubclassWindow
+- AFXWIN/CWnd::UnlockWindowUpdate
+- AFXWIN/CWnd::UnsubclassWindow
+- AFXWIN/CWnd::UpdateData
+- AFXWIN/CWnd::UpdateDialogControls
+- AFXWIN/CWnd::UpdateLayeredWindow
+- AFXWIN/CWnd::UpdateWindow
+- AFXWIN/CWnd::ValidateRect
+- AFXWIN/CWnd::ValidateRgn
+- AFXWIN/CWnd::WindowFromPoint
+- AFXWIN/CWnd::WinHelp
+- AFXWIN/CWnd::Default
+- AFXWIN/CWnd::DefWindowProc
+- AFXWIN/CWnd::DoDataExchange
+- AFXWIN/CWnd::GetCurrentMessage
+- AFXWIN/CWnd::InitDynamicLayout
+- AFXWIN/CWnd::LoadDynamicLayoutResource
+- AFXWIN/CWnd::OnActivate
+- AFXWIN/CWnd::OnActivateApp
+- AFXWIN/CWnd::OnAppCommand
+- AFXWIN/CWnd::OnAskCbFormatName
+- AFXWIN/CWnd::OnCancelMode
+- AFXWIN/CWnd::OnCaptureChanged
+- AFXWIN/CWnd::OnChangeCbChain
+- AFXWIN/CWnd::OnChangeUIState
+- AFXWIN/CWnd::OnChar
+- AFXWIN/CWnd::OnCharToItem
+- AFXWIN/CWnd::OnChildActivate
+- AFXWIN/CWnd::OnChildNotify
+- AFXWIN/CWnd::OnClipboardUpdate
+- AFXWIN/CWnd::OnClose
+- AFXWIN/CWnd::OnColorizationColorChanged
+- AFXWIN/CWnd::OnCommand
+- AFXWIN/CWnd::OnCompacting
+- AFXWIN/CWnd::OnCompareItem
+- AFXWIN/CWnd::OnCompositionChanged
+- AFXWIN/CWnd::OnContextMenu
+- AFXWIN/CWnd::OnCopyData
+- AFXWIN/CWnd::OnCreate
+- AFXWIN/CWnd::OnCtlColor
+- AFXWIN/CWnd::OnDeadChar
+- AFXWIN/CWnd::OnDeleteItem
+- AFXWIN/CWnd::OnDestroy
+- AFXWIN/CWnd::OnDestroyClipboard
+- AFXWIN/CWnd::OnDeviceChange
+- AFXWIN/CWnd::OnDevModeChange
+- AFXWIN/CWnd::OnDrawClipboard
+- AFXWIN/CWnd::OnDrawItem
+- AFXWIN/CWnd::OnDropFiles
+- AFXWIN/CWnd::OnEnable
+- AFXWIN/CWnd::OnEndSession
+- AFXWIN/CWnd::OnEnterIdle
+- AFXWIN/CWnd::OnEnterMenuLoop
+- AFXWIN/CWnd::OnEnterSizeMove
+- AFXWIN/CWnd::OnEraseBkgnd
+- AFXWIN/CWnd::OnExitMenuLoop
+- AFXWIN/CWnd::OnExitSizeMove
+- AFXWIN/CWnd::OnFontChange
+- AFXWIN/CWnd::OnGetDlgCode
+- AFXWIN/CWnd::OnGetMinMaxInfo
+- AFXWIN/CWnd::OnHelpInfo
+- AFXWIN/CWnd::OnHotKey
+- AFXWIN/CWnd::OnHScroll
+- AFXWIN/CWnd::OnHScrollClipboard
+- AFXWIN/CWnd::OnIconEraseBkgnd
+- AFXWIN/CWnd::OnInitMenu
+- AFXWIN/CWnd::OnInitMenuPopup
+- AFXWIN/CWnd::OnInputDeviceChange
+- AFXWIN/CWnd::OnInputLangChange
+- AFXWIN/CWnd::OnInputLangChangeRequest
+- AFXWIN/CWnd::OnKeyDown
+- AFXWIN/CWnd::OnKeyUp
+- AFXWIN/CWnd::OnKillFocus
+- AFXWIN/CWnd::OnLButtonDblClk
+- AFXWIN/CWnd::OnLButtonDown
+- AFXWIN/CWnd::OnLButtonUp
+- AFXWIN/CWnd::OnMButtonDblClk
+- AFXWIN/CWnd::OnMButtonDown
+- AFXWIN/CWnd::OnMButtonUp
+- AFXWIN/CWnd::OnMDIActivate
+- AFXWIN/CWnd::OnMeasureItem
+- AFXWIN/CWnd::OnMenuChar
+- AFXWIN/CWnd::OnMenuDrag
+- AFXWIN/CWnd::OnMenuGetObject
+- AFXWIN/CWnd::OnMenuRButtonUp
+- AFXWIN/CWnd::OnMenuSelect
+- AFXWIN/CWnd::OnMouseActivate
+- AFXWIN/CWnd::OnMouseHover
+- AFXWIN/CWnd::OnMouseHWheel
+- AFXWIN/CWnd::OnMouseLeave
+- AFXWIN/CWnd::OnMouseMove
+- AFXWIN/CWnd::OnMouseWheel
+- AFXWIN/CWnd::OnMove
+- AFXWIN/CWnd::OnMoving
+- AFXWIN/CWnd::OnNcActivate
+- AFXWIN/CWnd::OnNcCalcSize
+- AFXWIN/CWnd::OnNcCreate
+- AFXWIN/CWnd::OnNcDestroy
+- AFXWIN/CWnd::OnNcHitTest
+- AFXWIN/CWnd::OnNcLButtonDblClk
+- AFXWIN/CWnd::OnNcLButtonDown
+- AFXWIN/CWnd::OnNcLButtonUp
+- AFXWIN/CWnd::OnNcMButtonDblClk
+- AFXWIN/CWnd::OnNcMButtonDown
+- AFXWIN/CWnd::OnNcMButtonUp
+- AFXWIN/CWnd::OnNcMouseHover
+- AFXWIN/CWnd::OnNcMouseLeave
+- AFXWIN/CWnd::OnNcMouseMove
+- AFXWIN/CWnd::OnNcPaint
+- AFXWIN/CWnd::OnNcRButtonDblClk
+- AFXWIN/CWnd::OnNcRButtonDown
+- AFXWIN/CWnd::OnNcRButtonUp
+- AFXWIN/CWnd::OnNcRenderingChanged
+- AFXWIN/CWnd::OnNcXButtonDblClk
+- AFXWIN/CWnd::OnNcXButtonDown
+- AFXWIN/CWnd::OnNcXButtonUp
+- AFXWIN/CWnd::OnNextMenu
+- AFXWIN/CWnd::OnNotify
+- AFXWIN/CWnd::OnNotifyFormat
+- AFXWIN/CWnd::OnPaint
+- AFXWIN/CWnd::OnPaintClipboard
+- AFXWIN/CWnd::OnPaletteChanged
+- AFXWIN/CWnd::OnPaletteIsChanging
+- AFXWIN/CWnd::OnParentNotify
+- AFXWIN/CWnd::OnPowerBroadcast
+- AFXWIN/CWnd::OnQueryDragIcon
+- AFXWIN/CWnd::OnQueryEndSession
+- AFXWIN/CWnd::OnQueryNewPalette
+- AFXWIN/CWnd::OnQueryOpen
+- AFXWIN/CWnd::OnQueryUIState
+- AFXWIN/CWnd::OnRawInput
+- AFXWIN/CWnd::OnRButtonDblClk
+- AFXWIN/CWnd::OnRButtonDown
+- AFXWIN/CWnd::OnRButtonUp
+- AFXWIN/CWnd::OnRenderAllFormats
+- AFXWIN/CWnd::OnRenderFormat
+- AFXWIN/CWnd::OnSessionChange
+- AFXWIN/CWnd::OnSetCursor
+- AFXWIN/CWnd::OnSetFocus
+- AFXWIN/CWnd::OnSettingChange
+- AFXWIN/CWnd::OnShowWindow
+- AFXWIN/CWnd::OnSize
+- AFXWIN/CWnd::OnSizeClipboard
+- AFXWIN/CWnd::OnSizing
+- AFXWIN/CWnd::OnSpoolerStatus
+- AFXWIN/CWnd::OnStyleChanged
+- AFXWIN/CWnd::OnStyleChanging
+- AFXWIN/CWnd::OnSysChar
+- AFXWIN/CWnd::OnSysColorChange
+- AFXWIN/CWnd::OnSysCommand
+- AFXWIN/CWnd::OnSysDeadChar
+- AFXWIN/CWnd::OnSysKeyDown
+- AFXWIN/CWnd::OnSysKeyUp
+- AFXWIN/CWnd::OnTCard
+- AFXWIN/CWnd::OnTimeChange
+- AFXWIN/CWnd::OnTimer
+- AFXWIN/CWnd::OnTouchInput
+- AFXWIN/CWnd::OnTouchInputs
+- AFXWIN/CWnd::OnUniChar
+- AFXWIN/CWnd::OnUnInitMenuPopup
+- AFXWIN/CWnd::OnUpdateUIState
+- AFXWIN/CWnd::OnUserChanged
+- AFXWIN/CWnd::OnVKeyToItem
+- AFXWIN/CWnd::OnVScroll
+- AFXWIN/CWnd::OnVScrollClipboard
+- AFXWIN/CWnd::OnWindowPosChanged
+- AFXWIN/CWnd::OnWindowPosChanging
+- AFXWIN/CWnd::OnWinIniChange
+- AFXWIN/CWnd::OnWndMsg
+- AFXWIN/CWnd::OnXButtonDblClk
+- AFXWIN/CWnd::OnXButtonDown
+- AFXWIN/CWnd::OnXButtonUp
+- AFXWIN/CWnd::PostNcDestroy
+- AFXWIN/CWnd::ReflectChildNotify
+- AFXWIN/CWnd::ReflectLastMsg
+- AFXWIN/CWnd::ResizeDynamicLayout
+- AFXWIN/CWnd::WindowProc
+- AFXWIN/CWnd::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -512,7 +919,7 @@ class CWnd : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameaccdodefaultactiona--cwndaccdodefaultaction"></a><a name="accdodefaultaction"></a>CWnd::accDoDefaultAction  
+##  <a name="accdodefaultaction"></a>CWnd::accDoDefaultAction  
  Вызывается платформой для выполнения объектом действия по умолчанию.  
   
 ```  
@@ -531,7 +938,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
   
  Переопределить эту функцию в своей `CWnd`-производного класса, чтобы выполнить действие по умолчанию. Дополнительные сведения см. в разделе [IAccessible::accDoDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318470) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameacchittesta--cwndacchittest"></a><a name="acchittest"></a>CWnd::accHitTest  
+##  <a name="acchittest"></a>CWnd::accHitTest  
  Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана.  
   
 ```  
@@ -561,7 +968,7 @@ virtual HRESULT accHitTest(
   
  Дополнительные сведения см. в разделе [IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameacclocationa--cwndacclocation"></a><a name="acclocation"></a>CWnd::accLocation  
+##  <a name="acclocation"></a>CWnd::accLocation  
  Вызывается платформой для получения текущего положения указанного объекта на экране.  
   
 ```  
@@ -597,7 +1004,7 @@ virtual HRESULT accLocation(
   
  Дополнительные сведения см. в разделе **IAccessible::accLocation** в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameaccnavigatea--cwndaccnavigate"></a><a name="accnavigate"></a>CWnd::accNavigate  
+##  <a name="accnavigate"></a>CWnd::accNavigate  
  Вызывается платформой для перехода к другому элементу пользовательского интерфейса внутри контейнера и, если возможно, для извлечения объекта.  
   
 ```  
@@ -627,7 +1034,7 @@ virtual HRESULT accNavigate(
   
  Дополнительные сведения см. в разделе [IAccessible::accNavigate](http://msdn.microsoft.com/library/windows/desktop/dd318473) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameaccselecta--cwndaccselect"></a><a name="accselect"></a>CWnd::accSelect  
+##  <a name="accselect"></a>CWnd::accSelect  
  Вызывается платформой для изменения выбранной области или перемещения фокуса клавиатурного ввода указанного объекта.  
   
 ```  
@@ -653,7 +1060,7 @@ virtual HRESULT accSelect(
   
  Дополнительные сведения см. в разделе [IAccessible::accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameanimatewindowa--cwndanimatewindow"></a><a name="animatewindow"></a>CWnd::AnimateWindow  
+##  <a name="animatewindow"></a>CWnd::AnimateWindow  
  Создает специальные эффекты при отображении или скрытии windows.  
   
 ```  
@@ -675,7 +1082,7 @@ BOOL AnimateWindow(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу функции [AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namearrangeiconicwindowsa--cwndarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows  
+##  <a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows  
  Упорядочивает все свернутые (преобразованные в значки) дочерние окна.  
   
 ```  
@@ -693,7 +1100,7 @@ UINT ArrangeIconicWindows();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#66;](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]  
   
-##  <a name="a-nameattacha--cwndattach"></a><a name="attach"></a>CWnd::Attach  
+##  <a name="attach"></a>CWnd::Attach  
  Присоединяет окно Windows для `CWnd` объекта.  
   
 ```  
@@ -716,14 +1123,14 @@ BOOL Attach(HWND hWndNew);
   
  [!code-cpp[NVC_MFCWindowing&#69;](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]  
   
-##  <a name="a-namebeginmodalstatea--cwndbeginmodalstate"></a><a name="beginmodalstate"></a>CWnd::BeginModalState  
+##  <a name="beginmodalstate"></a>CWnd::BeginModalState  
  Данная функция-член вызывается для преобразования окна фрейма в модальное.  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="a-namebeginpainta--cwndbeginpaint"></a><a name="beginpaint"></a>CWnd::BeginPaint  
+##  <a name="beginpaint"></a>CWnd::BeginPaint  
  Подготавливает `CWnd` для рисования и заливки `PAINTSTRUCT` структура данных с информацией о заливку.  
   
 ```  
@@ -747,7 +1154,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#70;](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]  
   
-##  <a name="a-namebinddefaultpropertya--cwndbinddefaultproperty"></a><a name="binddefaultproperty"></a>CWnd::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>CWnd::BindDefaultProperty  
  Связывает вызывающий объект по умолчанию простого свойства привязки (например, элемент управления), как в библиотеке типов базовых курсор, который определяется источник данных, имя пользователя, пароль и SQL свойства элемента управления источником данных.  
   
 ```  
@@ -781,7 +1188,7 @@ void BindDefaultProperty(
 [!code-cpp[NVC_MFC_AxDataBinding&#2;](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding&#3;](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="a-namebindpropertya--cwndbindproperty"></a><a name="bindproperty"></a>Дополнительные сведения  
+##  <a name="bindproperty"></a>Дополнительные сведения  
  Привязывает свойство привязкой курсора в элементе управления с привязкой к данным (например, элемент управления сеткой) к элементу управления источником данных и регистрирует такую связь с диспетчером привязки MFC.  
   
 ```  
@@ -807,7 +1214,7 @@ void BindProperty(
 [!code-cpp[NVC_MFC_AxDataBinding&#4;](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding&#3;](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="a-namebringwindowtotopa--cwndbringwindowtotop"></a><a name="bringwindowtotop"></a>CWnd::BringWindowToTop  
+##  <a name="bringwindowtotop"></a>CWnd::BringWindowToTop  
  Перемещает `CWnd` на вершину стека перекрывающихся окон.  
   
 ```  
@@ -822,7 +1229,7 @@ void BringWindowToTop();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#71;](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]  
   
-##  <a name="a-namecalcwindowrecta--cwndcalcwindowrect"></a><a name="calcwindowrect"></a>CWnd::CalcWindowRect  
+##  <a name="calcwindowrect"></a>CWnd::CalcWindowRect  
  Вычисляет прямоугольника окна, который может содержать указанной клиентской области.  
   
 ```  
@@ -846,7 +1253,7 @@ virtual void CalcWindowRect(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#72;](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]  
   
-##  <a name="a-namecanceltooltipsa--cwndcanceltooltips"></a><a name="canceltooltips"></a>CWnd::CancelToolTips  
+##  <a name="canceltooltips"></a>CWnd::CancelToolTips  
  Вызовите эту функцию-член для удаления всплывающей подсказки на экране, если всплывающая подсказка отображается.  
   
 ```  
@@ -865,7 +1272,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#73;](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]  
   
-##  <a name="a-namecenterwindowa--cwndcenterwindow"></a><a name="centerwindow"></a>CWnd::CenterWindow  
+##  <a name="centerwindow"></a>CWnd::CenterWindow  
  Выравнивает окно по центру относительно его родительских окон.  
   
 ```  
@@ -882,7 +1289,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#74;](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]  
   
-##  <a name="a-namechangeclipboardchaina--cwndchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain  
+##  <a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain  
  Удаляет `CWnd` из цепочки средства просмотра буфера обмена и делает окно заданные `hWndNext` потомков элемента `CWnd` предка в цепочке.  
   
 ```  
@@ -896,7 +1303,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="a-namecheckdlgbuttona--cwndcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWnd::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>CWnd::CheckDlgButton  
  (Местах флажок рядом с пунктом) включению или отключению (удаляет флажок из) кнопки, или изменяет состояние кнопки тремя состояниями.  
   
 ```  
@@ -918,7 +1325,7 @@ void CheckDlgButton(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#75;](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]  
   
-##  <a name="a-namecheckradiobuttona--cwndcheckradiobutton"></a><a name="checkradiobutton"></a>CWnd::CheckRadioButton  
+##  <a name="checkradiobutton"></a>CWnd::CheckRadioButton  
  Выбирает (добавляет галочка) данного переключателя в группе и очищает (удаляет флажок напротив) все остальные переключатели в группе.  
   
 ```  
@@ -944,7 +1351,7 @@ void CheckRadioButton(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#76;](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]  
   
-##  <a name="a-namechildwindowfrompointa--cwndchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint  
+##  <a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint  
  Определяет, что, если любой из дочерних окон, относящихся к `CWnd` содержит заданную точку.  
   
 ```  
@@ -981,7 +1388,7 @@ CWnd* ChildWindowFromPoint(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#77;](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]  
   
-##  <a name="a-nameclienttoscreena--cwndclienttoscreen"></a><a name="clienttoscreen"></a>CWnd::ClientToScreen  
+##  <a name="clienttoscreen"></a>CWnd::ClientToScreen  
  Преобразует клиентские координаты указанной точки или прямоугольника на экране в экранные координаты.  
   
 ```  
@@ -8839,7 +9246,7 @@ void ScreenToClient (LPPOINT lpPoint) константу;  void ScreenToClient (
 ### <a name="example"></a>Пример  
   В примере показано [CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect).  
   
-##  <a name="a-namescrollwindowa--cwndscrollwindow"></a><a name="scrollwindow"></a>CWnd::ScrollWindow  
+##  <a name="scrollwindow"></a>CWnd::ScrollWindow  
  Прокручивает содержимое клиентской области текущего `CWnd` объекта.  
   
 ```  
@@ -8872,7 +9279,7 @@ void ScrollWindow(
   
  Если `lpRect` не **NULL**, положения дочерние окна не измененные и недопустимых областей в `CWnd` не смещения. Для предотвращения проблем обновления при `lpRect` не **NULL**, вызовите `UpdateWindow` функции-члена для отрисовки `CWnd` перед вызовом метода `ScrollWindow`.  
   
-##  <a name="a-namescrollwindowexa--cwndscrollwindowex"></a><a name="scrollwindowex"></a>CWnd::ScrollWindowEx  
+##  <a name="scrollwindowex"></a>CWnd::ScrollWindowEx  
  Прокручивает содержимое клиентской области окна.  
   
 ```  
@@ -8928,7 +9335,7 @@ int ScrollWindowEx(
   
  Все координаты ввода-вывода (для `lpRectScroll`, `lpRectClip`, `lpRectUpdate`, и *prgnUpdate*), считаются в клиентских координатах, независимо от того, имеет ли окно **CS_OWNDC** или **CS_CLASSDC** стиль класса. Используйте [LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042) и [DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) функции Windows для преобразования в и из логических координат, при необходимости.  
   
-##  <a name="a-namesendchildnotifylastmsga--cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg  
+##  <a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg  
  Эта функция-член вызывается платформой для предоставления уведомления дочернего окна из родительского окна, дочернее окно может обрабатывать задачи.  
   
 ```  
@@ -8947,7 +9354,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
   
  Дополнительные сведения об отражении сообщений см. в разделе [обработка сообщений отражены](../../mfc/handling-reflected-messages.md).  
   
-##  <a name="a-namesenddlgitemmessagea--cwndsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWnd::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>CWnd::SendDlgItemMessage  
  Отправляет сообщение в элемент управления.  
   
 ```  
@@ -8982,7 +9389,7 @@ LRESULT SendDlgItemMessage(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#113;](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]  
   
-##  <a name="a-namesendmessagea--cwndsendmessage"></a><a name="sendmessage"></a>CWnd::SendMessage  
+##  <a name="sendmessage"></a>CWnd::SendMessage  
  Отправляет указанное сообщение в этом окне.  
   
 ```  
@@ -9011,7 +9418,7 @@ LRESULT SendMessage(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#101;](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
-##  <a name="a-namesendmessagetodescendantsa--cwndsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWnd::SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>CWnd::SendMessageToDescendants  
  Вызовите эту функцию-член для отправки указанное сообщение Windows для всех окон-потомков.  
   
 ```  
@@ -9047,7 +9454,7 @@ void SendMessageToDescendants(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#114;](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]  
   
-##  <a name="a-namesendnotifymessagea--cwndsendnotifymessage"></a><a name="sendnotifymessage"></a>CWnd::SendNotifyMessage  
+##  <a name="sendnotifymessage"></a>CWnd::SendNotifyMessage  
  Отправляет указанное сообщение в окно.  
   
 ```  
@@ -9073,7 +9480,7 @@ BOOL SendNotifyMessage(
 ### <a name="remarks"></a>Примечания  
  Если окно было создано вызывающим потоком `SendNotifyMessage` вызывает процедуру окна для окна и не возвращается, пока не обработал сообщение процедуре окна. Если окно было создано другим потоком, `SendNotifyMessage` передает сообщение процедуре окна и возвращает немедленно; он не ожидает процедура окна для завершения обработки сообщения.  
   
-##  <a name="a-namesetactivewindowa--cwndsetactivewindow"></a><a name="setactivewindow"></a>CWnd::SetActiveWindow  
+##  <a name="setactivewindow"></a>CWnd::SetActiveWindow  
  Делает `CWnd` активного окна.  
   
 ```  
@@ -9088,7 +9495,7 @@ CWnd* SetActiveWindow();
 ### <a name="remarks"></a>Примечания  
  `SetActiveWindow` Функции-члена следует использовать с осторожностью, поскольку позволяет приложению выполнить произвольно активного окна и фокус ввода. Как правило Windows берет на себя все активации.  
   
-##  <a name="a-namesetcapturea--cwndsetcapture"></a><a name="setcapture"></a>CWnd::SetCapture  
+##  <a name="setcapture"></a>CWnd::SetCapture  
  Заставляет все последующие мыши отправку текущего `CWnd` объекта вне зависимости от положения курсора.  
   
 ```  
@@ -9103,7 +9510,7 @@ CWnd* SetCapture();
   
  При захвате мыши не `WM_NCHITTEST` или `WM_SETCURSOR` сообщения отправляются в активном окне.  
   
-##  <a name="a-namesetcaretposa--cwndsetcaretpos"></a><a name="setcaretpos"></a>CWnd::SetCaretPos  
+##  <a name="setcaretpos"></a>CWnd::SetCaretPos  
  Задает положение курсора.  
   
 ```  
@@ -9122,7 +9529,7 @@ static void PASCAL SetCaretPos(POINT point);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#115;](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]  
   
-##  <a name="a-namesetclipboardviewera--cwndsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWnd::SetClipboardViewer  
+##  <a name="setclipboardviewer"></a>CWnd::SetClipboardViewer  
  Добавляет это окно в цепочке windows, которые получают уведомления (с помощью параметра `WM_DRAWCLIPBOARD` сообщение) при каждом изменении содержимого буфера обмена.  
   
 ```  
@@ -9139,7 +9546,7 @@ HWND SetClipboardViewer();
   
  Чтобы удалить себя из цепочки буфер обмена, приложение должно вызвать [ChangeClipboardChain](#changeclipboardchain) функции-члена.  
   
-##  <a name="a-namesetdlgctrlida--cwndsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID  
  Задает новое значение окна идентификатор или идентификатор элемента управления для окна.  
   
 ```  
@@ -9156,7 +9563,7 @@ int SetDlgCtrlID(int nID);
 ### <a name="remarks"></a>Примечания  
  Окно может быть любого дочернего окна не только элемент управления в диалоговом окне. Окно не может быть окном верхнего уровня.  
   
-##  <a name="a-namesetdlgiteminta--cwndsetdlgitemint"></a><a name="setdlgitemint"></a>CWnd::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>CWnd::SetDlgItemInt  
  Задает текст данного элемента управления в диалоговом окне строковое представление заданного целого.  
   
 ```  
@@ -9182,7 +9589,7 @@ void SetDlgItemInt(
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::SetDlgItemText](#setdlgitemtext).  
   
-##  <a name="a-namesetdlgitemtexta--cwndsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWnd::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>CWnd::SetDlgItemText  
  Задает заголовок или текст элемента управления, принадлежащие окно или диалоговое окно.  
   
 ```  
@@ -9204,7 +9611,7 @@ void SetDlgItemText(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&116;](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]  
   
-##  <a name="a-namesetforegroundwindowa--cwndsetforegroundwindow"></a><a name="setforegroundwindow"></a>CWnd::SetForegroundWindow  
+##  <a name="setforegroundwindow"></a>CWnd::SetForegroundWindow  
  Помещает создавший окно поток на передний план и активирует окно.  
   
 ```  
@@ -9220,7 +9627,7 @@ BOOL SetForegroundWindow();
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::FindWindow](#findwindow).  
   
-##  <a name="a-namesetfocusa--cwndsetfocus"></a><a name="setfocus"></a>CWnd::SetFocus  
+##  <a name="setfocus"></a>CWnd::SetFocus  
  Утверждает фокус ввода.  
   
 ```  
@@ -9237,7 +9644,7 @@ CWnd* SetFocus();
   
  Если текущее окно активен, но не имеет фокуса (то есть окна не имеет фокуса) любой клавиши создаст сообщения о [WM_SYSCHAR](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown), или [WM_SYSKEYUP](#onsyskeyup).  
   
-##  <a name="a-namesetfonta--cwndsetfont"></a><a name="setfont"></a>CWnd::SetFont  
+##  <a name="setfont"></a>CWnd::SetFont  
  Отправляет `WM_SETFONT` сообщения в окне для использования указанного шрифта.  
   
 ```  
@@ -9256,7 +9663,7 @@ void SetFont(
 ### <a name="remarks"></a>Примечания  
  Этот метод действует только окна обрабатывает `WM_SETFONT` сообщение. Многие классы MFC, которые являются производными от `CWnd` обработать данное сообщение, поскольку они привязаны к классу стандартных окон, включающий обработчик сообщений для `WM_SETFONT` сообщения. Чтобы использовать этот метод, классы, производные от `CWnd` необходимо определить метод обработчика `WM_SETFONT` сообщение.  
   
-##  <a name="a-nameseticona--cwndseticon"></a><a name="seticon"></a>CWnd::SetIcon  
+##  <a name="seticon"></a>CWnd::SetIcon  
  Эта функция члена присвоено специальным значком дескриптор, который идентифицируется `hIcon`.  
   
 ```  
@@ -9281,7 +9688,7 @@ HICON SetIcon(
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::GetSystemMenu](#getsystemmenu).  
   
-##  <a name="a-namesetlayeredwindowattributesa--cwndsetlayeredwindowattributes"></a><a name="setlayeredwindowattributes"></a>CWnd::SetLayeredWindowAttributes  
+##  <a name="setlayeredwindowattributes"></a>CWnd::SetLayeredWindowAttributes  
  Задает ключ цвета прозрачности многослойного окна.  
   
 ```  
@@ -9307,7 +9714,7 @@ BOOL SetLayeredWindowAttributes(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу функции [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetmenua--cwndsetmenu"></a><a name="setmenu"></a>CWnd::SetMenu  
+##  <a name="setmenu"></a>CWnd::SetMenu  
  Присваивает указанное меню меню.  
   
 ```  
@@ -9329,7 +9736,7 @@ BOOL SetMenu(CMenu* pMenu);
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu).  
   
-##  <a name="a-namesetownera--cwndsetowner"></a><a name="setowner"></a>CWnd::SetOwner  
+##  <a name="setowner"></a>CWnd::SetOwner  
  Устанавливает текущее окно владельца для объекта указанного окна.  
   
 ```  
@@ -9347,7 +9754,7 @@ void SetOwner(CWnd* pOwnerWnd);
   
  Понятие владения эта функция отличается от концепции владения [GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515).  
   
-##  <a name="a-namesetparenta--cwndsetparent"></a><a name="setparent"></a>CWnd::SetParent  
+##  <a name="setparent"></a>CWnd::SetParent  
  Изменение родительского окна дочернего окна.  
   
 ```  
@@ -9364,7 +9771,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 ### <a name="remarks"></a>Примечания  
  Если дочернее окно является видимым, Windows выполняет соответствующие перерисовка и Отмена.  
   
-##  <a name="a-namesetpropertya--cwndsetproperty"></a><a name="setproperty"></a>CWnd::SetProperty  
+##  <a name="setproperty"></a>CWnd::SetProperty  
  Вызов этой функции-члена для задания свойства элемента управления OLE, указанного в `dwDispID`.  
   
 ```  
@@ -9390,7 +9797,7 @@ void AFX_CDECL SetProperty(
   
  Дополнительные сведения об использовании этой функции-члена с контейнеры элементов управления см. в статье [контейнеры элементов управления ActiveX: программирование элементов управления ActiveX в контейнере элементов управления ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).  
   
-##  <a name="a-namesetredrawa--cwndsetredraw"></a><a name="setredraw"></a>CWnd::SetRedraw  
+##  <a name="setredraw"></a>CWnd::SetRedraw  
  Приложение вызывает `SetRedraw` для разрешения смены перерисовку или для предотвращения изменения перерисовываться.  
   
 ```  
@@ -9407,7 +9814,7 @@ void SetRedraw(BOOL bRedraw = TRUE);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#117;](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]  
   
-##  <a name="a-namesetscrollinfoa--cwndsetscrollinfo"></a><a name="setscrollinfo"></a>CWnd::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CWnd::SetScrollInfo  
  Вызов этой функции-члена для задания данных, `SCROLLINFO` структура поддерживает о полосы прокрутки.  
   
 ```  
@@ -9444,7 +9851,7 @@ BOOL SetScrollInfo(
 > [!NOTE]
 > [CWnd::GetScrollInfo](#getscrollinfo) позволяет приложениям использовать полосы прокрутки 32-разрядных позиций.  
   
-##  <a name="a-namesetscrollposa--cwndsetscrollpos"></a><a name="setscrollpos"></a>CWnd::SetScrollPos  
+##  <a name="setscrollpos"></a>CWnd::SetScrollPos  
  Задает текущее положение ползунка полосы прокрутки и по запросу, экран для отображения нового положения ползунка полосы прокрутки.  
   
 ```  
@@ -9474,7 +9881,7 @@ int SetScrollPos(
 ### <a name="remarks"></a>Примечания  
  Установка `bRedraw` для **FALSE** используется, когда полоса прокрутки перерисовывается при последующих вызовах в другую функцию.  
   
-##  <a name="a-namesetscrollrangea--cwndsetscrollrange"></a><a name="setscrollrange"></a>CWnd::SetScrollRange  
+##  <a name="setscrollrange"></a>CWnd::SetScrollRange  
  Задает для указанной полосы прокрутки положения минимума и максимума.  
   
 ```  
@@ -9511,7 +9918,7 @@ void SetScrollRange(
   
  Диапазон по умолчанию для стандартных прокрутки — от 0 до 100. Диапазон по умолчанию для полосы прокрутки пуст (как `nMinPos` и `nMaxPos` являются значения от 0). Разница между значениями, указанными `nMinPos` и `nMaxPos` не может быть больше, чем **INT_MAX**.  
   
-##  <a name="a-namesettimera--cwndsettimer"></a><a name="settimer"></a>CWnd::SetTimer  
+##  <a name="settimer"></a>CWnd::SetTimer  
  Устанавливает таймер системы.  
   
 ```  
@@ -9555,7 +9962,7 @@ void CALLBACK TimerProc(
   
  [!code-cpp[NVC_MFCWindowing&#118;](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]  
   
-##  <a name="a-namesetwindowcontexthelpida--cwndsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId  
+##  <a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId  
  Вызовите эту функцию-член для присоединения к ним идентификатор контекста справки указанного окна.  
   
 ```  
@@ -9575,7 +9982,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#119;](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]  
   
-##  <a name="a-namesetwindowplacementa--cwndsetwindowplacement"></a><a name="setwindowplacement"></a>CWnd::SetWindowPlacement  
+##  <a name="setwindowplacement"></a>CWnd::SetWindowPlacement  
  Задает состояние отображения, а также обычное (восстановленное), свернутое и развернутое состояния окна.  
   
 ```  
@@ -9589,7 +9996,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
   
-##  <a name="a-namesetwindowposa--cwndsetwindowpos"></a><a name="setwindowpos"></a>CWnd::SetWindowPos  
+##  <a name="setwindowpos"></a>CWnd::SetWindowPos  
  Изменение размера, положения и Z-порядка дочерних, верхнего уровня и всплывающих окон.  
   
 ```  
@@ -9690,7 +10097,7 @@ BOOL SetWindowPos(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#120;](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
   
-##  <a name="a-namesetwindowrgna--cwndsetwindowrgn"></a><a name="setwindowrgn"></a>CWnd::SetWindowRgn  
+##  <a name="setwindowrgn"></a>CWnd::SetWindowRgn  
  Вызовите эту функцию-член для задания окна области.  
   
 ```  
@@ -9714,7 +10121,7 @@ int SetWindowRgn(
   
  После успешного вызова `SetWindowRgn`, операционная система, которому принадлежит области, заданной параметром дескриптор области `hRgn`. Операционной системы не копию области, поэтому не внесения дальнейших вызовы функций с данным дескриптором области и не закрывайте этот дескриптор области.  
   
-##  <a name="a-namesetwindowtexta--cwndsetwindowtext"></a><a name="setwindowtext"></a>CWnd::SetWindowText  
+##  <a name="setwindowtext"></a>CWnd::SetWindowText  
  Задает заголовок окна для указанного текста.  
   
 ```  
@@ -9733,7 +10140,7 @@ void SetWindowText(LPCTSTR lpszString);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#121;](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]  
   
-##  <a name="a-nameshowcareta--cwndshowcaret"></a><a name="showcaret"></a>CWnd::ShowCaret  
+##  <a name="showcaret"></a>CWnd::ShowCaret  
  Показывает курсор на экране в текущей позиции курсора.  
   
 ```  
@@ -9752,7 +10159,7 @@ void ShowCaret();
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::CreateCaret](#createcaret).  
   
-##  <a name="a-nameshowownedpopupsa--cwndshowownedpopups"></a><a name="showownedpopups"></a>CWnd::ShowOwnedPopups  
+##  <a name="showownedpopups"></a>CWnd::ShowOwnedPopups  
  Отображение или скрытие всех всплывающих окон, в этом окне.  
   
 ```  
@@ -9766,7 +10173,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::SetWindowPos](#setwindowpos).  
   
-##  <a name="a-nameshowscrollbara--cwndshowscrollbar"></a><a name="showscrollbar"></a>CWnd::ShowScrollBar  
+##  <a name="showscrollbar"></a>CWnd::ShowScrollBar  
  Показывает или скрывает полосы прокрутки.  
   
 ```  
@@ -9791,7 +10198,7 @@ void ShowScrollBar(
 ### <a name="remarks"></a>Примечания  
  Приложение не должно вызывать `ShowScrollBar` скрыть полосу прокрутки при обработке сообщения уведомления полосы прокрутки.  
   
-##  <a name="a-nameshowwindowa--cwndshowwindow"></a><a name="showwindow"></a>CWnd::ShowWindow  
+##  <a name="showwindow"></a>CWnd::ShowWindow  
  Задает состояние видимости для окна.  
   
 ```  
@@ -9831,7 +10238,7 @@ BOOL ShowWindow(int nCmdShow);
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::CalcWindowRect](#calcwindowrect).  
   
-##  <a name="a-namesubclassdlgitema--cwndsubclassdlgitem"></a><a name="subclassdlgitem"></a>CWnd::SubclassDlgItem  
+##  <a name="subclassdlgitem"></a>CWnd::SubclassDlgItem  
  Вызов этой функции-члена для «динамически подкласс» создана на основе шаблона диалогового окна элемента управления и присоединить его к этому `CWnd` объекта.  
   
 ```  
@@ -9858,7 +10265,7 @@ BOOL SubclassDlgItem(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#122;](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
   
-##  <a name="a-namesubclasswindowa--cwndsubclasswindow"></a><a name="subclasswindow"></a>CWnd::SubclassWindow  
+##  <a name="subclasswindow"></a>CWnd::SubclassWindow  
  Вызов этой функции-члена для «динамически подкласс» окна и присоединить его к этому `CWnd` объекта.  
   
 ```  
@@ -9883,7 +10290,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#123;](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
   
-##  <a name="a-nameunlockwindowupdatea--cwndunlockwindowupdate"></a><a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
+##  <a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
  Вызовите эту функцию-член для разблокировки окно заблокированного с `CWnd::LockWindowUpdate`.  
   
 ```  
@@ -9893,7 +10300,7 @@ void UnlockWindowUpdate();
 ### <a name="remarks"></a>Примечания  
  Одновременно только одно окно может быть заблокирован с помощью `LockWindowUpdate`. В разделе [CWnd::LockWindowUpdate](#lockwindowupdate) или функцию Win32 [LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) Дополнительные сведения о блокировке windows.  
   
-##  <a name="a-nameunsubclasswindowa--cwndunsubclasswindow"></a><a name="unsubclasswindow"></a>CWnd::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>CWnd::UnsubclassWindow  
  Вызов этой функции-члена для задания **WndProc** обратно в исходное значение и отсоединение окна определяется `HWND` из **CWnd** объекта.  
   
 ```  
@@ -9906,7 +10313,7 @@ HWND UnsubclassWindow();
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::SubclassWindow](#subclasswindow).  
   
-##  <a name="a-nameupdatedataa--cwndupdatedata"></a><a name="updatedata"></a>CWnd::UpdateData  
+##  <a name="updatedata"></a>CWnd::UpdateData  
  Вызовите эту функцию-член для инициализации данных в диалоговом окне, извлечения и проверки данных диалогового окна.  
   
 ```  
@@ -9923,7 +10330,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ### <a name="remarks"></a>Примечания  
  Платформа автоматически вызывает `UpdateData` с `bSaveAndValidate` значение **FALSE** создания модального диалогового окна в реализации по умолчанию [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog). Вызов происходит перед отображается диалоговое окно. Реализация по умолчанию [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) вызывает эту функцию-член с `bSaveAndValidate` значение **TRUE** для получения данных и в случае успешного выполнения закроет диалоговое окно. (При нажатии кнопки "Отмена" в диалоговом окне диалоговое окно закрыто без полученных данных.)  
   
-##  <a name="a-nameupdatedialogcontrolsa--cwndupdatedialogcontrols"></a><a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
+##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
  Вызовите для обновления состояния кнопок диалогового окна и другие элементы управления в диалоговое окно или окно, в котором используется эта функция-член [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) механизм обратного вызова.  
   
 ```  
@@ -9944,7 +10351,7 @@ void UpdateDialogControls(
   
  Платформа вызывает эту функцию-член для элементов управления в диалоговые панели или панели инструментов в составе приложения простоя обработки.  
   
-##  <a name="a-nameupdatelayeredwindowa--cwndupdatelayeredwindow"></a><a name="updatelayeredwindow"></a>CWnd::UpdateLayeredWindow  
+##  <a name="updatelayeredwindow"></a>CWnd::UpdateLayeredWindow  
  Обновляет положение, размер, форму, содержимое и прозрачность многослойного окна.  
   
 ```  
@@ -9996,7 +10403,7 @@ BOOL UpdateLayeredWindow(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу функции [UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameupdatewindowa--cwndupdatewindow"></a><a name="updatewindow"></a>CWnd::UpdateWindow  
+##  <a name="updatewindow"></a>CWnd::UpdateWindow  
  Обновляет области клиента путем отправки [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) сообщение, если область обновления не пуст.  
   
 ```  
@@ -10009,7 +10416,7 @@ void UpdateWindow();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#124;](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]  
   
-##  <a name="a-namevalidaterecta--cwndvalidaterect"></a><a name="validaterect"></a>CWnd::ValidateRect  
+##  <a name="validaterect"></a>CWnd::ValidateRect  
  Проверяет клиентской области в пределах заданного прямоугольника, удалив прямоугольник из области обновления окна.  
   
 ```  
@@ -10025,7 +10432,7 @@ void ValidateRect(LPCRECT lpRect);
   
  Windows продолжает создавать `WM_PAINT` сообщений до окончания проверки текущей области обновления.  
   
-##  <a name="a-namevalidatergna--cwndvalidatergn"></a><a name="validatergn"></a>CWnd::ValidateRgn  
+##  <a name="validatergn"></a>CWnd::ValidateRgn  
  Проверяет клиентской области в пределах данной области, удалив из текущей области обновления окна области.  
   
 ```  
@@ -10041,7 +10448,7 @@ void ValidateRgn(CRgn* pRgn);
   
  [BeginPaint](#beginpaint) функция-член автоматически проверяет всю клиентскую область. Ни [ValidateRect](#validaterect) ни `ValidateRgn` должен вызываться функция-член, если часть области обновления должны быть проверены перед следующим [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) формируется сообщение.  
   
-##  <a name="a-namewindowfrompointa--cwndwindowfrompoint"></a><a name="windowfrompoint"></a>CWnd::WindowFromPoint  
+##  <a name="windowfrompoint"></a>CWnd::WindowFromPoint  
  Получает окно, содержащее указанную точку; `point` необходимо указать координаты экрана точки на экране.  
   
 ```  
@@ -10058,7 +10465,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="remarks"></a>Примечания  
  `WindowFromPoint`не получить скрытые или отключенные окна, даже если точка находится в пределах окна. В приложении необходимо использовать [ChildWindowFromPoint](#childwindowfrompoint) свободная поиска функции-члена.  
   
-##  <a name="a-namewindowproca--cwndwindowproc"></a><a name="windowproc"></a>CWnd::WindowProc  
+##  <a name="windowproc"></a>CWnd::WindowProc  
  Описание процедуры Windows ( `WindowProc`) для `CWnd` объекта.  
   
 ```  
@@ -10084,7 +10491,7 @@ virtual LRESULT WindowProc(
 ### <a name="remarks"></a>Примечания  
  Он отправляет сообщения через схему сообщений окна.  
   
-##  <a name="a-namewinhelpa--cwndwinhelp"></a><a name="winhelp"></a>CWnd::WinHelp  
+##  <a name="winhelp"></a>CWnd::WinHelp  
  Вызывается для запуска приложения WinHelp.  
   
 ```  
@@ -10103,7 +10510,7 @@ virtual void WinHelp(
 ### <a name="remarks"></a>Примечания  
  В разделе [CWinApp::WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) для получения дополнительной информации.  
   
-##  <a name="a-nameregistertouchwindowa--cwndregistertouchwindow"></a><a name="registertouchwindow"></a>CWnd::RegisterTouchWindow  
+##  <a name="registertouchwindow"></a>CWnd::RegisterTouchWindow  
  Регистрирует или отменяет регистрацию поддержки Windows touch.  
   
 ```  
@@ -10124,7 +10531,7 @@ BOOL RegisterTouchWindow(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameresizedynamiclayouta--cwndresizedynamiclayout"></a><a name="resizedynamiclayout"></a>CWnd::ResizeDynamicLayout  
+##  <a name="resizedynamiclayout"></a>CWnd::ResizeDynamicLayout  
  Вызывается платформой при изменении размера окна для настройки макета дочерних окон, если для этого окна используется динамический макет.  
   
 ```  

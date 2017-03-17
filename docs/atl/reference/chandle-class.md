@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHandle
-- ATL::CHandle
 - CHandle
+- ATLBASE/ATL::CHandle
+- ATLBASE/ATL::CHandle::CHandle
+- ATLBASE/ATL::CHandle::Attach
+- ATLBASE/ATL::CHandle::Close
+- ATLBASE/ATL::CHandle::Detach
+- ATLBASE/ATL::CHandle::m_h
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +93,7 @@ class CHandle
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>CHandle::Attach  
  Этот метод вызывается для присоединения `CHandle` объекта для существующего дескриптора.  
   
 ```
@@ -103,7 +107,7 @@ void Attach(HANDLE h) throw();
 ### <a name="remarks"></a>Примечания  
  Назначает `CHandle` объект `h` обработки. В сборках отлаживает ATLASSERT будет создано, если `h` имеет значение NULL. Проверка других относительно достоверности дескриптор не выполняется.  
   
-##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>CHandle::CHandle  
  Конструктор.  
   
 ```
@@ -119,7 +123,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Примечания  
  Создает новый `CHandle` объекта, при необходимости с помощью существующего дескриптора или `CHandle` объекта.  
   
-##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>CHandle:: ~ CHandle  
  Деструктор  
   
 ```
@@ -129,7 +133,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает `CHandle` путем вызова метода [CHandle::Close](#close).  
   
-##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+##  <a name="close"></a>CHandle::Close  
  Вызовите этот метод, чтобы закрыть `CHandle` объекта.  
   
 ```
@@ -139,7 +143,7 @@ void Close() throw();
 ### <a name="remarks"></a>Примечания  
  Закрывает дескриптор открытого объекта. Если дескриптор имеет значение NULL, который будет в том случае, если **закрыть** уже был вызван, ATLASSERT, будет создано в отладочных построениях.  
   
-##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>CHandle::Detach  
  Этот метод вызывается для отсоединения дескриптор из `CHandle` объекта.  
   
 ```
@@ -152,14 +156,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает владение дескриптора.  
   
-##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>CHandle::m_h  
  Член переменной для хранения дескриптора.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>CHandle::operator =  
  Оператор присваивания.  
   
 ```
@@ -176,7 +180,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>Примечания  
  Если `CHandle` объект в настоящее время содержит дескриптор, оно будет закрыто. `CHandle` Объекта, передаваемого будет его дескриптор ссылки, присваивается значение NULL. Это гарантирует, что два `CHandle` объектов никогда не будет содержать тот же дескриптор active.  
   
-##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::operator ДЕСКРИПТОРА  
+##  <a name="operator_handle"></a>CHandle::operator ДЕСКРИПТОРА  
  Возвращает значение хранимого дескриптора.  
   
 ```  

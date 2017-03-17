@@ -10,10 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CW2WEX
-- ATL.CW2WEX<t_nBufferLength>
-- ATL::CW2WEX
-- ATL.CW2WEX
-- ATL::CW2WEX<t_nBufferLength>
+- ATLCONV/ATL::CW2WEX
+- ATLCONV/ATL::CW2WEX::CW2WEX
+- ATLCONV/ATL::CW2WEX::m_psz
+- ATLCONV/ATL::CW2WEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +109,7 @@ class CW2WEX
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlconv.h  
   
-##  <a name="a-namecw2wexa--cw2wexcw2wex"></a><a name="cw2wex"></a>CW2WEX::CW2WEX  
+##  <a name="cw2wex"></a>CW2WEX::CW2WEX  
  Конструктор.  
   
 ```
@@ -127,7 +127,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ### <a name="remarks"></a>Примечания  
  Создает буфер, необходимый для перевода.  
   
-##  <a name="a-namedtora--cw2wexcw2wex"></a><a name="dtor"></a>CW2WEX:: ~ CW2WEX  
+##  <a name="dtor"></a>CW2WEX:: ~ CW2WEX  
  Деструктор...  
   
 ```
@@ -137,21 +137,21 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ### <a name="remarks"></a>Примечания  
  Освобождает выделенный буфер.  
   
-##  <a name="a-namempsza--cw2wexmpsz"></a><a name="m_psz"></a>CW2WEX::m_psz  
+##  <a name="m_psz"></a>CW2WEX::m_psz  
  Член данных, хранит исходную строку.  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--cw2wexmszbuffer"></a><a name="m_szbuffer"></a>CW2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CW2WEX::m_szBuffer  
  Статический буфер, используемый для хранения Преобразованная строка.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpwstra--cw2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CW2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>CW2WEX::operator LPWSTR  
  Оператор приведения.  
   
 ```  

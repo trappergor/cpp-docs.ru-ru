@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
+- AFXWIN/CCommandLineInfo
+- AFXWIN/CCommandLineInfo::CCommandLineInfo
+- AFXWIN/CCommandLineInfo::ParseParam
+- AFXWIN/CCommandLineInfo::m_bRunAutomated
+- AFXWIN/CCommandLineInfo::m_bRunEmbedded
+- AFXWIN/CCommandLineInfo::m_bShowSplash
+- AFXWIN/CCommandLineInfo::m_nShellCommand
+- AFXWIN/CCommandLineInfo::m_strDriverName
+- AFXWIN/CCommandLineInfo::m_strFileName
+- AFXWIN/CCommandLineInfo::m_strPortName
+- AFXWIN/CCommandLineInfo::m_strPrinterName
+- AFXWIN/CCommandLineInfo::m_strRestartIdentifier
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameccommandlineinfoa--ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
  Этот конструктор создает `CCommandLineInfo` объектов со значениями по умолчанию.  
   
 ```  
@@ -123,7 +135,7 @@ CCommandLineInfo();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="a-namembrunautomateda--ccommandlineinfombrunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
  Указывает, что **/Automation** флаг был найден в командной строке.  
   
 ```  
@@ -133,7 +145,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>Примечания  
  Если **TRUE**, это означает, что запущен как сервер OLE-автоматизации.  
   
-##  <a name="a-namembrunembeddeda--ccommandlineinfombrunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
  Указывает, что **и внедрение** флаг был найден в командной строке.  
   
 ```  
@@ -143,7 +155,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>Примечания  
  Если **TRUE**, это означает, что запущен для редактирования встроенного элемента OLE.  
   
-##  <a name="a-namembshowsplasha--ccommandlineinfombshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  Задает отображение экрана-заставки.  
   
 ```  
@@ -153,7 +165,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>Примечания  
  Если **TRUE**, это означает экран-заставку для этого приложения должен отображаться во время запуска. Реализация по умолчанию [ParseParam](#parseparam) устанавливает этот элемент данных **TRUE** Если [m_nShellCommand](#m_nshellcommand) равен **CCommandLineInfo::FileNew**.  
   
-##  <a name="a-namemnshellcommanda--ccommandlineinfomnshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  Указывает команду оболочки для этого экземпляра приложения.  
   
 ```  
@@ -208,7 +220,7 @@ m_nShellCommand;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="a-namemstrdrivernamea--ccommandlineinfomstrdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
  Сохраняет значение третьего параметра без флага в командной строке.  
   
 ```  
@@ -218,7 +230,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>Примечания  
  Этот параметр обычно является имя драйвера принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных **/pt** флаг был найден в командной строке.  
   
-##  <a name="a-namemstrfilenamea--ccommandlineinfomstrfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  Сохраняет значение первого параметра без флага в командной строке.  
   
 ```  
@@ -228,7 +240,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>Примечания  
  Этот параметр обычно является имя открываемого файла.  
   
-##  <a name="a-namemstrportnamea--ccommandlineinfomstrportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
  Сохраняет значение без флага четвертый параметр в командной строке.  
   
 ```  
@@ -238,7 +250,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>Примечания  
  Этот параметр обычно является имя порта принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных **/pt** флаг был найден в командной строке.  
   
-##  <a name="a-namemstrprinternamea--ccommandlineinfomstrprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  Сохраняет значение второго параметра без флага в командной строке.  
   
 ```  
@@ -248,7 +260,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>Примечания  
  Этот параметр обычно является имя принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных **/pt** флаг был найден в командной строке.  
   
-##  <a name="a-namemstrrestartidentifiera--ccommandlineinfomstrrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  Уникальный перезапустите идентификатор в командной строке.  
   
 ```  
@@ -260,7 +272,7 @@ CString m_strRestartIdentifier;
   
  Если диспетчер перезапуска завершает работу приложения и настройки его диспетчер перезапуска выполняет приложение из командной строки с идентификатором перезапуска как необязательный параметр. Когда диспетчер перезапуска использует идентификатор перезапуска, приложение можно открыть ранее открытые документы и восстанавливать файлы автоматически сохраненная.  
   
-##  <a name="a-nameparseparama--ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
  Платформа вызывает эту функцию для синтаксического анализа и интерпретации отдельных параметров из командной строки. Вторая версия отличается от первого только в проектах Юникода.  
   
 ```  

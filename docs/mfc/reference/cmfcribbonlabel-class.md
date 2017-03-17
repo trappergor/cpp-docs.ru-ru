@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxRibbonLabel.h  
   
-##  <a name="a-namecmfcribbonlabela--cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
  Создает и инициализирует [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) объекта, который отображает заданную текстовую строку.  
   
 ```  
@@ -98,7 +101,7 @@ CMFCRibbonLabel(
  [in] `bIsMultiLine`  
  `TRUE`Чтобы указать, что метка Многострочная метка; в противном случае — `FALSE`.  
   
-##  <a name="a-namesetaccdataa--cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
  Определяет доступность данных для текущего элемента метку ленты.  
   
 ```  

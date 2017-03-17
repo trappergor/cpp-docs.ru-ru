@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[Перечисление access_type](#access_type)|[Перечисление queuing_mode](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>Перечисление access_type  
+##  <a name="access_type"></a>Перечисление access_type  
  Тип перечисления, который используется для обозначения различных типов доступа к данным.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|Совместно. Выделение доступен на сочетания клавиш и для чтения и записи на ЦП.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>Перечисление queuing_mode  
+##  <a name="queuing_mode"></a>Перечисление queuing_mode  
  Указывает режимы очереди, которые поддерживаются сочетания клавиш.  
   
 ```  

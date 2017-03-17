@@ -10,8 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
-- CMDITabInfo.CMDITabInfo
-- CMDITabInfo::CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo::Serialize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bAutoColor
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bDocumentMenu
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bEnableTabSwap
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bFlatFrame
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCloseButton
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCustomTooltips
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabIcons
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_nTabBorderSize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_style
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_tabLocation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +105,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmdiclientareawnd.h  
   
-##  <a name="a-namembactivetabclosebuttona--cmditabinfombactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
  Указывает ли **закрыть** кнопка отображается на метке активной вкладки.  
   
 ```  
@@ -105,7 +115,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, будет отображена надпись активной вкладке **закрыть** кнопки. **Закрыть** будут удалены кнопки в правом верхнем углу области вкладки. В противном случае — не будет отображаться метка активной вкладке **закрыть** кнопки. **Закрыть** кнопка отображается в правом верхнем углу области вкладки.  
   
-##  <a name="a-namembautocolora--cmditabinfombautocolor"></a><a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
  Указывает, имеет ли каждая вкладка MDI собственный цвет.  
   
 ```  
@@ -115,7 +125,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, каждая вкладка будет иметь свой собственный цвет. Набор цветов, осуществляется библиотекой MFC. В противном случае — в техническом отображаются вкладки. Значение по умолчанию — `FALSE`.  
   
-##  <a name="a-namembdocumentmenua--cmditabinfombdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
  Указывает, отображается ли каждая вкладка всплывающее меню, которое показывает список открытых документов по правому краю области вкладки.  
   
 ```  
@@ -125,7 +135,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, windows Каждая вкладка отображает всплывающее меню, содержащее список открытых документов по правому краю области вкладки. В противном случае — окно вкладка отображает кнопки прокрутки по правому краю области вкладки. Значение по умолчанию — `FALSE`.  
   
-##  <a name="a-namembenabletabswapa--cmditabinfombenabletabswap"></a><a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
  Указывает ли пользователь можно переключить положения вкладки путем перетаскивания.  
   
 ```  
@@ -135,14 +145,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, пользователь может изменить позиции табуляции, перетащив на вкладках. В противном случае — пользователь не может изменить позиции табуляции. Значение по умолчанию — `TRUE`.  
   
-##  <a name="a-namembflatframea--cmditabinfombflatframe"></a><a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
  Указывает, имеет ли окно каждой вкладки плоский кадра.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="a-namembtabclosebuttona--cmditabinfombtabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
  Указывает, отображаются ли каждое окно вкладку **закрыть** кнопки.  
   
 ```  
@@ -152,7 +162,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, каждая вкладка окно отображает **закрыть** кнопку на правой стороне вкладки. В противном случае — **закрыть** кнопка не отображается. Значение по умолчанию — `TRUE`.  
   
-##  <a name="a-namembtabcustomtooltipsa--cmditabinfombtabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
  Отображение вкладок подсказки.  
   
 ```  
@@ -162,7 +172,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, приложение отправляет `AFX_WM_ON_GET_TAB_TOOLTIP` сообщение главного фрейма. Это сообщение можно обработать с помощью `ON_REGISTERED_MESSAGE` макрос.  
   
-##  <a name="a-namembtabiconsa--cmditabinfombtabicons"></a><a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
  Указывает необходимость отображения значков на вкладках окна MDI.  
   
 ```  
@@ -172,7 +182,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Примечания  
  Если `TRUE`, значки отображаются на каждой вкладке MDI. В противном случае — значков не отображаются на вкладках. Значение по умолчанию — `FALSE`.  
   
-##  <a name="a-namemntabbordersizea--cmditabinfomntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
  Указывает размер границы в пикселях каждого окна вкладки.  
   
 ```  
@@ -182,7 +192,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Примечания  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) возвращает значение по умолчанию.  
   
-##  <a name="a-namemstylea--cmditabinfomstyle"></a><a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>CMDITabInfo::m_style  
  Задает стиль метки вкладок.  
   
 ```  
@@ -210,7 +220,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Трехмерный стиль с метками round вкладки.  
   
-##  <a name="a-namemtablocationa--cmditabinfomtablocation"></a><a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
  Указывает, находятся ли метки вкладок в верхней или нижней части страницы.  
   
 ```  
@@ -224,7 +234,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: метки вкладок в верхней части страницы  
   
-##  <a name="a-nameserializea--cmditabinfoserialize"></a><a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>CMDITabInfo::Serialize  
  Считывает или записывает этот объект из архива или в архив.  
   
 ```  

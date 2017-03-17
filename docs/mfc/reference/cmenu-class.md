@@ -10,6 +10,46 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMenu
+- AFXWIN/CMenu
+- AFXWIN/CMenu::CMenu
+- AFXWIN/CMenu::AppendMenu
+- AFXWIN/CMenu::Attach
+- AFXWIN/CMenu::CheckMenuItem
+- AFXWIN/CMenu::CheckMenuRadioItem
+- AFXWIN/CMenu::CreateMenu
+- AFXWIN/CMenu::CreatePopupMenu
+- AFXWIN/CMenu::DeleteMenu
+- AFXWIN/CMenu::DeleteTempMap
+- AFXWIN/CMenu::DestroyMenu
+- AFXWIN/CMenu::Detach
+- AFXWIN/CMenu::DrawItem
+- AFXWIN/CMenu::EnableMenuItem
+- AFXWIN/CMenu::FromHandle
+- AFXWIN/CMenu::GetDefaultItem
+- AFXWIN/CMenu::GetMenuContextHelpId
+- AFXWIN/CMenu::GetMenuInfo
+- AFXWIN/CMenu::GetMenuItemCount
+- AFXWIN/CMenu::GetMenuItemID
+- AFXWIN/CMenu::GetMenuItemInfo
+- AFXWIN/CMenu::GetMenuState
+- AFXWIN/CMenu::GetMenuString
+- AFXWIN/CMenu::GetSafeHmenu
+- AFXWIN/CMenu::GetSubMenu
+- AFXWIN/CMenu::InsertMenu
+- AFXWIN/CMenu::InsertMenuItem
+- AFXWIN/CMenu::LoadMenu
+- AFXWIN/CMenu::LoadMenuIndirect
+- AFXWIN/CMenu::MeasureItem
+- AFXWIN/CMenu::ModifyMenu
+- AFXWIN/CMenu::RemoveMenu
+- AFXWIN/CMenu::SetDefaultItem
+- AFXWIN/CMenu::SetMenuContextHelpId
+- AFXWIN/CMenu::SetMenuInfo
+- AFXWIN/CMenu::SetMenuItemBitmaps
+- AFXWIN/CMenu::SetMenuItemInfo
+- AFXWIN/CMenu::TrackPopupMenu
+- AFXWIN/CMenu::TrackPopupMenuEx
+- AFXWIN/CMenu::m_hMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,7 +172,7 @@ class CMenu : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameappendmenua--cmenuappendmenu"></a><a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>CMenu::AppendMenu  
  Добавляет новый элемент в конец меню.  
   
 ```  
@@ -212,7 +252,7 @@ BOOL AppendMenu(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="a-nameattacha--cmenuattach"></a><a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>CMenu::Attach  
  Присоединяет к существующему меню Windows `CMenu` объекта.  
   
 ```  
@@ -234,7 +274,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#21;](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="a-namecheckmenuitema--cmenucheckmenuitem"></a><a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
  Флажки для добавляет или удаляет флажки из пунктов меню во всплывающем меню.  
   
 ```  
@@ -269,7 +309,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::GetMenuState](#getmenustate).  
   
-##  <a name="a-namecheckmenuradioitema--cmenucheckmenuradioitem"></a><a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
  Проверяет указанный меню и делает элемент радио.  
   
 ```  
@@ -307,7 +347,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>Пример  
   В примере показано [ON_COMMAND_RANGE](http://msdn.microsoft.com/library/c52719fc-dd6e-48c9-af79-383f48d608e0).  
   
-##  <a name="a-namecmenua--cmenucmenu"></a><a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>CMenu::CMenu  
  Создает пустое меню и присоединяет его к `CMenu` объекта.  
   
 ```  
@@ -327,7 +367,7 @@ CMenu();
   
 - [Attach](#attach)  
   
-##  <a name="a-namecreatemenua--cmenucreatemenu"></a><a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>CMenu::CreateMenu  
  Меню создает и присоединяет его к `CMenu` объекта.  
   
 ```  
@@ -347,7 +387,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#22;](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="a-namecreatepopupmenua--cmenucreatepopupmenu"></a><a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
  Создает всплывающее меню и присоединяет его к `CMenu` объекта.  
   
 ```  
@@ -367,7 +407,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="a-namedeletemenua--cmenudeletemenu"></a><a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>CMenu::DeleteMenu  
  Удаляет элемент из меню.  
   
 ```  
@@ -399,7 +439,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="a-namedeletetempmapa--cmenudeletetempmap"></a><a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
  Вызывается автоматически `CWinApp` обработчик времени простоя, удаляет все временные `CMenu` объектов, созданных [FromHandle](#fromhandle) функции-члена.  
   
 ```  
@@ -412,7 +452,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#23;](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="a-namedestroymenua--cmenudestroymenu"></a><a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>CMenu::DestroyMenu  
  Уничтожает меню и ресурсы Windows, которые были использованы.  
   
 ```  
@@ -428,7 +468,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="a-namedetacha--cmenudetach"></a><a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>CMenu::Detach  
  Отсоединяет меню Windows `CMenu` объекта и возвращает дескриптор.  
   
 ```  
@@ -444,7 +484,7 @@ HMENU Detach();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#21;](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="a-namedrawitema--cmenudrawitem"></a><a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>CMenu::DrawItem  
  Вызывается инфраструктурой при изменении внешнего вида пользовательского меню изменения.  
   
 ```  
@@ -465,7 +505,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing&#24;](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="a-nameenablemenuitema--cmenuenablemenuitem"></a><a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
  Включает, отключает или затемняется пункта меню.  
   
 ```  
@@ -504,7 +544,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#25;](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="a-namefromhandlea--cmenufromhandle"></a><a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>CMenu::FromHandle  
  Возвращает указатель на `CMenu` объект, заданный дескриптор окна для меню.  
   
 ```  
@@ -526,7 +566,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="a-namegetdefaultitema--cmenugetdefaultitem"></a><a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
  Определяет элемент меню по умолчанию, заданного в меню.  
   
 ```  
@@ -556,7 +596,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namegetmenucontexthelpida--cmenugetmenucontexthelpid"></a><a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
  Извлекает идентификатор, связанный с помощью контекста `CMenu`.  
   
 ```  
@@ -569,7 +609,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namegetmenuinfoa--cmenugetmenuinfo"></a><a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
  Возвращает сведения о меню.  
   
 ```  
@@ -586,7 +626,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения информации о меню.  
   
-##  <a name="a-namegetmenuitemcounta--cmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
  Определяет количество элементов в меню всплывающее окно или верхнего уровня.  
   
 ```  
@@ -599,7 +639,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>Пример  
   В примере показано [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="a-namegetmenuitemida--cmenugetmenuitemid"></a><a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
  Получает идентификатор пункта меню для пункта меню, который расположен в позиции, определяемой `nPos`.  
   
 ```  
@@ -616,7 +656,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namegetmenuiteminfoa--cmenugetmenuiteminfo"></a><a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
  Извлекает сведения о пункта меню.  
   
 ```  
@@ -645,7 +685,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#26;](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="a-namegetmenustatea--cmenugetmenustate"></a><a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>CMenu::GetMenuState  
  Возвращает состояние заданный элемент меню или количество элементов в контекстном меню.  
   
 ```  
@@ -687,7 +727,7 @@ UINT GetMenuState(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#27;](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="a-namegetmenustringa--cmenugetmenustring"></a><a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>CMenu::GetMenuString  
  Копирует указанный буфер метку заданный элемент меню.  
   
 ```  
@@ -733,7 +773,7 @@ int GetMenuString(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namegetsafehmenua--cmenugetsafehmenu"></a><a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
  Возвращает `HMENU` Инкапсулированный данным итератором `CMenu` объекта, или **NULL** `CMenu` указателя.  
   
 ```  
@@ -743,7 +783,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="a-namegetsubmenua--cmenugetsubmenu"></a><a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
  Извлекает `CMenu` объекта из всплывающего меню.  
   
 ```  
@@ -760,7 +800,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::TrackPopupMenu](#trackpopupmenu).  
   
-##  <a name="a-nameinsertmenua--cmenuinsertmenu"></a><a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>CMenu::InsertMenu  
  Вставляет новый элемент меню в позиции, указанной параметром `nPosition` и перемещает другие элементы меню.  
   
 ```  
@@ -820,7 +860,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#28;](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="a-nameinsertmenuitema--cmenuinsertmenuitem"></a><a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
  Вставляет новый элемент меню в указанной позиции в меню.  
   
 ```  
@@ -843,7 +883,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>Примечания  
  Эта функция осуществляет [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), описанный в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloadmenua--cmenuloadmenu"></a><a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>CMenu::LoadMenu  
  Загружает ресурс меню из исполняемого файла приложения и присоединяет его к `CMenu` объекта.  
   
 ```  
@@ -867,7 +907,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#29;](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="a-nameloadmenuindirecta--cmenuloadmenuindirect"></a><a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
  Загружает ресурс из меню шаблона в памяти и присоединяет его к `CMenu` объекта.  
   
 ```  
@@ -895,7 +935,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#30;](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="a-namemhmenua--cmenumhmenu"></a><a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>CMenu::m_hMenu  
  Указывает `HMENU` дескриптор меню Windows подключенные к `CMenu` объекта.  
   
 ```  
@@ -905,7 +945,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="a-namemeasureitema--cmenumeasureitem"></a><a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>CMenu::MeasureItem  
  Вызывается инфраструктурой при создании меню с пользовательской отрисовки стиля.  
   
 ```  
@@ -926,7 +966,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing&#31;](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="a-namemodifymenua--cmenumodifymenu"></a><a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>CMenu::ModifyMenu  
  Изменяет существующий элемент меню в позиции, указанной параметром `nPosition`.  
   
 ```  
@@ -984,7 +1024,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-nameoperatorhmenua--cmenuoperator-hmenu"></a><a name="operator_hmenu"></a>CMenu::operator описателя HMENU  
+##  <a name="operator_hmenu"></a>CMenu::operator описателя HMENU  
  Этот оператор используется для получения дескриптора `CMenu` объекта.  
   
 ```  
@@ -997,7 +1037,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>Примечания  
  Дескриптор можно использовать для прямого вызова API-интерфейсов Windows.  
   
-##  <a name="a-nameoperatorneqa--cmenuoperator-"></a><a name="operator_neq"></a>CMenu::operator! =  
+##  <a name="operator_neq"></a>CMenu::operator! =  
  Определяет, если два меню логически не равны.  
   
 ```  
@@ -1011,7 +1051,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>Примечания  
  Проверяет объект меню с левой стороны не равно объект меню справа от оператора.  
   
-##  <a name="a-nameoperatoreqeqa--cmenuoperator-"></a><a name="operator_eq_eq"></a>CMenu::operator ==  
+##  <a name="operator_eq_eq"></a>CMenu::operator ==  
  Определяет, логически равны ли два меню.  
   
 ```  
@@ -1025,7 +1065,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>Примечания  
  Проверяет объект меню с левой стороны равно (в виде `HMENU` значение) в объект меню справа от оператора.  
   
-##  <a name="a-nameremovemenua--cmenuremovemenu"></a><a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>CMenu::RemoveMenu  
  Удаляет элемент меню со связанным всплывающее меню в меню.  
   
 ```  
@@ -1057,7 +1097,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namesetdefaultitema--cmenusetdefaultitem"></a><a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
  Задает элемент меню по умолчанию для указанного меню.  
   
 ```  
@@ -1082,7 +1122,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namesetmenucontexthelpida--cmenusetmenucontexthelpid"></a><a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
  Связывает идентификатор контекста справки с `CMenu`.  
   
 ```  
@@ -1102,7 +1142,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>Пример  
   В примере показано [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="a-namesetmenuinfoa--cmenusetmenuinfo"></a><a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
  Задает сведения о меню.  
   
 ```  
@@ -1119,7 +1159,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию, чтобы задать определенные сведения о меню.  
   
-##  <a name="a-namesetmenuitembitmapsa--cmenusetmenuitembitmaps"></a><a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
  Связывает указанный растровых изображений с элементом меню.  
   
 ```  
@@ -1165,7 +1205,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing&#33;](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="a-namesetmenuiteminfoa--cmenusetmenuiteminfo"></a><a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
  Изменение сведений о пункта меню.  
   
 ```  
@@ -1188,7 +1228,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>Примечания  
  Эта функция осуществляет [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), описанный в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nametrackpopupmenua--cmenutrackpopupmenu"></a><a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
  Отображает число с плавающей контекстное меню в указанном месте и отслеживает список элементов всплывающего меню.  
   
 ```  
@@ -1225,7 +1265,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#34;](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="a-nametrackpopupmenuexa--cmenutrackpopupmenuex"></a><a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
  Отображает число с плавающей контекстное меню в указанном месте и отслеживает список элементов всплывающего меню.  
   
 ```  
