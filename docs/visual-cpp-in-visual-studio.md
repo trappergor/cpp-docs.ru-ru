@@ -41,8 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
+ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
+ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
+ms.lasthandoff: 03/15/2017
 
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
@@ -65,6 +66,9 @@ ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
  [Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md) 
  Узнайте об улучшениях соответствия C++ в Visual Studio 2017. 
 
+ [Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)  
+ Список с данными о состоянии соответствия стандартам по каждой функции в Visual C++.
+
  [Журнал изменений Visual C++ 2003–2015](porting/visual-cpp-change-history-2003-2015.md)  
  Ознакомьтесь с критическими изменениями в предыдущих версиях.  
   
@@ -76,9 +80,6 @@ ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
   
  [Руководство по переносу и обновлению Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)  
  Руководство по переносу кода и обновлению проектов для Visual C++ в Visual Studio 2017, включая перенос кода C++ в Windows 10 и универсальную платформу Windows.  
-  
- [Поддержка возможностей C++11/14/17 (современный C++)](cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
- Подробнее о поддержке возможностей C++11 и С++14 в Visual C++.  
   
  [Блог команды разработчиков Visual C++](http://blogs.msdn.com/b/vcblog/)  
  Описание новых возможностей и актуальная информация от разработчиков [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].  
@@ -183,9 +184,4 @@ ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
  [Справочник по языку C](c-language/c-language-reference.md)   
  [Справочник по библиотеке времени выполнения C](c-runtime-library/c-run-time-library-reference.md)   
  [Внутренние объекты компилятора и язык ассемблера](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
