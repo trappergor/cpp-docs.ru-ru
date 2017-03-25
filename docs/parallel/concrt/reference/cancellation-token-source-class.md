@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token_source
+- cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 5c80977656308d3174f4141b131c27fd3c162bbe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtokensource-class"></a>Класс cancellation_token_source
@@ -54,24 +59,24 @@ class cancellation_token_source;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор cancellation_token_source](#ctor)|Перегружен. Создает новый `cancellation_token_source`. Источник можно использовать, чтобы сигнализировать об отмене некоторой отменяемой операции.|  
+|[cancellation_token_source](#ctor)|Перегружен. Создает новый `cancellation_token_source`. Источник можно использовать, чтобы сигнализировать об отмене некоторой отменяемой операции.|  
 |[~ cancellation_token_source деструктор](#dtor)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Cancel-метод](#cancel)|Отменяет токен. Любой элемент `task_group`, `structured_task_group` или `task`, который использует этот токен, будет отменен при этом вызове и создаст исключение в следующей точке прерывания.|  
-|[create_linked_source метод](#create_linked_source)|Перегружен. Создает `cancellation_token_source`, который отменяется при отмене предоставленного токена.|  
-|[get_token метод](#get_token)|Возвращает токен отмены, связанный с данным источником. Возвращенный токен можно опрашивать на предмет отмены или предоставить обратный вызов, если и когда произойдет отмена.|  
+|[Отмена](#cancel)|Отменяет токен. Любой элемент `task_group`, `structured_task_group` или `task`, который использует этот токен, будет отменен при этом вызове и создаст исключение в следующей точке прерывания.|  
+|[create_linked_source](#create_linked_source)|Перегружен. Создает `cancellation_token_source`, который отменяется при отмене предоставленного токена.|  
+|[get_token](#get_token)|Возвращает токен отмены, связанный с данным источником. Возвращенный токен можно опрашивать на предмет отмены или предоставить обратный вызов, если и когда произойдет отмена.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор! =-оператор](#operator_neq)||  
-|[оператор =-оператор](#operator_eq)||  
-|[оператор ==-оператор](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `cancellation_token_source`  
@@ -81,13 +86,13 @@ class cancellation_token_source;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namedtora-cancellationtokensource"></a><a name="dtor"></a>~ cancellation_token_source 
+##  <a name="dtor"></a>~ cancellation_token_source 
 
 ```
 ~cancellation_token_source();
 ```  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Отмена 
+##  <a name="cancel"></a>Отмена 
 
  Отменяет токен. Любой элемент `task_group`, `structured_task_group` или `task`, который использует этот токен, будет отменен при этом вызове и создаст исключение в следующей точке прерывания.  
   
@@ -95,7 +100,7 @@ class cancellation_token_source;
 void cancel() const;
 ```  
   
-##  <a name="a-namectora-cancellationtokensource"></a><a name="ctor"></a>cancellation_token_source 
+##  <a name="ctor"></a>cancellation_token_source 
 
  Создает новый `cancellation_token_source`. Источник можно использовать, чтобы сигнализировать об отмене некоторой отменяемой операции.  
   
@@ -110,7 +115,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ### <a name="parameters"></a>Параметры  
  `_Src`  
   
-##  <a name="a-namecreatelinkedsourcea-createlinkedsource"></a><a name="create_linked_source"></a>create_linked_source 
+##  <a name="create_linked_source"></a>create_linked_source 
 
  Создает `cancellation_token_source`, который отменяется при отмене предоставленного токена.  
   
@@ -136,7 +141,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ### <a name="return-value"></a>Возвращаемое значение  
  `cancellation_token_source`, который отменяется при отмене токена, предоставляемого параметром `_Src`.  
   
-##  <a name="a-namegettokena-gettoken"></a><a name="get_token"></a>get_token 
+##  <a name="get_token"></a>get_token 
 
  Возвращает токен отмены, связанный с данным источником. Возвращенный токен можно опрашивать на предмет отмены или предоставить обратный вызов, если и когда произойдет отмена.  
   
@@ -147,7 +152,7 @@ cancellation_token get_token() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Токен отмены, связанный с этим источником.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>оператор! = 
+##  <a name="operator_neq"></a>оператор! = 
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -158,7 +163,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -171,7 +176,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>оператор == 
+##  <a name="operator_eq_eq"></a>оператор == 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;
@@ -183,5 +188,5 @@ bool operator== (const cancellation_token_source& _Src) const;
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

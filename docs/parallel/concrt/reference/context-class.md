@@ -9,7 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Context
+- Context
+- CONCRT/concurrency::Context
+- CONCRT/concurrency::Context::Block
+- CONCRT/concurrency::Context::CurrentContext
+- CONCRT/concurrency::Context::GetId
+- CONCRT/concurrency::Context::GetScheduleGroupId
+- CONCRT/concurrency::Context::GetVirtualProcessorId
+- CONCRT/concurrency::Context::Id
+- CONCRT/concurrency::Context::IsCurrentTaskCollectionCanceling
+- CONCRT/concurrency::Context::IsSynchronouslyBlocked
+- CONCRT/concurrency::Context::Oversubscribe
+- CONCRT/concurrency::Context::ScheduleGroupId
+- CONCRT/concurrency::Context::Unblock
+- CONCRT/concurrency::Context::VirtualProcessorId
+- CONCRT/concurrency::Context::Yield
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 11d8252afdfe9c02869b14f976f8f348513c46b8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fd6f59e1e94329ef73e8fdbe946ec22241815e2e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="context-class"></a>Класс Context
@@ -60,19 +74,19 @@ class Context;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Block-метод](#block)|Блокирует текущий контекст.|  
-|[CurrentContext-метод](#currentcontext)|Возвращает указатель на текущий контекст.|  
-|[Метод GetId](#getid)|Возвращает идентификатор для контекста, уникальный в пределах планировщик, к которому принадлежит контекст.|  
-|[Getschedulegroupid-метод](#getschedulegroupid)|Возвращает идентификатор для группы расписаний, контекст в настоящее время занимается.|  
-|[Getvirtualprocessorid-метод](#getvirtualprocessorid)|Возвращает идентификатор для виртуального процессора, контекст выполняется в данный момент.|  
-|[ID-метод](#id)|Возвращает идентификатор для текущего контекста, уникальный в пределах планировщик, к которому принадлежит текущий контекст.|  
-|[Iscurrenttaskcollectioncanceling-метод](#iscurrenttaskcollectioncanceling)|Возвращает значение, указывающее, следует ли коллекция задач, которая выполняется в данный момент встроено в текущем контексте, в процессе активной отмены (или будет вскоре).|  
-|[Issynchronouslyblocked-метод](#issynchronouslyblocked)|Определяет ли контекст синхронно блокироваться. Контекст считается синхронно блокированным, если он явно выполнил действие, которое привело к блокировке.|  
-|[Oversubscribe-метод](#oversubscribe)|Внедряет дополнительный виртуальный процессор в планировщике до конца блока кода при вызове контекста выполнения на одном из виртуальных процессоров в данном планировщике.|  
-|[Schedulegroupid-метод](#schedulegroupid)|Возвращает идентификатор для группы расписаний, занимается текущего контекста.|  
-|[Unblock-метод](#unblock)|Разблокирует контекст и приводит к запуску.|  
-|[Virtualprocessorid-метод](#virtualprocessorid)|Возвращает идентификатор для виртуального процессора, выполняемый в текущий контекст.|  
-|[Yield-метод](#yield)|Уступает выполнение, чтобы мог выполняться другой контекст. Если доступных контекстов для уступки выполнения нет, планировщик может уступить выполнение другому потоку операционной системы.|  
+|[Block](#block)|Блокирует текущий контекст.|  
+|[CurrentContext](#currentcontext)|Возвращает указатель на текущий контекст.|  
+|[GetId](#getid)|Возвращает идентификатор для контекста, уникальный в пределах планировщик, к которому принадлежит контекст.|  
+|[GetScheduleGroupId](#getschedulegroupid)|Возвращает идентификатор для группы расписаний, контекст в настоящее время занимается.|  
+|[GetVirtualProcessorId](#getvirtualprocessorid)|Возвращает идентификатор для виртуального процессора, контекст выполняется в данный момент.|  
+|[Идентификатор](#id)|Возвращает идентификатор для текущего контекста, уникальный в пределах планировщик, к которому принадлежит текущий контекст.|  
+|[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Возвращает значение, указывающее, следует ли коллекция задач, которая выполняется в данный момент встроено в текущем контексте, в процессе активной отмены (или будет вскоре).|  
+|[IsSynchronouslyBlocked](#issynchronouslyblocked)|Определяет ли контекст синхронно блокироваться. Контекст считается синхронно блокированным, если он явно выполнил действие, которое привело к блокировке.|  
+|[Использовать превышение лимита подписки](#oversubscribe)|Внедряет дополнительный виртуальный процессор в планировщике до конца блока кода при вызове контекста выполнения на одном из виртуальных процессоров в данном планировщике.|  
+|[ScheduleGroupId](#schedulegroupid)|Возвращает идентификатор для группы расписаний, занимается текущего контекста.|  
+|[Разблокировать](#unblock)|Разблокирует контекст и приводит к запуску.|  
+|[VirtualProcessorId](#virtualprocessorid)|Возвращает идентификатор для виртуального процессора, выполняемый в текущий контекст.|  
+|[Yield](#yield)|Уступает выполнение, чтобы мог выполняться другой контекст. Если доступных контекстов для уступки выполнения нет, планировщик может уступить выполнение другому потоку операционной системы.|  
   
 ## <a name="remarks"></a>Примечания  
  Планировщик среды выполнения с параллелизмом (см. [планировщика](scheduler-class.md)) в очереди контекстов выполнения использует для выполнения работы в приложении. Поток Win32 является примером контекста выполнения в операционной системе Windows.  
@@ -89,7 +103,7 @@ class Context;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameblocka-block"></a><a name="block"></a>Блок 
+##  <a name="block"></a>Блок 
 
  Блокирует текущий контекст.  
   
@@ -106,13 +120,13 @@ static void __cdecl Block();
   
  Этот метод можно вызвать ряд исключений, включая [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).  
   
-##  <a name="a-namedtora-context"></a><a name="dtor"></a>~ Контекста 
+##  <a name="dtor"></a>~ Контекста 
 
 ```
 virtual ~Context();
 ```  
   
-##  <a name="a-namecurrentcontexta-currentcontext"></a><a name="currentcontext"></a>CurrentContext 
+##  <a name="currentcontext"></a>CurrentContext 
 
  Возвращает указатель на текущий контекст.  
   
@@ -126,7 +140,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="remarks"></a>Примечания  
  В результате этого метода в процессе будет создан планировщик по умолчанию и/или присоединен к вызывающему контексту, если отсутствует планировщик, в данный момент связанный с вызывающим контекстом.  
   
-##  <a name="a-namegetida-getid"></a><a name="getid"></a>GetId 
+##  <a name="getid"></a>GetId 
 
  Возвращает идентификатор для контекста, уникальный в пределах планировщик, к которому принадлежит контекст.  
   
@@ -137,7 +151,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор контекста, уникальный в пределах планировщик, к которому принадлежит контекст.  
   
-##  <a name="a-namegetschedulegroupida-getschedulegroupid"></a><a name="getschedulegroupid"></a>GetScheduleGroupId 
+##  <a name="getschedulegroupid"></a>GetScheduleGroupId 
 
  Возвращает идентификатор для группы расписаний, контекст в настоящее время занимается.  
   
@@ -151,7 +165,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение из этого метода является результатом проверки группы планирования, выполняемый в контексте. Если этот метод вызывается в контексте, отличном от текущего контекста, значение может быть устаревшим в момент возврата и полагаться на него нельзя. Как правило этот метод используется для только для целей отладки или трассировки.  
   
-##  <a name="a-namegetvirtualprocessorida-getvirtualprocessorid"></a><a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
+##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
 
  Возвращает идентификатор для виртуального процессора, контекст выполняется в данный момент.  
   
@@ -165,7 +179,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение из этого метода является результатом проверки виртуального процессора, выполняемый в контексте. Это значение может быть устаревшим в момент возврата, и на него нельзя полагаться. Как правило этот метод используется для только для целей отладки или трассировки.  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Идентификатор 
+##  <a name="id"></a>Идентификатор 
 
  Возвращает идентификатор для текущего контекста, уникальный в пределах планировщик, к которому принадлежит текущий контекст.  
   
@@ -176,7 +190,7 @@ static unsigned int __cdecl Id();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если текущий контекст присоединен к планировщик, идентификатор для текущего контекста, уникальный в пределах планировщик, к которому принадлежит текущий контекст; в противном случае — значение `-1`.  
   
-##  <a name="a-nameiscurrenttaskcollectioncancelinga-iscurrenttaskcollectioncanceling"></a><a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
+##  <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
 
  Возвращает значение, указывающее, следует ли коллекция задач, которая выполняется в данный момент встроено в текущем контексте, в процессе активной отмены (или будет вскоре).  
   
@@ -187,7 +201,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если планировщик присоединен к вызывающему контексту и группа задач выполняет задачу встроено в данный контекст, указывающее, находится ли этой группе задач, в процессе активной отмены (или будет вскоре); в противном случае — значение `false`.  
   
-##  <a name="a-nameissynchronouslyblockeda-issynchronouslyblocked"></a><a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
+##  <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
 
  Определяет ли контекст синхронно блокироваться. Контекст считается синхронно блокированным, если он явно выполнил действие, которое привело к блокировке.  
   
@@ -203,7 +217,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
   
  Возвращаемое значение из этого метода является образец ли контекст синхронно блокировка на данный момент. Это значение может быть устаревшим в момент возврата и может использоваться только в особых обстоятельствах.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>оператор delete 
+##  <a name="operator_delete"></a>оператор delete 
 
  Объект `Context` объект уничтожается внутренне средой выполнения. Его невозможно удалить явно.  
   
@@ -215,7 +229,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  Указатель на объект для удаления.  
   
-##  <a name="a-nameoversubscribea-oversubscribe"></a><a name="oversubscribe"></a>Использовать превышение лимита подписки 
+##  <a name="oversubscribe"></a>Использовать превышение лимита подписки 
 
  Внедряет дополнительный виртуальный процессор в планировщике до конца блока кода при вызове контекста выполнения на одном из виртуальных процессоров в данном планировщике.  
   
@@ -227,7 +241,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
  `_BeginOversubscription`  
  Если `true`, указывает на то, что дополнительный виртуальный процессор должны быть добавлены в течение переподписки. Если `false`, указывает на то что превышение лимита подписки следует завершить и ранее добавленный виртуальный процессор должны быть удалены.  
   
-##  <a name="a-nameschedulegroupida-schedulegroupid"></a><a name="schedulegroupid"></a>ScheduleGroupId 
+##  <a name="schedulegroupid"></a>ScheduleGroupId 
 
  Возвращает идентификатор для группы расписаний, занимается текущего контекста.  
   
@@ -238,7 +252,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если текущий контекст присоединен к планировщик и работает над группой расписаний, идентификатор для планировщика группу, текущий контекст работает; в противном случае — значение `-1`.  
   
-##  <a name="a-nameunblocka-unblock"></a><a name="unblock"></a>Разблокировать 
+##  <a name="unblock"></a>Разблокировать 
 
  Разблокирует контекст и приводит к запуску.  
   
@@ -253,7 +267,7 @@ virtual void Unblock() = 0;
   
  Имейте в виду, что существует критический период между точкой, где код публикует его контекст для другого потока, который может вызвать `Unblock` метод и точки, где вызов фактического метода `Block` выполняется. Во время этого периода не следует вызывать ни один метод, который может блокировать и разблокировать по своим собственным причинам (например, получение блокировки). Вызовы `Block` и `Unblock` метод не отслеживают причины блокировки и разблокирования. Только один объект должен быть владельцем `Block` и `Unblock` пары.  
   
-##  <a name="a-namevirtualprocessorida-virtualprocessorid"></a><a name="virtualprocessorid"></a>VirtualProcessorId 
+##  <a name="virtualprocessorid"></a>VirtualProcessorId 
 
  Возвращает идентификатор для виртуального процессора, выполняемый в текущий контекст.  
   
@@ -267,7 +281,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение из этого метода является результатом проверки виртуального процессора, выполняемый в текущий контекст. Это значение может быть устаревшим в момент возврата, и на него нельзя полагаться. Как правило этот метод используется для только для целей отладки или трассировки.  
   
-##  <a name="a-nameyielda-yield"></a><a name="yield"></a>Yield 
+##  <a name="yield"></a>Yield 
 
  Уступает выполнение, чтобы мог выполняться другой контекст. Если доступных контекстов для уступки выполнения нет, планировщик может уступить выполнение другому потоку операционной системы.  
   
@@ -278,7 +292,7 @@ static void __cdecl Yield();
 ### <a name="remarks"></a>Примечания  
  В результате этого метода в процессе будет создан планировщик по умолчанию и/или присоединен к вызывающему контексту, если отсутствует планировщик, в данный момент связанный с вызывающим контекстом.  
   
-##  <a name="a-nameyieldexecutiona-yieldexecution"></a><a name="yieldexecution"></a>YieldExecution 
+##  <a name="yieldexecution"></a>YieldExecution 
 
  Уступает выполнение, чтобы мог выполняться другой контекст. Если доступных контекстов для уступки выполнения нет, планировщик может уступить выполнение другому потоку операционной системы.  
   

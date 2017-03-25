@@ -9,7 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::array
+- array
+- AMP/array
+- AMP/Concurrency::array::array
+- AMP/Concurrency::array::copy_to
+- AMP/Concurrency::array::data
+- AMP/Concurrency::array::get_accelerator_view
+- AMP/Concurrency::array::get_associated_accelerator_view
+- AMP/Concurrency::array::get_cpu_access_type
+- AMP/Concurrency::array::get_extent
+- AMP/Concurrency::array::reinterpret_as
+- AMP/Concurrency::array::section
+- AMP/Concurrency::array::view_as
+- AMP/Concurrency::array::rank
+- AMP/Concurrency::array::accelerator_view
+- AMP/Concurrency::array::associated_accelerator_view
+- AMP/Concurrency::array::cpu_access_type
+- AMP/Concurrency::array::extent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +50,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c1708bfedc35076f1d10f6c4dd128bb428a7855e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 470918d62357a8dd463db35b4d929e7ec5c2f251
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="array-class"></a>Класс array
@@ -68,24 +84,24 @@ friend class array;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[copy_to метод](#copy_to)|Копирует содержимое массива в другой массив.|  
-|[Метод данных](#data)|Возвращает указатель на необработанные данные массива.|  
-|[get_accelerator_view метод](#get_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.|  
-|[get_associated_accelerator_view метод](#get_associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) , передается в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.|  
-|[Метод get_cpu_access_type](#get_cpu_access_type)|Возвращает [access_type](concurrency-namespace-enums-amp.md#access_type) массива. Этот метод может осуществляться только на ЦП.|  
-|[get_extent метод](#get_extent)|Возвращает [экстент](extent-class.md) объект массива.|  
-|[reinterpret_as метод](#reinterpret_as)|Возвращает одномерный массив, содержащий все элементы в `array` объекта.|  
-|[раздел метод](#section)|Возвращает подраздел `array` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.|  
-|[view_as метод](#view_as)|Возвращает [array_view](array-view-class.md) , получаемый из `array` объекта.|  
+|[copy_to](#copy_to)|Копирует содержимое массива в другой массив.|  
+|[data](#data)|Возвращает указатель на необработанные данные массива.|  
+|[get_accelerator_view](#get_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) , передается в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.|  
+|[get_cpu_access_type](#get_cpu_access_type)|Возвращает [access_type](concurrency-namespace-enums-amp.md#access_type) массива. Этот метод может осуществляться только на ЦП.|  
+|[get_extent](#get_extent)|Возвращает [экстент](extent-class.md) объект массива.|  
+|[reinterpret_as](#reinterpret_as)|Возвращает одномерный массив, содержащий все элементы в `array` объекта.|  
+|[section](#section)|Возвращает подраздел `array` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.|  
+|[view_as](#view_as)|Возвращает [array_view](array-view-class.md) , получаемый из `array` объекта.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор std::vector&lt;value_type&gt; оператор](#operator_vec)|Использует `copy(*this, vector)` неявно Преобразуемый массив std::[вектор](../../../standard-library/vector-class.md) объекта.|  
-|[Оператор Operator()](#operator_call)|Возвращает значение элемента, определяются параметрами.|  
-|[Оператор Operator]](#operator_at)|Возвращает элемент, который находится по указанному индексу.|  
-|[оператор =-оператор](#operator_eq)|Копирует содержимое указанного `array` объекта в другой.|  
+|[оператор std::vector&lt;value_type&gt;](#operator_vec)|Использует `copy(*this, vector)` неявно Преобразуемый массив std::[вектор](../../../standard-library/vector-class.md) объекта.|  
+|[Operator()](#operator_call)|Возвращает значение элемента, определяются параметрами.|  
+|[оператор]](#operator_at)|Возвращает элемент, который находится по указанному индексу.|  
+|[operator=](#operator_eq)|Копирует содержимое указанного `array` объекта в другой.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -97,10 +113,10 @@ friend class array;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[accelerator_view элемент данных](#accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.|  
-|[associated_accelerator_view элемент данных](#associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) , передается в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.|  
-|[cpu_access_type элемент данных](#cpu_access_type)|Возвращает [access_type](concurrency-namespace-enums-amp.md#access_type) , представляющий доступ ЦП хранилища массива.|  
-|[экстент элемент данных](#extent)|Получает экстент, который определяет форму массива.|  
+|[accelerator_view](#accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) , передается в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.|  
+|[cpu_access_type](#cpu_access_type)|Возвращает [access_type](concurrency-namespace-enums-amp.md#access_type) , представляющий доступ ЦП хранилища массива.|  
+|[extent](#extent)|Получает экстент, который определяет форму массива.|  
   
 ## <a name="remarks"></a>Примечания  
  Тип `array<T,N>` представляет плотным и обычным (не ступенчатые) *N*-мерный массив, расположенный в определенном расположении, например ускоритель или ЦП. Тип данных элементов в массиве является `T`, который должен быть типа, совместимого с ускорителем целевой. Несмотря на то что ранг, `N`, (из массива определяется статически и часть типа, степени массива определяется средой выполнения и выражается с помощью класса `extent<N>`.  
@@ -127,7 +143,7 @@ friend class array;
   
  **Пространство имен** : Concurrency  
   
-##  <a name="a-namedtora-array"></a><a name="dtor"></a>~ массива 
+##  <a name="dtor"></a>~ массива 
 
  Уничтожает `array` объекта.  
   
@@ -135,7 +151,7 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="a-nameacceleratorviewa-acceleratorview"></a><a name="accelerator_view"></a>accelerator_view 
+##  <a name="accelerator_view"></a>accelerator_view 
 
  Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.  
   
@@ -143,7 +159,7 @@ friend class array;
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
 ```  
   
-##  <a name="a-namectora-array"></a><a name="ctor"></a>Массив 
+##  <a name="ctor"></a>Массив 
 
  Инициализирует новый экземпляр [класс array](array-class.md). Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы выполняются только в ЦП. Они не может выполняться на целевом Direct3D.  
   
@@ -446,7 +462,7 @@ array(array&& _Other) restrict(cpu);
  `value_type`  
  Тип данных элементов, которые будут скопированы.  
   
-##  <a name="a-nameassociatedacceleratorviewa-associatedacceleratorview"></a><a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
 
  Возвращает второй [accelerator_view](accelerator-view-class.md) , передается в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.  
   
@@ -454,7 +470,7 @@ array(array&& _Other) restrict(cpu);
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="a-namecopytoa-copyto"></a><a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a>copy_to 
 
  Копирует содержимое `array` в другой `array`.  
   
@@ -470,7 +486,7 @@ void copy_to(
  `_Dest`  
  [Array_view](array-view-class.md) объект для копирования.  
   
-##  <a name="a-namecpuaccesstypea-cpuaccesstype"></a><a name="cpu_access_type"></a>cpu_access_type 
+##  <a name="cpu_access_type"></a>cpu_access_type 
 
  Возвращает access_type ЦП, допустимое для данного массива.  
   
@@ -478,7 +494,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="a-namedataa-data"></a><a name="data"></a>данные 
+##  <a name="data"></a>данные 
 
  Возвращает указатель на необработанные данные `array`.  
   
@@ -491,7 +507,7 @@ const value_type* data() const restrict(amp, cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на необработанные данные массива.  
   
-##  <a name="a-nameextenta-extent"></a><a name="extent"></a>экстент 
+##  <a name="extent"></a>экстент 
 
  Возвращает [экстент](extent-class.md) объект, который определяет форму `array`.  
   
@@ -499,9 +515,9 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="a-namegetacceleratorviewa-getacceleratorview"></a><a name="get_accelerator_view"></a>get_accelerator_view 
+##  <a name="get_accelerator_view"></a>get_accelerator_view 
 
- Возвращает [accelerator_view](accelerator-view-class.md) объект, представляющий расположение где `array` выделен объект. Это свойство может осуществляться только на ЦП.  
+ Возвращает [accelerator_view](accelerator-view-class.md) объект, представляющий расположение которых `array` выделен объект. Это свойство может осуществляться только на ЦП.  
   
 ```  
 Concurrency::accelerator_view get_accelerator_view() const;  
@@ -510,7 +526,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  `accelerator_view` Объект, представляющий расположение где `array` выделен объект.  
   
-##  <a name="a-namegetassociatedacceleratorviewa-getassociatedacceleratorview"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
 
  Возвращает второй [accelerator_view](accelerator-view-class.md) , передается в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.  
   
@@ -521,7 +537,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ### <a name="return-value"></a>Возвращаемое значение  
  Второй [accelerator_view](accelerator-view-class.md) объект, передаваемый конструктору промежуточной.  
   
-##  <a name="a-namegetcpuaccesstypea-getcpuaccesstype"></a><a name="get_cpu_access_type"></a>get_cpu_access_type 
+##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
 
  Возвращает access_type ЦП, допустимых для данного массива.  
   
@@ -531,7 +547,7 @@ access_type get_cpu_access_type() const restrict(cpu);
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namegetextenta-getextent"></a><a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a>get_extent 
 
  Возвращает [экстент](extent-class.md) объекта `array`.  
   
@@ -542,7 +558,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  `extent` Объекта `array`.  
   
-##  <a name="a-nameoperatorveca-operator-stdvectorltvaluetypegt"></a><a name="operator_vec"></a>оператор std::vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a>оператор std::vector&lt;value_type&gt; 
 
  Использует `copy(*this, vector)` неявное преобразование массива в объект std::vector.  
   
@@ -557,7 +573,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект типа `vector<T>` , содержащий копию данных, содержащихся в массиве.  
   
-##  <a name="a-nameoperatorcalla-operator"></a><a name="operator_call"></a>Operator() 
+##  <a name="operator_call"></a>Operator() 
 
  Возвращает значение элемента, определяются параметрами.  
   
@@ -598,7 +614,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента с указанными параметрами.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>оператор] 
+##  <a name="operator_at"></a>оператор] 
 
  Возвращает элемент, который находится по указанному индексу.  
   
@@ -623,7 +639,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Возвращаемое значение  
  Элемент, который находится по указанному индексу.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
  Копирует содержимое указанного `array` объекта.  
   
@@ -646,14 +662,14 @@ array& operator= (
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `array` объекта.  
   
-##  <a name="a-nameranka-rank"></a><a name="rank"></a>Ранг 
+##  <a name="rank"></a>Ранг 
 
  Сохраняет ранг объекта `array`.  
   
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="a-namereinterpretasa-reinterpretas"></a><a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a>reinterpret_as 
 
 Повторно интерпретирует к массиву по одномерный массив array_view, который при необходимости может иметь тип отличается от исходного массива.
 
@@ -687,7 +703,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```  
   
-##  <a name="a-namesectiona-section"></a><a name="section"></a>раздел 
+##  <a name="section"></a>раздел 
 
  Возвращает подраздел `array` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область.  
   
@@ -789,7 +805,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает подраздел `array` объект, находящийся в указанный источник и, Дополнительно, который имеет указанную область. Только если `index` указан объект, подраздел содержит все элементы в сетке связанные, имеют индексы, превышающие индексы элементов в `index` объекта.  
   
-##  <a name="a-nameviewasa-viewas"></a><a name="view_as"></a>view_as 
+##  <a name="view_as"></a>view_as 
 
  Повторно интерпретирует этот массив в качестве [array_view](array-view-class.md) другого ранга.  
   

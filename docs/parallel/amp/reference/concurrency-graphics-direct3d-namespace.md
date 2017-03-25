@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Пространство имен Concurrency::graphics::direct3d
@@ -53,11 +53,11 @@ namespace direct3d;
   
 |Имя<br /><br /> Описание|  
 |--------------------------|  
-|[Функция get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get интерфейс состояния Direct3D пробы данного сочетания клавиш просмотра, представляющий указанный образец объекта.|  
-|[Функция get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Возвращает указанный базовый интерфейс текстуры Direct3D [текстуры](texture-class.md) объекта.|  
-|[Функция make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Создание образца из указателя на интерфейс состояния Direct3D пробы.|  
-|[Функция make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Создает [текстуры](texture-class.md) объекта, используя заданные параметры.|  
-|[Функция msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Сравнивает значение 4-байтовое ссылки и 8-байтовое исходного значения и собирает вектора 4 сумм.|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get интерфейс состояния Direct3D пробы данного сочетания клавиш просмотра, представляющий указанный образец объекта.|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Возвращает указанный базовый интерфейс текстуры Direct3D [текстуры](texture-class.md) объекта.|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Создание образца из указателя на интерфейс состояния Direct3D пробы.|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Создает [текстуры](texture-class.md) объекта, используя заданные параметры.|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Сравнивает значение 4-байтовое ссылки и 8-байтовое исходного значения и собирает вектора 4 сумм.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_graphics.h  
@@ -65,5 +65,5 @@ namespace direct3d;
  **Пространство имен:** Concurrency::graphics  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

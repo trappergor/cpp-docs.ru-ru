@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 003cf8a4e1803154b4224c30524f8a302f10ea8f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cb780d4164099b9b2b609a0d430054af8cd8aa25
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="double2-class"></a>Класс double_2
@@ -88,31 +88,31 @@ class double_2;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод double_2::get_X||  
-|Метод double_2::get_xy||  
-|Метод double_2::get_y||  
-|Метод double_2::get_yx||  
-|Метод double_2::ref_g||  
-|Метод double_2::ref_r||  
-|Метод double_2::ref_x||  
-|Метод double_2::ref_y||  
-|Метод double_2::set_X||  
-|Метод double_2::set_xy||  
-|Метод double_2::set_y||  
-|Метод double_2::set_yx||  
+|double_2::get_X||  
+|double_2::get_xy||  
+|double_2::get_y||  
+|double_2::get_yx||  
+|double_2::ref_g||  
+|double_2::ref_r||  
+|double_2::ref_x||  
+|double_2::ref_y||  
+|double_2::set_X||  
+|double_2::set_xy||  
+|double_2::set_y||  
+|double_2::set_yx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|double_2::operator оператор||  
-|double_2::operator - оператор||  
-|double_2::operator * =-оператор||  
-|double_2::operator / =-оператор||  
-|double_2::operator оператор ++||  
-|Оператор += double_2::operator||  
-|double_2::operator =-оператор||  
-|double_2::operator-= оператор||  
+|double_2::operator-||  
+|double_2::operator--||  
+|double_2::operator * =||  
+|double_2::operator / =||  
+|double_2::operator ++||  
+|double_2::operator +=||  
+|double_2::operator =||  
+|double_2::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -124,14 +124,14 @@ class double_2;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных double_2::g||  
-|Элемент данных double_2::GR||  
-|Элемент данных double_2::r||  
-|Элемент данных double_2::RG||  
-|Элемент данных double_2::x||  
-|Элемент данных double_2::XY||  
-|Элемент данных double_2::y||  
-|Элемент данных double_2::YX||  
+|double_2::g||  
+|double_2::GR||  
+|double_2::r||  
+|double_2::RG||  
+|double_2::x||  
+|double_2::XY||  
+|double_2::y||  
+|double_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `double_2`  
@@ -141,7 +141,7 @@ class double_2;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-double2"></a><a name="ctor"></a>double_2 
+##  <a name="ctor"></a>double_2 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -204,12 +204,12 @@ explicit inline double_2(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-namedouble2sizea-size"></a><a name="double_2__size"></a>размер 
+##  <a name="double_2__size"></a>размер 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

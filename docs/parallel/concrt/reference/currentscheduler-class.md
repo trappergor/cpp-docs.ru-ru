@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::CurrentScheduler
+- CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler::Create
+- CONCRT/concurrency::CurrentScheduler::CreateScheduleGroup
+- CONCRT/concurrency::CurrentScheduler::Detach
+- CONCRT/concurrency::CurrentScheduler::Get
+- CONCRT/concurrency::CurrentScheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::CurrentScheduler::GetPolicy
+- CONCRT/concurrency::CurrentScheduler::Id
+- CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
+- CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
+- CONCRT/concurrency::CurrentScheduler::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 514f0abb6e317a7b133203a2f089d492a46ae4c4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 9536dd28eeb375f3b9e018539cefb338812e340b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="currentscheduler-class"></a>Класс CurrentScheduler
@@ -54,16 +65,16 @@ class CurrentScheduler;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CREATE-метод](#create)|Создает новый планировщик, поведение которого описывается `_Policy` параметр и присоединяет его к контексту вызова. Вновь созданный планировщик становится текущий планировщик для вызывающего контекста.|  
-|[Createschedulegroup-метод](#createschedulegroup)|Перегружен. Создает новую группу расписаний внутри планировщика, связанного с вызывающим контекстом. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|  
-|[Detach-метод](#detach)|Отсоединяет текущий планировщик от вызывающего контекста и восстанавливает ранее присоединенный планировщик как текущего планировщика, если таковой существует. После возврата этого метода, вызывающий контекст затем управляется планировщика, который ранее был присоединен к контексту с помощью `CurrentScheduler::Create` или `Scheduler::Attach` метод.|  
-|[GET-метод](#get)|Возвращает указатель на планировщик, связанный с контекстом вызывающим, также называемая текущего планировщика.|  
-|[Getnumberofvirtualprocessors-метод](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика, связанного с вызывающим контекстом.|  
-|[GetPolicy-метод](#getpolicy)|Возвращает копию политики, созданные с текущего планировщика.|  
-|[ID-метод](#id)|Возвращает уникальный идентификатор для текущего планировщика.|  
-|[Isavailablelocation-метод](#isavailablelocation)|Определяет, доступно ли данное расположение в текущем планировщике.|  
-|[Registershutdownevent-метод](#registershutdownevent)|Причины, переданный дескриптор события Windows `_ShutdownEvent` параметр сигнал, когда планировщик, связанный с текущим контекстом, завершает работу и удаляет себя. В то время, когда событие получает сигнал вся работа, запланированная планировщику завершена. Таким способом можно зарегистрировать несколько событий завершения работы.|  
-|[ScheduleTask-метод](#scheduletask)|Перегружен. Назначает легкое задание внутри планировщика, связанного с вызывающим контекстом. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.|  
+|[Создание](#create)|Создает новый планировщик, поведение которого описывается `_Policy` параметр и присоединяет его к контексту вызова. Вновь созданный планировщик становится текущий планировщик для вызывающего контекста.|  
+|[CreateScheduleGroup](#createschedulegroup)|Перегружен. Создает новую группу расписаний внутри планировщика, связанного с вызывающим контекстом. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|  
+|[Detach](#detach)|Отсоединяет текущий планировщик от вызывающего контекста и восстанавливает ранее присоединенный планировщик как текущего планировщика, если таковой существует. После возврата этого метода, вызывающий контекст затем управляется планировщика, который ранее был присоединен к контексту с помощью `CurrentScheduler::Create` или `Scheduler::Attach` метод.|  
+|[Получить](#get)|Возвращает указатель на планировщик, связанный с контекстом вызывающим, также называемая текущего планировщика.|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика, связанного с вызывающим контекстом.|  
+|[GetPolicy](#getpolicy)|Возвращает копию политики, созданные с текущего планировщика.|  
+|[Идентификатор](#id)|Возвращает уникальный идентификатор для текущего планировщика.|  
+|[IsAvailableLocation](#isavailablelocation)|Определяет, доступно ли данное расположение в текущем планировщике.|  
+|[RegisterShutdownEvent](#registershutdownevent)|Причины, переданный дескриптор события Windows `_ShutdownEvent` параметр сигнал, когда планировщик, связанный с текущим контекстом, завершает работу и удаляет себя. В то время, когда событие получает сигнал вся работа, запланированная планировщику завершена. Таким способом можно зарегистрировать несколько событий завершения работы.|  
+|[ScheduleTask](#scheduletask)|Перегружен. Назначает легкое задание внутри планировщика, связанного с вызывающим контекстом. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.|  
   
 ## <a name="remarks"></a>Примечания  
  Если планировщик (см. [планировщика](scheduler-class.md)) связанных с контекстом вызывающим, многие методы в `CurrentScheduler` класса приведет к вложение планировщик по умолчанию для данного процесса. Это также означает, что планировщик по умолчанию процесса создается во время такого вызова.  
@@ -76,7 +87,7 @@ class CurrentScheduler;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>Создание 
+##  <a name="create"></a>Создание 
 
  Создает новый планировщик, поведение которого описывается `_Policy` параметр и присоединяет его к контексту вызова. Вновь созданный планировщик становится текущий планировщик для вызывающего контекста.  
   
@@ -97,7 +108,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  Этот метод можно вызвать ряд исключений, включая [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) и [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  Создает новую группу расписаний внутри планировщика, связанного с вызывающим контекстом. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.  
   
@@ -121,7 +132,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  Обратите внимание, что если явно создан данный планировщик, необходимо освободить все ссылки на группы, расписания, перед освобождением ссылки на планировщик, путем отсоединения текущего контекста из него.  
   
-##  <a name="a-namedetacha-detach"></a><a name="detach"></a>Отсоединение 
+##  <a name="detach"></a>Отсоединение 
 
  Отсоединяет текущий планировщик от вызывающего контекста и восстанавливает ранее присоединенный планировщик как текущего планировщика, если таковой существует. После возврата этого метода, вызывающий контекст затем управляется планировщика, который ранее был присоединен к контексту с помощью `CurrentScheduler::Create` или `Scheduler::Attach` метод.  
   
@@ -136,7 +147,7 @@ static void __cdecl Detach();
   
  Вызов этого метода из контекста внутри и управляемый с помощью планировщика или контекст, который был подключен, используя метод, отличный от [Scheduler::Attach](scheduler-class.md#attach) или [CurrentScheduler::Create](#create) методы, приведет к [improper_scheduler_detach](improper-scheduler-detach-class.md) исключения.  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Получить 
+##  <a name="get"></a>Получить 
 
  Возвращает указатель на планировщик, связанный с контекстом вызывающим, также называемая текущего планировщика.  
   
@@ -150,7 +161,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>Примечания  
  В результате этого метода в процессе будет создан планировщик по умолчанию и/или присоединен к вызывающему контексту, если отсутствует планировщик, в данный момент связанный с вызывающим контекстом. Дополнительные ссылки будет располагаться на `Scheduler` объект, возвращаемый этим методом.  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  Возвращает текущее число виртуальных процессоров для планировщика, связанного с вызывающим контекстом.  
   
@@ -166,7 +177,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  Возвращаемое значение из этого метода является результатом проверки число виртуальных процессоров для планировщика, связанного с вызывающим контекстом. Это значение может быть устаревшим в момент возврата.  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  Возвращает копию политики, созданные с текущего планировщика.  
   
@@ -180,7 +191,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Примечания  
  В результате этого метода в процессе будет создан планировщик по умолчанию и/или присоединен к вызывающему контексту, если отсутствует планировщик, в данный момент связанный с вызывающим контекстом.  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Идентификатор 
+##  <a name="id"></a>Идентификатор 
 
  Возвращает уникальный идентификатор для текущего планировщика.  
   
@@ -194,7 +205,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>Примечания  
  Этот метод не приведет к вложению планировщика, если вызывающий контекст не связан с планировщика.  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  Определяет, доступно ли данное расположение в текущем планировщике.  
   
@@ -214,7 +225,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  Обратите внимание, что возвращаемое значение является результатом проверки доступности указанного расположения в данный момент. При наличии нескольких планировщиков динамическое управление ресурсами может добавлять или забирать ресурсы у планировщиков в любой момент. Если это произошло, доступность заданного расположения может измениться.  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Причины, переданный дескриптор события Windows `_ShutdownEvent` параметр сигнал, когда планировщик, связанный с текущим контекстом, завершает работу и удаляет себя. В то время, когда событие получает сигнал вся работа, запланированная планировщику завершена. Таким способом можно зарегистрировать несколько событий завершения работы.  
   
@@ -229,7 +240,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>Примечания  
  Если планировщик присоединен к вызывающему контексту, вызов этого метода приведет к [scheduler_not_attached](scheduler-not-attached-class.md) исключения.  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Назначает легкое задание внутри планировщика, связанного с вызывающим контекстом. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.  
   
@@ -260,7 +271,7 @@ static void __cdecl ScheduleTask(
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс планировщика](scheduler-class.md)   
- [Перечисление PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Планировщик заданий](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

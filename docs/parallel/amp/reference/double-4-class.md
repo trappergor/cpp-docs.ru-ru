@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: fc6fe5e6d89d2d9f8d31fca6df790bfa92d5afa5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7a55f3f39562481ba7a4b189293dfe59891740fe
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="double4-class"></a>Класс double_4
@@ -328,155 +328,155 @@ class double_4;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод double_4::get_w||  
-|Метод double_4::get_wx||  
-|Метод double_4::get_wxy||  
-|Метод double_4::get_wxyz||  
-|Метод double_4::get_wxz||  
-|Метод double_4::get_wxzy||  
-|Метод double_4::get_wy||  
-|Метод double_4::get_wyx||  
-|Метод double_4::get_wyxz||  
-|Метод double_4::get_wyz||  
-|Метод double_4::get_wyzx||  
-|Метод double_4::get_wz||  
-|Метод double_4::get_wzx||  
-|Метод double_4::get_wzxy||  
-|Метод double_4::get_wzy||  
-|Метод double_4::get_wzyx||  
-|Метод double_4::get_X||  
-|Метод double_4::get_xw||  
-|Метод double_4::get_xwy||  
-|Метод double_4::get_xwyz||  
-|Метод double_4::get_xwz||  
-|Метод double_4::get_xwzy||  
-|Метод double_4::get_xy||  
-|Метод double_4::get_xyw||  
-|Метод double_4::get_xywz||  
-|Метод double_4::get_xyz||  
-|Метод double_4::get_xyzw||  
-|Метод double_4::get_xz||  
-|Метод double_4::get_xzw||  
-|Метод double_4::get_xzwy||  
-|Метод double_4::get_xzy||  
-|Метод double_4::get_xzyw||  
-|Метод double_4::get_y||  
-|Метод double_4::get_yw||  
-|Метод double_4::get_ywx||  
-|Метод double_4::get_ywxz||  
-|Метод double_4::get_ywz||  
-|Метод double_4::get_ywzx||  
-|Метод double_4::get_yx||  
-|Метод double_4::get_yxw||  
-|Метод double_4::get_yxwz||  
-|Метод double_4::get_yxz||  
-|Метод double_4::get_yxzw||  
-|Метод double_4::get_yz||  
-|Метод double_4::get_yzw||  
-|Метод double_4::get_yzwx||  
-|Метод double_4::get_yzx||  
-|Метод double_4::get_yzxw||  
-|Метод double_4::get_z||  
-|Метод double_4::get_zw||  
-|Метод double_4::get_zwx||  
-|Метод double_4::get_zwxy||  
-|Метод double_4::get_zwy||  
-|Метод double_4::get_zwyx||  
-|Метод double_4::get_zx||  
-|Метод double_4::get_zxw||  
-|Метод double_4::get_zxwy||  
-|Метод double_4::get_zxy||  
-|Метод double_4::get_zxyw||  
-|Метод double_4::get_zy||  
-|Метод double_4::get_zyw||  
-|Метод double_4::get_zywx||  
-|Метод double_4::get_zyx||  
-|Метод double_4::get_zyxw||  
-|Метод double_4::ref_a||  
-|Метод double_4::ref_b||  
-|Метод double_4::ref_g||  
-|Метод double_4::ref_r||  
-|Метод double_4::ref_w||  
-|Метод double_4::ref_x||  
-|Метод double_4::ref_y||  
-|Метод double_4::ref_z||  
-|Метод double_4::set_w||  
-|Метод double_4::set_wx||  
-|Метод double_4::set_wxy||  
-|Метод double_4::set_wxyz||  
-|Метод double_4::set_wxz||  
-|Метод double_4::set_wxzy||  
-|Метод double_4::set_wy||  
-|Метод double_4::set_wyx||  
-|Метод double_4::set_wyxz||  
-|Метод double_4::set_wyz||  
-|Метод double_4::set_wyzx||  
-|Метод double_4::set_wz||  
-|Метод double_4::set_wzx||  
-|Метод double_4::set_wzxy||  
-|Метод double_4::set_wzy||  
-|Метод double_4::set_wzyx||  
-|Метод double_4::set_X||  
-|Метод double_4::set_xw||  
-|Метод double_4::set_xwy||  
-|Метод double_4::set_xwyz||  
-|Метод double_4::set_xwz||  
-|Метод double_4::set_xwzy||  
-|Метод double_4::set_xy||  
-|Метод double_4::set_xyw||  
-|Метод double_4::set_xywz||  
-|Метод double_4::set_xyz||  
-|Метод double_4::set_xyzw||  
-|Метод double_4::set_xz||  
-|Метод double_4::set_xzw||  
-|Метод double_4::set_xzwy||  
-|Метод double_4::set_xzy||  
-|Метод double_4::set_xzyw||  
-|Метод double_4::set_y||  
-|Метод double_4::set_yw||  
-|Метод double_4::set_ywx||  
-|Метод double_4::set_ywxz||  
-|Метод double_4::set_ywz||  
-|Метод double_4::set_ywzx||  
-|Метод double_4::set_yx||  
-|Метод double_4::set_yxw||  
-|Метод double_4::set_yxwz||  
-|Метод double_4::set_yxz||  
-|Метод double_4::set_yxzw||  
-|Метод double_4::set_yz||  
-|Метод double_4::set_yzw||  
-|Метод double_4::set_yzwx||  
-|Метод double_4::set_yzx||  
-|Метод double_4::set_yzxw||  
-|Метод double_4::set_z||  
-|Метод double_4::set_zw||  
-|Метод double_4::set_zwx||  
-|Метод double_4::set_zwxy||  
-|Метод double_4::set_zwy||  
-|Метод double_4::set_zwyx||  
-|Метод double_4::set_zx||  
-|Метод double_4::set_zxw||  
-|Метод double_4::set_zxwy||  
-|Метод double_4::set_zxy||  
-|Метод double_4::set_zxyw||  
-|Метод double_4::set_zy||  
-|Метод double_4::set_zyw||  
-|Метод double_4::set_zywx||  
-|Метод double_4::set_zyx||  
-|Метод double_4::set_zyxw||  
+|double_4::get_w||  
+|double_4::get_wx||  
+|double_4::get_wxy||  
+|double_4::get_wxyz||  
+|double_4::get_wxz||  
+|double_4::get_wxzy||  
+|double_4::get_wy||  
+|double_4::get_wyx||  
+|double_4::get_wyxz||  
+|double_4::get_wyz||  
+|double_4::get_wyzx||  
+|double_4::get_wz||  
+|double_4::get_wzx||  
+|double_4::get_wzxy||  
+|double_4::get_wzy||  
+|double_4::get_wzyx||  
+|double_4::get_X||  
+|double_4::get_xw||  
+|double_4::get_xwy||  
+|double_4::get_xwyz||  
+|double_4::get_xwz||  
+|double_4::get_xwzy||  
+|double_4::get_xy||  
+|double_4::get_xyw||  
+|double_4::get_xywz||  
+|double_4::get_xyz||  
+|double_4::get_xyzw||  
+|double_4::get_xz||  
+|double_4::get_xzw||  
+|double_4::get_xzwy||  
+|double_4::get_xzy||  
+|double_4::get_xzyw||  
+|double_4::get_y||  
+|double_4::get_yw||  
+|double_4::get_ywx||  
+|double_4::get_ywxz||  
+|double_4::get_ywz||  
+|double_4::get_ywzx||  
+|double_4::get_yx||  
+|double_4::get_yxw||  
+|double_4::get_yxwz||  
+|double_4::get_yxz||  
+|double_4::get_yxzw||  
+|double_4::get_yz||  
+|double_4::get_yzw||  
+|double_4::get_yzwx||  
+|double_4::get_yzx||  
+|double_4::get_yzxw||  
+|double_4::get_z||  
+|double_4::get_zw||  
+|double_4::get_zwx||  
+|double_4::get_zwxy||  
+|double_4::get_zwy||  
+|double_4::get_zwyx||  
+|double_4::get_zx||  
+|double_4::get_zxw||  
+|double_4::get_zxwy||  
+|double_4::get_zxy||  
+|double_4::get_zxyw||  
+|double_4::get_zy||  
+|double_4::get_zyw||  
+|double_4::get_zywx||  
+|double_4::get_zyx||  
+|double_4::get_zyxw||  
+|double_4::ref_a||  
+|double_4::ref_b||  
+|double_4::ref_g||  
+|double_4::ref_r||  
+|double_4::ref_w||  
+|double_4::ref_x||  
+|double_4::ref_y||  
+|double_4::ref_z||  
+|double_4::set_w||  
+|double_4::set_wx||  
+|double_4::set_wxy||  
+|double_4::set_wxyz||  
+|double_4::set_wxz||  
+|double_4::set_wxzy||  
+|double_4::set_wy||  
+|double_4::set_wyx||  
+|double_4::set_wyxz||  
+|double_4::set_wyz||  
+|double_4::set_wyzx||  
+|double_4::set_wz||  
+|double_4::set_wzx||  
+|double_4::set_wzxy||  
+|double_4::set_wzy||  
+|double_4::set_wzyx||  
+|double_4::set_X||  
+|double_4::set_xw||  
+|double_4::set_xwy||  
+|double_4::set_xwyz||  
+|double_4::set_xwz||  
+|double_4::set_xwzy||  
+|double_4::set_xy||  
+|double_4::set_xyw||  
+|double_4::set_xywz||  
+|double_4::set_xyz||  
+|double_4::set_xyzw||  
+|double_4::set_xz||  
+|double_4::set_xzw||  
+|double_4::set_xzwy||  
+|double_4::set_xzy||  
+|double_4::set_xzyw||  
+|double_4::set_y||  
+|double_4::set_yw||  
+|double_4::set_ywx||  
+|double_4::set_ywxz||  
+|double_4::set_ywz||  
+|double_4::set_ywzx||  
+|double_4::set_yx||  
+|double_4::set_yxw||  
+|double_4::set_yxwz||  
+|double_4::set_yxz||  
+|double_4::set_yxzw||  
+|double_4::set_yz||  
+|double_4::set_yzw||  
+|double_4::set_yzwx||  
+|double_4::set_yzx||  
+|double_4::set_yzxw||  
+|double_4::set_z||  
+|double_4::set_zw||  
+|double_4::set_zwx||  
+|double_4::set_zwxy||  
+|double_4::set_zwy||  
+|double_4::set_zwyx||  
+|double_4::set_zx||  
+|double_4::set_zxw||  
+|double_4::set_zxwy||  
+|double_4::set_zxy||  
+|double_4::set_zxyw||  
+|double_4::set_zy||  
+|double_4::set_zyw||  
+|double_4::set_zywx||  
+|double_4::set_zyx||  
+|double_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|double_4::operator оператор||  
-|double_4::operator - оператор||  
-|double_4::operator * =-оператор||  
-|double_4::operator / =-оператор||  
-|double_4::operator оператор ++||  
-|Оператор += double_4::operator||  
-|double_4::operator =-оператор||  
-|double_4::operator-= оператор||  
+|double_4::operator-||  
+|double_4::operator--||  
+|double_4::operator * =||  
+|double_4::operator / =||  
+|double_4::operator ++||  
+|double_4::operator +=||  
+|double_4::operator =||  
+|double_4::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -488,134 +488,134 @@ class double_4;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных double_4::a||  
-|Элемент данных double_4::AB||  
-|Элемент данных double_4::abg||  
-|Элемент данных double_4::abgr||  
-|Элемент данных double_4::ABR||  
-|Элемент данных double_4::abrg||  
-|Элемент данных double_4::AG||  
-|Элемент данных double_4::agb||  
-|Элемент данных double_4::agbr||  
-|Элемент данных double_4::agr||  
-|Элемент данных double_4::agrb||  
-|Элемент данных double_4::ar||  
-|Элемент данных double_4::arb||  
-|Элемент данных double_4::arbg||  
-|Элемент данных double_4::arg||  
-|Элемент данных double_4::ARGB||  
-|Элемент данных double_4::b||  
-|Элемент данных double_4::BA||  
-|Элемент данных double_4::bag||  
-|Элемент данных double_4::bagr||  
-|Элемент данных double_4::Bar||  
-|Элемент данных double_4::barg||  
-|Элемент данных double_4::BG||  
-|Элемент данных double_4::BGA||  
-|Элемент данных double_4::bgar||  
-|Элемент данных double_4::bgr||  
-|Элемент данных double_4::bgra||  
-|Элемент данных double_4::br||  
-|Элемент данных double_4::BRA||  
-|Элемент данных double_4::brag||  
-|Элемент данных double_4::brg||  
-|Элемент данных double_4::brga||  
-|Элемент данных double_4::g||  
-|Элемент данных double_4::ga||  
-|Элемент данных double_4::GAB||  
-|Элемент данных double_4::gabr||  
-|Элемент данных double_4::gar||  
-|Элемент данных double_4::garb||  
-|Элемент данных double_4::GB||  
-|Элемент данных double_4::gba||  
-|Элемент данных double_4::gbar||  
-|Элемент данных double_4::GBR||  
-|Элемент данных double_4::gbra||  
-|Элемент данных double_4::GR||  
-|Элемент данных double_4::gra||  
-|Элемент данных double_4::grab||  
-|Элемент данных double_4::grb||  
-|Элемент данных double_4::grba||  
-|Элемент данных double_4::r||  
-|Элемент данных double_4::RA||  
-|Элемент данных double_4::rab||  
-|Элемент данных double_4::rabg||  
-|Элемент данных double_4::rag||  
-|Элемент данных double_4::ragb||  
-|Элемент данных double_4::RB||  
-|Элемент данных double_4::rba||  
-|Элемент данных double_4::rbag||  
-|Элемент данных double_4::rbg||  
-|Элемент данных double_4::rbga||  
-|Элемент данных double_4::RG||  
-|Элемент данных double_4::rga||  
-|Элемент данных double_4::rgab||  
-|Элемент данных double_4::RGB||  
-|Элемент данных double_4::RGBA||  
-|Элемент данных double_4::w||  
-|Элемент данных double_4::WX||  
-|Элемент данных double_4::wxy||  
-|Элемент данных double_4::wxyz||  
-|Элемент данных double_4::wxz||  
-|Элемент данных double_4::wxzy||  
-|Элемент данных double_4::WY||  
-|Элемент данных double_4::wyx||  
-|Элемент данных double_4::wyxz||  
-|Элемент данных double_4::WYZ||  
-|Элемент данных double_4::wyzx||  
-|Элемент данных double_4::wZ||  
-|Элемент данных double_4::wzx||  
-|Элемент данных double_4::wzxy||  
-|Элемент данных double_4::wzy||  
-|Элемент данных double_4::wzyx||  
-|Элемент данных double_4::x||  
-|Элемент данных double_4::xw||  
-|Элемент данных double_4::xwy||  
-|Элемент данных double_4::xwyz||  
-|Элемент данных double_4::xwz||  
-|Элемент данных double_4::xwzy||  
-|Элемент данных double_4::XY||  
-|Элемент данных double_4::xyw||  
-|Элемент данных double_4::xywz||  
-|Элемент данных double_4::xyz||  
-|Элемент данных double_4::xyzw||  
-|Элемент данных double_4::xz||  
-|Элемент данных double_4::xzw||  
-|Элемент данных double_4::xzwy||  
-|Элемент данных double_4::xzy||  
-|Элемент данных double_4::xzyw||  
-|Элемент данных double_4::y||  
-|Элемент данных double_4::yw||  
-|Элемент данных double_4::ywx||  
-|Элемент данных double_4::ywxz||  
-|Элемент данных double_4::ywz||  
-|Элемент данных double_4::ywzx||  
-|Элемент данных double_4::YX||  
-|Элемент данных double_4::yxw||  
-|Элемент данных double_4::yxwz||  
-|Элемент данных double_4::yxz||  
-|Элемент данных double_4::yxzw||  
-|Элемент данных double_4::yz||  
-|Элемент данных double_4::yzw||  
-|Элемент данных double_4::yzwx||  
-|Элемент данных double_4::yzx||  
-|Элемент данных double_4::yzxw||  
-|Элемент данных double_4::z||  
-|Элемент данных double_4::zw||  
-|Элемент данных double_4::zwx||  
-|Элемент данных double_4::zwxy||  
-|Элемент данных double_4::zwy||  
-|Элемент данных double_4::zwyx||  
-|Элемент данных double_4::zx||  
-|Элемент данных double_4::zxw||  
-|Элемент данных double_4::zxwy||  
-|Элемент данных double_4::zxy||  
-|Элемент данных double_4::zxyw||  
-|Элемент данных double_4::zy||  
-|Элемент данных double_4::zyw||  
-|Элемент данных double_4::zywx||  
-|Элемент данных double_4::zyx||  
-|Элемент данных double_4::zyxw||  
+|double_4::a||  
+|double_4::AB||  
+|double_4::abg||  
+|double_4::abgr||  
+|double_4::ABR||  
+|double_4::abrg||  
+|double_4::AG||  
+|double_4::agb||  
+|double_4::agbr||  
+|double_4::agr||  
+|double_4::agrb||  
+|double_4::ar||  
+|double_4::arb||  
+|double_4::arbg||  
+|double_4::arg||  
+|double_4::ARGB||  
+|double_4::b||  
+|double_4::BA||  
+|double_4::bag||  
+|double_4::bagr||  
+|double_4::Bar||  
+|double_4::barg||  
+|double_4::BG||  
+|double_4::BGA||  
+|double_4::bgar||  
+|double_4::bgr||  
+|double_4::bgra||  
+|double_4::br||  
+|double_4::BRA||  
+|double_4::brag||  
+|double_4::brg||  
+|double_4::brga||  
+|double_4::g||  
+|double_4::ga||  
+|double_4::GAB||  
+|double_4::gabr||  
+|double_4::gar||  
+|double_4::garb||  
+|double_4::GB||  
+|double_4::gba||  
+|double_4::gbar||  
+|double_4::GBR||  
+|double_4::gbra||  
+|double_4::GR||  
+|double_4::gra||  
+|double_4::grab||  
+|double_4::grb||  
+|double_4::grba||  
+|double_4::r||  
+|double_4::RA||  
+|double_4::rab||  
+|double_4::rabg||  
+|double_4::rag||  
+|double_4::ragb||  
+|double_4::RB||  
+|double_4::rba||  
+|double_4::rbag||  
+|double_4::rbg||  
+|double_4::rbga||  
+|double_4::RG||  
+|double_4::rga||  
+|double_4::rgab||  
+|double_4::RGB||  
+|double_4::RGBA||  
+|double_4::w||  
+|double_4::WX||  
+|double_4::wxy||  
+|double_4::wxyz||  
+|double_4::wxz||  
+|double_4::wxzy||  
+|double_4::WY||  
+|double_4::wyx||  
+|double_4::wyxz||  
+|double_4::WYZ||  
+|double_4::wyzx||  
+|double_4::wZ||  
+|double_4::wzx||  
+|double_4::wzxy||  
+|double_4::wzy||  
+|double_4::wzyx||  
+|double_4::x||  
+|double_4::xw||  
+|double_4::xwy||  
+|double_4::xwyz||  
+|double_4::xwz||  
+|double_4::xwzy||  
+|double_4::XY||  
+|double_4::xyw||  
+|double_4::xywz||  
+|double_4::xyz||  
+|double_4::xyzw||  
+|double_4::xz||  
+|double_4::xzw||  
+|double_4::xzwy||  
+|double_4::xzy||  
+|double_4::xzyw||  
+|double_4::y||  
+|double_4::yw||  
+|double_4::ywx||  
+|double_4::ywxz||  
+|double_4::ywz||  
+|double_4::ywzx||  
+|double_4::YX||  
+|double_4::yxw||  
+|double_4::yxwz||  
+|double_4::yxz||  
+|double_4::yxzw||  
+|double_4::yz||  
+|double_4::yzw||  
+|double_4::yzwx||  
+|double_4::yzx||  
+|double_4::yzxw||  
+|double_4::z||  
+|double_4::zw||  
+|double_4::zwx||  
+|double_4::zwxy||  
+|double_4::zwy||  
+|double_4::zwyx||  
+|double_4::zx||  
+|double_4::zxw||  
+|double_4::zxwy||  
+|double_4::zxy||  
+|double_4::zxyw||  
+|double_4::zy||  
+|double_4::zyw||  
+|double_4::zywx||  
+|double_4::zyx||  
+|double_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `double_4`  
@@ -625,7 +625,7 @@ class double_4;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-double4"></a><a name="ctor"></a>double_4 
+##  <a name="ctor"></a>double_4 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -696,12 +696,12 @@ explicit inline double_4(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-namedouble4sizea-size"></a><a name="double_4__size"></a>размер 
+##  <a name="double_4__size"></a>размер 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

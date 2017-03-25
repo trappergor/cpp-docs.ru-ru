@@ -8,6 +8,18 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- texture_view
+- AMP_GRAPHICS/texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_alpha
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_blue
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_green
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_red
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::get
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
@@ -30,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d3206aea6a6f1e3033e157b3b99a6b3486cb2ac
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="textureview-class"></a>Класс texture_view
@@ -41,23 +53,16 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-template <
-    typename value_type,  
-    int _Rank  
->  
+template<typename value_type,int _Rank>  
 class texture_view;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view 
+   : public details::_Texture_base<value_type, _Rank>;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view<const value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view<const value_type, _Rank> 
+   : public details::_Texture_base<value_type, _Rank>;  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -88,27 +93,27 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод gather_alpha](#gather_alpha)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты альфа (w).|  
-|[Метод gather_blue](#gather_blue)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты синего цвета (z).|  
-|[Метод gather_green](#gather_green)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты зеленого (y).|  
-|[Метод gather_red](#gather_red)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты красный (x).|  
-|[GET-метод](#get)|Перегружен. Возвращает значение элемента по индексу.|  
-|[Пример метода](#sample)|Перегружен. Примеры текстуру по указанным координатам и уровень детализации с помощью выборки указанной конфигурации.|  
-|[Метод Set](#set)|Задает значение элемента по индексу.|  
+|[gather_alpha](#gather_alpha)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты альфа (w).|  
+|[gather_blue](#gather_blue)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты синего цвета (z).|  
+|[gather_green](#gather_green)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты зеленого (y).|  
+|[gather_red](#gather_red)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты красный (x).|  
+|[get](#get)|Перегружен. Возвращает значение элемента по индексу.|  
+|[Образец](#sample)|Перегружен. Примеры текстуру по указанным координатам и уровень детализации с помощью выборки указанной конфигурации.|  
+|[set](#set)|Задает значение элемента по индексу.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Оператор Operator()](#operator__)|Перегружен. Возвращает значение элемента по индексу.|  
-|[Оператор Operator]](#operator_at)|Перегружен. Возвращает значение элемента по индексу.|  
-|[оператор =-оператор](#operator_eq)|Перегружен. Оператор присвоения.|  
+|[Operator()](#operator_call)|Перегружен. Возвращает значение элемента по индексу.|  
+|[оператор]](#operator_at)|Перегружен. Возвращает значение элемента по индексу.|  
+|[operator=](#operator_eq)|Перегружен. Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[value_type элемент данных](#value_type)|Тип значения элементов `texture_view`.|  
+|[value_type](#value_type)|Тип значения элементов `texture_view`.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `_Texture_base`  
@@ -120,7 +125,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
  **Пространство имен:** concurrency::graphics  
   
-##  <a name="a-namedtora-textureview"></a><a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a>~ texture_view 
 
  Уничтожает `texture_view` экземпляра.  
   
@@ -128,7 +133,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="a-namectora-textureview"></a><a name="ctor"></a>texture_view 
+##  <a name="ctor"></a>texture_view 
 
  Создает `texture_view` экземпляра.  
   
@@ -190,7 +195,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  Количество уровней MIP-карты через `texture_view`.  
   
-##  <a name="a-namegatherreda-gatherred"></a><a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a>gather_red 
 
  Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты красный (x).  
   
@@ -220,7 +225,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>Возвращаемое значение  
  4 ранга короткого вектора, содержащего компонент красный (x) 4 выборки текселя значения.  
   
-##  <a name="a-namegathergreena-gathergreen"></a><a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a>gather_green 
 
  Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты зеленого (y).  
   
@@ -250,7 +255,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>Возвращаемое значение  
  4 ранга короткого вектора, содержащего компонент зеленый (y) 4 выборки текселя значения.  
   
-##  <a name="a-namegatherbluea-gatherblue"></a><a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a>gather_blue 
 
  Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты синего цвета (z).  
   
@@ -280,7 +285,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>Возвращаемое значение  
  4 ранга короткого вектора, содержащего компонент красный (x) 4 выборки текселя значения.  
   
-##  <a name="a-namegatheralphaa-gatheralpha"></a><a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a>gather_alpha 
 
  Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре текселя выбранные компоненты альфа (w).  
   
@@ -310,7 +315,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ранг 4 короткий vector, содержащий альфа-канал (w) компонент 4 измеренных значений текселя.  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Получить 
+##  <a name="get"></a>Получить 
 
  Возвращает значение элемента по указанному индексу.  
   
@@ -334,7 +339,7 @@ value_type get(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
  Назначает представление текстуры же как и в заданном `texture_view` к этому `texture_view` экземпляра.  
   
@@ -362,7 +367,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `texture_view` экземпляра.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>оператор] 
+##  <a name="operator_at"></a>оператор] 
 
  Возвращает значение элемента по индексу.  
   
@@ -389,7 +394,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента с индексом `_Index`.  
   
-##  <a name="a-nameoperatora-operator"></a><a name="operator__"></a>Operator() 
+##  <a name="operator_call"></a>Operator() 
 
  Возвращает значение элемента по индексу.  
   
@@ -447,7 +452,7 @@ value_type operator() (
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента с индексом `_Index`.  
   
-##  <a name="a-namesamplea-sample"></a><a name="sample"></a>Образец 
+##  <a name="sample"></a>Образец 
 
  Примеры текстуру по указанным координатам и уровень детализации с помощью выборки указанной конфигурации.  
   
@@ -486,7 +491,7 @@ value_type sample(
 ### <a name="return-value"></a>Возвращаемое значение  
  Образец интерполированное значение.  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>набор 
+##  <a name="set"></a>набор 
 
  Задает значение элемента по указанному индексу в указанное значение.  
   
@@ -503,7 +508,7 @@ void set(
  `value`  
  Значение, значение элемента.  
   
-##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>value_type 
+##  <a name="value_type"></a>value_type 
 
  Тип значения элементов texture_view.  
   
@@ -512,5 +517,5 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

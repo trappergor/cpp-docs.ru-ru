@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IScheduler
+- IScheduler
+- CONCRTRM/concurrency::IScheduler
+- CONCRTRM/concurrency::IScheduler::IScheduler::AddVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetId
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetPolicy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyBusy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
+- CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fd8733bdcf113497b82cb2559eaba5a6a4a15165
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 24305fbdded1709ec51270b3a29a239b345a5679
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischeduler-structure"></a>Структура IScheduler
@@ -54,13 +62,13 @@ struct IScheduler;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Предоставляет планировщик с набором корней виртуальный процессор для его использования. Каждый `IVirtualProcessorRoot` интерфейс представляет право на выполнение одного потока, которые выполняют работы от имени планировщик.|  
-|[Метод IScheduler::GetId](#getid)|Возвращает уникальный идентификатор для планировщика.|  
-|[Метод IScheduler::GetPolicy](#getpolicy)|Возвращает копию политики планировщика. Дополнительные сведения о политиках планировщиков см. в разделе [SchedulerPolicy](schedulerpolicy-class.md).|  
-|[Метод IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Уведомляет этот планировщик, что аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` теперь используются другие планировщики.|  
-|[Метод IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Уведомляет этот планировщик, что аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` не используются другие планировщики.|  
-|[Метод IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Инициирует удаление корни виртуального процессора, ранее выделенные для этого планировщика.|  
-|[Метод IScheduler::Statistics](#statistics)|Предоставляет сведения о скорости поступления до завершения задачи и изменение длины очереди для планировщика.|  
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Предоставляет планировщик с набором корней виртуальный процессор для его использования. Каждый `IVirtualProcessorRoot` интерфейс представляет право на выполнение одного потока, которые выполняют работы от имени планировщик.|  
+|[IScheduler::GetId](#getid)|Возвращает уникальный идентификатор для планировщика.|  
+|[IScheduler::GetPolicy](#getpolicy)|Возвращает копию политики планировщика. Дополнительные сведения о политиках планировщиков см. в разделе [SchedulerPolicy](schedulerpolicy-class.md).|  
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Уведомляет этот планировщик, что аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` теперь используются другие планировщики.|  
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Уведомляет этот планировщик, что аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` не используются другие планировщики.|  
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Инициирует удаление корни виртуального процессора, ранее выделенные для этого планировщика.|  
+|[IScheduler::Statistics](#statistics)|Предоставляет сведения о скорости поступления до завершения задачи и изменение длины очереди для планировщика.|  
   
 ## <a name="remarks"></a>Примечания  
  При реализации пользовательских планировщика, который взаимодействует с диспетчером ресурсов, должны предоставлять реализацию метода `IScheduler` интерфейса. Этот интерфейс — это один конец двустороннего канала связи между планировщиком и диспетчер ресурсов. Представленный другой конец `IResourceManager` и `ISchedulerProxy` интерфейсы, используемые диспетчером ресурсов.  
@@ -73,7 +81,7 @@ struct IScheduler;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameaddvirtualprocessorsa--ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>Метод IScheduler::AddVirtualProcessors  
+##  <a name="addvirtualprocessors"></a>Метод IScheduler::AddVirtualProcessors  
  Предоставляет планировщик с набором корней виртуальный процессор для его использования. Каждый `IVirtualProcessorRoot` интерфейс представляет право на выполнение одного потока, которые выполняют работы от имени планировщик.  
   
 ```
@@ -92,7 +100,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>Примечания  
  Диспетчер ресурсов вызывает `AddVirtualProcessor` метод для предоставления первоначального набора корней виртуальный процессор планировщику. Он также может вызывать этот метод для добавления к планировщику корни виртуального процессора при перебалансировке ресурсов между планировщиками.  
   
-##  <a name="a-namegetida--ischedulergetid-method"></a><a name="getid"></a>Метод IScheduler::GetId  
+##  <a name="getid"></a>Метод IScheduler::GetId  
  Возвращает уникальный идентификатор для планировщика.  
   
 ```
@@ -107,7 +115,7 @@ virtual unsigned int GetId() const = 0;
   
  Идентификатор, полученный из другого источника может привести к неопределенному поведению.  
   
-##  <a name="a-namegetpolicya--ischedulergetpolicy-method"></a><a name="getpolicy"></a>Метод IScheduler::GetPolicy  
+##  <a name="getpolicy"></a>Метод IScheduler::GetPolicy  
  Возвращает копию политики планировщика. Дополнительные сведения о политиках планировщиков см. в разделе [SchedulerPolicy](schedulerpolicy-class.md).  
   
 ```
@@ -117,7 +125,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Копия политики планировщика.  
   
-##  <a name="a-namenotifyresourcesexternallybusya--ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>Метод IScheduler::NotifyResourcesExternallyBusy  
+##  <a name="notifyresourcesexternallybusy"></a>Метод IScheduler::NotifyResourcesExternallyBusy  
  Уведомляет этот планировщик, что аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` теперь используются другие планировщики.  
   
 ```
@@ -142,7 +150,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  Планировщик, который определяет для уведомлений получает набор начального уведомления при его создании, сообщая ей, являются ли ресурсы, которые она была присвоена извне занятости и неактивности.  
   
-##  <a name="a-namenotifyresourcesexternallyidlea--ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>Метод IScheduler::NotifyResourcesExternallyIdle  
+##  <a name="notifyresourcesexternallyidle"></a>Метод IScheduler::NotifyResourcesExternallyIdle  
  Уведомляет этот планировщик, что аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` не используются другие планировщики.  
   
 ```
@@ -167,7 +175,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Планировщик, который определяет для уведомлений получает набор начального уведомления при его создании, сообщая ей, являются ли ресурсы, которые она была присвоена извне занятости и неактивности.  
   
-##  <a name="a-nameremovevirtualprocessorsa--ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>Метод IScheduler::RemoveVirtualProcessors  
+##  <a name="removevirtualprocessors"></a>Метод IScheduler::RemoveVirtualProcessors  
  Инициирует удаление корни виртуального процессора, ранее выделенные для этого планировщика.  
   
 ```
@@ -188,7 +196,7 @@ virtual void RemoveVirtualProcessors(
   
  Параметр `ppVirtualProcessorRoots` указывает на массив интерфейсов. Среди набора корни виртуального процессора, должны быть удалены, не были активированы корни возвращается немедленно с помощью `Remove` метод. Корни, которые были активированы и либо выполняют работу или были отключены и ожидают прибытия работы, должны возвращаться асинхронно. Планировщику необходимо сделать все попытки удалить корень виртуального процессора как можно быстрее. Задержка удаления корней виртуального процессора может привести к непреднамеренному превышение лимита подписки в планировщике.  
   
-##  <a name="a-namestatisticsa--ischedulerstatistics-method"></a><a name="statistics"></a>Метод IScheduler::Statistics  
+##  <a name="statistics"></a>Метод IScheduler::Statistics  
  Предоставляет сведения о скорости поступления до завершения задачи и изменение длины очереди для планировщика.  
   
 ```
@@ -211,13 +219,13 @@ virtual void Statistics(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается диспетчером ресурсов для сбора статистики для планировщика. Здесь собранная статистика будет использоваться для алгоритмов динамической обратной связи для определения, когда стоит назначить больше ресурсов планировщику и когда следует забрать ресурсы. Значения, предоставленные планировщиком может быть оптимистичный и не обязательно точно отражать текущее значение счетчика.  
   
- Необходимо реализовать этот метод, если требуется, чтобы диспетчер ресурсов использовал отзывы о таких действиях, как прибытие задачи, чтобы определить способ распределения ресурсов между данным планировщиком и другими планировщиками, зарегистрированными диспетчером ресурсов. Если сбор статистики не выбрана, можно задать ключ политики `DynamicProgressFeedback` значение `DynamicProgressFeedbackDisabled` в ваш планировщик политики и ресурс Manager не будет вызывать этот метод на планировщика.  
+ Необходимо реализовать этот метод, если требуется, чтобы диспетчер ресурсов использовал отзывы о таких действиях, как прибытие задачи, чтобы определить способ распределения ресурсов между данным планировщиком и другими планировщиками, зарегистрированными диспетчером ресурсов. Если сбор статистики не выбрана, можно задать ключ политики `DynamicProgressFeedback` значение `DynamicProgressFeedbackDisabled` в ваш планировщик политики и ресурс диспетчера не будет вызывать этот метод на планировщика.  
   
- В отсутствие статистические данные диспетчер ресурсов будет использовать уровни подписки потока оборудования для принятия решений по распределения и миграции ресурсов. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+ В отсутствие статистические данные диспетчер ресурсов будет использовать уровни подписки потока оборудования для принятия решений по выделения и миграции ресурсов. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
- [Перечисление PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Класс SchedulerPolicy](schedulerpolicy-class.md)   
  [Структура IExecutionContext](iexecutioncontext-structure.md)   
  [Структура IThreadProxy](ithreadproxy-structure.md)   

@@ -9,7 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ISource
+- ISource
+- AGENTS/concurrency::ISource
+- AGENTS/concurrency::ISource::accept
+- AGENTS/concurrency::ISource::acquire_ref
+- AGENTS/concurrency::ISource::consume
+- AGENTS/concurrency::ISource::link_target
+- AGENTS/concurrency::ISource::release
+- AGENTS/concurrency::ISource::release_ref
+- AGENTS/concurrency::ISource::reserve
+- AGENTS/concurrency::ISource::unlink_target
+- AGENTS/concurrency::ISource::unlink_targets
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: db3ba296a96b2e77c0ae7d9be3d0a499fe2e7f76
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b5545f666dccb251152dc6c9a83101662848be1c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="isource-class"></a>Класс ISource
@@ -71,15 +81,15 @@ class ISource;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Accept-метод](#accept)|При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.|  
-|[acquire_ref метод](#acquire_ref)|При переопределении в производном классе получает значение счетчика ссылок на это `ISource` блок, чтобы предотвратить удаление.|  
-|[consume-метод](#consume)|При переопределении в производном классе получает сообщение было предложено это `ISource` блока и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
-|[Метод link_target](#link_target)|При переопределении в производном классе связывает целевой блок это `ISource` блок.|  
-|[Release-метод](#release)|При переопределении в производном классе освобождает предыдущее успешное резервирование сообщения.|  
-|[release_ref метод](#release_ref)|При переопределении в производном классе освобождает значение счетчика ссылок на это `ISource` блок.|  
-|[reserve-метод](#reserve)|При переопределении в производном классе резервирует сообщение, которое было предложено это `ISource` блок.|  
-|[unlink_target метод](#unlink_target)|При переопределении в производном классе удаляет связь целевого блока с это `ISource` блокировать, если найден связываемых ранее.|  
-|[unlink_targets метод](#unlink_targets)|При переопределении в производном классе удаляет связь всех целевых блоков от этого `ISource` блок.|  
+|[принять](#accept)|При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.|  
+|[acquire_ref](#acquire_ref)|При переопределении в производном классе получает значение счетчика ссылок на это `ISource` блок, чтобы предотвратить удаление.|  
+|[Использование](#consume)|При переопределении в производном классе получает сообщение было предложено это `ISource` блока и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
+|[link_target](#link_target)|При переопределении в производном классе связывает целевой блок это `ISource` блок.|  
+|[release](#release)|При переопределении в производном классе освобождает предыдущее успешное резервирование сообщения.|  
+|[release_ref](#release_ref)|При переопределении в производном классе освобождает значение счетчика ссылок на это `ISource` блок.|  
+|[reserve](#reserve)|При переопределении в производном классе резервирует сообщение, которое было предложено это `ISource` блок.|  
+|[unlink_target](#unlink_target)|При переопределении в производном классе удаляет связь целевого блока с это `ISource` блокировать, если найден связываемых ранее.|  
+|[unlink_targets](#unlink_targets)|При переопределении в производном классе удаляет связь всех целевых блоков от этого `ISource` блок.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -92,7 +102,7 @@ class ISource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameaccepta-accept"></a><a name="accept"></a>принять 
+##  <a name="accept"></a>принять 
 
  При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.  
   
@@ -115,7 +125,7 @@ virtual message<T>* accept(
 ### <a name="remarks"></a>Примечания  
  `accept` Метод вызывается целевой объект, пока сообщение предлагается это `ISource` блок. Сообщение указатель, возвращенный может отличаться от того, переданные в `propagate` метод `ITarget` блокировать, если этот источник решает создать копию сообщения.  
   
-##  <a name="a-nameacquirerefa-acquireref"></a><a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a>acquire_ref 
 
  При переопределении в производном классе получает значение счетчика ссылок на это `ISource` блок, чтобы предотвратить удаление.  
   
@@ -130,7 +140,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объекта, который связан с этим источником во время `link_target` метод.  
   
-##  <a name="a-nameconsumea-consume"></a><a name="consume"></a>Использование 
+##  <a name="consume"></a>Использование 
 
  При переопределении в производном классе получает сообщение было предложено это `ISource` блока и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   
@@ -153,7 +163,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Примечания  
  `consume` Метод аналогичен `accept`, но всегда должно начинаться с помощью вызова `reserve` , возвращается `true`.  
   
-##  <a name="a-namedtora-isource"></a><a name="dtor"></a>~ ISource 
+##  <a name="dtor"></a>~ ISource 
 
  Уничтожает `ISource` объекта.  
   
@@ -161,7 +171,7 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```  
   
-##  <a name="a-namelinktargeta-linktarget"></a><a name="link_target"></a>link_target 
+##  <a name="link_target"></a>link_target 
 
  При переопределении в производном классе связывает целевой блок это `ISource` блок.  
   
@@ -173,7 +183,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Указатель на целевой блок, связываемый с это `ISource` блок.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>выпуск 
+##  <a name="release"></a>выпуск 
 
  При переопределении в производном классе освобождает предыдущее успешное резервирование сообщения.  
   
@@ -190,7 +200,7 @@ virtual void release(
  `_PTarget`  
  Указатель на целевой блок, вызывающий `release` метод.  
   
-##  <a name="a-namereleaserefa-releaseref"></a><a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a>release_ref 
 
  При переопределении в производном классе освобождает значение счетчика ссылок на это `ISource` блок.  
   
@@ -205,7 +215,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объект, который является, связь которого с этим источником. Блок источника может освободить ресурсы, зарезервированные для целевой блок.  
   
-##  <a name="a-namereservea-reserve"></a><a name="reserve"></a>Резерв 
+##  <a name="reserve"></a>Резерв 
 
  При переопределении в производном классе резервирует сообщение, которое было предложено это `ISource` блок.  
   
@@ -228,7 +238,7 @@ virtual bool reserve(
 ### <a name="remarks"></a>Примечания  
  После вызова метода `reserve`, если он завершается успешно, необходимо вызвать либо `consume` или `release` чтобы принять или высвободить владение сообщением, соответственно.  
   
-##  <a name="a-nameunlinktargeta-unlinktarget"></a><a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a>unlink_target 
 
  При переопределении в производном классе удаляет связь целевого блока с это `ISource` блокировать, если найден связываемых ранее.  
   
@@ -240,7 +250,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Указатель на целевой блок, связь которого с этого `ISource` блок.  
   
-##  <a name="a-nameunlinktargetsa-unlinktargets"></a><a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a>unlink_targets 
 
  При переопределении в производном классе удаляет связь всех целевых блоков от этого `ISource` блок.  
   

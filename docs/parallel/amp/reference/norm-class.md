@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::norm
+- norm
+- AMP_SHORT_VECTORS/norm
+- AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 dev_langs:
 - C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
@@ -33,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6f6477f37a94a0c2a093fd3a63fa8e87463a5a7b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm-class"></a>Класс norm
@@ -59,15 +61,15 @@ class norm;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|norm::operator оператор||  
-|norm::operator - оператор||  
-|float norm::operator оператор|Оператор преобразования. Преобразуйте нормы число с плавающей запятой.|  
-|norm::operator * =-оператор||  
-|norm::operator / =-оператор||  
-|norm::operator оператор ++||  
-|Оператор += norm::operator||  
-|norm::operator =-оператор||  
-|norm::operator-= оператор||  
+|norm::operator-||  
+|norm::operator--||  
+|norm::operator число с плавающей запятой|Оператор преобразования. Преобразуйте нормы число с плавающей запятой.|  
+|norm::operator * =||  
+|norm::operator / =||  
+|norm::operator ++||  
+|norm::operator +=||  
+|norm::operator =||  
+|norm::operator-=||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `norm`  
@@ -77,7 +79,7 @@ class norm;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-norm"></a><a name="ctor"></a>Норма 
+##  <a name="ctor"></a>Норма 
 
  Конструктор по умолчанию. Инициализируйте значение 0, 0f.  
   
@@ -125,5 +127,5 @@ norm(
  Объект, используемый для инициализации.  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

@@ -9,7 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Scheduler
+- Scheduler
+- CONCRT/concurrency::Scheduler
+- CONCRT/concurrency::Scheduler::Scheduler
+- CONCRT/concurrency::Scheduler::Attach
+- CONCRT/concurrency::Scheduler::Create
+- CONCRT/concurrency::Scheduler::CreateScheduleGroup
+- CONCRT/concurrency::Scheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::Scheduler::GetPolicy
+- CONCRT/concurrency::Scheduler::Id
+- CONCRT/concurrency::Scheduler::IsAvailableLocation
+- CONCRT/concurrency::Scheduler::Reference
+- CONCRT/concurrency::Scheduler::RegisterShutdownEvent
+- CONCRT/concurrency::Scheduler::Release
+- CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
+- CONCRT/concurrency::Scheduler::ScheduleTask
+- CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ea4de856528305020e8b082da3a55fcd27df3a64
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cc39a524e9a65aeab0c84fb43f5b38ddd892923e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="scheduler-class"></a>Класс Scheduler
@@ -54,26 +69,26 @@ class Scheduler;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор планировщика](#ctor)|Объект `Scheduler` класса можно создавать только с помощью методов фабрики или неявно.|  
+|[Планировщик](#ctor)|Объект `Scheduler` класса можно создавать только с помощью методов фабрики или неявно.|  
 |[~ Деструктор планировщика](#dtor)|Объект `Scheduler` класс неявно уничтожается, когда все внешние ссылки на него исчезают.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Attach-метод](#attach)|Присоединяет планировщик к контексту вызова. После возврата этого метода, вызывающий контекст управляется планировщиком и планировщик становится текущим планировщиком.|  
-|[CREATE-метод](#create)|Создает новый планировщик, поведение которого описывается `_Policy` параметра, помещает исходную ссылку на планировщик и возвращает указатель на него.|  
-|[Createschedulegroup-метод](#createschedulegroup)|Перегружен. Создает новую группу расписания в планировщике. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|  
-|[Getnumberofvirtualprocessors-метод](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика.|  
-|[GetPolicy-метод](#getpolicy)|Возвращает копию политики, был создан планировщик.|  
-|[ID-метод](#id)|Возвращает уникальный идентификатор для планировщика.|  
-|[Isavailablelocation-метод](#isavailablelocation)|Определяет, доступно ли данное расположение в планировщике.|  
-|[Reference-метод](#reference)|Увеличивает значение счетчика ссылок планировщика.|  
-|[Registershutdownevent-метод](#registershutdownevent)|Причины, переданный дескриптор события Windows `_Event` параметр сигнал, когда планировщик завершает работу и удаляет себя. В то время, когда событие получает сигнал вся работа, запланированная планировщику завершена. Таким способом можно зарегистрировать несколько событий завершения работы.|  
-|[Release-метод](#release)|Уменьшает значение счетчика ссылок планировщика.|  
-|[Resetdefaultschedulerpolicy-метод](#resetdefaultschedulerpolicy)|Восстанавливает политику по умолчанию планировщика по умолчанию среды выполнения. Далее время создания планировщик по умолчанию будет использовать параметры политики по умолчанию среды выполнения.|  
-|[ScheduleTask-метод](#scheduletask)|Перегружен. Назначает легкое задание в планировщике. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.|  
-|[SetDefaultSchedulerPolicy-метод](#setdefaultschedulerpolicy)|Позволяет политику определенную пользователем для создания планировщика по умолчанию. Этот метод может вызываться только в том случае, когда планировщик по умолчанию существует внутри процесса. После настройки политики по умолчанию остается в силе до следующего допустимого вызова либо `SetDefaultSchedulerPolicy` или [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) метод.|  
+|[Attach](#attach)|Присоединяет планировщик к контексту вызова. После возврата этого метода, вызывающий контекст управляется планировщиком и планировщик становится текущим планировщиком.|  
+|[Создание](#create)|Создает новый планировщик, поведение которого описывается `_Policy` параметра, помещает исходную ссылку на планировщик и возвращает указатель на него.|  
+|[CreateScheduleGroup](#createschedulegroup)|Перегружен. Создает новую группу расписания в планировщике. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика.|  
+|[GetPolicy](#getpolicy)|Возвращает копию политики, был создан планировщик.|  
+|[Идентификатор](#id)|Возвращает уникальный идентификатор для планировщика.|  
+|[IsAvailableLocation](#isavailablelocation)|Определяет, доступно ли данное расположение в планировщике.|  
+|[Ссылки](#reference)|Увеличивает значение счетчика ссылок планировщика.|  
+|[RegisterShutdownEvent](#registershutdownevent)|Причины, переданный дескриптор события Windows `_Event` параметр сигнал, когда планировщик завершает работу и удаляет себя. В то время, когда событие получает сигнал вся работа, запланированная планировщику завершена. Таким способом можно зарегистрировать несколько событий завершения работы.|  
+|[Релиз](#release)|Уменьшает значение счетчика ссылок планировщика.|  
+|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Восстанавливает политику по умолчанию планировщика по умолчанию среды выполнения. Далее время создания планировщик по умолчанию будет использовать параметры политики по умолчанию среды выполнения.|  
+|[ScheduleTask](#scheduletask)|Перегружен. Назначает легкое задание в планировщике. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.|  
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Позволяет политику определенную пользователем для создания планировщика по умолчанию. Этот метод может вызываться только в том случае, когда планировщик по умолчанию существует внутри процесса. После настройки политики по умолчанию остается в силе до следующего допустимого вызова либо `SetDefaultSchedulerPolicy` или [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) метод.|  
   
 ## <a name="remarks"></a>Примечания  
  Планировщик среды выполнения с параллелизмом использует контекстов выполнения, которые сопоставляются с контекстов выполнения операционной системы, например поток, для выполнения работы в очереди в приложении. В любое время уровень параллелизма выполнения планировщика равен номеру виртуальный процессор, предоставленные ему диспетчером ресурсов. Виртуальный процессор является абстракцией для обработки ресурсов и сопоставляется с аппаратным потоком в базовой системе. В определенный момент времени только один контекст планировщика может выполняться на виртуальный процессор.  
@@ -88,7 +103,7 @@ class Scheduler;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameattacha-attach"></a><a name="attach"></a>Присоединение 
+##  <a name="attach"></a>Присоединение 
 
  Присоединяет планировщик к контексту вызова. После возврата этого метода, вызывающий контекст управляется планировщиком и планировщик становится текущим планировщиком.  
   
@@ -105,7 +120,7 @@ virtual void Attach() = 0;
   
  Этот метод вызывает исключение [improper_scheduler_attach](improper-scheduler-attach-class.md) исключение, если данный планировщик является текущим планировщиком вызывающего контекста.  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>Создание 
+##  <a name="create"></a>Создание 
 
  Создает новый планировщик, поведение которого описывается `_Policy` параметра, помещает исходную ссылку на планировщик и возвращает указатель на него.  
   
@@ -127,7 +142,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  Этот метод можно вызвать ряд исключений, включая [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) и [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  Создает новую группу расписания в планировщике. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.  
   
@@ -149,7 +164,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  Обратите внимание, что если явно создан данный планировщик, необходимо освободить все ссылки на группы, расписания, перед освобождением ссылок на планировщик.  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  Возвращает текущее число виртуальных процессоров для планировщика.  
   
@@ -160,7 +175,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее число виртуальных процессоров для планировщика.  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  Возвращает копию политики, был создан планировщик.  
   
@@ -171,7 +186,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Копия политики, созданный планировщик.  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Идентификатор 
+##  <a name="id"></a>Идентификатор 
 
  Возвращает уникальный идентификатор для планировщика.  
   
@@ -182,7 +197,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Уникальный идентификатор для планировщика.  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  Определяет, доступно ли данное расположение в планировщике.  
   
@@ -200,7 +215,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что возвращаемое значение является результатом проверки доступности указанного расположения в данный момент. При наличии нескольких планировщиков динамическое управление ресурсами может добавлять или забирать ресурсы у планировщиков в любой момент. Если это произошло, доступность заданного расположения может измениться.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>Ссылка 
+##  <a name="reference"></a>Ссылка 
 
  Увеличивает значение счетчика ссылок планировщика.  
   
@@ -216,7 +231,7 @@ virtual unsigned int Reference() = 0 ;
   
  Метод создает исключение [improper_scheduler_reference](improper-scheduler-reference-class.md) исключение, если число ссылок до вызова метода `Reference` метод равно нулю и вызов выполняется из контекста, который не принадлежит планировщику.  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Причины, переданный дескриптор события Windows `_Event` параметр сигнал, когда планировщик завершает работу и удаляет себя. В то время, когда событие получает сигнал вся работа, запланированная планировщику завершена. Таким способом можно зарегистрировать несколько событий завершения работы.  
   
@@ -228,7 +243,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
  `_Event`  
  Дескриптор объекта события Windows, который будет оповещаться средой выполнения, когда планировщик завершает работу и удаляет себя.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>Выпуск 
+##  <a name="release"></a>Выпуск 
 
  Уменьшает значение счетчика ссылок планировщика.  
   
@@ -242,7 +257,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>Примечания  
  Обычно используется для управления временем жизни планировщика для объединения. Когда значение счетчика ссылок планировщика снижается до нуля, планировщик завершит работу и уничтожится после завершения всей работы, указанной в планировщике.  
   
-##  <a name="a-nameresetdefaultschedulerpolicya-resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
 
  Восстанавливает политику по умолчанию планировщика по умолчанию среды выполнения. Далее время создания планировщик по умолчанию будет использовать параметры политики по умолчанию среды выполнения.  
   
@@ -253,7 +268,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>Примечания  
  Этот метод может вызываться во время существования планировщика по умолчанию внутри процесса. Он не влияет на политику существующих планировщик по умолчанию. Однако если планировщик по умолчанию для завершения работы, и новое значение по умолчанию создаваться на более позднем этапе, новый планировщик будет использовать параметры политики по умолчанию среды выполнения.  
   
-##  <a name="a-namectora-scheduler"></a><a name="ctor"></a>Планировщик 
+##  <a name="ctor"></a>Планировщик 
 
  Объект `Scheduler` класса можно создавать только с помощью методов фабрики или неявно.  
   
@@ -266,7 +281,7 @@ Scheduler();
   
  Можно также создать планировщика явно с помощью либо `CurrentScheduler::Create` метода или `Scheduler::Create` метод.  
   
-##  <a name="a-namedtora-scheduler"></a><a name="dtor"></a>~ Планировщика 
+##  <a name="dtor"></a>~ Планировщика 
 
  Объект `Scheduler` класс неявно уничтожается, когда все внешние ссылки на него исчезают.  
   
@@ -274,7 +289,7 @@ Scheduler();
 virtual ~Scheduler();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Назначает легкое задание в планировщике. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.  
   
@@ -299,7 +314,7 @@ virtual void ScheduleTask(
  `_Placement`  
  Ссылка на расположение, где будет склонна выполняться упрощенная задача.  
   
-##  <a name="a-namesetdefaultschedulerpolicya-setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
 
  Позволяет политику определенную пользователем для создания планировщика по умолчанию. Этот метод может вызываться только в том случае, когда планировщик по умолчанию существует внутри процесса. После настройки политики по умолчанию остается в силе до следующего допустимого вызова либо `SetDefaultSchedulerPolicy` или [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) метод.  
   
@@ -317,7 +332,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс планировщика](scheduler-class.md)   
- [Перечисление PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Планировщик заданий](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

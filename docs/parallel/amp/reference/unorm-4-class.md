@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 6b3f327e81ce83ac0ea50a63194a5da8af888e14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm4-class"></a>Класс unorm_4
@@ -328,155 +328,155 @@ class unorm_4;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод unorm_4::get_w||  
-|Метод unorm_4::get_wx||  
-|Метод unorm_4::get_wxy||  
-|Метод unorm_4::get_wxyz||  
-|Метод unorm_4::get_wxz||  
-|Метод unorm_4::get_wxzy||  
-|Метод unorm_4::get_wy||  
-|Метод unorm_4::get_wyx||  
-|Метод unorm_4::get_wyxz||  
-|Метод unorm_4::get_wyz||  
-|Метод unorm_4::get_wyzx||  
-|Метод unorm_4::get_wz||  
-|Метод unorm_4::get_wzx||  
-|Метод unorm_4::get_wzxy||  
-|Метод unorm_4::get_wzy||  
-|Метод unorm_4::get_wzyx||  
-|Метод unorm_4::get_X||  
-|Метод unorm_4::get_xw||  
-|Метод unorm_4::get_xwy||  
-|Метод unorm_4::get_xwyz||  
-|Метод unorm_4::get_xwz||  
-|Метод unorm_4::get_xwzy||  
-|Метод unorm_4::get_xy||  
-|Метод unorm_4::get_xyw||  
-|Метод unorm_4::get_xywz||  
-|Метод unorm_4::get_xyz||  
-|Метод unorm_4::get_xyzw||  
-|Метод unorm_4::get_xz||  
-|Метод unorm_4::get_xzw||  
-|Метод unorm_4::get_xzwy||  
-|Метод unorm_4::get_xzy||  
-|Метод unorm_4::get_xzyw||  
-|Метод unorm_4::get_y||  
-|Метод unorm_4::get_yw||  
-|Метод unorm_4::get_ywx||  
-|Метод unorm_4::get_ywxz||  
-|Метод unorm_4::get_ywz||  
-|Метод unorm_4::get_ywzx||  
-|Метод unorm_4::get_yx||  
-|Метод unorm_4::get_yxw||  
-|Метод unorm_4::get_yxwz||  
-|Метод unorm_4::get_yxz||  
-|Метод unorm_4::get_yxzw||  
-|Метод unorm_4::get_yz||  
-|Метод unorm_4::get_yzw||  
-|Метод unorm_4::get_yzwx||  
-|Метод unorm_4::get_yzx||  
-|Метод unorm_4::get_yzxw||  
-|Метод unorm_4::get_z||  
-|Метод unorm_4::get_zw||  
-|Метод unorm_4::get_zwx||  
-|Метод unorm_4::get_zwxy||  
-|Метод unorm_4::get_zwy||  
-|Метод unorm_4::get_zwyx||  
-|Метод unorm_4::get_zx||  
-|Метод unorm_4::get_zxw||  
-|Метод unorm_4::get_zxwy||  
-|Метод unorm_4::get_zxy||  
-|Метод unorm_4::get_zxyw||  
-|Метод unorm_4::get_zy||  
-|Метод unorm_4::get_zyw||  
-|Метод unorm_4::get_zywx||  
-|Метод unorm_4::get_zyx||  
-|Метод unorm_4::get_zyxw||  
-|Метод unorm_4::ref_a||  
-|Метод unorm_4::ref_b||  
-|Метод unorm_4::ref_g||  
-|Метод unorm_4::ref_r||  
-|Метод unorm_4::ref_w||  
-|Метод unorm_4::ref_x||  
-|Метод unorm_4::ref_y||  
-|Метод unorm_4::ref_z||  
-|Метод unorm_4::set_w||  
-|Метод unorm_4::set_wx||  
-|Метод unorm_4::set_wxy||  
-|Метод unorm_4::set_wxyz||  
-|Метод unorm_4::set_wxz||  
-|Метод unorm_4::set_wxzy||  
-|Метод unorm_4::set_wy||  
-|Метод unorm_4::set_wyx||  
-|Метод unorm_4::set_wyxz||  
-|Метод unorm_4::set_wyz||  
-|Метод unorm_4::set_wyzx||  
-|Метод unorm_4::set_wz||  
-|Метод unorm_4::set_wzx||  
-|Метод unorm_4::set_wzxy||  
-|Метод unorm_4::set_wzy||  
-|Метод unorm_4::set_wzyx||  
-|Метод unorm_4::set_X||  
-|Метод unorm_4::set_xw||  
-|Метод unorm_4::set_xwy||  
-|Метод unorm_4::set_xwyz||  
-|Метод unorm_4::set_xwz||  
-|Метод unorm_4::set_xwzy||  
-|Метод unorm_4::set_xy||  
-|Метод unorm_4::set_xyw||  
-|Метод unorm_4::set_xywz||  
-|Метод unorm_4::set_xyz||  
-|Метод unorm_4::set_xyzw||  
-|Метод unorm_4::set_xz||  
-|Метод unorm_4::set_xzw||  
-|Метод unorm_4::set_xzwy||  
-|Метод unorm_4::set_xzy||  
-|Метод unorm_4::set_xzyw||  
-|Метод unorm_4::set_y||  
-|Метод unorm_4::set_yw||  
-|Метод unorm_4::set_ywx||  
-|Метод unorm_4::set_ywxz||  
-|Метод unorm_4::set_ywz||  
-|Метод unorm_4::set_ywzx||  
-|Метод unorm_4::set_yx||  
-|Метод unorm_4::set_yxw||  
-|Метод unorm_4::set_yxwz||  
-|Метод unorm_4::set_yxz||  
-|Метод unorm_4::set_yxzw||  
-|Метод unorm_4::set_yz||  
-|Метод unorm_4::set_yzw||  
-|Метод unorm_4::set_yzwx||  
-|Метод unorm_4::set_yzx||  
-|Метод unorm_4::set_yzxw||  
-|Метод unorm_4::set_z||  
-|Метод unorm_4::set_zw||  
-|Метод unorm_4::set_zwx||  
-|Метод unorm_4::set_zwxy||  
-|Метод unorm_4::set_zwy||  
-|Метод unorm_4::set_zwyx||  
-|Метод unorm_4::set_zx||  
-|Метод unorm_4::set_zxw||  
-|Метод unorm_4::set_zxwy||  
-|Метод unorm_4::set_zxy||  
-|Метод unorm_4::set_zxyw||  
-|Метод unorm_4::set_zy||  
-|Метод unorm_4::set_zyw||  
-|Метод unorm_4::set_zywx||  
-|Метод unorm_4::set_zyx||  
-|Метод unorm_4::set_zyxw||  
+|unorm_4::get_w||  
+|unorm_4::get_wx||  
+|unorm_4::get_wxy||  
+|unorm_4::get_wxyz||  
+|unorm_4::get_wxz||  
+|unorm_4::get_wxzy||  
+|unorm_4::get_wy||  
+|unorm_4::get_wyx||  
+|unorm_4::get_wyxz||  
+|unorm_4::get_wyz||  
+|unorm_4::get_wyzx||  
+|unorm_4::get_wz||  
+|unorm_4::get_wzx||  
+|unorm_4::get_wzxy||  
+|unorm_4::get_wzy||  
+|unorm_4::get_wzyx||  
+|unorm_4::get_X||  
+|unorm_4::get_xw||  
+|unorm_4::get_xwy||  
+|unorm_4::get_xwyz||  
+|unorm_4::get_xwz||  
+|unorm_4::get_xwzy||  
+|unorm_4::get_xy||  
+|unorm_4::get_xyw||  
+|unorm_4::get_xywz||  
+|unorm_4::get_xyz||  
+|unorm_4::get_xyzw||  
+|unorm_4::get_xz||  
+|unorm_4::get_xzw||  
+|unorm_4::get_xzwy||  
+|unorm_4::get_xzy||  
+|unorm_4::get_xzyw||  
+|unorm_4::get_y||  
+|unorm_4::get_yw||  
+|unorm_4::get_ywx||  
+|unorm_4::get_ywxz||  
+|unorm_4::get_ywz||  
+|unorm_4::get_ywzx||  
+|unorm_4::get_yx||  
+|unorm_4::get_yxw||  
+|unorm_4::get_yxwz||  
+|unorm_4::get_yxz||  
+|unorm_4::get_yxzw||  
+|unorm_4::get_yz||  
+|unorm_4::get_yzw||  
+|unorm_4::get_yzwx||  
+|unorm_4::get_yzx||  
+|unorm_4::get_yzxw||  
+|unorm_4::get_z||  
+|unorm_4::get_zw||  
+|unorm_4::get_zwx||  
+|unorm_4::get_zwxy||  
+|unorm_4::get_zwy||  
+|unorm_4::get_zwyx||  
+|unorm_4::get_zx||  
+|unorm_4::get_zxw||  
+|unorm_4::get_zxwy||  
+|unorm_4::get_zxy||  
+|unorm_4::get_zxyw||  
+|unorm_4::get_zy||  
+|unorm_4::get_zyw||  
+|unorm_4::get_zywx||  
+|unorm_4::get_zyx||  
+|unorm_4::get_zyxw||  
+|unorm_4::ref_a||  
+|unorm_4::ref_b||  
+|unorm_4::ref_g||  
+|unorm_4::ref_r||  
+|unorm_4::ref_w||  
+|unorm_4::ref_x||  
+|unorm_4::ref_y||  
+|unorm_4::ref_z||  
+|unorm_4::set_w||  
+|unorm_4::set_wx||  
+|unorm_4::set_wxy||  
+|unorm_4::set_wxyz||  
+|unorm_4::set_wxz||  
+|unorm_4::set_wxzy||  
+|unorm_4::set_wy||  
+|unorm_4::set_wyx||  
+|unorm_4::set_wyxz||  
+|unorm_4::set_wyz||  
+|unorm_4::set_wyzx||  
+|unorm_4::set_wz||  
+|unorm_4::set_wzx||  
+|unorm_4::set_wzxy||  
+|unorm_4::set_wzy||  
+|unorm_4::set_wzyx||  
+|unorm_4::set_X||  
+|unorm_4::set_xw||  
+|unorm_4::set_xwy||  
+|unorm_4::set_xwyz||  
+|unorm_4::set_xwz||  
+|unorm_4::set_xwzy||  
+|unorm_4::set_xy||  
+|unorm_4::set_xyw||  
+|unorm_4::set_xywz||  
+|unorm_4::set_xyz||  
+|unorm_4::set_xyzw||  
+|unorm_4::set_xz||  
+|unorm_4::set_xzw||  
+|unorm_4::set_xzwy||  
+|unorm_4::set_xzy||  
+|unorm_4::set_xzyw||  
+|unorm_4::set_y||  
+|unorm_4::set_yw||  
+|unorm_4::set_ywx||  
+|unorm_4::set_ywxz||  
+|unorm_4::set_ywz||  
+|unorm_4::set_ywzx||  
+|unorm_4::set_yx||  
+|unorm_4::set_yxw||  
+|unorm_4::set_yxwz||  
+|unorm_4::set_yxz||  
+|unorm_4::set_yxzw||  
+|unorm_4::set_yz||  
+|unorm_4::set_yzw||  
+|unorm_4::set_yzwx||  
+|unorm_4::set_yzx||  
+|unorm_4::set_yzxw||  
+|unorm_4::set_z||  
+|unorm_4::set_zw||  
+|unorm_4::set_zwx||  
+|unorm_4::set_zwxy||  
+|unorm_4::set_zwy||  
+|unorm_4::set_zwyx||  
+|unorm_4::set_zx||  
+|unorm_4::set_zxw||  
+|unorm_4::set_zxwy||  
+|unorm_4::set_zxy||  
+|unorm_4::set_zxyw||  
+|unorm_4::set_zy||  
+|unorm_4::set_zyw||  
+|unorm_4::set_zywx||  
+|unorm_4::set_zyx||  
+|unorm_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|unorm_4::operator оператор||  
-|unorm_4::operator - оператор||  
-|unorm_4::operator * =-оператор||  
-|unorm_4::operator / =-оператор||  
-|unorm_4::operator оператор ++||  
-|Оператор += unorm_4::operator||  
-|unorm_4::operator =-оператор||  
-|unorm_4::operator-= оператор||  
+|unorm_4::operator-||  
+|unorm_4::operator--||  
+|unorm_4::operator * =||  
+|unorm_4::operator / =||  
+|unorm_4::operator ++||  
+|unorm_4::operator +=||  
+|unorm_4::operator =||  
+|unorm_4::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -488,134 +488,134 @@ class unorm_4;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных unorm_4::a||  
-|Элемент данных unorm_4::AB||  
-|Элемент данных unorm_4::abg||  
-|Элемент данных unorm_4::abgr||  
-|Элемент данных unorm_4::ABR||  
-|Элемент данных unorm_4::abrg||  
-|Элемент данных unorm_4::AG||  
-|Элемент данных unorm_4::agb||  
-|Элемент данных unorm_4::agbr||  
-|Элемент данных unorm_4::agr||  
-|Элемент данных unorm_4::agrb||  
-|Элемент данных unorm_4::ar||  
-|Элемент данных unorm_4::arb||  
-|Элемент данных unorm_4::arbg||  
-|Элемент данных unorm_4::arg||  
-|Элемент данных unorm_4::ARGB||  
-|Элемент данных unorm_4::b||  
-|Элемент данных unorm_4::BA||  
-|Элемент данных unorm_4::bag||  
-|Элемент данных unorm_4::bagr||  
-|Элемент данных unorm_4::Bar||  
-|Элемент данных unorm_4::barg||  
-|Элемент данных unorm_4::BG||  
-|Элемент данных unorm_4::BGA||  
-|Элемент данных unorm_4::bgar||  
-|Элемент данных unorm_4::bgr||  
-|Элемент данных unorm_4::bgra||  
-|Элемент данных unorm_4::br||  
-|Элемент данных unorm_4::BRA||  
-|Элемент данных unorm_4::brag||  
-|Элемент данных unorm_4::brg||  
-|Элемент данных unorm_4::brga||  
-|Элемент данных unorm_4::g||  
-|Элемент данных unorm_4::ga||  
-|Элемент данных unorm_4::GAB||  
-|Элемент данных unorm_4::gabr||  
-|Элемент данных unorm_4::gar||  
-|Элемент данных unorm_4::garb||  
-|Элемент данных unorm_4::GB||  
-|Элемент данных unorm_4::gba||  
-|Элемент данных unorm_4::gbar||  
-|Элемент данных unorm_4::GBR||  
-|Элемент данных unorm_4::gbra||  
-|Элемент данных unorm_4::GR||  
-|Элемент данных unorm_4::gra||  
-|Элемент данных unorm_4::grab||  
-|Элемент данных unorm_4::grb||  
-|Элемент данных unorm_4::grba||  
-|Элемент данных unorm_4::r||  
-|Элемент данных unorm_4::RA||  
-|Элемент данных unorm_4::rab||  
-|Элемент данных unorm_4::rabg||  
-|Элемент данных unorm_4::rag||  
-|Элемент данных unorm_4::ragb||  
-|Элемент данных unorm_4::RB||  
-|Элемент данных unorm_4::rba||  
-|Элемент данных unorm_4::rbag||  
-|Элемент данных unorm_4::rbg||  
-|Элемент данных unorm_4::rbga||  
-|Элемент данных unorm_4::RG||  
-|Элемент данных unorm_4::rga||  
-|Элемент данных unorm_4::rgab||  
-|Элемент данных unorm_4::RGB||  
-|Элемент данных unorm_4::RGBA||  
-|Элемент данных unorm_4::w||  
-|Элемент данных unorm_4::WX||  
-|Элемент данных unorm_4::wxy||  
-|Элемент данных unorm_4::wxyz||  
-|Элемент данных unorm_4::wxz||  
-|Элемент данных unorm_4::wxzy||  
-|Элемент данных unorm_4::WY||  
-|Элемент данных unorm_4::wyx||  
-|Элемент данных unorm_4::wyxz||  
-|Элемент данных unorm_4::WYZ||  
-|Элемент данных unorm_4::wyzx||  
-|Элемент данных unorm_4::wZ||  
-|Элемент данных unorm_4::wzx||  
-|Элемент данных unorm_4::wzxy||  
-|Элемент данных unorm_4::wzy||  
-|Элемент данных unorm_4::wzyx||  
-|Элемент данных unorm_4::x||  
-|Элемент данных unorm_4::xw||  
-|Элемент данных unorm_4::xwy||  
-|Элемент данных unorm_4::xwyz||  
-|Элемент данных unorm_4::xwz||  
-|Элемент данных unorm_4::xwzy||  
-|Элемент данных unorm_4::XY||  
-|Элемент данных unorm_4::xyw||  
-|Элемент данных unorm_4::xywz||  
-|Элемент данных unorm_4::xyz||  
-|Элемент данных unorm_4::xyzw||  
-|Элемент данных unorm_4::xz||  
-|Элемент данных unorm_4::xzw||  
-|Элемент данных unorm_4::xzwy||  
-|Элемент данных unorm_4::xzy||  
-|Элемент данных unorm_4::xzyw||  
-|Элемент данных unorm_4::y||  
-|Элемент данных unorm_4::yw||  
-|Элемент данных unorm_4::ywx||  
-|Элемент данных unorm_4::ywxz||  
-|Элемент данных unorm_4::ywz||  
-|Элемент данных unorm_4::ywzx||  
-|Элемент данных unorm_4::YX||  
-|Элемент данных unorm_4::yxw||  
-|Элемент данных unorm_4::yxwz||  
-|Элемент данных unorm_4::yxz||  
-|Элемент данных unorm_4::yxzw||  
-|Элемент данных unorm_4::yz||  
-|Элемент данных unorm_4::yzw||  
-|Элемент данных unorm_4::yzwx||  
-|Элемент данных unorm_4::yzx||  
-|Элемент данных unorm_4::yzxw||  
-|Элемент данных unorm_4::z||  
-|Элемент данных unorm_4::zw||  
-|Элемент данных unorm_4::zwx||  
-|Элемент данных unorm_4::zwxy||  
-|Элемент данных unorm_4::zwy||  
-|Элемент данных unorm_4::zwyx||  
-|Элемент данных unorm_4::zx||  
-|Элемент данных unorm_4::zxw||  
-|Элемент данных unorm_4::zxwy||  
-|Элемент данных unorm_4::zxy||  
-|Элемент данных unorm_4::zxyw||  
-|Элемент данных unorm_4::zy||  
-|Элемент данных unorm_4::zyw||  
-|Элемент данных unorm_4::zywx||  
-|Элемент данных unorm_4::zyx||  
-|Элемент данных unorm_4::zyxw||  
+|unorm_4::a||  
+|unorm_4::AB||  
+|unorm_4::abg||  
+|unorm_4::abgr||  
+|unorm_4::ABR||  
+|unorm_4::abrg||  
+|unorm_4::AG||  
+|unorm_4::agb||  
+|unorm_4::agbr||  
+|unorm_4::agr||  
+|unorm_4::agrb||  
+|unorm_4::ar||  
+|unorm_4::arb||  
+|unorm_4::arbg||  
+|unorm_4::arg||  
+|unorm_4::ARGB||  
+|unorm_4::b||  
+|unorm_4::BA||  
+|unorm_4::bag||  
+|unorm_4::bagr||  
+|unorm_4::Bar||  
+|unorm_4::barg||  
+|unorm_4::BG||  
+|unorm_4::BGA||  
+|unorm_4::bgar||  
+|unorm_4::bgr||  
+|unorm_4::bgra||  
+|unorm_4::br||  
+|unorm_4::BRA||  
+|unorm_4::brag||  
+|unorm_4::brg||  
+|unorm_4::brga||  
+|unorm_4::g||  
+|unorm_4::ga||  
+|unorm_4::GAB||  
+|unorm_4::gabr||  
+|unorm_4::gar||  
+|unorm_4::garb||  
+|unorm_4::GB||  
+|unorm_4::gba||  
+|unorm_4::gbar||  
+|unorm_4::GBR||  
+|unorm_4::gbra||  
+|unorm_4::GR||  
+|unorm_4::gra||  
+|unorm_4::grab||  
+|unorm_4::grb||  
+|unorm_4::grba||  
+|unorm_4::r||  
+|unorm_4::RA||  
+|unorm_4::rab||  
+|unorm_4::rabg||  
+|unorm_4::rag||  
+|unorm_4::ragb||  
+|unorm_4::RB||  
+|unorm_4::rba||  
+|unorm_4::rbag||  
+|unorm_4::rbg||  
+|unorm_4::rbga||  
+|unorm_4::RG||  
+|unorm_4::rga||  
+|unorm_4::rgab||  
+|unorm_4::RGB||  
+|unorm_4::RGBA||  
+|unorm_4::w||  
+|unorm_4::WX||  
+|unorm_4::wxy||  
+|unorm_4::wxyz||  
+|unorm_4::wxz||  
+|unorm_4::wxzy||  
+|unorm_4::WY||  
+|unorm_4::wyx||  
+|unorm_4::wyxz||  
+|unorm_4::WYZ||  
+|unorm_4::wyzx||  
+|unorm_4::wZ||  
+|unorm_4::wzx||  
+|unorm_4::wzxy||  
+|unorm_4::wzy||  
+|unorm_4::wzyx||  
+|unorm_4::x||  
+|unorm_4::xw||  
+|unorm_4::xwy||  
+|unorm_4::xwyz||  
+|unorm_4::xwz||  
+|unorm_4::xwzy||  
+|unorm_4::XY||  
+|unorm_4::xyw||  
+|unorm_4::xywz||  
+|unorm_4::xyz||  
+|unorm_4::xyzw||  
+|unorm_4::xz||  
+|unorm_4::xzw||  
+|unorm_4::xzwy||  
+|unorm_4::xzy||  
+|unorm_4::xzyw||  
+|unorm_4::y||  
+|unorm_4::yw||  
+|unorm_4::ywx||  
+|unorm_4::ywxz||  
+|unorm_4::ywz||  
+|unorm_4::ywzx||  
+|unorm_4::YX||  
+|unorm_4::yxw||  
+|unorm_4::yxwz||  
+|unorm_4::yxz||  
+|unorm_4::yxzw||  
+|unorm_4::yz||  
+|unorm_4::yzw||  
+|unorm_4::yzwx||  
+|unorm_4::yzx||  
+|unorm_4::yzxw||  
+|unorm_4::z||  
+|unorm_4::zw||  
+|unorm_4::zwx||  
+|unorm_4::zwxy||  
+|unorm_4::zwy||  
+|unorm_4::zwyx||  
+|unorm_4::zx||  
+|unorm_4::zxw||  
+|unorm_4::zxwy||  
+|unorm_4::zxy||  
+|unorm_4::zxyw||  
+|unorm_4::zy||  
+|unorm_4::zyw||  
+|unorm_4::zywx||  
+|unorm_4::zyx||  
+|unorm_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `unorm_4`  
@@ -625,7 +625,7 @@ class unorm_4;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-unorm4"></a><a name="ctor"></a>unorm_4 
+##  <a name="ctor"></a>unorm_4 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -709,12 +709,12 @@ explicit inline unorm_4(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-nameunorm4sizea-size"></a><a name="unorm_4__size"></a>размер 
+##  <a name="unorm_4__size"></a>размер 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

@@ -6,31 +6,53 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d::abs
+- amp/Concurrency::direct3d::countbits
+- amp/Concurrency::direct3d::create_accelerator_view
+- amp/Concurrency::direct3d::d3d_access_lock
+- amp/Concurrency::direct3d::d3d_access_unlock
+- amp/Concurrency::direct3d::firstbithigh
+- amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::imax
+- amp/Concurrency::direct3d::is_timeout_disabled
+- amp/Concurrency::direct3d::mad
+- amp/Concurrency::direct3d::noise
+- amp/Concurrency::direct3d::radians
+- amp/Concurrency::direct3d::reversebits
+- amp/Concurrency::direct3d::saturate
+- amp/Concurrency::direct3d::smoothstep
+- amp/Concurrency::direct3d::step
+- amp/Concurrency::direct3d::umin
+dev_langs: C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 46cafc3c6d6f21eaf147ef0edfeca7f2c81d64e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ad00006c9ab4f25887cf28ed5b977551c35bda9e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Пространство имен Concurrency::Direct3D функции (AMP)
 ||||  
 |-|-|-|  
-|[Функция ABS](#abs)|[Функция CLAMP](#clamp)|[Функция countbits](#countbits)|
-|[Функция create_accelerator_view](#create_accelerator_view)|||
-|[Функция d3d_access_lock](#d3d_access_lock)|[Функция d3d_access_try_lock](#d3d_access_try_lock)|[Функция d3d_access_unlock](#d3d_access_unlock)|  
-|[Функция firstbithigh](#firstbithigh)|[Функция firstbitlow](#firstbitlow)|[Функция get_buffer](#get_buffer)|  
-|[Функция iMax](#imax)|[Функция imin](#imin)|[Функция is_timeout_disabled](#is_timeout_disabled)|  
-|[Функция MAD](#mad)|[Функция make_array](#make_array)|[Функция noise](#noise)|  
-|[Функция RADIANS](#radians)|[Функция rcp](#rcp)|[Функция reversebits](#reversebits)|  
-|[Функция saturate](#saturate)|[Функция Sign](#sign)|[Функция smoothstep](#smoothstep)|  
-|[Функция Step](#step)|[Функция UMAX](#umax)|[Функция umin](#umin)|  
+|[abs](#abs)|[Скоба](#clamp)|[countbits](#countbits)|
+|[create_accelerator_view](#create_accelerator_view)|||
+|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[iMax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
+|[MAD](#mad)|[make_array](#make_array)|[шум](#noise)|  
+|[радианы](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[перегрузке](#saturate)|[вход](#sign)|[smoothstep](#smoothstep)|  
+|[Шаг](#step)|[UMAX](#umax)|[umin](#umin)|  
+
+## <a name="requirements"></a>Требования
+**Заголовок:** amp.h **пространство имен:** параллелизма
   
-##  <a name="a-nameabsa--abs-function"></a><a name="abs"></a>Функция ABS  
+##  <a name="abs"></a>  abs  
  Возвращает абсолютное значение аргумента  
   
 ```  
@@ -44,7 +66,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает абсолютное значение аргумента.  
   
-##  <a name="a-nameclampa--clamp-function"></a><a name="clamp"></a>Функция CLAMP  
+##  <a name="clamp"></a>Скоба  
  Вычисляет значение первого указанного аргумента ограниченный диапазон, определяемый указанным второй и третий аргументы.  
   
 ```  
@@ -73,7 +95,7 @@ inline int clamp(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение ограниченными `_X`.  
   
-##  <a name="a-namecountbitsa--countbits-function"></a><a name="countbits"></a>Функция countbits  
+##  <a name="countbits"></a>countbits  
  Подсчитывает количество набор битов в _X  
   
 ```  
@@ -87,7 +109,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество набор битов в _X  
 
-## <a name="a-namecreateacceleratorviewa-createacceleratorview-function"></a><a name="create_accelerator_view"></a>Функция create_accelerator_view
+## <a name="create_accelerator_view"></a>create_accelerator_view  
 Создает [accelerator_view](accelerator-view-class.md) объекта из указателя на интерфейс устройства Direct3D.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -127,7 +149,7 @@ accelerator_view create_accelerator_view(
  Среда выполнения C++ AMP предоставляет подробные сведения об ошибке в режиме отладки с помощью слоя D3D отладки при использовании `D3D11_CREATE_DEVICE_DEBUG` флаг.  
   
   
-##  <a name="a-named3daccesslocka--d3daccesslock-function"></a><a name="d3d_access_lock"></a>Функция d3d_access_lock  
+##  <a name="d3d_access_lock"></a>d3d_access_lock  
  Получить блокировку для безопасного выполнения операций D3D ресурсов, совместно с accelerator_view accelerator_view. Accelerator_view и все ресурсы C++ AMP, связанные с этой accelerator_view внутренне принять эту блокировку при выполнении операций и блокируются на время другой поток владеет блокировкой доступа D3D. Эта блокировка является нерекурсивного: это неопределенное поведение, необходимо вызвать эту функцию из потока, который уже удерживает блокировку. Это поведение не определено для выполнения операций над accelerator_view или любого контейнера данных, связанного с accelerator_view из потока, который удерживает блокировку доступа D3D. См. также scoped_d3d_access_lock класс стиля RAII блокировки на уровне области доступа D3D.  
   
 ```  
@@ -138,7 +160,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view блокировки.  
   
-##  <a name="a-named3daccesstrylocka--d3daccesstrylock-function"></a><a name="d3d_access_try_lock"></a>Функция d3d_access_try_lock  
+##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
  Попытка получить блокировку доступа D3D accelerator_view без блокировки.  
   
 ```  
@@ -152,7 +174,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>Возвращаемое значение  
  значение true, если блокировка была получена, или false, если она в настоящее время удерживается другим потоком.  
   
-##  <a name="a-named3daccessunlocka--d3daccessunlock-function"></a><a name="d3d_access_unlock"></a>Функция d3d_access_unlock  
+##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
  Снять блокировку доступа D3D данного accelerator_view. Если вызывающий поток не удерживает блокировку accelerator_view результаты не определены.  
   
 ```  
@@ -163,7 +185,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view, для которого выполняется снятия блокировки.  
   
-##  <a name="a-namefirstbithigha--firstbithigh-function"></a><a name="firstbithigh"></a>Функция firstbithigh  
+##  <a name="firstbithigh"></a>firstbithigh  
  Возвращает положение первого значащего разряда в _X, начиная с старший бит и перехода к бит низкого порядка.  
   
 ```  
@@ -177,7 +199,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Расположение первый установленный бит  
   
-##  <a name="a-namefirstbitlowa--firstbitlow-function"></a><a name="firstbitlow"></a>Функция firstbitlow  
+##  <a name="firstbitlow"></a>firstbitlow  
  Возвращает положение первого значащего разряда в _X, начиная с бит низкого порядка и работает над старший бит.  
   
 ```  
@@ -191,7 +213,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает расположение первый установленный бит  
   
-##  <a name="a-namegetbuffera--getbuffer-function"></a><a name="get_buffer"></a>Функция get_buffer  
+##  <a name="get_buffer"></a>get_buffer  
  Получите интерфейс Direct3D буфера, базовый в указанный массив.  
   
 ```  
@@ -216,7 +238,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель интерфейса IUnknown, соответствующий базовый массив буфера Direct3D.  
   
-##  <a name="a-nameimaxa--imax-function"></a><a name="imax"></a>Функция iMax  
+##  <a name="imax"></a>iMax  
  Определите максимальное числовое значение аргументов  
   
 ```  
@@ -235,7 +257,7 @@ inline int imax(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает максимальное значение числового аргументов  
   
-##  <a name="a-nameimina--imin-function"></a><a name="imin"></a>Функция imin  
+##  <a name="imin"></a>imin  
  Определите минимальное числовое значение аргументов  
   
 ```  
@@ -254,7 +276,7 @@ inline int imin(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает минимальное значение числового аргументов  
   
-##  <a name="a-nameistimeoutdisableda--istimeoutdisabled-function"></a><a name="is_timeout_disabled"></a>Функция is_timeout_disabled  
+##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
  Возвращает указатель логического типа, указывающее, отключено ли время ожидания для указанного accelerator_view. Это соответствует флагу D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT для создания устройства Direct3D.  
   
 ```  
@@ -268,7 +290,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>Возвращаемое значение  
  Логический флаг, указывающее, отключено ли время ожидания для указанного accelerator_view.  
   
-##  <a name="a-namemada--mad-function"></a><a name="mad"></a>Функция MAD  
+##  <a name="mad"></a>MAD  
  Вычисляет произведение заданного аргумента, первый и второй, а затем добавляет указанный третий аргумент.  
   
 ```  
@@ -309,7 +331,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>Возвращаемое значение  
  The result of `_X` * `_Y` + `_Z`.  
   
-##  <a name="a-namemakearraya--makearray-function"></a><a name="make_array"></a>Функция make_array  
+##  <a name="make_array"></a>make_array  
  Создайте массив из указателя на интерфейс Direct3D буфера.  
   
 ```  
@@ -342,7 +364,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Возвращаемое значение  
  Массив, созданный с помощью предоставленного буфера Direct3D.  
   
-##  <a name="a-namenoisea--noise-function"></a><a name="noise"></a>Функция noise  
+##  <a name="noise"></a>шум  
  Создает случайное значение с помощью алгоритма шума Перлина  
   
 ```  
@@ -356,7 +378,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение шума Перлина в диапазоне от -1 до 1  
   
-##  <a name="a-nameradiansa--radians-function"></a><a name="radians"></a>Функция RADIANS  
+##  <a name="radians"></a>радианы  
  Преобразует _X из градусов в радианы  
   
 ```  
@@ -370,7 +392,7 @@ inline float radians(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает _X преобразуется из градусов в радианы  
   
-##  <a name="a-namercpa--rcp-function"></a><a name="rcp"></a>Функция rcp  
+##  <a name="rcp"></a>rcp  
  Вычисляет обратное указанного аргумента с помощью быстрой аппроксимации.  
   
 ```  
@@ -387,7 +409,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Обратное указанный аргумент.  
   
-##  <a name="a-namereversebitsa--reversebits-function"></a><a name="reversebits"></a>Функция reversebits  
+##  <a name="reversebits"></a>reversebits  
  Изменяет порядок битов _X  
   
 ```  
@@ -401,7 +423,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение с порядком бит в _X в обратном порядке  
   
-##  <a name="a-namesaturatea--saturate-function"></a><a name="saturate"></a>Функция saturate  
+##  <a name="saturate"></a>перегрузке  
  Фиксирует _X в диапазоне от 0 до 1  
   
 ```  
@@ -415,7 +437,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает _X сжимается в диапазоне от 0 до 1  
   
-##  <a name="a-namesigna--sign-function"></a><a name="sign"></a>Функция Sign  
+##  <a name="sign"></a>вход  
  Определяет знак заданного аргумента.  
   
 ```  
@@ -429,7 +451,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Знак аргумента.  
   
-##  <a name="a-namesmoothstepa--smoothstep-function"></a><a name="smoothstep"></a>Функция smoothstep  
+##  <a name="smoothstep"></a>smoothstep  
  Возвращает smooth Hermite интерполяцию между 0 и 1, если _X находится в диапазоне [_Min, _Max].  
   
 ```  
@@ -452,7 +474,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает 0, если _X меньше, чем _Min; 1, если _X больше, чем _Max; в противном случае — значение между 0 и 1, если _X находится в диапазоне [_Min, _Max]  
   
-##  <a name="a-namestepa--step-function"></a><a name="step"></a>Функция Step  
+##  <a name="step"></a>Шаг  
  Сравнивает два значения и возвращает 0 или 1, в зависимости от того, какое значение больше.  
   
 ```  
@@ -471,7 +493,7 @@ inline float step(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает 1, если _X больше или равно _Y; в противном случае — 0.  
   
-##  <a name="a-nameumaxa--umax-function"></a><a name="umax"></a>Функция UMAX  
+##  <a name="umax"></a>UMAX  
  Определите максимальное числовое значение аргументов  
   
 ```  
@@ -490,7 +512,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает максимальное значение числового аргументов  
   
-##  <a name="a-nameumina--umin-function"></a><a name="umin"></a>Функция umin  
+##  <a name="umin"></a>umin  
  Определите минимальное числовое значение аргументов  
   
 ```  
@@ -510,5 +532,5 @@ inline unsigned int umin(
  Возвращает минимальное значение числового аргументов  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Direct3D](concurrency-direct3d-namespace.md)
+ [Пространство имен Concurrency::direct3d](concurrency-direct3d-namespace.md)
 

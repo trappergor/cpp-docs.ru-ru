@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrency::call
-- agents/concurrency::call
+- call
+- AGENTS/concurrency::call
+- AGENTS/concurrency::call::call
+- AGENTS/concurrency::call::process_input_messages
+- AGENTS/concurrency::call::process_message
+- AGENTS/concurrency::call::propagate_message
+- AGENTS/concurrency::call::send_message
+- AGENTS/concurrency::call::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="call-class"></a>Класс call
@@ -63,18 +69,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[вызвать конструктор](#ctor)|Перегружен. Создает `call` блок обмена сообщениями.|  
+|[вызов](#ctor)|Перегружен. Создает `call` блок обмена сообщениями.|  
 |[~ вызова деструктора](#dtor)|Уничтожает `call` блок обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[process_input_messages метод](#process_input_messages)|Выполняет функцию вызов для входящих сообщений.|  
-|[process_message метод](#process_message)|Обрабатывает сообщение, которое ранее было принято данным `call` блок обмена сообщениями.|  
-|[propagate_message метод](#propagate_message)|Асинхронно передает сообщение из `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.|  
-|[send_message метод](#send_message)|Синхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `send` метод при вызове исходного блока.|  
-|[supports_anonymous_source метод](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[process_input_messages](#process_input_messages)|Выполняет функцию вызов для входящих сообщений.|  
+|[process_message](#process_message)|Обрабатывает сообщение, которое ранее было принято данным `call` блок обмена сообщениями.|  
+|[propagate_message](#propagate_message)|Асинхронно передает сообщение из `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.|  
+|[send_message](#send_message)|Синхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `send` метод при вызове исходного блока.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -91,7 +97,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namectora-call"></a><a name="ctor"></a>вызов 
+##  <a name="ctor"></a>вызов 
 
  Создает `call` блок обмена сообщениями.  
   
@@ -142,7 +148,7 @@ call(
   
  Тип `filter_method` является функтор подписью `bool (T const &)` которого вызывается этим `call` блок сообщений, чтобы определить ли он должен принять предложенное сообщение.  
   
-##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ вызова 
+##  <a name="dtor"></a>~ вызова 
 
  Уничтожает `call` блок обмена сообщениями.  
   
@@ -150,7 +156,7 @@ call(
 ~call();
 ```  
   
-##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a>process_input_messages 
 
  Выполняет функцию вызов для входящих сообщений.  
   
@@ -161,7 +167,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>Параметры  
  `_PMessage`  
   
-##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+##  <a name="process_message"></a>process_message 
 
  Обрабатывает сообщение, которое ранее было принято данным `call` блок обмена сообщениями.  
   
@@ -173,7 +179,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  Указатель на сообщение, которое будет обрабатываться.  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  Асинхронно передает сообщение из `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.  
   
@@ -193,7 +199,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [message_status](concurrency-namespace-enums.md) указывает на то, что целевой объект решил сделать с сообщением.  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  Синхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `send` метод при вызове исходного блока.  
   
@@ -213,7 +219,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [message_status](concurrency-namespace-enums.md) указывает на то, что целевой объект решил сделать с сообщением.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником.  
   

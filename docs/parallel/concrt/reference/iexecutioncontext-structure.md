@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionContext
+- IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::Dispatch
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetId
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 5ad3f21e55371b904ac8a597a7a66d5c5deb8339
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4c4301d7afe46249d6d67ab2a6ec0a9fc2c7935e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutioncontext-structure"></a>Структура IExecutionContext
@@ -54,11 +60,11 @@ struct IExecutionContext;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод IExecutionContext::Dispatch](#dispatch)|Метод, который вызывается, когда прокси-поток запускает выполнение определенного контекста выполнения. Это должен быть основной рабочий процесс для вашего планировщика.|  
-|[Метод IExecutionContext::GetId](#getid)|Возвращает уникальный идентификатор для контекста выполнения.|  
-|[Метод IExecutionContext::GetProxy](#getproxy)|Возвращает интерфейс прокси потока, выполняющего данный контекст.|  
-|[Метод IExecutionContext::GetScheduler](#getscheduler)|Возвращает интерфейс к планировщику, к которой принадлежит этот контекст выполнения.|  
-|[Метод IExecutionContext::SetProxy](#setproxy)|Связывает прокси-поток с данного контекста выполнения. Связанный прокси-поток вызывает этот метод прямо до начала выполнения контекста `Dispatch` метод.|  
+|[IExecutionContext::Dispatch](#dispatch)|Метод, который вызывается, когда прокси-поток запускает выполнение определенного контекста выполнения. Это должен быть основной рабочий процесс для вашего планировщика.|  
+|[IExecutionContext::GetId](#getid)|Возвращает уникальный идентификатор для контекста выполнения.|  
+|[IExecutionContext::GetProxy](#getproxy)|Возвращает интерфейс прокси потока, выполняющего данный контекст.|  
+|[IExecutionContext::GetScheduler](#getscheduler)|Возвращает интерфейс к планировщику, к которой принадлежит этот контекст выполнения.|  
+|[IExecutionContext::SetProxy](#setproxy)|Связывает прокси-поток с данного контекста выполнения. Связанный прокси-поток вызывает этот метод прямо до начала выполнения контекста `Dispatch` метод.|  
   
 ## <a name="remarks"></a>Примечания  
  При реализации пользовательских планировщика, который взаимодействует с диспетчером ресурсов с параллелизмом, необходимо реализовать `IExecutionContext` интерфейса. Потоки, созданные диспетчером ресурсов работать от имени вашего планировщика, выполнив `IExecutionContext::Dispatch` метод.  
@@ -71,7 +77,7 @@ struct IExecutionContext;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namedispatcha--iexecutioncontextdispatch-method"></a><a name="dispatch"></a>Метод IExecutionContext::Dispatch  
+##  <a name="dispatch"></a>Метод IExecutionContext::Dispatch  
  Метод, который вызывается, когда прокси-поток запускает выполнение определенного контекста выполнения. Это должен быть основной рабочий процесс для вашего планировщика.  
   
 ```
@@ -82,7 +88,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Указатель на состояние, под которым отправляется этот контекст выполнения. Дополнительные сведения о состоянии диспетчеризации см. в разделе [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="a-namegetida--iexecutioncontextgetid-method"></a><a name="getid"></a>Метод IExecutionContext::GetId  
+##  <a name="getid"></a>Метод IExecutionContext::GetId  
  Возвращает уникальный идентификатор для контекста выполнения.  
   
 ```
@@ -97,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  Идентификатор, полученный из другого источника может привести к неопределенному поведению.  
   
-##  <a name="a-namegetproxya--iexecutioncontextgetproxy-method"></a><a name="getproxy"></a>Метод IExecutionContext::GetProxy  
+##  <a name="getproxy"></a>Метод IExecutionContext::GetProxy  
  Возвращает интерфейс прокси потока, выполняющего данный контекст.  
   
 ```
@@ -110,7 +116,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Примечания  
  Диспетчер ресурсов будет вызывать `SetProxy` метод на контекст выполнения с `IThreadProxy` интерфейс в качестве параметра, перед выполнением `Dispatch` метод в контексте. Ожидается сохранение этот аргумента и возвращение его при вызове к `GetProxy()`.  
   
-##  <a name="a-namegetschedulera--iexecutioncontextgetscheduler-method"></a><a name="getscheduler"></a>Метод IExecutionContext::GetScheduler  
+##  <a name="getscheduler"></a>Метод IExecutionContext::GetScheduler  
  Возвращает интерфейс к планировщику, к которой принадлежит этот контекст выполнения.  
   
 ```
@@ -123,7 +129,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Примечания  
  Необходимо инициализировать контекст выполнения с допустимым `IScheduler` интерфейс, прежде чем использовать его как параметр методам указано диспетчером ресурсов.  
   
-##  <a name="a-namesetproxya--iexecutioncontextsetproxy-method"></a><a name="setproxy"></a>Метод IExecutionContext::SetProxy  
+##  <a name="setproxy"></a>Метод IExecutionContext::SetProxy  
  Связывает прокси-поток с данного контекста выполнения. Связанный прокси-поток вызывает этот метод прямо до начала выполнения контекста `Dispatch` метод.  
   
 ```

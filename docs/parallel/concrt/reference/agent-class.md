@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::agent
+- agent
+- AGENTS/concurrency::agent
+- AGENTS/concurrency::agent::agent
+- AGENTS/concurrency::agent::cancel
+- AGENTS/concurrency::agent::start
+- AGENTS/concurrency::agent::status
+- AGENTS/concurrency::agent::status_port
+- AGENTS/concurrency::agent::wait
+- AGENTS/concurrency::agent::wait_for_all
+- AGENTS/concurrency::agent::wait_for_one
+- AGENTS/concurrency::agent::done
+- AGENTS/concurrency::agent::run
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 640e1d66a879e8eb73428b50339d6a325cfd7cb2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1e6e23e742137bffd9035ecf69ecc32d199ca0c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="agent-class"></a>Класс agent
@@ -55,27 +66,27 @@ class agent;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор агента](#ctor)|Перегружен. Создает агент.|  
+|[агент](#ctor)|Перегружен. Создает агент.|  
 |[~ агента деструктор](#dtor)|Уничтожает агент.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Cancel-метод](#cancel)|Перемещает агент, либо от `agent_created` или `agent_runnable` состояния следует `agent_canceled` состояния.|  
-|[Start-метод](#start)|Перемещает агент из `agent_created` состояние `agent_runnable` состояние и планирует ее выполнение.|  
-|[состояние метода](#status)|Синхронный источник сведений о состоянии от агента.|  
-|[status_port метод](#status_port)|Асинхронный источник сведений о состоянии от агента.|  
-|[wait-метод](#wait)|Ожидает выполнения задач агента.|  
-|[wait_for_all метод](#wait_for_all)|Ожидает, когда все указанные агенты для выполнения своих задач.|  
-|[wait_for_one метод](#wait_for_one)|Ожидает один из указанных агентов для выполнения необходимых задач.|  
+|[Отмена](#cancel)|Перемещает агент, либо от `agent_created` или `agent_runnable` состояния следует `agent_canceled` состояния.|  
+|[start](#start)|Перемещает агент из `agent_created` состояние `agent_runnable` состояние и планирует ее выполнение.|  
+|[status](#status)|Синхронный источник сведений о состоянии от агента.|  
+|[status_port](#status_port)|Асинхронный источник сведений о состоянии от агента.|  
+|[Ожидание](#wait)|Ожидает выполнения задач агента.|  
+|[wait_for_all](#wait_for_all)|Ожидает, когда все указанные агенты для выполнения своих задач.|  
+|[wait_for_one](#wait_for_one)|Ожидает один из указанных агентов для выполнения необходимых задач.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод Done](#done)|Перемещает агент в `agent_done` состояние, указывающее, что агент завершился.|  
-|[Метод Run](#run)|Представляет основную задача агента. `run`должны быть переопределены в производном классе и указывает, что агент должен делать после его запуска.|  
+|[Договорились](#done)|Перемещает агент в `agent_done` состояние, указывающее, что агент завершился.|  
+|[run](#run)|Представляет основную задача агента. `run`должны быть переопределены в производном классе и указывает, что агент должен делать после его запуска.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [асинхронных агентов](../../../parallel/concrt/asynchronous-agents.md).  
@@ -88,7 +99,7 @@ class agent;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namectora-agent"></a><a name="ctor"></a>агент 
+##  <a name="ctor"></a>агент 
 
  Создает агент.  
   
@@ -110,7 +121,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>Примечания  
  Среда выполнения использует планировщик по умолчанию, если вы не укажете `_PScheduler` или `_PGroup` параметры.  
   
-##  <a name="a-namedtora-agent"></a><a name="dtor"></a>~ агента 
+##  <a name="dtor"></a>~ агента 
 
  Уничтожает агент.  
   
@@ -121,7 +132,7 @@ virtual ~agent();
 ### <a name="remarks"></a>Примечания  
  Это ошибка, чтобы удалить агент, который не находится в состоянии (либо `agent_done` или `agent_canceled`). Этого можно избежать, ожидания агента для достижения конечного состояния в деструкторе класса, который наследует от `agent` класса.  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Отмена 
+##  <a name="cancel"></a>Отмена 
 
  Перемещает агент, либо от `agent_created` или `agent_runnable` состояния следует `agent_canceled` состояния.  
   
@@ -132,7 +143,7 @@ bool cancel();
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если агент был отменен, `false` в противном случае. Невозможно отменить агент, если он уже был запущен или уже завершен.  
   
-##  <a name="a-namedonea-done"></a><a name="done"></a>Договорились 
+##  <a name="done"></a>Договорились 
 
  Перемещает агент в `agent_done` состояние, указывающее, что агент завершился.  
   
@@ -146,7 +157,7 @@ bool done();
 ### <a name="remarks"></a>Примечания  
  Этот метод должен вызываться в конце `run` завершения метода, когда вы знаете, выполнение ваших агента.  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>Запуск 
+##  <a name="run"></a>Запуск 
 
  Представляет основную задача агента. `run`должны быть переопределены в производном классе и указывает, что агент должен делать после его запуска.  
   
@@ -157,7 +168,7 @@ virtual void run() = 0;
 ### <a name="remarks"></a>Примечания  
  Состояние агента изменяется на `agent_started` правой перед вызовом этого метода. Метод должен вызывать `done` на агент с соответствующим статусом перед возвратом и не может создавать исключения.  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>Запуск 
+##  <a name="start"></a>Запуск 
 
  Перемещает агент из `agent_created` состояние `agent_runnable` состояние и планирует ее выполнение.  
   
@@ -168,7 +179,7 @@ bool start();
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если агент запускается правильно, `false` в противном случае. Не удается запустить агент, который был отменен.  
   
-##  <a name="a-namestatusa-status"></a><a name="status"></a>состояние 
+##  <a name="status"></a>состояние 
 
  Синхронный источник сведений о состоянии от агента.  
   
@@ -179,7 +190,7 @@ agent_status status();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает текущее состояние агента. Обратите внимание, что это возвращаемое состояние может меняться сразу после возврата.  
   
-##  <a name="a-namestatusporta-statusport"></a><a name="status_port"></a>status_port 
+##  <a name="status_port"></a>status_port 
 
  Асинхронный источник сведений о состоянии от агента.  
   
@@ -190,7 +201,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает источник сообщения, который может отправлять сообщения о текущем состоянии агента.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Ожидание 
+##  <a name="wait"></a>Ожидание 
 
  Ожидает выполнения задач агента.  
   
@@ -215,7 +226,7 @@ static agent_status __cdecl wait(
   
  Если параметр `_Timeout` имеет значение, отличное от константы `COOPERATIVE_TIMEOUT_INFINITE`, исключение [operation_timed_out](operation-timed-out-class.md) создается, если определенное время истекает до завершения агента.  
   
-##  <a name="a-namewaitforalla-waitforall"></a><a name="wait_for_all"></a>wait_for_all 
+##  <a name="wait_for_all"></a>wait_for_all 
 
  Ожидает, когда все указанные агенты для выполнения своих задач.  
   
@@ -245,7 +256,7 @@ static void __cdecl wait_for_all(
   
  Если параметр `_Timeout` имеет значение, отличное от константы `COOPERATIVE_TIMEOUT_INFINITE`, исключение [operation_timed_out](operation-timed-out-class.md) создается, если определенное время истекает до завершения агента.  
   
-##  <a name="a-namewaitforonea-waitforone"></a><a name="wait_for_one"></a>wait_for_one 
+##  <a name="wait_for_one"></a>wait_for_one 
 
  Ожидает один из указанных агентов для выполнения необходимых задач.  
   
@@ -280,5 +291,5 @@ static void __cdecl wait_for_one(
  Если параметр `_Timeout` имеет значение, отличное от константы `COOPERATIVE_TIMEOUT_INFINITE`, исключение [operation_timed_out](operation-timed-out-class.md) создается, если определенное время истекает до завершения агента.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

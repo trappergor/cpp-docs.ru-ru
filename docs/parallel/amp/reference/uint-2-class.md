@@ -57,9 +57,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1116be21d4f65b67ab967b7acedf4859df54a6e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="uint2-class"></a>Класс uint_2
@@ -89,37 +89,37 @@ class uint_2;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод uint_2::get_X||  
-|Метод uint_2::get_xy||  
-|Метод uint_2::get_y||  
-|Метод uint_2::get_yx||  
+|uint_2::get_X||  
+|uint_2::get_xy||  
+|uint_2::get_y||  
+|uint_2::get_yx||  
 |uint_2::ref_g_Method||  
 |uint_2::ref_r_Method||  
 |uint_2::ref_x_Method||  
 |uint_2::ref_y_Method||  
-|Метод uint_2::set_X||  
-|Метод uint_2::set_xy||  
-|Метод uint_2::set_y||  
-|Метод uint_2::set_yx||  
+|uint_2::set_X||  
+|uint_2::set_xy||  
+|uint_2::set_y||  
+|uint_2::set_yx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|uint_2::operator - оператор||  
-|uint_2::operator % =-оператор||  
-|uint_2::operator & =-оператор||  
-|uint_2::operator * =-оператор||  
-|uint_2::operator / =-оператор||  
-|uint_2::operator ^ =-оператор||  
-|uint_2::operator | =-оператор||  
-|uint_2::operator ~ оператор||  
-|uint_2::operator оператор ++||  
-|Оператор += uint_2::operator||  
-|uint_2::operator\<=-оператор||  
-|uint_2::operator =-оператор||  
-|uint_2::operator-= оператор||  
-|uint_2::operator >> =-оператор||  
+|uint_2::operator--||  
+|uint_2::operator % =||  
+|uint_2::operator & =||  
+|uint_2::operator * =||  
+|uint_2::operator / =||  
+|uint_2::operator ^ =||  
+|uint_2::operator | =||  
+|uint_2::operator ~||  
+|uint_2::operator ++||  
+|uint_2::operator +=||  
+|uint_2::operator\<=||  
+|uint_2::operator =||  
+|uint_2::operator-=||  
+|uint_2::operator >> =||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -131,14 +131,14 @@ class uint_2;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных uint_2::g||  
-|Элемент данных uint_2::GR||  
-|Элемент данных uint_2::r||  
-|Элемент данных uint_2::RG||  
-|Элемент данных uint_2::x||  
-|Элемент данных uint_2::XY||  
-|Элемент данных uint_2::y||  
-|Элемент данных uint_2::YX||  
+|uint_2::g||  
+|uint_2::GR||  
+|uint_2::r||  
+|uint_2::RG||  
+|uint_2::x||  
+|uint_2::XY||  
+|uint_2::y||  
+|uint_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `uint_2`  
@@ -148,7 +148,7 @@ class uint_2;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-uint2"></a><a name="ctor"></a>uint_2 
+##  <a name="ctor"></a>uint_2 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -211,12 +211,12 @@ explicit inline uint_2(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-nameuint2sizea-size"></a><a name="uint_2__size"></a>размер 
+##  <a name="uint_2__size"></a>размер 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

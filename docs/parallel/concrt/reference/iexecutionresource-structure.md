@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>Структура IExecutionResource
@@ -54,10 +59,10 @@ struct IExecutionResource;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Возвращает число активированных виртуальный процессор корней и подписанные внешние потоки, в данный момент связанный с базовой аппаратный поток, который представляет этот ресурс выполнения.|  
-|[Метод IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Возвращает уникальный идентификатор для аппаратного потока, который представляет этот ресурс выполнения.|  
-|[Метод IExecutionResource::GetNodeId](#getnodeid)|Возвращает уникальный идентификатор для узла процессора, к которому принадлежит этот ресурс выполнения.|  
-|[Метод IExecutionResource::Remove](#remove)|Возвращает этот ресурс выполнения диспетчеру ресурсов.|  
+|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Возвращает число активированных виртуальный процессор корней и подписанные внешние потоки, в данный момент связанный с базовой аппаратный поток, который представляет этот ресурс выполнения.|  
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Возвращает уникальный идентификатор для аппаратного потока, который представляет этот ресурс выполнения.|  
+|[IExecutionResource::GetNodeId](#getnodeid)|Возвращает уникальный идентификатор для узла процессора, к которому принадлежит этот ресурс выполнения.|  
+|[IExecutionResource::Remove](#remove)|Возвращает этот ресурс выполнения диспетчеру ресурсов.|  
   
 ## <a name="remarks"></a>Примечания  
  Ресурсы выполнения могут быть автономными или связанные с корни виртуального процессора. Автономный ресурс выполнения создается, когда поток в приложении создает подписку потока. Методы [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) и [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) создания подписки потоков и возврата `IExecutionResource` интерфейс, представляющий подписку. Создание подписки потока является способом информирования диспетчер ресурсов, что данный поток будет участвовать в работе в очереди планировщика, а также корни виртуального процессора, назначает диспетчером ресурсов планировщику. Диспетчер ресурсов использует сведения для избежать переподписки аппаратных потоков, где его можно.  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>Метод IExecutionResource::CurrentSubscriptionLevel  
+##  <a name="currentsubscriptionlevel"></a>Метод IExecutionResource::CurrentSubscriptionLevel  
  Возвращает число активированных виртуальный процессор корней и подписанные внешние потоки, в данный момент связанный с базовой аппаратный поток, который представляет этот ресурс выполнения.  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Диспетчер ресурсов использует сведения уровня подписки как один из способов определить, когда нужно переместить ресурсы между планировщиками.  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>Метод IExecutionResource::GetExecutionResourceId  
+##  <a name="getexecutionresourceid"></a>Метод IExecutionResource::GetExecutionResourceId  
  Возвращает уникальный идентификатор для аппаратного потока, который представляет этот ресурс выполнения.  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Примечания  
  Каждому аппаратному потоку присваивается уникальный идентификатор средой выполнения с параллелизмом. Если несколько ресурсов выполнения, соответствующее оборудование потока, они будут иметь один и тот же идентификатор ресурса выполнения.  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>Метод IExecutionResource::GetNodeId  
+##  <a name="getnodeid"></a>Метод IExecutionResource::GetNodeId  
  Возвращает уникальный идентификатор для узла процессора, к которому принадлежит этот ресурс выполнения.  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Количество узлов, которые могут быть получены из функции [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>Метод IExecutionResource::Remove  
+##  <a name="remove"></a>Метод IExecutionResource::Remove  
  Возвращает этот ресурс выполнения диспетчеру ресурсов.  
   
 ```

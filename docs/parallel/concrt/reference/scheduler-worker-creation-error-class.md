@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_worker_creation_error
+- scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c880ed65ef9e01c7eebdd2de45598a41763da57c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerworkercreationerror-class"></a>Класс scheduler_worker_creation_error
@@ -54,7 +56,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор scheduler_worker_creation_error](#ctor)|Перегружен. Создает объект `scheduler_worker_creation_error`.|  
+|[scheduler_worker_creation_error](#ctor)|Перегружен. Создает объект `scheduler_worker_creation_error`.|  
   
 ## <a name="remarks"></a>Примечания  
  Это исключение обычно создается при сбое вызова, адресованного операционной системе, для создания контекста выполнения из исполняющей среды с параллелизмом. Контексты выполнения — это потоки, которые выполняют задачи исполняющей среды с параллелизмом. Код ошибки, который обычно возвращается из вызова метода Win32 `GetLastError`, преобразуется в значение типа `HRESULT` и может быть получен посредством метода базового класса `get_error_code`.  
@@ -71,7 +73,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namectora-schedulerworkercreationerror"></a><a name="ctor"></a>scheduler_worker_creation_error 
+##  <a name="ctor"></a>scheduler_worker_creation_error 
 
  Создает объект `scheduler_worker_creation_error`.  
   
@@ -92,5 +94,5 @@ explicit _CRTIMP scheduler_worker_creation_error(
  `HRESULT` Значение ошибки, вызвавшей исключение.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

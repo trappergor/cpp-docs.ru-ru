@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c09719412e38a4f056eabc39a66a684caa0659d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9b49f65d8b862a7b85cdf3e09137f326fa8a1fa
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>Класс invalid_scheduler_policy_thread_specification
@@ -54,7 +54,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification конструктор] (недопустимый планировщика политики — значение class.md #ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|  
+|[invalid_scheduler_policy_thread_specification] (недопустимый планировщика политики — значение class.md #ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -65,7 +65,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  **Заголовок:** concrt.h  
   
  **Пространство имен:** concurrency  
-##  <a name="a-namectora-invalidschedulerpolicythreadspecification"></a><a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
 
  Создает объект `invalid_scheduler_policy_value`.  
   

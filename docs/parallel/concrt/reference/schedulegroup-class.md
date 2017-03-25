@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::ScheduleGroup
+- ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup::Id
+- CONCRT/concurrency::ScheduleGroup::Reference
+- CONCRT/concurrency::ScheduleGroup::Release
+- CONCRT/concurrency::ScheduleGroup::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 424b2f53f39bce57c85e44f0df54928acdac399a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulegroup-class"></a>Класс ScheduleGroup
@@ -60,10 +65,10 @@ class ScheduleGroup;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[ID-метод](#id)|Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.|  
-|[Reference-метод](#reference)|Увеличивает значение счетчика ссылок группы расписания.|  
-|[Release-метод](#release)|Уменьшает значение счетчика ссылок группы планировщика.|  
-|[ScheduleTask-метод](#scheduletask)|Назначает легкое задание в группы расписаний.|  
+|[Идентификатор](#id)|Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.|  
+|[Ссылки](#reference)|Увеличивает значение счетчика ссылок группы расписания.|  
+|[Релиз](#release)|Уменьшает значение счетчика ссылок группы планировщика.|  
+|[ScheduleTask](#scheduletask)|Назначает легкое задание в группы расписаний.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ScheduleGroup`  
@@ -73,7 +78,7 @@ class ScheduleGroup;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Идентификатор 
+##  <a name="id"></a>Идентификатор 
 
  Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.  
   
@@ -84,7 +89,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>оператор delete 
+##  <a name="operator_delete"></a>оператор delete 
 
  Объект `ScheduleGroup` объект уничтожается внутренне средой выполнения при выпуске всех внешних ссылок на него. Его невозможно удалить явно.  
   
@@ -103,7 +108,7 @@ void operator delete(
  `_PObject`  
  Указатель на объект для удаления.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>Ссылка 
+##  <a name="reference"></a>Ссылка 
 
  Увеличивает значение счетчика ссылок группы расписания.  
   
@@ -117,7 +122,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>Примечания  
  Обычно используется для управления временем существования группы планирования для композиции. Когда счетчик ссылок группы расписаний становится равным нулю, группа расписаний удаляется средой выполнения. Группа планирования, создаваемых с помощью [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) метода или [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) метода начинается с одним счетчиком ссылок.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>Выпуск 
+##  <a name="release"></a>Выпуск 
 
  Уменьшает значение счетчика ссылок группы планировщика.  
   
@@ -133,13 +138,13 @@ virtual unsigned int Release() = 0;
   
  Группа планирования связан с определенным экземпляром планировщика. Необходимо убедиться, что все ссылки на группу расписаний освобождаются до освобождения всех ссылок на планировщик, поскольку последние может привести к уничтожению планировщика. Это приведет к неопределенному поведению.  
   
-##  <a name="a-namedtora-schedulegroup"></a><a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a>~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Назначает легкое задание в группы расписаний.  
   

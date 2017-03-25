@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>Структура IUMSCompletionList
@@ -54,7 +56,7 @@ struct IUMSCompletionList;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Получает цепь `IUMSUnblockNotification` интерфейсов, представляющих контексты выполнения, чьи связанные потоки прокси разблокированы со времени последнего этот метод был вызван.|  
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Получает цепь `IUMSUnblockNotification` интерфейсов, представляющих контексты выполнения, чьи связанные потоки прокси разблокированы со времени последнего этот метод был вызван.|  
   
 ## <a name="remarks"></a>Примечания  
  Планировщик должен быть чрезвычайно осторожным, какие действия выполняются после использования этого интерфейса для извлечения из очереди элементов из списка завершения. Элементы должны размещаться на список работоспособных контекстов планировщика и быть общедоступными как можно быстрее. Это вполне возможно, что один из элементов, выведенного из очереди получил владение произвольной блокировки. Планировщик не может выполнять произвольные вызовы функции, которые могут блокировать между вызовом для извлечения элементов из очереди и размещение этих элементов в список, который может быть обычно доступен из планировщика.  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>Метод IUMSCompletionList::GetUnblockNotifications  
+##  <a name="getunblocknotifications"></a>Метод IUMSCompletionList::GetUnblockNotifications  
  Получает цепь `IUMSUnblockNotification` интерфейсов, представляющих контексты выполнения, чьи связанные потоки прокси разблокированы со времени последнего этот метод был вызван.  
   
 ```

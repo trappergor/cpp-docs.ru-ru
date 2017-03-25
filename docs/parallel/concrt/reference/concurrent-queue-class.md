@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_queue/concurrency::concurrent_queue
-- concurrent_queue/Concurrency::concurrent_queue
+- concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::clear
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::empty
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::get_allocator
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::push
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::try_pop
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aac7b15db82fbd2ceb801f45ff1b70c293014080
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d2af8483f38a14454e3aa1aecf28864bab1c6a1a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentqueue-class"></a>Класс concurrent_queue
@@ -76,21 +85,21 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор concurrent_queue](#ctor)|Перегружен. Создает параллельную очередь.|  
+|[concurrent_queue](#ctor)|Перегружен. Создает параллельную очередь.|  
 |[~ concurrent_queue деструктор](#dtor)|Уничтожает параллельную очереди.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Clear-метод](#clear)|Очищает параллельную очередь, уничтожая все в данный момент элементов в очереди. Этот метод не является безопасным в режиме параллелизма.|  
-|[Empty-метод](#empty)|Проверяет ли параллельная очередь пуста в момент вызывается этот метод. Данный метод безопасен в режиме параллелизма.|  
-|[get_allocator метод](#get_allocator)|Возвращает копию распределителя, используемого для создания параллельной очереди. Данный метод безопасен в режиме параллелизма.|  
-|[Метод Push](#push)|Перегружен. Добавляет элемент в конец параллельной очереди. Данный метод безопасен в режиме параллелизма.|  
-|[try_pop метод](#try_pop)|Удаляет элемент из очереди, если он доступен. Данный метод безопасен в режиме параллелизма.|  
-|[unsafe_begin метод](#unsafe_begin)|Перегружен. Возвращает итератор типа `iterator` или `const_iterator` для создания параллельной очереди. Этот метод не является безопасным в режиме параллелизма.|  
-|[unsafe_end метод](#unsafe_end)|Перегружен. Возвращает итератор типа `iterator` или `const_iterator` в конец параллельной очереди. Этот метод не является безопасным в режиме параллелизма.|  
-|[unsafe_size метод](#unsafe_size)|Возвращает количество элементов в очереди. Этот метод не является безопасным в режиме параллелизма.|  
+|[clear](#clear)|Очищает параллельную очередь, уничтожая все в данный момент элементов в очереди. Этот метод не является безопасным в режиме параллелизма.|  
+|[empty](#empty)|Проверяет ли параллельная очередь пуста в момент вызывается этот метод. Данный метод безопасен в режиме параллелизма.|  
+|[get_allocator](#get_allocator)|Возвращает копию распределителя, используемого для создания параллельной очереди. Данный метод безопасен в режиме параллелизма.|  
+|[push](#push)|Перегружен. Добавляет элемент в конец параллельной очереди. Данный метод безопасен в режиме параллелизма.|  
+|[try_pop](#try_pop)|Удаляет элемент из очереди, если он доступен. Данный метод безопасен в режиме параллелизма.|  
+|[unsafe_begin](#unsafe_begin)|Перегружен. Возвращает итератор типа `iterator` или `const_iterator` для создания параллельной очереди. Этот метод не является безопасным в режиме параллелизма.|  
+|[unsafe_end](#unsafe_end)|Перегружен. Возвращает итератор типа `iterator` или `const_iterator` в конец параллельной очереди. Этот метод не является безопасным в режиме параллелизма.|  
+|[unsafe_size](#unsafe_size)|Возвращает количество элементов в очереди. Этот метод не является безопасным в режиме параллелизма.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -103,7 +112,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Очистка 
+##  <a name="clear"></a>Очистка 
 
  Очищает параллельную очередь, уничтожая все в данный момент элементов в очереди. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -111,7 +120,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="a-namectora-concurrentqueue"></a><a name="ctor"></a>concurrent_queue 
+##  <a name="ctor"></a>concurrent_queue 
 
  Создает параллельную очередь.  
   
@@ -159,7 +168,7 @@ concurrent_queue(_InputIterator _Begin,
   
  Четвертый конструктор задает значения, полученные из итератора диапазона [ `_Begin`, `_End`).  
   
-##  <a name="a-namedtora-concurrentqueue"></a><a name="dtor"></a>~ concurrent_queue 
+##  <a name="dtor"></a>~ concurrent_queue 
 
  Уничтожает параллельную очереди.  
   
@@ -167,7 +176,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>пустой 
+##  <a name="empty"></a>пустой 
 
  Проверяет ли параллельная очередь пуста в момент вызывается этот метод. Данный метод безопасен в режиме параллелизма.  
   
@@ -181,7 +190,7 @@ bool empty() const;
 ### <a name="remarks"></a>Примечания  
  Хотя данный метод безопасен в режиме параллелизма относительно вызовы методов `push`, `try_pop`, и `empty`, возвращаемое значение могут быть неправильными ко времени просмотра вызывающим потоком.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Возвращает копию распределителя, используемого для создания параллельной очереди. Данный метод безопасен в режиме параллелизма.  
   
@@ -192,7 +201,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Копию распределителя, используемого для создания параллельной очереди.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>Push 
+##  <a name="push"></a>Push 
 
  Добавляет элемент в конец параллельной очереди. Данный метод безопасен в режиме параллелизма.  
   
@@ -209,7 +218,7 @@ void push(T&& _Src);
 ### <a name="remarks"></a>Примечания  
  `push`безопасен в режиме параллелизма относительно вызовы методов `push`, `try_pop`, и `empty`.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Удаляет элемент из очереди, если он доступен. Данный метод безопасен в режиме параллелизма.  
   
@@ -229,7 +238,7 @@ bool try_pop(T& _Dest);
   
  `try_pop`безопасен в режиме параллелизма относительно вызовы методов `push`, `try_pop`, и `empty`.  
   
-##  <a name="a-nameunsafebegina-unsafebegin"></a><a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a>unsafe_begin 
 
  Возвращает итератор типа `iterator` или `const_iterator` для создания параллельной очереди. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -245,7 +254,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>Примечания  
  Итераторы для `concurrent_queue` класс в основном предназначены для отладки, как они выполняются медленно и итерация не параллельно безопасная относительно других операций очереди.  
   
-##  <a name="a-nameunsafeenda-unsafeend"></a><a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a>unsafe_end 
 
  Возвращает итератор типа `iterator` или `const_iterator` в конец параллельной очереди. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -261,7 +270,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>Примечания  
  Итераторы для `concurrent_queue` класс в основном предназначены для отладки, как они выполняются медленно и итерация не параллельно безопасная относительно других операций очереди.  
   
-##  <a name="a-nameunsafesizea-unsafesize"></a><a name="unsafe_size"></a>unsafe_size 
+##  <a name="unsafe_size"></a>unsafe_size 
 
  Возвращает количество элементов в очереди. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -276,5 +285,5 @@ size_type unsafe_size() const;
  `unsafe_size`не является безопасным в режиме параллелизма и может выдавать неверные результаты, если вызван параллельно с вызовами методов `push`, `try_pop`, и `empty`.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

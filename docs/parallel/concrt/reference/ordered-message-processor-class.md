@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ordered_message_processor
+- ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor::ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor::async_send
+- AGENTS/concurrency::ordered_message_processor::initialize
+- AGENTS/concurrency::ordered_message_processor::initialize_batched_processing
+- AGENTS/concurrency::ordered_message_processor::sync_send
+- AGENTS/concurrency::ordered_message_processor::wait
+- AGENTS/concurrency::ordered_message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a9653c8eb5f05e56fd7812d334575e62dc101d63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1c3147001db16b610992d2501ed12ad4bd001fc9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="orderedmessageprocessor-class"></a>Класс ordered_message_processor
@@ -65,24 +73,24 @@ class ordered_message_processor : public message_processor<T>;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор ordered_message_processor](#ctor)|Создает объект `ordered_message_processor`.|  
+|[ordered_message_processor](#ctor)|Создает объект `ordered_message_processor`.|  
 |[~ ordered_message_processor деструктор](#dtor)|Уничтожает `ordered_message_processor` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод async_send](#async_send)|Асинхронно ставит в очередь сообщения и запускает задачу обработки, если это еще не сделано. (Переопределяет [message_processor::async_send](message-processor-class.md#async_send).)|  
-|[Метод Initialize](#initialize)|Инициализирует `ordered_message_processor` объект с соответствующей обратного вызова функцией, планировщик и расписание группы.|  
-|[initialize_batched_processing метод](#initialize_batched_processing)|Инициализация обработки пакетных сообщений|  
-|[sync_send метод](#sync_send)|Синхронно ставит в очередь сообщения и запускает задачу обработки, если это еще не сделано. (Переопределяет [message_processor::sync_send](message-processor-class.md#sync_send).)|  
-|[wait-метод](#wait)|Ожидание прокрутки определенного процессора, используемое в деструкторах блоков сообщений, чтобы убедиться в том, что все задачи асинхронной обработки имеют достаточно времени для окончания перед удалением блока. (Переопределяет [message_processor::wait](message-processor-class.md#wait).)|  
+|[async_send](#async_send)|Асинхронно ставит в очередь сообщения и запускает задачу обработки, если это еще не сделано. (Переопределяет [message_processor::async_send](message-processor-class.md#async_send).)|  
+|[Инициализация](#initialize)|Инициализирует `ordered_message_processor` объект с соответствующей обратного вызова функцией, планировщик и расписание группы.|  
+|[initialize_batched_processing](#initialize_batched_processing)|Инициализация обработки пакетных сообщений|  
+|[sync_send](#sync_send)|Синхронно ставит в очередь сообщения и запускает задачу обработки, если это еще не сделано. (Переопределяет [message_processor::sync_send](message-processor-class.md#sync_send).)|  
+|[Ожидание](#wait)|Ожидание прокрутки определенного процессора, используемое в деструкторах блоков сообщений, чтобы убедиться в том, что все задачи асинхронной обработки имеют достаточно времени для окончания перед удалением блока. (Переопределяет [message_processor::wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[process_incoming_message метод](#process_incoming_message)|Функция обработки, которая вызывается асинхронно. Он удаляет сообщения из очереди и начинает обработку их. (Переопределяет [message_processor::process_incoming_message](message-processor-class.md#process_incoming_message).)|  
+|[process_incoming_message](#process_incoming_message)|Функция обработки, которая вызывается асинхронно. Он удаляет сообщения из очереди и начинает обработку их. (Переопределяет [message_processor::process_incoming_message](message-processor-class.md#process_incoming_message).)|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [message_processor](message-processor-class.md)  
@@ -94,7 +102,7 @@ class ordered_message_processor : public message_processor<T>;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  Асинхронно ставит в очередь сообщения и запускает задачу обработки, если это еще не сделано.  
   
@@ -106,7 +114,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Указатель на сообщение.  
   
-##  <a name="a-nameinitializea-initialize"></a><a name="initialize"></a>Инициализация 
+##  <a name="initialize"></a>Инициализация 
 
  Инициализирует `ordered_message_processor` объект с соответствующей обратного вызова функцией, планировщик и расписание группы.  
   
@@ -127,7 +135,7 @@ void initialize(
  `_Handler`  
  Функтор обработчик вызывается во время обратного вызова.  
   
-##  <a name="a-nameinitializebatchedprocessinga-initializebatchedprocessing"></a><a name="initialize_batched_processing"></a>initialize_batched_processing 
+##  <a name="initialize_batched_processing"></a>initialize_batched_processing 
 
  Инициализация обработки пакетных сообщений  
   
@@ -144,7 +152,7 @@ virtual void initialize_batched_processing(
  `_Propagator`  
  Распространитель функтор вызывается во время обратного вызова.  
   
-##  <a name="a-namectora-orderedmessageprocessor"></a><a name="ctor"></a>ordered_message_processor 
+##  <a name="ctor"></a>ordered_message_processor 
 
  Создает объект `ordered_message_processor`.  
   
@@ -155,7 +163,7 @@ ordered_message_processor();
 ### <a name="remarks"></a>Примечания  
  Это `ordered_message_processor` асинхронный или синхронный обработчики, пока не будет планировать `initialize` вызывается функция.  
   
-##  <a name="a-namedtora-orderedmessageprocessor"></a><a name="dtor"></a>~ ordered_message_processor 
+##  <a name="dtor"></a>~ ordered_message_processor 
 
  Уничтожает `ordered_message_processor` объекта.  
   
@@ -166,7 +174,7 @@ virtual ~ordered_message_processor();
 ### <a name="remarks"></a>Примечания  
  Ожиданий для всех ожидающих асинхронных операций перед удалением процессора.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  Функция обработки, которая вызывается асинхронно. Он удаляет сообщения из очереди и начинает обработку их.  
   
@@ -174,7 +182,7 @@ virtual ~ordered_message_processor();
 virtual void process_incoming_message();
 ```  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  Синхронно ставит в очередь сообщения и запускает задачу обработки, если это еще не сделано.  
   
@@ -186,7 +194,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Указатель на сообщение.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Ожидание 
+##  <a name="wait"></a>Ожидание 
 
  Ожидание прокрутки определенного процессора, используемое в деструкторах блоков сообщений, чтобы убедиться в том, что все задачи асинхронной обработки имеют достаточно времени для окончания перед удалением блока.  
   
@@ -195,5 +203,5 @@ virtual void wait();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 
