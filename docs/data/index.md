@@ -2,9 +2,9 @@
 layout: LandingPage
 title: "Доступ к данным в Visual C++"
 translationtype: Human Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: bcec6bba72b48c8fc766c2d74dc31d8e47a239f9
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 807cf772d632f66f74a210985ff611fc31ee594a
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="data-access-in-visual-c"></a>Доступ к данным в Visual C++
@@ -203,6 +203,7 @@ ms.lasthandoff: 03/06/2017
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="https://www.microsoft.com/download/details.aspx?id=53339" title="Microsoft® ODBC Driver 13.1 for SQL Server® - Windows Download Page">Драйвер JDBC 13.1 для SQL Server</a></h3>
+                        <p>Microsoft ODBC Driver 13.1 for SQL Server — это отдельная библиотека динамической компоновки (DLL), обеспечивающая поддержку времени выполнения для приложений, использующих API в машинном коде для подключения к Microsoft SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2016, Analytics Platform System, базе данных SQL Azure и хранилищу данных SQL Azure. Скачать драйвер можно здесь.</p>
                     </div>
                 </div>
             </div>
