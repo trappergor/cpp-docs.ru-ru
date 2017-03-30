@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 486a0842ed04f0e760bbb332986a97a35ce9851f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-класс
@@ -78,31 +78,31 @@ class CSpinButtonCtrl : public CWnd
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::Create](#create)|Регулятор создает и присоединяет его к `CSpinButtonCtrl` объекта.|  
-|[CSpinButtonCtrl::CreateEx](#createex)|Создает регулятор с указанным расширенные стили Windows и присоединяет его к `CSpinButtonCtrl` объекта.|  
-|[CSpinButtonCtrl::GetAccel](#getaccel)|Извлекает сведения о ускорение для регулятор.|  
-|[CSpinButtonCtrl::GetBase](#getbase)|Извлекает текущей базы для регулятор.|  
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Извлекает указатель на текущее окно контактов.|  
-|[CSpinButtonCtrl::GetPos](#getpos)|Получает текущее положение регулятор.|  
-|[CSpinButtonCtrl::GetRange](#getrange)|Извлекает верхнее и нижнее ограничение (диапазон) для управления "Счетчик".|  
-|[CSpinButtonCtrl::SetAccel](#setaccel)|Задает ускорение для регулятор.|  
-|[CSpinButtonCtrl::SetBase](#setbase)|Задает основание регулятор.|  
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Задает окно регулятор контактов.|  
+|[CSpinButtonCtrl::Create](#create)|Создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта.|  
+|[CSpinButtonCtrl::CreateEx](#createex)|Создает счетчик-элемент управления с указанным расширенные стили Windows и прикрепляет его к `CSpinButtonCtrl` объекта.|  
+|[CSpinButtonCtrl::GetAccel](#getaccel)|Извлекает сведения о ускорение для счетчик-элемент управления.|  
+|[CSpinButtonCtrl::GetBase](#getbase)|Извлекает базе текущий счетчик-элемент управления.|  
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Извлекает указатель на текущее окно контактному лицу.|  
+|[CSpinButtonCtrl::GetPos](#getpos)|Получает текущее положение счетчик-элемент управления.|  
+|[CSpinButtonCtrl::GetRange](#getrange)|Возвращает верхний и нижний пределы (диапазон) для элемента управления button "Счетчик".|  
+|[CSpinButtonCtrl::SetAccel](#setaccel)|Задает ускорение для счетчик-элемент управления.|  
+|[CSpinButtonCtrl::SetBase](#setbase)|Задает основание счетчик-элемент управления.|  
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Задает в связанном окне для счетчик-элемент управления.|  
 |[CSpinButtonCtrl::SetPos](#setpos)|Задает текущую позицию элемента управления.|  
-|[CSpinButtonCtrl::SetRange](#setrange)|Задает верхний и нижний пределы (диапазон) для управления "Счетчик".|  
+|[CSpinButtonCtrl::SetRange](#setrange)|Задает верхний и нижний пределы (диапазон) для элемента управления button "Счетчик".|  
   
 ## <a name="remarks"></a>Примечания  
- «Регулятор» (также известный как элемент управления вверх / вниз) представляет собой пару кнопок со стрелками, пользователь может щелкнуть для увеличения или уменьшения значения, такие как позиция прокрутки или числа, отображаемые в элементе управления помощник по поиску. Значение, связанное с элементом управления "Счетчик" вызывается ее текущей позиции. Регулятор чаще всего используется с сопутствующим элементом управления, называемая «окном контактов».  
+ «Регулятор» (также известная как элемент управления вверх / вниз) — это пара кнопок со стрелками, пользователь может щелкнуть для увеличения или уменьшения значения, например позиции прокрутки или номер, отображаемые в элементе управления дополнительное. Значение, связанное с элементом управления "Счетчик", называется текущей позиции. Регулятор наиболее часто используется с дополнительное элемент управления с именем «окно контактному лицу».  
   
- Этот элемент управления (и, следовательно, `CSpinButtonCtrl` класса) доступны только для программы, запущенные в Windows 95/98 и Windows NT версии 3.51 и более поздних версий.  
+ Этот элемент управления (и, следовательно, `CSpinButtonCtrl` класс) доступен только для программ, работающих в Windows 95/98 и Windows NT версии 3.51 и более поздних.  
   
- Пользователю регулятор и окна ее контактов часто выглядеть одного элемента управления. Можно указать, что регулятор автоматически располагаться рядом с его окна контактов и что он автоматически присваивается заголовок окна контактов ее текущей позиции. Регулятор с ввода позволяет запрашивать у пользователя входных числовых данных.  
+ Для пользователя, а регулятор и окна ее контактному лицу часто выглядеть одного элемента управления. Можно указать, что регулятор автоматически поместить себя рядом с его окна контактному лицу и, он автоматически присваивается заголовок окна контактному лицу по текущей позиции. Регулятор с помощью элемента управления можно использовать для запроса у пользователя для ввода чисел.  
   
- Нажмите кнопку со стрелкой вверх перемещает текущую позицию увеличивается до максимума, и нажмите кнопку со стрелкой вниз текущей позиции уменьшается до минимума. По умолчанию минимальное значение — 100, а максимальное значение — 0. Каждый раз, когда минимального значения превышает максимальное значение параметра (например, если используются параметры по умолчанию), нажав кнопку вверх Стрелка уменьшается значение позиции и щелкнув стрелку вниз повышает его.  
+ Нажмите кнопку со стрелкой вверх перемещает текущую позицию увеличивается до максимума, и щелкните стрелку вниз перемещает текущую позицию уменьшается до минимума. По умолчанию минимальное значение — 100, а максимальное значение — 0. Каждый раз, когда минимальное значение превышает максимальное значение параметра (например, если используются параметры по умолчанию), по нажатию кнопки вверх Стрелка уменьшается значение позиции и щелкните стрелку вниз увеличивает его.  
   
- Регулятор без окна контактов функции сортировки упрощенный прокрутки. Например набор вкладок иногда отображается регулятор пользователь, который прокручивается в представлении дополнительные вкладки.  
+ Счетчик-элемент управления без окна контактному лицу функции сортировки полосы прокрутки упрощенный. Например набор вкладок иногда отображаются регулятор, чтобы пользователь мог прокрутку и отобразить дополнительные вкладки.  
   
- Дополнительные сведения об использовании `CSpinButtonCtrl`, в разделе [управления](../../mfc/controls-mfc.md) и [CSpinButtonCtrl с помощью](../../mfc/using-cspinbuttonctrl.md).  
+ Дополнительные сведения об использовании `CSpinButtonCtrl`, в разделе [элементов управления](../../mfc/controls-mfc.md) и [использование CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ class CSpinButtonCtrl : public CWnd
  **Заголовок:** afxcmn.h  
   
 ##  <a name="create"></a>CSpinButtonCtrl::Create  
- Регулятор создает и присоединяет его к `CSpinButtonCtrl` объекта...  
+ Создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта...  
   
 ```  
 virtual BOOL Create(
@@ -129,24 +129,24 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  `dwStyle`  
- Задает стиль кнопки элемента управления "Счетчик". Любое сочетание стили кнопок элемента управления "Счетчик" примените к элементу управления. Эти стили, описаны в [стили элемента управления вверх / вниз](http://msdn.microsoft.com/library/windows/desktop/bb759885) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Задает стиль кнопки элемента управления "Счетчик". Любое сочетание стилей элемента управления "Счетчик" кнопку примените к элементу управления. Эти стили описаны в [стили элемента управления вверх / вниз](http://msdn.microsoft.com/library/windows/desktop/bb759885) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
  Задает размер и положение элемента управления "Счетчик" кнопки. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры  
   
  `pParentWnd`  
- Указатель на кнопке счетчик родительского окна, обычно `CDialog`. Оно не должно быть **значение NULL.**  
+ Указатель на кнопку элемента управления "Счетчик" родительского окна, обычно `CDialog`. Он не должен быть **значение NULL.**  
   
  `nID`  
- Указывает идентификатор кнопки элемента управления "Счетчик".  
+ Указывает идентификатор элемента управления "Счетчик" кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если инициализация выполнена успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Создания `CSpinButtonCtrl` объект в два этапа, вызовите конструктор и затем вызвать **создать**, который создает счетчик-элемент управления и присоединяет его к `CSpinButtonCtrl` объекта.  
+ Создании `CSpinButtonCtrl` объекта сначала в два этапа, вызовите конструктор, а затем вызвать **создать**, который создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта.  
   
- Чтобы создать регулятор с расширенные стили окна, вызовите [CSpinButtonCtrl::CreateEx](#createex) вместо **создать**.  
+ Чтобы создать счетчик-элемент управления с расширенные стили окна, вызовите [CSpinButtonCtrl::CreateEx](#createex) вместо **создать**.  
   
 ##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CSpinButtonCtrl` объекта.  
@@ -162,13 +162,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список стилей расширенной windows, см. `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Указывает расширенный стиль создаваемого элемента управления. Список windows расширенных стилей см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Задает стиль кнопки элемента управления "Счетчик". Любое сочетание стили кнопок элемента управления "Счетчик" примените к элементу управления. Эти стили, описаны в [стили элемента управления вверх / вниз](http://msdn.microsoft.com/library/windows/desktop/bb759885) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Задает стиль кнопки элемента управления "Счетчик". Любое сочетание стилей элемента управления "Счетчик" кнопку примените к элементу управления. Эти стили описаны в [стили элемента управления вверх / вниз](http://msdn.microsoft.com/library/windows/desktop/bb759885) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, описывающее размер и положение окна, чтобы создать, в клиентских координат `pParentWnd`.  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
   
  `pParentWnd`  
  Указатель на окно, который является родительским для элемента управления.  
@@ -180,7 +180,7 @@ virtual BOOL CreateEx(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо [создать](#create) для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
+ Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
 ##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  Создает объект `CSpinButtonCtrl`.  
@@ -190,7 +190,7 @@ CSpinButtonCtrl();
 ```  
   
 ##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
- Извлекает сведения о ускорение для регулятор.  
+ Извлекает сведения о ускорение для счетчик-элемент управления.  
   
 ```  
 UINT GetAccel(
@@ -203,13 +203,13 @@ UINT GetAccel(
  Количество элементов массива, заданного параметром `pAccel`.  
   
  `pAccel`  
- Указатель на массив [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) структуры, которые получает сведения о ускорение.  
+ Указатель на массив [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) структуры, которые получает данные для ускорения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Получить число структур сочетаний клавиш.  
   
 ##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
- Извлекает текущей базы для регулятор.  
+ Извлекает базе текущий счетчик-элемент управления.  
   
 ```  
 UINT GetBase() const;  
@@ -219,154 +219,160 @@ UINT GetBase() const;
  Текущее базовое значение.  
   
 ##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
- Извлекает указатель на текущее окно контактов.  
+ Извлекает указатель на текущее окно контактному лицу.  
   
 ```  
 CWnd* GetBuddy() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель текущего окна контактов.  
+ Указатель на текущее окно контактному лицу.  
   
 ##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
- Получает текущее положение регулятор.  
+ Получает текущее положение счетчик-элемент управления.  
   
 ```  
-int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  ```  
+int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  
+```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  *lpbError*  
- A pointer to a boolean value that is set to zero if the value is successfully retrieved or non-zero if an error occurs. If this parameter is set to **NULL**, errors are not reported.  
+ Указатель на значение типа boolean, значение равно нулю, если значение успешно получены, или ненулевое значение, если произошла ошибка. Если этот параметр имеет значение **NULL**, ошибки не отображаются.  
   
-### Return Value  
- The first version returns the 16-bit current position in the low-order word. The high-order word is nonzero if an error occurred.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Первая версия возвращает 16-разрядное текущую позицию в младшее слово. Старшее слово ненулевое значение, если произошла ошибка.  
   
- The second version returns the 32-bit position.  
+ Вторая версия возвращает позицию 32-разрядной.  
   
-### Remarks  
- When it processes the value returned, the control updates its current position based on the caption of the buddy window. The control returns an error if there is no buddy window or if the caption specifies an invalid or out-of-range value.  
+### <a name="remarks"></a>Примечания  
+ При обработке возвращаемое значение, элемент управления обновляет ее текущей позиции, основанной на заголовок окна контактному лицу. Элемент управления возвращает ошибку, если нет окна контактному лицу или заголовок указывает недопустимое или вне диапазона значение.  
   
-##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
- Retrieves the upper and lower limits (range) for a spin button control.  
-  
-```  
-DWORD GetRange() константу;  
-  
-void GetRange (int & ниже,  
-    int & верхней) константу;  
-  
-void GetRange32 (int & ниже,  
-    int & верхней) константу;  
-```  
-  
-### Parameters  
- *lower*  
- Reference to an integer that receives the lower limit for the control.  
-  
- *upper*  
- Reference to an integer that receives the upper limit for the control.  
-  
-### Return Value  
- The first version returns a 32-bit value containing the upper and lower limits. The low-order word is the upper limit for the control, and the high-order word is the lower limit.  
-  
-### Remarks  
- The member function `GetRange32` retrieves the spin button control's range as a 32-bit integer.  
-  
-##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
- Sets the acceleration for a spin button control.  
+##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+ Возвращает верхний и нижний пределы (диапазон) для элемента управления button "Счетчик".  
   
 ```  
-SetAccel BOOL (int nAccel,  
+DWORD GetRange() const;  
+  
+void GetRange(
+    int& lower,  
+    int& upper) const;  
+  
+void GetRange32(
+    int& lower,  
+    int &upper) const;  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ *Ниже*  
+ Ссылка на целое число, Получает нижний предел для элемента управления.  
+  
+ *верхний*  
+ Ссылка на целое число, Получает верхний предел для элемента управления.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Первая версия возвращает 32-разрядное значение, содержащее верхний и нижний пределы. Младшее слово верхний предел для элемента управления, который старшее слово нижнего предела.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член `GetRange32` извлекает диапазон кнопки элемента управления "Счетчик" как 32-разрядное целое число.  
+  
+##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+ Задает ускорение для счетчик-элемент управления.  
+  
+```  
+BOOL SetAccel(
+    int nAccel,  
     UDACCEL* pAccel);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nAccel`  
- Number of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures specified by `pAccel`.  
+ Число [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) структур, указанных `pAccel`.  
   
  `pAccel`  
- Pointer to an array of `UDACCEL` structures, which contain acceleration information. Elements should be sorted in ascending order based on the **nSec** member.  
+ Указатель на массив `UDACCEL` структуры, которые содержат сведения для ускорения. Элементы должны быть отсортированы по возрастанию на основе **nSec** член.  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
- Sets the base for a spin button control.  
+##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+ Задает основание счетчик-элемент управления.  
   
 ```  
-int SetBase (int nBase);
+int SetBase(int nBase);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nBase`  
- New base value for the control. It can be 10 for decimal or 16 for hexadecimal.  
+ Новый базовое значение для элемента управления. Он может быть 10 в качестве десятичного или 16 для шестнадцатеричной.  
   
-### Return Value  
- The previous base value if successful, or zero if an invalid base is given.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Предыдущие базовое значение в случае успешного выполнения, или нуль, если указано недопустимое основание.  
   
-### Remarks  
- The base value determines whether the buddy window displays numbers in decimal or hexadecimal digits. Hexadecimal numbers are always unsigned; decimal numbers are signed.  
+### <a name="remarks"></a>Примечания  
+ Базовое значение определяет, отображаются ли в связанном окне в десятичное или шестнадцатеричное цифры номера. Шестнадцатеричные числа всегда не имеют знака; десятичные числа подписываются.  
   
-##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
- Sets the buddy window for a spin button control.  
+##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+ Задает в связанном окне для счетчик-элемент управления.  
   
 ```  
-CWnd* SetBuddy (CWnd* pWndBuddy);
+CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `pWndBuddy`  
- Pointer to the new buddy window.  
+ Указатель на окно нового контакта.  
   
-### Return Value  
- A pointer to the previous buddy window.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на предыдущее окно контактному лицу.  
   
-### Remarks  
- A spin control is almost always associated with another window, such as an edit control, that displays some content. This other window is called the "buddy" of the spin control.  
+### <a name="remarks"></a>Примечания  
+ Элемент управления "Счетчик" почти всегда связан с другое окно, такие как элемент управления, отображающий некоторое содержимое. Это другое окно называется «контакт» элемента управления "Счетчик".  
   
-##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
- Sets the current position for a spin button control.  
+##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+ Задает текущую позицию для счетчик-элемент управления.  
   
 ```  
-int SetPos (int nPos);  
+int SetPos(int nPos);  
 int SetPos32(int nPos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nPos`  
- New position for the control. This value must be in the range specified by the upper and lower limits for the control.  
+ Новое положение элемента управления. Это значение должно быть в диапазоне, определяемом верхняя и нижняя границы для элемента управления.  
   
-### Return Value  
- The previous position (16-bit precision for `SetPos`, 32-bit precision for `SetPos32`).  
+### <a name="return-value"></a>Возвращаемое значение  
+ Предыдущей позиции (16-разрядной точности для `SetPos`32- разрядная точность для `SetPos32`).  
   
-### Remarks  
- `SetPos32` sets the 32-bit position.  
+### <a name="remarks"></a>Примечания  
+ `SetPos32`Задает положение 32-разрядной.  
   
-##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
- Sets the upper and lower limits (range) for a spin button control.  
+##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
+ Задает верхний и нижний пределы (диапазон) для элемента управления button "Счетчик".  
   
 ```  
-void SetRange (короткий nLower,  
-    Краткое nUpper);
+void SetRange(
+    short nLower,  
+    short nUpper);
 
  
-void SetRange32 (int nLower,  
+void SetRange32(
+    int nLower,  
     int nUpper);
 ```  
   
-### Parameters  
- `nLower`and `nUpper`  
- Upper and lower limits for the control. For `SetRange`, neither limit can be greater than **UD_MAXVAL** or less than **UD_MINVAL**; in addition, the difference between the two limits cannot exceed **UD_MAXVAL**. `SetRange32` places no restrictions on the limits; use any integers.  
+### <a name="parameters"></a>Параметры  
+ `nLower`и`nUpper`  
+ Верхняя и нижняя границы для элемента управления. Для `SetRange`, ни ограничение может быть больше, чем **UD_MAXVAL** или меньше, чем **UD_MINVAL**; Кроме того, не может превышать разницу между двумя ограничениями **UD_MAXVAL**. `SetRange32`не накладывает ограничений на ограничения; Используйте любой целых чисел.  
   
-### Remarks  
- The member function `SetRange32` sets the 32-bit range for the spin button control.  
+### <a name="remarks"></a>Примечания  
+ Функция-член `SetRange32` задает 32-разрядным диапазоном для кнопки элемента управления "Счетчик".  
   
 > [!NOTE]
->  The default range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow will decrease the position and clicking the down arrow will increase it. Use `CSpinButtonCtrl::SetRange` to adjust these values.  
+>  Диапазон по умолчанию для кнопки "Счетчик" имеет значение ноль (0) максимальное и минимальное значение 100. Так как максимальное значение меньше, чем минимальное значение, нажав кнопку со стрелкой вверх приведет к уменьшению позиции, и щелкните стрелку вниз возрастет его. Используйте `CSpinButtonCtrl::SetRange` для настройки этих значений.  
   
-## See Also  
- [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CSliderCtrl Class](../../mfc/reference/csliderctrl-class.md)
+## <a name="see-also"></a>См. также  
+ [Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)   
+ [CWnd-класс](../../mfc/reference/cwnd-class.md)   
+ [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+ [Класс CSliderCtrl](../../mfc/reference/csliderctrl-class.md)
 

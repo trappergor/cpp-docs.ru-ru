@@ -1,59 +1,70 @@
 ---
-title: "CElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CElementTraits<T>"
-  - "ATL::CElementTraits"
-  - "ATL.CElementTraits"
-  - "ATL::CElementTraits<T>"
-  - "CElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CElementTraits class"
+title: "Класс CElementTraits | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CElementTraits
+- atlcoll/ATL::CElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6664a73967d3bdf9859556f21744737718018e74
+ms.openlocfilehash: 8b7b91bd9e027a3946160d95da1199c24af3502d
+ms.lasthandoff: 03/29/2017
 
-Этот класс используется классами коллекций, чтобы обеспечить методы и функции для перемещения, копирования, сравнения и хэширование операций.  
+---
+# <a name="celementtraits-class"></a>Класс CElementTraits
+Этот класс используется классами коллекции для обеспечения функции и методы для перемещения, копирования, сравнения и операций хэширования.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template<typename T>  
+class CElementTraits : public CDefaultElementTraits<T>
 ```  
   
-      template<  
-   typename T  
->  
-class CElementTraits : public CDefaultElementTraits< T >  
-```  
-  
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Тип данных, хранимых в коллекции.  
   
-## Заметки  
- По умолчанию этот класс предоставляет статические функции и методы для перемещения, копирования, сравнения и хэширование элементов, хранящихся в классе коллекции объект.  `CElementTraits` указан в качестве поставщика по умолчанию этих операций классами [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../Topic/CAtlList%20Class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md) и [CRBTree](../../atl/reference/crbtree-class.md) коллекции.  
+## <a name="remarks"></a>Примечания  
+ Этот класс предоставляет по умолчанию статические функции и методы для перемещения, копирования, сравнение и хэширования элементов, хранящихся в объекте класса коллекции. `CElementTraits`указывается как поставщик по умолчанию эти операции в классах коллекций [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), и [CRBTree](../../atl/reference/crbtree-class.md).  
   
- Реализации по умолчанию будут достаточным для простых типов данных, но если классы коллекций используются для хранения более сложных объектов, функции и методы должны быть переопределитьы пользователь\- предоставленными реализациями.  
+ Реализация по умолчанию будет достаточно для простых типов данных, но при использовании классов коллекций для хранения более сложные объекты функций и методов должны быть переопределены пользовательские реализации.  
   
- Дополнительные сведения см. в разделе [Классы коллекций библиотеку ATL](../../atl/atl-collection-classes.md).  
+ Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
-## Требования  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlcoll.h  
   
-## См. также  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>См. также  
+ [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Общие сведения о классе](../../atl/atl-class-overview.md)
+

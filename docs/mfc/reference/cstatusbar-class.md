@@ -54,9 +54,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e96070041ef5bcee0865991a14b6484082d8fc91
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: a2358d31bd87b2cc540dd9a5ce182b9340764522
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cstatusbar-class"></a>CStatusBar-класс
@@ -81,12 +81,12 @@ class CStatusBar : public CControlBar
 |Имя|Описание|  
 |----------|-----------------|  
 |[CStatusBar::CommandToIndex](#commandtoindex)|Возвращает индекс для идентификатора данного индикатора.|  
-|[CStatusBar::Create](#create)|Создает строку состояния, присоединяется к `CStatusBar` объекта и задает исходную высоту шрифта и строки.|  
-|[CStatusBar::CreateEx](#createex)|Создает `CStatusBar` объектов с помощью дополнительных стилей для embedded `CStatusBarCtrl` объекта.|  
-|[CStatusBar::DrawItem](#drawitem)|Вызывается при изменении внешнего вида панели управления рисование владельцем состояние изменится.|  
+|[CStatusBar::Create](#create)|Создает строку состояния, присоединяется к `CStatusBar` и устанавливает Начальная высота шрифта и строка.|  
+|[CStatusBar::CreateEx](#createex)|Создает `CStatusBar` дополнительные стили для внедренного объекта `CStatusBarCtrl` объекта.|  
+|[CStatusBar::DrawItem](#drawitem)|Вызывается при изменении внешнего вида рисуемый владельцем строке состояния элемента управления изменяется.|  
 |[CStatusBar::GetItemID](#getitemid)|Возвращает идентификатор индикатора для указанного индекса.|  
-|[CStatusBar::GetItemRect](#getitemrect)|Возвращает отобразить прямоугольник для указанного индекса.|  
-|[CStatusBar::GetPaneInfo](#getpaneinfo)|Возвращает идентификатор индикатора, стиль и ширину для указанного индекса.|  
+|[CStatusBar::GetItemRect](#getitemrect)|Возвращает отображение прямоугольник для указанного индекса.|  
+|[CStatusBar::GetPaneInfo](#getpaneinfo)|Возвращает идентификатор индикатора, стиля и ширины для данного индекса.|  
 |[CStatusBar::GetPaneStyle](#getpanestyle)|Возвращает стиль индикатора для указанного индекса.|  
 |[CStatusBar::GetPaneText](#getpanetext)|Возвращает текст индикатора для указанного индекса.|  
 |[CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)|Предоставляет прямой доступ к базовой стандартного элемента управления.|  
@@ -96,31 +96,31 @@ class CStatusBar : public CControlBar
 |[CStatusBar::SetPaneText](#setpanetext)|Задает текст индикатора для указанного индекса.|  
   
 ## <a name="remarks"></a>Примечания  
- Области Вывод часто используются как строки сообщения и как индикаторы состояния. Примеры включают справочное сообщение строки меню, которые кратко объясните команду меню и индикаторов, показывающих состояние SCROLL LOCK, NUM LOCK и других ключей.  
+ Панелей вывода часто используются как строки сообщения и в качестве индикаторов состояния. Примеры включают справочное сообщение строки меню, которые кратко объясните команду меню и индикаторы, которые показывают состояние SCROLL LOCK, NUM LOCK и другие ключи.  
   
- [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), функции-члена новые 4.0 MFC позволяет воспользоваться преимуществами поддержки общих элементов управления Windows в строке настройки и дополнительную функциональность состояния. `CStatusBar`функции-члены предоставить большую часть функциональных возможностей Windows стандартных элементов управления; Тем не менее, при вызове метода `GetStatusBarCtrl`, можно предоставить вашей строки состояния даже несколько характеристик Windows 95/98 строки состояния. При вызове `GetStatusBarCtrl`, будет возвращена ссылка на `CStatusBarCtrl` объект. В разделе [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) Дополнительные сведения о разработке с помощью общих элементов управления Windows. Дополнительные сведения об элементах управления в разделе [Общие элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), функция-член новые 4.0 MFC позволяет воспользоваться преимуществами общих элементов управления Windows поддержка строки дополнительные функциональные возможности и настройки состояния. `CStatusBar`функции-члены обеспечивают большую часть функций общих элементов управления Windows; Тем не менее, при вызове `GetStatusBarCtrl`, можно дать вашей строки состояния даже несколько характеристик строки состояния Windows 95/98. При вызове `GetStatusBarCtrl`, он возвращает ссылку на `CStatusBarCtrl` объекта. В разделе [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) Дополнительные сведения о разработке с помощью стандартных элементов управления Windows. Дополнительные общие сведения о стандартных элементах управления см. в разделе [стандартные элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- Платформа индикатор сведения хранятся в массиве с помощью индикатора крайней левой позиции 0. При создании строки состояния используется массив идентификаторов, платформа связывает с соответствующей индикаторы строк. Строковый идентификатор или индекс затем можно использовать для доступа к индикатора.  
+ Платформа хранит сведения индикатор в виде массива с крайнего левого индикатора в позиции 0. При создании строки состояния используется массив строк платформа связывает с индикаторами, соответствующих идентификаторам. Строковый идентификатор или индекс затем можно использовать для доступа к индикатора.  
   
- По умолчанию первый индикатор «эластичной»: занимает не используется в других областях индикатор длины строки состояния, чтобы другие панели по правому краю.  
+ По умолчанию является «эластичной» первого индикатора: она занимает не используются в других областях индикатор длины строки состояния, таким образом, другие панели по правому краю.  
   
  Чтобы создать строку состояния, выполните следующие действия.  
   
 1.  Создать `CStatusBar` объекта.  
   
-2.  Вызов [создать](#create) (или [CreateEx](#createex)) функция для создания строки состояния окна и присоединить его к `CStatusBar` объекта.  
+2.  Вызовите [создать](#create) (или [CreateEx](#createex)) функция для создания строки состояния окна и присоединить его к `CStatusBar` объекта.  
   
-3.  Вызов [SetIndicators](#setindicators) для присоединения к ним строковый идентификатор каждого индикатора.  
+3.  Вызовите [SetIndicators](#setindicators) связываемый с каждого индикатора идентификатора строки.  
   
  Обновление текста в строке состояния области тремя способами:  
   
-1.  Вызов [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) обновление текста в области 0 только.  
+1.  Вызовите [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) обновление текста в области только для 0.  
   
-2.  Вызов [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) в строке состояния `ON_UPDATE_COMMAND_UI` обработчика.  
+2.  Вызовите [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) в строке состояния `ON_UPDATE_COMMAND_UI` обработчика.  
   
-3.  Вызов [SetPaneText](#setpanetext) обновление текста для любой области.  
+3.  Вызовите [SetPaneText](#setpanetext) обновление текста для любой панели.  
   
- Вызов [SetPaneStyle](#setpanestyle) обновление стиль панели строки состояния.  
+ Вызовите [SetPaneStyle](#setpanestyle) измените стиль панели строки состояния.  
   
  Дополнительные сведения об использовании `CStatusBar`, см. в статье [реализация строки состояния в MFC](../../mfc/status-bar-implementation-in-mfc.md) и [Технические заметки 31: панелей элементов управления](../../mfc/tn031-control-bars.md).  
   
@@ -136,7 +136,7 @@ class CStatusBar : public CControlBar
  `CStatusBar`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле afxext.h  
+ **Заголовок:** afxext.h  
   
 ##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
  Возвращает индекс индикатор с заданным идентификатором.  
@@ -147,16 +147,16 @@ int CommandToIndex(UINT nIDFind) const;
   
 ### <a name="parameters"></a>Параметры  
  `nIDFind`  
- Идентификатор строки индикатора, индекс которого требуется получить.  
+ Идентификатор строки индикатора, индекс которого требуется извлечь.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Индекс индикатора в случае успешного выполнения; -1, если она завершилась неудачно.  
+ Индекс индикатора в случае успешного выполнения; -1, если выполнена успешно.  
   
 ### <a name="remarks"></a>Примечания  
- Индекс первого индикатора равно 0.  
+ Индекс первого индикатора — 0.  
   
 ##  <a name="create"></a>CStatusBar::Create  
- Состояние панели (дочернее окно) создает и связывает его с `CStatusBar` объекта.  
+ Создает (дочернего окна) в строке состояния и связывает его с `CStatusBar` объекта.  
   
 ```  
 virtual BOOL Create(
@@ -167,16 +167,16 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  `pParentWnd`  
- Указатель на [CWnd](../../mfc/reference/cwnd-class.md) окно которого Windows является родительским элементом в строке состояния объекта.  
+ Указатель на [CWnd](../../mfc/reference/cwnd-class.md) окно которого Windows является родительским для строки состояния объекта.  
   
  `dwStyle`  
  Стиль строки состояния. Помимо стандартных Windows [стили](../../mfc/reference/window-styles.md), поддерживаются следующие стили.  
   
-- `CBRS_TOP`Панель находится в верхней части окна фрейма.  
+- `CBRS_TOP`Строка управления находится в верхней части окна фрейма.  
   
 - `CBRS_BOTTOM`Панель элементов управления — в нижней части окна области.  
   
-- `CBRS_NOALIGN`При изменении размера родительской панели элементов управления не перемещен.  
+- `CBRS_NOALIGN`Панель элементов управления не меняет свое положение при изменении размеров родительского.  
   
  `nID`  
  Идентификатор дочернего окна панели инструментов  
@@ -185,10 +185,10 @@ virtual BOOL Create(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Также задает начальное шрифт и устанавливает состояние высоту строки на значение по умолчанию.  
+ Также задает начальные шрифт и устанавливает состояние высоту строки в значения по умолчанию.  
   
 ##  <a name="createex"></a>CStatusBar::CreateEx  
- Эта функция вызывается для создания состояния панели (дочернего окна) и связать его с `CStatusBar` объекта.  
+ Эта функция вызывается для создания (дочернего окна) в строке состояния и связать его с `CStatusBar` объекта.  
   
 ```  
 virtual BOOL CreateEx(
@@ -200,40 +200,40 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  `pParentWnd`  
- Указатель на [CWnd](../../mfc/reference/cwnd-class.md) окно которого Windows является родительским элементом в строке состояния объекта.  
+ Указатель на [CWnd](../../mfc/reference/cwnd-class.md) окно которого Windows является родительским для строки состояния объекта.  
   
  `dwCtrlStyle`  
- Дополнительные стили для создания внедренных [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) объекта. Значение по умолчанию указывает строку состояния без захвата для изменения размера или подсказки поддержки. Стили полосы состояния поддерживается являются:  
+ Дополнительные стили для создания внедренного [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) объекта. Значение по умолчанию задает строку состояния без захват для изменения размера или подсказки поддержки. Стили полосы состояния поддерживается являются:  
   
-- **SBARS_SIZEGRIP** включает элемент управления строки состояния захват для изменения размера в правом конце строки состояния. Захват для изменения размера аналогичны изменяющей размер границы; это прямоугольная область, которая пользователя можно щелкнуть и перетащить для изменения размера родительского окна.  
+- **SBARS_SIZEGRIP** включает в себя строки состояния захват для изменения размера в правом конце строки состояния. Захват для изменения размера аналогична границы для изменения размера; это прямоугольная область, которая пользователя можно щелкнуть и перетащить для изменения размера родительского окна.  
   
 - **SBT_TOOLTIPS** в строке состояния поддерживает подсказки.  
   
- Подробнее об этих стилей см. в разделе [параметры для CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
+ Дополнительные сведения об этих стилей см. в разделе [параметры для CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
  `dwStyle`  
- Стиль панели состояния. Значение по умолчанию указывает, что создано в строке состояния отображается в нижней части окна фрейма. Примените любое сочетание состояния панели управления стилей в [стили окна](../../mfc/reference/window-styles.md) и [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Тем не менее этот параметр необходимо всегда включать стили WS_CHILD и WS_VISIBLE.  
+ Стиль панели состояния. Значение по умолчанию задает в строке состояния отображается в нижней части окна фрейма. Примените любое сочетание строки стилей элемента управления в состояния [стили окна](../../mfc/reference/window-styles.md) и [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Тем не менее этот параметр всегда должна включать стили WS_CHILD и WS_VISIBLE.  
   
  `nID`  
- Идентификатор дочернего окна строки состояния.  
+ Идентификатор дочернего окна в строке состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция также задает начальное шрифт и устанавливает состояние высоту строки на значение по умолчанию.  
+ Эта функция также задает начальные шрифт и устанавливает состояние высоту строки в значения по умолчанию.  
   
- Используйте `CreateEx`, вместо [создать](#create), когда определенные стили должны присутствовать во время создания внедренные строки состояния. Например, задать `dwCtrlStyle` для **SBT_TOOLTIPS** для отображения всплывающих подсказок в объекте строки состояния.  
+ Используйте `CreateEx`, а не [создать](#create), когда определенные стили должны присутствовать во время создания внедренные строки состояния. Например, задать `dwCtrlStyle` для **SBT_TOOLTIPS** отображать подсказки в объекте строки состояния.  
   
 ##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
- Создает `CStatusBar` , создает шрифт по умолчанию строка состояния при необходимости и задается характеристики шрифта для значения по умолчанию.  
+ Создает `CStatusBar` , создает шрифта строки состояния по умолчанию, при необходимости и задается характеристики шрифта в значения по умолчанию.  
   
 ```  
 CStatusBar();
 ```  
   
 ##  <a name="drawitem"></a>CStatusBar::DrawItem  
- Эта функция-член вызывается инфраструктурой при изменении внешнего вида строка пользовательского состояния.  
+ Эта функция-член вызывается платформой при изменении внешнего вида строка пользовательского состояния.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -244,7 +244,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  Указатель на [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) структуру, содержащую сведения о типе требуется рисования.  
   
 ### <a name="remarks"></a>Примечания  
- **ItemAction** членом `DRAWITEMSTRUCT` структура определяет рисования действие, которое должно быть выполнено. Переопределить эту функцию-член для реализации отрисовки рисование владельцем `CStatusBar` объекта. Приложение должно восстановить всех графических устройств интерфейс (GDI) выбранных объектов в контексте отображения указано в `lpDrawItemStruct` до завершения работы этой функции-члена.  
+ **ItemAction** членом `DRAWITEMSTRUCT` структура определяет рисования действие, которое должно быть выполнено. Переопределить эту функцию-член для реализации отрисовки рисуемый владельцем `CStatusBar` объекта. Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct` перед прекращением работы этой функции-члена.  
   
 ##  <a name="getitemid"></a>CStatusBar::GetItemID  
  Возвращает идентификатор индикатора, определяемое `nIndex`.  
@@ -255,7 +255,7 @@ UINT GetItemID(int nIndex) const;
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Индекс, идентификатор которой требуется извлечь индикатора.  
+ Индекс, идентификатор которой требуется получить индикатора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор определяемого индикатора `nIndex`.  
@@ -271,16 +271,16 @@ void GetItemRect(
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Индекс прямоугольника, координаты которого должны быть получены индикатора.  
+ Индекс индикатора должны быть получены которого координат прямоугольника.  
   
  `lpRect`  
- Указывает [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, принимающий координат индикатора, определяемое `nIndex`.  
+ Указывает на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта, который будет получить координаты индикатора, определяемое `nIndex`.  
   
 ### <a name="remarks"></a>Примечания  
- Координаты измеряются в пикселях относительно верхнего левого угла строки состояния.  
+ Координаты задаются в пикселях относительно верхнего левого угла строки состояния.  
   
 ##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
- Наборы `nID`, `nStyle`, и `cxWidth` идентификатор, стиль и ширину области индикатора в расположении, заданном `nIndex`.  
+ Наборы `nID`, `nStyle`, и `cxWidth` идентификатор, стиль и ширину области индикатора в расположении, заданном по `nIndex`.  
   
 ```  
 void GetPaneInfo(
@@ -292,19 +292,19 @@ void GetPaneInfo(
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Индекс области, сведения о которой требуется получить.  
+ Индекс панели, сведения о которой требуется получить.  
   
  `nID`  
  Ссылка на **UINT** присваивается идентификатор области.  
   
  `nStyle`  
- Ссылка на **UINT** , устанавливается на стиль панели.  
+ Ссылка на **UINT** , задан стиль панели.  
   
  `cxWidth`  
  Ссылка на целое число, равное ширину области.  
   
 ##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
- Вызовите эту функцию-член для получения стиль панели строки состояния.  
+ Вызовите эту функцию-член для извлечения стиль панели строки состояния.  
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
@@ -312,161 +312,166 @@ UINT GetPaneStyle(int nIndex) const;
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Индекс области, стиль которого требуется получить.  
+ Индекс панели стиль которого требуется получить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стиль панели строки состояния, определяемого `nIndex`.  
+ Стиль панели строки состояния, заданные `nIndex`.  
   
 ### <a name="remarks"></a>Примечания  
- Стиль области определяет, как области отображается.  
+ Стиль панели определяет, как отображается область.  
   
- Список стилей, доступных для строки состояния, в разделе [создать](#create).  
+ Список стилей, доступных для строки состояния см. в разделе [создать](#create).  
   
 ##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
- Вызовите эту функцию-член для извлечения текста, отображаемая на панели строки состояния.  
+ Вызовите эту функцию-член для извлечения текста, который отображается в области строки состояния.  
   
 ```  
-CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rString) const;  ```  
+CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rString) const;  
+```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nIndex`  
- Index of the pane whose text is to be retrieved.  
+ Индекс панели, текст которой требуется получить.  
   
  `rString`  
- A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the text to be retrieved.  
+ Ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта, содержащего текст, который требуется получить.  
   
-### Return Value  
- A `CString` object containing the pane's text.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Объект `CString` объект, содержащий текст панели.  
   
-### Remarks  
- The second form of this member function fills a `CString` object with the string text.  
+### <a name="remarks"></a>Примечания  
+ Вторая форма этого элемента функция заливки `CString` вместе с текстом строки.  
   
-##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
- This member function allows direct access to the underlying common control.  
-  
-```  
-CStatusBarCtrl & GetStatusBarCtrl() константу;  
-```  
-  
-### Return Value  
- Contains a reference to a [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) object.  
-  
-### Remarks  
- Use `GetStatusBarCtrl` to take advantage of the functionality of the Windows status-bar common control, and to take advantage of the support [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) provides for status-bar customization. For example, by using the common control, you can specify a style that includes a sizing grip on the status bar, or you can specify a style to have the status bar appear at the top of the parent window's client area.  
-  
- For more general information about common controls, See [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
-  
-##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- Sets each indicator's ID to the value specified by the corresponding element of the array `lpIDArray`, loads the string resource specified by each ID, and sets the indicator's text to the string.  
+##  <a name="getstatusbarctrl"></a>CStatusBar::GetStatusBarCtrl  
+ Эта функция-член обеспечивает прямой доступ к базовой стандартного элемента управления.  
   
 ```  
-BOOL SetIndicators (const UINT * lpIDArray,  
+CStatusBarCtrl& GetStatusBarCtrl() const;  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Содержит ссылку на [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) объекта.  
+  
+### <a name="remarks"></a>Примечания  
+ Используйте `GetStatusBarCtrl` воспользоваться преимуществами функциональные возможности стандартного элемента управления строки состояния Windows и воспользоваться преимуществами поддержки [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) предоставляет для настройки строки состояния. Например с помощью стандартного элемента управления, вы можете указать стиль, который включает захват для изменения размера в строке состояния, или вы можете указать стиль, чтобы в строке состояния отображаются в верхней части клиентской области родительского окна.  
+  
+ Дополнительные общие сведения о стандартных элементах управления см. в разделе [стандартные элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="setindicators"></a>CStatusBar::SetIndicators  
+ Задает идентификатор каждого индикатора для значения, указанного в соответствующий элемент массива `lpIDArray`, загружает строки ресурса, указанного в каждый идентификатор и задает текст индикатора в строку.  
+  
+```  
+BOOL SetIndicators(
+    const UINT* lpIDArray,  
     int nIDCount);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `lpIDArray`  
- Pointer to an array of IDs.  
+ Указатель на массив идентификаторов.  
   
  `nIDCount`  
- Number of elements in the array pointed to by `lpIDArray`.  
+ Число элементов в массиве, на который указывает `lpIDArray`.  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
- Sets the specified indicator pane to a new ID, style, and width.  
+##  <a name="setpaneinfo"></a>CStatusBar::SetPaneInfo  
+ Задает новый идентификатор, стиль и ширину панели индикаторов указанного.  
   
 ```  
-void SetPaneInfo (int nIndex,  
-    UINT nID  
-    UINT nStyle  
+void SetPaneInfo(
+    int nIndex,  
+    UINT nID,  
+    UINT nStyle,  
     int cxWidth);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nIndex`  
- Index of the indicator pane whose style is to be set.  
+ Индекс панели индикаторов, стиль которого требуется задать.  
   
  `nID`  
- New ID for the indicator pane.  
+ Новый идентификатор для панели индикаторов.  
   
  `nStyle`  
- New style for the indicator pane.  
+ Создание стиля для панели индикаторов.  
   
  `cxWidth`  
- New width for the indicator pane.  
+ Новое значение ширины панели индикаторов.  
   
-### Remarks  
- The following indicator styles are supported:  
+### <a name="remarks"></a>Примечания  
+ Поддерживаются следующие стили индикатора:  
   
-- **SBPS_NOBORDERS** No 3-D border around the pane.  
+- **SBPS_NOBORDERS** не объемной границы вокруг области.  
   
-- **SBPS_POPOUT** Reverse border so that text "pops out."  
+- **SBPS_POPOUT** обратное границы, чтобы текст «раскрывающееся.»  
   
-- **SBPS_DISABLED** Do not draw text.  
+- **SBPS_DISABLED** не рисования текста.  
   
-- **SBPS_STRETCH** Stretch pane to fill unused space. Only one pane per status bar can have this style.  
+- **SBPS_STRETCH** Stretch области для заполнения неиспользуемого пространства. Только одна область, в строке состояния может иметь этот стиль.  
   
-- **SBPS_NORMAL** No stretch, borders, or pop-out.  
+- **SBPS_NORMAL** stretch, границы и исчезающего.  
   
-##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
- Call this member function to set the style of a status bar's pane.  
+##  <a name="setpanestyle"></a>CStatusBar::SetPaneStyle  
+ Вызовите эту функцию-член требуется задать стиль панели строки состояния.  
   
 ```  
-void SetPaneStyle (int nIndex,  
+void SetPaneStyle(
+    int nIndex,  
     UINT nStyle);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nIndex`  
- Index of the pane whose style is to be set.  
+ Индекс панели стиль которого требуется задать.  
   
  `nStyle`  
- Style of the pane whose style is to be set.  
+ Стиль панели стиль которого требуется задать.  
   
-### Remarks  
- A pane's style determines how the pane appears.  
+### <a name="remarks"></a>Примечания  
+ Стиль панели определяет, как отображается область.  
   
- For a list of styles available for status bars, see [SetPaneInfo](#setpaneinfo).  
+ Список стилей, доступных для строки состояния см. в разделе [SetPaneInfo](#setpaneinfo).  
   
-##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- Call this member function to set the pane text to the string pointed to by `lpszNewText`.  
+##  <a name="setpanetext"></a>CStatusBar::SetPaneText  
+ Вызовите эту функцию-член для задания области текста к строке, на который указывает `lpszNewText`.  
   
 ```  
-SetPaneText BOOL (int nIndex,  
-    LPCTSTR lpszNewText  
-    BСтратегии обновлениями BOOL = TRUE);
+BOOL SetPaneText(
+    int nIndex,  
+    LPCTSTR lpszNewText,  
+    BOOL bUpdate = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Параметры  
  `nIndex`  
- Index of the pane whose text is to be set.  
+ Индекс панели, текст которого требуется задать.  
   
  `lpszNewText`  
- Pointer to the new pane text.  
+ Указатель на новый текст панели.  
   
- *bUpdate*  
- If **TRUE**, the pane is invalidated after the text is set.  
+ *bСтратегии обновлениями*  
+ Если **TRUE**, области становится недействительным после изменения текста.  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Возвращаемое значение  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-### Remarks  
- After you call `SetPaneText`, you must add a UI update handler to display the new text in the status bar.  
+### <a name="remarks"></a>Примечания  
+ После вызова метода `SetPaneText`, необходимо добавить обработчик обновления пользовательского интерфейса для отображения нового текста в строке состояния.  
   
-### Example  
- [!code-cpp[NVC_MFCDocView#176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
+### <a name="example"></a>Пример  
+ [!code-cpp[NVC_MFCDocView #176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCDocView#177](../../mfc/codesnippet/cpp/cstatusbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView #177](../../mfc/codesnippet/cpp/cstatusbar-class_2.cpp)]  
   
- [!code-cpp[NVC_MFCDocView#178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView #178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]  
   
-## See Also  
- [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
- [MFC Sample DLGCBR32](../../visual-cpp-samples.md)   
- [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CStatusBarCtrl Class](../../mfc/reference/cstatusbarctrl-class.md)   
- [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>См. также  
+ [Пример MFC CTRLBARS](../../visual-cpp-samples.md)   
+ [Образец DLGCBR32 MFC](../../visual-cpp-samples.md)   
+ [CControlBar-класс](../../mfc/reference/ccontrolbar-class.md)   
+ [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+ [CStatusBarCtrl-класс](../../mfc/reference/cstatusbarctrl-class.md)   
+ [Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
