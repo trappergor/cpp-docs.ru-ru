@@ -1388,11 +1388,10 @@ ms.lasthandoff: 03/07/2017
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      Пример (теперь)  
@@ -1402,11 +1401,10 @@ ms.lasthandoff: 03/07/2017
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
 ###  <a name="VS_Update2"></a> Улучшения соответствия в обновлении 2  
