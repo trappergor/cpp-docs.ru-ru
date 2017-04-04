@@ -275,15 +275,13 @@ ATL_PDATAAVAILABLE m_pFunc;
 ### <a name="remarks"></a>Примечания  
  Функция, на который указывает `m_pFunc` является членом класса объекта и имеет следующий синтаксис:  
   
- `void Function_Name(`  
-  
- `CBindStatusCallback<T>* pbsc,`  
-  
- `BYTE* pBytes,`  
-  
- `DWORD dwSize`  
-  
- `);`  
+```  
+void Function_Name(  
+   CBindStatusCallback<T>* pbsc,  
+   BYTE* pBytes,  
+   DWORD dwSize  
+   );  
+```  
   
 ##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
  Указатель на объект, который запрашивает асинхронную передачу данных.  

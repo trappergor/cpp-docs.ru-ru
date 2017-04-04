@@ -266,17 +266,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Примечания  
  Возвращаемый тип значений определяется **выбора** перечисления тип, объявленный в `COleInsertDialog` класса.  
   
- `enum Selection`  
-  
- `{`  
-  
- `createNewItem,`  
-  
- `insertFromFile,`  
-  
- `linkToFile`  
-  
- `};`  
+```  
+enum Selection {
+    createNewItem,
+    insertFromFile,
+    linkToFile
+    };  
+```  
   
  Выполните краткое описание каждого из этих значений.  
   

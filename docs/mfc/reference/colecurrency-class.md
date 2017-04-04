@@ -198,15 +198,13 @@ CurrencyStatus GetStatus() const;
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение определяется `CurrencyStatus` перечислимый тип, в котором определен **COleCurrency** класса.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  Краткое описание этих значений состояния см. следующий список:  
   
@@ -530,15 +528,13 @@ void SetStatus(CurrencyStatus  status  );
 ### <a name="remarks"></a>Примечания  
  *Состояние* значение параметра определяется `CurrencyStatus` перечислимый тип, который определен в **COleCurrency** класса.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  Краткое описание этих значений состояния см. следующий список:  
   

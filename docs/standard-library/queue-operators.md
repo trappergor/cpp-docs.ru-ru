@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
 |[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **queue**.  
   
- ` right`  
+ `right`  
  Объект типа **queue**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -84,7 +84,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.  
   
 ```  
@@ -92,10 +92,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **queue**.  
   
- ` right`  
+ `right`  
  Объект типа **queue**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -143,7 +143,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.  
   
 ```  
@@ -151,10 +151,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **queue**.  
   
- ` right`  
+ `right`  
  Объект типа **queue**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -204,7 +204,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Проверяет равенство объекта-очереди слева от оператора объекту-очереди справа от оператора.  
   
 ```  
@@ -212,10 +212,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **queue**.  
   
- ` right`  
+ `right`  
  Объект типа **queue**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -266,7 +266,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.  
   
 ```  
@@ -274,10 +274,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **queue**.  
   
- ` right`  
+ `right`  
  Объект типа **queue**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -328,7 +328,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.  
   
 ```  
@@ -336,10 +336,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **queue**.  
   
- ` right`  
+ `right`  
  Объект типа **queue**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

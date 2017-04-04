@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
 |[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Проверяет неравенство объекта слева от оператора объекту справа от оператора.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **vector**.  
   
- ` right`  
+ `right`  
  Объект типа **vector**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -68,7 +68,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Проверяет, что объект слева от оператора меньше, чем объект справа от оператора.  
   
 ```  
@@ -76,10 +76,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **vector**.  
   
- ` right`  
+ `right`  
  Объект типа **vector**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -116,7 +116,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Проверяет, что объект слева от оператора меньше или равен объекту справа от оператора.  
   
 ```  
@@ -124,10 +124,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **vector**.  
   
- ` right`  
+ `right`  
  Объект типа **vector**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -164,7 +164,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Проверяет равенство объекта слева от оператора объекту справа от оператора.  
   
 ```  
@@ -172,10 +172,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **vector**.  
   
- ` right`  
+ `right`  
  Объект типа **vector**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -211,7 +211,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Проверяет, что объект слева от оператора больше, чем объект справа от оператора.  
   
 ```  
@@ -219,10 +219,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **vector**.  
   
- ` right`  
+ `right`  
  Объект типа **vector**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -260,7 +260,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Проверяет, что объект слева от оператора больше или равен объекту справа от оператора.  
   
 ```  
@@ -268,10 +268,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **vector**.  
   
- ` right`  
+ `right`  
  Объект типа **vector**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

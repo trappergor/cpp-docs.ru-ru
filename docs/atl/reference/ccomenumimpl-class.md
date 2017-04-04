@@ -172,17 +172,14 @@ HRESULT Init(
   
  `flags` Позволяет указать, как перечислитель следует рассматривать элементы массива, переданного ему. `flags`может принимать одно из значений **CComEnumFlags** перечисления, показано ниже:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** означает, что время существования массива не управляются с помощью перечислителя. В этом случае либо массив будет иметь статический метод или объекта, указанного в *pUnk* отвечает за освобождение массива, когда он больше не нужен.  
   

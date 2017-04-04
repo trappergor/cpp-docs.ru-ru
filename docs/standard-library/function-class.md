@@ -150,7 +150,7 @@ public:
   
  **Пространство имен:** std  
   
-##  <a name="a-namefunctionassigna--functionassign"></a><a name="function__assign"></a>  function::assign  
+##  <a name="function__assign"></a>  function::assign  
  Присваивает вызываемый объект данному объекту функции.  
   
 ```  
@@ -178,7 +178,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Примечания  
  Каждая функция-член заменяет `callable object`, который содержится в `*this`, на вызываемый объект, переданный как `operand`. Они оба выделяют память с объектом распределителя `Ax`.  
   
-##  <a name="a-namefunctionfunctiona--functionfunction"></a><a name="function__function"></a>  function::function  
+##  <a name="function__function"></a>  function::function  
  Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.  
   
 ```  
@@ -201,7 +201,7 @@ template <class Fx, class Alloc>
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Объект функции для копирования.  
   
  `Fx`  
@@ -292,7 +292,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="a-namefunctionoperatorunspecifieda--functionoperator-unspecified"></a><a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
  Проверяет, существует ли вызываемый объект.  
   
 ```  
@@ -332,7 +332,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="a-namefunctionoperatora--functionoperator"></a><a name="function__operator__"></a>  function::operator()  
+##  <a name="function__operator__"></a>  function::operator()  
  Вызывает вызываемый объект.  
   
 ```  
@@ -380,7 +380,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionoperatoreqa--functionoperator"></a><a name="function__operator_eq"></a>  function::operator=  
+##  <a name="function__operator_eq"></a>  function::operator=  
  Заменяет хранимый вызываемый объект.  
   
 ```  
@@ -459,7 +459,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionresulttypea--functionresulttype"></a><a name="function__result_type"></a>  function::result_type  
+##  <a name="function__result_type"></a>  function::result_type  
  Возвращаемый тип хранимого вызываемого объекта.  
   
 ```  
@@ -499,7 +499,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionswapa--functionswap"></a><a name="function__swap"></a>  function::swap  
+##  <a name="function__swap"></a>  function::swap  
  Меняет местами два вызываемых объекта.  
   
 ```  
@@ -555,7 +555,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctiontargeta--functiontarget"></a><a name="function__target"></a>  function::target  
+##  <a name="function__target"></a>  function::target  
  Проверяет, является ли вызываемый объект вызываемым, как указано.  
   
 ```  
@@ -614,7 +614,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="a-namefunctiontargettypea--functiontargettype"></a><a name="function__target_type"></a>  function::target_type  
+##  <a name="function__target_type"></a>  function::target_type  
  Возвращает сведения о типе в вызываемый объект.  
   
 ```  

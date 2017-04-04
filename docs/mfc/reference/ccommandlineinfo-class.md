@@ -175,27 +175,19 @@ m_nShellCommand;
 ### <a name="remarks"></a>Примечания  
  Тип для этого элемента данных является следующий тип перечисления, который определен в `CCommandLineInfo` класса.  
   
- `enum{`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `AppRegister,`  
-  
- `AppUnregister,`  
-  
- `RestartByRestartManager,`  
-  
- `FileNothing = -1`  
-  
- `};`  
+```  
+enum {  
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE,
+    AppRegister,
+    AppUnregister,
+    RestartByRestartManager,
+    FileNothing = -1  
+    };  
+```  
   
  Краткое описание этих значений см.  
   

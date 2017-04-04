@@ -335,19 +335,14 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Примечания  
  Возвращаемый тип значений определяется **выбора** перечисления тип, объявленный в `COlePasteSpecialDialog` класса.  
   
- `enum Selection`  
-  
- `{`  
-  
- `pasteLink,`  
-  
- `pasteNormal,`  
-  
- `pasteOther,`  
-  
- `pasteStatic`  
-  
- `};`  
+```  
+enum Selection {
+    pasteLink,
+    pasteNormal,
+    pasteOther,
+    pasteStatic
+    };  
+```  
   
  Выполните краткое desccriptions из следующих значений:  
   

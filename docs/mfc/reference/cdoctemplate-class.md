@@ -395,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение из **достоверности** перечисления, который определен следующим образом:  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>Примечания  
  Эту функцию можно используйте для определения типа шаблона документа, который используется для открытия файла. Если приложение поддерживает несколько типов файлов, например, вы эта функция используется для определения шаблонов документов, доступных для данного файла путем вызова `MatchDocType` для каждого шаблона в очередь и выбрав шаблон согласно значению достоверности возвращаемых.  

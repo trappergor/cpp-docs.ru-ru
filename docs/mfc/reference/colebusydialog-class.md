@@ -173,17 +173,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Примечания  
  Возвращаемый тип значений определяется **выбора** перечисления тип, объявленный в `COleBusyDialog` класса.  
   
- `enum Selection`  
-  
- `{`  
-  
- `switchTo,`  
-  
- `retry,`  
-  
- `callUnblocked`  
-  
- `};`  
+```  
+enum Selection {
+    switchTo,
+    retry,
+    callUnblocked
+    };
+```  
   
  Выполните краткое описание каждого из этих значений.  
   

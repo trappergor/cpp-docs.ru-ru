@@ -71,35 +71,19 @@ struct in_addr sin_addr;
   
  Компонент IP-адрес из этой структуры имеет тип **инет_адрес**. **Инет_адрес** структура определена в заголовочном файле Windows Sockets WINSOCK. H следующим образом:  
   
- `struct   in_addr {`  
-  
- `union   {`  
-  
- `struct{`  
-  
- `unsigned  char   s_b1,`  
-  
- `s_b2,`  
-  
- `s_b3,`  
-  
- `s_b4;`  
-  
- `}  S_un_b;`  
-  
- `struct  {`  
-  
- `unsigned  short  s_w1,`  
-  
- `s_w2;`  
-  
- `}  S_un_w;`  
-  
- `unsigned long  S_addr;`  
-  
- `} S_un;`  
-  
- `};`  
+```  
+struct in_addr {
+    union {
+        struct {  
+            unsigned char s_b1, s_b2, s_b3, s_b4;  
+        } S_un_b;  
+        struct {  
+            unsigned short s_w1, s_w2;
+        } S_un_w;
+        unsigned long S_addr;
+    } S_un;  
+};  
+```  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** winsock2.h  

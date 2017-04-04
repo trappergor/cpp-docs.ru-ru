@@ -245,17 +245,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Примечания  
  Возвращаемый тип значений определяется **выбора** перечисления тип, объявленный в `COleConvertDialog` класса.  
   
- `enum Selection`  
-  
- `{`  
-  
- `noConversion,`  
-  
- `convertItem,`  
-  
- `activateAs`  
-  
- `};`  
+```  
+enum Selection {
+    noConversion,
+    convertItem,
+    activateAs
+    };  
+```  
   
  Выполните краткое описание каждого из этих значений.  
   

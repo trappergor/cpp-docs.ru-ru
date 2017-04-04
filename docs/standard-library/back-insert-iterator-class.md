@@ -85,7 +85,7 @@ class back_insert_iterator;
   
  **Пространство имен:** std  
   
-##  <a name="a-namebackinsertiteratorbackinsertiteratora--backinsertiteratorbackinsertiterator"></a><a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
  Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.  
   
 ```   
@@ -147,7 +147,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratorcontainertypea--backinsertiteratorcontainertype"></a><a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
+##  <a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
  Тип, предоставляющий контейнер для итератора `back_insert_iterator`.  
   
 ```   
@@ -199,7 +199,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatorstara--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
+##  <a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
  Оператор удаления ссылки, используемый для реализации выражения итератора вывода \* *i* = *x*.  
   
 ```  
@@ -256,7 +256,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatoraddadda--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
+##  <a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
  Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.  
   
 ```  
@@ -314,7 +314,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatoreqa--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
+##  <a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
  Добавляет или вставляет значение в конец контейнера.  
   
 ```  
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` val`  
+ `val`  
  Значение для вставки в контейнер.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -377,7 +377,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebackinsertiteratorreferencea--backinsertiteratorreference"></a><a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
+##  <a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
  Тип, предоставляющий ссылку для итератора `back_insert_iterator`.  
   
 ```  
