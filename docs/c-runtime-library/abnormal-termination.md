@@ -52,7 +52,7 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-Указывает, выполнен ли вход в блок `__finally`оператора try-finally[](../cpp/try-finally-statement.md), когда система выполняет внутренний список обработчиков завершения.  
+Указывает, выполнен ли вход в блок `__finally`[оператора try-finally](../cpp/try-finally-statement.md), когда система выполняет внутренний список обработчиков завершения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
