@@ -1,51 +1,65 @@
 ---
-title: "Процедуры среды выполнения по категориям | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "категории, функции среды выполнения"
-  - "функции [CRT]"
-  - "функции [CRT], среда выполнения"
-  - "процедуры, среда выполнения"
+title: "Подпрограммы среды выполнения по категориям | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- routines, run-time
+- functions [CRT], run-time
+- categories, run-time functions
+- functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Процедуры среды выполнения по категориям
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
+ms.lasthandoff: 03/30/2017
 
-В этом разделе перечислены и описаны процедуры библиотеки времени выполнения Майкрософт по категориям.  Для удобства ссылок некоторые процедуры перечислены в более чем одной категории.  Процедуры многобайтовых символов и расширенных символов сгруппированы с аналогами для однобайтовых символов, если они есть.  
+---
+# <a name="run-time-routines-by-category"></a>Процедуры среды выполнения по категориям
+В этом разделе перечислены и описаны подпрограммы библиотеки времени выполнения Microsoft по категориям. Для удобства пользования справочником некоторые подпрограммы присутствуют в нескольких категориях. Подпрограммы для работы с многобайтовыми символами и расширенными символами сгруппированы с их аналогами для однобайтовых символов, если таковые существуют.  
   
- В этом разделе также предоставлены эквивалентные .NET Framework методы или классы, если они доступны.  
-  
- Основными категориями процедур библиотеки времени выполнения Майкрософт являются:  
+ Основные категории подпрограмм библиотеки времени выполнения Microsoft:  
   
 |||  
 |-|-|  
-|[Доступ к аргументам](../c-runtime-library/argument-access.md)|[Манипуляция буфером](../Topic/Buffer%20Manipulation.md)|  
+|[Доступ к аргументам](../c-runtime-library/argument-access.md)|[Манипуляция буфером](../c-runtime-library/buffer-manipulation.md)|  
 |[Классификация байтов](../c-runtime-library/byte-classification.md)|[Классификация символов](../c-runtime-library/character-classification.md)|  
 |[Выравнивание данных](../c-runtime-library/data-alignment.md)|[Преобразование данных](../c-runtime-library/data-conversion.md)|  
 |[Процедуры отладки](../c-runtime-library/debug-routines.md)|[Управление каталогами](../c-runtime-library/directory-control.md)|  
 |[Обработка ошибок](../c-runtime-library/error-handling-crt.md)|[Процедуры обработки исключений](../c-runtime-library/exception-handling-routines.md)|  
 |[Обработка файлов](../c-runtime-library/file-handling.md)|[Поддержка чисел с плавающей запятой](../c-runtime-library/floating-point-support.md)|  
-|[Ввод и вывод](../Topic/Input%20and%20Output.md)|[Интернационализация](../c-runtime-library/internationalization.md)|  
+|[Ввод и вывод](../c-runtime-library/input-and-output.md)|[Интернационализация](../c-runtime-library/internationalization.md)|  
 |[Выделение памяти](../c-runtime-library/memory-allocation.md)|[Управление процессами и средой](../c-runtime-library/process-and-environment-control.md)|  
-|[Устойчивость](../c-runtime-library/robustness.md)|[Проверка ошибок во время выполнения](../Topic/Run-Time%20Error%20Checking.md)|  
-|[Сортировка и поиск](../c-runtime-library/searching-and-sorting.md)|[Управление строками](../c-runtime-library/string-manipulation-crt.md)|  
-|[Системные вызовы](../Topic/System%20Calls.md)|[Управление временем](../c-runtime-library/time-management.md)|  
+|[Устойчивость](../c-runtime-library/robustness.md)|[Проверка ошибок во время выполнения](../c-runtime-library/run-time-error-checking.md)|  
+|[Сортировка и поиск](../c-runtime-library/searching-and-sorting.md)|[Операции со строками](../c-runtime-library/string-manipulation-crt.md)|  
+|[Системные вызовы](../c-runtime-library/system-calls.md)|[Управление временем](../c-runtime-library/time-management.md)|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)
