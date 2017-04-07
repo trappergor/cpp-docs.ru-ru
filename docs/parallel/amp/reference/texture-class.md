@@ -9,7 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics::texture
+- texture
+- AMP_GRAPHICS/texture
+- AMP_GRAPHICS/concurrency::graphics::texture::texture
+- AMP_GRAPHICS/concurrency::graphics::texture::copy_to
+- AMP_GRAPHICS/concurrency::graphics::texture::data
+- AMP_GRAPHICS/concurrency::graphics::texture::get
+- AMP_GRAPHICS/concurrency::graphics::texture::get_associated_accelerator_view
+- AMP_GRAPHICS/concurrency::graphics::texture::get_depth_pitch
+- AMP_GRAPHICS/concurrency::graphics::texture::get_row_pitch
+- AMP_GRAPHICS/concurrency::graphics::texture::set
+- AMP_GRAPHICS/concurrency::graphics::texture::rank
+- AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
+- AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
+- AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 dev_langs:
 - C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
@@ -32,21 +45,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aafb23ac4d366baed37f1cf667984253160af9c3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 7aee3b5135e486474132f455ddceaf86980d3be9
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="texture-class"></a>Класс texture
-Текстура — на статистических данных `accelerator_view` в домене экстента. Это коллекция переменных, по одной для каждого элемента в домене экстента. Каждая переменная содержит значение, соответствующее примитивный тип C++ ( `unsigned int`, `int`, `float`, `double`), скалярный тип ( `norm`, или `unorm`), или тип короткого вектора.  
+Текстура — на статистических данных `accelerator_view` в домене экстента. Представляет коллекцию переменных, по одной для каждого элемента в домене экстента. Каждая переменная содержит значение, соответствующее тип-примитив C++ ( `unsigned int`, `int`, `float`, `double`), скалярный тип ( `norm`, или `unorm`), или тип короткого вектора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-template <
-    typename value_type,  
-    int _Rank  
->  
+template <typename value_type,  int _Rank>  
 class texture;  
 ```  
   
@@ -77,21 +87,21 @@ class texture;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[copy_to метод](#copy_to)|Копирует `texture` объекта назначения, выполняя глубокую копию.|  
-|[Метод данных](#data)|Возвращает указатель ЦП необработанные данные этой текстуры.|  
-|[GET-метод](#get)|Возвращает значение элемента по указанному индексу.|  
-|[get_associated_accelerator_view метод](#get_associated_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) Это предпочтительный объект для этой текстуры для копирования.|  
-|[Метод get_depth_pitch](#get_depth_pitch)|Возвращает число байтов между каждого среза глубины в трехмерном пространстве, промежуточных текстуры на ЦП.|  
-|[Метод get_row_pitch](#get_row_pitch)|Возвращает число байтов между каждой строки в 2D или 3D, промежуточных текстуры на ЦП.|  
-|[Метод Set](#set)|Задает значение элемента по указанному индексу.|  
+|[copy_to](#copy_to)|Копирует `texture` объект в место назначения, выполняя глубокой копией.|  
+|[data](#data)|Возвращает необработанные данные текстуры, этот указатель ЦП.|  
+|[get](#get)|Возвращает значение элемента по указанному индексу.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) именно предпочитаемую целевую этот текстуры для копирования.|  
+|[get_depth_pitch](#get_depth_pitch)|Возвращает число байтов между каждый срез глубины в трехмерной промежуточных текстур на ЦП.|  
+|[get_row_pitch](#get_row_pitch)|Возвращает количество байтов всех строк в 2D или 3D промежуточных текстур на ЦП.|  
+|[set](#set)|Задает значение элемента по указанному индексу.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Оператор Operator()](#operator_call)|Возвращает значение элемента, определяются параметрами.|  
-|[Оператор Operator]](#operator_at)|Возвращает элемент, который находится по указанному индексу.|  
-|[оператор =-оператор](#operator_eq)|Копирует указанный [текстуры](texture-class.md) этого объекта.|  
+|[Operator()](#operator_call)|Возвращает значение элемента, указанный параметрами.|  
+|[оператор]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
+|[operator=](#operator_eq)|Копирует указанный [текстуры](texture-class.md) этого объекта.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -103,9 +113,9 @@ class texture;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[associated_accelerator_view элемент данных](#associated_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) Это предпочтительный объект для этой текстуры для копирования.|  
-|[depth_pitch элемент данных](#depth_pitch)|Возвращает число байтов между каждого среза глубины в промежуточной трехмерную текстуру на ЦП.|  
-|[row_pitch элемент данных](#row_pitch)|Возвращает число байтов между каждой строки в 2D или 3D промежуточной текстуры на ЦП.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) именно предпочитаемую целевую этот текстуры для копирования.|  
+|[depth_pitch](#depth_pitch)|Возвращает число байтов между каждый срез глубины 3D промежуточной текстуры на ЦП.|  
+|[row_pitch](#row_pitch)|Возвращает количество байтов всех строк в 2D или 3D промежуточных текстур на ЦП.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `_Texture_base`  
@@ -117,7 +127,7 @@ class texture;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namedtora-texture"></a><a name="dtor"></a>~ текстуры 
+##  <a name="dtor"></a>~ текстуры 
 
  Уничтожает `texture` объекта.  
   
@@ -125,28 +135,21 @@ class texture;
 ~texture() restrict(cpu);
 ```  
   
-##  <a name="a-nameassociatedacceleratorviewa-associatedacceleratorview"></a><a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
 
- Возвращает [accelerator_view](accelerator-view-class.md) Это предпочтительный объект для этой текстуры для копирования.  
+ Возвращает [accelerator_view](accelerator-view-class.md) именно предпочитаемую целевую этот текстуры для копирования.  
   
 ```  
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="a-namecopytoa-copyto"></a><a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a>copy_to 
 
- Копирует `texture` объекта назначения, выполняя глубокую копию.  
+ Копирует `texture` объект в место назначения, выполняя глубокой копией.  
   
 ```  
-void copy_to(
-    texture& _Dest) const;
-
- 
- 
-void copy_to(
-    writeonly_texture_view<value_type, _Rank>& _Dest) const;
-
- 
+void copy_to(texture& _Dest) const; 
+void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const; 
 ```  
   
 ### <a name="parameters"></a>Параметры  
@@ -159,9 +162,9 @@ void copy_to(
  `value_type`  
  Тип элементов в текстуре.  
   
-##  <a name="a-namedataa-data"></a><a name="data"></a>данные 
+##  <a name="data"></a>данные 
 
- Возвращает указатель ЦП необработанные данные этой текстуры.  
+ Возвращает необработанные данные текстуры, этот указатель ЦП.  
   
 ```  
 void* data() restrict(cpu);
@@ -173,15 +176,15 @@ const void* data() const restrict(cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на необработанные данные текстуры.  
   
-##  <a name="a-namedepthpitcha-depthpitch"></a><a name="depth_pitch"></a>depth_pitch 
+##  <a name="depth_pitch"></a>depth_pitch 
 
- Возвращает число байтов между каждого среза глубины в промежуточной трехмерную текстуру на ЦП.  
+ Возвращает число байтов между каждый срез глубины 3D промежуточной текстуры на ЦП.  
   
 ```  
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Получить 
+##  <a name="get"></a>Получить 
 
  Возвращает значение элемента по указанному индексу.  
   
@@ -196,42 +199,42 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента по указанному индексу.  
   
-##  <a name="a-namegetassociatedacceleratorviewa-getassociatedacceleratorview"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
 
- Возвращает accelerator_view, который является основной целью для этой текстуры для копирования.  
+ Возвращает accelerator_view, которая является целью предпочтительный для этого текстуры для копирования.  
   
 ```  
 Concurrency::accelerator_view get_associated_accelerator_view() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- [Accelerator_view](accelerator-view-class.md) Это предпочтительный объект для этой текстуры для копирования.  
+ [Accelerator_view](accelerator-view-class.md) именно предпочитаемую целевую этот текстуры для копирования.  
   
-##  <a name="a-namegetdepthpitcha-getdepthpitch"></a><a name="get_depth_pitch"></a>get_depth_pitch 
+##  <a name="get_depth_pitch"></a>get_depth_pitch 
 
- Возвращает число байтов между каждого среза глубины в трехмерном пространстве, промежуточных текстуры на ЦП.  
+ Возвращает число байтов между каждый срез глубины в трехмерной промежуточных текстур на ЦП.  
   
 ```  
 unsigned int get_depth_pitch() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число байтов между каждого среза глубины в трехмерном пространстве, промежуточных текстуры на ЦП.  
+ Число байтов между каждый срез глубины в трехмерной промежуточных текстур на ЦП.  
   
-##  <a name="a-namegetrowpitcha-getrowpitch"></a><a name="get_row_pitch"></a>get_row_pitch 
+##  <a name="get_row_pitch"></a>get_row_pitch 
 
- Возвращает число байтов, между каждой строки в двумерные промежуточной текстуры или каждой строки срез глубиной в 3-мерная промежуточной текстуры.  
+ Возвращает число байтов, между каждой строки в двумерные промежуточных текстур или каждой строки среза глубину объемного промежуточных текстур.  
   
 ```  
 unsigned int get_row_pitch() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число байтов между каждой строки в двумерные промежуточной текстуры или каждой строки срез глубиной в 3-мерная промежуточной текстуры.  
+ Число байтов между каждой строки в двумерные промежуточных текстур или каждой строки среза глубину объемного промежуточных текстур.  
   
-##  <a name="a-nameoperatorcalla-operator"></a><a name="operator_call"></a>Operator() 
+##  <a name="operator_call"></a>Operator() 
 
- Возвращает значение элемента, определяются параметрами.  
+ Возвращает значение элемента, указанный параметрами.  
   
 ```  
 const value_type operator() (
@@ -258,23 +261,23 @@ const value_type operator() (
  Индекс.  
   
  `_I0`  
- Наиболее значимый компонент индекса.  
+ Старший значащий компонент индекса.  
   
  `_I1`  
- Далее к значащий компонент индекса.  
+ Далее к старший значащий компонент индекса.  
   
  `_I2`  
- Наименее значимый компонент индекса.  
+ Компонент наименьшего индекса.  
   
  `_Rank`  
  Ранг индекса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение элемента, определяются параметрами.  
+ Значение элемента, указанный параметрами.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>оператор] 
+##  <a name="operator_at"></a>оператор] 
 
- Возвращает элемент, который находится по указанному индексу.  
+ Возвращает элемент, расположенный по указанному индексу.  
   
 ```  
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
@@ -291,9 +294,9 @@ const value_type operator[] (int _I0) const restrict(amp);
  Индекс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Элемент, который находится по указанному индексу.  
+ Элемент, расположенный по указанному индексу.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
  Копирует указанный [текстуры](texture-class.md) этого объекта.  
   
@@ -308,12 +311,12 @@ texture& operator= (
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `texture` Для копирования.  
+ `texture` Объект для копирования из.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `texture` объекта.  
   
-##  <a name="a-nameranka-rank"></a><a name="rank"></a>Ранг 
+##  <a name="rank"></a>Ранг 
 
  Возвращает ранг `texture` объекта.  
   
@@ -321,15 +324,15 @@ texture& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="a-namerowpitcha-rowpitch"></a><a name="row_pitch"></a>row_pitch 
+##  <a name="row_pitch"></a>row_pitch 
 
- Возвращает число байтов между каждой строки в 2D или 3D промежуточной текстуры на ЦП.  
+ Возвращает количество байтов всех строк в 2D или 3D промежуточных текстур на ЦП.  
   
 ```  
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>набор 
+##  <a name="set"></a>набор 
 
  Задает значение элемента по указанному индексу.  
   
@@ -349,45 +352,31 @@ void set(
  `value`  
  Новое значение элемента.  
   
-##  <a name="a-namectora-texture"></a><a name="ctor"></a>текстуры 
+##  <a name="ctor"></a>текстуры 
 
  Инициализирует новый экземпляр класса `texture`.  
   
 ```  
-texture(
-    const Concurrency::extent<_Rank>& _Ext) restrict(cpu);
-
+texture(const Concurrency::extent<_Rank>& _Ext) restrict(cpu);
  
-texture(
-    int _E0) restrict(cpu);
-
+texture(int _E0) restrict(cpu);
  
-texture(
-    int _E0,  
-    int _E1) restrict(cpu);
-
+texture(int _E0, int _E1) restrict(cpu);
  
-texture(
-    int _E0,  
-    int _E1,  
-    int _E2) restrict(cpu);
-
+texture(int _E0, int _E1, int _E2) restrict(cpu);
  
 texture(
     const Concurrency::extent<_Rank>& _Ext,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
-
  
 texture(
     int _E0,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
-
  
 texture(
     int _E0,  
     int _E1,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
-
  
 texture(
     int _E0,  
@@ -395,70 +384,68 @@ texture(
     int _E2,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
 
- 
-template<
-    typename _Input_iterator  
->  
+
+template<typename _Input_iterator>  
 texture(
-    const Concurrency::extent<_Rank>& _Ext, _Input_iterator _Src_first, _Input_iterator _Src_last) restrict(cpu);
+    const Concurrency::extent<_Rank>& _Ext, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
     int _E0, _Input_iterator _Src_first, _Input_iterator _Src_last) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
     int _E0,  
-    int _E1, _Input_iterator _Src_first, _Input_iterator _Src_last) restrict(cpu);
+    int _E1, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
     int _E0,  
     int _E1,  
-    int _E2, _Input_iterator _Src_first, _Input_iterator _Src_last) restrict(cpu);
+    int _E2, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
-    const Concurrency::extent<_Rank>& _Ext, _Input_iterator _Src_first, _Input_iterator _Src_last,  
+    const Concurrency::extent<_Rank>& _Ext, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
-    int _E0, _Input_iterator _Src_first, _Input_iterator _Src_last,  
+    int _E0, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
     int _E0,  
-    int _E1, _Input_iterator _Src_first, _Input_iterator _Src_last,  
+    int _E1, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last,  
     const Concurrency::accelerator_view& _Av) restrict(cpu);
 
  
-template<
-    typename _Input_iterator  
->  
+template<typename _Input_iterator>  
 texture(
     int _E0,  
     int _E1,  
-    int _E2, _Input_iterator _Src_first, _Input_iterator _Src_last,  
+    int _E2, 
+    _Input_iterator _Src_first, 
+    _Input_iterator _Src_last,  
     const Concurrency::accelerator_view& _Av) restrict(cpu))  ;  
  
 texture(
@@ -591,34 +578,34 @@ texture(
   
 ### <a name="parameters"></a>Параметры  
  `_Acc_view`  
- [Accelerator_view](accelerator-view-class.md) , определяющий расположение текстуры.  
+ [Accelerator_view](accelerator-view-class.md) , задающий расположение, текстуры.  
   
  `_Av`  
- [Accelerator_view](accelerator-view-class.md) , определяющий расположение текстуры.  
+ [Accelerator_view](accelerator-view-class.md) , задающий расположение, текстуры.  
   
  `_Associated_av`  
- Accelerator_view, указывающее Предпочитаемая копий или из этой текстуры.  
+ Accelerator_view, задает предпочитаемую целевую копий или из этого текстуры.  
   
  `_Bits_per_scalar_element`  
- Число бит на каждый скалярный элемент в базовый тип скалярных текстуры. Как правило поддерживаемое значение — 8, 16, 32 и 64. Если указано значение 0, число битов совпадает базового scalar_type. 64 действителен только для текстур, на основе типа double.  
+ Число битов на каждый скалярный элемент в базовом типе скалярные текстуры. В общем случае поддерживаемые значения, 8, 16, 32 и 64. Если указано значение 0, число битов совпадает базового scalar_type. 64 допустим только для текстур, на основе типа double.  
   
  `_Ext`  
- Область, в каждом измерении текстуры.  
+ Степень, в каждом измерении текстуры.  
   
  `_E0`  
  Наиболее значимые компонент текстуры.  
   
  `_E1`  
- Далее к значащий компонент текстуры.  
+ Далее к старший значащий компонент текстуры.  
   
  `_E2`  
- Компонент младших экстента текстуры.  
+ Наименее значащие компонент экстента текстуры.  
   
  `_Input_iterator`  
- Тип ввода interator.  
+ Тип входного interator.  
   
  `_Mipmap_levels`  
- Количество уровней MIP-карты в базовом текстуры. Если указано значение 0, текстуры будет иметь полный диапазон уровней MIP-карты до наименьший возможный размер для указанного экстента.  
+ Количество уровней MIP-карты в базовой текстуры. Если указано значение 0, текстуры будет иметь полный диапазон уровней MIP-карты до наименьший возможный размер для указанную область.  
   
  `_Rank`  
  Ранг экстента.  
@@ -630,10 +617,10 @@ texture(
  Для текстуры для копирования.  
   
  `_Src_byte_size`  
- Число байтов в буфере источника.  
+ Число байтов в исходном буфере.  
   
  `_Src_first`  
- Итератор начало в контейнер источника.  
+ Итератор с начала в контейнер источника.  
   
  `_Src_last`  
  Итератор конца в контейнер источника.  
@@ -645,5 +632,5 @@ texture(
  Ранг раздела.  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

@@ -30,47 +30,47 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 89790d1a56f64e6479ae32d72c529142ba8df1de
-ms.openlocfilehash: 0dce243b0f7db087db908d603e6cd1cfc4b02db8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="string-conversion-macros"></a>Макросы преобразования строк
-Эти макросы обеспечивают строки функции преобразования.  
+Эти макросы обеспечивают строка функции преобразования.  
   
 |||  
 |-|-|  
-|[ATL и макросы преобразования строк в MFC](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)|Набор макросов, которые преобразование между строковыми типами.|  
+|[ATL и MFC макросы преобразования строк](string-conversion-macros.md)|Набор макросов, которые преобразование между строковыми типами.|  
 |[DEVMODE и макросы преобразования строк TEXTMETRIC](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Набор макросов, которые преобразуют строки в `DEVMODE` и `TEXTMETRIC` структур.|  
   
-##  <a name="a-nameatlandmfcstringconversionmacrosa--atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a>ATL и макросы преобразования строк в MFC  
+##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL и MFC макросы преобразования строк  
  Рассматриваемые здесь макросы преобразования строк можно использовать как для ATL, так и для MFC. Дополнительные сведения о преобразовании строки MFC см. в разделе [TN059: использование макросов преобразования MFC MBCS в Юникод](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) и [макросов MFC и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md).  
   
-##  <a name="a-namedevmodeandtextmetricstringconversionmacrosa--devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE и макросы преобразования строк TEXTMETRIC  
- Эти макросы создать копию [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) или [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) структуры и преобразования строки в новую структуру новый строковый тип. Макросы выделения памяти в стеке для новой структуры и вернуть указатель в новую структуру.  
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE и макросы преобразования строк TEXTMETRIC  
+ Эти макросы создать копию [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) или [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) структуры и преобразования строк в новой структуре новый строковый тип. Макросы выделение памяти в стеке для новой структуры и вернуть указатель на структуру нового.  
   
 ```
 MACRONAME( address_of_structure )
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Пример:  
+ Например:  
   
- [!code-cpp[NVC_ATL_Utilities&#128;](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities #128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
   
  and:  
   
- [!code-cpp[NVC_ATL_Utilities&#129;](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities #129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
- В именах макросов тип строки в структуре источника расположен слева (например, **A**) и тип строки в структуре назначения — справа (например, **W**). **A** stands for **LPSTR**, **OLE** stands for `LPOLESTR`, **T** stands for `LPTSTR`, and **W** stands for `LPWSTR`.  
+ В именах макросов тип string в структуре источника находится слева (например, **A**) и строкового типа в целевой структуре — справа (например, **W**). **A** stands for **LPSTR**, **OLE** stands for `LPOLESTR`, **T** stands for `LPTSTR`, and **W** stands for `LPWSTR`.  
   
  Таким образом `DEVMODEA2W` копии `DEVMODE` структура с **LPSTR** строки в `DEVMODE` структура с `LPWSTR` строк, `TEXTMETRICOLE2T` копии `TEXTMETRIC` структура с `LPOLESTR` строки в `TEXTMETRIC` структура с `LPTSTR` строк и т. д.  
   
  Две строки преобразуются в `DEVMODE` структуры — это имя устройства ( **dmDeviceName**) и имя формы ( **dmFormName**). `DEVMODE` Макросы преобразования строк также обновить размер структуры ( **dmSize**).  
   
- Четыре строки преобразуются в `TEXTMETRIC` структуры являются первым символом ( **tmFirstChar**), последний знак ( **tmLastChar**), символ по умолчанию ( **tmDefaultChar**) и знак разрыва ( **tmBreakChar**).  
+ Четыре строки, преобразуются в `TEXTMETRIC` структуры являются первым символом ( **tmFirstChar**), последним символом ( **tmLastChar**), символ по умолчанию ( **tmDefaultChar**) и символа разрыва ( **tmBreakChar**).  
   
- Поведение `DEVMODE` и `TEXTMETRIC` макросы преобразования строк зависит от директивы компилятора в силу, при их наличии. Если исходный и конечный типы совпадают, преобразование не выполняется. Директивы компилятора изменяют **T** и **OLE** следующим образом:  
+ Поведение `DEVMODE` и `TEXTMETRIC` макросы преобразования строк зависит от директивы компилятора в силу, если таковые имеются. Если исходный и конечный типы совпадают, преобразование не выполняется. Директивы компилятора изменяют **T** и **OLE** следующим образом:  
   
 |Действующая директива компилятора|T становится|OLE становится|  
 |----------------------------------|---------------|-----------------|  

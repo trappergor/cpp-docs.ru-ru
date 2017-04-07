@@ -44,13 +44,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4668672af1b33170ece1cb4d449ed5a20f6040e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0f348328a4be4b934e00acdb43ba47fa919bac75
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmonikerfile-class"></a>Класс CMonikerFile
-Представляет поток данных ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) с именем, [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Представляет поток данных ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) с именем [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +70,7 @@ class CMonikerFile : public COleStreamFile
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CMonikerFile::Close](#close)|Отключает и освобождает поток и освобождает моникер.|  
+|[CMonikerFile::Close](#close)|Отсоединяет и освобождает поток и освобождает моникер.|  
 |[CMonikerFile::Detach](#detach)|Отсоединяет `IMoniker` из этого `CMonikerFile` объекта.|  
 |[CMonikerFile::GetMoniker](#getmoniker)|Возвращает текущий моникер.|  
 |[CMonikerFile::Open](#open)|Открывает указанный файл, чтобы получить поток.|  
@@ -79,16 +79,16 @@ class CMonikerFile : public COleStreamFile
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CMonikerFile::CreateBindContext](#createbindcontext)|Получает контекст привязки, или создает новый контекст привязки по умолчанию.|  
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Получает контекст привязки, или создает контекст привязки по умолчанию.|  
   
 ## <a name="remarks"></a>Примечания  
- Моникер сведения как путь к файлу. Если у вас есть указатель на объект моникера `IMoniker` интерфейс, могут получать доступ к определенного файла, без необходимости любых других данных о расположении файла на самом деле.  
+ Моникер сведения как путь к файлу. Если имеется указатель на объект моникера `IMoniker` интерфейс, без необходимости любую конкретную информацию о расположении файла фактически можно получить доступ к определенного файла.  
   
- Производный от `COleStreamFile`, `CMonikerFile` принимает моникера или его можно преобразовать в моникер строковое представление и привязывает к потоку, для которого специальное имя — это. Затем можно чтения и записи в поток. Действительной цели `CMonikerFile` — предоставить простой доступ к `IStream`s с именем, `IMoniker`s, привязать к потоку самостоятельно, не придется еще `CFile` функциональность в поток.  
+ Производное от `COleStreamFile`, `CMonikerFile` принимает моникер или строковое представление, его можно преобразовать в моникер и привязывает к потоку, для которого моникер — это имя. Кроме того, можно затем чтения и записи в поток. Реальные назначение `CMonikerFile` — для обеспечения простого доступа к `IStream`s с именем `IMoniker`s, чтобы не требовалось выполнить привязку к потоку самостоятельно, еще нет `CFile` функциональные возможности в поток.  
   
- `CMonikerFile`не может использоваться для привязки к отличается от потока. Если вы хотите связать хранилища или объекта, необходимо использовать `IMoniker` интерфейс напрямую.  
+ `CMonikerFile`не может использоваться для привязки к ничего, кроме потока. Если вы хотите привязать к хранилища или объекта, необходимо использовать `IMoniker` интерфейс непосредственно.  
   
- Дополнительные сведения о потоках и моникеров см [COleStreamFile](../../mfc/reference/colestreamfile-class.md) в *Справочник по библиотеке MFC* и [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) и [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения о потоках и моникеров. в разделе [COleStreamFile](../../mfc/reference/colestreamfile-class.md) в *Справочник по библиотеке MFC* и [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) и [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -103,14 +103,14 @@ class CMonikerFile : public COleStreamFile
  **Заголовок:** afxole.h  
   
 ##  <a name="close"></a>CMonikerFile::Close  
- Эта функция для выделения и освобождения потока и освободить моникер.  
+ Вызывайте эту функцию для выделения и освобождения потока и чтобы освободить моникер.  
   
 ```  
 virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Может быть вызван для неоткрытых или уже закрытым потоков.  
+ Может быть вызван потоки неоткрытый или уже закрыт.  
   
 ##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
  Создает объект `CMonikerFile`.  
@@ -128,16 +128,16 @@ IBindCtx* CreateBindContext(CFileException* pError);
   
 ### <a name="parameters"></a>Параметры  
  `pError`  
- Указатель на исключение файлов. В случае возникновения ошибки он будет присвоено причину.  
+ Указатель на исключение файлов. В случае ошибки он будет присвоено причину.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на контекст привязки [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) для привязки с, если успешно; в противном случае **NULL**. Если экземпляр был открыт с `IBindHost` интерфейс, контекст привязки извлекается из `IBindHost`. Если не `IBindHost` интерфейс или интерфейс не удастся вернуть контекст привязки, создается контекст привязки. Описание [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) интерфейса см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Указатель на контекст привязки [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) для привязки с, если успешно; в противном случае **NULL**. Если экземпляр был открыт с `IBindHost` интерфейс, контекст привязки извлекается из `IBindHost`. При наличии не `IBindHost` или в интерфейсе не возвращает контекста привязки, создается контекста привязки. Описание [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) интерфейса см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="remarks"></a>Примечания  
- Контекст привязки — объект, который хранит сведения об операции привязки моникера определенного. Можно переопределить эту функцию для предоставления контекста пользовательские привязки.  
+ Контекст привязки — объект, который хранит сведения о выполнении операции привязки моникера определенного. Можно переопределить эту функцию для предоставления контекста пользовательской привязки.  
   
 ##  <a name="detach"></a>CMonikerFile::Detach  
- Эта функция вызывается для закрытия потока.  
+ Вызывайте эту функцию для закрытия потока.  
   
 ```  
 BOOL Detach(CFileException* pError = NULL);
@@ -145,7 +145,7 @@ BOOL Detach(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>Параметры  
  `pError`  
- Указатель на исключение файлов. В случае возникновения ошибки он будет присвоено причину.  
+ Указатель на исключение файлов. В случае ошибки он будет присвоено причину.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -158,10 +158,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс текущий моникер ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Указатель на текущий интерфейс моникер ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
   
 ### <a name="remarks"></a>Примечания  
- Поскольку `CMonikerFile` не является интерфейсом указатель, возвращенный увеличивает счетчик ссылок (через [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), и моникер освобождается при `CMonikerFile` объект освобождается. Если требуется удерживать моникер или освободить самостоятельно, необходимо `AddRef` его.  
+ Так как `CMonikerFile` не является интерфейсом, возвращенный указатель не увеличивает счетчик ссылок (через [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), и моникер освобождается при `CMonikerFile` объект освобождается. Если требуется удерживать моникер или освободите его необходимо `AddRef` его.  
   
 ##  <a name="open"></a>CMonikerFile::Open  
  Вызовите эту функцию-член для открытия файла или моникер объекта.  
@@ -182,7 +182,7 @@ virtual BOOL Open(
  URL-адрес или имя файла для открытия.  
   
  `pError`  
- Указатель на исключение файлов. В случае возникновения ошибки он будет присвоено причину.  
+ Указатель на исключение файлов. В случае ошибки он будет присвоено причину.  
   
  `pMoniker`  
  Указатель на интерфейс моникер `IMoniker` использоваться для получения потока.  
@@ -191,15 +191,15 @@ virtual BOOL Open(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- `lpszURL` Параметр не может использоваться на компьютерах Macintosh. Только `pMoniker` форму **откройте** может использоваться на компьютерах Macintosh.  
+ `lpszURL` Параметр нельзя использовать на компьютерах Macintosh. Только `pMoniker` форму **откройте** можно использовать на компьютерах Macintosh.  
   
- Можно использовать URL-адрес или имя файла для `lpszURL` параметр. Пример:  
+ Можно использовать URL-адрес или имя файла для `lpszURL` параметра. Пример:  
   
- [!code-cpp[NVC_MFCWinInet №&6;](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
+ [!code-cpp[NVC_MFCWinInet #6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   
- — или —  
+ - или  
   
- [!code-cpp[NVC_MFCWinInet&#7;](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
+ [!code-cpp[NVC_MFCWinInet #7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleStreamFile](../../mfc/reference/colestreamfile-class.md)   

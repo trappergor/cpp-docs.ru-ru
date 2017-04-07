@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>Класс CMap
@@ -117,7 +117,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[[CMap::operator]](#operator_at)|Вставляет элемент в подстановке оператор \u2012 карты для `SetAt`.|  
+|[[CMap::operator]](#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   
 ## <a name="remarks"></a>Примечания  
  После вставки пару "ключ значение" (элемент) в сопоставление, можно эффективно извлекать и удалять пары с помощью ключа для доступа к нему. Также можно выполнять итерацию по всем элементам в схеме.  

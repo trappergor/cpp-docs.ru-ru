@@ -1,41 +1,58 @@
 ---
-title: "Создание приложения MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [MFC]"
-  - "MFC [C++], создание приложений"
-  - "приложения MFC"
+title: "Создание приложения MFC | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC]
+- MFC [C++], creating applications
+- MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Создание приложения MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6d900cc7c81907fa755ab44b23af3e3ec5fab56b
+ms.lasthandoff: 04/01/2017
 
-Приложение MFC является исполняемым приложением для Windows на основе библиотеки Microsoft Foundation Class \(MFC\).  Наиболее простым способом создания приложения MFC является использование мастера приложений MFC.  
+---
+# <a name="creating-an-mfc-application"></a>Создание приложения MFC
+Приложение MFC является исполняемым приложением для Windows на основе библиотеки Microsoft Foundation Class (MFC). Наиболее простым способом создания приложения MFC является использование мастера приложений MFC.  
   
 > [!IMPORTANT]
 >  Проекты MFC не поддерживаются в выпусках Visual Studio Express.  
   
- Исполняемые приложения MFC в целом делятся на пять типов: стандартные приложения Windows, диалоговые окна, приложения на основе форм, приложения в стиле проводника и приложения в стиле браузера.  Дополнительные сведения см. в следующих разделах:  
+ Исполняемые файлы MFC обычно делятся на пять типов: стандартные приложения Windows, диалоговые окна, приложений на основе форм, приложения в стиле проводника и веб-обозревателя приложений. Дополнительные сведения:  
   
--   [Использование классов для создания приложений Windows](../Topic/Using%20the%20Classes%20to%20Write%20Applications%20for%20Windows.md)  
+-   [Использование классов для создания приложений Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
 -   [Создание и отображение диалоговых окон](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Создание приложений MFC на основе форм](../Topic/Creating%20a%20Forms-Based%20MFC%20Application.md)  
+-   [Создание приложений MFC на основе форм](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
 -   [Создание приложения MFC в стиле проводника](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
   
@@ -43,23 +60,25 @@ caps.handback.revision: 12
   
  Мастер приложений MFC создает соответствующие классы и файлы для приложений любого типа в зависимости от параметров, выбранных в мастере.  
   
-### Создание приложения MFC при помощи мастера приложений MFC.  
+### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Создание приложения MFC при помощи мастера приложений MFC.  
   
-1.  Следуйте инструкциям, приведенным в разделе справки [Создание проекта с использованием мастера приложений Visual C\+\+](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Следуйте инструкциям в разделе справки [Создание проекта с использованием мастера приложений Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Чтобы открыть мастер, в диалоговом окне **Создание проекта** выберите в области "Шаблоны" элемент **Приложение MFC**.  
+2.  В **новый проект** выберите **приложение MFC** в области шаблонов, чтобы открыть мастер.  
   
-3.  Задайте параметры приложения при помощи [Мастера приложений MFC](../Topic/MFC%20Application%20Wizard.md).  
+3.  Задайте параметры приложения с помощью [мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md).  
   
     > [!NOTE]
     >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.  
   
-4.  Нажмите кнопку **Готово** для завершения работы мастера и откройте новый проект в среде разработки.  
+4.  Нажмите кнопку **Готово** завершить работу мастера и откройте новый проект в среде разработки.  
   
- После создания проекта можно просмотреть его файлы при помощи **обозревателя решений**.  Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt.  Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual C\+\+](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
-## См. также  
- [Debugging Preparation: Visual C\+\+ Windows Applications](http://msdn.microsoft.com/ru-ru/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+## <a name="see-also"></a>См. также  
+ [Подготовка к отладке: Приложения Windows на Visual C++](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/ru-ru/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Развертывание приложений](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+

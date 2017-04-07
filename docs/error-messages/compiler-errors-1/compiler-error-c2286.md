@@ -1,37 +1,53 @@
 ---
-title: "Ошибка компилятора C2286 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2286"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2286"
+title: "Ошибка компилятора C2286 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2286
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2286
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c745afd370bd444614fc216ab42fda0f584295e7
+ms.lasthandoff: 04/01/2017
 
-представление указателей на члены "идентификатор" уже имеет значение "наследование" — объявление пропущено  
+---
+# <a name="compiler-error-c2286"></a>Ошибка компилятора C2286
+указатели на члены представления «идентификатор» уже имеет значение «наследование» - объявление проигнорировано  
   
- Для класса задано два различных представления указателей на члены.  
+ Существует два различных представления указателей на члены класса.  
   
- Для получения дополнительной информации см. [Ключевые слова наследования](../../cpp/inheritance-keywords.md).  
+ Дополнительные сведения см. в разделе [ключевые слова наследования](../../cpp/inheritance-keywords.md).  
   
-## Пример  
- Следующий пример приводит к возникновению ошибки C2286:  
+## <a name="example"></a>Пример  
+ При компиляции следующего примера возникнет ошибка C2286:  
   
 ```  
 // C2286.cpp  

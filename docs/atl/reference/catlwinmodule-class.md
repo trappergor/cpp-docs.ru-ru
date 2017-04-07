@@ -38,13 +38,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6db3ae9e610605524683e984f2aba602b1daf0d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlwinmodule-class"></a>Класс CAtlWinModule
-Этот класс обеспечивает поддержку для работы с окнами компонентов ATL.  
+Этот класс обеспечивает поддержку компоненты ATL управления окнами.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -91,13 +91,13 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
   
 ### <a name="parameters"></a>Параметры  
  `pData`  
- Указатель на `_AtlCreateWndData` структуры для инициализации и добавления в текущем модуле.  
+ Указатель на `_AtlCreateWndData` структуры инициализируются и добавлен к текущему модулю.  
   
  `pObject`  
  Указатель на объект **это** указателя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) какие инициализирует [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуры. Эта структура будет хранить **это** указателем, используется для получения экземпляра класса в процедуры окна.  
+ Этот метод вызывает метод [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) какие инициализирует [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуры. Эта структура будет хранить **это** указатель, используемый для получения экземпляра класса в процедуры окна.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  Конструктор.  
@@ -107,7 +107,7 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В случае сбоя инициализации **EXCEPTION_NONCONTINUABLE** возникает исключение.  
+ При сбое инициализации **EXCEPTION_NONCONTINUABLE** возникает исключение.  
   
 ##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  Деструктор  

@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ed822c7e23510144d09ee268c1430aea354144cb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 90e95f10a2dc183734255e94a5ebe1d582bb026f
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cobarray-class"></a>Класс CObArray
@@ -109,25 +109,25 @@ class CObArray : public CObject
 ## <a name="remarks"></a>Примечания  
  Эти массивы объектов похожи на массивы C, но динамического сжатия и уменьшаться по мере необходимости.  
   
- Индексы массива всегда начинаются с позиции 0. Можно ли исправить верхнюю границу или разрешить разверните при добавлении элементов за пределами текущей границы массива. Память выделяется последовательно с верхней границей, даже если некоторые элементы имеют значение null.  
+ Индексы массива всегда начинаются в позиции 0. Можно решить, будет ли исправить верхнюю границу или разрешить разверните при добавлении элементов за пределами текущей границы массива. Последовательно выделяется память для верхней границы, даже если некоторые элементы имеют значение null.  
   
- В Win32, размер `CObArray` объекта ограничено только доступной памяти.  
+ В разделе Win32, размер `CObArray` объекта ограничено только доступной памяти.  
   
- Как и в случае с массивом C времени доступа к `CObArray` индексированного элемента является постоянным и не зависит от размера массива.  
+ Как и в случае с массивом C времени доступа к `CObArray` индексированного элемента является константой и не зависит от размера массива.  
   
- `CObArray` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Если массив `CObject` указатели сохраняется в архив с перегруженного оператора вставки или `Serialize` функция-член, каждый из которых `CObject` элемент в свою очередь, сериализуется вместе с его индекса массива.  
+ `CObArray` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Если массив `CObject` указатели хранится в архив с перегруженного оператора вставки или `Serialize` функция-член, каждый `CObject` элемент в свою очередь, сериализуется вместе с его индекса в массиве.  
   
- Если вам требуется дамп отдельных `CObject` элементов массива, необходимо задать глубину `CDumpContext` объекта больше или равно 1.  
+ Если вам требуется дамп отдельных `CObject` элементов в массиве, необходимо задать глубину `CDumpContext` , который больше или равно 1.  
   
- При `CObArray` объект удаляется или когда его элементы удаляются, только `CObject` удаляются указатели, не объекты, они ссылаются.  
+ Когда `CObArray` объект удаляется или когда его элементы удаляются, только `CObject` удаляются указатели, не объекты, они ссылаются.  
   
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  
   
- Производного класса массив похож на список наследования. Подробнее о производного класса список специального назначения, см. в статье [коллекции](../../mfc/collections.md).  
+ Производного класса массив похож на список наследования. Подробнее о производный класс списка специального назначения, см. в статье [коллекции](../../mfc/collections.md).  
   
 > [!NOTE]
->  Необходимо использовать `IMPLEMENT_SERIAL` макрос в реализации данного производного класса, если вы собираетесь сериализации массива.  
+>  Необходимо использовать `IMPLEMENT_SERIAL` макрос в реализации производного класса, если вы собираетесь сериализации массива.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -152,23 +152,23 @@ INT_PTR Add(CObject* newElement);
  Индекс добавленного элемента.  
   
 ### <a name="remarks"></a>Примечания  
- Если [SetSize](#setsize) был использован с `nGrowBy` значение больше 1, то дополнительная память может выделяться. Тем не менее верхнюю границу только 1 будет увеличиваться.  
+ Если [SetSize](#setsize) был использован с `nGrowBy` значение больше 1, то дополнительная память может выделяться. Тем не менее значение верхней границы увеличивается на 1 только.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::Add`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::Add`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Добавление INT_PTR (BYTE** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Добавление INT_PTR (DWORD** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Add( void\*** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Добавление INT_PTR (LPCTSTR** `newElement` **); throw (CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Добавление INT_PTR (UINT** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Добавление INT_PTR (WORD** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Добавить INT_PTR (BYTE** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Добавить INT_PTR (DWORD** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Add( void\*** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Добавить INT_PTR (LPCTSTR** `newElement` **); throw (CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Добавить INT_PTR (UINT** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Добавить INT_PTR (WORD** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Пример  
-  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#75;](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections #75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
   
  Ниже приведены результаты из этой программы.  
   
@@ -187,7 +187,7 @@ INT_PTR Append(const CObArray& src);
   
 ### <a name="parameters"></a>Параметры  
  *src*  
- Источник элементов, добавляемый в массив.  
+ Источник элементов, добавляемых в массив.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс первый добавленный элемент.  
@@ -195,9 +195,9 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Примечания  
  Массивы должны быть одного типа.  
   
- При необходимости **Append** может выделить дополнительную память для размещения элементов, добавляемый в конец массива.  
+ При необходимости **Append** может выделить дополнительный объем памяти для размещения элементов, добавляемый в конец массива.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::Append`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::Append`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -209,9 +209,9 @@ INT_PTR Append(const CObArray& src);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Добавление INT_PTR (const CWordArray &** *src* **);**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#76;](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections #76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
 ##  <a name="copy"></a>CObArray::Copy  
  Вызовите эту функцию-член для перезаписи элементов заданного массива с элементами другого массива того же типа.  
@@ -222,12 +222,12 @@ void Copy(const CObArray& src);
   
 ### <a name="parameters"></a>Параметры  
  *src*  
- Источник копируемых в массив элементов.  
+ Источник элементов, копируемых в массив.  
   
 ### <a name="remarks"></a>Примечания  
- **Копировать** не освобождает память, однако при необходимости **копирования** может выделить дополнительную память для размещения элементов, копируемых в массив.  
+ **Копировать** не освобождает память, однако при необходимости **копирования** может выделить дополнительный объем памяти для размещения элементов, копируемых в массив.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::Copy`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::Copy`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -239,12 +239,12 @@ void Copy(const CObArray& src);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Копировать void (const CWordArray &** *src* **);**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#77;](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections #77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
 ##  <a name="cobarray"></a>CObArray::CObArray  
- Создает пустой `CObject` указателя массива.  
+ Создает пустой `CObject` массив указателей.  
   
 ```  
 CObArray();
@@ -265,7 +265,7 @@ CObArray();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**(CWordArray);**|  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections&#78;](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
+ [!code-cpp[NVC_MFCCollections #78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
 ##  <a name="elementat"></a>CObArray::ElementAt  
  Возвращает временную ссылку на указатель элемента в массиве.  
@@ -276,15 +276,15 @@ CObject*& ElementAt(INT_PTR nIndex);
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значение, возвращаемое `GetUpperBound`.  
+ Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного `GetUpperBound`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на `CObject` указателя.  
   
 ### <a name="remarks"></a>Примечания  
- Он используется для реализации оператор присваивания слева для массивов. Обратите внимание, что это расширенную функцию, который должен использоваться только для реализации массива специальные операторы.  
+ Он используется для реализации оператор слева от оператора присваивания для массивов. Обратите внимание, что дополнительные функции, который должен использоваться только для реализации массива специальные операторы.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::ElementAt`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::ElementAt`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -296,19 +296,19 @@ CObject*& ElementAt(INT_PTR nIndex);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & ElementAt (INT_PTR** `nIndex` **);**|  
   
 ### <a name="example"></a>Пример  
-  В примере показано [CObArray::GetSize](#getsize).  
+  Далее приведен пример [CObArray::GetSize](#getsize).  
   
 ##  <a name="freeextra"></a>CObArray::FreeExtra  
- Освобождает любой дополнительной памяти, выделенной хотя массив был растет.  
+ Освобождает все дополнительную память, выделенную пока массива был увеличил.  
   
 ```  
 void FreeExtra();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция не влияет на размер или верхней границы массива.  
+ Эта функция не оказывает влияния на размер или верхней границы массива.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::FreeExtra`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::FreeExtra`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -320,10 +320,10 @@ void FreeExtra();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void (FreeExtra);**|  
   
 ### <a name="example"></a>Пример  
-  В примере показано [CObArray::GetData](#getdata).  
+  Далее приведен пример [CObArray::GetData](#getdata).  
   
 ##  <a name="getat"></a>CObArray::GetAt  
- Возвращает элемент массива с заданным индексом.  
+ Возвращает элемент массива по указанному индексу.  
   
 ```  
 CObject* GetAt(INT_PTR nIndex) const;  
@@ -331,31 +331,31 @@ CObject* GetAt(INT_PTR nIndex) const;
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значение, возвращаемое `GetUpperBound`.  
+ Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного `GetUpperBound`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `CObject` Элемент указателя в данный момент по этому индексу.  
+ `CObject` Элемент указателя в настоящее время по этому индексу.  
   
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Передача отрицательное значение или значение больше, чем значение, возвращаемое `GetUpperBound` приведет к ошибочного утверждения.  
+>  Передача отрицательное значение или значение больше, чем значение, возвращаемое `GetUpperBound` приведет к утверждение, вызвавшее сбой.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::GetAt`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::GetAt`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**GetAt БАЙТ (INT_PTR** `nIndex` **) константу;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) константу;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) константу;**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt (INT_PTR** `nIndex` **) константу;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) константу;**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) константу;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**GetAt БАЙТ (INT_PTR** `nIndex` **) const;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) const;**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt (INT_PTR** `nIndex` **) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#79;](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
+ [!code-cpp[NVC_MFCCollections #79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
 ##  <a name="getcount"></a>CObArray::GetCount  
  Возвращает число элементов массива.  
@@ -368,9 +368,9 @@ INT_PTR GetCount() const;
  Количество элементов в массиве.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется для получения числа элементов в массиве. Так как индексы отсчитываются от нуля, размер составляет 1 больше наибольшего индекса.  
+ Этот метод вызывается для получения количества элементов в массиве. Так как индексы отсчитываются от нуля, размер составляет 1 больше, чем наибольший индекс.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::GetCount`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::GetCount`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -382,9 +382,9 @@ INT_PTR GetCount() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**(Const; INT_PTR GetCount)**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#80;](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
+ [!code-cpp[NVC_MFCCollections #80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
 ##  <a name="getdata"></a>CObArray::GetData  
  Используйте эту функцию-член для прямого доступа к элементам в массиве.  
@@ -399,25 +399,25 @@ CObject** GetData();
  Указатель на массив `CObject` указатели.  
   
 ### <a name="remarks"></a>Примечания  
- Если элементы не доступны, `GetData` возвращает значение null.  
+ Если нет элементов, `GetData` возвращает значение null.  
   
- Хотя прямой доступ к элементам массива помогает работать быстрее, будьте осторожны при вызове `GetData`; все ошибки, внесенные непосредственно влияют на элементы массива.  
+ При прямой доступ к элементам массива может помочь вам работать быстрее, соблюдайте осторожность при вызове `GetData`; все ошибки, внесенные непосредственно влияют на элементы массива.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::GetData`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::GetData`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**const БАЙТОВ\* () GetData константу; БАЙТОВ\* GetData ();**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**const БАЙТОВ\* () GetData const; БАЙТОВ\* GetData ();**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData (const); DWORD\* GetData ();**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const void\* \* () GetData const; void\* \* (GetData);**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* () GetData константу; CString\* GetData ();**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* () GetData константу; UINT\* GetData ();**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**СЛОВА Const\* () GetData константу; WORD\* GetData ();**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const void\* \* (GetData) const; void\* \* GetData ();**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* () GetData const; CString\* GetData ();**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* () GetData const; UINT\* GetData ();**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**СЛОВА Const\* () GetData const; WORD\* GetData ();**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#81;](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
+ [!code-cpp[NVC_MFCCollections #81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
 ##  <a name="getsize"></a>CObArray::GetSize  
  Возвращает размер массива.  
@@ -427,9 +427,9 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Поскольку индексы отсчитываются от нуля, размер составляет 1 больше, чем самый большой индекс.  
+ Так как индексы отсчитываются от нуля, размер составляет 1 больше, чем наибольший индекс.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::GetSize`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::GetSize`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -441,12 +441,12 @@ INT_PTR GetSize() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**(Const; INT_PTR GetSize)**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#82;](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
+ [!code-cpp[NVC_MFCCollections #82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
 ##  <a name="getupperbound"></a>CObArray::GetUpperBound  
- Возвращает текущее верхней границы данного массива.  
+ Возвращает текущий верхнюю границу данного массива.  
   
 ```  
 INT_PTR GetUpperBound() const;  
@@ -456,11 +456,11 @@ INT_PTR GetUpperBound() const;
  Индекс (отсчитываемый от нуля) верхняя граница.  
   
 ### <a name="remarks"></a>Примечания  
- Так как массив индексы отсчитываются от нуля, эта функция возвращает значение 1 меньше, чем `GetSize`.  
+ Так как индексы массива отсчитываются от нуля, эта функция возвращает значение 1 меньше, чем `GetSize`.  
   
- Условие **(GetUpperBound)** = -1 указывает, что массив не содержит элементов.  
+ Условие **(GetUpperBound)** = -1 означает, что массив не содержит элементов.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::GetUpperBound`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::GetUpperBound`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -472,9 +472,9 @@ INT_PTR GetUpperBound() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**(Const; INT_PTR GetUpperBound)**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#83;](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
+ [!code-cpp[NVC_MFCCollections #83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
 ##  <a name="insertat"></a>CObArray::InsertAt  
  Вставляет элемент (или все элементы в другом массиве) по указанному индексу.  
@@ -499,7 +499,7 @@ void InsertAt(
  `CObject` Указатель помещается в этот массив. Объект `newElement` значения **NULL** разрешено.  
   
  `nCount`  
- Количество раз, когда этот элемент должен быть вставлен (по умолчанию 1).  
+ Количество раз, когда этот элемент должен быть вставлен (по умолчанию-1).  
   
  `nStartIndex`  
  Целое значение индекса, может быть больше, чем значение, возвращаемое `GetUpperBound`.  
@@ -508,27 +508,27 @@ void InsertAt(
  Другой массив, содержащий элементы для добавления в этот массив.  
   
 ### <a name="remarks"></a>Примечания  
- Первая версия `InsertAt` вставляет один элемент (или несколько копий элемента) по указанному индексу в массиве. В процессе его передвигается (путем увеличения или уменьшения индекс) существующего элемента в этот индекс и передвигается элементы над ним.  
+ Первая версия `InsertAt` вставляет один элемент (или несколько копий элемента) по указанному индексу в массиве. В процессе его передвигается (путем увеличения или уменьшения индекс) существующий элемент в этот индекс и его передвигается элементы над ним.  
   
  Вторая версия вставляет все элементы из другого `CObArray` коллекции, начиная с `nStartIndex` позиции.  
   
  `SetAt` Функции, напротив, заменяет один элемент указанного массива и не переместится какие-либо элементы.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::InsertAt`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::InsertAt`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **исключение (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray\*** `pNewArray` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **исключение (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray\*** `pNewArray` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, void\*** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **исключение (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray\*** `pNewArray` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **исключение (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CStringArray\* ** `pNewArray` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **исключение (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CUIntArray\*** `pNewArray` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **исключение (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray\*** `pNewArray` **);**<br /><br /> **исключение (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray\*** `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray\*** `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, void\*** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray\*** `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CStringArray\*** `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CUIntArray\*** `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray\*** `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Пример  
-  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#84;](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
+ [!code-cpp[NVC_MFCCollections #84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
   
  Ниже приведены результаты из этой программы.  
   
@@ -559,25 +559,25 @@ CObject* operator[](int_ptr nindex) const;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Первый оператор вызывается для массивов, которые не **const**, может быть использовано для вправо (r-значение) или (l значение) слева от оператора присваивания. Второй, вызывается для **const** массивов, могут использоваться только справа.  
+ Первый оператор вызывается для массивов, которые не являются **const**, могут быть использованы в правом (r-значение) или (l значение) слева от оператора присваивания. Второе, вызывается для **const** массивов, могут быть использованы только в правой части окна.  
   
- Отладочная версия библиотеки утверждает, если индекс (либо слева или справа от оператора присваивания) выходит за допустимые пределы.  
+ Отладочная версия библиотеки утверждения, если индекс (либо левой или правой части оператора присваивания) выходит за границы.  
   
  В следующей таблице приведены другие операторы, которые похожи на **[CObArray::operator]**.  
   
 |Класс|Оператор|  
 |-----------|--------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**БАЙТОВ & оператор [] (int_ptr** `nindex` ** \);**<br /><br /> **Оператор BYTE [] (int_ptr** `nindex` ** \) константу;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & оператор [] (int_ptr** `nindex` ** \);**<br /><br /> **Оператор [] DWORD (int_ptr** `nindex` ** \) константу;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [](int_ptr** `nindex` **\);**<br /><br /> **void\* оператор [] (int_ptr** `nindex` ** \) константу;**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & оператор [] (int_ptr** `nindex` ** \);**<br /><br /> **Оператор [] CString (int_ptr** `nindex` ** \) константу;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & оператор [] (int_ptr** `nindex` ** \);**<br /><br /> **Оператор UINT [] (int_ptr** `nindex` ** \) константу;**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & оператор [] (int_ptr** `nindex` ** \);**<br /><br /> **Оператор [] WORD (int_ptr** `nindex` ** \) константу;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**БАЙТОВ & оператор [] (int_ptr** `nindex` **\);**<br /><br /> **Оператор BYTE [] (int_ptr** `nindex` **\) const;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & оператор [] (int_ptr** `nindex` **\);**<br /><br /> **Оператор [] типа DWORD (int_ptr** `nindex` **\) const;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [](int_ptr** `nindex` **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex` **\) const;**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & оператор [] (int_ptr** `nindex` **\);**<br /><br /> **Оператор [] CString (int_ptr** `nindex` **\) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & оператор [] (int_ptr** `nindex` **\);**<br /><br /> **Оператор [] UINT (int_ptr** `nindex` **\) const;**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & оператор [] (int_ptr** `nindex` **\);**<br /><br /> **Оператор [] WORD (int_ptr** `nindex` **\) const;**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#88;](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
+ [!code-cpp[NVC_MFCCollections #88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
 ##  <a name="removeall"></a>CObArray::RemoveAll  
  Удаляет все указатели из этого массива, но не удаляет `CObject` объектов.  
@@ -587,11 +587,11 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если массив пуст, уже, функция по-прежнему работает.  
+ Если массив уже является пустым, функция все еще работает.  
   
- `RemoveAll` Функция освобождает всю память, используемая для хранения указателя.  
+ `RemoveAll` Функция освобождает всю память, используемых для хранения указателя.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::RemoveAll`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::RemoveAll`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -603,9 +603,9 @@ void RemoveAll();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void (RemoveAll);**|  
   
 ### <a name="example"></a>Пример  
- В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+ В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#85;](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
+ [!code-cpp[NVC_MFCCollections #85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
 ##  <a name="removeat"></a>CObArray::RemoveAt  
  Удаляет один или несколько элементов, начиная с указанного индекса в массиве.  
@@ -618,7 +618,7 @@ void RemoveAt(
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значение, возвращаемое `GetUpperBound`.  
+ Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного `GetUpperBound`.  
   
  `nCount`  
  Число удаляемых элементов.  
@@ -626,11 +626,11 @@ void RemoveAt(
 ### <a name="remarks"></a>Примечания  
  В процессе сдвигаются вниз элементы выше удаленных элементов. Он уменьшает верхняя граница массива, но не освобождает память.  
   
- При попытке удалить больше элементов, чем содержится в массиве над точкой удаления утверждает отладочная версия библиотеки.  
+ Если вы попытаетесь удалить элементы, содержащиеся в массиве над точкой удаления, отладочная версия библиотеки утверждения.  
   
- `RemoveAt` Функция удаляет `CObject` указатель из массива, но не удаляет сам объект.  
+ `RemoveAt` Функция удаляет `CObject` указателя из массива, но не удаляет сам объект.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::RemoveAt`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::RemoveAt`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -642,9 +642,9 @@ void RemoveAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1);**|  
   
 ### <a name="example"></a>Пример  
-  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#112;](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
+ [!code-cpp[NVC_MFCCollections #112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
   
  Ниже приведены результаты из этой программы.  
   
@@ -653,7 +653,7 @@ void RemoveAt(
  `[0] = a CAge at $4606 40`  
   
 ##  <a name="setat"></a>CObArray::SetAt  
- Задает элемент массива с заданным индексом.  
+ Задает элемент массива по указанному индексу.  
   
 ```  
 void SetAt(
@@ -663,17 +663,17 @@ void SetAt(
   
 ### <a name="parameters"></a>Параметры  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значение, возвращаемое `GetUpperBound`.  
+ Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного `GetUpperBound`.  
   
  `newElement`  
- Указатель на объект должны быть вставлены в этот массив. Объект **NULL** допустимое значение.  
+ Указатель на объект должны быть вставлены в этот массив. Объект **NULL** является допустимым значением.  
   
 ### <a name="remarks"></a>Примечания  
- `SetAt`не вызовет увеличение массива. Используйте `SetAtGrow` Если разрешено автоматическое увеличение массива.  
+ `SetAt`не вызовет массива может увеличиваться. Используйте `SetAtGrow` Если разрешено автоматическое увеличение массива.  
   
- Необходимо убедиться, что значение индекса представляет допустимую позицию в массиве. Если он выходит за допустимые пределы, отладочная версия библиотеки утверждения.  
+ Необходимо убедиться, что значение индекса представляет является допустимой позицией в массиве. Если вне допустимых границ, отладочная версия библиотеки утверждения.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::SetAt`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::SetAt`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
@@ -685,9 +685,9 @@ void SetAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, WORD** `newElement` **);**|  
   
 ### <a name="example"></a>Пример  
-  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#86;](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
+ [!code-cpp[NVC_MFCCollections #86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
   
  Ниже приведены результаты из этой программы.  
   
@@ -698,7 +698,7 @@ void SetAt(
  `[1] = a CAge at $47A0 40`  
   
 ##  <a name="setatgrow"></a>CObArray::SetAtGrow  
- Задает элемент массива с заданным индексом.  
+ Задает элемент массива по указанному индексу.  
   
 ```  
 void SetAtGrow(
@@ -711,26 +711,26 @@ void SetAtGrow(
  Целочисленный индекс, который больше или равно 0.  
   
  `newElement`  
- Указатель на объект для добавления в этот массив. Объект **NULL** допустимое значение.  
+ Указатель на объект для добавления в этот массив. Объект **NULL** является допустимым значением.  
   
 ### <a name="remarks"></a>Примечания  
- При необходимости массива увеличивается автоматически (то есть верхняя граница корректируется для размещения нового элемента).  
+ Массив увеличился автоматически при необходимости (то есть, верхняя граница корректируется для размещения нового элемента).  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::SetAtGrow`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::SetAtGrow`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, void\*** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **исключение (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, void\*** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Пример  
-  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, используемый во всех примерах в коллекции.  
+  В разделе [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) список `CAge` класс, который используется во всех примерах коллекции.  
   
- [!code-cpp[NVC_MFCCollections&#87;](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
+ [!code-cpp[NVC_MFCCollections #87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
   
  Ниже приведены результаты из этой программы.  
   
@@ -745,7 +745,7 @@ void SetAtGrow(
  `[3] = a CAge at $4840 65`  
   
 ##  <a name="setsize"></a>CObArray::SetSize  
- Устанавливает размер пустой или существующего массива; Выделяет память при необходимости.  
+ Устанавливает размер массива пустой или существующей; Выделяет память при необходимости.  
   
 ```  
 void SetSize(
@@ -755,38 +755,38 @@ void SetSize(
   
 ### <a name="parameters"></a>Параметры  
  `nNewSize`  
- Новый размер массива (число элементов). Должен быть больше или равно 0.  
+ Новый размер массива (число элементов). Должно быть больше или равно 0.  
   
  `nGrowBy`  
- Минимальное количество элемент слотов для выделения, если увеличение размера не требуется.  
+ Минимальное число слотов элемент для выделения, если увеличение размера не требуется.  
   
 ### <a name="remarks"></a>Примечания  
- Если новый размер меньше, чем старого, массив усекается, а всю неиспользуемую память освобождается. Для повышения эффективности, вызовите `SetSize` для установки размера массива перед его использованием. Это устраняет необходимость повторно выделить и скопировать при каждом добавлении элемента массива.  
+ Если новый размер меньше, чем старого, массив усекается, а всю неиспользуемую память освобождается. Для повышения эффективности вызовите `SetSize` задание размера массива перед его использованием. Это избавляет от необходимости перераспределение и копирование массива, каждый раз, когда элемент добавляется.  
   
- `nGrowBy` Параметр влияет на внутренней области памяти, хотя увеличение массива. Его использование никогда не влияет на размер массива, сообщаемые `GetSize` и `GetUpperBound`.  
+ `nGrowBy` Параметр влияет на выделения внутренней памяти, пока увеличение массива. Его использование никогда не влияет на размер массива, сообщаемые `GetSize` и `GetUpperBound`.  
   
- Если размер массива стал, все вновь выделенное **CObject \* ** указатели, присваивается значение NULL.  
+ Если размер массива стал, все вновь выделенный **CObject \*** указатели, присваивается значение NULL.  
   
- В следующей таблице показаны другой член функции, которые похожи на `CObArray::SetSize`.  
+ В следующей таблице приведены другие члена функции, которые похожи на `CObArray::SetSize`.  
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **исключение (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **исключение (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw (CMemoryException\* );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw (CMemoryException\* );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw (CMemoryException\* );**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1 );**<br /><br /> **throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Пример  
-  В примере показано [CObArray::GetData](#getdata).  
+  Далее приведен пример [CObArray::GetData](#getdata).  
   
 ## <a name="see-also"></a>См. также  
  [CObject-класс](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CStringArray](../../mfc/reference/cstringarray-class.md)   
  [Класс CPtrArray](../../mfc/reference/cptrarray-class.md)   
- [Сравнению с классом](../../mfc/reference/cbytearray-class.md)   
+ [Класс CByteArray](../../mfc/reference/cbytearray-class.md)   
  [Класс CWordArray](../../mfc/reference/cwordarray-class.md)   
  [Класс CDWordArray](../../mfc/reference/cdwordarray-class.md)
 

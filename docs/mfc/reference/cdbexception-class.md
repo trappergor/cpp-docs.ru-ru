@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** не удалось установить соединение с источником данных. Можно передать **NULL** `CDatabase` указатель на ваш конструктор набора записей и повторная попытка создать подключение на основе `GetDefaultConnect` сбой.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** запрошенный больше данных, чем указано хранилище для. Сведения о хранилище данных для увеличения `CString` или `CByteArray` типов данных в разделе `nMaxLength` аргумент для [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) и [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) в разделе «Макросы и глобальные переменные».  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** запрошенный больше данных, чем указано хранилище для. Сведения о хранилище данных для увеличения `CString` или `CByteArray` типов данных в разделе `nMaxLength` аргумент для [RFX_Text](record-field-exchange-functions.md#rfx_text) и [RFX_Binary](record-field-exchange-functions.md#rfx_binary) в разделе «Макросы и глобальные переменные».  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** вызов `CRecordset::Open` запрашивающего динамическим подмножеством данных не удалось. Динамические наборы не поддерживаются драйвером.  
   

@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 235955f8573ae7e430be3de2a96efdd7496d15de
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="idispeventimpl-class"></a>Класс IDispEventImpl
-Этот класс предоставляет реализацию `IDispatch` методы.  
+Этот класс предоставляет реализации `IDispatch` методы.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -72,10 +72,10 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  Класс пользователя, который является производным от `IDispEventImpl`.  
   
  `pdiid`  
- Указатель на идентификатор IID disp-интерфейс событий, реализованные этим классом. Этот интерфейс должен быть определен в библиотеке типов, обозначенное с помощью `plibid`, `wMajor`, и `wMinor`.  
+ Указатель на IID интерфейс событий, реализованные этим классом. Этот интерфейс должен быть определен в библиотеке типов, обозначенное с помощью `plibid`, `wMajor`, и `wMinor`.  
   
  `plibid`  
- Указатель, определяющий интерфейс диспетчеризации библиотеки типов, на который указывает `pdiid`. Если **& GUID_NULL**, будет загрузить библиотеку типов из источников событий объекта.  
+ Указатель на библиотеку типов, которая определяет интерфейс диспетчеризации, на который указывает `pdiid`. Если **& GUID_NULL**, будет загрузить библиотеку типов из источников событий объекта.  
   
  `wMajor`  
  Основной номер версии библиотеки типов. Значение по умолчанию — 0.  
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  Дополнительный номер версии библиотеки типов. Значение по умолчанию — 0.  
   
  `tihclass`  
- Класс, используемый для управления сведения о типе `T`. Значение по умолчанию — класс типа `CComTypeInfoHolder`, однако можно переопределить этот параметр шаблона, не предоставляя класс типа `CComTypeInfoHolder`.  
+ Класс, используемый для управления сведения о типе `T`. Значение по умолчанию — класс типа `CComTypeInfoHolder`, однако можно переопределить, указав класс типа, отличного от этого параметра шаблона `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Члены  
   
@@ -104,29 +104,29 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Находит индекс функция заданным идентификатором диспетчеризации.|  
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Сопоставляется с соответствующим набором целое DISPID один элемент и необязательный набор имен аргументов.|  
-|[IDispEventImpl::GetTypeInfo](#gettypeinfo)|Извлекает сведения о типе объекта.|  
-|[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|Получает число интерфейсов сведения о типе.|  
-|[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Получает базовый тип определяемого пользователем типа.|  
+|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Находит индекс функция указанный идентификатор.|  
+|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Сопоставляется соответствующему набору целого DISPID один элемент и дополнительный набор имен аргументов.|  
+|[IDispEventImpl::GetTypeInfo](#gettypeinfo)|Извлекает сведения о типе для объекта.|  
+|[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|Возвращает число интерфейсов сведения о типе.|  
+|[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Возвращает базовый тип определяемого пользователем типа.|  
   
 ## <a name="remarks"></a>Примечания  
- `IDispEventImpl`предоставляет способ реализации диспетчерский интерфейс событий без необходимости предоставить код реализации для каждого метода или события в этом интерфейсе. `IDispEventImpl`предоставляет реализацию `IDispatch` методы. Необходимо предоставлять реализации для заинтересованы в обработке событий.  
+ `IDispEventImpl`предоставляет способ реализации диспетчерский интерфейс событий без необходимости указать код реализации для каждого метода и события в этом интерфейсе. `IDispEventImpl`предоставляет реализации `IDispatch` методы. Необходимо предоставить реализации для событий, которые нужно в обработке.  
   
- `IDispEventImpl`работает совместно с [картой приемника событий](http://msdn.microsoft.com/library/32542b3d-ac43-4139-8ac4-41c48481744f) в классе, распределяя события соответствующим функциям обработки. С помощью этого класса:  
+ `IDispEventImpl`работает совместно с картой приемника событий в классе направляет события соответствующим функциям обработки. С помощью этого класса:  
   
 
- Добавить [SINK_ENTRY](http://msdn.microsoft.com/library/33a5fff6-5248-47c0-8cf4-8bdf760e86e5) или [SINK_ENTRY_EX](http://msdn.microsoft.com/library/e1d14342-838f-4791-ac2f-5dae2801c1ac) макрос картой приемника событий для каждого события на каждый объект, который необходимо обработать. При использовании `IDispEventImpl` как базовый класс составного элемента управления, можно вызвать [AtlAdviseSinkMap](http://msdn.microsoft.com/library/0757a6af-3de3-4179-8b4f-ccd137d919b4) для установки и разорвать соединение с источниками событий для всех записей событий приемника карты. В других случаях или расширить возможности управления, вызовите [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) для установления соединения между исходным объектом и базового класса. Вызов [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) Чтобы разорвать подключение.  
+ Добавить [SINK_ENTRY](composite-control-macros.md#sink_entry) или [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) макрос карту приемник событий для каждого события для каждого объекта, которые требуется обработать. При использовании `IDispEventImpl` как базовый класс составного элемента управления, можно вызвать [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) для установки и разорвать соединение с источниками событий для всех операций приемника событий карты. В других случаях или расширить возможности управления, вызовите [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) для установления соединения между исходным объектом и базового класса. Вызовите [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) Чтобы разорвать связь.  
 
   
- Должен быть производным от `IDispEventImpl` (с помощью уникальное значение для `nID`) для каждого объекта, для которого необходимы для обработки событий. Можно повторно использовать базовый класс, unadvising от одного исходного объекта, затем о том, с другой исходный объект, но максимальное число объектов источника, которые могут обрабатываться один объект за раз, ограничивается число `IDispEventImpl` базовые классы.  
+ Должен быть производным от `IDispEventImpl` (с помощью уникальное значение для `nID`) для каждого объекта, для которого необходимы для обработки событий. Вы можете использовать базовый класс, unadvising от одного исходного объекта, затем о том, для исходного объекта, но максимальное количество объектов источников, может обрабатываться одновременно с помощью одного объекта ограничивается количество `IDispEventImpl` базовые классы.  
   
- `IDispEventImpl`предоставляет те же функции, как [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), но она возвращает тип сведений об интерфейсе из библиотеки типов, вместо того, он предоставлен как указатель на [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) структуры. Использование `IDispEventSimpleImpl` при не библиотеку типов, описывающий интерфейс событий, так и избежать издержек, связанных с использованием библиотеки типов.  
+ `IDispEventImpl`предоставляет те же функциональные возможности, как [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), за исключением того, он возвращает тип сведений об интерфейсе из библиотеки типов, вместо того, он предоставлен как указатель на [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) структуры. Используйте `IDispEventSimpleImpl` при не имеют библиотеку типов, описывающие интерфейса события или хотите избежать издержек, связанных с использованием библиотеки типов.  
   
 > [!NOTE]
-> `IDispEventImpl`и `IDispEventSimpleImpl` собственные реализации **IUnknown::QueryInterface** включения каждого `IDispEventImpl` и `IDispEventSimpleImpl` базового класса в качестве с отдельным удостоверением COM по-прежнему предоставляя прямой доступ к членам класса в основной COM-объект.  
+> `IDispEventImpl`и `IDispEventSimpleImpl` предоставить свою собственную реализацию **IUnknown::QueryInterface** включение каждого `IDispEventImpl` и `IDispEventSimpleImpl` базового класса в качестве отдельный идентификатор COM по-прежнему предоставляя прямой доступ к членам класса в основной COM-объект.  
   
- Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
+ Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из вашего методы обработчиков событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
  Дополнительные сведения см. в разделе [IDispEventImpl поддержки](../../atl/supporting-idispeventimpl.md).  
   
@@ -140,10 +140,10 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  `IDispEventImpl`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
   
 ##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
- Находит индекс функция заданным идентификатором диспетчеризации.  
+ Находит индекс функция указанный идентификатор.  
   
 ```
 HRESULT GetFuncInfoFromId(
@@ -161,16 +161,16 @@ HRESULT GetFuncInfoFromId(
  [in] Идентификатор диспетчеризации функции.  
   
  `lcid`  
- [in] Контекст языкового идентификатора функции.  
+ [in] Контекст языкового стандарта идентификатора функции.  
   
  `info`  
- [in] Структура, указывающее способ вызова функции.  
+ [in] Структура, указывающее, как вызвать функцию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
- Один член и необязательный набор имен аргументов сопоставляется соответствующему набору целого идентификаторы DispId, которые могут быть использованы при последующих вызовах [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Сопоставляет один элемент и дополнительный набор имен аргументов соответствующему набору целого DispId, которые могут быть использованы при последующих вызовах [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -182,7 +182,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::GetIdsOfNames расширенное](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  Возвращает сведения о типе объекта, которые затем могут использоваться для получения сведений о типе интерфейса.  
@@ -207,7 +207,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
  В разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
- Получает базовый тип определяемого пользователем типа.  
+ Возвращает базовый тип определяемого пользователем типа.  
   
 ```
 VARTYPE GetUserDefinedType(
@@ -217,10 +217,10 @@ VARTYPE GetUserDefinedType(
   
 ### <a name="parameters"></a>Параметры  
  `pTI`  
- [in] Указатель на [ITypeInfo](http://msdn.microsoft.com/en-us/f3356463-3373-4279-bae1-953378aa2680) интерфейс, содержащий определяемого пользователем типа.  
+ [in] Указатель на [ITypeInfo](http://msdn.microsoft.com/en-us/f3356463-3373-4279-bae1-953378aa2680) интерфейса, содержащего определяемый пользователем тип.  
   
  *hrt*  
- [in] Дескриптор для описания типа для извлечения.  
+ [in] Дескриптор для описания типа, который требуется получить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Тип variant.  
@@ -229,14 +229,14 @@ VARTYPE GetUserDefinedType(
  В разделе [ITypeInfo::GetRefTypeInfo](http://msdn.microsoft.com/en-us/61d3b31d-6591-4e55-9e82-5246a168be00).  
   
 ##  <a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
- Конструктор. Сохраняет значения параметров шаблона класса `plibid`, `pdiid`, `wMajor`, и `wMinor`.  
+ Конструктор. Хранит значения параметров шаблона класса `plibid`, `pdiid`, `wMajor`, и `wMinor`.  
   
 ```
 IDispEventImpl();
 ```  
   
 ##  <a name="tihclass"></a>IDispEventImpl::tihclass  
- Это определение типа является экземпляром класса параметр шаблона `tihclass`.  
+ Это определение типа является экземпляром типа параметра шаблона класса `tihclass`.  
   
 ```
 typedef tihclass _tihclass;
@@ -249,7 +249,7 @@ typedef tihclass _tihclass;
  [Структура _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   
  [Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)   
  [Класс IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
- [SINK_ENTRY](http://msdn.microsoft.com/library/33a5fff6-5248-47c0-8cf4-8bdf760e86e5)   
- [SINK_ENTRY_EX](http://msdn.microsoft.com/library/e1d14342-838f-4791-ac2f-5dae2801c1ac)   
- [SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7)   
+ [SINK_ENTRY](composite-control-macros.md#sink_entry)   
+ [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
+ [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

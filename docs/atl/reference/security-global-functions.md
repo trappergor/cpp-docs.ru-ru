@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 368da76305910a0948eb386990a4bcdb84e61396
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="security-global-functions"></a>Глобальные функции безопасности
-Эти функции обеспечивают поддержку для изменения идентификатора SID и ACL объектов.  
+Эти функции предоставляют поддержку для изменения ИД безопасности и ACL объекта.  
   
 > [!IMPORTANT]
 >  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlgetdacla--atlgetdacl"></a><a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>AtlGetDacl  
  Вызывайте эту функцию для получения данных списка управления доступом на уровне пользователя (DACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -75,23 +75,21 @@ inline bool AtlGetDacl(
   
 ### <a name="parameters"></a>Параметры  
  `hObject`  
- Дескриптор объекта, для которого необходимо получить сведения о безопасности.  
+ Дескриптор объекта, для которого требуется получить сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `pDacl`  
- Указатель объекта список DACL, который будет содержать полученную информацию безопасности.  
+ Указатель на объект DACL, который будет содержать полученную информацию безопасности.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- В отладочных построениях, произойдет ошибка утверждения, если `hObject` или `pDacl` недопустимый *.*  
-
-v
-
-##  <a name="a-nameatlsetdacla--atlsetdacl"></a><a name="atlsetdacl"></a>AtlSetDacl  
+ В отладочных построениях, произойдет ошибка утверждения, если параметр `hObject` или `pDacl` является недопустимым.  
+  
+##  <a name="atlsetdacl"></a>AtlSetDacl  
  Вызывайте эту функцию для задания данных списка управления доступом на уровне пользователя (DACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -110,10 +108,10 @@ inline bool AtlSetDacl(
  Дескриптор объекта, для которого устанавливаются сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `rDacl`  
- Список DACL содержит новые сведения о безопасности.  
+ Список DACL, содержащий новые сведения о безопасности.  
   
  `dwInheritanceFlowControl`  
  Управление потоком наследования. Это значение может быть 0 (по умолчанию), PROTECTED_DACL_SECURITY_INFORMATION или UNPROTECTED_DACL_SECURITY_INFORMATION.  
@@ -122,11 +120,11 @@ inline bool AtlSetDacl(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- В отладочных построениях, произойдет ошибка утверждения, если `hObject` недопустим, или если `dwInheritanceFlowControl` не является одним из трех разрешенных значений.  
+ В отладочных построениях, произойдет ошибка утверждения, если `hObject` является недопустимым, или если `dwInheritanceFlowControl` не является одним из трех допустимых значений.  
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlgetgroupsida--atlgetgroupsid"></a><a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
  Вызывайте эту функцию для извлечения идентификатора безопасности (SID) группы для объекта.  
   
 > [!IMPORTANT]
@@ -144,7 +142,7 @@ inline bool AtlGetGroupSid(
  Дескриптор объекта, из которого требуется извлечь сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `pSid`  
  Указатель на `CSid` объект, который будет содержать новые сведения о безопасности.  
@@ -155,7 +153,7 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlsetgroupsida--atlsetgroupsid"></a><a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
  Вызывайте эту функцию для задания идентификатора безопасности (SID) группы для объекта.  
   
 > [!IMPORTANT]
@@ -173,7 +171,7 @@ inline bool AtlSetGroupSid(
  Дескриптор объекта, для которого устанавливаются сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `rSid`  
  `CSid` Объект, содержащий новые сведения о безопасности.  
@@ -184,7 +182,7 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlgetownersida--atlgetownersid"></a><a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
  Вызывайте эту функцию для извлечения идентификатора безопасности (SID) владельца для объекта.  
   
 > [!IMPORTANT]
@@ -202,7 +200,7 @@ inline bool AtlGetOwnerSid(
  Дескриптор объекта, из которого требуется извлечь сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `pSid`  
  Указатель на `CSid` объект, который будет содержать новые сведения о безопасности.  
@@ -213,7 +211,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlsetownersida--atlsetownersid"></a><a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
  Вызывайте эту функцию для задания идентификатора безопасности (SID) владельца для объекта.  
   
 > [!IMPORTANT]
@@ -231,7 +229,7 @@ inline bool AtlSetOwnerSid(
  Дескриптор объекта, для которого устанавливаются сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `rSid`  
  `CSid` Объект, содержащий новые сведения о безопасности.  
@@ -242,7 +240,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlgetsacla--atlgetsacl"></a><a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>AtlGetSacl  
  Вызывайте эту функцию для получения данных системного списка управления доступом (SACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -261,24 +259,24 @@ inline bool AtlGetSacl(
  Дескриптор объекта, из которого требуется извлечь сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  `pSacl`  
  Указатель на объект системного списка управления ДОСТУПОМ, который будет содержать полученную информацию безопасности.  
   
  `bRequestNeededPrivileges`  
- Значение true, если функция попытается включить привилегией SE_SECURITY_NAME и восстановить ее на завершение.  
+ Если значение равно true, функция попытается включить привилегию SE_SECURITY_NAME и восстановить его при завершении.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Если `AtlGetSacl` вызывается многократно для многих различных объектов, будет более эффективным Включение один раз перед вызовом функции, с привилегией SE_SECURITY_NAME — в `bRequestNeededPrivileges` значение false.  
+ Если `AtlGetSacl` должна быть вызвана несколько раз на множество разных объектов, он будет лучше, чтобы включить привилегию SE_SECURITY_NAME один раз перед вызовом функции, с `bRequestNeededPrivileges` значение false.  
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlsetsacla--atlsetsacl"></a><a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>AtlSetSacl  
  Вызывайте эту функцию для задания данных системного списка управления доступом (SACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -298,7 +296,7 @@ inline bool AtlSetSacl(
  Дескриптор объекта, для которого устанавливаются сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в `hObject` параметре.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в `hObject` параметра.  
   
  *rSacl*  
  Системный список управления ДОСТУПОМ, содержащий новые сведения о безопасности.  
@@ -307,20 +305,20 @@ inline bool AtlSetSacl(
  Управление потоком наследования. Это значение может быть 0 (по умолчанию), PROTECTED_SACL_SECURITY_INFORMATION или UNPROTECTED_SACL_SECURITY_INFORMATION.  
   
  `bRequestNeededPrivileges`  
- Значение true, если функция попытается включить привилегией SE_SECURITY_NAME и восстановить ее на завершение.  
+ Если значение равно true, функция попытается включить привилегию SE_SECURITY_NAME и восстановить его при завершении.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- В отладочных построениях, произойдет ошибка утверждения, если `hObject` недопустим, или если `dwInheritanceFlowControl` не является одним из трех разрешенных значений.  
+ В отладочных построениях, произойдет ошибка утверждения, если `hObject` является недопустимым, или если `dwInheritanceFlowControl` не является одним из трех допустимых значений.  
   
- Если `AtlSetSacl` вызывается многократно для многих различных объектов, будет более эффективным Включение один раз перед вызовом функции, с привилегией SE_SECURITY_NAME — в `bRequestNeededPrivileges` значение false.  
+ Если `AtlSetSacl` должна быть вызвана несколько раз на множество разных объектов, он будет лучше, чтобы включить привилегию SE_SECURITY_NAME один раз перед вызовом функции, с `bRequestNeededPrivileges` значение false.  
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="a-nameatlgetsecuritydescriptora--atlgetsecuritydescriptor"></a><a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
  Вызывайте эту функцию для извлечения дескриптора безопасности заданного объекта.  
   
 > [!IMPORTANT]
@@ -342,22 +340,22 @@ inline bool AtlGetSecurityDescriptor(
  Указатель на строку с завершающим нулем, указывающее имя объекта, из которого требуется извлечь сведения о безопасности.  
   
  `ObjectType`  
- Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисление, указывающее тип объекта, указанного в *pszObjectName* параметр.  
+ Указывает значение из [работать пример](http://msdn.microsoft.com/library/windows/desktop/aa379593) перечисления, указывающее тип объекта, указанного в *pszObjectName* параметра.  
   
  *pSecurityDescriptor*  
- Объект, который получает дескриптор запрошенного типа безопасности.  
+ Объект, который получает дескриптор безопасности.  
   
  *requestedInfo*  
- Набор [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) битовые флаги, указывающие тип извлекаемых данных безопасности. Этот параметр может иметь сочетание следующих значений.  
+ Набор [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) битовые флаги, указывающие тип извлекаемых данных безопасности. Этот параметр может быть сочетанием следующих значений.  
   
  `bRequestNeededPrivileges`  
- Значение true, если функция попытается включить привилегией SE_SECURITY_NAME и восстановить ее на завершение.  
+ Если значение равно true, функция попытается включить привилегию SE_SECURITY_NAME и восстановить его при завершении.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Если `AtlGetSecurityDescriptor` вызывается многократно для многих различных объектов, будет более эффективным Включение один раз перед вызовом функции, с привилегией SE_SECURITY_NAME — в `bRequestNeededPrivileges` значение false.  
+ Если `AtlGetSecurityDescriptor` должна быть вызвана несколько раз на множество разных объектов, он будет лучше, чтобы включить привилегию SE_SECURITY_NAME один раз перед вызовом функции, с `bRequestNeededPrivileges` значение false.  
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 

@@ -1,5 +1,5 @@
 ---
-title: "Стандартные процедуры проверки данных | Документы Microsoft"
+title: "Процедуры проверки данных стандартное диалоговое окно | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,22 +32,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 87cf0389b7b58579a8674d4075d2601186b1ae95
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 5e71adfb0cda64e43239926b75a8fdc91b73fc29
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Стандартные программы проверки данных диалоговых окон
 В этом разделе перечислены процедуры проверки (DDV) данных стандартного диалогового окна, используемые для общих элементов управления диалоговых окон MFC.  
   
 > [!NOTE]
->  Процедуры обмена данными стандартное диалоговое окно, определяются в afxdd_.h файла заголовка. Тем не менее приложения должны включать afxwin.h.  
+>  Программы обмена данных стандартное диалоговое окно позволяет определить afxdd_.h файла заголовка. Тем не менее приложения должны иметь afxwin.h.  
   
 ### <a name="ddv-functions"></a>DDV функции  
   
 |||  
 |-|-|  
-|[DDV_MaxChars](#ddv_maxchars)|Проверяет, что число знаков в значении данного элемента управления не превышает заданного максимального.|  
+|[DDV_MaxChars](#ddv_maxchars)|Проверяет, что число знаков в значении элемента управления не превышает заданного максимального.|  
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|Проверяет, не превышает значение данного элемента управления данного **БАЙТОВ** диапазона.|  
 |[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Проверяет, что значение данного элемента управления не превышает заданный диапазон времени.|  
 |[DDV_MinMaxDouble](#ddv_minmaxdouble)|Проверяет, не превышает значение данного элемента управления данного **двойные** диапазона.|  
@@ -60,12 +60,13 @@ ms.lasthandoff: 02/24/2017
 |[DDV_MinMaxShort](#ddv_minmaxshort)|Проверяет, не превышает значение данного элемента управления данного **короткие** диапазона.|  
 |[DDV_MinMaxSlider](#ddv_minmaxslider)|Проверяет значение элемента управления данного ползунка попадает в заданном диапазоне.|  
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Проверяет, не превышает значение данного элемента управления данного **UINT** диапазона.|  
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Подтверждает, что данный элемент управления находится между двумя указанными значениями.| 
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Проверяет, не превышает значение данного элемента управления данного **ULONGLONG** диапазона.|  
   
 
   
-##  <a name="a-nameddvmaxcharsa--ddvmaxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars  
- Вызов `DDV_MaxChars` чтобы убедиться, что количество символов в элементе управления связанные с *значение* не превышает *nChars*.  
+##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+ Вызовите `DDV_MaxChars` чтобы убедиться, что некоторые знаки в элементе управления связана с *значение* не превышает *nChars*.  
   
 ```   
 void AFXAPI DDV_MaxChars(
@@ -79,7 +80,7 @@ void AFXAPI DDV_MaxChars(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `nChars`  
  Максимальное допустимое число символов.  
@@ -90,8 +91,8 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxbytea--ddvminmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
- Вызов `DDV_MinMaxByte` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+ Вызовите `DDV_MinMaxByte` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxByte(
@@ -106,7 +107,7 @@ void AFXAPI DDV_MinMaxByte(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **БАЙТОВ**) разрешено.  
@@ -120,8 +121,8 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxdatetimea--ddvminmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
- Вызов `DDV_MinMaxDateTime` чтобы убедиться, что значение даты и времени в элементе управления выбора даты и времени элемента управления ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) связанных с *refValue* попадает `refMinRange` и `refMaxRange`.  
+##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+ Вызовите `DDV_MinMaxDateTime` чтобы убедиться, что значение даты и времени в элементе выбора даты и времени элемента управления ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) связанный с *refValue* попадает `refMinRange` и `refMaxRange`.  
   
 ```   
 void AFXAPI DDV_MinMaxDateTime(
@@ -139,10 +140,10 @@ void AFXAPI DDV_MinMaxDateTime(
   
 ### <a name="parameters"></a>Параметры  
  `pDX`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление. Удалить этот объект, не нужно.  
+ Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление. Удалить этот объект не нужно.  
   
  *refValue*  
- Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) или [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта, связанного с переменную-член диалоговое окно, представление формы или объект элемента управления представления. Этот объект содержит данные для проверки.  
+ Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) или [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, связанный с переменной-члена диалоговое окно, представление формы или объекте представления элемента управления. Этот объект содержит данные для проверки.  
   
  `refMinRange`  
  Минимальное допустимое значение даты и времени.  
@@ -156,8 +157,8 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxdoublea--ddvminmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
- Вызов `DDV_MinMaxDouble` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+ Вызовите `DDV_MinMaxDouble` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxDouble(
@@ -172,7 +173,7 @@ void AFXAPI DDV_MinMaxDouble(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **двойные**) разрешено.  
@@ -186,8 +187,8 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxdworda--ddvminmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
- Вызов `DDV_MinMaxDWord` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+ Вызовите `DDV_MinMaxDWord` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxDWord(
@@ -202,7 +203,7 @@ void AFXAPI DDV_MinMaxDWord(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа `DWORD`) разрешено.  
@@ -216,8 +217,8 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxfloata--ddvminmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
- Вызов `DDV_MinMaxFloat` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+ Вызовите `DDV_MinMaxFloat` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxFloat(
@@ -232,7 +233,7 @@ void AFXAPI DDV_MinMaxFloat(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **float**) разрешено.  
@@ -246,8 +247,8 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxinta--ddvminmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt  
- Вызов `DDV_MinMaxInt` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+ Вызовите `DDV_MinMaxInt` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxInt(
@@ -262,7 +263,7 @@ void AFXAPI DDV_MinMaxInt(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа `int`) разрешено.  
@@ -276,8 +277,8 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxlonga--ddvminmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
- Вызов `DDV_MinMaxLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+ Вызовите `DDV_MinMaxLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxLong(
@@ -292,7 +293,7 @@ void AFXAPI DDV_MinMaxLong(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **длинные**) разрешено.  
@@ -306,8 +307,8 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxlonglonga--ddvminmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
- Вызов `DDV_MinMaxLongLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+ Вызовите `DDV_MinMaxLongLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxLongLong(
@@ -322,7 +323,7 @@ void AFXAPI DDV_MinMaxLongLong(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **longlong ПРИВЕДЕННЫМ**) разрешено.  
@@ -336,8 +337,8 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxmontha--ddvminmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
- Вызов `DDV_MinMaxMonth` чтобы убедиться, что значение даты и времени в месячном календаре элемента управления ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) связанных с *refValue* попадает `refMinRange` и `refMaxRange`.  
+##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+ Вызовите `DDV_MinMaxMonth` чтобы убедиться, что значение даты и времени в месячном календаре элемента управления ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) связанный с *refValue* попадает `refMinRange` и `refMaxRange`.  
   
 ```   
 void AFXAPI DDV_MinMaxMonth(
@@ -358,7 +359,7 @@ void AFXAPI DDV_MinMaxMonth(
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *refValue*  
- Ссылку на объект типа `CTime` или `COleDateTime` , связанная с переменную-член диалогового окна, представление формы, или объект представления элемента управления. Этот объект содержит данные для проверки. Передает MFC, когда ссылка this `DDV_MinMaxMonth` вызывается.  
+ Ссылку на объект типа `CTime` или `COleDateTime` , связанный с переменной-члена диалогового окна, представление формы или объекта представления элемента управления. Этот объект содержит данные для проверки. Передает MFC, ссылка this наблюдают `DDV_MinMaxMonth` вызывается.  
   
  `refMinRange`  
  Минимальное допустимое значение даты и времени.  
@@ -372,8 +373,8 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxshorta--ddvminmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
- Вызов `DDV_MinMaxShort` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+ Вызовите `DDV_MinMaxShort` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxShort(
@@ -388,7 +389,7 @@ void AFXAPI DDV_MinMaxShort(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **короткие**) разрешено.  
@@ -402,8 +403,8 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxslidera--ddvminmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
- Вызов `DDV_MinMaxSlider` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+ Вызовите `DDV_MinMaxSlider` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxSlider(
@@ -418,7 +419,7 @@ void AFXAPI DDV_MinMaxSlider(
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на значение для проверки. Этот параметр содержит или задает текущее положение бегунка элемента управления "ползунок".  
+ Ссылка на значение для проверки. Этот параметр содержит или задает текущую позицию thumb управления "ползунок".  
   
  `minVal`  
  Минимально допустимое значение.  
@@ -427,13 +428,13 @@ void AFXAPI DDV_MinMaxSlider(
  Максимально допустимое значение.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Сведения об элементах управления "ползунок" в разделе [CSliderCtrl с помощью](../../mfc/using-csliderctrl.md).  
+ Дополнительные сведения о DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Сведения об элементах управления "ползунок" в разделе [использование CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxuinta--ddvminmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
- Вызов `DDV_MinMaxUInt` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+ Вызовите `DDV_MinMaxUInt` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxUInt(
@@ -448,7 +449,7 @@ void AFXAPI DDV_MinMaxUInt(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **UINT**) разрешено.  
@@ -462,8 +463,8 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="a-nameddvminmaxulonglonga--ddvminmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
- Вызов `DDV_MinMaxULongLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+ Вызовите `DDV_MinMaxULongLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxULongLong(
@@ -478,7 +479,7 @@ void AFXAPI DDV_MinMaxULongLong(
  Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
  *value*  
- Ссылка на переменную-член диалоговое окно, представление формы или объект элемента управления представления проверки данных.  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
   
  `minVal`  
  Минимальное значение (типа **ULONGLONG**) разрешено.  
@@ -493,6 +494,44 @@ void AFXAPI DDV_MinMaxULongLong(
   **Заголовок** afxdd_.h  
     
 ## <a name="see-also"></a>См. также  
- [Процедуры обмена данными стандартного диалогового окна](../../mfc/reference/standard-dialog-data-exchange-routines.md)   
+ [Стандартные программы обмена данных](../../mfc/reference/standard-dialog-data-exchange-routines.md)   
  [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+
+ ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
+Вызовите `DDV_MinMaxUnsigned` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
+   
+### <a name="syntax"></a>Синтаксис    
+```
+   void AFXAPI DDV_MinMaxUnsigned(  
+       CDataExchange* pDX,  
+       unsigned value,  
+       unsigned minVal,  
+       unsigned maxVal );  
+```
+### <a name="parameters"></a>Параметры  
+ `pDX`  
+ Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+  
+ *value*  
+ Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления проверки данных.  
+  
+ `minVal`  
+ Минимальное значение (типа **неподписанные** ) разрешено.  
+  
+ `maxVal`  
+ Максимальное значение (типа **неподписанные** ) разрешено.  
+   
+### <a name="remarks"></a>Примечания  
+ Дополнительные сведения о DDV см. в разделе [обмен данными диалоговых окон и проверка](../dialog-data-exchange-and-validation.md).  
+   
+### <a name="requirements"></a>Требования  
+ **Заголовок:** afxdd_.h  
+   
+### <a name="see-also"></a>См. также  
+ [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
+ [DDX_Slider](#ddx_slider)   
+ [DDX_FieldSlider](#ddx_fieldslider)
+ 
+
+
 

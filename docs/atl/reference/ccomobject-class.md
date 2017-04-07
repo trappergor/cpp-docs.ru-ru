@@ -40,13 +40,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f752b96d4a722fbddfcc9e5be3a82b8b12a86a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomobject-class"></a>Класс CComObject
-Этот класс реализует **IUnknown** нестатистические объекта.  
+Этот класс реализует **IUnknown** неагрегированные объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +57,7 @@ class CComObject : public Base
   
 #### <a name="parameters"></a>Параметры  
  `Base`  
- Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), как хорошо от любых других интерфейсов, которую требуется поддерживать на объект.  
+ Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любых других интерфейсов, которые требуется поддерживать на объект.  
   
 ## <a name="members"></a>Члены  
   
@@ -72,15 +72,15 @@ class CComObject : public Base
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CComObject::AddRef](#addref)|Увеличивает значение счетчика ссылок на объект.|  
+|[CComObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|  
 |[CComObject::CreateInstance](#createinstance)|(Статический) Создает новый `CComObject` объекта.|  
 |[CComObject::QueryInterface](#queryinterface)|Извлекает указатель на запрошенный интерфейс.|  
 |[CComObject::Release](#release)|Уменьшает счетчик ссылок на объект.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComObject`реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) нестатистические объекта. Однако вызовы `QueryInterface`, `AddRef`, и **выпуска** делегируются `CComObjectRootEx`.  
+ `CComObject`реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта. Однако вызовы `QueryInterface`, `AddRef`, и **выпуска** делегируются `CComObjectRootEx`.  
   
- Дополнительные сведения об использовании `CComObject`, см. в статье [основы ATL COM объектов](../../atl/fundamentals-of-atl-com-objects.md).  
+ Дополнительные сведения об использовании `CComObject`, см. в статье [основы объекта ATL COM-объекты](../../atl/fundamentals-of-atl-com-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `Base`  
@@ -88,17 +88,17 @@ class CComObject : public Base
  `CComObject`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
   
 ##  <a name="addref"></a>CComObject::AddRef  
- Увеличивает значение счетчика ссылок на объект.  
+ Увеличивает счетчик ссылок на объект.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Эта функция возвращает новый счетчик ссылок увеличивается на объект. Это значение может быть полезен для диагностики и тестирования.  
+ Эта функция возвращает новый счетчик увеличивается ссылок на объект. Это значение может быть полезен для диагностики и тестирования.  
   
 ##  <a name="ccomobject"></a>CComObject::CComObject  
  Конструктор увеличивает счетчик блокировки модуля.  
@@ -108,13 +108,13 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- **void\***  
+ **значение типа void\***  
  [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
   
 ### <a name="remarks"></a>Примечания  
  Деструктор уменьшает его.  
   
- Если `CComObject`-успешно производного объекта создается с помощью **новый** оператор, начальное значение счетчика ссылок равно 0. Значение счетчика ссылок соответствующее значение (1), чтобы вызов [AddRef](#addref) функции.  
+ Если `CComObject`-успешно производного объекта создается с помощью **новый** оператор, начальное значение счетчика ссылок равно 0. Устанавливает значение счетчика ссылок на соответствующее значение (1), чтобы вызов [AddRef](#addref) функции.  
   
 ##  <a name="dtor"></a>CComObject:: ~ CComObject  
  Деструктор  
@@ -128,7 +128,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- Эта статическая функция позволяет создать новую **CComObject** `Base` ** > ** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Эта статическая функция позволяет создать новую **CComObject** `Base` **>** объекта, одновременно снижая издержки [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -136,20 +136,20 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Параметры  
  `pp`  
- [out] Указатель на **CComObject** `Base` ** > ** указателя. Если `CreateInstance` завершается неудачно, `pp` равен **NULL**.  
+ [out] Указатель на **CComObject** `Base` **>** указателя. Если `CreateInstance` завершается неудачно, `pp` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- Возвращаемый объект имеет нулевое число ссылок, поэтому вызов `AddRef` немедленно, воспользуйтесь **выпуска** освободить ссылку на указатель объекта после завершения.  
+ Возвращаемый объект имеет нулевое число ссылок, поэтому вызовов `AddRef` немедленно, воспользуйтесь **выпуска** освободить ссылку на указатель на объект после завершения.  
   
- Если не требуется прямой доступ к объекту, но по-прежнему необходимо создать новый объект без использования `CoCreateInstance`, используйте [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо.  
+ Если не требуется прямой доступ к объекту, но все равно хотите создать новый объект без необходимости проведения `CoCreateInstance`, используйте [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо него.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_COM&#38;](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM #38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM&#39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
@@ -165,10 +165,10 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
  [in] Идентификатор запрашиваемого интерфейса.  
   
  `ppvObject`  
- [out] Указатель на указатель интерфейса, идентифицируемый `iid`. Если объект не поддерживает этот интерфейс `ppvObject` равен **NULL**.  
+ [out] Указатель на указатель на интерфейс, определяемый `iid`. Если объект не поддерживает этот интерфейс `ppvObject` равно **NULL**.  
   
  `pp`  
- [out] Указатель на указатель интерфейса, определенный по типу `Q`. Если объект не поддерживает этот интерфейс `pp` равен **NULL**.  
+ [out] Указатель на указатель интерфейса, принадлежащих указанному типу `Q`. Если объект не поддерживает этот интерфейс `pp` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
@@ -181,12 +181,12 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Эта функция возвращает новый счетчик ссылок уменьшается на единицу для объекта. В отладочных построениях возвращаемое значение может быть полезно для диагностики или тестирования. В сборках неотладочные **выпуска** всегда возвращает значение 0.  
+ Эта функция возвращает новый счетчик ссылок уменьшается на единицу для объекта. В отладочных построениях возвращаемое значение может быть полезно для диагностики или тестирования. В неотладочных сборках **выпуска** всегда возвращает значение 0.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)   
  [Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
- [DECLARE_AGGREGATABLE](http://msdn.microsoft.com/library/e7e568d7-04e0-4226-b5dc-224deed229ab)   
- [DECLARE_NOT_AGGREGATABLE](http://msdn.microsoft.com/library/2a116c7c-bab8-4f2a-a9ad-03d7aba0f762)   
+ [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
+ [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
 
