@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  Создает новый [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) объекта.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  Отображает платформу переменную-член типа Boolean, указывающее, какие во всплывающем меню.  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Примечания  
  Если `m_bOSMenu` — `TRUE`, платформа вызывает унаследованный `TrackPopupMenu` метод для данного объекта. В противном случае — платформа вызывает [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  Переменная член типа Boolean, указывающее расположение контекстного меню.  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Примечания  
  Когда пользователь нажимает кнопку меню, приложение показывает всплывающее меню. Платформа будет отображаться во всплывающем меню рядом с кнопкой или справа от кнопки. Эта кнопка также имеет маленькую стрелку, которая указывает, где отображаются во всплывающем меню. Если `m_bRightArrow` — `TRUE`, платформа отображаются во всплывающем меню справа от кнопки. В противном случае — отображаются во всплывающем меню рядом с кнопкой.  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  Нажатии переменную-член типа Boolean, указывающее, отображается ли кнопка меню, когда пользователь делает выбор в раскрывающемся меню.  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  Если `m_bStayPressed` член является `TRUE`, становится нажата кнопка меню, когда пользователь нажимает кнопку. Он остается нажатой до, после закрытия всплывающего меню, путем выбора или отмены пользователем.  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  Дескриптор вложенного меню.  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Примечания  
  Платформа отображает меню обозначается переменную-член, когда пользователь нажимает кнопку меню.  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  Целое число, указывающее, какой элемент пользователь выбирает из контекстного меню.  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Примечания  
  Значение этой переменной-члена равно нулю, если пользователь отменяет меню без выбора или при возникновении ошибки.  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  Вызывается платформой для перевода оконных сообщений перед их отправкой.  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  Изменение размера кнопки в соответствии с его размер шрифта и размера образа.  
   
 ```  

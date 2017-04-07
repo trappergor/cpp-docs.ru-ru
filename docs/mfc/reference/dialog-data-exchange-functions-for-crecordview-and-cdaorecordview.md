@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDAO/DDX_FieldCBIndex
+- AFXDAO/DDX_FieldCBString
+- AFXDAO/DDX_FieldCBStringExact
+- AFXDAO/DDX_FieldCheck
+- AFXDAO/DDX_FieldLBIndex
+- AFXDAO/DDX_FieldLBString
+- AFXDAO/DDX_FieldLBStringExact
+- AFXDAO/DDX_FieldRadio
+- AFXDAO/DDX_FieldScroll
+- AFXDAO/DDX_FieldText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -65,7 +74,7 @@ ms.lasthandoff: 02/24/2017
 |[DDX_FieldScroll](#ddx_fieldscroll)|Задает или возвращает позицию прокрутки полосы прокрутки в `CRecordView` или `CDaoRecordView`. Вызов из вашего [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) функции.|  
 |[DDX_FieldText](#ddx_fieldtext)|Перегруженные версии будут доступны для передачи `int`, **UINT**, **длинные**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **двойные**, **короткие**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), и [COleCurrency](../../mfc/reference/colecurrency-class.md) поле данных между элементом поля данных набора записей и изменения `CRecordView` или `CDaoRecordView`.|  
   
-##  <a name="a-nameddxfieldcbindexa--ddxfieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
  `DDX_FieldCBIndex` Функция синхронизирует индекс выбранного элемента в окно списка элемента управления полем со списком в представление записей и `int` членам данных полей в наборе записей, связанный с представлением записи.  
   
 ```  
@@ -108,7 +117,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  
 
-##  <a name="a-nameddxfieldcbstringa--ddxfieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
  `DDX_FieldCBString` Функция управляет передачей [CString](../../atl-mfc-shared/reference/cstringt-class.md) данные между редактируемый элемент управления поля со списком в представление записей и `CString` членам данных полей в наборе записей, связанный с представлением записи.  
   
 ```  
@@ -151,7 +160,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-## <a name="a-nameddxfieldcbstringexacta--ddxfieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
  `DDX_FieldCBStringExact` Функция управляет передачей [CString](../../atl-mfc-shared/reference/cstringt-class.md) данные между редактируемый элемент управления поля со списком в представление записей и `CString` членам данных полей в наборе записей, связанный с представлением записи.  
   
 ```  
@@ -194,7 +203,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldchecka--ddxfieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
  `DDX_FieldCheck` Функция управляет передачей `int` данные между управления "флажок" в диалоговом окне, форму, представление или объект элемента управления представления и `int` диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
   
 ```  
@@ -232,7 +241,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldlbindexa--ddxfieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
  `DDX_FieldLBIndex` Функция синхронизирует индекс выбранного элемента в элемент управления списком в представление записей и `int` членам данных полей в наборе записей, связанный с представлением записи.  
   
 ```  
@@ -275,7 +284,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldlbstringa--ddxfieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
  `DDX_FieldLBString` Копирует текущее выделение окно списка в представлении записей для [CString](../../atl-mfc-shared/reference/cstringt-class.md) членам данных полей в наборе записей, связанный с представлением записи.  
   
 ```  
@@ -318,7 +327,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldlbstringexacta--ddxfieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
  `DDX_FieldLBStringExact` Функция копирует текущее выделение окно списка в представлении записей для [CString](../../atl-mfc-shared/reference/cstringt-class.md) членам данных полей в наборе записей, связанный с представлением записи.  
   
 ```  
@@ -361,7 +370,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldradioa--ddxfieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
  `DDX_FieldRadio` Функция связывает отсчитываемый от нуля `int` переменной-члена набора записей представления записей с помощью выбранного переключателя в группе переключателей в представлении записей.  
   
 ```  
@@ -404,7 +413,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldscrolla--ddxfieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
  `DDX_FieldScroll` Функция синхронизирует позицию прокрутки полосы прокрутки в представлении записей и `int` членам данных полей в наборе записей, связанный с представлением записи (или любой целочисленной переменной, выберите его, чтобы сопоставить).  
   
 ```  
@@ -447,7 +456,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="a-nameddxfieldtexta--ddxfieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>DDX_FieldText  
  `DDX_FieldText` Функция управляет передачей `int`, **короткие**, **длинные**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **двойные**, **BOOL**, или **БАЙТОВ** данных между поля ввода и элементами данных полей набора записей.  
   
 ```  

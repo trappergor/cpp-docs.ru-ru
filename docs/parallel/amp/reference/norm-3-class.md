@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 51769d252d82ff1f307517a93ce01e22b8b69fdd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ca5d8270f04240f99fa6735ea8235c2e077dfa01
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm3-class"></a>Класс norm_3
@@ -132,55 +132,55 @@ class norm_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод norm_3::get_X||  
-|Метод norm_3::get_xy||  
-|Метод norm_3::get_xyz||  
-|Метод norm_3::get_xz||  
-|Метод norm_3::get_xzy||  
-|Метод norm_3::get_y||  
-|Метод norm_3::get_yx||  
-|Метод norm_3::get_yxz||  
-|Метод norm_3::get_yz||  
-|Метод norm_3::get_yzx||  
-|Метод norm_3::get_z||  
-|Метод norm_3::get_zx||  
-|Метод norm_3::get_zxy||  
-|Метод norm_3::get_zy||  
-|Метод norm_3::get_zyx||  
-|Метод norm_3::ref_b||  
-|Метод norm_3::ref_g||  
-|Метод norm_3::ref_r||  
-|Метод norm_3::ref_x||  
-|Метод norm_3::ref_y||  
-|Метод norm_3::ref_z||  
-|Метод norm_3::set_X||  
-|Метод norm_3::set_xy||  
-|Метод norm_3::set_xyz||  
-|Метод norm_3::set_xz||  
-|Метод norm_3::set_xzy||  
-|Метод norm_3::set_y||  
-|Метод norm_3::set_yx||  
-|Метод norm_3::set_yxz||  
-|Метод norm_3::set_yz||  
-|Метод norm_3::set_yzx||  
-|Метод norm_3::set_z||  
-|Метод norm_3::set_zx||  
-|Метод norm_3::set_zxy||  
-|Метод norm_3::set_zy||  
-|Метод norm_3::set_zyx||  
+|norm_3::get_X||  
+|norm_3::get_xy||  
+|norm_3::get_xyz||  
+|norm_3::get_xz||  
+|norm_3::get_xzy||  
+|norm_3::get_y||  
+|norm_3::get_yx||  
+|norm_3::get_yxz||  
+|norm_3::get_yz||  
+|norm_3::get_yzx||  
+|norm_3::get_z||  
+|norm_3::get_zx||  
+|norm_3::get_zxy||  
+|norm_3::get_zy||  
+|norm_3::get_zyx||  
+|norm_3::ref_b||  
+|norm_3::ref_g||  
+|norm_3::ref_r||  
+|norm_3::ref_x||  
+|norm_3::ref_y||  
+|norm_3::ref_z||  
+|norm_3::set_X||  
+|norm_3::set_xy||  
+|norm_3::set_xyz||  
+|norm_3::set_xz||  
+|norm_3::set_xzy||  
+|norm_3::set_y||  
+|norm_3::set_yx||  
+|norm_3::set_yxz||  
+|norm_3::set_yz||  
+|norm_3::set_yzx||  
+|norm_3::set_z||  
+|norm_3::set_zx||  
+|norm_3::set_zxy||  
+|norm_3::set_zy||  
+|norm_3::set_zyx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|norm_3::operator оператор||  
-|norm_3::operator - оператор||  
-|norm_3::operator * =-оператор||  
-|norm_3::operator / =-оператор||  
-|norm_3::operator оператор ++||  
-|Оператор += norm_3::operator||  
-|norm_3::operator =-оператор||  
-|norm_3::operator-= оператор||  
+|norm_3::operator-||  
+|norm_3::operator--||  
+|norm_3::operator * =||  
+|norm_3::operator / =||  
+|norm_3::operator ++||  
+|norm_3::operator +=||  
+|norm_3::operator =||  
+|norm_3::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -192,36 +192,36 @@ class norm_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных norm_3::b||  
-|Элемент данных norm_3::BG||  
-|Элемент данных norm_3::bgr||  
-|Элемент данных norm_3::br||  
-|Элемент данных norm_3::brg||  
-|Элемент данных norm_3::g||  
-|Элемент данных norm_3::GB||  
-|Элемент данных norm_3::GBR||  
-|Элемент данных norm_3::GR||  
-|Элемент данных norm_3::grb||  
-|Элемент данных norm_3::r||  
-|Элемент данных norm_3::RB||  
-|Элемент данных norm_3::rbg||  
-|Элемент данных norm_3::RG||  
-|Элемент данных norm_3::RGB||  
-|Элемент данных norm_3::x||  
-|Элемент данных norm_3::XY||  
-|Элемент данных norm_3::xyz||  
-|Элемент данных norm_3::xz||  
-|Элемент данных norm_3::xzy||  
-|Элемент данных norm_3::y||  
-|Элемент данных norm_3::YX||  
-|Элемент данных norm_3::yxz||  
-|Элемент данных norm_3::yz||  
-|Элемент данных norm_3::yzx||  
-|Элемент данных norm_3::z||  
-|Элемент данных norm_3::zx||  
-|Элемент данных norm_3::zxy||  
-|Элемент данных norm_3::zy||  
-|Элемент данных norm_3::zyx||  
+|norm_3::b||  
+|norm_3::BG||  
+|norm_3::bgr||  
+|norm_3::br||  
+|norm_3::brg||  
+|norm_3::g||  
+|norm_3::GB||  
+|norm_3::GBR||  
+|norm_3::GR||  
+|norm_3::grb||  
+|norm_3::r||  
+|norm_3::RB||  
+|norm_3::rbg||  
+|norm_3::RG||  
+|norm_3::RGB||  
+|norm_3::x||  
+|norm_3::XY||  
+|norm_3::xyz||  
+|norm_3::xz||  
+|norm_3::xzy||  
+|norm_3::y||  
+|norm_3::YX||  
+|norm_3::yxz||  
+|norm_3::yz||  
+|norm_3::yzx||  
+|norm_3::z||  
+|norm_3::zx||  
+|norm_3::zxy||  
+|norm_3::zy||  
+|norm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `norm_3`  
@@ -231,7 +231,7 @@ class norm_3;
   
  **Пространство имен:** Concurrency::graphics  
 
-## <a name="a-namectora-norm3-constructor"></a><a name="ctor"></a>Конструктор norm_3
+## <a name="ctor"></a>Конструктор norm_3
 По умолчанию конструктор инициализирует все элементы с 0.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -303,5 +303,5 @@ static const int size = 3;
 ```   
  
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

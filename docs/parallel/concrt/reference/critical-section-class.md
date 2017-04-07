@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::critical_section
+- critical_section
+- CONCRT/concurrency::critical_section
+- CONCRT/concurrency::critical_section::critical_section::scoped_lock Class
+- CONCRT/concurrency::critical_section::critical_section
+- CONCRT/concurrency::critical_section::lock
+- CONCRT/concurrency::critical_section::native_handle
+- CONCRT/concurrency::critical_section::try_lock
+- CONCRT/concurrency::critical_section::try_lock_for
+- CONCRT/concurrency::critical_section::unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 20a150c1aedbd9d78c84187bf29e6284a248fbc7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58821589a4b7596b80179a77dfd6a5772531f053
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="criticalsection-class"></a>Класс critical_section
@@ -66,18 +74,18 @@ class critical_section;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор critical_section](#ctor)|Создает новый критический раздел.|  
+|[critical_section](#ctor)|Создает новый критический раздел.|  
 |[~ critical_section деструктор](#dtor)|Уничтожает критический раздел.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод блокировки](#lock)|Получает данную критическую секцию.|  
-|[native_handle метод](#native_handle)|Возвращает определенного собственного дескриптора платформы, если он существует.|  
-|[try_lock метод](#try_lock)|Пытается получить блокировку без блокировки.|  
-|[try_lock_for метод](#try_lock_for)|Пытается получить блокировку без блокировки в течение указанного числа миллисекунд.|  
-|[Unlock-метод](#unlock)|Снимает блокировку критической секции.|  
+|[lock](#lock)|Получает данную критическую секцию.|  
+|[native_handle](#native_handle)|Возвращает определенного собственного дескриптора платформы, если он существует.|  
+|[try_lock](#try_lock)|Пытается получить блокировку без блокировки.|  
+|[try_lock_for](#try_lock_for)|Пытается получить блокировку без блокировки в течение указанного числа миллисекунд.|  
+|[unlock](#unlock)|Снимает блокировку критической секции.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [структуры данных синхронизации](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -90,7 +98,7 @@ class critical_section;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namectora-criticalsection"></a><a name="ctor"></a>critical_section 
+##  <a name="ctor"></a>critical_section 
 
  Создает новый критический раздел.  
   
@@ -98,7 +106,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="a-namedtora-criticalsection"></a><a name="dtor"></a>~ critical_section 
+##  <a name="dtor"></a>~ critical_section 
 
  Уничтожает критический раздел.  
   
@@ -109,7 +117,7 @@ critical_section();
 ### <a name="remarks"></a>Примечания  
  Ожидается, что больше не блокировку при выполнении деструктора. По-прежнему уничтожение критического раздела приводит к неопределенному блокировка удерживается результатов к неопределенному поведению.  
   
-##  <a name="a-namelocka-lock"></a><a name="lock"></a>Блокировка 
+##  <a name="lock"></a>Блокировка 
 
  Получает данную критическую секцию.  
   
@@ -122,7 +130,7 @@ void lock();
   
  Если блокировка уже захвачена вызывающий контекст [improper_lock](improper-lock-class.md) будет создано исключение.  
   
-##  <a name="a-namenativehandlea-nativehandle"></a><a name="native_handle"></a>native_handle 
+##  <a name="native_handle"></a>native_handle 
 
  Возвращает определенного собственного дескриптора платформы, если он существует.  
   
@@ -136,14 +144,14 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>Примечания  
  Объект `critical_section` объект не связан с платформы собственный дескриптор операционной системы Windows. Метод просто возвращает ссылку на сам объект.  
   
-##  <a name="a-namecriticalsectionscopedlockclassa--criticalsectionscopedlock-class"></a><a name="critical_section__scoped_lock_class"></a>Класс critical_section::scoped_lock  
+##  <a name="critical_section__scoped_lock_class"></a>Класс critical_section::scoped_lock  
  Исключение безопасный программой-оболочкой RAII для `critical_section` объекта.  
   
 ```
 class scoped_lock;
 ```  
   
-##  <a name="a-namecriticalsectionscopedlockctora-scopedlockscopedlock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
  Создает `scoped_lock` объекта и получает `critical_section` объект, передаваемый в `_Critical_section` параметр. Если критический раздел удерживается другим потоком, этот вызов блокируется.  
   
@@ -155,7 +163,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  Критический раздел для блокировки.  
   
-##  <a name="a-namecriticalsectionscopedlockdtora-scopedlockscopedlock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
  Уничтожает `scoped_lock` объекта и освобождает критический раздел, переданную в конструкторе.  
   
@@ -163,7 +171,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ~scoped_lock();
 ```  
   
-##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a>try_lock 
 
  Пытается получить блокировку без блокировки.  
   
@@ -174,7 +182,7 @@ bool try_lock();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если блокировка была получена, значение `true`; в противном случае — значение `false`.  
   
-##  <a name="a-nametrylockfora-trylockfor"></a><a name="try_lock_for"></a>try_lock_for 
+##  <a name="try_lock_for"></a>try_lock_for 
 
  Пытается получить блокировку без блокировки в течение указанного числа миллисекунд.  
   
@@ -189,7 +197,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если блокировка была получена, значение `true`; в противном случае — значение `false`.  
   
-##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>разблокировать 
+##  <a name="unlock"></a>разблокировать 
 
  Снимает блокировку критической секции.  
   

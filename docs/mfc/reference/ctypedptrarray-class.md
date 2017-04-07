@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
+- AFXTEMPL/CTypedPtrArray
+- AFXTEMPL/CTypedPtrArray::Add
+- AFXTEMPL/CTypedPtrArray::Append
+- AFXTEMPL/CTypedPtrArray::Copy
+- AFXTEMPL/CTypedPtrArray::ElementAt
+- AFXTEMPL/CTypedPtrArray::GetAt
+- AFXTEMPL/CTypedPtrArray::InsertAt
+- AFXTEMPL/CTypedPtrArray::SetAt
+- AFXTEMPL/CTypedPtrArray::SetAtGrow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +104,7 @@ class CTypedPtrArray : public BASE_CLASS
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtempl.h  
   
-##  <a name="a-nameadda--ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray::Add  
+##  <a name="add"></a>CTypedPtrArray::Add  
  Эта функция-член вызывает `BASE_CLASS` **:: добавить**.  
   
 ```  
@@ -115,7 +124,7 @@ INT_PTR Add(TYPE newElement);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
-##  <a name="a-nameappenda--ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray::Append  
+##  <a name="append"></a>CTypedPtrArray::Append  
  Эта функция-член вызывает `BASE_CLASS` **:: Append**.  
   
 ```  
@@ -138,7 +147,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::Append](../../mfc/reference/cobarray-class.md#append).  
   
-##  <a name="a-namecopya--ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray::Copy  
+##  <a name="copy"></a>CTypedPtrArray::Copy  
  Эта функция-член вызывает `BASE_CLASS` **:: Копировать**.  
   
 ```  
@@ -158,7 +167,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).  
   
-##  <a name="a-nameelementata--ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray::ElementAt  
+##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
  Это встроенная функция вызывает `BASE_CLASS` **:: ElementAt**.  
   
 ```  
@@ -178,7 +187,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
   
-##  <a name="a-namegetata--ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray::GetAt  
+##  <a name="getat"></a>CTypedPtrArray::GetAt  
  Это встроенная функция вызывает `BASE_CLASS` **:: GetAt**.  
   
 ```  
@@ -198,7 +207,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="a-nameinsertata--ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray::InsertAt  
+##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
  Эта функция-член вызывает `BASE_CLASS` **:: InsertAt**.  
   
 ```  
@@ -238,7 +247,7 @@ void InsertAt(
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).  
   
-##  <a name="a-nameoperatorata--ctypedptrarrayoperator--"></a><a name="operator_at"></a>[CTypedPtrArray::operator]  
+##  <a name="operator_at"></a>[CTypedPtrArray::operator]  
  Эти операторы встроенный вызов `BASE_CLASS` **:: operator []**.  
   
 ```  
@@ -258,7 +267,7 @@ TYPE operator[ ](int_ptr nindex) const;
   
  Отладочная версия библиотеки утверждает, если индекс (либо слева или справа от оператора присваивания) выходит за допустимые пределы.  
   
-##  <a name="a-namesetata--ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray::SetAt  
+##  <a name="setat"></a>CTypedPtrArray::SetAt  
  Эта функция-член вызывает `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -280,7 +289,7 @@ void SetAt(
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).  
   
-##  <a name="a-namesetatgrowa--ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
+##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
  Эта функция-член вызывает `BASE_CLASS` **:: SetAtGrow**.  
   
 ```  

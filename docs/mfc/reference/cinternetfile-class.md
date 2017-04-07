@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetFile
+- AFXINET/CInternetFile
+- AFXINET/CInternetFile::CInternetFile
+- AFXINET/CInternetFile::Abort
+- AFXINET/CInternetFile::Close
+- AFXINET/CInternetFile::Flush
+- AFXINET/CInternetFile::GetLength
+- AFXINET/CInternetFile::Read
+- AFXINET/CInternetFile::ReadString
+- AFXINET/CInternetFile::Seek
+- AFXINET/CInternetFile::SetReadBufferSize
+- AFXINET/CInternetFile::SetWriteBufferSize
+- AFXINET/CInternetFile::Write
+- AFXINET/CInternetFile::WriteString
+- AFXINET/CInternetFile::m_hFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +119,7 @@ class CInternetFile : public CStdioFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="a-nameaborta--cinternetfileabort"></a><a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>CInternetFile::Abort  
  Закрывает файл, связанный с данным объектом и он становится недоступным для чтения или записи.  
   
 ```  
@@ -117,7 +131,7 @@ virtual void Abort();
   
  При обработке исключений, **прервать** отличается от [закрыть](#close) в двух важных моментах. Во-первых, **прервать** функция не вызывает исключение при сбое, так как он игнорирует ошибки. Во-вторых, **прервать** не **ASSERT** Если файл не был открыт или закрыт ранее.  
   
-##  <a name="a-namecinternetfilea--cinternetfilecinternetfile"></a><a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
  Эта функция-член вызывается `CInternetFile` создается объект.  
   
 ```  
@@ -162,7 +176,7 @@ CInternetFile(
 ### <a name="remarks"></a>Примечания  
  Никогда не создавать `CInternetFile` напрямую. Создайте объект одного из его производных классов, вызвав [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) или [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Можно также создавать `CInternetFile` путем вызова метода [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="a-nameclosea--cinternetfileclose"></a><a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>CInternetFile::Close  
  Закрывает `CInternetFile` и освобождает его ресурсы.  
   
 ```  
@@ -172,7 +186,7 @@ virtual void Close();
 ### <a name="remarks"></a>Примечания  
  Если файл был открыт для записи, имеется неявный вызов [Flush](#flush) для гарантии, что все буферизованные данные записываются на узел. Следует вызвать **закрыть** после использования файла.  
   
-##  <a name="a-nameflusha--cinternetfileflush"></a><a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>CInternetFile::Flush  
  Вызовите эту функцию-член для записи содержимого буфера записи на диск.  
   
 ```  
@@ -182,28 +196,28 @@ virtual void Flush();
 ### <a name="remarks"></a>Примечания  
  Используйте `Flush` для гарантии, что все данные в памяти на самом деле были записаны на конечный компьютер и гарантировать завершения транзакции с хост-компьютера. `Flush`действует только на `CInternetFile` объектов открыть для записи.  
   
-##  <a name="a-namegetlengtha--cinternetfilegetlength"></a><a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>CInternetFile::GetLength  
  Возвращает размер файла.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="a-namemhfilea--cinternetfilemhfile"></a><a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>CInternetFile::m_hFile  
  Дескриптор файла, связанного с данным объектом.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="a-nameoperatorhinterneta--cinternetfileoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
  Этот оператор используется для получения дескриптора Windows для текущего сеанса Интернета.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="a-namereada--cinternetfileread"></a><a name="read"></a>CInternetFile::Read  
+##  <a name="read"></a>CInternetFile::Read  
  Вызывайте эту функцию-член для чтения заданного числа байтов (`nCount`) в указанных областях памяти (начиная со значения параметра `lpvBuf`).  
   
 ```  
@@ -227,7 +241,7 @@ virtual UINT Read(
   
  Чтобы получить все данные, приложение должно продолжать вызывать **CInternetFile::Read** пока метод возвращает ноль.  
   
-##  <a name="a-namereadstringa--cinternetfilereadstring"></a><a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>CInternetFile::ReadString  
  Вызовите эту функцию-член для чтения поток символов, пока не найдет символ перевода строки.  
   
 ```  
@@ -259,7 +273,7 @@ virtual LPTSTR ReadString(
   
  При вызове метода `ReadString` без предварительного вызова функции [SetReadBufferSize](#setreadbuffersize), вы получите буфера 4096 байт.  
   
-##  <a name="a-nameseeka--cinternetfileseek"></a><a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>CInternetFile::Seek  
  Вызовите эту функцию-член можно переместить указатель в уже открытого файла.  
   
 ```  
@@ -297,7 +311,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>Пример  
   См. пример реализации базового класса ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="a-namesetreadbuffersizea--cinternetfilesetreadbuffersize"></a><a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
  Эта функция члена задается размер временного буфера чтения, используемый `CInternetFile`-производный объект.  
   
 ```  
@@ -318,7 +332,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  Можно увеличить размер буфера в любое время, но сжатие буфер не будет действовать. При вызове метода [ReadString](#readstring) без предварительного вызова метода `SetReadBufferSize`, вы получите буфера 4096 байт.  
   
-##  <a name="a-namesetwritebuffersizea--cinternetfilesetwritebuffersize"></a><a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
  Вызовите эту функцию-член для установки размера временной записи буфера, используемого `CInternetFile`-производный объект.  
   
 ```  
@@ -337,7 +351,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  По умолчанию `CInternetFile` объект не имеет буферизации для записи. Если вызывается функция-член, необходимо убедиться, что файл был открыт для записи. Размер буфера записи можно изменить в любое время, но при этом неявный вызов [Flush](#flush).  
   
-##  <a name="a-namewritea--cinternetfilewrite"></a><a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>CInternetFile::Write  
  Вызов этой функции-члена для записи в памяти, `lpvBuf`, указанное число байтов, `nCount`.  
   
 ```  
@@ -356,7 +370,7 @@ virtual void Write(
 ### <a name="remarks"></a>Примечания  
  Если возникают ошибки при записи данных, функция создает [CInternetException](../../mfc/reference/cinternetexception-class.md) объект, описывающий ошибку.  
   
-##  <a name="a-namewritestringa--cinternetfilewritestring"></a><a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>CInternetFile::WriteString  
  Эта функция записывает строку, завершающуюся значением null к соответствующему файлу.  
   
 ```  

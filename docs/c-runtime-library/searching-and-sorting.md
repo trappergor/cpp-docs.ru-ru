@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5ba605d61ddcf1ae6bd2adc24c41737536fa2ce9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: d3eb356b47c29c4d81361cf87e94d7a5722f7108
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="searching-and-sorting"></a>Сортировка и поиск
@@ -47,16 +47,16 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="searching-and-sorting-functions"></a>Функции поиска и сортировки  
   
-|Функция|Поиск или сортировка|Эквивалент .NET Framework|  
-|--------------|--------------------|-------------------------------|  
-|[bsearch](../c-runtime-library/reference/bsearch.md)|Двоичный поиск|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Более безопасная версия `bsearch`.|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[_lfind](../c-runtime-library/reference/lfind.md)|Линейный поиск заданного значения|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Более безопасная версия `_lfind`|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[_lsearch](../c-runtime-library/reference/lsearch.md)|Линейный поиск заданного значения, которое добавляется в массив, если оно не найдено|Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Более безопасная версия `_lsearch`|Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[qsort](../c-runtime-library/reference/qsort.md)|Быстрая сортировка|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
-|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Более безопасная версия `qsort`|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
+|Функция|Поиск или сортировка|  
+|--------------|--------------------|  
+|[bsearch](../c-runtime-library/reference/bsearch.md)|Двоичный поиск|  
+|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Более безопасная версия `bsearch`|  
+|[_lfind](../c-runtime-library/reference/lfind.md)|Линейный поиск заданного значения|  
+|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Более безопасная версия `_lfind`|  
+|[_lsearch](../c-runtime-library/reference/lsearch.md)|Линейный поиск заданного значения, которое добавляется в массив, если оно не найдено|  
+|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Более безопасная версия `_lsearch`|  
+|[qsort](../c-runtime-library/reference/qsort.md)|Быстрая сортировка|  
+|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Более безопасная версия `qsort`|  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)

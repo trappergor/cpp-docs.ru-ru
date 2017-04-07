@@ -10,7 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DPointU
-- afxrendertarget/CD2DPointU
+- AFXRENDERTARGET/CD2DPointU
+- AFXRENDERTARGET/CD2DPointU::CD2DPointU
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +72,7 @@ class CD2DPointU : public D2D1_POINT_2U;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-namecd2dpointua--cd2dpointucd2dpointu"></a><a name="cd2dpointu"></a>CD2DPointU::CD2DPointU  
+##  <a name="cd2dpointu"></a>CD2DPointU::CD2DPointU  
  Создает объект CD2DPointU из CPoint объекта.  
   
 ```  
@@ -91,7 +92,7 @@ CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
  `uY`  
  Источник Y  
   
-##  <a name="a-nameoperatorcpointa--cd2dpointuoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointU::operator CPoint  
+##  <a name="operator_cpoint"></a>CD2DPointU::operator CPoint  
  Преобразует CPoint CD2DPointU.  
   
 ```  

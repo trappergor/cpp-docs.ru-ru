@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
+- AFXEXT/CSplitterWnd
+- AFXEXT/CSplitterWnd::CSplitterWnd
+- AFXEXT/CSplitterWnd::ActivateNext
+- AFXEXT/CSplitterWnd::CanActivateNext
+- AFXEXT/CSplitterWnd::Create
+- AFXEXT/CSplitterWnd::CreateScrollBarCtrl
+- AFXEXT/CSplitterWnd::CreateStatic
+- AFXEXT/CSplitterWnd::CreateView
+- AFXEXT/CSplitterWnd::DeleteColumn
+- AFXEXT/CSplitterWnd::DeleteRow
+- AFXEXT/CSplitterWnd::DeleteView
+- AFXEXT/CSplitterWnd::DoKeyboardSplit
+- AFXEXT/CSplitterWnd::DoScroll
+- AFXEXT/CSplitterWnd::DoScrollBy
+- AFXEXT/CSplitterWnd::GetActivePane
+- AFXEXT/CSplitterWnd::GetColumnCount
+- AFXEXT/CSplitterWnd::GetColumnInfo
+- AFXEXT/CSplitterWnd::GetPane
+- AFXEXT/CSplitterWnd::GetRowCount
+- AFXEXT/CSplitterWnd::GetRowInfo
+- AFXEXT/CSplitterWnd::GetScrollStyle
+- AFXEXT/CSplitterWnd::IdFromRowCol
+- AFXEXT/CSplitterWnd::IsChildPane
+- AFXEXT/CSplitterWnd::IsTracking
+- AFXEXT/CSplitterWnd::RecalcLayout
+- AFXEXT/CSplitterWnd::SetActivePane
+- AFXEXT/CSplitterWnd::SetColumnInfo
+- AFXEXT/CSplitterWnd::SetRowInfo
+- AFXEXT/CSplitterWnd::SetScrollStyle
+- AFXEXT/CSplitterWnd::SplitColumn
+- AFXEXT/CSplitterWnd::SplitRow
+- AFXEXT/CSplitterWnd::OnDraw
+- AFXEXT/CSplitterWnd::OnDrawSplitter
+- AFXEXT/CSplitterWnd::OnInvertTracker
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -158,7 +192,7 @@ class CSplitterWnd : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле afxext.h  
   
-##  <a name="a-nameactivatenexta--csplitterwndactivatenext"></a><a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
  Вызывается платформой для выполнения команды следующей или предыдущей области.  
   
 ```  
@@ -172,7 +206,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член является команда высокого уровня, которая используется [CView](../../mfc/reference/cview-class.md) класс делегировать `CSplitterWnd` реализации.  
   
-##  <a name="a-namecanactivatenexta--csplitterwndcanactivatenext"></a><a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
  Вызывается платформой для проверки, если команда следующей или предыдущей области в данный момент возможно.  
   
 ```  
@@ -189,7 +223,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член является команда высокого уровня, которая используется [CView](../../mfc/reference/cview-class.md) класс делегировать `CSplitterWnd` реализации.  
   
-##  <a name="a-namecreatea--csplitterwndcreate"></a><a name="create"></a>CSplitterWnd::Create  
+##  <a name="create"></a>CSplitterWnd::Create  
  Чтобы создать динамическое окно разделитель, вызовите **создать** функции-члена.  
   
 ```  
@@ -246,7 +280,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#125;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="a-namecreatescrollbarctrla--csplitterwndcreatescrollbarctrl"></a><a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
  Вызывается платформой для создания общей полосы прокрутки.  
   
 ```  
@@ -268,7 +302,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>Примечания  
  Переопределение `CreateScrollBarCtrl` для включения дополнительных элементов управления рядом с полосы прокрутки. Поведение по умолчанию является создание обычных элементов управления полосы прокрутки Windows.  
   
-##  <a name="a-namecreatestatica--csplitterwndcreatestatic"></a><a name="createstatic"></a>CSplitterWnd::CreateStatic  
+##  <a name="createstatic"></a>CSplitterWnd::CreateStatic  
  Чтобы создать статическое окно-разделитель, вызовите `CreateStatic` функции-члена.  
   
 ```  
@@ -318,7 +352,7 @@ virtual BOOL CreateStatic(
   
  См. в статье «Разделитель Windows» [несколько типов документов, представления и окна фрейма](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Технические заметки](../../mfc/tn029-splitter-windows.md)и `CSplitterWnd` о классе для получения дополнительных сведений о окна со статическим разделителем.  
   
-##  <a name="a-namecreateviewa--csplitterwndcreateview"></a><a name="createview"></a>CSplitterWnd::CreateView  
+##  <a name="createview"></a>CSplitterWnd::CreateView  
  Создает область для статическое окно-разделитель.  
   
 ```  
@@ -357,7 +391,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#4;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="a-namecsplitterwnda--csplitterwndcsplitterwnd"></a><a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
  Вызов для создания `CSplitterWnd` объекта.  
   
 ```  
@@ -367,7 +401,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>Примечания  
  Создать `CSplitterWnd` объекта в два этапа. Во-первых, вызовите конструктор, который создает `CSplitterWnd` , а затем вызвать [создать](#create) функция-член, который создает окно-разделитель и присоединяет его к `CSplitterWnd` объекта.  
   
-##  <a name="a-namedeletecolumna--csplitterwnddeletecolumn"></a><a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
  Удаление столбца из окна-разделителя.  
   
 ```  
@@ -381,7 +415,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член вызывается платформой для реализации логики динамическое окно разделитель (то есть, если имеет окна-разделителя **SPLS_DYNAMIC_SPLIT** стиль). Его можно настроить, а также виртуальную функцию [CreateView](#createview), чтобы реализовать более сложные динамические разделителей.  
   
-##  <a name="a-namedeleterowa--csplitterwnddeleterow"></a><a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
  Удаляет строку из окна-разделителя.  
   
 ```  
@@ -395,7 +429,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член вызывается платформой для реализации логики динамическое окно разделитель (то есть, если имеет окна-разделителя **SPLS_DYNAMIC_SPLIT** стиль). Его можно настроить, а также виртуальную функцию [CreateView](#createview), чтобы реализовать более сложные динамические разделителей.  
   
-##  <a name="a-namedeleteviewa--csplitterwnddeleteview"></a><a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
  Удаляет представление из окна разделителя.  
   
 ```  
@@ -416,7 +450,7 @@ virtual void DeleteView(
   
  Эта функция-член вызывается платформой для реализации логики динамическое окно разделитель (то есть, если имеет окна-разделителя **SPLS_DYNAMIC_SPLIT** стиль). Его можно настроить, а также виртуальную функцию [CreateView](#createview), чтобы реализовать более сложные динамические разделителей.  
   
-##  <a name="a-namedokeyboardsplita--csplitterwnddokeyboardsplit"></a><a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
  Выполняет клавиатуры разделить команды, обычно «Разделение окна».  
   
 ```  
@@ -429,7 +463,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член является команда высокого уровня, которая используется [CView](../../mfc/reference/cview-class.md) класс делегировать `CSplitterWnd` реализации.  
   
-##  <a name="a-namedoscrolla--csplitterwnddoscroll"></a><a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
  Выполняет синхронную прокрутку окна разделителя.  
   
 ```  
@@ -467,7 +501,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член вызывается платформой для выполнения синхронную прокрутку окна разделителя, когда представление получает сообщение прокрутки. Переопределение синхронную прокрутку может требоваться действие пользователя.  
   
-##  <a name="a-namedoscrollbya--csplitterwnddoscrollby"></a><a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
  Прокручивает окно разделитель заданное количество точек.  
   
 ```  
@@ -495,7 +529,7 @@ virtual BOOL DoScrollBy(
   
  Переопределение требуют вмешательства со стороны пользователя перед предоставлением прокрутки.  
   
-##  <a name="a-namegetactivepanea--csplitterwndgetactivepane"></a><a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
  Определяет активную область из фокуса или активное представление в рамке.  
   
 ```  
@@ -517,7 +551,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член вызывается платформой для определения активной области в окно-разделитель. Переопределение требуют вмешательства со стороны пользователя перед получением активной области.  
   
-##  <a name="a-namegetcolumncounta--csplitterwndgetcolumncount"></a><a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
  Возвращает число столбцов текущей области.  
   
 ```  
@@ -527,7 +561,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает текущее число столбцов в разделителя. Для статического разделителя это будет также максимальное число столбцов.  
   
-##  <a name="a-namegetcolumninfoa--csplitterwndgetcolumninfo"></a><a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
  Возвращает сведения об указанном столбце.  
   
 ```  
@@ -547,7 +581,7 @@ void GetColumnInfo(
  `cxMin`  
  Ссылку на `int` будет присвоено значение текущей минимальную ширину столбца.  
   
-##  <a name="a-namegetpanea--csplitterwndgetpane"></a><a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>CSplitterWnd::GetPane  
  Возвращает область в указанной строке и столбце.  
   
 ```  
@@ -566,7 +600,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает область в указанной строке и столбце. Возвращаемый области обычно является [CView](../../mfc/reference/cview-class.md)-производного класса.  
   
-##  <a name="a-namegetrowcounta--csplitterwndgetrowcount"></a><a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
  Возвращает число строк текущей области.  
   
 ```  
@@ -576,7 +610,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает текущее число строк в окно-разделитель. Для статическое окно-разделитель это будет также максимальное число строк.  
   
-##  <a name="a-namegetrowinfoa--csplitterwndgetrowinfo"></a><a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
  Возвращает сведения о заданной строки.  
   
 ```  
@@ -599,7 +633,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>Примечания  
  Вызовите эту функцию-член для получения сведений об указанной строки. `cyCur` Параметр заполняется из текущей высоты указанной строки и `cyMin` заполняется минимальную высоту строки.  
   
-##  <a name="a-namegetscrollstylea--csplitterwndgetscrollstyle"></a><a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
  Возвращает стиль общего полоса прокрутки окна-разделителя.  
   
 ```  
@@ -615,7 +649,7 @@ DWORD GetScrollStyle() const;
   
  Если значение равно нулю, окно-разделитель не находится под управлением любого общего ползунки.  
   
-##  <a name="a-nameidfromrowcola--csplitterwndidfromrowcol"></a><a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
  Получает дочерний идентификатор области в указанной строке и столбце окна.  
   
 ```  
@@ -640,7 +674,7 @@ int IdFromRowCol(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#5;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="a-nameischildpanea--csplitterwndischildpane"></a><a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
  Определяет, является ли `pWnd` область дочернего окна-разделителя в данный момент.  
   
 ```  
@@ -670,7 +704,7 @@ BOOL IsChildPane(
   
  Эта версия больше не используется и не должен использоваться.  
   
-##  <a name="a-nameistrackinga--csplitterwndistracking"></a><a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>CSplitterWnd::IsTracking  
  Вызовите эту функцию-член для определения, если выполняется перемещение полосы разделения в окне.  
   
 ```  
@@ -680,7 +714,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если операция разделитель выполняется; в противном случае — 0.  
   
-##  <a name="a-nameondrawsplittera--csplitterwndondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
  Отображает рисунок окна разделителя.  
   
 ```  
@@ -713,7 +747,7 @@ virtual void OnDrawSplitter(
   
  Дополнительные сведения о окна с динамическим разделителем см «Разделитель Windows» в статье [несколько типов документов, представления и окна фрейма](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Технические заметки](../../mfc/tn029-splitter-windows.md)и `CSplitterWnd` о классе.  
   
-##  <a name="a-nameoninverttrackera--csplitterwndoninverttracker"></a><a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
  Отображает рисунок окна разделителя же размер и форму, что окна фрейма.  
   
 ```  
@@ -729,7 +763,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  Дополнительные сведения о окна с динамическим разделителем см «Разделитель Windows» в статье [несколько типов документов, представления и окна фрейма](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Технические заметки](../../mfc/tn029-splitter-windows.md)и `CSplitterWnd` о классе.  
   
-##  <a name="a-namerecalclayouta--csplitterwndrecalclayout"></a><a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
  Вызов на экран окна-разделителя после изменения размера строки или столбца.  
   
 ```  
@@ -744,7 +778,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>Пример  
   В примере показано [CSplitterWnd::SetColumnInfo](#setcolumninfo).  
   
-##  <a name="a-namesetactivepanea--csplitterwndsetactivepane"></a><a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
  Задает область, чтобы сделать активным в кадре.  
   
 ```  
@@ -769,7 +803,7 @@ virtual void SetActivePane(
   
  Задать область, указав строки и столбца, **или** , предоставляя `pWnd`.  
   
-##  <a name="a-namesetcolumninfoa--csplitterwndsetcolumninfo"></a><a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
  Вызов для задания данных указанного столбца.  
   
 ```  
@@ -797,7 +831,7 @@ void SetColumnInfo(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing №&6;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="a-namesetrowinfoa--csplitterwndsetrowinfo"></a><a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
  Вызов для установки информации указанной строки.  
   
 ```  
@@ -822,7 +856,7 @@ void SetRowInfo(
   
  Когда платформа отобразит окно-разделитель, размещает панелей в столбцы и строки согласно их идеальным измерений, работа из верхнего левого в правый нижний угол клиентской области окна-разделителя.  
   
-##  <a name="a-namesetscrollstylea--csplitterwndsetscrollstyle"></a><a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
  Указывает, что поддержка полосы прокрутки общих новый стиль прокрутки окна-разделителя.  
   
 ```  
@@ -840,7 +874,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Примечания  
  После создания полосу прокрутки его, не будут уничтожены даже в том случае, если `SetScrollStyle` вызывается без стиля; вместо этого эти полос прокрутки. Это позволяет сохранить свое состояние, даже если они скрыты полосы прокрутки. После вызова метода `SetScrollStyle` необходимо вызвать [RecalcLayout](#recalclayout) все изменения вступили в силу.  
   
-##  <a name="a-namesplitcolumna--csplitterwndsplitcolumn"></a><a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
  Указывает, где рамка окна разделяет вертикально.  
   
 ```  
@@ -859,7 +893,7 @@ virtual BOOL SplitColumn(int cxBefore);
   
  `SplitColumn`вызывается платформой для реализации логики динамическое окно разделитель (то есть, если имеет окна-разделителя **SPLS_DYNAMIC_SPLIT** стиль). Его можно настроить, а также виртуальную функцию [CreateView](#createview), чтобы реализовать более сложные динамические разделителей.  
   
-##  <a name="a-namesplitrowa--csplitterwndsplitrow"></a><a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
  Указывает, где рамка окна разделяет горизонтально.  
   
 ```  
@@ -878,7 +912,7 @@ virtual BOOL SplitRow(int cyBefore);
   
  `SplitRow`вызывается платформой для реализации логики динамическое окно разделитель (то есть, если имеет окна-разделителя **SPLS_DYNAMIC_SPLIT** стиль). Его можно настроить, а также виртуальную функцию [CreateView](#createview), чтобы реализовать более сложные динамические разделителей.  
   
-##  <a name="a-nameondrawa--csplitterwndondraw"></a><a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
  Вызывается платформой для рисования окно-разделитель.  
   
 ```  

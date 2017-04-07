@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IResourceManager
+- IResourceManager
+- CONCRTRM/concurrency::IResourceManager
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fb523127f60c4e8cd45b2525749b536ad55849b0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2d054bd632db90708d90fe8d791965b47f713493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iresourcemanager-structure"></a>Структура IResourceManager
@@ -54,18 +62,18 @@ struct IResourceManager;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Перечисление IResourceManager::OSVersion](#osversion)|Перечислимый тип, представляющий версию операционной системы.|  
+|[IResourceManager::OSVersion](#osversion)|Перечислимый тип, представляющий версию операционной системы.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод IResourceManager::CreateNodeTopology](#createnodetopology)|Присутствует только в отладочной сборки среды выполнения, этот метод является обработчик тестов, разработанный для упрощения тестирования диспетчера ресурсов на различные аппаратные топологии, не требуя аппаратным соответствия конфигурации. С розничными построениями среды выполнения этот метод возвращает не выполняя никаких действий.|  
-|[Метод IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Возвращает количество узлов, доступных диспетчеру ресурсов.|  
-|[Метод IResourceManager::GetFirstNode](#getfirstnode)|Возвращает первый узел в порядке перечисления, определенном диспетчером ресурсов.|  
-|[Метод IResourceManager::Reference](#reference)|Увеличивает значение счетчика ссылок на экземпляр диспетчера ресурсов.|  
-|[Метод IResourceManager::RegisterScheduler](#registerscheduler)|Регистрирует планировщик с диспетчером ресурсов. После регистрации планировщика, его необходимо связаться с диспетчером ресурсов с помощью `ISchedulerProxy` интерфейс, который возвращается.|  
-|[Метод IResourceManager::Release](#release)|Уменьшает счетчик ссылок на экземпляр диспетчера ресурсов. Диспетчер ресурсов уничтожается, когда его счетчик ссылок становится равен `0`.|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Присутствует только в отладочной сборки среды выполнения, этот метод является обработчик тестов, разработанный для упрощения тестирования диспетчера ресурсов на различные аппаратные топологии, не требуя аппаратным соответствия конфигурации. С розничными построениями среды выполнения этот метод возвращает не выполняя никаких действий.|  
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Возвращает количество узлов, доступных диспетчеру ресурсов.|  
+|[IResourceManager::GetFirstNode](#getfirstnode)|Возвращает первый узел в порядке перечисления, определенном диспетчером ресурсов.|  
+|[IResourceManager::Reference](#reference)|Увеличивает значение счетчика ссылок на экземпляр диспетчера ресурсов.|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Регистрирует планировщик с диспетчером ресурсов. После регистрации планировщика, его необходимо связаться с диспетчером ресурсов с помощью `ISchedulerProxy` интерфейс, который возвращается.|  
+|[IResourceManager::Release](#release)|Уменьшает счетчик ссылок на экземпляр диспетчера ресурсов. Диспетчер ресурсов уничтожается, когда его счетчик ссылок становится равен `0`.|  
   
 ## <a name="remarks"></a>Примечания  
  Используйте [CreateResourceManager](concurrency-namespace-functions.md) функции для получения интерфейса на экземпляр одноэлементного диспетчера ресурсов. Метод увеличивает значение счетчика ссылок диспетчера ресурсов и необходимо вызвать [IResourceManager::Release](#release) метод, чтобы освободить ссылку, когда выполняются с помощью диспетчера ресурсов. Обычно каждый создаваемый планировщик при создании будет вызывать этот метод во время создания и освободить ссылку для диспетчера ресурсов после завершения работы.  
@@ -78,7 +86,7 @@ struct IResourceManager;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecreatenodetopologya--iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>Метод IResourceManager::CreateNodeTopology  
+##  <a name="createnodetopology"></a>Метод IResourceManager::CreateNodeTopology  
  Присутствует только в отладочной сборки среды выполнения, этот метод является обработчик тестов, разработанный для упрощения тестирования диспетчера ресурсов на различные аппаратные топологии, не требуя аппаратным соответствия конфигурации. С розничными построениями среды выполнения этот метод возвращает не выполняя никаких действий.  
   
 ```
@@ -107,7 +115,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) создается, если этот метод вызывается, когда другие планировщики существует в процессе.  
   
-##  <a name="a-namegetavailablenodecounta--iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>Метод IResourceManager::GetAvailableNodeCount  
+##  <a name="getavailablenodecount"></a>Метод IResourceManager::GetAvailableNodeCount  
  Возвращает количество узлов, доступных диспетчеру ресурсов.  
   
 ```
@@ -117,7 +125,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество узлов, доступных диспетчеру ресурсов.  
   
-##  <a name="a-namegetfirstnodea--iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>Метод IResourceManager::GetFirstNode  
+##  <a name="getfirstnode"></a>Метод IResourceManager::GetFirstNode  
  Возвращает первый узел в порядке перечисления, определенном диспетчером ресурсов.  
   
 ```
@@ -127,14 +135,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Первый узел в порядке перечисления, определенном диспетчером ресурсов.  
   
-##  <a name="a-nameiresourcemanagerosversiona--iresourcemanagerosversion-enumeration"></a><a name="iresourcemanager__osversion"></a>Перечисление IResourceManager::OSVersion  
+##  <a name="iresourcemanager__osversion"></a>Перечисление IResourceManager::OSVersion  
  Перечислимый тип, представляющий версию операционной системы.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="a-namereferencea--iresourcemanagerreference-method"></a><a name="reference"></a>Метод IResourceManager::Reference  
+##  <a name="reference"></a>Метод IResourceManager::Reference  
  Увеличивает значение счетчика ссылок на экземпляр диспетчера ресурсов.  
   
 ```
@@ -144,7 +152,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Счетчик ссылок.  
   
-##  <a name="a-nameregisterschedulera--iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>Метод IResourceManager::RegisterScheduler  
+##  <a name="registerscheduler"></a>Метод IResourceManager::RegisterScheduler  
  Регистрирует планировщик с диспетчером ресурсов. После регистрации планировщика, его необходимо связаться с диспетчером ресурсов с помощью `ISchedulerProxy` интерфейс, который возвращается.  
   
 ```
@@ -168,7 +176,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  Метод создает `invalid_argument` исключение если параметр `pScheduler` имеет значение `NULL` или, если параметр `version` не является допустимой версией интерфейса взаимодействия.  
   
-##  <a name="a-namereleasea--iresourcemanagerrelease-method"></a><a name="release"></a>Метод IResourceManager::Release  
+##  <a name="release"></a>Метод IResourceManager::Release  
  Уменьшает счетчик ссылок на экземпляр диспетчера ресурсов. Диспетчер ресурсов уничтожается, когда его счетчик ссылок становится равен `0`.  
   
 ```

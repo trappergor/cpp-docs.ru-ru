@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -72,56 +81,56 @@ class CMFCToolBarInfo
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtoolbar.h  
   
-##  <a name="a-namemuicoldresida--cmfctoolbarinfomuicoldresid"></a><a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
+##  <a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
  Указывает идентификатор ресурса для всех образов обычная кнопка панели инструментов.  
   
 ```  
 UINT m_uiColdResID;  
 ```  
   
-##  <a name="a-namemuidisabledresida--cmfctoolbarinfomuidisabledresid"></a><a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
+##  <a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
  Указывает идентификатор ресурса для образов недоступной кнопку панели инструментов.  
   
 ```  
 UINT m_uiDisabledResID;  
 ```  
   
-##  <a name="a-namemuihotresida--cmfctoolbarinfomuihotresid"></a><a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
+##  <a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
  Указывает идентификатор ресурса для всех образов выделенной кнопки панели инструментов.  
   
 ```  
 UINT m_uiHotResID  
 ```  
   
-##  <a name="a-namemuilargecoldresida--cmfctoolbarinfomuilargecoldresid"></a><a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
+##  <a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
  Указывает идентификатор ресурса для всех изображений больших обычная кнопка панели инструментов.  
   
 ```  
 UINT m_uiLargeColdResID  
 ```  
   
-##  <a name="a-namemuilargedisabledresida--cmfctoolbarinfomuilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
+##  <a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
  Указывает идентификатор ресурса для всех изображений больших отключенной кнопки панели инструментов.  
   
 ```  
 UINT m_uiLargeDisabledResID;  
 ```  
   
-##  <a name="a-namemuilargehotresida--cmfctoolbarinfomuilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
+##  <a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
  Указывает идентификатор ресурса для всех больших изображений выделенной панели инструментов.  
   
 ```  
 UINT m_uiLargeHotResID;  
 ```  
   
-##  <a name="a-namemuimenudisabledresida--cmfctoolbarinfomuimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
+##  <a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
  Указывает идентификатор ресурса для образов, команда недоступна на панели инструментов.  
   
 ```  
 UINT m_uiMenuDisabledResID;  
 ```  
   
-##  <a name="a-namemuimenuresida--cmfctoolbarinfomuimenuresid"></a><a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
+##  <a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
  Указывает идентификатор ресурса для всех обычных изображений пунктов меню на панели инструментов.  
   
 ```  

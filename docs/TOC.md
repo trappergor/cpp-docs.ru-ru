@@ -13,7 +13,7 @@
 # [Разработка .NET с использованием C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Облачное и веб-программирование в Visual C++](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [Параллельное программирование](parallel/parallel-programming-in-visual-cpp.md)
-# [Доступ к данным](data/index.md)
+# [Доступ к данным](data/data-access-in-cpp.md)
 # [Текст и строки](text/text-and-strings-in-visual-cpp.md)
 # [Использование интегрированной среды разработки Visual Studio для C++](ide/ide-and-tools-for-visual-cpp-development.md)
 # [Компиляторы и инструменты сборки](build/building-c-cpp-programs.md)

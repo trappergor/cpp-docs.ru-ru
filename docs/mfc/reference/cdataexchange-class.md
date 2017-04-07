@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataExchange
+- AFXWIN/CDataExchange
+- AFXWIN/CDataExchange::CDataExchange
+- AFXWIN/CDataExchange::Fail
+- AFXWIN/CDataExchange::PrepareCtrl
+- AFXWIN/CDataExchange::PrepareEditCtrl
+- AFXWIN/CDataExchange::PrepareOleCtrl
+- AFXWIN/CDataExchange::m_bSaveAndValidate
+- AFXWIN/CDataExchange::m_pDlgWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CDataExchange
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecdataexchangea--cdataexchangecdataexchange"></a><a name="cdataexchange"></a>CDataExchange::CDataExchange  
+##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
  Вызов этой функции-члена для создания `CDataExchange` объекта.  
   
 ```  
@@ -119,7 +127,7 @@ CDataExchange(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog&#70;](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="a-namefaila--cdataexchangefail"></a><a name="fail"></a>CDataExchange::Fail  
+##  <a name="fail"></a>CDataExchange::Fail  
  Платформа вызывает эту функцию-член, при сбое операции проверки (DDV) данных диалогового окна.  
   
 ```  
@@ -133,7 +141,7 @@ void Fail();
   
  Дополнительные сведения о создании собственных процедур DDX и DDV см. в разделе [Технические заметки 26](../../mfc/tn026-ddx-and-ddv-routines.md). Обзор DDX и DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md) и [диалоговому](../../mfc/dialog-boxes.md).  
   
-##  <a name="a-namembsaveandvalidatea--cdataexchangembsaveandvalidate"></a><a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
+##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
  Этот флаг указывает направление операции с данными exchange (DDX) диалогового окна.  
   
 ```  
@@ -147,7 +155,7 @@ BOOL m_bSaveAndValidate;
   
  Дополнительные сведения о создании собственных процедур DDX и DDV см. в разделе [Технические заметки 26](../../mfc/tn026-ddx-and-ddv-routines.md). Обзор DDX и DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md) и [диалоговому](../../mfc/dialog-boxes.md).  
   
-##  <a name="a-namempdlgwnda--cdataexchangempdlgwnd"></a><a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
+##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
  Содержит указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, для какой диалог обмен данными (диалоговых окон DDX) или проверки (DDV) выполняется.  
   
 ```  
@@ -159,7 +167,7 @@ CWnd* m_pDlgWnd;
   
  Дополнительные сведения о создании собственных процедур DDX и DDV см. в разделе [Технические заметки 26](../../mfc/tn026-ddx-and-ddv-routines.md). Обзор DDX и DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md) и [диалоговому](../../mfc/dialog-boxes.md).  
   
-##  <a name="a-namepreparectrla--cdataexchangepreparectrl"></a><a name="preparectrl"></a>CDataExchange::PrepareCtrl  
+##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
  Платформа вызывает эту функцию-член для подготовки указанного элемента управления для обмена данными диалогового окна (DDX) и проверки (DDV).  
   
 ```  
@@ -182,7 +190,7 @@ HWND PrepareCtrl(int nIDC);
   
  Дополнительные сведения о создании собственных процедур DDX и DDV см. в разделе [Технические заметки 26](../../mfc/tn026-ddx-and-ddv-routines.md). Обзор DDX и DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md) и [диалоговому](../../mfc/dialog-boxes.md).  
   
-##  <a name="a-nameprepareeditctrla--cdataexchangeprepareeditctrl"></a><a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
+##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
  Платформа вызывает эту функцию-член для подготовки элемента управления редактирования для обмена данными диалогового окна (DDX) и проверки (DDV).  
   
 ```  
@@ -205,7 +213,7 @@ HWND PrepareEditCtrl(int nIDC);
   
  Дополнительные сведения о создании собственных процедур DDX и DDV см. в разделе [Технические заметки 26](../../mfc/tn026-ddx-and-ddv-routines.md). Обзор DDX и DDV см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md) и [диалоговому](../../mfc/dialog-boxes.md).  
   
-##  <a name="a-nameprepareolectrla--cdataexchangeprepareolectrl"></a><a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
+##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
  Платформа вызывает эту функцию-член для подготовки указанного элемента управления OLE для обмена данными диалогового окна (DDX) и проверки (DDV).  
   
 ```  

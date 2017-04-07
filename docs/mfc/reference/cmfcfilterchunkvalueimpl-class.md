@@ -10,7 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFilterChunkValueImpl
-- afxwin/CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl::Clear
+- AFXWIN/CMFCFilterChunkValueImpl::CopyChunk
+- AFXWIN/CMFCFilterChunkValueImpl::CopyFrom
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkGUID
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkPID
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkType
+- AFXWIN/CMFCFilterChunkValueImpl::GetString
+- AFXWIN/CMFCFilterChunkValueImpl::GetValue
+- AFXWIN/CMFCFilterChunkValueImpl::GetValueNoAlloc
+- AFXWIN/CMFCFilterChunkValueImpl::IsValid
+- AFXWIN/CMFCFilterChunkValueImpl::SetBoolValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetDwordValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetFileTimeValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetInt64Value
+- AFXWIN/CMFCFilterChunkValueImpl::SetIntValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetLongValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetSystemTimeValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetTextValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetChunk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +128,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecleara--cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
+##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
  Очищает ChunkValue.  
   
 ```  
@@ -117,7 +137,7 @@ void Clear();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecmfcfilterchunkvalueimpla--cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  Создает объект.  
   
 ```  
@@ -126,7 +146,7 @@ CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namedtorcmfcfilterchunkvalueimpla--cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
  Разрушается объекта.  
   
 ```  
@@ -135,7 +155,7 @@ virtual ~CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecopychunka--cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
+##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
  Копирует структуру, определяющих характеристики фрагмента этот фрагмент.  
   
 ```  
@@ -151,7 +171,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namecopyfroma--cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
+##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
  Инициализирует этот фрагмент значение из другого значения.  
   
 ```  
@@ -164,7 +184,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetchunkguida--cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
+##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
  Получает GUID фрагмента данных.  
   
 ```  
@@ -176,7 +196,7 @@ REFGUID GetChunkGUID() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetchunkpida--cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
+##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
  Извлекает Идентификаторы свойств фрагмента данных.  
   
 ```  
@@ -188,7 +208,7 @@ DWORD GetChunkPID() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetchunktypea--cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
+##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
  Получает тип фрагмента данных.  
   
 ```  
@@ -200,7 +220,7 @@ CHUNKSTATE GetChunkType() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetstringa--cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
+##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
  Получает строковое значение.  
   
 ```  
@@ -212,7 +232,7 @@ CString &GetString();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetvaluea--cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
+##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
  Получает значение как выделенный propvariant.  
   
 ```  
@@ -228,7 +248,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegetvaluenoalloca--cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
+##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
  Возвращает значение, не выделенные (внутреннее значение).  
   
 ```  
@@ -240,7 +260,7 @@ PROPVARIANT GetValueNoAlloc ();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameisvalida--cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
+##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
  Проверяет, является ли значение данного свойства допустимым.  
   
 ```  
@@ -252,7 +272,7 @@ BOOL IsValid() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetboolvaluea--cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
+##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
  Перегружен. Задает свойство, ключом которого является логическое значение.  
   
 ```  
@@ -303,7 +323,7 @@ HRESULT SetBoolValue(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetchunka--cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
+##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
  Вспомогательная функция, которая устанавливает общие свойства фрагмента.  
   
 ```  
@@ -340,7 +360,7 @@ HRESULT SetChunk(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetdwordvaluea--cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
+##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
  Задайте для свойства ключом на значение DWORD.  
   
 ```  
@@ -381,7 +401,7 @@ HRESULT SetDwordValue(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetfiletimevaluea--cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
+##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
  Задайте свойство ключом для filetime.  
   
 ```  
@@ -422,7 +442,7 @@ HRESULT SetFileTimeValue(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetint64valuea--cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
+##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
  Задайте свойство ключом для переменной типа int64.  
   
 ```  
@@ -463,7 +483,7 @@ HRESULT SetInt64Value(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetintvaluea--cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
+##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
  Задать значение свойства ключа в тип int.  
   
 ```  
@@ -504,7 +524,7 @@ HRESULT SetIntValue(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetlongvaluea--cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
+##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
  Задайте свойство ключом для типа LONG.  
   
 ```  
@@ -545,7 +565,7 @@ HRESULT SetLongValue(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetsystemtimevaluea--cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
+##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
  Задает свойство ключом в SystemTime.  
   
 ```  
@@ -586,7 +606,7 @@ HRESULT SetSystemTimeValue(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettextvaluea--cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
+##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
  Задает свойство ключом в строку Юникода.  
   
 ```  

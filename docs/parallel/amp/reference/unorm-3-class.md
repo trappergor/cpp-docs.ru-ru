@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ce64e15c062f04df6c9f7671bd820ee188af0111
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 14c85a46b8026878c3b5502931f937e2cf6196cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm3-class"></a>Класс unorm_3
@@ -132,54 +132,54 @@ class unorm_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод unorm_3::get_X||  
-|Метод unorm_3::get_xy||  
-|Метод unorm_3::get_xyz||  
-|Метод unorm_3::get_xz||  
-|Метод unorm_3::get_xzy||  
-|Метод unorm_3::get_y||  
-|Метод unorm_3::get_yx||  
-|Метод unorm_3::get_yxz||  
-|Метод unorm_3::get_yz||  
-|Метод unorm_3::get_yzx||  
-|Метод unorm_3::get_z||  
-|Метод unorm_3::get_zx||  
-|Метод unorm_3::get_zxy||  
-|Метод unorm_3::get_zy||  
-|Метод unorm_3::get_zyx||  
-|Метод Unorm_3::ref_b||  
-|Метод Unorm_3::ref_g||  
-|Метод Unorm_3::ref_r||  
-|Метод Unorm_3::ref_x||  
-|Метод Unorm_3::ref_y||  
-|Метод Unorm_3::ref_z||  
-|Метод unorm_3::set_X||  
-|Метод unorm_3::set_xy||  
-|Метод unorm_3::set_xyz||  
-|Метод unorm_3::set_xz||  
-|Метод unorm_3::set_xzy||  
-|Метод unorm_3::set_y||  
-|Метод unorm_3::set_yx||  
-|Метод unorm_3::set_yxz||  
-|Метод unorm_3::set_yz||  
-|Метод unorm_3::set_yzx||  
-|Метод unorm_3::set_z||  
-|Метод unorm_3::set_zx||  
-|Метод unorm_3::set_zxy||  
-|Метод unorm_3::set_zy||  
-|Метод unorm_3::set_zyx||  
+|unorm_3::get_X||  
+|unorm_3::get_xy||  
+|unorm_3::get_xyz||  
+|unorm_3::get_xz||  
+|unorm_3::get_xzy||  
+|unorm_3::get_y||  
+|unorm_3::get_yx||  
+|unorm_3::get_yxz||  
+|unorm_3::get_yz||  
+|unorm_3::get_yzx||  
+|unorm_3::get_z||  
+|unorm_3::get_zx||  
+|unorm_3::get_zxy||  
+|unorm_3::get_zy||  
+|unorm_3::get_zyx||  
+|Unorm_3::ref_b||  
+|Unorm_3::ref_g||  
+|Unorm_3::ref_r||  
+|Unorm_3::ref_x||  
+|Unorm_3::ref_y||  
+|Unorm_3::ref_z||  
+|unorm_3::set_X||  
+|unorm_3::set_xy||  
+|unorm_3::set_xyz||  
+|unorm_3::set_xz||  
+|unorm_3::set_xzy||  
+|unorm_3::set_y||  
+|unorm_3::set_yx||  
+|unorm_3::set_yxz||  
+|unorm_3::set_yz||  
+|unorm_3::set_yzx||  
+|unorm_3::set_z||  
+|unorm_3::set_zx||  
+|unorm_3::set_zxy||  
+|unorm_3::set_zy||  
+|unorm_3::set_zyx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|unorm_3::operator - оператор||  
-|unorm_3::operator * =-оператор||  
-|unorm_3::operator / =-оператор||  
-|unorm_3::operator оператор ++||  
-|Оператор += unorm_3::operator||  
-|unorm_3::operator =-оператор||  
-|unorm_3::operator-= оператор||  
+|unorm_3::operator--||  
+|unorm_3::operator * =||  
+|unorm_3::operator / =||  
+|unorm_3::operator ++||  
+|unorm_3::operator +=||  
+|unorm_3::operator =||  
+|unorm_3::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -191,36 +191,36 @@ class unorm_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных unorm_3::b||  
-|Элемент данных unorm_3::BG||  
-|Элемент данных unorm_3::bgr||  
-|Элемент данных unorm_3::br||  
-|Элемент данных unorm_3::brg||  
-|Элемент данных unorm_3::g||  
-|Элемент данных unorm_3::GB||  
-|Элемент данных unorm_3::GBR||  
-|Элемент данных unorm_3::GR||  
-|Элемент данных unorm_3::grb||  
-|Элемент данных unorm_3::r||  
-|Элемент данных unorm_3::RB||  
-|Элемент данных unorm_3::rbg||  
-|Элемент данных unorm_3::RG||  
-|Элемент данных unorm_3::RGB||  
-|Элемент данных unorm_3::x||  
-|Элемент данных unorm_3::XY||  
-|Элемент данных unorm_3::xyz||  
-|Элемент данных unorm_3::xz||  
-|Элемент данных unorm_3::xzy||  
-|Элемент данных unorm_3::y||  
-|Элемент данных unorm_3::YX||  
-|Элемент данных unorm_3::yxz||  
-|Элемент данных unorm_3::yz||  
-|Элемент данных unorm_3::yzx||  
-|Элемент данных unorm_3::z||  
-|Элемент данных unorm_3::zx||  
-|Элемент данных unorm_3::zxy||  
-|Элемент данных unorm_3::zy||  
-|Элемент данных unorm_3::zyx||  
+|unorm_3::b||  
+|unorm_3::BG||  
+|unorm_3::bgr||  
+|unorm_3::br||  
+|unorm_3::brg||  
+|unorm_3::g||  
+|unorm_3::GB||  
+|unorm_3::GBR||  
+|unorm_3::GR||  
+|unorm_3::grb||  
+|unorm_3::r||  
+|unorm_3::RB||  
+|unorm_3::rbg||  
+|unorm_3::RG||  
+|unorm_3::RGB||  
+|unorm_3::x||  
+|unorm_3::XY||  
+|unorm_3::xyz||  
+|unorm_3::xz||  
+|unorm_3::xzy||  
+|unorm_3::y||  
+|unorm_3::YX||  
+|unorm_3::yxz||  
+|unorm_3::yz||  
+|unorm_3::yzx||  
+|unorm_3::z||  
+|unorm_3::zx||  
+|unorm_3::zxy||  
+|unorm_3::zy||  
+|unorm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `unorm_3`  
@@ -230,7 +230,7 @@ class unorm_3;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-unorm3"></a><a name="ctor"></a>unorm_3 
+##  <a name="ctor"></a>unorm_3 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -309,12 +309,12 @@ explicit inline unorm_3(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-nameunorm3sizea-size"></a><a name="unorm_3__size"></a>размер 
+##  <a name="unorm_3__size"></a>размер 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

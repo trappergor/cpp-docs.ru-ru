@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationValue
 - CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetVariable
+- AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationValue::m_value
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +106,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>CAnimationValue::AddTransition  
  Добавляет переход, применяемый к значению.  
   
 ```  
@@ -113,7 +120,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию, чтобы добавить переход внутренний список переходов для применения к переменной анимации. При добавлении переходов, они не применяются сразу и хранятся в внутренний список. Переходы применяются (Добавление в раскадровку для определенного значения) при вызове CAnimationController::AnimateGroup.  
   
-##  <a name="a-namecanimationvaluea--canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
  Создает объект CAnimationValue.  
   
 ```  
@@ -143,7 +150,7 @@ CAnimationValue(
 ### <a name="remarks"></a>Примечания  
  Создает объект CAnimationValue со свойствами по умолчанию: значение по умолчанию, код группы и идентификатор объекта имеют значение 0.  
   
-##  <a name="a-namegetanimationvariablelista--canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
  Помещает переменной инкапсулированный анимации в список.  
   
 ```  
@@ -156,7 +163,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Когда функция возвращает значение, он содержит указатель на CAnimationVariable, представляющий анимированное значение.  
   
-##  <a name="a-namegetvaluea--canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>CAnimationValue::GetValue  
  Получает текущее значение.  
   
 ```  
@@ -177,7 +184,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения текущего значения. Такая реализация вызывает инкапсулированный объект COM, и если завершается неудачно, этот метод возвращает значение по умолчанию, который ранее был установлен в конструкторе или с SetDefaultValue.  
   
-##  <a name="a-namegetvariablea--canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>CAnimationValue::GetVariable  
  Предоставляет доступ к переменной инкапсулированный анимации.  
   
 ```  
@@ -190,14 +197,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для доступа к переменной инкапсулированный анимации. Из CAnimationVariable вы получаете доступ к основной объект IUIAnimationVariable, указатель может иметь значение NULL, если не был создан переменной анимации.  
   
-##  <a name="a-namemvaluea--canimationvaluemvalue"></a><a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>CAnimationValue::m_value  
  Инкапсулированный анимации переменной, представляющей значение анимации.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="a-nameoperatordoublea--canimationvalueoperator-double"></a><a name="operator_double"></a>ДВОЙНОЙ CAnimationValue::operator  
+##  <a name="operator_double"></a>ДВОЙНОЙ CAnimationValue::operator  
  Обеспечивает преобразование между CAnimationValue и DOUBLE.  
   
 ```  
@@ -210,7 +217,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>Примечания  
  Обеспечивает преобразование между CAnimationValue и DOUBLE. Внутри этого метода вызывает GetValue и не проверяет наличие ошибок. В случае сбоя GetValue возвращаемое значение будет содержать значение по умолчанию, заданные в конструкторе или с SetDefaultValue ранее.  
   
-##  <a name="a-nameoperatorint32a--canimationvalueoperator-int32"></a><a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
  Обеспечивает преобразование между CAnimationValue и INT32.  
   
 ```  
@@ -223,7 +230,7 @@ operator INT32();
 ### <a name="remarks"></a>Примечания  
  Обеспечивает преобразование между CAnimationValue и INT32. Внутри этого метода вызывает GetValue и не проверяет наличие ошибок. В случае сбоя GetValue возвращаемое значение будет содержать значение по умолчанию, заданные в конструкторе или с SetDefaultValue ранее.  
   
-##  <a name="a-nameoperatoreqa--canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>CAnimationValue::operator =  
  Присваивает значение типа DOUBLE CAnimationValue.  
   
 ```  
@@ -241,7 +248,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>Примечания  
  Присваивает значение типа DOUBLE CAnimationValue. Это значение как значение по умолчанию для переменной инкапсулированный анимации. Если подписка данного объекта анимации для события (ValueChanged или IntegerValueChanged), необходимо включить эти события.  
   
-##  <a name="a-namesetdefaultvaluea--canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
  Задает значение по умолчанию.  
   
 ```  

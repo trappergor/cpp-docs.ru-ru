@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 41cef906c326e7b113faa70fadfe347a11b58f87
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4ead4c4bd9aac91c4a0db7e2dfbc4976664120bd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="double3-class"></a>Класс double_3
@@ -132,55 +132,55 @@ class double_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод double_3::get_X||  
-|Метод double_3::get_xy||  
-|Метод double_3::get_xyz||  
-|Метод double_3::get_xz||  
-|Метод double_3::get_xzy||  
-|Метод double_3::get_y||  
-|Метод double_3::get_yx||  
-|Метод double_3::get_yxz||  
-|Метод double_3::get_yz||  
-|Метод double_3::get_yzx||  
-|Метод double_3::get_z||  
-|Метод double_3::get_zx||  
-|Метод double_3::get_zxy||  
-|Метод double_3::get_zy||  
-|Метод double_3::get_zyx||  
-|Метод double_3::ref_b||  
-|Метод double_3::ref_g||  
-|Метод double_3::ref_r||  
-|Метод double_3::ref_x||  
-|Метод double_3::ref_y||  
-|Метод double_3::ref_z||  
-|Метод double_3::set_X||  
-|Метод double_3::set_xy||  
-|Метод double_3::set_xyz||  
-|Метод double_3::set_xz||  
-|Метод double_3::set_xzy||  
-|Метод double_3::set_y||  
-|Метод double_3::set_yx||  
-|Метод double_3::set_yxz||  
-|Метод double_3::set_yz||  
-|Метод double_3::set_yzx||  
-|Метод double_3::set_z||  
-|Метод double_3::set_zx||  
-|Метод double_3::set_zxy||  
-|Метод double_3::set_zy||  
-|Метод double_3::set_zyx||  
+|double_3::get_X||  
+|double_3::get_xy||  
+|double_3::get_xyz||  
+|double_3::get_xz||  
+|double_3::get_xzy||  
+|double_3::get_y||  
+|double_3::get_yx||  
+|double_3::get_yxz||  
+|double_3::get_yz||  
+|double_3::get_yzx||  
+|double_3::get_z||  
+|double_3::get_zx||  
+|double_3::get_zxy||  
+|double_3::get_zy||  
+|double_3::get_zyx||  
+|double_3::ref_b||  
+|double_3::ref_g||  
+|double_3::ref_r||  
+|double_3::ref_x||  
+|double_3::ref_y||  
+|double_3::ref_z||  
+|double_3::set_X||  
+|double_3::set_xy||  
+|double_3::set_xyz||  
+|double_3::set_xz||  
+|double_3::set_xzy||  
+|double_3::set_y||  
+|double_3::set_yx||  
+|double_3::set_yxz||  
+|double_3::set_yz||  
+|double_3::set_yzx||  
+|double_3::set_z||  
+|double_3::set_zx||  
+|double_3::set_zxy||  
+|double_3::set_zy||  
+|double_3::set_zyx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|double_3::operator оператор||  
-|double_3::operator - оператор||  
-|double_3::operator * =-оператор||  
-|double_3::operator / =-оператор||  
-|double_3::operator оператор ++||  
-|Оператор += double_3::operator||  
-|double_3::operator =-оператор||  
-|double_3::operator-= оператор||  
+|double_3::operator-||  
+|double_3::operator--||  
+|double_3::operator * =||  
+|double_3::operator / =||  
+|double_3::operator ++||  
+|double_3::operator +=||  
+|double_3::operator =||  
+|double_3::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -192,36 +192,36 @@ class double_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных double_3::b||  
-|Элемент данных double_3::BG||  
-|Элемент данных double_3::bgr||  
-|Элемент данных double_3::br||  
-|Элемент данных double_3::brg||  
-|Элемент данных double_3::g||  
-|Элемент данных double_3::GB||  
-|Элемент данных double_3::GBR||  
-|Элемент данных double_3::GR||  
-|Элемент данных double_3::grb||  
-|Элемент данных double_3::r||  
-|Элемент данных double_3::RB||  
-|Элемент данных double_3::rbg||  
-|Элемент данных double_3::RG||  
-|Элемент данных double_3::RGB||  
-|Элемент данных double_3::x||  
-|Элемент данных double_3::XY||  
-|Элемент данных double_3::xyz||  
-|Элемент данных double_3::xz||  
-|Элемент данных double_3::xzy||  
-|Элемент данных double_3::y||  
-|Элемент данных double_3::YX||  
-|Элемент данных double_3::yxz||  
-|Элемент данных double_3::yz||  
-|Элемент данных double_3::yzx||  
-|Элемент данных double_3::z||  
-|Элемент данных double_3::zx||  
-|Элемент данных double_3::zxy||  
-|Элемент данных double_3::zy||  
-|Элемент данных double_3::zyx||  
+|double_3::b||  
+|double_3::BG||  
+|double_3::bgr||  
+|double_3::br||  
+|double_3::brg||  
+|double_3::g||  
+|double_3::GB||  
+|double_3::GBR||  
+|double_3::GR||  
+|double_3::grb||  
+|double_3::r||  
+|double_3::RB||  
+|double_3::rbg||  
+|double_3::RG||  
+|double_3::RGB||  
+|double_3::x||  
+|double_3::XY||  
+|double_3::xyz||  
+|double_3::xz||  
+|double_3::xzy||  
+|double_3::y||  
+|double_3::YX||  
+|double_3::yxz||  
+|double_3::yz||  
+|double_3::yzx||  
+|double_3::z||  
+|double_3::zx||  
+|double_3::zxy||  
+|double_3::zy||  
+|double_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `double_3`  
@@ -231,7 +231,7 @@ class double_3;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-double3"></a><a name="ctor"></a>double_3 
+##  <a name="ctor"></a>double_3 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -298,12 +298,12 @@ explicit inline double_3(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-namedouble3sizea-size"></a><a name="double_3__size"></a>размер 
+##  <a name="double_3__size"></a>размер 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

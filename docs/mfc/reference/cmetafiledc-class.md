@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  Закрывает контекст устройства метафайла и создает дескриптор метафайла Windows, который можно использовать для воспроизведения метафайла с помощью [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) функции-члена.  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  Удаление метафайл после использования, вызвав Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) функции.  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  Закрывает контекст устройства расширенного метафайла и возвращает дескриптор, который определяет расширенный формат метафайла.  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  Если приложение больше не нужна дескриптор расширенного метафайла, он должен освободить дескриптор путем вызова функции Win32 **DeleteEnhMetaFile** функции.  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  Создать `CMetaFileDC` объекта в два этапа.  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Примечания  
  Во-первых, вызовите `CMetaFileDC`, затем вызовите **создать**, который создает контекст устройства метафайл Windows и присоединяет его к `CMetaFileDC` объекта.  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  Создать `CMetaFileDC` объекта в два этапа.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Примечания  
  Во-первых, вызовите конструктор `CMetaFileDC`, затем вызовите **создать**, который создает контекст устройства метафайл Windows и присоединяет его к `CMetaFileDC` объекта.  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  Создает контекст устройства для расширенный формат метафайла.  
   
 ```  

@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandSource
+- AFXWINFORMS/ICommandSource
+- AFXWINFORMS/ICommandSource::AddCommandHandler
+- AFXWINFORMS/ICommandSource::AddCommandRangeHandler
+- AFXWINFORMS/ICommandSource::AddCommandRangeUIHandler
+- AFXWINFORMS/ICommandSource::AddCommandUIHandler
+- AFXWINFORMS/ICommandSource::PostCommand
+- AFXWINFORMS/ICommandSource::RemoveCommandHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandRangeHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandRangeUIHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandUIHandler
+- AFXWINFORMS/ICommandSource::SendCommand
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +86,7 @@ interface class ICommandSource
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxwinforms.h (определенный в сборке atlmfc\lib\mfcmifc80.dll)  
   
-## <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
 Добавляет обработчик команды объект источника команды.
 ```
 void AddCommandHandler(
@@ -93,7 +104,7 @@ void AddCommandHandler(
 Этот метод добавляет объект источника команды cmdHandler обработчик команды и сопоставляет обработчик cmdID.
 В разделе [Практическое руководство: Добавление маршрутизации команд для элемента управления Windows Forms](https://msdn.microsoft.com/library/y33d8624.aspx) пример использования AddCommandHandler.
 
-## <a name="a-nameaddcommandrangehandlera-icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
 
 Добавляет группу обработчиков команд объект источника команды.
 ```
@@ -112,7 +123,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>Примечания
 Этот метод сопоставляет непрерывный диапазон идентификаторов команд обработчику одно сообщение и добавляет его к объекту источника команды. Используется для обработки нескольких связанных кнопок с одного метода.
 
-## <a name="a-nameaddcommandrangeuihandlera-icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
 Добавляет группу обработчики сообщений команды интерфейса пользователя на объект источника команды.
 ```
 void AddCommandRangeUIHandler(
@@ -131,7 +142,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>Примечания
 Этот метод непрерывный диапазон идентификаторов команд сопоставляется сообщение обработчика команды интерфейса одного пользователя и добавляет его к объекту источника команды. Используется для обработки нескольких связанных кнопок с одного метода.
 
-## <a name="a-nameaddcommanduihandlera-icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
 Добавляет обработчик сообщений команды интерфейса пользователя объект источника команды.
 ```
 void AddCommandUIHandler(
@@ -147,7 +158,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>Примечания
 Этот метод добавляет объект источника команды cmdHandler обработчик сообщений пользователя интерфейса командной и сопоставляет обработчик cmdID.
 
-## <a name="a-namepostcommanda-icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand
+## <a name="postcommand"></a>ICommandSource::PostCommand
 Посылает сообщение, не дожидаясь его обработки.
 ```
 void PostCommand(unsigned int command);
@@ -159,7 +170,7 @@ void PostCommand(unsigned int command);
 Этот метод асинхронно отправляет сообщение сопоставляется с Идентификатором, указанным параметром команды. Он вызывает CWnd::PostMessage, чтобы поместить сообщение в очередь сообщений окна и затем возвращается без ожидания соответствующее окно для обработки сообщения.
 
 
-## <a name="a-nameremovecommandhandlera-icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
 Удаляет обработчик команды из исходного объекта команды.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -171,7 +182,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 Этот метод удаляет обработчик команды, сопоставленный с cmdID исходный объект команды.
 
 
-## <a name="a-nameremovecommandrangecommandhandlera-icommandsourceremovecommandrangehandler"></a><a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
 Удаляет группу обработчиков команд из исходного объекта команды.
 ```
 void RemoveCommandRangeUIHandler(
@@ -186,7 +197,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Примечания
 Этот метод удаляет группу обработчиков сообщений, сопоставленный с указанных идентификаторов команд, cmdIDMin и cmdIDMax, исходный объект команды.
 
-## <a name="a-nameremovecommandrangeuihandlera-icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
 Удаляет группу обработчики сообщений команды интерфейса пользователя из исходного объекта команды.
 ```
 void RemoveCommandRangeUIHandler(
@@ -201,7 +212,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Примечания
 Этот метод удаляет группу пользователя интерфейс сообщения обработчиков команд, сопоставленный с указанных идентификаторов команд, cmdIDMin и cmdIDMax, исходный объект команды.
 
-## <a name="a-nameremovecommanduihandlera-icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
 Удаляет обработчик сообщений команды интерфейса пользователя из исходного объекта команды.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -212,7 +223,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Примечания
 Этот метод удаляет обработчик пользовательского интерфейса команды сообщение cmdID, полученного из исходного объекта команды.
 
-## <a name="a-namesendcommanda-icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand 
+## <a name="sendcommand"></a>ICommandSource::SendCommand 
 Отправляет сообщение и ожидает его для обработки перед возвратом.
 ```
 void SendCommand(unsigned int command);

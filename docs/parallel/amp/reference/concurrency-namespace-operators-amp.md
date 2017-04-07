@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор+](#operator_add)|[оператор-](#operator-)|[оператор/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==   
+##  <a name="operator_eq_eq"></a> operator==   
  Определяет, равны ли указанные аргументы.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если кортежи равны; в противном случае — `false`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=   
+##  <a name="operator_neq"></a> operator!=   
  Определяет, равны ли указанные аргументы.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если кортежи не равны. в противном случае — `false`.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a> operator+   
+##  <a name="operator_add"></a> operator+   
 
  Вычисляет сумму component-wise указанные аргументы.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Возвращаемое значение  
  Component-wise сумма указанные аргументы.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  оператор-   
+##  <a name="operator-"></a>  оператор-   
 
  Component-wise расхождения между указанными аргументами.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Возвращаемое значение  
  Component-wise различие между указанными аргументами.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  оператор*   
+##  <a name="operator_star"></a>  оператор*   
 
  Вычисляет произведение component-wise указанные аргументы.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  Component-wise произведение заданных аргументов.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  оператор/   
+##  <a name="operator_div"></a>  оператор/   
  Вычисляет частное component-wise указанных аргументов.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Возвращаемое значение  
  Component-wise частное указанные аргументы.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  оператор%   
+##  <a name="operator_mod"></a>  оператор%   
 
  Вычисляет модуль первого указанного аргумента с помощью второго заданного аргумента.  
   

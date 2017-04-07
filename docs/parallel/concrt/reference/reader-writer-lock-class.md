@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::reader_writer_lock
+- reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock::scoped_lock
+- CONCRT/concurrency::reader_writer_lock::scoped_lock_read
+- CONCRT/concurrency::reader_writer_lock::reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock::lock
+- CONCRT/concurrency::reader_writer_lock::lock_read
+- CONCRT/concurrency::reader_writer_lock::try_lock
+- CONCRT/concurrency::reader_writer_lock::try_lock_read
+- CONCRT/concurrency::reader_writer_lock::unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: d5d2fde890b0836621fcd1db5bb87b1933bb2a04
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b5107923baa7d22e6a98c6617a22a883c4d84125
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
@@ -61,18 +70,18 @@ class reader_writer_lock;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор reader_writer_lock](#ctor)|Создает новый `reader_writer_lock` объекта.|  
+|[reader_writer_lock](#ctor)|Создает новый `reader_writer_lock` объекта.|  
 |[~ reader_writer_lock деструктор](#dtor)|Уничтожает `reader_writer_lock` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод блокировки](#lock)|Получает блокировку чтения записи разработчику.|  
-|[lock_read метод](#lock_read)|Получает блокировку чтения записи читателей. Если имеются писатели, активные читатели должны подождать, пока они выполняются. Средство чтения просто регистрирует интерес в блокировке и ожидает записи для его освобождения.|  
-|[try_lock метод](#try_lock)|Пытается получить блокировку чтения записи в качестве модуля записи без блокировки.|  
-|[try_lock_read метод](#try_lock_read)|Пытается получить блокировку чтения записи в качестве читателя без блокировки.|  
-|[Unlock-метод](#unlock)|Снимает блокировку чтения записи, в зависимости от того, кто именно заблокировал, средство чтения или записи.|  
+|[lock](#lock)|Получает блокировку чтения записи разработчику.|  
+|[lock_read](#lock_read)|Получает блокировку чтения записи читателей. Если имеются писатели, активные читатели должны подождать, пока они выполняются. Средство чтения просто регистрирует интерес в блокировке и ожидает записи для его освобождения.|  
+|[try_lock](#try_lock)|Пытается получить блокировку чтения записи в качестве модуля записи без блокировки.|  
+|[try_lock_read](#try_lock_read)|Пытается получить блокировку чтения записи в качестве читателя без блокировки.|  
+|[unlock](#unlock)|Снимает блокировку чтения записи, в зависимости от того, кто именно заблокировал, средство чтения или записи.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [структуры данных синхронизации](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -85,7 +94,7 @@ class reader_writer_lock;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namelocka-lock"></a><a name="lock"></a>Блокировка 
+##  <a name="lock"></a>Блокировка 
 
  Получает блокировку чтения записи разработчику.  
   
@@ -102,7 +111,7 @@ void lock();
   
  Если блокировка уже захвачена вызывающий контекст [improper_lock](improper-lock-class.md) будет создано исключение.  
   
-##  <a name="a-namelockreada-lockread"></a><a name="lock_read"></a>lock_read 
+##  <a name="lock_read"></a>lock_read 
 
  Получает блокировку чтения записи читателей. Если имеются писатели, активные читатели должны подождать, пока они выполняются. Средство чтения просто регистрирует интерес в блокировке и ожидает записи для его освобождения.  
   
@@ -115,7 +124,7 @@ void lock_read();
   
  Если имеются ожидающие блокировку писатели, средство чтения будет ожидать, пока все писатели в строке получат и освободят блокировку. Эта блокировка смещен в сторону записи и исключает доступ читателей под постоянной нагрузкой модулей записи.  
   
-##  <a name="a-namectora-readerwriterlock"></a><a name="ctor"></a>reader_writer_lock 
+##  <a name="ctor"></a>reader_writer_lock 
 
  Создает новый `reader_writer_lock` объекта.  
   
@@ -123,7 +132,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="a-namedtora-readerwriterlock"></a><a name="dtor"></a>~ reader_writer_lock 
+##  <a name="dtor"></a>~ reader_writer_lock 
 
  Уничтожает `reader_writer_lock` объекта.  
   
@@ -134,13 +143,13 @@ reader_writer_lock();
 ### <a name="remarks"></a>Примечания  
  Ожидается, что больше не блокировку при выполнении деструктора. По-прежнему позволяя блокировки чтения записи приводит к неопределенному блокировка удерживается результатов к неопределенному поведению.  
   
-##  <a name="a-namescopedlockclassa--readerwriterlockscopedlock-class"></a><a name="scoped_lock_class"></a>Класс reader_writer_lock::scoped_lock  
+##  <a name="scoped_lock_class"></a>Класс reader_writer_lock::scoped_lock  
  Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокирует объекты, как модуль записи.  
   
 ```
 class scoped_lock;
 ``` 
-## <a name="a-namescopedlockctora-scopedlockscopedlock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+## <a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
 Создает `scoped_lock` объекта и получает `reader_writer_lock` объект, передаваемый в `_Reader_writer_lock` параметра, как модуль записи. Если блокировка удерживается другим потоком, этот вызов блокируется.  
   
@@ -153,7 +162,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock` Объект для получения как модуль записи.  
   
-## <a name="a-namescopedlockdtora-scopedlockscopedlock"></a><a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+## <a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
 Уничтожает `reader_writer_lock` объекта и освободит блокировку, переданную в конструкторе.   
 
@@ -161,18 +170,18 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock();
 ```  
   
-##  <a name="a-namescopedlockreadclassa--readerwriterlockscopedlockread-class"></a><a name="scoped_lock_read_class"></a>Класс reader_writer_lock::scoped_lock_read  
+##  <a name="scoped_lock_read_class"></a>Класс reader_writer_lock::scoped_lock_read  
  Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировать объекты чтения.  
   
 ```
 class scoped_lock_read;
 ```  
   
-##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a>try_lock 
 
  Пытается получить блокировку чтения записи в качестве модуля записи без блокировки.  
 
-## <a name="a-namescopedlockreadctora-scopedlockreadscopedlockread"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+## <a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
 
 Создает `scoped_lock_read` объекта и получает `reader_writer_lock` объект, передаваемый в `_Reader_writer_lock` параметр чтения. Если блокировка удерживается другим потоком как модуль записи или ожидаются модулями записи, этот вызов блокируется.  
   
@@ -191,7 +200,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock_read();
 ```  
   
-## <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+## <a name="try_lock"></a>try_lock 
 
 ```
 bool try_lock();
@@ -200,7 +209,7 @@ bool try_lock();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если блокировка была получена, значение `true`; в противном случае — значение `false`.  
   
-##  <a name="a-nametrylockreada-trylockread"></a><a name="try_lock_read"></a>try_lock_read 
+##  <a name="try_lock_read"></a>try_lock_read 
 
  Пытается получить блокировку чтения записи в качестве читателя без блокировки.  
   
@@ -211,7 +220,7 @@ bool try_lock_read();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если блокировка была получена, значение `true`; в противном случае — значение `false`.  
   
-##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>разблокировать 
+##  <a name="unlock"></a>разблокировать 
 
  Снимает блокировку чтения записи, в зависимости от того, кто именно заблокировал, средство чтения или записи.  
   

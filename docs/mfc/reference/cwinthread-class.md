@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinThread
+- AFXWIN/CWinThread
+- AFXWIN/CWinThread::CWinThread
+- AFXWIN/CWinThread::CreateThread
+- AFXWIN/CWinThread::ExitInstance
+- AFXWIN/CWinThread::GetMainWnd
+- AFXWIN/CWinThread::GetThreadPriority
+- AFXWIN/CWinThread::InitInstance
+- AFXWIN/CWinThread::IsIdleMessage
+- AFXWIN/CWinThread::OnIdle
+- AFXWIN/CWinThread::PostThreadMessage
+- AFXWIN/CWinThread::PreTranslateMessage
+- AFXWIN/CWinThread::ProcessMessageFilter
+- AFXWIN/CWinThread::ProcessWndProcException
+- AFXWIN/CWinThread::PumpMessage
+- AFXWIN/CWinThread::ResumeThread
+- AFXWIN/CWinThread::Run
+- AFXWIN/CWinThread::SetThreadPriority
+- AFXWIN/CWinThread::SuspendThread
+- AFXWIN/CWinThread::m_bAutoDelete
+- AFXWIN/CWinThread::m_hThread
+- AFXWIN/CWinThread::m_nThreadID
+- AFXWIN/CWinThread::m_pActiveWnd
+- AFXWIN/CWinThread::m_pMainWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -121,7 +144,7 @@ class CWinThread : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-namecreatethreada--cwinthreadcreatethread"></a><a name="createthread"></a>Функцию CWinThread::CreateThread  
+##  <a name="createthread"></a>Функцию CWinThread::CreateThread  
  Создает поток для выполнения в адресном пространстве вызывающего процесса.  
   
 ```  
@@ -151,7 +174,7 @@ BOOL CreateThread(
 ### <a name="remarks"></a>Примечания  
  Используйте `AfxBeginThread` создать объект потока или выполнить ее за один шаг. Используйте `CreateThread` , если вы хотите повторно использовать объект thread между последовательными создания и завершения выполнения потока.  
   
-##  <a name="a-namecwinthreada--cwinthreadcwinthread"></a><a name="cwinthread"></a>CWinThread::CWinThread  
+##  <a name="cwinthread"></a>CWinThread::CWinThread  
  Создает объект `CWinThread`.  
   
 ```  
@@ -161,7 +184,7 @@ CWinThread();
 ### <a name="remarks"></a>Примечания  
  Чтобы начать выполнение потока, вызовите [CreateThread](#createthread) функции-члена. Обычно создается потоков путем вызова [AfxBeginThread](http://msdn.microsoft.com/library/e9e8684d-24f7-4599-8fdf-1f4f560a753b), который будет вызывать этот конструктор и `CreateThread`.  
   
-##  <a name="a-nameexitinstancea--cwinthreadexitinstance"></a><a name="exitinstance"></a>CWinThread::ExitInstance  
+##  <a name="exitinstance"></a>CWinThread::ExitInstance  
  Вызывается платформой из переопределенного редко [запуска](#run) функции-члена для выхода из этого экземпляра потока, или если в вызове [InitInstance](#initinstance) завершается ошибкой.  
   
 ```  
@@ -176,7 +199,7 @@ virtual int ExitInstance();
   
  Реализация по умолчанию эта функция удаляет `CWinThread` объекта, если [m_bAutoDelete](#m_bautodelete) — **TRUE**. Переопределите эту функцию, если вы хотите выполнить дополнительную очистку при завершении потока. Реализация `ExitInstance` после выполнения кода вызова версии базового класса.  
   
-##  <a name="a-namegetmainwnda--cwinthreadgetmainwnd"></a><a name="getmainwnd"></a>CWinThread::GetMainWnd  
+##  <a name="getmainwnd"></a>CWinThread::GetMainWnd  
  Если приложение является OLE-сервер, эта функция вызывается для извлечения указателя активное окно основного приложения, а не непосредственно ссылается `m_pMainWnd` член объекта приложения.  
   
 ```  
@@ -195,7 +218,7 @@ virtual CWnd* GetMainWnd();
   
  Переопределите эту функцию для изменения поведения по умолчанию.  
   
-##  <a name="a-namegetthreadprioritya--cwinthreadgetthreadpriority"></a><a name="getthreadpriority"></a>CWinThread::GetThreadPriority  
+##  <a name="getthreadpriority"></a>CWinThread::GetThreadPriority  
  Возвращает текущий уровень приоритета потока для данного потока.  
   
 ```  
@@ -221,7 +244,7 @@ int GetThreadPriority();
   
  Дополнительные сведения о эти приоритеты в разделе [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitinstancea--cwinthreadinitinstance"></a><a name="initinstance"></a>CWinThread::InitInstance  
+##  <a name="initinstance"></a>CWinThread::InitInstance  
  `InitInstance`должен переопределяться для инициализации каждого нового экземпляра потока пользовательского интерфейса.  
   
 ```  
@@ -236,7 +259,7 @@ virtual BOOL InitInstance();
   
  Эта функция-член используется только в потоках пользовательского интерфейса. Инициализации рабочих потоков, передаваемый функции управления [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
   
-##  <a name="a-nameisidlemessagea--cwinthreadisidlemessage"></a><a name="isidlemessage"></a>CWinThread::IsIdleMessage  
+##  <a name="isidlemessage"></a>CWinThread::IsIdleMessage  
  Переопределить эту функцию, чтобы сохранить **OnIdle** вызов после создания определенных сообщений.  
   
 ```  
@@ -259,7 +282,7 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
   
  Обработка `WM_TIMER` таким образом повышает производительность приложений, использующих короткий таймеров.  
   
-##  <a name="a-namembautodeletea--cwinthreadmbautodelete"></a><a name="m_bautodelete"></a>CWinThread::m_bAutoDelete  
+##  <a name="m_bautodelete"></a>CWinThread::m_bAutoDelete  
  Указывает, является ли `CWinThread` объекта будет автоматически удален при завершении потока.  
   
 ```  
@@ -271,7 +294,7 @@ BOOL m_bAutoDelete;
   
  Значение `m_bAutoDelete` не влияет на способ закрытия базовый дескриптор потока. Дескриптор потока всегда закрывается, когда `CWinThread` объект уничтожается.  
   
-##  <a name="a-namemhthreada--cwinthreadmhthread"></a><a name="m_hthread"></a>CWinThread::m_hThread  
+##  <a name="m_hthread"></a>CWinThread::m_hThread  
  Дескриптор потока, присоединенные к этому `CWinThread`.  
   
 ```  
@@ -281,7 +304,7 @@ HANDLE m_hThread;
 ### <a name="remarks"></a>Примечания  
  `m_hThread` Член данных — это открытая переменная типа `HANDLE`. Допустимо только если основной поток в настоящее время существует.  
   
-##  <a name="a-namemnthreadida--cwinthreadmnthreadid"></a><a name="m_nthreadid"></a>CWinThread::m_nThreadID  
+##  <a name="m_nthreadid"></a>CWinThread::m_nThreadID  
  Идентификатор потока, присоединенные к этому `CWinThread`.  
   
 ```  
@@ -294,7 +317,7 @@ DWORD m_nThreadID;
 ### <a name="example"></a>Пример  
   В примере показано [AfxGetThread](application-information-and-management.md#afxgetthread).  
   
-##  <a name="a-namempactivewnda--cwinthreadmpactivewnd"></a><a name="m_pactivewnd"></a>CWinThread::m_pActiveWnd  
+##  <a name="m_pactivewnd"></a>CWinThread::m_pActiveWnd  
  Используйте этот элемент данных для хранения указатель на объект активного окна вашего потока.  
   
 ```  
@@ -306,7 +329,7 @@ CWnd* m_pActiveWnd;
   
  Как правило, задать переменную-член при переопределении `InitInstance`. Значение этого элемента данных в рабочем потоке, наследуется от родительского потока.  
   
-##  <a name="a-namempmainwnda--cwinthreadmpmainwnd"></a><a name="m_pmainwnd"></a>CWinThread::m_pMainWnd  
+##  <a name="m_pmainwnd"></a>CWinThread::m_pMainWnd  
  Используйте этот элемент данных для хранения указатель на объект главного окна вашего потока.  
   
 ```  
@@ -318,7 +341,7 @@ CWnd* m_pMainWnd;
   
  Как правило, задать переменную-член при переопределении `InitInstance`. Значение этого элемента данных в рабочем потоке, наследуется от родительского потока.  
   
-##  <a name="a-nameonidlea--cwinthreadonidle"></a><a name="onidle"></a>CWinThread::OnIdle  
+##  <a name="onidle"></a>CWinThread::OnIdle  
  Переопределите эту функцию-член для выполнения обработки времени простоя.  
   
 ```  
@@ -343,7 +366,7 @@ virtual BOOL OnIdle(LONG lCount);
   
  Поскольку приложение не удается обработать сообщения до `OnIdle` возвращает, не выполняют продолжительных задач в этой функции.  
   
-##  <a name="a-nameoperatorhandlea--cwinthreadoperator-handle"></a><a name="operator_handle"></a>CWinThread::operator ДЕСКРИПТОРА  
+##  <a name="operator_handle"></a>CWinThread::operator ДЕСКРИПТОРА  
  Получает дескриптор `CWinThread` объекта.  
   
 ```  
@@ -356,7 +379,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Примечания  
  С помощью маркера напрямую вызывать API-интерфейсов Windows.  
   
-##  <a name="a-namepostthreadmessagea--cwinthreadpostthreadmessage"></a><a name="postthreadmessage"></a>CWinThread::PostThreadMessage  
+##  <a name="postthreadmessage"></a>CWinThread::PostThreadMessage  
  Вызван для учета определенное пользователем сообщение в другой `CWinThread` объекта.  
   
 ```  
@@ -385,7 +408,7 @@ BOOL PostThreadMessage(
 > [!NOTE]
 >  При вызове Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) функции в приложении MFC сообщений MFC, обработчики не вызываются. Дополнительные сведения см. в статье базы знаний «PRB: MFC сообщение обработчик не вызывается с PostThreadMessage()» (Q142415).  
   
-##  <a name="a-namepretranslatemessagea--cwinthreadpretranslatemessage"></a><a name="pretranslatemessage"></a>CWinThread::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CWinThread::PreTranslateMessage  
  Переопределить эту функцию для фильтрации окна сообщений перед их отправкой в функции Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).  
   
 ```  
@@ -402,7 +425,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член используется только в потоках пользовательского интерфейса.  
   
-##  <a name="a-nameprocessmessagefiltera--cwinthreadprocessmessagefilter"></a><a name="processmessagefilter"></a>CWinThread::ProcessMessageFilter  
+##  <a name="processmessagefilter"></a>CWinThread::ProcessMessageFilter  
  Функция-ловушка framework вызывает эту функцию-член для фильтрации и отвечать на определенные сообщения Windows.  
   
 ```  
@@ -426,7 +449,7 @@ virtual BOOL ProcessMessageFilter(
   
  Если переопределить это дополнительная функция, необходимо вызвать версию базового класса для поддержания framework подключить обработки.  
   
-##  <a name="a-nameprocesswndprocexceptiona--cwinthreadprocesswndprocexception"></a><a name="processwndprocexception"></a>CWinThread::ProcessWndProcException  
+##  <a name="processwndprocexception"></a>CWinThread::ProcessWndProcException  
  Платформа вызывает эту функцию-член, всякий раз, когда обработчик не перехватывает исключение, создаваемое в одном из вашего потока сообщений или обработчиков команд.  
   
 ```  
@@ -459,7 +482,7 @@ virtual LRESULT ProcessWndProcException(
   
  Эта функция-член используется только в потоках, которые содержит цикл обработки сообщений.  
   
-##  <a name="a-namepumpmessagea--cwinthreadpumpmessage"></a><a name="pumpmessage"></a>CWinThread::PumpMessage  
+##  <a name="pumpmessage"></a>CWinThread::PumpMessage  
  Содержит цикл обработки сообщений потока.  
   
 ```  
@@ -471,7 +494,7 @@ virtual BOOL PumpMessage();
   
  Вызов `PumpMessage` напрямую и переопределение поведения по умолчанию рекомендуется только опытным пользователям.  
   
-##  <a name="a-nameresumethreada--cwinthreadresumethread"></a><a name="resumethread"></a>CWinThread::ResumeThread  
+##  <a name="resumethread"></a>CWinThread::ResumeThread  
  Чтобы возобновить выполнение потока, который был приостановлен, [SuspendThread](#suspendthread) функции-члена или в потоке, созданном с **CREATE_SUSPENDED** флаг.  
   
 ```  
@@ -484,7 +507,7 @@ DWORD ResumeThread();
 ### <a name="remarks"></a>Примечания  
  Счетчик приостановки текущего потока уменьшается на единицу. Если уменьшить счетчик приостановок, равное нулю, поток возобновляет выполнение; в противном случае поток приостанавливается.  
   
-##  <a name="a-nameruna--cwinthreadrun"></a><a name="run"></a>CWinThread::Run  
+##  <a name="run"></a>CWinThread::Run  
  Обеспечивает цикла сообщений по умолчанию для потоков пользовательского интерфейса.  
   
 ```  
@@ -501,7 +524,7 @@ virtual int Run();
   
  Эта функция-член используется только в потоках пользовательского интерфейса.  
   
-##  <a name="a-namesetthreadprioritya--cwinthreadsetthreadpriority"></a><a name="setthreadpriority"></a>CWinThread::SetThreadPriority  
+##  <a name="setthreadpriority"></a>CWinThread::SetThreadPriority  
  Эта функция задает уровень приоритета текущего потока, внутри своего класса приоритета.  
   
 ```  
@@ -534,7 +557,7 @@ BOOL SetThreadPriority(int nPriority);
 ### <a name="remarks"></a>Примечания  
  Может вызываться только после [CreateThread](#createthread) успешно возвращает.  
   
-##  <a name="a-namesuspendthreada--cwinthreadsuspendthread"></a><a name="suspendthread"></a>CWinThread::SuspendThread  
+##  <a name="suspendthread"></a>CWinThread::SuspendThread  
  Увеличивает текущий счетчик приостановок потока.  
   
 ```  

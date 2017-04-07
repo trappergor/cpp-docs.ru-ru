@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::index
+- AMP/index
+- AMP/Concurrency::index::index
+- AMP/Concurrency::index::rank
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 55a44499ca9bbd5149a4528a31c1417b60ba7fa3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 52c19da3cb8de10c3963ca3b795cac1babb3dc7a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="index-class"></a>Класс index
@@ -65,15 +67,15 @@ class index;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор — оператор](#operator--)|Уменьшает значение каждого элемента `index` объекта.|  
-|[Operator(MOD) =-оператор](#operator_mod_eq)|Вычисляет остаток (остаток от деления) каждого элемента в `index` объекта при делении на номер элемента.|  
-|[оператор * =-оператор](#operator_star_eq)|Умножает каждый элемент `index` объекта числом.|  
-|[оператор / =-оператор](#operator_div_eq)|Делит каждый элемент `index` объекта числом.|  
+|[оператор--](#operator--)|Уменьшает значение каждого элемента `index` объекта.|  
+|[Operator(MOD) =](#operator_mod_eq)|Вычисляет остаток (остаток от деления) каждого элемента в `index` объекта при делении на номер элемента.|  
+|[оператор*=](#operator_star_eq)|Умножает каждый элемент `index` объекта числом.|  
+|[оператор/=](#operator_div_eq)|Делит каждый элемент `index` объекта числом.|  
 |[index::operator\[\]](#operator_at)|Возвращает элемент, который находится по указанному индексу.|  
-|[operator ++ оператор](#operator_add_add)|Увеличивает значение каждого элемента `index` объекта.|  
-|[Оператор += оператор](#operator_add_eq)|Добавляет указанный номер каждого элемента `index` объекта.|  
-|[оператор =-оператор](#operator_eq)|Копирует содержимое указанного `index` объекта в другой.|  
-|[оператор-= оператор](#operator_-_eq)|Вычитает из каждого элемента заданного числа `index` объекта.|  
+|[оператор++](#operator_add_add)|Увеличивает значение каждого элемента `index` объекта.|  
+|[оператор+=](#operator_add_eq)|Добавляет указанный номер каждого элемента `index` объекта.|  
+|[operator=](#operator_eq)|Копирует содержимое указанного `index` объекта в другой.|  
+|[оператор-=](#operator_-_eq)|Вычитает из каждого элемента заданного числа `index` объекта.|  
 
   
 ### <a name="public-constants"></a>Открытые константы  
@@ -86,7 +88,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>Примечания  
- `index` Структуры представляет собой координат вектор *N* целых чисел, указывающий уникальное положение в *N*-двухмерном пространстве. Значения в объекте vector упорядочиваются от наиболее важных до наименее важных. Можно извлечь значения компоненты с помощью [operator =-оператор](#operator_eq).  
+ `index` Структуры представляет собой координат вектор *N* целых чисел, указывающий уникальное положение в *N*-двухмерном пространстве. Значения в объекте vector упорядочиваются от наиболее важных до наименее важных. Можно извлечь значения компоненты с помощью [оператор =](#operator_eq).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок** : amp.h  
@@ -94,7 +96,7 @@ class index;
  **Пространство имен** : Concurrency  
 
 
-## <a name="a-nameindexctora-index-constructor"></a><a name="index_ctor"></a>Индекс конструктора
+## <a name="index_ctor"></a>Индекс конструктора
 Инициализирует новый экземпляр класса индекса.
 
 ```  
@@ -139,7 +141,7 @@ _I2
 _Other  
 Индекс объекта, на котором основан новый объект индекса.  
 
-## <a name="a-nameoperator--a--operator--"></a><a name="operator--"></a>оператор--
+## <a name="operator--"></a>оператор--
 Уменьшает на единицу каждый элемент объекта индекса.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -151,7 +153,7 @@ index operator--(
 ### <a name="return-values"></a>Возвращаемые значения
 Для оператора префикс объект индекса (* это). Для оператора суффикс новый объект индекса.
 
-## <a name="a-nameoperatormodeqa--operatormod"></a><a name="operator_mod_eq"></a>Operator(MOD) =   
+## <a name="operator_mod_eq"></a>Operator(MOD) =   
 Вычисляет остаток (остаток от деления) каждого элемента в объекте индекса при делении на указанное число этого элемента.
 
 ```  
@@ -163,7 +165,7 @@ index<_Rank>& operator%=(
 _Rhs число-знаменатель, чтобы найти остаток.
 Возвращаемое значение индекса объекта.
 
-## <a name="a-nameoperatorstareqa--operator"></a><a name="operator_star_eq"></a>оператор * =   
+## <a name="operator_star_eq"></a>оператор * =   
 Умножает каждый элемент в объект индекса на указанное число.
 ```
 index<_Rank>& operator*=(
@@ -174,7 +176,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Параметры
 _Rhs число для перемножения.
 
-## <a name="a-nameoperatordiveqa--operator"></a><a name="operator_div_eq"></a>оператор / = 
+## <a name="operator_div_eq"></a>оператор / = 
 Делит каждый элемент в объект индекса заданного числа.
 
 ```
@@ -185,7 +187,7 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>Параметры
 _Rhs число-знаменатель.
 
-## <a name="a-nameoperatorata--operator"></a><a name="operator_at"></a> operator\[\]  
+## <a name="operator_at"></a> operator\[\]  
 Возвращает компонент в указанном расположении индекса.
 
 ```
@@ -214,7 +216,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="a-nameoperatoraddadda--operator"></a><a name="operator_add_add"></a>Operator ++   
+## <a name="operator_add_add"></a>Operator ++   
 Увеличивает значение каждого элемента объекта индекса.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -226,7 +228,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>Возвращаемое значение
 Для оператора префикс объект индекса (* это). Для оператора суффикс новый объект индекса.
 
-## <a name="a-nameoperatoraddeqa--operator"></a><a name="operator_add_eq"></a>оператор +=   
+## <a name="operator_add_eq"></a>оператор +=   
 Добавляет заданное число для каждого элемента объекта индекса.
 ```  
 index<_Rank>& operator+=(
@@ -243,7 +245,7 @@ _Rhs число для сложения.
 ### <a name="return-value"></a>Возвращаемое значение
 Объект индекса.
 
-## <a name="a-nameoperatoreqa--operator"></a><a name="operator_eq"></a>  оператор=   
+## <a name="operator_eq"></a>  оператор=   
 Копирует содержимое объекта указанного индекса в другой.
 ```  
 index<_Rank>& operator=(
@@ -256,7 +258,7 @@ index<_Rank>& operator=(
 ### <a name="return-value"></a>Возвращаемое значение
 Ссылка на этот объект индекса.
 
-## <a name="a-nameoperator-eqa--operator-"></a><a name="operator_-_eq"></a>оператор-=
+## <a name="operator_-_eq"></a>оператор-=
 Вычитает указанный номер из каждого элемента объекта индекса.
 ```  
 index<_Rank>& operator-=(
@@ -273,7 +275,7 @@ _Rhs числа для вычитания.
 ### <a name="return-value"></a>Возвращаемое значение
 Объект индекса.   
 
-## <a name="a-nameranka--rank"></a><a name="rank"></a>Ранг  
+## <a name="rank"></a>Ранг  
   Возвращает ранг объекта индекса.
 ```
 static const int rank = _Rank;

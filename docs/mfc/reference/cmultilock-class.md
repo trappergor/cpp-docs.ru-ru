@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiLock
+- AFXMT/CMultiLock
+- AFXMT/CMultiLock::CMultiLock
+- AFXMT/CMultiLock::IsLocked
+- AFXMT/CMultiLock::Lock
+- AFXMT/CMultiLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CMultiLock
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmt.h  
   
-##  <a name="a-namecmultilocka--cmultilockcmultilock"></a><a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
  Создает **CMultiLock** объекта.  
   
 ```  
@@ -105,7 +110,7 @@ CMultiLock(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается после создания массива объектов синхронизации для ожидания на. Она обычно вызывается из потока, который необходимо дождаться один из объектов синхронизации станет доступным.  
   
-##  <a name="a-nameislockeda--cmultilockislocked"></a><a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>CMultiLock::IsLocked  
  Определяет, является ли указанный объект несигнальное (недоступно).  
   
 ```  
@@ -119,7 +124,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если указанный объект заблокирован; в противном случае — 0.  
   
-##  <a name="a-namelocka--cmultilocklock"></a><a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>CMultiLock::Lock  
  Эта функция вызывается для получения доступа к одной или нескольким ресурсы, управляемые объекты синхронизации, передаваемые **CMultiLock** конструктор.  
   
 ```  
@@ -163,7 +168,7 @@ DWORD Lock(
   
  Если `Lock` не может возвращать значение немедленно, он будет ожидать не более указанного числа миллисекунд в *dwTimeOut* параметр перед возвратом. Если *dwTimeOut* — **БЕСКОНЕЧНЫЙ**, `Lock` не возвращается до получили доступ к объекту или условия, указанного в `dwWakeMask` было выполнено. В противном случае, если `Lock` была возможность получения объекта синхронизации, то возвращается успешно; в противном случае возвращается ошибка.  
   
-##  <a name="a-nameunlocka--cmultilockunlock"></a><a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>CMultiLock::Unlock  
  Освобождает объект синхронизации, принадлежащий `CMultiLock`.  
   
 ```  

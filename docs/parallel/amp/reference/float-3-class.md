@@ -102,9 +102,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 9e1225c724d2c89dd2a6c4158446b6a4df195f6c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2cd5e44d60ce02a1acf781812a0cc72e1e7657cf
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float3-class"></a>Класс float_3
@@ -134,55 +134,55 @@ class float_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод float_3::get_X||  
-|Метод float_3::get_xy||  
-|Метод float_3::get_xyz||  
-|Метод float_3::get_xz||  
-|Метод float_3::get_xzy||  
-|Метод float_3::get_y||  
-|Метод float_3::get_yx||  
-|Метод float_3::get_yxz||  
-|Метод float_3::get_yz||  
-|Метод float_3::get_yzx||  
-|Метод float_3::get_z||  
-|Метод float_3::get_zx||  
-|Метод float_3::get_zxy||  
-|Метод float_3::get_zy||  
-|Метод float_3::get_zyx||  
-|Метод float_3::ref_b||  
-|Метод float_3::ref_g||  
-|Метод float_3::ref_r||  
-|Метод float_3::ref_x||  
-|Метод float_3::ref_y||  
-|Метод float_3::ref_z||  
-|Метод float_3::set_X||  
-|Метод float_3::set_xy||  
-|Метод float_3::set_xyz||  
-|Метод float_3::set_xz||  
-|Метод float_3::set_xzy||  
-|Метод float_3::set_y||  
-|Метод float_3::set_yx||  
-|Метод float_3::set_yxz||  
-|Метод float_3::set_yz||  
-|Метод float_3::set_yzx||  
-|Метод float_3::set_z||  
-|Метод float_3::set_zx||  
-|Метод float_3::set_zxy||  
-|Метод float_3::set_zy||  
-|Метод float_3::set_zyx||  
+|float_3::get_X||  
+|float_3::get_xy||  
+|float_3::get_xyz||  
+|float_3::get_xz||  
+|float_3::get_xzy||  
+|float_3::get_y||  
+|float_3::get_yx||  
+|float_3::get_yxz||  
+|float_3::get_yz||  
+|float_3::get_yzx||  
+|float_3::get_z||  
+|float_3::get_zx||  
+|float_3::get_zxy||  
+|float_3::get_zy||  
+|float_3::get_zyx||  
+|float_3::ref_b||  
+|float_3::ref_g||  
+|float_3::ref_r||  
+|float_3::ref_x||  
+|float_3::ref_y||  
+|float_3::ref_z||  
+|float_3::set_X||  
+|float_3::set_xy||  
+|float_3::set_xyz||  
+|float_3::set_xz||  
+|float_3::set_xzy||  
+|float_3::set_y||  
+|float_3::set_yx||  
+|float_3::set_yxz||  
+|float_3::set_yz||  
+|float_3::set_yzx||  
+|float_3::set_z||  
+|float_3::set_zx||  
+|float_3::set_zxy||  
+|float_3::set_zy||  
+|float_3::set_zyx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|float_3::operator оператор||  
-|float_3::operator - оператор||  
-|float_3::operator * =-оператор||  
-|float_3::operator / =-оператор||  
-|float_3::operator оператор ++||  
-|Оператор += float_3::operator||  
-|float_3::operator =-оператор||  
-|float_3::operator-= оператор||  
+|float_3::operator-||  
+|float_3::operator--||  
+|float_3::operator * =||  
+|float_3::operator / =||  
+|float_3::operator ++||  
+|float_3::operator +=||  
+|float_3::operator =||  
+|float_3::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -194,36 +194,36 @@ class float_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных float_3::b||  
-|Элемент данных float_3::BG||  
-|Элемент данных float_3::bgr||  
-|Элемент данных float_3::br||  
-|Элемент данных float_3::brg||  
-|Элемент данных float_3::g||  
-|Элемент данных float_3::GB||  
-|Элемент данных float_3::GBR||  
-|Элемент данных float_3::GR||  
-|Элемент данных float_3::grb||  
-|Элемент данных float_3::r||  
-|Элемент данных float_3::RB||  
-|Элемент данных float_3::rbg||  
-|Элемент данных float_3::RG||  
-|Элемент данных float_3::RGB||  
-|Элемент данных float_3::x||  
-|Элемент данных float_3::XY||  
-|Элемент данных float_3::xyz||  
-|Элемент данных float_3::xz||  
-|Элемент данных float_3::xzy||  
-|Элемент данных float_3::y||  
-|Элемент данных float_3::YX||  
-|Элемент данных float_3::yxz||  
-|Элемент данных float_3::yz||  
-|Элемент данных float_3::yzx||  
-|Элемент данных float_3::z||  
-|Элемент данных float_3::zx||  
-|Элемент данных float_3::zxy||  
-|Элемент данных float_3::zy||  
-|Элемент данных float_3::zyx||  
+|float_3::b||  
+|float_3::BG||  
+|float_3::bgr||  
+|float_3::br||  
+|float_3::brg||  
+|float_3::g||  
+|float_3::GB||  
+|float_3::GBR||  
+|float_3::GR||  
+|float_3::grb||  
+|float_3::r||  
+|float_3::RB||  
+|float_3::rbg||  
+|float_3::RG||  
+|float_3::RGB||  
+|float_3::x||  
+|float_3::XY||  
+|float_3::xyz||  
+|float_3::xz||  
+|float_3::xzy||  
+|float_3::y||  
+|float_3::YX||  
+|float_3::yxz||  
+|float_3::yz||  
+|float_3::yzx||  
+|float_3::z||  
+|float_3::zx||  
+|float_3::zxy||  
+|float_3::zy||  
+|float_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `float_3`  
@@ -233,7 +233,7 @@ class float_3;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-float3"></a><a name="ctor"></a>float_3 
+##  <a name="ctor"></a>float_3 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -300,12 +300,12 @@ explicit inline float_3(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-namefloat3sizea-size"></a><a name="float_3__size"></a>размер 
+##  <a name="float_3__size"></a>размер 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

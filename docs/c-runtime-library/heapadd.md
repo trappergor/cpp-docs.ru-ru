@@ -50,9 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4d2f5694ad2f06bf78307783d8f24c34bb0849df
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c1a72c382d0df6d667ca97a45c6783c928f6ae98
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="heapadd"></a>_heapadd
@@ -92,9 +92,6 @@ int _heapadd(
 |`_heapadd`|\<malloc.h>|\<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Выделение памяти](../c-runtime-library/memory-allocation.md)   

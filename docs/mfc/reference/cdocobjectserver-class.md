@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServer
+- AFXDOCOB/CDocObjectServer
+- AFXDOCOB/CDocObjectServer::CDocObjectServer
+- AFXDOCOB/CDocObjectServer::ActivateDocObject
+- AFXDOCOB/CDocObjectServer::OnActivateView
+- AFXDOCOB/CDocObjectServer::OnApplyViewState
+- AFXDOCOB/CDocObjectServer::OnSaveViewState
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +104,7 @@ class CDocObjectServer : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdocob.h  
   
-##  <a name="a-nameactivatedocobjecta--cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
+##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
  Эта функция вызывается для активации (но не показывать) сервера объект документа.  
   
 ```  
@@ -110,7 +116,7 @@ void ActivateDocObject();
   
  Вместе `ActivateDocObject` и `OnActivateView` активации и отобразить представление DocObject. Активация DocObject отличается от других видов активации на месте OLE. Активации DocObject обходит отображения границы штриховки на месте и оформления объекта (например, маркеров), игнорирует функции экстент объектов и рисует полосы прокрутки прямоугольника представление, в отличие от их рисования за границы этого прямоугольника (как в обычном активации на месте).  
   
-##  <a name="a-namecdocobjectservera--cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
+##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
  Создает и инициализирует объект `CDocObjectServer`.  
   
 ```  
@@ -129,7 +135,7 @@ explicit CDocObjectServer(
 ### <a name="remarks"></a>Примечания  
  При активном DocObject клиента сайта OLE-интерфейс ( `IOleDocumentSite`) является то, что позволяет серверу DocObject для связи с его клиентом (контейнера). Когда сервер DocObject активируется, сначала она проверяет, что контейнер реализует `IOleDocumentSite` интерфейса. В этом случае [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) вызывается, чтобы узнать, поддерживает ли контейнер DocObjects. По умолчанию `GetDocObjectServer` возвращает **NULL**. Необходимо переопределить `COleServerDoc::GetDocObjectServer` для создания нового `CDocObjectServer` объекта или производного объекта собственные, с помощью указателей на `COleServerDoc` контейнера и его `IOleDocumentSite` интерфейс в качестве аргументов, передаваемых конструктору.  
   
-##  <a name="a-nameonactivateviewa--cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObjectServer::OnActivateView  
+##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
  Эта функция вызывается для отображения представления DocObject.  
   
 ```  
@@ -142,7 +148,7 @@ virtual HRESULT OnActivateView();
 ### <a name="remarks"></a>Примечания  
  Эта функция создает окно фрейма на месте, рисует полосы прокрутки в представлении, настраивает меню сервере совместно с его контейнером, добавляет элементы управления frame, задает активный объект затем наконец показано окно фрейма на месте и с фокусом.  
   
-##  <a name="a-nameonapplyviewstatea--cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
+##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
  Переопределите эту функцию для восстановления состояния представления DocObject.  
   
 ```  
@@ -158,7 +164,7 @@ virtual void OnApplyViewState(CArchive& ar);
   
  Можно использовать `OnSaveViewState` для хранения постоянных информации состояния представления элемента. При переопределении `OnSaveViewState` для хранения информации, необходимо переопределить `OnApplyViewState` прочитать эту информацию и применять его для просмотра, когда вновь активируется.  
   
-##  <a name="a-nameonsaveviewstatea--cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
+##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
  Переопределите эту функцию для сохранения сведений о представлении DocObject дополнительный состоянии.  
   
 ```  

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandUI
+- AFXWINFORMS/ICommandUI
+- AFXWINFORMS/icommandui__Check
+- AFXWINFORMS/ICommandUI::ContinueRouting
+- AFXWINFORMS/ICommandUI::Enabled
+- AFXWINFORMS/ICommandUI::ID
+- AFXWINFORMS/ICommandUI::Index
+- AFXWINFORMS/ICommandUI::Radio
+- AFXWINFORMS/ICommandUI::Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +81,7 @@ interface class ICommandUI
   
  Дополнительные сведения об управлении команд пользовательского интерфейса в MFC см. в разделе [CCmdUI-класс](../../mfc/reference/ccmdui-class.md).  
   
-## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+## <a name="check"></a>ICommandUI::Check  
 Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.
 ```
 property UICheckState Check;
@@ -84,7 +92,7 @@ property UICheckState Check;
 - Проверка&1;  
 - Неопределенное значение&2;  
 
-## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
 Указывает механизму маршрутизации команд для продолжения рассылки текущее сообщение по цепочке обработчиков.
 ```
 void ContinueRouting();
@@ -92,7 +100,7 @@ void ContinueRouting();
 ## <a name="remarks"></a>Примечания
 Это функция-член дополнительно, следует использовать в сочетании с обработчиком ON_COMMAND_EX, который возвращает значение FALSE. Дополнительные сведения см. в разделе технических TN006 Примечание: схемы сообщений.
 
-## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+## <a name="enabled"></a>ICommandUI::Enabled 
 Включает или отключает элемент интерфейса пользователя для этой команды.
 ```
 property bool Enabled;
@@ -100,7 +108,7 @@ property bool Enabled;
 ## <a name="remarks"></a>Примечания
 Это свойство включает или отключает элемент интерфейса пользователя для этой команды. Включено в значение true, чтобы включить элемент, значение FALSE, чтобы отключить его.
 
-## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+## <a name="id"></a>ICommandUI::ID  
 Возвращает идентификатор объекта интерфейса пользователя, представленного объектом ICommandUI.
 ```
 property unsigned int ID;
@@ -108,7 +116,7 @@ property unsigned int ID;
 ## <a name="remarks"></a>Примечания
 Это свойство возвращает идентификатор элемента меню, кнопки панели инструментов или другой объект интерфейса пользователя, представленный объектом ICommandUI (дескриптор).
 
-## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+## <a name="index"></a>ICommandUI::Index   
 Возвращает индекс объекта интерфейса пользователя, представленного объектом ICommandUI.
 ```
 property unsigned int Index;
@@ -116,7 +124,7 @@ property unsigned int Index;
 ## <a name="remarks"></a>Примечания
 Это свойство возвращает индекс (дескриптор) элемент меню, кнопки панели инструментов или другой объект интерфейса пользователя, представленный объектом ICommandUI.
 
-## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+## <a name="radio"></a>ICommandUI::Radio 
 Задает состояние соответствующего флажка элемента интерфейса пользователя для этой команды.
 ```
 property bool Radio;
@@ -124,7 +132,7 @@ property bool Radio;
 ## <a name="remarks"></a>Примечания
 Это свойство задает элемент интерфейса пользователя для этой команды для соответствующих проверки состояния. Установите переключатель в true, чтобы включить элемент; в противном случае — значение FALSE.
 
-## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+## <a name="text"></a>ICommandUI::Text 
 Задает текст элемента интерфейса пользователя для этой команды.
 ```
 property String^ Text;

@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ff9cb756ca17633aa90e2f35c6f6f02da6cc884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f37610aa77cb17fa574444cec43465ffc5ba3498
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm2-class"></a>Класс norm_2
@@ -88,31 +88,31 @@ class norm_2;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод norm_2::get_X||  
-|Метод norm_2::get_xy||  
-|Метод norm_2::get_y||  
-|Метод norm_2::get_yx||  
-|Метод norm_2::ref_g||  
-|Метод norm_2::ref_r||  
-|Метод norm_2::ref_x||  
-|Метод norm_2::ref_y||  
-|Метод norm_2::set_X||  
-|Метод norm_2::set_xy||  
-|Метод norm_2::set_y||  
-|Метод norm_2::set_yx||  
+|norm_2::get_X||  
+|norm_2::get_xy||  
+|norm_2::get_y||  
+|norm_2::get_yx||  
+|norm_2::ref_g||  
+|norm_2::ref_r||  
+|norm_2::ref_x||  
+|norm_2::ref_y||  
+|norm_2::set_X||  
+|norm_2::set_xy||  
+|norm_2::set_y||  
+|norm_2::set_yx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|norm_2::operator оператор||  
-|norm_2::operator - оператор||  
-|norm_2::operator * =-оператор||  
-|norm_2::operator / =-оператор||  
-|norm_2::operator оператор ++||  
-|Оператор += norm_2::operator||  
-|norm_2::operator =-оператор||  
-|norm_2::operator-= оператор||  
+|norm_2::operator-||  
+|norm_2::operator--||  
+|norm_2::operator * =||  
+|norm_2::operator / =||  
+|norm_2::operator ++||  
+|norm_2::operator +=||  
+|norm_2::operator =||  
+|norm_2::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -124,14 +124,14 @@ class norm_2;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных norm_2::g||  
-|Элемент данных norm_2::GR||  
-|Элемент данных norm_2::r||  
-|Элемент данных norm_2::RG||  
-|Элемент данных norm_2::x||  
-|Элемент данных norm_2::XY||  
-|Элемент данных norm_2::y||  
-|Элемент данных norm_2::YX||  
+|norm_2::g||  
+|norm_2::GR||  
+|norm_2::r||  
+|norm_2::RG||  
+|norm_2::x||  
+|norm_2::XY||  
+|norm_2::y||  
+|norm_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `norm_2`  
@@ -141,7 +141,7 @@ class norm_2;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-norm2"></a><a name="ctor"></a>norm_2 
+##  <a name="ctor"></a>norm_2 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -221,12 +221,12 @@ explicit inline norm_2(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-namenorm2sizea-size"></a><a name="norm_2__size"></a>размер 
+##  <a name="norm_2__size"></a>размер 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

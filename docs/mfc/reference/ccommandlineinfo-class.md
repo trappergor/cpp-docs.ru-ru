@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
+- AFXWIN/CCommandLineInfo
+- AFXWIN/CCommandLineInfo::CCommandLineInfo
+- AFXWIN/CCommandLineInfo::ParseParam
+- AFXWIN/CCommandLineInfo::m_bRunAutomated
+- AFXWIN/CCommandLineInfo::m_bRunEmbedded
+- AFXWIN/CCommandLineInfo::m_bShowSplash
+- AFXWIN/CCommandLineInfo::m_nShellCommand
+- AFXWIN/CCommandLineInfo::m_strDriverName
+- AFXWIN/CCommandLineInfo::m_strFileName
+- AFXWIN/CCommandLineInfo::m_strPortName
+- AFXWIN/CCommandLineInfo::m_strPrinterName
+- AFXWIN/CCommandLineInfo::m_strRestartIdentifier
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,9 +51,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cb8cd58e4e7cf0318b8826cf473739e26e730273
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: a5b104e4ad0a0b9ce1933e7d8057f4d0fae46b77
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ccommandlineinfo-class"></a>Класс CCommandLineInfo
@@ -71,8 +83,8 @@ class CCommandLineInfo : public CObject
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Указывает командной строки **/Automation** обнаружен параметр.|  
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Указывает командной строки **и внедрение** обнаружен параметр.|  
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Указывает командной строки `/Automation` обнаружен параметр.|  
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Указывает командной строки `/Embedding` обнаружен параметр.|  
 |[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Указывает, должен ли отображаться экран-заставку.|  
 |[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Указывает команду оболочки для обработки.|  
 |[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Указывает драйверу имя, если команда shell — печати; в противном случае — пустой.|  
@@ -90,13 +102,13 @@ class CCommandLineInfo : public CObject
 |----------------------------|----------------------|  
 |*app*|Новый файл.|  
 |*приложение* имя файла|Открытие файла.|  
-|*приложение* **/p** имя файла|Печать файла на принтер по умолчанию.|  
-|*приложение* **/pt** filename порт драйвера принтера|Печать файла на указанный принтер.|  
-|*app* **/dde**|Запустите и await команд DDE.|  
-|*приложение*  ** /Automation**|Запустить как сервер OLE-автоматизации.|  
-|*приложение* **и внедрение**|Запустите изменение встроенного элемента OLE.|  
-|*приложение*  ** /Register**<br /><br /> *приложение*  ** /regserver**|Информирует приложение для выполнения любых задач регистрации.|  
-|*приложение* **/ Unregister**<br /><br /> *приложение* **/Unregserver**|Информирует приложение для выполнения любых задач отмены регистрации.|  
+|*приложение* `/p` имя файла|Печать файла на принтер по умолчанию.|  
+|*приложение* `/pt` filename порта драйвера принтера|Печать файла на указанный принтер.|  
+|*app*`/dde`|Запустите и await команд DDE.|  
+|*app*`/Automation`|Запустить как сервер OLE-автоматизации.|  
+|*app*`/Embedding`|Запустите изменение встроенного элемента OLE.|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|Информирует приложение для выполнения любых задач регистрации.|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Информирует приложение для выполнения любых задач для отмены регистрации.|  
   
  Наследовать новый класс из `CCommandLineInfo` обрабатывать другие флаги и значения параметров. Переопределение [ParseParam](#parseparam) для обработки новых флагов.  
   
@@ -108,7 +120,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameccommandlineinfoa--ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
  Этот конструктор создает `CCommandLineInfo` объектов со значениями по умолчанию.  
   
 ```  
@@ -116,34 +128,34 @@ CCommandLineInfo();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Значение по умолчанию — для отображения экрана-заставки ( `m_bShowSplash` **= TRUE**) и для выполнения этой команды в меню File ( `m_nShellCommand` **= Создатьфайл**).  
+ Значение по умолчанию — для отображения экрана-заставки ( `m_bShowSplash=TRUE`) и для выполнения этой команды в меню File ( `m_nShellCommand` **= Создатьфайл**).  
   
  Приложение вызывает framework [ParseParam](#parseparam) для заполнения элементов данных этого объекта.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="a-namembrunautomateda--ccommandlineinfombrunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
- Указывает, что **/Automation** флаг был найден в командной строке.  
+##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+ Указывает, что `/Automation` флаг был найден в командной строке.  
   
 ```  
 BOOL m_bRunAutomated;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если **TRUE**, это означает, что запущен как сервер OLE-автоматизации.  
+ Если `TRUE`, это означает, что запущен как сервер OLE-автоматизации.  
   
-##  <a name="a-namembrunembeddeda--ccommandlineinfombrunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
- Указывает, что **и внедрение** флаг был найден в командной строке.  
+##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+ Указывает, что `/Embedding` флаг был найден в командной строке.  
   
 ```  
 BOOL m_bRunEmbedded;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если **TRUE**, это означает, что запущен для редактирования встроенного элемента OLE.  
+ Если `TRUE`, это означает, что запущен для редактирования встроенного элемента OLE.  
   
-##  <a name="a-namembshowsplasha--ccommandlineinfombshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  Задает отображение экрана-заставки.  
   
 ```  
@@ -151,9 +163,9 @@ BOOL m_bShowSplash;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если **TRUE**, это означает экран-заставку для этого приложения должен отображаться во время запуска. Реализация по умолчанию [ParseParam](#parseparam) устанавливает этот элемент данных **TRUE** Если [m_nShellCommand](#m_nshellcommand) равен **CCommandLineInfo::FileNew**.  
+ Если `TRUE`, это означает экран-заставку для этого приложения должен отображаться во время запуска. Реализация по умолчанию [ParseParam](#parseparam) устанавливает этот элемент данных `TRUE` Если [m_nShellCommand](#m_nshellcommand) равен `CCommandLineInfo::FileNew`.  
   
-##  <a name="a-namemnshellcommanda--ccommandlineinfomnshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  Указывает команду оболочки для этого экземпляра приложения.  
   
 ```  
@@ -163,27 +175,19 @@ m_nShellCommand;
 ### <a name="remarks"></a>Примечания  
  Тип для этого элемента данных является следующий тип перечисления, который определен в `CCommandLineInfo` класса.  
   
- `enum{`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `AppRegister,`  
-  
- `AppUnregister,`  
-  
- `RestartByRestartManager,`  
-  
- `FileNothing = -1`  
-  
- `};`  
+```  
+enum {  
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE,
+    AppRegister,
+    AppUnregister,
+    RestartByRestartManager,
+    FileNothing = -1  
+    };  
+```  
   
  Краткое описание этих значений см.  
   
@@ -208,7 +212,7 @@ m_nShellCommand;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView&#55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="a-namemstrdrivernamea--ccommandlineinfomstrdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
  Сохраняет значение третьего параметра без флага в командной строке.  
   
 ```  
@@ -216,9 +220,9 @@ CString m_strDriverName;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот параметр обычно является имя драйвера принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных **/pt** флаг был найден в командной строке.  
+ Этот параметр обычно является имя драйвера принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных `/pt` флаг был найден в командной строке.  
   
-##  <a name="a-namemstrfilenamea--ccommandlineinfomstrfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  Сохраняет значение первого параметра без флага в командной строке.  
   
 ```  
@@ -228,7 +232,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>Примечания  
  Этот параметр обычно является имя открываемого файла.  
   
-##  <a name="a-namemstrportnamea--ccommandlineinfomstrportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
  Сохраняет значение без флага четвертый параметр в командной строке.  
   
 ```  
@@ -236,9 +240,9 @@ CString m_strPortName;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот параметр обычно является имя порта принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных **/pt** флаг был найден в командной строке.  
+ Этот параметр обычно является имя порта принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных `/pt` флаг был найден в командной строке.  
   
-##  <a name="a-namemstrprinternamea--ccommandlineinfomstrprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  Сохраняет значение второго параметра без флага в командной строке.  
   
 ```  
@@ -246,9 +250,9 @@ CString m_strPrinterName;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот параметр обычно является имя принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных **/pt** флаг был найден в командной строке.  
+ Этот параметр обычно является имя принтера для печати на команду оболочки. Реализация по умолчанию [ParseParam](#parseparam) задает этот только если член данных `/pt` флаг был найден в командной строке.  
   
-##  <a name="a-namemstrrestartidentifiera--ccommandlineinfomstrrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  Уникальный перезапустите идентификатор в командной строке.  
   
 ```  
@@ -260,7 +264,7 @@ CString m_strRestartIdentifier;
   
  Если диспетчер перезапуска завершает работу приложения и настройки его диспетчер перезапуска выполняет приложение из командной строки с идентификатором перезапуска как необязательный параметр. Когда диспетчер перезапуска использует идентификатор перезапуска, приложение можно открыть ранее открытые документы и восстанавливать файлы автоматически сохраненная.  
   
-##  <a name="a-nameparseparama--ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
  Платформа вызывает эту функцию для синтаксического анализа и интерпретации отдельных параметров из командной строки. Вторая версия отличается от первого только в проектах Юникода.  
   
 ```  
@@ -287,27 +291,27 @@ virtual void ParseParam(
  Указывает, является ли это последний параметр или флаг в командной строке.  
   
 ### <a name="remarks"></a>Примечания  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) вызовов `ParseParam` один раз для каждого параметра или флаг в командной строке, передав аргумент `pszParam`. Если первый символ параметра " ** - **«или» ** / **", то он удаляется и *bFlag* задано значение **TRUE**. При синтаксическом анализе последний параметр, `bLast` равен **TRUE**.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) вызовов `ParseParam` один раз для каждого параметра или флаг в командной строке, передав аргумент `pszParam`. Если первый символ параметра " **-**«или» **/**", а затем оно удаляется и *bFlag* имеет значение `TRUE`. При синтаксическом анализе последний параметр, `bLast` равен `TRUE`.  
   
- Реализация по умолчанию эта функция распознает следующие флаги: **/p**, **/pt**, **/dde**, **/Automation**, и **и внедрение**, как показано в следующей таблице:  
+ Реализация по умолчанию эта функция распознает следующие флаги: `/p`, `/pt`, `/dde`, `/Automation`, и `/Embedding`, как показано в следующей таблице:  
   
 |Аргумент командной строки|Команда, выполняемая|  
 |----------------------------|----------------------|  
 |*app*|Новый файл.|  
 |*приложение* имя файла|Открытие файла.|  
-|*приложение* **/p** имя файла|Печать файла на принтер по умолчанию.|  
-|*приложение* **/pt** filename порт драйвера принтера|Печать файла на указанный принтер.|  
-|*app* **/dde**|Запустите и await команд DDE.|  
-|*приложение*  ** /Automation**|Запустить как сервер OLE-автоматизации.|  
-|*приложение* **и внедрение**|Запустите изменение встроенного элемента OLE.|  
-|*приложение*  ** /Register**<br /><br /> *приложение*  ** /regserver**|Информирует приложение для выполнения любых задач регистрации.|  
-|*приложение* **/ Unregister**<br /><br /> *приложение* **/Unregserver**|Информирует приложение для выполнения любых задач отмены регистрации.|  
+|*приложение* `/p` имя файла|Печать файла на принтер по умолчанию.|  
+|*приложение* `/pt` filename порта драйвера принтера|Печать файла на указанный принтер.|  
+|*app*`/dde`|Запустите и await команд DDE.|  
+|*app*`/Automation`|Запустить как сервер OLE-автоматизации.|  
+|*app*`/Embedding`|Запустите изменение встроенного элемента OLE.|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|Информирует приложение для выполнения любых задач регистрации.|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Информирует приложение для выполнения любых задач для отмены регистрации.|  
   
- Эти сведения хранятся в [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), и [m_nShellCommand](#m_nshellcommand). Флаги помечены либо прямой косой черты " ** / **«или дефиса» ** - **".  
+ Эти сведения хранятся в [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), и [m_nShellCommand](#m_nshellcommand). Флаги помечены либо прямой косой черты " **/**«или дефиса» **-**".  
   
- Реализация по умолчанию помещается в первый параметр без флага [m_strFileName](#m_strfilename). В случае использования **/pt** флаг, реализация по умолчанию помещает второй, третий и четвертый параметры без флага в [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), и [m_strPortName](#m_strportname)соответственно.  
+ Реализация по умолчанию помещается в первый параметр без флага [m_strFileName](#m_strfilename). В случае использования `/pt` флаг, реализация по умолчанию помещает второй, третий и четвертый параметры без флага в [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), и [m_strPortName](#m_strportname)соответственно.  
   
- Реализация по умолчанию также устанавливает [m_bShowSplash](#m_bshowsplash) для **TRUE** только в случае нового файла. В случае файл нового пользователя вступила в действие с участием самого приложения. Во всех остальных случаях, включая Открытие существующих файлов с помощью оболочки действия пользователя включает в себя файл напрямую. В документе зрения экран-заставка не требуется объявить о запуске приложения.  
+ Реализация по умолчанию также устанавливает [m_bShowSplash](#m_bshowsplash) для `TRUE` только в случае нового файла. В случае файл нового пользователя вступила в действие с участием самого приложения. Во всех остальных случаях, включая Открытие существующих файлов с помощью оболочки действия пользователя включает в себя файл напрямую. В документе зрения экран-заставка не требуется объявить о запуске приложения.  
   
  Переопределите эту функцию в производном классе для обработки других флага и значения параметров.  
   

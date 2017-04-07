@@ -51,9 +51,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: caab4bfb3d2228d037996ececc09faa06e90a3f2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 602f4460af0e08e6515fb4559bec2d49bbc56e75
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="setoutputformat"></a>_set_output_format
@@ -92,12 +92,9 @@ unsigned int _set_output_format(
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md) во введении.  
   
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
-  
 ## <a name="example"></a>Пример  
   
-```  
+```C  
 // crt_set_output_format.c  
 #include <stdio.h>  
   
@@ -147,5 +144,4 @@ int main()
   
 ## <a name="see-also"></a>См. также  
  [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [Символы поля типа printf](../c-runtime-library/printf-type-field-characters.md)   
  [_get_output_format](../c-runtime-library/get-output-format.md)

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fe4946a8d3785c6295cb7537de0a11e06cd7a1cc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3dd5d8dd77f2b62a6b0ea52e7d056b3d779cd2f4
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="exception-handling-routines"></a>Процедуры обработки исключений
@@ -44,13 +44,13 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="exception-handling-functions"></a>Функции обработки исключений  
   
-|Функция|Применение|Эквивалент .NET Framework|  
-|--------------|---------|-------------------------------|  
-|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Обрабатывает исключения Win32 (структурированные исключения C) как типизированные исключения C++|Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Установите собственную подпрограмму завершения, чтобы ее можно было вызвать с помощью функции `terminate`|Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Установите собственную функцию завершения, чтобы ее можно было вызвать с помощью функции `unexpected`|Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[terminate](../c-runtime-library/reference/terminate-crt.md)|Вызывается автоматически при определенных условиях после исключения. Эта функция `terminate` вызывает функцию `abort` или функцию, указанную с помощью `set_terminate`|Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Вызывает функцию `terminate` или функцию, заданную с помощью `set_unexpected`. Функция `unexpected` не используется в текущей реализации обработчика исключений Microsoft C++|[Класс System::Exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)|  
+|Функция|Применение|  
+|--------------|---------|  
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Обрабатывает исключения Win32 (структурированные исключения C) как типизированные исключения C++|  
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Установите собственную подпрограмму завершения, чтобы ее можно было вызвать с помощью функции `terminate`|  
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Установите собственную функцию завершения, чтобы ее можно было вызвать с помощью функции `unexpected`|  
+|[terminate](../c-runtime-library/reference/terminate-crt.md)|Вызывается автоматически при определенных условиях после исключения. Эта функция `terminate` вызывает функцию `abort` или функцию, указанную с помощью `set_terminate`|  
+|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Вызывает функцию `terminate` или функцию, заданную с помощью `set_unexpected`. Функция `unexpected` не используется в текущей реализации обработчика исключений Microsoft C++|  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)

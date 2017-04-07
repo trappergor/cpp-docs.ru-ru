@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DMesh
 - CD2DMesh
+- AFXRENDERTARGET/CD2DMesh
+- AFXRENDERTARGET/CD2DMesh::CD2DMesh
+- AFXRENDERTARGET/CD2DMesh::Attach
+- AFXRENDERTARGET/CD2DMesh::Create
+- AFXRENDERTARGET/CD2DMesh::Destroy
+- AFXRENDERTARGET/CD2DMesh::Detach
+- AFXRENDERTARGET/CD2DMesh::Get
+- AFXRENDERTARGET/CD2DMesh::IsValid
+- AFXRENDERTARGET/CD2DMesh::Open
+- AFXRENDERTARGET/CD2DMesh::m_pMesh
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DMesh : public CD2DResource;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dmesha--cd2dmeshcd2dmesh"></a><a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
+##  <a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
  Деструктор Вызывается при уничтожении объекта D2D сетки.  
   
 ```  
 virtual ~CD2DMesh();
 ```  
   
-##  <a name="a-nameattacha--cd2dmeshattach"></a><a name="attach"></a>CD2DMesh::Attach  
+##  <a name="attach"></a>CD2DMesh::Attach  
  Присоединение существующих ресурсов интерфейса в объект  
   
 ```  
@@ -110,7 +119,7 @@ void Attach(ID2D1Mesh* pResource);
  `pResource`  
  Существующий интерфейс ресурсов. Не может иметь значение NULL  
   
-##  <a name="a-namecd2dmesha--cd2dmeshcd2dmesh"></a><a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
+##  <a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
  Создает объект CD2DMesh.  
   
 ```  
@@ -126,7 +135,7 @@ CD2DMesh(
  `bAutoDestroy`  
  Указывает, что объект будет уничтожен владельцем (pParentTarget).  
   
-##  <a name="a-namecreatea--cd2dmeshcreate"></a><a name="create"></a>CD2DMesh::CREATE  
+##  <a name="create"></a>CD2DMesh::CREATE  
  Создает CD2DMesh.  
   
 ```  
@@ -140,14 +149,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод завершается успешно, возвращается значение S_OK. В противном случае — возвращает код ошибки HRESULT.  
   
-##  <a name="a-namedestroya--cd2dmeshdestroy"></a><a name="destroy"></a>CD2DMesh::destroy  
+##  <a name="destroy"></a>CD2DMesh::destroy  
  Уничтожает объект CD2DMesh.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dmeshdetach"></a><a name="detach"></a>CD2DMesh::Detach  
+##  <a name="detach"></a>CD2DMesh::Detach  
  Отсоединяет интерфейс ресурса из объекта  
   
 ```  
@@ -157,7 +166,7 @@ ID2D1Mesh* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс отсоединенных ресурсов.  
   
-##  <a name="a-namegeta--cd2dmeshget"></a><a name="get"></a>CD2DMesh::Get  
+##  <a name="get"></a>CD2DMesh::Get  
  Возвращает интерфейс ID2D1Mesh  
   
 ```  
@@ -167,7 +176,7 @@ ID2D1Mesh* Get();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Mesh или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="a-nameisvalida--cd2dmeshisvalid"></a><a name="isvalid"></a>CD2DMesh::IsValid  
+##  <a name="isvalid"></a>CD2DMesh::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -177,14 +186,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="a-namempmesha--cd2dmeshmpmesh"></a><a name="m_pmesh"></a>CD2DMesh::m_pMesh  
+##  <a name="m_pmesh"></a>CD2DMesh::m_pMesh  
  Указатель на ID2D1Mesh.  
   
 ```  
 ID2D1Mesh* m_pMesh;  
 ```  
   
-##  <a name="a-nameopena--cd2dmeshopen"></a><a name="open"></a>CD2DMesh::Open  
+##  <a name="open"></a>CD2DMesh::Open  
  Открывает сетку для заполнения.  
   
 ```  
@@ -194,7 +203,7 @@ ID2D1TessellationSink* Open();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на ID2D1TessellationSink, который используется для заполнения сетки.  
   
-##  <a name="a-nameoperatorid2d1meshstara--cd2dmeshoperator-id2d1mesh"></a><a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
+##  <a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
  Возвращает интерфейс ID2D1Mesh  
   
 ```  

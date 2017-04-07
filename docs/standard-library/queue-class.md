@@ -103,7 +103,7 @@ class queue
   
  **Пространство имен:** std  
   
-##  <a name="a-namequeuebacka--queueback"></a><a name="queue__back"></a>  queue::back  
+##  <a name="queue__back"></a>  queue::back  
  Возвращает ссылку на последний и наиболее недавно добавленный элемент в конце очереди.  
   
 ```  
@@ -146,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namequeuecontainertypea--queuecontainertype"></a><a name="queue__container_type"></a>  queue::container_type  
+##  <a name="queue__container_type"></a>  queue::container_type  
  Тип, предоставляющий базовый контейнер для изменения.  
   
 ```  
@@ -161,7 +161,7 @@ typedef Container container_type;
 ### <a name="example"></a>Пример  
   См. пример для [queue](#queue__queue) с примером объявления и использования `container_type`.  
   
-##  <a name="a-namequeueemptya--queueempty"></a><a name="queue__empty"></a>  queue::empty  
+##  <a name="queue__empty"></a>  queue::empty  
  Проверяет, пуста ли очередь.  
   
 ```  
@@ -205,7 +205,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="a-namequeuefronta--queuefront"></a><a name="queue__front"></a>  queue::front  
+##  <a name="queue__front"></a>  queue::front  
  Возвращает ссылку на первый элемент в начале очереди.  
   
 ```  
@@ -254,7 +254,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namequeuepopa--queuepop"></a><a name="queue__pop"></a>  queue::pop  
+##  <a name="queue__pop"></a>  queue::pop  
  Удаляет элемент из начала очереди.  
   
 ```  
@@ -308,7 +308,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="a-namequeuepusha--queuepush"></a><a name="queue__push"></a>  queue::push  
+##  <a name="queue__push"></a>  queue::push  
  Добавляет элемент в конец queue.  
   
 ```  
@@ -354,7 +354,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="a-namequeuequeuea--queuequeue"></a><a name="queue__queue"></a>  queue::queue  
+##  <a name="queue__queue"></a>  queue::queue  
  Создает пустую очередь или очередь — копию базового объекта-контейнера.  
   
 ```  
@@ -364,7 +364,7 @@ explicit queue(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Контейнер **const**, из которого будет копироваться создаваемая очередь.  
   
 ### <a name="remarks"></a>Примечания  
@@ -418,7 +418,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="a-namequeuesizea--queuesize"></a><a name="queue__size"></a>  queue::size  
+##  <a name="queue__size"></a>  queue::size  
  Возвращает число элементов в очереди.  
   
 ```  
@@ -457,7 +457,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="a-namequeuesizetypea--queuesizetype"></a><a name="queue__size_type"></a>  queue::size_type  
+##  <a name="queue__size_type"></a>  queue::size_type  
  Тип целого числа без знака, который может представлять количество элементов в очереди.  
   
 ```  
@@ -470,7 +470,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Пример  
   См. пример для [queue::front](#queue__front) с примером объявления и использования `size_type`.  
   
-##  <a name="a-namequeuevaluetypea--queuevaluetype"></a><a name="queue__value_type"></a>  queue::value_type  
+##  <a name="queue__value_type"></a>  queue::value_type  
  Тип, представляющий тип объекта, который хранится в виде элемента в очереди.  
   
 ```  

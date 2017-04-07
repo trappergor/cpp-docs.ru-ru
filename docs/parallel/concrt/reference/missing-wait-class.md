@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::missing_wait
+- missing_wait
+- CONCRT/concurrency::missing_wait
+- CONCRT/concurrency::missing_wait::missing_wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="missingwait-class"></a>Класс missing_wait
@@ -54,7 +56,7 @@ class missing_wait : public std::exception;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор missing_wait](#ctor)|Перегружен. Создает объект `missing_wait`.|  
+|[missing_wait](#ctor)|Перегружен. Создает объект `missing_wait`.|  
   
 ## <a name="remarks"></a>Примечания  
  Отсутствует поток исключений, вы несете ответственность за вызов либо `wait` или `run_and_wait` метод `task_group` или `structured_task_group` объекта перед разрешением этого объекта для уничтожения. Среда выполнения создает это исключение, как это означает, что вы забыли вызывать `wait` или `run_and_wait` метод.  
@@ -69,7 +71,7 @@ class missing_wait : public std::exception;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a>missing_wait 
 
  Создает объект `missing_wait`.  
   
@@ -86,7 +88,7 @@ missing_wait() throw();
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс task_group](task-group-class.md)   
- [wait-метод](task-group-class.md)   
- [run_and_wait метод](task-group-class.md)   
+ [Ожидание](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [Класс structured_task_group](structured-task-group-class.md)
 

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::structured_task_group
+- structured_task_group
+- PPL/concurrency::structured_task_group
+- PPL/concurrency::structured_task_group::structured_task_group
+- PPL/concurrency::structured_task_group::cancel
+- PPL/concurrency::structured_task_group::is_canceling
+- PPL/concurrency::structured_task_group::run
+- PPL/concurrency::structured_task_group::run_and_wait
+- PPL/concurrency::structured_task_group::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ef20ff7fef8683cec4a3856c80c09846aa69a89a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a1817080506150a8a25918988e18b76dd7a04def
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="structuredtaskgroup-class"></a>Класс structured_task_group
@@ -54,18 +61,18 @@ class structured_task_group;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор structured_task_group](#ctor)|Перегружен. Создает новый `structured_task_group` объекта.|  
+|[structured_task_group](#ctor)|Перегружен. Создает новый `structured_task_group` объекта.|  
 |[~ structured_task_group деструктор](#dtor)|Уничтожает объект `structured_task_group`. Вы должны вызвать `wait` или `run_and_wait` метод на объекте до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Cancel-метод](#cancel)|Делает все возможное пытается отменить поддерево работ, имеющее корень в данной группе задач. Все задачи, запланированные в группе задач отменяются транзитивно, если это возможно.|  
-|[is_canceling метод](#is_canceling)|Сообщает вызывающей стороне, находится ли группа задач состоянии отмены. Это не обязательно означает, что `cancel` метод был вызван для `structured_task_group` объекта (хотя это определенно позволяет этот метод для возврата `true`). Часто бывает так, `structured_task_group` объекта выполняется встроено и одной группы задач вверх в дереве рабочих была отменена. В случаях, таких как where эти среда выполнения может определить заранее, что отмена будет передаваться через этот `structured_task_group` объекта, `true` также будут возвращены.|  
-|[Метод Run](#run)|Перегружен. Планирует задачу на `structured_task_group` объект. Вызывающий объект управляет временем существования `task_handle` объект, передаваемый в `_Task_handle` параметр. Версия, которая принимает параметр `_Placement`, заставляет задачу стремиться к выполнению в расположении, указанном этим параметром.|  
-|[run_and_wait метод](#run_and_wait)|Перегружен. Планирует задачу для выполнения встроено в вызывающий контекст с помощью `structured_task_group` объекта для поддержки полной отмены. Если `task_handle` объект передается в качестве параметра `run_and_wait`, вызывающий объект отвечает за управление временем жизни `task_handle` объекта. Функция затем ожидает, пока не будет работать на `structured_task_group` объекта будет завершена или отменена.|  
-|[wait-метод](#wait)|Ожидает, пока вся работа на `structured_task_group` завершена или отменена.|  
+|[Отмена](#cancel)|Делает все возможное пытается отменить поддерево работ, имеющее корень в данной группе задач. Все задачи, запланированные в группе задач отменяются транзитивно, если это возможно.|  
+|[is_canceling](#is_canceling)|Сообщает вызывающей стороне, находится ли группа задач состоянии отмены. Это не обязательно означает, что `cancel` метод был вызван для `structured_task_group` объекта (хотя это определенно позволяет этот метод для возврата `true`). Часто бывает так, `structured_task_group` объекта выполняется встроено и одной группы задач вверх в дереве рабочих была отменена. В случаях, таких как where эти среда выполнения может определить заранее, что отмена будет передаваться через этот `structured_task_group` объекта, `true` также будут возвращены.|  
+|[run](#run)|Перегружен. Планирует задачу на `structured_task_group` объект. Вызывающий объект управляет временем существования `task_handle` объект, передаваемый в `_Task_handle` параметр. Версия, которая принимает параметр `_Placement`, заставляет задачу стремиться к выполнению в расположении, указанном этим параметром.|  
+|[run_and_wait](#run_and_wait)|Перегружен. Планирует задачу для выполнения встроено в вызывающий контекст с помощью `structured_task_group` объекта для поддержки полной отмены. Если `task_handle` объект передается в качестве параметра `run_and_wait`, вызывающий объект отвечает за управление временем жизни `task_handle` объекта. Функция затем ожидает, пока не будет работать на `structured_task_group` объекта будет завершена или отменена.|  
+|[Ожидание](#wait)|Ожидает, пока вся работа на `structured_task_group` завершена или отменена.|  
   
 ## <a name="remarks"></a>Примечания  
  Существует ряд серьезные ограничения, налагаемые на использование `structured_task_group` объекта с целью повышения производительности:  
@@ -74,7 +81,7 @@ class structured_task_group;
   
 -   Все задания, запланированные для `structured_task_group` объекта планируются использования `task_handle` которого необходимо явно управлять временем жизни объектов.  
   
--   Несколько групп могут использоваться только в порядке абсолютно вложенных. Если два `structured_task_group` объектов объявляются, должен уничтожения второй объявляемый (один внутренний) перед вызовом любого метода, за исключением `cancel` или `is_canceling` вызывается в первый из них (один внешний). Это условие истинно как в случае простого объявления нескольких `structured_task_group` объектов внутри того же или функционально вложенных областей, а также в случае задачу, которая поставлено в очередь `structured_task_group` через `run` или `run_and_wait` методы.  
+-   Несколько групп могут использоваться только в порядке абсолютно вложенных. Если два `structured_task_group` объектов объявляются, должен уничтожения второй объявляемого (один внутренний) перед вызовом любого метода, за исключением `cancel` или `is_canceling` вызывается в первый из них (один внешний). Это условие истинно как в случае простого объявления нескольких `structured_task_group` объектов внутри того же или функционально вложенных областей, а также в случае задачу, которая поставлено в очередь `structured_task_group` через `run` или `run_and_wait` методы.  
   
 -   В отличие от общих `task_group` класса всех состояний в `structured_task_group` класса являются окончательными. После помещения задач в очередь группы и ожидания их завершения невозможно использовать ту же группу снова.  
   
@@ -88,7 +95,7 @@ class structured_task_group;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Отмена 
+##  <a name="cancel"></a>Отмена 
 
  Делает все возможное пытается отменить поддерево работ, имеющее корень в данной группе задач. Все задачи, запланированные в группе задач отменяются транзитивно, если это возможно.  
   
@@ -99,7 +106,7 @@ void cancel();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [отмены](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-nameiscancelinga-iscanceling"></a><a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a>is_canceling 
 
  Сообщает вызывающей стороне, находится ли группа задач состоянии отмены. Это не обязательно означает, что `cancel` метод был вызван для `structured_task_group` объекта (хотя это определенно позволяет этот метод для возврата `true`). Часто бывает так, `structured_task_group` объекта выполняется встроено и одной группы задач вверх в дереве рабочих была отменена. В случаях, таких как where эти среда выполнения может определить заранее, что отмена будет передаваться через этот `structured_task_group` объекта, `true` также будут возвращены.  
   
@@ -113,7 +120,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [отмены](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>Запуск 
+##  <a name="run"></a>Запуск 
 
  Планирует задачу на `structured_task_group` объект. Вызывающий объект управляет временем существования `task_handle` объект, передаваемый в `_Task_handle` параметр. Версия, которая принимает параметр `_Placement`, заставляет задачу стремиться к выполнению в расположении, указанном этим параметром.  
   
@@ -145,7 +152,7 @@ void run(
   
  Создает [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) исключение, если задача обработки заданного `_Task_handle` параметр уже было запланировано на объект группы задач через `run` метод и без промежуточных вызовов любого `wait` или `run_and_wait` метод в этой группе задач.  
   
-##  <a name="a-namerunandwaita-runandwait"></a><a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a>run_and_wait 
 
  Планирует задачу для выполнения встроено в вызывающий контекст с помощью `structured_task_group` объекта для поддержки полной отмены. Если `task_handle` объект передается в качестве параметра `run_and_wait`, вызывающий объект отвечает за управление временем жизни `task_handle` объекта. Функция затем ожидает, пока не будет работать на `structured_task_group` объекта будет завершена или отменена.  
   
@@ -179,7 +186,7 @@ task_group_status run_and_wait(const _Function& _Func);
   
  В неисключительном пути выполнения имеется поручение вызывать этот метод или `wait` метод до деструктора `structured_task_group` выполняет.  
   
-##  <a name="a-namectora-structuredtaskgroup"></a><a name="ctor"></a>structured_task_group 
+##  <a name="ctor"></a>structured_task_group 
 
  Создает новый `structured_task_group` объекта.  
   
@@ -196,7 +203,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Примечания  
  Конструктор, который принимает токен отмены, создает `structured_task_group`, которая будет отменена, когда будет отменен источник, связанный с этим токеном. Предоставление явного токена отмены также изолирует эту группу структурированных задач от участия в неявной отмене из родительской группы с другим токеном или без токена.  
   
-##  <a name="a-namedtora-structuredtaskgroup"></a><a name="dtor"></a>~ structured_task_group 
+##  <a name="dtor"></a>~ structured_task_group 
 
  Уничтожает объект `structured_task_group`. Вы должны вызвать `wait` или `run_and_wait` метод на объекте до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.  
   
@@ -207,7 +214,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Примечания  
  Если деструктор выполняется как результат обычного выполнения (например, не освобождения стека из-за исключения) и ни `wait` , ни `run_and_wait` были вызваны, деструктор может вызвать [missing_wait](missing-wait-class.md) исключение.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Ожидание 
+##  <a name="wait"></a>Ожидание 
 
  Ожидает, пока вся работа на `structured_task_group` завершена или отменена.  
   

@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task
+- task
+- PPLTASKS/concurrency::task
+- PPLTASKS/concurrency::task::task
+- PPLTASKS/concurrency::task::get
+- PPLTASKS/concurrency::task::is_apartment_aware
+- PPLTASKS/concurrency::task::is_done
+- PPLTASKS/concurrency::task::scheduler
+- PPLTASKS/concurrency::task::then
+- PPLTASKS/concurrency::task::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7bbe0445c59279423665cd7df4eb5972f23ecf78
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="task-class-concurrency-runtime"></a>Класс task (среда выполнения с параллелизмом)
@@ -73,26 +81,26 @@ class task;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[задачи конструктора](#ctor)|Перегружен. Создает объект `task`.|  
+|[Задача](#ctor)|Перегружен. Создает объект `task`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[GET-метод](#get)|Перегружен. Возвращает результат, созданный этой задачей. Если задача не находится в конечном состоянии, вызов `get` будет ожидать завершения задачи. Этот метод не возвращает значение при вызове для задачи с параметром `result_type`, имеющим значение `void`.|  
-|[is_apartment_aware метод](#is_apartment_aware)|Определяет, распаковывает ли задача интерфейс среды выполнения Windows `IAsyncInfo` или происходит от такой задачи.|  
-|[Метод is_done](#is_done)|Определяет, завершена ли задача.|  
-|[Метод планировщика](#scheduler)|Возвращает планировщик для этой задачи|  
-|[Затем метод](#then)|Перегружен. Добавляет задачу продолжения к этой задаче.|  
-|[wait-метод](#wait)|Ожидает, когда эта задача достигнет конечного состояния. У `wait` существует возможность выполнения задачи встроенным образом, если все зависимости задач удовлетворены, и она еще не взята для выполнения фоновым рабочим процессом.|  
+|[get](#get)|Перегружен. Возвращает результат, созданный этой задачей. Если задача не находится в конечном состоянии, вызов `get` будет ожидать завершения задачи. Этот метод не возвращает значение при вызове для задачи с параметром `result_type`, имеющим значение `void`.|  
+|[is_apartment_aware](#is_apartment_aware)|Определяет, распаковывает ли задача интерфейс среды выполнения Windows `IAsyncInfo` или происходит от такой задачи.|  
+|[is_done](#is_done)|Определяет, завершена ли задача.|  
+|[Планировщик](#scheduler)|Возвращает планировщик для этой задачи|  
+|[затем](#then)|Перегружен. Добавляет задачу продолжения к этой задаче.|  
+|[Ожидание](#wait)|Ожидает, когда эта задача достигнет конечного состояния. У `wait` существует возможность выполнения задачи встроенным образом, если все зависимости задач удовлетворены, и она еще не взята для выполнения фоновым рабочим процессом.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор! =-оператор](#operator_neq)|Перегружен. Определяет, представляют ли два объекта `task` различные внутренние задачи.|  
-|[оператор =-оператор](#operator_eq)|Перегружен. Заменяет содержимое одного объекта `task` другим.|  
-|[оператор ==-оператор](#operator_eq_eq)|Перегружен. Определяет, представляют ли два объекта `task` одну и ту же внутреннюю задачу.|  
+|[operator!=](#operator_neq)|Перегружен. Определяет, представляют ли два объекта `task` различные внутренние задачи.|  
+|[operator=](#operator_eq)|Перегружен. Заменяет содержимое одного объекта `task` другим.|  
+|[operator==](#operator_eq_eq)|Перегружен. Определяет, представляют ли два объекта `task` одну и ту же внутреннюю задачу.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -105,7 +113,7 @@ class task;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Получить 
+##  <a name="get"></a>Получить 
 
  Возвращает результат, созданный этой задачей. Если задача не находится в конечном состоянии, вызов `get` будет ожидать завершения задачи. Этот метод не возвращает значение при вызове для задачи с параметром `result_type`, имеющим значение `void`.  
   
@@ -124,7 +132,7 @@ void get() const;
 > [!IMPORTANT]
 >  В [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] приложения, не следует вызывать [Concurrency::Task:: wait](#wait) или `get` ( `wait` вызовов `get`) в коде, выполняемом в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](invalid-operation-class.md) , так как эти методы блокирует текущий поток и приложение перестанет отвечать на запросы. Тем не менее, можно вызвать `get` метод для получения результата из предшествующей задачи в продолжение на основе задач, так как результат становится доступен сразу.  
   
-##  <a name="a-nameisapartmentawarea-isapartmentaware"></a><a name="is_apartment_aware"></a>is_apartment_aware 
+##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
  Определяет, распаковывает ли задача интерфейс среды выполнения Windows `IAsyncInfo` или происходит от такой задачи.  
   
@@ -135,7 +143,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если задача распаковывает интерфейс `IAsyncInfo` или является потомком такой задачи, в противном случае — значение `false`.  
   
-##  <a name="a-nameisdonea--taskisdone-method-concurrency-runtime"></a><a name="is_done"></a>Метод Task::is_done (среда выполнения с параллелизмом)  
+##  <a name="is_done"></a>Метод Task::is_done (среда выполнения с параллелизмом)  
  Определяет, завершена ли задача.  
   
 ```
@@ -148,7 +156,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Примечания  
  Функция возвращает значение true, если задача завершается или отменяется (с или без исключения пользователей).  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>оператор! = 
+##  <a name="operator_neq"></a>оператор! = 
 
  Определяет, представляют ли два объекта `task` различные внутренние задачи.  
   
@@ -164,7 +172,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объекты ссылаются на разные базовые задачи, в противном случае — значение `false`.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
  Заменяет содержимое одного объекта `task` другим.  
   
@@ -183,7 +191,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Примечания  
  Поскольку `task` действует как интеллектуальный указатель, после назначения копии эти объекты `task` представляют ту же фактическую задачу, что и `_Other`.  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>оператор == 
+##  <a name="operator_eq_eq"></a>оператор == 
 
  Определяет, представляют ли два объекта `task` одну и ту же внутреннюю задачу.  
   
@@ -199,7 +207,7 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объекты ссылаются на одну и ту же базовую задачу, в противном случае — значение `false`.  
   
-##  <a name="a-nameschedulera--taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>Метод Task::Scheduler (среда выполнения с параллелизмом)  
+##  <a name="scheduler"></a>Метод Task::Scheduler (среда выполнения с параллелизмом)  
  Возвращает планировщик для этой задачи  
   
 ```
@@ -209,7 +217,7 @@ scheduler_ptr scheduler() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на планировщик  
   
-##  <a name="a-namectora-task"></a><a name="ctor"></a>Задача 
+##  <a name="ctor"></a>Задача 
 
  Создает объект `task`.  
   
@@ -259,7 +267,7 @@ task(
   
  Дополнительные сведения см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namethena-then"></a><a name="then"></a>затем 
+##  <a name="then"></a>затем 
 
  Добавляет задачу продолжения к этой задаче.  
   
@@ -320,7 +328,7 @@ __declspec(
   
  Дополнительные сведения об использовании продолжений задач для составления асинхронной работы см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Ожидание 
+##  <a name="wait"></a>Ожидание 
 
  Ожидает, когда эта задача достигнет конечного состояния. У `wait` существует возможность выполнения задачи встроенным образом, если все зависимости задач удовлетворены, и она еще не взята для выполнения фоновым рабочим процессом.  
   
@@ -337,5 +345,5 @@ task_status wait() const;
 >  В [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] приложения, не следует вызывать `wait` в коде, выполняемом в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](invalid-operation-class.md) , так как этот метод блокирует текущий поток и приложение перестанет отвечать на запросы. Тем не менее, можно вызвать [Concurrency::Task:: Get](#get) метод для получения результата из предшествующей задачи в продолжение на основе задач.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

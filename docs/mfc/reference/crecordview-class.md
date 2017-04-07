@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordView
+- AFXDB/CRecordView
+- AFXDB/CRecordView::CRecordView
+- AFXDB/CRecordView::IsOnFirstRecord
+- AFXDB/CRecordView::IsOnLastRecord
+- AFXDB/CRecordView::OnGetRecordset
+- AFXDB/CRecordView::OnMove
+- AFXDB/CRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +115,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="a-namecrecordviewa--crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>CRecordView::CRecordView  
  При создании объекта типа производным от `CRecordView`, вызовите конструктор для инициализации объекта представления и определения ресурса диалогового окна, лежащие в основе представления либо форме.  
   
 ```  
@@ -137,7 +144,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase&#32;](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
  Вызовите эту функцию-член, чтобы определить, является ли текущая запись первой записи в объекте набора записей, связанный с этим представлением записи.  
   
 ```  
@@ -152,7 +159,7 @@ BOOL IsOnFirstRecord();
   
  Если пользователь переходит к первой записи, платформа отключает все объекты пользовательского интерфейса для перехода к первому или предыдущей записи.  
   
-##  <a name="a-nameisonlastrecorda--crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
  Вызовите эту функцию-член, чтобы определить, является ли текущая запись последней записи в объекте набора записей, связанный с этим представлением записи.  
   
 ```  
@@ -168,7 +175,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Результат этой функции надежен, за исключением того, что представление не может обнаружить конца набора данных, пока пользователь уже прошел его. Пользователю необходимо переместить за пределы последней записи перед представления записей можно указать, что его нужно отключить любые объекты пользовательского интерфейса для перемещения к следующей или последней записи. Если пользователь перемещает за последней записью и затем обратно до последней записи (или перед ним), представление записей можно отслеживать положение пользователя в наборе записей и правильно отключить объекты пользовательского интерфейса. `IsOnLastRecord`также является ненадежным после вызова функции реализацию **OnRecordLast**, который обрабатывает `ID_RECORD_LAST` команды, или `CRecordset::MoveLast`.  
   
-##  <a name="a-nameongetrecordseta--crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
  Возвращает указатель на `CRecordset`-производный объект, связанный с представлением записи.  
   
 ```  
@@ -183,7 +190,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--crecordviewonmove"></a><a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>CRecordView::OnMove  
  Вызовите эту функцию-член для перемещения к другой записи в наборе записей и отобразить ее поля в элементах управления представления записей.  
   
 ```  

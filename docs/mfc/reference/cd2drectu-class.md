@@ -10,7 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DRectU
-- afxrendertarget/CD2DRectU
+- AFXRENDERTARGET/CD2DRectU
+- AFXRENDERTARGET/CD2DRectU::CD2DRectU
+- AFXRENDERTARGET/CD2DRectU::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DRectU : public D2D1_RECT_U;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="a-namecd2drectua--cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
+##  <a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
  Создает объект CD2DRectU из CRect объекта.  
   
 ```  
@@ -109,7 +111,7 @@ CD2DRectU(
  `uBottom`  
  Нижняя координата источника  
   
-##  <a name="a-nameisnulla--cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::ISNULL  
+##  <a name="isnull"></a>CD2DRectU::ISNULL  
  Возвращает логическое значение, указывающее, содержит ли выражение недопустимые данные (Null).  
   
 ```  
@@ -119,7 +121,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если прямоугольника верхней, левой, нижней и правильные значения все равно 0; в противном случае — значение FALSE.  
   
-##  <a name="a-nameoperatorcrecta--cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::operator CRect  
+##  <a name="operator_crect"></a>CD2DRectU::operator CRect  
  Преобразует CD2DRectU CRect.  
   
 ```  

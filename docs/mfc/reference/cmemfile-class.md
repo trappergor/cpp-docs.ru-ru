@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMemFile
+- AFX/CMemFile
+- AFX/CMemFile::CMemFile
+- AFX/CMemFile::Attach
+- AFX/CMemFile::Detach
+- AFX/CMemFile::Alloc
+- AFX/CMemFile::Free
+- AFX/CMemFile::GrowFile
+- AFX/CMemFile::Memcpy
+- AFX/CMemFile::Realloc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMemFile : public CFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
-##  <a name="a-namealloca--cmemfilealloc"></a><a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>CMemFile::Alloc  
  Эта функция вызывается `CMemFile` функции-члены.  
   
 ```  
@@ -121,7 +130,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  Реализация по умолчанию использует функции библиотеки времени выполнения [malloc](../../c-runtime-library/reference/malloc.md) для выделения памяти.  
   
-##  <a name="a-nameattacha--cmemfileattach"></a><a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>CMemFile::Attach  
  Эта функция вызывается для присоединения блока памяти `CMemFile`.  
   
 ```  
@@ -150,7 +159,7 @@ void Attach(
   
  Если `nGrowBytes` больше, чем 0, `CMemFile` будет игнорировать содержимое блока памяти была присоединена. Вам придется записать содержимое в файл памяти с нуля с помощью `CMemFile` переопределение `CFile::Write`. При попытке записи за пределами файла или расширить файл путем вызова `CMemFile` переопределение `CFile::SetLength`, `CMemFile` будет расти выделения памяти с шагом `nGrowBytes`. Увеличение выделения памяти завершится ошибкой, если блок памяти, которая передается **присоединить** не был выделен с помощью метода, совместимый с [Alloc](#alloc). Для обеспечения совместимости с реализацией по умолчанию `Alloc`, необходимо выделить память с помощью функции библиотеки времени выполнения [malloc](../../c-runtime-library/reference/malloc.md) или [calloc](../../c-runtime-library/reference/calloc.md).  
   
-##  <a name="a-namecmemfilea--cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>CMemFile::CMemFile  
  Первая перегрузка открывает файл пустой памяти.  
   
 ```  
@@ -181,7 +190,7 @@ CMemFile(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCFiles&#36;](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="a-namedetacha--cmemfiledetach"></a><a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>CMemFile::Detach  
  Эта функция вызывается для получения указателя на блок памяти, используемый `CMemFile`.  
   
 ```  
@@ -194,7 +203,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>Примечания  
  При вызове этой функции также закрывает `CMemFile`. Можно легко повторно подключить блок памяти, который `CMemFile` путем вызова [присоединить](#attach). Если вы хотите повторно вложить файл и использовать данные, необходимо вызвать [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) получить длину файла перед вызовом метода **отсоединения**. Обратите внимание, что при присоединении блок памяти, который `CMemFile` , чтобы вы могли использовать свои данные ( `nGrowBytes` == 0), то вы не сможете расти в файл памяти.  
   
-##  <a name="a-namefreea--cmemfilefree"></a><a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>CMemFile::Free  
  Эта функция вызывается `CMemFile` функции-члены.  
   
 ```  
@@ -208,7 +217,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для освобождения памяти для настраиваемой реализации. Если переопределить эту функцию, может потребоваться переопределить [Alloc](#alloc) и [Realloc](#realloc) также.  
   
-##  <a name="a-namegrowfilea--cmemfilegrowfile"></a><a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>CMemFile::GrowFile  
  Эта функция вызывается в нескольких `CMemFile` функции-члены.  
   
 ```  
@@ -222,7 +231,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>Примечания  
  Его можно изменить, если требуется изменить как `CMemFile` роста его файл. Реализация по умолчанию вызывает [перераспределения](#realloc) расти существующий блок (или [Alloc](#alloc) для создания блока памяти), выделение памяти кратно `nGrowBytes` значения, указанного в конструкторе или [присоединить](#attach) вызова.  
   
-##  <a name="a-namememcpya--cmemfilememcpy"></a><a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>CMemFile::Memcpy  
  Эта функция вызывается `CMemFile` переопределений [CFile::Read](../../mfc/reference/cfile-class.md#read) и [CFile::Write](../../mfc/reference/cfile-class.md#write) для обмена данными в файл памяти.  
   
 ```  
@@ -248,7 +257,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию, если вы хотите изменить способ, `CMemFile` эти копии памяти.  
   
-##  <a name="a-namerealloca--cmemfilerealloc"></a><a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>CMemFile::Realloc  
  Эта функция вызывается `CMemFile` функции-члены.  
   
 ```  

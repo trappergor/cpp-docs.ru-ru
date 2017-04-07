@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSize
+- ATLTYPES/ATL::CSize
+- ATLTYPES/ATL::CSize::CSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +88,7 @@ class CSize : public tagSIZE
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltypes.h  
   
-##  <a name="a-namecsizea--csizecsize"></a><a name="csize"></a>CSize::CSize  
+##  <a name="csize"></a>CSize::CSize  
  Создает объект `CSize`.  
   
 ```  
@@ -119,7 +121,7 @@ CSize( DWORD dwSize) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#97;](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--csizeoperator-"></a><a name="operator_eq_eq"></a>CSize::operator ==  
+##  <a name="operator_eq_eq"></a>CSize::operator ==  
  Проверяет равенство двух размеров.  
   
 ```   
@@ -132,7 +134,7 @@ BOOL operator==(SIZE size) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#98;](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]  
   
-##  <a name="a-nameoperatorneqa--csizeoperator-"></a><a name="operator_neq"></a>CSize::operator! =  
+##  <a name="operator_neq"></a>CSize::operator! =  
  Проверяет неравенство двух размеров.  
   
 ```   
@@ -145,7 +147,7 @@ BOOL operator!=(SIZE size) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#99;](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--csizeoperator-"></a><a name="operator_add_eq"></a>CSize::operator +=  
+##  <a name="operator_add_eq"></a>CSize::operator +=  
  Это добавляет размером `CSize`.  
   
 ```   
@@ -155,7 +157,7 @@ void operator+=(SIZE size) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#100;](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]  
   
-##  <a name="a-nameoperator-eqa--csizeoperator--"></a><a name="operator_-_eq"></a>CSize::operator-=  
+##  <a name="operator_-_eq"></a>CSize::operator-=  
  Вычитает из этого размера `CSize`.  
   
 ```   
@@ -165,7 +167,7 @@ void operator-=(SIZE size) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#101;](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]  
   
-##  <a name="a-nameoperatoradda--csizeoperator-"></a><a name="operator_add"></a>CSize::operator +  
+##  <a name="operator_add"></a>CSize::operator +  
  Добавьте эти операторы `CSize` в значение параметра.  
   
 ```   
@@ -186,7 +188,7 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities&#102;](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
   
-##  <a name="a-nameoperator-a--csizeoperator--"></a><a name="operator_-"></a>CSize::operator-  
+##  <a name="operator_-"></a>CSize::operator-  
  Первые три из этих операторов вычесть это `CSize` в значение параметра.  
   
 ```   

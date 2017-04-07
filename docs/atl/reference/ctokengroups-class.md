@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CTokenGroups
-- ATL.CTokenGroups
 - CTokenGroups
+- ATLSECURITY/ATL::CTokenGroups
+- ATLSECURITY/ATL::CTokenGroups::CTokenGroups
+- ATLSECURITY/ATL::CTokenGroups::Add
+- ATLSECURITY/ATL::CTokenGroups::Delete
+- ATLSECURITY/ATL::CTokenGroups::DeleteAll
+- ATLSECURITY/ATL::CTokenGroups::GetCount
+- ATLSECURITY/ATL::CTokenGroups::GetLength
+- ATLSECURITY/ATL::CTokenGroups::GetPTOKEN_GROUPS
+- ATLSECURITY/ATL::CTokenGroups::GetSidsAndAttributes
+- ATLSECURITY/ATL::CTokenGroups::LookupSid
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class CTokenGroups
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="a-nameadda--ctokengroupsadd"></a><a name="add"></a>CTokenGroups::Add  
+##  <a name="add"></a>CTokenGroups::Add  
  Добавляет `CSid` или существующих **TOKEN_GROUPS** структуры `CTokenGroups` объекта.  
   
 ```
@@ -113,7 +121,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ### <a name="remarks"></a>Примечания  
  Эти методы позволяют добавить один или несколько `CSid` объектов и связанные с ними атрибуты для `CTokenGroups` объекта.  
   
-##  <a name="a-namectokengroupsa--ctokengroupsctokengroups"></a><a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
+##  <a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
  Конструктор.  
   
 ```
@@ -129,7 +137,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  `CTokenGroups` Объекта при необходимости могут создаваться с помощью **TOKEN_GROUPS** структуры или ранее определенный `CTokenGroups` объекта.  
   
-##  <a name="a-namedtora--ctokengroupsctokengroups"></a><a name="dtor"></a>CTokenGroups:: ~ CTokenGroups  
+##  <a name="dtor"></a>CTokenGroups:: ~ CTokenGroups  
  Деструктор  
   
 ```
@@ -139,7 +147,7 @@ virtual ~CTokenGroups() throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все выделенные ресурсы.  
   
-##  <a name="a-namedeletea--ctokengroupsdelete"></a><a name="delete"></a>CTokenGroups::Delete  
+##  <a name="delete"></a>CTokenGroups::Delete  
  Удаляет `CSid` и связанных с ним атрибутов из `CTokenGroups` объекта.  
   
 ```
@@ -153,14 +161,14 @@ bool Delete(const CSid& rSid) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если `CSid` удаляется, значение false в противном случае.  
   
-##  <a name="a-namedeletealla--ctokengroupsdeleteall"></a><a name="deleteall"></a>CTokenGroups::DeleteAll  
+##  <a name="deleteall"></a>CTokenGroups::DeleteAll  
  Удаляет все `CSid` объектов и связанные с ними атрибуты из `CTokenGroups` объекта.  
   
 ```
 void DeleteAll() throw();
 ```  
   
-##  <a name="a-namegetcounta--ctokengroupsgetcount"></a><a name="getcount"></a>CTokenGroups::GetCount  
+##  <a name="getcount"></a>CTokenGroups::GetCount  
  Возвращает число `CSid` объектов, содержащихся в `CTokenGroups`.  
   
 ```
@@ -170,7 +178,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает число [CSid](../../atl/reference/csid-class.md) объектов и связанные с ними атрибуты содержатся в `CTokenGroups` объекта.  
   
-##  <a name="a-namegetlengtha--ctokengroupsgetlength"></a><a name="getlength"></a>CTokenGroups::GetLength  
+##  <a name="getlength"></a>CTokenGroups::GetLength  
  Возвращает размер **CTokenGroup** объекта.  
   
 ```
@@ -180,7 +188,7 @@ UINT GetLength() const throw();
 ### <a name="remarks"></a>Примечания  
  Возвращает общий размер **CTokenGroup** объекта в байтах.  
   
-##  <a name="a-namegetptokengroupsa--ctokengroupsgetptokengroups"></a><a name="getptoken_groups"></a>CTokenGroups::GetPTOKEN_GROUPS  
+##  <a name="getptoken_groups"></a>CTokenGroups::GetPTOKEN_GROUPS  
  Извлекает указатель на **TOKEN_GROUPS** структуры.  
   
 ```
@@ -190,7 +198,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Извлекает указатель на [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структуры, принадлежащих `CTokenGroups` объекта маркера доступа.  
   
-##  <a name="a-namegetsidsandattributesa--ctokengroupsgetsidsandattributes"></a><a name="getsidsandattributes"></a>CTokenGroups::GetSidsAndAttributes  
+##  <a name="getsidsandattributes"></a>CTokenGroups::GetSidsAndAttributes  
  Извлекает `CSid` объекты и (необязательно) атрибутов, принадлежащих `CTokenGroups` объекта.  
   
 ```
@@ -209,7 +217,7 @@ void GetSidsAndAttributes(
 ### <a name="remarks"></a>Примечания  
  Этот метод перечисляет все `CSid` объектов, содержащихся в `CTokenGroups` объекта и поместите их и (необязательно флаги атрибутов) в массив объектов.  
   
-##  <a name="a-namelookupsida--ctokengroupslookupsid"></a><a name="lookupsid"></a>CTokenGroups::LookupSid  
+##  <a name="lookupsid"></a>CTokenGroups::LookupSid  
  Получает атрибуты, связанные с `CSid` объекта.  
   
 ```
@@ -231,7 +239,7 @@ bool LookupSid(
 ### <a name="remarks"></a>Примечания  
  Установка `pdwAttributes` для NULL предоставляет способ подтверждения наличия `CSid` без обращения к атрибуту. Обратите внимание, что этот метод не должен использоваться для проверки прав доступа, как в среде Windows 2000 могут возникнуть неверные результаты. Приложения должны использовать вместо [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) метод.  
   
-##  <a name="a-nameoperatoreqa--ctokengroupsoperator-"></a><a name="operator_eq"></a>CTokenGroups::operator =  
+##  <a name="operator_eq"></a>CTokenGroups::operator =  
  Оператор присвоения.  
   
 ```
@@ -246,7 +254,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CTokenGroups` объекта.  
   
-##  <a name="a-nameoperatorconsttokengroupsstara--ctokengroupsoperator-const-tokengroups-"></a><a name="operator_const_token_groups__star"></a>CTokenGroups::operator const TOKEN_GROUPS *  
+##  <a name="operator_const_token_groups__star"></a>CTokenGroups::operator const TOKEN_GROUPS *  
  Приводит значение к указателю на **TOKEN_GROUPS** структуры.  
   
 ```  

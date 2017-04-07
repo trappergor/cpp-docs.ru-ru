@@ -10,6 +10,87 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
+- AFXDAO/CDaoRecordset
+- AFXDAO/CDaoRecordset::CDaoRecordset
+- AFXDAO/CDaoRecordset::AddNew
+- AFXDAO/CDaoRecordset::CanAppend
+- AFXDAO/CDaoRecordset::CanBookmark
+- AFXDAO/CDaoRecordset::CancelUpdate
+- AFXDAO/CDaoRecordset::CanRestart
+- AFXDAO/CDaoRecordset::CanScroll
+- AFXDAO/CDaoRecordset::CanTransact
+- AFXDAO/CDaoRecordset::CanUpdate
+- AFXDAO/CDaoRecordset::Close
+- AFXDAO/CDaoRecordset::Delete
+- AFXDAO/CDaoRecordset::DoFieldExchange
+- AFXDAO/CDaoRecordset::Edit
+- AFXDAO/CDaoRecordset::FillCache
+- AFXDAO/CDaoRecordset::Find
+- AFXDAO/CDaoRecordset::FindFirst
+- AFXDAO/CDaoRecordset::FindLast
+- AFXDAO/CDaoRecordset::FindNext
+- AFXDAO/CDaoRecordset::FindPrev
+- AFXDAO/CDaoRecordset::GetAbsolutePosition
+- AFXDAO/CDaoRecordset::GetBookmark
+- AFXDAO/CDaoRecordset::GetCacheSize
+- AFXDAO/CDaoRecordset::GetCacheStart
+- AFXDAO/CDaoRecordset::GetCurrentIndex
+- AFXDAO/CDaoRecordset::GetDateCreated
+- AFXDAO/CDaoRecordset::GetDateLastUpdated
+- AFXDAO/CDaoRecordset::GetDefaultDBName
+- AFXDAO/CDaoRecordset::GetDefaultSQL
+- AFXDAO/CDaoRecordset::GetEditMode
+- AFXDAO/CDaoRecordset::GetFieldCount
+- AFXDAO/CDaoRecordset::GetFieldInfo
+- AFXDAO/CDaoRecordset::GetFieldValue
+- AFXDAO/CDaoRecordset::GetIndexCount
+- AFXDAO/CDaoRecordset::GetIndexInfo
+- AFXDAO/CDaoRecordset::GetLastModifiedBookmark
+- AFXDAO/CDaoRecordset::GetLockingMode
+- AFXDAO/CDaoRecordset::GetName
+- AFXDAO/CDaoRecordset::GetParamValue
+- AFXDAO/CDaoRecordset::GetPercentPosition
+- AFXDAO/CDaoRecordset::GetRecordCount
+- AFXDAO/CDaoRecordset::GetSQL
+- AFXDAO/CDaoRecordset::GetType
+- AFXDAO/CDaoRecordset::GetValidationRule
+- AFXDAO/CDaoRecordset::GetValidationText
+- AFXDAO/CDaoRecordset::IsBOF
+- AFXDAO/CDaoRecordset::IsDeleted
+- AFXDAO/CDaoRecordset::IsEOF
+- AFXDAO/CDaoRecordset::IsFieldDirty
+- AFXDAO/CDaoRecordset::IsFieldNull
+- AFXDAO/CDaoRecordset::IsFieldNullable
+- AFXDAO/CDaoRecordset::IsOpen
+- AFXDAO/CDaoRecordset::Move
+- AFXDAO/CDaoRecordset::MoveFirst
+- AFXDAO/CDaoRecordset::MoveLast
+- AFXDAO/CDaoRecordset::MoveNext
+- AFXDAO/CDaoRecordset::MovePrev
+- AFXDAO/CDaoRecordset::Open
+- AFXDAO/CDaoRecordset::Requery
+- AFXDAO/CDaoRecordset::Seek
+- AFXDAO/CDaoRecordset::SetAbsolutePosition
+- AFXDAO/CDaoRecordset::SetBookmark
+- AFXDAO/CDaoRecordset::SetCacheSize
+- AFXDAO/CDaoRecordset::SetCacheStart
+- AFXDAO/CDaoRecordset::SetCurrentIndex
+- AFXDAO/CDaoRecordset::SetFieldDirty
+- AFXDAO/CDaoRecordset::SetFieldNull
+- AFXDAO/CDaoRecordset::SetFieldValue
+- AFXDAO/CDaoRecordset::SetFieldValueNull
+- AFXDAO/CDaoRecordset::SetLockingMode
+- AFXDAO/CDaoRecordset::SetParamValue
+- AFXDAO/CDaoRecordset::SetParamValueNull
+- AFXDAO/CDaoRecordset::SetPercentPosition
+- AFXDAO/CDaoRecordset::Update
+- AFXDAO/CDaoRecordset::m_bCheckCacheForDirtyFields
+- AFXDAO/CDaoRecordset::m_nFields
+- AFXDAO/CDaoRecordset::m_nParams
+- AFXDAO/CDaoRecordset::m_pDAORecordset
+- AFXDAO/CDaoRecordset::m_pDatabase
+- AFXDAO/CDaoRecordset::m_strFilter
+- AFXDAO/CDaoRecordset::m_strSort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -193,7 +274,7 @@ class CDaoRecordset : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  
   
-##  <a name="a-nameaddnewa--cdaorecordsetaddnew"></a><a name="addnew"></a>CDaoRecordset::AddNew  
+##  <a name="addnew"></a>CDaoRecordset::AddNew  
  Вызовите эту функцию-член для добавления новой записи в таблице типа или динамический набор записей.  
   
 ```  
@@ -231,7 +312,7 @@ virtual void AddNew();
   
  Дополнительные сведения см. в разделах «Метод AddNew», «Метод CancelUpdate», «Свойство LastModified» и «EditMode свойство» в справке DAO.  
   
-##  <a name="a-namecanappenda--cdaorecordsetcanappend"></a><a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>CDaoRecordset::CanAppend  
  Вызов этой функции-члена для определения ли ранее открытые записей позволяет добавлять новые записи путем вызова [AddNew](#addnew) функции-члена.  
   
 ```  
@@ -244,7 +325,7 @@ BOOL CanAppend() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе «Добавить метод» в справке DAO.  
   
-##  <a name="a-namecanbookmarka--cdaorecordsetcanbookmark"></a><a name="canbookmark"></a>CDaoRecordset::CanBookmark  
+##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
  Вызовите эту функцию-член для определения ли ранее открытые записей позволяет отдельно пометить записей с помощью закладок.  
   
 ```  
@@ -259,7 +340,7 @@ BOOL CanBookmark();
   
  Дополнительные сведения см. в разделе «Свойство Bookmarkable» в справке DAO.  
   
-##  <a name="a-namecancelupdatea--cdaorecordsetcancelupdate"></a><a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
  `CancelUpdate` Функция-член отменяет все отложенные обновления из-за [изменить](#edit) или [AddNew](#addnew) операции.  
   
 ```  
@@ -276,7 +357,7 @@ virtual void CancelUpdate();
   
  Дополнительные сведения см. в разделе «Метод CancelUpdate» в справке DAO.  
   
-##  <a name="a-namecanrestarta--cdaorecordsetcanrestart"></a><a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
  Вызовите эту функцию-член для определения того, допускает ли набор записей перезапуск его запроса (чтобы обновить свои записи) путем вызова **Requery** функции-члена.  
   
 ```  
@@ -293,7 +374,7 @@ BOOL CanRestart();
   
  Дополнительные сведения см. в разделе «Свойство возобновляемой» в справке DAO.  
   
-##  <a name="a-namecanscrolla--cdaorecordsetcanscroll"></a><a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
  Вызовите эту функцию-член, чтобы определить, допускает ли прокрутка набора записей.  
   
 ```  
@@ -308,7 +389,7 @@ BOOL CanScroll() const;
   
  Дополнительные сведения см. в разделе «Позиционирования текущей записи указатель с DAO» в справке DAO.  
   
-##  <a name="a-namecantransacta--cdaorecordsetcantransact"></a><a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
  Вызовите эту функцию-член, чтобы определить, допускает ли набор записей транзакций.  
   
 ```  
@@ -321,7 +402,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе «Свойство транзакции» в справке DAO.  
   
-##  <a name="a-namecanupdatea--cdaorecordsetcanupdate"></a><a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
  Вызовите эту функцию-член для определения, можно ли обновить набор записей.  
   
 ```  
@@ -336,7 +417,7 @@ BOOL CanUpdate() const;
   
  Дополнительные сведения см. в разделах «Метод AddNew», «Изменить метод», «Метод Delete», «Метод Update» и «Обновляемые свойства» в справке DAO.  
   
-##  <a name="a-namecdaorecordseta--cdaorecordsetcdaorecordset"></a><a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
  Создает объект `CDaoRecordset`.  
   
 ```  
@@ -355,7 +436,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  Передайте **NULL** конструктор набора записей для `CDaoDatabase` объект создается и автоматически подключены для вас. Это удобно, не требует создания и подключения `CDaoDatabase` объекта до создания набора записей. Если `CDaoDatabase` объектов не открыт, [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) также создается объект, использует рабочей области по умолчанию. Дополнительные сведения см. в разделе [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
   
-##  <a name="a-nameclosea--cdaorecordsetclose"></a><a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>CDaoRecordset::Close  
  Закрытие `CDaoRecordset` объекта он удаляется из коллекции открытых наборов записей в соответствующей базе данных.  
   
 ```  
@@ -371,7 +452,7 @@ virtual void Close();
   
  Дополнительные сведения см. в разделе «Метод Close» в справке DAO.  
   
-##  <a name="a-namedeletea--cdaorecordsetdelete"></a><a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>CDaoRecordset::Delete  
  Вызовите эту функцию-член для удаления текущей записи в открытом объекте набора записей динамического или тип таблицы.  
   
 ```  
@@ -392,7 +473,7 @@ virtual void Delete();
   
  Дополнительные сведения см. в разделах «Метод AddNew», «Изменить метод», «Метод Delete», «Метод Update» и «Обновляемые свойства» в справке DAO.  
   
-##  <a name="a-namedofieldexchangea--cdaorecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
  Платформа вызывает эту функцию-член автоматически обмен данными между элементами данных полей объекта набора записей и соответствующих столбцов текущей записи в источнике данных.  
   
 ```  
@@ -412,7 +493,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase&#2;](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="a-nameedita--cdaorecordsetedit"></a><a name="edit"></a>CDaoRecordset::Edit  
+##  <a name="edit"></a>CDaoRecordset::Edit  
  Вызовите эту функцию-член можно разрешить изменение текущей записи.  
   
 ```  
@@ -452,7 +533,7 @@ virtual void Edit();
   
  Дополнительные сведения см. в разделах «Метод AddNew», «Изменить метод», «Метод Delete», «Метод Update» и «Обновляемые свойства» в справке DAO.  
   
-##  <a name="a-namefillcachea--cdaorecordsetfillcache"></a><a name="fillcache"></a>CDaoRecordset::FillCache  
+##  <a name="fillcache"></a>CDaoRecordset::FillCache  
  Вызовите эту функцию-член для кэширования указанное число записей из набора записей.  
   
 ```  
@@ -481,7 +562,7 @@ void FillCache(
   
  Дополнительные сведения см. в разделе «Метод FillCache» в справке DAO.  
   
-##  <a name="a-namefinda--cdaorecordsetfind"></a><a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>CDaoRecordset::Find  
  Вызовите эту функцию-член для обнаружения определенной строки в наборе записей типа динамических подмножеств данных и моментальных снимков с помощью оператора сравнения.  
   
 ```  
@@ -520,7 +601,7 @@ virtual BOOL Find(
   
  Дополнительные сведения см. в разделе «FindNext FindFirst, FindLast, FindPrevious методы» в справке DAO.  
   
-##  <a name="a-namefindfirsta--cdaorecordsetfindfirst"></a><a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
  Вызовите эту функцию-член для поиска первой записи, которая соответствует заданному условию.  
   
 ```  
@@ -570,7 +651,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  Дополнительные сведения см. в разделе «FindNext FindFirst, FindLast, FindPrevious методы» в справке DAO.  
   
-##  <a name="a-namefindlasta--cdaorecordsetfindlast"></a><a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>CDaoRecordset::FindLast  
  Вызовите эту функцию-член, чтобы найти последнюю запись, которая соответствует заданному условию.  
   
 ```  
@@ -608,7 +689,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  Дополнительные сведения см. в разделе «FindNext FindFirst, FindLast, FindPrevious методы» в справке DAO.  
   
-##  <a name="a-namefindnexta--cdaorecordsetfindnext"></a><a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>CDaoRecordset::FindNext  
  Вызовите эту функцию-член для следующей записи, который соответствует заданному условию поиска.  
   
 ```  
@@ -646,7 +727,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  Дополнительные сведения см. в разделе «FindNext FindFirst, FindLast, FindPrevious методы» в справке DAO.  
   
-##  <a name="a-namefindpreva--cdaorecordsetfindprev"></a><a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>CDaoRecordset::FindPrev  
  Вызовите эту функцию-член для поиска предыдущей записи, который соответствует заданному условию.  
   
 ```  
@@ -684,7 +765,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  Дополнительные сведения см. в разделе «FindNext FindFirst, FindLast, FindPrevious методы» в справке DAO.  
   
-##  <a name="a-namegetabsolutepositiona--cdaorecordsetgetabsoluteposition"></a><a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
  Возвращает номер текущей записи объекта набора записей.  
   
 ```  
@@ -707,7 +788,7 @@ long GetAbsolutePosition();
   
  Дополнительные сведения см. в разделе «AbsolutePosition свойство» в справке DAO.  
   
-##  <a name="a-namegetbookmarka--cdaorecordsetgetbookmark"></a><a name="getbookmark"></a>CDaoRecordset::GetBookmark  
+##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
  Вызовите эту функцию-член для получения значения закладки в определенной записи.  
   
 ```  
@@ -727,7 +808,7 @@ COleVariant GetBookmark();
   
  Дополнительные сведения см. в разделе «Свойства закладки» в справке DAO.  
   
-##  <a name="a-namegetcachesizea--cdaorecordsetgetcachesize"></a><a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
  Вызовите эту функцию-член, чтобы получить число записей в кэше.  
   
 ```  
@@ -744,7 +825,7 @@ long GetCacheSize();
   
  Дополнительные сведения см. в разделе «CacheSize свойства CacheStart» в справке DAO.  
   
-##  <a name="a-namegetcachestarta--cdaorecordsetgetcachestart"></a><a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
  Вызовите эту функцию-член для получения значения первой записи в наборе записей, кэшируемых закладки.  
   
 ```  
@@ -762,7 +843,7 @@ COleVariant GetCacheStart();
   
  Дополнительные сведения см. в разделе «CacheSize свойства CacheStart» в справке DAO.  
   
-##  <a name="a-namegetcurrentindexa--cdaorecordsetgetcurrentindex"></a><a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
  Вызовите эту функцию-член для определения индекса в настоящее время индексированные таблицей `CDaoRecordset` объекта.  
   
 ```  
@@ -779,7 +860,7 @@ CString GetCurrentIndex();
   
  Дополнительные сведения см. раздел «Объект индекса» и определение «текущий индекс» в справке DAO.  
   
-##  <a name="a-namegetdatecreateda--cdaorecordsetgetdatecreated"></a><a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
  Вызовите эту функцию-член для получения дату и время создания базовой таблицы.  
   
 ```  
@@ -794,7 +875,7 @@ COleDateTime GetDateCreated();
   
  Дополнительные сведения см. в разделе «DateCreated свойства LastUpdated» в справке DAO.  
   
-##  <a name="a-namegetdatelastupdateda--cdaorecordsetgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
  Вызовите эту функцию-член для извлечения даты и времени последнего обновления схемы.  
   
 ```  
@@ -809,7 +890,7 @@ COleDateTime GetDateLastUpdated();
   
  Дополнительные сведения см. в разделе «DateCreated свойства LastUpdated» в справке DAO.  
   
-##  <a name="a-namegetdefaultdbnamea--cdaorecordsetgetdefaultdbname"></a><a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
  Вызовите эту функцию-член для определения имени базы данных для этого набора записей.  
   
 ```  
@@ -826,7 +907,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase&#4;](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="a-namegetdefaultsqla--cdaorecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
  Платформа вызывает эту функцию-член для получения оператора SQL по умолчанию, лежащие в основе набора записей.  
   
 ```  
@@ -843,7 +924,7 @@ virtual CString GetDefaultSQL();
   
  Если передается пустая строка для [откройте](#open), то эта функция вызывается для определения имени таблицы или SQL для набора записей.  
   
-##  <a name="a-namegeteditmodea--cdaorecordsetgeteditmode"></a><a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
  Вызовите эту функцию-член для определения состояния редактирования, которое является одним из следующих значений:  
   
 ```  
@@ -863,7 +944,7 @@ short GetEditMode();
   
  Дополнительные сведения см. в разделе «EditMode свойство» в справке DAO.  
   
-##  <a name="a-namegetfieldcounta--cdaorecordsetgetfieldcount"></a><a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
  Вызовите эту функцию-член для получения числа полей (столбцов), определенных в наборе записей.  
   
 ```  
@@ -876,7 +957,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе «Свойство Count» в справке DAO.  
   
-##  <a name="a-namegetfieldinfoa--cdaorecordsetgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
  Вызовите эту функцию-член для получения сведений о полях в набор записей.  
   
 ```  
@@ -918,7 +999,7 @@ void GetFieldInfo(
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namegetfieldvaluea--cdaorecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
  Вызовите эту функцию-член для получения данных в набор записей.  
   
 ```  
@@ -960,7 +1041,7 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  Дополнительные сведения см. в разделах «Поле Object» и «Значение свойства» в справке DAO.  
   
-##  <a name="a-namegetindexcounta--cdaorecordsetgetindexcount"></a><a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
  Вызовите эту функцию-член для определения количества индексов, доступных для объекта recordset типа таблицы.  
   
 ```  
@@ -975,7 +1056,7 @@ short GetIndexCount();
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namegetindexinfoa--cdaorecordsetgetindexinfo"></a><a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
  Вызовите эту функцию-член для получения различных типов сведений об индексе, определенные в базовой таблице набор записей.  
   
 ```  
@@ -1017,7 +1098,7 @@ void GetIndexInfo(
   
  Дополнительные сведения см. в разделе «Атрибуты свойства» в справке DAO.  
   
-##  <a name="a-namegetlastmodifiedbookmarka--cdaorecordsetgetlastmodifiedbookmark"></a><a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
  Вызовите эту функцию-член для получения закладки для записи наиболее недавно добавлены или обновлены.  
   
 ```  
@@ -1034,7 +1115,7 @@ COleVariant GetLastModifiedBookmark();
   
  Дополнительные сведения см. в разделе «Свойство LastModified» в справке DAO.  
   
-##  <a name="a-namegetlockingmodea--cdaorecordsetgetlockingmode"></a><a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
  Вызовите эту функцию-член для определения типа фактически блокировки для набора записей.  
   
 ```  
@@ -1053,7 +1134,7 @@ BOOL GetLockingMode();
   
  Дополнительные сведения см. в разделах «Свойства LockEdits» и «Блокировки поведение в многопользовательском приложений» в справке DAO.  
   
-##  <a name="a-namegetnamea--cdaorecordsetgetname"></a><a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>CDaoRecordset::GetName  
  Вызовите эту функцию-член для извлечения имени набора записей.  
   
 ```  
@@ -1068,7 +1149,7 @@ CString GetName();
   
  Дополнительные сведения см. в разделе «Свойства Name» в справке DAO.  
   
-##  <a name="a-namegetparamvaluea--cdaorecordsetgetparamvalue"></a><a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
  Вызовите эту функцию-член для получения текущего значения заданного параметра в базовом объекте DAOParameter.  
   
 ```  
@@ -1091,7 +1172,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  Дополнительные сведения см. в разделе «Параметр объект» в справке DAO.  
   
-##  <a name="a-namegetpercentpositiona--cdaorecordsetgetpercentposition"></a><a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
+##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
  При работе с динамического или статического типа записей, при вызове `GetPercentPosition` до полного заполнения набора записей, объем перемещаемых — по сравнению с числом записей, доступных как указано путем вызова [GetRecordCount](#getrecordcount).  
   
 ```  
@@ -1108,7 +1189,7 @@ float GetPercentPosition();
   
  Дополнительные сведения см. в разделе «PercentPosition свойство» в справке DAO.  
   
-##  <a name="a-namegetrecordcounta--cdaorecordsetgetrecordcount"></a><a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
  Эта функция члена выяснить обращались количество записей в наборе записей.  
   
 ```  
@@ -1133,7 +1214,7 @@ long GetRecordCount();
   
  Дополнительные сведения см. в разделе «RecordCount свойство» в справке DAO.  
   
-##  <a name="a-namegetsqla--cdaorecordsetgetsql"></a><a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>CDaoRecordset::GetSQL  
  Вызовите эту функцию-член для получения инструкции SQL, который использовался для выбора записей набора записей, если он был открыт.  
   
 ```  
@@ -1153,7 +1234,7 @@ CString GetSQL() const;
   
  Дополнительные сведения см. в разделе «Свойство SQL» в справке DAO.  
   
-##  <a name="a-namegettypea--cdaorecordsetgettype"></a><a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>CDaoRecordset::GetType  
  Вызовите эту функцию-член после открытия набора записей, чтобы определить тип объекта набора записей.  
   
 ```  
@@ -1172,7 +1253,7 @@ short GetType();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе «Тип свойства» в справке DAO.  
   
-##  <a name="a-namegetvalidationrulea--cdaorecordsetgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
  Вызовите эту функцию-член для определения правил, используемый для проверки данных.  
   
 ```  
@@ -1189,7 +1270,7 @@ CString GetValidationRule();
   
  Дополнительные сведения см. в разделе «Свойства ValidationRule» в справке DAO.  
   
-##  <a name="a-namegetvalidationtexta--cdaorecordsetgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
  Вызовите эту функцию-член для получения текста свертыванию базового объекта поля.  
   
 ```  
@@ -1202,7 +1283,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе «Свертыванию» в справке DAO.  
   
-##  <a name="a-nameisbofa--cdaorecordsetisbof"></a><a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>CDaoRecordset::IsBOF  
  Вызов функции-члена до перехода от записи к записи, чтобы узнать, является ли Вы завершили перед первой записью в наборе записей.  
   
 ```  
@@ -1249,7 +1330,7 @@ BOOL IsBOF() const;
   
  Дополнительные сведения см. в разделе «BOF, свойства EOF» в справке DAO.  
   
-##  <a name="a-nameisdeleteda--cdaorecordsetisdeleted"></a><a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
  Вызовите эту функцию-член для определения, был ли удален текущей записи.  
   
 ```  
@@ -1269,7 +1350,7 @@ BOOL IsDeleted() const;
   
  Дополнительные сведения см. в разделах «Метод Delete», «Свойство LastModified» и «EditMode свойство» в справке DAO.  
   
-##  <a name="a-nameiseofa--cdaorecordsetiseof"></a><a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>CDaoRecordset::IsEOF  
  Вызовите эту функцию-член, как переход от записи к записи, чтобы узнать ли вы прошли после последней записи в наборе записей.  
   
 ```  
@@ -1316,7 +1397,7 @@ BOOL IsEOF() const;
   
  Дополнительные сведения см. в разделе «BOF, свойства EOF» в справке DAO.  
   
-##  <a name="a-nameisfielddirtya--cdaorecordsetisfielddirty"></a><a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
  Вызовите эту функцию-член для определения ли член данных заданного поля подмножества помечен как «грязный» (изменить).  
   
 ```  
@@ -1335,7 +1416,7 @@ BOOL IsFieldDirty(void* pv);
   
  `IsFieldDirty`реализуется с помощью `DoFieldExchange`.  
   
-##  <a name="a-nameisfieldnulla--cdaorecordsetisfieldnull"></a><a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
  Вызовите эту функцию-член для определения, помечен ли элемент данных заданного поля набора записей как Null.  
   
 ```  
@@ -1360,7 +1441,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  При использовании динамической привязки записей, без создания класса, производного от `CDaoRecordset`, обязательно используйте **VT_NULL** как показано в примере.  
   
-##  <a name="a-nameisfieldnullablea--cdaorecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
  Вызов этой функции-члена для определения ли член данных заданного поля значение «NULL» (может быть присвоено значение Null; C++ **NULL** не обязательно является Null, что в терминологии связанных баз данных, означает «необходимости нет значения»).  
   
 ```  
@@ -1377,7 +1458,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>Примечания  
  Поле, которое не может быть Null должен иметь значение. При попытке такого поля задать значение Null при добавлении или обновлении записи источника данных отклоняет Добавление или обновление, и **обновление** будет выдано исключение. Исключение возникает при вызове **обновление**, не при вызове `SetFieldNull`.  
   
-##  <a name="a-nameisopena--cdaorecordsetisopen"></a><a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>CDaoRecordset::IsOpen  
  Вызовите эту функцию-член для определения того, открыт ли набор записей.  
   
 ```  
@@ -1389,7 +1470,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namembcheckcachefordirtyfieldsa--cdaorecordsetmbcheckcachefordirtyfields"></a><a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset::m_bCheckCacheForDirtyFields  
+##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset::m_bCheckCacheForDirtyFields  
  Содержит флаг, указывающий ли кэшированные поля автоматически помечаются как «грязной» (измененного) и Null.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1397,7 +1478,7 @@ BOOL IsOpen() const;
   
  Значение этого элемента данных, перед вызовом метода **откройте**. Этот механизм используется главным образом для простоты использования. Производительность может быть медленнее из-за двойной буферизации полей при внесении изменений.  
   
-##  <a name="a-namemnfieldsa--cdaorecordsetmnfields"></a><a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
  Содержит количество элементов данных полей в классе записей и число столбцов, выбранных в набор записей из источника данных.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1410,7 +1491,7 @@ BOOL IsOpen() const;
   
  Можно привязать столбцы динамически с применением `CDaoRecordset::GetFieldValue` и `CDaoRecordset::SetFieldValue`. Если сделать это, необходимо выполнить приращение счетчика в `m_nFields` с учетом число функция DFX вызовов вашей `DoFieldExchange` функции-члена.  
   
-##  <a name="a-namemnparamsa--cdaorecordsetmnparams"></a><a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
  Содержит количество элементов данных параметров в классе записей — количество параметров, передаваемый с запроса набора записей.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1423,7 +1504,7 @@ BOOL IsOpen() const;
   
  Дополнительные сведения см. в разделе «Параметр объект» в справке DAO.  
   
-##  <a name="a-namempdaorecordseta--cdaorecordsetmpdaorecordset"></a><a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
  Содержит указатель на интерфейс OLE для базового объекта набора записей DAO `CDaoRecordset` объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1431,7 +1512,7 @@ BOOL IsOpen() const;
   
  Дополнительные сведения см. в разделе «Объект набора записей» в справке DAO.  
   
-##  <a name="a-namempdatabasea--cdaorecordsetmpdatabase"></a><a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
  Содержит указатель на `CDaoDatabase` объект, через который набор записей подключен к источнику данных.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1441,7 +1522,7 @@ BOOL IsOpen() const;
   
  Дополнительные сведения см. в разделе «Объект базы данных» в справке DAO.  
   
-##  <a name="a-namemstrfiltera--cdaorecordsetmstrfilter"></a><a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
  Содержит строку, которая используется для создания **ГДЕ** инструкции SQL.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1451,7 +1532,7 @@ BOOL IsOpen() const;
   
  Дополнительные сведения см. в разделе «Свойства фильтра» в справке DAO.  
   
-##  <a name="a-namemstrsorta--cdaorecordsetmstrsort"></a><a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
  Содержит строку, содержащую **ORDERBY** инструкции SQL без зарезервированных слов **ORDERBY**.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1463,7 +1544,7 @@ BOOL IsOpen() const;
   
  Дополнительные сведения см. в разделе «Свойство сортировки» в справке DAO.  
   
-##  <a name="a-namemovea--cdaorecordsetmove"></a><a name="move"></a>CDaoRecordset::Move  
+##  <a name="move"></a>CDaoRecordset::Move  
  Вызов этой функции-члена для размещения записей `lRows` записей из текущей записи.  
   
 ```  
@@ -1492,7 +1573,7 @@ virtual void Move(long lRows);
   
  Дополнительные сведения см. в разделах «Переместить метод» и «MoveFirst, MoveLast, MoveNext, методы MovePrevious» в справке DAO.  
   
-##  <a name="a-namemovefirsta--cdaorecordsetmovefirst"></a><a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
  Вызовите эту функцию-член вносить первой записи в наборе записей (если таковые имеются) текущей записи.  
   
 ```  
@@ -1520,7 +1601,7 @@ void MoveFirst();
   
  Дополнительные сведения см. в разделах «Переместить метод» и «MoveFirst, MoveLast, MoveNext, методы MovePrevious» в справке DAO.  
   
-##  <a name="a-namemovelasta--cdaorecordsetmovelast"></a><a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>CDaoRecordset::MoveLast  
  Эта функция члена вносить последней записи (если таковые имеются) в наборе записей текущей записи.  
   
 ```  
@@ -1545,7 +1626,7 @@ void MoveLast();
   
  Дополнительные сведения см. в разделах «Переместить метод» и «MoveFirst, MoveLast, MoveNext, методы MovePrevious» в справке DAO.  
   
-##  <a name="a-namemovenexta--cdaorecordsetmovenext"></a><a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>CDaoRecordset::MoveNext  
  Вызовите эту функцию-член для следующей записи в текущую запись набора записей.  
   
 ```  
@@ -1569,7 +1650,7 @@ void MoveNext();
   
  Дополнительные сведения см. в разделах «Переместить метод» и «MoveFirst, MoveLast, MoveNext, методы MovePrevious» в справке DAO.  
   
-##  <a name="a-namemovepreva--cdaorecordsetmoveprev"></a><a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
  Вызовите эту функцию-член для предыдущей записи в текущую запись набора записей.  
   
 ```  
@@ -1595,7 +1676,7 @@ void MovePrev();
   
  Дополнительные сведения см. в разделах «Переместить метод» и «MoveFirst, MoveLast, MoveNext, методы MovePrevious» в справке DAO.  
   
-##  <a name="a-nameopena--cdaorecordsetopen"></a><a name="open"></a>CDaoRecordset::Open  
+##  <a name="open"></a>CDaoRecordset::Open  
  Необходимо вызвать эту функцию-член для извлечения записей для набора записей.  
   
 ```  
@@ -1717,7 +1798,7 @@ virtual void Open(
   
  Дополнительные сведения см. в разделе «Метод OpenRecordset» в справке DAO.  
   
-##  <a name="a-namerequerya--cdaorecordsetrequery"></a><a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>CDaoRecordset::Requery  
  Эта функция члена для перестроения (обновления) набора записей.  
   
 ```  
@@ -1745,7 +1826,7 @@ virtual void Requery();
   
  Дополнительные сведения см. в разделе «Повторного» справки DAO.  
   
-##  <a name="a-nameseeka--cdaorecordsetseek"></a><a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>CDaoRecordset::Seek  
  Вызовите эту функцию-член для обнаружения записи в объекте набора записей индексированных тип таблицы, удовлетворяющей критериям для текущего индекса и убедитесь, что запись текущей записи.  
   
 ```  
@@ -1806,7 +1887,7 @@ BOOL Seek(
   
  Дополнительные сведения см. в разделе «Поиск метода» в справке DAO.  
   
-##  <a name="a-namesetabsolutepositiona--cdaorecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
  Задает относительный номер текущей записи объекта набора записей.  
   
 ```  
@@ -1832,7 +1913,7 @@ void SetAbsolutePosition(long lPosition);
   
  Дополнительные сведения см. в разделе «AbsolutePosition свойство» в справке DAO.  
   
-##  <a name="a-namesetbookmarka--cdaorecordsetsetbookmark"></a><a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
  Вызов этой функции-члена для размещения записей в записи, содержащей указанную закладку.  
   
 ```  
@@ -1853,7 +1934,7 @@ void SetBookmark(COleVariant varBookmark);
   
  Дополнительные сведения см. в разделах «Свойства закладки» и свойство Bookmarkable» в справке DAO.  
   
-##  <a name="a-namesetcachesizea--cdaorecordsetsetcachesize"></a><a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
+##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
  Вызовите эту функцию-член для задания числа записей, которые будут кэшироваться.  
   
 ```  
@@ -1871,7 +1952,7 @@ void SetCacheSize(long lSize);
   
  Дополнительные сведения см. в разделе «CacheSize свойства CacheStart» в справке DAO.  
   
-##  <a name="a-namesetcachestarta--cdaorecordsetsetcachestart"></a><a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
+##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
  Вызов этой функции-члена для указания закладки первой записи в наборе записей, кэшируемых.  
   
 ```  
@@ -1895,7 +1976,7 @@ void SetCacheStart(COleVariant varBookmark);
   
  Дополнительные сведения см. в разделе CacheSize, свойства CacheStart» в справке DAO.  
   
-##  <a name="a-namesetcurrentindexa--cdaorecordsetsetcurrentindex"></a><a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
+##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
  Вызов этой функции-члена следует установить индекс для объекта recordset типа таблицы.  
   
 ```  
@@ -1915,7 +1996,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  Дополнительные сведения см. раздел «Объект индекса» и определение «текущий индекс» в справке DAO.  
   
-##  <a name="a-namesetfielddirtya--cdaorecordsetsetfielddirty"></a><a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
  Вызов этой функции-члена для флага члену данных поля в наборе записей, как измененные или как без изменений.  
   
 ```  
@@ -1955,7 +2036,7 @@ void SetFieldDirty(
   
  `SetFieldDirty`реализуется с помощью `DoFieldExchange`.  
   
-##  <a name="a-namesetfieldnulla--cdaorecordsetsetfieldnull"></a><a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
  Вызовите эту функцию-член пометки члену данных поля в наборе записей, как Null (в частности наличие никакого значения) или пустым.  
   
 ```  
@@ -1991,7 +2072,7 @@ void SetFieldNull(
   
  установит только **outputColumn** полей для **NULL**; **param** полей не затрагиваются.  
   
-##  <a name="a-namesetfieldvaluea--cdaorecordsetsetfieldvalue"></a><a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
  Вызовите эту функцию-член для задания значения поля, либо по порядковому номеру, либо путем изменения значения строки.  
   
 ```  
@@ -2035,7 +2116,7 @@ void SetFieldValue(
   
  Дополнительные сведения см. в разделах «Поле Object» и «Значение свойства» в справке DAO.  
   
-##  <a name="a-namesetfieldvaluenulla--cdaorecordsetsetfieldvaluenull"></a><a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
  Вызовите эту функцию-член, чтобы задать в поле значение Null.  
   
 ```  
@@ -2055,7 +2136,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  Дополнительные сведения см. в разделах «Поле Object» и «Значение свойства» в справке DAO.  
   
-##  <a name="a-namesetlockingmodea--cdaorecordsetsetlockingmode"></a><a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
  Вызовите эту функцию-член для задания типа блокировки для набора записей.  
   
 ```  
@@ -2077,7 +2158,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  При работе с источниками данных ODBC, режим блокировки всегда является оптимистическим.  
   
-##  <a name="a-namesetparamvaluea--cdaorecordsetsetparamvalue"></a><a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
  Вызовите эту функцию-член для задания значения параметра в наборе записей во время выполнения.  
   
 ```  
@@ -2106,7 +2187,7 @@ virtual void SetParamValue(
   
  Укажите значение, которое задается как `COleVariant` объект. Сведения о настройке нужное значение и тип в вашей `COleVariant` объекта см. в разделе класса [COleVariant](../../mfc/reference/colevariant-class.md). Обратите внимание, что если вы не создаете набор записей ЮНИКОДА, `COleVariant` объекта должны быть объявлены явно ANSI. Это можно сделать с помощью [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** форма конструктора с `vtSrc` значение `VT_BSTRT` (ANSI) или с помощью **COleVariant** функция [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** с `vtSrc` значение `VT_BSTRT`.  
   
-##  <a name="a-namesetparamvaluenulla--cdaorecordsetsetparamvaluenull"></a><a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
  Вызов этой функции-члена для присвойте параметру значение Null.  
   
 ```  
@@ -2124,7 +2205,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>Примечания  
  C++ **NULL** не обязательно является Null, что в терминологии связанных баз данных, означает «необходимости нет значения».  
   
-##  <a name="a-namesetpercentpositiona--cdaorecordsetsetpercentposition"></a><a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
+##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
  Вызовите эту функцию-член значение изменяется Приблизительное расположение текущей записи в объекте набора записей на основе процента записей в наборе записей.  
   
 ```  
@@ -2145,7 +2226,7 @@ void SetPercentPosition(float fPosition);
   
  Дополнительные сведения см. в разделе «PercentPosition свойство» в справке DAO.  
   
-##  <a name="a-nameupdatea--cdaorecordsetupdate"></a><a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>CDaoRecordset::Update  
  Это функция-член вызывается после вызова `AddNew` или **изменить** функции-члена.  
   
 ```  

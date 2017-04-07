@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectNoLock
-- ATL::CComObjectNoLock
-- ATL.CComObjectNoLock<Base>
 - CComObjectNoLock
-- ATL::CComObjectNoLock<Base>
+- ATLCOM/ATL::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::AddRef
+- ATLCOM/ATL::CComObjectNoLock::QueryInterface
+- ATLCOM/ATL::CComObjectNoLock::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +88,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectnolockaddref"></a><a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>CComObjectNoLock::AddRef  
  Увеличивает значение счетчика ссылок на объект.  
   
 ```
@@ -97,7 +98,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, которое может быть полезно для диагностики и тестирования.  
   
-##  <a name="a-nameccomobjectnolocka--ccomobjectnolockccomobjectnolock"></a><a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
  Конструктор. В отличие от [CComObject](../../atl/reference/ccomobject-class.md), не увеличивает счетчик блокировки модуля.  
   
 ```
@@ -108,7 +109,7 @@ CComObjectNoLock(void* = NULL);
  **void\***  
  [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
   
-##  <a name="a-namedtora--ccomobjectnolockccomobjectnolock"></a><a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
  Деструктор  
   
 ```
@@ -119,7 +120,7 @@ CComObjectNoLock(void* = NULL);
  Освобождает все выделенные ресурсы и вызывает [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
-##  <a name="a-namequeryinterfacea--ccomobjectnolockqueryinterface"></a><a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -136,7 +137,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="a-namereleasea--ccomobjectnolockrelease"></a><a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>CComObjectNoLock::Release  
  Уменьшает счетчик ссылок на объект.  
   
 ```

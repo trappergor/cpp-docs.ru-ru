@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IVirtualProcessorRoot
+- IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Activate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: ca095a249ee0eb9e1393e232ab7957a7060a2002
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2635f1c18dd61127360b8398ad1b0da03f1666d7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Структура IVirtualProcessorRoot
@@ -54,10 +59,10 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод IVirtualProcessorRoot::Activate](#activate)|Прокси-поток, связанный с интерфейсом контекста выполнения вызывает `pContext` для запуска выполнения на этот корневой виртуальный процессор.|  
-|[Метод IVirtualProcessorRoot::Deactivate](#deactivate)|Вызывает прокси-поток, выполняющийся на этот корневой виртуальный процессор прекращает управлять контекстом выполнения. Прокси-поток продолжит выполнение при вызове `Activate` метода.|  
-|[Метод IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Вызывает данные, хранящиеся в иерархии памяти отдельных процессоров, становятся видимыми для всех процессоров в системе. Это гарантирует, что полная памяти граница была выполнена на всех процессорах перед возвратом метода.|  
-|[Метод IVirtualProcessorRoot::GetId](#getid)|Возвращает уникальный идентификатор для корневой виртуальный процессор.|  
+|[IVirtualProcessorRoot::Activate](#activate)|Прокси-поток, связанный с интерфейсом контекста выполнения вызывает `pContext` для запуска выполнения на этот корневой виртуальный процессор.|  
+|[IVirtualProcessorRoot::Deactivate](#deactivate)|Вызывает прокси-поток, выполняющийся на этот корневой виртуальный процессор прекращает управлять контекстом выполнения. Прокси-поток продолжит выполнение при вызове `Activate` метода.|  
+|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Вызывает данные, хранящиеся в иерархии памяти отдельных процессоров, становятся видимыми для всех процессоров в системе. Это гарантирует, что полная памяти граница была выполнена на всех процессорах перед возвратом метода.|  
+|[IVirtualProcessorRoot::GetId](#getid)|Возвращает уникальный идентификатор для корневой виртуальный процессор.|  
   
 ## <a name="remarks"></a>Примечания  
  Каждый корень виртуального процессора имеет связанный ресурс выполнения. `IVirtualProcessorRoot` Интерфейс наследует от [IExecutionResource](iexecutionresource-structure.md) интерфейса. Несколько корней виртуальный процессор может соответствовать же базовый поток оборудования.  
@@ -74,7 +79,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameactivatea--ivirtualprocessorrootactivate-method"></a><a name="activate"></a>Метод IVirtualProcessorRoot::Activate  
+##  <a name="activate"></a>Метод IVirtualProcessorRoot::Activate  
  Прокси-поток, связанный с интерфейсом контекста выполнения вызывает `pContext` для запуска выполнения на этот корневой виртуальный процессор.  
   
 ```
@@ -100,7 +105,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  Процесс активации корня виртуальный процессор увеличивает уровень подписки базовой аппаратный поток на единицу. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-namedeactivatea--ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>Метод IVirtualProcessorRoot::Deactivate  
+##  <a name="deactivate"></a>Метод IVirtualProcessorRoot::Deactivate  
  Вызывает прокси-поток, выполняющийся на этот корневой виртуальный процессор прекращает управлять контекстом выполнения. Прокси-поток продолжит выполнение при вызове `Activate` метода.  
   
 ```
@@ -127,7 +132,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  Процесс деактивации корня виртуальный процессор уменьшает уровень подписки базовой аппаратный поток на единицу. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-nameensurealltasksvisiblea--ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>Метод IVirtualProcessorRoot::EnsureAllTasksVisible  
+##  <a name="ensurealltasksvisible"></a>Метод IVirtualProcessorRoot::EnsureAllTasksVisible  
  Вызывает данные, хранящиеся в иерархии памяти отдельных процессоров, становятся видимыми для всех процессоров в системе. Это гарантирует, что полная памяти граница была выполнена на всех процессорах перед возвратом метода.  
   
 ```
@@ -147,7 +152,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation`возникает, если корневой виртуальный процессор никогда не была активирована, или аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
   
-##  <a name="a-namegetida--ivirtualprocessorrootgetid-method"></a><a name="getid"></a>Метод IVirtualProcessorRoot::GetId  
+##  <a name="getid"></a>Метод IVirtualProcessorRoot::GetId  
  Возвращает уникальный идентификатор для корневой виртуальный процессор.  
   
 ```
@@ -158,5 +163,5 @@ virtual unsigned int GetId() const = 0;
  Целочисленный идентификатор.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

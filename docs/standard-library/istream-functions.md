@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="a-nameistreamswapa--swap"></a><a name="istream_swap"></a>  swap  
+##  <a name="istream_swap"></a>  swap  
  Меняет местами элементы двух объектов-потоков.  
   
 ```  
@@ -38,13 +38,13 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Поток.  
   
- ` right`  
+ `right`  
  Поток.  
   
-##  <a name="a-namewsa--ws"></a><a name="ws"></a>  ws  
+##  <a name="ws"></a>  ws  
  Пропускает пробелы в потоке.  
   
 ```  

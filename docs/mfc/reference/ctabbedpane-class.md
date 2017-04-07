@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
+- AFXTABBEDPANE/CTabbedPane
+- AFXTABBEDPANE/CTabbedPane::DetachPane
+- AFXTABBEDPANE/CTabbedPane::EnableTabAutoColor
+- AFXTABBEDPANE/CTabbedPane::FloatTab
+- AFXTABBEDPANE/CTabbedPane::GetTabArea
+- AFXTABBEDPANE/CTabbedPane::GetTabWnd
+- AFXTABBEDPANE/CTabbedPane::HasAutoHideMode
+- AFXTABBEDPANE/CTabbedPane::IsTabLocationBottom
+- AFXTABBEDPANE/CTabbedPane::ResetTabs
+- AFXTABBEDPANE/CTabbedPane::SetTabAutoColors
+- AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop
+- AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +171,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxTabbedPane.h  
   
-##  <a name="a-namedetachpanea--ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CTabbedPane::DetachPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL DetachPane(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameenabletabautocolora--ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
  Включает или выключает автоматическую цветовую маркировку вкладок.  
   
 ```  
@@ -194,7 +206,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  По умолчанию этот параметр отключен.  
   
-##  <a name="a-namefloattaba--ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>CTabbedPane::FloatTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -215,7 +227,7 @@ virtual BOOL FloatTab(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namegettabareaa--ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
  Возвращает размер и положение полосы вкладки окна с вкладками.  
   
 ```  
@@ -236,7 +248,7 @@ virtual void GetTabArea(
   
  Переопределите этот метод в `CTabbedPane`-производного класса, чтобы изменить это поведение.  
   
-##  <a name="a-namegettabwnda--ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -247,7 +259,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namehasautohidemodea--ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -258,7 +270,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameistablocationbottoma--ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
  Определяет, расположены ли вкладки в нижней части окна.  
   
 ```  
@@ -270,7 +282,7 @@ virtual BOOL IsTabLocationBottom() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namembtabsalwaystopa--ctabbedpanembtabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
  Расположение вкладок в приложении по умолчанию.  
   
 ```  
@@ -284,7 +296,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  Значение по умолчанию — `FALSE`.  
   
-##  <a name="a-namemptabwndrtca--ctabbedpanemptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
  Сведения о классе среды выполнения для настраиваемого объекта, производного от класса `CMFCTabCtrl`.  
   
 ```  
@@ -294,7 +306,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>Примечания  
  Задайте этой статической переменной-члена в указатель на данные класса среды выполнения `CMFCTabCtrl`-производный объект при использовании пользовательских окна с вкладками в область с вкладками.  
   
-##  <a name="a-nameresettabsa--ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
  Переводит все панели с вкладками в состояние по умолчанию.  
   
 ```  
@@ -304,7 +316,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для возврата всех вкладках состояние по умолчанию. При вызове этот метод сбрасывает размеры границы и автоматическое цвет состояния всех вкладках.  
   
-##  <a name="a-namesettabautocolorsa--ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
  Задает список настраиваемых цветов, используемых при включенной функции цвет автоматически.  
   
 ```  

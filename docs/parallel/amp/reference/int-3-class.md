@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 038b3cafdbdc628fdff0bcf70db6575acabb17e1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9a9b8eed7fcf46dee258c55471e79420666e043
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="int3-class"></a>Класс int_3
@@ -132,62 +132,62 @@ class int_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод int_3::get_X||  
-|Метод int_3::get_xy||  
-|Метод int_3::get_xyz||  
-|Метод int_3::get_xz||  
-|Метод int_3::get_xzy||  
-|Метод int_3::get_y||  
-|Метод int_3::get_yx||  
-|Метод int_3::get_yxz||  
-|Метод int_3::get_yz||  
-|Метод int_3::get_yzx||  
-|Метод int_3::get_z||  
-|Метод int_3::get_zx||  
-|Метод int_3::get_zxy||  
-|Метод int_3::get_zy||  
-|Метод int_3::get_zyx||  
-|Метод int_3::ref_b||  
-|Метод int_3::ref_g||  
-|Метод int_3::ref_r||  
-|Метод int_3::ref_x||  
-|Метод int_3::ref_y||  
-|Метод int_3::ref_z||  
-|Метод int_3::set_X||  
-|Метод int_3::set_xy||  
-|Метод int_3::set_xyz||  
-|Метод int_3::set_xz||  
-|Метод int_3::set_xzy||  
-|Метод int_3::set_y||  
-|Метод int_3::set_yx||  
-|Метод int_3::set_yxz||  
-|Метод int_3::set_yz||  
-|Метод int_3::set_yzx||  
-|Метод int_3::set_z||  
-|Метод int_3::set_zx||  
-|Метод int_3::set_zxy||  
-|Метод int_3::set_zy||  
-|Метод int_3::set_zyx||  
+|int_3::get_X||  
+|int_3::get_xy||  
+|int_3::get_xyz||  
+|int_3::get_xz||  
+|int_3::get_xzy||  
+|int_3::get_y||  
+|int_3::get_yx||  
+|int_3::get_yxz||  
+|int_3::get_yz||  
+|int_3::get_yzx||  
+|int_3::get_z||  
+|int_3::get_zx||  
+|int_3::get_zxy||  
+|int_3::get_zy||  
+|int_3::get_zyx||  
+|int_3::ref_b||  
+|int_3::ref_g||  
+|int_3::ref_r||  
+|int_3::ref_x||  
+|int_3::ref_y||  
+|int_3::ref_z||  
+|int_3::set_X||  
+|int_3::set_xy||  
+|int_3::set_xyz||  
+|int_3::set_xz||  
+|int_3::set_xzy||  
+|int_3::set_y||  
+|int_3::set_yx||  
+|int_3::set_yxz||  
+|int_3::set_yz||  
+|int_3::set_yzx||  
+|int_3::set_z||  
+|int_3::set_zx||  
+|int_3::set_zxy||  
+|int_3::set_zy||  
+|int_3::set_zyx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|int_3::operator оператор||  
-|int_3::operator - оператор||  
-|int_3::operator % =-оператор||  
-|int_3::operator & =-оператор||  
-|int_3::operator * =-оператор||  
-|int_3::operator / =-оператор||  
-|int_3::operator ^ =-оператор||  
-|int_3::operator | =-оператор||  
-|int_3::operator ~ оператор||  
-|int_3::operator оператор ++||  
-|Оператор += int_3::operator||  
-|int_3::operator\<=-оператор||  
-|int_3::operator =-оператор||  
-|int_3::operator-= оператор||  
-|int_3::operator >> =-оператор||  
+|int_3::operator-||  
+|int_3::operator--||  
+|int_3::operator % =||  
+|int_3::operator & =||  
+|int_3::operator * =||  
+|int_3::operator / =||  
+|int_3::operator ^ =||  
+|int_3::operator | =||  
+|int_3::operator ~||  
+|int_3::operator ++||  
+|int_3::operator +=||  
+|int_3::operator\<=||  
+|int_3::operator =||  
+|int_3::operator-=||  
+|int_3::operator >> =||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -199,36 +199,36 @@ class int_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных int_3::b||  
-|Элемент данных int_3::BG||  
-|Элемент данных int_3::bgr||  
-|Элемент данных int_3::br||  
-|Элемент данных int_3::brg||  
-|Элемент данных int_3::g||  
-|Элемент данных int_3::GB||  
-|Элемент данных int_3::GBR||  
-|Элемент данных int_3::GR||  
-|Элемент данных int_3::grb||  
-|Элемент данных int_3::r||  
-|Элемент данных int_3::RB||  
-|Элемент данных int_3::rbg||  
-|Элемент данных int_3::RG||  
-|Элемент данных int_3::RGB||  
-|Элемент данных int_3::x||  
-|Элемент данных int_3::XY||  
-|Элемент данных int_3::xyz||  
-|Элемент данных int_3::xz||  
-|Элемент данных int_3::xzy||  
-|Элемент данных int_3::y||  
-|Элемент данных int_3::YX||  
-|Элемент данных int_3::yxz||  
-|Элемент данных int_3::yz||  
-|Элемент данных int_3::yzx||  
-|Элемент данных int_3::z||  
-|Элемент данных int_3::zx||  
-|Элемент данных int_3::zxy||  
-|Элемент данных int_3::zy||  
-|Элемент данных int_3::zyx||  
+|int_3::b||  
+|int_3::BG||  
+|int_3::bgr||  
+|int_3::br||  
+|int_3::brg||  
+|int_3::g||  
+|int_3::GB||  
+|int_3::GBR||  
+|int_3::GR||  
+|int_3::grb||  
+|int_3::r||  
+|int_3::RB||  
+|int_3::rbg||  
+|int_3::RG||  
+|int_3::RGB||  
+|int_3::x||  
+|int_3::XY||  
+|int_3::xyz||  
+|int_3::xz||  
+|int_3::xzy||  
+|int_3::y||  
+|int_3::YX||  
+|int_3::yxz||  
+|int_3::yz||  
+|int_3::yzx||  
+|int_3::z||  
+|int_3::zx||  
+|int_3::zxy||  
+|int_3::zy||  
+|int_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `int_3`  
@@ -238,7 +238,7 @@ class int_3;
   
  **Пространство имен:** Concurrency::graphics  
 
-## <a name="a-namectora-int3"></a><a name="ctor"></a>int_3 
+## <a name="ctor"></a>int_3 
 
 По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -290,7 +290,7 @@ explicit inline int_3(
  `_Other`  
  Объект, используемый для инициализации.  
   
-## <a name="a-namesizea-size"></a><a name="size"></a>размер 
+## <a name="size"></a>размер 
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -299,5 +299,5 @@ static const int size = 3;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

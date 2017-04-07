@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRectTracker
+- AFXEXT/CRectTracker
+- AFXEXT/CRectTracker::CRectTracker
+- AFXEXT/CRectTracker::AdjustRect
+- AFXEXT/CRectTracker::Draw
+- AFXEXT/CRectTracker::DrawTrackerRect
+- AFXEXT/CRectTracker::GetHandleMask
+- AFXEXT/CRectTracker::GetTrueRect
+- AFXEXT/CRectTracker::HitTest
+- AFXEXT/CRectTracker::NormalizeHit
+- AFXEXT/CRectTracker::OnChangedRect
+- AFXEXT/CRectTracker::SetCursor
+- AFXEXT/CRectTracker::Track
+- AFXEXT/CRectTracker::TrackRubberBand
+- AFXEXT/CRectTracker::m_nHandleSize
+- AFXEXT/CRectTracker::m_nStyle
+- AFXEXT/CRectTracker::m_rect
+- AFXEXT/CRectTracker::m_sizeMin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +117,7 @@ class CRectTracker
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле afxext.h  
   
-##  <a name="a-nameadjustrecta--crecttrackeradjustrect"></a><a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
  Вызывается инфраструктурой при изменении размера прямоугольника отслеживания с помощью маркер изменения размера.  
   
 ```  
@@ -123,7 +140,7 @@ virtual void AdjustRect(
   
  Специальные функции, которые не поддерживаются напрямую `CRectTracker`, такие как привязка к сетке или keep пропорция, можно реализовать путем переопределения эта функция.  
   
-##  <a name="a-namecrecttrackera--crecttrackercrecttracker"></a><a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
  Создает и инициализирует `CRectTracker` объекта.  
   
 ```  
@@ -157,7 +174,7 @@ CRectTracker(
 ### <a name="remarks"></a>Примечания  
  Конструктор по умолчанию инициализирует `CRectTracker` объекта значениями из `lpSrcRect` и инициализирует других размеров системы по умолчанию. Если объект создается без параметров, `m_rect` и `m_nStyle` данные-члены являются неинициализированным.  
   
-##  <a name="a-namedrawa--crecttrackerdraw"></a><a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>CRectTracker::Draw  
  Эта функция вызывается для рисования линий внешний и внутренний регион прямоугольника.  
   
 ```  
@@ -171,7 +188,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>Примечания  
  Стиль средства отслеживания определяет, как выполняется рисование. В разделе конструктор `CRectTracker` Дополнительные сведения о доступных стилей.  
   
-##  <a name="a-namedrawtrackerrecta--crecttrackerdrawtrackerrect"></a><a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
  Вызывается инфраструктурой при каждом изменении позиции средства отслеживания хотя внутри `Track` или `TrackRubberBand` функции-члена.  
   
 ```  
@@ -200,7 +217,7 @@ virtual void DrawTrackerRect(
   
  Переопределите эту функцию для разных отзыв во время операции отслеживания.  
   
-##  <a name="a-namegethandlemaska--crecttrackergethandlemask"></a><a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
  Платформа вызывает эту функцию-член для получения маску для прямоугольника маркеры изменения размера.  
   
 ```  
@@ -221,7 +238,7 @@ virtual UINT GetHandleMask() const;
   
  Переопределите эту функцию-член, чтобы скрыть или отобразить указанный маркеры изменения размера.  
   
-##  <a name="a-namegettruerecta--crecttrackergettruerect"></a><a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
  Эта функция вызывается для извлечения координат прямоугольника.  
   
 ```  
@@ -235,7 +252,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>Примечания  
  Размеры прямоугольника включают высоту и ширину все маркеры изменения размера, расположенных на внешнюю границу. При возвращении, `lpTrueRect` всегда является нормализованным прямоугольником в координаты устройства.  
   
-##  <a name="a-namehittesta--crecttrackerhittest"></a><a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>CRectTracker::HitTest  
  Вызывайте эту функцию, чтобы узнать, является ли пользователь взял маркер изменения размера.  
   
 ```  
@@ -269,7 +286,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="a-namemnhandlesizea--crecttrackermnhandlesize"></a><a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
  Размер в точках из `CRectTracker` маркеры изменения размера.  
   
 ```  
@@ -279,14 +296,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>Примечания  
  Инициализирован системы по умолчанию.  
   
-##  <a name="a-namemrecta--crecttrackermrect"></a><a name="m_rect"></a>CRectTracker::m_rect  
+##  <a name="m_rect"></a>CRectTracker::m_rect  
  Текущая позиция прямоугольника в координатах клиента (в пикселях).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="a-namemsizemina--crecttrackermsizemin"></a><a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
  Минимальный размер прямоугольника.  
   
 ```  
@@ -296,7 +313,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>Примечания  
  Оба значения по умолчанию **cx** и **cy**, вычисляются на основе системы по умолчанию для ширины границы. Этот член данных используется только `AdjustRect` функции-члена.  
   
-##  <a name="a-namemnstylea--crecttrackermnstyle"></a><a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
  Текущий стиль прямоугольника.  
   
 ```  
@@ -306,7 +323,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>Примечания  
  В разделе [CRectTracker::CRectTracker](#crecttracker) список возможных стилей.  
   
-##  <a name="a-namenormalizehita--crecttrackernormalizehit"></a><a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
  Эта функция вызывается для преобразования потенциально инвертированный дескриптор.  
   
 ```  
@@ -323,7 +340,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>Примечания  
  Когда `CRectTracker::Track` или `CRectTracker::TrackRubberBand` вызывается с Инверсия допускается, существует возможность прямоугольник обратные на оси x и оси y. В этом случае `HitTest` будет возвращать маркеры, которые также обратным по отношению к прямоугольника. Это подходит для рисования курсоров, поскольку отзывов зависит от положения на экране прямоугольник, а не часть структуры данных прямоугольника, который будет изменен.  
   
-##  <a name="a-nameonchangedrecta--crecttrackeronchangedrect"></a><a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
  Вызывается инфраструктурой при каждом прямоугольник отслеживания был изменен во время вызова `Track`.  
   
 ```  
@@ -339,7 +356,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  Переопределите эту функцию, если требуется выполнять никаких действий, после изменения размера прямоугольника.  
   
-##  <a name="a-namesetcursora--crecttrackersetcursor"></a><a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>CRectTracker::SetCursor  
  Эта функция вызывается для изменения формы курсора, когда оно находится над `CRectTracker` область объекта.  
   
 ```  
@@ -361,7 +378,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию из функции окна, который обрабатывает `WM_SETCURSOR` сообщений (обычно `OnSetCursor`).  
   
-##  <a name="a-nametracka--crecttrackertrack"></a><a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>CRectTracker::Track  
  Эта функция вызывается для отображения пользовательского интерфейса для изменения размеров прямоугольника.  
   
 ```  
@@ -395,7 +412,7 @@ BOOL Track(
   
  Если `bAllowInvert` — **TRUE**, прямоугольник отслеживания могут быть инвертированы на оси x или оси y.  
   
-##  <a name="a-nametrackrubberbanda--crecttrackertrackrubberband"></a><a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
+##  <a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
  Эта функция вызывается для сделать выбор изменяемого.  
   
 ```  

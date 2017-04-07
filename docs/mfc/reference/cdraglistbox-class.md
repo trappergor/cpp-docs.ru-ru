@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDragListBox
+- AFXCMN/CDragListBox
+- AFXCMN/CDragListBox::CDragListBox
+- AFXCMN/CDragListBox::BeginDrag
+- AFXCMN/CDragListBox::CancelDrag
+- AFXCMN/CDragListBox::Dragging
+- AFXCMN/CDragListBox::DrawInsert
+- AFXCMN/CDragListBox::Dropped
+- AFXCMN/CDragListBox::ItemFromPt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>CDragListBox::BeginDrag  
  Вызывается методом framework, когда происходит событие, которое может начать операцию перетаскивания, например нажатия левой кнопки мыши.  
   
 ```  
@@ -111,7 +119,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если вы хотите контролировать, что происходит, когда начинается операция перетаскивания. Реализация по умолчанию захват мыши и остается в режим перетаскивания, пока пользователь не нажимает кнопку мыши влево или вправо или нажатии клавиши ESC, в какое время отменена операция перетаскивания.  
   
-##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
  Вызывается инфраструктурой при отмене операции перетаскивания.  
   
 ```  
@@ -125,14 +133,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для обработки специальной обработки для элемента управления поля списка.  
   
-##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
  Создает объект `CDragListBox`.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>CDragListBox::Dragging  
  Вызывается инфраструктурой при перетаскиваемого элемента списка в пределах `CDragListBox` объекта.  
   
 ```  
@@ -155,7 +163,7 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="remarks"></a>Примечания  
  По умолчанию возвращает `DL_MOVECURSOR`. Эту функцию можно переопределите, чтобы обеспечить дополнительные функциональные возможности.  
   
-##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
  Вызывается платформой для изображения направляющих перед элементом с указанным индексом.  
   
 ```  
@@ -169,7 +177,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Примечания  
  Значение - 1 очищает направляющих. Переопределите эту функцию для изменения внешнего вида и поведения направляющих.  
   
-##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>CDragListBox::Dropped  
  Вызывается инфраструктурой при удалении элемента в пределах `CDragListBox` объекта.  
   
 ```  
@@ -188,7 +196,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Примечания  
  Поведение по умолчанию копирует элемента списка и его данных в новое расположение, а затем удаляет исходный элемент. Переопределите эту функцию, чтобы изменить поведение по умолчанию, такие как включение копий элементы списка можно перетаскивать в другие местоположения в пределах списка.  
   
-##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
  Эту функцию для получения отсчитываемый от нуля индекс элемента списка находится на вызов `pt`.  
   
 ```  

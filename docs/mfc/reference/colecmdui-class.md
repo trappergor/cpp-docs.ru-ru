@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  Создает `COleCmdUI` объекта, связанного с командой конкретного пользовательского интерфейса.  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>Примечания  
  `COleCmdUI` Объект предоставляет программный интерфейс для обновления DocObject объекты пользовательского интерфейса, такие как элементы меню или кнопок панели управления. Объекты пользовательского интерфейса можно быть включена, отключена, установлен или снят через `COleCmdUI` объекта.  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  Вызвать эту функцию, чтобы задать флаг команды `COleCmdUI` объект **OLECOMDF_ENABLED**, который указывает интерфейс, что команда доступна и включена, или снимите флаг команды.  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  Указывает, связан ли команда `COleCmdUI` включен или отключен объект. Ненулевое значение включает команду; 0 отключает команду.  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  Эта функция вызывается для задания состояния включения/выключения переключателя командной.  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|Задает команду, чтобы определено; не удается определить состояние, так как атрибут этой команды на и отключение состояний в подходящий вариант выбора.|  
 |любое другое значение|Задает команду, отключен.|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  Эта функция вызывается для возврата строки имени или состоянии текст для команды.  
   
 ```  

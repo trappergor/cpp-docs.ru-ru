@@ -10,6 +10,57 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFrameWnd
+- AFXWIN/CFrameWnd
+- AFXWIN/CFrameWnd::CFrameWnd
+- AFXWIN/CFrameWnd::ActivateFrame
+- AFXWIN/CFrameWnd::BeginModalState
+- AFXWIN/CFrameWnd::Create
+- AFXWIN/CFrameWnd::CreateView
+- AFXWIN/CFrameWnd::DockControlBar
+- AFXWIN/CFrameWnd::EnableDocking
+- AFXWIN/CFrameWnd::EndModalState
+- AFXWIN/CFrameWnd::FloatControlBar
+- AFXWIN/CFrameWnd::GetActiveDocument
+- AFXWIN/CFrameWnd::GetActiveFrame
+- AFXWIN/CFrameWnd::GetActiveView
+- AFXWIN/CFrameWnd::GetControlBar
+- AFXWIN/CFrameWnd::GetDockState
+- AFXWIN/CFrameWnd::GetMenuBarState
+- AFXWIN/CFrameWnd::GetMenuBarVisibility
+- AFXWIN/CFrameWnd::GetMessageBar
+- AFXWIN/CFrameWnd::GetMessageString
+- AFXWIN/CFrameWnd::GetTitle
+- AFXWIN/CFrameWnd::InitialUpdateFrame
+- AFXWIN/CFrameWnd::InModalState
+- AFXWIN/CFrameWnd::IsTracking
+- AFXWIN/CFrameWnd::LoadAccelTable
+- AFXWIN/CFrameWnd::LoadBarState
+- AFXWIN/CFrameWnd::LoadFrame
+- AFXWIN/CFrameWnd::NegotiateBorderSpace
+- AFXWIN/CFrameWnd::OnBarCheck
+- AFXWIN/CFrameWnd::OnContextHelp
+- AFXWIN/CFrameWnd::OnSetPreviewMode
+- AFXWIN/CFrameWnd::OnUpdateControlBarMenu
+- AFXWIN/CFrameWnd::RecalcLayout
+- AFXWIN/CFrameWnd::SaveBarState
+- AFXWIN/CFrameWnd::SetActivePreviewView
+- AFXWIN/CFrameWnd::SetActiveView
+- AFXWIN/CFrameWnd::SetDockState
+- AFXWIN/CFrameWnd::SetMenuBarState
+- AFXWIN/CFrameWnd::SetMenuBarVisibility
+- AFXWIN/CFrameWnd::SetMessageText
+- AFXWIN/CFrameWnd::SetProgressBarPosition
+- AFXWIN/CFrameWnd::SetProgressBarRange
+- AFXWIN/CFrameWnd::SetProgressBarState
+- AFXWIN/CFrameWnd::SetTaskbarOverlayIcon
+- AFXWIN/CFrameWnd::SetTitle
+- AFXWIN/CFrameWnd::ShowControlBar
+- AFXWIN/CFrameWnd::ShowOwnedWindows
+- AFXWIN/CFrameWnd::OnCreateClient
+- AFXWIN/CFrameWnd::OnHideMenuBar
+- AFXWIN/CFrameWnd::OnShowMenuBar
+- AFXWIN/CFrameWnd::m_bAutoMenuEnable
+- AFXWIN/CFrameWnd::rectDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -182,7 +233,7 @@ class CFrameWnd : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="a-nameactivateframea--cframewndactivateframe"></a><a name="activateframe"></a>CFrameWnd::ActivateFrame  
+##  <a name="activateframe"></a>CFrameWnd::ActivateFrame  
  Вызовите эту функцию-член для активации и восстанавливает рамку окна, чтобы было видимым и доступным для пользователя.  
   
 ```  
@@ -203,14 +254,14 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#1;](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
   
-##  <a name="a-namebeginmodalstatea--cframewndbeginmodalstate"></a><a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
+##  <a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
  Данная функция-член вызывается для преобразования окна фрейма в модальное.  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="a-namecframewnda--cframewndcframewnd"></a><a name="cframewnd"></a>CFrameWnd::CFrameWnd  
+##  <a name="cframewnd"></a>CFrameWnd::CFrameWnd  
  Создает `CFrameWnd` объекта, но не создает окно видимой области.  
   
 ```  
@@ -220,7 +271,7 @@ CFrameWnd();
 ### <a name="remarks"></a>Примечания  
  Вызов **создать** создание видимого окна.  
   
-##  <a name="a-namecreatea--cframewndcreate"></a><a name="create"></a>CFrameWnd::Create  
+##  <a name="create"></a>CFrameWnd::Create  
  Вызов для создания и инициализации Windows окно, связанное с `CFrameWnd` объекта.  
   
 ```  
@@ -268,7 +319,7 @@ virtual BOOL Create(
   
  Используйте `LoadFrame` вместо **создать** для загрузки из ресурсов, вместо указания аргументов фрейме окна.  
   
-##  <a name="a-namecreateviewa--cframewndcreateview"></a><a name="createview"></a>CFrameWnd::CreateView  
+##  <a name="createview"></a>CFrameWnd::CreateView  
  Вызов `CreateView` для создания представления в рамке.  
   
 ```  
@@ -290,7 +341,7 @@ CWnd* CreateView(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член для создания «представления», не используйте `CView`-производным внутри рамки. После вызова метода `CreateView`, необходимо вручную установить представление активной и сделать его видимым, эти задачи не выполняются автоматически по `CreateView`.  
   
-##  <a name="a-namedockcontrolbara--cframewnddockcontrolbar"></a><a name="dockcontrolbar"></a>CFrameWnd::DockControlBar  
+##  <a name="dockcontrolbar"></a>CFrameWnd::DockControlBar  
  В результате закреплено в фрейме окна панели управления.  
   
 ```  
@@ -323,7 +374,7 @@ void DockControlBar(
 ### <a name="remarks"></a>Примечания  
  На панели управления будет прикреплен к одной из сторон окна фрейма, заданные в вызовах как [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) и [CFrameWnd::EnableDocking](#enabledocking). Определяется стороне выбран `nDockBarID`.  
   
-##  <a name="a-nameenabledockinga--cframewndenabledocking"></a><a name="enabledocking"></a>CFrameWnd::EnableDocking  
+##  <a name="enabledocking"></a>CFrameWnd::EnableDocking  
  Эта функция вызывается для включения закрепляемых панелей в окне фрейма.  
   
 ```  
@@ -350,7 +401,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="example"></a>Пример  
   В примере показано [CToolBar::Create](../../mfc/reference/ctoolbar-class.md#create).  
   
-##  <a name="a-nameendmodalstatea--cframewndendmodalstate"></a><a name="endmodalstate"></a>CFrameWnd::EndModalState  
+##  <a name="endmodalstate"></a>CFrameWnd::EndModalState  
  Данная функция-член вызывается для изменения состояния окна с модального на немодальное.  
   
 ```  
@@ -360,7 +411,7 @@ virtual void EndModalState();
 ### <a name="remarks"></a>Примечания  
  `EndModalState`включает все окна отключено по [BeginModalState](#beginmodalstate).  
   
-##  <a name="a-namefloatcontrolbara--cframewndfloatcontrolbar"></a><a name="floatcontrolbar"></a>CFrameWnd::FloatControlBar  
+##  <a name="floatcontrolbar"></a>CFrameWnd::FloatControlBar  
  Вызывайте эту функцию, чтобы вызвать панель элементов управления не закреплено в фрейме окна.  
   
 ```  
@@ -395,7 +446,7 @@ void FloatControlBar(
   
  Эта функция вызывается платформой, когда пользователь вызывает операцию перетаскивания, выпустив левой кнопки мыши при перетаскивании в расположении, не доступен для закрепления панели управления.  
   
-##  <a name="a-namegetactivedocumenta--cframewndgetactivedocument"></a><a name="getactivedocument"></a>CFrameWnd::GetActiveDocument  
+##  <a name="getactivedocument"></a>CFrameWnd::GetActiveDocument  
  Вызовите эту функцию-член для получения указателя на текущий **CDocument** присоединен к текущее активное представление.  
   
 ```  
@@ -405,7 +456,7 @@ virtual CDocument* GetActiveDocument();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на текущий [CDocument](../../mfc/reference/cdocument-class.md). Если текущий документ не возвращает **NULL**.  
   
-##  <a name="a-namegetactiveframea--cframewndgetactiveframe"></a><a name="getactiveframe"></a>CFrameWnd::GetActiveFrame  
+##  <a name="getactiveframe"></a>CFrameWnd::GetActiveFrame  
  Вызовите эту функцию-член для получения указателя к активному дочернего окна многодокументного интерфейса (MDI) окне фрейма MDI.  
   
 ```  
@@ -418,7 +469,7 @@ virtual CFrameWnd* GetActiveFrame();
 ### <a name="remarks"></a>Примечания  
  Если нет активной дочерней MDI-приложения или приложения является однооконный интерфейс (SDI), неявный **это** возвращается указатель.  
   
-##  <a name="a-namegetactiveviewa--cframewndgetactiveview"></a><a name="getactiveview"></a>CFrameWnd::GetActiveView  
+##  <a name="getactiveview"></a>CFrameWnd::GetActiveView  
  Вызовите эту функцию-член может получить указатель на активное представление (если таковые имеются), прикрепленных к окну кадров ( `CFrameWnd`).  
   
 ```  
@@ -433,7 +484,7 @@ CView* GetActiveView() const;
   
  [!code-cpp[NVC_MFCWindowing&#2;](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
-##  <a name="a-namegetcontrolbara--cframewndgetcontrolbar"></a><a name="getcontrolbar"></a>CFrameWnd::GetControlBar  
+##  <a name="getcontrolbar"></a>CFrameWnd::GetControlBar  
  Вызов `GetControlBar` для получения доступа к панели управления, связанный с идентификатором.  
   
 ```  
@@ -452,7 +503,7 @@ CControlBar* GetControlBar(UINT nID);
   
  `GetControlBar`вернет панели управления, даже если он является перемещаемой и таким образом не является в настоящее время дочернего окна фрейма.  
   
-##  <a name="a-namegetdockstatea--cframewndgetdockstate"></a><a name="getdockstate"></a>CFrameWnd::GetDockState  
+##  <a name="getdockstate"></a>CFrameWnd::GetDockState  
  Вызовите эту функцию-член для хранения сведений о фрейме окна панели элементов управления в состоянии `CDockState` объекта.  
   
 ```  
@@ -466,7 +517,7 @@ void GetDockState(CDockState& state) const;
 ### <a name="remarks"></a>Примечания  
  После этого можно написать содержимое `CDockState` в хранилище с помощью `CDockState::SaveState` или `Serialize`. Если позже вы хотите восстановить предыдущее состояние панели элементов управления, загрузить состояние с `CDockState::LoadState` или `Serialize`, затем вызовите `SetDockState` для применения к панели элементов управления окна фрейма в предыдущее состояние.  
   
-##  <a name="a-namegetmenubarstatea--cframewndgetmenubarstate"></a><a name="getmenubarstate"></a>CFrameWnd::GetMenuBarState  
+##  <a name="getmenubarstate"></a>CFrameWnd::GetMenuBarState  
  Получает состояние отображения меню в текущем приложении MFC.  
   
 ```  
@@ -483,7 +534,7 @@ virtual DWORD GetMenuBarState();
 ### <a name="remarks"></a>Примечания  
  Если возникает ошибка во время выполнения, этот метод утверждения в режиме отладки и вызывает исключение, производный от [CException](../../mfc/reference/cexception-class.md) класса.  
   
-##  <a name="a-namegetmenubarvisibilitya--cframewndgetmenubarvisibility"></a><a name="getmenubarvisibility"></a>CFrameWnd::GetMenuBarVisibility  
+##  <a name="getmenubarvisibility"></a>CFrameWnd::GetMenuBarVisibility  
  Указывает, является ли состояние по умолчанию меню в текущем приложении MFC скрытым или видимым.  
   
 ```  
@@ -502,7 +553,7 @@ virtual DWORD CFrameWnd::GetMenuBarVisibility();
 ### <a name="remarks"></a>Примечания  
  Если возникает ошибка во время выполнения, этот метод утверждения в режиме отладки и вызывает исключение, производный от [CException](../../mfc/reference/cexception-class.md) класса.  
   
-##  <a name="a-namegetmessagebara--cframewndgetmessagebar"></a><a name="getmessagebar"></a>CFrameWnd::GetMessageBar  
+##  <a name="getmessagebar"></a>CFrameWnd::GetMessageBar  
  Вызовите эту функцию-член для получения указателя на строку состояния.  
   
 ```  
@@ -512,7 +563,7 @@ virtual CWnd* GetMessageBar();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель строки состояния окна.  
   
-##  <a name="a-namegetmessagestringa--cframewndgetmessagestring"></a><a name="getmessagestring"></a>CFrameWnd::GetMessageString  
+##  <a name="getmessagestring"></a>CFrameWnd::GetMessageString  
  Переопределите эту функцию для передачи пользовательских строк для идентификаторов команд.  
   
 ```  
@@ -531,7 +582,7 @@ virtual void GetMessageString(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию просто загружает строки, заданной параметром `nID` из файла ресурсов. Эта функция вызывается платформой, когда строку сообщения в строке состояния необходимо обновить.  
   
-##  <a name="a-namegettitlea--cframewndgettitle"></a><a name="gettitle"></a>CFrameWnd::GetTitle  
+##  <a name="gettitle"></a>CFrameWnd::GetTitle  
  Получает заголовок окна объекта.  
   
 ```  
@@ -541,7 +592,7 @@ CString GetTitle() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект, содержащий текущий заголовок окна объекта.  
   
-##  <a name="a-nameinitialupdateframea--cframewndinitialupdateframe"></a><a name="initialupdateframe"></a>CFrameWnd::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>CFrameWnd::InitialUpdateFrame  
  Вызов **IntitialUpdateFrame** после создания новый кадр с **создать**.  
   
 ```  
@@ -562,7 +613,7 @@ void InitialUpdateFrame(
   
  Кроме того Если существует не была ранее активное представление, основного представления окна фрейма делается активным. Основное представление — это представление с ИД дочернего объекта **AFX_IDW_PANE_FIRST**. Наконец, будет виден в фрейме окна Если `bMakeVisible` имеет ненулевое значение. Если `bMakeVisible` составляет 0, что текущим местоположением и видимое состояние окна фрейма останутся без изменений. Эта функция вызывается при использовании платформы реализации новых файлов и открытие файла необязательно.  
   
-##  <a name="a-nameinmodalstatea--cframewndinmodalstate"></a><a name="inmodalstate"></a>CFrameWnd::InModalState  
+##  <a name="inmodalstate"></a>CFrameWnd::InModalState  
  Вызовите эту функцию-член для проверки модальное или немодальное окно.  
   
 ```  
@@ -572,7 +623,7 @@ BOOL InModalState() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если Да; в противном случае — 0.  
   
-##  <a name="a-nameistrackinga--cframewndistracking"></a><a name="istracking"></a>CFrameWnd::IsTracking  
+##  <a name="istracking"></a>CFrameWnd::IsTracking  
  Вызовите эту функцию-член для определения, если выполняется перемещение полосы разделения в окне.  
   
 ```  
@@ -582,7 +633,7 @@ BOOL IsTracking() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если операция разделитель выполняется; в противном случае — 0.  
   
-##  <a name="a-nameloadacceltablea--cframewndloadacceltable"></a><a name="loadacceltable"></a>CFrameWnd::LoadAccelTable  
+##  <a name="loadacceltable"></a>CFrameWnd::LoadAccelTable  
  Вызов для загрузки таблицы сочетание клавиш.  
   
 ```  
@@ -603,7 +654,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
   
  При вызове метода `LoadFrame` для создания окна фрейма, платформа загружает таблицу сочетаний клавиш, а также ресурсов меню и значок, а затем необязателен в последующем вызове функции-члена.  
   
-##  <a name="a-nameloadbarstatea--cframewndloadbarstate"></a><a name="loadbarstate"></a>CFrameWnd::LoadBarState  
+##  <a name="loadbarstate"></a>CFrameWnd::LoadBarState  
  Эта функция вызывается для восстановления параметров каждого панели элементов управления в фрейме окна.  
   
 ```  
@@ -619,7 +670,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
   
  Параметры, которые требуется восстановить необходимо записать в реестр перед вызовом метода `LoadBarState`. Записывать данные в реестре, вызвав [CWinApp::SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey). Записать данные INI-файл, вызвав [SaveBarState](#savebarstate).  
   
-##  <a name="a-nameloadframea--cframewndloadframe"></a><a name="loadframe"></a>CFrameWnd::LoadFrame  
+##  <a name="loadframe"></a>CFrameWnd::LoadFrame  
  Вызов для динамического создания фрейма окна из сведений о ресурсах.  
   
 ```  
@@ -652,7 +703,7 @@ virtual BOOL LoadFrame(
   
  Инфраструктура использует `pContext` для указания объектов подключения в окне фрейма, включая все содержащиеся объекты представлений. Можно задать `pContext` аргумент **NULL** при вызове `LoadFrame`.  
   
-##  <a name="a-namembautomenuenablea--cframewndmbautomenuenable"></a><a name="m_bautomenuenable"></a>CFrameWnd::m_bAutoMenuEnable  
+##  <a name="m_bautomenuenable"></a>CFrameWnd::m_bAutoMenuEnable  
  При включении этого элемента данных (по умолчанию), элементов меню, не имеют `ON_UPDATE_COMMAND_UI` или `ON_COMMAND` обработчики автоматически отключаются, когда пользователь запрашивает по меню.  
   
 ```  
@@ -672,7 +723,7 @@ BOOL m_bAutoMenuEnable;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing&#3;](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]  
   
-##  <a name="a-namenegotiateborderspacea--cframewndnegotiateborderspace"></a><a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  
  Вызовите эту функцию-член для согласования граница места в окне фрейма во время активации inplace OLE.  
   
 ```  
@@ -700,7 +751,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член является **CFrameWnd** реализации согласования пробел границы OLE.  
   
-##  <a name="a-nameonbarchecka--cframewndonbarcheck"></a><a name="onbarcheck"></a>CFrameWnd::OnBarCheck  
+##  <a name="onbarcheck"></a>CFrameWnd::OnBarCheck  
  Вызывается, когда действие выполняется по строке указанным элементом управления.  
   
 ```  
@@ -714,7 +765,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если существует панели управления; в противном случае — 0.  
   
-##  <a name="a-nameoncontexthelpa--cframewndoncontexthelp"></a><a name="oncontexthelp"></a>CFrameWnd::OnContextHelp  
+##  <a name="oncontexthelp"></a>CFrameWnd::OnContextHelp  
  Обрабатывает клавиши SHIFT + F1 справка для элементов на месте.  
   
 ```  
@@ -730,7 +781,7 @@ afx_msg void OnContextHelp();
   
  Если приложение является OLE контейнер, `OnContextHelp` помещает все элементы на месте внутри рамки окна объекта в режим справки. Стрелка и знак вопроса и пользователь может затем наведите указатель мыши и нажмите левую кнопку мыши для выбора диалоговое окно, окно, меню или кнопки. Эта функция-член вызывает функцию Windows `WinHelp` в контексте справки объекта под курсором.  
   
-##  <a name="a-nameoncreateclienta--cframewndoncreateclient"></a><a name="oncreateclient"></a>CFrameWnd::OnCreateClient  
+##  <a name="oncreateclient"></a>CFrameWnd::OnCreateClient  
  Вызывается средой во время выполнения `OnCreate`.  
   
 ```  
@@ -759,7 +810,7 @@ virtual BOOL OnCreateClient(
 > [!NOTE]
 >  Не заменяйте значения, передаваемые в `CREATESTRUCT` структуру. Они являются только в информационных целях. Если требуется переопределить начальное окно прямоугольника, например, переопределение `CWnd` функции-члена [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).  
   
-##  <a name="a-nameonhidemenubara--cframewndonhidemenubar"></a><a name="onhidemenubar"></a>CFrameWnd::OnHideMenuBar  
+##  <a name="onhidemenubar"></a>CFrameWnd::OnHideMenuBar  
  Эта функция вызывается, когда система собирается скрыть строку меню в текущем приложении MFC.  
   
 ```  
@@ -769,7 +820,7 @@ virtual void OnHideMenuBar();
 ### <a name="remarks"></a>Примечания  
  Этот обработчик событий позволяет вашему приложению для выполнения пользовательских действий, когда система собирается скрыть меню. Невозможно запретить меню как скрытые, но могут, например, вызывать другие методы для получения стиль меню или состояния.  
   
-##  <a name="a-nameonsetpreviewmodea--cframewndonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CFrameWnd::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>CFrameWnd::OnSetPreviewMode  
  Вызов этой функции-члена переключает окно главного фрейма приложения в режим предварительного просмотра и из него.  
   
 ```  
@@ -790,7 +841,7 @@ virtual void OnSetPreviewMode(
   
  Переопределите эту функцию-член для настройки скрытие и отображение панелей элементов управления и других частей рамки окна во время предварительного просмотра. Вызовите реализацию базового класса из внутри переопределенная версия.  
   
-##  <a name="a-nameonshowmenubara--cframewndonshowmenubar"></a><a name="onshowmenubar"></a>CFrameWnd::OnShowMenuBar  
+##  <a name="onshowmenubar"></a>CFrameWnd::OnShowMenuBar  
  Эта функция вызывается, когда система отображения меню в текущем приложении MFC.  
   
 ```  
@@ -800,7 +851,7 @@ virtual void OnShowMenuBar();
 ### <a name="remarks"></a>Примечания  
  Этот обработчик событий позволяет вашему приложению для выполнения пользовательских действий, когда отобразится меню. Меню не может предотвратить отображение, но могут, например, вызывать другие методы для получения стиль меню или состояния.  
   
-##  <a name="a-nameonupdatecontrolbarmenua--cframewndonupdatecontrolbarmenu"></a><a name="onupdatecontrolbarmenu"></a>CFrameWnd::OnUpdateControlBarMenu  
+##  <a name="onupdatecontrolbarmenu"></a>CFrameWnd::OnUpdateControlBarMenu  
  Вызывается инфраструктурой при обновлении связанным меню.  
   
 ```  
@@ -811,7 +862,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  Указатель на [CCmdUI](../../mfc/reference/ccmdui-class.md) объект, представляющий меню, которое создается команда обновления. Вызывает обработчик обновление [включить](../../mfc/reference/ccmdui-class.md#enable) функцию-член `CCmdUI` через `pCmdUI` для обновления пользовательского интерфейса.  
   
-##  <a name="a-namerecalclayouta--cframewndrecalclayout"></a><a name="recalclayout"></a>CFrameWnd::RecalcLayout  
+##  <a name="recalclayout"></a>CFrameWnd::RecalcLayout  
  Вызывается инфраструктурой при переключении панелей стандартных элементов управления и отключение или при изменении размера окна фрейма.  
   
 ```  
@@ -827,14 +878,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
  Переопределите эту функцию-член для управления, внешний вид и поведение элементов управления после изменения макета окна фрейма. Например назвать ее при выключать панелей элементов управления или добавьте другую панель элементов управления.  
   
-##  <a name="a-namerectdefaulta--cframewndrectdefault"></a><a name="rectdefault"></a>CFrameWnd::rectDefault  
+##  <a name="rectdefault"></a>CFrameWnd::rectDefault  
  Передать этот статический `CRect` как параметр при создании окна, чтобы разрешить операционной системе Windows выберите исходный размер и положение окна.  
   
 ```  
 static AFX_DATA const CRect rectDefault;  
 ```  
   
-##  <a name="a-namesavebarstatea--cframewndsavebarstate"></a><a name="savebarstate"></a>CFrameWnd::SaveBarState  
+##  <a name="savebarstate"></a>CFrameWnd::SaveBarState  
  Эта функция используется для хранения информации о каждой панели элементов управления, принадлежащих фрейме окна.  
   
 ```  
@@ -848,7 +899,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ### <a name="remarks"></a>Примечания  
  Эта информация может быть считано из файла инициализации с помощью [LoadBarState](#loadbarstate). Сведения, хранящиеся включают видимость горизонтальной или вертикальной ориентации закрепления состояние и положение элемента панели управления.  
   
-##  <a name="a-namesetactivepreviewviewa--cframewndsetactivepreviewview"></a><a name="setactivepreviewview"></a>CFrameWnd::SetActivePreviewView  
+##  <a name="setactivepreviewview"></a>CFrameWnd::SetActivePreviewView  
  Обозначает указанное представление для активного представления для расширенного просмотра.  
   
 ```  
@@ -861,7 +912,7 @@ void SetActivePreviewView(CView* pViewNew);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetactiveviewa--cframewndsetactiveview"></a><a name="setactiveview"></a>CFrameWnd::SetActiveView  
+##  <a name="setactiveview"></a>CFrameWnd::SetActiveView  
  Вызовите эту функцию-член для задания активное представление.  
   
 ```  
@@ -880,7 +931,7 @@ void SetActiveView(
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает эту функцию автоматически, как пользователь изменяет фокус на представление в фрейме окна. Можно явно вызывать `SetActiveView` для изменения фокуса на указанное представление.  
   
-##  <a name="a-namesetdockstatea--cframewndsetdockstate"></a><a name="setdockstate"></a>CFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>CFrameWnd::SetDockState  
  Вызов этой функции-члена для применения сведений о состоянии, хранящихся в `CDockState` объекта на панели элементов управления окна фрейма.  
   
 ```  
@@ -894,7 +945,7 @@ void SetDockState(const CDockState& state);
 ### <a name="remarks"></a>Примечания  
  Чтобы восстановить предыдущее состояние панелей элементов управления, можно загрузить сохраненное состояние с `CDockState::LoadState` или `Serialize`, затем использовать `SetDockState` для применения к панели элементов управления окна фрейма. Предыдущее состояние хранится в `CDockState` объекта с`GetDockState`  
   
-##  <a name="a-namesetmenubarstatea--cframewndsetmenubarstate"></a><a name="setmenubarstate"></a>CFrameWnd::SetMenuBarState  
+##  <a name="setmenubarstate"></a>CFrameWnd::SetMenuBarState  
  Задает состояние отображения меню в текущем приложении MFC для скрытых или отображаемых.  
   
 ```  
@@ -913,7 +964,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 ### <a name="remarks"></a>Примечания  
  Если возникает ошибка во время выполнения, этот метод утверждения в режиме отладки и вызывает исключение, производный от [CException](../../mfc/reference/cexception-class.md) класса.  
   
-##  <a name="a-namesetmenubarvisibilitya--cframewndsetmenubarvisibility"></a><a name="setmenubarvisibility"></a>CFrameWnd::SetMenuBarVisibility  
+##  <a name="setmenubarvisibility"></a>CFrameWnd::SetMenuBarVisibility  
  Задает поведение по умолчанию меню в текущем приложении MFC, чтобы быть видимым или скрытым.  
   
 ```  
@@ -931,7 +982,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
  Этот метод воздействует на состояние меню в приложениях, написанных для [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] и более поздних версий.  
   
-##  <a name="a-namesetmessagetexta--cframewndsetmessagetext"></a><a name="setmessagetext"></a>CFrameWnd::SetMessageText  
+##  <a name="setmessagetext"></a>CFrameWnd::SetMessageText  
  Эта функция используется для размещения строки на панели строки состояния с идентификатором 0.  
   
 ```  
@@ -949,7 +1000,7 @@ void SetMessageText(UINT nID);
 ### <a name="remarks"></a>Примечания  
  Обычно это крайний левый и длинная, панели строки состояния.  
   
-##  <a name="a-namesetprogressbarpositiona--cframewndsetprogressbarposition"></a><a name="setprogressbarposition"></a>CFrameWnd::SetProgressBarPosition  
+##  <a name="setprogressbarposition"></a>CFrameWnd::SetProgressBarPosition  
  Задает текущую позицию для отображения на панели задач индикатора хода выполнения Windows 7.  
   
 ```  
@@ -962,7 +1013,7 @@ void SetProgressBarPosition(int nProgressPos);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetprogressbarrangea--cframewndsetprogressbarrange"></a><a name="setprogressbarrange"></a>CFrameWnd::SetProgressBarRange  
+##  <a name="setprogressbarrange"></a>CFrameWnd::SetProgressBarRange  
  Задает диапазон для отображения на панели задач индикатора хода выполнения Windows 7.  
   
 ```  
@@ -980,7 +1031,7 @@ void SetProgressBarRange(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesetprogressbarstatea--cframewndsetprogressbarstate"></a><a name="setprogressbarstate"></a>CFrameWnd::SetProgressBarState  
+##  <a name="setprogressbarstate"></a>CFrameWnd::SetProgressBarState  
  Задает тип и состояние индикатора хода выполнения, отображаемый на кнопке панели задач.  
   
 ```  
@@ -993,7 +1044,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettaskbaroverlayicona--cframewndsettaskbaroverlayicon"></a><a name="settaskbaroverlayicon"></a>CFrameWnd::SetTaskbarOverlayIcon  
+##  <a name="settaskbaroverlayicon"></a>CFrameWnd::SetTaskbarOverlayIcon  
  Перегружен. Применяет наложенной на кнопку панели задач для указания состояния приложения или для уведомления пользователя.  
   
 ```  
@@ -1022,7 +1073,7 @@ BOOL SetTaskbarOverlayIcon(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namesettitlea--cframewndsettitle"></a><a name="settitle"></a>CFrameWnd::SetTitle  
+##  <a name="settitle"></a>CFrameWnd::SetTitle  
  Задает заголовок окна объекта.  
   
 ```  
@@ -1033,7 +1084,7 @@ void SetTitle(LPCTSTR lpszTitle);
  `lpszTitle`  
  Указатель на строку символов, содержащая заголовок окна объекта.  
   
-##  <a name="a-nameshowcontrolbara--cframewndshowcontrolbar"></a><a name="showcontrolbar"></a>CFrameWnd::ShowControlBar  
+##  <a name="showcontrolbar"></a>CFrameWnd::ShowControlBar  
  Вызовите эту функцию-член для отображения или скрытия панели управления.  
   
 ```  
@@ -1053,7 +1104,7 @@ void ShowControlBar(
  *bDelay*  
  Если **TRUE**, задержка отображения панели управления. Если **FALSE**, Показать панель элементов управления немедленно.  
   
-##  <a name="a-nameshowownedwindowsa--cframewndshowownedwindows"></a><a name="showownedwindows"></a>CFrameWnd::ShowOwnedWindows  
+##  <a name="showownedwindows"></a>CFrameWnd::ShowOwnedWindows  
  Вызов этой функции-члена для отображения всех окон, которые являются потомками `CFrameWnd` объекта.  
   
 ```  

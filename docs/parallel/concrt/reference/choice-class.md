@@ -9,7 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::choice
+- choice
+- AGENTS/concurrency::choice
+- AGENTS/concurrency::choice::choice
+- AGENTS/concurrency::choice::accept
+- AGENTS/concurrency::choice::acquire_ref
+- AGENTS/concurrency::choice::consume
+- AGENTS/concurrency::choice::has_value
+- AGENTS/concurrency::choice::index
+- AGENTS/concurrency::choice::link_target
+- AGENTS/concurrency::choice::release
+- AGENTS/concurrency::choice::release_ref
+- AGENTS/concurrency::choice::reserve
+- AGENTS/concurrency::choice::unlink_target
+- AGENTS/concurrency::choice::unlink_targets
+- AGENTS/concurrency::choice::value
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1ee8fe2197a41ad2abc14e24c372f808bdbc16d0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 13110f3a221be47716ca60618c59d2e4bdd6911e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="choice-class"></a>Класс choice
@@ -67,25 +81,25 @@ class choice: public ISource<size_t>;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Выбор конструктора](#ctor)|Перегружен. Создает блок обмена сообщениями `choice` .|  
+|[Выбор](#ctor)|Перегружен. Создает блок обмена сообщениями `choice` .|  
 |[~ choice деструктор](#dtor)|Уничтожает `choice` блок обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Accept-метод](#accept)|Принимает сообщение, предложенное это `choice` блоком, передавая владение вызывающему объекту.|  
-|[acquire_ref метод](#acquire_ref)|Получает значение счетчика ссылок на это `choice` блок сообщений, чтобы предотвратить удаление.|  
-|[consume-метод](#consume)|Потребляет сообщение, ранее предложенное это `choice` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
-|[has_value метод](#has_value)|Проверяет, является ли это `choice` блок сообщений еще инициализирован со значением.|  
-|[Метод Index](#index)|Возвращает индекс в `tuple` представляет элемент, выбранный по `choice` блок обмена сообщениями.|  
-|[Метод link_target](#link_target)|Это связывает целевой блок `choice` блок обмена сообщениями.|  
-|[Release-метод](#release)|Освобождает предыдущее успешное резервирование сообщения.|  
-|[release_ref метод](#release_ref)|Освобождает значение счетчика ссылок на это `choice` блок обмена сообщениями.|  
-|[reserve-метод](#reserve)|Резервирует сообщение, которое было предложено это `choice` блок обмена сообщениями.|  
-|[unlink_target метод](#unlink_target)|Удаляет связь целевого блока с это `choice` блок обмена сообщениями.|  
-|[unlink_targets метод](#unlink_targets)|Удаляет связь всех целевых объектов из этого `choice` блок обмена сообщениями. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
-|[значение метода](#value)|Получает сообщение, индекс которого был выбран, `choice` блок обмена сообщениями.|  
+|[принять](#accept)|Принимает сообщение, предложенное это `choice` блоком, передавая владение вызывающему объекту.|  
+|[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `choice` блок сообщений, чтобы предотвратить удаление.|  
+|[Использование](#consume)|Потребляет сообщение, ранее предложенное это `choice` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
+|[has_value](#has_value)|Проверяет, является ли это `choice` блок сообщений еще инициализирован со значением.|  
+|[Индекс](#index)|Возвращает индекс в `tuple` представляет элемент, выбранный по `choice` блок обмена сообщениями.|  
+|[link_target](#link_target)|Это связывает целевой блок `choice` блок обмена сообщениями.|  
+|[release](#release)|Освобождает предыдущее успешное резервирование сообщения.|  
+|[release_ref](#release_ref)|Освобождает значение счетчика ссылок на это `choice` блок обмена сообщениями.|  
+|[reserve](#reserve)|Резервирует сообщение, которое было предложено это `choice` блок обмена сообщениями.|  
+|[unlink_target](#unlink_target)|Удаляет связь целевого блока с это `choice` блок обмена сообщениями.|  
+|[unlink_targets](#unlink_targets)|Удаляет связь всех целевых объектов из этого `choice` блок обмена сообщениями. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
+|[value](#value)|Получает сообщение, индекс которого был выбран, `choice` блок обмена сообщениями.|  
   
 ## <a name="remarks"></a>Примечания  
  Блок выбора гарантирует, что используется только одно из входящих сообщений.  
@@ -102,7 +116,7 @@ class choice: public ISource<size_t>;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-nameaccepta-accept"></a><a name="accept"></a>принять 
+##  <a name="accept"></a>принять 
 
  Принимает сообщение, предложенное это `choice` блоком, передавая владение вызывающему объекту.  
   
@@ -122,7 +136,7 @@ virtual message<size_t>* accept(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на сообщение, которое теперь принадлежит вызывающей стороне.  
   
-##  <a name="a-nameacquirerefa-acquireref"></a><a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a>acquire_ref 
 
  Получает значение счетчика ссылок на это `choice` блок сообщений, чтобы предотвратить удаление.  
   
@@ -137,7 +151,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объекта, который связан с этим источником во время `link_target` метод.  
   
-##  <a name="a-namectora-choice"></a><a name="ctor"></a>Выбор 
+##  <a name="ctor"></a>Выбор 
 
  Создает блок обмена сообщениями `choice` .  
   
@@ -178,7 +192,7 @@ choice(
   
  Конструкция перемещения не выполняется при блокировке. Это означает, что пользователь должен убедиться в отсутствии простых задач во время перемещения. В противном случае могут возникнуть многочисленные гонки, приводящие к исключениям или недопустимому состоянию.  
   
-##  <a name="a-namedtora-choice"></a><a name="dtor"></a>~ choice 
+##  <a name="dtor"></a>~ choice 
 
  Уничтожает `choice` блок обмена сообщениями.  
   
@@ -186,7 +200,7 @@ choice(
 ~choice();
 ```  
   
-##  <a name="a-nameconsumea-consume"></a><a name="consume"></a>Использование 
+##  <a name="consume"></a>Использование 
 
  Потребляет сообщение, ранее предложенное это `choice` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   
@@ -209,7 +223,7 @@ virtual message<size_t>* consume(
 ### <a name="remarks"></a>Примечания  
  `consume` Метод аналогичен `accept`, но всегда должно начинаться с помощью вызова `reserve` , возвращается `true`.  
   
-##  <a name="a-namehasvaluea-hasvalue"></a><a name="has_value"></a>has_value 
+##  <a name="has_value"></a>has_value 
 
  Проверяет, является ли это `choice` блок сообщений еще инициализирован со значением.  
   
@@ -222,7 +236,7 @@ bool has_value() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если блок получил значение, `false` в противном случае.  
   
-##  <a name="a-nameindexa-index"></a><a name="index"></a>Индекс 
+##  <a name="index"></a>Индекс 
 
  Возвращает индекс в `tuple` представляет элемент, выбранный по `choice` блок обмена сообщениями.  
   
@@ -236,7 +250,7 @@ size_t index();
 ### <a name="remarks"></a>Примечания  
  Полезные данные сообщения могут быть извлечены с помощью `get` метод.  
   
-##  <a name="a-namelinktargeta-linktarget"></a><a name="link_target"></a>link_target 
+##  <a name="link_target"></a>link_target 
 
  Это связывает целевой блок `choice` блок обмена сообщениями.  
   
@@ -248,7 +262,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Указатель на `ITarget` блок, чтобы создать ссылку на этот `choice` блок обмена сообщениями.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>выпуск 
+##  <a name="release"></a>выпуск 
 
  Освобождает предыдущее успешное резервирование сообщения.  
   
@@ -265,7 +279,7 @@ virtual void release(
  `_PTarget`  
  Указатель на целевой блок, вызывающий `release` метод.  
   
-##  <a name="a-namereleaserefa-releaseref"></a><a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a>release_ref 
 
  Освобождает значение счетчика ссылок на это `choice` блок обмена сообщениями.  
   
@@ -280,7 +294,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объект, который является, связь которого с этим источником. Блок источника может освободить ресурсы, зарезервированные для целевой блок.  
   
-##  <a name="a-namereservea-reserve"></a><a name="reserve"></a>Резерв 
+##  <a name="reserve"></a>Резерв 
 
  Резервирует сообщение, которое было предложено это `choice` блок обмена сообщениями.  
   
@@ -303,7 +317,7 @@ virtual bool reserve(
 ### <a name="remarks"></a>Примечания  
  После вызова метода `reserve`, если он завершается успешно, необходимо вызвать либо `consume` или `release` чтобы принять или высвободить владение сообщением, соответственно.  
   
-##  <a name="a-nameunlinktargeta-unlinktarget"></a><a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a>unlink_target 
 
  Удаляет связь целевого блока с это `choice` блок обмена сообщениями.  
   
@@ -315,7 +329,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Указатель на `ITarget` блок отсоединиться от этого `choice` блок обмена сообщениями.  
   
-##  <a name="a-nameunlinktargetsa-unlinktargets"></a><a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a>unlink_targets 
 
  Удаляет связь всех целевых объектов из этого `choice` блок обмена сообщениями.  
   
@@ -326,7 +340,7 @@ virtual void unlink_targets();
 ### <a name="remarks"></a>Примечания  
  Этот метод не вызывается из деструктора, поскольку деструктор для внутреннего `single_assignment` блок будет разрывать связь правильно.  
   
-##  <a name="a-namevaluea-value"></a><a name="value"></a>значение 
+##  <a name="value"></a>значение 
 
  Получает сообщение, индекс которого был выбран, `choice` блок обмена сообщениями.  
   

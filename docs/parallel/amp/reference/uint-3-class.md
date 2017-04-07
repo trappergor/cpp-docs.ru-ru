@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4bb1f7e1a971050dfc1616deb178c8fe834bc351
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 034478144d77abcc9dba8bf1a1909c4711f7119c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="uint3-class"></a>Класс uint_3
@@ -132,61 +132,61 @@ class uint_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Метод uint_3::get_X||  
-|Метод uint_3::get_xy||  
-|Метод uint_3::get_xyz||  
-|Метод uint_3::get_xz||  
-|Метод uint_3::get_xzy||  
-|Метод uint_3::get_y||  
-|Метод uint_3::get_yx||  
-|Метод uint_3::get_yxz||  
-|Метод uint_3::get_yz||  
-|Метод uint_3::get_yzx||  
-|Метод uint_3::get_z||  
-|Метод uint_3::get_zx||  
-|Метод uint_3::get_zxy||  
-|Метод uint_3::get_zy||  
-|Метод uint_3::get_zyx||  
-|Метод uint_t::ref_b||  
-|Метод uint_t::ref_g||  
-|Метод uint_t::ref_r||  
-|Метод uint_t::ref_x||  
-|Метод uint_t::ref_y||  
-|Метод uint_t::ref_z||  
-|Метод uint_3::set_X||  
-|Метод uint_3::set_xy||  
-|Метод uint_3::set_xyz||  
-|Метод uint_3::set_xz||  
-|Метод uint_3::set_xzy||  
-|Метод uint_3::set_y||  
-|Метод uint_3::set_yx||  
-|Метод uint_3::set_yxz||  
-|Метод uint_3::set_yz||  
-|Метод uint_3::set_yzx||  
-|Метод uint_3::set_z||  
-|Метод uint_3::set_zx||  
-|Метод uint_3::set_zxy||  
-|Метод uint_3::set_zy||  
-|Метод uint_3::set_zyx||  
+|uint_3::get_X||  
+|uint_3::get_xy||  
+|uint_3::get_xyz||  
+|uint_3::get_xz||  
+|uint_3::get_xzy||  
+|uint_3::get_y||  
+|uint_3::get_yx||  
+|uint_3::get_yxz||  
+|uint_3::get_yz||  
+|uint_3::get_yzx||  
+|uint_3::get_z||  
+|uint_3::get_zx||  
+|uint_3::get_zxy||  
+|uint_3::get_zy||  
+|uint_3::get_zyx||  
+|uint_t::ref_b||  
+|uint_t::ref_g||  
+|uint_t::ref_r||  
+|uint_t::ref_x||  
+|uint_t::ref_y||  
+|uint_t::ref_z||  
+|uint_3::set_X||  
+|uint_3::set_xy||  
+|uint_3::set_xyz||  
+|uint_3::set_xz||  
+|uint_3::set_xzy||  
+|uint_3::set_y||  
+|uint_3::set_yx||  
+|uint_3::set_yxz||  
+|uint_3::set_yz||  
+|uint_3::set_yzx||  
+|uint_3::set_z||  
+|uint_3::set_zx||  
+|uint_3::set_zxy||  
+|uint_3::set_zy||  
+|uint_3::set_zyx||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|uint_3::operator - оператор||  
-|uint_3::operator % =-оператор||  
-|uint_3::operator & =-оператор||  
-|uint_3::operator * =-оператор||  
-|uint_3::operator / =-оператор||  
-|uint_3::operator ^ =-оператор||  
-|uint_3::operator | =-оператор||  
-|uint_3::operator ~ оператор||  
-|uint_3::operator оператор ++||  
-|Оператор += uint_3::operator||  
-|uint_3::operator\<=-оператор||  
-|uint_3::operator =-оператор||  
-|uint_3::operator-= оператор||  
-|uint_3::operator >> =-оператор||  
+|uint_3::operator--||  
+|uint_3::operator % =||  
+|uint_3::operator & =||  
+|uint_3::operator * =||  
+|uint_3::operator / =||  
+|uint_3::operator ^ =||  
+|uint_3::operator | =||  
+|uint_3::operator ~||  
+|uint_3::operator ++||  
+|uint_3::operator +=||  
+|uint_3::operator\<=||  
+|uint_3::operator =||  
+|uint_3::operator-=||  
+|uint_3::operator >> =||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -198,36 +198,36 @@ class uint_3;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Элемент данных uint_3::b||  
-|Элемент данных uint_3::BG||  
-|Элемент данных uint_3::bgr||  
-|Элемент данных uint_3::br||  
-|Элемент данных uint_3::brg||  
-|Элемент данных uint_3::g||  
-|Элемент данных uint_3::GB||  
-|Элемент данных uint_3::GBR||  
-|Элемент данных uint_3::GR||  
-|Элемент данных uint_3::grb||  
-|Элемент данных uint_3::r||  
-|Элемент данных uint_3::RB||  
-|Элемент данных uint_3::rbg||  
-|Элемент данных uint_3::RG||  
-|Элемент данных uint_3::RGB||  
-|Элемент данных uint_3::x||  
-|Элемент данных uint_3::XY||  
-|Элемент данных uint_3::xyz||  
-|Элемент данных uint_3::xz||  
-|Элемент данных uint_3::xzy||  
-|Элемент данных uint_3::y||  
-|Элемент данных uint_3::YX||  
-|Элемент данных uint_3::yxz||  
-|Элемент данных uint_3::yz||  
-|Элемент данных uint_3::yzx||  
-|Элемент данных uint_3::z||  
-|Элемент данных uint_3::zx||  
-|Элемент данных uint_3::zxy||  
-|Элемент данных uint_3::zy||  
-|Элемент данных uint_3::zyx||  
+|uint_3::b||  
+|uint_3::BG||  
+|uint_3::bgr||  
+|uint_3::br||  
+|uint_3::brg||  
+|uint_3::g||  
+|uint_3::GB||  
+|uint_3::GBR||  
+|uint_3::GR||  
+|uint_3::grb||  
+|uint_3::r||  
+|uint_3::RB||  
+|uint_3::rbg||  
+|uint_3::RG||  
+|uint_3::RGB||  
+|uint_3::x||  
+|uint_3::XY||  
+|uint_3::xyz||  
+|uint_3::xz||  
+|uint_3::xzy||  
+|uint_3::y||  
+|uint_3::YX||  
+|uint_3::yxz||  
+|uint_3::yz||  
+|uint_3::yzx||  
+|uint_3::z||  
+|uint_3::zx||  
+|uint_3::zxy||  
+|uint_3::zy||  
+|uint_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `uint_3`  
@@ -237,7 +237,7 @@ class uint_3;
   
  **Пространство имен:** Concurrency::graphics  
   
-##  <a name="a-namectora-uint3"></a><a name="ctor"></a>uint_3 
+##  <a name="ctor"></a>uint_3 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -304,12 +304,12 @@ explicit inline uint_3(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="a-nameuint3sizea-size"></a><a name="uint_3__size"></a>размер 
+##  <a name="uint_3__size"></a>размер 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::Graphics](concurrency-graphics-namespace.md)
+ [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
 

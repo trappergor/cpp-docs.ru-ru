@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAdapt
-- ATL.CAdapt<T>
-- ATL::CAdapt
-- ATL::CAdapt<T>
 - CAdapt
+- ATLCOMCLI/ATL::CAdapt
+- ATLCOMCLI/ATL::CAdapt::CAdapt
+- ATLCOMCLI/ATL::CAdapt::m_T
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +96,7 @@ class CAdapt
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcomcli.h  
   
-##  <a name="a-namecadapta--cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>CAdapt::CAdapt  
  Конструкторы позволяют объектам адаптера по умолчанию создается, скопированные из объект адаптированного типа или скопирован из другого объекта адаптера.  
   
 ```
@@ -115,7 +114,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  Объект адаптера автономные данные которого следует скопировать (или переместить) в объекте нового созданного адаптера.  
   
-##  <a name="a-namemta--cadaptmt"></a><a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>CAdapt::m_T  
  Содержит адаптируемые данные.  
   
 ```
@@ -125,7 +124,7 @@ T m_T;
 ### <a name="remarks"></a>Примечания  
  Это **открытый** элемент данных может осуществляться непосредственно или косвенно с [оператор const T &](#operator_const_t_amp) и [оператор T &](#operator_t_amp).  
   
-##  <a name="a-nameoperatorconsttampa--cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
+##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
  Возвращает **const** ссылки [m_T](#m_t) член, позволяя объекта адаптера обрабатывается, как если бы это был объект типа `T`.  
   
 ```  
@@ -135,7 +134,7 @@ operator const T&() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект **const** ссылку на `m_T`.  
   
-##  <a name="a-nameoperatortampa--cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
  Возвращает ссылку на [m_T](#m_t) член, позволяя объекта адаптера обрабатывается, как если бы это был объект типа `T`.  
   
 ```  
@@ -145,7 +144,7 @@ operator T&();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на `m_T`.  
   
-##  <a name="a-nameoperatorlta--cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>CAdapt::operator&lt;  
  Сравнивает объект адаптированного типа с [m_T](#m_t).  
   
 ```
@@ -159,7 +158,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Результат сравнения между `m_T` и `rSrc`.  
   
-##  <a name="a-nameoperatoreqa--cadaptoperator-"></a><a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>CAdapt::operator =  
  Оператор присваивания назначает аргумента, `rSrc`, элемент данных [m_T](#m_t) и возвращает объект текущего адаптера.  
   
 ```
@@ -178,7 +177,7 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на текущий объект.  
   
-##  <a name="a-nameoperatoreqeqa--cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt::operator ==  
+##  <a name="operator_eq_eq"></a>CAdapt::operator ==  
  Сравнивает объект адаптированного типа с [m_T](#m_t).  
   
 ```

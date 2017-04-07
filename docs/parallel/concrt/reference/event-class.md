@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::event
+- event
+- CONCRT/concurrency::event
+- CONCRT/concurrency::event::reset
+- CONCRT/concurrency::event::set
+- CONCRT/concurrency::event::wait
+- CONCRT/concurrency::event::wait_for_multiple
+- CONCRT/concurrency::event::timeout_infinite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: abda6512f391b59cb48c8e96a489714ee117ae68
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="event-class"></a>Класс event
@@ -60,16 +66,16 @@ class event;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод Reset](#reset)|Сбрасывает событие в несигнальное состояние.|  
-|[Метод Set](#set)|Указывает события.|  
-|[wait-метод](#wait)|Ожидает перехода события в сигнальное.|  
-|[wait_for_multiple метод](#wait_for_multiple)|Ожидает в течение нескольких события в сигнальное.|  
+|[reset](#reset)|Сбрасывает событие в несигнальное состояние.|  
+|[set](#set)|Указывает события.|  
+|[Ожидание](#wait)|Ожидает перехода события в сигнальное.|  
+|[wait_for_multiple](#wait_for_multiple)|Ожидает в течение нескольких события в сигнальное.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Константа timeout_infinite](#timeout_infinite)|Значение, указывающее, что время ожидания никогда не должно истечь.|  
+|[timeout_infinite](#timeout_infinite)|Значение, указывающее, что время ожидания никогда не должно истечь.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [структуры данных синхронизации](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -82,7 +88,7 @@ class event;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namectora-event"></a><a name="ctor"></a>событие 
+##  <a name="ctor"></a>событие 
 
  Создает новое событие.  
   
@@ -92,7 +98,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namedtora-event"></a><a name="dtor"></a>~ событий 
+##  <a name="dtor"></a>~ событий 
 
  Уничтожает событие.  
   
@@ -103,7 +109,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Примечания  
  Предполагается, что существуют потоки, ожидающие события при выполнении деструктор. Разрешение уничтожения события при наличии ожидающих его результатов потоков приводит к неопределенному поведению.  
   
-##  <a name="a-namereseta-reset"></a><a name="reset"></a>Сброс 
+##  <a name="reset"></a>Сброс 
 
  Сбрасывает событие в несигнальное состояние.  
   
@@ -111,7 +117,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>набор 
+##  <a name="set"></a>набор 
 
  Указывает события.  
   
@@ -122,7 +128,7 @@ void set();
 ### <a name="remarks"></a>Примечания  
  Подача сигнала о событии может привести к тому, что произвольное число контекстов будет ожидать, когда событие станет готово к запуску.  
   
-##  <a name="a-nametimeoutinfinitea-timeoutinfinite"></a><a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a>timeout_infinite 
 
  Значение, указывающее, что время ожидания никогда не должно истечь.  
   
@@ -130,7 +136,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Ожидание 
+##  <a name="wait"></a>Ожидание 
 
  Ожидает перехода события в сигнальное.  
   
@@ -148,7 +154,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 > [!IMPORTANT]
 >  В приложении [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] не следует вызывать `wait` в потоке ASTA, потому что такой вызов может заблокировать текущий поток и приложение перестанет отвечать.  
   
-##  <a name="a-namewaitformultiplea-waitformultiple"></a><a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
  Ожидает в течение нескольких события в сигнальное.  
   
@@ -183,5 +189,5 @@ static size_t __cdecl wait_for_multiple(
 >  В приложении [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] не следует вызывать `wait_for_multiple` в потоке ASTA, потому что такой вызов может заблокировать текущий поток и приложение перестанет отвечать.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

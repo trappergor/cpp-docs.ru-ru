@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::Close
+- AFXSETTINGSSTORE/CSettingsStore::CreateKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteValue
+- AFXSETTINGSSTORE/CSettingsStore::Open
+- AFXSETTINGSSTORE/CSettingsStore::Read
+- AFXSETTINGSSTORE/CSettingsStore::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +93,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxsettingsstore.h  
   
-##  <a name="a-nameclosea--csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>CSettingsStore::Close  
  Закрытие открытого раздела реестра.  
   
 ```  
@@ -94,7 +103,7 @@ virtual void Close();
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод вызывается из деструктора из [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="a-namecreatekeya--csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>CSettingsStore::CreateKey  
  Открывает раздел реестра или создает ее, если она не существует.  
   
 ```  
@@ -111,7 +120,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="remarks"></a>Примечания  
  `CreateKey`использует `m_hKey` как корень реестра запросы. Он выполняет поиск `pszPath` виде подраздела `m_hKey`. Если ключ не существует, `CreateKey` его создает. В противном случае — открывает ключ. `CreateKey`Задает `m_hKey` для созданного или открытого ключа.  
   
-##  <a name="a-namecsettingsstorea--csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
  Создает объект `CSettngsStore`.  
   
 ```  
@@ -134,7 +143,7 @@ CSettingsStore(
   
  Деструктор `CSettingsStore` освобождает `m_hKey` автоматически.  
   
-##  <a name="a-namedeletekeya--csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
  Удаляет ключ и его дочерние элементы из реестра.  
   
 ```  
@@ -158,7 +167,7 @@ virtual BOOL DeleteKey(
   
  Если параметр `bAdmin` равен нулю, `DeleteKey` ищет ключ для удаления в разделе `HKEY_CURRENT_USER`. Если `bAdmin` не равно нулю, `DeleteKey` ищет ключ для удаления в разделе `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="a-namedeletevaluea--csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
  Удаляет значение из `m_hKey`.  
   
 ```  
@@ -172,7 +181,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="a-nameopena--csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>CSettingsStore::Open  
  Открывает раздел реестра.  
   
 ```  
@@ -189,7 +198,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Примечания  
  После этого метода успешно открывает указанный ключ, он устанавливает `m_hKey` для обработки этого ключа.  
   
-##  <a name="a-namereada--csettingsstoreread"></a><a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>CSettingsStore::Read  
  Считывает значение из раздела в реестре.  
   
 ```  
@@ -319,7 +328,7 @@ virtual BOOL Read(
 ### <a name="remarks"></a>Примечания  
  `Read`проверяет наличие `pszKey` виде подраздела `m_hKey`.  
   
-##  <a name="a-namewritea--csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>CSettingsStore::Write  
  Записывает значение в реестр с открытым ключом.  
   
 ```  

@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplinterface/concurrency::scheduler_ptr
+- scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 dev_langs:
 - C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
@@ -32,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bef1995724d078c9702669806ff61d5563ac465
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerptr-structure"></a>Структура scheduler_ptr
@@ -52,20 +56,20 @@ struct scheduler_ptr;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|  
+|[scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод scheduler_ptr::Get](#get)|Возвращает необработанный указатель планировщику|  
+|[scheduler_ptr::Get](#get)|Возвращает необработанный указатель планировщику|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Оператор scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|  
-|[scheduler_ptr::operator -&gt; оператор](#operator_ptr)|Поведение, как у указателя|  
+|[scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Поведение, как у указателя|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `scheduler_ptr`  
@@ -75,7 +79,7 @@ struct scheduler_ptr;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>Метод scheduler_ptr::Get  
+##  <a name="get"></a>Метод scheduler_ptr::Get  
  Возвращает необработанный указатель планировщику  
   
 ```
@@ -84,7 +88,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr::operator bool   
+##  <a name="operator_bool"></a>scheduler_ptr::operator bool   
  Проверьте, является ли указатель планировщика отличным от null  
   
 ''' bool() оператор const;

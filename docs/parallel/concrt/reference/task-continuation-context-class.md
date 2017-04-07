@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_continuation_context
+- task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context::get_current_winrt_context
+- PPLTASKS/concurrency::task_continuation_context::use_arbitrary
+- PPLTASKS/concurrency::task_continuation_context::use_current
+- PPLTASKS/concurrency::task_continuation_context::use_default
+- PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 627c2adc60c143ef7cd9be62f71a4365eed5aed5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcontinuationcontext-class"></a>Класс task_continuation_context
@@ -55,11 +61,11 @@ class task_continuation_context : public details::_ContextCallback;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод get_current_winrt_context](#get_current_winrt_context)|Возвращает объект контекста продолжения задачи, представляющий текущий контекст потока winrt.|  
-|[use_arbitrary метод](#use_arbitrary)|Создает контекст продолжения выполнения задачи, который позволяет среде выполнения возможность выбора контекста для продолжения.|  
-|[use_current метод](#use_current)|Возвращает объект контекста продолжения задачи, представляющий контекст текущего выполнения.|  
-|[use_default метод](#use_default)|Создает контекст продолжения задачи по умолчанию.|  
-|[Метод use_synchronous_execution](#use_synchronous_execution)|Возвращает объект контекста продолжения задачи, представляющий контекст выполнения синхронной.|  
+|[get_current_winrt_context](#get_current_winrt_context)|Возвращает объект контекста продолжения задачи, представляющий текущий контекст потока winrt.|  
+|[use_arbitrary](#use_arbitrary)|Создает контекст продолжения выполнения задачи, который позволяет среде выполнения возможность выбора контекста для продолжения.|  
+|[use_current](#use_current)|Возвращает объект контекста продолжения задачи, представляющий контекст текущего выполнения.|  
+|[use_default](#use_default)|Создает контекст продолжения задачи по умолчанию.|  
+|[use_synchronous_execution](#use_synchronous_execution)|Возвращает объект контекста продолжения задачи, представляющий контекст выполнения синхронной.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `_ContextCallback`  
@@ -71,7 +77,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Пространство имен:** concurrency  
 
-## <a name="a-namegetcurrentwinrtcontexta-getcurrentwinrtcontext"></a><a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
  Возвращает объект контекста продолжения задачи, представляющий текущий контекст потока WinRT.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -91,7 +97,7 @@ static task_continuation_context get_current_winrt_context();
  Этот метод аналогичен `use_current` метода, но он также может использоваться для машинного кода C++ не используется C + +/ CX поддержка расширения. Он предназначен для использования Опытные пользователи записи C + +/ CX независимой от кода библиотеки машинный код и вызывающие объекты среды выполнения Windows. Если эта функция необходима, мы не рекомендуем `use_current` метод, который доступен только на C + +/ CX клиентов.  
   
   
-##  <a name="a-nameusearbitrarya-usearbitrary"></a><a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a>use_arbitrary 
 
  Создает контекст продолжения выполнения задачи, который позволяет среде выполнения возможность выбора контекста для продолжения.  
   
@@ -109,7 +115,7 @@ static task_continuation_context use_arbitrary();
   
  Этот метод доступен только для приложений для магазина Windows.  
   
-##  <a name="a-nameusecurrenta-usecurrent"></a><a name="use_current"></a>use_current 
+##  <a name="use_current"></a>use_current 
 
  Возвращает объект контекста продолжения задачи, представляющий контекст текущего выполнения.  
   
@@ -127,7 +133,7 @@ static task_continuation_context use_current();
   
  Этот метод доступен только для приложений для магазина Windows.  
   
-##  <a name="a-nameusedefaulta-usedefault"></a><a name="use_default"></a>use_default 
+##  <a name="use_default"></a>use_default 
 
  Создает контекст продолжения задачи по умолчанию.  
   
@@ -145,7 +151,7 @@ static task_continuation_context use_default();
   
  Продолжение не подразделения учитывать задачи будет выполняться в контексте, который среда выполнения выбирает.  
 
-## <a name="a-nameusesynchronousexecutiona-taskcontinuationcontextusesynchronousexecution"></a><a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 Возвращает объект контекста продолжения задачи, представляющий контекст выполнения синхронной.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -160,9 +166,9 @@ static task_continuation_context use_synchronous_execution();
 ## <a name="remarks"></a>Примечания  
  `use_synchronous_execution` Метод вынуждает одновременного выполнения в контексте приводит к завершения предшествующей задачи задача продолжения.  
   
- Если предшествующая задача уже завершена при присоединении продолжения, продолжение выполняется синхронно в контексте, который присоединяет продолжения.  
+ Если предшествующая задача уже завершена при присоединении продолжение, продолжение выполняется синхронно в контексте, который присоединяет продолжение.  
   
  
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

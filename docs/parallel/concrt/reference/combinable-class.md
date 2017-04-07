@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>Класс combinable
@@ -59,23 +65,23 @@ class combinable;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор класса combinable](#ctor)|Перегружен. Создает новый `combinable` объекта.|  
+|[combinable](#ctor)|Перегружен. Создает новый `combinable` объекта.|  
 |[~ combinable деструктор](#dtor)|Уничтожает объект `combinable`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Clear-метод](#clear)|Очищает все промежуточные вычислительные результаты из предыдущего использования.|  
-|[Combine-метод](#combine)|Вычисляет окончательное значение из набора вложенных вычислений локального потока, вызывая предоставленный функтор.|  
-|[combine_each метод](#combine_each)|Вычисляет окончательное значение из набора вложенных вычислений локального потока, вызывая предоставленный функтор каждый вложенный вычисление локального потока. Конечный результат накапливаются объектом функции.|  
-|[Local-метод](#local)|Перегружен. Возвращает ссылку на вложенные вычисления частного потока.|  
+|[clear](#clear)|Очищает все промежуточные вычислительные результаты из предыдущего использования.|  
+|[combine](#combine)|Вычисляет окончательное значение из набора вложенных вычислений локального потока, вызывая предоставленный функтор.|  
+|[combine_each](#combine_each)|Вычисляет окончательное значение из набора вложенных вычислений локального потока, вызывая предоставленный функтор каждый вложенный вычисление локального потока. Конечный результат накапливаются объектом функции.|  
+|[локальный](#local)|Перегружен. Возвращает ссылку на вложенные вычисления частного потока.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор =-оператор](#operator_eq)|Назначает `combinable` из другого объекта `combinable` объекта.|  
+|[operator=](#operator_eq)|Назначает `combinable` из другого объекта `combinable` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -88,7 +94,7 @@ class combinable;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Очистка 
+##  <a name="clear"></a>Очистка 
 
  Очищает все промежуточные вычислительные результаты из предыдущего использования.  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>combinable 
+##  <a name="ctor"></a>combinable 
 
  Создает новый `combinable` объекта.  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  Третий конструктор является конструктор копий.  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  Уничтожает объект `combinable`.  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>Объединение 
+##  <a name="combine"></a>Объединение 
 
  Вычисляет окончательное значение из набора вложенных вычислений локального потока, вызывая предоставленный функтор.  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Окончательный результат объединения всех вычислений вложенные закрытого потока.  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  Вычисляет окончательное значение из набора вложенных вычислений локального потока, вызывая предоставленный функтор каждый вложенный вычисление локального потока. Конечный результат накапливаются объектом функции.  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Функтор, который используется для объединения одного подвычисления. Он имеет сигнатуру `void (T)` или `void (const T&)`и должен быть ассоциативными и коммуникативными.  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>локальный 
+##  <a name="local"></a>локальный 
 
  Возвращает ссылку на вложенные вычисления частного потока.  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на вложенный вычисления частного потока.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
  Назначает `combinable` из другого объекта `combinable` объекта.  
   
@@ -202,5 +208,5 @@ combinable& operator= (const combinable& _Copy);
  Ссылку на это `combinable` объекта.  
   
 ## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)
+ [Пространство имен concurrency](concurrency-namespace.md)
 

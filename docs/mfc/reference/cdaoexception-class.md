@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoException
+- AFXDAO/CDaoException
+- AFXDAO/CDaoException::CDaoException
+- AFXDAO/CDaoException::GetErrorCount
+- AFXDAO/CDaoException::GetErrorInfo
+- AFXDAO/CDaoException::m_nAfxDaoError
+- AFXDAO/CDaoException::m_pErrorInfo
+- AFXDAO/CDaoException::m_scode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +107,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  
   
-##  <a name="a-namecdaoexceptiona--cdaoexceptioncdaoexception"></a><a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>CDaoException::CDaoException  
  Создает объект `CDaoException`.  
   
 ```  
@@ -128,7 +135,7 @@ CDaoException();
   
  Дополнительные сведения об обработке ошибок в классах MFC DAO см. в статье [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="a-namegeterrorcounta--cdaoexceptiongeterrorcount"></a><a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
  Вызовите эту функцию-член для получения числа объектов DAO ошибок в коллекцию ошибок ядра СУБД.  
   
 ```  
@@ -144,7 +151,7 @@ short GetErrorCount();
 > [!NOTE]
 >  Обычно существует только один объект error в коллекцию ошибок. При работе с источником данных ODBC, однако может существовать более одного.  
   
-##  <a name="a-namegeterrorinfoa--cdaoexceptiongeterrorinfo"></a><a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
  Возвращает сведения об объекте конкретной ошибки в коллекцию ошибок.  
   
 ```  
@@ -172,7 +179,7 @@ void GetErrorInfo(int nIndex);
   
  Сведения об исключениях DAO и пример кода см. в статье [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="a-namemnafxdaoerrora--cdaoexceptionmnafxdaoerror"></a><a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
  Содержит MFC расширенный код ошибки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -188,7 +195,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN** попытка открыть набор записей на основе querydef или tabledef объект, который не был в открытом состоянии.  
   
-##  <a name="a-namemperrorinfoa--cdaoexceptionmperrorinfo"></a><a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
  Содержит указатель на `CDaoErrorInfo` структура, которая предоставляет сведения о DAO объекта ошибки, вы извлекли путем вызова [GetErrorInfo](#geterrorinfo).  
   
 ### <a name="remarks"></a>Примечания  
@@ -204,7 +211,7 @@ void GetErrorInfo(int nIndex);
   
  Дополнительные сведения об информации, содержащейся в `CDaoErrorInfo` объекта см. в разделе [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) структуры.  
   
-##  <a name="a-namemscodea--cdaoexceptionmscode"></a><a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>CDaoException::m_scode  
  Содержит значение типа `SCODE` , описывающая ошибку.  
   
 ### <a name="remarks"></a>Примечания  

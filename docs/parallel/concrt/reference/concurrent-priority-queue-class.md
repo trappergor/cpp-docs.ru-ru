@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_priority_queue/concurrency::concurrent_priority_queue
+- concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::clear
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::empty
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::get_allocator
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::push
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 59bbd25f78294e1363b8acb49e45f364a9ae026e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentpriorityqueue-class"></a>Класс concurrent_priority_queue
@@ -78,25 +87,25 @@ template <typename T,
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор concurrent_priority_queue](#ctor)|Перегружен. Создает параллельную очередь с приоритетом.|  
+|[concurrent_priority_queue](#ctor)|Перегружен. Создает параллельную очередь с приоритетом.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Clear-метод](#clear)|Удаляет все элементы в параллельной очереди с приоритетом. Этот метод не является безопасным в режиме параллелизма.|  
-|[Empty-метод](#empty)|Проверяет, пуста ли параллельная очередь с приоритетом в момент, когда этот метод вызывается. Данный метод безопасен в режиме параллелизма.|  
-|[get_allocator метод](#get_allocator)|Возвращает копию распределителя, используемого для создания параллельной очереди с приоритетом. Данный метод безопасен в режиме параллелизма.|  
-|[Метод Push](#push)|Перегружен. Добавляет элемент в параллельную очередь с приоритетом. Данный метод безопасен в режиме параллелизма.|  
-|[Размер метода](#size)|Возвращает число элементов в параллельной очереди с приоритетом. Данный метод безопасен в режиме параллелизма.|  
-|[Swap-метод](#swap)|Меняет местами содержимое двух параллельных очередей с приоритетом. Этот метод не является безопасным в режиме параллелизма.|  
-|[try_pop метод](#try_pop)|Удаляет и возвращает элемент наивысшего приоритета из очереди, если очередь не пуста. Данный метод безопасен в режиме параллелизма.|  
+|[clear](#clear)|Удаляет все элементы в параллельной очереди с приоритетом. Этот метод не является безопасным в режиме параллелизма.|  
+|[empty](#empty)|Проверяет, пуста ли параллельная очередь с приоритетом в момент, когда этот метод вызывается. Данный метод безопасен в режиме параллелизма.|  
+|[get_allocator](#get_allocator)|Возвращает копию распределителя, используемого для создания параллельной очереди с приоритетом. Данный метод безопасен в режиме параллелизма.|  
+|[push](#push)|Перегружен. Добавляет элемент в параллельную очередь с приоритетом. Данный метод безопасен в режиме параллелизма.|  
+|[size](#size)|Возвращает число элементов в параллельной очереди с приоритетом. Данный метод безопасен в режиме параллелизма.|  
+|[swap](#swap)|Меняет местами содержимое двух параллельных очередей с приоритетом. Этот метод не является безопасным в режиме параллелизма.|  
+|[try_pop](#try_pop)|Удаляет и возвращает элемент наивысшего приоритета из очереди, если очередь не пуста. Данный метод безопасен в режиме параллелизма.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор =-оператор](#operator_eq)|Перегружен. Назначает содержимое другого `concurrent_priority_queue` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
+|[operator=](#operator_eq)|Перегружен. Назначает содержимое другого `concurrent_priority_queue` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения о `concurrent_priority_queue` см. в разделе [параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -109,7 +118,7 @@ template <typename T,
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Очистка 
+##  <a name="clear"></a>Очистка 
 
  Удаляет все элементы в параллельной очереди с приоритетом. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -120,7 +129,7 @@ void clear();
 ### <a name="remarks"></a>Примечания  
  `clear`не является безопасным в режиме параллелизма. Необходимо убедиться, что нет других потоков, вызывающих методов в параллельной очереди с приоритетом, при вызове этого метода. `clear`не освобождает память.  
   
-##  <a name="a-namectora-concurrentpriorityqueue"></a><a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue 
 
  Создает параллельную очередь с приоритетом.  
   
@@ -184,7 +193,7 @@ concurrent_priority_queue(
   
  Шестая и седьмая конструкторы укажите перемещения в очередь с приоритетом `_Src`.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>пустой 
+##  <a name="empty"></a>пустой 
 
  Проверяет, пуста ли параллельная очередь с приоритетом в момент, когда этот метод вызывается. Данный метод безопасен в режиме параллелизма.  
   
@@ -195,7 +204,7 @@ bool empty() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если очередь с приоритетом был пустым в момент вызова функции, `false` в противном случае.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Возвращает копию распределителя, используемого для создания параллельной очереди с приоритетом. Данный метод безопасен в режиме параллелизма.  
   
@@ -206,7 +215,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Копию распределителя, используемого для создания `concurrent_priority_queue` объекта.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a>оператор = 
 
  Назначает содержимое другого `concurrent_priority_queue` этого объекта. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -223,7 +232,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `concurrent_priority_queue` объекта.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>Push 
+##  <a name="push"></a>Push 
 
  Добавляет элемент в параллельную очередь с приоритетом. Данный метод безопасен в режиме параллелизма.  
   
@@ -237,7 +246,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  Элемент, добавляемый параллельной очереди с приоритетом.  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>размер 
+##  <a name="size"></a>размер 
 
  Возвращает число элементов в параллельной очереди с приоритетом. Данный метод безопасен в режиме параллелизма.  
   
@@ -251,7 +260,7 @@ size_type size() const;
 ### <a name="remarks"></a>Примечания  
  Возвращенный размер обязательно включать все элементы, добавленные в вызовы функции `push`. Тем не менее он может не отражать результаты одновременных операций в очереди.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>Переключение 
+##  <a name="swap"></a>Переключение 
 
  Меняет местами содержимое двух параллельных очередей с приоритетом. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -263,7 +272,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  `concurrent_priority_queue` Объект для обмена содержимым.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Удаляет и возвращает элемент наивысшего приоритета из очереди, если очередь не пуста. Данный метод безопасен в режиме параллелизма.  
   
