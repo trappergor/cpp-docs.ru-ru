@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 0cc29b21aa2279e51ba666d7447d913c4cc777d4
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
@@ -54,6 +54,8 @@ ms.lasthandoff: 03/29/2017
   
 ### <a name="run-time-object-model-services-macros"></a>Макросы служб времени выполнения объектной модели  
   
+
+
 |||  
 |-|-|  
 |[DECLARE_DYNAMIC](#declare_dynamic)|Обеспечивает доступ к информации класса среды выполнения (следует использовать в объявлении класса).|  
@@ -70,12 +72,69 @@ ms.lasthandoff: 03/29/2017
  Библиотеки классов Microsoft Foundation предоставляет два макроса конкретных OLE.  
   
 ### <a name="dynamic-creation-of-ole-objects"></a>Динамическое создание объектов OLE  
-  
+
+ 
+
+
+
+
+
+
 |||  
 |-|-|  
+|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Определяет, реализует ли общие элементы управления библиотеки указанного API.|
+|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Определяет, реализует ли общие элементы управления библиотеки указанного API.|
 |[DECLARE_OLECREATE](#declare_olecreate)|Позволяет объектам для создания с помощью OLE-автоматизации.|  
+|[DECLARE_OLECTLTYPE](#declare_olectltype)|Объявляет **GetUserTypeNameID** и `GetMiscStatus` функции-члены класса элемента управления.|
+|[DECLARE_PROPPAGEIDS](#declare_proppageids)|Объявляет, что элемент управления OLE предоставляет список страницы свойств, чтобы отобразить ее свойства.|
 |[IMPLEMENT_OLECREATE](#implement_olecreate)|Позволяет объектам, создаваемых системой OLE.|  
-  
+|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Реализует **GetUserTypeNameID** и `GetMiscStatus` функции-члены класса элемента управления.|  
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Либо этот макрос или [IMPLEMENT_OLECREATE](#implement_olecreate) должен быть указан в файле реализации для любого класса, который использует `DECLARE_OLECREATE`. |
+
+## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+Определяет, реализует ли общие элементы управления библиотеки указанного API.  
+   
+### <a name="syntax"></a>Синтаксис  
+  ```  
+AFX_COMCTL32_IF_EXISTS(  proc );  
+```
+### <a name="parameters"></a>Параметры  
+ `proc`  
+ Указатель на символом null строку, содержащую имя функции или указывает порядковое значение функции. Если этот параметр имеет порядковый номер, он должен быть в младшее слово; старшее слово должно быть нулевым. Этот параметр должен быть в формате Юникод.  
+   
+### <a name="remarks"></a>Примечания  
+ Используйте этот макрос для определения, является ли общие элементы управления библиотеки функция заданный `proc` (вместо вызова метода [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+   
+### <a name="requirements"></a>Требования  
+ afxcomctl32.h, afxcomctl32.inl  
+   
+### <a name="see-also"></a>См. также  
+ [Изоляция MFC Общие элементы управления библиотеки](../isolation-of-the-mfc-common-controls-library.md)
+ [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
+ 
+## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+Определяет, реализует ли общие элементы управления библиотеки указанный API (это версия Юникода [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
+   
+### <a name="syntax"></a>Синтаксис    
+```  
+AFX_COMCTL32_IF_EXISTS2( proc );  
+```
+### <a name="parameters"></a>Параметры  
+ `proc`  
+ Указатель на символом null строку, содержащую имя функции или указывает порядковое значение функции. Если этот параметр имеет порядковый номер, он должен быть в младшее слово; старшее слово должно быть нулевым. Этот параметр должен быть в формате Юникод.  
+   
+### <a name="remarks"></a>Примечания  
+ Используйте этот макрос для определения, является ли общие элементы управления библиотеки функция заданный `proc` (вместо вызова метода [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Этот макрос имеет версию Юникода для `AFX_COMCTL32_IF_EXISTS`.  
+   
+### <a name="requirements"></a>Требования  
+ afxcomctl32.h, afxcomctl32.inl  
+   
+### <a name="see-also"></a>См. также  
+ [Изоляция MFC Общие элементы управления библиотеки](../isolation-of-the-mfc-common-controls-library.md)
+ [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
+
+
+
 ##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
  Добавляет возможность доступа к среде выполнения сведения о классе объекта при наследовании от класса `CObject`.  
   
@@ -130,6 +189,51 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
+
+ 
+## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
+Объявляет **GetUserTypeNameID** и `GetMiscStatus` функции-члены класса элемента управления.  
+   
+### <a name="syntax"></a>Синтаксис    
+```
+DECLARE_OLECTLTYPE( class_name )  
+```
+### <a name="parameters"></a>Параметры  
+ *class_name*  
+ Имя класса элемента управления.  
+   
+### <a name="remarks"></a>Примечания  
+ **GetUserTypeNameID** и `GetMiscStatus` являются чистые виртуальные функции, объявленные в `COleControl`. Поскольку эти функции являются чисто виртуальные, они должны быть переопределены в классе элемента управления. В дополнение к **DECLARE_OLECTLTYPE**, необходимо добавить `IMPLEMENT_OLECTLTYPE` макрос к объявлению класса элемента управления.  
+   
+### <a name="requirements"></a>Требования  
+ **Заголовок:** afxctl.h  
+   
+### <a name="see-also"></a>См. также  
+ [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
+ 
+
+## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
+Объявляет, что элемент управления OLE предоставляет список страницы свойств, чтобы отобразить ее свойства.  
+   
+### <a name="syntax"></a>Синтаксис    
+```
+DECLARE_PROPPAGEIDS( class_name )  
+```
+### <a name="parameters"></a>Параметры  
+ *class_name*  
+ Имя класса элемента управления, которому принадлежит страницы свойств.  
+   
+### <a name="remarks"></a>Примечания  
+ Используйте `DECLARE_PROPPAGEIDS` макрос в конце объявления класса. В CPP-файле, который определяет функции-члены класса, используйте `BEGIN_PROPPAGEIDS` макрос, макрос записи для каждой из страниц свойств элемента управления и `END_PROPPAGEIDS` макрос для объявления в конец списка страницы свойств.  
+  
+ Дополнительные сведения о страницах свойств см. в статье [элементы управления ActiveX: страницы свойств](../mfc-activex-controls-property-pages.md).  
+   
+### <a name="requirements"></a>Требования  
+ **Заголовок:** afxctl.h  
+   
+### <a name="see-also"></a>См. также   
+ [BEGIN_PROPPAGEIDS](#begin_proppageids)   
+ [END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>DECLARE_SERIAL  
  Создает заголовок код C++, необходимые для `CObject`-производного класса, который может быть сериализован.  
@@ -220,6 +324,83 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
+
+## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+Либо этот макрос или [IMPLEMENT_OLECREATE](#implement_olecreate) должен быть указан в файле реализации для любого класса, который использует `DECLARE_OLECREATE`.  
+   
+### <a name="syntax"></a>Синтаксис    
+```
+IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags, 
+    l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
+  
+```
+### <a name="parameters"></a>Параметры  
+ *class_name*  
+ Фактическое имя класса.  
+  
+ *Параметры external_name*  
+ Имя объекта, другим приложениям (заключенная в кавычки).  
+  
+ `nFlags`  
+ Содержит один или несколько из следующих флагов:  
+  
+-   `afxRegInsertable`Позволяет элементу управления отображаются в диалоговом окне Вставка объекта OLE-объекты.    
+-   `afxRegApartmentThreading`Задает модель потоков в реестре, ThreadingModel = подразделения.    
+-   **afxRegFreeThreading** задает потоковую модель в реестре, ThreadingModel = Free.  
+  
+     Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` для задания ThreadingModel = Both. В разделе [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) в Windows SDK, Дополнительные сведения о потоковой модели регистрации.    
+ *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ Компоненты класса **CLSID**.  
+   
+### <a name="remarks"></a>Примечания  
+  
+> [!NOTE]
+>  Если вы используете `IMPLEMENT_OLECREATE_FLAGS`, можно указать, какие потоковой модели, поддерживаемые объектом с помощью `nFlags` параметра. Для поддержки только treading одной модели, используйте `IMPLEMENT_OLECREATE`.  
+  
+ Внешнее имя является идентификатором, другим приложениям. Клиентские приложения используют внешнее имя для запроса объекта данного класса сервера автоматизации.  
+  
+ Идентификатор класса OLE имеет уникальный 128-разрядный идентификатор для объекта. Он состоит из одного **длинные**, два **WORD**s и восьми **БАЙТОВ**s, представленные как *l*, *w1*, *w2*, и *b1* через *b8* в описании синтаксиса. Мастер приложения и код мастеров при необходимости создать уникальные идентификаторы класса OLE для вас.  
+   
+### <a name="requirements"></a>Требования  
+ **Заголовок:** afxdisp.h  
+   
+### <a name="see-also"></a>См. также  
+ [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
+ [DECLARE_OLECREATE](#declare_olecreate)   
+ [Раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+
+
+## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+Реализует **GetUserTypeNameID** и `GetMiscStatus` функции-члены класса элемента управления.  
+   
+### <a name="syntax"></a>Синтаксис    
+```
+DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )  
+```
+### <a name="parameters"></a>Параметры  
+ *class_name*  
+ Имя класса элемента управления.  
+  
+ *idsUserTypeName*  
+ Идентификатор ресурса строка, содержащая имя внешнего элемента управления.  
+  
+ *dwOleMisc*  
+ Перечисление, содержащее один или несколько флагов. Дополнительные сведения об этом перечислении см. в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) в Windows SDK.  
+   
+### <a name="remarks"></a>Примечания  
+ В дополнение к `IMPLEMENT_OLECTLTYPE`, необходимо добавить **DECLARE_OLECTLTYPE** макрос к объявлению класса элемента управления.  
+  
+ **GetUserTypeNameID** функция-член возвращает строку ресурса, определяющий класса элемента управления. `GetMiscStatus`Возвращает **OLEMISC, ПОЗВОЛЯЯ** bits для элемента управления. Это перечисление указывает набор параметров, определяющих различные характеристики элемента управления. Полное описание **OLEMISC, ПОЗВОЛЯЯ** параметров, в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) в Windows SDK.  
+  
+> [!NOTE]
+>  Настройки по умолчанию, используемые автоматически ActiveX: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, и **OLEMISC_RECOMPOSEONRESIZE**.  
+   
+### <a name="requirements"></a>Требования  
+ **Заголовок:** afxctl.h  
+   
+### <a name="see-also"></a>См. также  
+ [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
+ [DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
  Создает код C++, необходимые для динамического `CObject`-производного класса во время выполнения доступ к имени класса и положение в иерархии.  
@@ -327,4 +508,5 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ## <a name="see-also"></a>См. также  
  [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+
 

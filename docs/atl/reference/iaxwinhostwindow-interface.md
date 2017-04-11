@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6e366e7e30e7b4080462fbc21c29b4ecdf0214ae
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: ecf88a3a6b115088dd605fff2b633bff86fb086a
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iaxwinhostwindow-interface"></a>Интерфейс IAxWinHostWindow
@@ -64,15 +64,15 @@ interface IAxWinHostWindow : IUnknown
   
 |||  
 |-|-|  
-|[AttachControl](#attachcontrol)|Присоединяет существующего элемента управления к объекту главного приложения.|  
-|[CreateControl](#createcontrol)|Создает элемент управления и присоединяет его к объекту главного приложения.|  
-|[CreateControlEx](#createcontrolex)|Создает элемент управления, присоединяет его к объекту главного приложения и при необходимости устанавливает обработчик события.|  
+|[AttachControl](#attachcontrol)|Присоединяет объект узла существующего элемента управления.|  
+|[CreateControl](#createcontrol)|Создает элемент управления и прикрепляет его к объекту узла.|  
+|[CreateControlEx](#createcontrolex)|Создает элемент управления и прикрепляет его к объекту узла при необходимости устанавливает обработчик события.|  
 |[QueryControl](#querycontrol)|Возвращает указатель на интерфейс для размещенного элемента управления.|  
-|[SetExternalDispatch](#setexternaldispatch)|Задает внешние `IDispatch` интерфейса.|  
-|[SetExternalUIHandler](#setexternaluihandler)|Задает внешние `IDocHostUIHandlerDispatch` интерфейса.|  
+|[SetExternalDispatch](#setexternaldispatch)|Задает внешний `IDispatch` интерфейса.|  
+|[SetExternalUIHandler](#setexternaluihandler)|Задает внешний `IDocHostUIHandlerDispatch` интерфейса.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс предоставляется элементом управления ActiveX ATL размещение объектов. Вызовите методы на этот интерфейс, чтобы создать или присоединить элемент управления к объекту главного приложения для получения интерфейс размещенного элемента управления или для внешних диспетчерский или обработчик пользовательского интерфейса для использования при размещении веб-браузера.  
+ Этот интерфейс предоставляется элементом управления ActiveX ATL размещение объектов. Вызовите методы для этого интерфейса позволяет создать и назначить объект узла, для получения интерфейса из размещенного элемента управления или при размещении веб-браузер, задайте внешний disp-интерфейса и обработчик пользовательского интерфейса для использования элемента управления.  
   
 ## <a name="requirements"></a>Требования  
  Определение этого интерфейса доступна как IDL или C++, как показано ниже.  
@@ -80,10 +80,10 @@ interface IAxWinHostWindow : IUnknown
 |Определение типа|Файл|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
-|C++|Насколько (также входит в ATLBase.h)|  
+|C++|См (также входит в состав ATLBase.h)|  
   
 ##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
- Присоединяет существующего (и предварительно инициализированных) элемента управления к объекту главного приложения с помощью окна определяется `hWnd`.  
+ Прикрепляет элемент управления с существующие (и предварительно инициализированных) на базовый объект, с помощью окна, обозначенную `hWnd`.  
   
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -91,16 +91,16 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
   
 ### <a name="parameters"></a>Параметры  
  *pUnkControl*  
- [in] Указатель на **IUnknown** интерфейса элемента управления должны быть присоединены к объект узла.  
+ [in] Указатель на **IUnknown** интерфейса элемента управления для присоединения к объекту узла.  
   
  `hWnd`  
- [in] Дескриптор окна, используемый для размещения.  
+ [in] Дескриптор окна, используемое для размещения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
- Создает элемент управления, инициализирует его и размещает в окне, идентифицируемый `hWnd`.  
+ Создает элемент управления, инициализирует его и размещает в окна, обозначенную `hWnd`.  
   
 ```
 STDMETHOD(CreateControl)(
@@ -111,23 +111,23 @@ STDMETHOD(CreateControl)(
   
 ### <a name="parameters"></a>Параметры  
  `lpTricsData`  
- [in] Строка, определяющая создаваемый элемент управления. Может быть (включая фигурные) CLSID, ProgID, URL-адрес или исходный HTML-код (с префиксом **MSHTML:**).  
+ [in] Строка, идентифицирующая элемент управления для создания. Может быть (включая фигурные) CLSID, ProgID, URL-адрес или исходный HTML-код (префиксом **MSHTML:**).  
   
  `hWnd`  
- [in] Дескриптор окна, используемый для размещения.  
+ [in] Дескриптор окна, используемое для размещения.  
   
  `pStream`  
- [in] Указатель на интерфейс для потока, содержащего данные инициализации для элемента управления. Может быть **NULL**.  
+ [in] Указатель интерфейса для поток, содержащий данные инициализации для элемента управления. Может быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- Это окно будет подклассом объектом хоста, предоставление доступа к этот интерфейс, чтобы сообщения могут быть отражены в элемент управления и других функций контейнера будет работать.  
+ Это окно будет подклассом объектом узла, предоставление доступа к этот интерфейс, чтобы сообщения могут быть отражены в элемент управления и других функций контейнера будет работать.  
   
  Вызов этого метода эквивалентен вызову [IAxWinHostWindow::CreateControlEx](#createcontrolex).  
   
- Создание лицензированный элемент управления ActiveX, в разделе [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
+ Создание лицензированный элемент управления ActiveX — [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
 ##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
  Создает элемент управления ActiveX, инициализирует его и размещает в указанном окне аналогично [IAxWinHostWindow::CreateControl](#createcontrol).  
@@ -144,13 +144,13 @@ STDMETHOD(CreateControlEx)(
   
 ### <a name="parameters"></a>Параметры  
  `lpTricsData`  
- [in] Строка, определяющая создаваемый элемент управления. Может быть (включая фигурные) CLSID, ProgID, URL-адрес или исходный HTML-код (с префиксом **MSHTML:**).  
+ [in] Строка, идентифицирующая элемент управления для создания. Может быть (включая фигурные) CLSID, ProgID, URL-адрес или необработанное HTML (с префиксом **MSHTML:**).  
   
  `hWnd`  
- [in] Дескриптор окна, используемый для размещения.  
+ [in] Дескриптор окна, используемое для размещения.  
   
  `pStream`  
- [in] Указатель на интерфейс для потока, содержащего данные инициализации для элемента управления. Может быть **NULL**.  
+ [in] Указатель интерфейса для поток, содержащий данные инициализации для элемента управления. Может быть **NULL**.  
   
  `ppUnk`  
  [out] Адрес указателя, который получит **IUnknown** интерфейса созданный элемент управления. Может быть **NULL**.  
@@ -159,18 +159,18 @@ STDMETHOD(CreateControlEx)(
  [in] Идентификатор исходящего интерфейса содержащегося объекта. Может быть **равным IID_NULL**.  
   
  *punkAdvise*  
- [in] Указатель на **IUnknown** интерфейс приемника объекта должен быть подключен к точке соединения для содержащегося объекта, заданного параметром `iidSink`.  
+ [in] Указатель на **IUnknown** интерфейса приемника объекта должны быть подключены к точкой соединения в автономной объекта, заданного параметром `iidSink`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- В отличие от `CreateControl` метод `CreateControlEx` также позволяет получать указатель интерфейса на вновь созданного элемента управления и настроить приемник событий для получения событий, произошедших в элементе управления.  
+ В отличие от `CreateControl` метода `CreateControlEx` также позволяет получать указатель интерфейса на вновь созданного элемента управления и настроить приемник событий для получения событий, произошедших в элементе управления.  
   
- Создание лицензированный элемент управления ActiveX, в разделе [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
+ Создание лицензированный элемент управления ActiveX — [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
 ##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
- Возвращает заданный указатель интерфейса предоставляемых размещенного элемента управления.  
+ Возвращает заданный указатель интерфейса, предоставляемые размещенного элемента управления.  
   
 ```
 STDMETHOD(QueryControl)(
@@ -180,7 +180,7 @@ STDMETHOD(QueryControl)(
   
 ### <a name="parameters"></a>Параметры  
  `riid`  
- [in] Идентификатор интерфейса запрашиваемого элемента управления.  
+ [in] Идентификатор элемента управления, запрашиваемый интерфейс.  
   
  `ppvObject`  
  [out] Адрес указателя, который получит указанный интерфейс созданный элемент управления.  
@@ -189,7 +189,7 @@ STDMETHOD(QueryControl)(
  Стандартное значение `HRESULT` .  
   
 ##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
- Задает внешний disp-интерфейс, доступный в контейнере элементов управления через [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) метод.  
+ Задает внешний disp-интерфейса, доступном через содержащиеся в нем элементы [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) метод.  
   
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -203,7 +203,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
  Стандартное значение `HRESULT` .  
   
 ##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
- Вызовите эту функцию для задания внешние [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) интерфейс для `CAxWindow` объекта.  
+ Вызовите эту функцию для задания внешних [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) интерфейс для `CAxWindow` объекта.  
   
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -217,12 +217,12 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция используется элементами управления (например, элемент управления браузера), запрос узла для `IDocHostUIHandlerDispatch` интерфейса.  
+ Эта функция используется элементами управления (например, элемент управления браузера), запрос узлу для `IDocHostUIHandlerDispatch` интерфейса.  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
- [AtlAxGetHost](http://msdn.microsoft.com/library/ad1f4f16-608d-4e96-8d30-04d4ca906a7b)
+ [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 
 
 

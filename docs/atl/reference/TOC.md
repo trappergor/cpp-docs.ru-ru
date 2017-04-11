@@ -225,6 +225,7 @@
 ## [Макросы агрегирования и фабрик классов](aggregation-and-class-factory-macros.md)
 ## [Макросы категорий](category-macros.md)
 ## [Макросы сопоставления COM](com-map-macros.md)
+## [Макрос точки входа в интерфейс модели COM](com-interface-entry-macros.md)
 ## [Макросы для параметров компилятора](compiler-options-macros.md)
 ## [Макросы для работы с составными элементами управления](composite-control-macros.md)
 ## [Макросы для работы с точками подключения](connection-point-macros.md)

@@ -39,13 +39,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 377e7f2fa6d8377d46e98b52e9c8f075b10956a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04946d07bea39eb739c31a3254355d3527d2e9c3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Класс CComSimpleThreadAllocator
-Этот класс управляет Выбор потоков для класса `CComAutoThreadModule`.  
+Этот класс управляет выбора потока для класса `CComAutoThreadModule`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Выбирает поток.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComSimpleThreadAllocator`Управляет Выбор потоков для [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`просто перебирает каждый поток и возвращает является следующим в последовательности.  
+ `CComSimpleThreadAllocator`управляет выбором потока для [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`просто выполняет циклический переход по каждому потоку и возвращает следующим в последовательности.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -76,16 +76,16 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
   
 ### <a name="parameters"></a>Параметры  
  `pApt`  
- В реализации библиотеки ATL по умолчанию не используется.  
+ В реализации по умолчанию ATL не используется.  
   
  `nThreads`  
  Максимальное число потоков в модуле exe-файла.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Целое число от нуля и ( `nThreads` – 1). Определяет один из потоков в модуле exe-файла.  
+ Целое число от нуля и ( `nThreads` - 1). Определяет один из потоков в модуле exe-файла.  
   
 ### <a name="remarks"></a>Примечания  
- Можно переопределить `GetThread` для предоставления другой метод выделения или использовать `pApt` параметр.  
+ Можно переопределить `GetThread` для предоставления другой метод выделения или использовать `pApt` параметра.  
   
  `GetThread`вызывается методом [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   

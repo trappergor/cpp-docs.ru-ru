@@ -39,13 +39,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 901a6a6bf4097b6aa78a898254766f122bb2f959
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Класс IPersistPropertyBagImpl
-Этот класс реализует **IUnknown** и объект для сохранения его свойств контейнера свойств, предоставленное клиентом.  
+Этот класс реализует **IUnknown** и позволяет сохранить его свойств в контейнер свойств, предоставленное клиентом объекту.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -73,9 +73,9 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |[IPersistPropertyBagImpl::Save](#save)|Сохраняет свойства объекта в контейнер свойств, предоставленное клиентом.|  
   
 ## <a name="remarks"></a>Примечания  
- [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) интерфейс позволяет объекту сохранить его свойств в контейнер свойств, предоставленное клиентом. Класс `IPersistPropertyBagImpl` предоставляет стандартную реализацию этого интерфейса и реализует **IUnknown** при отправке информации для дампа строит устройства в режиме отладки.  
+ [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) интерфейс позволяет объекту сохранить его свойств в контейнер свойств, предоставленное клиентом. Класс `IPersistPropertyBagImpl` предоставляет стандартную реализацию этого интерфейса и реализует **IUnknown** , отправляя сведения в дамп устройства в отладочных построений.  
   
- **IPersistPropertyBag** работает в сочетании с [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) и [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Эти последний два интерфейса должен быть реализован клиентом. Через `IPropertyBag`, клиент сохраняет и загружает отдельных свойств объекта. Через **IErrorLog**, и объект и клиент может сообщать все обнаруженные ошибки.  
+ **IPersistPropertyBag** работает в сочетании с [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) и [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Эти последние два интерфейса должен быть реализован клиентом. Через `IPropertyBag`, клиент сохраняет и загружает отдельных свойств объекта. Через **IErrorLog**, и объект и клиент может сообщать все обнаруженные ошибки.  
   
  **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [создается проект ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
  `IPersistPropertyBagImpl`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
   
 ##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
  Извлекает идентификатор CLSID объекта.  
@@ -118,7 +118,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- ATL использует сопоставление свойств объекта для извлечения этой информации.  
+ ATL использует сопоставление свойств объекта для получения этих сведений.  
   
  В разделе [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -138,6 +138,6 @@ STDMETHOD(Save)(
  В разделе [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [BEGIN_PROP_MAP](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)   
+ [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
 

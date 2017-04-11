@@ -43,13 +43,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ab1c92c1b7442025f91007ef971d81d087351212
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cworkerthread-class"></a>Класс CWorkerThread
-Этот класс создает рабочий поток или использует существующую ожидает один или несколько маркеров объектов ядра и выполняет функцию указанного клиента, когда один из маркеров, получает сигнал.  
+Этот класс создает рабочий поток или использует уже существующий, ожидает один или несколько маркеров объектов ядра и выполняет функцию указанного клиента, когда один из маркеров, получает сигнал.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -63,7 +63,7 @@ class CWorkerThread
   
 #### <a name="parameters"></a>Параметры  
  `ThreadTraits`  
- Класс, предоставляющий функции создания потока, таких как [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) или [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).  
+ Класс, предоставляющий функции создания потока, такие как [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) или [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).  
   
 ## <a name="members"></a>Члены  
   
@@ -84,8 +84,8 @@ class CWorkerThread
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CWorkerThread::AddHandle](#addhandle)|Вызовите этот метод для добавления дескриптора ожидания объекта списка, поддерживаемого в рабочем потоке.|  
-|[CWorkerThread::AddTimer](#addtimer)|Этот метод используется для добавления таймер ожидания для списка, поддерживаемого в рабочем потоке.|  
+|[CWorkerThread::AddHandle](#addhandle)|Вызовите этот метод, чтобы добавить дескриптор ожидающий объект списка, поддерживаемого рабочим потоком.|  
+|[CWorkerThread::AddTimer](#addtimer)|Этот метод служит для добавления периодический таймер ожидания для списка, поддерживаемого рабочим потоком.|  
 |[CWorkerThread::GetThreadHandle](#getthreadhandle)|Вызовите этот метод, чтобы получить дескриптор потока рабочего потока.|  
 |[CWorkerThread::GetThreadId](#getthreadid)|Этот метод используется для получения идентификатора потока рабочего потока.|  
 |[CWorkerThread::Initialize](#initialize)|Этот метод вызывается для инициализации рабочего потока.|  
@@ -94,19 +94,19 @@ class CWorkerThread
   
 ## <a name="remarks"></a>Примечания  
   
-### <a name="to-use-cworkerthread"></a>Использование CWorkerThread  
+### <a name="to-use-cworkerthread"></a>Чтобы использовать CWorkerThread  
   
 1.  Создайте экземпляр этого класса.  
   
-2.  Вызов [CWorkerThread::Initialize](#initialize).  
+2.  Вызовите [CWorkerThread::Initialize](#initialize).  
   
-3.  Вызов [CWorkerThread::AddHandle](#addhandle) с дескриптором объекта ядра и указатель на реализацию [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).  
+3.  Вызовите [CWorkerThread::AddHandle](#addhandle) с дескриптором объекта ядра и указатель на реализацию [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).  
   
-     — или —  
+     - или  
   
-     Вызов [CWorkerThread::AddTimer](#addtimer) с указателем на реализацию [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).  
+     Вызовите [CWorkerThread::AddTimer](#addtimer) с указателем на реализацию [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).  
   
-4.  Реализуйте [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) выполнить некоторое действие, при получении сигнала дескриптор или таймера.  
+4.  Реализуйте [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) для выполнения некоторых действий при получении сигнала дескриптор или таймера.  
   
 5.  Чтобы удалить объект из списка объектов ожидания, вызовите [CWorkerThread::RemoveHandle](#removehandle).  
   
@@ -116,7 +116,7 @@ class CWorkerThread
  **Заголовок:** файлов atlutil.h  
   
 ##  <a name="addhandle"></a>CWorkerThread::AddHandle  
- Вызовите этот метод для добавления дескриптора ожидания объекта списка, поддерживаемого в рабочем потоке.  
+ Вызовите этот метод, чтобы добавить дескриптор ожидающий объект списка, поддерживаемого рабочим потоком.  
   
 ```
 HRESULT AddHandle(
@@ -130,19 +130,19 @@ HRESULT AddHandle(
  Дескриптор ожидания объекта.  
   
  `pClient`  
- Указатель на [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) интерфейс для объекта, вызываемого, когда дескриптор получает сигнал.  
+ Указатель на [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) интерфейс объекта, которое будет вызываться, когда дескриптор получает сигнал.  
   
  `dwParam`  
- Параметр для передачи [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) после получения сигнала дескриптор.  
+ Параметр должен быть передан [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) при дескриптор получает сигнал.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через `pClient` при дескриптор `hObject`, получает сигнал.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через `pClient` при дескриптора, `hObject`, которому отправляется сигнал.  
   
 ##  <a name="addtimer"></a>CWorkerThread::AddTimer  
- Этот метод используется для добавления таймер ожидания для списка, поддерживаемого в рабочем потоке.  
+ Этот метод служит для добавления периодический таймер ожидания для списка, поддерживаемого рабочим потоком.  
   
 ```
 HRESULT AddTimer(
@@ -154,24 +154,24 @@ HRESULT AddTimer(
   
 ### <a name="parameters"></a>Параметры  
  *dwInterval*  
- Указывает период таймера в миллисекундах.  
+ Указывает интервал таймера в миллисекундах.  
   
  `pClient`  
- Указатель на [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) интерфейс для объекта, вызываемого, когда дескриптор получает сигнал.  
+ Указатель на [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) интерфейс объекта, которое будет вызываться, когда дескриптор получает сигнал.  
   
  `dwParam`  
- Параметр для передачи [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) после получения сигнала дескриптор.  
+ Параметр должен быть передан [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) при дескриптор получает сигнал.  
   
  `phTimer`  
- [out] Адрес переменной ДЕСКРИПТОРА, в случае успешного выполнения принимает дескриптор вновь созданного таймера.  
+ [out] Адрес переменной ДЕСКРИПТОРА, в случае успешного выполнения принимает дескриптор только что созданный таймера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через `pClient` когда сигнал таймера.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через `pClient` при сигнал таймера.  
   
- Передайте дескриптор таймера из `phTimer` для [CWorkerThread::RemoveHandle](#removehandle) закрыть таймера.  
+ Передает этот дескриптор таймера из `phTimer` для [CWorkerThread::RemoveHandle](#removehandle) закрытие таймером.  
   
 ##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
  Конструктор.  
@@ -224,12 +224,12 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
  Существующий рабочий поток.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод должен вызываться для инициализации объекта после создания или после вызова [CWorkerThread::Shutdown](#shutdown).  
   
- Два или более `CWorkerThread` объектов использовать в одном рабочем потоке, один из них без передачи каких-либо аргументов затем передать указатель на этот объект, чтобы инициализировать `Initialize` других методов. Объекты инициализируются с использованием указателя необходимо завершить работу, прежде чем объект, используемый для их инициализации.  
+ Для двух или более `CWorkerThread` объектов использовать в одном рабочем потоке, один из них без передачи аргументов затем передать указатель на этот объект для инициализации `Initialize` других методов. Объекты, инициализируется с использованием указателя необходимо завершить работу перед объект, используемый для их инициализации.  
   
  В разделе [CWorkerThread::Shutdown](#shutdown) сведения, как изменяется поведение этого метода при инициализации с помощью указателя на существующий объект.  
   
@@ -245,10 +245,10 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  Дескриптор для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- При удалении дескриптор [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, который был передан в [AddHandle](#addhandle). Если этот вызов завершается неудачно, `CWorkerThread` вызовет Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) функция маркер.  
+ При удалении дескриптора [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, который был передан в [AddHandle](#addhandle). Если этот вызов завершается неудачно, `CWorkerThread` вызовет Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) функция с дескриптором.  
   
 ##  <a name="shutdown"></a>CWorkerThread::Shutdown  
  Вызовите этот метод, чтобы завершить работу рабочий поток.  
@@ -259,15 +259,15 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
 ### <a name="parameters"></a>Параметры  
  `dwWait`  
- Время (в миллисекундах) ожидания рабочего потока завершить работу.  
+ Время (в миллисекундах) ожидания рабочего потока завершить работу. Значение по умолчанию ATL_WORKER_THREAD_WAIT 10 секунд. При необходимости можно определить собственное значение для этого символа перед включением файлов atlutil.h. 
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK на успех или ошибку HRESULT при сбое, например, если значение времени ожидания, `dwWait`, превышено.  
+ Возвращает значение S_OK на успех или ошибку HRESULT при сбое, например, если значение времени ожидания `dwWait`, превышено.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы повторно использовать объект, вызовите [CWorkerThread::Initialize](#initialize) после вызова этого метода.  
   
- Обратите внимание, что вызов **завершение работы** на объект инициализируется с помощью указателя на другой `CWorkerThread` объект не действует и всегда возвращает значение S_OK.  
+ Обратите внимание, что вызов **завершение работы** на объект инициализируется с использованием указателя в другой `CWorkerThread` объект не действует и всегда возвращает значение S_OK.  
   
 ## <a name="see-also"></a>См. также  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   

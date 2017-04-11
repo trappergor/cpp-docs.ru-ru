@@ -43,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 851ef15013ca62012931fd92baf277d5db96033d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9bf968571f9a1bcdbce57c3559b3d70e7692ebe0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Класс CMFCRibbonFontComboBox
@@ -81,7 +81,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||  
 |[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Возвращает типы шрифтов, отображаемые в поле со списком. Допустимые значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE, а также любые их битовые комбинации.|  
 |[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Возвращает шаг и семейство шрифтов, отображаемых в поле со списком.|  
-|`CMFCRibbonFontComboBox::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|`CMFCRibbonFontComboBox::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
 |[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Заполняет поле со списком шрифтов на ленте на основе таких ранее заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|Выбирает указанный шрифт в поле со списком.|  
   
@@ -105,7 +105,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
  **Заголовок:** afxRibbonComboBox.h  
   
 ##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
- Заполняет поле со списком на ленте с шрифтами.  
+ Заполняет поле со списком на ленте со шрифтами.  
   
 ```  
 void BuildFonts(
@@ -122,7 +122,7 @@ void BuildFonts(
  Указывает кодировку шрифтов для добавления.  
   
  [in] `nPitchAndFamily`  
- Указывает шаг и семейство шрифтов для добавления.  
+ Задает шаг и семейство шрифтов для добавления.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Создает и инициализирует [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) объекта.  
@@ -141,21 +141,21 @@ CMFCRibbonFontComboBox(
  Идентификатор команды команду, которая выполняется, когда пользователь выбирает элемент в поле со списком.  
   
  [in] `nFontType`  
- Указывает, какой шрифт типы для отображения в поле со списком. Допустимые параметры: **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, и **TRUETYPE_FONTTYPE**, или их побитовой комбинации.  
+ Указывает типы шрифт для отображения в поле со списком. Допустимые значения: **значения: DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, и **TRUETYPE_FONTTYPE**, или все битовые комбинации.  
   
  [in] `nCharSet`  
- Фильтрует шрифты теми, которые принадлежат набору указанный символ в поле со списком...  
+ Фильтрует шрифтов в поле со списком теми, которые принадлежат кодировку...  
   
  [in] `nPitchAndFamily`  
- Указывает шаг и семейство шрифтов, которые отображаются в поле со списком.  
+ Задает шаг и семейство шрифтов, отображаемых в поле со списком.  
   
  [in] `nWidth`  
- Ширина в пикселях поле со списком.  
+ Ширина в пикселях, поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о возможных `nFontType` значения параметров в разделе [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) в документации по Windows SDK.  
+ Дополнительные сведения о возможных `nFontType` значения параметров в разделе [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) в документации пакета SDK для Windows.  
   
- Дополнительные сведения о допустимых кодировок, которые могут быть назначены `nCharSet,` и допустимые значения, которые могут быть назначены `nPitchAndFamily`, в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) документации по пакету Windows SDK.  
+ Дополнительные сведения о допустимых кодировок, которые могут быть назначены `nCharSet`и их допустимых значений, которые могут быть назначены `nPitchAndFamily`, в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) документации по пакету Windows SDK.  
   
 ##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -172,14 +172,14 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
- Заполняет поле со списком на ленте с шрифтами ранее указанного шрифта, набор символов и шаг и семейства.  
+ Заполняет поле со списком на ленте со шрифтами типа ранее указанного шрифта, набор символов и шаг и семейство.  
   
 ```  
 void RebuildFonts();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Можно указать тип шрифта, набор символов и шаг и семейство шрифтов для включения в поле со списком шрифта ленты в [конструктор](#cmfcribbonfontcombobox) для этого класса или путем вызова [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
+ Можно указать тип шрифта, набор символов и шаг и семейство шрифтов для включения в поле со списком шрифтов ленты в [конструктор](#cmfcribbonfontcombobox) для этого класса или путем вызова [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
 ##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  Выбирает указанный шрифт в поле со списком.  
@@ -199,10 +199,10 @@ BOOL SetFont(
  Указывает кодировку для выбранного шрифта.  
   
  `bExact`  
- `TRUE`Чтобы указать, что набор символов должно соответствовать при выборе шрифта; `FALSE` для указания, что при выборе шрифта наборе символов может быть проигнорирован.  
+ `TRUE`Чтобы указать, что набор символов должно соответствовать при выборе шрифта; `FALSE` для указания того, при выборе шрифта может игнорироваться набор символов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если указанный шрифт был найден и установлен; в противном случае — нуль.  
+ Ненулевое значение, если указанный шрифт был найден и установлен; в противном случае возвращается ноль.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -226,7 +226,7 @@ int GetFontType() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Типы шрифтов (см. EnumFontFamProc в документации по Windows SDK).  
+ Типы шрифтов (см. EnumFontFamProc в документации Windows SDK).  
   
 ### <a name="remarks"></a>Примечания  
   

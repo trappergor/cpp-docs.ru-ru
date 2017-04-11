@@ -33,74 +33,74 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 04df63d36c1ac8dbcb93c3f9503d97decad994f8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 0e04a53a0ea8919c793614d7e3037d10ce01a03c
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="atl-macros"></a>Макросы ATL
-Для поиска макроса ATL по категории, в следующих разделах.  
+Чтобы найти макрос ATL по категориям, в следующих разделах.  
   
- [Статистическая обработка и макросов фабрики классов](../../atl/reference/aggregation-and-class-factory-macros.md)  
- Предоставляют способы управления статистической обработки и объявления фабрики классов.  
+ [Макросы агрегирования и фабрик классов](../../atl/reference/aggregation-and-class-factory-macros.md)  
+ Предоставляют способы управления статистической обработки и объявления фабрик классов.  
   
- [Макросы категории](../../atl/reference/category-macros.md)  
- Определите категории карт.  
+ [Макросы категорий](../../atl/reference/category-macros.md)  
+ Определение категории карты.  
   
  [Макросы сопоставления COM](../../atl/reference/com-map-macros.md)  
- Определение сопоставления COM интерфейс.  
+ Определения схемы интерфейсов COM.  
   
- [Макросы параметров компилятора](../../atl/reference/compiler-options-macros.md)  
+ [Макросы для параметров компилятора](../../atl/reference/compiler-options-macros.md)  
  Функции управления определенного компилятора.  
   
- [Макросы в составной элемент управления](../../atl/reference/composite-control-macros.md)  
+ [Макросы для работы с составными элементами управления](../../atl/reference/composite-control-macros.md)  
  Определение схемы приемников событий и записи.  
   
- [Макросы точки подключения](../../atl/reference/connection-point-macros.md)  
+ [Макросы для работы с точками подключения](../../atl/reference/connection-point-macros.md)  
  Определение схемы точки подключения и записи.  
   
- [Макросы отладки и сообщения об ошибках](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ [Макросы для отладки и создания отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-macros.md)  
  Предоставляет полезные средства отладки и трассировки.  
   
- [Макросы обработки исключений](../../atl/reference/exception-handling-macros.md)  
+ [Макросы для обработки исключений](../../atl/reference/exception-handling-macros.md)  
  Предоставляет поддержку для обработки исключений.  
   
  [Макросы схемы сообщений](../../atl/reference/message-map-macros-atl.md)  
  Определение схемы сообщений и операции.  
   
- [Макросы схемы объекта](../../atl/reference/object-map-macros.md)  
- Определение сопоставления объектов и записей.  
+ [Макросы сопоставления объектов](../../atl/reference/object-map-macros.md)  
+ Определите сопоставления объектов и записей.  
   
- [Макросы состояния объекта](../../atl/reference/object-status-macros.md)  
+ [Макросы состояния объектов](../../atl/reference/object-status-macros.md)  
  Задает флаги, относящиеся к элементам управления ActiveX.  
   
- [Макрос свойств карты](../../atl/reference/property-map-macros.md)  
- Определение сопоставления свойств и операций.  
+ [Макросы сопоставления свойств](../../atl/reference/property-map-macros.md)  
+ Определите сопоставления свойств и записи.  
   
- [Макросы Exchange данных реестра](../../atl/reference/registry-data-exchange-macros.md)  
+ [Макросы для обмена данными с реестром](../../atl/reference/registry-data-exchange-macros.md)  
  Операции обмена данными реестра.  
   
  [Макросы реестра](../../atl/reference/registry-macros.md)  
- Определение возможности полезный тип библиотеки и реестра.  
+ Определите средства полезный тип библиотеки и реестра.  
   
- [Макросы схемы службы](../../atl/reference/service-map-macros.md)  
- Определение сопоставления служб и операций.  
+ [Макросы сопоставления служб](../../atl/reference/service-map-macros.md)  
+ Определение схемы услуг и записи.  
   
- [Макросы объекта snap-In](../../atl/reference/snap-in-object-macros.md)  
- Поддержка расширения оснастки.  
+ [Макросы объекта оснастки](../../atl/reference/snap-in-object-macros.md)  
+ Предоставляет поддержку для расширения оснастки.  
   
- [Макросы преобразования строк](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)  
+ [Макросы преобразования строк](string-conversion-macros.md)  
  Укажите строку функции преобразования.  
   
  [Макросы класса окна](../../atl/reference/window-class-macros.md)  
- Определите служебных программ класса окна.  
+ Определите служебные программы класс окна.  
   
  [Макросы сообщений Windows](../../atl/reference/windows-messages-macros.md)  
  Пересылка сообщений окна.  
   
 ## <a name="see-also"></a>См. также  
 
- [Компоненты COM Desktop ATL](../../atl/atl-com-desktop-components.md)   
+ [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)   
  [Функции](../../atl/reference/atl-functions.md)   
  [Глобальные переменные](../../atl/reference/atl-global-variables.md)   
  [Структуры](../../atl/reference/atl-structures.md)   

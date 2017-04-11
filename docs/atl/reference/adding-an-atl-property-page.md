@@ -34,32 +34,32 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 7b6a6220a33890d99e6fb2bd81ce832b38720c50
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 72a8644d81857b722fd50a7e852d215bb25a2fb2
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="adding-an-atl-property-page"></a>Добавление страницы свойств ATL
-Добавление в проект страницу свойств Active Template Library (ATL), проект должен создан как приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [ATL Project Wizard](../../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
+Добавление страницы свойств Active Template Library (ATL) для проекта, проекта должны были созданы как приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
   
- При добавлении страницы свойств для элемента управления, элемент управления должен поддерживать [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) интерфейса. По умолчанию этот интерфейс является производным списком управления класс, если вы [Создание элемента управления ATL](../../atl/reference/adding-an-atl-control.md) с помощью [мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md).  
+ При добавлении страницы свойств для элемента управления, этот элемент управления должен поддерживать [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) интерфейса. По умолчанию этот интерфейс является производным списком элемента управления класса, если вы [Создание элемента управления ATL](../../atl/reference/adding-an-atl-control.md) с помощью [мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md).  
   
 > [!NOTE]
->  Если нет класса элемента управления [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) в своем списке наследования, его необходимо добавить вручную.  
+>  Если ваш класс элемента управления не имеет [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) в своем списке наследования, его необходимо добавить вручную.  
   
 ### <a name="to-add-an-atl-property-page-to-your-project"></a>Добавление страницы свойств ATL в проект  
   
 1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому требуется добавить страницы свойств ATL.  
   
-2.  В контекстном меню щелкните **добавить** и нажмите кнопку **добавить класс**.  
+2.  В контекстном меню щелкните **добавить** и нажмите кнопку **Добавление класса**.  
   
-3.  В [добавить класс](../../ide/add-class-dialog-box.md) диалогового окна, в области «Шаблоны» выберите **страницы свойств ATL** и нажмите кнопку **откройте** для отображения [мастер создания страниц свойств ATL](../../atl/reference/atl-property-page-wizard.md).  
+3.  В [добавить класс](../../ide/add-class-dialog-box.md) щелкните в области шаблонов диалогового **страницы свойств ATL** и нажмите кнопку **откройте** для отображения [мастер страницы свойств ATL](../../atl/reference/atl-property-page-wizard.md).  
   
- После создания страницы свойств для элемента управления, необходимо предоставить [PROP_PAGE](http://msdn.microsoft.com/library/2155973e-b96c-4385-bf85-5d6112c969b8) записи в схеме сопоставления свойств для элемента управления.  
+ После создания страницы свойств для элемента управления, необходимо предоставить [PROP_PAGE](property-map-macros.md#prop_page) записи в схеме сопоставления свойств для элемента управления.  
   
 ## <a name="see-also"></a>См. также  
  [Страницы свойств](../../atl/atl-com-property-pages.md)   
- [Основы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Пример: Реализация страницы свойств](../../atl/example-implementing-a-property-page.md)
+ [Основные принципы работы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Пример. Реализация страницы свойств](../../atl/example-implementing-a-property-page.md)
 
 

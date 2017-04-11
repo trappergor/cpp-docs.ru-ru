@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 3787214d5479e1cd57295c9c25335e87651a16bb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 61026044fb5a4da7bebfe8f369c68af4c37ebf44
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomclassfactory2-class"></a>Класс CComClassFactory2
@@ -61,11 +61,11 @@ class CComClassFactory2 : public IClassFactory2,
  *лицензии*  
  Класс, реализующий следующие статические функции:  
   
-- **VerifyLicenseKey статические BOOL (BSTR** `bstr` **);**  
+- **статические VerifyLicenseKey BOOL (BSTR** `bstr` **);**  
   
-- **GetLicenseKey статические BOOL (DWORD** `dwReserved` **, BSTR\* ** `pBstr` **);**  
+- **GetLicenseKey статические BOOL (DWORD** `dwReserved` **, BSTR\*** `pBstr` **);**  
   
-- **статические (BOOL IsLicenseValid);**  
+- **статические BOOL IsLicenseValid ();**  
   
 ## <a name="members"></a>Члены  
   
@@ -74,23 +74,23 @@ class CComClassFactory2 : public IClassFactory2,
 |Имя|Описание|  
 |----------|-----------------|  
 |[CComClassFactory2::CreateInstance](#createinstance)|Создает объект для указанного идентификатора CLSID.|  
-|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Создает объект для указанного идентификатора CLSID ключ лицензии.|  
+|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Лицензионный ключ создает объект для указанного идентификатора CLSID.|  
 |[CComClassFactory2::GetLicInfo](#getlicinfo)|Получает сведения, описывающие возможности лицензирования фабрики класса.|  
-|[CComClassFactory2::LockServer](#lockserver)|Блокирует фабрики классов в памяти.|  
+|[CComClassFactory2::LockServer](#lockserver)|Блокирует фабрики класса в памяти.|  
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Создает и возвращает лицензионный ключ.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComClassFactory2`реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс, который представляет собой расширение для [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** элементы управления объекта создание с помощью лицензии. Класс фабрики выполнение лицензированного компьютера можно предоставить ключ лицензии во время выполнения. Этот ключ лицензии позволяет приложению создавать экземпляры объектов, при полной машины лицензии не существует.  
+ `CComClassFactory2`реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс, который представляет собой расширение для [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** создавать с помощью лицензии объекта элементов управления. Выполнения фабрики класса лицензированных компьютера можно ввести ключ лицензии во время выполнения. Это лицензионный ключ позволяет приложению для создания экземпляров объектов, при полной машины лицензии не существует.  
   
- Объекты ATL обычно получения фабрики класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрика класса по умолчанию. Для использования `CComClassFactory2`, укажите [DECLARE_CLASSFACTORY2](http://msdn.microsoft.com/library/38a6c969-7297-4bb1-9ba6-1fe2d355b285) макрос в определении класса объекта. Пример:  
+ Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрика класса по умолчанию. Для использования `CComClassFactory2`, укажите [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) макроса в определении класса объекта. Пример:  
   
- [!code-cpp[NVC_ATL_COM&#2;](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM #2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
- **CMyLicense**, параметр шаблона `CComClassFactory2`, необходимо реализовать статические функции `VerifyLicenseKey`, `GetLicenseKey`, и `IsLicenseValid`. Ниже приведен пример класса простые лицензии:  
+ **CMyLicense**, параметр шаблона `CComClassFactory2`, необходимо реализовать статические функции `VerifyLicenseKey`, `GetLicenseKey`, и `IsLicenseValid`. Ниже приведен пример класса простого лицензии:  
   
- [!code-cpp[NVC_ATL_COM&#3;](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM #3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`наследует от **CComClassFactory2Base** и *лицензий*. **CComClassFactory2Base**, в свою очередь, является производным от **IClassFactory2** и **CComObjectRootEx\< CComGlobalsThreadModel настроек**.  
+ `CComClassFactory2`наследует от **CComClassFactory2Base** и *лицензии*. **CComClassFactory2Base**, в свою очередь, является производным от **IClassFactory2** и **CComObjectRootEx\< CComGlobalsThreadModel настроек**.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CComObjectRootBase`  
@@ -104,10 +104,10 @@ class CComClassFactory2 : public IClassFactory2,
  `CComClassFactory2`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
- Создает объект для указанного идентификатора CLSID и получает указатель интерфейса на этот объект.  
+ Создает объект для указанного идентификатора CLSID и возвращает указатель интерфейса на этот объект.  
   
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -115,19 +115,19 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
   
 ### <a name="parameters"></a>Параметры  
  `pUnkOuter`  
- [in] Если объект создается в ходе статистической обработки, затем `pUnkOuter` должен быть внешнего неизвестен. В противном случае — `pUnkOuter` должно быть **NULL**.  
+ [in] Если объект создается как часть агрегата, затем `pUnkOuter` должен быть внешняя Неизвестная строка. В противном случае `pUnkOuter` должно быть **NULL**.  
   
  `riid`  
- [in] Идентификатор IID запрошенного интерфейса. Если `pUnkOuter` отличен от **NULL**, `riid` должно быть **IID_IUnknown**.  
+ [in] Идентификатор IID запрошенного интерфейса. Если `pUnkOuter` не является **NULL**, `riid` должно быть **IID_IUnknown**.  
   
  `ppvObj`  
- [out] Указатель на указатель интерфейса, идентифицируемый `riid`. Если объект не поддерживает этот интерфейс `ppvObj` равен **NULL**.  
+ [out] Указатель на указатель на интерфейс, определяемый `riid`. Если объект не поддерживает этот интерфейс `ppvObj` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- Необходимо иметь лицензию полностью компьютера. Если лицензия полного не существует, вызов [CreateInstanceLic](#createinstancelic).  
+ Необходимо иметь лицензию полностью компьютера. Если полного лицензия не существует, вызов [CreateInstanceLic](#createinstancelic).  
   
 ##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
  Аналогично [CreateInstance](#createinstance), за исключением того, что `CreateInstanceLic` требует лицензионный ключ.  
@@ -144,28 +144,28 @@ STDMETHOD(CreateInstanceLic)(
   
 ### <a name="parameters"></a>Параметры  
  `pUnkOuter`  
- [in] Если объект создается в ходе статистической обработки, затем `pUnkOuter` должен быть внешнего неизвестен. В противном случае — `pUnkOuter` должно быть **NULL**.  
+ [in] Если объект создается как часть агрегата, затем `pUnkOuter` должен быть внешняя Неизвестная строка. В противном случае `pUnkOuter` должно быть **NULL**.  
   
  *pUnkReserved*  
  [in] Не используется. Должно быть **NULL**.  
   
  `riid`  
- [in] Идентификатор IID запрошенного интерфейса. Если `pUnkOuter` отличен от **NULL**, `riid` должно быть **IID_IUnknown**.  
+ [in] Идентификатор IID запрошенного интерфейса. Если `pUnkOuter` не является **NULL**, `riid` должно быть **IID_IUnknown**.  
   
  `bstrKey`  
  [in] Во время выполнения лицензионный ключ, ранее получены из вызова `RequestLicKey`. Этот ключ необходим для создания объекта.  
   
  `ppvObject`  
- [out] Указатель на указатель интерфейса, заданный по `riid`. Если объект не поддерживает этот интерфейс `ppvObject` равен **NULL**.  
+ [out] Указатель на указатель интерфейса, определяемое `riid`. Если объект не поддерживает этот интерфейс `ppvObject` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- Вы можете получить лицензионного ключа использовать [RequestLicKey](#requestlickey). Чтобы создать объект на машине нелицензионных, необходимо вызвать метод `CreateInstanceLic`.  
+ Вы можете получить ключа лицензии с помощью [RequestLicKey](#requestlickey). Чтобы создать объект на машине без лицензии, необходимо вызвать метод `CreateInstanceLic`.  
   
 ##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
- Заполняет [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структуры сведения, описывающие фабрика классов по лицензированию возможности.  
+ Заполняет [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структуру с информацию, описывающую класс фабрики лицензирования возможностей.  
   
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -179,10 +179,10 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- `fRuntimeKeyAvail` Этой структуры указывает, учитывая лицензионный ключ, фабрика классов позволяет ли объекты для создания на машине нелицензионного. *FLicVerified* элемент указывает, существует ли полного лицензии.  
+ `fRuntimeKeyAvail` Член этой структуры указывает ли, учитывая лицензионный ключ, фабрики класса позволяет создавать на машине нелицензионного объекты. *FLicVerified* элемент указывает, существует ли полного лицензию.  
   
 ##  <a name="lockserver"></a>CComClassFactory2::LockServer  
- Увеличение и уменьшение счетчик блокировок модуля путем вызова **_Module::Lock** и **_Module::Unlock**соответственно.  
+ Увеличение и уменьшение, счетчик блокировок модуля путем вызова **_Module::Lock** и **_Module::Unlock**соответственно.  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -190,7 +190,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
 ### <a name="parameters"></a>Параметры  
  `fLock`  
- [in] Если **TRUE**число блокировок увеличивается; в противном случае, уменьшается на единицу счетчик блокировок.  
+ [in] Если **TRUE**, счетчик блокировок увеличивается; в противном случае, уменьшается на единицу счетчик блокировок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
@@ -198,7 +198,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 ### <a name="remarks"></a>Примечания  
  **_Module** ссылается на глобальный экземпляр класса [CComModule](../../atl/reference/ccommodule-class.md) или класс, производный от него.  
   
- Вызов `LockServer` позволяет клиенту удерживать фабрики класса, чтобы быстро создать несколько объектов.  
+ Вызов `LockServer` позволяет клиенту удерживаться в фабрику класса, чтобы быстро создать несколько объектов.  
   
 ##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
  Создает и возвращает лицензионный ключ, при условии, что `fRuntimeKeyAvail` членом [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структура **TRUE**.  
@@ -218,14 +218,14 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
  Стандартное значение `HRESULT` .  
   
 ### <a name="remarks"></a>Примечания  
- Лицензионный ключ является обязательным для вызова [CreateInstanceLic](#createinstancelic) для создания объекта на машине без лицензии. Если `fRuntimeKeyAvail` — **FALSE**, а затем объекты могут создаваться только на компьютере, полностью лицензированный.  
+ Лицензионный ключ является обязательным для вызова [CreateInstanceLic](#createinstancelic) для создания объекта на компьютере без лицензии. Если `fRuntimeKeyAvail` — **FALSE**, а затем объекты могут создаваться только на компьютере, полностью лицензированной.  
   
- Вызов [GetLicInfo](#getlicinfo) для извлечения значения `fRuntimeKeyAvail`.  
+ Вызовите [GetLicInfo](#getlicinfo) для извлечения значения `fRuntimeKeyAvail`.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
- [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComObjectRootEx-класс](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
 
