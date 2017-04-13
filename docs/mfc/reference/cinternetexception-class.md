@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a128095cfc443f0ea8de4cb4028b903929a83f47
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1831f868b7388cbc6382e26fca92280c3b880276
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetexception-class"></a>Класс CInternetException
@@ -70,7 +70,7 @@ class CInternetException : public CException
 |[CInternetException::m_dwError](#m_dwerror)|Ошибки, вызвавшей исключение.|  
   
 ## <a name="remarks"></a>Примечания  
- `CInternetException` Класс включает две открытые члены данных: один содержит код ошибки, связанный с исключением, а другое содержит идентификатор контекста для веб-приложение, связанное с ошибкой.  
+ `CInternetException` Класс содержит два открытые члены данных: один содержит код ошибки, связанный с исключением, а другое содержит идентификатор контекста для Интернет-приложения, с которым связана ошибка.  
   
  Дополнительные сведения об идентификаторах контекста для веб-приложений см. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -85,7 +85,7 @@ class CInternetException : public CException
  **Заголовок:** afxinet.h  
   
 ##  <a name="cinternetexception"></a>CInternetException::CInternetException  
- Эта функция-член вызывается `CInternetException` создается объект.  
+ Эта функция-член вызывается, когда `CInternetException` создан объект.  
   
 ```  
 CInternetException(DWORD dwError);
@@ -96,17 +96,17 @@ CInternetException(DWORD dwError);
  Ошибки, вызвавшей исключение.  
   
 ### <a name="remarks"></a>Примечания  
- Для вызова CInternetException, вызовите глобальную функцию MFC [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Чтобы создать CInternetException, вызовите глобальную функцию MFC [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
- Значение контекста, связанное с связанных Интернет-операции.  
+ Значение контекста, связанное с связанные Интернет-операции.  
   
 ```  
 DWORD_PTR m_dwContext;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Идентификатор контекста первоначально заданным в параметре [CInternetSession](../../mfc/reference/cinternetsession-class.md) и передаются по MFC для [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- и [CInternetFile](../../mfc/reference/cinternetfile-class.md)-производные классы. Можно переопределить это поведение по умолчанию и назначить любой `dwContext` параметра значение по своему выбору. `dwContext`связан с любой операции данного объекта. `dwContext`Определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ Идентификатор контекста изначально указывается в [CInternetSession](../../mfc/reference/cinternetsession-class.md) и передаются по MFC, позволяющий [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- и [классе CInternetFile](../../mfc/reference/cinternetfile-class.md)-производные классы. Можно переопределить поведение по умолчанию и назначить любой `dwContext` параметра значение по своему выбору. `dwContext`связан с любой операции данного объекта. `dwContext`Определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>CInternetException::m_dwError  
  Ошибки, вызвавшей исключение.  
@@ -116,12 +116,12 @@ DWORD m_dwError;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Значение этой ошибки может быть системы код ошибки, в WINERROR. H, или значение ошибки из WININET. З.  
+ Значение этой ошибки может быть системой код ошибки, содержится в WINERROR. H или код ошибки из WININET. З.  
   
- Список кодов ошибок Win32 см. в разделе [коды ошибок](http://msdn.microsoft.com/library/windows/desktop/ms681381). Список Интернет конкретных сообщений об ошибках см. Оба разделов [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Список кодов ошибок Win32 см. в разделе [коды ошибок](http://msdn.microsoft.com/library/windows/desktop/ms681381). Список ошибок сообщения, относящиеся к Интернету см. в разделе. Оба раздела находятся в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [CException-класс](../../mfc/reference/cexception-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CException-класс](../../mfc/reference/cexception-class.md)
+ [Класс CException](../../mfc/reference/cexception-class.md)
 

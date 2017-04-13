@@ -35,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: aa9586bd0abed0b1fa1d24c777eea8c82c5cedc0
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4a82bbdd3b28ae0150ab8366d3ecbe849e7ac8a1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Предупреждение компилятора предупреждение (уровень 3) C4996
@@ -67,7 +67,7 @@ ms.lasthandoff: 03/29/2017
   
  **Различные сообщения в коде MFC или ATL**  
   
- Предупреждение `C4996` также может возникать при использовании функций библиотек MFC или ATL, не рекомендуемых к использованию по соображениям безопасности. Чтобы подавить эти предупреждения, в разделе [_AFX_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b) и [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
+ Предупреждение `C4996` также может возникать при использовании функций библиотек MFC или ATL, не рекомендуемых к использованию по соображениям безопасности. Чтобы подавить эти предупреждения, в разделе [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings) и [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
   
  **Ошибки маршалинга в коде среды CLR**  
   
@@ -228,3 +228,4 @@ int main() {
    return 0;  
 }  
 ```
+

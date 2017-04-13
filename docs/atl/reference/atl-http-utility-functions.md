@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>Служебные функции HTTP ATL
@@ -101,7 +101,7 @@ inline BOOL AtlCombineUrl(
  Указатель на переменную, которая содержит длину в символах `szBuffer`. Если функция выполняется успешно, переменная получает количество символов, записанных в буфер, не включая завершающий символ null. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера, включая пространство для завершающего символа null.  
   
  `dwFlags`  
- Флаги управления поведением этой функции. В разделе [флаги ATL_URL](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Флаги управления поведением этой функции. В разделе [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
@@ -173,7 +173,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
  Символ, который проверяется на безопасность.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** Если введенный символ является небезопасным, **FALSE** в противном случае.  
+ Возвращает **TRUE** Если введенный символ небезопасна, **FALSE** в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  Символы, которые не должны использоваться в URL-адреса можно проверить с помощью этой функции и преобразовывать с помощью [AtlCanonicalizeUrl](#atlcanonicalizeurl).  

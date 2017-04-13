@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: f2699316266e9cc061fa898c4176e36ae8323b33
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4bc0dafbc4d09f5c53ff502876da2e250d537882
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="afxextensionmodule-structure"></a>Структура AFX_EXTENSION_MODULE
-`AFX_EXTENSION_MODULE` Используется для хранения состояния модуля DLL расширения во время инициализации библиотеки расширения MFC.  
+`AFX_EXTENSION_MODULE` Используется во время инициализации DLL расширения MFC для хранения состояния модуль DLL расширения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,35 +63,35 @@ struct AFX_EXTENSION_MODULE
  Определяет дескриптор модуля DLL.  
   
  *hResource*  
- Определяет дескриптор модуля DLL настраиваемого ресурса.  
+ Определяет дескриптор DLL настраиваемого модуля ресурсов.  
   
  *pFirstSharedClass*  
- Указатель на сведения ( `CRuntimeClass` структуры) о первого класса среды выполнения модуля DLL. Используется для начала список классов среды выполнения.  
+ Указатель на сведения ( `CRuntimeClass` структуры) о модуль DLL первого класса среды выполнения. Используется для начала список классов среды выполнения.  
   
  *pFirstSharedFactory*  
- Указатель на первый объект фабрики модуля DLL ( `COleObjectFactory` объекта). Используется для начала списка фабрики класса.  
+ Указатель на первый объект фабрики модуль DLL ( `COleObjectFactory` объекта). Используется для начала списка фабрики класса.  
   
 ## <a name="remarks"></a>Примечания  
- Расширения MFC DLL-библиотеки нужно сделать две вещи в свои `DllMain` функции:  
+ Расширения MFC библиотеки DLL, необходимо выполнить два действия в их `DllMain` функции:  
   
--   Вызов [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1) и проверить возвращаемое значение.  
+-   Вызовите [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) и проверяйте возвращаемое значение.  
   
--   Создание **CDynLinkLibrary** объекта, если библиотека DLL будет Экспорт [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объектов или имеет свои собственные настраиваемые ресурсы.  
+-   Создание **CDynLinkLibrary** объекта, если библиотека DLL будет экспортироваться [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объектов или имеет свои собственные настраиваемые ресурсы.  
   
- `AFX_EXTENSION_MODULE` Структура используется для хранения копии состояния модуля DLL, включая копирование объектов классов среды выполнения, которые инициализированы с помощью расширения DLL в рамках конструирования обычный статический объект, перед выполнением расширения `DllMain` вводится. Пример:  
+ `AFX_EXTENSION_MODULE` Структура используется для хранения копии расширения состояния модуля DLL, включая копии объектов класса среды выполнения, которые будут инициализированы с помощью расширения DLL в рамках обычного статического объекта конструирования, перед выполнением `DllMain` вводится. Пример:  
   
- [!code-cpp[NVC_MFC_DLL&#2;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
+ [!code-cpp[NVC_MFC_DLL #2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Сведения о модуле, хранящиеся в `AFX_EXTENSION_MODULE` структуры могут быть скопированы в **CDynLinkLibrary** объекта. Пример:  
+ Сведения о модуле, хранящиеся в `AFX_EXTENSION_MODULE` структуры могут быть скопированы в **CDynLinkLibrary** объекта. Например:  
   
- [!code-cpp[NVC_MFC_DLL&#5;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_DLL #5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
 ## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1)   
- [AfxTermExtensionModule](http://msdn.microsoft.com/library/b64de402-f1e3-4c26-9823-08c07876aaaa)
+ [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)   
+ [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
 
 

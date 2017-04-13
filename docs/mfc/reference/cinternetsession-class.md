@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
@@ -107,7 +107,7 @@ class CInternetSession : public CObject
   
 - [GetFtpConnection](#getftpconnection) открыть подключение к службе FTP.  
   
- [SetOption](#setoption) позволяет задать параметры запроса в сеанс, например значения времени ожидания, число повторных попыток и т. д.  
+ [SetOption](#setoption) можно задать параметры запроса в сеанс, например значения времени ожидания, число повторных попыток и т. д.  
   
  `CInternetSession`функции-члены [SetCookie](#setcookie), [GetCookie](#getcookie), и [GetCookieLength](#getcookielength) предоставляют средства для управления базой данных файлов cookie Win32, через который серверов и сценарии отслеживания сведений о состоянии о клиентской рабочей станции.  
   
@@ -171,7 +171,7 @@ CInternetSession(
 ### <a name="remarks"></a>Примечания  
  **CInternetSession** является первая функция Интернет вызвана приложением. Он инициализирует внутренние структуры данных и подготавливает к последующим вызовам из приложения.  
   
- Если отсутствует подключение к Интернету может быть открыт, `CInternetSession` вызывает [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Если отсутствует подключение к Интернету может быть открыт, `CInternetSession` вызывает [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
@@ -281,7 +281,7 @@ static DWORD GetCookieLength(
  Указатель на строку, содержащую имя файла cookie.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `DWORD` значение, указывающее длину куки-файла, сохраненного в буфере. Нуль, если нет куки-файл с именем, обозначенном `pstrCookieName` существует.  
+ Объект `DWORD` значение, указывающее длину файла cookie, сохраненного в буфере. Нуль, если нет куки-файл с именем, обозначенном `pstrCookieName` существует.  
   
 ### <a name="remarks"></a>Примечания  
  Это значение используется [GetCookie](#getcookie).  
@@ -513,7 +513,7 @@ CStdioFile* OpenURL(
   
  `OpenURL`, который создает оболочку для функции Win32 **InternetOpenURL**, позволяет только загрузки, извлечения и чтение данных из веб-сервером. `OpenURL`позволяет не обработке файла в удаленном расположении, поэтому для него требуется нет [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) объекта.  
   
- Для использования подключения (то есть протоколом) функции, такие как запись в файл, необходимо открыть сеанс, затем откройте конкретный тип соединения, и используют это подключение, чтобы открыть файл в нужном режиме. В разделе `CInternetConnection` Дополнительные сведения о функции, зависящие от подключения.  
+ Для использования определенных подключений (т. е протоколом) функции, такие как запись в файл, необходимо открыть сеанс, затем откройте конкретный тип соединения, и используют это подключение, чтобы открыть файл в нужном режиме. В разделе `CInternetConnection` Дополнительные сведения о функции, зависящие от подключения.  
   
 ##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
  Этот оператор используется для получения дескриптора Windows для текущего сеанса Интернета.  

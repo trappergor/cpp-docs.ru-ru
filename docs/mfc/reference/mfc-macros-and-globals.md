@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 7dc1f904d1c3f76635a49db1747578e2ce0b0b3b
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4de4d9a0764bb2f25eaf63c302fa03ebc12e3cee
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="mfc-macros-and-globals"></a>Макросы и глобальные объекты MFC
@@ -124,7 +124,7 @@ ms.lasthandoff: 04/04/2017
   
 -   [Схемы подготовки к отправке](dispatch-maps.md)  
   
- Кроме того, MFC предоставляет функции, вызываемой [AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b) , OLE-контейнер, разработанных с помощью MFC 4.0 для полной поддержки включает встроенные элементы управления OLE.  
+ Кроме того, MFC предоставляет функции, вызываемой [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) , OLE-контейнер, разработанных с помощью MFC 4.0 для полной поддержки включает встроенные элементы управления OLE.  
   
 ## <a name="ole-controls"></a>Элементы управления OLE  
   
