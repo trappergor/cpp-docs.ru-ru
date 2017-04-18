@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.oststream
-- oststream
-- std::oststream
+- std.ostrstream
+- ostrstream
+- std::ostrstream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +76,7 @@ class ostrstream : public ostream
   
  **Пространство имен:** std  
   
-##  <a name="a-nameostrstreamfreezea--ostrstreamfreeze"></a><a name="ostrstream__freeze"></a>  ostrstream::freeze  
+##  <a name="ostrstream__freeze"></a>  ostrstream::freeze  
  Делает буфер потока недоступным для операций с буфером потока.  
   
 ```
@@ -93,7 +93,7 @@ void freeze(bool _Freezeit = true);
 ### <a name="example"></a>Пример  
   См. раздел [strstream::freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) с примером использования **freeze**.  
   
-##  <a name="a-nameostrstreamostrstreama--ostrstreamostrstream"></a><a name="ostrstream__ostrstream"></a>  ostrstream::ostrstream  
+##  <a name="ostrstream__ostrstream"></a>  ostrstream::ostrstream  
  Создает объект типа `ostrstream`.  
   
 ```
@@ -121,7 +121,7 @@ ostrstream(char* ptr,
   
 -   В противном случае `ptr` должен назначить первый элемент массива элементов-счетчиков, содержащий строку C, первый элемент которой обозначается `ptr`. Затем конструктор вызывает `strstreambuf`(`ptr`, `count`, `ptr`  +  `strlen`(`ptr`)).  
   
-##  <a name="a-nameostrstreampcounta--ostrstreampcount"></a><a name="ostrstream__pcount"></a>  ostrstream::pcount  
+##  <a name="ostrstream__pcount"></a>  ostrstream::pcount  
  Возвращает число элементов, записанных в управляемую последовательность.  
   
 ```
@@ -137,7 +137,7 @@ streamsize pcount() const;
 ### <a name="example"></a>Пример  
   См. раздел [strstream::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) с примером использования `pcount`.  
   
-##  <a name="a-nameostrstreamrdbufa--ostrstreamrdbuf"></a><a name="ostrstream__rdbuf"></a>  ostrstream::rdbuf  
+##  <a name="ostrstream__rdbuf"></a>  ostrstream::rdbuf  
  Возвращает указатель на объект strstreambuf, связанный с потоком.  
   
 ```
@@ -153,7 +153,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Пример  
   См. раздел [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) с примером использования `rdbuf`.  
   
-##  <a name="a-nameostrstreamstra--ostrstreamstr"></a><a name="ostrstream__str"></a>  ostrstream::str  
+##  <a name="ostrstream__str"></a>  ostrstream::str  
  Вызывает [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze), затем возвращает указатель на начало управляемой последовательности.  
   
 ```

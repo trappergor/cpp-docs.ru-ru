@@ -108,8 +108,8 @@ The template class describes a distribution that produces values of a user-speci
   
 ||||  
 |-|-|-|  
-|[negative_binomial_distribution::negative_binomial_distribution](#negative_binomial_distribution__negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|  
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[negative_binomial_distribution::param_type](#negative_binomial_distribution__param_type)|  
+|[negative_binomial_distribution](#negative_binomial_distribution__negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|  
+|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#negative_binomial_distribution__param_type)|  
   
 The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.  
   
@@ -249,7 +249,7 @@ Histogram for 100 samples:
   
 **Пространство имен:** std  
   
-##  <a name="a-namenegativebinomialdistributionnegativebinomialdistributiona--negativebinomialdistributionnegativebinomialdistribution"></a><a name="negative_binomial_distribution__negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
+##  <a name="negative_binomial_distribution__negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
 Формирует распределение.  
   
 ```  
@@ -274,7 +274,7 @@ explicit negative_binomial_distribution(const param_type& parm);
   
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
   
-##  <a name="a-namenegativebinomialdistributionparamtypea--negativebinomialdistributionparamtype"></a><a name="negative_binomial_distribution__param_type"></a>  negative_binomial_distribution::param_type  
+##  <a name="negative_binomial_distribution__param_type"></a>  negative_binomial_distribution::param_type  
 Сохраняет параметры распределения.  
   
 struct param_type {  
