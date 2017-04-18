@@ -45,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 40d833772735e1079647f8f3205fb8db736843fd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 0722150ff3cc496a462008b362e55362aeebb9c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cdumpcontext-class"></a>Класс CDumpContext
@@ -71,10 +71,10 @@ class CDumpContext
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CDumpContext::DumpAsHex](#dumpashex)|Создает дамп указанного элемента в шестнадцатеричном формате.|  
+|[CDumpContext::DumpAsHex](#dumpashex)|Выводит указанный элемент в шестнадцатеричном формате.|  
 |[CDumpContext::Flush](#flush)|Очищает все данные в буфере контекста дампа.|  
-|[CDumpContext::GetDepth](#getdepth)|Возвращает целое число, соответствующее глубине дампа.|  
-|[CDumpContext::HexDump](#hexdump)|Создает дамп байтов, содержащихся в массиве в шестнадцатеричном формате.|  
+|[CDumpContext::GetDepth](#getdepth)|Возвращает целое число, соответствующее глубину дампа.|  
+|[CDumpContext::HexDump](#hexdump)|Выводит байтов, содержащихся в массиве в шестнадцатеричном формате.|  
 |[CDumpContext::SetDepth](#setdepth)|Задает глубину дампа.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
@@ -86,23 +86,23 @@ class CDumpContext
 ## <a name="remarks"></a>Примечания  
  `CDumpContext`не имеет базового класса.  
   
- Можно использовать [afxDump](http://msdn.microsoft.com/library/4b3cfa3f-fb75-456a-9d99-a5601acbcb11), predeclared `CDumpContext` объекта, для большинства вашей формирование дампа. `afxDump` Объект доступен только в отладочной версии библиотеки классов Microsoft Foundation.  
+ Можно использовать [afxDump](diagnostic-services.md#afxdump), объявленная ранее `CDumpContext` объекта, для большинства вашей формирование дампа. `afxDump` Объект доступен только в отладочной версии библиотеки классов Microsoft Foundation.  
   
- Некоторые из памяти [диагностические службы](../../mfc/reference/diagnostic-services.md) использовать `afxDump` для свои выходные данные.  
+ Некоторые из памяти [службы диагностики](../../mfc/reference/diagnostic-services.md) использовать `afxDump` для свои выходные данные.  
   
- В среде Windows, выходные данные из предварительно определенных `afxDump` объекта, концептуально сходная с `cerr` потока, направляется в отладчике через функцию Windows **OutputDebugString**.  
+ В среде Windows, выходные данные о стандартных `afxDump` объекта, по существу аналогично `cerr` потока, направляется в отладчике через функцию Windows **OutputDebugString**.  
   
- `CDumpContext` Класс имеет перегруженные Вставка ( ** << **) оператор для `CObject` указатели, которые создает дамп данных объекта. Если вам требуется формат пользовательского дампа для производного объекта, переопределяют [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Большинство классов Microsoft Foundation реализуют переопределенный `Dump` функции-члена.  
+ `CDumpContext` Класс имеет перегруженные Вставка ( **<<**) оператор для `CObject` указателей, которые создает дамп данных объекта. Если вам требуется формат дампа пользовательского производного объекта, переопределяют [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Большинство классов Microsoft Foundation реализуют переопределенный `Dump` функции-члена.  
   
- Классы, которые не являются производными от `CObject`, такие как `CString`, `CTime`, и `CTimeSpan`, имеют свои собственные перегруженных `CDumpContext` операторы вставки, как часто используется структуры, таких как **CFileStatus**, `CPoint`, и `CRect`.  
+ Классы, которые не являются производными от `CObject`, такие как `CString`, `CTime`, и `CTimeSpan`, имеют собственные перегруженных `CDumpContext` операторы вставки, как часто используется структуры, такие как **CFileStatus**, `CPoint`, и `CRect`.  
   
- При использовании [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) или [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) макрос в реализации класса, затем `CObject::Dump` выводит имя вашего `CObject`-производного класса. В противном случае, напечатает `CObject`.  
+ При использовании [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) или [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) макрос в реализации класса, затем `CObject::Dump` напечатает имя вашей `CObject`-производного класса. В противном случае оно печатается `CObject`.  
   
- `CDumpContext` Класс доступен с отладочной и окончательной версии библиотеки, но `Dump` функция-член определяется только в отладочной версии. Используйте **#ifdef _DEBUG**  /  `#endif` скобкой код диагностики, включая пользовательских инструкций `Dump` функции-члены.  
+ `CDumpContext` Класс доступен с отладочной и окончательной версии библиотеки, но `Dump` функция-член определяется только в отладочной версии. Используйте **#ifdef _DEBUG**  /  `#endif` инструкции, чтобы квадратная скобка диагностики кода, включая пользовательскую `Dump` функции-члены.  
   
- Прежде чем создавать собственные `CDumpContext` объекта, необходимо создать `CFile` объект, выступающий в качестве назначения дампа.  
+ Прежде чем создавать собственные `CDumpContext` объекта, необходимо создать `CFile` объект, который служит в качестве назначения дампа.  
   
- Дополнительные сведения о `CDumpContext`, в разделе [отладка приложений MFC](/visualstudio/debugger/mfc-debugging-techniques).  
+ Дополнительные сведения о `CDumpContext`, в разделе [отладки приложения MFC](/visualstudio/debugger/mfc-debugging-techniques).  
   
  **#define _DEBUG**  
   
@@ -121,18 +121,18 @@ CDumpContext(CFile* pFile = NULL);
   
 ### <a name="parameters"></a>Параметры  
  `pFile`  
- Указатель на `CFile` объект, который является конечным дампа.  
+ Указатель на `CFile` объект, который является целевым дампа.  
   
 ### <a name="remarks"></a>Примечания  
  `afxDump` Объект будет создан автоматически.  
   
- Не записывать в базовом `CFile` при активна; в противном случае контекст дампа будет мешать дампа. В среде Windows вывод направляется в отладчик через функцию Windows **OutputDebugString**.  
+ Не выполняйте запись в базовый `CFile` при активен; в противном случае контекст дампа будет мешать дампа. В среде Windows вывод направляется в отладчике через функцию Windows **OutputDebugString**.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities&#12;](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities #12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
 ##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
- Создает дамп указанного типа в формате шестнадцатеричных чисел.  
+ Выводит указанного типа, представленного шестнадцатеричных чисел.  
   
 ```  
 CDumpContext& DumpAsHex(BYTE b);  
@@ -149,36 +149,36 @@ CDumpContext& DumpAsHex(WORD w);
  Ссылка на объект `CDumpContext`.  
   
 ### <a name="remarks"></a>Примечания  
- Вызов этой функции-члена для дампа элемент указанного типа в шестнадцатеричном формате. Для помещения в дамп массив, вызовите [CDumpContext::HexDump](#hexdump).  
+ Вызовите эту функцию-член для помещения в дамп элемент заданного типа, как шестнадцатеричное число. Для помещения в дамп массив вызвать [CDumpContext::HexDump](#hexdump).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities&#13;](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities #13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
 ##  <a name="flush"></a>CDumpContext::Flush  
- Заставляет все данные в буферах, в файл присоединен к контексту дампа.  
+ Заставляет все данные, оставшиеся в буферах, в файл присоединен к контексту дампа.  
   
 ```  
 void Flush();
 ```  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities&#14;](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities #14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
 ##  <a name="getdepth"></a>CDumpContext::GetDepth  
- Определяет, является ли процесс глубоко или поверхностно дампа.  
+ Определяет, является ли глубоко или поверхностно дамп процесса.  
   
 ```  
 int GetDepth() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Глубина дампа, заданного методом `SetDepth`.  
+ Глубина дампа, задаваемое при помощи `SetDepth`.  
   
 ### <a name="example"></a>Пример  
-  В примере показано [SetDepth](#setdepth).  
+  Далее приведен пример [SetDepth](#setdepth).  
   
 ##  <a name="hexdump"></a>CDumpContext::HexDump  
- Выводит массив байтов в формате шестнадцатеричных чисел.  
+ Выводит массив байтов, в формате шестнадцатеричных чисел.  
   
 ```  
 void HexDump(
@@ -193,19 +193,19 @@ void HexDump(
  Строка для вывода в начале новой строки.  
   
  *pby*  
- Указатель на буфер, содержащий в байтах.  
+ Указатель на буфер, содержащий байты для помещения в дамп.  
   
  `nBytes`  
  Число байтов для помещения в дамп.  
   
  `nWidth`  
- Максимальное число байтов, записаны в строке (не ширина строки выхода).  
+ Максимальное число байтов записаны в каждой строке (не толщину линии выходных данных).  
   
 ### <a name="remarks"></a>Примечания  
- Для вывода типа отдельной элемента в шестнадцатеричном формате, вызовите [CDumpContext::DumpAsHex](#dumpashex).  
+ Для помещения в дамп типа конкретную элемента как шестнадцатеричное число, вызовите [CDumpContext::DumpAsHex](#dumpashex).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities&#15;](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities #15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
 ##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
  Выводит указанные данные в контекст дампа.  
@@ -235,15 +235,15 @@ CDumpContext& operator<<(HFONT h);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- A `CDumpContext` ссылки. Возвращаемое значение можно написать несколько операций вставки в одной строке исходного кода.  
+ Объект `CDumpContext` ссылки. Возвращаемое значение можно написать несколько операций вставки в одной строке исходного кода.  
   
 ### <a name="remarks"></a>Примечания  
- Для перегрузки оператора вставки `CObject` также как и большинство примитивных типов указателей. Указатель на символ результаты в дамп содержимого строки; указатель на `void` результатов в шестнадцатеричном дампе только адреса. Объект **longlong ПРИВЕДЕННЫМ** результатов в дамп 64-разрядное знаковое целое число; Объект **ULONGLONG** выводится дамп 64-разрядного целого числа без знака.  
+ Оператор вставки перегружается для `CObject` указатели также, как и большинство примитивных типов. Указатель на символ результаты в дамп содержимого строки; указатель на `void` результатов в шестнадцатеричном дампе только адреса. Объект **longlong ПРИВЕДЕННЫМ** выводится дамп 64-разрядного целого числа со знаком; Объект **ULONGLONG** выводится дамп 64-разрядного целого числа без знака.  
   
- При использовании `IMPLEMENT_DYNAMIC` или `IMPLEMENT_SERIAL` макрос в реализации класса, а затем оператор вставки через `CObject::Dump`, напечатает имя вашего `CObject`-производного класса. В противном случае, напечатает `CObject`. При переопределении `Dump` функции класса, то можно предоставить более осмысленными вывод содержимого объекта вместо шестнадцатеричных дампа.  
+ При использовании `IMPLEMENT_DYNAMIC` или `IMPLEMENT_SERIAL` макрос в реализации класса, а затем оператор вставки через `CObject::Dump`, будет печататься имя вашей `CObject`-производного класса. В противном случае оно печатается `CObject`. При переопределении `Dump` функции класса, то можно провести более понятные выходные данные из содержимого этого объекта вместо шестнадцатеричный дамп.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities&17;](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities 17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
 ##  <a name="setdepth"></a>CDumpContext::SetDepth  
  Задает глубину для дампа.  
@@ -257,16 +257,16 @@ void SetDepth(int nNewDepth);
  Новое значение глубины.  
   
 ### <a name="remarks"></a>Примечания  
- Если выполняется дамп является простым типом или простой `CObject` , не содержит указателей на другие объекты, то достаточно значение 0. Значение больше 0 задает глубокой дампа, когда все объекты были записаны рекурсивно. Например сложного дамп коллекции выгружать все элементы коллекции. Вы можете использовать другие значения определенных глубины в производных классах.  
+ Если формирование дампа типом-примитивом или простой `CObject` , не содержит указателей на другие объекты, то достаточно значение 0. Значение больше 0 задает глубокой дампа, когда все объекты были записаны рекурсивно. Например сложного дампа коллекции будет дампа все элементы коллекции. В производных классах, могут использоваться другие значения определенной глубины.  
   
 > [!NOTE]
->  Циклические ссылки не обнаруживаются в глубокой дампы и может привести к бесконечных циклов.  
+>  Циклические ссылки не определяются в глубоких дампы и может привести к бесконечные циклы.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities №&16;](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities № 16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [CFile-класс](../../mfc/reference/cfile-class.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)
+ [Класс CObject](../../mfc/reference/cobject-class.md)
 

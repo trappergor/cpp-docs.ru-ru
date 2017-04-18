@@ -1,29 +1,46 @@
 ---
-title: "Неустранимая ошибка C1098 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C1098"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1098"
+title: "Неустранимая ошибка C1098 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C1098
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1098
 ms.assetid: 09a1a14b-95bd-49db-b644-192efbaf9f45
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Неустранимая ошибка C1098
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 7423e2b163f0dd8ab21bd7442ffdf4817aa9ff99
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="fatal-error-c1098"></a>Неустранимая ошибка C1098
 Несовпадение версий в механизме "Изменить и продолжить"  
   
- Используемая версия отладчика не совпадает с версией компилятора, использовавшегося для создания исполняемого файла. Если повторная компиляция не устранит эту ошибку, может потребоваться переустановить Visual C\+\+, чтобы обеспечить соответствие версий отладчика и компилятора.
+ Используемая версия отладчика не совпадает с версией компилятора, использовавшегося для создания исполняемого файла. Если повторная компиляция не устранит эту ошибку, может потребоваться переустановить Visual C++, чтобы обеспечить соответствие версий отладчика и компилятора.

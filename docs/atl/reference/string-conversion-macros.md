@@ -30,19 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: e322c3af297c288ec6c9ccdb1c04e58d0a5759ff
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="string-conversion-macros"></a>Макросы преобразования строк
 Эти макросы обеспечивают строка функции преобразования.  
   
-|||  
-|-|-|  
-|[ATL и MFC макросы преобразования строк](string-conversion-macros.md)|Набор макросов, которые преобразование между строковыми типами.|  
-|[DEVMODE и макросы преобразования строк TEXTMETRIC](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Набор макросов, которые преобразуют строки в `DEVMODE` и `TEXTMETRIC` структур.|  
-  
+ 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL и MFC макросы преобразования строк  
  Рассматриваемые здесь макросы преобразования строк можно использовать как для ATL, так и для MFC. Дополнительные сведения о преобразовании строки MFC см. в разделе [TN059: использование макросов преобразования MFC MBCS в Юникод](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) и [макросов MFC и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md).  
   
@@ -80,8 +76,6 @@ MACRONAME( address_of_structure )
 |**_UNICODE** и **OLE2ANSI**|**W**|**A**|  
   
  В следующей таблице перечислены `DEVMODE` и `TEXTMETRIC` макросы преобразования строк.  
-  
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE и макросы преобразования строк TEXTMETRIC  
   
 |||  
 |-|-|  
