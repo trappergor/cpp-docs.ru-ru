@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
 |[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Проверяет неравенство объекта-списка слева от оператора объекту-списку справа от оператора.  
   
 ```
@@ -68,7 +69,7 @@ Lists not equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Проверяет, меньше ли объект-список слева от оператора, чем объект-список справа от оператора.  
   
 ```
@@ -119,7 +120,7 @@ List c1 is less than list c2.
 *\   
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Проверяет, что объект-список слева от оператора меньше или равен объекту-списку справа от оператора.  
   
 ```
@@ -170,7 +171,7 @@ List c1 is less than or equal to list c2.
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Проверяет, равен ли объект-список слева от оператора объекту-списку справа от оператора.  
   
 ```
@@ -217,7 +218,7 @@ The lists are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Проверяет, больше ли объект-список слева от оператора, чем объект-список справа от оператора.  
   
 ```
@@ -268,7 +269,7 @@ List c1 is greater than list c2.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Проверяет, что объект-список слева от оператора больше или равен объекту-списку справа от оператора.  
   
 ```

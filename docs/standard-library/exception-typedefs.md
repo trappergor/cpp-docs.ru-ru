@@ -6,6 +6,10 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- exception/std::exception_ptr
+- exception/std::terminate_handler
+- exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
   
-##  <a name="a-nameexceptionptra--exceptionptr"></a><a name="exception_ptr"></a>  exception_ptr  
+##  <a name="exception_ptr"></a>  exception_ptr  
  Тип, который описывает указатель на исключение.  
   
 ```cpp  
@@ -42,7 +46,7 @@ typedef unspecified exception_ptr;
   
  Можно использовать операторы равенства (`==`) и неравенства (`!=`) для сравнения двух объектов `exception_ptr`. Эти операторы не сравнивают бинарное значение (битовый шаблон) структур `EXCEPTION_RECORD`, которые представляют исключения. Вместо этого операторы сравнивают адреса в поле ссылки на исключение объектов `exception_ptr`. Поэтому `exception_ptr` со значением null и значение NULL при сравнении считаются равными.  
   
-##  <a name="a-nameterminatehandlera--terminatehandler"></a><a name="terminate_handler"></a>  terminate_handler  
+##  <a name="terminate_handler"></a>  terminate_handler  
  Тип, который описывает указатель на функцию, подходящую для использования в качестве `terminate_handler`.  
   
 ```
@@ -55,7 +59,7 @@ typedef void (*terminate_handler)();
 ### <a name="example"></a>Пример  
   См. [set_terminate](../standard-library/exception-functions.md#set_terminate), чтобы ознакомиться с примером использования `terminate_handler`.  
   
-##  <a name="a-nameunexpectedhandlera--unexpectedhandler"></a><a name="unexpected_handler"></a>  unexpected_handler  
+##  <a name="unexpected_handler"></a>  unexpected_handler  
  Тип, который описывает указатель на функцию, подходящую для использования в качестве `unexpected_handler`.  
   
 ```

@@ -10,9 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - system_error/std::error_condition
-- std::error_condition
 - error_condition
-- std.error_condition
+- system_error/std::error_condition::value_type
+- system_error/std::error_condition::assign
+- system_error/std::error_condition::category
+- system_error/std::error_condition::clear
+- system_error/std::error_condition::message
+- system_error/std::error_condition::operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class error_condition;
   
  **Пространство имен:** std  
   
-##  <a name="a-nameerrorconditionassigna--errorconditionassign"></a><a name="error_condition__assign"></a>  error_condition::assign  
+##  <a name="error_condition__assign"></a>  error_condition::assign  
  Присваивает условию ошибки значение кода ошибки и категорию.  
   
 ```
@@ -107,7 +111,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>Примечания  
  Функция-член сохраняет `val` как значение кода ошибки и указатель на `_Cat`.  
   
-##  <a name="a-nameerrorconditioncategorya--errorconditioncategory"></a><a name="error_condition__category"></a>  error_condition::category  
+##  <a name="error_condition__category"></a>  error_condition::category  
  Возвращает категорию ошибки.  
   
 ```
@@ -119,7 +123,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameerrorconditioncleara--errorconditionclear"></a><a name="error_condition__clear"></a>  error_condition::clear  
+##  <a name="error_condition__clear"></a>  error_condition::clear  
  Очищает значение кода ошибки и категорию.  
   
 ```
@@ -129,7 +133,7 @@ clear();
 ### <a name="remarks"></a>Примечания  
  Функция-член сохраняет нулевое значение кода ошибки и указатель на объект [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="a-nameerrorconditionerrorconditiona--errorconditionerrorcondition"></a><a name="error_condition__error_condition"></a>  error_condition::error_condition  
+##  <a name="error_condition__error_condition"></a>  error_condition::error_condition  
  Создает объект типа `error_condition`.  
   
 ```
@@ -158,7 +162,7 @@ error_condition(_Enum _Errcode,
   
  Третий конструктор сохраняет `(value_type)_Errcode` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="a-nameerrorconditionmessagea--errorconditionmessage"></a><a name="error_condition__message"></a>  error_condition::message  
+##  <a name="error_condition__message"></a>  error_condition::message  
  Возвращает имя кода ошибки.  
   
 ```
@@ -171,7 +175,7 @@ string message() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член возвращает значение `category().message(value())`.  
   
-##  <a name="a-nameerrorconditionoperatoreqeqa--errorconditionoperator"></a><a name="error_condition__operator_eq_eq"></a>  error_condition::operator==  
+##  <a name="error_condition__operator_eq_eq"></a>  error_condition::operator==  
  Проверяет равенство между объектами `error_condition`.  
   
 ```
@@ -190,7 +194,7 @@ bool operator==(const error_condition& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `category() == right.category() && value == right.value()`.  
   
-##  <a name="a-nameerrorconditionoperatorneqa--errorconditionoperator"></a><a name="error_condition__operator_neq"></a>  error_condition::operator!=  
+##  <a name="error_condition__operator_neq"></a>  error_condition::operator!=  
  Проверяет неравенство между объектами `error_condition`.  
   
 ```
@@ -209,7 +213,7 @@ bool operator!=(const error_condition& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `!(*this == right)`.  
   
-##  <a name="a-nameerrorconditionoperatorlta--errorconditionoperatorlt"></a><a name="error_condition__operator_lt_"></a>  error_condition::operator&lt;  
+##  <a name="error_condition__operator_lt_"></a>  error_condition::operator&lt;  
  Проверяет, меньше ли объект `error_condition` переданного для сравнения объекта `error_code`.  
   
 ```
@@ -228,7 +232,7 @@ bool operator<(const error_condition& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `category() < right.category() || category() == right.category() && value < right.value()`.  
   
-##  <a name="a-nameerrorconditionoperatoreqa--errorconditionoperator"></a><a name="error_condition__operator_eq"></a>  error_condition::operator=  
+##  <a name="error_condition__operator_eq"></a>  error_condition::operator=  
  Присваивает новое значение перечисления объекту `error_condition`.  
   
 ```
@@ -251,7 +255,7 @@ error_condition(_Enum error,
 ### <a name="remarks"></a>Примечания  
  Функция-член сохраняет `(value_type)error` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category). Он возвращает `*this`.  
   
-##  <a name="a-nameerrorconditionoperatorboola--errorconditionoperator-bool"></a><a name="error_condition__operator_bool"></a>  error_condition::operator bool  
+##  <a name="error_condition__operator_bool"></a>  error_condition::operator bool  
  Преобразует переменную типа `error_condition`.  
   
 ```
@@ -264,7 +268,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>Примечания  
  Оператор возвращает значение, преобразуемое в `true`, только тогда, когда [значение](#error_condition__value) не равно нулю. Тип возвращаемого значения можно преобразовать только в `bool`, а не в `void *` или другие известные скалярные типы.  
   
-##  <a name="a-nameerrorconditionvaluea--errorconditionvalue"></a><a name="error_condition__value"></a>  error_condition::value  
+##  <a name="error_condition__value"></a>  error_condition::value  
  Возвращает сохраненное значение кода ошибки.  
   
 ```
@@ -276,7 +280,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameerrorconditionvaluetypea--errorconditionvaluetype"></a><a name="error_condition__value_type"></a>  error_condition::value_type  
+##  <a name="error_condition__value_type"></a>  error_condition::value_type  
  Тип, представляющий сохраненное значение кода ошибки.  
   
 ```

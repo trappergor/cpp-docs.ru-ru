@@ -10,24 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - weak_ptr
-- std::weak_ptr
 - memory/std::weak_ptr
-- std::weak_ptr::element_type
 - memory/std::weak_ptr::element_type
-- std::weak_ptr::expired
 - memory/std::weak_ptr::expired
-- std::weak_ptr::lock
 - memory/std::weak_ptr::lock
-- std::weak_ptr::owner_before
 - memory/std::weak_ptr::owner_before
-- std::weak_ptr::reset
 - memory/std::weak_ptr::reset
-- std::weak_ptr::swap
 - memory/std::weak_ptr::swap
-- std::weak_ptr::use_count
 - memory/std::weak_ptr::use_count
-- std::weak_ptr::operator=
 - memory/std::weak_ptr::operator=
+- memory/std::weak_ptr::element_type
+- memory/std::weak_ptr::expired
+- memory/std::weak_ptr::lock
+- memory/std::weak_ptr::owner_before
+- memory/std::weak_ptr::reset
+- memory/std::weak_ptr::swap
+- memory/std::weak_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +126,7 @@ public:
   
  **Пространство имен:** std  
   
-##  <a name="a-nameweakptrelementtypea--elementtype"></a><a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="weak_ptr__element_type"></a>  element_type  
  Тип элемента.  
   
 ```  
@@ -163,7 +161,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="a-nameweakptrexpireda--expired"></a><a name="weak_ptr__expired"></a>  expired  
+##  <a name="weak_ptr__expired"></a>  expired  
  Проверяет, истек ли срок действия владения.  
   
 ```  
@@ -219,7 +217,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="a-nameweakptrlocka--lock"></a><a name="weak_ptr__lock"></a>  lock  
+##  <a name="weak_ptr__lock"></a>  lock  
  Получает эксклюзивные права владения ресурсом.  
   
 ```  
@@ -275,7 +273,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="a-nameweakptroperatoreqa--operator"></a><a name="weak_ptr__operator_eq"></a>  оператор=  
+##  <a name="weak_ptr__operator_eq"></a>  оператор=  
  Заменяет ресурс, которым владеет.  
   
 ```  
@@ -334,7 +332,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="a-nameweakptrownerbeforea--ownerbefore"></a><a name="weak_ptr__owner_before"></a>  owner_before  
+##  <a name="weak_ptr__owner_before"></a>  owner_before  
  Возвращает `true`, если этот объект `weak_ptr` заказывался раньше заданного указателя (или меньше него).  
   
 ```  
@@ -352,7 +350,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Примечания  
  Функция-член возвращает значение `true`, если `*this` равно `ordered before``ptr`.  
   
-##  <a name="a-nameweakptrreseta--reset"></a><a name="weak_ptr__reset"></a>  reset  
+##  <a name="weak_ptr__reset"></a>  reset  
  Освобождает ресурс, которым владеет.  
   
 ```  
@@ -393,7 +391,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="a-nameweakptrswapa--swap"></a><a name="weak_ptr__swap"></a>  swap  
+##  <a name="weak_ptr__swap"></a>  swap  
  Меняет местами два объекта `weak_ptr`.  
   
 ```  
@@ -461,7 +459,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameweakptrusecounta--usecount"></a><a name="weak_ptr__use_count"></a>  use_count  
+##  <a name="weak_ptr__use_count"></a>  use_count  
  Считает количество назначенных объектов `shared_ptr`.  
   
 ```  
@@ -500,7 +498,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="a-nameweakptrweakptra--weakptr"></a><a name="weak_ptr__weak_ptr"></a>  weak_ptr  
+##  <a name="weak_ptr__weak_ptr"></a>  weak_ptr  
  Создает документ `weak_ptr`.  
   
 ```  

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 57492e09-3836-4dbc-9ae5-78ecf506c190
 caps.latest.revision: 11
 manager: ghogen
@@ -21,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
 |[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.  
   
 ```
@@ -40,7 +41,7 @@ bool operator==(
 ### <a name="remarks"></a>Примечания  
  Эта функция шаблона перегружает `operator==` для сравнения двух объектов класса шаблона `forward_list`. Функция возвращает `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.  
   
 ```
@@ -62,7 +63,7 @@ bool operator!=(
 ### <a name="remarks"></a>Примечания  
  Эта функция шаблона возвращает `!(left == right)`.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Проверяет, меньше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.  
   
 ```
@@ -84,7 +85,7 @@ bool operator<(
 ### <a name="remarks"></a>Примечания  
  Эта функция шаблона перегружает `operator<` для сравнения двух объектов класса шаблона `forward_list`. Функция возвращает `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Проверяет, меньше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.  
   
 ```
@@ -106,7 +107,7 @@ bool operator<=(
 ### <a name="remarks"></a>Примечания  
  Эта функция шаблона возвращает `!(right < left)`.  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Проверяет, больше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.  
   
 ```
@@ -128,7 +129,7 @@ bool operator>(
 ### <a name="remarks"></a>Примечания  
  Эта функция шаблона возвращает `right < left`.  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Проверяет, больше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.  
   
 ```

@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::error_category
 - system_error/std::error_category
 - error_category
-- std.error_category
+- system_error/std::error_category::value_type
+- system_error/std::error_category::default_error_condition
+- system_error/std::error_category::equivalent
+- system_error/std::error_category::message
+- system_error/std::error_category::name
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class error_category;
   
  **Пространство имен:** std  
   
-##  <a name="a-nameerrorcategorydefaulterrorconditiona--errorcategorydefaulterrorcondition"></a><a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
+##  <a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
  Сохраняет значение кода ошибки для объекта условия ошибки.  
   
 ```
@@ -100,7 +103,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameerrorcategoryequivalenta--errorcategoryequivalent"></a><a name="error_category__equivalent"></a>  error_category::equivalent  
+##  <a name="error_category__equivalent"></a>  error_category::equivalent  
  Возвращает значение, указывающее, эквивалентны ли объекты ошибок.  
   
 ```
@@ -127,7 +130,7 @@ virtual bool equivalent(const error_code& _Code,
   
  Вторая функция-член возвращает значение `*this == _Code.category() && _Code.value() == _Errval`.  
   
-##  <a name="a-nameerrorcategorymessagea--errorcategorymessage"></a><a name="error_category__message"></a>  error_category::message  
+##  <a name="error_category__message"></a>  error_category::message  
  Возвращает имя указанного кода ошибки.  
   
 ```
@@ -145,7 +148,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameerrorcategorynamea--errorcategoryname"></a><a name="error_category__name"></a>  error_category::name  
+##  <a name="error_category__name"></a>  error_category::name  
  Возвращает имя категории.  
   
 ```
@@ -157,7 +160,7 @@ virtual const char *name() const = 0;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameerrorcategoryoperatoreqeqa--errorcategoryoperator"></a><a name="error_category__operator_eq_eq"></a>  error_category::operator==  
+##  <a name="error_category__operator_eq_eq"></a>  error_category::operator==  
  Проверяет равенство между объектами `error_category`.  
   
 ```
@@ -176,7 +179,7 @@ bool operator==(const error_category& right) const;
 ### <a name="remarks"></a>Примечания  
  Этот оператор-член возвращает `this == &right`.  
   
-##  <a name="a-nameerrorcategoryoperatorneqa--errorcategoryoperator"></a><a name="error_category__operator_neq"></a>  error_category::operator!=  
+##  <a name="error_category__operator_neq"></a>  error_category::operator!=  
  Проверяет неравенство между объектами `error_category`.  
   
 ```
@@ -195,7 +198,7 @@ bool operator!=(const error_category& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `(!*this == right)`.  
   
-##  <a name="a-nameerrorcategoryoperatorlta--errorcategoryoperatorlt"></a><a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
+##  <a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
  Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.  
   
 ```
@@ -214,7 +217,7 @@ bool operator<(const error_category& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `this < &right`.  
   
-##  <a name="a-nameerrorcategoryvaluetypea--errorcategoryvaluetype"></a><a name="error_category__value_type"></a>  error_category::value_type  
+##  <a name="error_category__value_type"></a>  error_category::value_type  
  Тип, представляющий сохраняемое значение кода ошибки.  
   
 ```

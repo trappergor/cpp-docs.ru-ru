@@ -13,6 +13,8 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
+dev_langs:
+- C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 caps.latest.revision: 13
 manager: ghogen
@@ -28,7 +30,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
 |[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Сравнивает объекты `tuple` на неравенство.  
   
 ```  
@@ -90,7 +92,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Сравнение объектов `tuple` на предмет меньшинства.  
   
 ```  
@@ -152,7 +154,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Сравнение объектов `tuple` на предмет отношения меньше или равно.  
   
 ```  
@@ -214,7 +216,7 @@ true
 false  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Сравнение объектов `tuple` на равенство.  
   
 ```  
@@ -276,7 +278,7 @@ true
 false  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Сравнение объектов `tuple` на предмет большинства.  
   
 ```  
@@ -338,7 +340,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Сравнение объектов `tuple` на предмет большинства или равенства.  
   
 ```  

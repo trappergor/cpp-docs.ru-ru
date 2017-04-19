@@ -6,6 +6,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- locale/std::has_facet
+- locale/std::isalnum
+- locale/std::isalpha
+- locale/std::iscntrl
+- locale/std::isdigit
+- locale/std::isgraph
+- locale/std::islower
+- locale/std::isprint
+- locale/std::ispunct
+- locale/std::isspace
+- locale/std::isupper
+- locale/std::isxdigit
+- locale/std::tolower
+- locale/std::toupper
+- locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|  
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="a-namehasfaceta--hasfacet"></a><a name="has_facet"></a>  has_facet  
+##  <a name="has_facet"></a>  has_facet  
  Тестирует наличие того или иного аспекта в указанном языковом стандарте.  
   
 ```  
@@ -63,7 +79,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-nameisalnuma--isalnum"></a><a name="isalnum"></a>  isalnum  
+##  <a name="isalnum"></a>  isalnum  
  Проверяет, является ли элемент языкового стандарта буквенным или цифровым символом.  
   
 ```  
@@ -127,7 +143,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="a-nameisalphaa--isalpha"></a><a name="isalpha"></a>  isalpha  
+##  <a name="isalpha"></a>  isalpha  
  Проверяет, является ли элемент языкового стандарта буквенным символом.  
   
 ```  
@@ -188,7 +204,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameiscntrla--iscntrl"></a><a name="iscntrl"></a>  iscntrl  
+##  <a name="iscntrl"></a>  iscntrl  
  Определяет, является ли элемент языкового стандарта управляющим символом.  
   
 ```  
@@ -249,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisdigita--isdigit"></a><a name="isdigit"></a>  isdigit  
+##  <a name="isdigit"></a>  isdigit  
  Определяет, является ли элемент языкового стандарта цифровым символом.  
   
 ```  
@@ -310,7 +326,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisgrapha--isgraph"></a><a name="isgraph"></a>  isgraph  
+##  <a name="isgraph"></a>  isgraph  
  Проверяет, является ли элемент языкового стандарта буквенно-цифровым символом или символом пунктуации.  
   
 ```  
@@ -371,7 +387,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameislowera--islower"></a><a name="islower"></a>  islower  
+##  <a name="islower"></a>  islower  
  Определяет, является ли элемент языкового стандарта символом в нижнем регистре.  
   
 ```  
@@ -432,7 +448,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisprinta--isprint"></a><a name="isprint"></a>  isprint  
+##  <a name="isprint"></a>  isprint  
  Определяет, является ли элемент языкового стандарта символом, пригодным для печати.  
   
 ```  
@@ -492,7 +508,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameispuncta--ispunct"></a><a name="ispunct"></a>  ispunct  
+##  <a name="ispunct"></a>  ispunct  
  Определяет, является ли элемент языкового стандарта символом пунктуации.  
   
 ```  
@@ -553,7 +569,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisspacea--isspace"></a><a name="isspace"></a>  isspace  
+##  <a name="isspace"></a>  isspace  
  Определяет, является ли элемент языкового стандарта символом пустого пространства.  
   
 ```  
@@ -614,7 +630,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisuppera--isupper"></a><a name="isupper"></a>  isupper  
+##  <a name="isupper"></a>  isupper  
  Определяет, является ли элемент языкового стандарта символом в верхнем регистре.  
   
 ```  
@@ -675,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisxdigita--isxdigit"></a><a name="isxdigit"></a>  isxdigit  
+##  <a name="isxdigit"></a>  isxdigit  
  Определяет, является ли элемент языкового стандарта символом, используемым для представления шестнадцатеричных чисел.  
   
 ```  
@@ -738,7 +754,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametolowera--tolower"></a><a name="tolower"></a>  tolower  
+##  <a name="tolower"></a>  tolower  
  Преобразует символ в нижний регистр.  
   
 ```  
@@ -783,7 +799,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametouppera--toupper"></a><a name="toupper"></a>  toupper  
+##  <a name="toupper"></a>  toupper  
  Преобразует символ в верхний регистр.  
   
 ```  
@@ -828,7 +844,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameusefaceta--usefacet"></a><a name="use_facet"></a>  use_facet  
+##  <a name="use_facet"></a>  use_facet  
  Возвращает ссылку на аспект указанного типа, сохраненный в языковом стандарте.  
   
 ```  
