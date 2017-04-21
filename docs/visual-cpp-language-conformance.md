@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Соответствие стандартам языка Visual C++ 
 В этом разделе приводится сводка соответствия функций компилятора языковым стандартам ISO C++03, C++11, C++14 и C++17 (черновая версия), а также список функций стандартной библиотеки (STL) для Visual C++ в Visual Studio 2017 и более ранних версиях. Каждое название функции компилятора и STL является ссылкой на документ по C++ стандарта ISO, где находится ее описание (если функция доступна на момент публикации). В столбце поддерживаемых версий перечислены версии Visual Studio, в которых впервые появилась поддержка функции.  
   
 Сведения об улучшениях соответствия стандартам и других изменениях в Visual Studio 2017 см. в статьях [C++ conformance improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md) (Улучшения соответствия C++ в Visual Studio 2017) и [What's New for Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017). Сведения об изменениях соответствия в более ранних версиях см. в статье [Критические изменения в Visual C++](porting/visual-cpp-change-history-2003-2015.md) и [Visual C++ What's New 2003 through 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)(Новые возможности Visual C++ в версиях 2003–2015). Последние новости от команды разработчиков C++ см. в [блоге команды разработчиков Visual C++](http://blogs.msdn.microsoft.com/vcblog/).  
+
+ > [!NOTE]
+ > Принципы работы с двоичными файлами в Visual Studio 2017 по сравнению с Visual Studio 2015 существенно не изменились.
   
 ## <a name="compiler-features"></a>Функции компилятора  
   
