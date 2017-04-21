@@ -48,9 +48,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: eb1636b0c2f85a0de559409b04e76b3e3614b509
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 652f0a24aed2ef03983ddb1116a0d372d377897c
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ciexp"></a>_CIexp
@@ -72,4 +72,4 @@ void __cdecl _CIexp();
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp, expf](../c-runtime-library/reference/exp-expf.md)
+ [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)

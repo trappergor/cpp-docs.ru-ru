@@ -1,78 +1,94 @@
 ---
-title: "Процедуры is, isw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "isw"
-  - "is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is - процедуры"
-  - "isw - процедуры"
+title: "Процедуры is, isw | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- isw
+- is
+dev_langs:
+- C++
+helpviewer_keywords:
+- is routines
+- isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Процедуры is, isw
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: d4f4902c29b64be4c2e032571face5f583c62734
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="is-isw-routines"></a>Процедуры is, isw
 |||  
 |-|-|  
-|[isalnum, iswalnum, \_isalnum\_l, \_iswalnum\_l](../Topic/isalnum,%20iswalnum,%20_isalnum_l,%20_iswalnum_l.md)|[isgraph, iswgraph, \_isgraph\_l, \_iswgraph\_l](../Topic/isgraph,%20iswgraph,%20_isgraph_l,%20_iswgraph_l.md)|  
-|[isalpha, iswalpha, \_isalpha\_l, \_iswalpha\_l](../Topic/isalpha,%20iswalpha,%20_isalpha_l,%20_iswalpha_l.md)|[isleadbyte, \_isleadbyte\_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
-|[isascii, \_\_isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, \_islower\_l, \_iswlower\_l](../Topic/islower,%20iswlower,%20_islower_l,%20_iswlower_l.md)|  
-|[isblank, iswblank, \_isblank\_l, \_iswblank\_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, \_isprint\_l, \_iswprint\_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
-|[iscntrl, iswcntrl, \_iscntrl\_l, \_iswcntrl\_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, \_ispunct\_l, \_iswpunct\_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
-|[iscsym, iscsymf, \_\_iscsym, \_\_iswcsym, \_\_iscsymf, \_\_iswcsymf, \_iscsym\_l, \_iswcsym\_l, \_iscsymf\_l, \_iswcsymf\_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, \_isspace\_l, \_iswspace\_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
-|[\_isctype, iswctype, \_isctype\_l, \_iswctype\_l](../Topic/_isctype,%20iswctype,%20_isctype_l,%20_iswctype_l.md)|[isupper, \_isupper\_l, iswupper, \_iswupper\_l](../Topic/isupper,%20_isupper_l,%20iswupper,%20_iswupper_l.md)|  
-|[isdigit, iswdigit, \_isdigit\_l, \_iswdigit\_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, \_isxdigit\_l, \_iswxdigit\_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
+|[isalnum, iswalnum, _isalnum_l, _iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, _isgraph_l, _iswgraph_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
+|[isalpha, iswalpha, _isalpha_l, _iswalpha_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
+|[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
+|[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
+|[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
+|[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
+|[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
   
-## Заметки  
- Эта процедура проверяет символы на соответствие заданным условиям.  
+## <a name="remarks"></a>Примечания  
+ Эти подпрограммы проверяют символы на соответствие заданным условиям.  
   
- Процедуры **is** выдают значащий результат для любого целочисленного аргумента от –1 \(`EOF`\) до **UCHAR\_MAX** \(0xFF\) включительно.  Ожидается тип аргумента `int`.  
+ Подпрограммы **is** выдают значащий результат для любого целочисленного аргумента от –1 (`EOF`) до **UCHAR_MAX** (0xFF) включительно. Ожидается тип аргумента `int`.  
   
 > [!CAUTION]
->  Для **is** процедур передача аргумента типа `char` может привести к непредсказуемым результатам.  Однобайтовый знак типа `char` со значением, превышающем 0x7F, в однобайтовой или многобайтовой кодировке является отрицательным.  Если передается значение типа `char`, компилятор может преобразовать это значение в значение типа `int` со знаком или **long** со знаком.  Данное значение может быть расширено знаком компилятором, что приведет к непредвиденным результатам.  
+>  Для подпрограмм **is** передача аргумента типа `char` может привести к непредсказуемым результатам. Однобайтовый символ типа `char` со значением, превышающем 0x7F, в однобайтовой или многобайтовой кодировке является отрицательным. Если передается значение типа `char`, компилятор может преобразовать это значение в значение типа `int` со знаком или **long** со знаком. Компилятор может расширить знак данного значения, что приведет к непредвиденным результатам.  
   
- Процедуры **isw** выдают значащие результаты для любого целого числа от –1 \(**WEOF**\) до 0xFFFF включительно.  Тип данных **wint\_t** определяется в WCHAR.H как **unsigned short**; он может содержать любое значение расширенного символа или расширенного символа конца файла \(**WEOF**\).  
+ Подпрограммы **isw** выдают значащие результаты для любого целого числа от –1 (**WEOF**) до 0xFFFF включительно. Тип данных **wint_t** определяется в WCHAR.H как **unsigned short**; он может содержать любое значение расширенного символа или расширенный символ конца файла (**WEOF**).  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса **\_l** используют текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версии с суффиксом **\_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта.  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта.  
   
- В языковом стандарте «C» следующие условия теста для процедуры **is**:  
+ В языковом стандарте "C" для подпрограмм **is** определены следующие условия проверки:  
   
  `isalnum`  
- Алфавитно\-цифровые символы \(a\-z, a\-z или от 0 до 9\).  
+ Алфавитно-цифровые символы (A–Z, a–z или 0–9).  
   
  `isalpha`  
- Алфавитные \(a\-z или a\-z\).  
+ Алфавитные (A–Z или a–z).  
   
  `__isascii`  
- Символы ASCII \(0x00 — 0x7F\).  
+ Символы ASCII (0x00–0x7F).  
   
  `isblank`  
- Горизонтальная табуляция или пробел \(0x09 или 0x20\).  
+ Горизонтальная табуляция или пробел (0x09 или 0x20).  
   
  `iscntrl`  
- Управляющий символ \(0x1F или 0x00 — 0x7F\).  
+ Управляющий символ (0x00–0x1F или 0x7F).  
   
  `__iscsym`  
  Буква, символ подчеркивания или цифра.  
@@ -81,99 +97,99 @@ caps.handback.revision: 13
  Буква или символ подчеркивания.  
   
  **isdigit**  
- Десятичная цифра \(0 – 9\).  
+ Десятичная цифра (0–9).  
   
  `isgraph`  
- Печатные символы, кроме пробела \( \).  
+ Печатные символы, кроме пробела ( ).  
   
  `islower`  
- Буквы нижнего регистра \(a – z\).  
+ Буквы нижнего регистра (a–z).  
   
  `isprint`  
- Печатные символы, включая пробел \(0x20 — 0x7E\).  
+ Печатные символы, включая пробел (0x20–0x7E).  
   
  `ispunct`  
  Знак препинания.  
   
  `isspace`  
- Знак пробела \(0x09 — 0x0D или 0x20\).  
+ Пробельный символ (0x09–0x0D или 0x20).  
   
  `isupper`  
- Буквы верхнего регистра \(A – Z\).  
+ Буквы верхнего регистра (A–Z).  
   
  `isxdigit`  
- Шестнадцатеричная цифра \(А — F, a — f или 0 — 9\).  
+ Шестнадцатеричная цифра (А–F, a–f или 0–9).  
   
- Для процедуры **isw**, результаты теста для заданного условия не зависят от языкового стандарта.  Условия теста для функций **isw** следующие:  
+ Для подпрограмм **isw** результаты проверки заданного условия не зависят от языкового стандарта. Условия проверки для функций **isw** следующие:  
   
  `iswalnum`  
  `iswalpha` или `iswdigit`.  
   
  `iswalpha`  
- Любой расширенный символ из набора, определенного реализацией, для которого ни одно из `iswcntrl`, `iswdigit`, `iswpunct` или `iswspace` отлично от нуля.  `iswalpha` возвращает ненулевое значение только для расширенных символов, для которых  `iswupper` или `iswlower` ненулевые.  
+ Любой расширенный символ из набора, определенного реализацией, для которого ни одна из функций `iswcntrl`, `iswdigit`, `iswpunct` и `iswspace` не принимает значение, отличное от нуля. `iswalpha` возвращает ненулевое значение только для расширенных символов, для которых `iswupper` или `iswlower` имеет ненулевое значение.  
   
  `iswascii`  
- Представление символа ASCII \(0x0000 — 0x007F\) в расширенных символах.  
+ Представление символа ASCII (0x0000–0x007F) в расширенных символах.  
   
  `iswblank`  
- Расширенный символ, соответствующий стандартному пробелу или являющийся одним из определенных реализацией символов, для которых `iswalnum` ложно.  Стандартные пустые символы представляют собой пробел \(L' '\) и символ горизонтальной табуляции \(L'\\t'\).  
+ Расширенный символ, соответствующий стандартному пробелу или входящий в определяемый реализацией набор расширенных символов, для которых функция `iswalnum` имеет значение false. Стандартные пробельные символы — это пробел (L" ") и символ горизонтальной табуляции (L"\t").  
   
  `iswcntrl`  
  Расширенный символ управления.  
   
- **\_\_iswcsym**  
- Любой расширенный символ, для которого **isalnum**  имеет значение true, или символ '\_'.  
+ **__iswcsym**  
+ Любой расширенный символ, для которого функция **isalnum** имеет значение true, или символ "_".  
   
- **\_\_iswcsymf**  
- Любой расширенный символ, для которого `iswalpha` имеет значение true, или символ '\_'.  
+ **__iswcsymf**  
+ Любой расширенный символ, для которого функция `iswalpha` имеет значение true, или символ "_".  
   
  `iswctype`  
- Символ содержит значение свойства, указанного аргументом `desc`.  Для каждого допустимого значения аргумента `desc` `iswctype`, существует эквивалентная функция, работающая с расширенными символами, как показано в следующей таблице:  
+ Символ имеет свойство, указанное аргументом `desc`. Для каждого допустимого значения аргумента `desc` функции `iswctype` существует эквивалентная функция, работающая с расширенными символами, как показано в следующей таблице:  
   
- **Эквивалентность iswctype \(**   
- ***c, desc* \) другим процедурам тестирования isw**  
+ **Эквивалентность iswctype(**   
+ ***c, desc*) другим подпрограммам проверки isw**  
   
-|Значение аргумента *desc*|эквивалент iswctype\( *c, desc* \)|  
-|-------------------------------|----------------------------------------|  
-|**\_ALPHA**|**iswalpha\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT**|**iswalnum\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_CONTROL**|**iswcntrl\(** `c` **\)**|  
-|**\_DIGIT**|**iswdigit\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswgraph\(** `c` **\)**|  
-|**\_LOWER**|**iswlower\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_BLANK** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswprint\(** `c` **\)**|  
-|**\_PUNCT**|**iswpunct\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_SPACE**|**iswspace\(** `c` **\)**|  
-|**\_UPPER**|**iswupper\(** `c` **\)**|  
-|**\_HEX**|**iswxdigit\(** `c` **\)**|  
+|Значение аргумента *desc*|эквивалент iswctype(*c, desc*)|  
+|------------------------------|----------------------------------------|  
+|**_ALPHA**|**iswalpha(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_CONTROL**|**iswcntrl(** `c` **)**|  
+|**_DIGIT**|**iswdigit(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|  
+|**_LOWER**|**iswlower(** `c` **)**|  
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|  
+|**_PUNCT**|**iswpunct(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_SPACE**|**iswspace(** `c` **)**|  
+|**_UPPER**|**iswupper(** `c` **)**|  
+|**_HEX**|**iswxdigit(** `c` **)**|  
   
  `iswdigit`  
- Расширенный символ, соответствующий символу десятичной цифры  
+ Расширенный символ, соответствующий символу десятичной цифры.  
   
  `iswgraph`  
- Печатные расширенные символы, кроме расширенного символа пробела \(L' '\).  
+ Печатный расширенный символ, кроме расширенного символа пробела (L" ").  
   
  `iswlower`  
- Строчная буква или член определенного реализацией набора расширенных символов, для которых ни одно из `iswcntrl`, `iswdigit`, `iswpunct` или `iswspace` отлично от нуля.  `iswlower` возвращает ненулевое значение только для расширенных символов, которые соответствуют буквам нижнего регистра.  
+ Строчная буква или член определенного реализацией набора расширенных символов, для которых ни одна из функций `iswcntrl`, `iswdigit`, `iswpunct` и `iswspace` не имеет значения, отличного от нуля. `iswlower` возвращает ненулевое значение только для расширенных символов, которые соответствуют буквам нижнего регистра.  
   
  `iswprint`  
- Печатные расширенные символы, включая расширенный символа пробела \(L' '\).  
+ Печатный расширенный символ, включая расширенный символа пробела (L" ").  
   
  `iswpunct`  
- Печатные расширенные символы, которые не являются ни расширенным символом пробела \(L' '\), ни расширенным символом, для которого `iswalnum` отлично от нуля.  
+ Печатный расширенный символ, который не является ни расширенным символом пробела (L" "), ни расширенным символом, для которого значение функции `iswalnum` отлично от нуля.  
   
  `iswspace`  
- Расширенный символ, соответствующий стандартному пробелу или являющийся одним из определенных реализацией символов, для которых `iswalnum` ложно.  Стандартные пробельные символы: пробел \(L' '\), символ конца страницы \(L'\\f'\), символ новой строки \(L'\\n'\), символ возврата каретки \(L'\\r'\), символ горизонтальной табуляции \(L'\\t'\), символ вертикальной табуляции \(L'\\v'\).  
+ Расширенный символ, соответствующий стандартному расширенному символу пробела или являющийся одним из определяемых реализацией расширенных символов, для которых функция `iswalnum` имеет значение false. Стандартные пробельные символы: пробел (L" "), символ конца страницы (L"\f"), символ новой строки (L"\n"), символ возврата каретки (L"\r"), символ горизонтальной табуляции (L"\t"), символ вертикальной табуляции (L"\v").  
   
  `iswupper`  
- Расширенный символ верхнего регистра или один из набора определенных реализацией расширенных символов, для которых ни одно из `iswcntrl`, `iswdigit`, `iswpunct` или `iswspace` не равно нулю.  `iswupper` возвращает ненулевое значение только для расширенных символов, которые соответствуют буквам верхнего регистра.  
+ Расширенный символ верхнего регистра или символ из набора определенных реализацией расширенных символов, для которых ни одна из функций `iswcntrl`, `iswdigit`, `iswpunct` и `iswspace` не имеет нулевого значения. Функция `iswupper` возвращает ненулевое значение только для расширенных символов, которые соответствуют буквам верхнего регистра.  
   
  `iswxdigit`  
  Расширенный символ, который соответствует символу шестнадцатеричной цифры.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_isfam.c  
@@ -211,7 +227,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 00            AS  C                              .  
@@ -344,9 +360,9 @@ int main( void )
 7f            AS  C                              .  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Классификация символов](../c-runtime-library/character-classification.md)   
  [Языковой стандарт](../c-runtime-library/locale.md)   
- [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [Интерпретация последовательностей многобайтовых символов](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Функции to](../c-runtime-library/to-functions.md)

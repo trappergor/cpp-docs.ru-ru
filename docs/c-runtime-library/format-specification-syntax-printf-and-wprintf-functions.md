@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 985fde9eacbdb8e0953aa576c45dfa0a9e173d95
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c57231375c662134fb1f9bd0252fd3b70f051ba2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Синтаксис описания формата: функции printf и wprintf
@@ -126,7 +126,7 @@ ms.lasthandoff: 03/07/2017
 |Значение|Вывод|  
 |-----------|------------|  
 |+ бесконечность|`1.#INF` *случайные цифры*|  
-|– бесконечность|`–1.#INF` *случайные цифры*|  
+|- infinity|`-1.#INF` *случайные цифры*|  
 |Неопределенное (то же, что и не число без вызова исключения)|*цифра* `.#IND` *случайные цифры*|  
 |NaN|*цифра* `.#NAN` *случайные цифры*|  
   

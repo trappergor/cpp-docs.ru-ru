@@ -1,146 +1,162 @@
 ---
-title: "Общие сведения о константах | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "константы, C"
+title: "Общие сведения о константах | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Общие сведения о константах
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8ba95629fc2cd8796e9c1e0016f08426a49164a9
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="summary-of-constants"></a>Общие сведения о константах
 `constant`:  
- *константа\-с\-плавающей запятой*  
+ *floating-point-constant*  
   
- *целочисленная\-константа*  
+ *integer-constant*  
   
- *константа\-перечисления*  
+ *enumeration-constant*  
   
- *символьная\-константа*  
+ *character-constant*  
   
- *константа\-с\-плавающей запятой*:  
- *константа\-дробной\-части порядок\-числа*  необ *суффикс\-числа\-с\-плавающей\-запятой* необ  
+ *floating-point-constant*:  
+ *fractional-constant exponent-part* opt*floating-suffix* opt  
   
- *последовательность\-цифр порядок\-числа суффикс\-числа\-с\-плавающей\-запятой*  необ  
+ *digit-sequence exponent-part floating-suffix* opt  
   
- *константа\-дробной\-части*:  
- *последовательность\-цифр*  необ **.***последовательность\-цифр*  
+ *fractional-constant*:  
+ *digit-sequence* opt**.***digit-sequence*  
   
- *последовательность\-цифр*  **.**  
+ *digit-sequence*  **.**  
   
- *порядок\-числа*:  
- **e**  *знак*  необ *последовательность\-цифр*  
+ *exponent-part*:  
+ **e**  *sign* opt*digit-sequence*  
   
- **E**  *знак*  необ *последовательность\-цифр*  
+ **E**  *sign* opt*digit-sequence*  
   
- *знак*: один из указанных ниже  
- **\+ –**  
+ *sign*: один из указанных ниже знаков  
+ **+ -**  
   
- *последовательность\-цифр*:  
- *цифровой\-знак*  
+ *digit-sequence*:  
+ *digit*  
   
- *последовательность\-цифр цифра*  
+ *digit-sequence digit*  
   
- *суффикс\-числа\-с\-плавающей\-запятой*: один из указанных ниже  
+ *floating-suffix*: один из указанных ниже знаков  
  **f l F L**  
   
- *целочисленная\-константа*:  
- *десятичная\-константа суффикс\-целого\-числа*  необ  
+ *integer-constant*:  
+ *decimal-constant integer-suffix* opt  
   
- *восьмеричная\-константа суффикс\-целого\-числа*  необ  
+ *octal-constant integer-suffix* opt  
   
- *шестнадцатеричная\-константа суффикс\-целого\-числа*  необ  
+ *hexadecimal-constant integer-suffix* opt  
   
- *десятичная\-константа*:  
- *ненулевая\-цифра*  
+ *decimal-constant*:  
+ *nonzero-digit*  
   
- *десятичная\-константа цифра*  
+ *decimal-constant digit*  
   
- *восьмеричная\-константа*:  
+ *octal-constant*:  
  **0**  
   
- *восьмеричная\-константа восьмеричная\-цифра*  
+ *octal-constant octal-digit*  
   
- *шестнадцатеричная\-константа*:  
- **0x**  *шестнадцатеричная\-цифра*  
+ *hexadecimal-constant*:  
+ **0x**  *hexadecimal-digit*  
   
- **0X**  *шестнадцатеричная\-цифра*  
+ **0X**  *hexadecimal-digit*  
   
- *шестнадцатеричная\-константа шестнадцатеричная\-цифра*  
+ *hexadecimal-constant hexadecimal-digit*  
   
- *ненулевая\-цифра*: одна из указанных ниже  
+ *nonzero-digit*: одна из указанных ниже  
  **1 2 3 4 5 6 7 8 9**  
   
- *восьмеричная\-цифра*: одна из указанных ниже  
+ *octal-digit*: одна из указанных ниже  
  **0 1 2 3 4 5 6 7**  
   
- *шестнадцатеричная\-цифра*: одна из указанных ниже  
+ *hexadecimal-digit*: одна из указанных ниже  
  **0 1 2 3 4 5 6 7 8 9**  
   
  **a b c d e f**  
   
  **A B C D E F**  
   
- *суффикс\-числа\-без\-знака*: один из указанных ниже  
+ *unsigned-suffix*: one of  
  **u U**  
   
- *суффикс\-длинного\-числа*: один из указанных ниже  
+ *long-suffix*: one of  
  **l L**  
   
- *символьная\-константа*:  
- **'** *c\-char\-последовательность*  
+ *character-constant*:  
+ **'** *c-char-sequence*  
   
- **'L'** *последовательность\-символов\-с* **'**  
+ **'L'** *c-char-sequence* **'**  
   
- *суффикс\-целого\-числа*:  
- *суффикс\-числа\-без\-знака суффикс\-длинного\-числа*  необ  
+ *integer-suffix*:  
+ *unsigned-suffix long-suffix* opt  
   
- *суффикс\-длинного\-числа суффикс\-числа\-без\-знака*  необ  
+ *long-suffix unsigned-suffix* opt  
   
- *последовательность\-символов\-с*:  
- *c\-символ*  
+ *c-char-sequence*:  
+ *c-char*  
   
- *последовательность\-символов\-с с\-символ*  
+ *c-char-sequence c-char*  
   
- *c\-символ*:  
- Любой член исходной кодировки, кроме *escape\-последовательности* одинарной кавычки \('\), обратной косой черты \(**\\**\) и символа новой строки  
+ *c-char*:  
+ Любой член исходной кодировки, кроме *escape-последовательности* одинарной кавычки ('), обратной косой черты (**\\**) или символа новой строки  
   
- *escape\-последовательность*:  
- *простая\-escape\-последовательность*  
+ *escape-sequence*:  
+ *simple-escape-sequence*  
   
- *восьмеричная\-escape\-последовательность*  
+ *octal-escape-sequence*  
   
- *шестнадцатеричная\-escape\-последовательность*  
+ *hexadecimal-escape-sequence*  
   
- *простая\-escape\-последовательность*: одна из следующих  
- **\\a \\b \\f \\n \\r \\t \\v**  
+ *simple-escape-sequence*: одна из следующих:  
+ **\a \b \f \n \r \t \v**  
   
- **\\' \\" \\\\ \\?**  
+ **\\' \\" \\\ \\?**  
   
- *восьмеричная\-escape\-последовательность*:  
- **\\** *восьмеричная\-цифра*  
+ *octal-escape-sequence*:  
+ **\\** *octal-digit*  
   
- **\\** *восьмеричная\-цифра восьмеричная\-цифра*  
+ **\\** *octal-digit octal-digit*  
   
- **\\** *восьмеричная\-цифра восьмеричная\-цифра восьмеричная\-цифра*  
+ **\\** *octal-digit octal-digit octal-digit*  
   
- *шестнадцатеричная\-escape\-последовательность*:  
- **\\x**  *шестнадцатеричная\-цифра*  
+ *hexadecimal-escape-sequence*:  
+ **\x**  *hexadecimal-digit*  
   
- *шестнадцатеричная\-escape\-последовательность шестнадцатеричная\-цифра*  
+ *hexadecimal-escape-sequence hexadecimal-digit*  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Лексическая грамматика](../c-language/lexical-grammar.md)

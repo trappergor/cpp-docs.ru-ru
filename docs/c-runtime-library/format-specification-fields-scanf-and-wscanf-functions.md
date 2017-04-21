@@ -50,9 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7bfdce500ad9a268947a90f34ce7c48dca23faea
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 77ef83eccc158cb9fff1a9161b5694a4caf62777
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Поля спецификации формата. Функции scanf и wscanf

@@ -1,55 +1,79 @@
 ---
-title: "Члены структур и объединений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ". оператор"
-  - "-> - оператор, члены структур и объединений"
-  - "точка (.) - оператор"
-  - "операторы для выбора членов"
-  - "операторы [C], выбор члена"
-  - "ссылка на члены структур"
-  - "выбор члена структуры"
-  - "члены структуры, создание ссылок"
+title: "Члены структур и объединений | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- member-selection operators
+- structure members, referencing
+- -> operator, structure and union members
+- dot operator (.)
+- referencing structure members
+- . operator
+- operators [C], member selection
+- structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Члены структур и объединений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 31118df209db98435a3b9cfb0c38e17dbd818d01
+ms.lasthandoff: 04/01/2017
 
-Выражение выбора члена ссылается на члены структур и объединений.  Такое выражение имеет значение и тип выбранного члена.  
+---
+# <a name="structure-and-union-members"></a>Члены структур и объединений
+Выражение выбора члена ссылается на члены структур и объединений. Такое выражение имеет значение и тип выбранного члена.  
   
 ```  
   
-        postfix-expression . identifier  
-postfix-expression –> identifier  
+postfix-expression  
+.  
+identifier  
+postfix-expression  
+->  
+identifier  
+  
 ```  
   
  В следующем списке приводится описание двух форм выражений выбора члена.  
   
-1.  В первой форме *postfix\-expression* представляет значение типа `struct` или **union**, а *identifier* именует член указанной структуры или объединения.  Значение операции совпадает с *identifier* и является l\-значением, если *postfix\-expression* является l\-значением.  Дополнительные сведения см. в разделе [Выражения l\-значений и r\-значений](../Topic/L-Value%20and%20R-Value%20Expressions.md).  
+1.  В первой форме *postfix-expression* представляет значение типа `struct` или **union**, а *identifier* именует член указанной структуры или объединения. Значение операции совпадает с *identifier* и является l-значением, если *postfix-expression* является l-значением. Дополнительные сведения см. в разделе [Выражения l-значений и r-значений](../c-language/l-value-and-r-value-expressions.md).  
   
-2.  Во второй форме *postfix\-expression* представляет указатель на структуру или объединение, а *identifier* именует член указанной структуры или объединения.  Это значение совпадает с *identifier* и является l\-значением.  
+2.  Во второй форме *postfix-expression* представляет указатель на структуру или объединение, а *identifier* именует член указанной структуры или объединения. Это значение совпадает с *identifier* и является l-значением.  
   
  Две формы выражений выбора члена оказывают аналогичное влияние.  
   
- Фактически, выражение, включающее оператор выбора члена \(**–\>**\), — это сокращенная версия выражения, использующего точку \(**.**\), если выражение перед точкой включает оператор косвенного обращения \(**\***\), примененный ко значению указателя.  Поэтому  
+ Фактически выражение, включающее оператор выбора члена (**->**), — это сокращенная версия выражения, использующего точку (**.**), если выражение перед точкой включает оператор косвенного обращения (**\***), примененный к значению указателя. Поэтому  
   
 ```  
   
-expression –> identifier  
+expression  
+->  
+identifier  
+  
 ```  
   
  эквивалентно  
@@ -58,13 +82,15 @@ expression –> identifier
   
 (*  
 expression  
-) . identifier  
+) .  
+identifier  
+  
 ```  
   
- если *выражение* — значение указателя.  
+ если *expression* — значение указателя.  
   
-## Примеры  
- Данное объявление структуры представлено в следующих примерах.  Дополнительные сведения об операторе косвенного обращения \(**\***\), используемом в этих примерах, см. в разделе [Операторы косвенного обращения и определения адреса](../c-language/indirection-and-address-of-operators.md).  
+## <a name="examples"></a>Примеры  
+ Данное объявление структуры представлено в следующих примерах. Дополнительные сведения об операторе косвенного обращения (**\***), используемом в этих примерах, см. в разделе [Операторы косвенного обращения и определения адреса](../c-language/indirection-and-address-of-operators.md).  
   
 ```  
 struct pair   
@@ -81,13 +107,13 @@ struct pair
 item.sp = &item;  
 ```  
   
- В приведенном выше примере адрес структуры `item` присваивается члену `sp` структуры.  Это означает, что `item` содержит указатель на себя.  
+ В приведенном выше примере адрес структуры `item` присваивается члену `sp` структуры. Это означает, что `item` содержит указатель на себя.  
   
 ```  
-(item.sp)–>a = 24;  
+(item.sp)->a = 24;  
 ```  
   
- В этом примере выражение указателя `item.sp` используется с оператором выбора члена \(**–\>**\) для присвоения значения члену `a`.  
+ В этом примере выражение указателя `item.sp` используется с оператором выбора члена (**->**) для присвоения значения члену `a`.  
   
 ```  
 list[8].b = 12;  
@@ -95,5 +121,5 @@ list[8].b = 12;
   
  На примере этого оператора показано, как выбрать отдельный член структуры из массива структур.  
   
-## См. также  
- [Операторы для доступа к членам: . и \-\>](../Topic/Member%20Access%20Operators:%20.%20and%20-%3E.md)
+## <a name="see-also"></a>См. также  
+ [Операторы для доступа к членам: . и ->](../cpp/member-access-operators-dot-and.md)
