@@ -1,32 +1,48 @@
 ---
-title: "Ошибка компилятора C2797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2797"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2797"
+title: "Ошибка компилятора C2797 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2797
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Ошибка компилятора C2797
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 5eea0aae37627015f8723835e4e3e1cb0c6d2e94
+ms.lasthandoff: 04/24/2017
 
-Инициализация списка внутри списка инициализатора членов или инициализатора членов нестатических данных не выполнена.  
+---
+# <a name="compiler-error-c2797"></a>Ошибка компилятора C2797
+(Устарело) Инициализация списка внутри списка инициализаторов членов или инициализатора члена нестатических данных не реализован.  
   
- Компилятор C\+\+ в Visual Studio не выполняет инициализацию списков внутри инициализатора членов или инициализатора членов нестатических данных.  До Visual Studio 2013 Update 3 в таких случаях инициализация автоматически преобразовывалась в вызов функции, что могло приводить к получению неверного кода.  В Visual Studio 2013 Update 3 в таких случаях выводится ошибка.  
+ Это предупреждение не используется в Visual Studio 2015. В Visual Studio 2013 и более ранних версий компилятор Visual C++ не реализует инициализация списка внутри списка инициализатора членов или инициализатор члена нестатических данных. До Visual Studio 2013 Update 3 в таких случаях инициализация автоматически преобразовывалась в вызов функции, что могло приводить к получению неверного кода. В Visual Studio 2013 Update 3 в таких случаях выводится ошибка.  
   
  Этот пример создает C2797:  
   
@@ -56,7 +72,7 @@ struct S2 {
   
 ```  
   
- Чтобы устранить эту проблему, используйте явное создание внутренних списков.  Например:  
+ Чтобы устранить эту проблему, используйте явное создание внутренних списков. Например:  
   
 ```  
 #include <vector>  
@@ -82,4 +98,4 @@ struct S {
   
 ```  
   
- \(Компилятор в Visual Studio 2013 делает это неявным образом во всех версиях до Visual Studio 2013 Update 3.\)
+ (Компилятор в Visual Studio 2013 делает это неявным образом во всех версиях до Visual Studio 2013 Update 3.)
