@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ostream/std::ostream
+- ostream/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 caps.latest.revision: 11
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[ostream](#ostream)|[wostream](#wostream)|  
   
-##  <a name="a-nameostreama--ostream"></a><a name="ostream"></a>  ostream  
+##  <a name="ostream"></a>  ostream  
  Создает тип из basic_ostream, специализированного на `char` и `char_traits`, специализированного на `char`.  
   
 ```
@@ -30,7 +33,7 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 ### <a name="remarks"></a>Примечания  
  Этот тип является синонимом класса шаблона [basic_ostream](../standard-library/basic-ostream-class.md), специализированного для элементов типа `char` с признаками символа по умолчанию.  
   
-##  <a name="a-namewostreama--wostream"></a><a name="wostream"></a>  wostream  
+##  <a name="wostream"></a>  wostream  
  Создает тип из basic_ostream, специализированного на `wchar_t` и `char_traits`, специализированного на `wchar_t`.  
   
 ```

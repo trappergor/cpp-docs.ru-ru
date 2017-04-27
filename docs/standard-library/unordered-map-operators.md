@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|-|  
 |[оператор!=](#operator_neq)|[оператор==](#operator_eq_eq)|[оператор!=](#operator_neq_multimap)|[оператор==](#operator_eq_eq_multimap)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Проверяет, не равен ли объект [unordered_map](../standard-library/unordered-map-class.md) в левой части объекту unordered_map в правой части.  
   
 ```
@@ -81,7 +82,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Проверяет, равен ли объект [unordered_map](../standard-library/unordered-map-class.md) в левой части объекту unordered_map в правой части.  
   
 ```
@@ -142,7 +143,7 @@ int main( )
   
  `um2 == um3: false`  
   
-##  <a name="a-nameoperatorneqmultimapa--operator"></a><a name="operator_neq_multimap"></a>  оператор!=  
+##  <a name="operator_neq_multimap"></a>  оператор!=  
  Проверяет, не равен ли объект [unordered_multimap](../standard-library/unordered-multimap-class.md) в левой части объекту unordered_multimap в правой части.  
   
 ```
@@ -204,7 +205,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="a-nameoperatoreqeqmultimapa--operator"></a><a name="operator_eq_eq_multimap"></a>  оператор==  
+##  <a name="operator_eq_eq_multimap"></a>  оператор==  
  Проверяет, равен ли объект [unordered_multimap](../standard-library/unordered-multimap-class.md) в левой части объекту unordered_multimap в правой части.  
   
 ```

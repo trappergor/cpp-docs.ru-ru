@@ -30,26 +30,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cf1442e98cdd7489a395bec211cda1bbb037bae2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 85238c2cf07398bd74040a7d5d3c6c2e6a6b8fc3
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="summary-of-declarations"></a>Общие сведения об объявлениях
 `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list*opt**;**  
+ *declaration-specifiers attribute-seq* <sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**  
   
  /\* *attribute-seq* относится только к системам Microsoft */  
   
  *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers*opt  
+ *storage-class-specifier declaration-specifiers*<sub>opt</sub>  
   
- *type-specifier declaration-specifiers*opt  
+ *type-specifier declaration-specifiers*<sub>opt</sub>  
   
- *type-qualifier declaration-specifiers*opt  
+ *type-qualifier declaration-specifiers*<sub>opt</sub>  
   
  *attribute-seq* :            /\* *attribute-seq* относится только к системам Microsoft \*/  
- *attribute attribute-seq* opt  
+ *attribute attribute-seq* <sub>opt</sub>  
   
  *attribute* : one of      /* Microsoft Specific \*/  
  ||||  
@@ -120,23 +120,23 @@ ms.lasthandoff: 02/24/2017
  `volatile`  
   
  `declarator`:  
- `pointer`opt*direct-declarator*  
+ `pointer`<sub>opt</sub> *direct-declarator*  
   
  *direct-declarator*:  
  *identifier*  
   
  **(**  *declarator*  **)**  
   
- *direct-declarator*  **[**  *constant-expression* opt**]**  
+ *direct-declarator*  **[**  *constant-expression* <sub>opt</sub>**]**  
   
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Декларатор нового стиля \*/  
   
- *direct-declarator*  **(**  *identifier-list*opt**)** /* Декларатор устаревшего стиля \*/  
+ *direct-declarator*  **(**  *identifier-list*<sub>opt</sub>**)** /* Декларатор устаревшего стиля \*/  
   
  `pointer`:  
- **\*** *type-qualifier-list*opt  
+ **\*** *type-qualifier-list*<sub>opt</sub>  
   
- **\*** *type-qualifier-list*opt`pointer`  
+ **\*** *type-qualifier-list*<sub>opt</sub>`pointer`  
   
  *parameter-type-list*:                           /\* Список параметров \*/  
  *parameter-list*  
@@ -154,7 +154,7 @@ ms.lasthandoff: 02/24/2017
  *type-qualifier-list type-qualifier*  
   
  *enum-specifier*:  
- **enum**  *identifier*opt**{** *enumerator-list* **}**  
+ **enum**  *identifier*<sub>opt</sub>**{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/24/2017
  *identifier*  
   
  *спецификатор-структуры-или-объединения*:  
- *struct-or-union identifier*opt**{** *struct-declaration-list* **}** *struct-or-union identifier*  
+ *struct-or-union identifier*<sub>opt</sub>**{** *struct-declaration-list* **}** *struct-or-union identifier*  
   
  *структура-или-объединение*:  
  **struct**  
@@ -188,9 +188,9 @@ ms.lasthandoff: 02/24/2017
  *список-спецификаторов-и-квалификаторов список-деклараторов-структуры* **;**  
   
  *список-спецификаторов-и-квалификаторов*:  
- *type-specifier specifier-qualifier-list*opt  
+ *type-specifier specifier-qualifier-list*<sub>opt</sub>  
   
- *type-qualifier specifier-qualifier-list*opt  
+ *type-qualifier specifier-qualifier-list*<sub>opt</sub>  
   
  *список-деклараторов-структуры*:  
  *struct-declarator struct-declarator-list*  **,**  *struct-declarator*  
@@ -198,12 +198,12 @@ ms.lasthandoff: 02/24/2017
  *декларатор-структуры*:  
  *declarator*  
   
- *type-specifier declarator*opt**:** *constant-expression*  
+ *type-specifier declarator*<sub>opt</sub>**:** *constant-expression*  
   
  *parameter-declaration*:  
  *declaration-specifiers declarator* /* Именованный декларатор \*/  
   
- *declaration-specifiers abstract-declarator*opt**/\*** Анонимный декларатор **\*/**  
+ *declaration-specifiers abstract-declarator*<sub>opt</sub>**/\*** Анонимный декларатор **\*/**  
   
  *identifier-list*: **/\*** Для декларатора устаревшего стиля **\* /**  
  *identifier*  
@@ -213,14 +213,14 @@ ms.lasthandoff: 02/24/2017
  *abstract-declarator*: **/\*** Используется с анонимными деклараторами **\*/**  
  *pointer*  
   
- `pointer`opt*direct-abstract-declarator*  
+ `pointer`<sub>opt</sub>*direct-abstract-declarator*  
   
  *direct-abstract-declarator*:  
  **(**  *abstract-declarator*  **)**  
   
- *direct-abstract-declarator*opt**[** *constant-expression*opt**]**  
+ *direct-abstract-declarator*<sub>opt</sub>**[** *constant-expression*<sub>opt</sub>**]**  
   
- *direct-abstract-declarator*opt**(** *parameter-type-list* opt**)**  
+ *direct-abstract-declarator*<sub>opt</sub>**(** *parameter-type-list* <sub>opt</sub>**)**  
   
  *initializer*:  
  *assignment-expression*  
@@ -235,13 +235,13 @@ ms.lasthandoff: 02/24/2017
  *initializer-list*  **,**  *initializer*  
   
  *type-name*:  
- *specifier-qualifier-list abstract-declarator*opt  
+ *specifier-qualifier-list abstract-declarator*<sub>opt</sub>  
   
  *typedef-name*:  
  *identifier*  
   
  *extended-decl-modifier-seq*:/\*    Относится только к системам Microsoft \*/  
- *extended-decl-modifier*opt  
+ *extended-decl-modifier*<sub>opt</sub>  
   
  *extended-decl-modifier-seq extended-decl-modifier*  
   

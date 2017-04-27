@@ -14,6 +14,8 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
+dev_langs:
+- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
@@ -30,7 +32,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[оператор&lt;=](#operator_lt__eq)|  
 |[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Сравнение различных объектов на неравенство.  
   
 ```  
@@ -147,7 +149,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Сравнение "меньше, чем" для различных объектов.  
   
 ```  
@@ -255,7 +257,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  оператор&lt;&lt;  
+##  <a name="operator_lt__lt_"></a>  оператор&lt;&lt;  
  Вставляет в поток sub_match.  
   
 ```  
@@ -313,7 +315,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Сравнение "меньше или равно" для различных объектов.  
   
 ```  
@@ -421,7 +423,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Сравнение различных объектов на равенство.  
   
 ```  
@@ -546,7 +548,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Сравнение "больше, чем" для различных объектов.  
   
 ```  
@@ -654,7 +656,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Сравнение "больше или равно" для различных объектов.  
   
 ```  

@@ -1,47 +1,63 @@
 ---
-title: "Постфиксные операторы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "операторы [C], постфикс"
-  - "постфиксные операторы"
+title: "Постфиксные операторы | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C], postfix
+- postfix operators
 ms.assetid: 76260011-1624-484e-8bef-72ae7ab556cc
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Постфиксные операторы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d456c0eb3add4fbcb7c968d3309625157922051
+ms.lasthandoff: 04/01/2017
 
-Постфиксные операторы имеют самый высокий приоритет \(наиболее тесную привязки\) в вычислении выражений.  
+---
+# <a name="postfix-operators"></a>Постфиксные операторы
+Постфиксные операторы имеют самый высокий приоритет (наиболее тесную привязки) в вычислении выражений.  
   
-## Синтаксис  
- *постфиксное\-выражение*:  
- *основное\-выражение*  
+## <a name="syntax"></a>Синтаксис  
+ *postfix-expression*:  
+ *primary-expression*  
   
- *постфиксное\-выражение*  **\[**  *выражение*  **\]**  
+ *postfix-expression*  **[**  *expression*  **]**  
   
- *постфиксное\-выражение*  **\(**  *список\-выражений\-аргумента*  необ **\)**  
+ *postfix-expression*  **(**  *argument-expression-list* opt**)**  
   
- *постфиксное\-выражение*  **.**  *идентификатор*  
+ *postfix-expression*  **.**  *identifier*  
   
- *постфиксное\-выражение*  **–\>**  *идентификатор*  
+ *postfix-expression*  **->**  *identifier*  
   
- *постфиксное\-выражение*  **\+\+**  
+ *postfix-expression*  **++**  
   
- *постфиксное\-выражение*  **––**  
+ *postfix-expression*  **--**  
   
  Операторы на этом уровне приоритета являются индексами массива, функциональными вызовами, структурными элементами и членами объединений, а также постфиксными операторами приращения и уменьшения.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Операторы в C](../c-language/c-operators.md)

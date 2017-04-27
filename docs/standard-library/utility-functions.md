@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get Function &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a>  exchange  
+##  <a name="exchange"></a>  exchange  
  **(C++14)** Назначает новое значение объекту и возвращает его старое значение.  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a>  forward  
+##  <a name="forward"></a>  forward  
  Условно приводит свой аргумент к ссылке rvalue, если аргумент представляет собой rvalue или ссылку rvalue. Это восстанавливает присущие rvalue характеристики аргумента для функции пересылки для обеспечения точной пересылки.  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  Восстановление присущих rvalue характеристик исходного значения аргумента для выполнения разрешения перегрузки известно как *точная пересылка*. Точная пересылка позволяет шаблонной функции принимать аргумент любого ссылочного типа и восстановить его присущие rvalue характеристики, когда это необходимо для правильного разрешения перегрузки. С помощью точной пересылки можно сохранять семантику перемещения для значений rvalue и избегать необходимости предоставления перегрузок функциям, которые отличаются только ссылочным типом их аргументов.  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a>  get  
+##  <a name="get"></a>  get  
  Получает элемент из объекта `pair` по позиции индекса или по типу.  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a>  make_pair  
+##  <a name="make_pair"></a>  make_pair  
  Функция шаблона, которую можно использовать для построения объектов типа `pair`, где типы компонентов автоматически выбираются на основе типов данных, переданных в качестве параметров.  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>Пример  
   Пример использования вспомогательной функции `make_pair` для объявления и инициализации пары см. в разделе [Структура pair](../standard-library/pair-structure.md).  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a>  move  
+##  <a name="move"></a>  move  
  Безусловно приводит свой аргумент к ссылке rvalue, тем самым указывая, что его можно переместить, если его тип допускает перемещения.  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  Если значение, переданное в `Arg`, является ссылкой lvalue, то есть его имя или адрес можно получить, при перемещении оно становится недействительным. Не создавайте ссылки на значение, переданное в `Arg`, по имени или адресу после перемещения.  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Меняет местами элементы двух объектов [структуры pair](../standard-library/pair-structure.md).  
   
 ```

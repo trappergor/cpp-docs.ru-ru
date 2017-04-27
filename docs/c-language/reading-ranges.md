@@ -30,13 +30,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: be2c2f555ab004cbb48310d5ad4a6897bd15d408
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0892c38d6448ed28a309c8c9864d78dc9aeb4a28
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="reading-ranges"></a>Диапазоны чтения
-**ANSI 4.9.6.2** Интерпретация символа дефиса (–), который не является ни первым, ни последним символом в списке сканирования для преобразования % [ в функции `fscanf`  
+**ANSI 4.9.6.2** Интерпретация символа дефиса (-), который не является ни первым, ни последним символом в списке сканирования для преобразования % [ в функции `fscanf`  
   
  В следующей строке  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/24/2017
 fscanf( fileptr, "%[A-Z]", strptr);  
 ```  
   
- считывается любое количество символов в диапазоне A-Z в строке, на которую указывает `strptr`.  
+ считывается любое количество символов в диапазоне A–Z в строке, на которую указывает `strptr`.  
   
 ## <a name="see-also"></a>См. также  
  [Функции библиотеки](../c-language/library-functions.md)

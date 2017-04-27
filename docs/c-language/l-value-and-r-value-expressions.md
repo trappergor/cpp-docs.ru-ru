@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6128a335f01fd859f1445c0b841ddfd345a28c3c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cc967b4f1e5fbcbd1d9261b4dbb2d71dfcd536e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="l-value-and-r-value-expressions"></a>Выражения L-Value и R-Value
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/24/2017
   
 -   Выражение нижнего индекса (**[ ]**), результатом которого не является массив.  
   
--   Выражение выбора члена (**–>** или **.**).  
+-   Выражение выбора члена (**->** или **.**)  
   
 -   Унарное косвенное выражение (**\***), которое не ссылается на массив.  
   

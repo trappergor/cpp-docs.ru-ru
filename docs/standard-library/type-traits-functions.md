@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+- type_traits/std::is_copy_assignable
+- type_traits/std::is_copy_constructible
+- type_traits/std::is_default_constructible
+- type_traits/std::is_move_assignable
+- type_traits/std::is_move_constructible
+- type_traits/std::is_nothrow_move_assignable
+- type_traits/std::is_trivially_copy_assignable
+- type_traits/std::is_trivially_move_assignable
+- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|  
 |[is_trivially_move_constructible](#is_trivially_move_constructible)|  
   
-##  <a name="a-nameisassignablea--isassignable"></a><a name="is_assignable"></a>  is_assignable  
+##  <a name="is_assignable"></a>  is_assignable  
  Проверяет, можно ли назначить значение типа `From` типу `To`.  
   
 ```  
@@ -41,7 +52,7 @@ struct is_assignable;
 ### <a name="remarks"></a>Примечания  
  Невычисленное выражение `declval<To>() = declval<From>()` должно иметь правильный формат. `From` и `To` должны быть полными типами, `void`, или массивами с неизвестной границей.  
   
-##  <a name="a-nameiscopyassignablea--iscopyassignable"></a><a name="is_copy_assignable"></a>  is_copy_assignable  
+##  <a name="is_copy_assignable"></a>  is_copy_assignable  
  Проверяет, может ли тип быть скопирован при присвоении значения.  
   
 ```  
@@ -56,7 +67,7 @@ struct is_copy_assignable;
 ### <a name="remarks"></a>Примечания  
  Экземпляр предиката типа содержит значение true, если тип `Ty` является классом, имеющим оператор присваивания копированием, в противном случае — значение false. Эквивалентно is_assignable\<Ty&, const Ty&>.  
   
-##  <a name="a-nameiscopyconstructiblea--iscopyconstructible"></a><a name="is_copy_constructible"></a>  is_copy_constructible  
+##  <a name="is_copy_constructible"></a>  is_copy_constructible  
  Проверяет, есть ли у типа конструктор копии.  
   
 ```  
@@ -106,7 +117,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-##  <a name="a-nameisdefaultconstructiblea--isdefaultconstructible"></a><a name="is_default_constructible"></a>  is_default_constructible  
+##  <a name="is_default_constructible"></a>  is_default_constructible  
  Проверяет, есть ли у типа конструктор по умолчанию.  
   
 ```  
@@ -156,7 +167,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-##  <a name="a-nameismoveassignablea--ismoveassignable"></a><a name="is_move_assignable"></a>  is_move_assignable  
+##  <a name="is_move_assignable"></a>  is_move_assignable  
  Проверяет, является ли тип перемещаемым при присваивании.  
   
 ```  
@@ -171,7 +182,7 @@ struct is_move_assignable;
 ### <a name="remarks"></a>Примечания  
  Тип является тип присваиваемым при перемещении, если ссылку rvalue на тип можно присвоить ссылке на тип. Предикат типа эквивалентен `is_assignable<T&, T&&>`. Перемещаемые при присваивании типы включают ссылочные скалярные типы и типы классов, в которых есть созданные компилятором или определяемые пользователем операторы присваивания.  
   
-##  <a name="a-nameismoveconstructiblea--ismoveconstructible"></a><a name="is_move_constructible"></a>  is_move_constructible  
+##  <a name="is_move_constructible"></a>  is_move_constructible  
  Проверяет, имеет ли тип конструктор перемещения.  
   
 ```  
@@ -186,7 +197,7 @@ struct is_move_constructible;
 ### <a name="remarks"></a>Примечания  
  Предикат типа, результатом вычисления которого будет значение true, если тип `T` может быть создан с помощью операции перемещения. Этот предикат эквивалентен `is_constructible<T, T&&>`.  
   
-##  <a name="a-nameisnothrowmoveassignablea--isnothrowmoveassignable"></a><a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
+##  <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
  Проверяет, имеет ли тип оператор присваивания перемещения **nothrow**.  
   
 ```  
@@ -201,7 +212,7 @@ struct is_nothrow_move_assignable;
 ### <a name="remarks"></a>Примечания  
  Экземпляр предиката типа содержит значение true, если тип `Ty` имеет оператор присваивания перемещения nothrow; в противном случае — значение false.  
   
-##  <a name="a-nameistriviallycopyassignablea--istriviallycopyassignable"></a><a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
+##  <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
  Проверяет, есть ли у типа тривиальный оператор присваивания копии.  
   
 ```  
@@ -218,7 +229,7 @@ struct is_trivially_copy_assignable;
   
  Конструктор присваивания для класса `T` является тривиальным, если он предоставляется неявно, класс `T` не имеет виртуальных функций, класс `T` не имеет виртуальных базовых классов; классы для всех нестатических членов класса типа "класс" имеют тривиальные операторы присваивания, классы для всех нестатических членов типа "массив" также имеют тривиальные операторы присваивания.  
   
-##  <a name="a-nameistriviallymoveassignablea--istriviallymoveassignable"></a><a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
+##  <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
  Проверяет, есть ли у типа тривиальный оператор присваивания перемещением.  
   
 ```  
@@ -245,7 +256,7 @@ struct is_trivially_move_assignable;
   
  классы всех нестатических элементов данных массива типов класса имеют тривиальные операторы присваивания перемещением.  
   
-##  <a name="a-nameistriviallymoveconstructiblea--istriviallymoveconstructible"></a><a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
+##  <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
  Проверяет, есть ли у типа тривиальный конструктор перемещения.  
   
 ```  

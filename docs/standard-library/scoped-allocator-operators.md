@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[оператор!=](#operator_neq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Сравнивает два объекта `scoped_allocator_adaptor`, чтобы определить их неравенство.  
   
 ```cpp  
@@ -40,7 +41,7 @@ bool operator!=(
 ### <a name="return-value"></a>Возвращаемое значение  
  `!(left == right)`  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Сравнивает два объекта `scoped_allocator_adaptor`, чтобы определить, равны ли они.  
   
 ```cpp  

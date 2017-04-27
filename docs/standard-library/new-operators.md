@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::operator delete
+- new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
@@ -21,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |[Оператор delete](#operator_delete)|[Оператор delete[]](#operator_delete_arr)|[Оператор new](#operator_new)|  
 |[Оператор new[]](#operator_new_arr)|  
   
-##  <a name="a-nameoperatordeletea--operator-delete"></a><a name="operator_delete"></a>  Оператор delete  
+##  <a name="operator_delete"></a>  Оператор delete  
  Функция, вызываемая с помощью выражения delete для отмены выделения хранилища для отдельных объектов.  
   
 ```
@@ -50,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>Пример  
   См. раздел [Оператор new](../standard-library/new-operators.md#operator_new) с примером использования `operator delete`.  
   
-##  <a name="a-nameoperatordeletearra--operator-delete"></a><a name="operator_delete_arr"></a>  Оператор delete[]  
+##  <a name="operator_delete_arr"></a>  Оператор delete[]  
  Функция, вызываемая с помощью выражения delete для отмены выделения хранилища для массива объектов.  
   
 ```
@@ -77,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>Пример  
   См. раздел [Оператор new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) с примерами использования `operator delete[]`.  
   
-##  <a name="a-nameoperatornewa--operator-new"></a><a name="operator_new"></a>  Оператор new  
+##  <a name="operator_new"></a>  Оператор new  
  Функция вызывается выражением new для выделения памяти для отдельных объектов.  
   
 ```
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatornewarra--operator-new"></a><a name="operator_new_arr"></a>  Оператор new[]  
+##  <a name="operator_new_arr"></a>  Оператор new[]  
  Функция выделения, вызываемая выражением new для выделения памяти для массива объектов.  
   
 ```

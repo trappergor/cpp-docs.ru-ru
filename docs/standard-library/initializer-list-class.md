@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - C++
+f1_keywords:
+- initializer_list/std::initializer_list::initializer_list
+- initializer_list/std::initializer_list::begin
+- initializer_list/std::initializer_list::end
+- initializer_list/std::initializer_list::size
 ms.assetid: 1f2c0ff4-5636-4f79-b008-e75426e3d2ab
 caps.latest.revision: 17
 author: corob-msft
@@ -91,7 +96,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
  **Пространство имен:** std  
   
-##  <a name="a-nameinitializerlistbegina--initializerlistbegin"></a><a name="initializer_list__begin"></a>  initializer_list::begin  
+##  <a name="initializer_list__begin"></a>  initializer_list::begin  
  Возвращает указатель на первый элемент в `initializer_list`.  
   
 ```  
@@ -103,7 +108,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameinitializerlistenda--initializerlistend"></a><a name="initializer_list__end"></a>  initializer_list::end  
+##  <a name="initializer_list__end"></a>  initializer_list::end  
  Возвращает указатель на позицию, следующую за последним элементом в `initializer list`.  
   
 ```  
@@ -113,7 +118,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на позицию, следующую за последним элементом в списке. Если список пуст, он идентичен указателю на первый элемент в списке.  
   
-##  <a name="a-nameinitializerlistinitializerlista--initializerlistinitializerlist"></a><a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
+##  <a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
  Создает объект типа `initializer_list`.  
   
 ```  
@@ -194,7 +199,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="a-nameinitializerlistsizea--initializerlistsize"></a><a name="initializer_list__size"></a>  initializer_list::size  
+##  <a name="initializer_list__size"></a>  initializer_list::size  
  Возвращает количество элементов в списке.  
   
 ```  

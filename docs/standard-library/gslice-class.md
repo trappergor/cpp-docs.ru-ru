@@ -9,10 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::gslice
-- std.gslice
 - gslice
 - valarray/std::gslice
+- valarray/std::gslice::size
+- valarray/std::gslice::start
+- valarray/std::gslice::stride
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +80,7 @@ ms.lasthandoff: 02/24/2017
   
  **Пространство имен:** std  
   
-##  <a name="a-namegslicegslicea--gslicegslice"></a><a name="gslice__gslice"></a>  gslice::gslice  
+##  <a name="gslice__gslice"></a>  gslice::gslice  
  Служебный класс, используемый для определения многомерных срезов valarray.  
   
 ```  
@@ -154,7 +155,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)  
 ```  
   
-##  <a name="a-namegslicesizea--gslicesize"></a><a name="gslice__size"></a>  gslice::size  
+##  <a name="gslice__size"></a>  gslice::size  
  Находит значения массива, указывающие количество элементов в общем срезе valarray.  
   
 ```  
@@ -229,7 +230,7 @@ The size of vaResult is:
  vaGSlice.size ( ) = ( 4 4 ).  
 ```  
   
-##  <a name="a-namegslicestarta--gslicestart"></a><a name="gslice__start"></a>  gslice::start  
+##  <a name="gslice__start"></a>  gslice::start  
  Находит начальный индекс общего среза valarray.  
   
 ```  
@@ -290,7 +291,7 @@ The valarray for vaGSlice is vaResult:
 The index of the first element of vaResult is: 0.  
 ```  
   
-##  <a name="a-namegslicestridea--gslicestride"></a><a name="gslice__stride"></a>  gslice::stride  
+##  <a name="gslice__stride"></a>  gslice::stride  
  Находит расстояние между элементами в общем срезе valarray.  
   
 ```  

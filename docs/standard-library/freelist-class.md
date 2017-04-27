@@ -11,8 +11,9 @@ ms.topic: article
 f1_keywords:
 - stdext::freelist
 - freelist
-- stdext.freelist
 - allocators/stdext::freelist
+- allocators/stdext::freelist::pop
+- allocators/stdext::freelist::push
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class freelist
   
  **Пространство имен:** stdext  
   
-##  <a name="a-namefreelistfreelista--freelistfreelist"></a><a name="freelist__freelist"></a>  freelist::freelist  
+##  <a name="freelist__freelist"></a>  freelist::freelist  
  Создает объект типа `freelist`.  
   
 ```
@@ -90,7 +91,7 @@ freelist();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namefreelistpopa--freelistpop"></a><a name="freelist__pop"></a>  freelist::pop  
+##  <a name="freelist__pop"></a>  freelist::pop  
  Удаляет первый блок памяти из свободного списка.  
   
 ```
@@ -103,7 +104,7 @@ void *pop();
 ### <a name="remarks"></a>Примечания  
  Функция-член возвращает `NULL`, если список пуст. В противном случае удаляет первый блок памяти из списка.  
   
-##  <a name="a-namefreelistpusha--freelistpush"></a><a name="freelist__push"></a>  freelist::push  
+##  <a name="freelist__push"></a>  freelist::push  
  Добавляет блок памяти в список.  
   
 ```

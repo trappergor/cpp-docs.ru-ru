@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
 |[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="operator_neq"></a>  оператор!=  
  Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.  
   
 ```
@@ -67,7 +68,7 @@ The deques are not equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="operator_lt_"></a>  оператор&lt;  
  Проверяет, меньше ли объект deque слева от оператора объекта deque справа от оператора.  
   
 ```
@@ -117,7 +118,7 @@ Deque c1 is less than deque c2.
 *\   
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="operator_lt__eq"></a>  оператор&lt;=  
  Проверяет, меньше или равен объект deque слева от оператора объекту deque справа от оператора.  
   
 ```
@@ -168,7 +169,7 @@ Deque c1 is less than or equal to deque c2.
   
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="operator_eq_eq"></a>  оператор==  
  Проверяет равенство объекта deque слева от оператора объекту deque справа от оператора.  
   
 ```
@@ -222,7 +223,7 @@ The deques are not equal.
   
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="operator_gt_"></a>  оператор&gt;  
  Проверяет, больше ли объект deque слева от оператора объекта deque справа от оператора.  
   
 ```
@@ -274,7 +275,7 @@ Deque c1 is greater than deque c2.
   
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="operator_gt__eq"></a>  оператор&gt;=  
  Проверяет, больше или равен ли объект deque слева от оператора объекту deque справа от оператора.  
   
 ```

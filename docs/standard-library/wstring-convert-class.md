@@ -9,12 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- cvt.wstring_convert
 - wstring_convert
 - stdext::cvt::wstring_convert
 - cvt::wstring_convert
 - wstring/stdext::cvt::wstring_convert
-- stdext.cvt.wstring_convert
+- locale/std::wstring_convert::byte_string
+- locale/std::wstring_convert::wide_string
+- locale/std::wstring_convert::state_type
+- locale/std::wstring_convert::int_type
+- locale/std::wstring_convert::from_bytes
+- locale/std::wstring_convert::to_bytes
+- locale/std::wstring_convert::converted
+- locale/std::wstring_convert::state
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +111,7 @@ class wstring_convert
   
  **Пространство имен:** std  
   
-##  <a name="a-namewstringconvertbytestringa--wstringconvertbytestring"></a><a name="wstring_convert__byte_string"></a>  wstring_convert::byte_string  
+##  <a name="wstring_convert__byte_string"></a>  wstring_convert::byte_string  
  Тип, представляющий однобайтную строку.  
   
 ```
@@ -115,7 +121,7 @@ typedef std::basic_string<char> byte_string;
 ### <a name="remarks"></a>Примечания  
  Тип является синонимом `std::basic_string<char>`.  
   
-##  <a name="a-namewstringconvertconverteda--wstringconvertconverted"></a><a name="wstring_convert__converted"></a>  wstring_convert::converted  
+##  <a name="wstring_convert__converted"></a>  wstring_convert::converted  
  Возвращает количество успешных преобразований.  
   
 ```
@@ -128,7 +134,7 @@ size_t converted() const;
 ### <a name="remarks"></a>Примечания  
  Число успешных преобразований хранится в объекте счетчика преобразований.  
   
-##  <a name="a-namewstringconvertfrombytesa--wstringconvertfrombytes"></a><a name="wstring_convert__from_bytes"></a>  wstring_convert::from_bytes  
+##  <a name="wstring_convert__from_bytes"></a>  wstring_convert::from_bytes  
  Преобразует строку однобайтовых символов в строку двухбайтовых символов.  
   
 ```
@@ -156,7 +162,7 @@ wide_string from_bytes(const char* first, const char* last);
   
  Количество успешно преобразованных входных элементов сохраняется в объекте счетчика преобразования. При отсутствии ошибок преобразования функция-член возвращает преобразованную двухбайтовую строку. В противном случае, если объект был создан с помощью инициализатора сообщения об ошибке в двухбайтовой строке, функция-член возвращает объект сообщения об ошибке в двухбайтовой строке. В противном случае функция-член создает объект класса [range_error](../standard-library/range-error-class.md).  
   
-##  <a name="a-namewstringconvertinttypea--wstringconvertinttype"></a><a name="wstring_convert__int_type"></a>  wstring_convert::int_type  
+##  <a name="wstring_convert__int_type"></a>  wstring_convert::int_type  
  Тип, представляющий целое число.  
   
 ```
@@ -166,7 +172,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 ### <a name="remarks"></a>Примечания  
  Тип является синонимом `wide_string::traits_type::int_type`.  
   
-##  <a name="a-namewstringconvertstatea--wstringconvertstate"></a><a name="wstring_convert__state"></a>  wstring_convert::state  
+##  <a name="wstring_convert__state"></a>  wstring_convert::state  
  Возвращает объект, представляющий состояние преобразования.  
   
 ```
@@ -178,7 +184,7 @@ state_type state() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namewstringconvertstatetypea--wstringconvertstatetype"></a><a name="wstring_convert__state_type"></a>  wstring_convert::state_type  
+##  <a name="wstring_convert__state_type"></a>  wstring_convert::state_type  
  Тип, представляющий состояние преобразования.  
   
 ```
@@ -188,7 +194,7 @@ typedef typename Codecvt::state_type state_type;
 ### <a name="remarks"></a>Примечания  
  Тип описывает объект, который может представлять состояние преобразования. Тип является синонимом `Codecvt::state_type`.  
   
-##  <a name="a-namewstringconverttobytesa--wstringconverttobytes"></a><a name="wstring_convert__to_bytes"></a>  wstring_convert::to_bytes  
+##  <a name="wstring_convert__to_bytes"></a>  wstring_convert::to_bytes  
  Преобразует двухбайтовую строку в однобайтовую.  
   
 ```
@@ -213,7 +219,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
  Число успешно преобразованных входных элементов сохраняется в объекте счетчика преобразований. При отсутствии ошибок преобразования, функция-член возвращает преобразованную однобайтовую строку. В противном случае, если объект был создан с помощью инициализатора сообщения об ошибке в однобайтовой строке, функция-член возвращает объект сообщения об ошибке в однобайтовой строке. В противном случае функция-член создает объект класса [range_error](../standard-library/range-error-class.md).  
   
-##  <a name="a-namewstringconvertwidestringa--wstringconvertwidestring"></a><a name="wstring_convert__wide_string"></a>  wstring_convert::wide_string  
+##  <a name="wstring_convert__wide_string"></a>  wstring_convert::wide_string  
  Тип, представляющий двухбайтную строку.  
   
 ```
@@ -223,7 +229,7 @@ typedef std::basic_string<Elem> wide_string;
 ### <a name="remarks"></a>Примечания  
  Тип является синонимом `std::basic_string<Elem>`.  
   
-##  <a name="a-namewstringconvertwstringconverta--wstringconvertwstringconvert"></a><a name="wstring_convert__wstring_convert"></a>  wstring_convert::wstring_convert  
+##  <a name="wstring_convert__wstring_convert"></a>  wstring_convert::wstring_convert  
  Создает объект типа `wstring_convert`.  
   
 ```

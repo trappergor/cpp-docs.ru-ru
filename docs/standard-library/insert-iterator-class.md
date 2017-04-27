@@ -9,10 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::insert_iterator
 - iterator/std::insert_iterator
-- std.insert_iterator
 - insert_iterator
+- iterator/std::insert_iterator::container_type
+- iterator/std::insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class insert_iterator;
   
  **Пространство имен:** std  
   
-##  <a name="a-nameinsertiteratorcontainertypea--insertiteratorcontainertype"></a><a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
+##  <a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
  Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.  
   
 ```
@@ -126,7 +126,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorinsertiteratora--insertiteratorinsertiterator"></a><a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
+##  <a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
  Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.  
   
 ```
@@ -189,7 +189,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatorstara--insertiteratoroperator"></a><a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
+##  <a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
  Разыменовывает итератор вставки и возвращает адреса элемента.  
   
 ```
@@ -246,7 +246,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoraddadda--insertiteratoroperator"></a><a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
+##  <a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
  Увеличивает **insert_iterator** до следующего местоположения, в котором можно сохранить значение.  
   
 ```
@@ -307,7 +307,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoreqa--insertiteratoroperator"></a><a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
+##  <a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
  Вставляет значение в контейнер и возвращает итератор, который обновлен и указывает на новый элемент.  
   
 ```
@@ -386,7 +386,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorreferencea--insertiteratorreference"></a><a name="insert_iterator__reference"></a>  insert_iterator::reference  
+##  <a name="insert_iterator__reference"></a>  insert_iterator::reference  
  Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.  
   
 ```

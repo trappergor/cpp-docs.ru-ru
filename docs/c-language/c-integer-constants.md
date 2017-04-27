@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: abe56015bada3914accabca877b3ba0d155de154
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dab1cb72b5914901808dc51f3a173a62a8924cfb
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-integer-constants"></a>Целочисленные константы в C
@@ -92,7 +92,7 @@ ms.lasthandoff: 02/24/2017
  *64-bit integer-suffix*:  
  **i64**  
   
- Целые константы имеют положительное значение, если перед ними не указан знак "минус" (**–**). Знак "минус" интерпретируется как унарный арифметический оператор изменения знака. (Сведения об этом операторе см. в статье [Unary Arithmetic Operators](../c-language/unary-arithmetic-operators.md) (Унарные арифметические операторы).  
+ Целые константы имеют положительное значение, если перед ними не указан знак "минус" (**-**). Знак "минус" интерпретируется как унарный арифметический оператор изменения знака. (Сведения об этом операторе см. в статье [Unary Arithmetic Operators](../c-language/unary-arithmetic-operators.md) (Унарные арифметические операторы).  
   
  Если целая константа начинается с символов **0x** или **0X**, она является шестнадцатеричной. Если константа начинается с цифры **0**, она восьмеричная. В противном случае считается, что она десятичная.  
   

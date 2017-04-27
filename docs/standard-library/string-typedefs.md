@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- string/std::string
+- string/std::u16string
+- string/std::u32string
+- string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 caps.latest.revision: 12
 manager: ghogen
@@ -21,7 +26,7 @@ ms.lasthandoff: 02/24/2017
 |[string](#string)|[u16string](#u16string)|[u32string](#u32string)|  
 |[wstring](#wstring)|  
   
-##  <a name="a-namestringa--string"></a>строка <a name="string"></a>  
+##  строка <a name="string"></a>  
  Тип, описывающий специализацию класса шаблона [basic_string](../standard-library/basic-string-class.md) элементами типа `char`.  
   
  Другие определения типов, описывающие специализацию `basic_string`, включают [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) и [u32string](../standard-library/string-typedefs.md#u32string).  
@@ -41,7 +46,7 @@ basic_string<char> str("");
   
  Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
   
-##  <a name="a-nameu16stringa--u16string"></a><a name="u16string"></a>  u16string  
+##  <a name="u16string"></a>  u16string  
  Тип, описывающий специализацию класса шаблона [basic_string](../standard-library/basic-string-class.md) элементами типа `char16_t`.  
   
  Другие определения типов, описывающие специализацию `basic_string`, включают [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string) и [u32string](../standard-library/string-typedefs.md#u32string).  
@@ -53,7 +58,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 ### <a name="remarks"></a>Примечания  
  Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
   
-##  <a name="a-nameu32stringa--u32string"></a><a name="u32string"></a>  u32string  
+##  <a name="u32string"></a>  u32string  
  Тип, описывающий специализацию класса шаблона [basic_string](../standard-library/basic-string-class.md) элементами типа `char32_t`.  
   
  Другие определения типов, описывающие специализацию `basic_string`, включают [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) и [wstring](../standard-library/string-typedefs.md#wstring).  
@@ -65,7 +70,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 ### <a name="remarks"></a>Примечания  
  Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
   
-##  <a name="a-namewstringa--wstring"></a><a name="wstring"></a>  wstring  
+##  <a name="wstring"></a>  wstring  
  Тип, описывающий специализацию класса шаблона [basic_string](../standard-library/basic-string-class.md) элементами типа `wchar_t`.  
   
  Другие определения типов, описывающие специализацию `basic_string`, включают [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) и [u32string](../standard-library/string-typedefs.md#u32string).  
