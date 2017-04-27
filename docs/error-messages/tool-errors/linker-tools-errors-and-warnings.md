@@ -1,30 +1,53 @@
 ---
-title: "Ошибки и предупреждения инструментов компоновщика | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ошибки [C++]"
-  - "ошибки [C++], компоновщик"
-  - "компоновщик [C++], ошибки и предупреждения"
+title: "Ошибки и предупреждения средств компоновщика | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- errors [C++]
+- linker [C++], errors and warnings
+- errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Ошибки и предупреждения инструментов компоновщика
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
+ms.lasthandoff: 04/24/2017
 
-Эти ошибки и предупреждения создаются программами LINK, LIB, DUMPBIN и EDITBIN.  Чтобы получить справку по конкретному сообщению об ошибке, следует щелкнуть мышью номер ошибки в окне вывода, нажать клавишу F1 и ввести номер ошибки в поле индекса **Найти** или щелкнуть расположенную ниже ссылку.  
+---
+# <a name="linker-tools-errors-and-warnings"></a>Ошибки и предупреждения инструментов компоновщика
+ССЫЛКА, LIB, DUMPBIN и EDITBIN создавать эти ошибки и предупреждения. Чтобы получить справку по конкретному сообщению об ошибке, следует щелкнуть номер ошибки в окне вывода и нажать клавишу F1, ввести номер ошибки в **искать** в индексе либо щелкнуть ссылку ниже.  
+  
+> [!NOTE]
+>  Не каждый [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ошибку или предупреждение документируется в MSDN. Во многих случаях диагностическое сообщение предоставляет все информацию, которая доступна. Если вы считаете, что сообщение об ошибке требует дополнительного объяснения, сообщите нам об этом. Можно использовать форму обратной связи на этой странице или перейти к строке меню в Visual Studio и выберите **справки**, **сообщения об ошибке**, или вы можете отправить отчет предложений или ошибку на [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+Может оказаться дополнительную помощь для ошибок и предупреждений на открытых форумах MSDN. [Языка Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) — форум для вопросов и обсуждения о [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] синтаксисом и компилятором языка. [Visual C++ Общие](http://go.microsoft.com/fwlink/?LinkId=158194) — форум для вопросов о [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , которые не обсуждаются на других форумах. Кроме того, возможно справки об ошибках и предупреждения на [переполнения стека](http://stackoverflow.com/).  
+  
+## <a name="in-this-section"></a>Содержание раздела
   
  [Ошибка средств компоновщика LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)  
   
@@ -36,7 +59,7 @@ caps.handback.revision: 15
   
  [Ошибка средств компоновщика LNK1107](../../error-messages/tool-errors/linker-tools-error-lnk1107.md)  
   
- [Ошибка средств компоновщика LNK1112](../Topic/Linker%20Tools%20Error%20LNK1112.md)  
+ [Ошибка средств компоновщика LNK1112](../../error-messages/tool-errors/linker-tools-error-lnk1112.md)  
   
  [Ошибка средств компоновщика LNK1113](../../error-messages/tool-errors/linker-tools-error-lnk1113.md)  
   
@@ -52,19 +75,19 @@ caps.handback.revision: 15
   
  [Ошибка средств компоновщика LNK1141](../../error-messages/tool-errors/linker-tools-error-lnk1141.md)  
   
- [Ошибка средств компоновщика LNK1143](../Topic/Linker%20Tools%20Error%20LNK1143.md)  
+ [Ошибка средств компоновщика LNK1143](../../error-messages/tool-errors/linker-tools-error-lnk1143.md)  
   
  [Ошибка средств компоновщика LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)  
   
- [Ошибка средств компоновщика LNK1158](../Topic/Linker%20Tools%20Error%20LNK1158.md)  
+ [Ошибка средств компоновщика LNK1158](../../error-messages/tool-errors/linker-tools-error-lnk1158.md)  
   
- [Ошибка средств компоновщика LNK1164](../Topic/Linker%20Tools%20Error%20LNK1164.md)  
+ [Ошибка средств компоновщика LNK1164](../../error-messages/tool-errors/linker-tools-error-lnk1164.md)  
   
  [Ошибка средств компоновщика LNK1166](../../error-messages/tool-errors/linker-tools-error-lnk1166.md)  
   
  [Ошибка средств компоновщика LNK1168](../../error-messages/tool-errors/linker-tools-error-lnk1168.md)  
   
- [Ошибка средств компоновщика LNK1169](../Topic/Linker%20Tools%20Error%20LNK1169.md)  
+ [Ошибка средств компоновщика LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md)  
   
  [Ошибка средств компоновщика LNK1179](../../error-messages/tool-errors/linker-tools-error-lnk1179.md)  
   
@@ -98,23 +121,23 @@ caps.handback.revision: 15
   
  [Ошибка средств компоновщика LNK1241](../../error-messages/tool-errors/linker-tools-error-lnk1241.md)  
   
- [Ошибка средств компоновщика LNK1245](../Topic/Linker%20Tools%20Error%20LNK1245.md)  
+ [Ошибка средств компоновщика LNK1245](../../error-messages/tool-errors/linker-tools-error-lnk1245.md)  
   
  [Ошибка средств компоновщика LNK1248](../../error-messages/tool-errors/linker-tools-error-lnk1248.md)  
   
- [Ошибка средств компоновщика LNK1256](../Topic/Linker%20Tools%20Error%20LNK1256.md)  
+ [Ошибка средств компоновщика LNK1256](../../error-messages/tool-errors/linker-tools-error-lnk1256.md)  
   
- [Ошибка средств компоновщика LNK1264](../Topic/Linker%20Tools%20Error%20LNK1264.md)  
+ [Ошибка средств компоновщика LNK1264](../../error-messages/tool-errors/linker-tools-error-lnk1264.md)  
   
  [Ошибка средств компоновщика LNK1277](../../error-messages/tool-errors/linker-tools-error-lnk1277.md)  
   
  [Ошибка средств компоновщика LNK1282](../../error-messages/tool-errors/linker-tools-error-lnk1282.md)  
   
- [Ошибка средств компоновщика LNK1287](../Topic/Linker%20Tools%20Error%20LNK1287.md)  
+ [Ошибка средств компоновщика LNK1287](../../error-messages/tool-errors/linker-tools-error-lnk1287.md)  
   
  [Ошибка средств компоновщика LNK1296](../../error-messages/tool-errors/linker-tools-error-lnk1296.md)  
   
- [Ошибка средств компоновщика LNK1301](../Topic/Linker%20Tools%20Error%20LNK1301.md)  
+ [Ошибка средств компоновщика LNK1301](../../error-messages/tool-errors/linker-tools-error-lnk1301.md)  
   
  [Ошибка средств компоновщика LNK1302](../../error-messages/tool-errors/linker-tools-error-lnk1302.md)  
   
@@ -132,9 +155,9 @@ caps.handback.revision: 15
   
  [Ошибка средств компоновщика LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md)  
   
- [Ошибка средств компоновщика LNK2001](../Topic/Linker%20Tools%20Error%20LNK2001.md)  
+ [Ошибка средств компоновщика LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)  
   
- [Ошибка средств компоновщика LNK2004](../Topic/Linker%20Tools%20Error%20LNK2004.md)  
+ [Ошибка средств компоновщика LNK2004](../../error-messages/tool-errors/linker-tools-error-lnk2004.md)  
   
  [Ошибка средств компоновщика LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)  
   
@@ -144,9 +167,9 @@ caps.handback.revision: 15
   
  [Ошибка средств компоновщика LNK2013](../../error-messages/tool-errors/linker-tools-error-lnk2013.md)  
   
- [Ошибка средств компоновщика LNK2017](../Topic/Linker%20Tools%20Error%20LNK2017.md)  
+ [Ошибка средств компоновщика LNK2017](../../error-messages/tool-errors/linker-tools-error-lnk2017.md)  
   
- [Ошибка средств компоновщика LNK2019](../Topic/Linker%20Tools%20Error%20LNK2019.md)  
+ [Ошибка средств компоновщика LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)  
   
  [Ошибка средств компоновщика LNK2020](../../error-messages/tool-errors/linker-tools-error-lnk2020.md)  
   
@@ -166,7 +189,7 @@ caps.handback.revision: 15
   
  [Ошибка средств компоновщика LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)  
   
- [Предупреждение средств компоновщика LNK4001](../Topic/Linker%20Tools%20Warning%20LNK4001.md)  
+ [Предупреждение средств компоновщика LNK4001](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md)  
   
  [Предупреждение средств компоновщика LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)  
   
@@ -190,57 +213,57 @@ caps.handback.revision: 15
   
  [Предупреждение средств компоновщика LNK4071](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md)  
   
- [Предупреждение средств компоновщика LNK4073](../Topic/Linker%20Tools%20Warning%20LNK4073.md)  
+ [Предупреждение средств компоновщика LNK4073](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md)  
   
  [Предупреждение средств компоновщика LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)  
   
  [Предупреждение средств компоновщика LNK4076](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md)  
   
- [Предупреждение средств компоновщика LNK4078](../Topic/Linker%20Tools%20Warning%20LNK4078.md)  
+ [Предупреждение средств компоновщика LNK4078](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md)  
   
  [Предупреждение средств компоновщика LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)  
   
- [Предупреждение средств компоновщика LNK4092](../Topic/Linker%20Tools%20Warning%20LNK4092.md)  
+ [Предупреждение средств компоновщика LNK4092](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md)  
   
  [Предупреждение средств компоновщика LNK4096](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md)  
   
  [Предупреждение средств компоновщика LNK4098](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md)  
   
- [Предупреждение средств компоновщика LNK4099](../Topic/Linker%20Tools%20Warning%20LNK4099.md)  
+ [Предупреждение средств компоновщика LNK4099](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md)  
   
  [Предупреждение средств компоновщика LNK4102](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md)  
   
  [Предупреждение средств компоновщика LNK4104](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md)  
   
- [Предупреждение средств компоновщика LNK4105](../Topic/Linker%20Tools%20Warning%20LNK4105.md)  
+ [Предупреждение средств компоновщика LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)  
   
  [Предупреждение средств компоновщика LNK4194](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md)  
   
- [Предупреждение средств компоновщика LNK4197](../Topic/Linker%20Tools%20Warning%20LNK4197.md)  
+ [Предупреждение средств компоновщика LNK4197](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md)  
   
  [Предупреждение средств компоновщика LNK4199](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md)  
   
- [Предупреждение средств компоновщика LNK4200](../Topic/Linker%20Tools%20Warning%20LNK4200.md)  
+ [Предупреждение средств компоновщика LNK4200](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md)  
   
  [Предупреждение средств компоновщика LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)  
   
- [Предупреждение средств компоновщика LNK4205](../Topic/Linker%20Tools%20Warning%20LNK4205.md)  
+ [Предупреждение средств компоновщика LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)  
   
  [Предупреждение средств компоновщика LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)  
   
- [Предупреждение средств компоновщика LNK4210](../Topic/Linker%20Tools%20Warning%20LNK4210.md)  
+ [Предупреждение средств компоновщика LNK4210](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md)  
   
  [Предупреждение средств компоновщика LNK4216](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md)  
   
  [Предупреждение средств компоновщика LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)  
   
- [Предупреждение средств компоновщика LNK4219](../Topic/Linker%20Tools%20Warning%20LNK4219.md)  
+ [Предупреждение средств компоновщика LNK4219](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md)  
   
- [Предупреждение средств компоновщика LNK4220](../Topic/Linker%20Tools%20Warning%20LNK4220.md)  
+ [Предупреждение средств компоновщика LNK4220](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md)  
   
  [Предупреждение средств компоновщика LNK4221](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md)  
   
- [Предупреждение средств компоновщика LNK4222](../Topic/Linker%20Tools%20Warning%20LNK4222.md)  
+ [Предупреждение средств компоновщика LNK4222](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md)  
   
  [Предупреждение средств компоновщика LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)  
   

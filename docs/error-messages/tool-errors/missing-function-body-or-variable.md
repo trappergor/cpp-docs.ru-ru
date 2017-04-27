@@ -1,32 +1,48 @@
 ---
-title: "Отсутствует тело функции или переменная | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "основная часть функции"
-  - "переменные, отсутствует"
+title: "Отсутствует тело функции или переменная | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function body
+- variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Отсутствует тело функции или переменная
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: c80a5626e7f674ddca7d44e94aa8ab64c735c81e
+ms.lasthandoff: 04/24/2017
 
-Компилятор может продолжать работу с прототипом функции без ошибок, но компоновщику не удается распознать вызов адреса, поскольку код функции или переменная интервала зарезервированы.  Эту ошибку не удастся увидеть до создания вызова функции, которую должен разрешить компоновщик.  
+---
+# <a name="missing-function-body-or-variable"></a>Отсутствует тело функции или переменная
+С прототипом функции компилятор может продолжать работу без ошибок, но компоновщик не может разрешить вызов адреса, поскольку код функции или переменная интервала зарезервированы. Эта ошибка не увидят до создания вызова функции, которую должен разрешить компоновщик.  
   
-## Пример  
- В целом, вызов функции приводит к появлению ошибки LNK2019, поскольку наличие прототипа позволяет компилятору считать, что функция существует.  Компоновщик обнаруживает отсутствие функции.  
+## <a name="example"></a>Пример  
+ Вызов функции в основном вызовет ошибку LNK2019, поскольку прототипа позволяет компилятору считать, что функция существует.  Компоновщик обнаруживает, что это не так.  
   
 ```  
 // LNK2019_MFBV.cpp  
@@ -37,8 +53,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- Убедитесь в том, что реализация указанной функции в языке C\+\+ включена для класса, а не только для прототипа в определении класса.  При определении класса за пределами файла заголовка необходимо включить имя класса перед функцией \(`Classname``::``memberfunction`\).  
+## <a name="example"></a>Пример  
+ В C++ убедитесь, что включение реализации определенной функции для класса и не только для прототипа в определении класса. При определении класса за пределами файла заголовка, не забудьте включить имя класса перед функцией (`Classname::memberfunction`).  
   
 ```  
 // LNK2019_MFBV_2.cpp  
@@ -56,5 +72,5 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Ошибка средств компоновщика LNK2019](../Topic/Linker%20Tools%20Error%20LNK2019.md)
+## <a name="see-also"></a>См. также  
+ [Ошибка средств компоновщика LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
