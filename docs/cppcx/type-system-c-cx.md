@@ -136,7 +136,7 @@ caps.handback.revision: 28
  Дополнительные сведения см. в разделе [Делегаты](../cppcx/delegates-c-cx.md).  
   
 ### Исключения  
- В C \+\+\/CX можно перехватить пользовательские типы исключений, типы [std::exception](../Topic/exception%20Class1.md) и [Platform::Exception](../cppcx/platform-exception-class.md).  
+ В C \+\+\/CX можно перехватить пользовательские типы исключений, типы [std::exception](~/standard-library/exception-class.md) и [Platform::Exception](../cppcx/platform-exception-class.md).  
   
  Дополнительные сведения см. в разделе [Исключения](../cppcx/exceptions-c-cx.md).  
   
@@ -146,7 +146,7 @@ caps.handback.revision: 28
  Дополнительные сведения см. в разделе [События](../cppcx/events-c-cx.md).  
   
 ### Приведение  
- C \+\+\/CX поддерживает стандартные операторы приведения типа [static\_cast](../cpp/static-cast-operator.md), [dynamic\_cast](../cpp/dynamic-cast-operator.md) и [reinterpret\_cast](../cpp/reinterpret-cast-operator.md), а также оператор [safe\_cast](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md), относящийся к C \+\+\/CX.  
+ C \+\+\/CX поддерживает стандартные операторы приведения типа [static\_cast](../cpp/static-cast-operator.md), [dynamic\_cast](../cpp/dynamic-cast-operator.md) и [reinterpret\_cast](../cpp/reinterpret-cast-operator.md), а также оператор [safe\_cast](~/windows/safe-cast-cpp-component-extensions.md), относящийся к C \+\+\/CX.  
   
  Дополнительные сведения см. в разделе [Приведение](../cppcx/casting-c-cx.md).  
   

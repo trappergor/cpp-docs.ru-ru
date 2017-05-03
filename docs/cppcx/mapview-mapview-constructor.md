@@ -57,7 +57,7 @@ MapView(::std::initializer_list<
  Тип, предоставляющий объект функции, который может сравнить два значения элементов в качестве ключей сортировки для определения их относительного порядка в объекте MapView.  
   
  `m`  
- Ссылка или [Значения Lvalue и Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) на объект [Класс map](../standard-library/map-class.md), используемый для инициализации текущего объекта MapView.  
+ Ссылка или [Значения Lvalue и Rvalue](http://msdn.microsoft.com/library/a8843344-cccc-40be-b701-b71f7b5cdcaf) на объект [Класс map](../standard-library/map-class.md), используемый для инициализации текущего объекта MapView.  
   
  `first`  
  Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта MapView.  

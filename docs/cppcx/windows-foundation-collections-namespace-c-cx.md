@@ -50,4 +50,4 @@ namespace Windows {
  **Пространство имен:** Windows::Foundation::Collections  
   
 ## См. также  
- [Пространство имен Windows::Foundation](../Topic/Windows::Foundation%20Namespace.md)
+ [Пространство имен Windows::Foundation](http://msdn.microsoft.com/library/96a6b5e0-ddee-4b21-ae4e-da5feeb945c3)

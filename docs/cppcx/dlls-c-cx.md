@@ -21,7 +21,7 @@ caps.handback.revision: 21
 ## DLL компонентов [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]  
  В большинстве случаев при необходимости создания библиотеки DLL для использования в приложении [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)] создавайте такую библиотеку как компонент [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] с помощью шаблона проекта с тем же именем. Можно создать проект компонента [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] для библиотек DLL, содержащих открытые или закрытые типы [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]. К компоненту [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] могут обращаться приложения, написанные на любом языке, совместимом с [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]. По умолчанию в параметрах компилятора для проекта компонента [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] задан ключ **\/ZW**. WINMD\-файл должен иметь одно имя с корневым пространством имен. Например, экземпляр класса с именем A.B.C.MyClass может быть создан, только если он определен в файле метаданных с именем A.winmd, A.B.winmd или A.B.C.winmd. Имя DLL\-файла не обязательно должно соответствовать имени WINMD\-файла.  
   
- Для получения дополнительной информации см. [Создание компонентов среды выполнения Windows в C\+\+](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md).  
+ Для получения дополнительной информации см. [Создание компонентов среды выполнения Windows в C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf).  
   
 #### Указание ссылки на двоичный файл компонента [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] сторонних разработчиков  
   

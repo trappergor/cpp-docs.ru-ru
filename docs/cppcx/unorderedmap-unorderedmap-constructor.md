@@ -106,7 +106,7 @@ UnorderedMap();
  Объект функции, создающий хэш\-значения для ключей. Этому параметру по умолчанию присваивается значение [Класс hash](../Topic/hash%20Class%201.md) для ключевых поддерживаемых этим классом типов.  
   
  `m`  
- Ссылка или [Значения Lvalue и Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) на [std::unordered\_map](../standard-library/unordered-map-class.md), используемый для инициализации текущего объекта UnorderedMap.  
+ Ссылка или [Значения Lvalue и Rvalue](http://msdn.microsoft.com/library/a8843344-cccc-40be-b701-b71f7b5cdcaf) на [std::unordered\_map](../standard-library/unordered-map-class.md), используемый для инициализации текущего объекта UnorderedMap.  
   
  il  
  Список [std::initializer\_list](../standard-library/initializer-list-class.md) объектов [std::pair](../standard-library/pair-structure.md), которые будут использоваться для инициализации сопоставления.  

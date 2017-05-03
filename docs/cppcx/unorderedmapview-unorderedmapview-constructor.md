@@ -100,7 +100,7 @@ UnorderedMapView(
  Тип, предоставляющий объект функции, который может сравнивать два ключа с целью установления их равенства. По умолчанию используется [std::equal\_to\<K\>](../standard-library/equal-to-struct.md).  
   
  `m`  
- Ссылка или [Значения Lvalue и Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) на [std::unordered\_map](../standard-library/unordered-map-class.md), используемое для инициализации UnorderedMapView.  
+ Ссылка или [Значения Lvalue и Rvalue](http://msdn.microsoft.com/library/a8843344-cccc-40be-b701-b71f7b5cdcaf) на [std::unordered\_map](../standard-library/unordered-map-class.md), используемое для инициализации UnorderedMapView.  
   
  `first`  
  Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации UnorderedMapView.  

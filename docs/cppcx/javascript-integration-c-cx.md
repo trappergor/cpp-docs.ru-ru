@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Интеграция с JavaScript (C++/CX)
-См. раздел [Создание компонентов среды выполнения Windows](../Topic/Creating%20Windows%20Runtime%20Components.md).  
+См. раздел [Создание компонентов среды выполнения Windows](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133).  
   
 ## См. также  
  [Взаимодействие с другими языками](../cppcx/interoperating-with-other-languages-c-cx.md)

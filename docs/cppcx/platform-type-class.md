@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Класс Platform::Type
-Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом метода [Object::GetType](../cppcx/object-gettype-method.md) в любом объекте или использованием оператора [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) в имени класса или структуры.  
+Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом метода [Object::GetType](../cppcx/object-gettype-method.md) в любом объекте или использованием оператора [typeid](http://msdn.microsoft.com/library/e9706cae-e7c4-4d6d-b474-646d73df3e70) в имени класса или структуры.  
   
 ## Синтаксис  
   

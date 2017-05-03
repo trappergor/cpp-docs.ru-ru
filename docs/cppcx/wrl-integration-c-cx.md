@@ -19,7 +19,7 @@ caps.handback.revision: 9
 Можно свободно возможность сочетать код [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] с кодом [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)] \([!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\). В одной и той же записи преобразования можно использовать объекты, объявленные с помощью нотации дескриптора объекта [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] \(`^`\) и с помощью нотации интеллектуального указателя [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] \(`ComPtr<T>`\). Однако необходимо вручную обрабатывать возвращаемые значения, а также коды ошибок [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] HRESULT и исключения [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)].  
   
 ## Разработка [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]  
- Дополнительные сведения о разработке и использовании компонентов [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] см. в разделе [Библиотека шаблонов C\+\+ среды выполнения Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md).  
+ Дополнительные сведения о разработке и использовании компонентов [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] см. в разделе [Библиотека шаблонов C\+\+ среды выполнения Windows \(WRL\)](http://msdn.microsoft.com/library/b915afce-553b-44a7-b8dc-0ab601758eb0).  
   
 ## Пример  
  Следующий фрагмент кода демонстрирует использование [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] и [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] для использования классов [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] и анализа файла метаданных.  
