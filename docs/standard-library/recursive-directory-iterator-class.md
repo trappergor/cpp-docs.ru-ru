@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 99e43055e5cb3e391aa3f3a71ea62532d971d139
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0d4325fbe8d4f336f4ca1ac6afe4ba5a96a7172d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="recursivedirectoryiterator-class"></a>Класс recursive_directory_iterator
@@ -194,7 +195,7 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
  Функция пытается перейти к имени следующего файла во вложенной последовательности. В случае успешного выполнения она сохраняет это имя файла в myentry; в противном случае — создает итератор конца последовательности.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** filesystem  
+ **Заголовок:** \<filesystem >  
   
  **Пространство имен:** std::tr2::sys  
   

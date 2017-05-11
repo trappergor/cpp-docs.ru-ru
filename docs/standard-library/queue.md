@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 2e3bdbd8bfe0b288d9f6dec5251ffeff2e3c5f81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8c2f3d928d305baa4fce49eb55ee8c6a65cd794b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
@@ -55,12 +56,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор!=](../standard-library/queue-operators.md#operator_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|  
-|[оператор<](../standard-library/queue-operators.md#operator_lt_)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.|  
-|[оператор\<=](../standard-library/queue-operators.md#operator_lt__eq)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|  
-|[оператор==](../standard-library/queue-operators.md#operator_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|  
-|[оператор>](../standard-library/queue-operators.md#operator_gt_)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.|  
-|[оператор>=](../standard-library/queue-operators.md#operator_gt__eq)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|  
+|[оператор!=](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|  
+|[оператор<](../standard-library/queue-operators.md#op_lt)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.|  
+|[оператор\<=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|  
+|[оператор==](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|  
+|[оператор>](../standard-library/queue-operators.md#op_gt)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.|  
+|[оператор>=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|  
   
 ### <a name="classes"></a>Классы  
   

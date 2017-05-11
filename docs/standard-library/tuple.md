@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
@@ -60,20 +61,20 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор==](../standard-library/tuple-operators.md#operator_eq_eq)|Сравнение объектов `tuple`, равенство|  
-|[оператор!=](../standard-library/tuple-operators.md#operator_neq)|Сравнение объектов `tuple`, неравенство|  
-|[оператор<](../standard-library/tuple-operators.md#operator_lt_)|Сравнение объектов `tuple`, меньше|  
-|[оператор<=](../standard-library/tuple-operators.md#operator_lt__eq)|Сравнение объектов `tuple`, меньше или равно|  
-|[оператор>](../standard-library/tuple-operators.md#operator_gt_)|Сравнение объектов `tuple`, больше|  
-|[оператор>=](../standard-library/tuple-operators.md#operator_gt__eq)|Сравнение объектов `tuple`, больше или равно|  
+|[оператор==](../standard-library/tuple-operators.md#op_eq_eq)|Сравнение объектов `tuple`, равенство|  
+|[оператор!=](../standard-library/tuple-operators.md#op_neq)|Сравнение объектов `tuple`, неравенство|  
+|[оператор<](../standard-library/tuple-operators.md#op_lt)|Сравнение объектов `tuple`, меньше|  
+|[оператор<=](../standard-library/tuple-operators.md#op_lt_eq)|Сравнение объектов `tuple`, меньше или равно|  
+|[оператор>](../standard-library/tuple-operators.md#op_gt)|Сравнение объектов `tuple`, больше|  
+|[оператор>=](../standard-library/tuple-operators.md#op_gt_eq)|Сравнение объектов `tuple`, больше или равно|  
   
 ### <a name="functions"></a>Функции  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get_function)|Возвращает элемент из объекта `tuple`.|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|Создает `tuple` из значений элементов.|  
-|[tie](../standard-library/tuple-functions.md#tie_function)|Создает `tuple` из ссылок на элементы.|  
+|[get](../standard-library/tuple-functions.md#get)|Возвращает элемент из объекта `tuple`.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Создает `tuple` из значений элементов.|  
+|[tie](../standard-library/tuple-functions.md#tie)|Создает `tuple` из ссылок на элементы.|  
   
 ## <a name="see-also"></a>См. также  
  [\<array>](../standard-library/array.md)

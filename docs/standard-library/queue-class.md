@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 0db56597dd5d5ce8b68a45a5b53ce1af370134ee
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="queue-class"></a>Класс queue
@@ -66,7 +67,7 @@ class queue
  Тип базового контейнера, используемый для реализации очереди.  
   
 ## <a name="remarks"></a>Примечания  
- Элементы класса **Type**, заданные в первом параметре-шаблоне объекта очереди, являются синонимами [value_type](#queue__value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром-шаблоном. Класс **Type** должен быть назначаемым, чтобы можно было копировать объекты этого типа и присваивать значения переменным этого типа.  
+ Элементы класса **Type**, заданные в первом параметре-шаблоне объекта очереди, являются синонимами [value_type](#value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром-шаблоном. Класс **Type** должен быть назначаемым, чтобы можно было копировать объекты этого типа и присваивать значения переменным этого типа.  
   
  К подходящим классам базового контейнера для очереди относятся [deque](../standard-library/deque-class.md) и [list](../standard-library/list-class.md), а также любой другой контейнер последовательностей, поддерживающий операции `front`, **back**, `push_back` и `pop_front`. Класс базового контейнера инкапсулирован в адаптер контейнера, который предоставляет только ограниченный набор функций-членов контейнера последовательностей в виде открытого интерфейса.  
   
@@ -84,33 +85,33 @@ class queue
   
 |||  
 |-|-|  
-|[queue](#queue__queue)|Создает `queue`, который является пустым или копией объекта базового контейнера.|  
+|[queue](#queue)|Создает `queue`, который является пустым или копией объекта базового контейнера.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#queue__container_type)|Тип, предоставляющий базовый контейнер для изменения в `queue`.|  
-|[size_type](#queue__size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `queue`.|  
-|[value_type](#queue__value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `queue`.|  
+|[container_type](#container_type)|Тип, предоставляющий базовый контейнер для изменения в `queue`.|  
+|[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `queue`.|  
+|[value_type](#value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `queue`.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[back](#queue__back)|Возвращает ссылку на последний и наиболее недавно добавленный элемент в конец `queue`.|  
-|[empty](#queue__empty)|Проверяет, является ли `queue` пустым.|  
-|[front](#queue__front)|Возвращает ссылку на первый элемент в начале `queue`.|  
-|[pop](#queue__pop)|Удаляет элемент из начала `queue`.|  
-|[push](#queue__push)|Добавляет элемент в конец `queue`.|  
-|[size](#queue__size)|Возвращает количество элементов в контейнере `queue`.|  
+|[back](#back)|Возвращает ссылку на последний и наиболее недавно добавленный элемент в конец `queue`.|  
+|[empty](#empty)|Проверяет, является ли `queue` пустым.|  
+|[front](#front)|Возвращает ссылку на первый элемент в начале `queue`.|  
+|[pop](#pop)|Удаляет элемент из начала `queue`.|  
+|[push](#push)|Добавляет элемент в конец `queue`.|  
+|[size](#size)|Возвращает количество элементов в контейнере `queue`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<queue>  
   
  **Пространство имен:** std  
   
-##  <a name="queue__back"></a>  queue::back  
+##  <a name="back"></a>  queue::back  
  Возвращает ссылку на последний и наиболее недавно добавленный элемент в конце очереди.  
   
 ```  
@@ -153,7 +154,7 @@ int main( )
 }  
 ```  
   
-##  <a name="queue__container_type"></a>  queue::container_type  
+##  <a name="container_type"></a>  queue::container_type  
  Тип, предоставляющий базовый контейнер для изменения.  
   
 ```  
@@ -166,9 +167,9 @@ typedef Container container_type;
  Дополнительные сведения о `Container` см. в разделе "Примечания" документации к [Класс queue](../standard-library/queue-class.md).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [queue](#queue__queue) с примером объявления и использования `container_type`.  
+  См. пример для [queue](#queue) с примером объявления и использования `container_type`.  
   
-##  <a name="queue__empty"></a>  queue::empty  
+##  <a name="empty"></a>  queue::empty  
  Проверяет, пуста ли очередь.  
   
 ```  
@@ -212,7 +213,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="queue__front"></a>  queue::front  
+##  <a name="front"></a>  queue::front  
  Возвращает ссылку на первый элемент в начале очереди.  
   
 ```  
@@ -261,7 +262,7 @@ int main() {
 }  
 ```  
   
-##  <a name="queue__pop"></a>  queue::pop  
+##  <a name="pop"></a>  queue::pop  
  Удаляет элемент из начала очереди.  
   
 ```  
@@ -315,7 +316,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="queue__push"></a>  queue::push  
+##  <a name="push"></a>  queue::push  
  Добавляет элемент в конец queue.  
   
 ```  
@@ -361,7 +362,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue__queue"></a>  queue::queue  
+##  <a name="queue"></a>  queue::queue  
  Создает пустую очередь или очередь — копию базового объекта-контейнера.  
   
 ```  
@@ -425,7 +426,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="queue__size"></a>  queue::size  
+##  <a name="size"></a>  queue::size  
  Возвращает число элементов в очереди.  
   
 ```  
@@ -464,7 +465,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="queue__size_type"></a>  queue::size_type  
+##  <a name="size_type"></a>  queue::size_type  
  Тип целого числа без знака, который может представлять количество элементов в очереди.  
   
 ```  
@@ -475,9 +476,9 @@ typedef typename Container::size_type size_type;
  Тип является синонимом `size_type` базового контейнера, адаптированного очередью.  
   
 ### <a name="example"></a>Пример  
-  См. пример для [queue::front](#queue__front) с примером объявления и использования `size_type`.  
+  См. пример для [queue::front](#front) с примером объявления и использования `size_type`.  
   
-##  <a name="queue__value_type"></a>  queue::value_type  
+##  <a name="value_type"></a>  queue::value_type  
  Тип, представляющий тип объекта, который хранится в виде элемента в очереди.  
   
 ```  

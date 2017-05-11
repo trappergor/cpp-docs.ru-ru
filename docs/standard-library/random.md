@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="quick-tips"></a>Краткие советы  
  Вот несколько советов по использованию `<random>`.  
   
--   В большинстве случаев РГСЧ формируют необработанные значения, которые упорядочиваются распределением. (Исключением служит функция [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle), так как она использует РГСЧ напрямую.)  
+-   В большинстве случаев РГСЧ формируют необработанные значения, которые упорядочиваются распределением. (Исключением служит функция [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), так как она использует РГСЧ напрямую.)  
   
 -   Один экземпляр РГСЧ или распределения не может безопасно вызываться параллельно, так как использование РГСЧ или распределения — это операция изменения. Дополнительные сведения см. в разделе [Потоковая безопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/24/2017
   
  В заголовке можно выбрать различные варианты `<random>`; любой из них предпочтительнее устаревшей функции библиотеки времени выполнения C `rand()`. Для информации о недостатках `rand()` и о том, как `<random>` работает с этими недостатками, см. [это видео](http://go.microsoft.com/fwlink/LinkId=397615).  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> Примеры  
+##  <a name="code"></a> Примеры  
  В следующем примере кода показана генерация случайных чисел; в этом случае пять из них используют генератор, созданный с недетерминистическим начальным значением.  
   
 ```cpp  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 Этот код показывает два разных метода рандомизации (вектора целых чисел и перемешивания массива индексированных данных) с помощью тестовой функции шаблона. В первом вызове тестовой функции используется криптобезопасный, недетерминистический, неповторяющийся РГСЧ `random_device` без начального значения. Во втором вызове в качестве РГСЧ используется `mersenne_twister_engine` с детерминистическим 32-разрядным постоянным начальным значением; это означает, что результаты повторяются. В третьем вызове для `mersenne_twister_engine` используется 32-разрядное недетерминистическое значение — результат выполнения `random_device`. В четвертом вызове применяется [последовательность начальных значений](../standard-library/seed-seq-class.md), заполненная результатами выполнения `random_device`, что обеспечивает рандомизацию лучше, чем 32-разрядный недетерминистический подход (но все еще не обеспечивает криптобезопасность). Чтобы узнать больше, читайте дальше.  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> Списки по категориям  
+##  <a name="listing"></a> Списки по категориям  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> Равномерные генераторы случайных чисел  
+###  <a name="urngs"></a> Равномерные генераторы случайных чисел  
  РГСЧ часто описываются следующими свойствами.  
   
 1. **Длина периода**: число итераций до повторения последовательности чисел. Чем период длиннее, тем лучше.  
@@ -241,13 +242,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  В следующих разделах перечислены РГСЧ, доступные в заголовке `<random>`.  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> Недетерминистический генератор  
+####  <a name="rd"></a> Недетерминистический генератор  
   
 |||  
 |-|-|  
 |[Класс random_device](../standard-library/random-device-class.md)|Формирует недетерминистическую, криптографическую безопасную случайную последовательность с помощью внешнего устройства. Обычно используется для получения начального значения для механизма случайных чисел. Низкая производительность, очень высокое качество. Дополнительные сведения см. в разделе [Замечания](#comments).|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Определения типа механизма с предварительно заданными параметрами  
+####  <a name="typedefs"></a> Определения типа механизма с предварительно заданными параметрами  
  Для инициации механизмов и адаптеров. Дополнительные сведения см. в разделе [Механизмы и распределения](#engdist).  
   
 - `default_random_engine`Механизм по умолчанию.   
@@ -280,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 - `ranlux48_base` Используется в качестве основания для `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> Шаблоны механизмов  
+####  <a name="eng"></a> Шаблоны механизмов  
  Шаблоны механизмов используются как автономные РГСЧ или как базовые механизмы, которые передаются [адаптерам механизмов](#engadapt). Обычно они создаются с [предварительно заданным определением типа механизма](#typedefs) и передаются в [распределение](#distributions). Дополнительные сведения см. в разделе [Механизмы и распределения](#engdist).  
   
 |||  
@@ -289,7 +290,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[Класс mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Создает случайную последовательность, используя алгоритм "Вихрь Мерсенна". Самый сложный с самым высоким качеством (кроме класса random_device). Очень высокая производительность.|  
 |[Класс subtract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)|Создает случайную последовательность, используя алгоритм вычитания с переносом. Улучшение `linear_congruential_engine`, но с более низким качеством и производительностью, чем у `mersenne_twister_engine`.|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a> Шаблоны адаптеров механизмов  
+####  <a name="engadapt"></a> Шаблоны адаптеров механизмов  
  Адаптеры механизмов — это шаблоны, адаптирующие другие (базовые) механизмы. Обычно они создаются с [предварительно заданным определением типа механизма](#typedefs) и передаются в [распределение](#distributions). Дополнительные сведения см. в разделе [Механизмы и распределения](#engdist).  
   
 |||  
@@ -300,7 +301,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  [[Шаблоны механизмов](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> Распределения случайных чисел  
+###  <a name="distributions"></a> Распределения случайных чисел  
  В следующих разделах перечислены распределения, доступные в заголовке `<random>`. Распределения — это механизмы постобработки, которые обычно используют результаты РГСЧ в качестве входа и распределяют выходные данные с помощью заданной функции плотности статистической вероятности. Дополнительные сведения см. в разделе [Механизмы и распределения](#engdist).  
   
 #### <a name="uniform-distributions"></a>Равномерные распределения  
@@ -330,7 +331,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|  
 |[Класс cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Формирует распределение Коши вещественных значений (с плавающей запятой).|  
 |[Класс chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Формирует распределение хи-квадрат вещественных значений (с плавающей запятой).|  
-|[Класс fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Формирует F-распределение (также известное как F-распределение Снедекора или распределение Фишера-Снедекора) вещественных значений (с плавающей запятой).|  
+|[Класс fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Формирует F-распределение (также известное как F снедекора или распределение Фишера-снедекора) вещественных значений (с плавающей точкой).|  
 |[Класс lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Формирует логарифмически нормальное распределение вещественных значений (с плавающей запятой).|  
 |[Класс normal_distribution](../standard-library/normal-distribution-class.md)|Формирует нормальное (Гауссово) распределение вещественных значений (с плавающей запятой).|  
 |[Класс student_t_distribution](../standard-library/student-t-distribution-class.md)|Формирует *t*-распределение Стьюдента вещественных значений (с плавающей запятой).|  
@@ -376,7 +377,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |`operator<<`|Запись сведений о состоянии в поток.|  
 |`operator>>`|Извлечение сведений о состоянии из потока.|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> Механизмы и распределения  
+##  <a name="engdist"></a> Механизмы и распределения  
  Сведения о каждой категории класса шаблонов, заданных в `<random>`, см. в следующих разделах. Обе категории принимают тип в качестве аргумента и используют общие имена параметров шаблона для описания свойств типа, которые можно использовать как тип фактического аргумента, как показано далее.  
   
 - `IntType` обозначает `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` или `unsigned long long`.  
@@ -459,7 +460,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  Дополнительные сведения см. ниже в справочных подразделах, указанных ранее в этой статье.  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> Примечания  
+##  <a name="comments"></a> Примечания  
  В Visual Studio есть два очень полезных РГСЧ — `mt19937` и `random_device`, которые показаны в следующей таблице.  
   
 |РГСЧ|Быстрый|Криптобезопасный|С начальным значением|Детерминированный|  

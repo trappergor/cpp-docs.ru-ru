@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4f407dce7825a593273206ada02680d6da99e9a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
@@ -108,7 +109,7 @@ wchar_t *_wtempnam_dbg(
 > Не требуется вызывать  `free` (или `free_dbg`) для указателей, выделенных функциями `_tempnam_dbg` и `_wtempnam_dbg`.  
   
 ## <a name="remarks"></a>Примечания  
- Функции `_tempnam_dbg` и `_wtempnam_dbg` идентичны `_tempnam` и `_wtempnam`, за исключением того, что, если определен `_DEBUG`, эти функции используют отладочную версию `malloc` и `_malloc_dbg` для выделения памяти, если `NULL` передается как первый параметр. Дополнительные сведения см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ `_tempnam_dbg` И `_wtempnam_dbg` идентичны `_tempnam` и `_wtempnam` за исключением того, что, когда `_DEBUG` — определен, эти функции используют отладочную версию `malloc` и `_malloc_dbg`для выделения памяти, если `NULL` передается в качестве первого параметра. Дополнительные сведения см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`. Если определен флаг `_CRTDBG_MAP_ALLOC`, вызовы функций `_tempnam` и `_wtempnam` повторно сопоставляются с `_tempnam_dbg` и `_wtempnam_dbg` соответственно, а для параметра `blockType` задается флаг `_NORMAL_BLOCK`. Таким образом, не требуется явно вызывать эти функции, если только нет необходимости пометить блоки кучи как `_CLIENT_BLOCK`. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -124,10 +125,7 @@ wchar_t *_wtempnam_dbg(
 |-------------|---------------------|  
 |`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="see-also"></a>См. также  
  [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   

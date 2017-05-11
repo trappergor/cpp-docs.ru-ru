@@ -10,12 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - reference_wrapper
-- std::reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
 - type_traits/std::reference_wrapper::get
 - type_traits/std::reference_wrapper::operator()
+- functional/std::reference_wrapper::result_type
+- functional/std::reference_wrapper::type
+- functional/std::reference_wrapper::get
+- functional/std::reference_wrapper::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
-ms.openlocfilehash: 1b6968f2300e5214575cc5385c136d6f27bab10a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="referencewrapper-class"></a>Класс reference_wrapper
@@ -76,39 +80,39 @@ private:
   
 Тип `Ty` должен иметь тип "Объект" или "Функция". В противном случае статическое утверждение во время компиляции завершится ошибкой.  
   
-Вспомогательные функции [std::ref](functional-functions.md#ref_function) и [std::cref](functional-functions.md#cref_function) можно использовать для создания объектов `reference_wrapper`.  
+Вспомогательные функции [std::ref](functional-functions.md#ref) и [std::cref](functional-functions.md#cref) можно использовать для создания объектов `reference_wrapper`.  
   
 ### <a name="constructors"></a>Конструкторы  
   
 |||  
 |-|-|  
-|[reference_wrapper::reference_wrapper](#reference_wrapper)|Создает документ `reference_wrapper`.|  
+|[reference_wrapper](#reference_wrapper)|Создает документ `reference_wrapper`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[reference_wrapper::result_type](#result_type)|Слабый тип результата ссылки в оболочке.|  
-|[reference_wrapper::type](#type)|Тип ссылки в оболочке.|  
+|[result_type](#result_type)|Слабый тип результата ссылки в оболочке.|  
+|[Тип](#type)|Тип ссылки в оболочке.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[reference_wrapper::get](#get)|Получает ссылку в оболочке.|  
+|[get](#get)|Получает ссылку в оболочке.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#operator_ty_amp_)|Получает указатель на ссылку в оболочке.|  
-|[reference_wrapper::operator()](#operator_call)|Вызывает ссылку в оболочке.|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Получает указатель на ссылку в оболочке.|  
+|[reference_wrapper::operator()](#op_call)|Вызывает ссылку в оболочке.|  
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-##  <a name="a-namegeta--referencewrapperget"></a><a name="get"></a>  reference_wrapper::get  
+##  <a name="get"></a>  reference_wrapper::get  
  Получает ссылку в оболочке.  
   
 ```  
@@ -145,7 +149,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameoperatortyampa--referencewrapperoperator-tyamp"></a><a name="operator_ty_amp_"></a>  reference_wrapper::operator Ty&amp;  
+##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
  Получение ссылки в оболочке.  
   
 ```  
@@ -179,7 +183,7 @@ i = 1
 (int)rwi = 1  
 ```  
   
-##  <a name="a-nameoperatorcalla--referencewrapperoperator"></a><a name="operator_call"></a>  reference_wrapper::operator()  
+##  <a name="op_call"></a>  reference_wrapper::operator()  
  Вызывает ссылку в оболочке.  
   
 ```  
@@ -222,7 +226,7 @@ int main() {
 rwi(3) = -3  
 ```  
   
-##  <a name="a-namereferencewrappera--referencewrapperreferencewrapper"></a><a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
+##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
  Создает документ `reference_wrapper`.  
   
 ```  
@@ -270,7 +274,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameresulttypea--referencewrapperresulttype"></a><a name="result_type"></a>  reference_wrapper::result_type  
+##  <a name="result_type"></a>  reference_wrapper::result_type  
  Слабый тип результата ссылки в оболочке.  
   
 ```  
@@ -307,7 +311,7 @@ int main() {
 val = -3  
 ```  
   
-##  <a name="a-nametypea--referencewrappertype"></a><a name="type"></a>  reference_wrapper::type  
+##  <a name="type"></a>  reference_wrapper::type  
  Тип ссылки в оболочке.  
   
 ```  
@@ -348,7 +352,7 @@ rwi = 1
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция cref](../standard-library/functional-functions.md#cref_function)   
- [Функция ref](../standard-library/functional-functions.md#ref_function)
+ [cref](../standard-library/functional-functions.md#cref)   
+ [ref](../standard-library/functional-functions.md#ref)
 
 

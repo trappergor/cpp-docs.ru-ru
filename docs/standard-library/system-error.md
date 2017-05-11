@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
@@ -75,15 +76,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор==](../standard-library/system-error-operators.md#operator_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|  
-|[оператор!=](../standard-library/system-error-operators.md#operator_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|  
-|[оператор<](../standard-library/system-error-operators.md#operator_lt_)|Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.|  
+|[оператор==](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|  
+|[оператор!=](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|  
+|[оператор<](../standard-library/system-error-operators.md#op_lt)|Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.|  
   
 ### <a name="enumerations"></a>Перечисления  
   
 |||  
 |-|-|  
-|[errc](../standard-library/system-error-enums.md#errc_enumeration)|Предоставляет символьные имена для всех макросов кода ошибки, определенных Posix в `<errno.h>`.|  
+|[errc](../standard-library/system-error-enums.md#errc)|Предоставляет символьные имена для всех макросов кода ошибки, определенных Posix в `<errno.h>`.|  
   
 ### <a name="classes-and-structs"></a>Классы и структуры  
   

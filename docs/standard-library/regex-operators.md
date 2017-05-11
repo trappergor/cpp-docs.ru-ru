@@ -19,20 +19,21 @@ dev_langs:
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 254eee6065dfc4b11c6eadf82d07fcfb5a7cf4e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c5bf713f65c26a1a46becf846fa21f17ac867628
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
-|[оператор&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[оператор&lt;=](#operator_lt__eq)|  
-|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
+|[оператор==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Сравнение различных объектов на неравенство.  
   
 ```  
@@ -149,7 +150,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="op_lt"></a>  оператор&lt;  
  Сравнение "меньше, чем" для различных объектов.  
   
 ```  
@@ -257,7 +258,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="operator_lt__lt_"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
  Вставляет в поток sub_match.  
   
 ```  
@@ -315,7 +316,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a>  оператор&lt;=  
  Сравнение "меньше или равно" для различных объектов.  
   
 ```  
@@ -423,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Сравнение различных объектов на равенство.  
   
 ```  
@@ -548,7 +549,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="op_gt"></a>  оператор&gt;  
  Сравнение "больше, чем" для различных объектов.  
   
 ```  
@@ -656,7 +657,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a>  оператор&gt;=  
  Сравнение "больше или равно" для различных объектов.  
   
 ```  

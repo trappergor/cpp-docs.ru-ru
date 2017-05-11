@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7fcb706317f7185d260daab15ae14f478176768
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
@@ -59,12 +60,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор!=](../standard-library/unordered-set-operators.md#operator_neq)|Проверяет, не равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|  
-|[оператор==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Проверяет, равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|  
-|[Функция swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Меняет местами два объекта multiset.|  
-|[оператор!=](../standard-library/unordered-set-operators.md#operator_neq)|Проверяет, не равен ли объект unordered_set в левой части объекту unordered_set в правой части.|  
-|[оператор==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Проверяет, равен ли объект unordered_set в левой части объекту unordered_set в правой части.|  
-|[Функция swap](../standard-library/unordered-set-functions.md#swap)|Меняет местами два сопоставления.|  
+|[оператор!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|  
+|[оператор==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Меняет местами два объекта multiset.|  
+|[оператор!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_set в левой части объекту unordered_set в правой части.|  
+|[оператор==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_set в левой части объекту unordered_set в правой части.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|Меняет местами два сопоставления.|  
   
 ## <a name="see-also"></a>См. также  
  [Класс unordered_map](../standard-library/unordered-map-class.md)   

@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3160c7fb3965bc05ceace5722a9c502e60f89442
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7702c8ba7e5d0f9dfa5df184451d9addb19adbbd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltqueuegt-operators"></a>Операторы &lt;queue&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
-|[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.  
   
 ```  
@@ -85,7 +86,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="op_lt"></a>  оператор&lt;  
  Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.  
   
 ```  
@@ -144,7 +145,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.  
 ```  
   
-##  <a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a>  оператор&lt;=  
  Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.  
   
 ```  
@@ -205,7 +206,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.  
 ```  
   
-##  <a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Проверяет равенство объекта-очереди слева от оператора объекту-очереди справа от оператора.  
   
 ```  
@@ -267,7 +268,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="op_gt"></a>  оператор&gt;  
  Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.  
   
 ```  
@@ -329,7 +330,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.  
 ```  
   
-##  <a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a>  оператор&gt;=  
  Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.  
   
 ```  

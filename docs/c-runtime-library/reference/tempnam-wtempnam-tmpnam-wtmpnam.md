@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  Указатель, который будет содержать формируемое имя и совпадать с именем, возвращенным функцией. Это удобный способ сохранения формируемого имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает указатель на формируемое имя или `NULL` в случае сбоя. Сбой может возникать при попытке совершить больше `TMP_MAX` (см. файл STDIO.H) вызовов с функцией `tmpnam` или если при использовании функции `_tempnam` в переменной среды TMP и в параметре `dir` задано неверное имя каталога.  
+ Каждая из этих функций возвращает указатель на формируемое имя или `NULL` в случае сбоя. Сбой может возникать при попытке более `TMP_MAX` (STDIO см. H) вызовов с `tmpnam` или если вы используете `_tempnam` и указано недопустимое имя каталога в переменной среды TMP и `dir` параметра.  
   
 > [!NOTE]
 >  Указатели, возвращенные функциями `tmpnam` и `_wtmpnam`, указывают на внутренние статические буфера. Для освобождения этих указателей не следует вызывать функцию [free](../../c-runtime-library/reference/free.md). Функцию `free` необходимо вызывать для указателей, размещенных в памяти функциями `_tempnam` и `_wtempnam`.  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   

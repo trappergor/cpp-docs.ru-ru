@@ -1,52 +1,69 @@
 ---
-title: "_umask | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_umask"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_umask"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_umask - функция"
-  - "разрешения файла [C++]"
-  - "файлы [C++], параметры разрешений для"
-  - "маски"
-  - "маски, параметры разрешений файлов"
-  - "umask - функция"
+title: "_umask | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _umask
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _umask
+dev_langs:
+- C++
+helpviewer_keywords:
+- masks, file-permission-setting
+- _umask function
+- masks
+- umask function
+- file permissions [C++]
+- files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _umask
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f2ad9c75caa5f3816ab4791dc4e67cb7937bfad4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Задает маску разрешений для файлов по умолчанию.  Существует более безопасная версия этой функций; см. раздел [\_umask\_s](../Topic/_umask_s.md).  
+---
+# <a name="umask"></a>_umask
+Задает маску разрешений файла по умолчанию. Существует более безопасная версия этой функции, см. раздел [_umask_s](../../c-runtime-library/reference/umask-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _umask(  
@@ -54,43 +71,43 @@ int _umask(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pmode`  
- Параметр разрешений по умолчанию.  
+ Параметр разрешения по умолчанию.  
   
-## Возвращаемое значение  
- `_umask` возвращает предыдущее значение `pmode`.  Нет какого\-либо возврата ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_umask` возвращает предыдущее значение `pmode`. Ошибка не возвращается.  
   
-## Заметки  
- Функция `_umask` задает маску разрешений для файлов текущего процесса в режим, указанный в `pmode`*.* Маска разрешений для файлов изменяет настройки разрешений новых файлов, созданных функциями `_creat`, `_open` или `_sopen`.  Если бит в маске равен 1, соответствующий бит в запрошенном значении разрешения для файла устанавливается в 0 \(запрещено\).  Если бит в маске равен 0, соответствующий бит остается без изменений.  Настройка разрешений для нового файла не устанавливается до тех пор, пока файл не закрыт в первый раз.  
+## <a name="remarks"></a>Примечания  
+ `_umask` , Функция задает маску разрешений файла текущего процесса значение режима, указанного по `pmode`. Маска разрешений файла изменяет параметр разрешения для новых файлов, созданных `_creat`, `_open` или `_sopen`. Если бит в битовой маске равен 1, соответствующий бит в запрошенном значении разрешения имеет значение 0 (запрещено). Если бит в битовой маске равен 0, соответствующий бит остается без изменений. Параметр разрешения для нового файла не устанавливается до тех пор, пока файл не будет закрыт в первый раз.  
   
- Целочисленное выражение `pmode` содержит одну или обе следующих константы манифеста, определенных в SYS\\STAT.H:  
+ Целочисленное выражение `pmode` содержит одну или обе из следующих констант манифеста, определенных в файле SYS\STAT.H:  
   
  `_S_IWRITE`  
- Запись разрешена.  
+ Разрешена запись.  
   
  `_S_IREAD`  
- Чтение разрешено.  
+ Разрешено чтение.  
   
  `_S_IREAD | _S_IWRITE`  
- Чтение и запись разрешены.  
+ Разрешены чтение и запись.  
   
- Если предоставлены обе константы, они объединяются битовым оператором OR \(          `|`  \).  Если аргумент `pmode` равен `_S_IREAD`, чтение не разрешено \(файл доступен только для записи\).  Если аргумент `pmode` равен `_S_IWRITE`, запись не разрешена \(файл доступен только для чтения\).  Например, если бит записи устанавливается в маске, то все новые файлы будут доступны только для чтения.  Обратите внимание, что для операционных систем MS\-DOS и Windows, все файлы доступны для чтения; невозможно предоставить им доступ только на запись.  Поэтому установка бита чтения в `_umask` не влияет на режимы файла.  
+ Если заданы обе константы, они соединяются с помощью битового оператора ИЛИ ( `|` ). Если аргумент `pmode` имеет значение `_S_IREAD`, чтение запрещено (файл доступен только для записи). Если аргумент `pmode` имеет значение `_S_IWRITE`, запись запрещена (файл доступен только для чтения). Например, если в маске установлен бит записи, все новые файлы будут доступны только для чтения. Обратите внимание, что в операционных системах MS-DOS и Windows все файлы доступны для чтения; невозможно предоставить разрешение только на запись. Таким образом, установка бита чтения с помощью `_umask` не влияет на режимы файла.  
   
- Если `pmode` \- не сочетание одной из констант манифеста, или он содержит другой набор констант, функция просто игнорирует их.  
+ Если `pmode` не является комбинацией одной из констант манифеста и не включает дополнительный набор констант, функция будет просто игнорировать это.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_umask`|\<io.h\>, \<sys\/stat.h\>, \<sys\/types.h\>|  
+|-------------|---------------------|  
+|`_umask`|\<io.h>, \<sys/stat.h>, \<sys/types.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_umask.c  
@@ -115,14 +132,14 @@ int main( void )
 }  
 ```  
   
-  **Oldmask \= 0x0000**   
-## Эквивалент в .NET Framework  
- [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
+```Output  
+Oldmask = 0x0000  
+```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [Низкоуровневый ввод\-вывод](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [Функция \_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_mkdir, \_wmkdir](../Topic/_mkdir,%20_wmkdir.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>Примечания  
  Классы и шаблоны в `<type_traits>` используются для поддержки определения, классификации и преобразования типов во время выполнения, а также для обнаружения связанных с типом ошибок и оптимизации универсального кода. Эти классы и шаблоны включают унарные признаки типов, которые описывают свойство типа, двоичные признаки типов, которые описывают связь между типами, и признаки преобразования, изменяющие свойство типа.  
   
- Для поддержки признаков типа определен вспомогательный класс `integral_constant`. Он имеет специализации шаблона `true_type` и `false_type`, формирующие базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является открыто производным (явно или косвенно) от [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). Если значение предиката типа равно *false*, он является открыто производным (явно или косвенно) от [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef).  
+ Для поддержки признаков типа определен вспомогательный класс `integral_constant`. Он имеет специализации шаблона `true_type` и `false_type`, формирующие базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является открыто производным (явно или косвенно) от [true_type](../standard-library/type-traits-typedefs.md#true_type). Если значение предиката типа равно *false*, он является открыто производным (явно или косвенно) от [false_type](../standard-library/type-traits-typedefs.md#false_type).  
   
  *Модификатор типа* или *признак преобразования* — это шаблон, принимающий один или несколько аргументов шаблона и имеющий один член (`type`), который является синонимом для измененного типа.  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Создает целочисленную константу из типа и значения.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Содержит целочисленную константу со значением true.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Содержит целочисленную константу со значением false.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Содержит целочисленную константу со значением true.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Содержит целочисленную константу со значением false.|  
   
  Категории основных типов  
   

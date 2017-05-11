@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f84bf4392de02ad95e637ee3f952f10496619b9c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 64e215e42433ac7d69e8005f1e44f9ae8184bec0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
@@ -84,7 +85,7 @@ int _wunlink(
  Имя удаляемого файла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций при успешном выполнении возвращает 0. В противном случае эта функция возвращает –1 и устанавливает `errno` в значение `EACCES`, указывающее, что путь задает файл только для чтения, или в значение `ENOENT`, указывающее, что файл или путь не найден или путь задает каталог.  
+ Каждая из этих функций при успешном выполнении возвращает 0. В противном случае функция возвращает -1 и наборы `errno` для `EACCES`, что означает путь указывает файл только для чтения, или `ENOENT`, означающее, что файл или путь не найден, или путь указан каталог.  
   
  Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -134,9 +135,6 @@ This file will be deleted.
 ```  
 Deleted 'CRT_UNLINK.TXT'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::IO::File::Delete](https://msdn.microsoft.com/en-us/library/system.io.file.delete.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   

@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92144dbdc043d68d9280d2721a0aaeac3a9e3f1a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
@@ -106,7 +107,7 @@ size_t wcsxfrm_l(
  Исходная строка.  
   
  `count`  
- Наибольшее число символов, которые могут быть размещены в `strDest`*.*  
+ Максимальное количество символов для размещения в `strDest`.  
   
  `locale`  
  Используемый языковой стандарт.  
@@ -158,10 +159,7 @@ return( strlen( _string1 ) );
 |`_strxfrm_l`|\<string.h>|  
 |`_wcsxfrm_l`|\<string.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
