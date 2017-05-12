@@ -2,9 +2,10 @@
 layout: HubPage
 title: "Документация по Visual C++ | Документы Майкрософт"
 description: "Узнайте, как использовать C++ для разработки приложений, служб и средств для платформ и устройств."
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fa2cdbf2d54994784bfc8a0bd0e542b3f5de309b
 ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
