@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - uniform_real_distribution
-- std::uniform_real_distribution
 - random/std::uniform_real_distribution
-- std::uniform_real_distribution::reset
 - random/std::uniform_real_distribution::reset
-- std::uniform_real_distribution::a
 - random/std::uniform_real_distribution::a
-- std::uniform_real_distribution::b
 - random/std::uniform_real_distribution::b
-- std::uniform_real_distribution::param
 - random/std::uniform_real_distribution::param
-- std::uniform_real_distribution::min
 - random/std::uniform_real_distribution::min
-- std::uniform_real_distribution::max
 - random/std::uniform_real_distribution::max
-- std::uniform_real_distribution::operator()
 - random/std::uniform_real_distribution::operator()
-- std::uniform_real_distribution::param_type
 - random/std::uniform_real_distribution::param_type
-- std::uniform_real_distribution::param_type::a
 - random/std::uniform_real_distribution::param_type::a
-- std::uniform_real_distribution::param_type::b
 - random/std::uniform_real_distribution::param_type::b
-- std::uniform_real_distribution::param_type::operator==
 - random/std::uniform_real_distribution::param_type::operator==
-- std::uniform_real_distribution::param_type::operator!=
 - random/std::uniform_real_distribution::param_type::operator!=
+- random/std::uniform_real_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7de3cf77ff7a70b13f57a1f06e015aa806c2a11
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 34c8090f40b4653f4c8798ffac404dc1652f7b52
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniformrealdistribution-class"></a>Класс uniform_real_distribution
@@ -107,8 +96,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[uniform_real_distribution::uniform_real_distribution](#uniform_real_distribution__uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[uniform_real_distribution::param_type](#uniform_real_distribution__param_type)|  
+|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
+|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|  
   
 Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение. Для класса распределения эти минимальные и максимальные значения совпадают со значениями, которые возвращаются функциями свойств `min()` и `max()`, описанными в разделе [\<random>](../standard-library/random.md).  
   
@@ -205,7 +194,7 @@ Distribution for 10 samples:
   
  **Пространство имен:** std  
   
-##  <a name="a-nameuniformrealdistributionuniformrealdistributiona--uniformrealdistributionuniformrealdistribution"></a><a name="uniform_real_distribution__uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
+##  <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
 Формирует распределение.  
   
 ```  
@@ -230,7 +219,7 @@ explicit uniform_real_distribution(const param_type& parm);
   
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
   
-##  <a name="a-nameuniformrealdistributionparamtypea--uniformrealdistributionparamtype"></a><a name="uniform_real_distribution__param_type"></a>  uniform_real_distribution::param_type  
+##  <a name="param_type"></a>  uniform_real_distribution::param_type  
  Сохраняет все параметры распределения.  
   
 ```  

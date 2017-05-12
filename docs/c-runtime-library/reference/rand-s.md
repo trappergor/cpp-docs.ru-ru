@@ -1,83 +1,100 @@
 ---
-title: "rand_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rand_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rand_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "криптографически безопасные случайные числа"
-  - "генерация псевдослучайных чисел"
-  - "числа, генерация псевдослучайных"
-  - "числа, псевдослучайный"
-  - "псевдослучайные числа"
-  - "rand_s - функция"
-  - "случайные числа, криптографически безопасные"
-  - "случайные числа, создание"
+title: "rand_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rand_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rand_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- generating pseudorandom numbers
+- random numbers, cryptographically secure
+- random numbers, generating
+- rand_s function
+- numbers, pseudorandom
+- cryptographically secure random numbers
+- pseudorandom numbers
+- numbers, generating pseudorandom
 ms.assetid: d6a0be60-997d-4904-8411-8aea6839cc94
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# rand_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5087948c5737f105e9bc694da1e866be659ff18f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Возвращает псевдослучайное число.  Это версия [rand](../Topic/rand.md) с усовершенствованиями безопасности, как описано в [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="rands"></a>rand_s
+Создает псевдослучайное число. Версия функции [rand](../../c-runtime-library/reference/rand.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t rand_s(   unsigned int* randomValue);  
 ```  
   
-## Возвращаемое значение  
- Ноль в случае успешного выполнения, в противном случае — код ошибки.  Если параметр `randomValue` является нулевым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение разрешено для продолжить, функция возвращает `EINVAL` и задает `errno` в `EINVAL`.  Если функция завершается с ошибкой по какой\-либо другой причине, \*`randomValue` присваивается значение 0.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Ноль в случае успешного выполнения; в противном случае — код ошибки. Если указатель ввода `randomValue` является пустым указателем, функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает `EINVAL` и устанавливает для параметра `errno` значение `EINVAL`. Если функция завершается с ошибкой по другой причине, для *`randomValue` задается значение 0.  
   
-## Заметки  
- Функция `rand_s` записывает псевдослучайное целое число в диапазоне от 0 до `UINT_MAX` по входному указателю.  Функция `rand_s` используется операционной системой для создания криптографически безопасных случайных чисел.  В ней не используется начальное значение, созданное функцией [srand](../../c-runtime-library/reference/srand.md), и она не влияет на последовательность случайных чисел, используемую `rand`.  
+## <a name="remarks"></a>Примечания  
+ Функция `rand_s` записывает псевдослучайное целое число в диапазоне от 0 до `UINT_MAX` в указатель ввода. Функция `rand_s` использует операционную систему для создания криптографически безопасных случайных чисел. Функция не использует начальное значение, созданное функцией [srand](../../c-runtime-library/reference/srand.md), и не влияет на последовательность случайных чисел, которая используется `rand`.  
   
- Функция `rand_s` требует, чтобы константа `_CRT_RAND_S` определена до включения функции, как показано в следующем примере:  
+ Функция `rand_s` требует, чтобы константа `_CRT_RAND_S` была определена до объявления оператора включения для этой функции, как показано в следующем примере:  
   
 ```  
 #define _CRT_RAND_S  
 #include <stdlib.h>  
 ```  
   
- `rand_s` зависит от API [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694), который доступен только в Windows XP или более поздних версиях.  
+ `rand_s` зависит от API [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694), который доступен только в Windows XP и более поздних версиях.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`rand_s`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`rand_s`|\<stdlib.h>|  
   
- Для получения дополнительной информации см. [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_rand_s.c  
@@ -127,7 +144,7 @@ int main( void )
 }  
 ```  
   
-## Пример результатов выполнения  
+## <a name="sample-output"></a>Пример результатов выполнения  
   
 ```  
 10  
@@ -153,9 +170,6 @@ int main( void )
 65.0712  
 ```  
   
-## Эквивалент в .NET Framework  
- [System::Random Class](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [srand](../../c-runtime-library/reference/srand.md)

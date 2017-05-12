@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
@@ -93,7 +94,7 @@ __time64_t _time64(
 ## <a name="remarks"></a>Примечания  
  Функция `time` возвращает число секунд, истекших после полуночи (00:00:00) 1 января 1970 г. (UTC) по системным часам. Возвращаемое значение сохраняется в расположении, предоставленном `timer`. Этот параметр может быть `NULL`, в этом случае возвращаемое значение не сохраняется.  
   
- `time` является оболочкой для `_time64`, а `time_t` по умолчанию равнозначно `__time64_t`. Если необходимо, чтобы компилятор принудительно интерпретировал `time_t` как старое 32-разрядное значение `time_t`, можно определить `_USE_32BIT_TIME_T`. Это не рекомендуется, так как в приложении может произойти сбой после 18-го января 2038 года; использование этого макроса не поддерживается на 64-разрядных платформах.  
+ `time` является оболочкой для `_time64` , а `time_t` по умолчанию равнозначно `__time64_t`. Если необходимо, чтобы компилятор принудительно интерпретировал `time_t` как старое 32-разрядное значение `time_t`, можно определить `_USE_32BIT_TIME_T`. Это не рекомендуется, так как в приложении может произойти сбой после 18-го января 2038 года; использование этого макроса не поддерживается на 64-разрядных платформах.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   

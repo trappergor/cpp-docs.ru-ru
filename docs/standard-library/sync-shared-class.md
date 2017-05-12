@@ -38,10 +38,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b510fbe0b93f97222a093007300a3b3d054d1505
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d3cfcde97a0f6c89b1f18c4026c6ab49db66fd96
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="syncshared-class"></a>Класс sync_shared
@@ -64,16 +65,16 @@ class sync_shared
   
 |||  
 |-|-|  
-|[allocate](#sync_shared__allocate)|Выделяет блок памяти.|  
-|[deallocate](#sync_shared__deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|  
-|[equals](#sync_shared__equals)|Сравнивает два кэша на равенство.|  
+|[allocate](#allocate)|Выделяет блок памяти.|  
+|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|  
+|[equals](#equals)|Сравнивает два кэша на равенство.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<allocators>  
   
  **Пространство имен:** stdext  
   
-##  <a name="sync_shared__allocate"></a>  sync_shared::allocate  
+##  <a name="allocate"></a>  sync_shared::allocate  
  Выделяет блок памяти.  
   
 ```
@@ -92,7 +93,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Примечания  
  Функция-член блокирует мьютекс, вызывает метод `cache.allocate(count)`, разблокирует мьютекс и возвращает результат более раннего вызова `cache.allocate(count)`. `cache` представляет текущий объект кэша.  
   
-##  <a name="sync_shared__deallocate"></a>  sync_shared::deallocate  
+##  <a name="deallocate"></a>  sync_shared::deallocate  
  Освобождает указанное число объектов из памяти, начиная с заданной позиции.  
   
 ```
@@ -109,7 +110,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член блокирует мьютекс, вызывает метод `cache.deallocate(ptr, count)`, где `cache` представляет объект кэша, а затем разблокирует мьютекс.  
   
-##  <a name="sync_shared__equals"></a>  sync_shared::equals  
+##  <a name="equals"></a>  sync_shared::equals  
  Сравнивает два кэша на равенство.  
   
 ```

@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 93065406bd41889338f79ee4df5e8b57ef479c25
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f35701cf1ef644b140cae01ef2d8707cfb387a68
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s, _ultow_s
@@ -113,7 +114,7 @@ errno_t _ultow_s(
  Нуль, если функция выполнена успешно, или код ошибки.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_ultoa_s` преобразует цифры `value` в строку знаков, завершающуюся значением NULL, и сохраняет результат (до 33 байт) в `str`. Аргумент `radix` определяет основание системы счисления `value`, которое должно быть в диапазоне от 2 до 36. `_ultow_s` — это версия функции `_ultoa_s` с расширенными символами; второй аргумент функции `_ultow_s` является строкой с расширенными символами.  
+ Функция `_ultoa_s` преобразует цифры `value` в строку знаков, завершающуюся значением NULL, и сохраняет результат (до 33 байт) в `str`. `radix` Аргумент задает основание системы счисления `value`, которое должно быть в диапазоне от 2-36. `_ultow_s` — это версия функции `_ultoa_s` с расширенными символами; второй аргумент функции `_ultow_s` является строкой с расширенными символами.  
   
  Если параметр `str` является указателем `NULL` или значение параметра `sizeOfstr` меньше или равно нулю, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и присваивают `errno` значение `EINVAL`, либо если значение `value` или `str` выходит за пределы диапазона типа данных long integer, эти функции возвращают значение -1 и присваивают `errno` значение `ERANGE`.  
   
@@ -133,9 +134,6 @@ errno_t _ultow_s(
 |`_ultow_s`|\<stdlib.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

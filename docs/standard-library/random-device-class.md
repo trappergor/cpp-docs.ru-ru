@@ -10,15 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - random_device
-- std::random_device
 - random/std::random_device
-- std::random_device::min
 - random/std::random_device::min
-- std::random_device::max
 - random/std::random_device::max
-- std::random_device::entropy
 - random/std::random_device::entropy
-- std::random_device::operator()
+- random/std::random_device::operator()
+- random/std::random_device::entropy
 - random/std::random_device::operator()
 dev_langs:
 - C++
@@ -43,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d755f15b9f8dc575eb95d65822adfae3fdb568dd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 842e4f9b53a06373df8e00f64b1ab24a48a5c6b9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="randomdevice-class"></a>Класс random_device
@@ -80,8 +78,8 @@ public:
   
 |||  
 |-|-|  
-|[random_device::random_device](#random_device__random_device)|[random_device::entropy](#random_device__entropy)|  
-|[random_device::operator()](#random_device__operator__)||  
+|[random_device](#random_device)|[энтропия](#entropy)|  
+|[random_device::operator()](#op_call)||  
   
 ## <a name="remarks"></a>Примечания  
 Этот класс описывает источник случайных чисел и, согласно стандарту ISO C++, может быть недетерминистическим или криптостойким (но это необязательно). В реализации в Visual Studio полученные значения являются недетерминистическими и криптостойкими, но производительность ниже, чем у генераторов, созданных на основе механизмов и адаптеров механизмов (таких как [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), быстрого и качественного механизма для большинства приложений).  
@@ -132,7 +130,7 @@ a random value == 213725214
   
  **Пространство имен:** std  
   
-##  <a name="a-namerandomdevicerandomdevicea--randomdevicerandomdevice"></a><a name="random_device__random_device"></a>  random_device::random_device  
+##  <a name="random_device"></a>  random_device::random_device  
 Формирует генератор.  
   
 ```  
@@ -142,7 +140,7 @@ random_device(const std::string& = "");
 ### <a name="remarks"></a>Примечания  
 Конструктор инициализирует генератор, как требуется, игнорируя строковый параметр. Возвращает значение определенного в реализации типа, производного из [exception](../standard-library/exception-class.md), если не удалось инициализировать `random_device`.  
   
-##  <a name="a-namerandomdeviceentropya--randomdeviceentropy"></a><a name="random_device__entropy"></a>  random_device::entropy  
+##  <a name="entropy"></a>  random_device::entropy  
 Оценивает стохастичность источника.  
   
 ```  
@@ -152,7 +150,7 @@ double entropy() const noexcept;
 ### <a name="remarks"></a>Примечания  
 Эта функция-член возвращает оценку стохастичности источника в битах.  
   
-##  <a name="a-namerandomdeviceoperatora--randomdeviceoperator"></a><a name="random_device__operator__"></a>  random_device::operator()  
+##  <a name="op_call"></a>  random_device::operator()  
 Возвращает случайное значение.  
   
 ```  

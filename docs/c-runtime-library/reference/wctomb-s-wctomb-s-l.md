@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 94973bf59580354aed75b8c7a3a154f415060163
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ac97c0bc957c28d8d0837199157d52d4ac0536e1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
@@ -115,7 +116,7 @@ errno_t _wctomb_s_l(
 ## <a name="remarks"></a>Примечания  
  Функция `wctomb_s` преобразует свой аргумент `wchar` в соответствующий многобайтовый символ и сохраняет результат в `mbchar`. Эту функцию можно вызывать из любой точки в любой программе.  
   
- Если функция `wctomb_s` преобразует расширенный символ в многобайтовый символ, она помещает число байтов (которое никогда не превышает `MB_CUR_MAX`) в расширенном символе в целое число со знаком, на которое указывает `pRetValue`. Если `wchar` является расширенным нуль-символом (L '\0'), `wctomb_s` заполняет `pRetValue` символом 1. Если целевой указатель `mbchar` имеет значение NULL, `wctomb_s` помещает 0 в `pRetValue`. Если преобразование невозможно в текущем языковом стандарте, `wctomb_s` помещает –1 в `pRetValue`.  
+ Если функция `wctomb_s` преобразует расширенный символ в многобайтовый символ, она помещает число байтов (которое никогда не превышает `MB_CUR_MAX`) в расширенном символе в целое число со знаком, на которое указывает `pRetValue`. Если `wchar` является расширенным нуль-символом (L '\0'), `wctomb_s` заполняет `pRetValue` символом 1. Если целевой указатель `mbchar` имеет значение NULL, `wctomb_s` помещает 0 в `pRetValue`. Если преобразование не поддерживается в текущем языковом стандарте, `wctomb_s` помещается значение -1 `pRetValue`.  
   
  Функция `wctomb_s` использует текущий языковой стандарт для информации, обусловленной языковыми стандартами; функция `_wctomb_s_l` идентична за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -154,9 +155,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

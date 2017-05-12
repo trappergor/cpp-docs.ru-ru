@@ -31,14 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b554f87dea52ed5d71bebbf862e40f95530e3477
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 1a6427beb2230c437b75e0539c430a7251f5f0ba
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="trytolockt-structure"></a>Структура try_to_lock_t
-Представляет `struct`, который определяет объект [try_to_lock](../standard-library/mutex-functions.md#try_to_lock_variable). Служит для выбора одного из перегруженных конструкторов [unique_lock](../standard-library/unique-lock-class.md).  
+Представляет `struct`, который определяет объект [try_to_lock](../standard-library/mutex-functions.md#try_to_lock). Служит для выбора одного из перегруженных конструкторов [unique_lock](../standard-library/unique-lock-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +48,7 @@ struct try_to_lock_t;
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** mutex  
+ **Заголовок:** \<мьютекс >  
   
  **Пространство имен:** std  
   

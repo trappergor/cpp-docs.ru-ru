@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e9387288db68a2af4897daece878f6cec1e522ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 33949110690ef671a7a2b0d40e98f81c9d7fbc2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
@@ -137,9 +138,6 @@ int _towlower_l(
   
 ## <a name="example"></a>Пример  
  См. пример в разделе [Функции to](../../c-runtime-library/to-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::Char::ToLower](https://msdn.microsoft.com/en-us/library/system.char.tolower.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

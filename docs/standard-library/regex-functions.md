@@ -8,31 +8,32 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_match
-- std::regex_match
 - regex/std::regex_match
 - regex_replace
-- std::regex_replace
 - regex/std::regex_replace
 - regex_search
-- std::regex_search
 - regex/std::regex_search
 - regex/std::swap
+- regex/std::swap
+dev_langs:
+- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28fdbf1c00c44711538b7c163053eeca5a0c47e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltregexgt-functions"></a>Функции &lt;regex&gt;
 ||||  
 |-|-|-|  
-|[Функция regex_match](#regex_match_function)|[Функция regex_replace](#regex_replace_function)|[Функция regex_search](#regex_search_function)|  
-|[Функция swap](#swap_function)|  
+|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
+|[swap](#swap)|  
   
-##  <a name="a-nameregexmatchfunctiona--regexmatch-function"></a><a name="regex_match_function"></a>  Функция regex_match  
+##  <a name="regex_match"></a>regex_match
  Проверяет, совпадает ли регулярное выражение со всей целевой строкой.  
   
 ```  
@@ -121,7 +122,7 @@ bool regex_match(
  Конец последовательности для сопоставления.  
   
  `match`  
- Результаты сопоставления. Соответствует типу Elem: [smatch](../standard-library/regex-typedefs.md#smatch_typedef) для string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef) для wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch_typedef) для char* или [wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef) для wchar_t\*.  
+ Результаты сопоставления. Соответствует типу Elem: [smatch](../standard-library/regex-typedefs.md#smatch) для string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) для wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch) для char* или [wcmatch](../standard-library/regex-typedefs.md#wcmatch) для wchar_t\*.  
   
  `ptr`  
  Указатель на начало последовательности для сопоставления. Если ptr — это char*, используются cmatch и regex. Если ptr — это wchar_t\*, используются wcmatch и wregex.  
@@ -133,7 +134,7 @@ bool regex_match(
  Сопоставляемая строка. Соответствует типу Elem.  
   
 ### <a name="remarks"></a>Примечания  
- Каждая функция шаблона возвращает значение true, только если вся последовательность операндов `str` точно соответствует аргументу `re` регулярного выражения. Используйте [regex_search](../standard-library/regex-functions.md#regex_search_function) для сопоставления подстроки с целевой последовательностью и regex_iterator для поиска нескольких соответствий. Функции, принимающие объект `match_results`, указывают в своих членах, выполнено ли сопоставление успешно и, в этом случае, какие группы захвата в регулярном выражении были определены.  
+ Каждая функция шаблона возвращает значение true, только если вся последовательность операндов `str` точно соответствует аргументу `re` регулярного выражения. Используйте [regex_search](../standard-library/regex-functions.md#regex_search) для сопоставления подстроки с целевой последовательностью и regex_iterator для поиска нескольких соответствий. Функции, принимающие объект `match_results`, указывают в своих членах, выполнено ли сопоставление успешно и, в этом случае, какие группы захвата в регулярном выражении были определены.  
   
  Функции, принимающие объект `match_results`, указывают в своих членах, выполнено ли сопоставление успешно и, в этом случае, какие группы захвата в регулярном выражении были определены.  
   
@@ -192,7 +193,7 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="a-nameregexreplacefunctiona--regexreplace-function"></a><a name="regex_replace_function"></a>  Функция regex_replace  
+##  <a name="regex_replace"></a>regex_replace
  Заменяет соответствующие регулярные выражения.  
   
 ```  
@@ -298,7 +299,7 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="a-nameregexsearchfunctiona--regexsearch-function"></a><a name="regex_search_function"></a>  Функция regex_search  
+##  <a name="regex_search"></a>regex_search
  Поиск соответствия регулярному выражению.  
   
 ```  
@@ -447,7 +448,7 @@ search(string, "abc") == true
   matched: "abc"  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap-function"></a><a name="swap_function"></a>  Функция swap  
+##  <a name="swap"></a>  swap
  Меняет местами два объекта basic_regex или match_results.  
   
 ```  

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a7aef3b83378d36ff5db1ec14c401112818c8de1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 46bfc6bc42e09348d0760f7d03d70c816fde31ed
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="rawstorageiterator-class"></a>Класс raw_storage_iterator
@@ -70,29 +71,29 @@ class raw_storage_iterator
   
 |||  
 |-|-|  
-|[raw_storage_iterator](#raw_storage_iterator__raw_storage_iterator)|Создает итератор необработанного хранилища с указанным базовым выходным итератором.|  
+|[raw_storage_iterator](#raw_storage_iterator)|Создает итератор необработанного хранилища с указанным базовым выходным итератором.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#raw_storage_iterator__element_type)|Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.|  
-|[iter_type](#raw_storage_iterator__iter_type)|Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.|  
+|[element_type](#element_type)|Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.|  
+|[iter_type](#iter_type)|Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор*](#raw_storage_iterator__operator_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `ii` = `x`.|  
-|[оператор=](#raw_storage_iterator__operator_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища * `i` = `x` для сохранения в памяти.|  
-|[оператор++](#raw_storage_iterator__operator_add_add)|Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.|  
+|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `ii` = `x`.|  
+|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища * `i` = `x` для сохранения в памяти.|  
+|[оператор++](#op_add_add)|Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<memory>  
   
  **Пространство имен:** std  
   
-##  <a name="raw_storage_iterator__element_type"></a>  raw_storage_iterator::element_type  
+##  <a name="element_type"></a>  raw_storage_iterator::element_type  
  Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.  
   
 ```
@@ -102,7 +103,7 @@ typedef Type element_type;
 ### <a name="remarks"></a>Примечания  
  Тип является синонимом параметра-шаблона **Type** класса raw_storage_iterator.  
   
-##  <a name="raw_storage_iterator__iter_type"></a>  raw_storage_iterator::iter_type  
+##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
  Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.  
   
 ```
@@ -112,7 +113,7 @@ typedef ForwardIterator iter_type;
 ### <a name="remarks"></a>Примечания  
  Тип является синонимом для параметра-шаблона **ForwardIterator**.  
   
-##  <a name="raw_storage_iterator__operator_star"></a>  raw_storage_iterator::operator*  
+##  <a name="op_star"></a>  raw_storage_iterator::operator*  
  Оператор разыменования, используемый для реализации выражения итератора необработанного хранилища \* *ii* = *x*.  
   
 ```
@@ -123,7 +124,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
  Ссылка на итератор необработанного хранилища  
   
 ### <a name="remarks"></a>Примечания  
- Требования для состояния **ForwardIterator**, которые должен выполнить итератор необработанного хранилища, требуют только действительность выражения \* *ii* = *t*, и он не должен ничего сообщать об **operator** или `operator=` самих по себе. Возвращает операторы-члены в этой реализации **\*this**, так что [operator=](#raw_storage_iterator__operator_eq)(**constType**&) может выполнить фактическое сохранение в выражении, таком как \* *ptr* = `val`.  
+ Требования для состояния **ForwardIterator**, которые должен выполнить итератор необработанного хранилища, требуют только действительность выражения \* *ii* = *t*, и он не должен ничего сообщать об **operator** или `operator=` самих по себе. Возвращает операторы-члены в этой реализации **\*this**, так что [operator=](#op_eq)(**constType**&) может выполнить фактическое сохранение в выражении, таком как \* *ptr* = `val`.  
   
 ### <a name="example"></a>Пример  
   
@@ -176,7 +177,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="raw_storage_iterator__operator_eq"></a>  raw_storage_iterator::operator=  
+##  <a name="op_eq"></a>  raw_storage_iterator::operator=  
  Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* *i* = *x* для сохранения в памяти.  
   
 ```
@@ -245,7 +246,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="raw_storage_iterator__operator_add_add"></a>  raw_storage_iterator::operator++  
+##  <a name="op_add_add"></a>  raw_storage_iterator::operator++  
  Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.  
   
 ```
@@ -298,7 +299,7 @@ array 4 = 8
 *\  
 ```  
   
-##  <a name="raw_storage_iterator__raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
+##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
  Создает итератор необработанного хранилища с указанным базовым выходным итератором.  
   
 ```

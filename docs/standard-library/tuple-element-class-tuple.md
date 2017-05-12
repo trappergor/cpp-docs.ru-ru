@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>Класс tuple_element
@@ -108,7 +109,7 @@ template <class T1, class T2>
   
 Специализации шаблона для типов `pair` предоставляют по одному определению типа члена, `type`, которое является синонимом типа элемента в указанной позиции в паре с сохранением всех квалификаторов const и(или) volatile. Определение типа `tuple_element_t` является удобным псевдонимом для `tuple_element<N, pair<T1, T2>>::type`.  
   
-Используйте [служебную функцию &lt;get&gt;](../standard-library/utility-functions.md#get) для возвращения элемента в указанной позиции или (в C++14 / Visual Studio 2015) указанного типа. 
+Используйте [функция get &lt;программы&gt; ](../standard-library/utility-functions.md#get) требуется возвратить элемент в указанной позиции или заданного типа. 
   
 ## <a name="example"></a>Пример  
   

@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ff8b387b81487e0c39ba5018487a1b8045bd0574
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9cfcedc524b94d0aa6c381416c445cf62f9cf2fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="raise"></a>raise
@@ -104,9 +105,6 @@ int sig
   
 ## <a name="libraries"></a>Библиотеки  
  Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   

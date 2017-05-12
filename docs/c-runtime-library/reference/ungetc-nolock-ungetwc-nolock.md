@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  Указатель на структуру `FILE` .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- При успешном выполнении каждая из этих функций возвращает аргумент символа `c`*.* Если `c` не удается отправить обратно или ни один символ не считан, входной поток не изменяется, и `_ungetc_nolock` возвращает `EOF`; `_ungetwc_nolock` возвращает `WEOF`. Если `stream` — `NULL`, то возвращается `EOF` или `WEOF`, и `errno` устанавливается в значение `EINVAL`.  
+ При успешном завершении, каждая из этих функций возвращает символьный аргумент `c`. Если `c` не удается отправить обратно или ни один символ не считан, входной поток не изменяется, и `_ungetc_nolock` возвращает `EOF`; `_ungetwc_nolock` возвращает `WEOF`. Если `stream` — `NULL`, то возвращается `EOF` или `WEOF`, и `errno` устанавливается в значение `EINVAL`.  
   
  Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -110,9 +111,6 @@ wint_t _ungetwc_nolock(
 |`_ungetwc_nolock`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   

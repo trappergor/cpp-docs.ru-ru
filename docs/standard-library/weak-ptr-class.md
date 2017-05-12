@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 9e36da6c4f7dde6df281d8ad229373d861ee045a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weakptr-class"></a>Класс weak_ptr
@@ -89,7 +90,7 @@ public:
 ## <a name="remarks"></a>Примечания  
  Класс шаблона описывает объект, который указывает на ресурс, находящийся под управлением одного или нескольких объектов [класса shared_ptr](../standard-library/shared-ptr-class.md). Объекты `weak_ptr`, которые указывают на ресурс, не влияют на количество ссылок на ресурс. Таким образом, когда последний объект `shared_ptr`, который управляет этим ресурсом, будет уничтожен, ресурс освободится, даже если существуют объекты `weak_ptr`, указывающие на этот ресурс. Это важно, чтобы избежать циклов в структурах данных.  
   
- Объект `weak_ptr` указывает на ресурс, если он был создан из объекта `shared_ptr`, который владеет этим ресурсом; если он был создан из объекта `weak_ptr`, который указывает на этот ресурс; или если этот ресурс был назначен ему с помощью [operator=](#weak_ptr__operator_eq). Объект `weak_ptr` не предоставляет прямой доступ к ресурсу, на который он указывает. Код, которому необходимо использовать ресурс, делает с это с помощью объекта `shared_ptr`, который владеет этим ресурсом. Этот объект создается функцией-членом [lock](#weak_ptr__lock). Срок действия объекта `weak_ptr` истекает, если ресурс, на который он указывает, был освобожден, так как все объекты `shared_ptr`, владеющие ресурсом, были уничтожены. Вызов `lock` в объекте `weak_ptr` с истекшим сроком действия создает пустой объект shared_ptr.  
+ Объект `weak_ptr` указывает на ресурс, если он был создан из объекта `shared_ptr`, который владеет этим ресурсом; если он был создан из объекта `weak_ptr`, который указывает на этот ресурс; или если этот ресурс был назначен ему с помощью [operator=](#op_eq). Объект `weak_ptr` не предоставляет прямой доступ к ресурсу, на который он указывает. Код, которому необходимо использовать ресурс, делает с это с помощью объекта `shared_ptr`, который владеет этим ресурсом. Этот объект создается функцией-членом [lock](#lock). Срок действия объекта `weak_ptr` истекает, если ресурс, на который он указывает, был освобожден, так как все объекты `shared_ptr`, владеющие ресурсом, были уничтожены. Вызов `lock` в объекте `weak_ptr` с истекшим сроком действия создает пустой объект shared_ptr.  
   
  Пустой объект weak_ptr не указывает на какие-либо ресурсы и не содержит блок управления. Его функция-член `lock` возвращает пустой объект shared_ptr.  
   
@@ -101,32 +102,32 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr](#weak_ptr__weak_ptr)|Создает документ `weak_ptr`.|  
+|[weak_ptr](#weak_ptr)|Создает документ `weak_ptr`.|  
   
 ### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[element_type](#weak_ptr__element_type)|Тип элемента.|  
-|[expired](#weak_ptr__expired)|Проверяет, истек ли срок действия владения.|  
-|[lock](#weak_ptr__lock)|Получает эксклюзивные права владения ресурсом.|  
-|[owner_before](#weak_ptr__owner_before)|Возвращает `true`, если этот объект `weak_ptr` заказывался раньше заданного указателя (или меньше него).|  
-|[reset](#weak_ptr__reset)|Освобождает ресурс, которым владеет.|  
-|[swap](#weak_ptr__swap)|Меняет местами два объекта `weak_ptr`.|  
-|[use_count](#weak_ptr__use_count)|Считает количество назначенных объектов `shared_ptr`.|  
+|[element_type](#element_type)|Тип элемента.|  
+|[expired](#expired)|Проверяет, истек ли срок действия владения.|  
+|[lock](#lock)|Получает эксклюзивные права владения ресурсом.|  
+|[owner_before](#owner_before)|Возвращает `true`, если этот объект `weak_ptr` заказывался раньше заданного указателя (или меньше него).|  
+|[reset](#reset)|Освобождает ресурс, которым владеет.|  
+|[swap](#swap)|Меняет местами два объекта `weak_ptr`.|  
+|[use_count](#use_count)|Считает количество назначенных объектов `shared_ptr`.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор=](#weak_ptr__operator_eq)|Заменяет ресурс, которым владеет.|  
+|[оператор=](#op_eq)|Заменяет ресурс, которым владеет.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<memory>  
   
  **Пространство имен:** std  
   
-##  <a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="element_type"></a>  element_type  
  Тип элемента.  
   
 ```  
@@ -161,7 +162,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="weak_ptr__expired"></a>  expired  
+##  <a name="expired"></a>  expired  
  Проверяет, истек ли срок действия владения.  
   
 ```  
@@ -217,7 +218,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__lock"></a>  lock  
+##  <a name="lock"></a>  lock  
  Получает эксклюзивные права владения ресурсом.  
   
 ```  
@@ -273,7 +274,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__operator_eq"></a>  оператор=  
+##  <a name="op_eq"></a>  оператор=  
  Заменяет ресурс, которым владеет.  
   
 ```  
@@ -332,7 +333,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="weak_ptr__owner_before"></a>  owner_before  
+##  <a name="owner_before"></a>  owner_before  
  Возвращает `true`, если этот объект `weak_ptr` заказывался раньше заданного указателя (или меньше него).  
   
 ```  
@@ -350,7 +351,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Примечания  
  Функция-член возвращает значение `true`, если `*this` равно `ordered before``ptr`.  
   
-##  <a name="weak_ptr__reset"></a>  reset  
+##  <a name="reset"></a>  reset  
  Освобождает ресурс, которым владеет.  
   
 ```  
@@ -391,7 +392,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="weak_ptr__swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Меняет местами два объекта `weak_ptr`.  
   
 ```  
@@ -459,7 +460,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="weak_ptr__use_count"></a>  use_count  
+##  <a name="use_count"></a>  use_count  
  Считает количество назначенных объектов `shared_ptr`.  
   
 ```  
@@ -498,7 +499,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr__weak_ptr"></a>  weak_ptr  
+##  <a name="weak_ptr"></a>  weak_ptr  
  Создает документ `weak_ptr`.  
   
 ```  

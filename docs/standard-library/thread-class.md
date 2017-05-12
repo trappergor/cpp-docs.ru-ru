@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - thread/std::thread
+- thread/std::thread::id Class
+- thread/std::thread::thread
+- thread/std::thread::detach
+- thread/std::thread::get_id
+- thread/std::thread::hardware_concurrency
+- thread/std::thread::join
+- thread/std::thread::joinable
+- thread/std::thread::native_handle
+- thread/std::thread::swap
 dev_langs:
 - C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
@@ -31,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 848a51faa24498dd1505483894aa47ce959240a7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b1c5282d284a70917c6c14511bacda305180d778
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="thread-class"></a>Класс thread
@@ -57,38 +67,38 @@ class thread;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Класс thread::id](#thread__id_class)|Уникально идентифицирует соответствующий поток.|  
+|[Класс thread::id](#id_class)|Уникально идентифицирует соответствующий поток.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор thread::thread](#thread__thread_constructor)|Создает объект `thread`.|  
+|[thread](#thread)|Создает объект `thread`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод thread::detach](#thread__detach_method)|Отсоединяет связанный поток от объекта `thread`.|  
-|[Метод thread::get_id](#thread__get_id_method)|Возвращает уникальный идентификатор связанного потока.|  
-|[Метод thread::hardware_concurrency](#thread__hardware_concurrency_method)|Статический. Возвращает приблизительное число контекстов аппаратного потока.|  
-|[Метод thread::join](#thread__join_method)|Блокируется до завершения соответствующего потока.|  
-|[Метод thread::joinable](#thread__joinable_method)|Указывает, возможно ли присоединение связанного потока.|  
-|[Метод thread::native_handle](#thread__native_handle_method)|Возвращает тип реализации, представляющий дескриптор потока.|  
-|[Метод thread::swap](#thread__swap_method)|Заменяет состояние потока заданным объектом `thread`.|  
+|[отсоединение](#detach)|Отсоединяет связанный поток от объекта `thread`.|  
+|[get_id](#get_id)|Возвращает уникальный идентификатор связанного потока.|  
+|[hardware_concurrency](#hardware_concurrency)|Статический. Возвращает приблизительное число контекстов аппаратного потока.|  
+|[join](#join)|Блокируется до завершения соответствующего потока.|  
+|[joinable](#joinable)|Указывает, возможно ли присоединение связанного потока.|  
+|[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор потока.|  
+|[swap](#swap)|Заменяет состояние потока заданным объектом `thread`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[thread::operator=](#thread__operator_eq)|Связывает поток с текущим объектом `thread`.|  
+|[thread::operator=](#op_eq)|Связывает поток с текущим объектом `thread`.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** thread  
+ **Заголовок:** \<поток >  
   
  **Пространство имен:** std  
   
-##  <a name="a-namethreaddetachmethoda--threaddetach-method"></a><a name="thread__detach_method"></a> Метод thread::detach  
+##  <a name="detach"></a>Thread::Detach
  Отсоединяет связанный поток. Операционная система становится ответственной за освобождение ресурсов потока при завершении.  
   
 ```
@@ -96,13 +106,13 @@ void detach();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- После вызова `detach` последующие вызовы [get_id](#thread__get_id_method) возвращают [id](#thread__id_class).  
+ После вызова `detach` последующие вызовы [get_id](#get_id) возвращают [id](#id_class).  
   
  Если поток, связанный с вызываемым объектом, присоединить невозможно, функция создает ошибку [system_error](../standard-library/system-error-class.md) с кодом `invalid_argument`.  
   
  Если поток, связанный с вызывающим объектом, является недопустимым, функция создает ошибку `system_error` с кодом `no_such_process`.  
   
-##  <a name="a-namethreadgetidmethoda--threadgetid-method"></a><a name="thread__get_id_method"></a> Метод thread::get_id  
+##  <a name="get_id"></a>Thread::get_id
  Возвращает уникальный идентификатор связанного потока.  
   
 ```
@@ -110,9 +120,9 @@ id get_id() const noexcept;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [thread::id](#thread__id_class), уникально идентифицирующий связанный поток, или `thread::id()`, если с объектом не связан никакой поток.  
+ Объект [thread::id](#id_class), уникально идентифицирующий связанный поток, или `thread::id()`, если с объектом не связан никакой поток.  
   
-##  <a name="a-namethreadhardwareconcurrencymethoda--threadhardwareconcurrency-method"></a><a name="thread__hardware_concurrency_method"></a> Метод thread::hardware_concurrency  
+##  <a name="hardware_concurrency"></a>Thread::hardware_concurrency
  Статический метод, который возвращает приблизительное число контекстов аппаратного потока.  
   
 ```
@@ -122,7 +132,7 @@ static unsigned int hardware_concurrency() noexcept;
 ### <a name="return-value"></a>Возвращаемое значение  
  Приблизительное число контекстов аппаратного потока. Если значение не может быть вычислено или не является правильно определенным, этот метод возвращает значение 0.  
   
-##  <a name="a-namethreadidclassa--threadid-class"></a><a name="thread__id_class"></a> Класс thread::id  
+##  <a name="id_class"></a> Класс thread::id  
  Предоставляет уникальный идентификатор для каждого потока выполнения в процессе.  
   
 ```
@@ -136,7 +146,7 @@ class thread::id {
   
  Все созданные конструктором по умолчанию объекты `thread::id` равны.  
   
-##  <a name="a-namethreadjoinmethoda--threadjoin-method"></a><a name="thread__join_method"></a> Метод thread::join  
+##  <a name="join"></a>Thread::JOIN
  Блокируется до завершения потока выполнения, связанного с вызывающим объектом.  
   
 ```
@@ -144,9 +154,9 @@ void join();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если вызов завершается успешно, последующие вызовы [get_id](#thread__get_id_method) для вызывающего объекта возвращают значение по умолчанию [thread::id](#thread__id_class), которое не равно значению `thread::id` ни одного из существующих потоков; если вызов завершается неудачно, возвращаемое `get_id` значение остается неизменным.  
+ Если вызов завершается успешно, последующие вызовы [get_id](#get_id) для вызывающего объекта возвращают значение по умолчанию [thread::id](#id_class), которое не равно значению `thread::id` ни одного из существующих потоков; если вызов завершается неудачно, возвращаемое `get_id` значение остается неизменным.  
   
-##  <a name="a-namethreadjoinablemethoda--threadjoinable-method"></a><a name="thread__joinable_method"></a> Метод thread::joinable  
+##  <a name="joinable"></a>Thread::joinable
  Указывает, возможно ли *присоединение* связанного потока.  
   
 ```
@@ -159,7 +169,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>Примечания  
  Объект потока *присоединяем*, если `get_id() != id()`.  
   
-##  <a name="a-namethreadnativehandlemethoda--threadnativehandle-method"></a><a name="thread__native_handle_method"></a> Метод thread::native_handle  
+##  <a name="native_handle"></a>Thread::native_handle
  Возвращает тип реализации, представляющий дескриптор потока. Дескриптор потока может использоваться разными способами в зависимости от реализации.  
   
 ```
@@ -169,7 +179,7 @@ native_handle_type native_handle();
 ### <a name="return-value"></a>Возвращаемое значение  
  `native_handle_type` определяется как `HANDLE` Win32, который приводится к `void *`.  
   
-##  <a name="a-namethreadoperatoreqa--threadoperator"></a><a name="thread__operator_eq"></a> thread::operator=  
+##  <a name="op_eq"></a> thread::operator=  
  Связывает поток заданного объекта с текущим объектом.  
   
 ```
@@ -188,7 +198,7 @@ thread& operator=(thread&& Other) noexcept;
   
  После установления связи `Other` присваивается состояние, созданное по умолчанию.  
   
-##  <a name="a-namethreadswapmethoda--threadswap-method"></a><a name="thread__swap_method"></a> Метод thread::swap  
+##  <a name="swap"></a>Thread::Swap
  Заменяет состояние потока состоянием заданного объекта `thread`.  
   
 ```
@@ -199,7 +209,7 @@ void swap(thread& Other) noexcept;
  `Other`  
  Объект `thread`.  
   
-##  <a name="a-namethreadthreadconstructora--threadthread-constructor"></a><a name="thread__thread_constructor"></a> Конструктор thread::thread  
+##  <a name="thread"></a> Конструктор thread::thread  
  Создает объект `thread`.  
   
 ```

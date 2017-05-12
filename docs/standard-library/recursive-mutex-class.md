@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::recursive_mutex
+- mutex/std::recursive_mutex::recursive_mutex
+- mutex/std::recursive_mutex::lock
+- mutex/std::recursive_mutex::try_lock
+- mutex/std::recursive_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: eb5ffd1b-7e78-4559-8391-bb220ead42fc
@@ -31,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c82c8302be5d3e01de90adda2049a022100b8443
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0e5fccf4d1c1019d8922ae0676d7f5fe8e8dfd2a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="recursivemutex-class"></a>Класс recursive_mutex
@@ -52,23 +57,23 @@ class recursive_mutex;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор recursive_mutex](#recursive_mutex__recursive_mutex_constructor)|Создает объект `recursive_mutex`.|  
-|[Деструктор ~recursive_mutex](#recursive_mutex___dtorrecursive_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_mutex`.|  
+|[recursive_mutex](#recursive_mutex)|Создает объект `recursive_mutex`.|  
+|[Деструктор ~recursive_mutex](#dtorrecursive_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_mutex`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[lock](#recursive_mutex__lock_method)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца мьютекса.|  
-|[try_lock](#recursive_mutex__try_lock_method)|Попытки получить права владельца мьютекса без блокировки.|  
-|[unlock](#recursive_mutex__unlock_method)|Освобождает права владения мьютексом.|  
+|[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца мьютекса.|  
+|[try_lock](#try_lock)|Попытки получить права владельца мьютекса без блокировки.|  
+|[unlock](#unlock)|Освобождает права владения мьютексом.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** mutex  
+ **Заголовок:** \<мьютекс >  
   
  **Пространство имен:** std  
   
-##  <a name="a-namerecursivemutexlockmethoda--lock"></a><a name="recursive_mutex__lock_method"></a>  lock  
+##  <a name="lock"></a>  lock  
  Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.  
   
 ```cpp  
@@ -78,14 +83,14 @@ void lock();
 ### <a name="remarks"></a>Примечания  
  Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает значение и предыдущая блокировка остается в силе.  
   
-##  <a name="a-namerecursivemutexrecursivemutexconstructora--recursivemutex"></a><a name="recursive_mutex__recursive_mutex_constructor"></a>  recursive_mutex  
+##  <a name="recursive_mutex"></a>  recursive_mutex  
  Создает объект `recursive_mutex`, который не заблокирован.  
   
 ```cpp  
 recursive_mutex();
 ```  
   
-##  <a name="a-namerecursivemutexdtorrecursivemutexdestructora--recursivemutex"></a><a name="recursive_mutex___dtorrecursive_mutex_destructor"></a>  ~recursive_mutex  
+##  <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex  
  Освобождает все ресурсы, используемые объектом.  
   
 ```cpp  
@@ -95,7 +100,7 @@ recursive_mutex();
 ### <a name="remarks"></a>Примечания  
  Если при выполнении деструктора объект заблокирован, поведение не определено.  
   
-##  <a name="a-namerecursivemutextrylockmethoda--trylock"></a><a name="recursive_mutex__try_lock_method"></a>  try_lock  
+##  <a name="try_lock"></a>  try_lock  
  Попытки получить права владельца объекта `mutex` без блокировки.  
   
 ```cpp  
@@ -108,7 +113,7 @@ bool try_lock() noexcept;
 ### <a name="remarks"></a>Примечания  
  Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает `true` и предыдущая блокировка остается в силе.  
   
-##  <a name="a-namerecursivemutexunlockmethoda--unlock"></a><a name="recursive_mutex__unlock_method"></a>  unlock  
+##  <a name="unlock"></a>  unlock  
  Освобождает права владения мьютексом.  
   
 ```cpp  
@@ -116,7 +121,7 @@ void unlock();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод освобождает владение `mutex` только после его вызова столько раз, сколько [lock](#recursive_mutex__lock_method) и [try_lock](#recursive_mutex__try_lock_method) были успешно вызваны для объекта`recursive_mutex`.  
+ Этот метод освобождает владение `mutex` только после его вызова столько раз, сколько [lock](#lock) и [try_lock](#try_lock) были успешно вызваны для объекта`recursive_mutex`.  
   
  Если вызывающий поток не является владельцем `mutex`, поведение не определено.  
   

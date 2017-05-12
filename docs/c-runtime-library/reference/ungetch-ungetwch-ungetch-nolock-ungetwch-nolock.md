@@ -1,73 +1,90 @@
 ---
-title: "_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ungetch_nolock"
-  - "_ungetwch_nolock"
-  - "_ungetwch"
-  - "_ungetch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ungetch_nolock"
-  - "ungetwch"
-  - "ungetch_nolock"
-  - "_ungetwch"
-  - "ungetch"
-  - "ungetwch_nolock"
-  - "_ungetch"
-  - "_ungettch_nolock"
-  - "_ungettch"
-  - "_ungetwch_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ungetch - функция"
-  - "_ungetch_nolock - функция"
-  - "_ungettch - функция"
-  - "_ungettch_nolock - функция"
-  - "_ungetwch - функция"
-  - "_ungetwch_nolock - функция"
-  - "знаки, возвращение обратно в консоль"
-  - "ungetch_nolock - функция"
-  - "ungettch - функция"
-  - "ungettch_nolock - функция"
-  - "ungetwch - функция"
-  - "ungetwch_nolock - функция"
+title: "_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ungetch_nolock
+- _ungetwch_nolock
+- _ungetwch
+- _ungetch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ungetch_nolock
+- ungetwch
+- ungetch_nolock
+- _ungetwch
+- ungetch
+- ungetwch_nolock
+- _ungetch
+- _ungettch_nolock
+- _ungettch
+- _ungetwch_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ungetch function
+- ungetwch function
+- characters, pushing back to console
+- _ungettch_nolock function
+- ungettch function
+- _ungettch function
+- ungetch_nolock function
+- ungettch_nolock function
+- _ungetwch_nolock function
+- _ungetch_nolock function
+- ungetwch_nolock function
+- _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4c36da30cfc69140a47e779025acb579bb687df2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Возвращает обратно последний символ, который читается с консоли.  
+---
+# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
+Помещает обратно последний символ, считанный из консоли.  
   
 > [!IMPORTANT]
->  Этот API невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _ungetch(  
@@ -84,35 +101,35 @@ wint_t _ungetwch_nolock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
- Символ, который требуется вернуть.  
+ Символ, который требуется поместить обратно.  
   
-## Возвращаемое значение  
- Обе функции возвращают символ `c` при успешном выполнении.  При возникновении ошибки `_ungetch` возвращает значение `EOF` и `_ungetwch`возвращает значение`WEOF`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Обе функции возвращают символ `c` в случае успешного выполнения. Если возникает ошибка, `_ungetch` возвращает значение `EOF` и `_ungetwch` возвращает `WEOF`.  
   
-## Заметки  
- Эти функции возвращают символ `c` обратно на консоль и определяет `c` как следующий читаемый символ `_getch` или `_getche` \(или`_getwch` или`_getwche`\).  `_ungetch` и `_ungetwch` завершаются ошибкой, если они вызываются несколько раз перед следующей операцией чтения.  Аргумент `c` не может быть `EOF` \(или `WEOF`\).  
+## <a name="remarks"></a>Примечания  
+ Эти функции push-символ `c` обратно в консоль, вызывая `c` для следующего символа, считываемых `_getch` или `_getche` (или `_getwch` или `_getwche`). Функции `_ungetch` и `_ungetwch` завершаются неудачно, если они вызываются несколько раз до следующего чтения. Аргумент `c` может не иметь значение `EOF` (или `WEOF`).  
   
- Версии с суффиксом `_nolock` идентичны за исключением того, что они не защищены от взаимодействия с другими потоками.  Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков.  Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
+ Версии с суффиксом `_nolock` идентичны за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ungettch`|`_ungetch`|`_ungetch`|`_ungetwch`|  
 |`_ungettch_nolock`|`_ungetch_nolock`|`_ungetch_nolock`|`_ungetwch_nolock`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_ungetch`, `_ungetch_nolock`|\<conio.h\>|  
-|`_ungetwch`, `_ungetwch_nolock`|\<conio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_ungetch`, `_ungetch_nolock`|\<conio.h>|  
+|`_ungetwch`, `_ungetwch_nolock`|\<conio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_ungetch.c  
@@ -149,8 +166,12 @@ int main( void )
 }  
 ```  
   
-  **`White`token \= White**   
-## См. также  
- [Ввод\-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [\_getch, \_getwch](../Topic/_getch,%20_getwch.md)
+```Output  
+  
+Whitetoken = White  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Ввод-вывод на консоль и в порт](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

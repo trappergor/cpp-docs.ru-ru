@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 129ad6a0359fbee402b39c5e7ff498602e97479d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7cd85d29ee14376b46d05ac5cfa95496fffdc9e5
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2815"></a>Ошибка компилятора C2815
-«operator delete»: первый формальный параметр должен быть "void *", однако «параметр»  
+«operator delete»: первый формальный параметр должен быть "void *", однако «param»  
   
- Любые пользовательские [оператор delete](../../standard-library/new-operators.md#operator_delete) функция должна принимать первый формальный параметр типа `void *`.  
+ Любым пользовательским [оператор delete](../../standard-library/new-operators.md#op_delete) функция должна принимать первый формальный параметр типа `void *`.  
   
  Следующий пример приводит к возникновению ошибки C2815:  
   

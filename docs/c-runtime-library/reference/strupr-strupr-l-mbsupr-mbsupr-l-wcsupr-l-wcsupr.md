@@ -1,89 +1,106 @@
 ---
-title: "_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsupr_l"
-  - "_mbsupr"
-  - "_strupr_l"
-  - "_wcsupr"
-  - "_wcsupr_l"
-  - "_strupr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntoskrnl.exe"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbsupr"
-  - "_ftcsupr"
-  - "mbsupr"
-  - "_tcsupr"
-  - "strupr_l"
-  - "_fstrupr"
-  - "_strupr"
-  - "mbsupr_l"
-  - "_wcsupr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrupr - функция"
-  - "_ftcsupr - функция"
-  - "_mbsupr - функция"
-  - "_mbsupr_l - функция"
-  - "_strupr - функция"
-  - "_strupr_l - функция"
-  - "_tcsupr - функция"
-  - "_tcsupr_l - функция"
-  - "_wcsupr - функция"
-  - "_wcsupr_l - функция"
-  - "преобразование случая, функции CRT"
-  - "fstrupr - функция"
-  - "ftcsupr - функция"
-  - "mbsupr - функция"
-  - "mbsupr_l - функция"
-  - "преобразование строк [C++], регистр знаков"
-  - "строки [C++], регистр знаков"
-  - "строки [C++], преобразование случая"
-  - "strupr - функция"
-  - "strupr_l - функция"
-  - "tcsupr - функция"
-  - "tcsupr_l - функция"
-  - "прописные буквы, преобразование строк в"
-  - "wcsupr - функция"
-  - "wcsupr_l - функция"
+title: "Функции _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsupr_l
+- _mbsupr
+- _strupr_l
+- _wcsupr
+- _wcsupr_l
+- _strupr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntoskrnl.exe
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbsupr
+- _ftcsupr
+- mbsupr
+- _tcsupr
+- strupr_l
+- _fstrupr
+- _strupr
+- mbsupr_l
+- _wcsupr
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcsupr_l function
+- mbsupr function
+- strupr function
+- uppercase, converting strings to
+- wcsupr function
+- _wcsupr function
+- string conversion [C++], case
+- ftcsupr function
+- _ftcsupr function
+- _wcsupr_l function
+- wcsupr_l function
+- strings [C++], case
+- tcsupr function
+- _tcsupr_l function
+- _fstrupr function
+- _strupr_l function
+- _mbsupr_l function
+- converting case, CRT functions
+- fstrupr function
+- mbsupr_l function
+- strupr_l function
+- _strupr function
+- _mbsupr function
+- _tcsupr function
+- strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09153213c542e3424b38057ba12c9826344a5a02
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Преобразует строку в верхний регистр.  Существуют более безопасные версии этих функций; см. раздел [\_strupr\_s, \_strupr\_s\_l, \_mbsupr\_s, \_mbsupr\_s\_l, \_wcsupr\_s, \_wcsupr\_s\_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
+---
+# <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
+Преобразуют буквы в строке в прописные. Есть более безопасные версии этих функций. См. раздел [Функции _strupr_s _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsupr` и `_mbsupr_l` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Функции  `_mbsupr` и `_mbsupr_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *_strupr(  
@@ -136,49 +153,46 @@ unsigned char *_mbsupr_l(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
- Строка для преобразования в верхний регистр.  
+ Строка для преобразования букв.  
   
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Возвращает указатель на измененную строку.  Поскольку изменения осуществляются по месту, возвращаемый указатель является тем же указателем, который передавался в качестве аргумента.  Нет зарезервированных возвращаемых значений для указания ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает указатель на измененную строку. Так как изменение осуществляется на месте, возвращенный указатель совпадает с указателем, переданным в качестве входного аргумента. Нет зарезервированных возвращаемых значений для указания ошибки.  
   
-## Заметки  
- Функция `_strupr` преобразует по месту буквы нижнего регистра в `str` в верхний регистр.  Преобразование определяется параметром категории `LC_CTYPE` языкового стандарта.  Другие символы не затрагиваются.  Дополнительные сведения по `LC_CTYPE` см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса `_l` используют текущий языковой стандарт; версии с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Примечания  
+ Функция `_strupr` преобразует "на месте" каждую строчную букву в строке `str` в прописную. Преобразование определяется категорией `LC_CTYPE` языкового стандарта. Другие символы не изменяются. Дополнительные сведения по `LC_CTYPE` см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт. Версии с суффиксом `_l` идентичны им, но они используют языковой стандарт, переданный в качестве аргумента. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- `_wcsupr` и `_mbsupr` — двубайтовая и многобайтовая символьные версии `_strupr`.  Аргумент и возвращаемое значение `_wcsupr` представляют собой расширенные строки; аргумент и возвращаемое значение `_mbsupr` представляют собой многобайтовые строки.  В остальных случаях эти три функции ведут себя идентично.  
+ Функции `_wcsupr` и `_mbsupr` являются версиями функции `_strupr` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение функции `_wcsupr` представляют собой строки с расширенными символами. Аргументы и возвращаемое значение функции `_mbsupr` представляют собой строки с многобайтовыми символами. В остальном эти три функции ведут себя идентично.  
   
- Если `str` является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают исходную строку и устанавливают `errno` в `EINVAL`.  
+ Если параметр `str` является пустым указателем, вызывается обработчик недопустимых параметров. Это описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают исходную строку и устанавливают для `errno` значение `EINVAL`.  
   
- В C\+\+ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsupr`|`_strupr`|`_mbsupr`|`_wcsupr`|  
 |`_tcsupr_l`|`_strupr_l`|`_mbsupr_l`|`_wcsupr_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_strupr`, `_strupr_l`|\<string.h\>|  
-|`_wcsupr`, `_wcsupr_l`|\<string.h\> или \<wchar.h\>|  
-|`_mbsupr`, `_mbsupr_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strupr`, `_strupr_l`|\<string.h>|  
+|`_wcsupr`, `_wcsupr_l`|\<string.h> или \<wchar.h>|  
+|`_mbsupr`, `_mbsupr_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
- См. пример для [strlwr](../Topic/_strlwr,%20_wcslwr,%20_mbslwr,%20_strlwr_l,%20_wcslwr_l,%20_mbslwr_l.md).  
+## <a name="example"></a>Пример  
+ См. пример для функции [_strlwr](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).  
   
-## Эквивалент в .NET Framework  
- [System::String::ToUpper](https://msdn.microsoft.com/en-us/library/system.string.toupper.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
- [\_strlwr, \_wcslwr, \_mbslwr, \_strlwr\_l, \_wcslwr\_l, \_mbslwr\_l](../Topic/_strlwr,%20_wcslwr,%20_mbslwr,%20_strlwr_l,%20_wcslwr_l,%20_mbslwr_l.md)
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
+ [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)

@@ -18,19 +18,20 @@ dev_langs:
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 9d8418ee3cd3d2ff0295b7cfa8beb063000ebc2f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 97cdd6afe672d902efd92a692b23e920f7d03647
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt-operators"></a>Операторы &lt;tuple&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
-|[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Сравнивает объекты `tuple` на неравенство.  
   
 ```  
@@ -92,7 +93,7 @@ false
 true  
 ```  
   
-##  <a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="op_lt"></a>  оператор&lt;  
  Сравнение объектов `tuple` на предмет меньшинства.  
   
 ```  
@@ -154,7 +155,7 @@ false
 true  
 ```  
   
-##  <a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a>  оператор&lt;=  
  Сравнение объектов `tuple` на предмет отношения меньше или равно.  
   
 ```  
@@ -216,7 +217,7 @@ true
 false  
 ```  
   
-##  <a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Сравнение объектов `tuple` на равенство.  
   
 ```  
@@ -278,7 +279,7 @@ true
 false  
 ```  
   
-##  <a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="op_gt"></a>  оператор&gt;  
  Сравнение объектов `tuple` на предмет большинства.  
   
 ```  
@@ -340,7 +341,7 @@ false
 true  
 ```  
   
-##  <a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a>  оператор&gt;=  
  Сравнение объектов `tuple` на предмет большинства или равенства.  
   
 ```  
