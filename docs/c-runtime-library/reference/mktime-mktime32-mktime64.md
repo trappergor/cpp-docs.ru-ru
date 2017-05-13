@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1f738584d525da5b7787b2ba134e7c95ddc57683
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ced40f391f4a4085531d624acc45094e06e1f0a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
@@ -86,9 +87,9 @@ __time64_t _mktime64(
  Указатель на структуру времени; см. [asctime](../../c-runtime-library/reference/asctime-wasctime.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция `_mktime32` возвращает указанное календарное время, закодированное как значение типа [time_t](../../c-runtime-library/standard-types.md). Если *timeptr* ссылается на время до полуночи 1 января 1970 г. или если невозможно представить календарное время, `_mktime32` возвращает значение –1, приведенное к типу `time_t`. Если при использовании `_mktime32` *timeptr* ссылается на время после 23:59:59 18 января 2038 г. в формате UTC, параметр возвращает значение –1, приведенное к типу `time_t`.  
+ Функция `_mktime32` возвращает указанное календарное время, закодированное как значение типа [time_t](../../c-runtime-library/standard-types.md). Если *timeptr* ссылается на время до полуночи 1 января 1970 года, или если невозможно представить Календарное время, `_mktime32` возвращает -1, приведенное к типу `time_t`. При использовании `_mktime32` и, если *timeptr* ссылается на время после 23:59:59 18 января 2038 года, универсальное глобальное (UTC), возвращается значение -1, приведенное к типу `time_t`.  
   
- `_mktime64` возвращает значение –1, приведенное к типу `__time64_t`, если *timeptr* ссылается на время после 23:59:59 31 декабря 3000 г. в формате UTC.  
+ `_mktime64`Возвращает -1, приведенное к типу `__time64_t` Если *timeptr* ссылается на дату после 23:59:59, 31 декабря 3000 года, время UTC.  
   
 ## <a name="remarks"></a>Примечания  
  Функции `mktime`, `_mktime32` и `_mktime64` преобразуют предоставленную структуру (возможно, неполную), на которую указывает *timeptr*, в полностью определенную структуру с нормализованными значениями, а затем преобразуют ее в значение календарного времени `time_t`. Преобразованное время имеет ту же кодировку, что и значения, возвращаемые функцией [time](../../c-runtime-library/reference/time-time32-time64.md). Исходные значения компонентов `tm_wday` и `tm_yday` структуры *timeptr* пропускаются, а исходные значения других компонентов не ограничиваются их нормальными диапазонами.  
@@ -164,9 +165,6 @@ Current time is Fri Apr 25 13:34:07 2003
   
 In 20 days the time will be Thu May 15 13:34:07 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- <xref:System.DateTimeOffset.%23ctor%2A>  
   
 ## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   

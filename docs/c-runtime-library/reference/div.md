@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  Функция `div`, вызванная с использованием аргументов типа `int`, возвращает структуру типа `div_t`, состоящую из частного и остатка. Возвращаемое значение перегруженной функции с аргументами типа `long` — `ldiv_t`. Структуры `div_t` и `ldiv_t` определены в STDLIB.H.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `div` производит деление `numer` на `denom`, вычисляя таким образом частное и остаток. Структура [div_t](../../c-runtime-library/standard-types.md) содержит частное, `int``quot`, и остаток, `int``rem`. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.  
+ Функция `div` производит деление `numer` на `denom`, вычисляя таким образом частное и остаток. Структура [div_t](../../c-runtime-library/standard-types.md) содержит частное, `int quot`, и остаток, `int rem`. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.  
   
- Перегруженные версии, принимающие аргументы типа `long` или `long long`, доступны только для кода C++. Тип возвращаемого значения [ldiv_t](../../c-runtime-library/standard-types.md) содержит элементы `long``quot` и `long``rem`, а тип возвращаемого значения [lldiv_t](../../c-runtime-library/standard-types.md) содержит элементы `long long quot` и `long long rem`, которые имеют те же смысловые значения, что и члены `div_t`.  
+ Перегруженные версии, принимающие аргументы типа `long` или `long long`, доступны только для кода C++. Тип возвращаемого значения [ldiv_t](../../c-runtime-library/standard-types.md) содержит элементы `long quot` и `long rem`, а тип возвращаемого значения [lldiv_t](../../c-runtime-library/standard-types.md) содержит элементы `long long quot` и `long long rem`, которые имеют те же смысловые значения, что и члены `div_t`.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   

@@ -1,72 +1,90 @@
 ---
-title: "strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcscoll"
-  - "_mbscoll"
-  - "_mbscoll_l"
-  - "strcoll"
-  - "_strcoll_l"
-  - "_wcscoll_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcscoll"
-  - "_mbscoll"
-  - "_tcscoll"
-  - "_ftcscoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "кодовые страницы, использование для сравнений строк"
-  - "Функция mbscoll"
-  - "Функция wcscoll_l"
-  - "Функция ftcscoll"
-  - "Функция wcscoll"
-  - "Функция _strcoll_l"
-  - "Функция tcscoll"
-  - "Функция _ftcscoll"
-  - "Функция _tcscoll"
-  - "Функция _wcscoll_l"
-  - "Функция _mbscoll"
-  - "Функция strcoll_l"
-  - "Функция strcoll"
-  - "строки [C++], сравнение по кодовой странице"
+title: "strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcscoll
+- _mbscoll
+- _mbscoll_l
+- strcoll
+- _strcoll_l
+- _wcscoll_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcscoll
+- _mbscoll
+- _tcscoll
+- _ftcscoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- code pages, using for string comparisons
+- mbscoll function
+- wcscoll_l function
+- ftcscoll function
+- wcscoll function
+- _strcoll_l function
+- tcscoll function
+- _ftcscoll function
+- _tcscoll function
+- _wcscoll_l function
+- _mbscoll function
+- strcoll_l function
+- strcoll functions
+- strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 43953fbd9473f491d628fd7389c4b9a62294e2b6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Сравнивает строки, используя текущий языковой стандарт или указанную LC\_COLLATE категорию состояния преобразования.  
+---
+# <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
+Сравнивает строки с помощью текущего языкового стандарта или заданной категории состояния преобразования LC_COLLATE.  
   
 > [!IMPORTANT]
->  `_mbscoll` и `_mbscoll_l` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Функции  `_mbscoll` и `_mbscoll_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int strcoll(  
@@ -98,61 +116,58 @@ int _mbscoll_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `string1`, `string2`  
  Строки с завершающим нулем для сравнения.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает значение, указывающее отношение `string1` к `string2` следующим образом.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает значение, показывающее связь между `string1` для `string2`, как показано ниже.  
   
 |Возвращаемое значение|Отношение string1 к string2|  
-|---------------------------|---------------------------------|  
-|\< 0|`string1` меньше чем `string2`.|  
-|0|`string1` идентична `string2`.|  
-|\> 0|`string1` больше чем `string2`.|  
+|------------------|----------------------------------------|  
+|< 0|`string1` меньше `string2`|  
+|0|`string1` идентично `string2`|  
+|> 0|`string1` больше `string2`|  
   
- Каждая из этих функций возвращает `_NLSCMPERROR` при ошибке.  Для использования `_NLSCMPERROR` включите либо STRING.H, либо MBSTRING.H.  `wcscoll` может завершиться неудачей, если либо `string1`, либо `string2` имеют значение NULL или содержат коды расширенных символов вне домена сортированной последовательности.  При возникновении ошибки `wcscoll` может установить `errno` в `EINVAL`.  Для проверки ошибок при вызове `wcscoll` установите `errno` в 0 и проверьте `errno` после вызова `wcscoll`.  
+ Каждая из этих функций возвращает `_NLSCMPERROR` в случае ошибки. Чтобы использовать функцию `_NLSCMPERROR`, включите STRING.H или MBSTRING.H. `wcscoll` может завершиться ошибкой, если `string1` или `string2` имеет значение NULL или содержит коды расширенных символов, не входящие в последовательность сортировки. При возникновении ошибки `wcscoll` может присвоить параметру `errno` значение `EINVAL`. Чтобы убедиться, не возникает ли ошибка при вызове функции `wcscoll`, присвойте параметру `errno` значение 0 и проверьте `errno` после вызова функции `wcscoll`.  
   
-## Заметки  
- Каждая из этих функций выполняет сравнения с учетом регистра `string1` и `string2` в соответствии с использующейся кодовой страницей.  Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядке символов в текущей кодовой странице и данное различие представляет интерес во время сравнения строк.  
+## <a name="remarks"></a>Примечания  
+ Каждая из этих функций сравнивает с учетом регистра строки `string1` и `string2` в соответствии с используемой в настоящее время кодовой страницей. Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядком символов в текущей кодовой странице и данное различие представляет интерес во время сравнения строк.  
   
- Все эти функции производят проверку своих параметров.  Если либо `string1`, либо `string2` является указателем на null или если `count` больше `INT_MAX`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают `_NLSCMPERROR` и устанавливают для `errno` значение `EINVAL`.  
+ Все эти функции проверяют свои параметры. Если параметр `string1` или `string2` является пустым указателем либо значение `count` больше `INT_MAX`, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `_NLSCMPERROR` и устанавливают для `errno` значение `EINVAL`.  
   
- Сравнение двух строк — операция, зависимая от языкового стандарта, поскольку каждый языковой стандарт имеет различные правила упорядочивания символов.  Версии этих функций без суффикса `_l` используют языковой стандарт текущего потока для этого поведения, зависящего от языкового стандарта; версии с суффиксом `_l` совпадают с соответствующей функции без суффикса, за исключением того, что они используют языковой стандарт, передаваемый в качестве параметра вместо текущего языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Сравнение двух строк — это операция, зависящая от языкового стандарта, так как каждый языковой стандарт теперь имеет разные правила для сортировки символов. Версии этих функций без суффикса `_l` используют текущий языковой стандарт потока для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны соответствующей функции без суффикса, однако они используют переданный языковой стандарт в качестве параметра вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscoll`|`strcoll`|`_mbscoll`|`wcscoll`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strcoll`|\<string.h\>|  
-|`wcscoll`|\<wchar.h\>, \<string.h\>|  
-|`_mbscoll`, `_mbscoll_l`|\<mbstring.h\>|  
-|`_strcoll_l`|\<string.h\>|  
-|`_wcscoll_l`|\<wchar.h\>, \<string.h\>|  
+|-------------|---------------------|  
+|`strcoll`|\<string.h>|  
+|`wcscoll`|\<wchar.h>, \<string.h>|  
+|`_mbscoll`, `_mbscoll_l`|\<mbstring.h>|  
+|`_strcoll_l`|\<string.h>|  
+|`_wcscoll_l`|\<wchar.h>, \<string.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [Функции strcoll](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll, \_mbsnbcoll\_l, \_mbsnbicoll, \_mbsnbicoll\_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [\_stricmp, \_wcsicmp, \_mbsicmp, \_stricmp\_l, \_wcsicmp\_l, \_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

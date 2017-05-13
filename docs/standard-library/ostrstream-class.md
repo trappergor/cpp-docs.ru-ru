@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9aa18b0d230fcd3b5888b958d0709f9b6c567d50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2ed85552778f3bbf7346001e4dd4c858177ce49b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ostrstream-class"></a>Класс ostrstream
@@ -62,23 +63,23 @@ class ostrstream : public ostream
   
 |||  
 |-|-|  
-|[ostrstream](#ostrstream__ostrstream)|Создает объект типа `ostrstream`.|  
+|[ostrstream](#ostrstream)|Создает объект типа `ostrstream`.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[freeze](#ostrstream__freeze)|Делает буфер потока недоступным для операций с буфером потока.|  
-|[pcount](#ostrstream__pcount)|Возвращает число элементов, записанных в управляемую последовательность.|  
-|[rdbuf](#ostrstream__rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|  
-|[str](#ostrstream__str)|Вызывает [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze), затем возвращает указатель на начало управляемой последовательности.|  
+|[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|  
+|[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|  
+|[rdbuf](#rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|  
+|[str](#str)|Вызывает [freeze](../standard-library/strstreambuf-class.md#freeze), затем возвращает указатель на начало управляемой последовательности.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<strstream>  
   
  **Пространство имен:** std  
   
-##  <a name="ostrstream__freeze"></a>  ostrstream::freeze  
+##  <a name="freeze"></a>  ostrstream::freeze  
  Делает буфер потока недоступным для операций с буфером потока.  
   
 ```
@@ -90,12 +91,12 @@ void freeze(bool _Freezeit = true);
  Объект `bool`, указывающий, следует ли фиксировать поток.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член вызывает метод [rdbuf](#ostrstream__rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze)(_ *Freezeit*).  
+ Функция-член вызывает метод [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).  
   
 ### <a name="example"></a>Пример  
-  См. раздел [strstream::freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) с примером использования **freeze**.  
+  См. раздел [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) с примером использования **freeze**.  
   
-##  <a name="ostrstream__ostrstream"></a>  ostrstream::ostrstream  
+##  <a name="ostrstream"></a>  ostrstream::ostrstream  
  Создает объект типа `ostrstream`.  
   
 ```
@@ -114,7 +115,7 @@ ostrstream(char* ptr,
  Размер буфера в байтах.  
   
  `_Mode`  
- Режим ввода-вывода буфера. См. раздел [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) для получения дополнительной информации.  
+ Режим ввода-вывода буфера. См. раздел [ios_base::openmode](../standard-library/ios-base-class.md#openmode) для получения дополнительной информации.  
   
 ### <a name="remarks"></a>Примечания  
  Оба конструктора инициализируют базовый класс путем вызова [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), где **sb** является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализирует **sb** путем вызова `strstreambuf`. Второй конструктор инициализирует базовый класс одним из двух способов:  
@@ -123,7 +124,7 @@ ostrstream(char* ptr,
   
 -   В противном случае `ptr` должен назначить первый элемент массива элементов-счетчиков, содержащий строку C, первый элемент которой обозначается `ptr`. Затем конструктор вызывает `strstreambuf`(`ptr`, `count`, `ptr`  +  `strlen`(`ptr`)).  
   
-##  <a name="ostrstream__pcount"></a>  ostrstream::pcount  
+##  <a name="pcount"></a>  ostrstream::pcount  
  Возвращает число элементов, записанных в управляемую последовательность.  
   
 ```
@@ -134,12 +135,12 @@ streamsize pcount() const;
  Число элементов, записанных в управляемую последовательность.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает [rdbuf](#ostrstream__rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount).  
+ Функция-член возвращает [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).  
   
 ### <a name="example"></a>Пример  
-  См. раздел [strstream::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) с примером использования `pcount`.  
+  См. раздел [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) с примером использования `pcount`.  
   
-##  <a name="ostrstream__rdbuf"></a>  ostrstream::rdbuf  
+##  <a name="rdbuf"></a>  ostrstream::rdbuf  
  Возвращает указатель на объект strstreambuf, связанный с потоком.  
   
 ```
@@ -153,10 +154,10 @@ strstreambuf *rdbuf() const
  Функция-член возвращает адрес хранимого буфера потока типа **pointer**, указывающий на [strstreambuf](../standard-library/strstreambuf-class.md).  
   
 ### <a name="example"></a>Пример  
-  См. раздел [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) с примером использования `rdbuf`.  
+  См. раздел [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) с примером использования `rdbuf`.  
   
-##  <a name="ostrstream__str"></a>  ostrstream::str  
- Вызывает [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze), затем возвращает указатель на начало управляемой последовательности.  
+##  <a name="str"></a>  ostrstream::str  
+ Вызывает [freeze](../standard-library/strstreambuf-class.md#freeze), затем возвращает указатель на начало управляемой последовательности.  
   
 ```
 char *str();
@@ -166,10 +167,10 @@ char *str();
  Указатель на начало управляемой последовательности.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает [rdbuf](#ostrstream__rdbuf) -> [str](../standard-library/strstreambuf-class.md#strstreambuf__str).  
+ Функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
 ### <a name="example"></a>Пример  
-  См. раздел [strstream::str](../standard-library/strstreambuf-class.md#strstreambuf__str) с примером использования **str**.  
+  См. раздел [strstream::str](../standard-library/strstreambuf-class.md#str) с примером использования **str**.  
   
 ## <a name="see-also"></a>См. также  
  [ostream](../standard-library/ostream-typedefs.md#ostream)   

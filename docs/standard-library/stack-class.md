@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>Класс stack
@@ -66,7 +67,7 @@ class stack
  Тип базового контейнера, используемый для реализации стека. Значение по умолчанию — класс `deque`*\<Type>*.  
   
 ## <a name="remarks"></a>Примечания  
- Элементы класса **Type**, заданного в первом параметре шаблона объекта стека, являются синонимами [value_type](#stack__value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром шаблона. Класс **Type** должен быть назначаемым, чтобы можно было скопировать объекты этого типа и присвоить значения переменным этого типа.  
+ Элементы класса **Type**, заданного в первом параметре шаблона объекта стека, являются синонимами [value_type](#value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром шаблона. Класс **Type** должен быть назначаемым, чтобы можно было скопировать объекты этого типа и присвоить значения переменным этого типа.  
   
  К подходящим классам базового контейнера для стека относятся [deque](../standard-library/deque-class.md), [list](../standard-library/list-class.md) и [vector](../standard-library/vector-class.md), а также любой другой контейнер последовательностей, поддерживающий операции **back**, `push_back` и `pop_back`. Класс базового контейнера инкапсулирован в адаптер контейнера, который предоставляет только ограниченный набор функций-членов контейнера последовательностей в виде открытого интерфейса.  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|Создает `stack`, который является пустым или копией объекта базового контейнера.|  
+|[stack](#stack)|Создает `stack`, который является пустым или копией объекта базового контейнера.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|Тип, предоставляющий базовый контейнер для принятия `stack`.|  
-|[size_type](#stack__size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `stack`.|  
-|[value_type](#stack__value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `stack`.|  
+|[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `stack`.|  
+|[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `stack`.|  
+|[value_type](#value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `stack`.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[empty](#stack__empty)|Проверяет, является ли `stack` пустым.|  
-|[pop](#stack__pop)|Удаляет элемент из верхней части `stack`.|  
-|[push](#stack__push)|Добавляет элемент в верхнюю часть `stack`.|  
-|[size](#stack__size)|Возвращает количество элементов в контейнере `stack`.|  
-|[top](#stack__top)|Возвращает ссылку на элемент в верхней части `stack`.|  
+|[empty](#empty)|Проверяет, является ли `stack` пустым.|  
+|[pop](#pop)|Удаляет элемент из верхней части `stack`.|  
+|[push](#push)|Добавляет элемент в верхнюю часть `stack`.|  
+|[size](#size)|Возвращает количество элементов в контейнере `stack`.|  
+|[top](#top)|Возвращает ссылку на элемент в верхней части `stack`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<stack>  
   
  **Пространство имен:** std  
   
-##  <a name="stack__container_type"></a> stack::container_type  
+##  <a name="container_type"></a> stack::container_type  
  Тип, предоставляющий базовый контейнер для изменения.  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  Дополнительные сведения о `Container` см. в подразделе "Примечания" раздела [Класс stack](../standard-library/stack-class.md).  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `container_type` в разделе [stack::stack](#stack__stack).  
+  См. пример объявления и использования `container_type` в разделе [stack::stack](#stack).  
   
-##  <a name="stack__empty"></a> stack::empty  
+##  <a name="empty"></a> stack::empty  
  Проверяет, пуст ли стек.  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a> stack::pop  
+##  <a name="pop"></a> stack::pop  
  Удаляет элемент из верхней части стека.  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a> stack::push  
+##  <a name="push"></a> stack::push  
  Добавляет элемент в начало (верх) стека.  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a> stack::size  
+##  <a name="size"></a> stack::size  
  Возвращает количество элементов в стеке.  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a> stack::size_type  
+##  <a name="size_type"></a> stack::size_type  
  Целочисленный тип без знака, который может представлять количество элементов в стеке.  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  Этот тип является синонимом для `size_type` базового контейнера, адаптированного стеком.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `size_type` в разделе [size](#stack__size).  
+  См. пример объявления и использования `size_type` в разделе [size](#size).  
   
-##  <a name="stack__stack"></a> stack::stack  
+##  <a name="stack"></a> stack::stack  
  Создает стек, который является пустым или представляет собой копию класса базового контейнера.  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a> stack::top  
+##  <a name="top"></a> stack::top  
  Возвращает ссылку на элемент вверху стека.  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a> stack::value_type  
+##  <a name="value_type"></a> stack::value_type  
  Тип, представляющий тип объекта, который хранится в стеке в виде элемента.  
   
 ```  

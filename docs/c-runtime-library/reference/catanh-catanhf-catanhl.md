@@ -1,57 +1,74 @@
 ---
-title: "catanh, catanhf, catanhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "catanh"
-  - "catanhf"
-  - "catanhl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "catanh"
-  - "catanhf"
-  - "catanhl"
-  - "complex/catanh"
-  - "complex/catanhf"
-  - "complex/catanhl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция catanh"
-  - "функция catanhf"
-  - "функция catanhl"
+title: "catanh, catanhf, catanhl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- catanh
+- catanhf
+- catanhl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- catanh
+- catanhf
+- catanhl
+- complex/catanh
+- complex/catanhf
+- complex/catanhl
+dev_langs:
+- C++
+helpviewer_keywords:
+- catanh function
+- catanhf function
+- catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# catanh, catanhf, catanhl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c70314e30419f6315fc1c3afe84e8e9fc104d728
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Возвращает обратный гиперболический тангенс комплексное число, с сокращает ветви попадает в интервал \[−1; \+ 1\] на реальных оси.  
+---
+# <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
+Возвращает обратный гиперболический тангенс комплексного числа, с порезов ветвь попадает в интервал [-1; + 1] на реальных оси.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _Dcomplex catanh(   
@@ -71,31 +88,31 @@ _Lcomplex catanhl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `z`  
- Комплексное число, представляющее угол в радианах.  
+ Комплексное число, указывающее угол в радианах.  
   
-## Возвращаемое значение  
- Обратный гиперболический тангенс `z`, в радианах. Результат неограничен реальных оси и в интервале \[−iπ\-2; \+ iπ\-2\] мнимой оси. Если произойдет ошибка домена `z` не попадает в интервал \[\-1, \+ 1\]. Если произойдет ошибка полюсе `z` \-1 или \+ 1.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Обратный гиперболический тангенс аргумента `z` в радианах. Результат unbounded вдоль оси реальные и в интервале [-iπ/2; + iπ/2] мнимой оси. Если `z` не попадает в интервал [−1, +1], возникает ошибка домена. Если `z` имеет значение −1 или +1, возникает ошибка полюса.  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки `catanh`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `catanh` всегда принимает и возвращает `_Dcomplex` значение.  
+## <a name="remarks"></a>Примечания  
+ Поскольку C++ допускает перегрузку, можно вызывать перегрузки `catanh`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `catanh` всегда принимает и возвращает значение `_Dcomplex` .  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Подпрограмма|Заголовок C|Заголовок C\+\+|  
-|------------------|-----------------|---------------------|  
-|`catanh`, `catanhf`, `catanhl`|\<complex.h\>|\< ccomplex \>|  
+|Подпрограмма|Заголовок C|Заголовок C++|  
+|-------------|--------------|------------------|  
+|`catanh`,               `catanhf`, `catanhl`|\<complex.h>|\<ccomplex>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../Topic/csinh,%20csinhf,%20csinhl.md)   
- [casinh, casinhf, casinhl](../Topic/casinh,%20casinhf,%20casinhl.md)   
- [ccosh, ccoshf, ccoshl](../Topic/ccosh,%20ccoshf,%20ccoshl.md)   
+ [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
+ [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
+ [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
  [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
  [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
  [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   

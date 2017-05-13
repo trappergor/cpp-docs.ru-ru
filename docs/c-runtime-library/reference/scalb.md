@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ade761d8fa3e37d4e190a05db5b93cd9e5f63cca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a8f70dd525a798bd2492270ef95e5e75c5aa36b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scalb"></a>_scalb
@@ -77,7 +78,7 @@ double _scalb(
  Показатель степени — длинное целое число.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение экспоненты в случае успешного выполнения. При переполнении (в зависимости от знака `x`) `_scalb` возвращает +/– `HUGE_VAL`; переменная `errno` принимает значение `ERANGE`.  
+ Возвращает значение экспоненты в случае успешного выполнения. При переполнении (в зависимости от знака `x`), `_scalb` возвращает `HUGE_VAL`; `errno` присваивается переменной `ERANGE`.  
   
  Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -91,9 +92,6 @@ double _scalb(
 |`_scalb`|\<float.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   

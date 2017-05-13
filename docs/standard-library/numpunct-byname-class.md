@@ -1,60 +1,80 @@
 ---
-title: "Класс numpunct_byname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.numpunct_byname"
-  - "numpunct_byname"
-  - "xlocnum/std::numpunct_byname"
-  - "std::numpunct_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "numpunct_byname - класс"
+title: "Класс numpunct_byname | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- numpunct_byname
+- xlocnum/std::numpunct_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Класс numpunct_byname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1821793921924a5f0bb75703f581705f7f1d8115
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
-Производный класс шаблона описание объекта, который можно использовать как аспект `numpunct` данного языкового стандарта для числового форматирования и знаки препинания и логических выражений.  
+---
+# <a name="numpunctbyname-class"></a>Класс numpunct_byname
+Производный класс шаблона, описывающий объект, который можно использовать в качестве аспекта `numpunct` для заданного языкового стандарта, для возможности форматирования и расстановки пунктуационных знаков в числовых и логических выражениях.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class CharType>
+class numpunct_byname : public numpunct<Elem> {
+public:
+    explicit numpunct_byname(
+    const char* _Locname,
+    size_t _Refs = 0);
+
+    explicit numpunct_byname(
+    const string& _Locname,
+    size_t _Refs = 0);
+
+protected:
+    virtual ~numpunct_byname();
+
+ };
 ```  
-template<Class CharType>  
-    class numpunct_byname : public numpunct<Elem> {  
-public:  
-    explicit numpunct_byname(  
-        const char* _Locname,  
-        size_t _Refs = 0  
-    );  
-    explicit numpunct_byname(  
-        const string& _Locname,  
-        size_t _Refs = 0  
-    );  
-protected:  
-    virtual ~numpunct_byname( );  
-   };  
-```  
   
-## Заметки  
- Его расширение функциональности определяется языковым стандартом `_Locname`[именованный](../Topic/locale::name.md).  Конструктор инициализирует его базовый объект с помощью [numpunct](../Topic/numpunct::numpunct.md)\<CharType\>\(`_Refs`\).  
+## <a name="remarks"></a>Примечания  
+ Его поведение определяется [именованным](../standard-library/locale-class.md#name) языковым стандартом `_Locname`. Конструктор инициализирует свой базовый объект с [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
   
-## Требования  
- **Заголовок:**\<locale\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<locale>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

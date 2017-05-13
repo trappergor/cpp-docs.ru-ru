@@ -1,90 +1,108 @@
 ---
-title: "strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strncpy"
-  - "_strncpy_l"
-  - "_mbsncpy"
-  - "wcsncpy"
-  - "_mbsncpy_l"
-  - "_wcsncpy_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstrncpy"
-  - "strncpy"
-  - "_ftcsncpy"
-  - "_tcsnccpy_l"
-  - "_tcsnccpy"
-  - "_mbsncpy"
-  - "wcsncpy"
-  - "_tcsncpy"
-  - "_strncpy_l"
-  - "_mbsncpy_l"
-  - "_wcsncpy_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrncpy - функция"
-  - "_ftcsncpy - функция"
-  - "_mbsncpy - функция"
-  - "_mbsncpy_l - функция"
-  - "_strncpy_l - функция"
-  - "_tcsnccpy - функция"
-  - "_tcsnccpy_l - функция"
-  - "_tcsncpy - функция"
-  - "_tcsncpy_l - функция"
-  - "_wcsncpy_l - функция"
-  - "знаки [C++], копирование"
-  - "копирование знаков строк"
-  - "fstrncpy - функция"
-  - "ftcsncpy - функция"
-  - "mbsncpy - функция"
-  - "mbsncpy_l - функция"
-  - "строки [C++], копирование"
-  - "strncpy - функция"
-  - "strncpy_l - функция"
-  - "tcsnccpy - функция"
-  - "tcsnccpy_l - функция"
-  - "tcsncpy - функция"
-  - "tcsncpy_l - функция"
-  - "wcsncpy - функция"
-  - "wcsncpy_l - функция"
+title: "strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strncpy
+- _strncpy_l
+- _mbsncpy
+- wcsncpy
+- _mbsncpy_l
+- _wcsncpy_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstrncpy
+- strncpy
+- _ftcsncpy
+- _tcsnccpy_l
+- _tcsnccpy
+- _mbsncpy
+- wcsncpy
+- _tcsncpy
+- _strncpy_l
+- _mbsncpy_l
+- _wcsncpy_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcsncpy_l function
+- characters [C++], copying
+- mbsncpy_l function
+- strncpy_l function
+- wcsncpy function
+- tcsnccpy function
+- ftcsncpy function
+- copying characters of strings
+- _wcsncpy_l function
+- _tcsnccpy function
+- _tcsnccpy_l function
+- strncpy function
+- _tcsncpy function
+- mbsncpy function
+- _fstrncpy function
+- _mbsncpy_l function
+- tcsncpy_l function
+- tcsnccpy_l function
+- fstrncpy function
+- strings [C++], copying
+- _ftcsncpy function
+- _tcsncpy_l function
+- _mbsncpy function
+- tcsncpy function
+- _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
 caps.latest.revision: 42
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 42
----
-# strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: da3d85085d7b9dbe914acd4515252b8b4637a6dc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Копируют символы одной строки в другую.  Доступны более безопасные версии этих функций; см. раздел [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../Topic/strncpy_s,%20_strncpy_s_l,%20wcsncpy_s,%20_wcsncpy_s_l,%20_mbsncpy_s,%20_mbsncpy_s_l.md).  
+---
+# <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
+Копируют символы одной строки в другую. Доступны более безопасные версии этих функций; см. раздел [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsncpy` и `_mbsncpy_l` нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Дополнительные сведения см. в разделе [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncpy` и `_mbsncpy_l` нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *strncpy(  
@@ -161,7 +179,7 @@ unsigned char *_mbsncpy_l(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `strDest`  
  Конечная строка.  
   
@@ -174,45 +192,45 @@ unsigned char *_mbsncpy_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Возвращает `strDest`.  Нет зарезервированных возвращаемых значений для указания ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает `strDest`. Нет зарезервированных возвращаемых значений для указания ошибки.  
   
-## Заметки  
- Функция `strncpy` копирует первые несколько символов, количество которых определяет параметр `count`, из строки `strSource` в строку `strDest` и возвращает строку `strDest`.  Если значение параметра `count` меньше или равно длине строки `strSource`, символ null не добавляется к скопированной строке автоматически.  Если значение `count` больше, чем длина строки `strSource`, строка назначения заполняется символами null, пока ее длина не достигнет длины строки `count`.  При перекрытии исходного и конечного буферов поведение `strncpy` не определено.  
+## <a name="remarks"></a>Примечания  
+ Функция `strncpy` копирует первые несколько символов, количество которых определяет параметр `count`, из строки `strSource` в строку `strDest` и возвращает строку `strDest`. Если значение параметра `count` меньше или равно длине строки `strSource`, символ null не добавляется к скопированной строке автоматически. Если значение `count` больше, чем длина строки `strSource`, строка назначения заполняется символами null, пока ее длина не достигнет длины строки `count`. При перекрытии исходного и конечного буферов поведение `strncpy` не определено.  
   
 > [!IMPORTANT]
->  `strncpy` не проверяет, достаточно ли места в строке `strDest`, в связи с чем может возникнуть ошибка переполнения буфера.  Аргумент `count` ограничивает количество копируемых символов, но не влияет на размер `strDest`.  См. следующий пример.  Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  `strncpy` не проверяет, достаточно ли места в строке `strDest`, в связи с чем может возникнуть ошибка переполнения буфера. Аргумент `count` ограничивает количество копируемых символов, но не влияет на размер `strDest`. См. следующий пример. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Если параметр `strDest` или `strSource` является указателем `NULL` или значение параметра `count` меньше или равно нулю, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если разрешается продолжать выполнение, эти функции возвращают \-1 и присваивают `errno` значение `EINVAL`.  
+ Если параметр `strDest` или `strSource` является указателем `NULL` или значение параметра `count` меньше или равно нулю, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и присваивают `errno` значение `EINVAL`.  
   
- Функции `wcsncpy` и `_mbsncpy` являются версиями функции `strncpy` для расширенных и многобайтовых символов.  Аргументы и возвращаемое значение функций `wcsncpy` и `_mbsncpy` различаются соответственно.  В остальном эти шесть функций ведут себя идентично.  
+ Функции `wcsncpy` и `_mbsncpy` являются версиями функции `strncpy` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение функций `wcsncpy` и `_mbsncpy` различаются соответственно. В остальном эти шесть функций ведут себя идентично.  
   
- Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- В C\+\+ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций.  Дополнительные сведения см. в статье [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncpy`|`strncpy`|`_mbsnbcpy`|`wcsncpy`|  
 |`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcpy_l`|`_wcsncpy_l`|  
   
 > [!NOTE]
->  Функции `_strncpy_l` и `_wcsncpy_l` не зависят от языкового стандарта; они предназначены только для функции `_tcsncpy_l` и не должны вызываться напрямую.  
+> Функции  `_strncpy_l` и `_wcsncpy_l` не зависят от языкового стандарта; они предназначены только для функции `_tcsncpy_l` и не должны вызываться напрямую.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strncpy`|\<string.h\>|  
-|`wcsncpy`|\<string.h\> или \<wchar.h\>|  
-|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strncpy`|\<string.h>|  
+|`wcsncpy`|\<string.h> или \<wchar.h>|  
+|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h>|  
   
  Дополнительные сведения о совместимости платформ см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
- В следующем примере показано использование процедуры `strncpy` и способ ее ошибочного применения, вызывающий ошибки и проблемы безопасности.  При каждом вызове `strncpy` компилятор выдает предупреждение вида: **crt\_strncpy\_x86.c\(15\) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy\_s instead. To disable deprecation, use \_CRT\_SECURE\_NO\_WARNINGS. See online help for details.**  
+## <a name="example"></a>Пример  
+ В следующем примере показано использование процедуры `strncpy` и способ ее ошибочного применения, вызывающий ошибки и проблемы безопасности. При каждом вызове `strncpy` компилятор выдает предупреждение вида: **crt_strncpy_x86.c(15) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. Чтобы отключить сообщения об устаревании, используйте _CRT_SECURE_NO_WARNINGS. See online help for details.** (Функция или переменная может быть небезопасной. Используйте strncpy_s. Дополнительные сведения см. в справке.)  
   
 ```  
 // crt_strncpy_x86.c  
@@ -268,28 +286,30 @@ int main() {
   
  Вывод  
   
-  **ZZ**  
-**aa bb dd**  
-**это очень длинный тест**  
-**собаки любят кошек**  
-**собаки любят бегать за машинами.  Переполнение буфера: s \= 'ars.' \(должно быть 'test'\)**  Макет автоматических переменных и уровень обнаружения ошибок и защиты кода могут варьироваться в зависимости от изменения в параметрах компилятора.  Данный пример может дать иные результаты, если построить его в другой среде компиляции или с другими параметрами компилятора.  
+```Output  
+ ZZ  
+aa bb dd  
+this is a very long test  
+dogs like cats  
+dogs like to chase cars.  
+Buffer overrun: s = 'ars.' (should be 'test')  
+```  
   
-## Эквивалент в .NET Framework  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
+ Макет автоматических переменных и уровень обнаружения ошибок и защиты кода могут варьироваться в зависимости от изменения в параметрах компилятора. Данный пример может дать иные результаты, если построить его в другой среде компиляции или с другими параметрами компилятора.  
   
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcpy, \_mbsnbcpy\_l](../Topic/_mbsnbcpy,%20_mbsnbcpy_l.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../Topic/strncpy_s,%20_strncpy_s_l,%20wcsncpy_s,%20_wcsncpy_s_l,%20_mbsncpy_s,%20_mbsncpy_s_l.md)   
- [strcpy\_s, wcscpy\_s, \_mbscpy\_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
+ [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)

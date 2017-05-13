@@ -1,73 +1,90 @@
 ---
-title: "strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbspbrk"
-  - "wcspbrk"
-  - "_mbspbrk_l"
-  - "strpbrk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstrpbrk"
-  - "_mbspbrk"
-  - "strpbrk"
-  - "_tcspbrk"
-  - "_ftcspbrk"
-  - "wcspbrk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrpbrk - функция"
-  - "_ftcspbrk - функция"
-  - "_mbspbrk - функция"
-  - "_mbspbrk_l - функция"
-  - "_tcspbrk - функция"
-  - "кодировки [C++], сканирование строк на наличие знаков"
-  - "знаки [C++], сканирование строк"
-  - "fstrpbrk - функция"
-  - "ftcspbrk - функция"
-  - "mbspbrk - функция"
-  - "mbspbrk_l - функция"
-  - "строки [C++], сканирование"
-  - "strpbrk - функция"
-  - "tcspbrk - функция"
-  - "wcspbrk - функция"
+title: "strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbspbrk
+- wcspbrk
+- _mbspbrk_l
+- strpbrk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstrpbrk
+- _mbspbrk
+- strpbrk
+- _tcspbrk
+- _ftcspbrk
+- wcspbrk
+dev_langs:
+- C++
+helpviewer_keywords:
+- fstrpbrk function
+- _ftcspbrk function
+- _mbspbrk_l function
+- strpbrk function
+- _fstrpbrk function
+- mbspbrk function
+- characters [C++], scanning strings
+- _tcspbrk function
+- wcspbrk function
+- ftcspbrk function
+- character sets [C++], scanning strings for characters
+- strings [C++], scanning
+- tcspbrk function
+- _mbspbrk function
+- mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9eb1dfc77694c9c1b85aa21fe039058facb98c71
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Ищет в строке символы из указанного набора символов.  
+---
+# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+Сканирует строки на наличие символов в указанных наборах символов.  
   
 > [!IMPORTANT]
->  `_mbspbrk` и `_mbspbrk_l` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Функции  `_mbspbrk` и `_mbspbrk_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *strpbrk(  
@@ -123,7 +140,7 @@ const unsigned char *_mbspbrk_l(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
  Строка для поиска, завершающаяся символом NULL.  
   
@@ -131,42 +148,42 @@ const unsigned char *_mbspbrk_l(
  Набор символов, завершающийся символом NULL.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Возвращает указатель на первое вхождение любого символа из `strCharSet` в `str` или указатель на `NULL`, если строковые аргументы не имеют общих символов.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает указатель на первое вхождение любого символа из `strCharSet` в `str` или указатель `NULL`, если у двух строк нет общих символов.  
   
-## Заметки  
- Функция `strpbrk` возвращает указатель на первое вхождение символа, принадлежащего набору символов `strCharSet`, в `str`.  Поиск не распространяется на завершающий нулевой символ.  
+## <a name="remarks"></a>Примечания  
+ Функция `strpbrk` возвращает указатель на первое вхождение в `str` символа из набора символов `strCharSet`. Поиск не включает завершающие нуль-символы.  
   
- `wcspbrk` и `_mbspbrk` — двубайтовая и многобайтовая символьные версии `strpbrk`.  Аргументы и возвращаемое значение `wcspbrk` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbspbrk` представляют собой многобайтовые строки.  
+ Функции `wcspbrk` и `_mbspbrk` являются версиями функции `strpbrk` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcspbrk` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbspbrk` представляют собой многобайтовые строки.  
   
- `_mbspbrk` проверяет свои параметры.  Если `str` или `strCharSet` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, то `_mbspbrk` возвращает `NULL` и устанавливает `errno` в `EINVAL`.  `strpbrk` и `wcspbrk` не проверяют свои параметры.  В остальных случаях эти три функции ведут себя идентично.  
+ `_mbspbrk` проверяет свои параметры. Если параметр `str` или `strCharSet` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция `_mbspbrk` возвращает значение `NULL` и устанавливает параметр `errno` в значение `EINVAL`. Функции `strpbrk` и `wcspbrk` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.  
   
- `_mbspbrk` аналогична `_mbscspn` за исключением того, что `_mbspbrk` возвращает указатель, а не значение типа [size\_t](../../c-runtime-library/standard-types.md).  
+ `_mbspbrk` аналогична `_mbscspn`, за исключением того, что `_mbspbrk` возвращает указатель, а не значение типа [size_t](../../c-runtime-library/standard-types.md).  
   
- В языке C эти функции принимают указатель `const` для первого аргумента.  В языке C\+\+ доступны две перегрузки.  Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не являющийся `const`, возвращает указатель на не `const`.  Макрос \_CONST\_CORRECT\_OVERLOADS определен, если доступны и `const` и не `const` версии этих функций.  Если требуется не `const` функциональность для обеих перегрузок C\+\+, укажите символ \_CONST\_RETURN.  
+ В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос _CONST_CORRECT_OVERLOADS определен, если одновременно доступны версии `const` и не-`const` этих функций. Чтобы реализовать поведение не-`const` для обеих перегрузок в языке C++, определите символ _CONST_RETURN.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версия с суффиксом `_l` идентична, за исключением того, что она использует переданный параметр языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). В версиях этих функций без суффикса `_l` используется текущий языковой стандарт для поведения, которое зависит от языкового стандарта. Версия с суффиксом `_l` идентична, однако в ней используется языковой стандарт, переданный в качестве параметра. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|  
-|**Н\/Д**|**Н\/Д**|`_mbspbrk_l`|**Н\/Д**|  
+|**Н/Д**|**Н/Д**|`_mbspbrk_l`|**Н/Д**|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strpbrk`|\<string.h\>|  
-|`wcspbrk`|\<string.h\> или \<wchar.h\>|  
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strpbrk`|\<string.h>|  
+|`wcspbrk`|\<string.h> или \<wchar.h>|  
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_strpbrk.c  
@@ -190,17 +207,20 @@ int main( void )
 }  
 ```  
   
-  **1: The 3 men and 2 boys ate 5 pigs**  
-**2: 3 men and 2 boys ate 5 pigs**  
-**3: 2 boys ate 5 pigs**  
-**4: 5 pigs**   
-## Эквивалент в .NET Framework  
- [System::String::IndexOfAny](https://msdn.microsoft.com/en-us/library/system.string.indexofany.aspx)  
+```Output  
+1: The 3 men and 2 boys ate 5 pigs  
   
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+2: 3 men and 2 boys ate 5 pigs  
+  
+3: 2 boys ate 5 pigs  
+  
+4: 5 pigs  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../Topic/strcspn,%20wcscspn,%20_mbscspn,%20_mbscspn_l.md)   
- [strchr, wcschr, \_mbschr, \_mbschr\_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

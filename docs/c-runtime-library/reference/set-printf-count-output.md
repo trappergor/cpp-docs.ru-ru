@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfb86b7d6e52168fda5ec28bd66edc29b24432e4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 11f0dbe2a4bb67992dd307aea62f79ca8f6b5f73
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
@@ -76,7 +77,7 @@ int _set_printf_count_output(
  Состояние поддержки `%n` перед вызовом этой функции: отличное от нуля значение, если поддержка `%n` была включена; 0, если она была отключена.  
   
 ## <a name="remarks"></a>Примечания  
- В целях безопасности поддержка спецификатора формата `%n` по умолчанию отключена в `printf` и всех ее вариантах. Если `%n` обнаруживается в спецификации формата `printf`, реакция по умолчанию — вызвать обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Вызов `_set_printf_count_output` с ненулевым аргументом приведет к тому, что функции семейства `printf` интерпретируют `%n`, как описано в разделе [Символы поля типа printf](../../c-runtime-library/printf-type-field-characters.md).  
+ В целях безопасности поддержка спецификатора формата `%n` по умолчанию отключена в `printf` и всех ее вариантах. Если `%n` обнаруживается в спецификации формата `printf`, реакция по умолчанию — вызвать обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Вызов `_set_printf_count_output` с аргументом ненулевой вызовет `printf`-функциями семейства интерпретировать `%n` как описано в [синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -88,7 +89,7 @@ int _set_printf_count_output(
   
 ## <a name="example"></a>Пример  
   
-```  
+```C  
 // crt_set_printf_count_output.c  
 #include <stdio.h>  
   
@@ -106,17 +107,12 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Вывод  
-  
-```  
+```Output  
 %n support was disabled.  
 %n support is now enabled.  
 123456789  
 i = 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)

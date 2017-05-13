@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 79282200587a8c116bbcd44db68e809f6dcc0d9c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a9bc5007e94aad8cd8ed65f16ba3f0aaf73faabc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
@@ -191,9 +192,6 @@ int main( )
 _snscanf converted 2 fields: 15 and 12.000000  
 _snwscanf converted 2 fields: 15 and 12.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md)

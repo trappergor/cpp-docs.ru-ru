@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 4345539f7ecd836280bed94c4bb2b125dfa08107
+ms.contentlocale: ru-ru
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="controlfps"></a>_controlfp_s
@@ -99,7 +100,7 @@ errno_t _controlfp_s(
   
  Разница между функциями `_control87` и `_controlfp_s` состоит в способе обработки значения `DENORMAL`. В случае платформ Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] и ARM функция `_control87` может устанавливать и очищать маску исключения DENORMAL OPERAND. Функция `_controlfp_s` не изменяет маску исключения DENORMAL OPERAND. В следующем примере показано это различие.  
   
-```  
+```C  
 _control87( _EM_INVALID, _MCW_EM );   
 // DENORMAL is unmasked by this call.  
 unsigned int current_word = 0;  
@@ -111,7 +112,7 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
   
  Платформы на основе Intel (x86) аппаратно поддерживают входные и выходные значения DENORMAL. В случае x86 значения DENORMAL сохраняются. Платформа ARM и платформы [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], в которых имеется поддержка SSE2, позволяют сбрасывать операнды и результаты DENORMAL (т. е., принудительно задавать для них нулевые значения). Функции `_controlfp_s`, `_controlfp` и `_control87` предоставляют маску для изменения такого поведения. В следующем примере показано использование этой маски:  
   
-```  
+```C  
 unsigned int current_word = 0;  
 _controlfp_s(&current_word, _DN_SAVE, _MCW_DN);     
 // Denormal values preserved on ARM platforms and on x64 processors with  
@@ -129,7 +130,7 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  Эта функция учитывается при использовании [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) компиляции, поскольку общеязыковой среды выполнения (CLR) поддерживает только точность чисел с плавающей запятой по умолчанию.  
   
- **Шестнадцатеричные значения**  
+### <a name="mask-constants-and-values"></a>Маска констант и значений  
   
  При очистке маски `_MCW_EM` задается исключение, которое допускает аппаратное исключение; установка маски скрывает это исключение. Если возникает исключение `_EM_UNDERFLOW` или `_EM_OVERFLOW`, аппаратное исключение не создается, пока не будет выполняться следующая операция с плавающей запятой. Чтобы аппаратное исключение возникало сразу после `_EM_UNDERFLOW` или `_EM_OVERFLOW`, следует вызвать инструкцию FWAIT MASM.  
   
@@ -151,14 +152,12 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>Пример  
   
-```  
-  
-      // crt_contrlfp_s.c  
+```C  
+// crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -193,9 +192,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Original: 0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0xa001f  
@@ -203,9 +200,6 @@ Original: 0x9001f
 Default:  0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   

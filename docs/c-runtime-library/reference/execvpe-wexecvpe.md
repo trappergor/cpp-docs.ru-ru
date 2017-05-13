@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f81b616b0bb81501a6cd1273f47293853336caeb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fc5a0df49b31f77874e6a75ff39ed9650386c58f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
@@ -93,7 +94,7 @@ intptr_t _wexecvpe(
  Массив указателей на параметры среды.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение, равное -1, указывает на ошибку; в таком случае устанавливается глобальная переменная `errno`.  
+ В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку в этом случае `errno` значение глобальной переменной.  
   
 |Значение `errno`|Описание|  
 |-------------------|-----------------|  
@@ -122,12 +123,6 @@ intptr_t _wexecvpe(
   
 ## <a name="example"></a>Пример  
  См. пример в разделе [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
-  
--   [System::Diagnostics::Process Class](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [System::Diagnostics::ProcessStartInfo Class](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   

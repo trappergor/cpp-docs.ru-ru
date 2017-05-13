@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.ostreambuf_iterator
 - streambuf/std::ostreambuf_iterator
 - ostreambuf_iterator
-- std::ostreambuf_iterator
+- iterator/std::ostreambuf_iterator::char_type
+- iterator/std::ostreambuf_iterator::ostream_type
+- iterator/std::ostreambuf_iterator::streambuf_type
+- iterator/std::ostreambuf_iterator::traits_type
+- iterator/std::ostreambuf_iterator::failed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 30e8f1c86ebff67c520f4ff303ade831306cede6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2f58e86e76e63d51739558b796e47dc3f5165d3f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ostreambufiterator-class"></a>Класс ostreambuf_iterator
@@ -53,7 +57,7 @@ template <class CharType = char class Traits = char_traits <CharType>>
   
 #### <a name="parameters"></a>Параметры  
  `CharType`  
- Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char`*.*  
+ Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, и значением по умолчанию является `char`.  
   
  `Traits`  
  Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*  
@@ -71,31 +75,31 @@ template <class CharType = char class Traits = char_traits <CharType>>
   
 |||  
 |-|-|  
-|[char_type](#ostreambuf_iterator__char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|  
+|[char_type](#char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|  
 |[ostream_type](#ostreambuf_iterator_ostream_type)|Тип, обеспечивающий тип потока для `ostream_iterator`.|  
-|[streambuf_type](#ostreambuf_iterator__streambuf_type)|Тип, обеспечивающий тип потока для `ostreambuf_iterator`.|  
-|[traits_type](#ostreambuf_iterator__traits_type)|Тип, обеспечивающий тип признаков символа для `ostream_iterator`.|  
+|[streambuf_type](#streambuf_type)|Тип, обеспечивающий тип потока для `ostreambuf_iterator`.|  
+|[traits_type](#traits_type)|Тип, обеспечивающий тип признаков символа для `ostream_iterator`.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[failed](#ostreambuf_iterator__failed)|Проверяет наличие ошибок вставки в буфер потока вывода.|  
+|[failed](#failed)|Проверяет наличие ошибок вставки в буфер потока вывода.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор*](#ostreambuf_iterator__operator_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `i` = `x`.|  
-|[оператор++](#ostreambuf_iterator__operator_add_add)|Нефункциональный оператор инкремента, возвращающий `ostreambuf_iterator`, обращающийся к тому же объекту, к которому он обращался до вызова операции.|  
-|[оператор=](#ostreambuf_iterator__operator_eq)|Данный оператор вставляет символ в соответствующий буфер потока.|  
+|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `i` = `x`.|  
+|[оператор++](#op_add_add)|Нефункциональный оператор инкремента, возвращающий `ostreambuf_iterator`, обращающийся к тому же объекту, к которому он обращался до вызова операции.|  
+|[оператор=](#op_eq)|Данный оператор вставляет символ в соответствующий буфер потока.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-##  <a name="a-nameostreambufiteratorchartypea--ostreambufiteratorchartype"></a><a name="ostreambuf_iterator__char_type"></a>  ostreambuf_iterator::char_type  
+##  <a name="char_type"></a>  ostreambuf_iterator::char_type  
  Тип, обеспечивающий тип символа для `ostreambuf_iterator`.  
   
 ```
@@ -143,7 +147,7 @@ The characters written to the output stream
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratorfaileda--ostreambufiteratorfailed"></a><a name="ostreambuf_iterator__failed"></a>  ostreambuf_iterator::failed  
+##  <a name="failed"></a>  ostreambuf_iterator::failed  
  Проверяет наличие ошибок вставки в буфер потока вывода.  
   
 ```
@@ -191,7 +195,7 @@ No insertions failed.
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratoroperatorstara--ostreambufiteratoroperator"></a><a name="ostreambuf_iterator__operator_star"></a>  ostreambuf_iterator::operator*  
+##  <a name="op_star"></a>  ostreambuf_iterator::operator*  
  Нефункциональный оператор разыменования, используемый для реализации выражения итератора вывода \* *i* = *x*.  
   
 ```
@@ -235,7 +239,7 @@ OUT
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratoroperatoraddadda--ostreambufiteratoroperator"></a><a name="ostreambuf_iterator__operator_add_add"></a>  ostreambuf_iterator::operator++  
+##  <a name="op_add_add"></a>  ostreambuf_iterator::operator++  
  Нефункциональный оператор приращения, который возвращает итератор ostream, обращающийся к тому же символу, к которому он обращался до вызова операции.  
   
 ```
@@ -280,7 +284,7 @@ OUT
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratoroperatoreqa--ostreambufiteratoroperator"></a><a name="ostreambuf_iterator__operator_eq"></a>  ostreambuf_iterator::operator=  
+##  <a name="op_eq"></a>  ostreambuf_iterator::operator=  
  Данный оператор вставляет символ в соответствующий буфер потока.  
   
 ```
@@ -328,7 +332,7 @@ OUT
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratorostreambufiteratora--ostreambufiteratorostreambufiterator"></a><a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator  
+##  <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator  
  Создает итератор `ostreambuf_iterator`, инициализированный для записи символов в поток вывода.  
   
 ```
@@ -381,7 +385,7 @@ These characters are being written to the output stream.
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratorostreamtypea--ostreambufiteratorostreamtype"></a><a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type  
+##  <a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type  
  Тип, обеспечивающий тип потока для `ostream_iterator`.  
   
 ```
@@ -394,7 +398,7 @@ typedef basicOstream<CharType, Traits> ostream_type;
 ### <a name="example"></a>Пример  
   См. раздел [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) с примером объявления и использования `ostream_type`.  
   
-##  <a name="a-nameostreambufiteratorstreambuftypea--ostreambufiteratorstreambuftype"></a><a name="ostreambuf_iterator__streambuf_type"></a>  ostreambuf_iterator::streambuf_type  
+##  <a name="streambuf_type"></a>  ostreambuf_iterator::streambuf_type  
  Тип, обеспечивающий тип потока для `ostreambuf_iterator`.  
   
 ```
@@ -407,7 +411,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 ### <a name="example"></a>Пример  
   См. раздел [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) с примером объявления и использования `streambuf_type`.  
   
-##  <a name="a-nameostreambufiteratortraitstypea--ostreambufiteratortraitstype"></a><a name="ostreambuf_iterator__traits_type"></a>  ostreambuf_iterator::traits_type  
+##  <a name="traits_type"></a>  ostreambuf_iterator::traits_type  
  Тип, обеспечивающий тип признаков символа для `ostream_iterator`.  
   
 ```

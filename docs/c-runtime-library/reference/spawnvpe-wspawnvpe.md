@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a42bc72c20139ff88f6b7bcf61f54fbdf6154afb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c6b6ce9e791ff0a514d5d5d04ba73a6de1b9c90
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
@@ -101,7 +102,7 @@ intptr_t _wspawnvpe(
  Массив указателей на параметры среды  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение синхронных функций `_spawnvpe` или `_wspawnvpe` (для параметра `_P_WAIT` указано значение `mode`) — это состояние завершения нового процесса. Возвращаемое значение асинхронной функции `_spawnvpe` или `_wspawnvpe` (для параметра `_P_NOWAIT` указано значение `_P_NOWAITO` или `mode`) — это дескриптор процесса. Состояние выхода имеет значение 0, если процесс завершился обычным образом. Для состояния выхода можно задать ненулевое значение, если порожденный процесс специально вызывает процедуру `exit` с ненулевым аргументом. Если новый процесс не задал положительное состояние выхода в явном виде, положительное состояние выхода указывает на аварийный выход по отмене или прерыванию. Возвращаемое значение –1 указывает на ошибку (новый процесс не запущен). В этом случае `errno` имеет одно из следующих значений:  
+ Возвращаемое значение синхронных функций `_spawnvpe` или `_wspawnvpe` (для параметра `_P_WAIT` указано значение `mode`) — это состояние завершения нового процесса. Возвращаемое значение асинхронной функции `_spawnvpe` или `_wspawnvpe` (для параметра `_P_NOWAIT` указано значение `_P_NOWAITO` или `mode`) — это дескриптор процесса. Состояние выхода имеет значение 0, если процесс завершился обычным образом. Для состояния выхода можно задать ненулевое значение, если порожденный процесс специально вызывает процедуру `exit` с ненулевым аргументом. Если новый процесс не задал положительное состояние выхода в явном виде, положительное состояние выхода указывает на аварийный выход по отмене или прерыванию. Возвращаемое значение-1 указывает на ошибку (новый процесс не запущен). В этом случае `errno` имеет одно из следующих значений:  
   
  `E2BIG`  
  Длина списка аргументов превышает 1024 байта  
@@ -136,12 +137,6 @@ intptr_t _wspawnvpe(
   
 ## <a name="example"></a>Пример  
  См. пример в разделе [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
-  
--   [System::Diagnostics::Process Class](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [System::Diagnostics::ProcessStartInfo Class](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [abort](../../c-runtime-library/reference/abort.md)   

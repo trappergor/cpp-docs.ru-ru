@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: b5a0a5af02dffea95471a41b9c7bc9726e6beab5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 90a0b43841616414d38d8a24a99c90b2e2c7f689
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
@@ -92,7 +93,7 @@ void * _aligned_realloc_dbg(
  Будет ошибкой повторно выделить память и изменить выравнивание блока.  
   
 ## <a name="remarks"></a>Примечания  
- `_aligned_realloc_dbg` — это отладочная версия функции [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_aligned_realloc_dbg` сокращается до вызова функции _`aligned_realloc`. И \_`aligned_realloc`, и `_aligned_realloc_dbg` выполняют перераспределение блока памяти в основной куче, однако `_aligned_realloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
+ `_aligned_realloc_dbg` — это отладочная версия функции [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_aligned_realloc_dbg` сокращается до вызова функции `_aligned_realloc`. И `_aligned_realloc`, и `_aligned_realloc_dbg` выполняют перераспределение блока памяти в основной куче, однако `_aligned_realloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
   
  `_aligned_realloc_dbg` повторно выделяет указанный блок памяти, добавив немного больше пространства, чем запрошено `newSize`. `newSize` может быть больше или меньше размера первоначально выделенного блока памяти. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. Перераспределение может привести к перемещению исходного блока памяти в другое расположение в куче, а также к изменению размера блока памяти. Если блок памяти перемещен, содержимое исходного блока перезаписывается.  
   
@@ -112,9 +113,6 @@ void * _aligned_realloc_dbg(
   
 ## <a name="libraries"></a>Библиотеки  
  Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Функции-члены потока выходного файла
@@ -43,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="the-open-function-for-output-streams"></a>Функция open для потоков вывода  
  Для использования файлового потока вывода ([ofstream](../standard-library/basic-ofstream-class.md)) следует связать этот поток с конкретным файлом на диске в конструкторе или в функции **open**. При использовании функции **open** можно повторно использовать один и тот же объект-поток с рядом файлов. В любом случае аргументы, описывающие файл, одни и те же.  
   
- При открытии файла, связанного с потоком вывода, обычно указывается флаг **open_mode**. Эти флаги, определенные как перечислители в классе `ios`, можно комбинировать с помощью побитового оператора OR (&#124;). Список перечислителей приведен в разделе [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode).  
+ При открытии файла, связанного с потоком вывода, обычно указывается флаг **open_mode**. Эти флаги, определенные как перечислители в классе `ios`, можно комбинировать с помощью побитового оператора OR (&#124;). Список перечислителей приведен в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  Три типовые ситуации для потока вывода используют параметры режима:  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>Функция put  
+## <a name="the-put"></a>Put
  Функция **put** записывает в поток вывода один символ. Следующие две конструкции по умолчанию одинаковы, но вторая зависит от аргументов формата потока:  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>Функция write  
+## <a name="the-write"></a>Запись
  Функция **write** записывает блок памяти в файловый поток вывода. Аргумент length указывает количество записанных байт. Следующий пример создает файловый поток вывода и записывает в него двоичное значение структуры `Date`:  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  Деструктор потока вывода автоматически закрывает файл потока, только если файл был открыт конструктором или функцией-членом **open**. Если конструктору передается дескриптор для уже открытого файла или используется функция-член **attach**, необходимо явно закрыть файл.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Функции обработки ошибок  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Функции обработки ошибок  
  Используйте эти функции-члены для проверки на ошибки при записи в поток:  
   
 |Функция|Возвращаемое значение|  

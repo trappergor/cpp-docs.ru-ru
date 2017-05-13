@@ -14,25 +14,28 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
+dev_langs:
+- C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 50cfd9e09a7534ea7c615ebf6b0c781806013965
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt-operators"></a>операторы &lt;memory&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
-|[оператор&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[оператор&lt;=](#operator_lt__eq)|  
-|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
+|[оператор==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Проверяет неравенство между объектами.  
   
 ```  
@@ -53,10 +56,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Один из объектов для проверки на неравенство.  
   
- ` right`  
+ `right`  
  Один из объектов для проверки на неравенство.  
   
  `Ty1`  
@@ -71,7 +74,7 @@ bool operator!=(
 ### <a name="remarks"></a>Примечания  
  Первый оператор шаблона возвращает значение false. (Все распределители по умолчанию равны.)  
   
- Второй и третий операторы шаблона возвращают `!(`` left` `==` ` right``)`.  
+ Второй и третий операторы шаблона возвращают `!(left == right)`.  
   
 ### <a name="example"></a>Пример  
   
@@ -130,7 +133,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Проверяет равенство между объектами.  
   
 ```  
@@ -151,10 +154,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Один из объектов для проверки на равенство.  
   
- ` right`  
+ `right`  
  Один из объектов для проверки на равенство.  
   
  `Ty1`  
@@ -239,7 +242,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a>  оператор&gt;=  
  Проверяет, больше или равен один объект второму объекту.  
   
 ```  
@@ -255,10 +258,10 @@ bool operator>=(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Один из сравниваемых объектов.  
   
- ` right`  
+ `right`  
  Один из сравниваемых объектов.  
   
  `Ty1`  
@@ -268,9 +271,9 @@ bool operator>=(
  Тип, управляемый правым общим указателем.  
   
 ### <a name="remarks"></a>Примечания  
- Операторы шаблона возвращают ` left``.get() >=` ` right``.get()`.  
+ Операторы шаблона возвращают `left.get() >= right.get()`.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Проверяет, меньше ли один объект второго объекта.  
   
 ```  
@@ -286,10 +289,10 @@ bool operator<(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Один из сравниваемых объектов.  
   
- ` right`  
+ `right`  
  Один из сравниваемых объектов.  
   
  `Ty1`  
@@ -298,7 +301,7 @@ bool operator<(
  `Ty2`  
  Тип, управляемый правым указателем.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a>  оператор&lt;=  
  Проверяет, меньше или равен один объект второму объекту.  
   
 ```  
@@ -314,10 +317,10 @@ bool operator<=(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Один из сравниваемых объектов.  
   
- ` right`  
+ `right`  
  Один из сравниваемых объектов.  
   
  `Ty1`  
@@ -327,9 +330,9 @@ bool operator<=(
  Тип, управляемый правым общим указателем.  
   
 ### <a name="remarks"></a>Примечания  
- Операторы шаблона возвращают ` left``.get() <=` ` right``.get()`  
+ Операторы шаблона возвращают`left.get() <= right.get()`  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Проверяет, больше ли один объект второго объекта.  
   
 ```  
@@ -345,10 +348,10 @@ bool operator>(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Один из сравниваемых объектов.  
   
- ` right`  
+ `right`  
  Один из сравниваемых объектов.  
   
  `Ty1`  
@@ -357,7 +360,7 @@ bool operator>(
  `Ty2`  
  Тип, управляемый правым общим указателем.  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
 Записывает в поток общий указатель.  
   
 ```  

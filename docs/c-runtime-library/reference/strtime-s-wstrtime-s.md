@@ -1,56 +1,73 @@
 ---
-title: "_strtime_s, _wstrtime_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wstrtime_s"
-  - "_strtime_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wstrtime_s"
-  - "strtime_s"
-  - "wstrtime_s"
-  - "_strtime_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strtime_s - функция"
-  - "_wstrtime_s - функция"
-  - "копирование времени в буферы"
-  - "strtime_s - функция"
-  - "время, копирование"
-  - "wstrtime_s - функция"
+title: "_strtime_s, _wstrtime_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wstrtime_s
+- _strtime_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wstrtime_s
+- strtime_s
+- wstrtime_s
+- _strtime_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- wstrtime_s function
+- copying time to buffers
+- strtime_s function
+- _wstrtime_s function
+- time, copying
+- _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _strtime_s, _wstrtime_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e253a90b195ccd5aaf60942a243d8ebc50993b94
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Скопировать текущее время в буфер.  Здесь представлены версии [\_strtime, \_wstrtime](../Topic/_strtime,%20_wstrtime.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
+Копирует текущее время в буфер. Это версии функции [_strtime, _wstrtime](../../c-runtime-library/reference/strtime-wstrtime.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _strtime_s(  
@@ -71,55 +88,55 @@ errno_t _wstrtime_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
- \[исходящий\] `buffer`  
- Буфер, по крайней мере 10 байтов длиной, где будет записано время.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `buffer`  
+ Буфер длиной не менее 10 символов, в который будет записано время.  
   
- \[входящий\] `numberOfElements`  
+ [in] `numberOfElements`  
  Размер буфера.  
   
-## Возвращаемое значение  
- Ноль, если успешно.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль при успешном завершении.  
   
- Если возникает ошибочное условие, то вызывается обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Возвращаемое значение — код ошибки в случае сбоя.  Коды ошибок определенны в ERRNO.H; см. следующую таблицу для конкретных ошибок, создаваемых этой функцией.  Дополнительные сведения о кодах ошибок см. в разделе [Константы errno](../../c-runtime-library/errno-constants.md).  
+ Если возникает ошибка, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). В случае сбоя возвращаемое значение представляет собой код ошибки. Коды ошибок определены в ERRNO.H; ошибки, создаваемые этой функцией, см. в таблице ниже. Дополнительные сведения о кодах ошибок см. в разделе [Константы errno](../../c-runtime-library/errno-constants.md).  
   
-### Условия возникновения ошибки  
+### <a name="error-conditions"></a>Условия ошибок  
   
-|`buffer`|`numberOfElements`|Return|Содержимое `buffer`.|  
+|`buffer`|`numberOfElements`|Назад|Содержимое `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
-|`NULL`|\(any\)|`EINVAL`|Без изменений|  
-|Не `NULL` \(указывающий на допустимый буфер\)|0|`EINVAL`|Без изменений|  
-|Не `NULL` \(указывающий на допустимый буфер\)|0 \< size \< 9|`EINVAL`|Пустая строка|  
-|Не `NULL` \(указывающий на допустимый буфер\)|Size \> 9|0|Текущее время, отформатированное в соответствии с замечаниями|  
+|`NULL`|(любые)|`EINVAL`|Без изменений|  
+|Не `NULL` (указывает на допустимый буфер)|0|`EINVAL`|Без изменений|  
+|Не `NULL` (указывает на допустимый буфер)|0 < size < 9|`EINVAL`|Пустая строка|  
+|Не `NULL` (указывает на допустимый буфер)|Size > 9|0|Текущая дата в формате, указанном в разделе "Примечания"|  
   
-## Проблемы безопасности  
- Передача недопустимого, отличного от NULL значения для буфера приведет к нарушению прав доступа, если параметр `numberOfElements` больше 9.  
+## <a name="security-issues"></a>Проблемы безопасности  
+ При передаче в качестве буфера недействительного значения, отличного от NULL, возникнет нарушение прав доступа, если значение параметра `numberOfElements` больше 9.  
   
- Передача для `numberOfElements` значения, превышающего фактический размер буфера, может привести к переполнению буфера.  
+ Передача в качестве `numberOfElements` значения, превышающего фактический размер буфера, приведет к переполнению буфера.  
   
-## Заметки  
- Эти функции предоставляют более безопасные версии `_strtime` и `_wstrtime`.  Функция `_strtime_s` копирует текущее местное время в буфер, указанный в `timestr`*.* Время форматируется как `hh:mm:ss`, где `hh` является двумя цифрами, представляющими час в 24\-часовой записи, `mm` является двумя цифрами, представляющими минуты, прошедшие с последнего часа, и `ss` является двумя цифрами, представляющими секунды.  Например, строка `18:23:44` представляет 23 минуты и 44 секунды, прошедших с 18 часов. Буфер должен быть длиной, по крайней мере, 9 байт; фактический размер указывается в качестве второго параметра.  
+## <a name="remarks"></a>Примечания  
+ Эти функции представляют собой более безопасные версии `_strtime` и `_wstrtime`. `_strtime_s` Функция копирует текущее местное время в буфере, на который указывает `timestr`. Время представлено в формате `hh:mm:ss`, где `hh` — две цифры, представляющие час в 24-часовом формате, `mm` — две цифры, представляющие минуты после начала часа, `ss` — две цифры, представляющие секунды. Например, строка `18:23:44` представляет 23 минуты и 44 секунды после 18 часов. Размер буфера должен составлять не менее 9 байт; фактический размер указывается в качестве второго параметра.  
   
- `_wstrtime` — это двухбайтовая версия функции `_strtime`; аргумент и возвращаемое значение `_wstrtime` являются строками двухбайтовых символов.  В остальном эти функции ведут себя идентично.  
+ `_wstrtime` — это версия с расширенными символами для `_strtime`; аргумент и возвращаемое значение `_wstrtime` являются строками с расширенными символами. В остальном эти функции ведут себя одинаково.  
   
- В C\+\+ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера \(что исключает необходимость указания аргумента с размером буфера\), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций:  
+### <a name="generic-text-routine-mapping"></a>Сопоставление универсальных текстовых функций:  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstrtime_s`|`_strtime_s`|`_strtime_s`|`_wstrtime_s`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_strtime_s`|\<time.h\>|  
-|`_wstrtime_s`|\<time.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_strtime_s`|\<time.h>|  
+|`_wstrtime_s`|\<time.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // strtime_s.c  
@@ -157,26 +174,17 @@ int main()
 }  
 ```  
   
-  **OS time:            14:37:49**  
-**OS date:            04\/25\/03**   
-## Эквивалент в .NET Framework  
+```Output  
+OS time:            14:37:49  
+OS date:            04/25/03  
+```  
   
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   
- [asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [ctime\_s, \_ctime32\_s, \_ctime64\_s, \_wctime\_s, \_wctime32\_s, \_wctime64\_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [mktime, \_mktime32, \_mktime64](../Topic/mktime,%20_mktime32,%20_mktime64.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)   
- [\_tzset](../Topic/_tzset.md)
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)

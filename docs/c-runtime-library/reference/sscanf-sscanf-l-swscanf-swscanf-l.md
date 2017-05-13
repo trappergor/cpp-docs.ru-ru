@@ -1,66 +1,83 @@
 ---
-title: "sscanf, _sscanf_l, swscanf, _swscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "swscanf"
-  - "sscanf"
-  - "_sscanf_l"
-  - "_swscanf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_sscanf_l"
-  - "_stscanf"
-  - "swscanf"
-  - "_stscanf_l"
-  - "sscanf"
-  - "_swscanf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_sscanf_l - функция"
-  - "_stscanf - функция"
-  - "_stscanf_l - функция"
-  - "_swscanf_l - функция"
-  - "чтение данных, строки"
-  - "sscanf - функция"
-  - "sscanf_l - функция"
-  - "строки [C++], чтение"
-  - "строки [C++], чтение данных из"
-  - "stscanf - функция"
-  - "stscanf_l - функция"
-  - "swscanf - функция"
-  - "swscanf_l - функция"
+title: "sscanf, _sscanf_l, swscanf, _swscanf_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- swscanf
+- sscanf
+- _sscanf_l
+- _swscanf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _sscanf_l
+- _stscanf
+- swscanf
+- _stscanf_l
+- sscanf
+- _swscanf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- swscanf function
+- _stscanf function
+- sscanf function
+- _stscanf_l function
+- _sscanf_l function
+- _swscanf_l function
+- swscanf_l function
+- strings [C++], reading data from
+- stscanf function
+- reading data, strings
+- strings [C++], reading
+- sscanf_l function
+- stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# sscanf, _sscanf_l, swscanf, _swscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b124ba5aa0fef8efd6d44b405fbc608709e05d72
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Читают форматированные данные из строки.  Существуют более безопасные версии этих функций; см. раздел [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../Topic/sscanf_s,%20_sscanf_s_l,%20swscanf_s,%20_swscanf_s_l.md).  
+---
+# <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
+Считывают форматированные данные из строки. Существуют более безопасные версии этих функций; см. раздел [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int sscanf(  
@@ -87,12 +104,12 @@ int _swscanf_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Сохраненные данные  
   
  `format`  
- Строка управления форматом.  Дополнительные сведения см. в разделе [Спецификации формата](../Topic/Format%20Specification%20Fields:%20scanf%20and%20wscanf%20Functions.md).  
+ Строка управления форматом. Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `argument`  
  Необязательные аргументы  
@@ -100,40 +117,40 @@ int _swscanf_l(
  `locale`  
  Используемый языковой стандарт  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает количество полей, которые успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не присвоены.  Возвращаемое значение 0 указывает, что поля не были присвоены.  Возвращаемое значение равно `EOF` в случае ошибки или если конец строки достигнут до первого преобразования.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Если до первого преобразования возникает ошибка или достигается конец строки, возвращается значение `EOF`.  
   
- Если параметр `buffer` или `format` указывает на `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, эти функции возвращают \-1 и устанавливают `errno` в значение `EINVAL`.  
+ Если `buffer` или `format` является указателем `NULL`, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `sscanf` считывает данные из `buffer` в расположение, которое задается каждым `argument`.  Каждый `argument` должен быть указателем на переменную типа, соответствующего спецификатору типа в `format`.  Аргумент `format` управляет интерпретацией полей ввода и имеет те же форму и функциональные возможности, что и аргумент `format` для функции `scanf`.  Если копирование производится между перекрывающимися строками, поведение не определено.  
+## <a name="remarks"></a>Примечания  
+ Функция `sscanf` считывает данные из `buffer` в расположение, заданное параметрами `argument`. Каждый параметр `argument` должен быть указателем на переменную, которая имеет тип, соответствующий спецификатору типа в параметре `format`. Аргумент `format` определяет интерпретацию полей входных данных и имеет такую же форму и функцию, как аргумент `format` для функции `scanf`. Если копирование производится между перекрывающимися строками, поведение не определено.  
   
 > [!IMPORTANT]
->  При считывании строки с помощью `sscanf` всегда надо указывать ширину для формата `%s` \(например, `"%32s"` вместо `"%s"`\); в противном случае неправильно отформатированные входные данные могут вызвать переполнение буфера.  
+>  При использовании `sscanf` для чтения строки всегда следует указывать ширину для формата `%s` (например, `"%32s"` вместо `"%s"`); в противном случае ввод в неправильном формате может легко привести к переполнению буфера.  
   
- `swscanf` — это двухбайтовая версия `sscanf`; аргументы для `swscanf` представляют собой двухбайтовые строки.  `sscanf`не обрабатывает многобайтовые шестнадцатеричные символы.  `swscanf` не обрабатывает полноширинные шестнадцатеричные символы юникода или символы "зоны совместимости".  В противном случае поведение `swscanf` и `sscanf` идентично.  
+ `swscanf` — это двухбайтовая версия `sscanf`; аргументы для `swscanf` представляют собой двухбайтовые строки. `sscanf` не обрабатывает многобайтовые шестнадцатеричные символы. `swscanf` не обрабатывает шестнадцатеричные символы Юникода полной ширины и символы "зоны совместимости". В противном случае поведение `swscanf` и `sscanf` идентично.  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_stscanf`|`sscanf`|`sscanf`|`swscanf`|  
 |`_stscanf_l`|`_sscanf_l`|`_sscanf_l`|`_swscanf_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`sscanf`, `_sscanf_l`|\<stdio.h\>|  
-|`swscanf`, `_swscanf_l`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`sscanf`, `_sscanf_l`|\<stdio.h>|  
+|`swscanf`, `_swscanf_l`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_sscanf.c  
@@ -167,16 +184,16 @@ int main( void )
 }  
 ```  
   
-  **Строка    \= 15**  
-**Знак \= 1**  
-**Целое число:  \= 15**  
-**Real:     \= 15.000000**   
-## Эквивалент в .NET Framework  
- См. методы `Parse`, такие как [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [snprintf, \_snprintf, \_snprintf\_l, \_snwprintf, \_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)

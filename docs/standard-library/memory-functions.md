@@ -7,61 +7,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::addressof
 - memory/std::addressof
-- std::align
 - memory/std::align
-- std::allocate_shared
 - memory/std::allocate_shared
-- std::const_pointer_cast
 - memory/std::const_pointer_cast
-- std::declare_no_pointers
 - memory/std::declare_no_pointers
-- std::declare_reachable
 - memory/std::declare_reachable
-- std::default_delete
 - memory/std::default_delete
-- std::dynamic_pointer_cast
 - memory/std::dynamic_pointer_cast
-- std::get_deleter_function
-- memory/std::get_deleter_function
-- std::get_pointer_safety
+- memory/std::get_deleter
 - memory/std::get_pointer_safety
-- std::get_temporary_buffer
 - memory/std::get_temporary_buffer
-- std::make_shared
 - memory/std::make_shared
-- std::make_unique
 - memory/std::make_unique
-- std::owner_less
 - memory/std::owner_less
-- std::return_temporary_buffer
 - memory/std::return_temporary_buffer
-- std::static_pointer_cast
 - memory/std::static_pointer_cast
-- std::swap
 - memory/std::swap
-- std::undeclare_no_pointers
 - memory/std::undeclare_no_pointers
-- std::undeclare_reachable
 - memory/std::undeclare_reachable
-- std::uninitialized_copy
 - memory/std::uninitialized_copy
-- std::uninitialized_copy_n
 - memory/std::uninitialized_copy_n
-- std::uninitialized_fill
 - memory/std::uninitialized_fill
-- std::uninitialized_fill_n
 - memory/std::uninitialized_fill_n
+- memory/std::addressof
+- memory/std::align
+- memory/std::allocate_shared
+- memory/std::const_pointer_cast
+- memory/std::declare_no_pointers
+- memory/std::declare_reachable
+- memory/std::default_delete
+- memory/std::dynamic_pointer_cast
+- memory/std::get_deleter
+- memory/std::get_pointer_safety
+- memory/std::get_temporary_buffer
+- memory/std::make_shared
+- memory/std::make_unique
+- memory/std::owner_less
+- memory/std::return_temporary_buffer
+- memory/std::static_pointer_cast
+- memory/std::undeclare_no_pointers
+- memory/std::undeclare_reachable
+- memory/std::uninitialized_copy
+- memory/std::uninitialized_copy_n
+- memory/std::uninitialized_fill
+- memory/std::uninitialized_fill_n
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bab363d16555ca66ce0b57aad4ac8f3d9aaad21b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4d6d010f7f910a89565ef8cd7c07ddbb2f054759
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltmemorygt-functions"></a>Функции &lt;memory&gt;
@@ -69,14 +71,14 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[Функция get_deleter](#get_deleter_function)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|  
 |[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap (стандартная библиотека C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="a-nameaddressofa--addressof"></a><a name="addressof"></a>  addressof  
+##  <a name="addressof"></a>  addressof  
  Получает истинный адрес объекта.  
   
 ```  
@@ -93,7 +95,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namealigna--align"></a><a name="align"></a>  align  
+##  <a name="align"></a>  align  
  Помещает хранилище определенного размера — выровненное по заданной спецификации выравнивания — по первому возможному адресу заданного хранилища.  
   
 ```  
@@ -150,7 +152,7 @@ while (alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="a-nameallocateshareda--allocateshared"></a><a name="allocate_shared"></a>  allocate_shared  
+##  <a name="allocate_shared"></a>  allocate_shared  
  Создает `shared_ptr` для объектов, выделенных и созданных для заданного типа с помощью указанного распределителя. Возвращает `shared_ptr`.  
   
 ```  
@@ -169,7 +171,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 ### <a name="remarks"></a>Примечания  
  Функция создает объект `shared_ptr``<Type>`, указатель на `Type(``Args``...)`, как выделенный и созданный `Alloc`.  
   
-##  <a name="a-nameconstpointercasta--constpointercast"></a><a name="const_pointer_cast"></a>  const_pointer_cast  
+##  <a name="const_pointer_cast"></a>  const_pointer_cast  
  Приведение константы к shared_ptr.  
   
 ```  
@@ -217,7 +219,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="a-namedeclarenopointersa--declarenopointers"></a><a name="declare_no_pointers"></a>  declare_no_pointers  
+##  <a name="declare_no_pointers"></a>  declare_no_pointers  
  Сообщает сборщику мусора, что символы в блоке памяти, определенном указателем на базовый адрес и размером блока, не содержат трассируемых указателей.  
   
 ```  
@@ -230,13 +232,13 @@ void declare_no_pointers(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` ptr`|Адрес первого символа, который больше не содержит трассируемых указателей.|  
-|`_Size`|Размер блока, который начинается с ` ptr` и не содержит трассируемых указателей.|  
+|`ptr`|Адрес первого символа, который больше не содержит трассируемых указателей.|  
+|`_Size`|Размер блока, который начинается с `ptr` и не содержит трассируемых указателей.|  
   
 ### <a name="remarks"></a>Примечания  
- Функция сообщает любой `garbage collector`, что диапазон адресов `[`` ptr``,` ` ptr` `+` `_Size``)` больше не содержит трассируемых указателей. (Все указатели на выделенную память не должны быть разыменованными, кроме случаев, когда они были `reachable`.)  
+ Функция сообщает любой `garbage collector` , диапазон адресов `[ ptr, ptr + _Size)` больше не будут содержать трассируемые указатели. (Все указатели на выделенную память не должны быть разыменованными, кроме случаев, когда они были `reachable`.)  
   
-##  <a name="a-namedeclarereachablea--declarereachable"></a><a name="declare_reachable"></a>  declare_reachable  
+##  <a name="declare_reachable"></a>  declare_reachable  
  Уведомляет сборщик мусора, что указанный адрес относится к выделенной памяти и является доступным.  
   
 ```  
@@ -244,13 +246,13 @@ void declare_reachable(void* ptr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  Указатель на доступную, выделенную, допустимую область хранения.  
   
 ### <a name="remarks"></a>Примечания  
- Если ` ptr` не равно null, функция сообщает любому сборщику мусора, что ` ptr` далее является доступным (указывает на допустимую выделенную память).  
+ Если `ptr` не равно null, функция сообщает любому сборщику мусора, что `ptr` далее является доступным (указывает на допустимую выделенную память).  
   
-##  <a name="a-namedefaultdeletea--defaultdelete"></a><a name="default_delete"></a>  default_delete  
+##  <a name="default_delete"></a>  default_delete  
  Удаляет объекты, выделенные с помощью `operator new`. Подходит для использования с `unique_ptr`.  
 ```  
 struct default_delete {
@@ -269,7 +271,7 @@ struct default_delete {
 ### <a name="remarks"></a>Примечания  
  Класс шаблона описывает `deleter`, который удаляет скалярные объекты, выделенные с помощью `operator new`; может использоваться с классом шаблона `unique_ptr`. Также имеет явную специализацию `default_delete<Type[]>`.  
   
-##  <a name="a-namedynamicpointercasta--dynamicpointercast"></a><a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
  Динамическое приведение к типу shared_ptr.  
   
 ```  
@@ -331,7 +333,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-namegetdeleterfunctiona--getdeleter-function"></a><a name="get_deleter_function"></a>  Функция get_deleter  
+##  <a name="get_deleter"></a>get_deleter
  Получение метода удаления из shared_ptr.  
   
 ```  
@@ -397,7 +399,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="a-namegetpointersafetya--getpointersafety"></a><a name="get_pointer_safety"></a>  get_pointer_safety  
+##  <a name="get_pointer_safety"></a>  get_pointer_safety  
  Возвращает тип безопасности указателя, подразумеваемый любым сборщиком мусора.  
   
 ```  
@@ -407,7 +409,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>Примечания  
  Функция возвращает тип безопасности указателя, подразумеваемый любым автоматическим `garbage collector`.  
   
-##  <a name="a-namegettemporarybuffera--gettemporarybuffer"></a><a name="get_temporary_buffer"></a>  get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
  Выделяет временное хранилище для последовательности элементов, которая не превышает заданное число элементов.  
   
 ```  
@@ -416,7 +418,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` count`  
+ `count`  
  Максимальное количество запрошенных элементов, для которых нужно выделить память.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -460,7 +462,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="a-namemakeshareda--makeshared"></a><a name="make_shared"></a>  make_shared  
+##  <a name="make_shared"></a>  make_shared  
  Создает и возвращает `shared_ptr`, указывающий на выделенные объекты, созданные без аргументов или с помощью нескольких аргументов с использованием распределителя по умолчанию. Выделяет и создает объект указанного типа и `shared_ptr` для управления общим владением объекта и возвращает `shared_ptr`.  
   
 ```  
@@ -554,7 +556,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="a-namemakeuniquea--makeunique"></a><a name="make_unique"></a>  make_unique  
+##  <a name="make_unique"></a>  make_unique  
  Создает и возвращает [unique_ptr](../standard-library/unique-ptr-class.md) на объект указанного типа, который создается с помощью использования указанных аргументов.  
   
 ```scr  
@@ -608,7 +610,7 @@ typename enable_if<extent<T>::value != 0,
   
   При появлении ошибки C2280 в связи с `unique_ptr`, это почти наверняка связано с тем, что вы пытаетесь вызвать его конструктор копированием, который является удаленной функцией.  
   
-##  <a name="a-nameownerlessa--ownerless"></a><a name="owner_less"></a>  owner_less  
+##  <a name="owner_less"></a>  owner_less  
  Разрешает смешанные сравнения общих и слабых указателей на основе собственности. Возвращает `true`, если левый параметр размещен по порядку перед правым параметром функцией-членом `owner_before`.  
   
 ```  
@@ -652,13 +654,13 @@ struct owner_less<weak_ptr<Type>>
  `_left`  
  Общий или слабый указатель.  
   
- ` right`  
+ `right`  
  Общий или слабый указатель.  
   
 ### <a name="remarks"></a>Примечания  
- Классы-шаблоны определяют все свои операторы-члены как возвращающие ` left``.owner_before(`` right``)`.  
+ Классы-шаблоны определяют все свои операторы-члены как возвращающие `left``.owner_before(``right``)`.  
   
-##  <a name="a-namereturntemporarybuffera--returntemporarybuffer"></a><a name="return_temporary_buffer"></a>  return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
  Отменяет выделение временной памяти, выделенной с помощью функции шаблона `get_temporary_buffer`.  
   
 ```  
@@ -711,7 +713,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="a-namestaticpointercasta--staticpointercast"></a><a name="static_pointer_cast"></a>  static_pointer_cast  
+##  <a name="static_pointer_cast"></a>  static_pointer_cast  
  Статическое приведение к shared_ptr.  
   
 ```  
@@ -769,7 +771,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-nameswapa--swap-c-standard-library"></a><a name="swap"></a> swap (стандартная библиотека C++)  
+##  <a name="swap"></a> swap (стандартная библиотека C++)  
  Переключение двух объектов shared_ptr или weak_ptr.  
   
 ```  
@@ -850,7 +852,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameundeclarenopointersa--undeclarenopointers"></a><a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
  Сообщает сборщику мусора, что символы в блоке памяти, определенном указателем на базовый адрес и размером блока, теперь могут содержать трассируемые указатели.  
   
 ```  
@@ -860,9 +862,9 @@ void undeclare_no_pointers(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Функция сообщает любому `garbage collector`, что диапазон адресов `[`` ptr``,` ` ptr` `+` `_Size``)` сейчас может содержать `traceable pointers`.  
+ Функция сообщает любой `garbage collector` , диапазон адресов `[ptr, ptr + _Size)` , теперь могут содержать `traceable pointers`.  
   
-##  <a name="a-nameundeclarereachablea--undeclarereachable"></a><a name="undeclare_reachable"></a>  undeclare_reachable  
+##  <a name="undeclare_reachable"></a>  undeclare_reachable  
  Уведомляет `garbage_collector`, что указанная область памяти является недоступной.  
   
 ```  
@@ -874,12 +876,12 @@ Type *undeclare_reachable(Type* ptr);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` ptr`|Указатель на адрес памяти, который нужно объявить недоступным.|  
+|`ptr`|Указатель на адрес памяти, который нужно объявить недоступным.|  
   
 ### <a name="remarks"></a>Примечания  
- Если ` ptr` не `null`, функция сообщает любому `garbage collector`, что ` ptr` впредь не `reachable`. Она возвращает указатель `safely derived`, равный ` ptr`.  
+ Если `ptr` не `null`, функция сообщает любому `garbage collector`, что `ptr` впредь не `reachable`. Она возвращает указатель `safely derived`, равный `ptr`.  
   
-##  <a name="a-nameuninitializedcopya--uninitializedcopy"></a><a name="uninitialized_copy"></a>  uninitialized_copy  
+##  <a name="uninitialized_copy"></a>  uninitialized_copy  
  Копирует объекты из указанного исходного диапазона в неинициализированный конечный диапазон.  
   
 ```  
@@ -888,17 +890,17 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` first`  
+ `first`  
  Итератор ввода, обращающийся к первому элементу в исходном диапазоне.  
   
- ` last`  
+ `last`  
  Итератор ввода, обращающийся к последнему элементу в исходном диапазоне.  
   
- ` dest`  
+ `dest`  
  Прямой оператор, обращающийся к первому элементу в диапазоне назначения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, обращающийся к первой позиции после диапазона назначения, кроме случаев, когда исходный диапазон был пуст и итератор сначала обращался к * first.*  
+ Прямой итератор, обращающийся к первой позиции после диапазон назначения, если исходный диапазон был пуст и итератор обращен * first.*  
   
 ### <a name="remarks"></a>Примечания  
  Этот алгоритм позволяет отделить выделение памяти от создания объекта.  
@@ -980,7 +982,7 @@ int main()
 }
 ```  
   
-##  <a name="a-nameuninitializedcopyna--uninitializedcopyn"></a><a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
  Создает копию заданного числа элементов из итератора ввода. Копии помещаются в прямой итератор.  
   
 ```  
@@ -992,32 +994,30 @@ ForwardIterator uninitialized_copy_n(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` first`  
+ `first`  
  Итератор ввода, который ссылается на объект, подлежащий копированию.  
   
- ` count`  
+ `count`  
  Целочисленный тип со знаком или без знака, указывающий количество операций копирования объекта.  
   
- ` dest`  
+ `dest`  
  Прямой итератор, ссылающийся на место размещения новых копий.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, обращающийся к первой позиции после места назначения. Если исходный диапазон был пуст, итератор обращается к ` first`*.*  
+ Прямой итератор, обращающийся к первой позиции после места назначения. Если исходный диапазон был пуст, итератор адреса `first`.  
   
 ### <a name="remarks"></a>Примечания  
  Шаблонная функция фактически выполняет следующее.  
   
- `for (; 0 < count; -- count)`  
-  
- `new ((void *)&*` ` dest` `++)`  
-  
- `iterator_traits<InputIterator>::value_type(*` ` first` `++);`  
-  
- `return dest;`  
+```cpp  
+    for (; 0 < count; --count)  
+        new ((void *)&* dest++) iterator_traits<InputIterator>::value_type(*first++);  
+    return dest;  
+```  
   
  если код не создает исключение. В этом случае все созданные объекты уничтожаются, и создается исключение.  
   
-##  <a name="a-nameuninitializedfilla--uninitializedfill"></a><a name="uninitialized_fill"></a>  uninitialized_fill  
+##  <a name="uninitialized_fill"></a>  uninitialized_fill  
  Копирует объекты с указанным значением в неинициализированный конечный диапазон.  
   
 ```  
@@ -1026,13 +1026,13 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` first`  
+ `first`  
  Прямой итератор, обращающийся к первому элементу в диапазоне назначения, подлежащем инициализации.  
   
- ` last`  
+ `last`  
  Прямой итератор, обращающийся к последнему элементу в диапазоне назначения, подлежащем инициализации.  
   
- ` val`  
+ `val`  
  Значение, используемое для инициализации диапазона назначения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1086,7 +1086,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="a-nameuninitializedfillna--uninitializedfilln"></a><a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
  Копирует объекты с указанным значением в указанное число элементов в неинициализированном диапазоне назначения.  
   
 ```  
@@ -1095,13 +1095,13 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` first`  
+ `first`  
  Прямой оператор, обращающийся к первому элементу в диапазоне назначения, подлежащем инициализации.  
   
- ` count`  
+ `count`  
  Число подлежащих инициализации элементов.  
   
- ` val`  
+ `val`  
  Значение, используемое для инициализации диапазона назначения.  
   
 ### <a name="remarks"></a>Примечания  
