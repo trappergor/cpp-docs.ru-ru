@@ -398,7 +398,7 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 ### [Практическое руководство. Слияние нескольких профилей PGO в единый профиль](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-# [Ошибки компилятора с C2001 по C2499](../../error-messages/compiler-errors-1/TOC.md)
+# [Ошибки компилятора с C999 по C2499](../../error-messages/compiler-errors-1/TOC.md)
 # [Ошибки компилятора с C2500 по C3999](../../error-messages/compiler-errors-2/TOC.md)
 # [Предупреждения компилятора](../../error-messages/compiler-warnings/TOC.md)
 # [Ошибки средств](../../error-messages/tool-errors/TOC.md)
