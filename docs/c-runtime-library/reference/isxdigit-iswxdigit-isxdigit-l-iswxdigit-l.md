@@ -1,60 +1,77 @@
 ---
-title: "isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_iswxdigit_l"
-  - "iswxdigit"
-  - "isxdigit"
-  - "_isxdigit_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "iswxdigit"
-  - "isxdigit"
-  - "_istxdigit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_istxdigit - функция"
-  - "_iswxdigit_l - функция"
-  - "_isxdigit_l - функция"
-  - "шестнадцатеричные знаки"
-  - "istxdigit - функция"
-  - "iswxdigit - функция"
-  - "iswxdigit_l - функция"
-  - "isxdigit - функция"
-  - "isxdigit_l - функция"
+title: "isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _iswxdigit_l
+- iswxdigit
+- isxdigit
+- _isxdigit_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- iswxdigit
+- isxdigit
+- _istxdigit
+dev_langs:
+- C++
+helpviewer_keywords:
+- isxdigit function
+- istxdigit function
+- _iswxdigit_l function
+- _istxdigit function
+- _isxdigit_l function
+- iswxdigit_l function
+- isxdigit_l function
+- hexadecimal characters
+- iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 38d046526f391a85687d608ec64740fcac8e7658
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Определяет, представляет ли целое число символ шестнадцатеричной цифры.  
+---
+# <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
+Определяет, представляет ли целое число шестнадцатеричный символ.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int isxdigit(  
@@ -73,43 +90,40 @@ int _iswxdigit_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
- Целое число, которое требуется проверить.  
+ Проверяемое целое число.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая из этих процедур возвращает отличное от нуля значение, если `c` — конкретное представление символа шестнадцатеричной цифры.  `isxdigit` возвращает ненулевое значение, если `c` — шестнадцатеричная цифра \(A – F, a – f или 0 – 9\).  `iswxdigit` возвращает ненулевое значение, если `c` — расширенный символ, который соответствует символу шестнадцатеричной цифры.  Каждая из этих процедур возвращает 0, если `c` не удовлетворяет условию теста.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление шестнадцатеричного символа. `isxdigit`возвращает ненулевое значение, если `c` представляет собой шестнадцатеричную цифру (A - F, a - f или 0 - 9). Функция `iswxdigit` возвращает ненулевое значение, если `c` представляет собой расширенный символ, соответствующий шестнадцатеричному символу. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
- Для языкового стандарта «C» функция `iswxdigit` не поддерживает полностью расширенные шестнадцатеричные символы Юникода.  
+ Для языкового стандарта C функция `iswxdigit` не поддерживает шестнадцатеричные символы Юникод полной ширины.  
   
- Версии этих функций, которые содержат суффикс `_l` для поведения, зависящего от языкового стандарта, используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- Поведение `isxdigit` и `_isxdigit_l` является неопределенным, если `c` не является концом файла или не находится в диапазоне от 0 до 0xFF включительно.  При использовании библиотеки CRT отладки и `c` не является одним из этих значений, функции вызывают утверждение.  
+ Поведение функций `isxdigit` и `_isxdigit_l` не определено, если `c` не является концом файла или не находится в диапазоне от 0 по 0xFF включительно. Если используется библиотека отладки CRT и `c` не является одним из этих значений, функции вызывают утверждение.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istxdigit`|`isxdigit`|`isxdigit`|`iswxdigit`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`isxdigit`|\<ctype.h\>|  
-|`iswxdigit`|\<ctype.h\> или \<wchar.h\>|  
-|`_isxdigit_l`|\<ctype.h\>|  
-|`_iswxdigit_l`|\<ctype.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`isxdigit`|\<ctype.h>|  
+|`iswxdigit`|\<ctype.h> или \<wchar.h>|  
+|`_isxdigit_l`|\<ctype.h>|  
+|`_iswxdigit_l`|\<ctype.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- [System::Char::IsNumber](https://msdn.microsoft.com/en-us/library/system.char.isnumber.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)
+ [Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)
