@@ -1,89 +1,106 @@
 ---
-title: "_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strlwr_s_l"
-  - "_mbslwr_s_l"
-  - "_mbslwr_s"
-  - "_wcslwr_s"
-  - "_strlwr_s"
-  - "_wcslwr_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strlwr_s_l"
-  - "_strlwr_s"
-  - "mbslwr_s_l"
-  - "strlwr_s_l"
-  - "_wcslwr_s"
-  - "strlwr_s"
-  - "mbslwr_s"
-  - "_wcslwr_s_l"
-  - "wcslwr_s_l"
-  - "_tcslwr_s"
-  - "_tcslwr_s_l"
-  - "_mbslwr_s_l"
-  - "wcslwr_s"
-  - "_mbslwr_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbslwr_s - функция"
-  - "_mbslwr_s_l - функция"
-  - "_strlwr_s - функция"
-  - "_strlwr_s_l - функция"
-  - "_tcslwr_s - функция"
-  - "_tcslwr_s_l - функция"
-  - "_wcslwr_s - функция"
-  - "_wcslwr_s_l - функция"
-  - "регистр знаков, преобразование"
-  - "преобразование случая, функции CRT"
-  - "mbslwr_s - функция"
-  - "mbslwr_s_l - функция"
-  - "преобразование строк [C++], регистр знаков"
-  - "строки [C++], регистр знаков"
-  - "строки [C++], преобразование случая"
-  - "strlwr_s - функция"
-  - "strlwr_s_l - функция"
-  - "tcslwr_s - функция"
-  - "tcslwr_s_l - функция"
-  - "wcslwr_s - функция"
-  - "wcslwr_s_l - функция"
+title: "_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strlwr_s_l
+- _mbslwr_s_l
+- _mbslwr_s
+- _wcslwr_s
+- _strlwr_s
+- _wcslwr_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strlwr_s_l
+- _strlwr_s
+- mbslwr_s_l
+- strlwr_s_l
+- _wcslwr_s
+- strlwr_s
+- mbslwr_s
+- _wcslwr_s_l
+- wcslwr_s_l
+- _tcslwr_s
+- _tcslwr_s_l
+- _mbslwr_s_l
+- wcslwr_s
+- _mbslwr_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tcslwr_s function
+- wcslwr_s function
+- _mbslwr_s function
+- _wcslwr_s function
+- strlwr_s_l function
+- mbslwr_s_l function
+- _strlwr_s function
+- string conversion [C++], case
+- strlwr_s function
+- wcslwr_s_l function
+- _tcslwr_s_l function
+- mbslwr_s function
+- strings [C++], case
+- _wcslwr_s_l function
+- converting case, CRT functions
+- _strlwr_s_l function
+- _mbslwr_s_l function
+- case, converting
+- tcslwr_s function
+- tcslwr_s_l function
+- strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
 caps.latest.revision: 42
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 42
----
-# _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 33fa0536f811bf0fd8ac91d4cd227b6836ac79c6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Переводит строку в нижний регистр, используя переданный текущий языковой стандарт или объект языкового стандарта.  В этих версиях [\_strlwr, \_wcslwr, \_mbslwr, \_strlwr\_l, \_wcslwr\_l, \_mbslwr\_l](../Topic/_strlwr,%20_wcslwr,%20_mbslwr,%20_strlwr_l,%20_wcslwr_l,%20_mbslwr_l.md) усовершенствована безопасность, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
+Преобразует буквы в строке в строчные с использованием текущего или переданного языкового стандарта. Эти версии функций [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) отличаются повышенной безопасностью (см. раздел [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).  
   
 > [!IMPORTANT]
->  `_mbslwr_s` и `_mbslwr_s_l` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Функции  `_mbslwr_s` и `_mbslwr_s_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _strlwr_s(  
@@ -142,9 +159,9 @@ errno_t _wcslwr_s_l(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
- Строка, завершенная нулевым символом, которую нужно перевести в нижний регистр.  
+ Строка, завершающаяся символом NULL, для преобразования в нижний регистр.  
   
  `numberOfElements`  
  Размер буфера.  
@@ -152,38 +169,38 @@ errno_t _wcslwr_s_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Ноль возвращается при успехе, ненулевое значение — код ошибки при сбое.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль в случае успеха или ненулевой код ошибки в случае ошибки.  
   
- Эти функции проверяют свои параметры.  Если `str` не является допустимой строкой, завершенной нулевым символом, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` и устанавливают для `errno` значение `EINVAL`.  Если `numberOfElements` меньше, чем длина строки, функции также возвращают `EINVAL` и устанавливают `errno` в `EINVAL`.  
+ Эти функции проверяют свои параметры. Если `str` не является действительной строкой, завершающейся символом NULL, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают `EINVAL` и устанавливают параметр `errno` в значение `EINVAL`. Если `numberOfElements` меньше, чем длина строки, функции также возвращают `EINVAL` и устанавливают для параметра `errno` значение `EINVAL`.  
   
-## Заметки  
- Функция `_strlwr_s` преобразовывает по месту буквы верхнего регистра в `str` в нижний регистр.  `_mbslwr_s` это версия для работы с многобайтовыми символами функции `_strlwr_s`.`_wcslwr_s` это версия для работы с расширенными символами функции `_strlwr_s`.  
+## <a name="remarks"></a>Примечания  
+ Функция `_strlwr_s` преобразует "на месте" каждую прописную букву в строке `str` в строчную. `_mbslwr_s` — это версия функции `_strlwr_s` с многобайтовой кодировкой символов.`_wcslwr_s` представляет собой версию переменной `_strlwr_s` для расширенных символов.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версии с суффиксом `_l` идентичны, за исключением того, что они используют переданный параметр языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- В C\+\+ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера \(что исключает необходимость указания аргумента с размером буфера\), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
- Отладочные версии этих функций сначала заполняют буфер значением 0xFD.  Для отключения данного поведения используйте [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcslwr_s`|`_strlwr_s`|`_mbslwr_s`|`_wcslwr_s`|  
 |`_tcslwr_s_l`|`_strlwr_s_l`|`_mbslwr_s_l`|`_wcslwr_s_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_strlwr_s`, `_strlwr_s_l`|\<string.h\>|  
-|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h\>|  
-|`_wcslwr_s`, `_wcslwr_s_l`|\<string.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_strlwr_s`, `_strlwr_s_l`|\<string.h>|  
+|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h>|  
+|`_wcslwr_s`, `_wcslwr_s_l`|\<string.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_strlwr_s.cpp  
@@ -215,14 +232,14 @@ int main()
 }  
 ```  
   
-  **Mixed: The String to End All Strings\!**  
-**Lower: the string to end all strings\!**  
-**Upper: THE STRING TO END ALL STRINGS\!**   
-## Эквивалент в .NET Framework  
- [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
+```Output  
+Mixed: The String to End All Strings!  
+Lower: the string to end all strings!  
+Upper: THE STRING TO END ALL STRINGS!  
+```  
   
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_strupr\_s, \_strupr\_s\_l, \_mbsupr\_s, \_mbsupr\_s\_l, \_wcsupr\_s, \_wcsupr\_s\_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)

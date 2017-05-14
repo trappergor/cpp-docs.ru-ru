@@ -82,10 +82,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 236fc62186319c3c9e707456d298edd7016496e8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4955b5741413458b4a24a1b359343174ad484f2a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
@@ -158,7 +159,7 @@ unsigned char *_mbslwr_l(
  Каждая из этих функций возвращает указатель на преобразованную строку. Так как изменение осуществляется на месте, возвращенный указатель совпадает с указателем, переданным в качестве входного аргумента. Нет зарезервированных возвращаемых значений для указания ошибки.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_strlwr` преобразует все буквы в верхнем регистре в `str` в нижний регистр, как определено категорией `LC_CTYPE` языкового стандарта. Другие символы не изменяются. Дополнительные сведения по `LC_CTYPE` см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для своего поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_strlwr` преобразует все буквы в верхнем регистре в `str` в нижний регистр, как определено категорией `LC_CTYPE` языкового стандарта. Другие символы не изменяются. Дополнительные сведения по `LC_CTYPE` см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без `_l` используют текущий языковой стандарт для зависящего от языкового стандарта поведения; версии с `_l` суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Функции `_wcslwr` и `_mbslwr` являются версиями функции `_strlwr` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение функции `_wcslwr` представляют собой строки с расширенными символами. Аргументы и возвращаемое значение функции `_mbslwr` представляют собой строки с многобайтовыми символами. В остальном эти три функции ведут себя идентично.  
   
@@ -218,9 +219,6 @@ Mixed: The String to End All Strings!
 Lower: the string to end all strings!  
 Upper: THE STRING TO END ALL STRINGS!  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   

@@ -1,71 +1,88 @@
 ---
-title: "vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vswprintf_l"
-  - "_vsprintf_l"
-  - "vsprintf"
-  - "vswprintf"
-  - "__vswprintf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vstprintf"
-  - "vswprintf"
-  - "_vstprintf"
-  - "vsprintf"
-  - "__vswprintf_l"
-  - "_vsprintf_l"
-  - "_vswprintf_l"
-  - "vswprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vswprintf_l - функция"
-  - "_vsprintf_l - функция"
-  - "_vstprintf - функция"
-  - "_vstprintf_l - функция"
-  - "_vswprintf_l - функция"
-  - "вызывать переполнение буфера"
-  - "буферы, исключение переполнения"
-  - "буферы, вызывать переполнение буфера"
-  - "форматированный текст"
-  - "vsprintf - функция"
-  - "vsprintf_l - функция"
-  - "vstprintf - функция"
-  - "vstprintf_l - функция"
-  - "vswprintf - функция"
-  - "vswprintf_l - функция"
+title: "vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vswprintf_l
+- _vsprintf_l
+- vsprintf
+- vswprintf
+- __vswprintf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vstprintf
+- vswprintf
+- _vstprintf
+- vsprintf
+- __vswprintf_l
+- _vsprintf_l
+- _vswprintf_l
+- vswprintf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- __vswprintf_l function
+- _vstprintf_l function
+- formatted text
+- vstprintf_l function
+- _vswprintf_l function
+- vsprintf_l function
+- buffers, avoiding overruns
+- buffer overruns
+- vswprintf_l function
+- buffers, buffer overruns
+- vstprintf function
+- _vsprintf_l function
+- vswprintf function
+- vsprintf function
+- _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f738bc22cc5b3feb854dc958607509352202a738
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Записывают форматированные выходные данные с помощью указателя на список аргументов.  Существуют более безопасные версии этих функций; см. раздел [vsprintf\_s, \_vsprintf\_s\_l, vswprintf\_s, \_vswprintf\_s\_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
+---
+# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+Записывают форматированные выходные данные с помощью указателя на список аргументов. Существуют более безопасные версии этих функций; см. раздел [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int vsprintf(  
@@ -126,12 +143,12 @@ int _vswprintf_l(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Место хранения выходных данных.  
   
  `count`  
- Максимальное число символов для хранения, в версии `UNICODE` для этой функции.  
+ Максимальное количество символов, которое может хранить эта функция в версии `UNICODE`.  
   
  `format`  
  Спецификация формата.  
@@ -142,42 +159,42 @@ int _vswprintf_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `vsprintf` и `vswprintf` возвращают число записанных символов, не включая конечный нуль\-символ, или отрицательное значение, если произошла ошибка вывода.  Если `buffer` или `format` является указателем null, то эти функции вызывают обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, эти функции возвращают \-1 и устанавливают `errno` в значение `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функции `vsprintf` и `vswprintf` возвращают число записанных символов, не включая конечный нуль-символ, или отрицательное значение, если произошла ошибка вывода. Если `buffer` или `format` является пустым указателем, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает заданные данные в область памяти, на которую указывает `buffer`.  
+## <a name="remarks"></a>Примечания  
+ Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает указанные данные в память, на которую указывает `buffer`.  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
 > [!IMPORTANT]
->  Не существует способа ограничения количества записанные символов с помощью `vsprintf`, что означает, что код, использующий эту функцию, восприимчив к переполнениям буфера.  Вместо этой функции следует использовать [\_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) или вызывать [\_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md), чтобы определить, насколько больший буфер нужен.  Также убедитесь, что `format` не является строкой, определяемой пользователем.  Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Функция `vsprintf` не позволяет ограничить число записываемых символов, а значит, код, в котором используется эта функция, может привести к переполнению буфера. Используйте вместо нее [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) или вызывайте [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md), чтобы определить требуемый размер буфера. Кроме того, убедитесь, что `format` не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- `vswprintf` соответствует стандарту ISO C, который требует второго параметра `count` типа `size_t`.  Чтобы принудительно использовать старое нестандартное поведение, укажите `_CRT_NON_CONFORMING_SWPRINTFS.` Старое поведение может быть не включено в будущие версии, поэтому код должен быть изменен для использования нового соответствующего поведения.  
+ `vswprintf` соответствует стандарту ISO C, который требует указания второго параметра (`count`) типа `size_t`. Чтобы получить старое нестандартное поведение, задайте `_CRT_NON_CONFORMING_SWPRINTFS.`В будущей версии старое поведение может быть удалено, поэтому код необходимо изменить в соответствии с новым стандартным поведением.  
   
- В C\+\+ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstprintf`|`vsprintf`|`vsprintf`|`vswprintf`|  
 |`_vstprintf_l`|`_vsprintf_l`|`_vsprintf_l`|`_vswprintf_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательные заголовки|  
-|------------------|----------------------------|------------------------------|  
-|`vsprintf`, `_vsprintf_l`|\<stdio.h\> и \<stdarg.h\>|\<varargs.h\>\*|  
-|`vswprintf`, `_vswprintf_l`|\<stdio.h\> или \<wchar.h\> и \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`vsprintf`, `_vsprintf_l`|\<stdio.h> и \<stdarg.h>|\<varargs.h>*|  
+|`vswprintf`, `_vswprintf_l`|\<stdio.h> или \<wchar.h> и \<stdarg.h>|\<varargs.h>*|  
   
- \* Требуется для обеспечения совместимости с UNIX V.  
+ \* Требуется для совместимости с UNIX V.  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_vsprintf.c  
@@ -207,7 +224,8 @@ void test( char * format, ... )
     // Note: vsprintf is deprecated; consider using vsprintf_s instead  
     puts( buffer );  
   
-    free( buffer );  
+    free( buffer ); 
+    va_end( args ); 
 }  
   
 int main( void )  
@@ -217,16 +235,16 @@ int main( void )
 }  
 ```  
   
-  **123 \< 456**  
-**This is a string**   
-## Эквивалент в .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+123 < 456  
+This is a string  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
  [Функции vprintf](../../c-runtime-library/vprintf-functions.md)   
- [Синтаксис описания формата: функции printf и wprintf](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

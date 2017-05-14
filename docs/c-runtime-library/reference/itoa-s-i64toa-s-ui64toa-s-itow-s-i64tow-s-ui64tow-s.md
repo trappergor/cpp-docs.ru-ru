@@ -1,84 +1,101 @@
 ---
-title: "_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ui64tow_s"
-  - "_itoa_s"
-  - "_itow_s"
-  - "_ui64toa_s"
-  - "_i64tow_s"
-  - "_i64toa_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "i64tot_s"
-  - "itow_s"
-  - "_ui64tow_s"
-  - "_itow_s"
-  - "ui64tot_s"
-  - "_ui64toa_s"
-  - "itoa_s"
-  - "_i64tow_s"
-  - "_i64tot_s"
-  - "_itot_s"
-  - "_i64toa_s"
-  - "_itoa_s"
-  - "ui64toa_s"
-  - "i64toa_s"
-  - "_ui64tot_s"
-  - "i64tow_s"
-  - "itot_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_i64toa_s - функция"
-  - "_i64tot_s - функция"
-  - "_i64tow_s - функция"
-  - "_itoa_s - функция"
-  - "_itot_s - функция"
-  - "_itow_s - функция"
-  - "_ui64toa_s - функция"
-  - "_ui64tot_s - функция"
-  - "_ui64tow_s - функция"
-  - "преобразование целых чисел"
-  - "преобразование чисел, к строкам"
-  - "i64toa_s - функция"
-  - "i64tow_s - функция"
-  - "целые числа, преобразование"
-  - "itoa_s - функция"
-  - "itow_s - функция"
-  - "ui64toa_s - функция"
+title: "_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ui64tow_s
+- _itoa_s
+- _itow_s
+- _ui64toa_s
+- _i64tow_s
+- _i64toa_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- i64tot_s
+- itow_s
+- _ui64tow_s
+- _itow_s
+- ui64tot_s
+- _ui64toa_s
+- itoa_s
+- _i64tow_s
+- _i64tot_s
+- _itot_s
+- _i64toa_s
+- _itoa_s
+- ui64toa_s
+- i64toa_s
+- _ui64tot_s
+- i64tow_s
+- itot_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ui64toa_s function
+- _itow_s function
+- _i64tow_s function
+- _itot_s function
+- converting integers
+- itow_s function
+- i64toa_s function
+- _ui64tow_s function
+- integers, converting
+- _i64tot_s function
+- itoa_s function
+- _itoa_s function
+- ui64toa_s function
+- i64tow_s function
+- converting numbers, to strings
+- _ui64tot_s function
+- _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7e163c78f3a6b011c8670ad71277fb6770935066
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Преобразует целое число в строку.  Здесь представлены версии [\_itoa, \_i64toa, \_ui64toa, \_itow, \_i64tow, \_ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
+Преобразует целое число в строку. Это версии функций [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _itoa_s(  
@@ -131,64 +148,64 @@ errno_t _itow_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
- \[входящий\] `value`  
- Число, которое нужно преобразовать.  
+#### <a name="parameters"></a>Параметры  
+ [in] `value`  
+ Число, которое требуется преобразовать.  
   
- \[исходящий\] `buffer`  
+ [выходной] `buffer`  
  Заполняется результатом преобразования.  
   
- \[входящий\] `sizeInCharacters`  
+ [in] `sizeInCharacters`  
  Размер буфера в однобайтовых или расширенных символах.  
   
- \[входящий\] `radix`  
- Основание системы счисления значения `value`; должно находиться в диапазоне от 2 до 36.  
+ [in] `radix`  
+ Основание системы счисления `value`; который должен быть в диапазоне от 2-36.  
   
-## Возвращаемое значение  
- Нуль, если успешно; код ошибки при неудаче.  Если применяются любые из следующих условий, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает нуль в случае успеха или код ошибки в случае неудачи. В случае выполнения одного из указанных ниже условий возникновения ошибок функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
-### Условия возникновения ошибки  
+### <a name="error-conditions"></a>Условия ошибок  
   
 |value|buffer|sizeInCharacters|radix|Return|  
 |-----------|------------|----------------------|-----------|------------|  
-|any|`NULL`|any|any|`EINVAL`|  
-|any|any|\<\=0|any|`EINVAL`|  
-|any|any|\<\= длина требуемой результирующей строки|any|`EINVAL`|  
-|any|any|any|`radix` \< 2 или `radix` \> 36|`EINVAL`|  
+|любые|`NULL`|любые|любые|`EINVAL`|  
+|любые|any|<=0|any|`EINVAL`|  
+|любые|any|<= требуемой длины результирующей строки|любые|`EINVAL`|  
+|любые|любые|any|`radix` < 2 или `radix` > 36|`EINVAL`|  
   
  **Проблемы безопасности**  
   
- Эти функции могут создавать нарушение прав доступа, если `buffer` не указывает на допустимую память и не равен `NULL`, или если длина буфера недостаточна для хранения результирующей строки.  
+ Эти функции могут создавать нарушение прав доступа, если `buffer` не указывает на допустимый участок памяти и не равен `NULL`, или если длина буфера недостаточна для хранения результирующей строки.  
   
-## Заметки  
- За исключением параметров и возвращаемого значения, функции `_itoa_s` имеют одинаковое поведение с соответствующими менее безопасными версиями.  
+## <a name="remarks"></a>Примечания  
+ За исключением параметров и возвращаемого значения функции `_itoa_s` ведут себя так же, как и их менее безопасные версии.  
   
- В C\+\+ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера \(что исключает необходимость указания аргумента с размером буфера\), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
- Отладочные версии этих функций сначала заполняют буфер значением 0xFD.  Для отключения данного поведения используйте [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|  
 |`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|  
 |`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_itoa_s`|\<stdlib.h\>|  
-|`_i64toa_s`|\<stdlib.h\>|  
-|`_ui64toa_s`|\<stdlib.h\>|  
-|`_itow_s`|\<stdlib.h\> или \<wchar.h\>|  
-|`_i64tow_s`|\<stdlib.h\> или \<wchar.h\>|  
-|`_ui64tow_s`|\<stdlib.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_itoa_s`|\<stdlib.h>|  
+|`_i64toa_s`|\<stdlib.h>|  
+|`_ui64toa_s`|\<stdlib.h>|  
+|`_itow_s`|\<stdlib.h> или \<wchar.h>|  
+|`_i64tow_s`|\<stdlib.h> или \<wchar.h>|  
+|`_ui64tow_s`|\<stdlib.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_itoa_s.c  
@@ -219,7 +236,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 base 10: -1 (2 chars)  
@@ -253,10 +270,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
   
-## Эквивалент в .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
- [\_ltoa, \_ltow](../Topic/_ltoa,%20_ltow.md)   
- [\_ultoa, \_ultow](../../c-runtime-library/reference/ultoa-ultow.md)
+ [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

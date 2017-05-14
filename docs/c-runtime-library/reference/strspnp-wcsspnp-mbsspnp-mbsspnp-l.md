@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f7bf32d7fa725e1f012b2a793a8091674e1c2e9f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
@@ -115,7 +116,7 @@ unsigned char *_mbsspnp_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_strspnp`, `_wcsspnp` и `_mbsspnp` возвращают указатель на первый символ в `str`, который не принадлежит к набору символов в `charset`*.* Каждая из этих функций возвращает `NULL`, если `str` полностью состоит из символов из `charset`*.* Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.  
+ `_strspnp`, `_wcsspnp`, и `_mbsspnp` возвращает указатель на первый символ в `str` , не принадлежит набор символов в `charset`. Каждая из этих функций возвращает `NULL` Если `str` состоит только из символов из `charset`. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_mbsspnp` возвращают указатель на первый многобайтовый символ в `str`, который не принадлежит к набору символов в `charset`. Функция `_mbsspnp` распознает последовательности многобайтовых символов в соответствии с текущей используемой [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md). Поиск не включает завершающие нуль-символы.  
@@ -163,9 +164,6 @@ int main( void ) {
 ```  
 abbage  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   

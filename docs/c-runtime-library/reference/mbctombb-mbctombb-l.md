@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c659b24b2d8364af4303c0667841224560914cd6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
@@ -87,14 +88,14 @@ unsigned int _mbctombb_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения функции `_mbctombb` и `_mbctombb_l` возвращают однобайтовый символ, соответствующий `c`; в противном случае возвращается `c`.  
+ В случае успешного выполнения `_mbctombb` и `_mbctombb_l` возвращает однобайтовый символ, соответствующий `c`; в противном случае возвращается `c`.  
   
 ## <a name="remarks"></a>Примечания  
- Функции `_mbctombb` и `_mbctombb_l` преобразуют заданный многобайтовый символ в соответствующий однобайтовый многобайтовый символ. Символы должны соответствовать однобайтовым символам, находящимся в диапазоне 0x20–0x7E или 0xA1–0xDF.  
+ `_mbctombb` И `_mbctombb_l` функции преобразуют определенный Многобайтовый символ в соответствующий Многобайтовый символ однобайтовый. Символы должны соответствовать однобайтовые символы в диапазоне от 0x20 — 0x7E или 0xA1 - 0xDF для преобразования.  
   
  Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия этой функции без суффикса `_l` использует текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версия с суффиксом `_l` идентична версии без суффикса, но использует переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- В предыдущих версиях функция `_mbctombb` называлась `zentohan`. Вместо нее используйте функцию _`mbctombb`.  
+ В предыдущих версиях функция `_mbctombb` называлась `zentohan`. Взамен рекомендуется использовать `_mbctombb` .  
   
 ## <a name="requirements"></a>Требования  
   
@@ -104,9 +105,6 @@ unsigned int _mbctombb_l(
 |`_mbctombb_l`|\<mbstring.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

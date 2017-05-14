@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>Класс path
@@ -174,7 +175,7 @@ template <class Elem,
 string generic_string() const;
 ```  
   
- Возвращает `this->string<Elem, Traits, Alloc>(al)` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.  
+ Возвращает значение `this->string<Elem, Traits, Alloc>(al)` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.  
   
 ## <a name="pathgenericu16string"></a>path::generic_u16string  
   
@@ -612,7 +613,7 @@ wstring wstring() const;
  Преобразует последовательность, хранимую в mypath, в кодировку, предпочитаемую в системе размещения для последовательности wchar_t, и возвращает ее, сохранив в объекте типа wstring.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** filesystem  
+ **Заголовок:** \<filesystem >  
   
  **Пространство имен:** std::experimental::filesystem
   

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a67e7f6ff915b53ba91c11c0c39d9bec6e4a380a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0552fd2b76859166ea84ec17433ee5d04b5dcb19
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="collatebyname-class"></a>Класс collate_byname
@@ -71,7 +72,7 @@ protected:
  Начальное значение счетчика ссылок.  
   
 ## <a name="remarks"></a>Примечания  
- Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate__collate)\<CharType>. Его поведение определяется [именованным](../standard-library/locale-class.md#locale__name) языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate__collate)\<CharType>( `_Refs`).  
+ Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate)\<CharType>. Его поведение определяется [именованным](../standard-library/locale-class.md#name) языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<locale>  

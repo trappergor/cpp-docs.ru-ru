@@ -1,54 +1,71 @@
 ---
-title: "ceil, ceilf, ceill | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ceilf"
-  - "ceil"
-  - "ceill"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ceil"
-  - "ceilf"
-  - "ceill"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "вычисление максимальных значений"
-  - "ceil - функция"
-  - "ceilf - функция"
-  - "ceill - функция"
+title: "ceil, ceilf, ceill | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ceilf
+- ceil
+- ceill
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ceil
+- ceilf
+- ceill
+dev_langs:
+- C++
+helpviewer_keywords:
+- calculating value ceilings
+- ceill function
+- ceil function
+- ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# ceil, ceilf, ceill
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1fd4b888c8fc332c07aed62af03b340864dfe3bf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Вычисляет ближайшее целое число, превышающее значение.  
+---
+# <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
+Рассчитывает верхний предел значения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double ceil(   
@@ -68,38 +85,35 @@ long double ceill(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `x`  
  Значение с плавающей запятой.  
   
-## Возвращаемое значение  
- Функции `ceil` возвращают значение с плавающей запятой, представляющее наименьшее целое число, которое больше или равно `x`.  Нет какого\-либо возврата ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функции `ceil` возвращают значение с плавающей запятой, которое представляет наименьшее целое число, большее или равное `x`. Ошибка не возвращается.  
   
 |Ввод|Исключение SEH|Исключение Matherr|  
-|----------|--------------------|------------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|Нет|`_DOMAIN`|  
   
- `ceil` имеет реализацию, которая использует набор инструкций SSE2.  Дополнительные сведения и ограничения по использованию реализации с SSE2 см. в разделе [\_set\_SSE2\_enable](../Topic/_set_SSE2_enable.md).  
+ `ceil` содержит реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузки, можно вызывать перегрузки `ceil`.  В программе на языке C `ceil` всегда принимает и возвращает значение типа double.  
+## <a name="remarks"></a>Примечания  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки `ceil`. В программе на языке C `ceil` всегда принимает и возвращает двойное значение.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`ceil`, `ceilf`, `ceill`|\<math.h\>|  
+|-------------|---------------------|  
+|`ceil`, `ceilf`, `ceill`|\<math.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  См. пример для [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  
   
-## Эквивалент в .NET Framework  
- [System::Math::Ceiling](https://msdn.microsoft.com/en-us/library/system.math.ceiling.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../Topic/fmod,%20fmodf.md)   
+ [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
  [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)

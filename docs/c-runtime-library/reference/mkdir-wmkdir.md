@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ffed1c851bba2187c3c9b6afbbfc615911210249
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8352612a254b0abec8f632151246f5a32f39121a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
@@ -86,7 +87,7 @@ int _wmkdir(
  Путь для нового каталога.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая функция возвращает значение 0, если новый каталог успешно создан. При возникновении ошибки функция возвращает значение –1 и задает значение `errno` следующим образом.  
+ Каждая функция возвращает значение 0, если новый каталог успешно создан. На ошибку, функция возвращает -1 и задает `errno` следующим образом.  
   
  `EEXIST`  
  Каталог не был создан, так как `dirname` является именем существующего файла, каталога или устройства.  
@@ -159,12 +160,6 @@ Directory '\testtmp' was successfully created
                2 Dir(s)  15,498,690,560 bytes free  
 Directory '\testtmp' was successfully removed  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
-  
--   [System::IO::Directory::CreateDirectory](https://msdn.microsoft.com/en-us/library/system.io.directory.createdirectory.aspx)  
-  
--   [System::IO::DirectoryInfo::CreateSubdirectory](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.createsubdirectory.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Управление каталогами](../../c-runtime-library/directory-control.md)   

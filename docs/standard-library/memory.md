@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ca10c4b759f9dafbfe4ffd3d6ac4a4b8c0d5b1dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
@@ -66,13 +67,13 @@ ms.lasthandoff: 02/24/2017
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Уведомляет сборщик мусора, что указанный адрес относится к выделенной памяти и является доступным.|  
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Удаляет объекты, выделенные с помощью `operator new`. Подходит для использования с `unique_ptr`.|  
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Динамическое приведение к `shared_ptr`.|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter_function)|Получение метода удаления из `shared_ptr`.|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|Получение метода удаления из `shared_ptr`.|  
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Возвращает тип безопасности указателя, подразумеваемый любым сборщиком мусора.|  
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Выделяет временное хранилище для последовательности элементов, которая не превышает заданное число элементов.|  
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Создает и возвращает `shared_ptr`, указывающий на объект, для которого выделена память, созданный из нуля или нескольких аргументов с помощью распределителя по умолчанию.|  
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Создает и возвращает [unique_ptr](../standard-library/unique-ptr-class.md), указывающий на выделенный объект, созданный из нуля или нескольких аргументов.|  
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Разрешает смешанные сравнения общих и слабых указателей на основе собственности.|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety_enumeration)|Перечисление всех возможных возвращаемых значений для `get_pointer_safety`.|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Перечисление всех возможных возвращаемых значений для `get_pointer_safety`.|  
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Отменяет выделение временной памяти, выделенной с помощью функции шаблона `get_temporary_buffer`.|  
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Статическое приведение к `shared_ptr`.|  
 |[swap](../standard-library/memory-functions.md#swap)|Обмен двух объектов `shared_ptr` или `weak_ptr`.|  
@@ -87,13 +88,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор!=](../standard-library/memory-operators.md#operator_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|  
-|[оператор==](../standard-library/memory-operators.md#operator_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|  
-|[оператор>=](../standard-library/memory-operators.md#operator_gt__eq)|Проверяет, является ли один объект распределителя больше или равным второму объекту распределителя указанного класса.|  
-|[оператор<](../standard-library/memory-operators.md#operator_lt_)|Проверяет, является ли один объект распределителя меньше или равным второму объекту распределителя указанного класса.|  
-|[оператор\<=](../standard-library/memory-operators.md#operator_lt__eq)|Проверяет, является ли один объект меньше или равным второму объекту указанного класса.|  
-|[оператор>](../standard-library/memory-operators.md#operator_gt_)|Проверяет, является ли один объект больше второго объекта указанного класса.|  
-|[оператор<<](../standard-library/memory-operators.md#operator_lt__lt_)|Вставляет `shared_ptr`.|  
+|[оператор!=](../standard-library/memory-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|  
+|[оператор==](../standard-library/memory-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|  
+|[оператор>=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект распределителя больше или равным второму объекту распределителя указанного класса.|  
+|[оператор<](../standard-library/memory-operators.md#op_lt)|Проверяет, является ли один объект распределителя меньше или равным второму объекту распределителя указанного класса.|  
+|[оператор\<=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект меньше или равным второму объекту указанного класса.|  
+|[оператор>](../standard-library/memory-operators.md#op_gt)|Проверяет, является ли один объект больше второго объекта указанного класса.|  
+|[оператор<<](../standard-library/memory-operators.md#op_lt_lt)|Вставляет `shared_ptr`.|  
   
 ### <a name="classes"></a>Классы  
   

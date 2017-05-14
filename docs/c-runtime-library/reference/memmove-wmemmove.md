@@ -1,50 +1,67 @@
 ---
-title: "memmove, wmemmove | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memmove"
-  - "wmemmove"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memmove"
-  - "wmemmove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memmove - функция"
-  - "wmemmove - функция"
+title: "memmove, wmemmove | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memmove
+- wmemmove
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memmove
+- wmemmove
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemmove function
+- memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# memmove, wmemmove
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2f8c6199d65c5865110774dcd0d2e5623d515467
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Перемещает один буфер в другой.  Существуют более безопасные версии этих функций; см. раздел [memmove\_s, wmemmove\_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md).  
+---
+# <a name="memmove-wmemmove"></a>memmove, wmemmove
+Перемещает один буфер в другой. Существуют более безопасные версии этих функций; см. раздел [memmove_s, wmemmove_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void *memmove(  
@@ -59,25 +76,25 @@ wchar_t *wmemmove(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `dest`  
- Объект назначения.  
+ Конечный объект.  
   
  `src`  
- Объект\-источник.  
+ Исходный объект.  
   
  `count`  
- Число байтов \(`memmove`\) или символов \(`wmemmove`\), которые нужно скопировать.  
+ Число копируемых байтов (`memmove`) или символов (`wmemmove`).  
   
-## Возвращаемое значение  
- Значение параметра `dest`*.*  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение `dest`.  
   
-## Заметки  
- Копирует `count` байт \(`memmove`\) или символов \(`wmemmove`\) из `src` в `dest`*.* Если некоторые части исходной области и области назначения перекрываются, то обе функции гарантируют, что байты первоисточника в перекрывающейся области копируются перед перезаписью.  
+## <a name="remarks"></a>Примечания  
+ Копирует `count` байт (`memmove`) или знаков (`wmemmove`) из `src` для `dest`. Если отдельные области конечного объекта перекрывают области исходного объекта, то обе эти функции гарантируют, что байты исходного объекта в перекрывающейся области будут скопированы, прежде чем будут перезаписаны.  
   
- **Примечание по безопасности:** Убедитесь, что буфер места назначения равен или превосходит буфер источника.  Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Примечание о безопасности**. Убедитесь в том, что буфер назначения равен или превосходит по размеру исходный буфер. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Функции `memmove` и `wmemmove` являются нерекомендуемыми, только если перед включением заголовочного файла, содержащего эти функции, определена константа `_CRT_SECURE_DEPRECATE_MEMORY` для того, чтобы показать, что функции нерекомендуемые, как в примере ниже:  
+ Функции `memmove` и `wmemmove` будут выведены из употребления, только если перед оператором включения определена константа `_CRT_SECURE_DEPRECATE_MEMORY`, показывающая, что эти функции должны быть выведены из употребления, как в примере ниже.  
   
 ```  
 #define _CRT_SECURE_DEPRECATE_MEMORY  
@@ -87,16 +104,16 @@ or
 #include <wchar.h>  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`memmove`|\<string.h\>|  
-|`wmemmove`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memmove`|\<string.h>|  
+|`wmemmove`|\<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_memcpy.c  
@@ -125,16 +142,16 @@ int main( void )
 }  
 ```  
   
-  **The string: aabbcc**  
-**New string: aaaabb**  
-**The string: aabbcc**  
-**New string: aaaabb**   
-## Эквивалент в .NET Framework  
- [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
+```Output  
+The string: aabbcc  
+New string: aaaabb  
+The string: aabbcc  
+New string: aaaabb  
+```  
   
-## См. также  
- [Манипуляция буфером](../Topic/Buffer%20Manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+## <a name="see-also"></a>См. также  
+ [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)

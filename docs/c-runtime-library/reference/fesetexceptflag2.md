@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
@@ -66,12 +67,11 @@ int fesetexceptflag(
      const fexcept_t *pstatus,  
      int excepts  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  `pstatus`  
- Указатель на объект `fexcept_t`, содержащий значения, которым будут присваиваться флаги состояний исключения. Объект может задаваться в рамках предыдущего вызова функции [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654).  
+ Указатель на объект `fexcept_t`, содержащий значения, которым будут присваиваться флаги состояний исключения. Объект может задаваться в рамках предыдущего вызова функции [fegetexceptflag](fegetexceptflag2.md).  
   
  `excepts`  
  Флаги состояний исключения с плавающей запятой, которые требуется задать.  

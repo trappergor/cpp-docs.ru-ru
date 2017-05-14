@@ -1,61 +1,79 @@
 ---
-title: "vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vswprintf_s_l"
-  - "vsprintf_s"
-  - "vswprintf_s"
-  - "_vsprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vswprintf_s"
-  - "vsprintf_s"
-  - "_vstprintf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vstprintf_s_l - функция"
-  - "vsprintf_s_l - функция"
-  - "_vstprintf_s - функция"
-  - "vswprintf_s - функция"
-  - "vstprintf_s - функция"
-  - "vstprintf_s_l - функция"
-  - "vswprintf_s_l - функция"
-  - "vsprintf_s - функция"
-  - "_vsprintf_s_l - функция"
-  - "форматированный текст [C++]"
-  - "_vswprintf_s_l - функция"
+title: "vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vswprintf_s_l
+- vsprintf_s
+- vswprintf_s
+- _vsprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vswprintf_s
+- vsprintf_s
+- _vstprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _vstprintf_s_l function
+- vsprintf_s_l function
+- _vstprintf_s function
+- vswprintf_s function
+- vstprintf_s function
+- vstprintf_s_l function
+- vswprintf_s_l function
+- vsprintf_s function
+- _vsprintf_s_l function
+- formatted text [C++]
+- _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f9fb587a0172a7f3fc6a43e828dd25d24c88ec5d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Записывают форматированные выходные данные с помощью указателя на список аргументов.  Здесь представлены версии [vsprintf, \_vsprintf\_l, vswprintf, \_vswprintf\_l, \_\_vswprintf\_l](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
+Записывают форматированные выходные данные с помощью указателя на список аргументов. Это версии функций [vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \__vswprintf_l](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int vsprintf_s(  
@@ -98,7 +116,7 @@ int vswprintf_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Место хранения выходных данных.  
   
@@ -114,41 +132,41 @@ int vswprintf_s(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `vsprintf_s` и `vswprintf_s` возвращают число записанных символов, не включая конечный нуль\-символ, или отрицательное значение, если произошла ошибка вывода.  Если `buffer` или `format` является указателем на null, если число равно нулю, или если строка формата содержит недопустимые символы форматирования, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, то функции возвращают \-1 и устанавливают `errno` в `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функции `vsprintf_s` и `vswprintf_s` возвращают число записанных символов, не включая конечный нуль-символ, или отрицательное значение, если произошла ошибка вывода. Если `buffer` или `format` является пустым указателем, или count имеет значение 0, или строка форматирования содержит недопустимые символы форматирования, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задают для `errno` значение `EINVAL`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает заданные данные в область памяти, на которую указывает `buffer`.  
+## <a name="remarks"></a>Примечания  
+ Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает указанные данные в память, на которую указывает `buffer`.  
   
- `vswprintf_s` соответствует стандарту ISO языка C для `vswprintf`, который требует второго параметра `count` типа `size_t`.  
+ `vswprintf_s` соответствует стандарту ISO C для `vswprintf`, который требует указания второго параметра `count` типа `size_t`.  
   
- Эти функции отличаются от их небезопасных версий тем, что безопасные версии поддерживают позиционные параметры.  Для получения дополнительной информации см. [Позиционные параметры printf\_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Эти функции отличаются от менее безопасных версий только тем, что они поддерживают позиционные параметры. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
- В C\+\+ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера \(что исключает необходимость указания аргумента с размером буфера\), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstprintf_s`|`vsprintf_s`|`vsprintf_s`|`vswprintf_s`|  
 |`_vstprintf_s_l`|`_vsprintf_s_l`|`_vsprintf_s_l`|`_vswprintf_s_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательные заголовки|  
-|------------------|----------------------------|------------------------------|  
-|`vsprintf_s`, `_vsprintf_s_l`|\<stdio.h\> и \<stdarg.h\>|\<varargs.h\>\*|  
-|`vswprintf_s`, `_vswprintf_s_l`|\<stdio.h\> или \<wchar.h\> и \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`vsprintf_s`, `_vsprintf_s_l`|\<stdio.h> и \<stdarg.h>|\<varargs.h>*|  
+|`vswprintf_s`, `_vswprintf_s_l`|\<stdio.h> или \<wchar.h> и \<stdarg.h>|\<varargs.h>*|  
   
- \* Требуется для обеспечения совместимости с UNIX V.  
+ \* Требуется для совместимости с UNIX V.  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_vsprintf_s.c  
@@ -170,7 +188,8 @@ void test( char * format, ... )
    buffer = malloc( len * sizeof(char) );  
    vsprintf_s( buffer, len, format, args );  
    puts( buffer );  
-   free( buffer );  
+   free( buffer );
+   va_end( args );  
 }  
   
 int main( void )  
@@ -180,16 +199,16 @@ int main( void )
 }  
 ```  
   
-  **123 \< 456**  
-**This is a string**   
-## Эквивалент в .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+123 < 456  
+This is a string  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
  [Функции vprintf](../../c-runtime-library/vprintf-functions.md)   
- [Синтаксис описания формата: функции printf и wprintf](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

@@ -1,108 +1,127 @@
 ---
-title: "Ошибка компилятора C2248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2248"
+title: "Ошибка компилятора C2248 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2248
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Ошибка компилятора C2248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 24977f831d326dab4882a21c70d8dce6da8b1ae9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
-"член": невозможно обратиться к члену "уровень доступа", объявленному в классе "класс"  
+---
+# <a name="compiler-error-c2248"></a>Ошибка компилятора C2248
+"*член*": не удается получить доступ к "*access_level*«член объявлен в классе»*класс*"  
   
- Члены производного класса не могут обращаться к членам `private` базового класса.  Обращение к членам `private` или `protected` экземпляров класса невозможно.  
+Члены производного класса не может получить доступ к `private` членов базового класса. Не удается получить доступ к `private` или `protected` члены экземпляров класса.  
   
- Дополнительные сведения об ошибке C2248 см. в статье KB243351 базы знаний.  
+## <a name="example"></a>Пример  
   
- Следующий пример приводит к возникновению ошибки C2248:  
+Следующий пример приводит к возникновению ошибки C2248 при закрытый или защищенные члены класса доступны из вне класса. Чтобы устранить эту проблему, не доступа этих членов непосредственно за пределами класса. Используйте открытый член данных и функции-члены для взаимодействия с классом.  
   
-```  
-// C2248.cpp  
+```cpp  
+// C2248_access.cpp 
+// compile with: cl /EHsc /W4 C2248_access.cpp 
 #include <stdio.h>  
+
 class X {  
 public:  
-   int  m_pubMemb;  
-   void setPrivMemb( int i ) {  
-      m_privMemb = i;  
-      printf_s("\n%d", m_privMemb);  
-   }  
+    int  m_publicMember;  
+    void setPrivateMember( int i ) {  
+        m_privateMember = i;  
+        printf_s("\n%d", m_privateMember);  
+    }  
 protected:  
-   int  m_protMemb;  
+    int  m_protectedMember;  
   
 private:  
-   int  m_privMemb;  
+    int  m_privateMember;  
 } x;  
   
 int main() {  
-   x.m_pubMemb = 4;  
-   printf_s("\n%d", x.m_pubMemb);  
-   x.m_protMemb = 2;   // C2248 m_protMemb is protected  
-   x.m_privMemb = 3;   // C2248  m_privMemb is private  
-   x.setPrivMemb(0);   // OK uses public access function  
+    x.m_publicMember = 4;  
+    printf_s("\n%d", x.m_publicMember);  
+    x.m_protectedMember = 2; // C2248 m_protectedMember is protected  
+    x.m_privateMember = 3;   // C2248  m_privMemb is private  
+    x.setPrivateMember(0);   // OK uses public access function  
 }  
 ```  
   
- Возникновение ошибки C2248 также может быть связано с проблемами совместимости при использовании дружественных шаблонов и специализации.  Дополнительные сведения см. в разделе [Ошибка компоновщика LNK2019](../Topic/Linker%20Tools%20Error%20LNK2019.md).  
+Другая проблема совместимости, предоставляющую C2248 заключается в использовании дружественных шаблонов и специализации. Чтобы устранить эту проблему, объявите дружественной функции шаблона с помощью пустого шаблона параметра список <> или параметры конкретного шаблона.  
   
-```  
-// C2248_b.cpp  
+```cpp  
+// C2248_template.cpp 
+// compile with: cl /EHsc /W4 C2248_template.cpp 
 template<class T>  
 void f(T t) {  
-   t.i;   // C2248  
+    t.i;   // C2248  
 }  
   
 struct S {  
 private:  
-   int i;  
+    int i;  
   
 public:  
-   S() {}  
-   // Delete the following line to resolve.  
-   friend void f(S);   // refer to the non-template function void f(S)  
-  
-   // Uncomment the following line to resolve.  
-   // friend void f<S>(S);  
+    S() {}  
+    friend void f(S);   // refer to the non-template function void f(S)  
+    // To fix, comment out the previous line and
+    // uncomment the following line.  
+    // friend void f<S>(S);  
 };  
   
 int main() {  
-   S s;  
-   f<S>(s);  
+    S s;  
+    f<S>(s);  
 }  
 ```  
   
- Ошибка C2248 также может быть связана с проблемами совместимости, которые возникают при попытке объявления дружественного класса, если включающий класс находится за пределами видимости объявления дружественного класса в области действия класса.  Чтобы устранить ошибку, следует предоставить статус дружественного включающему классу.  
+Другая проблема совместимости, предоставляющую C2248 при попытке объявления дружественного класса, если класс не является видимым для дружественное объявление в области класса. Чтобы устранить эту проблему, следует предоставьте статус дружественного включающего класса.  
   
-```  
-// C2248_c.cpp  
-// compile with: /c  
+```cpp  
+// C2248_enclose.cpp  
+// compile with: cl /W4 /c C2248_enclose.cpp  
 class T {  
-   class S {  
-      class E {};  
-   };  
-   friend class S::E;   // C2248  
+    class S {  
+        class E {};  
+    };  
+    friend class S::E;   // C2248  
 };  
   
 class A {  
-   class S {  
-      class E {};  
-      friend class A;   // grant friendship to enclosing class  
-   };  
-   friend class S::E;   // OK  
+    class S {  
+        class E {};  
+        friend class A;  // grant friendship to enclosing class  
+    };  
+    friend class S::E;   // OK  
 };  
 ```

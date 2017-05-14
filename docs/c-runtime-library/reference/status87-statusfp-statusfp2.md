@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
@@ -100,7 +101,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
  Для процессоров, поддерживающих как набор команд x87, так и SSE2 (например, Pentium IV), рекомендуется использовать функцию `_statusfp2`. В случае функции `_statusfp2` адреса заполняются с использованием слова состояния процессора операций с плавающей запятой как для x87, так и для SSE2. В случае микросхем, поддерживающих процессоры с плавающей запятой x87 и SSE2, для бита EM_AMBIGUOUS устанавливается значение 1, если используется функция `_statusfp` или `_controlfp` и действие было неоднозначным, поскольку оно могло ссылаться на слово состояние модуля операций с плавающей запятой x87 или SSE2. Функция `_statusfp2` поддерживается только на платформах x86.  
   
- Эти функции не используются в [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) потому, что общеязыковая среда выполнения (CLR) поддерживает только точность чисел с плавающей запятой по умолчанию.  
+ Эти функции не используются в [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) поскольку общеязыковой среды выполнения (CLR) поддерживает только точность чисел с плавающей запятой по умолчанию.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   

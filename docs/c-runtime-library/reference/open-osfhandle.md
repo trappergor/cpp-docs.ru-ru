@@ -1,50 +1,68 @@
 ---
-title: "_open_osfhandle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_open_osfhandle"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_open_osfhandle"
-  - "open_osfhandle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Функция open_osfhandle"
-  - "дескрипторы файлов [C++], связывание"
-  - "Функция _open_osfhandle"
+title: "_open_osfhandle | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _open_osfhandle
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _open_osfhandle
+- open_osfhandle
+dev_langs:
+- C++
+helpviewer_keywords:
+- open_osfhandle function
+- file handles [C++], associating
+- _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _open_osfhandle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a201fa08f48198069df26c5c61944c99db73edf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Связывает идентификатор файла С времени выполнения с существующим дескриптором файла операционной системы.  
+---
+# <a name="openosfhandle"></a>_open_osfhandle
+Связывает дескриптор файла времени выполнения C с существующим дескриптором файла операционной системы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -54,48 +72,45 @@ caps.handback.revision: 11
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `osfhandle`  
  Дескриптор файла операционной системы.  
   
  `flags`  
- Типы допустимых операций.  
+ Разрешенные типы операций.  
   
-## Возвращаемое значение  
- В случае успеха `_open_osfhandle` возвращает идентификатор файла времени выполнения С.  В противном случае возвращается значение \-1.  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успешного выполнения функция `_open_osfhandle` возвращает дескриптор файла времени выполнения C. В противном случае возвращается значение -1.  
   
-## Заметки  
- Функция `_open_osfhandle` выделяет идентификатор файла времени выполнения С и связывает его с дескриптором файла операционной системы `osfhandle`.  Аргумент `flags` — целочисленное выражение, построенное из одной или нескольких констант манифеста, определенных в Fcntl.h.  Если используется две или более константы манифеста для формирования аргумента `flags`, то константы объединяются с побитовым оператором OR \(  **&#124;** \).  
+## <a name="remarks"></a>Примечания  
+ Функция `_open_osfhandle` выделяет дескриптор файла времени выполнения C и связывает его с дескриптором файла операционной системы, указанным функцией `osfhandle`. Аргумент `flags` представляет собой целочисленное выражение, сформированное на базе одной или нескольких констант манифеста, которые определяются в файле Fcntl.h. Если несколько констант манифеста используются для формирования аргумента `flags`, константы объединяются с помощью битового оператора ИЛИ ( **&#124;** ).  
   
- Fcntl.h определяет следующие константы манифеста.  
+ Файл Fcntl.h определяет следующие константы манифеста.  
   
- **\_O\_APPEND**  
- Перемещает указатель файла в конец файла перед каждой операцией записи.  
+ **_O_APPEND**  
+ Помещает указатель файла в конец файла перед каждой операцией записи.  
   
- **\_O\_RDONLY**  
+ **_O_RDONLY**  
  Открывает файл только для чтения.  
   
- **\_O\_TEXT**  
- Открывает файл в текстовом \(преобразованном\) режиме.  
+ **_O_TEXT**  
+ Открывает файл в текстовом режиме (с преобразованием).  
   
- **\_O\_WTEXT**  
- Открывает файл в режиме Юникод \(преобразованном UTF\-16\).  
+ **_O_WTEXT**  
+ Открывает файл в режиме Юникода (с преобразованием UTF-16).  
   
- Чтобы закрыть файл, открытый `_open_osfhandle`, вызовите `_close`.  Базовый дескриптор также можно закрыть вызовом `_close`, поэтому не нужно вызывать функцию `CloseHandle` Win32 для исходного дескриптора.  
+ Чтобы закрыть файл, открытый с помощью функции `_open_osfhandle`, вызовите функцию `_close`. При вызове функции `_close` базовый дескриптор также закрывается, поэтому не нужно вызывать функцию `CloseHandle` Win32 для исходного дескриптора.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_open_osfhandle`|\<io.h\>|  
+|-------------|---------------------|  
+|`_open_osfhandle`|\<io.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Эквивалент в .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)

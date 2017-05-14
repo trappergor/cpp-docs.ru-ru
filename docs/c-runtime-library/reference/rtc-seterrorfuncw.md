@@ -52,10 +52,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d71962eca033e5d3994c82e666102f44c62e82be
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9c340310feb94ac181049c01d3ab1efaee2002c3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
@@ -84,9 +85,9 @@ ms.lasthandoff: 02/24/2017
   
  Убедитесь, что передаваемый в `_RTC_SetErrorFuncW` адрес относится к допустимой функции обработки ошибок.  
   
- Если ошибке назначен тип "–1" путем использования [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), функция обработки ошибок не вызывается.  
+ Если ошибке назначен тип значение -1, с помощью [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), вызывается функция обработки ошибок.  
   
- Перед тем, как вы сможете вызвать эту функцию, необходимо сначала вызвать одну из функций инициализации проверки на ошибки во время выполнения. Дополнительные сведения см. в разделе [Использование проверки кода во время выполнения без библиотеки среды выполнения языка C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
+ Перед тем, как вы сможете вызвать эту функцию, необходимо сначала вызвать одну из функций инициализации проверки на ошибки во время выполнения. Для получения дополнительной информации см. [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
   
  **_RTC_error_fnW** определяется следующим образом:  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 02/24/2017
  Исходный файл, где произошел сбой, или значение NULL, если информация об отладке недоступна.  
   
  *linenumber*  
- Строка *filename*, где произошел сбой, или 0, если информация об отладке недоступна.  
+ Строка *filename* , где произошел сбой, или 0, если информация об отладке недоступна.  
   
  `moduleName`  
  Библиотека DLL или имя исполняемого файла, где произошел сбой.  
@@ -121,9 +122,6 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="libraries"></a>Библиотеки  
  Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   

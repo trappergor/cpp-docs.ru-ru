@@ -35,13 +35,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
-# <a name="afxglobaldata-structure"></a>Структура AFX_GLOBAL_DATA
+# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA - структура
 Структура `AFX_GLOBAL_DATA` содержит поля и методы, используемые для управления платформой или настройки внешнего вида и поведения приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -196,7 +197,7 @@ BOOL DrawParentBackground(
  Указатель на контекст устройства.  
   
  [in] `lpRect`  
- Указатель на прямоугольник, ограничивающий область для рисования. Значение по умолчанию — `NULL`.  
+ Указатель на прямоугольник, ограничивающий область для рисования. Значение по умолчанию — `NULL`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если этот метод выполнен успешно; в противном случае `FALSE`.  
@@ -275,16 +276,16 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры   
  [in] `bEnable`  
- `TRUE`для включения поддержки специальных возможностей; `FALSE` отключение поддержки специальных возможностей. Значение по умолчанию — `TRUE`.  
+ `TRUE`для включения поддержки специальных возможностей; `FALSE` отключение поддержки специальных возможностей. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
- Активные специальные возможности технологии COM, который повышает программами и работы операционной системы Windows вместе с продуктов поддержки специальных возможностей. Он предоставляет надежные методы для вывода информации об элементах пользовательского интерфейса. Однако доступна новая модель специальных возможностей, вызывается модели автоматизации пользовательского интерфейса Microsoft. Сравнение этих двух технологий см. в разделе [модели автоматизации пользовательского интерфейса и Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321).  
+ Активные специальные возможности технологии COM, который повышает программами и работы операционной системы Windows вместе с продуктов поддержки специальных возможностей. Он предоставляет надежные методы для вывода информации об элементах пользовательского интерфейса. Однако доступна новая модель специальных возможностей, вызывается модели автоматизации пользовательского интерфейса Microsoft. Сравнение этих двух технологий см. в разделе [модели автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
  Используйте [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) метод, чтобы определить, включена ли поддержка Microsoft Active Accessibility.  
   
  
 ### <a name="see-also"></a>См. также  
- [Автоматизация пользовательского интерфейса и Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [Автоматизация пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
@@ -405,7 +406,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
   
 ### <a name="parameters"></a>Параметры   
  [in] `bHorz`  
- `TRUE`Для получения высота символов, если отрезки текста по горизонтали; `FALSE` для получения высота символов, если текст располагается вертикально. Значение по умолчанию — `TRUE`.  
+ `TRUE`Для получения высота символов, если отрезки текста по горизонтали; `FALSE` для получения высота символов, если текст располагается вертикально. Значение по умолчанию — `TRUE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Высота текущего шрифта, измеряется от его выносным элементом до его подстрочный элемент линией.  
@@ -486,7 +487,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>См. также  
- [Автоматизация пользовательского интерфейса и Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [Автоматизация пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Определяет, был ли инициализирован D2D  
@@ -742,7 +743,7 @@ BOOL SetMenuFont(
  `TRUE`Если этот метод выполнен успешно; в противном случае `FALSE`. В режиме отладки этот метод подтверждает, если этот метод завершается неудачно.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает горизонтальной регулярного шрифта подчеркнутого шрифта и полужирный шрифт, используемый по умолчанию пунктов меню. При необходимости этот метод создает регулярное вертикального шрифта. Дополнительные сведения о логических шрифты см. в разделе [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
+ Этот метод создает горизонтальной обычный шрифт подчеркнутого шрифта, и полужирный шрифт, используемый по умолчанию пунктов меню. При необходимости этот метод создает регулярное вертикального шрифта. Дополнительные сведения о логических шрифты см. в разделе [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
   
 ## <a name="updatefonts"></a>AFX_GLOBAL_DATA::UpdateFonts
 Повторно инициализирует логические шрифты, используемые платформой.  

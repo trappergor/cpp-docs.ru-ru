@@ -1,50 +1,67 @@
 ---
-title: "vsscanf, vswscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vsscanf"
-  - "vswscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vstscanf"
-  - "vsscanf"
-  - "vswscanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vsscanf - функция"
-  - "vswscanf - функция"
+title: "vsscanf, vswscanf | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vsscanf
+- vswscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vstscanf
+- vsscanf
+- vswscanf
+dev_langs:
+- C++
+helpviewer_keywords:
+- vswscanf function
+- vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# vsscanf, vswscanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 06c26fdeb5d63a446600bc288f99ca9cc903d002
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Чтение форматированных данных из строки.  Существуют более безопасные версии этих функций; см. раздел [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
+---
+# <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
+Считывают форматированные данные из строки. Существуют более безопасные версии этих функций; см. статью [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int vsscanf(  
@@ -59,47 +76,47 @@ int vswscanf(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Сохраненные данные  
   
  `format`  
- Строка управления форматом.  Для получения дополнительной информации см. [Поля спецификации формата. Функции scanf и wscanf](../Topic/Format%20Specification%20Fields:%20scanf%20and%20wscanf%20Functions.md).  
+ Строка управления форматом. Дополнительные сведения см. в разделе [Поля спецификации формата — функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `arglist`  
  Список аргументов переменных.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает количество полей, которые успешно преобразуются и назначаются; возвращаемое значение не включает поля, которые были считаны, но не присваиваются.  Возвращаемое значение 0 указывает, что поля не были присвоены.  Возвращаемое значение равно `EOF` в случае ошибки или если конец строки достигнут до первого преобразования.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Если до первого преобразования возникает ошибка или достигается конец строки, возвращается значение `EOF`.  
   
- Если параметр `buffer` или `format` указывает на `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, эти функции возвращают \-1 и устанавливают `errno` в значение `EINVAL`.  
+ Если `buffer` или `format` является указателем `NULL`, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
   
- Сведения об этих и других кодах ошибок см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `vsscanf` считывает данные из `buffer` в расположения, указанными каждым аргументом в списке аргументов `arglist`.  Каждый аргумент в списке должен быть указателем на переменную, которая имеет тип, который соответствует спецификатору типа в `format`.  Аргумент `format` управляет интерпретацией полей ввода и имеет те же форму и функциональные возможности, что и аргумент `format` для функции `scanf`.  Если копирование производится между перекрывающимися строками, поведение не определено.  
+## <a name="remarks"></a>Примечания  
+ Функция `vsscanf` считывает данные из `buffer` в расположения, указанные аргументами в списке аргументов `arglist`. Каждый аргумент в списке должен быть указателем на переменную, которая имеет тип, соответствующий спецификатору типа в параметре `format`. Аргумент `format` определяет интерпретацию полей входных данных и имеет такую же форму и функцию, как аргумент `format` для функции `scanf`. Если копирование производится между перекрывающимися строками, поведение не определено.  
   
 > [!IMPORTANT]
->  При использовании `vsscanf` для чтения строки, всегда надо указать ширину для формата `%s` \(например, `"%32s"` вместо `"%s"`\); в противном случае неправильно отформатированный входные данные могут вызвать переполнение буфера.  
+>  При использовании `vsscanf` для чтения строки всегда следует указывать ширину для формата `%s` (например, `"%32s"` вместо `"%s"`); в противном случае ввод в неправильном формате может привести к переполнению буфера.  
   
- `vswscanf` — это двухбайтовая версия `vsscanf`; аргументы для `vswscanf` представляют собой двухбайтовые строки.  метод `vsscanf` не обрабатывает многобайтовые шестнадцатеричные символы.  `vswscanf` не обрабатывает полноширинные шестнадцатеричные символы юникода или символы "зоны совместимости".  В противном случае поведение `vswscanf` и `vsscanf` идентично.  
+ `vswscanf` — это двухбайтовая версия `vsscanf`; аргументы для `vswscanf` представляют собой двухбайтовые строки. `vsscanf` не обрабатывает многобайтовые шестнадцатеричные символы. `vswscanf` не обрабатывает шестнадцатеричные символы Юникода полной ширины и символы "зоны совместимости". В противном случае поведение `vswscanf` и `vsscanf` идентично.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf`|`vsscanf`|`vsscanf`|`vswscanf`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`vsscanf`|\<stdio.h\>|  
-|`vswscanf`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`vsscanf`|\<stdio.h>|  
+|`vswscanf`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_vsscanf.c  
@@ -143,16 +160,16 @@ int main( void )
 }  
 ```  
   
-  **Строка    \= 15**  
-**Знак \= 1**  
-**Целое число:  \= 15**  
-**Real:     \= 15.000000**   
-## Эквивалент в .NET Framework  
- См. методы `Parse`, такие как [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

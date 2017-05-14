@@ -1,50 +1,67 @@
 ---
-title: "_fclose_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fclose_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fclose_nolock"
-  - "_fclose_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fclose_nolock - функция"
-  - "fclose_nolock - функция"
-  - "потоки, закрытие"
+title: "_fclose_nolock | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fclose_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fclose_nolock
+- _fclose_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, closing
+- fclose_nolock function
+- _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _fclose_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1e42b9835d6c1775f21e3a908c67913f0559b43e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Закрывает поток без блокирования потока.  
+---
+# <a name="fclosenolock"></a>_fclose_nolock
+Закрывает поток без блокировки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _fclose_nolock(   
@@ -52,48 +69,28 @@ int _fclose_nolock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
  Указатель на структуру `FILE`.  
   
-## Возвращаемое значение  
- `fclose` возвращает 0, если поток успешно закрыт.  Возвращает `EOF` для указания ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `fclose` возвращает 0, если поток был успешно закрыт. Возвращает `EOF` для указания ошибки.  
   
-## Заметки  
- Эта функция \- неблокирующая версия `fclose`.  Она идентична, за исключением того, что она не защищена от взаимодействия с другими потоками.  Она может выполняться быстрее, поскольку она не создают дополнительную нагрузку, связанную с блокировкой работы других потоков.  Эту функцию следует использовать только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
+## <a name="remarks"></a>Примечания  
+ Эта функция представляет собой неблокирующую версию функции `fclose`. Она идентична, но не защищена от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_fclose_nolock`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`_fclose_nolock`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Эквивалент в .NET Framework  
-  
--   [System::IO::BinaryReader::Close](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.close.aspx)  
-  
--   [System::IO::BinaryWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.close.aspx)  
-  
--   [System::IO::StringReader::Close](https://msdn.microsoft.com/en-us/library/system.io.stringreader.close.aspx)  
-  
--   [System::IO::StringWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.stringwriter.close.aspx)  
-  
--   [System::IO::Stream::Close](https://msdn.microsoft.com/en-us/library/system.io.stream.close.aspx)  
-  
--   [System::IO::StreamReader::Close](https://msdn.microsoft.com/en-us/library/system.io.streamreader.close.aspx)  
-  
--   [System::IO::StreamWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.close.aspx)  
-  
--   [System::IO::TextReader::Close](https://msdn.microsoft.com/en-us/library/system.io.textreader.close.aspx)  
-  
--   [System::IO::TextWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.textwriter.close.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [\_close](../Topic/_close.md)   
- [\_fdopen, \_wfdopen](../Topic/_fdopen,%20_wfdopen.md)   
- [fflush](../Topic/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

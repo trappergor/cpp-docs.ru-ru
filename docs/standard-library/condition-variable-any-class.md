@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - condition_variable/std::condition_variable_any
+- condition_variable/std::condition_variable_any::condition_variable_any
+- condition_variable/std::condition_variable_any::notify_all
+- condition_variable/std::condition_variable_any::notify_one
+- condition_variable/std::condition_variable_any::wait
+- condition_variable/std::condition_variable_any::wait_for
+- condition_variable/std::condition_variable_any::wait_until
 dev_langs:
 - C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a04164eb30bdb0403f131d64a31b9c7d9cb5656f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="conditionvariableany-class"></a>Класс condition_variable_any
@@ -52,24 +59,24 @@ class condition_variable_any;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор condition_variable_any::condition_variable_any](#condition_variable_any__condition_variable_any_constructor)|Создает объект `condition_variable_any`.|  
+|[condition_variable_any](#condition_variable_any)|Создает объект `condition_variable_any`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[condition_variable_any::notify_all](#condition_variable_any__notify_all_method)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|  
-|[condition_variable_any::notify_one](#condition_variable_any__notify_one_method)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|  
-|[condition_variable_any::wait](#condition_variable_any__wait_method)|Блокирует поток.|  
-|[condition_variable_any::wait_for](#condition_variable_any__wait_for_method)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|  
-|[condition_variable_any::wait_until](#condition_variable_any__wait_until_method)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|  
+|[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|  
+|[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|  
+|[Ожидание](#wait)|Блокирует поток.|  
+|[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|  
+|[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** condition_variable  
+ **Заголовок:** \<condition_variable >  
   
  **Пространство имен:** std  
   
-##  <a name="a-nameconditionvariableanyconditionvariableanyconstructora--conditionvariableanyconditionvariableany-constructor"></a><a name="condition_variable_any__condition_variable_any_constructor"></a> Конструктор condition_variable_any::condition_variable_any  
+##  <a name="condition_variable_any"></a> Конструктор condition_variable_any::condition_variable_any  
  Создает объект `condition_variable_any`.  
   
 ```
@@ -79,21 +86,21 @@ condition_variable_any();
 ### <a name="remarks"></a>Примечания  
  При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.  
   
-##  <a name="a-nameconditionvariableanynotifyallmethoda--conditionvariableanynotifyall"></a><a name="condition_variable_any__notify_all_method"></a>  condition_variable_any::notify_all  
+##  <a name="notify_all"></a>  condition_variable_any::notify_all  
  Разблокирует все потоки, которые ожидают объект `condition_variable_any`.  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanynotifyonemethoda--conditionvariableanynotifyone"></a><a name="condition_variable_any__notify_one_method"></a>  condition_variable_any::notify_one  
+##  <a name="notify_one"></a>  condition_variable_any::notify_one  
  Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanywaitmethoda--conditionvariableanywait"></a><a name="condition_variable_any__wait_method"></a>  condition_variable_any::wait  
+##  <a name="wait"></a>  condition_variable_any::wait  
  Блокирует поток.  
   
 ```
@@ -112,7 +119,7 @@ void wait(Lock& Lck, Predicate Pred);
  Любое выражение, возвращающее значение `true` или `false`.  
   
 ### <a name="remarks"></a>Примечания  
- Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) или [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method). Он может также ложно активироваться.  
+ Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all). Он может также ложно активироваться.  
   
  Второй метод фактически выполняет следующий код.  
   
@@ -121,7 +128,7 @@ while (!Pred())
     wait(Lck);
 ```    
   
-##  <a name="a-nameconditionvariableanywaitformethoda--conditionvariableanywaitfor"></a><a name="condition_variable_any__wait_for_method"></a>  condition_variable_any::wait_for  
+##  <a name="wait_for"></a>  condition_variable_any::wait_for  
  Блокирует поток и задает интервал времени, после которого поток разблокируется.  
   
 ```
@@ -148,7 +155,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
  Второй метод возвращает значение `Pred`.  
   
 ### <a name="remarks"></a>Примечания  
- Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) или [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method), или до завершения временного интервала `Rel_time`. Он может также ложно активироваться.  
+ Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all), или до завершения временного интервала `Rel_time`. Он может также ложно активироваться.  
   
  Второй метод фактически выполняет следующий код.  
   
@@ -160,7 +167,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="a-nameconditionvariableanywaituntilmethoda--conditionvariableanywaituntil"></a><a name="condition_variable_any__wait_until_method"></a>  condition_variable_any::wait_until  
+##  <a name="wait_until"></a>  condition_variable_any::wait_until  
  Блокирует поток и задает максимальный момент времени, в который поток разблокируется.  
   
 ```
@@ -199,7 +206,7 @@ void wait_until(
  Методы, возвращающие `bool` возвращают значение `Pred`.  
   
 ### <a name="remarks"></a>Примечания  
- Первый метод блокируется до оповещения объекта `condition_variable` путем вызова [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) или [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method)`Abs_time`. Он может также ложно активироваться.  
+ Первый метод блокируется до оповещения объекта `condition_variable` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all)`Abs_time`. Он может также ложно активироваться.  
   
  Второй метод фактически выполняет следующий код.  
   

@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ ms.lasthandoff: 02/24/2017
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  Строка управления форматом.  
   
- `argument`  
- Необязательные параметры.  
+ `argument_list`  
+ Необязательные параметры для строки формата.  
   
  `locale`  
  Используемый языковой стандарт.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  Число отображаемых символов.  
   
 ## <a name="remarks"></a>Примечания  
- Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль, используя функцию `_putch` (`_putwch` для `_cwprintf`) для вывода символов. Каждый `argument` (если он есть) преобразуется и выводится согласно соответствующей спецификацией формата в `format`. Формат имеет те же форму и функцию, что и параметр `format` для функции [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). В отличие от функций `fprintf`, `printf` и `sprintf`, ни `_cprintf`, ни `_cwprintf` не заменяют символы конца строки на сочетание символов конца строки и возврата каретки (CR-LF) при выводе.  
+ Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль, используя функцию `_putch` (`_putwch` для `_cwprintf`) для вывода символов. Каждый аргумент в `argument_list` (если есть) преобразуется и выводится согласно соответствующей спецификацией формата в `format`. `format` Использует аргумент [форматирования спецификация синтаксиса для функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). В отличие от `fprintf`, `printf`, и `sprintf` функции, ни `_cprintf` , ни `_cwprintf` транслирует символы перевода строки каретки сочетания канала для возврата строки (CR-LF) при выводе.  
   
- Важное отличие заключается в том, что функция `_cwprintf` показывает символы Юникода при использовании в Windows NT. В отличие от функции `_cprintf`, функция `_cwprintf` использует текущие параметры языкового стандарта консоли.  
+ Важное отличие состоит в том `_cwprintf` показывает символы Юникода при использовании в Windows. В отличие от функции `_cprintf`, функция `_cwprintf` использует текущие параметры языкового стандарта консоли.  
   
  Версии этих функций с суффиксом `_l` идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Ввод-вывод на консоль и в порт](../../c-runtime-library/console-and-port-i-o.md)   
