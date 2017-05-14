@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 200e62472c8c6002cdc45181ad019a1d78ca7977
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c46338445598ef77e6b8a4c1c261962fe9e7ff0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="valuecompare-class-ltmapgt"></a>Класс value_compare (&lt;map&gt;)
@@ -64,7 +65,7 @@ protected:
  Для наборов и множественных наборов, которые представляют собой простые контейнеры, в которых значения ключей идентичны значениям элементов, `value_compare` эквивалентно `key_compare`; для сопоставлений и объектов multimap, это не так, так как элементы типа `pair` не эквивалентны значению ключа элемента.  
   
 ## <a name="example"></a>Пример  
-  См. пример объявления и использования `value_compare` в примере для [value_comp](../standard-library/map-class.md#map__value_comp).  
+  См. пример объявления и использования `value_compare` в примере для [value_comp](../standard-library/map-class.md#value_comp).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<map>  

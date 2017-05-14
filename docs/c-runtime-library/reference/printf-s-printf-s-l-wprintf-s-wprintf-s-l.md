@@ -1,62 +1,79 @@
 ---
-title: "printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_printf_s_l"
-  - "wprintf_s"
-  - "_wprintf_s_l"
-  - "printf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wprintf_s"
-  - "printf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_printf_s_l - функция"
-  - "_tprintf_s - функция"
-  - "_tprintf_s_l - функция"
-  - "_wprintf_s_l - функция"
-  - "форматированный текст [C++]"
-  - "printf - функция, поля описания формата"
-  - "printf - функция, использование"
-  - "printf_s - функция"
-  - "printf_s_l - функция"
-  - "tprintf_s - функция"
-  - "tprintf_s_l - функция"
-  - "wprintf_s - функция"
-  - "wprintf_s_l - функция"
+title: "printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _printf_s_l
+- wprintf_s
+- _wprintf_s_l
+- printf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wprintf_s
+- printf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- wprintf_s function
+- tprintf_s function
+- _tprintf_s function
+- printf_s_l function
+- printf_s function
+- _printf_s_l function
+- printf function, format specification fields
+- printf function, using
+- _tprintf_s_l function
+- wprintf_s_l function
+- formatted text [C++]
+- tprintf_s_l function
+- _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 008ecd864959078951a3671a318abfa6e593bd49
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Печатает форматированный результат в стандартный поток вывода.  В этих версиях [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) усовершенствована безопасность, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
+Выводит форматированные выходные данные в стандартный поток вывода. Это версии функций [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int printf_s(  
@@ -79,9 +96,9 @@ int _wprintf_s_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `format`  
- Управление форматом.  
+ Формат объекта.  
   
  `argument`  
  Необязательные аргументы.  
@@ -89,57 +106,57 @@ int _wprintf_s_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Возвращает число напечатанных символов или отрицательное значение в случае ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает число выведенных символов или отрицательное значение в случае ошибки.  
   
-## Заметки  
- Функция `printf_s` форматирует и выводит ряд символов и значений в стандартный поток вывода, `stdout`.  Если аргументы идут за *строкой формата*, то строка `format` должна содержать спецификации, которые определяют формат вывода для аргументов.  
+## <a name="remarks"></a>Примечания  
+ Функция `printf_s` форматирует и выводит последовательность символов и значений в стандартный поток вывода, `stdout`. Если за строкой *format* следуют аргументы, строка `format` должна содержать спецификации, которые определяют формат вывода для аргументов.  
   
- Основное различие между `printf_s` и `printf` заключается в том, что `printf_s` проверяет строку форматирования на наличие допустимых символов форматирования, тогда как `printf` только проверяет, является ли строка формата указателем null.  Если проверка завершается с ошибкой, то вызывается обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, функция возвращает \-1 и устанавливает `errno` в значение `EINVAL`.  
+ Основное различие между `printf_s` и `printf` заключается в том, что `printf_s` проверяет строку форматирования на наличие допустимых символов форматирования, тогда как `printf` только проверяет, является ли строка форматирования пустым указателем. Если проверка завершается с ошибкой, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает `errno` в значение `EINVAL`.  
   
- Дополнительные сведения о `errno` и кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения о `errno` и кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Поведение `printf_s`и`fprintf_s` идентичны за исключением того, что `printf_s` выводит данные в `stdout`, а не в место назначения типа `FILE`.  Для получения дополнительной информации см. [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+ `printf_s`и `fprintf_s` ведут себя одинаково, за исключением того, что `printf_s` записывает выходные данные `stdout` , а не для назначения типа `FILE`. Дополнительные сведения см. в разделе [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
- `wprintf_s` — двухбайтовая версия `printf_s`; `format` — двухбайтовая строка.  Поведение `wprintf_s` и `printf_s` идентично, если поток открыт в режиме ANSI\-совместимости.  `printf_s` в настоящее время не поддерживает вывод в поток в юникоде.  
+ Функция `wprintf_s` — это версия `printf_s` с расширенными символами; `format` — строка расширенных символов. `wprintf_s` и `printf_s` ведут себя одинаково, если поток открыт в режиме ANSI. Функция `printf_s` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_unicode определена|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tprintf_s`|`printf_s`|`printf_s`|`wprintf_s`|  
 |`_tprintf_s_l`|`_printf_s_l`|`_printf_s_l`|`_wprintf_s_l`|  
   
- Аргумент `format` состоит из обычных символов, escape\-последовательностей и \(если аргументы следуют за параметром `format`\) спецификаций формата.  Обычные символы и escape\-последовательности копируются в `stdout` в порядке их следования.  Например, в строке  
+ Аргумент `format` состоит из обычных символов, escape-последовательностей и (если за `format` следуют аргументы) спецификаций формата. Обычные символы и escape-последовательности копируются в `stdout` в порядке их отображения. Например, в строке  
   
 ```  
 printf_s("Line one\n\t\tLine two\n");   
 ```  
   
- создает выходные данные  
+ выводятся следующие выходные данные  
   
 ```  
 Line one  
         Line two  
 ```  
   
- [Спецификации формата](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md) всегда начинаются со знака процента \(`%`\) и читаются слева направо.  При обнаружении `printf_s` первой спецификации формата \(если таковые имеются\) она преобразует значение первого аргумента после `format` и выводит его соответствующим образом.  Вторая спецификация формата приводит к преобразованию и выводу второго аргумента и так далее.  Если аргументов больше, чем спецификаций формата, дополнительные аргументы игнорируются.  Результаты будут не определены, если аргументов недостаточно для всех спецификаций формата.  
+ [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) всегда начинаются со знака процента (`%`) и читаются слева направо. Когда функция `printf_s` обнаруживает первую спецификацию формата (если таковые имеются), она преобразует значение первого после `format` аргумента и выводит его соответствующим образом. Вторая спецификация формата вызывает преобразование второго аргумента и его вывод и т. д. Если число аргументов превышает количество спецификаций формата, лишние аргументы игнорируются. Если число аргументов меньше количества спецификаций формата, результаты будут не определены.  
   
 > [!IMPORTANT]
 >  Убедитесь, что `format` не является строкой, определяемой пользователем.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`printf_s`, `_printf_s_l`|\<stdio.h\>|  
-|`wprintf_s`, `_wprintf_s_l`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`printf_s`, `_printf_s_l`|\<stdio.h>|  
+|`wprintf_s`, `_wprintf_s_l`|\<stdio.h> или \<wchar.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Стандартные дескрипторы потока, связанные с консолью — `stdin`, `stdout` и `stderr` — необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_printf_s.c  
@@ -189,7 +206,7 @@ int main( void )
 }  
 ```  
   
-## Пример результатов выполнения  
+## <a name="sample-output"></a>Пример результатов выполнения  
   
 ```  
 Integer formats:  
@@ -217,18 +234,12 @@ Address as:   0012FF78
   
 ```  
   
-## Эквивалент в .NET Framework  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
--   [System::Console::WriteLine](https://msdn.microsoft.com/en-us/library/system.console.writeline.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [Функции vprintf](../../c-runtime-library/vprintf-functions.md)

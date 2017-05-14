@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 99aa5d5df1367dfb6e6f6c0b9333783240a12690
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 77c13a5f8d813bbeaa0dae2307769a575bb22fa8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
@@ -115,12 +116,12 @@ void swap (
   
 |||  
 |-|-|  
-|[оператор! =](../standard-library/vector-operators.md#operator_neq)|Проверяет следующее условие: объект вектора слева от оператора не равен объекту вектора справа от оператора.|  
-|[оператор<](../standard-library/vector-operators.md#operator_lt_)|Проверяет следующее условие: объект вектора слева от оператора меньше, чем объект вектора справа от оператора.|  
-|[оператор\<=](../standard-library/vector-operators.md#operator_lt__eq)|Проверяет следующее условие: объект вектора слева от оператора меньше или равен объекту вектора справа от оператора.|  
-|[оператор==](../standard-library/vector-operators.md#operator_eq_eq)|Проверяет следующее условие: объект вектора слева от оператора равен объекту вектора справа от оператора.|  
-|[оператор>](../standard-library/vector-operators.md#operator_gt_)|Проверяет следующее условие: объект вектора слева от оператора больше, чем объект вектора справа от оператора.|  
-|[оператор>=](../standard-library/vector-operators.md#operator_gt__eq)|Проверяет следующее условие: объект вектора слева от оператора больше или равен объекту вектора справа от оператора.|  
+|[оператор! =](../standard-library/vector-operators.md#op_neq)|Проверяет следующее условие: объект вектора слева от оператора не равен объекту вектора справа от оператора.|  
+|[оператор<](../standard-library/vector-operators.md#op_lt)|Проверяет следующее условие: объект вектора слева от оператора меньше, чем объект вектора справа от оператора.|  
+|[оператор\<=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора меньше или равен объекту вектора справа от оператора.|  
+|[оператор==](../standard-library/vector-operators.md#op_eq_eq)|Проверяет следующее условие: объект вектора слева от оператора равен объекту вектора справа от оператора.|  
+|[оператор>](../standard-library/vector-operators.md#op_gt)|Проверяет следующее условие: объект вектора слева от оператора больше, чем объект вектора справа от оператора.|  
+|[оператор>=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора больше или равен объекту вектора справа от оператора.|  
   
 ### <a name="classes"></a>Классы  
   

@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad82a85b00f04620bf52bdf478c5293905b75aca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2c0c5fafe959710621de041581751c7b295fb1cc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
@@ -140,15 +141,12 @@ int _vfwprintf_s_l(
   
 |Подпрограмма|Обязательный заголовок|Необязательные заголовки|  
 |-------------|---------------------|----------------------|  
-|`vfprintf_s`, _`vfprintf_s_l`|\<stdio.h> и \<stdarg.h>|\<varargs.h>*|  
-|`vfwprintf_s`, _`vfwprintf_s_l`|\<stdio.h> или \<wchar.h> и \<stdarg.h>|\<varargs.h>*|  
+|`vfprintf_s`, `_vfprintf_s_l`|\<stdio.h> и \<stdarg.h>|\<varargs.h>*|  
+|`vfwprintf_s`, `_vfwprintf_s_l`|\<stdio.h> или \<wchar.h> и \<stdarg.h>|\<varargs.h>*|  
   
  \* Требуется для совместимости с UNIX V.  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
