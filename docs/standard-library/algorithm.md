@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
@@ -147,7 +148,7 @@ ms.lasthandoff: 02/24/2017
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Объединяет все элементы, входящие в один, но не в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Объединяет все элементы, входящие в хотя бы один из двух исходных упорядоченных диапазонов, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.|  
 |[sort](../standard-library/algorithm-functions.md#sort)|Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом.|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|Перемешивает (изменяет порядок) элементы в указанном диапазоне, используя генератор случайных чисел.|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|Перемешивает (изменяет порядок) элементы в указанном диапазоне, используя генератор случайных чисел.|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Преобразует кучу в упорядоченный диапазон.|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют, с сохранением относительного порядка равноценных элементов.|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом, и сохраняет относительный порядок равноценных элементов.|  

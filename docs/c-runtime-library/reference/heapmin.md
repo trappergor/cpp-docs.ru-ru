@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapmin"></a>_heapmin
@@ -75,7 +76,7 @@ int _heapmin( void );
  Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_heapmin` устанавливает минимальный размер кучи, высвобождая неиспользуемую память для операционной системы. Если операционная система не поддерживает функцию `_heapmin` (например, Windows 98), эта функция возвращает -1 и устанавливает для параметра `errno` значение `ENOSYS`.  
+ Функция `_heapmin` устанавливает минимальный размер кучи, высвобождая неиспользуемую память для операционной системы. Если операционная система не поддерживает `_heapmin`(например, Windows 98), функция возвращает -1 и задает `errno` для `ENOSYS`.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -84,9 +85,6 @@ int _heapmin( void );
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Выделение памяти](../../c-runtime-library/memory-allocation.md)   

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: e7f431f18a1ddd6097fc5a4790a1a3688d3bda92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
@@ -92,13 +93,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор!= ](../standard-library/iterator-operators.md#operator_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|  
-|[оператор==](../standard-library/iterator-operators.md#operator_eq_eq)|Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.|  
-|[оператор<](../standard-library/iterator-operators.md#operator_lt_)|Определяет, верно ли, что объект итератора в левой части оператора меньше объекта итератора в правой части.|  
-|[оператор\<=](../standard-library/iterator-operators.md#operator_lt__eq)|Определяет, верно ли, что объект итератора в левой части оператора меньше или равен объекту итератора в правой части.|  
-|[оператор>](../standard-library/iterator-operators.md#operator_gt_)|Определяет, верно ли, что объект итератора в левой части оператора больше объекта итератора в правой части.|  
-|[оператор>=](../standard-library/iterator-operators.md#operator_gt__eq)|Определяет, верно ли, что объект итератора в левой части оператора больше или равен объекту итератора в правой части.|  
-|[оператор+](../standard-library/iterator-operators.md#operator_add)|Добавление смещения к итератору и возврат нового итератора `reverse_iterator`, который обращается к вставленному элементу в новой позиции смещения.|  
+|[оператор!= ](../standard-library/iterator-operators.md#op_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|  
+|[оператор==](../standard-library/iterator-operators.md#op_eq_eq)|Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.|  
+|[оператор<](../standard-library/iterator-operators.md#op_lt)|Определяет, верно ли, что объект итератора в левой части оператора меньше объекта итератора в правой части.|  
+|[оператор\<=](../standard-library/iterator-operators.md#op_gt_eq)|Определяет, верно ли, что объект итератора в левой части оператора меньше или равен объекту итератора в правой части.|  
+|[оператор>](../standard-library/iterator-operators.md#op_gt)|Определяет, верно ли, что объект итератора в левой части оператора больше объекта итератора в правой части.|  
+|[оператор>=](../standard-library/iterator-operators.md#op_gt_eq)|Определяет, верно ли, что объект итератора в левой части оператора больше или равен объекту итератора в правой части.|  
+|[оператор+](../standard-library/iterator-operators.md#op_add)|Добавление смещения к итератору и возврат нового итератора `reverse_iterator`, который обращается к вставленному элементу в новой позиции смещения.|  
 |[оператор-](../standard-library/iterator-operators.md#operator-)|Вычитает один итератор из другого и возвращает разницу.|  
   
 ### <a name="classes"></a>Классы  

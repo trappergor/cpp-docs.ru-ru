@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ac9a6808371183a234f5cd61312f641e6ea9e49f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5e67ca683ac8946f88389e9ca2323f1255da6695
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
@@ -107,7 +108,7 @@ wchar_t *_ltow(
  Каждая из этих функций возвращает указатель на `str`. Ошибка не возвращается.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_ltoa` преобразует цифры `value` в строку знаков, завершающуюся значением NULL, и сохраняет результат (до 33 байт) в `str`. Аргумент `radix` определяет основание системы счисления `value`, которое должно быть в диапазоне от 2 до 36. Если значение `radix` равно 10 и `value` имеет отрицательное значение, то первым символом результирующей строки будет знак "минус" (–). `_ltow` — это версия с расширенными символами для `_ltoa`; второй аргумент и возвращаемое значение функции `_ltow` являются строками с расширенными символами. Каждая из этих функций является специфичной для систем Microsoft.  
+ Функция `_ltoa` преобразует цифры `value` в строку знаков, завершающуюся значением NULL, и сохраняет результат (до 33 байт) в `str`. `radix` Аргумент задает основание системы счисления `value`, которое должно быть в диапазоне от 2-36. Если `radix` равно 10 и `value` имеет отрицательное значение, первым символом результирующей строки будет знак «минус» (-). `_ltow` — это версия с расширенными символами для `_ltoa`; второй аргумент и возвращаемое значение функции `_ltow` являются строками с расширенными символами. Каждая из этих функций является специфичной для систем Microsoft.  
   
 > [!IMPORTANT]
 >  Чтобы предотвратить переполнение буфера, убедитесь, что буфер `str` достаточно велик для хранения преобразованных цифр, а также конечного нуль-символа и символа знака.  
@@ -131,9 +132,6 @@ wchar_t *_ltow(
   
 ## <a name="example"></a>Пример  
  См. пример для функции [_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

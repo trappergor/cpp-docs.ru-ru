@@ -58,14 +58,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 89d0d8b05ee9b785701ae3990c70f51a893b0dc5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1620eb200723fe4b2cd6553e7ba50405b026d53c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
-Извлекает обратный гиперболический синус комплексного числа, ветви которого выходят за пределы интервала [−i, +i] на мнимой оси.  
+Возвращает обратный гиперболический синус комплексного числа, с порезов ветвь попадает в интервал [-i, + i] мнимой оси.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -92,7 +93,7 @@ _Lcomplex casinhl(
  Комплексное число, указывающее угол в радианах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Обратный гиперболический синус аргумента `z` в радианах. На реальной оси результат неограничен и находится в интервале [−iπ/2, +iπ/2] на мнимой оси.  
+ Обратный гиперболический синус аргумента `z` в радианах. Результат отменяется привязка вдоль оси реальные и в интервале [-iπ/2 + iπ/2] мнимой оси.  
   
 ## <a name="remarks"></a>Примечания  
  Поскольку C++ допускает перегрузку, можно вызывать перегрузки `casinh`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `casinh` всегда принимает и возвращает значение `_Dcomplex` .  

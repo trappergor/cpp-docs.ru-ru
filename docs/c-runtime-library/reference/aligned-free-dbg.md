@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 40a42d694d6f0101573cb9b29e5a7571c4863bb0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -71,7 +72,7 @@ void _aligned_free_dbg(
  Указатель на блок памяти, возвращенный в функцию `_aligned_malloc` или `_aligned_offset_malloc`.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_aligned_free_dbg` — это отладочная версия функции [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_aligned_free_dbg` сокращается до вызова функции _`aligned_free`. И \_`aligned_free`, и `_aligned_free_dbg` освобождают блок памяти в основной куче, однако `_aligned_free_dbg` включает возможность отладки: возможность хранить освободившиеся блоки в связанном списке кучи для моделирования условий недостатка памяти.  
+ Функция `_aligned_free_dbg` — это отладочная версия функции [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_aligned_free_dbg` сокращается до вызова функции `_aligned_free`. Оба `_aligned_free` и `_aligned_free_dbg` освобождения блока памяти в основной куче, но `_aligned_free_dbg` включает возможность отладки: возможность хранить освободившиеся блоки в связанном списке кучи для моделирования условий недостатка памяти.  
   
  `_aligned_free_dbg` выполняет проверку действительности для всех указанных файлов и расположений блоков перед выполнением операции освобождения. Приложение не ожидает предоставления этих сведений. Когда освобождается блок памяти, диспетчер отладочной кучи автоматически проверяет целостность буферов по обеим сторонам пользовательской части и выдает отчет об ошибке в случае их перезаписи. Если задано битовое поле `_CRTDBG_DELAY_FREE_MEM_DF` флага [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md), освободившийся блок заполняется значением 0xDD, ему назначается тип блока `_FREE_BLOCK` и он хранится в связанном списке блоков памяти кучи.  
   
@@ -86,9 +87,6 @@ void _aligned_free_dbg(
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: fad398e9f18c2f45de7e071be464e3eff2e9243e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c9a97acb8bf6154bfba764049f1082fc0cca8055
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
@@ -57,18 +58,18 @@ ms.lasthandoff: 02/24/2017
   
 |Версия Map|Версия Multimap|Описание|  
 |-----------------|----------------------|-----------------|  
-|[operator!= (map)](../standard-library/map-operators.md#operator_neq)|[operator!= (multimap)](../standard-library/map-operators.md#operator_neq)|Проверяет неравенство объекта map или multimap слева от оператора объекту map или multimap справа от оператора.|  
-|[оператор< (map)](../standard-library/map-operators.md#operator_eq_eq)|[оператор< (multimap)](../standard-library/map-operators.md#operator_eq_eq)|Проверяет, меньше ли объект map или multimap слева от оператора объекта map или multimap справа от оператора.|  
-|[оператор<= (map)](../standard-library/map-operators.md#operator_lt_)|[оператор\<= (multimap)](../standard-library/map-operators.md#operator_lt_)|Проверяет, меньше или равен объект map или multimap слева от оператора объекту map или multimap справа от оператора.|  
-|[оператор== (map)](../standard-library/map-operators.md#operator_lt__eq)|[оператор== (multimap)](../standard-library/map-operators.md#operator_lt__eq)|Проверяет равенство объекта map или multimap слева от оператора объекту map или multimap справа от оператора.|  
-|[оператор> (map)](../standard-library/map-operators.md#operator_gt_)|[оператор> (multimap)](../standard-library/map-operators.md#operator_gt_)|Проверяет, больше ли объект map или multimap слева от оператора объекта map или multimap справа от оператора.|  
-|[оператор>= (map)](../standard-library/map-operators.md#operator_gt__eq)|[оператор>= (multimap)](../standard-library/map-operators.md#operator_gt__eq)|Проверяет, больше или равен объект map или multimap слева от оператора объекту map или multimap справа от оператора.|  
+|[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Проверяет неравенство объекта map или multimap слева от оператора объекту map или multimap справа от оператора.|  
+|[оператор< (map)](../standard-library/map-operators.md#op_eq_eq)|[оператор< (multimap)](../standard-library/map-operators.md#op_eq_eq)|Проверяет, меньше ли объект map или multimap слева от оператора объекта map или multimap справа от оператора.|  
+|[оператор<= (map)](../standard-library/map-operators.md#op_lt)|[оператор\<= (multimap)](../standard-library/map-operators.md#op_lt)|Проверяет, меньше или равен объект map или multimap слева от оператора объекту map или multimap справа от оператора.|  
+|[оператор== (map)](../standard-library/map-operators.md#op_eq_eq)|[оператор== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Проверяет равенство объекта map или multimap слева от оператора объекту map или multimap справа от оператора.|  
+|[оператор> (map)](../standard-library/map-operators.md#op_gt)|[оператор> (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Проверяет, больше ли объект map или multimap слева от оператора объекта map или multimap справа от оператора.|  
+|[оператор>= (map)](../standard-library/map-operators.md#op_gt_eq)|[оператор>= (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Проверяет, больше или равен объект map или multimap слева от оператора объекту map или multimap справа от оператора.|  
   
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов  
   
 |Версия Map|Версия Multimap|Описание|  
 |-----------------|----------------------|-----------------|  
-|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap)|Обменивает элементы между двумя объектами map или multimap.|  
+|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Обменивает элементы между двумя объектами map или multimap.|  
   
 ### <a name="classes"></a>Классы  
   

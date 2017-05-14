@@ -1,66 +1,83 @@
 ---
-title: "fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fwscanf_s"
-  - "_fscanf_s_l"
-  - "_fwscanf_s_l"
-  - "fscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fwscanf_s_l"
-  - "_fscanf_s_l"
-  - "fscanf_s"
-  - "_ftscanf_s_l"
-  - "_ftscanf_s"
-  - "fwscanf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fscanf_s_l - функция"
-  - "_ftscanf_s - функция"
-  - "_ftscanf_s_l - функция"
-  - "_fwscanf_s_l - функция"
-  - "данные [CRT], чтение из потоков"
-  - "форматированные данные [C++], чтение из потоков"
-  - "fscanf_s - функция"
-  - "fscanf_s_l - функция"
-  - "ftscanf_s - функция"
-  - "ftscanf_s_l - функция"
-  - "fwscanf_s - функция"
-  - "fwscanf_s_l - функция"
-  - "потоки [C++], чтение форматированных данных из"
+title: "fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fwscanf_s
+- _fscanf_s_l
+- _fwscanf_s_l
+- fscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _fwscanf_s_l
+- _fscanf_s_l
+- fscanf_s
+- _ftscanf_s_l
+- _ftscanf_s
+- fwscanf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- formatted data [C++], reading from streams
+- _ftscanf_s_l function
+- _fscanf_s_l function
+- ftscanf_s function
+- fwscanf_s function
+- _ftscanf_s function
+- data [CRT], reading from streams
+- _fwscanf_s_l function
+- fscanf_s function
+- fwscanf_s_l function
+- ftscanf_s_l function
+- streams [C++], reading formatted data from
+- fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 41ed7ff84800f38726858f01472a71531967edc1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Чтение форматированных данных из потока.  В этих версиях [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md) усовершенствована безопасность, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
+Считывают форматированные данные из потока. Эти версии [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md) отличаются повышенной безопасностью (см. раздел [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int fscanf_s(   
@@ -87,9 +104,9 @@ int _fwscanf_s_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE` .  
   
  `format`  
  Строка управления форматом.  
@@ -100,38 +117,38 @@ int _fwscanf_s_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает количество полей, которые успешно преобразуются и назначаются; возвращаемое значение не включает поля, которые были считаны, но не присваиваются.  Возвращаемое значение 0 указывает, что поля не были присвоены.  При возникновении ошибки или если достигнут конец файлового потока перед первым преобразованием, возвращенное значение `EOF` для `fscanf_s` и `fwscanf_s`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Если до первого преобразования возникает ошибка или достигается конец потока файла, возвращается значение `EOF` для `fscanf_s` и `fwscanf_s`.  
   
- Эти функции проверяют свои параметры.  Если параметр `stream` или `format` указывает на файл или на NULL, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают `EOF` и устанавливают для `errno` значение `EINVAL`.  
+ Эти функции проверяют свои параметры. Если `stream` является недопустимым указателем или `format` является указателем NULL, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EOF` и устанавливают для `errno` значение `EINVAL`.  
   
-## Заметки  
- Функция `fscanf_s` считывает данные из текущей позиции в `stream` в расположения, заданные в `argument` \(если он есть\).  Каждый `argument` должен быть указателем на переменную, которая имеет тип, который соответствует спецификатору типа в `format`.  `format` управляет интерпретацией полей ввода и имеет те же форму и функцию, как и аргумент `format` для `scanf_s`; см. раздел [Поля спецификации формата. Функции scanf и wscanf](../Topic/Format%20Specification%20Fields:%20scanf%20and%20wscanf%20Functions.md) для описания `format`.  `fwscanf_s` \- версия `fscanf_s` для расширенных символов; аргумент формата в `fwscanf_s` строка расширенных символов.  Поведение этих функций идентично, если поток открыт в режиме ANSI\-совместимости.  `fscanf_s` сейчас не поддерживает входные данные из потока ЮНИКОДА.  
+## <a name="remarks"></a>Примечания  
+ Функция `fscanf_s` считывает данные из текущей позиции `stream` в расположения, на которые указывает `argument` (если такие есть). Каждый параметр `argument` должен быть указателем на переменную, которая имеет тип, соответствующий спецификатору типа в параметре `format`. `format` определяет толкование полей входных данных и имеет такую же форму и функцию, как аргумент `format` для `scanf_s` В разделе [Поля спецификации формата — функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) приводится описание `format`.  `fwscanf_s` — это версия `fscanf_s` с расширенными символами; аргумент format для функции `fwscanf_s` — строка расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. `fscanf_s` сейчас не поддерживает ввод из потока ЮНИКОДА.  
   
- Основное различие между более безопасными функциями \(которые имеют суффикс `_s`\) и другими версиями состоит в том, что более безопасные функции требуют размер в символах каждого поля типа `c`, `C`, `s`, `S` и `[`, который должен передаваться в качестве аргумента сразу же за переменной.  Дополнительные сведения см. в разделах [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).  
+ Основное различие между более безопасными функциями (с `_s` суффиксом) и другими версиями заключается в том, что первые требуют, чтобы размер каждого поля типа `c`, `C`, `s`, `S` и `[` в символах передавался как аргумент сразу после переменной. Дополнительные сведения см. в разделах [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).  
   
 > [!NOTE]
->  Параметр размера — типа `unsigned`, а не `size_t`.  
+>  Параметр размера имеет тип `unsigned`, а не `size_t`.  
   
- Версии этих функций, имеющие суффикс `_l`, идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
+ Версии этих функций с суффиксом `_l` идентичны версиям без суффикса, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ftscanf_s`|`fscanf_s`|`fscanf_s`|`fwscanf_s`|  
 |`_ftscanf_s_l`|`_fscanf_s_l`|`_fscanf_s_l`|`_fwscanf_s_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`fscanf_s`, `_fscanf_s_l`|\<stdio.h\>|  
-|`fwscanf_s`, `_fwscanf_s_l`|\<stdio.h\> или \<wchar.h\>|  
+|--------------|---------------------|  
+|`fscanf_s`, `_fscanf_s_l`|\<stdio.h>|  
+|`fwscanf_s`, `_fwscanf_s_l`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_fscanf_s.c  
@@ -179,17 +196,17 @@ int main( void )
 }  
 ```  
   
-  **a\-string**  
-**65000**  
-**3.141590**  
-**x**   
-## Эквивалент в .NET Framework  
- [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). См. также методы `Parse`, такие как [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+a-string  
+65000  
+3.141590  
+x  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [\_cscanf\_s, \_cscanf\_s\_l, \_cwscanf\_s, \_cwscanf\_s\_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
- [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../Topic/sscanf_s,%20_sscanf_s_l,%20swscanf_s,%20_swscanf_s_l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)

@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 896845aa89f2d14683e21978ad2bca73dbbcf1f1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7789a1634f5ee87d54d6b9f2aadbc720819f31ef
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="locking"></a>_locking
@@ -83,7 +84,7 @@ ms.lasthandoff: 02/24/2017
  Число байтов для блокировки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция `_locking` возвращает 0 в случае успеха. Возвращаемое значение, равное –1, указывает на ошибку; в таком случае для параметра [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) устанавливается одно из следующих значений.  
+ Функция `_locking` возвращает 0 в случае успеха. Возвращаемое значение -1, указывающее на ошибку, в этом случае [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается одно из следующих значений.  
   
  `EACCES`  
  Нарушение блокировки (файл уже заблокирован или разблокирован).  
@@ -108,7 +109,7 @@ ms.lasthandoff: 02/24/2017
  Блокирует указанные байты. Если заблокировать байты не удается, программа попытается повторить блокировку через 1 секунду. Если после 10 попыток байты все равно не удается заблокировать, константа возвращает ошибку.  
   
  `_LK_NBLCK`  
- Блокирует указанные байты. Если после&10; попыток байты все равно не удается заблокировать, константа возвращает ошибку.  
+ Блокирует указанные байты. Если после 10 попыток байты все равно не удается заблокировать, константа возвращает ошибку.  
   
  `_LK_NBRLCK`  
  Эквивалентно `_LK_NBLCK`.  
@@ -196,9 +197,6 @@ No one can change these bytes while I'm reading them
 30 bytes read: The first thirty bytes of this  
 Now I'm done. Do what you will with them  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   

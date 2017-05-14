@@ -1,64 +1,81 @@
 ---
-title: "atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atan2f"
-  - "atan2l"
-  - "atan2"
-  - "atanf"
-  - "atan"
-  - "atanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atan"
-  - "atan2l"
-  - "atan2"
-  - "atanl"
-  - "atanf"
-  - "atan2f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arctangent - функция"
-  - "atan - функция"
-  - "atan2 - функция"
-  - "atan2f - функция"
-  - "atan2l - функция"
-  - "atanf - функция"
-  - "atanl - функция"
-  - "тригонометрические функции"
+title: "atan, atanf, atanl, atan2, atan2f, atan2l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atan2f
+- atan2l
+- atan2
+- atanf
+- atan
+- atanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- atan
+- atan2l
+- atan2
+- atanl
+- atanf
+- atan2f
+dev_langs:
+- C++
+helpviewer_keywords:
+- atan function
+- atanf function
+- atanl function
+- atan2 function
+- atan2l function
+- arctangent function
+- trigonometric functions
+- atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# atan, atanf, atanl, atan2, atan2f, atan2l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Вычисляет арктангенс `x` \(`atan`, `atanf` и `atanl`\) или арктангенс `y`\/`x` \(`atan2`, `atan2f` и `atan2l`\).  
+---
+# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
+Вычисляет арктангенс `x` (`atan`, `atanf` и `atanl`) или арктангенс `y`/`x` (`atan2`, `atan2f` и `atan2l`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double atan(   
@@ -98,33 +115,33 @@ long double atan2l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `x`, `y`  
- Любые числа.  
+ Все числа.  
   
-## Возвращаемое значение  
- `atan` возвращает арктангенс от `x` диапазоне от \-π\/2 до π\/2 радиан.  `atan2` возвращает арктангенс от `y/x` диапазоне от –π до π радиан.  Если `x` равен 0, то `atan` возвращает 0.  Если оба параметра `atan2` равны 0, функция возвращает 0.  Все результаты в радианах.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `atan`Возвращает арктангенс `x` в диапазоне - π/2-π/2 радиан. `atan2`Возвращает арктангенс `y/x` в диапазоне - π в радианы π. Если значение `x` равно 0, `atan` возвращает 0. Если оба параметра `atan2` равны 0, функция возвращает значение 0. Все результаты даются в радианах.  
   
- `atan2` использует знаки обоих параметров, чтобы определить квадрант возвращаемого значения.  
+ Используя признаки обоих параметров, `atan2` определяет квадрант возвращаемого значения.  
   
 |Ввод|Исключение SEH|Исключение Matherr|  
-|----------|--------------------|------------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|Нет|`_DOMAIN`|  
   
-## Заметки  
- Функция `atan` вычисляет арктангенс \(обратную функцию тангенса\) от `x`.  `atan2` вычисляет арктангенс от `y`\/`x` \(если `x` равно 0, то `atan2` возвращает π\/2, если `y` положительно, π\/2, если `y` отрицательно или равно 0, если `y` равно 0\).  
+## <a name="remarks"></a>Примечания  
+ Функция `atan` вычисляет арктангенс (функцию обратного тангенса) `x`. `atan2` вычисляет арктангенс `y`/`x` (если `x` равно 0; `atan2` возвращает π/2; если `y` положительно, -π/2, если `y` отрицательно, или 0, если `y` равно 0).  
   
- `atan` имеет реализацию, которая использует набор инструкций SSE2.  Дополнительные сведения и ограничения по использованию реализации с SSE2 см. в разделе [\_set\_SSE2\_enable](../Topic/_set_SSE2_enable.md).  
+ Функция `atan` содержит реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
- Поскольку C\+\+ допускает перегрузки, можно вызывать перегрузки `atan` и `atan2`.  В программе на языке C `atan` и `atan2` всегда принимают и возвращают значения типа double.  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки `atan` и `atan2`. В программе на языке C `atan` и `atan2` всегда принимают и возвращают двойные значения.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h\>|  
+|-------------|---------------------|  
+|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_atan.c  
@@ -150,21 +167,18 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **Arctangent of 5.000000: 1.373401**  
-**Arctangent of 0.500000 \/ 5.000000: 0.099669**   
-## Эквивалент в .NET Framework  
+```Output  
+Arctangent of 5.000000: 1.373401  
+Arctangent of 0.500000 / 5.000000: 0.099669  
+```  
   
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
-  
--   [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIatan](../Topic/_CIatan.md)   
- [\_CIatan2](../../c-runtime-library/ciatan2.md)
+ [_CIatan](../../c-runtime-library/ciatan.md)   
+ [_CIatan2](../../c-runtime-library/ciatan2.md)

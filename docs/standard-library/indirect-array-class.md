@@ -1,101 +1,61 @@
 ---
-title: "Класс indirect_array | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.indirect_array"
-  - "valarray/std::indirect_array"
-  - "std::indirect_array"
-  - "indirect_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indirect_array - класс"
+title: "Класс indirect_array | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- valarray/std::indirect_array
+- indirect_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Класс indirect_array
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7a5b105b9c812d81dfbbe5905bb593bba1b98ef8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
-Внутренний вспомогательный класс шаблона, который поддерживает объекты, valarrays подмножества, обеспечивая операций между массивами подмножества, задавая подмножество индексов родительского valarray.  
+---
+# <a name="indirectarray-class"></a>Класс indirect_array
+Внутренний, вспомогательный класс шаблона, который поддерживает объекты, представляющие подмножества valarray, предоставляя операции между массивами подмножеств, заданных в виде подмножества индексов родительского valarray.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-template<class Type>  
-   class indirect_array {  
-public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
   
-   void operator=(  
-      const Type& x  
-   ) const;  
   
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
+## <a name="remarks"></a>Примечания  
+ В классе описывается объект, который хранит ссылку на объект **va** класса [valarray](../standard-library/valarray-class.md)**\<Type>**, а также объект **xa** класса **valarray<size_t>**, который описывает порядок элементов для выбора из объекта **valarray\<Type>**.  
   
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
+ Объект **indirect_array\<Type>** создается только путем написания выражения вида **va[xa]**. Функции — члены класса indirect_array затем ведут себя как соответствующие сигнатуры функций, определенных для **valarray\<Type>** с той разницей, что затрагивается только последовательность выбранных элементов.  
   
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
+ Последовательность состоит из элементов **xa.**[size](../standard-library/valarray-class.md#size), где элемент `I` становится индексом **xa**[`I`] в **va**.  
   
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-// The rest is private or implementation defined  
-}  
-```  
-  
-## Заметки  
- Класс описывает объект, который содержит ссылку на объект **va** класса [valarray](../standard-library/valarray-class.md)**\<Type\>** вместе с объектом **xa** класса **valarray\<size\_t\>**, который описывает последовательность элементов, чтобы выделить из объекта **valarray\<Type\>**.  
-  
- При создании объекта **indirect\_array\<Type\>** только путем написания выражение в форме **va\[xa\]**.  Функции\-члены класса indirect\_array затем аналогично поведению соответствующий сигнатуры функции, определенные для **valarray\<Type\>**, за исключением того, что только последовательность выбранных элементов относится.  
-  
- Последовательность состоит из элементов **xa.**, где элемент [size](../Topic/valarray::size.md)`I` будет индексом **xa**\[`I`\] внутри **va**.  
-  
-## Пример:  
+## <a name="example"></a>Пример  
   
 ```  
 // indirect_array.cpp  
@@ -134,17 +94,19 @@ int main( )
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
-The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
-The modified operand valarray is:  ( 0 -1 10 -1 10 -1 10 -1 8 -1 ).  
+The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
+The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).  
 ```  
   
-## Требования  
- **Заголовок:**\<valarray\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<valarray>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

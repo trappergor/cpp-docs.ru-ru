@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
@@ -90,7 +91,7 @@ unsigned int _mbbtombc_l(
  Если функция `_mbbtombc` успешно преобразовывает `c`, она возвращает многобайтовый символ; в противном случае она возвращает `c`.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_mbbtombc` преобразовывает указанный однобайтовый многобайтовый символ в соответствующий двухбайтовый многобайтовый символ. Для преобразования символы должны находиться в диапазоне 0x20–0x7E или 0xA1–0xDF.  
+ Функция `_mbbtombc` преобразовывает указанный однобайтовый многобайтовый символ в соответствующий двухбайтовый многобайтовый символ. Символы должны быть в диапазоне от 0x20 — 0x7E или 0xA1 - 0xDF для преобразования.  
   
  Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что функция `_mbbtombc` использует текущий языковой стандарт для поведения, зависящего от языкового стандарта, а функция `_mbbtombc_l` вместо этого использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

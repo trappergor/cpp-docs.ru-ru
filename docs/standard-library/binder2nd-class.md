@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.binder2nd
 - binder2nd
 - xfunctional/std::binder2nd
-- std::binder2nd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f19b476ae903c915d4231621c39a88bf70b08685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder2nd-class"></a>Класс binder2nd
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>Примечания  
  Класс шаблона сохраняет копию объекта бинарной функции _ *Func* в **op** и копию `right` — в **value**. Он определяет свою функцию-член `operator()` как возвращающую **op**( `left`, **value**).  
   
- Если `Func` — объект типа **Operation**, а c — константа, то [bind2nd](../standard-library/functional-functions.md#bind2nd_function) ( `Func`, `c` ) — эквивалент конструктора `binder2nd`\< **Operation**> ( `Func`, `c` ) класса `binder2nd` и является более удобным.  
+ Если `Func` — объект типа **Operation**, а c — константа, то [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) — эквивалент конструктора `binder2nd`\< **Operation**> ( `Func`, `c` ) класса `binder2nd` и является более удобным.  
   
 ## <a name="example"></a>Пример  
   

@@ -6,21 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- limits/std::float_denorm_style
+- limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e0f4b6ca5d11207787f9ff4f27b21dbbc78080c0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 519cc2c696b5dcb67fed79fd04c3e7d66e7d0ad9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlimitsgt-enums"></a>Перечисления &lt;limits&gt;
 |||  
 |-|-|  
-|[Перечисление float_denorm_style](#float_denorm_style_enumeration)|[Перечисление float_round_style](#float_round_style_enumeration)|  
+|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|  
   
-##  <a name="a-namefloatdenormstyleenumerationa--floatdenormstyle-enumeration"></a><a name="float_denorm_style_enumeration"></a>  Перечисление float_denorm_style  
+##  <a name="float_denorm_style"></a>  Перечисление float_denorm_style  
  Перечисление описывает различные методы, которые могут быть выбраны реализацией для представления ненормализованного значения с плавающей запятой, если оно мало для представления в качестве нормализованного значения:  
   
 ```
@@ -40,9 +44,9 @@ enum float_denorm_style {
 - **denorm_present**, если денормализованные формы присутствуют.  
   
 ### <a name="example"></a>Пример  
-  См. раздел [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#numeric_limits__has_denorm) с примером, в котором можно получить доступ к значениям этого перечисления.  
+  См. раздел [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) с примером, в котором можно получить доступ к значениям этого перечисления.  
   
-##  <a name="a-namefloatroundstyleenumerationa--floatroundstyle-enumeration"></a><a name="float_round_style_enumeration"></a>  Перечисление float_round_style  
+##  <a name="float_round_style"></a>  Перечисление float_round_style  
  Перечисление описывает различные методы, которые могут быть выбраны реализацией для округления значения с плавающей запятой до целочисленного.  
   
 ```
@@ -68,7 +72,7 @@ enum float_round_style {
 - **round_toward_neg_infinity**, если округление к более отрицательному целому числу.  
   
 ### <a name="example"></a>Пример  
-  См. раздел [numeric_limits::round_style](../standard-library/numeric-limits-class.md#numeric_limits__round_style) с примером, в котором можно получить доступ к значениям этого перечисления.  
+  См. раздел [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) с примером, в котором можно получить доступ к значениям этого перечисления.  
   
 ## <a name="see-also"></a>См. также  
  [\<limits>](../standard-library/limits.md)

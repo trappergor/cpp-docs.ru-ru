@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9ff1d22bafa778db24fb489d33e83b1a553711e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="insertiterator-class"></a>Класс insert_iterator
@@ -64,29 +65,29 @@ class insert_iterator;
   
 |||  
 |-|-|  
-|[insert_iterator](#insert_iterator__insert_iterator)|Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.|  
+|[insert_iterator](#insert_iterator)|Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#insert_iterator__container_type)|Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.|  
-|[reference](#insert_iterator__reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|  
+|[container_type](#container_type)|Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.|  
+|[reference](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор*](#insert_iterator__operator_star)|Оператор разыменования используется для реализации выражения итератора вывода * `i` = `x` для вставки общего типа.|  
-|[оператор++](#insert_iterator__operator_add_add)|Увеличивает `insert_iterator` до следующего местоположения, в котором можно сохранить значение.|  
-|[оператор=](#insert_iterator__operator_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода * `i` = `x` для вставки общего типа.|  
+|[оператор*](#op_star)|Оператор разыменования используется для реализации выражения итератора вывода * `i` = `x` для вставки общего типа.|  
+|[оператор++](#op_add_add)|Увеличивает `insert_iterator` до следующего местоположения, в котором можно сохранить значение.|  
+|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода * `i` = `x` для вставки общего типа.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-##  <a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
+##  <a name="container_type"></a>  insert_iterator::container_type  
  Тип, представляющий контейнер, в который будет осуществляться вставка общего типа.  
   
 ```
@@ -126,7 +127,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
+##  <a name="insert_iterator"></a>  insert_iterator::insert_iterator  
  Создает итератор `insert_iterator`, добавляющий элемент в указанную позицию в контейнере.  
   
 ```
@@ -189,7 +190,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
+##  <a name="op_star"></a>  insert_iterator::operator*  
  Разыменовывает итератор вставки и возвращает адреса элемента.  
   
 ```
@@ -200,7 +201,7 @@ insert_iterator<Container>& operator*();
  Функция-член возвращает значение адресованного элемента.  
   
 ### <a name="remarks"></a>Примечания  
- Используется для применения выражения итератора вывода **\*Iter** = **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то ** \*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.  
+ Используется для применения выражения итератора вывода **\*Iter** = **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то  **\*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.  
   
 ### <a name="example"></a>Пример  
   
@@ -246,7 +247,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
+##  <a name="op_add_add"></a>  insert_iterator::operator++  
  Увеличивает **insert_iterator** до следующего местоположения, в котором можно сохранить значение.  
   
 ```
@@ -307,7 +308,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
+##  <a name="op_eq"></a>  insert_iterator::operator=  
  Вставляет значение в контейнер и возвращает итератор, который обновлен и указывает на новый элемент.  
   
 ```
@@ -386,7 +387,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__reference"></a>  insert_iterator::reference  
+##  <a name="reference"></a>  insert_iterator::reference  
  Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.  
   
 ```

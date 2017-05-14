@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 031904042e81f5ec9c8b54bbc3e2bfa9e9a365cf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5434d1dc44724cf876a42323140877ba38cb2b45
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lthashsetgt-operators"></a>Операторы &lt;hash_set&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[operator!= (hash_multiset)](#operator_neq__hash_multiset_)|[оператор==](#operator_eq_eq)|  
-|[operator== (hash_multiset)](#operator_eq_eq__hash_multiset_)|  
+|[оператор!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[оператор==](#op_eq_eq)|  
+|[operator== (hash_multiset)](#op_eq_eq_hash_multiset)|  
   
-##  <a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
   
 > [!NOTE]
 >  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
@@ -46,7 +47,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 ### <a name="remarks"></a>Примечания  
  Сравнение между объектами hash_set основывается на попарном сравнении их элементов. Два объекта hash_set равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
   
- В Visual C++ .NET 2003 члены файлов заголовков [<hash_map>](../standard-library/hash-map.md) и [<hash_set>](../standard-library/hash-set.md) больше не находятся в пространстве имен std. Они перемещены в пространство имен stdext. Более подробные сведения см. в разделе [Пространство имен stdext](../standard-library/stdext-namespace.md).  
+ Члены [< hash_map >](../standard-library/hash-map.md) и [< hash_set >](../standard-library/hash-set.md) файлы заголовка, [пространство имен stdext](../standard-library/stdext-namespace.md).
   
 ### <a name="example"></a>Пример  
   
@@ -87,7 +88,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.  
 ```  
   
-##  <a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
   
 > [!NOTE]
 >  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
@@ -152,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.  
 ```  
   
-##  <a name="operator_neq__hash_multiset_"></a>  operator!= (hash_multiset)  
+##  <a name="neq_hash_multiset"></a>  operator!= (hash_multiset)  
   
 > [!NOTE]
 >  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
@@ -217,7 +218,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.  
 ```  
   
-##  <a name="operator_eq_eq__hash_multiset_"></a>  operator== (hash_multiset)  
+##  <a name="eq_eq_hash_multiset"></a>  operator== (hash_multiset)  
   
 > [!NOTE]
 >  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
@@ -241,7 +242,7 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 ### <a name="remarks"></a>Примечания  
  Сравнение между объектами hash_multiset основывается на попарном сравнении их элементов. Два объекта hash_multiset равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
   
- В Visual C++ .NET 2003 члены файлов заголовков [<hash_map>](../standard-library/hash-map.md) и [<hash_set>](../standard-library/hash-set.md) больше не находятся в пространстве имен std. Они перемещены в пространство имен stdext. Более подробные сведения см. в разделе [Пространство имен stdext](../standard-library/stdext-namespace.md).  
+ В Visual C++ .NET 2003 члены файлов заголовков [<hash_map>](../standard-library/hash-map.md) и [<hash_set>](../standard-library/hash-set.md) больше не находятся в пространстве имен std. Они были перенесены в пространство имен stdext. В разделе [пространство имен stdext](../standard-library/stdext-namespace.md) для получения дополнительной информации.  
   
 ### <a name="example"></a>Пример  
   

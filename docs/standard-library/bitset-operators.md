@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>Операторы &lt;bitset&gt;
 ||||  
 |-|-|-|  
-|[оператор&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[оператор&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[оператор&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[оператор^](#op_xor)|[оператор|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  оператор&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  Выполняет побитовую операцию `AND` между двумя битовыми массивами.  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `AND`.  
   
- ` right`  
+ `right`  
  Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `AND`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Битовый массив, элементы которого являются результатом выполнения операции `AND` с соответствующими элементами ` left` и ` right`.  
+ Битовый массив, элементы которого являются результатом выполнения операции `AND` с соответствующими элементами `left` и `right`.  
   
 ### <a name="example"></a>Пример  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
  Вставляет текстовое представление битовой последовательности в поток вывода.  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Объект типа **bitset\<N>**, который будет вставлен в выходной поток в виде строки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  оператор&gt;&gt;  
+##  <a name="op_gt_gt"></a>  оператор&gt;&gt;  
  Считывает строку битовых символов в битовый массив.  
   
 ```  
@@ -144,7 +145,7 @@ _Istr,
  `_Istr`  
  Строка, которая вводится во входной поток для вставки в битовый массив.  
   
- ` right`  
+ `right`  
  Битовый массив, получающий биты из входного потока.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a>  operator_xor  
+##  <a name="op_xor"></a>  оператор^  
  Выполняет побитовую операцию `EXCLUSIVE-OR` между двумя битовыми массивами.  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `EXCLUSIVE-OR`.  
   
- ` right`  
+ `right`  
  Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `EXCLUSIVE-OR`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Битовый массив, элементы которого являются результатом выполнения операции `EXCLUSIVE-OR` с соответствующими элементами ` left` и ` right`.  
+ Битовый массив, элементы которого являются результатом выполнения операции `EXCLUSIVE-OR` с соответствующими элементами `left` и `right`.  
   
 ### <a name="example"></a>Пример  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a>  operator_or  
+##  <a name="op_or"></a>оператор |  
  Выполняет побитовую операцию `OR` между двумя битовыми массивами.  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `OR`.  
   
- ` right`  
+ `right`  
  Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `OR`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Битовый массив, элементы которого являются результатом выполнения операции `OR` с соответствующими элементами ` left` и ` right`.  
+ Битовый массив, элементы которого являются результатом выполнения операции `OR` с соответствующими элементами `left` и `right`.  
   
 ### <a name="example"></a>Пример  
   

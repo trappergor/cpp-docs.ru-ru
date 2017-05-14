@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -120,28 +121,28 @@ errno_t _localtime64_s(
  Поля структуры типа [tm](../../c-runtime-library/standard-types.md) хранят следующие значения, каждое из которых имеет тип `int`.  
   
  `tm_sec`  
- Секунды после минуты (0–59).  
+ Секунды после минуты (0 - 59).  
   
  `tm_min`  
- Минуты после часа (0–59).  
+ Минуты после часа (0 - 59).  
   
  `tm_hour`  
- Часы после полуночи (от 0 до 23).  
+ Часы после полуночи (0 - 23).  
   
  `tm_mday`  
- День месяца (1–31).  
+ День месяца (1-31).  
   
  `tm_mon`  
- Месяц (0–11; январь = 0).  
+ Месяц (0 – 11; Январь = 0).  
   
  `tm_year`  
  Год (текущий год минус 1900).  
   
  `tm_wday`  
- День недели (0–6; воскресенье = 0).  
+ День недели (0 – 6; Воскресенье = 0).  
   
  `tm_yday`  
- День года (0–365; 1-е января = 0).  
+ День года (0 – 365; 1 января = 0).  
   
  `tm_isdst`  
  Положительное значение, если действует летнее время; 0, если летнее время не действует; отрицательное значение, если состояние летнего времени неизвестно. Если задана переменная среды `TZ`, для реализации перехода на летнее время (DST) в библиотеке времени выполнения C принимаются правила, подходящие для США.  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   
