@@ -1,64 +1,82 @@
 ---
-title: "isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_isdigit_l"
-  - "iswdigit"
-  - "_iswdigit_l"
-  - "isdigit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_iswdigit_l"
-  - "_isdigit_l"
-  - "iswdigit"
-  - "isdigit"
-  - "_istdigit"
-  - "_istdigit_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iswdigit - функция"
-  - "iswdigit_l - функция"
-  - "_iswdigit_l - функция"
-  - "_istdigit_l - функция"
-  - "_istdigit - функция"
-  - "istdigit - функция"
-  - "isdigit - функция"
-  - "isdigit_l - функция"
-  - "_ismbcdigit_l - функция"
-  - "_isdigit_l - функция"
+title: "isdigit, iswdigit, _isdigit_l, _iswdigit_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _isdigit_l
+- iswdigit
+- _iswdigit_l
+- isdigit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _iswdigit_l
+- _isdigit_l
+- iswdigit
+- isdigit
+- _istdigit
+- _istdigit_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- iswdigit function
+- iswdigit_l function
+- _iswdigit_l function
+- _istdigit_l function
+- _istdigit function
+- istdigit function
+- isdigit function
+- isdigit_l function
+- _ismbcdigit_l function
+- _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# isdigit, iswdigit, _isdigit_l, _iswdigit_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 86afddd96c0d20e6c6f29cf64668a8fa26613da7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 Определяет, представляет ли целое число символ десятичной цифры.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int isdigit(   
@@ -77,42 +95,39 @@ int _iswdigit_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
- Целое число, которое требуется проверить.  
+ Проверяемое целое число.  
   
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая из этих процедур возвращает отличное от нуля значение, если `c` — конкретное представление символа десятичной цифры.  `isdigit` возвращает ненулевое значение, если `c` десятичный цифра \(от 0 до 9\).  `iswdigit` возвращает ненулевое значение, если `c` расширенный символ, который соответствует символу десятичного разряда.  Каждая из этих процедур возвращает 0, если `c` не удовлетворяет условию теста.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление символа десятичной цифры. `isdigit`возвращает ненулевое значение, если `c` является десятичной цифрой (0 - 9). Функция `iswdigit` возвращает ненулевое значение, если `c` представляет собой расширенный символ, соответствующий символу десятичной цифры. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
- Версии этих функций, которые содержат суффикс `_l` для поведения, зависящего от языкового стандарта, используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- Поведение `isdigit` и `_isdigit_l` является неопределенным, если `c` не является концом файла или не находится в диапазоне от 0 до 0xFF включительно.  При использовании библиотеки CRT отладки и `c` не является одним из этих значений, функции вызывают утверждение.  
+ Поведение функций `isdigit` и `_isdigit_l` не определено, если `c` не является концом файла или не находится в диапазоне от 0 по 0xFF включительно. Если используется библиотека отладки CRT и `c` не является одним из этих значений, функции вызывают утверждение.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
-|`_istdigit`|`isdigit`|[\_ismbcdigit](../Topic/_ismbcalnum,%20_ismbcalnum_l,%20_ismbcalpha,%20_ismbcalpha_l,%20_ismbcdigit,%20_ismbcdigit_l.md)|`iswdigit`|  
-|`_istdigit_l`|`_isdigit_l`|[\_ismbcdigit\_l](../Topic/_ismbcalnum,%20_ismbcalnum_l,%20_ismbcalpha,%20_ismbcalpha_l,%20_ismbcdigit,%20_ismbcdigit_l.md)|`_iswdigit_l`|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_istdigit`|`isdigit`|[_ismbcdigit](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswdigit`|  
+|`_istdigit_l`|`_isdigit_l`|[_ismbcdigit_l](../../c-runtime-library/reference/ismbcalnum-functions.md)|`_iswdigit_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`isdigit`|\<ctype.h\>|  
-|`iswdigit`|\<ctype.h\> или \<wchar.h\>|  
-|`_isdigit_l`|\<ctype.h\>|  
-|`_iswdigit_l`|\<ctype.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`isdigit`|\<ctype.h>|  
+|`iswdigit`|\<ctype.h> или \<wchar.h>|  
+|`_isdigit_l`|\<ctype.h>|  
+|`_iswdigit_l`|\<ctype.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Эквивалент в .NET Framework  
- [System::Char::IsDigit](https://msdn.microsoft.com/en-us/library/system.char.isdigit.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)
+ [Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)

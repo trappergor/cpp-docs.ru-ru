@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![Функция ошибок от x](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- Дополнительная функция Гаусса ошибок определяется как 1 - erf(x). Функция `erf` возвращает значение в диапазоне от -1,0 до 1,0. Ошибка не возвращается. Функция `erfc` возвращает значение в диапазоне от 0 до 2. Если значение `x` слишком большое для `erfc`, переменная `errno` задается равной `ERANGE`.  
+ Функция Гаусса ошибок определяется как 1 - erf(x). Функция `erf` возвращает значение в диапазоне от -1,0 до 1,0. Ошибка не возвращается. Функция `erfc` возвращает значение в диапазоне от 0 до 2. Если значение `x` слишком большое для `erfc`, переменная `errno` задается равной `ERANGE`.  
   
  Поскольку C++ допускает перегрузку, можно вызывать перегрузки `erf` и `erfc`, которые принимают и возвращают типы `float` и `long double`. В программе на языке C `erf` и `erfc` всегда принимают и возвращают значение `double`.  
   
@@ -121,9 +122,6 @@ long double erfcl(
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)

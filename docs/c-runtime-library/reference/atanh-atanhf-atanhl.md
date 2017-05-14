@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8cda9bb597a24cc3e7988ba8ef4c4f8103861ea3
-ms.openlocfilehash: 3b559db7a8d8f8fbc0672d8d8a644579fd9e1ca8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
@@ -88,7 +89,7 @@ long double atanhl(
  Значение с плавающей запятой.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функции `atanh` возвращают обратный гиперболический тангенс (гиперболический арктангенс) `x`. Если `x` больше 1 или меньше -1, для `errno` задается значение `EDOM` и результатом является несигнальное значение NaN (QNAN). Если `x` равняется 1 или -1, возвращается положительная или отрицательная бесконечность, а для `errno` задается значение `ERANGE`.  
+ Функции `atanh` возвращают обратный гиперболический тангенс (гиперболический арктангенс) `x`. Если `x` больше 1 или меньше -1, `errno` равно `EDOM` и результатом является несигнальным значением NaN. Если `x` равняется 1 или -1, возвращается положительная или отрицательная бесконечность, а для `errno` задается значение `ERANGE`.  
   
 |Ввод|Исключение SEH|Исключение `Matherr`|  
 |-----------|-------------------|-------------------------|  
@@ -133,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   

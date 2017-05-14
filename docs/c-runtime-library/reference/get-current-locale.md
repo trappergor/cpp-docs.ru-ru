@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9c03528f5c85e7ac0ce70202486c8ee92ffadad0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e2f14ad541750967d63a50c13ec82a9ed57fce05
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
@@ -72,9 +73,9 @@ _locale_t _get_current_locale(void);
  Объект языкового стандарта, представляющий текущий языковой стандарт.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_get_current_locale` получает текущий языковой стандарт и возвращает представляющий его объект языкового стандарта.  
+ `_get_current_locale` Возвращает установленные функции языкового стандарта для потока и возвращает объект языкового стандарта, представляющий данного языкового стандарта.  
   
- Предыдущее название данной функции `__get_current_locale` (с&2; символами подчеркивания в начале) использовать не рекомендуется.  
+ Предыдущее название данной функции `__get_current_locale` (с 2 символами подчеркивания в начале) использовать не рекомендуется.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -83,9 +84,6 @@ _locale_t _get_current_locale(void);
 |`_get_current_locale`|\<locale.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Эквивалент отсутствует.  
   
 ## <a name="see-also"></a>См. также  
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   

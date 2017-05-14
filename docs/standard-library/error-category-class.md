@@ -39,10 +39,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 7700ffce8b04f9caad33c08f03f0585c29a43efd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8a2a37464e5edb5a5fde1def70d2f0728524fad2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="errorcategory-class"></a>Класс error_category
@@ -61,31 +62,31 @@ class error_category;
   
 |||  
 |-|-|  
-|[value_type](#error_category__value_type)|Тип, представляющий сохраненное значение кода ошибки.|  
+|[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[default_error_condition](#error_category__default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|  
-|[equivalent](#error_category__equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|  
-|[message](#error_category__message)|Возвращает имя указанного кода ошибки.|  
-|[name](#error_category__name)|Возвращает имя категории.|  
+|[default_error_condition](#default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|  
+|[equivalent](#equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|  
+|[message](#message)|Возвращает имя указанного кода ошибки.|  
+|[name](#name)|Возвращает имя категории.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор==](#error_category__operator_eq_eq)|Проверяет равенство между объектами `error_category`.|  
-|[оператор!=](#error_category__operator_neq)|Проверяет неравенство между объектами `error_category`.|  
-|[оператор<](#error_category__operator_lt_)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|  
+|[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|  
+|[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_category`.|  
+|[оператор<](#op_lt)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<system_error>  
   
  **Пространство имен:** std  
   
-##  <a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
+##  <a name="default_error_condition"></a>  error_category::default_error_condition  
  Сохраняет значение кода ошибки для объекта условия ошибки.  
   
 ```
@@ -103,7 +104,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="error_category__equivalent"></a>  error_category::equivalent  
+##  <a name="equivalent"></a>  error_category::equivalent  
  Возвращает значение, указывающее, эквивалентны ли объекты ошибок.  
   
 ```
@@ -130,7 +131,7 @@ virtual bool equivalent(const error_code& _Code,
   
  Вторая функция-член возвращает значение `*this == _Code.category() && _Code.value() == _Errval`.  
   
-##  <a name="error_category__message"></a>  error_category::message  
+##  <a name="message"></a>  error_category::message  
  Возвращает имя указанного кода ошибки.  
   
 ```
@@ -148,7 +149,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="error_category__name"></a>  error_category::name  
+##  <a name="name"></a>  error_category::name  
  Возвращает имя категории.  
   
 ```
@@ -160,7 +161,7 @@ virtual const char *name() const = 0;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="error_category__operator_eq_eq"></a>  error_category::operator==  
+##  <a name="op_eq_eq"></a>  error_category::operator==  
  Проверяет равенство между объектами `error_category`.  
   
 ```
@@ -179,7 +180,7 @@ bool operator==(const error_category& right) const;
 ### <a name="remarks"></a>Примечания  
  Этот оператор-член возвращает `this == &right`.  
   
-##  <a name="error_category__operator_neq"></a>  error_category::operator!=  
+##  <a name="op_neq"></a>  error_category::operator!=  
  Проверяет неравенство между объектами `error_category`.  
   
 ```
@@ -198,7 +199,7 @@ bool operator!=(const error_category& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `(!*this == right)`.  
   
-##  <a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
+##  <a name="op_lt"></a>  error_category::operator&lt;  
  Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.  
   
 ```
@@ -217,7 +218,7 @@ bool operator<(const error_category& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `this < &right`.  
   
-##  <a name="error_category__value_type"></a>  error_category::value_type  
+##  <a name="value_type"></a>  error_category::value_type  
  Тип, представляющий сохраняемое значение кода ошибки.  
   
 ```

@@ -1,59 +1,76 @@
 ---
-title: "_fputchar, _fputwchar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fputchar"
-  - "_fputwchar"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fputtchar"
-  - "_fputwchar"
-  - "fputwchar"
-  - "_fputtchar"
-  - "fputchar"
-  - "_fputchar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fputchar - функция"
-  - "_fputtchar - функция"
-  - "_fputwchar - функция"
-  - "fputchar - функция"
-  - "fputtchar - функция"
-  - "fputwchar - функция"
-  - "стандартный вывод, запись в"
+title: "_fputchar, _fputwchar | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fputchar
+- _fputwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputtchar
+- _fputwchar
+- fputwchar
+- _fputtchar
+- fputchar
+- _fputchar
+dev_langs:
+- C++
+helpviewer_keywords:
+- fputchar function
+- standard output, writing to
+- _fputtchar function
+- fputwchar function
+- _fputwchar function
+- fputtchar function
+- _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _fputchar, _fputwchar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4222a9cbce6094ca69120d819906e59d0fbd094c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Записывает символ в `stdout`.  
+---
+# <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
+Записывает символ в поток `stdout`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _fputchar(  
@@ -64,34 +81,34 @@ wint_t _fputwchar(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
  Символ, который требуется записать.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает записанный символ.  Возвращаемое значение `EOF` для функции `_fputchar` указывает на ошибку.  Возвращаемое значение `WEOF` для функции `_fputwchar` указывает на ошибку.  Если c равен `NULL`, эти функции создают исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, они возвращают `EOF`\(или`WEOF`\) и задают `errno` значение `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает записанный символ. Для `_fputchar` возвращаемое значение `EOF` указывает на ошибку. Для `_fputwchar` возвращаемое значение `WEOF` указывает на ошибку. Если параметр c равен `NULL`, эти функции создают исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают `EOF` (или `WEOF`) и задайте `errno` для `EINVAL`.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Обе эти функции печатают отдельный символ `c` в `stdout` и сдвигают индикатор соответствующим образом.  `_fputchar` эквивалентна `fputc(``stdout )`.  Она также эквивалентна `putchar`, но реализуется только как функция, а не как функция и макрос.  В отличие от `fputc` и `putchar`, эти функции не совместимы со стандартом ANSI.  
+## <a name="remarks"></a>Примечания  
+ Обе эти функции записывают один символ `c` в поток `stdout` и перемещают индикатор соответствующим образом. `_fputchar` равно `fputc( stdout )`. Эта функция эквивалентна `putchar`, но реализуется только как функция, а не как функция и макрос. В отличие от `fputc` и `putchar` эти функции не совместимы со стандартом ANSI.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_fputtchar`|`_fputchar`|`_fputchar`|`_fputwchar`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_fputchar`|\<stdio.h\>|  
-|`_fputwchar`|\<stdio.h\> или \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fputchar`|\<stdio.h>|  
+|`_fputwchar`|\<stdio.h> или \<wchar.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Стандартные дескрипторы потока, связанные с консолью — `stdin`, `stdout` и `stderr` — необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_fputchar.c  
@@ -112,14 +129,11 @@ int main( void )
 }  
 ```  
   
-  **This is a test of \_fputchar\!\!**   
-## Эквивалент в .NET Framework  
+```Output  
+This is a test of _fputchar!!  
+```  
   
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fgetc, fgetwc](../Topic/fgetc,%20fgetwc.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)

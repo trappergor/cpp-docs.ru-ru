@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8ae2c34fb0eb62ec895b8b8e28bc6dd14f03b1fa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1facc7aec41e7ab1c8b420f6792d76cce0d2b029
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fsetpos"></a>fsetpos
@@ -80,7 +81,7 @@ int fsetpos(
  Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Функция `fsetpos` присваивает индикатору позиции в файле для `stream` значение `pos`*,* которое было получено в рамках предыдущего вызова `fgetpos` для `stream`*.* Функция удаляет индикатор конца файла и отменяет все результаты выполнения [ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md) для `stream`*.* После вызова `fsetpos` следующая операция над `stream` может выполнять как ввод, так и вывод данных.  
+ `fsetpos` Функция задает для индикатора позиции файла `stream` значению `pos`, который получается в предыдущем вызове `fgetpos` от `stream`. Функция очищает индикатор end of file и отменяет последствия [ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md) на `stream`. После вызова `fsetpos` следующая операция над `stream` может выполнять как ввод, так и вывод данных.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -92,9 +93,6 @@ int fsetpos(
   
 ## <a name="example"></a>Пример  
  См. пример для [fgetpos](../../c-runtime-library/reference/fgetpos.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   

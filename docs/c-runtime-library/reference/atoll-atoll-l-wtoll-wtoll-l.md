@@ -1,59 +1,76 @@
 ---
-title: "atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoll"
-  - "_atoll_l"
-  - "_wtoll_l"
-  - "atoll"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoll_l"
-  - "_wtoll"
-  - "_atoll_l"
-  - "_ttoll"
-  - "_tstoll"
-  - "_wtoll_l"
-  - "atoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atoll_l - функция"
-  - "_wtoll - функция"
-  - "_wtoll_l - функция"
-  - "atoll - функция"
+title: "atoll, _atoll_l, _wtoll, _wtoll_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoll
+- _atoll_l
+- _wtoll_l
+- atoll
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoll_l
+- _wtoll
+- _atoll_l
+- _ttoll
+- _tstoll
+- _wtoll_l
+- atoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- atoll function
+- _wtoll_l function
+- _wtoll function
+- _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# atoll, _atoll_l, _wtoll, _wtoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e707c06f06015a684e968367f61e7e763ff87a6d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 Преобразует строку в целое число `long long`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 long long atoll(  
@@ -72,54 +89,54 @@ long long _wtoll_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
  Строка для преобразования.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Каждая функция возвращает значение `long long`, которая создается за счет интерпретации входных символов в виде числа.  Возвращаемое значение `atoll` равно 0, если входные данные невозможно преобразовать в значение этого типа.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая функция возвращает значение `long long`, которое создается за счет интерпретации входных символов как числа. Возвращаемое значение `atoll` равно 0, если аргумент невозможно преобразовать в значение этого типа.  
   
- Для Переполнения с большими положительными целыми значениями `atoll` возвращает `LLONG_MAX`, и для переполнений с большими отрицательными целыми значениями он возвращает значение `LLONG_MIN`.  
+ При переполнении большими положительными целыми значениями функция `atoll` возвращает `LLONG_MAX`, при переполнении большими отрицательными целыми значениями — `LLONG_MIN`.  
   
- Во всех случаях вне допустимого диапазона, параметр `errno` имеет значение `ERANGE`.  Если переданный параметр — `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают 0.  
+ Во всех случаях, когда диапазон не соблюдается, `errno` принимает значение `ERANGE`. Если переданный параметр имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают 0.  
   
-## Заметки  
- Эти функции преобразуют символьную строку в целочисленное значение `long long`.  
+## <a name="remarks"></a>Примечания  
+ Эти функции преобразуют символьную строку в целое значение `long long`.  
   
- Входная строка — это последовательность символов, которая может быть интерпретирована как числовое значение указанного типа.  Функция прекращает чтение входной строки на первом знаке, который она не может распознать как часть числа.  Этот символ может быть символов NULL \("\\0" или " L "\\0"\), которым завершается строка.  
+ Входная строка представляет собой последовательность символов, которые могут обрабатываться как числовое значение указанного типа. Каждая функция прекращает чтение строки на первом знаке, который она не может распознать как часть числа. Этот символ может быть нуль-символом ("\0" или L"\0"), которым завершается строка.  
   
- Аргумент `str` для `atoll` имеет следующую форму:  
+ Аргумент `str` для `atoll` принимает следующую форму:  
   
 ```  
 [whitespace] [sign] [digits]  
 ```  
   
- `whitespace` состоит из пробелов и знаков табуляции, которые игнорируются; `sign` — плюс \(\+\) или минус \(–\); `digits` — одна или несколько десятичных цифр.  
+ Объект `whitespace` состоит из пробелами или символами табуляции, которые игнорируются. `sign` либо плюс (+) или минус (-); и `digits` — один или несколько цифр.  
   
- `_wtoll` идентично `atoll`, за исключением того, что он принимает строку расширенных символов в качестве параметра.  
+ Функция `_wtoll` идентична функции `atoll` за тем исключением, что принимает в качестве параметра строку расширенных символов.  
   
- Версии этих функций с суффиксом `_l` идентичны версиям без суффикса, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` идентичны версиям без суффикса, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tstoll`|`atoll`|`atoll`|`_wtoll`|  
 |`_tstoll_l`|`_atoll_l`|`_atoll_l`|`_wtoll_l`|  
 |`_ttoll`|`_atoll`|`_atoll`|`_wtoll`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Программы|Обязательный заголовок|  
-|---------------|----------------------------|  
-|`atoll`, `_atoll_l`|\<stdlib.h\>|  
-|`_wtoll`, `_wtoll_l`|\<stdlib.h\> или \<wchar.h\>|  
+|Подпрограммы|Обязательный заголовок|  
+|--------------|---------------------|  
+|`atoll`, `_atoll_l`|\<stdlib.h>|  
+|`_wtoll`, `_wtoll_l`|\<stdlib.h> или \<wchar.h>|  
   
-## Пример  
- Эта программа показывает, как использовать функции `atoll` для преобразования чисел, хранящихся в виде строк, в числовые значения.  
+## <a name="example"></a>Пример  
+ Эта программа показывает, как преобразовывать числа, хранящиеся в виде строк, в числовые значения с помощью функции `atoll`.  
   
 ```  
 // crt_atoll.c  
@@ -160,22 +177,20 @@ int main(void)
 }  
 ```  
   
-  **Функция: atoll\("  \-27182818284 "\) \= \-27182818284**  
-**Функция: atoll\("314127.64"\) \= 314127**  
-**Функция: atoll\("3336402735171707160320"\) \= 9223372036854775807**  
-**Возникло условие переполнения.**   
-## Эквивалент в .NET Framework  
+```Output  
+Function: atoll("  -27182818284 ") = -27182818284  
+Function: atoll("314127.64") = 314127  
+Function: atoll("3336402735171707160320") = 9223372036854775807  
+Overflow condition occurred.  
   
--   [System::Convert::ToInt64](https://msdn.microsoft.com/en-us/library/system.convert.toint64.aspx)  
+```  
   
--   [System::Convert::ToUInt64](https://msdn.microsoft.com/en-us/library/system.convert.touint64.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../Topic/_fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

@@ -21,6 +21,12 @@ f1_keywords:
 - memory/std::allocator_traits::size_type
 - memory/std::allocator_traits::const_void_pointer
 - memory/std::allocator_traits::void_pointer
+- memory/std::allocator_traits::allocate
+- memory/std::allocator_traits::construct
+- memory/std::allocator_traits::deallocate
+- memory/std::allocator_traits::destroy
+- memory/std::allocator_traits::max_size
+- memory/std::allocator_traits::select_on_container_copy_construction
 dev_langs:
 - C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
@@ -42,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 19927f6846b7feaa3fca37d08b70de6dee79c5e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d4fdcb8af6fa8b33ee6153563770b9bf00f02942
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="allocatortraits-class"></a>Класс allocator_traits
@@ -79,19 +86,19 @@ class allocator_traits;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод allocator_traits::allocate](#allocator_traits__allocate_method)|Статический метод, который выделяет память с помощью указанного параметра распределителя.|  
-|[Метод allocator_traits::construct](#allocator_traits__construct_method)|Статический метод, который используется указанным распределителем для создания объекта.|  
-|[Метод allocator_traits::deallocate](#allocator_traits__deallocate_method)|Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.|  
-|[Метод allocator_traits::destroy](#allocator_traits__destroy_method)|Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.|  
-|[Метод allocator_traits::max_size](#allocator_traits__max_size_method)|Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.|  
-|[Метод allocator_traits::select_on_container_copy_construction](#allocator_traits__select_on_container_copy_construction_method)|Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.|  
+|[allocate](#allocate)|Статический метод, который выделяет память с помощью указанного параметра распределителя.|  
+|[construct](#construct)|Статический метод, который используется указанным распределителем для создания объекта.|  
+|[deallocate](#deallocate)|Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.|  
+|[destroy](#destroy)|Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.|  
+|[max_size](#max_size)|Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<memory>  
   
  **Пространство имен:** std  
   
-##  <a name="a-nameallocatortraitsallocatemethoda--allocatortraitsallocate-method"></a><a name="allocator_traits__allocate_method"></a>Метод allocator_traits::allocate  
+##  <a name="allocate"></a>allocator_traits::allocate
  Статический метод, который выделяет память с помощью указанного параметра распределителя.  
   
 ```cpp  
@@ -118,7 +125,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  Второй метод возвращает `al.allocate(count, hint)`, если это выражение правильно сформировано; в противном случае возвращается `al.allocate(count)`.  
   
-##  <a name="a-nameallocatortraitsconstructmethoda--allocatortraitsconstruct-method"></a><a name="allocator_traits__construct_method"></a>Метод allocator_traits::construct  
+##  <a name="construct"></a>allocator_traits::construct
  Статический метод, который используется указанным распределителем для создания объекта.  
   
 ```cpp  
@@ -139,7 +146,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>Примечания  
  Эта статическая функция-член вызывает `al.construct(ptr, args...)`, если выражение правильно сформировано; в противном случае оно оценивается как `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="a-nameallocatortraitsdeallocatemethoda--allocatortraitsdeallocate-method"></a><a name="allocator_traits__deallocate_method"></a>Метод allocator_traits::deallocate  
+##  <a name="deallocate"></a>allocator_traits::DEALLOCATE
  Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.  
   
 ```cpp  
@@ -163,7 +170,7 @@ static void deallocate(Alloc al,
   
  Этот метод ничего не создает.  
   
-##  <a name="a-nameallocatortraitsdestroymethoda--allocatortraitsdestroy-method"></a><a name="allocator_traits__destroy_method"></a>Метод allocator_traits::destroy  
+##  <a name="destroy"></a>allocator_traits::destroy
  Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.  
   
 ```cpp  
@@ -181,7 +188,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает `al.destroy(ptr)`, если выражение правильно сформировано; в противном случае оно оценивается как `ptr->~Uty()`.  
   
-##  <a name="a-nameallocatortraitsmaxsizemethoda--allocatortraitsmaxsize-method"></a><a name="allocator_traits__max_size_method"></a>Метод allocator_traits::max_size  
+##  <a name="max_size"></a>allocator_traits::max_size
  Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.  
   
 ```cpp  
@@ -195,7 +202,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает `al.max_size()`, если это выражение правильно сформировано; в противном случае возвращается `numeric_limits<size_type>::max()`.  
   
-##  <a name="a-nameallocatortraitsselectoncontainercopyconstructionmethoda--allocatortraitsselectoncontainercopyconstruction-method"></a><a name="allocator_traits__select_on_container_copy_construction_method"></a>Метод allocator_traits::select_on_container_copy_construction  
+##  <a name="select_on_container_copy_construction"></a>allocator_traits::select_on_container_copy_construction
  Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.  
   
 ```cpp  

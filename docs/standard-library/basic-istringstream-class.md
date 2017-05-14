@@ -1,47 +1,61 @@
 ---
-title: "Класс basic_istringstream | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::basic_istringstream"
-  - "sstream/std::basic_istringstream"
-  - "basic_istringstream"
-  - "std.basic_istringstream"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "basic_istringstream - класс"
+title: "Класс basic_istringstream | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sstream/std::basic_istringstream
+- basic_istringstream
+- sstream/std::basic_istringstream::allocator_type
+- sstream/std::basic_istringstream::rdbuf
+- sstream/std::basic_istringstream::str
+- sstream/std::basic_istringstream::swap
+dev_langs:
+- C++
+helpviewer_keywords:
+- basic_istringstream class
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Класс basic_istringstream
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dd5ffa6d31f78fe71fdc099c39dd6ad719a217cf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
-Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера класса [basic\_stringbuf](../Topic/basic_stringbuf%20Class.md)\<**Elem**, **Tr**, `Alloc`\>.  
+---
+# <a name="basicistringstream-class"></a>Класс basic_istringstream
+Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-        template <  
-   class Elem,   
-   class Tr = char_traits<Elem>,   
-   class Alloc = allocator<Elem>   
->  
-   class basic_istringstream : public basic_istream<Elem, Tr>  
+template <class Elem, class Tr = char_traits<Elem>, class Alloc = allocator<Elem>>  
+class basic_istringstream : public basic_istream<Elem, Tr>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Alloc`  
  Класс распределителя.  
   
@@ -51,41 +65,149 @@ caps.handback.revision: 19
  *Tr*  
  Признаки символа, соответствующие основному элементу строки.  
   
-## Заметки  
- Класс шаблона описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic\_stringbuf](../Topic/basic_stringbuf%20Class.md)\<**Elem**, **Tr**, `Alloc`\> с элементами типа **Elem**. Их признаки символов определяются классом **Tr**, а элементы выделяются распределителем класса `Alloc`.  Объект сохраняет объект класса basic\_stringbuf\<**Elem**, **Tr**, `Alloc`\>.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> с элементами типа **Elem**, признаки символов которых определяются классом **Tr**, а элементы выделяются распределителем класса `Alloc`. Объект сохраняет объект класса basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
-### Конструкторы  
-  
-|||  
-|-|-|  
-|[basic\_istringstream](../Topic/basic_istringstream::basic_istringstream.md)|Создает объект типа `basic_istringstream`.|  
-  
-### Typedefs  
+### <a name="constructors"></a>Конструкторы  
   
 |||  
 |-|-|  
-|[allocator\_type](../Topic/basic_istringstream::allocator_type.md)|Этот тип является синонимом для параметра шаблона `Alloc`.|  
+|[basic_istringstream](#basic_istringstream)|Создает объект типа `basic_istringstream`.|  
   
-### Функции\-члены  
-  
-|||  
-|-|-|  
-|[rdbuf](../Topic/basic_istringstream::rdbuf.md)|Возвращает адрес буфера сохраненного потока типа `pointer` в [basic\_stringbuf](../Topic/basic_stringbuf%20Class.md)\<`Elem`, `Tr`, `Alloc`\>.|  
-|[str](../Topic/basic_istringstream::str.md)|Задает или получает текст в буфере строк без изменения позиции записи.|  
-|[swap](../Topic/basic_istringstream::swap.md)|Меняет местами значения в этом объекте `basic_istringstream` и значения предоставленного объекта.|  
-  
-### Операторы  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator \=](../Topic/basic_istringstream::operator=.md)|Назначает значения этому объекту `basic_istringstream` из параметра объекта.|  
+|[allocator_type](#allocator_type)|Этот тип является синонимом для параметра шаблона `Alloc`.|  
   
-## Требования  
- **Заголовок:** \<sstream\>  
+### <a name="member-functions"></a>Функции-члены  
+  
+|||  
+|-|-|  
+|[rdbuf](#rdbuf)|Возвращает адрес буфера сохраненного потока типа `pointer` в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
+|[str](#str)|Задает или получает текст в буфере строк без изменения позиции записи.|  
+|[swap](#swap)|Меняет местами значения в этом объекте `basic_istringstream` и значения предоставленного объекта.|  
+  
+### <a name="operators"></a>Операторы  
+  
+|||  
+|-|-|  
+|[оператор=](#op_eq)|Назначает значения этому объекту `basic_istringstream` из параметра объекта.|  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<sstream>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../Topic/iostream%20Programming.md)   
+##  <a name="allocator_type"></a>  basic_istringstream::allocator_type  
+ Этот тип является синонимом для параметра шаблона `Alloc`.  
+  
+```  
+typedef Alloc allocator_type;  
+```  
+  
+##  <a name="basic_istringstream"></a>  basic_istringstream::basic_istringstream  
+ Создает объект типа `basic_istringstream`.  
+  
+```  
+explicit basic_istringstream(
+    ios_base::openmode _Mode = ios_base::in);
+
+explicit basic_istringstream(
+    const basic_string<Elem, Tr, Alloc>& str,  
+    ios_base::openmode _Mode = ios_base::in);
+
+basic_istringstream(
+    basic_istringstream&& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Mode`  
+ Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+  
+ `str`  
+ Объект типа `basic_string`.  
+  
+ `right`  
+ Ссылка rvalue на объект `basic_istringstream`.  
+  
+### <a name="remarks"></a>Примечания  
+ Первый конструктор инициализирует базовый класс путем вызова [basic_istream](../standard-library/basic-istream-class.md)( `sb`), где `sb` — сохраненный объект класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>. Он также инициализирует `sb` путем вызова `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).  
+  
+ Второй конструктор инициализирует базовый класс путем вызова `basic_istream(sb)`. Он также инициализирует `sb` путем вызова `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`).  
+  
+ Третий конструктор инициализирует объект с содержимым `right`, что рассматривается как ссылка rvalue.  
+  
+##  <a name="op_eq"></a>  basic_istringstream::operator=  
+ Назначает значения этому объекту `basic_istringstream` из параметра объекта.  
+  
+```  
+basic_istringstream& operator=(basic_istringstream&& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `right`  
+ Ссылка rvalue на объект `basic_istringstream`.  
+  
+### <a name="remarks"></a>Примечания  
+ Оператор-член заменяет содержимое объекта на содержимое `right`, которое обрабатывается как присваивание перемещением ссылки rvalue.  
+  
+##  <a name="rdbuf"></a>  basic_istringstream::rdbuf  
+ Возвращает адрес буфера сохраненного потока типа **pointer** в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
+  
+```  
+basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Адрес буфера сохраненного потока типа **pointer** в basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
+  
+### <a name="example"></a>Пример  
+  Пример, в котором используется `rdbuf`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).  
+  
+##  <a name="str"></a>  basic_istringstream::str  
+ Задает или получает текст в буфере строк без изменения позиции записи.  
+  
+```  
+basic_string<Elem, Tr, Alloc> str() const;
+
+ 
+void str(
+    const basic_string<Elem, Tr, Alloc>& _Newstr);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `_Newstr`  
+ Новая строка.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Возвращает объект класса [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, управляемая последовательность которого является копией последовательности, управляемой **\*this**.  
+  
+### <a name="remarks"></a>Примечания  
+ Первая функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Вторая функция-член вызывает `rdbuf` -> **str**( `_Newstr`).  
+  
+### <a name="example"></a>Пример  
+  Пример использования **str** см. в разделе [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str).  
+  
+##  <a name="swap"></a>  basic_istringstream::swap  
+ Меняет местами значения двух объектов `basic_istringstream`.  
+  
+```  
+void swap(basic_istringstream& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+  
+|Параметр|Описание|  
+|---------------|-----------------|  
+|`right`|Ссылка `lvalue` на объект `basic_istringstream`.|  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член меняет местами значения этого объекта и значения `right`.  
+  
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Программирование iostream](../standard-library/iostream-programming.md)   
  [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+
+

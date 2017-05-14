@@ -10,10 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - ctype
-- std::ctype
-- std.ctype
-- CType
 - xlocale/std::ctype
+- locale/std::ctype::char_type
+- locale/std::ctype::do_is
+- locale/std::ctype::do_narrow
+- locale/std::ctype::do_scan_is
+- locale/std::ctype::do_scan_not
+- locale/std::ctype::do_tolower
+- locale/std::ctype::do_toupper
+- locale/std::ctype::do_widen
+- locale/std::ctype::is
+- locale/std::ctype::narrow
+- locale/std::ctype::scan_is
+- locale/std::ctype::scan_not
+- locale/std::ctype::tolower
+- locale/std::ctype::toupper
+- locale/std::ctype::widen
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 08c792c0ab211a5ea8e83d026790322242decb81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ctype-class"></a>Класс ctype
@@ -78,39 +91,39 @@ class ctype : public ctype_base;
   
 |||  
 |-|-|  
-|[ctype](#ctype__ctype)|Конструктор для объектов класса `ctype`, которые служат в качестве аспектов языкового стандарта для символов.|  
+|[ctype](#ctype)|Конструктор для объектов класса `ctype`, которые служат в качестве аспектов языкового стандарта для символов.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#ctype__char_type)|Тип, который описывает символ, используемый языковым стандартом.|  
+|[char_type](#char_type)|Тип, который описывает символ, используемый языковым стандартом.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[do_is](#ctype__do_is)|Виртуальная функция, вызываемая для проверки того, есть ли у отдельного символа определенный атрибут, или для классификации атрибутов каждого символа в диапазоне и сохранения их в массиве.|  
-|[do_narrow](#ctype__do_narrow)|Виртуальная функция, вызываемая для преобразования символа типа `CharType`, используемого языковым стандартом, в соответствующий символ типа `char` в собственной кодировке.|  
-|[do_scan_is](#ctype__do_scan_is)|Виртуальная функция, вызываемая для обнаружения первого символа, соответствующего указанной маске, в диапазоне.|  
-|[do_scan_not](#ctype__do_scan_not)|Виртуальная функция, вызываемая для обнаружения первого символа, не соответствующего указанной маске, в диапазоне.|  
-|[do_tolower](#ctype__do_tolower)|Виртуальная функция, вызываемая для преобразования символа или диапазона символов в нижний регистр.|  
-|[do_toupper](#ctype__do_toupper)|Виртуальная функция, вызываемая для преобразования символа или диапазона символов в верхний регистр.|  
-|[do_widen](#ctype__do_widen)|Виртуальная функция, вызываемая для преобразования символа типа `char` в исходной кодировке в соответствующий символ типа `CharType`, используемый языковым стандартом.|  
-|[is](#ctype__is)|Проверяет, есть ли у отдельного символа определенный атрибут, или классифицирует атрибуты каждого символа в диапазоне и сохраняет их в массиве.|  
-|[narrow](#ctype__narrow)|Преобразовывает символ типа `CharType`, используемый языковым стандартом, в соответствующий символ типа char в исходной кодировке.|  
-|[scan_is](#ctype__scan_is)|Обнаруживает первый символ, соответствующий указанной маске, в диапазоне.|  
-|[scan_not](#ctype__scan_not)|Обнаруживает первый символ, несоответствующий указанной маске, в диапазоне.|  
-|[tolower](#ctype__tolower)|Преобразует символ или диапазон символов в нижний регистр.|  
-|[toupper](#ctype__toupper)|Преобразует символ или диапазон символов в верхний регистр.|  
-|[widen](#ctype__widen)|Преобразовывает символ типа `char` в исходной кодировке в соответствующий символ типа `CharType`, используемый языковым стандартом.|  
+|[do_is](#do_is)|Виртуальная функция, вызываемая для проверки того, есть ли у отдельного символа определенный атрибут, или для классификации атрибутов каждого символа в диапазоне и сохранения их в массиве.|  
+|[do_narrow](#do_narrow)|Виртуальная функция, вызываемая для преобразования символа типа `CharType`, используемого языковым стандартом, в соответствующий символ типа `char` в собственной кодировке.|  
+|[do_scan_is](#do_scan_is)|Виртуальная функция, вызываемая для обнаружения первого символа, соответствующего указанной маске, в диапазоне.|  
+|[do_scan_not](#do_scan_not)|Виртуальная функция, вызываемая для обнаружения первого символа, не соответствующего указанной маске, в диапазоне.|  
+|[do_tolower](#do_tolower)|Виртуальная функция, вызываемая для преобразования символа или диапазона символов в нижний регистр.|  
+|[do_toupper](#do_toupper)|Виртуальная функция, вызываемая для преобразования символа или диапазона символов в верхний регистр.|  
+|[do_widen](#do_widen)|Виртуальная функция, вызываемая для преобразования символа типа `char` в исходной кодировке в соответствующий символ типа `CharType`, используемый языковым стандартом.|  
+|[is](#is)|Проверяет, есть ли у отдельного символа определенный атрибут, или классифицирует атрибуты каждого символа в диапазоне и сохраняет их в массиве.|  
+|[narrow](#narrow)|Преобразовывает символ типа `CharType`, используемый языковым стандартом, в соответствующий символ типа char в исходной кодировке.|  
+|[scan_is](#scan_is)|Обнаруживает первый символ, соответствующий указанной маске, в диапазоне.|  
+|[scan_not](#scan_not)|Обнаруживает первый символ, несоответствующий указанной маске, в диапазоне.|  
+|[tolower](#tolower)|Преобразует символ или диапазон символов в нижний регистр.|  
+|[toupper](#toupper)|Преобразует символ или диапазон символов в верхний регистр.|  
+|[widen](#widen)|Преобразовывает символ типа `char` в исходной кодировке в соответствующий символ типа `CharType`, используемый языковым стандартом.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<locale>  
   
  **Пространство имен:** std  
   
-##  <a name="a-namectypechartypea--ctypechartype"></a><a name="ctype__char_type"></a>  ctype::char_type  
+##  <a name="char_type"></a>  ctype::char_type  
  Тип, который описывает символ, используемый языковым стандартом.  
   
 ```  
@@ -121,9 +134,9 @@ typedef CharType char_type;
  Тип является синонимом для параметра-шаблона **Chartype**.  
   
 ### <a name="example"></a>Пример  
-  Пример, в котором `char_type` используется в качестве возвращаемого значения, см. в описании функции-члена [widen](#ctype__widen).  
+  Пример, в котором `char_type` используется в качестве возвращаемого значения, см. в описании функции-члена [widen](#widen).  
   
-##  <a name="a-namectypectypea--ctypectype"></a><a name="ctype__ctype"></a>  ctype::ctype  
+##  <a name="ctype"></a>  ctype::ctype  
  Конструктор для объектов класса ctype, которые служат в качестве аспектов языкового стандарта для символов.  
   
 ```  
@@ -141,13 +154,13 @@ explicit ctype(size_t _Refs = 0);
   
 -   1: время существования объекта должно управляться вручную.  
   
--   \> 0: эти значения не определены.  
+-   \>1: эти значения не определены.  
   
  Прямые примеры привести нельзя, так как деструктор защищен.  
   
  Конструктор инициализирует свой базовый объект `locale::facet` с **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
-##  <a name="a-namectypedoisa--ctypedois"></a><a name="ctype__do_is"></a>  ctype::do_is  
+##  <a name="do_is"></a>  ctype::do_is  
  Виртуальная функция, вызываемая для проверки того, есть ли у отдельного символа определенный атрибут, или для классификации атрибутов каждого символа в диапазоне и сохранения их в массиве.  
   
 ```  
@@ -187,9 +200,9 @@ virtual const CharType *do_is(
  Значения маски, классифицирующие атрибуты символов, предоставляются классом [ctype_base](../standard-library/ctype-base-class.md), от которого производится класс ctype. Первая функция-член может принимать для своего первого параметра выражения, которые называются битовыми масками и формируются из сочетания значений маски логическими побитовыми операторами (&#124;, &, ^, ~).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [is](#ctype__is), в котором вызывается `do_is`.  
+  См. пример для [is](#is), в котором вызывается `do_is`.  
   
-##  <a name="a-namectypedonarrowa--ctypedonarrow"></a><a name="ctype__do_narrow"></a>  ctype::do_narrow  
+##  <a name="do_narrow"></a>  ctype::do_narrow  
  Виртуальная функция, вызываемая для преобразования символа типа `CharType`, используемого языковым стандартом, в соответствующий символ типа `char` в собственной кодировке.  
   
 ```  
@@ -227,12 +240,12 @@ virtual const CharType* do_narrow(
  Вторая защищенная функция-член возвращает указатель на целевой диапазон собственных символов, преобразованных из символов типа `CharType`.  
   
 ### <a name="remarks"></a>Примечания  
- Вторая защищенная функция-член шаблона сохраняет в `dest`[`I`] значение `do_narrow`(`first` [`I`], `default`) для `I` в интервале [0, `last`–`first`).  
+ Функция-член шаблона сохраняет в защищенных второй `dest`[ `I`] значение `do_narrow`( `first` [ `I`], `default`), для `I` в интервале [0, `last`  -  `first`).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [narrow](#ctype__narrow), в котором вызывается `do_narrow`.  
+  См. пример для [narrow](#narrow), в котором вызывается `do_narrow`.  
   
-##  <a name="a-namectypedoscanisa--ctypedoscanis"></a><a name="ctype__do_scan_is"></a>  ctype::do_scan_is  
+##  <a name="do_scan_is"></a>  ctype::do_scan_is  
  Виртуальная функция, вызываемая для обнаружения первого символа, соответствующего указанной маске, в диапазоне.  
   
 ```  
@@ -256,12 +269,12 @@ virtual const CharType *do_scan_is(
  Указатель на первый символ в диапазоне, соответствующий указанной маске. Если такое значение не существует, функция возвращает `last.`.  
   
 ### <a name="remarks"></a>Примечания  
- Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [`first`, `last`), для которого [do_is](#ctype__do_is)(`maskVal`, * `ptr`) имеет значение true.  
+ Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [`first`, `last`), для которого [do_is](#do_is)(`maskVal`, * `ptr`) имеет значение true.  
   
 ### <a name="example"></a>Пример  
-  См. пример для [scan_is](#ctype__scan_is), в котором вызывается `do_scan_is`.  
+  См. пример для [scan_is](#scan_is), в котором вызывается `do_scan_is`.  
   
-##  <a name="a-namectypedoscannota--ctypedoscannot"></a><a name="ctype__do_scan_not"></a>  ctype::do_scan_not  
+##  <a name="do_scan_not"></a>  ctype::do_scan_not  
  Виртуальная функция, вызываемая для обнаружения первого символа, не соответствующего указанной маске, в диапазоне.  
   
 ```  
@@ -285,12 +298,12 @@ virtual const CharType *do_scan_not(
  Указатель на первый символ в диапазоне, не соответствующий указанной маске. Если такое значение не существует, функция возвращает `last`.  
   
 ### <a name="remarks"></a>Примечания  
- Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [`first`, `last`), для которого [do_is](#ctype__do_is)(`maskVal`, * `ptr`) имеет значение false.  
+ Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [`first`, `last`), для которого [do_is](#do_is)(`maskVal`, * `ptr`) имеет значение false.  
   
 ### <a name="example"></a>Пример  
-  См. пример для [scan_not](#ctype__scan_not), в котором вызывается `do_scan_not`.  
+  См. пример для [scan_not](#scan_not), в котором вызывается `do_scan_not`.  
   
-##  <a name="a-namectypedotolowera--ctypedotolower"></a><a name="ctype__do_tolower"></a>  ctype::do_tolower  
+##  <a name="do_tolower"></a>  ctype::do_tolower  
  Виртуальная функция, вызываемая для преобразования символа или диапазона символов в нижний регистр.  
   
 ```  
@@ -316,12 +329,12 @@ virtual const CharType *do_tolower(
  Первая защищенная функция-член возвращает содержимое параметра `ch` в нижнем регистре. Если форма в нижнем регистре не существует, возвращается `ch`. Вторая защищенная функция-член возвращает `last`.  
   
 ### <a name="remarks"></a>Примечания  
- Вторая защищенная функция — член шаблона заменяет каждый элемент `first` [`I`] для `I` в интервале [0, `last`–`first`) на `do_tolower`(`first` [`I`]).  
+ Вторая функция-член с модификатором protected шаблон заменяет каждый элемент `first` [ `I`], для `I` в интервале [0, `last`  -  `first`), с `do_tolower`( `first` [ `I`]).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [tolower](#ctype__tolower), в котором вызывается `do_tolower`.  
+  См. пример для [tolower](#tolower), в котором вызывается `do_tolower`.  
   
-##  <a name="a-namectypedotouppera--ctypedotoupper"></a><a name="ctype__do_toupper"></a>  ctype::do_toupper  
+##  <a name="do_toupper"></a>  ctype::do_toupper  
  Виртуальная функция, вызываемая для преобразования символа или диапазона символов в верхний регистр.  
   
 ```  
@@ -347,12 +360,12 @@ virtual const CharType *do_toupper(
  Первая защищенная функция-член возвращает содержимое параметра `ch` в верхнем регистре. Если форма в верхнем регистре не существует, возвращается `ch`. Вторая защищенная функция-член возвращает `last`.  
   
 ### <a name="remarks"></a>Примечания  
- Вторая защищенная функция — член шаблона заменяет каждый элемент `first` [`I`] для `I` в интервале [0, `last`–`first`) на `do_toupper`(`first` [`I`]).  
+ Вторая функция-член с модификатором protected шаблон заменяет каждый элемент `first` [ `I`], для `I` в интервале [0, `last`  -  `first`), с `do_toupper`( `first` [ `I`]).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [toupper](#ctype__toupper), в котором вызывается `do_toupper`.  
+  См. пример для [toupper](#toupper), в котором вызывается `do_toupper`.  
   
-##  <a name="a-namectypedowidena--ctypedowiden"></a><a name="ctype__do_widen"></a>  ctype::do_widen  
+##  <a name="do_widen"></a>  ctype::do_widen  
  Виртуальная функция, вызываемая для преобразования символа типа `char` в исходной кодировке в соответствующий символ типа `CharType`, используемый языковым стандартом.  
   
 ```  
@@ -387,9 +400,9 @@ virtual const char *do_widen(
  Вторая защищенная функция-член шаблона сохраняет в `dest`[`I`] значение `do_widen`(`first`[`I`]) для `I` в диапазоне [0, `last` - `first`).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [widen](#ctype__widen), в котором вызывается `do_widen`.  
+  См. пример для [widen](#widen), в котором вызывается `do_widen`.  
   
-##  <a name="a-namectypeisa--ctypeis"></a><a name="ctype__is"></a>  ctype::is  
+##  <a name="is"></a>  ctype::is  
  Проверяет, есть ли у отдельного символа определенный атрибут, или классифицирует атрибуты каждого символа в диапазоне и сохраняет их в массиве.  
   
 ```  
@@ -465,7 +478,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namectypenarrowa--ctypenarrow"></a><a name="ctype__narrow"></a>  ctype::narrow  
+##  <a name="narrow"></a>  ctype::narrow  
  Преобразовывает символы типа `CharType`, используемого языковым стандартом, в соответствующие символы типа `char` в собственной кодировке.  
   
 ```  
@@ -501,7 +514,7 @@ const CharType* narrow(
  Вторая функция-член возвращает указатель на целевой диапазон собственных символов, преобразованных из символов типа `CharType`.  
   
 ### <a name="remarks"></a>Примечания  
- Первая функция-член возвращает [do_narrow](#ctype__do_narrow)(`ch`, `default`). Вторая функция-член возвращает [do_narrow](#ctype__do_narrow) (`first`, `last`, `default`, `dest`). Только основные исходные символы всегда имеют уникальный прообраз `CharType` в `narrow`. Для этих базовых исходных символов хранится следующий инвариант: `narrow` ([widen](#ctype__widen) (**c**), 0) == **c**.  
+ Первая функция-член возвращает [do_narrow](#do_narrow)(`ch`, `default`). Вторая функция-член возвращает [do_narrow](#do_narrow) (`first`, `last`, `default`, `dest`). Только основные исходные символы всегда имеют уникальный прообраз `CharType` в `narrow`. Для этих базовых исходных символов хранится следующий инвариант: `narrow` ([widen](#widen) (**c**), 0) == **c**.  
   
 ### <a name="example"></a>Пример  
   
@@ -529,7 +542,7 @@ int main( )
 Xhello everyone  
 ```  
   
-##  <a name="a-namectypescanisa--ctypescanis"></a><a name="ctype__scan_is"></a>  ctype::scan_is  
+##  <a name="scan_is"></a>  ctype::scan_is  
  Обнаруживает первый символ, соответствующий указанной маске, в диапазоне.  
   
 ```  
@@ -553,7 +566,7 @@ const CharType *scan_is(
  Указатель на первый символ в диапазоне, соответствующий указанной маске. Если такое значение не существует, функция возвращает `last.`.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает [do_scan_is](#ctype__do_scan_is)(`maskVal`, `first`, `last`).  
+ Функция-член возвращает [do_scan_is](#do_scan_is)(`maskVal`, `first`, `last`).  
   
 ### <a name="example"></a>Пример  
   
@@ -581,7 +594,7 @@ int main( )
 The first punctuation is "," at position: 5  
 ```  
   
-##  <a name="a-namectypescannota--ctypescannot"></a><a name="ctype__scan_not"></a>  ctype::scan_not  
+##  <a name="scan_not"></a>  ctype::scan_not  
  Обнаруживает первый символ, несоответствующий указанной маске, в диапазоне.  
   
 ```  
@@ -605,7 +618,7 @@ const CharType *scan_not(
  Указатель на первый символ в диапазоне, не соответствующий указанной маске. Если такое значение не существует, функция возвращает `last`.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает [do_scan_not](#ctype__do_scan_not)(`maskVal`, `first`, `last`).  
+ Функция-член возвращает [do_scan_not](#do_scan_not)(`maskVal`, `first`, `last`).  
   
 ### <a name="example"></a>Пример  
   
@@ -633,7 +646,7 @@ int main( )
 First nonalpha character is "," at position: 5  
 ```  
   
-##  <a name="a-namectypetolowera--ctypetolower"></a><a name="ctype__tolower"></a>  ctype::tolower  
+##  <a name="tolower"></a>  ctype::tolower  
  Преобразует символ или диапазон символов в нижний регистр.  
   
 ```  
@@ -659,7 +672,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
  Вторая функция-член возвращает значение `last`.  
   
 ### <a name="remarks"></a>Примечания  
- Первая функция-член возвращает [do_tolower](#ctype__do_tolower)(`ch`). Вторая функция-член возвращает [do_tolower](#ctype__do_tolower)(`first`, `last`).  
+ Первая функция-член возвращает [do_tolower](#do_tolower)(`ch`). Вторая функция-член возвращает [do_tolower](#do_tolower)(`first`, `last`).  
   
 ### <a name="example"></a>Пример  
   
@@ -686,7 +699,7 @@ int main( )
 The lowercase string is: hello, my name is john  
 ```  
   
-##  <a name="a-namectypetouppera--ctypetoupper"></a><a name="ctype__toupper"></a>  ctype::toupper  
+##  <a name="toupper"></a>  ctype::toupper  
  Преобразует символ или диапазон символов в верхний регистр.  
   
 ```  
@@ -710,7 +723,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
  Вторая функция-член возвращает значение `last`.  
   
 ### <a name="remarks"></a>Примечания  
- Первая функция-член возвращает [do_toupper](#ctype__do_toupper)(`ch`). Вторая функция-член возвращает [do_toupper](#ctype__do_toupper)(`first`, `last`).  
+ Первая функция-член возвращает [do_toupper](#do_toupper)(`ch`). Вторая функция-член возвращает [do_toupper](#do_toupper)(`first`, `last`).  
   
 ### <a name="example"></a>Пример  
   
@@ -737,7 +750,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN  
 ```  
   
-##  <a name="a-namectypewidena--ctypewiden"></a><a name="ctype__widen"></a>  ctype::widen  
+##  <a name="widen"></a>  ctype::widen  
  Преобразовывает символ типа `char` в исходной кодировке в соответствующий символ типа `CharType`, используемый языковым стандартом.  
   
 ```  
@@ -764,7 +777,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
  Вторая функция-член возвращает указатель на целевой диапазон символов типа `CharType`, используемого языковым стандартом, преобразованных из исходных символов типа `char`.  
   
 ### <a name="remarks"></a>Примечания  
- Первая функция-член возвращает [do_widen](#ctype__do_widen)(`byte`). Вторая функция-член возвращает [do_widen](#ctype__do_widen)(`first`, `last`, `dest`).  
+ Первая функция-член возвращает [do_widen](#do_widen)(`byte`). Вторая функция-член возвращает [do_widen](#do_widen)(`first`, `last`, `dest`).  
   
 ### <a name="example"></a>Пример  
   

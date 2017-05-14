@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b50819686ca10a5676c75fb47375572d39974a1f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3ef742cc4715c419b113e9235bbcc257ba8f1944
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="backinsertiterator-class"></a>Класс back_insert_iterator
@@ -63,29 +64,29 @@ class back_insert_iterator;
   
 |||  
 |-|-|  
-|[back_insert_iterator](#back_insert_iterator__back_insert_iterator)|Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.|  
+|[back_insert_iterator](#back_insert_iterator)|Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#back_insert_iterator__container_type)|Тип, предоставляющий контейнер для итератора `back_insert_iterator`.|  
-|[reference](#back_insert_iterator__reference)|Тип, предоставляющий ссылку для итератора `back_insert_iterator`.|  
+|[container_type](#container_type)|Тип, предоставляющий контейнер для итератора `back_insert_iterator`.|  
+|[reference](#reference)|Тип, предоставляющий ссылку для итератора `back_insert_iterator`.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор*](#back_insert_iterator__operator_star)|Оператор удаления ссылки, используемый для реализации выражения итератора вывода * `i` = `x` для вставки в конечную часть.|  
-|[оператор++](#back_insert_iterator__operator_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|  
-|[оператор=](#back_insert_iterator__operator_eq)|Оператор присваивания, используемый для применения выражения итератора вывода * `i` = `x` для вставки в конечную часть.|  
+|[оператор*](#op_star)|Оператор удаления ссылки, используемый для реализации выражения итератора вывода * `i` = `x` для вставки в конечную часть.|  
+|[оператор++](#op_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|  
+|[оператор=](#op_eq)|Оператор присваивания, используемый для применения выражения итератора вывода * `i` = `x` для вставки в конечную часть.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-##  <a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
  Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.  
   
 ```   
@@ -147,7 +148,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
+##  <a name="container_type"></a>  back_insert_iterator::container_type  
  Тип, предоставляющий контейнер для итератора `back_insert_iterator`.  
   
 ```   
@@ -199,7 +200,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
+##  <a name="op_star"></a>  back_insert_iterator::operator*  
  Оператор удаления ссылки, используемый для реализации выражения итератора вывода \* *i* = *x*.  
   
 ```  
@@ -210,7 +211,7 @@ back_insert_iterator<Container>& operator*();
  Ссылка на элемент, вставленный в конец контейнера.  
   
 ### <a name="remarks"></a>Примечания  
- Используется для применения выражения итератора вывода **\*Iter** = **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то ** \*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.  
+ Используется для применения выражения итератора вывода **\*Iter** = **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то  **\*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.  
   
 ### <a name="example"></a>Пример  
   
@@ -256,7 +257,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  back_insert_iterator::operator++  
  Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.  
   
 ```  
@@ -314,7 +315,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
+##  <a name="op_eq"></a>  back_insert_iterator::operator=  
  Добавляет или вставляет значение в конец контейнера.  
   
 ```  
@@ -377,7 +378,7 @@ int main( )
 }  
 ```  
   
-##  <a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
+##  <a name="reference"></a>  back_insert_iterator::reference  
  Тип, предоставляющий ссылку для итератора `back_insert_iterator`.  
   
 ```  

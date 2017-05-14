@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|Сравнение массивов на равенство.|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|Сравнение массивов на неравенство.|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|Сравнение массивов "меньше, чем".|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|Сравнение массивов "больше или равно".|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|Сравнение массивов "больше, чем".|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|Сравнение массивов "меньше или равно".|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|Сравнение массивов на равенство.|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|Сравнение массивов на неравенство.|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|Сравнение массивов "меньше, чем".|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|Сравнение массивов "больше или равно".|  
+|[operator>](../standard-library/array-operators.md#op_gt)|Сравнение массивов "больше, чем".|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|Сравнение массивов "меньше или равно".|  
   
 ### <a name="functions"></a>Функции  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|Получает указанный элемент массива.|  
-|[swap](../standard-library/array-functions.md#swap_function)|Меняет местами содержимое одного массива с содержимым другого массива.|  
+|[get](../standard-library/array-functions.md#get)|Получает указанный элемент массива.|  
+|[swap](../standard-library/array-functions.md#swap)|Меняет местами содержимое одного массива с содержимым другого массива.|  
   
 ## <a name="see-also"></a>См. также  
  [\<tuple>](../standard-library/tuple.md)   

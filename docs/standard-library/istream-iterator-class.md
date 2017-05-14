@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e5f214501712bd8d6212f465fe82d835ccaf9028
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 37c517bf764e9a9840d549aa9f223ad0942d8c48
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istreamiterator-class"></a>Класс istream_iterator
@@ -76,30 +77,30 @@ class istream_iterator
   
 |||  
 |-|-|  
-|[istream_iterator](#istream_iterator__istream_iterator)|Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.|  
+|[istream_iterator](#istream_iterator)|Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#istream_iterator__char_type)|Тип, обеспечивающий тип символа для `istream_iterator`.|  
-|[istream_type](#istream_iterator__istream_type)|Тип, обеспечивающий тип потока для `istream_iterator`.|  
-|[traits_type](#istream_iterator__traits_type)|Тип, обеспечивающий тип признаков символа для `istream_iterator`.|  
+|[char_type](#char_type)|Тип, обеспечивающий тип символа для `istream_iterator`.|  
+|[istream_type](#istream_type)|Тип, обеспечивающий тип потока для `istream_iterator`.|  
+|[traits_type](#traits_type)|Тип, обеспечивающий тип признаков символа для `istream_iterator`.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор*](#istream_iterator__operator_star)|Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.|  
-|[оператор->](#istream_iterator__operator-_gt_)|Возвращает значение члена при наличии.|  
-|[оператор++](#istream_iterator__operator_add_add)|Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.|  
+|[оператор*](#op_star)|Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.|  
+|[оператор->](#operator-_gt)|Возвращает значение члена при наличии.|  
+|[оператор++](#op_add_add)|Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-##  <a name="istream_iterator__char_type"></a>  istream_iterator::char_type  
+##  <a name="char_type"></a>  istream_iterator::char_type  
  Тип, обеспечивающий тип символа для `istream_iterator`.  
   
 ```
@@ -145,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_iterator"></a>  istream_iterator::istream_iterator  
+##  <a name="istream_iterator"></a>  istream_iterator::istream_iterator  
  Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.  
   
 ```
@@ -197,7 +198,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_type"></a>  istream_iterator::istream_type  
+##  <a name="istream_type"></a>  istream_iterator::istream_type  
  Тип, обеспечивающий тип потока для `istream_iterator`.  
   
 ```
@@ -208,9 +209,9 @@ typedef basic_istream<CharType, Traits> istream_type;
  Тип является синонимом для `basic_istream`\< **CharType**, **Traits**>.  
   
 ### <a name="example"></a>Пример  
-  См. раздел [istream_iterator](#istream_iterator__istream_iterator) с примером объявления и использования `istream_type`.  
+  См. раздел [istream_iterator](#istream_iterator) с примером объявления и использования `istream_type`.  
   
-##  <a name="istream_iterator__operator_star"></a>  istream_iterator::operator*  
+##  <a name="op_star"></a>  istream_iterator::operator*  
  Оператор разыменования возвращает сохраненный объект типа **тип**, к которому обращается `istream_iterator`.  
   
 ```
@@ -252,7 +253,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator-_gt_"></a>  istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt"></a>  istream_iterator::operator-&gt;  
  Возвращает значение члена при наличии.  
   
 ```
@@ -299,7 +300,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator_add_add"></a>  istream_iterator::operator++  
+##  <a name="op_add_add"></a>  istream_iterator::operator++  
  Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.  
   
 ```
@@ -343,7 +344,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__traits_type"></a>  istream_iterator::traits_type  
+##  <a name="traits_type"></a>  istream_iterator::traits_type  
  Тип, обеспечивающий тип признаков символа для `istream_iterator`.  
   
 ```

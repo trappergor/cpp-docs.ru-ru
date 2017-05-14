@@ -1,136 +1,153 @@
 ---
-title: "fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fprintf_s_l"
-  - "fwprintf_s"
-  - "fprintf_s"
-  - "_fwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftprintf_s"
-  - "fprintf_s"
-  - "fwprintf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fprintf_s_l - функция"
-  - "_ftprintf_s - функция"
-  - "_ftprintf_s_l - функция"
-  - "_fwprintf_s_l - функция"
-  - "fprintf_s - функция"
-  - "fprintf_s_l - функция"
-  - "ftprintf_s - функция"
-  - "ftprintf_s_l - функция"
-  - "fwprintf_s - функция"
-  - "fwprintf_s_l - функция"
-  - "печать форматированных данных в потоки"
+title: "fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fprintf_s_l
+- fwprintf_s
+- fprintf_s
+- _fwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _ftprintf_s
+- fprintf_s
+- fwprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftprintf_s_l function
+- ftprintf_s function
+- _fprintf_s_l function
+- _ftprintf_s function
+- _ftprintf_s_l function
+- fwprintf_s_l function
+- fwprintf_s function
+- fprintf_s_l function
+- fprintf_s function
+- _fwprintf_s_l function
+- print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6ca073e8021d10b81245327d04b358b8c410ef0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Печатает форматированные данные в поток.  Здесь представлены версии [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
+Печатает форматированные данные в поток. Это версии функций [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int fprintf_s(   
    FILE *stream,  
    const char *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fprintf_s_l(   
    FILE *stream,  
    const char *format,  
    locale_t locale [,  
-   argument ]...  
+   argument_list ]  
 );  
 int fwprintf_s(   
    FILE *stream,  
    const wchar_t *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fwprintf_s_l(   
    FILE *stream,  
    const wchar_t *format,  
    locale_t locale [,  
-   argument ]…  
+   argument_list ]  
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE` .  
   
  `format`  
  Строка управления форматом.  
   
- `argument`  
- Необязательные аргументы.  
+ `argument_list`  
+ Необязательные аргументы в строку формата.  
   
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `fprintf_s` возвращает число записанных байтов.  `fwprintf_s` возвращает число записанных расширенных символов.  Каждая из этих функций возвращает отрицательное значение при ошибке вывода.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `fprintf_s` возвращает число записанных байтов. `fwprintf_s` возвращает число записанных расширенных символов. В случае ошибки вывода каждая из этих функций возвращает отрицательное значение.  
   
-## Заметки  
- `fprintf_s` форматирует и печатает набор символов и значений в выходной поток `stream`*.* Каждый аргумент `argument` \(если таковые имеются\) преобразуется и выводится согласно соответствующей спецификацией формата в `format`*.* Для `fprintf_s`, аргумент `format` имеет такой же синтаксис и использование, как и для `printf_s`.  
+## <a name="remarks"></a>Примечания  
+ Функция `fprintf_s` форматирует и выводит набор символов и значений в выходной поток `stream`. Каждый аргумент в `argument_list` (если есть) преобразуется и выводится согласно соответствующей спецификацией формата в `format`. `format` Использует аргумент [форматирования спецификация синтаксиса для функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
- `fwprintf_s` — двухбайтовая версия `fprintf_s`; в `fwprintf_s` `format` — двухбайтовая строка.  Поведение этих функций идентично, если поток открыт в режиме ANSI\-совместимости.  `fprintf_s` в настоящее время не поддерживает вывод в поток в юникоде.  
+ `fwprintf_s` — версия функции `fprintf_s` для расширенных символов; в функции `fwprintf_s` параметр `format` — это строка расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. Функция `fprintf_s` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
   
  Версии этих функций с суффиксом `_l` идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.  
   
 > [!IMPORTANT]
 >  Убедитесь, что `format` не является строкой, определяемой пользователем.  
   
- Как и небезопасные версии \(см. раздел [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)\), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md), если `stream` или `format` является пустым указателем.  Эти функции отличаются от небезопасных версий тем, что сама строка формата также проверяется.  При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра.  Во всех случаях, если продолжение выполнения разрешено, функции возвращают \-1 и устанавливают для `errno` значение `EINVAL`.  См. раздел [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) для дополнительных сведений по этим и другим кодам возврата.  
+ Как и небезопасные версии (см. раздел [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md), если параметр `stream` или `format` является указателем NULL. Также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра. Во всех случаях, если выполнение может быть продолжено, функции возвращают –1 и устанавливают параметр `errno` в значение `EINVAL`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ftprintf_s`|`fprintf_s`|`fprintf_s`|`fwprintf_s`|  
 |`_ftprintf_s_l`|`_fprintf_s_l`|`_fprintf_s_l`|`_fwprintf_s_l`|  
   
- Дополнительные сведения см. в разделе [Спецификации формата](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md).  
+ Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`fprintf_s`, `_fprintf_s_l`|\<stdio.h\>|  
-|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h\> или \<wchar.h\>|  
+|--------------|---------------------|  
+|`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
+|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```C  
 // crt_fprintf_s.c  
 // This program uses fprintf_s to format various  
 // data and print it to the file named FPRINTF_S.OUT. It  
@@ -158,14 +175,14 @@ int main( void )
 }  
 ```  
   
-  **this is a string**  
-**10**  
-**1.500000**   
-## Эквивалент в .NET Framework  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
+```Output  
+this is a string  
+10  
+1.500000  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)

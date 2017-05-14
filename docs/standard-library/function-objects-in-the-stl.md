@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Объекты функции в стандартной библиотеке C++
@@ -83,7 +84,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```  
   
- Последний аргумент `remove_if` является объектом функции, который возвращает логическое значение ( *предикат*). Если результат выполнения объекта функции — значение `true`, элемент удаляется из контейнера, доступ к которому получают итераторы ` first` и ` last`. Можно использовать любые объекты функций, объявленные в заголовке [\<functional>](../standard-library/functional.md) для аргумента ` pred`, или создать свой собственный.  
+ Последний аргумент `remove_if` является объектом функции, который возвращает логическое значение ( *предикат*). Если результат выполнения объекта функции — значение `true`, элемент удаляется из контейнера, доступ к которому получают итераторы `first` и `last`. Можно использовать любые объекты функций, объявленные в заголовке [\<functional>](../standard-library/functional.md) для аргумента `pred`, или создать свой собственный.  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

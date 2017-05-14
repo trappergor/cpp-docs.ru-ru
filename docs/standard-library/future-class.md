@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::future
+- future/std::future::future
+- future/std::future::get
+- future/std::future::share
+- future/std::future::valid
+- future/std::future::wait
+- future/std::future::wait_for
+- future/std::future::wait_until
 dev_langs:
 - C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
@@ -32,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6de4fecd3f5f65ac48cbb49f2ed4f874f4283487
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="future-class"></a>Класс future
@@ -57,31 +65,31 @@ class future;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор future::future](#future__future_constructor)|Создает объект `future`.|  
+|[future](#future)|Создает объект `future`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[future::get](#future__get_method)|Получает результат, который хранится в связанном асинхронном состоянии.|  
-|[future::share](#future__share_method)|Преобразует объект в `shared_future`.|  
-|[future::valid](#future__valid_method)|Указывает, является ли объект не пустым.|  
-|[future::wait](#future__wait_method)|Блокирует текущий поток, пока не будет готово связанное асинхронное состояние.|  
-|[future::wait_for](#future__wait_for_method)|Выполняет блокировку, пока не будет готово связанное асинхронное состояние или не истечет указанный период времени.|  
-|[future::wait_until](#future__wait_until_method)|Выполняет блокировку, пока не будет готово связанное асинхронное состояние или не наступит указанный момент времени.|  
+|[get](#get)|Получает результат, который хранится в связанном асинхронном состоянии.|  
+|[Предоставить общий доступ](#share)|Преобразует объект в `shared_future`.|  
+|[допустимый](#valid)|Указывает, является ли объект не пустым.|  
+|[Ожидание](#wait)|Блокирует текущий поток, пока не будет готово связанное асинхронное состояние.|  
+|[wait_for](#wait_for)|Выполняет блокировку, пока не будет готово связанное асинхронное состояние или не истечет указанный период времени.|  
+|[wait_until](#wait_until)|Выполняет блокировку, пока не будет готово связанное асинхронное состояние или не наступит указанный момент времени.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[future::operator=](#future__operator_eq)|Передает связанное асинхронное состояние из указанного объекта.|  
+|[future::operator=](#op_eq)|Передает связанное асинхронное состояние из указанного объекта.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** future  
+ **Заголовок:** \<будущих >  
   
  **Пространство имен:** std  
   
-##  <a name="a-namefuturefutureconstructora--futurefuture-constructor"></a><a name="future__future_constructor"></a>  Конструктор future::future  
+##  <a name="future"></a>  Конструктор future::future  
  Создает объект `future`.  
   
 ```
@@ -98,7 +106,7 @@ future(future&& Other) noexcept;
   
  Второй конструктор создает объект `future` и передает связанное асинхронное состояние из `Other`. `Other` больше не имеет связанного асинхронного состояния.  
   
-##  <a name="a-namefuturegetmethoda--futureget"></a><a name="future__get_method"></a>  future::get  
+##  <a name="get"></a>  future::get  
  Получает результат, который хранится в связанном асинхронном состоянии.  
   
 ```
@@ -117,7 +125,7 @@ Ty get();
   
  В других специализациях метод перемещает свое возвращаемое значение из сохраненного значения. Таким образом, этот метод следует вызывать только один раз.  
   
-##  <a name="a-namefutureoperatoreqa--futureoperator"></a><a name="future__operator_eq"></a>  future::operator=  
+##  <a name="op_eq"></a>  future::operator=  
  Передает связанное асинхронное состояние из указанного объекта.  
   
 ```
@@ -134,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>Примечания  
  После передачи `Right` больше не имеет связанного асинхронного состояния.  
   
-##  <a name="a-namefuturesharemethoda--futureshare"></a><a name="future__share_method"></a>  future::share  
+##  <a name="share"></a>  future::share  
  Преобразует объект в объект [shared_future](../standard-library/shared-future-class.md).  
   
 ```
@@ -144,7 +152,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>Возвращаемое значение  
  `shared_future(move(*this))`  
   
-##  <a name="a-namefuturevalidmethoda--futurevalid"></a><a name="future__valid_method"></a>  future::valid  
+##  <a name="valid"></a>  future::valid  
  Указывает, имеет ли объект связанное асинхронное состояние.  
   
 ```
@@ -154,7 +162,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объект имеет связанное асинхронное состояние; в противном случае — значение `false`.  
   
-##  <a name="a-namefuturewaitmethoda--futurewait"></a><a name="future__wait_method"></a>  future::wait  
+##  <a name="wait"></a>  future::wait  
  Блокирует текущий поток, пока связанное асинхронное состояние не получит значение *ready*.  
   
 ```cpp  
@@ -164,7 +172,7 @@ void wait() const;
 ### <a name="remarks"></a>Примечания  
  Связанное асинхронное состояние имеет значение *ready*, только если его асинхронный поставщик сохранил возвращаемое значение или исключение.  
   
-##  <a name="a-namefuturewaitformethoda--futurewaitfor"></a><a name="future__wait_for_method"></a>  future::wait_for  
+##  <a name="wait_for"></a>  future::wait_for  
  Блокирует текущий поток, пока связанное асинхронное состояние не получит значение *ready* или не истечет указанный период времени.  
   
 ```
@@ -177,12 +185,12 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
  Объект [chrono::duration](../standard-library/duration-class.md), который указывает на максимальный интервал времени, в течение которого поток может быть заблокирован.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Состояние [future_status](../standard-library/future-enums.md#future_status_enumeration), которое указывает причину возврата.  
+ Состояние [future_status](../standard-library/future-enums.md#future_status), которое указывает причину возврата.  
   
 ### <a name="remarks"></a>Примечания  
  Связанное асинхронное состояние имеет значение "ready", только если его асинхронный поставщик сохранил возвращаемое значение или исключение.  
   
-##  <a name="a-namefuturewaituntilmethoda--futurewaituntil"></a><a name="future__wait_until_method"></a>  future::wait_until  
+##  <a name="wait_until"></a>  future::wait_until  
  Блокирует текущий поток, пока связанное асинхронное состояние не получит значение *ready* или не наступит указанный момент времени.  
   
 ```cpp  
@@ -195,7 +203,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
  Объект [chrono::time_point](../standard-library/time-point-class.md), который указывает время, по истечении которого поток можно разблокировать.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Состояние [future_status](../standard-library/future-enums.md#future_status_enumeration), которое указывает причину возврата.  
+ Состояние [future_status](../standard-library/future-enums.md#future_status), которое указывает причину возврата.  
   
 ### <a name="remarks"></a>Примечания  
  Связанное асинхронное состояние имеет значение *ready*, только если его асинхронный поставщик сохранил возвращаемое значение или исключение.  

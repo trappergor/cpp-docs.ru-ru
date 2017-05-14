@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 4959d72feaae22cb31a5bc7b6f6aa1b5f5b8be02
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 82c70317383fe096c56b0d5b79bab24175d2872a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="errorcode-class"></a>Класс error_code
@@ -63,40 +64,40 @@ class error_code;
   
 |||  
 |-|-|  
-|[error_code](#error_code__error_code)|Создает объект типа `error_code`.|  
+|[error_code](#error_code)|Создает объект типа `error_code`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[value_type](#error_code__value_type)|Тип, представляющий сохраненное значение кода ошибки.|  
+|[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[assign](#error_code__assign)|Присваивает коду ошибки значение кода ошибки и категорию.|  
-|[category](#error_code__category)|Возвращает категорию ошибки.|  
-|[clear](#error_code__clear)|Очищает значение кода ошибки и категорию.|  
-|[default_error_condition](#error_code__default_error_condition)|Возвращает условие ошибки по умолчанию.|  
-|[message](#error_code__message)|Возвращает имя кода ошибки.|  
+|[assign](#assign)|Присваивает коду ошибки значение кода ошибки и категорию.|  
+|[category](#category)|Возвращает категорию ошибки.|  
+|[clear](#clear)|Очищает значение кода ошибки и категорию.|  
+|[default_error_condition](#default_error_condition)|Возвращает условие ошибки по умолчанию.|  
+|[message](#message)|Возвращает имя кода ошибки.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор==](#error_code__operator_eq_eq)|Проверяет равенство между объектами `error_code`.|  
-|[оператор!=](#error_code__operator_neq)|Проверяет неравенство между объектами `error_code`.|  
-|[оператор<](#error_code__operator_lt_)|Проверяет, меньше ли объект `error_code` переданного для сравнения объекта `error_code`.|  
-|[оператор=](#error_code__operator_eq)|Присваивает новое значение перечисления объекту `error_code`.|  
-|[operator bool](#error_code__operator_bool)|Преобразует переменную типа `error_code`.|  
+|[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_code`.|  
+|[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_code`.|  
+|[оператор<](#op_lt)|Проверяет, меньше ли объект `error_code` переданного для сравнения объекта `error_code`.|  
+|[оператор=](#op_eq)|Присваивает новое значение перечисления объекту `error_code`.|  
+|[operator bool](#op_bool)|Преобразует переменную типа `error_code`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<system_error>  
   
  **Пространство имен:** std  
   
-##  <a name="error_code__assign"></a>  error_code::assign  
+##  <a name="assign"></a>  error_code::assign  
  Присваивает коду ошибки значение кода ошибки и категорию.  
   
 ```
@@ -113,7 +114,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>Примечания  
  Функция-член сохраняет `val` как значение кода ошибки и указатель на `_Cat`.  
   
-##  <a name="error_code__category"></a>  error_code::category  
+##  <a name="category"></a>  error_code::category  
  Возвращает категорию ошибки.  
   
 ```
@@ -122,7 +123,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="error_code__clear"></a>  error_code::clear  
+##  <a name="clear"></a>  error_code::clear  
  Очищает значение кода ошибки и категорию.  
   
 ```
@@ -132,7 +133,7 @@ clear();
 ### <a name="remarks"></a>Примечания  
  Функция-член сохраняет нулевое значение кода ошибки и указатель на объект [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
+##  <a name="default_error_condition"></a>  error_code::default_error_condition  
  Возвращает условие ошибки по умолчанию.  
   
 ```
@@ -140,12 +141,12 @@ error_condition default_error_condition() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Условие [error_condition](../standard-library/error-condition-class.md), задаваемое условием [default_error_condition](../standard-library/error-category-class.md#error_category__default_error_condition).  
+ Условие [error_condition](../standard-library/error-condition-class.md), задаваемое условием [default_error_condition](../standard-library/error-category-class.md#default_error_condition).  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член возвращает значение `category().default_error_condition(value())`.  
   
-##  <a name="error_code__error_code"></a>  error_code::error_code  
+##  <a name="error_code"></a>  error_code::error_code  
  Создает объект типа `error_code`.  
   
 ```
@@ -174,7 +175,7 @@ error_code(_Enum _Errcode,
   
  Третий конструктор сохраняет `(value_type)_Errcode` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="error_code__message"></a>  error_code::message  
+##  <a name="message"></a>  error_code::message  
  Возвращает имя кода ошибки.  
   
 ```
@@ -187,7 +188,7 @@ string message() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член возвращает значение `category().message(value())`.  
   
-##  <a name="error_code__operator_eq_eq"></a>  error_code::operator==  
+##  <a name="op_eq_eq"></a>  error_code::operator==  
  Проверяет равенство между объектами `error_code`.  
   
 ```
@@ -206,7 +207,7 @@ bool operator==(const error_code& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `category() == right.category() && value == right.value()`.  
   
-##  <a name="error_code__operator_neq"></a>  error_code::operator!=  
+##  <a name="op_neq"></a>  error_code::operator!=  
  Проверяет неравенство между объектами `error_code`.  
   
 ```
@@ -225,7 +226,7 @@ bool operator!=(const error_code& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `!(*this == right)`.  
   
-##  <a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
+##  <a name="op_lt"></a>  error_code::operator&lt;  
  Проверяет, меньше ли объект [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) переданного для сравнения объекта `error_code`.  
   
 ```
@@ -244,7 +245,7 @@ bool operator<(const error_code& right) const;
 ### <a name="remarks"></a>Примечания  
  Оператор-член возвращает `category() < right.category() || category() == right.category() && value < right.value()`.  
   
-##  <a name="error_code__operator_eq"></a>  error_code::operator=  
+##  <a name="op_eq"></a>  error_code::operator=  
  Присваивает новое значение перечисления объекту [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31).  
   
 ```
@@ -266,7 +267,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 ### <a name="remarks"></a>Примечания  
  Функция-член сохраняет `(value_type)_Errcode` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category). Он возвращает `*this`.  
   
-##  <a name="error_code__operator_bool"></a>  error_code::operator bool  
+##  <a name="op_bool"></a>  error_code::operator bool  
  Преобразует переменную типа `error_code`.  
   
 ```
@@ -277,9 +278,9 @@ explicit operator bool() const;
  Логическое значение объекта `error_code`.  
   
 ### <a name="remarks"></a>Примечания  
- Оператор возвращает значение, преобразуемое в `true`, только тогда, когда [значение](#error_code__value) не равно нулю. Тип возвращаемого значения можно преобразовать только в `bool`, а не в `void *` или другие известные скалярные типы.  
+ Оператор возвращает значение, преобразуемое в `true`, только тогда, когда [значение](#value) не равно нулю. Тип возвращаемого значения можно преобразовать только в `bool`, а не в `void *` или другие известные скалярные типы.  
   
-##  <a name="error_code__value"></a>  error_code::value  
+##  <a name="value"></a>  error_code::value  
  Возвращает сохраненное значение кода ошибки.  
   
 ```
@@ -287,11 +288,11 @@ value_type value() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Сохраненное значение кода ошибки типа [value_type](#error_code__value_type).  
+ Сохраненное значение кода ошибки типа [value_type](#value_type).  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="error_code__value_type"></a>  error_code::value_type  
+##  <a name="value_type"></a>  error_code::value_type  
  Тип, представляющий сохраненное значение кода ошибки.  
   
 ```

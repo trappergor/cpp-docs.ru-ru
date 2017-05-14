@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>Класс function
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.|  
+|[function](#function)|Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|Возвращаемый тип хранимого вызываемого объекта.|  
+|[result_type](#result_type)|Возвращаемый тип хранимого вызываемого объекта.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|Присваивает вызываемый объект данному объекту функции.|  
-|[function::swap](#function__swap)|Меняет местами два вызываемых объекта.|  
-|[function::target](#function__target)|Проверяет, является ли вызываемый объект вызываемым, как указано.|  
-|[function::target_type](#function__target_type)|Возвращает сведения о типе в вызываемый объект.|  
+|[assign](#assign)|Присваивает вызываемый объект данному объекту функции.|  
+|[swap](#swap)|Меняет местами два вызываемых объекта.|  
+|[целевой](#target)|Проверяет, является ли вызываемый объект вызываемым, как указано.|  
+|[target_type](#target_type)|Возвращает сведения о типе в вызываемый объект.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[function::operator unspecified](#function__operator_unspecified)|Проверяет, существует ли вызываемый объект.|  
-|[function::operator()](#function__operator__)|Вызывает вызываемый объект.|  
-|[function::operator=](#function__operator_eq)|Заменяет хранимый вызываемый объект.|  
+|[function::operator unspecified](#op_unspecified)|Проверяет, существует ли вызываемый объект.|  
+|[function::operator()](#op_call)|Вызывает вызываемый объект.|  
+|[function::operator=](#op_eq)|Заменяет хранимый вызываемый объект.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<functional>  
   
  **Пространство имен:** std  
   
-##  <a name="function__assign"></a>  function::assign  
+##  <a name="assign"></a>  function::assign  
  Присваивает вызываемый объект данному объекту функции.  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Примечания  
  Каждая функция-член заменяет `callable object`, который содержится в `*this`, на вызываемый объект, переданный как `operand`. Они оба выделяют память с объектом распределителя `Ax`.  
   
-##  <a name="function__function"></a>  function::function  
+##  <a name="function"></a>  function::function  
  Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="op_unspecified"></a>  function::operator unspecified  
  Проверяет, существует ли вызываемый объект.  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a>  function::operator()  
+##  <a name="op_call"></a>  function::operator()  
  Вызывает вызываемый объект.  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a>  function::operator=  
+##  <a name="op_eq"></a>  function::operator=  
  Заменяет хранимый вызываемый объект.  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a>  function::result_type  
+##  <a name="result_type"></a>  function::result_type  
  Возвращаемый тип хранимого вызываемого объекта.  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a>  function::swap  
+##  <a name="swap"></a>  function::swap  
  Меняет местами два вызываемых объекта.  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a>  function::target  
+##  <a name="target"></a>  function::target  
  Проверяет, является ли вызываемый объект вызываемым, как указано.  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a>  function::target_type  
+##  <a name="target_type"></a>  function::target_type  
  Возвращает сведения о типе в вызываемый объект.  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция mem_fn](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [Класс reference_wrapper](../standard-library/reference-wrapper-class.md)
 

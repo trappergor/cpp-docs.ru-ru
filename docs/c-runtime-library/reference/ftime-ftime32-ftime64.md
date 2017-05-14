@@ -1,61 +1,79 @@
 ---
-title: "_ftime, _ftime32, _ftime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftime64"
-  - "_ftime"
-  - "_ftime32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftime32"
-  - "_ftime"
-  - "_ftime64"
-  - "ftime64"
-  - "ftime"
-  - "ftime32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Функция ftime64"
-  - "Функция _ftime64"
-  - "текущее время"
-  - "Функция _ftime"
-  - "Функция ftime"
-  - "Функция _ftime32"
-  - "Функция ftime32"
-  - "время, получение текущего"
+title: "_ftime, _ftime32, _ftime64 | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftime64
+- _ftime
+- _ftime32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftime32
+- _ftime
+- _ftime64
+- ftime64
+- ftime
+- ftime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftime64 function
+- _ftime64 function
+- current time
+- _ftime function
+- ftime function
+- _ftime32 function
+- ftime32 function
+- time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _ftime, _ftime32, _ftime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ed69cd73a42889e56dc258ce66e56db3210dfc95
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Получают текущее время.  Существуют более безопасные версии этих функций; см. раздел [\_ftime\_s, \_ftime32\_s, \_ftime64\_s](../Topic/_ftime_s,%20_ftime32_s,%20_ftime64_s.md).  
+---
+# <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
+Получает текущее время. Существуют более безопасные версии этих функций; см. раздел [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void _ftime(   
@@ -69,42 +87,42 @@ void _ftime64(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `timeptr`  
- Указатель на структуру `_timeb`,`__timeb32` или `__timeb64`.  
+ Указатель на структуру `_timeb`, `__timeb32` или `__timeb64`.  
   
-## Заметки  
- Функция `_ftime` получает текущее местное время и сохраняет его в структуре, на которую указывает `timeptr`*.* Структуры `_timeb`, `__timeb32`,и`__timeb64` определены в SYS\\Timeb.h.  Они содержат четыре поля, которые перечислены в следующей таблице.  
+## <a name="remarks"></a>Примечания  
+ `_ftime` Функция получает текущее местное время и сохраняет его в структуре, на который указывает `timeptr`. `_timeb`, `__timeb32`, И `__timeb64` структуры определяются в SYS\Timeb.h. Они содержат четыре поля, которые описываются в следующей таблице.  
   
  `dstflag`  
- Отлично от нуля, если в данный момент летнее время действует для этой зоны локального времени. \(См. [\_tzset](../Topic/_tzset.md) для объяснения способов определения летнего времени\).  
+ Ненулевое значение, если для местного часового пояса в данный момент действует летнее время. (Описание принципов определения летнего времени см. в разделе [_tzset](../../c-runtime-library/reference/tzset.md).)  
   
  `millitm`  
- Доли секунды в миллисекундах.  
+ Доля секунды в миллисекундах.  
   
  `time`  
- Время в секундах с полуночи \(00:00:00\), 1\-го января 1970, время в формате UTC.  
+ Время представляется в виде числа секунд, истекших после полуночи (00:00:00) 1 января 1970 года, время в формате UTC.  
   
  `timezone`  
- Различие в минутах, при движении на запад, между временем в формате UTC и местным временем.  Значение `timezone` берётся из значения глобальной переменной `_timezone` \(см. `_tzset`\).  
+ Разница в минутах между временем UTC и местным временем при движении в западном направлении. Значение `timezone` задается на основе значения глобальной переменной `_timezone` (см. раздел `_tzset`).  
   
- `_ftime64`, которая использует структуру `__timeb64`, разрешает даты создания файла до 23:59:59 31\-го декабря 3000, время в формате UTC; тогда как `_ftime32` представляет даты только до 03:14:07 19\-го января 2038, время в формате UTC.  Полночь 1\-ого января 1970 года \- нижняя граница диапазона дат для всех этих функций.  
+ Функция `_ftime64`, которая использует структуру `__timeb64`, поддерживает даты до 23:59:59 31 декабря 3000 года в формате UTC. При этом функция `_ftime32` представляет даты только до 23:59:59 18 января 2038 года в формате UTC. Полночь 1 января 1970 года — нижняя граница диапазона дат для всех этих функций.  
   
- `_ftime` эквивалентна `_ftime64`, и `_timeb` содержит 64\-разрядное время.  Это является истинным, если не указано `_USE_32BIT_TIME_T`, в этом случае старая функциональность остается в силе; `_ftime` использует 32\-разрядное время, и `_timeb` содержит 32\-разрядное время.  
+ Функция `_ftime` эквивалентна функции `_ftime64`, и `_timeb` содержит 64-разрядное время. Это верно, если не задана директива `_USE_32BIT_TIME_T`, в противном случае действует старое поведение: функция `_ftime` использует 32-разрядное время, и `_timeb` содержит 32-разрядное время.  
   
- `_ftime` проверяет свои параметры.  Если `timeptr` \- указатель на null, то функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может продолжено, функция задает `errno` значение `EINVAL`.  
+ Кроме того, функция `_ftime` проверяет свои параметры. Если в `timeptr` передан указатель NULL, функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_ftime`|\<sys\/types.h\> и \<sys\/timeb.h\>|  
-|`_ftime32`|\<sys\/types.h\> и \<sys\/timeb.h\>|  
-|`_ftime64`|\<sys\/types.h\> и \<sys\/timeb.h\>|  
+|--------------|---------------------|  
+|`_ftime`|\<sys/types.h> и \<sys/timeb.h>|  
+|`_ftime32`|\<sys/types.h> и \<sys/timeb.h>|  
+|`_ftime64`|\<sys/types.h> и \<sys/timeb.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_ftime.c  
@@ -151,18 +169,18 @@ int main( void )
 }  
 ```  
   
-  **Seconds since midnight, January 1, 1970 \(UTC\): 1051553334**  
-**Milliseconds: 230**  
-**Minutes between UTC and local time: 480**  
-**Daylight savings time flag \(1 means Daylight time is in effect\): 1**  
-**The time is Mon Apr 28 11:08:54.230 2003**   
-## Эквивалент в .NET Framework  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
+```Output  
+Seconds since midnight, January 1, 1970 (UTC): 1051553334  
+Milliseconds: 230  
+Minutes between UTC and local time: 480  
+Daylight savings time flag (1 means Daylight time is in effect): 1  
+The time is Mon Apr 28 11:08:54.230 2003  
+```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

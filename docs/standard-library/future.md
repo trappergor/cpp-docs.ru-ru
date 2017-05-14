@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  В коде, который компилируется с помощью **/CLR**, этот заголовок будет заблокирован.  
+>  В коде, скомпилированном с помощью **/CLR**, этот заголовок блокируется.  
   
  *Асинхронный поставщик* сохраняет результат вызова функции. *Асинхронный возвращаемый объект* используется для получения результата вызова функции. *Связанное асинхронное состояние* обеспечивает связь между асинхронным поставщиком и одним или несколькими асинхронными возвращаемыми объектами.  
   
@@ -91,19 +92,19 @@ ms.lasthandoff: 02/24/2017
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Функция async](../standard-library/future-functions.md#async_function)|Представляет асинхронного поставщика.|  
-|[Функция future_category](../standard-library/future-functions.md#future_category_function)|Возвращает ссылку на объект `error_category`, характеризующий ошибки, связанные с объектами `future`.|  
-|[Функция make_error_code](../standard-library/future-functions.md#make_error_code_function)|Создает `error_code`, который имеет объект `error_category`, характеризующий ошибки `future`.|  
-|[Функция make_error_condition](../standard-library/future-functions.md#make_error_condition_function)|Создает `error_condition`, который имеет объект `error_category`, характеризующий ошибки `future`.|  
-|[Функция swap](../standard-library/future-functions.md#swap_function)|Меняет местами связанное асинхронное состояние одного объекта `promise` с состоянием другого объекта.|  
+|[async](../standard-library/future-functions.md#async)|Представляет асинхронного поставщика.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Возвращает ссылку на объект `error_category`, характеризующий ошибки, связанные с объектами `future`.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Создает `error_code`, который имеет объект `error_category`, характеризующий ошибки `future`.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Создает `error_condition`, который имеет объект `error_category`, характеризующий ошибки `future`.|  
+|[swap](../standard-library/future-functions.md#swap)|Меняет местами связанное асинхронное состояние одного объекта `promise` с состоянием другого объекта.|  
   
 ### <a name="enumerations"></a>Перечисления  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Перечисление future_errc](../standard-library/future-enums.md#future_errc_enumeration)|Предоставляет символические имена для всех ошибок, о которых сообщает класс `future_error`.|  
-|[Перечисление future_status](../standard-library/future-enums.md#future_status_enumeration)|Предоставляет символические имена по причинам, которые может возвращать привязанная по времени функция wait.|  
-|[Перечисление launch](../standard-library/future-enums.md#launch_enumeration)|Представляет тип битовой маски, который описывает возможные режимы для функции-шаблона `async`.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Предоставляет символические имена для всех ошибок, о которых сообщает класс `future_error`.|  
+|[future_status](../standard-library/future-enums.md#future_status)|Предоставляет символические имена по причинам, которые может возвращать привязанная по времени функция wait.|  
+|[Запуск](../standard-library/future-enums.md#launch)|Представляет тип битовой маски, который описывает возможные режимы для функции-шаблона `async`.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

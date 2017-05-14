@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 86fa28d188aa5d1009d7a97591c95bad0e479564
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6d200480df1ff06afbb2b167ca62515fbf406435
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
@@ -77,7 +78,7 @@ size_t _CrtSetDebugFillThreshold(
  Предыдущее пороговое значение.  
   
 ## <a name="remarks"></a>Примечания  
- Отладочные версии некоторых функций CRT с улучшенной безопасностью заполняют переданный им буфер специальным символом (0xFD). Это помогает определить, когда функции был передан недопустимый размер. К сожалению, это также снижает производительность. Чтобы повысить производительность, используйте функцию `_CrtSetDebugFillThreshold` для отключения заполнения буферов, размер которых превышает пороговое значение. Пороговое значение 0 отключает заполнение для всех буферов.  
+ Отладочные версии некоторых функций CRT повышенной безопасностью заполняют буфер, переданный в них специальным символом (0xFE). Это помогает определить, когда функции был передан недопустимый размер. К сожалению, это также снижает производительность. Чтобы повысить производительность, используйте функцию `_CrtSetDebugFillThreshold` для отключения заполнения буферов, размер которых превышает пороговое значение. Пороговое значение 0 отключает заполнение для всех буферов.  
   
  Пороговое значение по умолчанию — `SIZE_T_MAX`.  
   
@@ -132,9 +133,9 @@ size_t _CrtSetDebugFillThreshold(
   
 ## <a name="example"></a>Пример  
   
-```  
-// crt_crtsetdebugfillthreshold.cpp  
-// compile with: /MTd  
+```C  
+// crt_crtsetdebugfillthreshold.c  
+// compile with: cl /MTd crt_crtsetdebugfillthreshold.c  
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <string.h>  
@@ -169,7 +170,7 @@ int main( void )
 }  
 ```  
   
-```  
+```Output  
 With buffer-filling on:  
 68  h  
 6f  o  
@@ -177,10 +178,10 @@ With buffer-filling on:
 64  d  
 79  y  
 00  
-fd  ²  
-fd  ²  
-fd  ²  
-fd  ²  
+fe  ■  
+fe  ■  
+fe  ■  
+fe  ■  
 With buffer-filling off:  
 68  h  
 6f  o  
@@ -193,9 +194,6 @@ With buffer-filling off:
 00  
 00  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

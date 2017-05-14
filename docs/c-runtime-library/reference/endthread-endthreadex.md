@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
-Завершает поток; `_endthread` завершает поток, созданный `_beginthread` , а  `_endthreadex` завершает поток, созданный`_beginthreadex`.  
+Завершает поток; `_endthread` завершает поток, созданный `_beginthread` , а  `_endthreadex` завершает поток, созданный `_beginthreadex`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -87,7 +88,7 @@ void _endthreadex(
   
  `_endthread` автоматически закрывает дескриптор потока. (Это поведение отличается от API Win32 `ExitThread`.) Поэтому при использовании `_beginthread` и `_endthread` не следует явно закрывать дескриптор потока вызовом API Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx).  
   
- Аналогично функции `ExitThread` API Win32, функция `_endthreadex` не закрывает дескриптор потока. Поэтому при использовании `_beginthreadex` и `_endthreadex` необходимо закрыть дескриптор потока, вызвав API Win32 `CloseHandle`.  
+ Аналогично функции `ExitThread` API Win32, функция `_endthreadex` не закрывает дескриптор потока. Поэтому при использовании `_beginthreadex` и `_endthreadex`необходимо закрыть дескриптор потока, вызвав функцию `CloseHandle` API Win32.  
   
 > [!NOTE]
 >  `_endthread` и `_endthreadex` блокируют вызов деструкторов C++, ожидающих в потоке.  
@@ -106,9 +107,6 @@ void _endthreadex(
   
 ## <a name="example"></a>Пример  
  См. пример для [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   

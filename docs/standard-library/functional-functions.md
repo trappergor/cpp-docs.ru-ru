@@ -9,41 +9,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::bind
 - functional/std::bind
-- std::bind1st
 - functional/std::bind1st
-- std::bind2nd
 - functional/std::bind2nd
-- std::bit_and
 - functional/std::bit_and
-- std::bit_not
 - functional/std::bit_not
-- std::bit_or
 - functional/std::bit_or
-- std::bit_xor
 - functional/std::bit_xor
-- std::cref
 - functional/std::cref
 - type_traits/std::cref
-- std::mem_fn
 - functional/std::mem_fn
-- std::mem_fun
 - functional/std::mem_fun
-- std::mem_fun_ref
 - functional/std::mem_fun_ref
-- std::not1
 - functional/std::not1
-- std::not2
 - functional/std::not2
-- std::ptr_fun
 - functional/std::ptr_fun
-- std::ref
 - functional/std::ref
 - type_traits/std::ref
-- std::swap
 - functional/std::swap
 - type_traits/std::swap
+- functional/std::bind
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
+- functional/std::cref
+- functional/std::mem_fn
+- functional/std::mem_fun
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::ptr_fun
+- functional/std::ref
+- functional/std::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -53,23 +53,24 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 9437109e3e03f2b8bfb39bf2b4ca75e520b59c80
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfunctionalgt-functions"></a>Функции &lt;functional&gt;
 ||||  
 |-|-|-|  
-|[bind](#bind_function)|[bind1st](#bind1st_function)|[bind2nd](#bind2nd_function)|  
-|[bit_and](#bit_and_function)|[bit_not](#bit_not_function)|[bit_or](#bit_or_function)|  
-|[bit_xor](#bit_xor_function)|[cref](#cref_function)|[mem_fn](#mem_fn_function)|  
-|[mem_fun](#mem_fun_function)|[mem_fun_ref](#mem_fun_ref_function)|[not1](#not1_function)|  
-|[not2](#not2_function)|[ptr_fun](#ptr_fun_function)|[ref](#ref_function)|  
-|[swap](#swap_function)|  
+|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
+|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|  
+|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|  
+|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|  
+|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|  
+|[swap](#swap)|  
   
-##  <a name="a-namebindfunctiona--bind"></a><a name="bind_function"></a>  bind  
+##  <a name="bind"></a>  bind  
  Привязывает аргументы к вызываемому объекту.  
   
 ```  
@@ -96,7 +97,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ### <a name="remarks"></a>Примечания  
  Типы `Fty, T1, T2, ..., TN` должны быть конструируемыми по копии, а `INVOKE(fn, t1, ..., tN)` должен быть действительным выражением для некоторых значений `w1, w2, ..., wN`.  
   
- Первая шаблонная функция возвращает пересылающую оболочку вызова `g` со слабым типом результата. Эффект `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN,` [result_of](../standard-library/result-of-class.md)`<Fty` `cv` `(V1, V2, ..., VN)>::type)`, где `cv` — CV-квалификаторы `g`, а значения и типы привязанных аргументов `v1, v2, ..., vN` определяются следующим образом. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов.  
+ Первая шаблонная функция возвращает пересылающую оболочку вызова `g` со слабым типом результата. Влияние `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, где `cv` является cv квалификаторы из `g` значения и типы аргументов, связанных `v1, v2, ..., vN` определяется, как указано ниже. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов.  
   
  Вторая шаблонная функция возвращает пересылающую оболочку вызова `g` с вложенным типом `result_type`, который является синонимом для `Ret`. Эффект `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN, Ret)`, где `cv` — CV-квалификаторы `g`, а значения и типы привязанных аргументов `v1, v2, ..., vN` определяются следующим образом. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов и заданным типом возвращаемого значения.  
   
@@ -168,7 +169,7 @@ int main()
 3^2 == 9  
 ```  
   
-##  <a name="a-namebind1stfunctiona--bind1st"></a><a name="bind1st_function"></a>  bind1st  
+##  <a name="bind1st"></a>  bind1st  
  Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.  
   
 ```  
@@ -180,11 +181,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
  `func`  
  Объект бинарной функции, который необходимо преобразовать в объект унарной функции.  
   
- ` left`  
+ `left`  
  Значение, к которому необходимо привязать первый аргумент объекта бинарной функции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект унарной функции, полученный в результате привязки первого аргумента объекта бинарной функции к значению ` left.`  
+ Объект функции унарный, полученный в результате привязывая первый аргумент бинарной функции объекта значение `left`.  
   
 ### <a name="remarks"></a>Примечания  
  Модули привязки функций — это разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в композициях функций некоторого типа для создания более сложных и мощных выражений.  
@@ -258,7 +259,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebind2ndfunctiona--bind2nd"></a><a name="bind2nd_function"></a>  bind2nd  
+##  <a name="bind2nd"></a>  bind2nd  
  Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению.  
   
 ```  
@@ -270,11 +271,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
  `func`  
  Объект бинарной функции, который необходимо преобразовать в объект унарной функции.  
   
- ` right`  
+ `right`  
  Значение, к которому необходимо привязать второй аргумент объекта бинарной функции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект унарной функции, полученный в результате привязки второго аргумента объекта бинарной функции к значению ` right.`  
+ Объект функции унарный, полученный в результате привязывая второй аргумент бинарной функции объекта значение `right`.  
   
 ### <a name="remarks"></a>Примечания  
  Модули привязки функций — это разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в композициях функций некоторого типа для создания более сложных и мощных выражений.  
@@ -348,7 +349,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebitandfunctiona--bitand"></a><a name="bit_and_function"></a>  bit_and  
+##  <a name="bit_and"></a>  bit_and  
  Стандартный объект функции, который выполняет над своими аргументами побитовую операцию И (бинарная `operator&`).  
   
 ```  
@@ -370,14 +371,14 @@ struct bit_and<void>
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Любой тип, поддерживающий `operator&`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд побитовой операции И. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа ` T`.  
+ Левый операнд побитовой операции И. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд побитовой операции И. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа ` U`.  
+ Правый операнд побитовой операции И. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Результат `Left``&``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator&`.  
@@ -385,7 +386,7 @@ struct bit_and<void>
 ### <a name="remarks"></a>Примечания  
  Функтор `bit_and` ограничен целочисленными типами для основных типов данных или определяемыми пользователем типами, которые реализуют бинарную `operator&`.  
   
-##  <a name="a-namebitnotfunctiona--bitnot"></a><a name="bit_not_function"></a>  bit_not  
+##  <a name="bit_not"></a>  bit_not  
  Стандартный объект функции, который выполняет над своими аргументами операцию побитового дополнения (НЕ) (бинарная `operator~`).  
   
 ```  
@@ -417,7 +418,7 @@ struct bit_not<void>
 ### <a name="remarks"></a>Примечания  
  Функтор `bit_not` ограничен целочисленными типами для основных типов данных или определяемыми пользователем типами, которые реализуют бинарную `operator~`.  
   
-##  <a name="a-namebitorfunctiona--bitor"></a><a name="bit_or_function"></a>  bit_or  
+##  <a name="bit_or"></a>  bit_or  
  Стандартный объект функции, который применяет побитовую операцию ИЛИ (`operator|`) к своим аргументам.  
   
 ```  
@@ -439,14 +440,14 @@ struct bit_or<void>
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Любой тип, поддерживающий `operator|`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд побитовой операции ИЛИ. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа ` T`.  
+ Левый операнд побитовой операции ИЛИ. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд побитовой операции ИЛИ. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа ` U`.  
+ Правый операнд побитовой операции ИЛИ. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Результат `Left``|``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator|`.  
@@ -454,7 +455,7 @@ struct bit_or<void>
 ### <a name="remarks"></a>Примечания  
  Функтор `bit_or` ограничен целочисленными типами для основных типов данных или определяемыми пользователем типами, которые реализуют `operator|`.  
   
-##  <a name="a-namebitxorfunctiona--bitxor"></a><a name="bit_xor_function"></a>  bit_xor  
+##  <a name="bit_xor"></a>  bit_xor  
  Стандартный объект функции, который применяет побитовую операцию "исключающее ИЛИ" (бинарное `operator^`) к своим аргументам.  
   
 ```  
@@ -476,14 +477,14 @@ struct bit_xor<void>
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Любой тип, поддерживающий `operator^`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд побитовой операции "исключающее ИЛИ". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа ` T`.  
+ Левый операнд побитовой операции "исключающее ИЛИ". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд побитовой операции "исключающее ИЛИ". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа ` U`.  
+ Правый операнд побитовой операции "исключающее ИЛИ". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Результат `Left``^``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator^`.  
@@ -491,7 +492,7 @@ struct bit_xor<void>
 ### <a name="remarks"></a>Примечания  
  Функтор `bit_xor` ограничен целочисленными типами для основных типов данных или определяемыми пользователем типами, которые реализуют бинарную `operator^`.  
   
-##  <a name="a-namecreffunctiona--cref"></a><a name="cref_function"></a>  cref  
+##  <a name="cref"></a>  cref  
  Создает конструкцию `reference_wrapper` из аргумента.  
   
 ```  
@@ -545,7 +546,7 @@ cref(i) = 1
 cref(neg)(i) = -1  
 ```  
   
-##  <a name="a-namememfnfunctiona--memfn"></a><a name="mem_fn_function"></a>  mem_fn  
+##  <a name="mem_fn"></a>  mem_fn  
  Создает простую оболочку вызова.  
   
 ```  
@@ -606,7 +607,7 @@ int main()
 3*2 == 6  
 ```  
   
-##  <a name="a-namememfunfunctiona--memfun"></a><a name="mem_fun_function"></a>  mem_fun  
+##  <a name="mem_fun"></a>  mem_fun  
  Вспомогательные функции шаблона, которые используются для создания адаптеров объекта-функции для функций-членов при инициализации с аргументами указателя.  
   
 ```  
@@ -690,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namememfunreffunctiona--memfunref"></a><a name="mem_fun_ref_function"></a>  mem_fun_ref  
+##  <a name="mem_fun_ref"></a>  mem_fun_ref  
  Вспомогательные функции шаблона, которые используются для создания адаптеров объекта-функции для функций-членов при инициализации с помощью ссылочных аргументов.  
   
 ```  
@@ -792,7 +793,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13   
 ```  
   
-##  <a name="a-namenot1functiona--not1"></a><a name="not1_function"></a>  not1  
+##  <a name="not1"></a>  not1  
  Возвращает дополнение унарного предиката.  
   
 ```  
@@ -801,7 +802,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` pred`  
+ `pred`  
  Унарный предикат, знак которого должен быть изменен.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -860,7 +861,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.  
 ```  
   
-##  <a name="a-namenot2functiona--not2"></a><a name="not2_function"></a>  not2  
+##  <a name="not2"></a>  not2  
  Возвращает дополнение бинарного предиката.  
   
 ```  
@@ -932,7 +933,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
 ```  
   
-##  <a name="a-nameptrfunfunctiona--ptrfun"></a><a name="ptr_fun_function"></a>  ptr_fun  
+##  <a name="ptr_fun"></a>  ptr_fun  
  Вспомогательные функции шаблона, которые используются для преобразования указателей на унарные и бинарные функции соответственно в унарные и бинарные адаптируемые функции.  
   
 ```  
@@ -958,7 +959,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="example"></a>Пример  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
-##  <a name="a-namereffunctiona--ref"></a><a name="ref_function"></a>  ref  
+##  <a name="ref"></a>  ref  
  Создает `reference_wrapper` из аргумента.  
   
 ```  
@@ -1047,7 +1048,7 @@ tiger lion cougar
 tiger cougar  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  Меняет местами два объекта `function`.  
   
 ```  

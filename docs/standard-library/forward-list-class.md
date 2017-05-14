@@ -9,10 +9,45 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::forward_list
 - forward_list
 - forward_list/std::forward_list
-- std.forward_list
+- forward_list/std::forward_list::allocator_type
+- forward_list/std::forward_list::const_iterator
+- forward_list/std::forward_list::const_pointer
+- forward_list/std::forward_list::const_reference
+- forward_list/std::forward_list::difference_type
+- forward_list/std::forward_list::iterator
+- forward_list/std::forward_list::pointer
+- forward_list/std::forward_list::reference
+- forward_list/std::forward_list::size_type
+- forward_list/std::forward_list::value_type
+- forward_list/std::forward_list::assign
+- forward_list/std::forward_list::before_begin
+- forward_list/std::forward_list::begin
+- forward_list/std::forward_list::cbefore_begin
+- forward_list/std::forward_list::cbegin
+- forward_list/std::forward_list::cend
+- forward_list/std::forward_list::clear
+- forward_list/std::forward_list::emplace_after
+- forward_list/std::forward_list::emplace_front
+- forward_list/std::forward_list::empty
+- forward_list/std::forward_list::end
+- forward_list/std::forward_list::erase_after
+- forward_list/std::forward_list::front
+- forward_list/std::forward_list::get_allocator
+- forward_list/std::forward_list::insert_after
+- forward_list/std::forward_list::max_size
+- forward_list/std::forward_list::merge
+- forward_list/std::forward_list::pop_front
+- forward_list/std::forward_list::push_front
+- forward_list/std::forward_list::remove
+- forward_list/std::forward_list::remove_if
+- forward_list/std::forward_list::resize
+- forward_list/std::forward_list::reverse
+- forward_list/std::forward_list::sort
+- forward_list/std::forward_list::splice_after
+- forward_list/std::forward_list::swap
+- forward_list/std::forward_list::unique
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 198522429f7337a4ee3e5d5cb29ab408950618d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cde111871667e754f629fd69562a6aa4aeb07b94
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="forwardlist-class"></a>Класс forward_list
@@ -68,73 +104,73 @@ class forward_list
   
  Итераторы, указатели и ссылки могут стать недопустимыми, если элементы их управляемой последовательности удаляются c помощью `forward_list`. Операции вставки и срезов, выполняемые над управляемой последовательностью с помощью `forward_list`, не делают итераторы недействительными.  
   
- Дополнения к управляемой последовательности могут возникнуть при вызове метода [forward_list::insert_after](#forward_list__insert_after), который является единственной функцией-членом, вызывающей конструктор `Type(const  T&)`. `forward_list` также может вызывать конструкторы перемещения. Если такое выражение создает исключение, объект-контейнер не вставляет новые элементы и повторно создает исключение. Таким образом объект класса шаблона `forward_list` остается в известном состоянии при возникновении таких исключений.  
+ Дополнения к управляемой последовательности могут возникнуть при вызове метода [forward_list::insert_after](#insert_after), который является единственной функцией-членом, вызывающей конструктор `Type(const  T&)`. `forward_list` также может вызывать конструкторы перемещения. Если такое выражение создает исключение, объект-контейнер не вставляет новые элементы и повторно создает исключение. Таким образом объект класса шаблона `forward_list` остается в известном состоянии при возникновении таких исключений.  
   
 ### <a name="constructors"></a>Конструкторы  
   
 |||  
 |-|-|  
-|[forward_list](#forward_list__forward_list)|Создает объект типа `forward_list`.|  
+|[forward_list](#forward_list)|Создает объект типа `forward_list`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#forward_list__allocator_type)|Тип, представляющий класс распределителя для объекта прямого списка.|  
-|[const_iterator](#forward_list__const_iterator)|Тип, предоставляющий константный итератор для прямого списка.|  
-|[const_pointer](#forward_list__const_pointer)|Тип, предоставляющий указатель на элемент `const` в прямом списке.|  
-|[const_reference](#forward_list__const_reference)|Тип, предоставляющий константную ссылку на элемент в прямом списке.|  
-|[difference_type](#forward_list__difference_type)|Тип целого числа со знаком, который можно использовать для представления количества элементов в прямом списке в диапазоне между элементами, на которые указывают итераторы.|  
-|[iterator](#forward_list__iterator)|Тип, предоставляющий итератор для прямого списка.|  
-|[pointer](#forward_list__pointer)|Тип, предоставляющий указатель на элемент в прямом списке.|  
-|[reference](#forward_list__reference)|Тип, предоставляющий ссылку на элемент в прямом списке.|  
-|[size_type](#forward_list__size_type)|Тип, представляющий беззнаковое расстояние между двумя элементами.|  
-|[value_type](#forward_list__value_type)|Тип, представляющий тип элемента, хранящегося в прямом списке.|  
+|[allocator_type](#allocator_type)|Тип, представляющий класс распределителя для объекта прямого списка.|  
+|[const_iterator](#const_iterator)|Тип, предоставляющий константный итератор для прямого списка.|  
+|[const_pointer](#const_pointer)|Тип, предоставляющий указатель на элемент `const` в прямом списке.|  
+|[const_reference](#const_reference)|Тип, предоставляющий константную ссылку на элемент в прямом списке.|  
+|[difference_type](#difference_type)|Тип целого числа со знаком, который можно использовать для представления количества элементов в прямом списке в диапазоне между элементами, на которые указывают итераторы.|  
+|[iterator](#iterator)|Тип, предоставляющий итератор для прямого списка.|  
+|[pointer](#pointer)|Тип, предоставляющий указатель на элемент в прямом списке.|  
+|[reference](#reference)|Тип, предоставляющий ссылку на элемент в прямом списке.|  
+|[size_type](#size_type)|Тип, представляющий беззнаковое расстояние между двумя элементами.|  
+|[value_type](#value_type)|Тип, представляющий тип элемента, хранящегося в прямом списке.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[assign](#forward_list__assign)|Удаляет элементы из прямого списка и копирует новый набор элементов в целевой прямой список.|  
-|[before_begin](#forward_list__before_begin)|Возвращает итератор, указывающий на позицию перед первым элементом в прямом списке.|  
-|[begin](#forward_list__begin)|Возвращает итератор, указывающий на первый элемент в прямом списке.|  
-|[cbefore_begin](#forward_list__cbefore_begin)|Возвращает константный итератор, указывающий на позицию перед первым элементом в прямом списке.|  
-|[cbegin](#forward_list__cbegin)|Возвращает константный итератор, обращающийся к первому элементу в прямом списке.|  
-|[cend](#forward_list__cend)|Возвращает константный итератор, адресующий расположение после последнего элемента в прямом списке.|  
-|[clear](#forward_list__clear)|Удаляет все элементы прямого списка.|  
-|[emplace_after](#forward_list__emplace_after)|Создает с перемещением новый элемент после указанной позиции.|  
-|[emplace_front](#forward_list__emplace_front)|Добавляет элемент, созданный на месте, в начало списка.|  
-|[empty](#forward_list__empty)|Проверяет, пуст ли прямой список.|  
-|[end](#forward_list__end)|Возвращает итератор, адресующий расположение после последнего элемента в прямом списке.|  
-|[erase_after](#forward_list__erase_after)|Удаляет элементы из прямого списка после указанной позиции.|  
-|[front](#forward_list__front)|Возвращает ссылку на первый элемент в прямом списке.|  
-|[get_allocator](#forward_list__get_allocator)|Возвращает копию объекта объекта распределителя, использованного для создания прямого списка.|  
-|[insert_after](#forward_list__insert_after)|Добавляет элементы в прямой список после указанной позиции.|  
-|[max_size](#forward_list__max_size)|Возвращает максимальную длину прямого списка.|  
-|[merge](#forward_list__merge)|Удаляет элементы из списка аргументов, вставляет их в целевой прямой список и сортирует новый объединенный набор элементов по возрастанию или в ином указанном порядке.|  
-|[pop_front](#forward_list__pop_front)|Удаляет элемент в начале прямого списка.|  
-|[push_front](#forward_list__push_front)|Добавляет элемент в начало прямого списка.|  
-|[remove](#forward_list__remove)|Удаляет из прямого списка элементы, совпадающие с заданным значением.|  
-|[remove_if](#forward_list__remove_if)|Удаляет из прямого списка элементы, для которых выполняется заданный предикат.|  
-|[resize](#forward_list__resize)|Указывает новый размер прямого списка.|  
-|[reverse](#forward_list__reverse)|Изменяет порядок следования элементов в прямом списке на обратный.|  
-|[sort](#forward_list__sort)|Упорядочивает элементы по возрастанию или по порядку, указанному предикатом.|  
-|[splice_after](#forward_list__splice_after)|Восстанавливает ссылки между узлами.|  
-|[swap](#forward_list__swap)|Меняет местами элементы двух прямых списков.|  
-|[unique](#forward_list__unique)|Удаляет смежные элементы, которые прошли заданный тест.|  
+|[assign](#assign)|Удаляет элементы из прямого списка и копирует новый набор элементов в целевой прямой список.|  
+|[before_begin](#before_begin)|Возвращает итератор, указывающий на позицию перед первым элементом в прямом списке.|  
+|[begin](#begin)|Возвращает итератор, указывающий на первый элемент в прямом списке.|  
+|[cbefore_begin](#cbefore_begin)|Возвращает константный итератор, указывающий на позицию перед первым элементом в прямом списке.|  
+|[cbegin](#cbegin)|Возвращает константный итератор, обращающийся к первому элементу в прямом списке.|  
+|[cend](#cend)|Возвращает константный итератор, адресующий расположение после последнего элемента в прямом списке.|  
+|[clear](#clear)|Удаляет все элементы прямого списка.|  
+|[emplace_after](#emplace_after)|Создает с перемещением новый элемент после указанной позиции.|  
+|[emplace_front](#emplace_front)|Добавляет элемент, созданный на месте, в начало списка.|  
+|[empty](#empty)|Проверяет, пуст ли прямой список.|  
+|[end](#end)|Возвращает итератор, адресующий расположение после последнего элемента в прямом списке.|  
+|[erase_after](#erase_after)|Удаляет элементы из прямого списка после указанной позиции.|  
+|[front](#front)|Возвращает ссылку на первый элемент в прямом списке.|  
+|[get_allocator](#get_allocator)|Возвращает копию объекта объекта распределителя, использованного для создания прямого списка.|  
+|[insert_after](#insert_after)|Добавляет элементы в прямой список после указанной позиции.|  
+|[max_size](#max_size)|Возвращает максимальную длину прямого списка.|  
+|[merge](#merge)|Удаляет элементы из списка аргументов, вставляет их в целевой прямой список и сортирует новый объединенный набор элементов по возрастанию или в ином указанном порядке.|  
+|[pop_front](#pop_front)|Удаляет элемент в начале прямого списка.|  
+|[push_front](#push_front)|Добавляет элемент в начало прямого списка.|  
+|[remove](#remove)|Удаляет из прямого списка элементы, совпадающие с заданным значением.|  
+|[remove_if](#remove_if)|Удаляет из прямого списка элементы, для которых выполняется заданный предикат.|  
+|[resize](#resize)|Указывает новый размер прямого списка.|  
+|[reverse](#reverse)|Изменяет порядок следования элементов в прямом списке на обратный.|  
+|[sort](#sort)|Упорядочивает элементы по возрастанию или по порядку, указанному предикатом.|  
+|[splice_after](#splice_after)|Восстанавливает ссылки между узлами.|  
+|[swap](#swap)|Меняет местами элементы двух прямых списков.|  
+|[unique](#unique)|Удаляет смежные элементы, которые прошли заданный тест.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор=](#forward_list__operator_eq)|Заменяет элементы прямого списка копией другого прямого списка.|  
+|[оператор=](#op_eq)|Заменяет элементы прямого списка копией другого прямого списка.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<forward_list>  
   
  **Пространство имен:** std  
   
-##  <a name="a-nameforwardlistallocatortypea--forwardlistallocatortype"></a><a name="forward_list__allocator_type"></a>  forward_list::allocator_type  
+##  <a name="allocator_type"></a>  forward_list::allocator_type  
  Тип, представляющий класс распределителя для объекта прямого списка.  
   
 ```  
@@ -144,16 +180,17 @@ typedef Allocator allocator_type;
 ### <a name="remarks"></a>Примечания  
  `allocator_type` — синоним параметра-шаблона Allocator.  
   
-##  <a name="a-nameforwardlistassigna--forwardlistassign"></a><a name="forward_list__assign"></a>  forward_list::assign  
+##  <a name="assign"></a>  forward_list::assign  
  Удаляет элементы из прямого списка и копирует новый набор элементов в целевой прямой список.  
   
 ```  
- 
 void assign(
     size_type Count,   
     const Type& Val);
+
 void assign(
     initializer_list<Type> IList);
+
 template <class InputIterator>  
 void assign(InputIterator First, InputIterator Last);
 ```  
@@ -162,10 +199,10 @@ void assign(InputIterator First, InputIterator Last);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` first`|Начало диапазона замены.|  
-|` last`|Конец диапазона замены.|  
-|` count`|Число элементов для присвоения.|  
-|` val`|Значение, присваиваемое каждому элементу.|  
+|`first`|Начало диапазона замены.|  
+|`last`|Конец диапазона замены.|  
+|`count`|Число элементов для присвоения.|  
+|`val`|Значение, присваиваемое каждому элементу.|  
 |`Type`|Тип значения.|  
 |`IList`|Копируемый initializer_list.|  
   
@@ -176,7 +213,7 @@ void assign(InputIterator First, InputIterator Last);
   
  Третья функция-член копирует элементы initializer_list в forward_list.  
   
-##  <a name="a-nameforwardlistbeforebegina--forwardlistbeforebegin"></a><a name="forward_list__before_begin"></a>  forward_list::before_begin  
+##  <a name="before_begin"></a>  forward_list::before_begin  
  Возвращает итератор, указывающий на позицию перед первым элементом в прямом списке.  
   
 ```  
@@ -189,7 +226,7 @@ iterator before_begin();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistbegina--forwardlistbegin"></a><a name="forward_list__begin"></a>  forward_list::begin  
+##  <a name="begin"></a>  forward_list::begin  
  Возвращает итератор, указывающий на первый элемент в прямом списке.  
   
 ```  
@@ -202,7 +239,7 @@ iterator begin();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistcbeforebegina--forwardlistcbeforebegin"></a><a name="forward_list__cbefore_begin"></a>  forward_list::cbefore_begin  
+##  <a name="cbefore_begin"></a>  forward_list::cbefore_begin  
  Возвращает константный итератор, указывающий на позицию перед первым элементом в прямом списке.  
   
 ```  
@@ -214,7 +251,7 @@ const_iterator cbefore_begin() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistcbegina--forwardlistcbegin"></a><a name="forward_list__cbegin"></a>  forward_list::cbegin  
+##  <a name="cbegin"></a>  forward_list::cbegin  
  Возвращает итератор `const`, направленный на первый элемент в диапазоне.  
   
 ```  
@@ -236,7 +273,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameforwardlistcenda--forwardlistcend"></a><a name="forward_list__cend"></a>  forward_list::cend  
+##  <a name="cend"></a>  forward_list::cend  
  Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
   
 ```  
@@ -261,7 +298,7 @@ auto i2 = Container.cend();
   
  Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
   
-##  <a name="a-nameforwardlistcleara--forwardlistclear"></a><a name="forward_list__clear"></a>  forward_list::clear  
+##  <a name="clear"></a>  forward_list::clear  
  Удаляет все элементы прямого списка.  
   
 ```  
@@ -271,7 +308,7 @@ void clear();
 ### <a name="remarks"></a>Примечания  
  Функция-член вызывает `erase_after(before_begin(), end()).`  
   
-##  <a name="a-nameforwardlistconstiteratora--forwardlistconstiterator"></a><a name="forward_list__const_iterator"></a>  forward_list::const_iterator  
+##  <a name="const_iterator"></a>  forward_list::const_iterator  
  Тип, предоставляющий константный итератор для прямого списка.  
   
 ```  
@@ -281,7 +318,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>Примечания  
  `const_iterator` описывает объект, который можно использовать в качестве постоянного прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа, определяемого реализацией.  
   
-##  <a name="a-nameforwardlistconstpointera--forwardlistconstpointer"></a><a name="forward_list__const_pointer"></a>  forward_list::const_pointer  
+##  <a name="const_pointer"></a>  forward_list::const_pointer  
  Тип, предоставляющий указатель на элемент `const` в прямом списке.  
   
 ```  
@@ -291,7 +328,7 @@ typedef typename Allocator::const_pointer
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistconstreferencea--forwardlistconstreference"></a><a name="forward_list__const_reference"></a>  forward_list::const_reference  
+##  <a name="const_reference"></a>  forward_list::const_reference  
  Тип, предоставляющий константную ссылку на элемент в прямом списке.  
   
 ```  
@@ -300,7 +337,7 @@ typedef typename Allocator::const_reference const_reference;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistdifferencetypea--forwardlistdifferencetype"></a><a name="forward_list__difference_type"></a>  forward_list::difference_type  
+##  <a name="difference_type"></a>  forward_list::difference_type  
  Тип целого числа со знаком, который можно использовать для представления количества элементов в прямом списке в диапазоне между элементами, на которые указывают итераторы.  
   
 ```  
@@ -310,7 +347,7 @@ typedef typename Allocator::difference_type difference_type;
 ### <a name="remarks"></a>Примечания  
  `difference_type` описывает объект, который может представлять разницу между адресами любых двух элементов в управляемой последовательности.  
   
-##  <a name="a-nameforwardlistemplaceaftera--forwardlistemplaceafter"></a><a name="forward_list__emplace_after"></a>  forward_list::emplace_after  
+##  <a name="emplace_after"></a>  forward_list::emplace_after  
  Создает с перемещением новый элемент после указанной позиции.  
   
 ```  
@@ -323,15 +360,15 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |Параметр|Описание|  
 |---------------|-----------------|  
 |`Where`|Позиция в конечном прямом списке, где создается новый элемент.|  
-|` val`|Аргумент конструктора.|  
+|`val`|Аргумент конструктора.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, указывающий на новый вставленный элемент.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член вставляет элемент с аргументами конструктора ` val` сразу после элемента, на который указывает `Where` в управляемой последовательности. Его поведение в противном случае такое же, как [forward_list::insert_after](#forward_list__insert_after).  
+ Эта функция-член вставляет элемент с аргументами конструктора `val` сразу после элемента, на который указывает `Where` в управляемой последовательности. Его поведение в противном случае такое же, как [forward_list::insert_after](#insert_after).  
   
-##  <a name="a-nameforwardlistemplacefronta--forwardlistemplacefront"></a><a name="forward_list__emplace_front"></a>  forward_list::emplace_front  
+##  <a name="emplace_front"></a>  forward_list::emplace_front  
  Добавляет элемент, созданный на месте, в начало списка.  
   
 ```  
@@ -343,14 +380,14 @@ void emplace_front(Type&& val);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` val`|Элемент, добавляемый в начало прямого списка.|  
+|`val`|Элемент, добавляемый в начало прямого списка.|  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член вставляет элемент с помощью аргументов конструктора `_ val` в конце управляемой последовательности.  
   
  При создании исключения контейнер не изменяется, а исключение создается снова.  
   
-##  <a name="a-nameforwardlistemptya--forwardlistempty"></a><a name="forward_list__empty"></a>  forward_list::empty  
+##  <a name="empty"></a>  forward_list::empty  
  Проверяет, пуст ли прямой список.  
   
 ```  
@@ -360,7 +397,7 @@ bool empty() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если прямой список пуст; в противном случае — значение `false`.  
   
-##  <a name="a-nameforwardlistenda--forwardlistend"></a><a name="forward_list__end"></a>  forward_list::end  
+##  <a name="end"></a>  forward_list::end  
  Возвращает итератор, адресующий расположение после последнего элемента в прямом списке.  
   
 ```  
@@ -371,7 +408,7 @@ iterator end();
 ### <a name="return-value"></a>Возвращаемое значение  
  Прямой итератор, который указывает на позицию непосредственно за концом последовательности.  
   
-##  <a name="a-nameforwardlisteraseaftera--forwardlisteraseafter"></a><a name="forward_list__erase_after"></a>  forward_list::erase_after  
+##  <a name="erase_after"></a>  forward_list::erase_after  
  Удаляет элементы из прямого списка после указанной позиции.  
   
 ```  
@@ -384,11 +421,11 @@ iterator erase_after(const_iterator first, const_iterator last);
 |Параметр|Описание|  
 |---------------|-----------------|  
 |`Where`|Позиция в конечном прямом списке, где элемент удален.|  
-|` first`|Начало диапазона для удаления.|  
-|` last`|Конец диапазона для удаления.|  
+|`first`|Начало диапазона для удаления.|  
+|`last`|Конец диапазона для удаления.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Итератор, который обозначает первый элемент, находящийся за всеми удаленными элементами, или [forward_list::end](#forward_list__end), если такой элемент не существует.  
+ Итератор, который обозначает первый элемент, находящийся за всеми удаленными элементами, или [forward_list::end](#end), если такой элемент не существует.  
   
 ### <a name="remarks"></a>Примечания  
  Первая функция-член удаляет элемент управляемой последовательности сразу после `Where`.  
@@ -399,7 +436,7 @@ iterator erase_after(const_iterator first, const_iterator last);
   
  Функции-члены не создают исключений.  
   
-##  <a name="a-nameforwardlistforwardlista--forwardlistforwardlist"></a><a name="forward_list__forward_list"></a>  forward_list::forward_list  
+##  <a name="forward_list"></a>  forward_list::forward_list  
  Создает объект типа `forward_list`.  
   
 ```  
@@ -446,7 +483,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
   
  Последний конструктор определяет начальную управляемую последовательность с объектом класса `initializer_list<Type>`.  
   
-##  <a name="a-nameforwardlistfronta--forwardlistfront"></a><a name="forward_list__front"></a>  forward_list::front  
+##  <a name="front"></a>  forward_list::front  
  Возвращает ссылку на первый элемент в прямом списке.  
   
 ```  
@@ -457,7 +494,7 @@ const_reference front() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на первый элемент управляемой последовательности, который должен быть не пустым.  
   
-##  <a name="a-nameforwardlistgetallocatora--forwardlistgetallocator"></a><a name="forward_list__get_allocator"></a>  forward_list::get_allocator  
+##  <a name="get_allocator"></a>  forward_list::get_allocator  
  Возвращает копию объекта объекта распределителя, использованного для создания прямого списка.  
   
 ```  
@@ -467,7 +504,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Сохраненный объект [allocator](../standard-library/allocator-class.md).  
   
-##  <a name="a-nameforwardlistinsertaftera--forwardlistinsertafter"></a><a name="forward_list__insert_after"></a>  forward_list::insert_after  
+##  <a name="insert_after"></a>  forward_list::insert_after  
  Добавляет элементы в прямой список после указанной позиции.  
   
 ```  
@@ -510,7 +547,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
   
  При создании исключения во время вставки одного или более элементов контейнер не изменяется, а исключение создается снова.  
   
-##  <a name="a-nameforwardlistiteratora--forwardlistiterator"></a><a name="forward_list__iterator"></a>  forward_list::iterator  
+##  <a name="iterator"></a>  forward_list::iterator  
  Тип, предоставляющий итератор для прямого списка.  
   
 ```  
@@ -520,7 +557,7 @@ typedef implementation-defined iterator;
 ### <a name="remarks"></a>Примечания  
  `iterator` описывает объект, который можно использовать в качестве прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа, определяемого реализацией.  
   
-##  <a name="a-nameforwardlistmaxsizea--forwardlistmaxsize"></a><a name="forward_list__max_size"></a>  forward_list::max_size  
+##  <a name="max_size"></a>  forward_list::max_size  
  Возвращает максимальную длину прямого списка.  
   
 ```  
@@ -532,7 +569,7 @@ size_type max_size() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistmergea--forwardlistmerge"></a><a name="forward_list__merge"></a>  forward_list::merge  
+##  <a name="merge"></a>  forward_list::merge  
  Объединяет две отсортированные последовательности в одну отсортированную последовательность в линейном времени. Удаляет элементы из списка аргументов и вставляет их в этот `forward_list`. Два списка должны быть отсортированы одним и тем же объектом функции сравнения перед вызовом в `merge`. Объединенный список будут отсортирован этим объектом функции сравнения.  
   
 ```  
@@ -545,19 +582,19 @@ void merge(forward_list& right, Predicate comp);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` right`|Прямой список, из которого следует выполнять слияние.|  
-|` comp`|Объект функции сравнения, используемый для сортировки элементов.|  
+|`right`|Прямой список, из которого следует выполнять слияние.|  
+|`comp`|Объект функции сравнения, используемый для сортировки элементов.|  
   
 ### <a name="remarks"></a>Примечания  
- `forward_list::merge` удаляет элементы из `forward_list`` right``,` и вставляет их в этот `forward_list`. Обе последовательности должны быть упорядочены по одному и тому же предикату, описанному ниже. Объединенная последовательность также упорядочивается этим объектом функции сравнения.  
+ `forward_list::merge` удаляет элементы из `forward_list``right``,` и вставляет их в этот `forward_list`. Обе последовательности должны быть упорядочены по одному и тому же предикату, описанному ниже. Объединенная последовательность также упорядочивается этим объектом функции сравнения.  
   
  Для итераторов `Pi` и `Pj`, обозначающих элементы в позициях `i` и `j`, первая функция-член упорядочивает `!(*Pj < *Pi)` каждый раз, когда `i < j`. (Элементы сортируются в порядке `ascending`.) Вторая функция-член упорядочивает `! comp(*Pj, *Pi)` каждый раз, когда `i < j`.  
   
- Никакие пары элементов в исходной управляемой последовательности не переставляются в результирующей управляемой последовательности. Если пара элементов в результирующей управляемой последовательности равна ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), элемент из исходного управляемой последовательности появляется перед элементом из последовательности, управляемой ` right`.  
+ Никакие пары элементов в исходной управляемой последовательности не переставляются в результирующей управляемой последовательности. Если пара элементов в результирующей управляемой последовательности равна ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), элемент из исходного управляемой последовательности появляется перед элементом из последовательности, управляемой `right`.  
   
- Исключение возникает только в том случае, если ` comp` создает исключение. В этом случае управляемая последовательность остается в неопределенном порядке, и исключение создается снова.  
+ Исключение возникает только в том случае, если `comp` создает исключение. В этом случае управляемая последовательность остается в неопределенном порядке, и исключение создается снова.  
   
-##  <a name="a-nameforwardlistoperatoreqa--forwardlistoperator"></a><a name="forward_list__operator_eq"></a>  forward_list::operator=  
+##  <a name="op_eq"></a>  forward_list::operator=  
  Заменяет элементы прямого списка копией другого прямого списка.  
   
 ```  
@@ -570,17 +607,17 @@ forward_list& operator=(forward_list&& right);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` right`|Прямой список, копируемый в прямой список.|  
+|`right`|Прямой список, копируемый в прямой список.|  
 |`IList`|Список инициализаторов, заключенных в скобки, который ведет себя так же, как последовательность элементов типа `Type`.|  
   
 ### <a name="remarks"></a>Примечания  
- Первый оператор-член заменяет управляемую последовательность копией последовательности, управляемой ` right`.  
+ Первый оператор-член заменяет управляемую последовательность копией последовательности, управляемой `right`.  
   
  Второй оператор член заменяет управляемую последовательность из объекта класса `initializer_list<Type>`.  
   
  Третий оператор член идентичен первому, но со ссылкой [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-##  <a name="a-nameforwardlistpointera--forwardlistpointer"></a><a name="forward_list__pointer"></a>  forward_list::pointer  
+##  <a name="pointer"></a>  forward_list::pointer  
  Тип, предоставляющий указатель на элемент в прямом списке.  
   
 ```  
@@ -589,7 +626,7 @@ typedef typename Allocator::pointer pointer;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistpopfronta--forwardlistpopfront"></a><a name="forward_list__pop_front"></a>  forward_list::pop_front  
+##  <a name="pop_front"></a>  forward_list::pop_front  
  Удаляет элемент в начале прямого списка.  
   
 ```  
@@ -601,7 +638,7 @@ void pop_front();
   
  Функция-член никогда не создает исключений.  
   
-##  <a name="a-nameforwardlistpushfronta--forwardlistpushfront"></a><a name="forward_list__push_front"></a>  forward_list::push_front  
+##  <a name="push_front"></a>  forward_list::push_front  
  Добавляет элемент в начало прямого списка.  
   
 ```  
@@ -613,12 +650,12 @@ void push_front(Type&& val);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` val`|Элемент, добавляемый в начало прямого списка.|  
+|`val`|Элемент, добавляемый в начало прямого списка.|  
   
 ### <a name="remarks"></a>Примечания  
  При создании исключения контейнер не изменяется, а исключение создается снова.  
   
-##  <a name="a-nameforwardlistreferencea--forwardlistreference"></a><a name="forward_list__reference"></a>  forward_list::reference  
+##  <a name="reference"></a>  forward_list::reference  
  Тип, предоставляющий ссылку на элемент в прямом списке.  
   
 ```  
@@ -627,7 +664,7 @@ typedef typename Allocator::reference reference;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistremovea--forwardlistremove"></a><a name="forward_list__remove"></a>  forward_list::remove  
+##  <a name="remove"></a>  forward_list::remove  
  Удаляет из прямого списка элементы, совпадающие с заданным значением.  
   
 ```  
@@ -638,14 +675,14 @@ void remove(const Type& val);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` val`|Значение, которое (в случае удержания элементом) приведет к удалению этого элемента из списка.|  
+|`val`|Значение, которое (в случае удержания элементом) приведет к удалению этого элемента из списка.|  
   
 ### <a name="remarks"></a>Примечания  
  Функция-член удаляет из управляемой последовательности все элементы, обозначенные итератором `P`, для которого `*P ==  val`.  
   
  Функция-член никогда не создает исключений.  
   
-##  <a name="a-nameforwardlistremoveifa--forwardlistremoveif"></a><a name="forward_list__remove_if"></a>  forward_list::remove_if  
+##  <a name="remove_if"></a>  forward_list::remove_if  
  Удаляет из прямого списка элементы, для которых выполняется заданный предикат.  
   
 ```  
@@ -657,14 +694,14 @@ void remove_if(Predicate pred);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` pred`|Унарный предикат, который в случае совпадения с элементом приводит к удалению данного элемента из списка.|  
+|`pred`|Унарный предикат, который в случае совпадения с элементом приводит к удалению данного элемента из списка.|  
   
 ### <a name="remarks"></a>Примечания  
  Функция-член удаляет из управляемой последовательности все элементы, обозначенные итератором `P`, для которого ` pred(*P)` — true.  
   
- Исключение возникает только в том случае, если ` pred` создает исключение. В этом случае управляемая последовательность остается в неопределенном состоянии, и исключение создается снова.  
+ Исключение возникает только в том случае, если `pred` создает исключение. В этом случае управляемая последовательность остается в неопределенном состоянии, и исключение создается снова.  
   
-##  <a name="a-nameforwardlistresizea--forwardlistresize"></a><a name="forward_list__resize"></a>  forward_list::resize  
+##  <a name="resize"></a>  forward_list::resize  
  Указывает новый размер прямого списка.  
   
 ```  
@@ -677,12 +714,12 @@ void resize(size_type _Newsize, const Type& val);
 |Параметр|Описание|  
 |---------------|-----------------|  
 |`_Newsize`|Число элементов в прямом списке с измененным размером.|  
-|` val`|Значение, используемое для заполнения.|  
+|`val`|Значение, используемое для заполнения.|  
   
 ### <a name="remarks"></a>Примечания  
- Обе функции-члена проверяют, что количество элементов списка с этого момента — `_Newsize`. Если это вынуждает сделать более длинной управляемую последовательность, первая функция-член добавляет элементы со значением `Type()`, тогда как вторая функция-член добавляет элементы со значением ` val`. Чтобы сделать управляемую последовательность более короткой, обе функции-члены вызывают `erase_after(begin() + _Newsize - 1, end())`.  
+ Обе функции-члена проверяют, что количество элементов списка с этого момента — `_Newsize`. Если это вынуждает сделать более длинной управляемую последовательность, первая функция-член добавляет элементы со значением `Type()`, тогда как вторая функция-член добавляет элементы со значением `val`. Чтобы сделать управляемую последовательность более короткой, обе функции-члены вызывают `erase_after(begin() + _Newsize - 1, end())`.  
   
-##  <a name="a-nameforwardlistreversea--forwardlistreverse"></a><a name="forward_list__reverse"></a>  forward_list::reverse  
+##  <a name="reverse"></a>  forward_list::reverse  
  Изменяет порядок следования элементов в прямом списке на обратный.  
   
 ```  
@@ -691,7 +728,7 @@ void reverse();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-nameforwardlistsizetypea--forwardlistsizetype"></a><a name="forward_list__size_type"></a>  forward_list::size_type  
+##  <a name="size_type"></a>  forward_list::size_type  
  Тип, представляющий беззнаковое расстояние между двумя элементами.  
   
 ```  
@@ -701,7 +738,7 @@ typedef typename Allocator::size_type size_type;
 ### <a name="remarks"></a>Примечания  
  Целочисленный тип без знака описывает объект, который может представлять длину любой управляемой последовательности.  
   
-##  <a name="a-nameforwardlistsorta--forwardlistsort"></a><a name="forward_list__sort"></a>  forward_list::sort  
+##  <a name="sort"></a>  forward_list::sort  
  Упорядочивает элементы по возрастанию или по порядку, указанному предикатом.  
   
 ```  
@@ -714,16 +751,16 @@ void sort(Predicate pred);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` pred`|Предикат упорядочения.|  
+|`pred`|Предикат упорядочения.|  
   
 ### <a name="remarks"></a>Примечания  
  Обе функции-члена упорядочивают элементы в управляемой последовательности по предикату, описанному ниже.  
   
  Для итераторов `Pi` и `Pj`, обозначающих элементы в позициях `i` и `j`, первая функция-член упорядочивает `!(*Pj < *Pi)` каждый раз, когда `i < j`. (Элементы сортируются в порядке `ascending`.) Шаблон функций-членов упорядочивает `! pred(*Pj, *Pi)` каждый раз, когда `i < j`. Никакие упорядоченные пары элементов в исходной управляемой последовательности не переставляются в результирующей управляемой последовательности. (Порядок сортировки стабилен.)  
   
- Исключение возникает только в том случае, если ` pred` создает исключение. В этом случае управляемая последовательность остается в неопределенном порядке, и исключение создается снова.  
+ Исключение возникает только в том случае, если `pred` создает исключение. В этом случае управляемая последовательность остается в неопределенном порядке, и исключение создается снова.  
   
-##  <a name="a-nameforwardlistspliceaftera--forwardlistspliceafter"></a><a name="forward_list__splice_after"></a>  forward_list::splice_after  
+##  <a name="splice_after"></a>  forward_list::splice_after  
  Удаляет элементы из исходного объекта forward_list и вставляет их в целевой объект forward_list.  
   
 ```  
@@ -772,7 +809,7 @@ void splice_after(
   
  Третья пара функций-членов (срез с диапазоном) вставляет поддиапазон, обозначенный `(First, Last)`, из последовательности, которая контролируется `Source`, сразу после элемента в контролируемой последовательности, на которую указывает `Where`. Она также удаляет исходный поддиапазон из последовательности, контролируемой `Source`. (Если `&Source == this`, диапазон `(First, Last)` не должен содержать элемент, на который указывает `Where`.)  
   
- Если срез с диапазоном вставляет `N` элементов и `&Source != this`, объект класса [iterator](#forward_list__iterator) увеличивается `N` раз.  
+ Если срез с диапазоном вставляет `N` элементов и `&Source != this`, объект класса [iterator](#iterator) увеличивается `N` раз.  
   
  Никакие итераторы, указатели или ссылки, которые обозначают соединенные элементы, не становятся недействительными.  
   
@@ -850,7 +887,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)  
 ```  
   
-##  <a name="a-nameforwardlistswapa--forwardlistswap"></a><a name="forward_list__swap"></a>  forward_list::swap  
+##  <a name="swap"></a>  forward_list::swap  
  Меняет местами элементы двух прямых списков.  
   
 ```  
@@ -861,12 +898,12 @@ void swap(forward_list& right);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` right`|Прямой список, предоставляющий элементы для обмена.|  
+|`right`|Прямой список, предоставляющий элементы для обмена.|  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член меняет местами управляемые последовательности между `*this` и ` right`. Если `get_allocator() ==  right.get_allocator()`, она делает это в константном времени, не создает исключения и не делает недействительными ссылки, указатели или итераторы, которые указывают элементы в двух управляемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.  
+ Функция-член меняет местами управляемые последовательности между `*this` и `right`. Если `get_allocator() ==  right.get_allocator()`, она делает это в константном времени, не создает исключения и не делает недействительными ссылки, указатели или итераторы, которые указывают элементы в двух управляемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.  
   
-##  <a name="a-nameforwardlistuniquea--forwardlistunique"></a><a name="forward_list__unique"></a>  forward_list::unique  
+##  <a name="unique"></a>  forward_list::unique  
  Удаляет все, кроме первого элемента из каждой последовательной группы равных элементов.  
   
 ```  
@@ -879,7 +916,7 @@ void unique(BinaryPredicate comp);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|` comp`|Двоичный предикат, используемый для сравнения последовательных элементов.|  
+|`comp`|Двоичный предикат, используемый для сравнения последовательных элементов.|  
   
 ### <a name="remarks"></a>Примечания  
  Сохраняет первый из каждого уникального элемента и удаляет остальные. Элементы должны быть отсортированы, чтобы элементы с одинаковым значением находились в списке рядом друг с другом.  
@@ -888,9 +925,9 @@ void unique(BinaryPredicate comp);
   
  Для управляемой последовательности с длиной `N` (> 0) предикат ` comp(*Pi, *Pj)` вычисляется `N - 1` раз.  
   
- Исключение возникает только в том случае, если ` comp` создает исключение. В этом случае управляемая последовательность остается в неопределенном состоянии, и исключение создается снова.  
+ Исключение возникает только в том случае, если `comp` создает исключение. В этом случае управляемая последовательность остается в неопределенном состоянии, и исключение создается снова.  
   
-##  <a name="a-nameforwardlistvaluetypea--forwardlistvaluetype"></a><a name="forward_list__value_type"></a>  forward_list::value_type  
+##  <a name="value_type"></a>  forward_list::value_type  
  Тип, представляющий тип элемента, хранящегося в прямом списке.  
   
 ```  

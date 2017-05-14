@@ -49,10 +49,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0607202f6335b6a8631802ab329b059b2bacb68d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f7f6dff1902777d5c795ac5cb29e1bcfdf3b0eb5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
@@ -90,7 +91,7 @@ size_t _fread_nolock_s(
  См. раздел [fread_s](../../c-runtime-library/reference/fread-s.md).  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция представляет собой неблокирующую версию функции `fread_s`. Она идентична функции `fread_s`, но не защищена от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
+ Эта функция представляет собой неблокирующую версию функции `fread_s`. Она идентична функции `fread_s` , но не защищена от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -99,9 +100,6 @@ size_t _fread_nolock_s(
 |`_fread_nolock_s`|C: \<stdio.h>; C++: \<cstdio> или \<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   

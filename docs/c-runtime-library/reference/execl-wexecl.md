@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: db53c0ace3c509d37ddc75c03561d84ba86b4ed5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 670d4ddaa4209830f842c68eb84d1840e1592790
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="execl-wexecl"></a>_execl, _wexecl
@@ -87,11 +88,11 @@ intptr_t _wexecl(
  `cmdname`  
  Путь к выполняемому файлу.  
   
- `arg0`, `...``argn`  
+ `arg0, ... argn`  
  Список указателей на параметры.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение, равное -1, указывает на ошибку; в таком случае устанавливается глобальная переменная `errno`.  
+ В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку в этом случае `errno` значение глобальной переменной.  
   
 |Значение errno|Описание|  
 |-----------------|-----------------|  
@@ -119,12 +120,6 @@ intptr_t _wexecl(
   
 ## <a name="example"></a>Пример  
  См. пример в разделе [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
-  
--   [System::Diagnostics::Process Class](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [System::Diagnostics::ProcessStartInfo Class](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   

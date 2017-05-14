@@ -62,10 +62,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d6ff95a0d31d14de0941e5f8c3a3535fe0e5ee9c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 20611bb1f40ae900ad2653395da6a0d8279252db
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
@@ -87,13 +88,13 @@ errno_t _ftime64_s(
   
 #### <a name="parameters"></a>Параметры  
  `timeptr`  
- Указатель на структуру `_timeb,``__timeb32` или `__timeb64`.  
+ Указатель на `_timeb`, `__timeb32`, или `__timeb64` структуры.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает нуль в случае успеха или код ошибки в случае неудачи. Если значение параметра `timeptr` равно `NULL`, возвращаемым значением является `EINVAL`.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_ftime_s` получает текущее местное время и сохраняет его в структуре, на которую указывает `timeptr`*.* Структуры `_timeb,``__timeb32` и `__timeb64` определены в файле SYS\Timeb.h. Они содержат четыре поля, которые описываются в следующей таблице.  
+ `_ftime_s` Функция получает текущее местное время и сохраняет его в структуре, на который указывает `timeptr`. `_timeb`, `__timeb32`, И `__timeb64` структуры определяются в SYS\Timeb.h. Они содержат четыре поля, которые описываются в следующей таблице.  
   
  `dstflag`  
  Ненулевое значение, если для местного часового пояса в данный момент действует летнее время. (Описание принципов определения летнего времени см. в разделе [_tzset](../../c-runtime-library/reference/tzset.md).)  
@@ -109,7 +110,7 @@ errno_t _ftime64_s(
   
  Функция `_ftime64_s`, которая использует структуру `__timeb64`, поддерживает даты до 23:59:59 31 декабря 3000 года в формате UTC. При этом функция `_ftime32_s` представляет даты только до 23:59:59 18 января 2038 года в формате UTC. Полночь 1 января 1970 года — нижняя граница диапазона дат для всех этих функций.  
   
- Функция `_ftime_s` эквивалентна функции `_ftime64_s`, и `_timeb` содержит 64-разрядное время. Это верно, если не задана директива `USE_32BIT_TIME_T`, в противном случае действует старое поведение: функция \_`ftime_s` использует 32-разрядное время, и `_timeb` содержит 32-разрядное время.  
+ Функция `_ftime_s` эквивалентна функции `_ftime64_s`, и `_timeb` содержит 64-разрядное время. Это верно, если не задана директива `_USE_32BIT_TIME_T`, в противном случае действует старое поведение: функция `_ftime_s` использует 32-разрядное время, и `_timeb` содержит 32-разрядное время.  
   
  Кроме того, функция `_ftime_s` проверяет свои параметры. Если в `timeptr` передан указатель NULL, функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL`.  
   
@@ -178,9 +179,6 @@ Minutes between UTC and local time: 480
 Daylight savings time flag (1 means Daylight time is in effect): 1  
 The time is Mon Apr 28 11:08:54.230 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   

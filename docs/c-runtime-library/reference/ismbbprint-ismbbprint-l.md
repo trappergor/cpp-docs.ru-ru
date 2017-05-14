@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 64d619e9826e896633aaa35d64d0148bede7879b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
@@ -90,7 +91,7 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- имеет ненулевое значение для `c`, или значение 0, если это не так. Функция `_ismbbprint` использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Функция `_ismbbprint_l` идентична за исключением того, что использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ имеет ненулевое значение для `c`, или значение 0, если это не так. Функция`_ismbbprint` использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Функция`_ismbbprint_l` идентична за исключением того, что использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -100,9 +101,6 @@ isprint || _ismbbkprint
 |`_ismbbprint_l`|\<mbctype.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Классификация байтов](../../c-runtime-library/byte-classification.md)   
