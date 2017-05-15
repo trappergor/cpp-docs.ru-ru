@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
@@ -141,10 +142,10 @@ using namespace std::experimental::filesystem::v1;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Перечисление copy_options](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|Перечисление, используемое с функцией [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60), которое определяет поведение в случае, если конечный файл уже существует.|  
-|[Перечисление directory_options](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|Перечисление, указывающее параметры итераторов каталога.|  
-|[Перечисление file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type)|Перечисление для типов файлов.|  
-|[Перечисление perms](../standard-library/filesystem-enumerations.md#filesystem__perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) , которое определяет действия в случае, если целевой файл уже существует.|  
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|  
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|  
+|[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

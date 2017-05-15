@@ -1,55 +1,72 @@
 ---
-title: "fgets, fgetws | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgets"
-  - "fgetws"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fgetts"
-  - "fgetws"
-  - "fgets"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgetts - функция"
-  - "fgets - функция"
-  - "fgetts - функция"
-  - "fgetws - функция"
-  - "потоки, получение строк из"
-  - "потоки, чтение из"
+title: "fgets, fgetws | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgets
+- fgetws
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fgetts
+- fgetws
+- fgets
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fgetts function
+- streams, getting strings from
+- streams, reading from
+- fgets function
+- fgetws function
+- fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# fgets, fgetws
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4012de79c3de0a27837813ddddf8b7e1aec4fac7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Считывание строки из потока.  
+---
+# <a name="fgets-fgetws"></a>fgets, fgetws
+Получает строку из потока.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *fgets(   
@@ -64,44 +81,44 @@ wchar_t *fgetws(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
  Место хранения данных.  
   
  `n`  
- Наибольшее число символов для чтения.  
+ Максимальное число считываемых символов.  
   
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE` .  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает `str`.  `NULL` возвращается для отображения ошибки или конца файла.  Используйте `feof` или `ferror` для определения, произошла ли ошибка.  Если `str` или `stream` — нулевой указатель, или `n` меньше или равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, то `errno` устанавливается в `EINVAL`, и функция возвращает `NULL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает `str`. `NULL` возвращается в случае ошибки или достижения конца файла. Чтобы определить, произошла ли ошибка, используйте `feof` или `ferror`. Если `str` или `stream` является указателем NULL либо `n` меньше или равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL` , и функция возвращает значение `NULL`.  
   
- См. раздел [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) для дополнительных сведений по этим и другим кодам возврата.  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `fgets` считывает строку из входного аргумента `stream` и сохраняет ее в `str`.  `fgets` считывает символы из потока начиная с текущей позиции и заканчивая первым символом новой строки \(включается в результат\), концом потока или считав `n` \- 1 символов.  Результат, сохраняющийся в `str`, дополняется нулевым символом.  Символ новой строки, если прочитан, включается в строку.  
+## <a name="remarks"></a>Примечания  
+ Функция `fgets` считывает строку из входного аргумента `stream` и сохраняет ее в `str`. `fgets`считывает символы из позиция текущего потока, включая первого символа новой строки, до конца потока или пока число считанных символов равно `n` - 1, что наступит раньше. Результат сохраняется в `str` с добавлением символа NULL. Считываемый символ новой строки (если такой есть) включается в строку.  
   
- `fgetws` — это версия `fgets` для расширенных символов.  
+ `fgetws` — это версия функции `fgets` для расширенных символов.  
   
- `fgetws` считывает в расширенную строку `str` как в расширенных символов или многобайтовых символов в зависимости от того, открыт ли `stream` в текстовом или бинарном режиме.  Дополнительные сведения о использовании текстового и бинарного режимов в юникоде и многобайтовом потоковом вводе\-выводе см. в разделах [Text and Binary Mode File I\/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Unicode Stream I\/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
+ Функция `fgetws` считывает аргумент `str` для расширенных символов как многобайтовый или расширенный символ, в зависимости от того, открыт ли `stream` в текстовом или двоичном режиме соответственно. Дополнительные сведения об использовании текстового и двоичного режима в Юникоде и многобайтовом потоковом вводе-выводе см. в разделах [Файловый ввод-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Ввод-вывод в поток в кодировке Юникод в текстовом и двоичном режиме](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fgetts`|`fgets`|`fgets`|`fgetws`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`fgets`|\<stdio.h\>|  
-|`fgetws`|\<stdio.h\> или \<wchar.h\>|  
+|--------------|---------------------|  
+|`fgets`|\<stdio.h>|  
+|`fgetws`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_fgets.c  
@@ -127,27 +144,21 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_fgets.txt  
+## <a name="input-crtfgetstxt"></a>Входные данные: crt_fgets.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 Line one.  
 ```  
   
-## Эквивалент в .NET Framework  
-  
--   [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx)  
-  
--   [System::IO::TextReader::ReadBlock](https://msdn.microsoft.com/en-us/library/system.io.textreader.readblock.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fputs, fputws](../Topic/fputs,%20fputws.md)   
- [gets, \_getws](../../c-runtime-library/gets-getws.md)   
- [puts, \_putws](../Topic/puts,%20_putws.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
+ [gets, _getws](../../c-runtime-library/gets-getws.md)   
+ [puts, _putws](../../c-runtime-library/reference/puts-putws.md)

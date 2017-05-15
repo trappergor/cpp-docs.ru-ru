@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
  **Пространство имен:** std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a>  copy_options
+##  <a name="copy_options"></a>  copy_options
 Перечисление значений битовой маски, используемое с функциями [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) и [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60), чтобы указать поведение.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|Создать жесткие связи вместо копирования файлов.|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 Определяет, следует выполнить символьные ссылки на каталоги или их игнорировать.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|  
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|  
   
-##  <a name="filesystem__file_type"></a>  file_type
+##  <a name="file_type"></a>  file_type
 Перечисление для типов файлов. Поддерживаются значения: regular, directory, not_found и unknown.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|Представляет сокет в системе UNIX. (Не поддерживается.)|  
 |`unknown`|8|Представляет файл, состояние которого невозможно определить.|  
   
-##  <a name="filesystem__perms"></a>  perms
+##  <a name="perms"></a>  perms
 Флаги разрешений файла. Поддерживаются значения: readonly (только для чтения) и all (все). Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).  
   
 ### <a name="syntax"></a>Синтаксис  

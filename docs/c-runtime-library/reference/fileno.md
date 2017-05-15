@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9de730aa3e9fe367a729b2f0d95283a6aae33b31
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e5a2f9c68eef3698886afd2ed48690d8b4fffd53
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fileno"></a>_fileno
@@ -74,7 +75,7 @@ int _fileno(
  Указатель на структуру `FILE`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_fileno` возвращает дескриптор файла. Ошибка не возвращается. Если `stream` не задает открытый файл, результат будет неопределенным. Если поток имеет значение `NULL`, функция _`fileno` вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает -1 и задает для `errno` значение `EINVAL`.  
+ `_fileno` возвращает дескриптор файла. Ошибка не возвращается. Если `stream` не задает открытый файл, результат будет неопределенным. Если поток имеет значение `NULL`, функция _`_fileno` вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает –1 и задает для `errno` значение `EINVAL`.  
   
  Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -115,9 +116,6 @@ The file descriptor for stdin is 0
 The file descriptor for stdout is 1  
 The file descriptor for stderr is 2  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
