@@ -21,6 +21,8 @@
 ### [Файлы справки (справка HTML)](help-files-html-help.md)
 ### [Файлы справки (WinHelp)](help-files-winhelp.md)
 ### [Файлы указаний](hint-files.md)
+### [XML-файлы страницы свойств](property-page-xml-files.md)
+### [Структура файлов VCXPROJ и PROPS](vcxproj-file-structure.md)
 ## [Создание проектов для рабочего стола с помощью мастеров приложений](creating-desktop-projects-by-using-application-wizards.md)
 ### [Поддержка мастера для других языков](wizard-support-for-other-languages.md)
 ### [Создание пользовательского мастера](creating-a-custom-wizard.md)

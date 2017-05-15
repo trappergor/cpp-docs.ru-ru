@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d508cdb00e26d2d3c0bab74b096cb371885bb106
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3d0d2f76b88f1518b24860b3e8efb7c2214c2845
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
@@ -208,7 +209,7 @@ errno_t _mbsncpy_s_l(
   
  означает, что функции `strncpy_s` требуется скопировать пять символов в буфер длиной пять байт; в этом случае для завершающего нуль-символа не остается места, следовательно функция `strncpy_s` обнулит строку и вызовет обработчик недопустимого параметра.  
   
- Если требуется поведение усечения, необходимо использовать `_TRUNCATE` или (`size` – 1).  
+ Если требуется поведение усечения, используйте `_TRUNCATE` или (`size` - 1):  
   
  `strncpy_s(dst, 5, "a long string", _TRUNCATE);`  
   
@@ -220,7 +221,7 @@ errno_t _mbsncpy_s_l(
   
  Если параметр `strDest` или `strSource` имеет значение `NULL` или параметр `numberOfElements` равен 0, вызывается обработчик недопустимого параметра. Если выполнение может быть продолжено, функция возвращает `EINVAL` и устанавливает для параметра `errno` значение `EINVAL`.  
   
- Функции `wcsncpy_s` и `_mbsncpy_s` являются версиями функции `strncpy_s` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение функций `wcsncpy_s` и `mbsncpy_s` различаются соответствующим образом. В остальном эти шесть функций ведут себя идентично.  
+ Функции `wcsncpy_s` и `_mbsncpy_s` являются версиями функции `strncpy_s` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcsncpy_s` и `mbsncpy_s` различаются соответственно. В остальном эти шесть функций ведут себя идентично.  
   
  Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -418,9 +419,6 @@ After strncpy into middle of string:
 After strncpy_s (with null-termination):  
    'mice'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   

@@ -1,60 +1,77 @@
 ---
-title: "rename, _wrename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rename"
-  - "_wrename"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wrename"
-  - "_trename"
-  - "Rename"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_trename - функция"
-  - "_wrename - функция"
-  - "каталоги [C++], переименование"
-  - "файлы [C++], переименование"
-  - "имена [C++], изменение каталога"
-  - "имена [C++], изменение файла"
-  - "rename - функция"
-  - "переименование каталогов"
-  - "переименование файлов"
-  - "trename - функция"
-  - "wrename - функция"
+title: "rename, _wrename | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rename
+- _wrename
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wrename
+- _trename
+- Rename
+dev_langs:
+- C++
+helpviewer_keywords:
+- trename function
+- directories [C++], renaming
+- renaming directories
+- names [C++], changing file
+- _trename function
+- rename function
+- wrename function
+- files [C++], renaming
+- _wrename function
+- names [C++], changing directory
+- renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# rename, _wrename
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5aeb9d9ceac7eabac061f211f48835d07f2ec38e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Переименование файла или каталога.  
+---
+# <a name="rename-wrename"></a>rename, _wrename
+Переименовывает файл или каталог.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -68,51 +85,51 @@ int _wrename(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *oldname*  
  Указатель на старое имя.  
   
  *newname*  
  Указатель на новое имя.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает 0 в случае успеха.  При возникновении ошибки функция возвращает ненулевое значение и задает `errno` одно из следующих значений:  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций при успешном выполнении возвращает 0. При возникновении ошибки функция возвращает ненулевое значение и задает для `errno` одно из следующих значений:  
   
  `EACCES`  
- Файл или каталог, указанный *newname*, уже существует и не может быть создан \(недопустимый путь\); или *oldname* является каталогом, а *newname* определяет другой путь.  
+ Файл или каталог, указанный в *newname*, уже существует, либо его не удалось создать (недопустимый путь); или *oldname* является каталогом, а *newname* указывает другой путь.  
   
  `ENOENT`  
- Файл или путь, указанный *oldname*, не найден.  
+ Файл или путь, указанный в *oldname*, не найден.  
   
  `EINVAL`  
  Имя содержит недопустимые символы.  
   
- Для других возможных возвращаемых значений см. [\_doserrno, \_errno, syserrlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Другие возможные возвращаемые значения см. в разделе [_doserrno, _errno, syserrlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция **rename** переименовывает файл или каталог, указанный *oldname*, к имени, заданному *newname*.  Старое имя должно быть путем к существующему файлу или каталогу.  Новое имя не должно быть именем существующего файла или каталога.  Можно использовать **rename** для перемещения файла из одного каталога или устройства в другое, указав другой путь в аргументе *newname*.  Однако нельзя использовать **rename** для перемещения каталога.  Каталоги можно переименовывать, но не перемещать.  
+## <a name="remarks"></a>Примечания  
+ Функция **rename** переименовывает файл или каталог, указанный в *oldname* и присваивает имя, заданное в *newname*. Старое имя должно быть путем к существующему файлу или каталогу. Новое имя не должно быть путем к существующему файлу или каталогу. Можно использовать функцию **rename** для перемещения файла из одного каталога или с одного устройства на другое, указав другой путь в аргументе *newname*. Однако нельзя использовать функцию **rename** для перемещения каталога. Каталоги можно переименовать, но нельзя перемещать.  
   
- `_wrename` — это двухбайтовая версия **\_rename**; аргументы для `_wrename` представляют собой двухбайтовые строки.  В противном случае поведение `_wrename` и **\_rename** идентично.  
+ `_wrename` — это версия функции **_rename** для расширенных символов; аргументы для функции `_wrename` представляют собой строки расширенных символов. Поведение `_wrename` и **_rename** идентично в противном случае.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
-|`_trename`|**переименовать**|**переименовать**|`_wrename`|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_trename`|**rename**|**rename**|`_wrename`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|**переименовать**|\<io.h\> или \<stdio.h\>|  
-|`_wrename`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|**rename**|\<io.h> или \<stdio.h>|  
+|`_wrename`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_renamer.c  
@@ -138,14 +155,11 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'  
 ```  
   
-## Эквивалент в .NET Framework  
- [System::IO::File::Move](https://msdn.microsoft.com/en-us/library/system.io.file.move.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)

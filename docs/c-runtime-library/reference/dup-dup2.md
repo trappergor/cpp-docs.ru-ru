@@ -1,54 +1,71 @@
 ---
-title: "_dup, _dup2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dup"
-  - "_dup2"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_dup2"
-  - "_dup"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_dup - функция"
-  - "_dup2 - функция"
-  - "dup - функция"
-  - "dup2 - функция"
-  - "файловые дескрипторы [C++], дублирование"
-  - "файловые дескрипторы [C++], повторное назначение"
+title: "_dup, _dup2 | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dup
+- _dup2
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _dup2
+- _dup
+dev_langs:
+- C++
+helpviewer_keywords:
+- _dup2 function
+- dup function
+- file handles [C++], duplicating
+- file handles [C++], reassigning
+- dup2 function
+- _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _dup, _dup2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a85a26fbe7ab8417ea9ecd3c43745789117ac856
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Создает второй идентификатор файла для открытого файла \(`_dup`\) или переназначает идентификатор файла \(`_dup2`\).  
+---
+# <a name="dup-dup2"></a>_dup, _dup2
+Создает второй дескриптор файла для открытого файла (`_dup`) или переназначает дескриптор файла (`_dup2`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _dup(   
@@ -60,37 +77,37 @@ int _dup2(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `fd`, `fd1`  
- Файловые идентификаторы, ссылающиеся на открытый файл.  
+ Дескрипторы файлов, ссылающиеся на открытый файл.  
   
  `fd2`  
- Любой идентификатор файла.  
+ Любой дескриптор файла.  
   
-## Возвращаемое значение  
- `_dup` возвращает идентификатор нового файла.  `_dup2` возвращает 0 в случае успеха.  При возникновении ошибки, каждая функция возвращает –1 и устанавливает `errno` в `EBADF`, если идентификатор файла является недопустимым, или в `EMFILE`, если больше нет доступных идентификаторов фала.  В случае недопустимого идентификатора файла, функция также вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `_dup` возвращает новый дескриптор файла. Функция `_dup2` возвращает 0 в случае успеха. При возникновении ошибки каждая функция возвращает -1 и устанавливает `errno` для `EBADF` Если дескриптор файла является недопустимым или `EMFILE` Если доступных нет дополнительных дескрипторов файлов. В случае недопустимого дескриптора файла функция также вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
- Дополнительные сведения об этих и других кодах возврата см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функции `_dup` и `_dup2` связывают второй идентификатор файла с открываемым в данный момент файлом.  Их можно использовать для связывания предопределенного идентификатора файла, например, идентификатора `stdout`, с другим файлом.  Операции с файлом могут быть выполнены с использованием любого файлового дескриптора.  Тип доступа к файлу не затрагивается созданием нового идентификатора.  `_dup` возвращает следующий доступный файловый идентификатор для указанного файла.  `_dup2` заставляет `fd2` ссылаться на тот же файл, что и `fd1`.  Если `fd2` связан с открытым файлом во время вызова, этот файл закрывается.  
+## <a name="remarks"></a>Примечания  
+ Функции `_dup` и `_dup2` связывают второй дескриптор файла с текущим открытым файлом. Их можно использовать для связывания предопределенного дескриптора файла, например `stdout`, с другим файлом. Операции с файлом можно выполнять с использованием любого дескриптора файла. При создании нового дескриптора тип доступа к файлу не изменяется. Функция `_dup` возвращает следующий доступный дескриптор файла для указанного файла. Функция `_dup2` принудительно устанавливает `fd2` на тот же файл, что и `fd1`. Если во время вызова дескриптор `fd2` связан с открытым файлом, этот файл закрывается.  
   
- И `_dup`, и `_dup2` принимают идентификаторы файла в качестве параметров.  Для передачи потока `(FILE *)` в любую из этих функций, используйте [\_fileno](../Topic/_fileno.md).  Процедура `fileno` возвращает идентификатор файла в данный момент связанный с данным потоком.  В следующем примере показано, как связать `stderr` \(определяется как `FILE` `*` в Stdio.h\) с идентификатором файла:  
+ Функции `_dup` и `_dup2` принимают в качестве параметров дескрипторы файлов. Для передачи потока `(FILE *)` в любую из этих функций используйте функцию [_fileno](../../c-runtime-library/reference/fileno.md). Подпрограмма `fileno` возвращает дескриптор файла, в данный момент связанный с заданным потоком. В следующем примере показано, как связать `stderr` (определяется как `FILE` `*` в Stdio.h) с дескриптором файла:  
   
 ```  
 int cstderr = _dup( _fileno( stderr ));  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_dup`|\<io.h\>|  
-|`_dup2`|\<io.h\>|  
+|-------------|---------------------|  
+|`_dup`|\<io.h>|  
+|`_dup2`|\<io.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Стандартные дескрипторы потока, связанные с консолью — `stdin`, `stdout` и `stderr` — необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_dup.c  
@@ -144,12 +161,16 @@ int main( void )
 }  
 ```  
   
-  **This goes to stdout first**  
-**This goes to stdout**  
-**The file 'data' contains:**  
-**This goes to file 'data'**   
-## См. также  
- [Низкоуровневый ввод\-вывод](../../c-runtime-library/low-level-i-o.md)   
- [\_close](../Topic/_close.md)   
- [Функция \_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+```Output  
+This goes to stdout first  
+This goes to stdout  
+  
+The file 'data' contains:  
+This goes to file 'data'  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

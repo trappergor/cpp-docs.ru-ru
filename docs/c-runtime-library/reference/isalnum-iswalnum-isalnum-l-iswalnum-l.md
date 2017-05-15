@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 065af7d72f7a2bfdecc945002d8eb869b47765a6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 14e5ecd35a6f844dd7d304f10167e690f7df970e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
@@ -99,7 +100,7 @@ int _iswalnum_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление алфавитно-цифрового символа. Функция `isalnum` возвращает ненулевое значение, если не равна нулю функция `isalpha` или `isdigit` для `c`, то есть если `c` находится в диапазоне A–Z, a–z или 0–9. Функция `iswalnum` возвращает ненулевое значение, если не равна нулю функция `iswalpha` или `iswdigit` для `c`. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление алфавитно-цифрового символа. `isalnum`возвращает ненулевое значение, если `isalpha` или `isdigit` имеет ненулевое значение для `c`, то есть если `c` находится в диапазоне A - Z, a - z или 0 - 9. Функция `iswalnum` возвращает ненулевое значение, если не равна нулю функция `iswalpha` или `iswdigit` для `c`. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
  Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -122,9 +123,6 @@ int _iswalnum_l(
 |`_iswalnum_l`|\<ctype.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::Char::IsLetterOrDigit](https://msdn.microsoft.com/en-us/library/system.char.isletterordigit.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   

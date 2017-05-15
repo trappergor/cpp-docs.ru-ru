@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13dea0e3f4fdaef74d4806373376d5c84904ce8f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
@@ -109,7 +110,7 @@ wchar_t *_wfullpath_dbg(
  Каждая функция возвращает указатель на буфер, который содержит абсолютный путь (`absPath`). При наличии ошибки (например, если значение, передаваемое в `relPath`, включает недопустимую букву диска или букву диска, которую не удается найти, или если длина созданного абсолютного пути (`absPath`) превышает `maxLength`), функция возвращает значение `NULL`.  
   
 ## <a name="remarks"></a>Примечания  
- Функции `_fullpath_dbg` и `_wfullpath_dbg` идентичны `_fullpath` и `_wfullpath` за исключением того, что если определен флаг **_**`DEBUG`, эти функции используют отладочную версию функций `malloc`, `_malloc_dbg` для выделения памяти, если NULL передается как первый параметр. Сведения о компонентах отладки `_malloc_dbg` см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ `_fullpath_dbg` И `_wfullpath_dbg` идентичны `_fullpath` и `_wfullpath` за исключением того, что, когда `_DEBUG` — определен, эти функции используют отладочную версию `malloc`, `_malloc_dbg`для выделения памяти, если в качестве первого параметра передается значение NULL. Сведения о средствах отладки `_malloc_dbg` см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`. Если определен флаг `_CRTDBG_MAP_ALLOC`, вызовы функций `_fullpath` и `_wfullpath` повторно сопоставляются с `_fullpath_dbg` и `_wfullpath_dbg` соответственно, а для параметра `blockType` задается тип `_NORMAL_BLOCK`. Таким образом, не требуется явно вызывать эти функции, если только нет необходимости пометить блоки кучи как `_CLIENT_BLOCK`. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -127,9 +128,6 @@ wchar_t *_wfullpath_dbg(
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- <xref:System.IO.File.Create%2A>  
   
 ## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   

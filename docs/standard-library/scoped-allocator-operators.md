@@ -10,18 +10,19 @@ f1_keywords: []
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c8b64ba6276ecfa1078faf3b75a3cf36e9fc5072
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d4602aa94b41a278edaff72f4e7bce6a6ea53407
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltscopedallocatorgt-operators"></a>Операторы &lt;scoped_allocator&gt;
 |||  
 |-|-|  
-|[оператор!=](#operator_neq)|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Сравнивает два объекта `scoped_allocator_adaptor`, чтобы определить их неравенство.  
   
 ```cpp  
@@ -41,7 +42,7 @@ bool operator!=(
 ### <a name="return-value"></a>Возвращаемое значение  
  `!(left == right)`  
   
-##  <a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Сравнивает два объекта `scoped_allocator_adaptor`, чтобы определить, равны ли они.  
   
 ```cpp  

@@ -1,94 +1,111 @@
 ---
-title: "_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnset"
-  - "_strnset"
-  - "_mbsnset_l"
-  - "_wcsnset_l"
-  - "_wcsnset"
-  - "_strnset_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsncset_l"
-  - "mbsnset_l"
-  - "_tcsnset_l"
-  - "_fstrnset"
-  - "_wcsnset_l"
-  - "_ftcsnset"
-  - "wcsnset_l"
-  - "_mbsnset_l"
-  - "_strnset"
-  - "_tcsnset"
-  - "_strnset_l"
-  - "mbsnset"
-  - "strnset_l"
-  - "_mbsnset"
-  - "_wcsnset"
-  - "_tcsncset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrnset - функция"
-  - "_ftcsnset - функция"
-  - "_mbsnset - функция"
-  - "_mbsnset_l - функция"
-  - "_strnset - функция"
-  - "_strnset_l - функция"
-  - "_tcsncset - функция"
-  - "_tcsncset_l - функция"
-  - "_tcsnset - функция"
-  - "_tcsnset_l - функция"
-  - "_wcsnset - функция"
-  - "_wcsnset_l - функция"
-  - "знаки [C++], инициализация в форматы"
-  - "fstrnset - функция"
-  - "ftcsnset - функция"
-  - "инициализация знаков"
-  - "mbsnset - функция"
-  - "mbsnset_l - функция"
-  - "строки [C++], инициализация"
-  - "strnset_l - функция"
-  - "tcsncset - функция"
-  - "tcsnset - функция"
-  - "tcsnset_l - функция"
-  - "wcsnset_l - функция"
+title: "_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnset
+- _strnset
+- _mbsnset_l
+- _wcsnset_l
+- _wcsnset
+- _strnset_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsncset_l
+- mbsnset_l
+- _tcsnset_l
+- _fstrnset
+- _wcsnset_l
+- _ftcsnset
+- wcsnset_l
+- _mbsnset_l
+- _strnset
+- _tcsnset
+- _strnset_l
+- mbsnset
+- strnset_l
+- _mbsnset
+- _wcsnset
+- _tcsncset
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcsnset function
+- strnset_l function
+- tcsnset function
+- tcsncset function
+- characters [C++], initializing to formats
+- mbsnset function
+- _tcsnset_l function
+- _mbsnset function
+- _strnset function
+- _tcsncset_l function
+- mbsnset_l function
+- _tcsnset function
+- initializing characters
+- _tcsncset function
+- ftcsnset function
+- wcsnset_l function
+- _ftcsnset function
+- _wcsnset_l function
+- _fstrnset function
+- _mbsnset_l function
+- _strnset_l function
+- fstrnset function
+- strings [C++], initializing
+- tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9650e07c35fc72f9dd5b73c32c472d0f48f6277a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Инициализирует символы строки определенным символом.  Существуют более безопасные версии этих функций; см. раздел [\_strnset\_s, \_strnset\_s\_l, \_wcsnset\_s, \_wcsnset\_s\_l, \_mbsnset\_s, \_mbsnset\_s\_l](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).  
+---
+# <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
+Инициализирует символы строки в соответствии с указанным символом. Существуют более безопасные версии этих функций; см. раздел [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsnset` и `_mbsnset_l` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Функции  `_mbsnset` и `_mbsnset_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *_strnset(  
@@ -126,7 +143,7 @@ unsigned char *_mbsnset_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `str`  
  Строка, которую требуется изменить.  
   
@@ -134,43 +151,43 @@ unsigned char *_mbsnset_l(
  Параметр символов.  
   
  `count`  
- Число задаваемых знаков.  
+ Количество символов для изменения.  
   
  `locale`  
- Языковой стандарт, который необходимо использовать.  
+ Используемый языковой стандарт.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на измененную строку.  
   
-## Заметки  
- Функция `_strnset` задает, по крайней мере, первые `count` символов `str` в `c` \(преобразованных в `char`\).  Если `count` больше, чем длина `str`, длина `str` используется вместо `count`.  
+## <a name="remarks"></a>Примечания  
+ Функция `_strnset` устанавливает `count` первых символов строки `str` в значение `c` (преобразованное в `char`). Если значение `count` больше длины строки `str`, вместо параметра `count` используется длина строки `str`.  
   
- `_wcsnset` и `_mbsnset` являются версиями функции `_strnset` для расширенных и многобайтовых символов.  Строковые аргументы и возвращаемое значение `_wcsnset` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsnset` представляют собой многобайтовые строки.  В остальных случаях эти три функции ведут себя идентично.  
+ Функции `_wcsnset` и `_mbsnset` являются версиями функции `_strnset` для расширенных и многобайтовых символов. Строковые аргументы и возвращаемое значение `_wcsnset` представляют собой строки расширенных символов; аргументы и возвращаемое значение `_mbsnset` представляют собой многобайтовые строки. В остальном эти три функции ведут себя идентично.  
   
- `_mbsnset` проверяет его параметры; если `str` является пустым указателем, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если выполнение может быть продолжено, то `_mbsnset` возвращает NULL и устанавливает `errno` в `EINVAL`.  `_strnset` и `_wcsnset` не проверяют свои параметры.  
+ `_mbsnset` проверяет свои параметры; если параметр `str` является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция `_mbsnset` возвращает значение NULL и устанавливает параметр `errno` в значение `EINVAL`. Функции `_strnset` и `_wcsnset` не проверяют свои параметры.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../Topic/setlocale,%20_wsetlocale.md).  Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версии с суффиксом`_l` идентичны, за исключением того, что они используют переданный параметр языкового стандарта.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsnset`|`_strnset`|`_mbsnbset`|`_wcsnset`|  
 |`_tcsnset_l`|`_strnset_l`|`_mbsnbset_l`|`_wcsnset_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_strnset`|\<string.h\>|  
-|`_strnset_l`|\<tchar.h\>|  
-|`_wcsnset`|\<string.h\> или \<wchar.h\>|  
-|`_wcsnset_l`|\<tchar.h\>|  
-|`_mbsnset`, `_mbsnset_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strnset`|\<string.h>|  
+|`_strnset_l`|\<tchar.h>|  
+|`_wcsnset`|\<string.h> или \<wchar.h>|  
+|`_wcsnset_l`|\<tchar.h>|  
+|`_mbsnset`, `_mbsnset_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_strnset.c  
@@ -189,16 +206,16 @@ int main( void )
 }  
 ```  
   
-  **Before: This is a test**  
-**After:  \*\*\*\* is a test**   
-## Эквивалент в .NET Framework  
- [System::String::Replace](https://msdn.microsoft.com/en-us/library/system.string.replace.aspx)  
+```Output  
+Before: This is a test  
+After:  **** is a test  
+```  
   
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей в многобайтной кодировке](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+ [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

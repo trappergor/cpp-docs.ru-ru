@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9bdc40f476e3e4e5b284eaf77fa1310d686c5197
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="maskarray-class"></a>Класс mask_array
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>Примечания  
  Класс описывает объект, который хранит ссылку на объект **va** класса [valarray](../standard-library/valarray-class.md)**\<Type>**, вместе с объектом **ba** класса [valarray\<bool>](../standard-library/valarray-bool-class.md), который описывает последовательность элементов для выбора из объекта **valarray\<Type>**.  
   
- Объект **mask_array\<Type>** создается только путем написания выражения вида [va&#91;ba&#93;](../standard-library/valarray-class.md#valarray__operator_at). После этого функции-члены класса mask_array ведут себя как соответствующие сигнатуры функций, заданные для **valarray\<Type>** с той разницей, что затрагивается только последовательность выбранных элементов.  
+ Объект **mask_array\<Type>** создается только путем написания выражения вида [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). После этого функции-члены класса mask_array ведут себя как соответствующие сигнатуры функций, заданные для **valarray\<Type>** с той разницей, что затрагивается только последовательность выбранных элементов.  
   
  Последовательность состоит максимум из **ba.size** элементов. Элемент *J* включается, только если **ba**[ *J*] имеет значение true. Таким образом, в последовательности существует столько элементов, сколько существует элементов со значением true в **ba**. Если `I` является индексом наименьшего элемента true в **ba**, то **va**[ `I`] является нулевым элементом в выбранной последовательности.  
   

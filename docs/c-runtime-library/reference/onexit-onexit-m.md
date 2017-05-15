@@ -1,56 +1,74 @@
 ---
-title: "_onexit, _onexit_m | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_onexit"
-  - "_onexit_m"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_onexit"
-  - "onexit_m"
-  - "onexit"
-  - "_onexit_m"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Функция onexit"
-  - "реестр, регистрация процедур выхода"
-  - "Функция _onexit_m"
-  - "Функция onexit_m"
-  - "Функция _onexit"
-  - "регистрация процедур выхода"
-  - "регистрация вызываемого при выходе объекта"
+title: "_onexit, _onexit_m | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _onexit
+- _onexit_m
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _onexit
+- onexit_m
+- onexit
+- _onexit_m
+dev_langs:
+- C++
+helpviewer_keywords:
+- onexit function
+- registry, registering exit routines
+- _onexit_m function
+- onexit_m function
+- _onexit function
+- registering exit routines
+- registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _onexit, _onexit_m
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 50070672e990333073f5ad7f7ba604110c3a3cfa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Регистрирует процедуру, вызываемую во время выхода.  
+---
+# <a name="onexit-onexitm"></a>_onexit, _onexit_m
+Регистрирует подпрограмму, вызываемую во время выхода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _onexit_t _onexit(  
@@ -61,29 +79,29 @@ _onexit_t_m _onexit_m(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `function`  
- Указатель на функцию, которая должна быть вызвана на выходе.  
+ Указатель на функцию, которая должна вызываться при выходе.  
   
-## Возвращаемое значение  
- `_onexit` возвращает указатель на функцию в случае успеха, или `NULL`, если нет места для хранения указателя на функцию.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `_onexit` возвращает указатель на функцию в случае успеха или значение `NULL`, если нет места для хранения указателя на функцию.  
   
-## Заметки  
- Функции `_onexit` передается адрес функции \(`function`\), которую нужно вызывать при завершении программы в обычном режиме.  Последовательные вызовы `_onexit` создают регистр функций, которые выполняются в порядке LIFO \(последним поступил — первым обслужен\).  Функции, переданные в `_onexit`, не могут принимать параметры.  
+## <a name="remarks"></a>Примечания  
+ Функции `_onexit` передается адрес функции (`function`), которую требуется вызывать при завершении программы в обычном режиме. Последовательные вызовы функции `_onexit` создают регистр функций, которые выполняются в порядке LIFO (последним поступил — первым обслужен). Функции, передаваемые в функции `_onexit`, не могут принимать параметры.  
   
- В этом случае, когда `_onexit` вызывается из библиотеки DLL, процедуры, зарегистрированные с `_onexit`, выполняются на выгрузке DLL после того, как `DllMain` вызывается с DLL\_PROCESS\_DETACH.  
+ В случае, если функция `_onexit` вызывается из библиотеки DLL, подпрограммы, зарегистрированные с помощью функции `_onexit`, выполняются при выгрузке DLL после вызова `DllMain` с DLL_PROCESS_DETACH.  
   
- `_onexit` является расширением Майкрософт.  Для переносимости ANSI используйте [atexit](../../c-runtime-library/reference/atexit.md).  Версия `_onexit_m` этой функции предназначена для использования смешанного режима.  
+ `_onexit` является расширением Майкрософт. Чтобы обеспечить переносимость ANSI, используйте функцию [atexit](../../c-runtime-library/reference/atexit.md). Версия `_onexit_m` этой функции предназначена для использования смешанного режима.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_onexit`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_onexit`|\<stdlib.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_onexit.c  
@@ -128,18 +146,15 @@ int fn4()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 This is executed first.  
 This is executed next.  
 ```  
   
-## Эквивалент в .NET Framework  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_\_dllonexit](../../c-runtime-library/dllonexit.md)
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [__dllonexit](../../c-runtime-library/dllonexit.md)

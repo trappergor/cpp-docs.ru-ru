@@ -1,55 +1,72 @@
 ---
-title: "floor, floorf, floorl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "floorf"
-  - "floorl"
-  - "floor"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "floor"
-  - "floorl"
-  - "_floorl"
-  - "floorf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "вычисление минимальных значений"
-  - "floor - функция"
-  - "floorf - функция"
-  - "floorl - функция"
+title: "floor, floorf, floorl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- floorf
+- floorl
+- floor
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- floor
+- floorl
+- _floorl
+- floorf
+dev_langs:
+- C++
+helpviewer_keywords:
+- floor function
+- floorf function
+- calculating floors of values
+- floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# floor, floorf, floorl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Вычисляет наибольшее целое число, которое равно или меньше значения.  
+---
+# <a name="floor-floorf-floorl"></a>floor, floorf, floorl
+Округляет значение вниз до целого числа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double floor(  
@@ -69,31 +86,31 @@ long double floorl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `x`  
  Значение с плавающей запятой.  
   
-## Возвращаемое значение  
- Функции `floor` возвращают значение с плавающей запятой, представляющее наибольшее целое число, которое меньше или равно `x`.  Нет какого\-либо возврата ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функции `floor` возвращают значение с плавающей запятой, которое представляет наибольшее целое число, не превосходящее `x`. Ошибка не возвращается.  
   
 |Ввод|Исключение SEH|Исключение Matherr|  
-|----------|--------------------|------------------------|  
-|± QNAN,IND|Нет|\_DOMAIN|  
+|-----------|-------------------|-----------------------|  
+|± QNAN,IND|Нет|_DOMAIN|  
   
- `floor` имеет реализацию, которая использует набор инструкций SSE2.  Дополнительные сведения и ограничения по использованию реализации с SSE2 см. в разделе [\_set\_SSE2\_enable](../Topic/_set_SSE2_enable.md).  
+ Функция `floor` содержит реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
-## Заметки  
- C\+\+ допускает перегрузку, поэтому можно вызывать перегрузки `floor`, принимающие и возвращающие значения `float` и `long double`.  В программе C `floor` всегда принимает и возвращает `double`.  
+## <a name="remarks"></a>Примечания  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки `floor`, которые принимают и возвращают значения типов `float` и `long double`. В программе на языке C `floor` всегда принимает и возвращает `double`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`floor`, `floorf`, `floorl`|\<math.h\>|  
+|--------------|---------------------|  
+|`floor`, `floorf`, `floorl`|\<math.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_floor.c  
@@ -121,15 +138,15 @@ int main( void )
 }  
 ```  
   
-  **The floor of 2.8 is 2.000000**  
-**floor от \-2.8 is \-3.000000**  
-**The ceil of 2.8 is 3.000000**  
-**The ceil of \-2.8 is \-2.000000**   
-## Эквивалент в .NET Framework  
- [System::Math::Floor](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)  
+```Output  
+The floor of 2.8 is 2.000000  
+The floor of -2.8 is -3.000000  
+The ceil of 2.8 is 3.000000  
+The ceil of -2.8 is -2.000000  
+```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   
- [fmod, fmodf](../Topic/fmod,%20fmodf.md)
+ [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)

@@ -10,30 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shared_ptr
-- std::shared_ptr
 - memory/std::shared_ptr
-- std::shared_ptr::element_type
 - memory/std::shared_ptr::element_type
-- std::shared_ptr::get
 - memory/std::shared_ptr::get
-- std::shared_ptr::owner_before
 - memory/std::shared_ptr::owner_before
-- std::shared_ptr::reset
 - memory/std::shared_ptr::reset
-- std::shared_ptr::swap
 - memory/std::shared_ptr::swap
-- std::shared_ptr::unique
 - memory/std::shared_ptr::unique
-- std::shared_ptr::use_count
 - memory/std::shared_ptr::use_count
-- std::shared_ptr::operator boolean-type
 - memory/std::shared_ptr::operator boolean-type
-- std::shared_ptr::operator*
 - memory/std::shared_ptr::operator*
-- std::shared_ptr::operator=
 - memory/std::shared_ptr::operator=
-- std::shared_ptr::operator->
 - memory/std::shared_ptr::operator->
+- memory/std::shared_ptr::element_type
+- memory/std::shared_ptr::get
+- memory/std::shared_ptr::owner_before
+- memory/std::shared_ptr::reset
+- memory/std::shared_ptr::swap
+- memory/std::shared_ptr::unique
+- memory/std::shared_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -57,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: d3638923d92759e5bbc379b8f1da633931fd7254
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sharedptr-class"></a>Класс shared_ptr
@@ -105,7 +101,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 -   если был создан из объекта [Класс weak_ptr](../standard-library/weak-ptr-class.md), который указывает на этот ресурс, или  
   
--   если владение этим ресурсом было передано ему помощью оператора [shared_ptr::operator=](#shared_ptr__operator_eq) или путем вызова функции-члена [shared_ptr::reset](#shared_ptr__reset)  
+-   если владение этим ресурсом было передано ему помощью оператора [shared_ptr::operator=](#op_eq) или путем вызова функции-члена [shared_ptr::reset](#reset)  
   
  Владеющие ресурсом объекты `shared_ptr` совместно используют один блок управления. Блок управления содержит следующее:  
   
@@ -152,36 +148,36 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr::shared_ptr](#shared_ptr__shared_ptr)|Создает документ `shared_ptr`.|  
-|[shared_ptr::~shared_ptr](#shared_ptr___dtorshared_ptr)|Удаляет `shared_ptr`.|  
+|[shared_ptr](#shared_ptr)|Создает документ `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Удаляет `shared_ptr`.|  
   
 ### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[shared_ptr::element_type](#shared_ptr__element_type)|Тип элемента.|  
-|[shared_ptr::get](#shared_ptr__get)|Возвращает адрес принадлежащего ресурса.|  
-|[shared_ptr::owner_before](#shared_ptr__owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|  
-|[shared_ptr::reset](#shared_ptr__reset)|Заменяет принадлежащий ресурс.|  
-|[shared_ptr::swap](#shared_ptr__swap)|Меняет местами два объекта `shared_ptr`.|  
-|[shared_ptr::unique](#shared_ptr__unique)|Проверяет, является ли принадлежащий ресурс уникальным.|  
-|[shared_ptr::use_count](#shared_ptr__use_count)|Подсчитывает количество владельцев ресурса.|  
+|[element_type](#element_type)|Тип элемента.|  
+|[get](#get)|Возвращает адрес принадлежащего ресурса.|  
+|[owner_before](#owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|  
+|[reset](#reset)|Заменяет принадлежащий ресурс.|  
+|[swap](#swap)|Меняет местами два объекта `shared_ptr`.|  
+|[unique](#unique)|Проверяет, является ли принадлежащий ресурс уникальным.|  
+|[use_count](#use_count)|Подсчитывает количество владельцев ресурса.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#shared_ptr__operator_boolean-type)|Проверяет существование принадлежащего ресурса.|  
-|[shared_ptr::operator*](#shared_ptr__operator_star)|Возвращает указанное значение.|  
-|[shared_ptr::operator=](#shared_ptr__operator_eq)|Заменяет принадлежащий ресурс.|  
-|[shared_ptr::operator-&gt;](#shared_ptr__operator-_gt_)|Получает указатель на указанное значение.|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Проверяет существование принадлежащего ресурса.|  
+|[shared_ptr::operator*](#op_star)|Возвращает указанное значение.|  
+|[shared_ptr::operator=](#op_eq)|Заменяет принадлежащий ресурс.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Получает указатель на указанное значение.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<memory>  
   
  **Пространство имен:** std  
   
-##  <a name="a-namesharedptrelementtypea--sharedptrelementtype"></a><a name="shared_ptr__element_type"></a>  shared_ptr::element_type  
+##  <a name="element_type"></a>  shared_ptr::element_type  
  Тип элемента.  
   
 ```  
@@ -215,7 +211,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptrgeta--sharedptrget"></a><a name="shared_ptr__get"></a>  shared_ptr::get  
+##  <a name="get"></a>  shared_ptr::get  
  Возвращает адрес принадлежащего ресурса.  
   
 ```  
@@ -252,7 +248,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="a-namesharedptroperatorboolean-typea--sharedptroperator-boolean-type"></a><a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
+##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
  Проверяет существование принадлежащего ресурса.  
   
 ```  
@@ -290,7 +286,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="a-namesharedptroperatorstara--sharedptroperator"></a><a name="shared_ptr__operator_star"></a>  shared_ptr::operator*  
+##  <a name="op_star"></a>  shared_ptr::operator*  
  Возвращает указанное значение.  
   
 ```  
@@ -323,7 +319,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptroperatoreqa--sharedptroperator"></a><a name="shared_ptr__operator_eq"></a>  shared_ptr::operator=  
+##  <a name="op_eq"></a>  shared_ptr::operator=  
  Заменяет принадлежащий ресурс.  
   
 ```  
@@ -385,7 +381,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="a-namesharedptroperator-gta--sharedptroperator-gt"></a><a name="shared_ptr__operator-_gt_"></a>  shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
  Получает указатель на указанное значение.  
   
 ```  
@@ -421,7 +417,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="a-namesharedptrownerbeforea--sharedptrownerbefore"></a><a name="shared_ptr__owner_before"></a>  shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.  
   
 ```  
@@ -439,7 +435,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Примечания  
  Функция-член возвращает значение true, если `*this` равно `ordered before``ptr`.  
   
-##  <a name="a-namesharedptrreseta--sharedptrreset"></a><a name="shared_ptr__reset"></a>  shared_ptr::reset  
+##  <a name="reset"></a>  shared_ptr::reset  
  Заменяет принадлежащий ресурс.  
   
 ```  
@@ -524,7 +520,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="a-namesharedptrsharedptra--sharedptrsharedptr"></a><a name="shared_ptr__shared_ptr"></a>  shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  Создает документ `shared_ptr`.  
   
 ```  
@@ -657,7 +653,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="a-namesharedptrdtorsharedptra--sharedptrsharedptr"></a><a name="shared_ptr___dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
  Удаляет `shared_ptr`.  
   
 ```  
@@ -711,7 +707,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="a-namesharedptrswapa--sharedptrswap"></a><a name="shared_ptr__swap"></a>  shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  Меняет местами два объекта `shared_ptr`.  
   
 ```  
@@ -779,7 +775,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-namesharedptruniquea--sharedptrunique"></a><a name="shared_ptr__unique"></a>  shared_ptr::unique  
+##  <a name="unique"></a>  shared_ptr::unique  
  Проверяет, является ли принадлежащий ресурс уникальным.  
   
 ```  
@@ -825,7 +821,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="a-namesharedptrusecounta--sharedptrusecount"></a><a name="shared_ptr__use_count"></a>  shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  Подсчитывает количество владельцев ресурса.  
   
 ```  

@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e7547d6ff0e62e8bc4c449d55c5f06f1c9349092
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 72cdb770716181ee5ac6b93b94d36fcd49bab7dd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
@@ -95,7 +96,7 @@ int _memicmp_l(
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение показывает связь между буферами.  
   
-|Возвращаемое значение|Отношения между определенным числом начальных байтов буфера&1; и буфера&2;|  
+|Возвращаемое значение|Отношения между определенным числом начальных байтов буфера 1 и буфера 2|  
 |------------------|--------------------------------------------------------|  
 |< 0|Значение `buf1` меньше значения `buf2`.|  
 |0|Значение `buf1` идентично значению `buf2`.|  
@@ -152,9 +153,6 @@ int main( void )
 Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'  
 First is equal to second.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)   

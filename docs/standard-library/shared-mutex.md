@@ -72,10 +72,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17978f1c6f934783236df5a36464ab44f8254903
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
@@ -91,7 +92,7 @@ ms.lasthandoff: 02/24/2017
   
 |Функции|Описание|  
 |---------------|-----------------|  
-|[Функция swap](../standard-library/shared-mutex.md#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -128,11 +129,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
  Класс шаблона `shared_lock` расширяет поддержку блокировки с ограничением времени и передает владение общему мьютексу. Владение мьютексом может быть получено на этапе создания или после и может быть передано другому объекту `shared_lock`. Объекты типа `shared_lock` можно переместить, но не копировать.  
   
 > [!WARNING]
->  Типы синхронизации стандартной библиотеки С++ в Visual Studio 2015 основаны на примитивах синхронизации Windows и больше не используют ConcRT (кроме случаев программирования под Windows XP). Типы, определенные в <shared_mutex>, не должны использоваться с какими-либо типами или функциями ConcRT.  
+>  Типы синхронизации стандартной библиотеки C++, начиная с Visual Studio 2015 основаны на примитивах синхронизации Windows и больше не используют ConcRT (кроме случаев, когда целевой платформы Windows XP). Типы, определенные в <shared_mutex>, не должны использоваться с какими-либо типами или функциями ConcRT.  
   
 ## <a name="classes"></a>Классы  
   
-###  <a name="a-nameclasssharedmutexa-sharedmutex-class"></a><a name="class_shared_mutex"></a> Класс shared_mutex  
+###  <a name="class_shared_mutex"></a> Класс shared_mutex  
  Класс `shared_mutex` реализует нерекурсивный мьютекс с семантикой совместного владения.  
   
 ```cpp  
@@ -158,7 +159,7 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedtimedmutexa-sharedtimedmutex-class"></a><a name="class_shared_timed_mutex"></a> Класс shared_timed_mutex  
+###  <a name="class_shared_timed_mutex"></a> Класс shared_timed_mutex  
  Класс `shared_timed_mutex` реализует нерекурсивный мьютекс с семантикой совместного владения, который соответствует требованиям типа мьютекса с ограничением по времени.  
   
 ```cpp  
@@ -189,7 +190,7 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedlocka-sharedlock-class"></a><a name="class_shared_lock"></a> Класс shared_lock  
+###  <a name="class_shared_lock"></a> Класс shared_lock  
  Класс шаблонов `shared_lock` контролирует совместное владение объектом shared mutex в области. Параметр шаблона должен быть типом shared mutex.  
 
 ```cpp  
@@ -236,7 +237,7 @@ class shared_lock {
 
 ## <a name="functions"></a>Функции  
   
-###  <a name="a-namefunctionswapa-swap-function"></a><a name="function_swap"></a> Функция swap  
+###  <a name="function_swap"></a>Swap
  Меняет местами объекты `shared_lock`.  
   
 ```cpp  

@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция `_mbclen` возвращает 1 или 2 в зависимости от того, сколько байтов содержит многобайтовый символ `c` (1 или 2). Для функции `_mbclen` ошибки не возвращаются. Если `mbstr` не имеет значение `NULL`, функция `mblen` возвращает длину многобайтового символа в байтах. Если `mbstr` имеет значение `NULL` или указывает на расширенный нуль-символ, функция `mblen` возвращает 0. Если объект, на который указывает `mbstr`, не образует допустимый многобайтовый символ в первых `count` символах, функция `mblen` возвращает –1.  
+ Функция `_mbclen` возвращает 1 или 2 в зависимости от того, сколько байтов содержит многобайтовый символ `c` (1 или 2). Для функции `_mbclen` ошибки не возвращаются. Если `mbstr` не имеет значение `NULL`, функция `mblen` возвращает длину многобайтового символа в байтах. Если `mbstr` имеет значение `NULL` или указывает на расширенный нуль-символ, функция `mblen` возвращает 0. Если объект, `mbstr` указывает не образует допустимый Многобайтовый символ в первых `count` символов, `mblen` возвращает значение -1.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_mbclen` возвращает длину многобайтового символа `c` в байтах. Если `c` не указывает на старший байт многобайтового символа, как определяется неявным вызовом функции `_ismbblead`, результат вызова функции `_mbclen` будет непредсказуемым.  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   

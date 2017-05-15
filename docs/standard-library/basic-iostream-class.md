@@ -1,74 +1,145 @@
 ---
-title: "Класс basic_iostream | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "istream/std::basic_iostream"
-  - "std.basic_iostream"
-  - "basic_iostream"
-  - "std::basic_iostream"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "basic_iostream - класс"
+title: "Класс basic_iostream | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- istream/std::basic_iostream
+- basic_iostream
+- istream/std::basic_iostream::swap
+dev_langs:
+- C++
+helpviewer_keywords:
+- basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Класс basic_iostream
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3a71df6cc23c0c8f4e6faeb39474c363ed1bd412
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="basiciostream-class"></a>Класс basic_iostream
 Класс потока, поддерживающий ввод и вывод.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-template <class Elem, class Tr = char_traits<Elem> >  
-    class basic_iostream : public basic_istream<Elem, Tr>,  
-        public basic_ostream<Elem, Tr>  
+template <class Elem, class Tr = char_traits<Elem>>  
+class basic_iostream : public basic_istream<Elem, Tr>,  
+    public basic_ostream<Elem, Tr>  
 {  
 public:  
-    explicit basic_iostream(basic_streambuf<Elem, Tr> *_Strbuf);  
-    virtual ~basic_iostream();  
+    explicit basic_iostream(basic_streambuf<Elem, Tr>* strbuf);
+
+    virtual ~basic_iostream();
+
 };  
 ```  
   
-## Заметки  
- Этот класс шаблона описывает объект, управляющий вставками с помощью базового класса [basic\_ostream](../Topic/basic_ostream%20Class.md)\<`Elem`, `Tr`\> и извлечениями с помощью базового класса [basic\_istream](../Topic/basic_istream%20Class.md)\<`Elem`, `Tr`\>.  У этих двух объектов общий виртуальный базовый класс [basic\_ios](../Topic/basic_ios%20Class.md)\<`Elem`, `Tr`\>.  Они также управляют общим буфером потока с элементами типа `Elem`, признаки символов которых определяются классом `Tr`.  Конструктор инициализирует базовые классы с помощью `basic_istream`\(**strbuf**\) и `basic_ostream`\(**strbuf**\).  
+## <a name="remarks"></a>Примечания  
+ Этот класс шаблона описывает объект, управляющий вставками с помощью базового класса [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> и извлечениями с помощью базового класса [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. У этих двух объектов общий виртуальный базовый класс [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Они также управляют общим буфером потока с элементами типа `Elem`, признаки символов которых определяются классом `Tr`. Конструктор инициализирует базовые классы с помощью `basic_istream`( **strbuf**) и `basic_ostream`( **strbuf**).  
   
-### Конструкторы  
-  
-|||  
-|-|-|  
-|[basic\_iostream](../Topic/basic_iostream::basic_iostream.md)|Создание объекта `basic_iostream`.|  
-  
-### Функции\-члены  
+### <a name="constructors"></a>Конструкторы  
   
 |||  
 |-|-|  
-|[swap](../Topic/basic_iostream::swap.md)|Меняет местами содержимое предоставленного объекта `basic_iostream` на содержимое этого объекта.|  
+|[basic_iostream](#basic_iostream)|Создание объекта `basic_iostream`.|  
   
-### Операторы  
+### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[operator \=](../Topic/basic_iostream::operator=.md)|Присваивает значение указанного объекта `basic_iostream` этому объекту.  Это присваивание перемещением, включающее `rvalue`, которое не оставляет копию.|  
+|[swap](#swap)|Меняет местами содержимое предоставленного объекта `basic_iostream` на содержимое этого объекта.|  
   
-## Требования  
- **Заголовок:** \<istream\>  
+### <a name="operators"></a>Операторы  
+  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Присваивает значение указанного объекта `basic_iostream` этому объекту. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<istream>  
   
  **Пространство имен:** std  
   
-## См. также  
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../Topic/iostream%20Programming.md)   
+##  <a name="basic_iostream"></a>  basic_iostream::basic_iostream  
+ Создание объекта `basic_iostream`.  
+  
+```  
+explicit basic_iostream(basic_streambuf<Elem, Tr>* strbuf);
+
+basic_iostream(basic_iostream&& right);
+
+basic_iostream();
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `strbuf`  
+ Существующий объект `basic_streambuf`.  
+  
+ `right`  
+ Существующий объект `basic_iostream`, который используется для создания нового объекта `basic_iostream`.  
+  
+### <a name="remarks"></a>Примечания  
+ Первый конструктор инициализирует базовые объекты посредством `basic_istream(strbuf)` и `basic_ostream(strbuf)`.  
+  
+ Второй конструктор инициализирует базовые объекты путем вызова `move(right)`.  
+  
+##  <a name="op_eq"></a>  basic_iostream::operator=  
+ Присваивает значение указанного объекта `basic_iostream` этому объекту. Это назначение перемещения, включающее rvalue, которое не оставляет копию.  
+  
+```  
+basic_iostream& operator=(basic_iostream&& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `right`  
+ Ссылка `rvalue` на объект `basic_iostream`, на основе которого будет присвоено значение.  
+  
+### <a name="remarks"></a>Примечания  
+ Оператор-член вызывает `swap(right)`.  
+  
+##  <a name="swap"></a>  basic_iostream::swap  
+ Меняет местами содержимое предоставленного объекта `basic_iostream` на содержимое этого объекта.  
+  
+```  
+void swap(basic_iostream& right);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `right`  
+ Объект `basic_iostream` для обмена.  
+  
+### <a name="remarks"></a>Примечания  
+ Функция-член вызывает `swap(right)`.  
+  
+## <a name="see-also"></a>См. также  
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Программирование iostream](../standard-library/iostream-programming.md)   
  [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+
+

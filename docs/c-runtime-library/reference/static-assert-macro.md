@@ -1,44 +1,61 @@
 ---
-title: "Макрос _STATIC_ASSERT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_STATIC_ASSERT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_STATIC_ASSERT - макрос"
+title: "Макрос _STATIC_ASSERT | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _STATIC_ASSERT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Макрос _STATIC_ASSERT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 265796cdebbed1c0a067c44bbe6b71077be44a2b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Вычисляют выражение во время компиляции и генерируют ошибку, когда результат равен `FALSE`.  
+---
+# <a name="staticassert-macro"></a>Макрос _STATIC_ASSERT
+Вычисляет выражение во время компиляции и выдает ошибку, если результат — `FALSE`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _STATIC_ASSERT(  
@@ -46,15 +63,15 @@ _STATIC_ASSERT(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `booleanExpression`  
- Выражение \(включая указатели\), результат вычисления которого не является нулем \(`TRUE`\) или является нулем \(`FALSE`\).  
+ Выражение (включая указатели), результат вычисления которого отличен от нуля (`TRUE`) или равен нулю (`FALSE`).  
   
-## Заметки  
- Этот макрос похож на [макросы \_ASSERT и \_ASSERTE](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md), за исключением того, что `booleanExpression` вычисляется во время компиляции, а не во время выполнения.  Если `booleanExpression` равен `FALSE` \(0\), то [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) создается.  
+## <a name="remarks"></a>Примечания  
+ Этот макрос напоминает [макросы _ASSERT и _ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), за исключением того, что `booleanExpression` вычисляется во время компиляции, а не во время выполнения. Если результат вычисления `booleanExpression` равен `FALSE` (0), создается [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md).  
   
-## Пример  
- В этом примере мы проверяем, является ли `sizeof` `int` большим или равным 2 байтам и является ли `sizeof` `long` равным одному байту.  Программа не будет компилироваться и сгенерирует [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md), поскольку `long` больше 1 байта.  
+## <a name="example"></a>Пример  
+ В этом примере проверяется, является ли `sizeof` `int` больше или равно двум байтам и равно ли значение `sizeof` `long` одному байту. Программа не будет скомпилирована, будет создана [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md), так как `long` превышает 1 байт.  
   
 ```  
 // crt__static_assert.c  
@@ -74,15 +91,12 @@ int main()
 }  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Макрос|Обязательный заголовок|  
-|------------|----------------------------|  
-|`_STATIC_ASSERT`|\<crtdbg.h\>|  
+|-----------|---------------------|  
+|`_STATIC_ASSERT`|\<crtdbg.h>|  
   
-## Эквивалент в .NET Framework  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Макросы \_ASSERT, \_ASSERTE, \_ASSERT\_EXPR](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md)
+ [Макросы _ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)

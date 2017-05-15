@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  Дополнительные подстановочные аргументы, используемые `format`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Для всех назначений отчетов `_CrtDbgReport` и `_CrtDbgReportW` возвращают -1 при возникновении ошибки и 0, если ошибки отсутствуют. Однако если назначение отчета — окно с сообщением об отладке, а пользователь нажимает кнопку **Повторить**, эти функции возвращают значение 1. Если пользователь нажимает кнопку **Прервать** в окне с сообщением об отладке, эти функции немедленно прерываются и не возвращают значение.  
+ Для всех назначений отчетов `_CrtDbgReport` и `_CrtDbgReportW` возвращают -1, если возникает ошибка и 0, если ошибок не обнаружено. Однако если назначение отчета — окно с сообщением об отладке, а пользователь нажимает кнопку **Повторить**, эти функции возвращают значение 1. Если пользователь нажимает кнопку **Прервать** в окне с сообщением об отладке, эти функции немедленно прерываются и не возвращают значение.  
   
- Макросы отладки [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) вызывают `_CrtDbgReport` для создания отчетов об отладке. Версии этих макросов с расширенными символами, так же как и [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` и `_RPTFW``n`, используют `_CrtDbgReportW` для создания отчетов об отладке. Если функция `_CrtDbgReport` или `_CrtDbgReportW` возвращает значение 1, эти макросы запускают отладчик при условии, что включена JIT-отладка.  
+ Макросы отладки [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) вызывают `_CrtDbgReport` для создания отчетов об отладке. Версии этих макросов с расширенными символами, так же как и [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` и `_RPTFW n`, используют `_CrtDbgReportW` для создания отчетов об отладке. Если функция `_CrtDbgReport` или `_CrtDbgReportW` возвращает значение 1, эти макросы запускают отладчик при условии, что включена JIT-отладка.  
   
 ## <a name="remarks"></a>Примечания  
  `_CrtDbgReport` и `_CrtDbgReportW` могут отправлять отчет об отладке в три разных назначения: файл отчета об отладке, монитор отладки (отладчик [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) или окно с сообщением об отладке. Две функции настройки, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) и [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), используются для задания назначения (назначений) для каждого типа отчета. Эти функции позволяют управлять назначением или назначениями для каждого типа отчета по отдельности. Например, можно указать, что `reportType` типа `_CRT_WARN` можно отправлять только в монитор отладки, а `reportType` типа `_CRT_ASSERT` — в окно с сообщением об отладке и пользовательский файл отчета.  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  Примеры изменения функций создания отчетов см. в разделе [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)   

@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - discrete_distribution
-- std::discrete_distribution
 - random/std::discrete_distribution
-- std::discrete_distribution::reset
 - random/std::discrete_distribution::reset
-- std::discrete_distribution::probabilities
 - random/std::discrete_distribution::probabilities
-- std::discrete_distribution::param
 - random/std::discrete_distribution::param
-- std::discrete_distribution::min
 - random/std::discrete_distribution::min
-- std::discrete_distribution::max
 - random/std::discrete_distribution::max
-- std::discrete_distribution::operator()
 - random/std::discrete_distribution::operator()
-- std::discrete_distribution::param_type
 - random/std::discrete_distribution::param_type
-- std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::probabilities
-- std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator==
-- std::discrete_distribution::param_type::operator!=
 - random/std::discrete_distribution::param_type::operator!=
+- random/std::discrete_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f29f4e98cf23f30383327713973f861b56ae0ce0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="discretedistribution-class"></a>Класс discrete_distribution
@@ -110,8 +101,8 @@ public:
   
 |||  
 |-|-|  
-|[discrete_distribution::discrete_distribution](#discrete_distribution__discrete_distribution)|`discrete_distribution::param`|  
-|`discrete_distribution::operator()`|[discrete_distribution::param_type](#discrete_distribution__param_type)|  
+|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
+|`discrete_distribution::operator()`|[param_type](#param_type)|  
   
  Функция свойства `vector<double> probabilities()` возвращает отдельные вероятности для каждого полученного целого числа.  
   
@@ -201,7 +192,7 @@ Distribution for 100 samples:
   
  **Пространство имен:** std  
   
-##  <a name="a-namediscretedistributiondiscretedistributiona--discretedistributiondiscretedistribution"></a><a name="discrete_distribution__discrete_distribution"></a>  discrete_distribution::discrete_distribution  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
  Формирует распределение.  
   
 ```  
@@ -234,7 +225,7 @@ explicit discrete_distribution(const param_type& parm);
  Объект [initializer_list](../cpp/initializers.md), из которого формируется распределение.  
   
 *count*  
- Количество элементов в диапазоне распределения. Если `count==0`, то эквивалентно конструктору по умолчанию (всегда формируется&0;).  
+ Количество элементов в диапазоне распределения. Если `count==0`, то эквивалентно конструктору по умолчанию (всегда формируется 0).  
   
 *low*  
  Минимальное значение в диапазоне распределения.  
@@ -249,7 +240,7 @@ explicit discrete_distribution(const param_type& parm);
  Структура `param_type`, используемая для формирования распределения.  
   
 ### <a name="remarks"></a>Примечания  
-Конструктор по умолчанию создает объект, значение вероятности которого содержит один элемент со значением 1. Это приводит к получению распределения, которое всегда возвращает&0;.  
+Конструктор по умолчанию создает объект, значение вероятности которого содержит один элемент со значением 1. Это приводит к получению распределения, которое всегда возвращает 0.  
   
 Конструктор диапазона итератора с параметрами *firstW* и *lastW* создает объект распределения с помощью значений веса из итераторов в пределах последовательности интервала [*firstW*, *lastW*).  
   
@@ -257,11 +248,11 @@ explicit discrete_distribution(const param_type& parm);
   
 Конструктор с параметрами *число*, *низкий*, *высокий* и *weightfunc* формирует объект распределения, инициализируемый на основе следующих правил:  
 -  Если *число* < 1, **n** = 1, то эквивалентно конструктору по умолчанию (всегда формируется 0).  
--  Если *число* > 0, **n** = *число*. Если **d** = (*высокий* - *низкий*) / **n** больше 0 и используются **d** однородных поддиапазонов, то назначение каждого веса выполняется следующим образом: `weight[k] = weightfunc(x)`, где **x** = *низкий* + **k** * **d** + **d** / 2, для **k** = 0, ..., **n** – 1.  
+-  Если *число* > 0, **n** = *число*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
 Конструктор, имеющий `param_type` параметр *parm*, создает объект распределения, используя *parm* как сохраненную структуру параметров.  
   
-##  <a name="a-namediscretedistributionparamtypea--discretedistributionparamtype"></a><a name="discrete_distribution__param_type"></a>  discrete_distribution::param_type  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
  Сохраняет все параметры распределения.  
   
 ```  

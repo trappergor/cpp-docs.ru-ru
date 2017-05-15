@@ -1,71 +1,88 @@
 ---
-title: "sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__swprintf_l"
-  - "sprintf"
-  - "_sprintf_l"
-  - "_swprintf_l"
-  - "swprintf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_stprintf_l"
-  - "__swprintf_l"
-  - "sprintf_l"
-  - "swprintf"
-  - "_sprintf_l"
-  - "sprintf"
-  - "_stprintf"
-  - "stprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__swprintf_l - функция"
-  - "_CRT_NON_CONFORMING_SWPRINTFS"
-  - "_sprintf_l - функция"
-  - "_stprintf - функция"
-  - "_stprintf_l - функция"
-  - "_swprintf_l - функция"
-  - "форматированный текст [C++]"
-  - "sprintf - функция"
-  - "sprintf_l - функция"
-  - "stprintf - функция"
-  - "stprintf_l - функция"
-  - "строки [C++], запись в"
-  - "swprintf - функция"
-  - "swprintf_l - функция"
+title: "sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __swprintf_l
+- sprintf
+- _sprintf_l
+- _swprintf_l
+- swprintf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _stprintf_l
+- __swprintf_l
+- sprintf_l
+- swprintf
+- _sprintf_l
+- sprintf
+- _stprintf
+- stprintf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _swprintf_l function
+- _stprintf function
+- __swprintf_l function
+- stprintf function
+- sprintf function
+- _sprintf_l function
+- _stprintf_l function
+- swprintf function
+- strings [C++], writing to
+- _CRT_NON_CONFORMING_SWPRINTFS
+- swprintf_l function
+- stprintf_l function
+- sprintf_l function
+- formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
 caps.latest.revision: 36
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
----
-# sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0a584008d0697dda3e45d8bafa74128d1978d5ce
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Запись форматированных данных в строку.  Существуют более безопасные версии этих функций; см. раздел [sprintf\_s, \_sprintf\_s\_l, swprintf\_s, \_swprintf\_s\_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  Безопасные версии `swprintf` и `_swprintf_l` не принимают параметр `count`.  
+---
+# <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
+Запись форматированных данных в строку. Существуют более безопасные версии этих функций; см. раздел [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Безопасные версии `swprintf` и `_swprintf_l` не принимают параметр `count`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int sprintf(  
@@ -114,7 +131,7 @@ int _sprintf_l(
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Место хранения выходных данных  
   
@@ -130,42 +147,42 @@ int _sprintf_l(
  `locale`  
  Используемый языковой стандарт.  
   
- Дополнительные сведения см. в разделе [Спецификации формата](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md).  
+ Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Возвращаемое значение  
- Записанное число символов или –1 в случае возникновения ошибки.  Если параметр `buffer` или `format` является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если разрешается продолжать выполнение, эти функции возвращают \-1 и задают `errno` значение `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Число записанных символов, или -1, если произошла ошибка. Если параметр `buffer` или `format` является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
   
- `sprintf` возвращает число байтов, сохраненных в `buffer` без учета завершающего символа null.  `swprintf` возвращает число расширенных символов, сохраненных в `buffer`, без учета завершающего расширенного символа null.  
+ `sprintf` возвращает число байтов, сохраненных в `buffer` без учета завершающего символа null. `swprintf` возвращает число расширенных символов, сохраненных в `buffer`, без учета завершающего расширенного символа null.  
   
-## Заметки  
- Функция `sprintf` форматирует и сохраняет набор символов и значений в `buffer`.  Каждый `argument` \(если он есть\) преобразуется и выводится согласно соответствующей спецификацией формата в `format`.  Формат состоит из обычных символов и имеет те же форму и функциональные возможности, что и аргумент `format` для [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  После последнего написанного символа добавляется символ null.  Если копирование производится между перекрывающимися строками, поведение не определено.  
+## <a name="remarks"></a>Примечания  
+ Функция `sprintf` форматирует и сохраняет набор символов и значений в `buffer`. Каждый `argument` (если он есть) преобразуется и выводится согласно соответствующей спецификацией формата в `format`. Формат состоит из обычных символов и имеет те же форму и функциональные возможности, что и аргумент `format` для [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). После последнего написанного символа добавляется символ null. Если копирование производится между перекрывающимися строками, поведение не определено.  
   
 > [!IMPORTANT]
->  Функция `sprintf` не позволяет ограничить число записываемых символов, а значит, код, включающий функцию `sprintf`, может привести к переполнению буфера.  Можно воспользоваться родственной функцией [\_snprintf](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), которая определяет максимальное количество символов для записи в `buffer`, или функцией [\_scprintf](../Topic/_scprintf,%20_scprintf_l,%20_scwprintf,%20_scwprintf_l.md), позволяющей установить необходимый размер буфера.  Кроме того, убедитесь, что `format` не является строкой, определяемой пользователем.  
+>  Функция `sprintf` не позволяет ограничить число записываемых символов, а значит, код, включающий функцию `sprintf`, может привести к переполнению буфера. Можно воспользоваться родственной функцией [_snprintf](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), которая определяет максимальное количество символов для записи в `buffer`, или функцией [_scprintf](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md), позволяющей установить необходимый размер буфера. Кроме того, убедитесь, что `format` не является строкой, определяемой пользователем.  
   
- `swprintf` — это двухбайтовая версия `sprintf`; аргументы указателя для `swprintf` представляют собой двухбайтовые строки.  Обнаружение ошибок кодирования в `swprintf` может отличаться от обнаружения ошибок в `sprintf`.  `swprintf` и `fwprintf` ведут себя одинаково за тем исключением, что `swprintf` записывает выходные данные в строку, а не в назначение типа `FILE`, а `swprintf` требует настройки параметра `count`, определяющего максимальное количество символов для записи.  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
+ `swprintf` — это двухбайтовая версия `sprintf`; аргументы указателя для `swprintf` представляют собой двухбайтовые строки. Обнаружение ошибок кодирования в `swprintf` может отличаться от обнаружения ошибок в `sprintf`. `swprintf` и `fwprintf` ведут себя одинаково за тем исключением, что `swprintf` записывает выходные данные в строку, а не в назначение типа `FILE`, а `swprintf` требует настройки параметра `count`, определяющего максимальное количество символов для записи. Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
- `swprintf` соответствует стандарту ISO C, который требует указания второго параметра \(`count`\) типа `size_t`.  Чтобы применить нестандартное поведение принудительно, определите функцию `_CRT_NON_CONFORMING_SWPRINTFS`.  В будущей версии старое поведение может быть удалено, поэтому код необходимо изменить в соответствии с новым стандартным поведением.  
+ `swprintf` соответствует стандарту ISO C, который требует указания второго параметра (`count`) типа `size_t`. Чтобы применить нестандартное поведение принудительно, определите функцию `_CRT_NON_CONFORMING_SWPRINTFS`. В будущей версии старое поведение может быть удалено, поэтому код необходимо изменить в соответствии с новым стандартным поведением.  
   
- В C\+\+ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций.  Дополнительные сведения см. в статье [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_stprintf`|`sprintf`|`sprintf`|`_swprintf`|  
 |`_stprintf_l`|`_sprintf_l`|`_sprintf_l`|`__swprintf_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`sprintf`, `_sprintf_l`|\<stdio.h\>|  
-|`swprintf`, `_swprintf_l`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`sprintf`, `_sprintf_l`|\<stdio.h>|  
+|`swprintf`, `_swprintf_l`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_sprintf.c  
@@ -192,13 +209,17 @@ int main( void )
 }  
 ```  
   
-  **Результат**  
- **Строка: компьютер**  
- **Символ: l**  
- **Целое число: 35**  
- **Real: 1,732053**  
-**число символов \= 79**   
-## Пример  
+```Output  
+Output:  
+   String:    computer  
+   Character: l  
+   Integer:   35  
+   Real:      1.732053  
+  
+character count = 79  
+```  
+  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_swprintf.c  
@@ -217,15 +238,15 @@ int main( void )
 }  
 ```  
   
-  **запись 11 символов**  
-**запись \-1 символ**   
-## Эквивалент в .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+wrote 11 characters  
+wrote -1 characters  
+```  
   
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [Функции vprintf](../../c-runtime-library/vprintf-functions.md)

@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ ms.lasthandoff: 02/24/2017
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -73,10 +73,10 @@ int feholdexcept(
  Указатель на объект `fenv_t`, содержащий копию среды с плавающей запятой.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает ноль только в том случае, если функция способна успешно включить непрерывную обработку исключений с плавающей запятой.  
+ Возвращает нуль только в том случае, если функция является возможность успешного включения обработки исключений с плавающей запятой без остановки.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `feholdexcept` используется для сохранения состояния текущей среды с плавающей запятой в объект `fenv_t`, на который указывает `penv`, и настройки среды таким образом, чтобы при возникновении исключений с плавающей запятой выполнение не прерывалось. Это называется режимом без остановки.  В этом режиме работа продолжается, пока среда не будет восстановлена с помощью функции [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) или [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
+ Функция `feholdexcept` используется для сохранения состояния текущей среды с плавающей запятой в объект `fenv_t`, на который указывает `penv`, и настройки среды таким образом, чтобы при возникновении исключений с плавающей запятой выполнение не прерывалось. Это называется режимом без остановки.  В этом режиме работа продолжается, пока среда не будет восстановлена с помощью функции [fesetenv](fesetenv1.md) или [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
   
  Эту функцию можно использовать в начале подпрограммы, который должна скрывать от вызывающей стороны одно или несколько исключений с плавающей запятой. Чтобы сообщить об исключении, можно просто удалить нежелательные исключения с помощью функции [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md), а затем завершить режим без остановки, вызвав `feupdateenv`.  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

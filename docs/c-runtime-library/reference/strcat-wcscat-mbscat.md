@@ -1,68 +1,85 @@
 ---
-title: "strcat, wcscat, _mbscat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbscat"
-  - "wcscat"
-  - "strcat"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbscat"
-  - "_ftcscat"
-  - "_tcscat"
-  - "strcat"
-  - "wcscat"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcscat - функция"
-  - "_mbscat - функция"
-  - "_tcscat - функция"
-  - "дополнение строк"
-  - "объединение строк"
-  - "ftcscat - функция"
-  - "mbscat - функция"
-  - "strcat - функция"
-  - "строки [C++], присоединение"
-  - "строки [C++], сцепление"
-  - "tcscat - функция"
-  - "wcscat - функция"
+title: "strcat, wcscat, _mbscat | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbscat
+- wcscat
+- strcat
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbscat
+- _ftcscat
+- _tcscat
+- strcat
+- wcscat
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- mbscat function
+- _ftcscat function
+- _tcscat function
+- ftcscat function
+- strcat function
+- strings [C++], appending
+- _mbscat function
+- tcscat function
+- strings [C++], concatenating
+- appending strings
+- wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# strcat, wcscat, _mbscat
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 92bed9443eba34dc0298d28c53d34543ee52d935
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Добавляет строку.  Существуют более безопасные версии этих функций; см. раздел [strcat\_s, wcscat\_s, \_mbscat\_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
+---
+# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+Дополняет строку. Существуют более безопасные версии этих функций; см. раздел [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
   
 > [!IMPORTANT]
->  `_mbscat_s` невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscat_s` не может использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *strcat(  
@@ -94,53 +111,50 @@ unsigned char *_mbscat(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `strDestination`  
- Строка назначения, завершающаяся символом NULL.  
+ Строка назначения, завершающаяся нуль-символом.  
   
  `strSource`  
  Исходная строка, завершающаяся символом NULL.  
   
-## Возвращаемое значение  
- Каждая из этих функций возвращает строку назначения \(`strDestination`\).  Нет зарезервированных возвращаемых значений для указания ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Каждая из этих функций возвращает строку назначения (`strDestination`). Нет зарезервированных возвращаемых значений для указания ошибки.  
   
-## Заметки  
- Функция `strcat` добавляет `strSource` к `strDestination`, а затем к результирующей строке завершающий символ null.  Начальный символ `strSource` перезаписывает конечный символ null `strDestination`.  При перекрытии исходной и конечной строк поведение инструкции `strcat` не определено.  
+## <a name="remarks"></a>Примечания  
+ Функция `strcat` добавляет `strSource` в `strDestination` и завершает результирующую строку символом NULL. Начальный символ строки `strSource` переопределяет завершающий символ NULL строки `strDestination`. При перекрытии исходного и конечного буферов поведение `strcat` не определено.  
   
 > [!IMPORTANT]
->  Поскольку `strcat` не проверяет наличие достаточного места в `strDestination` перед добавлением `strSource`, эта функция является потенциальной причиной переполнение буфера.  Попробуйте вместо нее использовать [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).  
+>  `strcat` не проверяет, достаточно ли места в строке `strDestination`, перед добавлением `strSource`, в связи с чем может возникнуть ошибка переполнения буфера. Рекомендуется использовать вместо нее функцию [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).  
   
- `wcscat` и `_mbscat` — двубайтовая и многобайтовая символьные версии `strcat`.  Аргументы и возвращаемое значение `wcscat` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbscat` представляют собой многобайтовые строки.  В остальных случаях эти три функции ведут себя идентично.  
+ Функции `wcscat` и `_mbscat` являются версиями функции `strcat` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcscat` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbscat` представляют собой многобайтовые строки. В остальном эти три функции ведут себя идентично.  
   
- В C\+\+ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscat`|`strcat`|`_mbscat`|`wcscat`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strcat`|\<string.h\>|  
-|`wcscat`|\<string.h\> или \<wchar.h\>|  
-|`_mbscat`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strcat`|\<string.h>|  
+|`wcscat`|\<string.h> или \<wchar.h>|  
+|`_mbscat`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  См. пример для [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
   
-## Эквивалент в .NET Framework  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
-  
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

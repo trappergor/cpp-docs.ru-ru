@@ -9,9 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.priority_queue
 - priority_queue
-- std::priority_queue
+- queue/std::priority_queue::container_type
+- queue/std::priority_queue::size_type
+- queue/std::priority_queue::value_type
+- queue/std::priority_queue::empty
+- queue/std::priority_queue::pop
+- queue/std::priority_queue::push
+- queue/std::priority_queue::size
+- queue/std::priority_queue::top
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 493cc5b28bb4cfa682b06ed904c3b0c0aa46220c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 31191f5109242dc239ac0237a2eab6ff459fe41b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="priorityqueue-class"></a>Класс priority_queue
@@ -62,7 +69,7 @@ class priority_queue
  Тип, предоставляющий объект-функцию, который может сравнить два значения элементов как ключи сортировки, чтобы определить их относительный порядок в priority_queue. Этот аргумент — необязательный, в качестве значения по умолчанию используется двоичный предикат **less***\<***typename** *Container***::value_type***>*.  
   
 ## <a name="remarks"></a>Примечания  
- Элементы класса **Type**, заданные в первом параметре-шаблоне объекта очереди, являются синонимами [value_type](#priority_queue__value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром-шаблоном. Класс **Type** должен быть назначаемым, чтобы можно было копировать объекты этого типа и присваивать значения переменным этого типа.  
+ Элементы класса **Type**, заданные в первом параметре-шаблоне объекта очереди, являются синонимами [value_type](#value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром-шаблоном. Класс **Type** должен быть назначаемым, чтобы можно было копировать объекты этого типа и присваивать значения переменным этого типа.  
   
  Priority_queue упорядочивает последовательность, которой она управляет, путем обращения к сохраненному объекту-функции класса **Traits**. В целом, упорядочиваемые элементы должны лишь подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея любые два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. С более технической точки зрения, функция сравнения является бинарным предикатом, который вызывает строгого слабое упорядочение в стандартном математически смысле.  
   
@@ -82,32 +89,32 @@ class priority_queue
   
 |||  
 |-|-|  
-|[priority_queue](#priority_queue__priority_queue)|Создает `priority_queue`, который является пустым или копией диапазона объекта базового контейнера или другого `priority_queue`.|  
+|[priority_queue](#priority_queue)|Создает `priority_queue`, который является пустым или копией диапазона объекта базового контейнера или другого `priority_queue`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#priority_queue__container_type)|Тип, предоставляющий базовый контейнер для принятия `priority_queue`.|  
-|[size_type](#priority_queue__size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `priority_queue`.|  
-|[value_type](#priority_queue__value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `priority_queue`.|  
+|[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `priority_queue`.|  
+|[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `priority_queue`.|  
+|[value_type](#value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `priority_queue`.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[empty](#priority_queue__empty)|Проверяет, является ли `priority_queue` пустым.|  
-|[pop](#priority_queue__pop)|Удаляет самый большой элемент `priority_queue` с верхней позиции.|  
-|[push](#priority_queue__push)|Добавляет элемент в очередь с приоритетом на основе приоритета элемента из оператора operator<.|  
-|[size](#priority_queue__size)|Возвращает количество элементов в контейнере `priority_queue`.|  
-|[top](#priority_queue__top)|Возвращает константную ссылку на наибольший элемент в верхней части `priority_queue`.|  
+|[empty](#empty)|Проверяет, является ли `priority_queue` пустым.|  
+|[pop](#pop)|Удаляет самый большой элемент `priority_queue` с верхней позиции.|  
+|[push](#push)|Добавляет элемент в очередь с приоритетом на основе приоритета элемента из оператора operator<.|  
+|[size](#size)|Возвращает количество элементов в контейнере `priority_queue`.|  
+|[top](#top)|Возвращает константную ссылку на наибольший элемент в верхней части `priority_queue`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<queue>  
   
  **Пространство имен:** std  
   
-##  <a name="a-namepriorityqueuecontainertypea--priorityqueuecontainertype"></a><a name="priority_queue__container_type"></a>  priority_queue::container_type  
+##  <a name="container_type"></a>  priority_queue::container_type  
  Тип, предоставляющий базовый контейнер для изменения.  
   
 ```  
@@ -120,9 +127,9 @@ typedef Container container_type;
  Дополнительные сведения о `Container` см. в разделе "Примечания" документации к [Класс priority_queue](../standard-library/priority-queue-class.md).  
   
 ### <a name="example"></a>Пример  
-  См. пример для [priority_queue](#priority_queue__priority_queue) с примером объявления и использования `container_type`.  
+  См. пример для [priority_queue](#priority_queue) с примером объявления и использования `container_type`.  
   
-##  <a name="a-namepriorityqueueemptya--priorityqueueempty"></a><a name="priority_queue__empty"></a>  priority_queue::empty  
+##  <a name="empty"></a>  priority_queue::empty  
  Проверяет, что priority_queue пуста.  
   
 ```  
@@ -166,7 +173,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="a-namepriorityqueuepopa--priorityqueuepop"></a><a name="priority_queue__pop"></a>  priority_queue::pop  
+##  <a name="pop"></a>  priority_queue::pop  
  Удаляет самый большой элемент в priority_queue с верхней позиции.  
   
 ```  
@@ -220,7 +227,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="a-namepriorityqueuepriorityqueuea--priorityqueuepriorityqueue"></a><a name="priority_queue__priority_queue"></a>  priority_queue::priority_queue  
+##  <a name="priority_queue"></a>  priority_queue::priority_queue  
  Создает priority_queue, которая пуста или является копией диапазона объекта базового контейнера или другой priority_queue.  
   
 ```  
@@ -249,21 +256,21 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
  `_Cont`  
  Базовый контейнер, из которого будет копироваться создаваемая priority_queue.  
   
- ` right`  
+ `right`  
  Priority_queue, для которой создаваемый набор станет копией.  
   
- ` first`  
+ `first`  
  Положение первого элемента в диапазоне копируемых элементов.  
   
- ` last`  
+ `last`  
  Положение первого элемента после диапазона копируемых элементов.  
   
 ### <a name="remarks"></a>Примечания  
- Каждый из первых трех конструкторов определяет пустую исходную priority_queue; второй также указывает тип функции сравнения (` comp`) для использования при установлении порядка элементов, а третий явно указывает `container_type` (`_Cont`) для использования. Ключевое слово **explicit** подавляет некоторые виды автоматического преобразования типов.  
+ Каждый из первых трех конструкторов определяет пустую исходную priority_queue; второй также указывает тип функции сравнения (`comp`) для использования при установлении порядка элементов, а третий явно указывает `container_type` (`_Cont`) для использования. Ключевое слово **explicit** подавляет некоторые виды автоматического преобразования типов.  
   
- Четвертый конструктор задает копию priority_queue ` right`.  
+ Четвертый конструктор задает копию priority_queue `right`.  
   
- Последние три конструктора копируют диапазон [* первый, последний*) из контейнера и используют значения, чтобы инициализировать priority_queue с увеличением эксплицитности в указании типа функции сравнения класса **Traits** и `container_type`.  
+ Последние три конструктора копируют диапазон [* первой, последней *) некоторые контейнера и значения можно использовать для инициализации priority_queue с увеличением explicitness при указании типа функции сравнения класса **признаки** и `container_type`.  
   
 ### <a name="example"></a>Пример  
   
@@ -376,7 +383,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namepriorityqueuepusha--priorityqueuepush"></a><a name="priority_queue__push"></a>  priority_queue::push  
+##  <a name="push"></a>  priority_queue::push  
  Добавляет элемент в очередь с приоритетом на основе приоритета элемента из оператора operator<.  
   
 ```  
@@ -384,7 +391,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` val`  
+ `val`  
  Элемент, добавляемый в верхнюю часть priority_queue.  
   
 ### <a name="remarks"></a>Примечания  
@@ -422,7 +429,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuesizea--priorityqueuesize"></a><a name="priority_queue__size"></a>  priority_queue::size  
+##  <a name="size"></a>  priority_queue::size  
  Возвращает количество элементов в priority_queue.  
   
 ```  
@@ -461,7 +468,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="a-namepriorityqueuesizetypea--priorityqueuesizetype"></a><a name="priority_queue__size_type"></a>  priority_queue::size_type  
+##  <a name="size_type"></a>  priority_queue::size_type  
  Тип целого числа без знака, который может представлять количество элементов в priority_queue.  
   
 ```  
@@ -472,9 +479,9 @@ typedef typename Container::size_type size_type;
  Тип является синонимом `size_type` базового контейнера, измененного priority_queue.  
   
 ### <a name="example"></a>Пример  
-  См. пример для [size](#priority_queue__size) в качестве примера объявления и использования `size_type`.  
+  См. пример для [size](#size) в качестве примера объявления и использования `size_type`.  
   
-##  <a name="a-namepriorityqueuetopa--priorityqueuetop"></a><a name="priority_queue__top"></a>  priority_queue::top  
+##  <a name="top"></a>  priority_queue::top  
  Возвращает константную ссылку на наибольший элемент в верхней части priority_queue.  
   
 ```  
@@ -519,7 +526,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuevaluetypea--priorityqueuevaluetype"></a><a name="priority_queue__value_type"></a>  priority_queue::value_type  
+##  <a name="value_type"></a>  priority_queue::value_type  
  Тип, представляющий тип объекта, который хранится в виде элемента в priority_queue.  
   
 ```  

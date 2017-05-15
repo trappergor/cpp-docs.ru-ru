@@ -10,9 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::locale
-- std::locale
-- std.locale
 - locale
+- locale/std::locale::category
+- locale/std::locale::combine
+- locale/std::locale::name
+- locale/std::locale::classic
+- locale/std::locale::global
+- locale/std::locale::operator( )
+- locale/std::locale::facet
+- locale/std::locale::id
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c32deb2524dc56925d3235c170f6ff0219c1b28c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6e33e125d2689d37443bec58c5b01f5b7e72ccfd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="locale-class"></a>Класс locale
@@ -60,7 +67,7 @@ static locale::id id;
   
  Можно задать открытый набор данных аспектов. Можно также создать объект языкового стандарта, назначающий произвольное количество аспектов.  
   
- Предопределенные группы этих аспектов представляют [категории языкового стандарта](#locale__category), которыми в стандартной библиотеке C традиционно управляет функция `setlocale`.  
+ Предопределенные группы этих аспектов представляют [категории языкового стандарта](#category), которыми в стандартной библиотеке C традиционно управляет функция `setlocale`.  
   
  Категория collate (LC_COLLATE) включает аспекты:  
   
@@ -124,7 +131,7 @@ messages<wchar_t>
   
  Некоторые из этих предопределенных аспектов используются классами iostreams для управления преобразованием числовых значений в текстовые последовательности и наоборот.  
   
- Объект класса locale также сохраняет имя языкового стандарта в качестве объекта класса [string](../standard-library/string-typedefs.md#string). Использование недопустимого имени языкового стандарта для создания аспекта языкового стандарта или объекта языкового стандарта создает объект класса [runtime_error](../standard-library/runtime-error-class.md). Сохраненное имя языкового стандарта — `"*"`, если объект языкового стандарта не может быть уверен в том, что локальный стандарт языка C точно соответствует представленному данным объектом. В противном случае можно установить соответствующий языковой стандарт в стандартной библиотеке C, для объекта языкового стандарта `Loc`, путем вызова `setlocale`(LC_ALL `,` `Loc`. [name](#locale__name)`().c_str()`).  
+ Объект класса locale также сохраняет имя языкового стандарта в качестве объекта класса [string](../standard-library/string-typedefs.md#string). Использование недопустимого имени языкового стандарта для создания аспекта языкового стандарта или объекта языкового стандарта создает объект класса [runtime_error](../standard-library/runtime-error-class.md). Сохраненное имя языкового стандарта — `"*"`, если объект языкового стандарта не может быть уверен в том, что локальный стандарт языка C точно соответствует представленному данным объектом. В противном случае можно установить соответствующий языковой стандарт в стандартной библиотеке C, для объекта языкового стандарта `Loc`, путем вызова `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
   
  В данном случае можно также вызвать статическую функцию-член:  
   
@@ -154,35 +161,35 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[locale](#locale__locale)|Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.|  
+|[locale](#locale)|Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[category](#locale__category)|Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.|  
+|[category](#category)|Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[combine](#locale__combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|  
-|[name](#locale__name)|Возвращает имя сохраненного языкового стандарта.|  
+|[combine](#combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|  
+|[name](#name)|Возвращает имя сохраненного языкового стандарта.|  
   
 ### <a name="static-functions"></a>Статические функции  
   
 |||  
 |-|-|  
-|[classic](#locale__classic)|Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.|  
-|[global](#locale__global)|Сброс языкового стандарта программы по умолчанию.|  
+|[classic](#classic)|Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.|  
+|[global](#global)|Сброс языкового стандарта программы по умолчанию.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор!=](#locale__operator_neq)|Проверка двух языковых стандартов на неравенство.|  
-|[оператор( )](#locale__operator__)|Сравнивает два объекта `basic_string`.|  
-|[оператор==](#locale__operator_eq_eq)|Проверка двух языковых стандартов на равенство.|  
+|[оператор!=](#op_neq)|Проверка двух языковых стандартов на неравенство.|  
+|[оператор( )](#op_call)|Сравнивает два объекта `basic_string`.|  
+|[оператор==](#op_eq_eq)|Проверка двух языковых стандартов на равенство.|  
   
 ### <a name="classes"></a>Классы  
   
@@ -196,7 +203,7 @@ cout.imbue(loc);
   
  **Пространство имен:** std  
   
-##  <a name="a-namelocalecategorya--localecategory"></a><a name="locale__category"></a>  locale::category  
+##  <a name="category"></a>  locale::category  
  Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.  
   
 ```  
@@ -234,7 +241,7 @@ static const int none = 0;
   
  Вы можете обозначить произвольную группу категорий с помощью `OR` с этими константами, например, **monetary** &#124; **time**.  
   
-##  <a name="a-namelocaleclassica--localeclassic"></a><a name="locale__classic"></a>  locale::classic  
+##  <a name="classic"></a>  locale::classic  
  Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.  
   
 ```  
@@ -286,7 +293,7 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="a-namelocalecombinea--localecombine"></a><a name="locale__combine"></a>  locale::combine  
+##  <a name="combine"></a>  locale::combine  
  Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.  
   
 ```  
@@ -331,7 +338,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namefacetclassa--facet-class"></a><a name="facet_class"></a>  Класс facet  
+##  <a name="facet_class"></a>  Класс facet  
  Класс, используемый как базовый класс для всех аспектов языкового стандарта.  
 
 ```    
@@ -350,7 +357,7 @@ private:
   
  В таких случаях конструктор для базового класса аспекта должен иметь нулевое значение аргумента `_Refs`. Когда объект больше не нужен, он удаляется. Таким образом, необходимо указывать ненулевое значение аргумента _ *Refs* только в тех редких случаях, когда вы отвечаете за время жизни объекта.  
   
-##  <a name="a-namelocaleglobala--localeglobal"></a><a name="locale__global"></a>  locale::global  
+##  <a name="global"></a>  locale::global  
  Сброс языкового стандарта по умолчанию для программы. Это влияет на глобальный языковой стандарт C и C++.  
   
 ```  
@@ -395,7 +402,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="a-nameidclassa--id-class"></a><a name="id_class"></a>  Класс id  
+##  <a name="id_class"></a>  Класс id  
  Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.  
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
@@ -403,7 +410,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 ### <a name="remarks"></a>Примечания  
  Класс-член описывает статический объект-член, необходимый для каждого уникального аспекта языкового стандарта. Обратите внимание, что объект класса **id** нельзя копировать или присваивать.  
   
-##  <a name="a-namelocalelocalea--localelocale"></a><a name="locale__locale"></a>  locale::locale  
+##  <a name="locale"></a>  locale::locale  
  Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.  
   
 ```  
@@ -494,7 +501,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namelocalenamea--localename"></a><a name="locale__name"></a>  locale::name  
+##  <a name="name"></a>  locale::name  
  Возвращает имя сохраненного языкового стандарта.  
   
 ```  
@@ -531,7 +538,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="a-namelocaleoperatorneqa--localeoperator"></a><a name="locale__operator_neq"></a>  locale::operator!=  
+##  <a name="op_neq"></a>  locale::operator!=  
  Проверка двух языковых стандартов на неравенство.  
   
 ```  
@@ -539,7 +546,7 @@ bool operator!=(const locale& right) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Один из языковых стандартов для проверки на неравенство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -588,7 +595,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="a-namelocaleoperatora--localeoperator"></a><a name="locale__operator__"></a>  locale::operator()  
+##  <a name="op_call"></a>  locale::operator()  
  Сравнивает два объекта `basic_string`.  
   
 ```  
@@ -599,18 +606,18 @@ bool operator()(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Левая строка.  
   
- ` right`  
+ `right`  
  Правая строка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Функция-член возвращает:  
   
--   –1, если первая последовательность оказывается меньше, чем вторая.  
+-   –1, если первая последовательность оказывается меньше, чем вторая;  
   
--   –1, если вторая последовательность оказывается меньше, чем первая.  
+-   +1, если вторая последовательность оказывается меньше, чем первая;  
   
 -   0, если последовательности являются эквивалентными.  
   
@@ -620,7 +627,7 @@ bool operator()(
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 
-return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) <0);
+return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```  
   
  Таким образом, объект языкового стандарта можно использовать как объект-функцию.  
@@ -656,7 +663,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namelocaleoperatoreqeqa--localeoperator"></a><a name="locale__operator_eq_eq"></a>  locale::operator==  
+##  <a name="op_eq_eq"></a>  locale::operator==  
  Проверка двух языковых стандартов на равенство.  
   
 ```  
@@ -664,7 +671,7 @@ bool operator==(const locale& right) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Один из языковых стандартов для проверки на равенство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

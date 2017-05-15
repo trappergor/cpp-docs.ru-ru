@@ -9,10 +9,63 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.basic_string
-- std::basic_string
 - basic_string
 - xstring/std::basic_string
+- string/std::basic_string::allocator_type
+- string/std::basic_string::const_iterator
+- string/std::basic_string::const_pointer
+- string/std::basic_string::const_reference
+- string/std::basic_string::const_reverse_iterator
+- string/std::basic_string::difference_type
+- string/std::basic_string::iterator
+- string/std::basic_string::npos
+- string/std::basic_string::pointer
+- string/std::basic_string::reference
+- string/std::basic_string::reverse_iterator
+- string/std::basic_string::size_type
+- string/std::basic_string::traits_type
+- string/std::basic_string::value_type
+- string/std::basic_string::append
+- string/std::basic_string::assign
+- string/std::basic_string::at
+- string/std::basic_string::back
+- string/std::basic_string::begin
+- string/std::basic_string::c_str
+- string/std::basic_string::capacity
+- string/std::basic_string::cbegin
+- string/std::basic_string::cend
+- string/std::basic_string::clear
+- string/std::basic_string::compare
+- string/std::basic_string::copy
+- string/std::basic_string::crbegin
+- string/std::basic_string::crend
+- string/std::basic_string::_Copy_s
+- string/std::basic_string::data
+- string/std::basic_string::empty
+- string/std::basic_string::end
+- string/std::basic_string::erase
+- string/std::basic_string::find
+- string/std::basic_string::find_first_not_of
+- string/std::basic_string::find_first_of
+- string/std::basic_string::find_last_not_of
+- string/std::basic_string::find_last_of
+- string/std::basic_string::front
+- string/std::basic_string::get_allocator
+- string/std::basic_string::insert
+- string/std::basic_string::length
+- string/std::basic_string::max_size
+- string/std::basic_string::pop_back
+- string/std::basic_string::push_back
+- string/std::basic_string::rbegin
+- string/std::basic_string::rend
+- string/std::basic_string::replace
+- string/std::basic_string::reserve
+- string/std::basic_string::resize
+- string/std::basic_string::rfind
+- string/std::basic_string::shrink_to_fit
+- string/std::basic_string::size
+- string/std::basic_string::substr
+- string/std::basic_string::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,14 +89,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a53f82cedf258ae1c26a31cf4b04cd89e2e6acdb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 062f7fdf2d3d57dc08a0e632326ccbc228eb7df6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicstring-class"></a>Класс basic_string
-Последовательности, управляемые объектом класса шаблона `basic_string`, являются строковым классом стандарта C++ и обычно называются просто строками, но их не следует путать с C-строками, завершающимися символом NULL, в библиотеке стандартных программ C++. Стандартная строка C++ является контейнером, позволяющим использовать строки как обычные типы, например в операциях сравнения и сцепления, итераторах, алгоритмах библиотеки стандартных программ C++, а также копировать и назначать с помощью управляемой памяти распределителя класса. Если требуется преобразовать стандартную строку C++ в C-строку, завершающуюся символом NULL, используйте член [basic_string::c_str](#basic_string__c_str).  
+Последовательности, управляемые объектом класса шаблона `basic_string`, являются строковым классом стандарта C++ и обычно называются просто строками, но их не следует путать с C-строками, завершающимися символом NULL, в библиотеке стандартных программ C++. Стандартная строка C++ является контейнером, позволяющим использовать строки как обычные типы, например в операциях сравнения и сцепления, итераторах, алгоритмах библиотеки стандартных программ C++, а также копировать и назначать с помощью управляемой памяти распределителя класса. Если требуется преобразовать стандартную строку C++ в C-строку, завершающуюся символом NULL, используйте член [basic_string::c_str](#c_str).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -66,83 +120,83 @@ class basic_string;
   
 |||  
 |-|-|  
-|[basic_string](#basic_string__basic_string)|Создает пустую строку или строку, инициализируемую с определенными символами, или представляющую собой полную или частичную копию какого-либо другого строкового объекта или С-строки.|  
+|[basic_string](#basic_string)|Создает пустую строку или строку, инициализируемую с определенными символами, или представляющую собой полную или частичную копию какого-либо другого строкового объекта или С-строки.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#basic_string__allocator_type)|Тип, представляющий класс `allocator` для объекта строки.|  
-|[const_iterator](#basic_string__const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать элемент `const` в списке.|  
-|[const_pointer](#basic_string__const_pointer)|Тип, предоставляющий указатель на элемент `const` в списке.|  
-|[const_reference](#basic_string__const_reference)|Тип, предоставляющий ссылку на элемент `const`, хранящийся в строке, для чтения и выполнения операций `const`.|  
-|[const_reverse_iterator](#basic_string__const_reverse_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать любой элемент `const` в строке.|  
-|[difference_type](#basic_string__difference_type)|Тип, предоставляющий разницу между двумя итераторами, ссылающимися на элементы в одной и той же строке.|  
-|[iterator](#basic_string__iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в строке.|  
-|[npos](#basic_string__npos)|Интегральное значение без знака, которое инициализируется со значением –1, что означает «не найдено» или «все остальные символы» при сбое функции поиска.|  
-|[pointer](#basic_string__pointer)|Тип, предоставляющий указатель на символьный элемент в строке или символьном массиве.|  
-|[reference](#basic_string__reference)|Тип, предоставляющий ссылку на элемент в строке.|  
-|[reverse_iterator](#basic_string__reverse_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в обратной строке.|  
-|[size_type](#basic_string__size_type)|Интегральный тип без знака для количества элементов в строке.|  
-|[traits_type](#basic_string__traits_type)|Тип, представляющий признаки символов для элементов, хранящихся в строке.|  
-|[value_type](#basic_string__value_type)|Тип, представляющий тип символов, хранящихся в строке.|  
+|[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта строки.|  
+|[const_iterator](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать элемент `const` в списке.|  
+|[const_pointer](#const_pointer)|Тип, предоставляющий указатель на элемент `const` в списке.|  
+|[const_reference](#const_reference)|Тип, предоставляющий ссылку на элемент `const`, хранящийся в строке, для чтения и выполнения операций `const`.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать любой элемент `const` в строке.|  
+|[difference_type](#difference_type)|Тип, предоставляющий разницу между двумя итераторами, ссылающимися на элементы в одной и той же строке.|  
+|[iterator](#iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в строке.|  
+|[npos](#npos)|Целочисленное значение без знака инициализируется со значением -1, что означает «не найдено» или «все остальные символы» при сбое функции поиска.|  
+|[pointer](#pointer)|Тип, предоставляющий указатель на символьный элемент в строке или символьном массиве.|  
+|[reference](#reference)|Тип, предоставляющий ссылку на элемент в строке.|  
+|[reverse_iterator](#reverse_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в обратной строке.|  
+|[size_type](#size_type)|Интегральный тип без знака для количества элементов в строке.|  
+|[traits_type](#traits_type)|Тип, представляющий признаки символов для элементов, хранящихся в строке.|  
+|[value_type](#value_type)|Тип, представляющий тип символов, хранящихся в строке.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[append](#basic_string__append)|Добавляет символы в конец строки.|  
-|[assign](#basic_string__assign)|Назначает значения новых символов содержимому строки.|  
-|[at](#basic_string__at)|Возвращает ссылку на  элемент в заданном положении в строке.|  
-|[back](#basic_string__back)||  
-|[begin](#basic_string__begin)|Возвращает итератор, адресующий первый элемент в строке.|  
-|[c_str](#basic_string__c_str)|Преобразует содержимое строки в С-строку, оканчивающуюся нулевым символом.|  
-|[capacity](#basic_string__capacity)|Возвращает наибольшее количество элементов, которые можно хранить в строке без увеличения выделения памяти этой строки.|  
-|[cbegin](#basic_string__cbegin)|Возвращает константный итератор, адресующий первый элемент в строке.|  
-|[cend](#basic_string__cend)|Возвращает константный итератор, адресующий расположение после последнего элемента в строке.|  
-|[clear](#basic_string__clear)|Удаляет все элементы строки.|  
-|[compare](#basic_string__compare)|Сравнивает строку с указанной строкой, чтобы определить их равенство или установить, что одна из строк лексикографически меньше второй.|  
-|[copy](#basic_string__copy)|Копирует не более указанного количества символов из индексированного положения в исходной строке в массив символов назначения. Не рекомендуется. Используйте вместо нее функцию [basic_string::_Copy_s](#basic_string___copy_s).|  
-|[crbegin](#basic_string__crbegin)|Возвращает константный итератор, адресующий первый элемент в обратной строке.|  
-|[crend](#basic_string__crend)|Возвращает константный итератор, адресующий расположение после последнего элемента в обратной строке.|  
-|[_Copy_s](#basic_string___copy_s)|Копирует не более указанного количества символов из индексированного положения в исходной строке в массив символов назначения.|  
-|[data](#basic_string__data)|Преобразует содержимое строки в массив символов.|  
-|[empty](#basic_string__empty)|Проверяет, содержит ли строка символы.|  
-|[end](#basic_string__end)|Возвращает итератор, адресующий расположение после последнего элемента в строке.|  
-|[erase](#basic_string__erase)|Удаляет элемент или диапазон элементов с указанного положения в строке.|  
-|[find](#basic_string__find)|Поиск по строке в прямом направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.|  
-|[find_first_not_of](#basic_string__find_first_not_of)|Выполняет поиск первого символа в строке, не совпадающего ни с одним элементом заданной строки.|  
-|[find_first_of](#basic_string__find_first_of)|Выполняет поиск первого символа в строке, совпадающего с любым элементом заданной строки.|  
-|[find_last_not_of](#basic_string__find_last_not_of)|Выполняет поиск последнего символа в строке, не совпадающего ни с одним элементом заданной строки.|  
-|[find_last_of](#basic_string__find_last_of)|Выполняет поиск последнего символа в строке, совпадающего с любым элементом заданной строки.|  
-|[front](#basic_string__front)|Возвращает ссылку на первый элемент в строке.|  
-|[get_allocator](#basic_string__get_allocator)|Возвращает копию объекта объекта `allocator`, использованного для создания строки.|  
-|[insert](#basic_string__insert)|Вставляет элемент или количество элементов или диапазон элементов в указанное положение в строке.|  
-|[length](#basic_string__length)|Возвращает текущее количество элементов в строке.|  
-|[max_size](#basic_string__max_size)|Возвращает максимальное количество символов в строке.|  
-|[pop_back](#basic_string__pop_back)|Удаляет последний элемент строки.|  
-|[push_back](#basic_string__push_back)|Добавляет элемент в конец строки.|  
-|[rbegin](#basic_string__rbegin)|Возвращает итератор на первый элемент в обратной строке.|  
-|[rend](#basic_string__rend)|Возвращает итератор, адресующий расположение после последнего элемента в обратной строке.|  
-|[replace](#basic_string__replace)|Заменяет элементы в указанном положении в строке на указанные символы или символы, скопированные из других диапазонов, обычных строк или С-строк.|  
-|[reserve](#basic_string__reserve)|Устанавливает вместимость строки не меньше указанного числа.|  
-|[resize](#basic_string__resize)|Указывает новый размер строки, добавляя или удаляя элементы по мере необходимости.|  
-|[rfind](#basic_string__rfind)|Поиск по строке в обратном направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.|  
-|[shrink_to_fit](#basic_string__shrink_to_fit)|Удаляет излишнюю вместимость строки.|  
-|[size](#basic_string__size)|Возвращает текущее количество элементов в строке.|  
-|[substr](#basic_string__substr)|Копирует из указанного положения в строке подстроку, содержащую по крайней мере несколько символов.|  
-|[swap](#basic_string__swap)|Меняет местами содержимое двух строк.|  
+|[append](#append)|Добавляет символы в конец строки.|  
+|[assign](#assign)|Назначает значения новых символов содержимому строки.|  
+|[at](#at)|Возвращает ссылку на  элемент в заданном положении в строке.|  
+|[back](#back)||  
+|[begin](#begin)|Возвращает итератор, адресующий первый элемент в строке.|  
+|[c_str](#c_str)|Преобразует содержимое строки в С-строку, оканчивающуюся нулевым символом.|  
+|[capacity](#capacity)|Возвращает наибольшее количество элементов, которые можно хранить в строке без увеличения выделения памяти этой строки.|  
+|[cbegin](#cbegin)|Возвращает константный итератор, адресующий первый элемент в строке.|  
+|[cend](#cend)|Возвращает константный итератор, адресующий расположение после последнего элемента в строке.|  
+|[clear](#clear)|Удаляет все элементы строки.|  
+|[compare](#compare)|Сравнивает строку с указанной строкой, чтобы определить их равенство или установить, что одна из строк лексикографически меньше второй.|  
+|[copy](#copy)|Копирует не более указанного количества символов из индексированного положения в исходной строке в массив символов назначения. Не рекомендуется. Используйте вместо нее функцию [basic_string::_Copy_s](#copy_s).|  
+|[crbegin](#crbegin)|Возвращает константный итератор, адресующий первый элемент в обратной строке.|  
+|[crend](#crend)|Возвращает константный итератор, адресующий расположение после последнего элемента в обратной строке.|  
+|[_Copy_s](#copy_s)|Копирует не более указанного количества символов из индексированного положения в исходной строке в массив символов назначения.|  
+|[data](#data)|Преобразует содержимое строки в массив символов.|  
+|[empty](#empty)|Проверяет, содержит ли строка символы.|  
+|[end](#end)|Возвращает итератор, адресующий расположение после последнего элемента в строке.|  
+|[erase](#erase)|Удаляет элемент или диапазон элементов с указанного положения в строке.|  
+|[find](#find)|Поиск по строке в прямом направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.|  
+|[find_first_not_of](#find_first_not_of)|Выполняет поиск первого символа в строке, не совпадающего ни с одним элементом заданной строки.|  
+|[find_first_of](#find_first_of)|Выполняет поиск первого символа в строке, совпадающего с любым элементом заданной строки.|  
+|[find_last_not_of](#find_last_not_of)|Выполняет поиск последнего символа в строке, не совпадающего ни с одним элементом заданной строки.|  
+|[find_last_of](#find_last_of)|Выполняет поиск последнего символа в строке, совпадающего с любым элементом заданной строки.|  
+|[front](#front)|Возвращает ссылку на первый элемент в строке.|  
+|[get_allocator](#get_allocator)|Возвращает копию объекта объекта `allocator`, использованного для создания строки.|  
+|[insert](#insert)|Вставляет элемент или количество элементов или диапазон элементов в указанное положение в строке.|  
+|[length](#length)|Возвращает текущее количество элементов в строке.|  
+|[max_size](#max_size)|Возвращает максимальное количество символов в строке.|  
+|[pop_back](#pop_back)|Удаляет последний элемент строки.|  
+|[push_back](#push_back)|Добавляет элемент в конец строки.|  
+|[rbegin](#rbegin)|Возвращает итератор на первый элемент в обратной строке.|  
+|[rend](#rend)|Возвращает итератор, адресующий расположение после последнего элемента в обратной строке.|  
+|[replace](#replace)|Заменяет элементы в указанном положении в строке на указанные символы или символы, скопированные из других диапазонов, обычных строк или С-строк.|  
+|[reserve](#reserve)|Устанавливает вместимость строки не меньше указанного числа.|  
+|[resize](#resize)|Указывает новый размер строки, добавляя или удаляя элементы по мере необходимости.|  
+|[rfind](#rfind)|Поиск по строке в обратном направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.|  
+|[shrink_to_fit](#shrink_to_fit)|Удаляет излишнюю вместимость строки.|  
+|[size](#size)|Возвращает текущее количество элементов в строке.|  
+|[substr](#substr)|Копирует из указанного положения в строке подстроку, содержащую по крайней мере несколько символов.|  
+|[swap](#swap)|Меняет местами содержимое двух строк.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор+=](#basic_string__operator_add_eq)|Присоединяет символы к строке.|  
-|[оператор=](#basic_string__operator_eq)|Назначает значения новых символов содержимому строки.|  
-|[оператор&#91;&#93;](#basic_string__operator_at)|Предоставляет ссылку на символ с указанным индексом в строке.|  
+|[оператор+=](#op_add_eq)|Присоединяет символы к строке.|  
+|[оператор=](#op_eq)|Назначает значения новых символов содержимому строки.|  
+|[оператор&#91;&#93;](#op_at)|Предоставляет ссылку на символ с указанным индексом в строке.|  
   
 ## <a name="remarks"></a>Примечания  
- Если функция должна создать последовательность, длина которой превышает [max_size](#basic_string__max_size) элементов, функция выдает сообщение об ошибке длины, создавая объект типа [length_error](../standard-library/length-error-class.md).  
+ Если функция должна создать последовательность, длина которой превышает [max_size](#max_size) элементов, функция выдает сообщение об ошибке длины, создавая объект типа [length_error](../standard-library/length-error-class.md).  
   
  Ссылки, указатели и итераторы, обозначающие элементы управляемой последовательности, могут стать недействительными после любого вызова функции, изменяющей управляемую последовательность, или после первого вызова **неконстантной** функции-члена.  
   
@@ -151,7 +205,7 @@ class basic_string;
   
  **Пространство имен:** std  
   
-##  <a name="a-namebasicstringallocatortypea--basicstringallocatortype"></a><a name="basic_string__allocator_type"></a>  basic_string::allocator_type  
+##  <a name="allocator_type"></a>  basic_string::allocator_type  
  Тип, представляющий класс allocator для объекта строки.  
   
 ```  
@@ -180,7 +234,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringappenda--basicstringappend"></a><a name="basic_string__append"></a>  basic_string::append  
+##  <a name="append"></a>  basic_string::append  
  Добавляет символы в конец строки.  
   
 ```  
@@ -218,32 +272,32 @@ basic_string<CharType, Traits, Allocator>& append(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  C-строка для добавления.  
   
- ` str`  
+ `str`  
  Строка, символы которой добавляются.  
   
  `_Off`  
  Индекс части исходной строки, предоставляющей добавляемые знаки.  
   
- ` count`  
+ `count`  
  Максимальное число символов для добавления из исходной строки.  
   
  `_Ch`  
  Символьное значение для добавления.  
   
- ` first`  
+ `first`  
  Входной итератор ввода, указывающий на первый элемент в диапазоне для добавления.  
   
- ` last`  
+ `last`  
  Входной итератор, const_pointer или const_iterator, указывающий на позицию сразу за последним элементом в диапазоне для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на добавляемый объект строки с символами, переданными функцией-членом.  
   
 ### <a name="remarks"></a>Примечания  
- Символы могут добавляться в строку с помощью [operator+=](#basic_string__operator_add_eq) или функций-членов **append** или [push_back](#basic_string__push_back). `operator+=` добавляет значения одиночных аргументов, а функция-член **append** с несколькими аргументами позволяет указывать для добавления определенную часть строки.  
+ Символы могут добавляться в строку с помощью [operator+=](#op_add_eq) или функций-членов **append** или [push_back](#push_back). `operator+=` добавляет значения одиночных аргументов, а функция-член **append** с несколькими аргументами позволяет указывать для добавления определенную часть строки.  
   
 ### <a name="example"></a>Пример  
   
@@ -337,7 +391,7 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.  
 ```  
   
-##  <a name="a-namebasicstringassigna--basicstringassign"></a><a name="basic_string__assign"></a>  basic_string::assign  
+##  <a name="assign"></a>  basic_string::assign  
  Назначает значения новых символов содержимому строки.  
   
 ```  
@@ -375,22 +429,22 @@ basic_string<CharType, Traits, Allocator>& assign(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  Указатель на символы C-строки, которые должны быть назначены целевой строке.  
   
- ` count`  
+ `count`  
  Максимальное число символов для добавления из исходной строки.  
   
- ` str`  
+ `str`  
  Исходная строка, символы которой присваиваются целевой строке.  
   
  `_Ch`  
  Символьное значение для присваивания.  
   
- ` first`  
+ `first`  
  Входной итератор, const_pointer или const_iterator, указывающий первый символ в диапазоне исходной строки для присваивания целевому диапазону.  
   
- ` last`  
+ `last`  
  Входной итератор, const_pointer или const_iterator, указывающий символ сразу за последним символом в диапазоне исходной строки для присваивания целевому диапазону.  
   
  `off`  
@@ -400,7 +454,7 @@ basic_string<CharType, Traits, Allocator>& assign(
  Ссылка на объект строки, которому функция-член будет присваивать новые символы.  
   
 ### <a name="remarks"></a>Примечания  
- Строкам можно присваивать новые символьные значения. Новое значение может быть строкой, C-строкой или одним символом. Функция-член [operator=](#basic_string__operator_eq) может использоваться, если новое значение описывается одним параметром; в противном случае для указания, какая часть строки должна присваиваться целевой строке, можно использовать функцию-член **assign**, имеющую несколько параметров.  
+ Строкам можно присваивать новые символьные значения. Новое значение может быть строкой, C-строкой или одним символом. Функция-член [operator=](#op_eq) может использоваться, если новое значение описывается одним параметром; в противном случае для указания, какая часть строки должна присваиваться целевой строке, можно использовать функцию-член **assign**, имеющую несколько параметров.  
   
 ### <a name="example"></a>Пример  
   
@@ -494,7 +548,7 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.  
 ```  
   
-##  <a name="a-namebasicstringata--basicstringat"></a><a name="basic_string__at"></a>  basic_string::at  
+##  <a name="at"></a>  basic_string::at  
  Предоставляет ссылку на символ с указанным индексом в строке.  
   
 ```  
@@ -512,9 +566,9 @@ reference at(size_type _Off);
  Ссылка на символ строки в позиции, указанной с помощью индекса параметра.  
   
 ### <a name="remarks"></a>Примечания  
- Первый элемент строки имеет индекс 0, и следующие элементы последовательно индексируются положительными целыми числами, так что в строке длины *n* *n*-й элемент имеет индекс *n –* 1.  
+ Первый элемент строки имеет индекс 0 и положительные целые числа, последовательно индексируются следующие элементы, чтобы строка длиной *n* имеет *n*элемент th пронумерованы *n -* 1.  
   
- Функция-член [operator&#91;&#93;](#basic_string__operator_at) работает быстрее, чем функция-член **at**, когда нужно предоставить доступ на чтение и запись элементов строки.  
+ Функция-член [operator&#91;&#93;](#op_at) работает быстрее, чем функция-член **at**, когда нужно предоставить доступ на чтение и запись элементов строки.  
   
  Функция-член `operator[]` не проверяет допустимость индекса, переданного в качестве параметра, а функция-член **at** проверяет, поэтому ее следует использовать, если нет уверенности в правильности индекса. Если передается недопустимый индекс, а это индекс меньше нуля или не меньше размера строки, то функция-член **at** вызывает исключение [out_of_range Class](../standard-library/out-of-range-class.md). Недопустимый индекс, переданный в `operator[]`, приводит к непредсказуемому поведению, однако индекс, равный длине строки, допустим для константных строк, и при передаче этого индекса оператор возвращает символ NULL.  
   
@@ -559,7 +613,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringbacka--basicstringback"></a><a name="basic_string__back"></a>  basic_string::back  
+##  <a name="back"></a>  basic_string::back  
  Возвращает ссылку на последний элемент строки.  
   
 ```  
@@ -574,7 +628,7 @@ reference back();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namebasicstringbasicstringa--basicstringbasicstring"></a><a name="basic_string__basic_string"></a>  basic_string::basic_string  
+##  <a name="basic_string"></a>  basic_string::basic_string  
  Создает пустую строку, строку, инициализируемую определенными символами или представляющую собой копию всей или части другого строкового объекта или С-строки (с окончанием на null).  
   
 ```  
@@ -646,16 +700,16 @@ basic_string(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  C-строка, символы могут использоваться для инициализации создаваемой строки `string`. Это значение не может быть указателем null.  
   
  `_Al`  
  Класс распределителя хранилища для создаваемого строкового объекта.  
   
- ` count`  
+ `count`  
  Количество инициализируемых символов.  
   
- ` right`  
+ `right`  
  Строка, инициализирующая создаваемую строку.  
   
  `_Roff`  
@@ -664,17 +718,17 @@ basic_string(
  `_Ch`  
  Значение символа, копируемое в создаваемую строку.  
   
- ` first`  
+ `first`  
  Итератор ввода, const_pointer или const_iterator, указывающий на первый элемент в диапазоне источника, который необходимо вставить.  
   
- ` last`  
+ `last`  
  Итератор ввода, const_pointer или const_iterator, указывающий на положение сразу за последним элементом в диапазоне источника, который необходимо вставить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на строковый объект, создаваемый конструкторами.  
   
 ### <a name="remarks"></a>Примечания  
- Все конструкторы сохраняют [basic_string::allocator_type](#basic_string__allocator_type) и инициализируют управляемую последовательность. Объектом распределителя является аргумент `al`, если он существует. Для конструктора копии это `right.`[basic_string::get_allocator](#basic_string__get_allocator)`()`. В противном случае — `Alloc()`.  
+ Все конструкторы сохраняют [basic_string::allocator_type](#allocator_type) и инициализируют управляемую последовательность. Объектом распределителя является аргумент `al`, если он существует. Для конструктора копии это `right.`[basic_string::get_allocator](#get_allocator)`()`. В противном случае — `Alloc()`.  
   
  Управляемая последовательность инициализируется для копии последовательности операндов, указанной оставшимися операндами. Конструктор без последовательности операндов указывает пустую начальную управляемую последовательность. Если `InputIterator` является целочисленным типом в конструкторе шаблона, то последовательность операндов _F `irst,  last` работает так же, как `(size_type) first, (value_type) last`.  
   
@@ -727,7 +781,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringbegina--basicstringbegin"></a><a name="basic_string__begin"></a>  basic_string::begin  
+##  <a name="begin"></a>  basic_string::begin  
  Возвращает итератор, адресующий первый элемент в строке.  
   
 ```  
@@ -776,7 +830,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namebasicstringcstra--basicstringcstr"></a><a name="basic_string__c_str"></a>  basic_string::c_str  
+##  <a name="c_str"></a>  basic_string::c_str  
  Преобразует содержимое строки в С-строку, завершающуюся символом NULL.  
   
 ```  
@@ -787,7 +841,7 @@ const value_type *c_str() const;
  Указатель на версию вызываемой С-строки.  Значение указателя недопустимо после вызова неконстантной функции, включая деструктор в классе basic_string объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Объекты типа String, принадлежащие классу basic_string\<char> шаблона C++, не обязательно завершаются символом NULL. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью строки так же, как любой другой символ. Выполняется автоматическое преобразование из константы **char\* ** в строки, но класс string не предоставляет автоматическое преобразование из С-строк в объекты типа **basic_string\<char>**.  
+ Объекты типа String, принадлежащие классу basic_string\<char> шаблона C++, не обязательно завершаются символом NULL. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью строки так же, как любой другой символ. Выполняется автоматическое преобразование из константы **char\***  в строки, но класс string не предоставляет автоматическое преобразование из С-строк в объекты типа **basic_string\<char>**.  
   
  Не следует изменять возвращенную С-строку, так как это может сделать недействительным указатель на эту строку, и не следует ее удалять, так как строка имеет ограниченное время существования и принадлежит классу string.  
   
@@ -837,7 +891,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11  
 ```  
   
-##  <a name="a-namebasicstringcapacitya--basicstringcapacity"></a><a name="basic_string__capacity"></a>  basic_string::capacity  
+##  <a name="capacity"></a>  basic_string::capacity  
  Возвращает наибольшее количество элементов, которые можно хранить в строке без увеличения выделения памяти этой строки.  
   
 ```  
@@ -848,7 +902,7 @@ size_type capacity() const;
  Размер хранилища, выделенного в текущий момент в памяти для хранения строки.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает хранилище, выделенное в текущий момент для хранения управляемой последовательности; значение по крайней мере не меньше, чем [size](#basic_string__size).  
+ Функция-член возвращает хранилище, выделенное в текущий момент для хранения управляемой последовательности; значение по крайней мере не меньше, чем [size](#size).  
   
 ### <a name="example"></a>Пример  
   
@@ -904,7 +958,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringcbegina--basicstringcbegin"></a><a name="basic_string__cbegin"></a>  basic_string::cbegin  
+##  <a name="cbegin"></a>  basic_string::cbegin  
  Возвращает итератор `const`, направленный на первый элемент в диапазоне.  
   
 ```  
@@ -927,7 +981,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namebasicstringcenda--basicstringcend"></a><a name="basic_string__cend"></a>  basic_string::cend  
+##  <a name="cend"></a>  basic_string::cend  
  Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
   
 ```  
@@ -952,7 +1006,7 @@ auto i2 = Container.cend();
   
  Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
   
-##  <a name="a-namebasicstringcleara--basicstringclear"></a><a name="basic_string__clear"></a>  basic_string::clear  
+##  <a name="clear"></a>  basic_string::clear  
  Удаляет все элементы строки.  
   
 ```  
@@ -1001,7 +1055,7 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.  
 ```  
   
-##  <a name="a-namebasicstringcomparea--basicstringcompare"></a><a name="basic_string__compare"></a>  basic_string::compare  
+##  <a name="compare"></a>  basic_string::compare  
  Выполняет сравнение с учетом регистра с указанной строкой, чтобы определить их равенство или установить, что одна из строк лексикографически меньше второй.  
   
 ```  
@@ -1041,7 +1095,7 @@ int compare(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` str`  
+ `str`  
  Строка для сравнения со строкой операнда.  
   
  `_Pos1`  
@@ -1056,10 +1110,10 @@ int compare(
  `_Off`  
  Индекс строки параметра, с которого начинается сравнение.  
   
- ` count`  
+ `count`  
  Максимальное количество символов из строки параметра для сравнения.  
   
- ` ptr`  
+ `ptr`  
  С-строка для сравнения со строкой операнда.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1263,7 +1317,7 @@ The 3 characters from position 2 of the operand string are equal to
  the first 3 characters of the parameter C-string.  
 ```  
   
-##  <a name="a-namebasicstringconstiteratora--basicstringconstiterator"></a><a name="basic_string__const_iterator"></a>  basic_string::const_iterator  
+##  <a name="const_iterator"></a>  basic_string::const_iterator  
  Тип, предоставляющий итератор произвольного доступа, который может читать элемент **const** в строке.  
   
 ```  
@@ -1274,9 +1328,9 @@ typedef implementation-defined const_iterator;
  Тип `const_iterator` не может использоваться для изменения значения символа и используется для выполнения итерации по строке в прямом направлении.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `const_iterator` см. в разделе [begin](#basic_string__begin).  
+  См. пример объявления и использования `const_iterator` см. в разделе [begin](#begin).  
   
-##  <a name="a-namebasicstringconstpointera--basicstringconstpointer"></a><a name="basic_string__const_pointer"></a>  basic_string::const_pointer  
+##  <a name="const_pointer"></a>  basic_string::const_pointer  
  Тип, предоставляющий указатель на элемент **const** в строке.  
   
 ```  
@@ -1314,7 +1368,7 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.  
 ```  
   
-##  <a name="a-namebasicstringconstreferencea--basicstringconstreference"></a><a name="basic_string__const_reference"></a>  basic_string::const_reference  
+##  <a name="const_reference"></a>  basic_string::const_reference  
  Тип, предоставляющий ссылку на элемент **const**, хранящийся в строке для чтения и выполнения операций **const**.  
   
 ```  
@@ -1327,9 +1381,9 @@ typedef typename allocator_type::const_reference const_reference;
  Этот тип является синонимом **allocator_type::const_reference**. Для **типа** string это эквивалентно константе **char&**.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `const_reference`[at](#basic_string__at).  
+  См. пример объявления и использования `const_reference`[at](#at).  
   
-##  <a name="a-namebasicstringconstreverseiteratora--basicstringconstreverseiterator"></a><a name="basic_string__const_reverse_iterator"></a>  basic_string::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  basic_string::const_reverse_iterator  
  Тип, предоставляющий итератор произвольного доступа, который может читать любой элемент **const** в строке.  
   
 ```  
@@ -1340,12 +1394,12 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
  Тип `const_reverse_iterator` не может изменять значение символа и используется для последовательного выполнения итерации по строке в обратном направлении.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `const_reverse_iterator` в примере для [rbegin](#basic_string__rbegin).  
+  См. пример объявления и использования `const_reverse_iterator` в примере для [rbegin](#rbegin).  
   
-##  <a name="a-namebasicstringcopya--basicstringcopy"></a><a name="basic_string__copy"></a>  basic_string::copy  
+##  <a name="copy"></a>  basic_string::copy  
  Копирует не более указанного количества символов из индексированного положения в исходной строке в массив символов назначения.  
   
- Этот метод является потенциально опасным, так как зависит от вызывающего объекта при проверке правильности переданных значений. Рекомендуется использовать вместо него метод [basic_string::_Copy_s](#basic_string___copy_s).  
+ Этот метод является потенциально опасным, так как зависит от вызывающего объекта при проверке правильности переданных значений. Рекомендуется использовать вместо него метод [basic_string::_Copy_s](#copy_s).  
   
 ```  
 size_type copy(
@@ -1355,7 +1409,7 @@ size_type copy(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  Целевой массив символов, в который должны быть скопированы элементы.  
   
  _ `Count`  
@@ -1419,7 +1473,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World  
 ```  
   
-##  <a name="a-namebasicstringcrbegina--basicstringcrbegin"></a><a name="basic_string__crbegin"></a>  basic_string::crbegin  
+##  <a name="crbegin"></a>  basic_string::crbegin  
  Возвращает константный итератор, адресующий первый элемент в обратной строке.  
   
 ```  
@@ -1429,7 +1483,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Обратный итератор, который указывает на положение, следующее за концом строки. Позиция задает начало обратной строки.  
   
-##  <a name="a-namebasicstringcrenda--basicstringcrend"></a><a name="basic_string__crend"></a>  basic_string::crend  
+##  <a name="crend"></a>  basic_string::crend  
  Возвращает константный итератор, адресующий расположение после последнего элемента в обратной строке.  
   
 ```  
@@ -1441,7 +1495,7 @@ const_reverse_iterator crend() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namebasicstringcopysa--basicstringcopys"></a><a name="basic_string___copy_s"></a>  basic_string::_Copy_s  
+##  <a name="copy_s"></a>  basic_string::_Copy_s  
  Копирует не более указанного количества символов из индексированного положения в исходной строке в массив символов назначения.  
   
 ```  
@@ -1453,11 +1507,11 @@ size_type _Copy_s(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` dest`  
+ `dest`  
  Целевой массив символов, в который должны быть скопированы элементы.  
   
- ` dest_size`  
- Размер ` dest`.  
+ `dest_size`  
+ Размер `dest`.  
   
  _ `Count`  
  Максимальное число символов для копирования из исходной строки.  
@@ -1518,7 +1572,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World  
 ```  
   
-##  <a name="a-namebasicstringdataa--basicstringdata"></a><a name="basic_string__data"></a>  basic_string::data  
+##  <a name="data"></a>  basic_string::data  
  Преобразует содержимое строки в массив символов.  
   
 ```  
@@ -1531,7 +1585,7 @@ const value_type *data() const;
 ### <a name="remarks"></a>Примечания  
  Объекты типа string, принадлежащие классу basic_string \<char> шаблона C++, не обязательно завершаются символом NULL. Тип возвращаемого значения для **data** — недопустимая С-строка, так как не дополняется символом NULL. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью объекта string так же, как любой другой символ.  
   
- Выполняется автоматическое преобразование из константы **char\* ** в строки, но класс string не предоставляет автоматическое преобразование из С-строк в объекты типа **basic_string \<char>**.  
+ Выполняется автоматическое преобразование из константы **char\***  в строки, но класс string не предоставляет автоматическое преобразование из С-строк в объекты типа **basic_string \<char>**.  
   
  Не следует изменять возвращенную строку, так как это может сделать недействительным указатель на эту строку, и не следует ее удалять, так как строка имеет ограниченное время существования и принадлежит классу string.  
   
@@ -1581,7 +1635,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11  
 ```  
   
-##  <a name="a-namebasicstringdifferencetypea--basicstringdifferencetype"></a><a name="basic_string__difference_type"></a>  basic_string::difference_type  
+##  <a name="difference_type"></a>  basic_string::difference_type  
  Тип, предоставляющий разницу между двумя итераторами, ссылающимися на элементы в одной и той же строке.  
   
 ```  
@@ -1627,7 +1681,7 @@ The last character i is at position: 8.
 The difference is: 6.  
 ```  
   
-##  <a name="a-namebasicstringemptya--basicstringempty"></a><a name="basic_string__empty"></a>  basic_string::empty  
+##  <a name="empty"></a>  basic_string::empty  
  Проверяет, содержит ли строка символы.  
   
 ```  
@@ -1638,7 +1692,7 @@ bool empty() const;
  Значение **true**, если объект string не содержит символы; значение **false**, если в нем есть хотя бы один символ.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эквивалентна [size](#basic_string__size) == 0.  
+ Эта функция-член эквивалентна [size](#size) == 0.  
   
 ### <a name="example"></a>Пример  
   
@@ -1672,7 +1726,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebasicstringenda--basicstringend"></a><a name="basic_string__end"></a>  basic_string::end  
+##  <a name="end"></a>  basic_string::end  
  Возвращает итератор, адресующий расположение после последнего элемента в строке.  
   
 ```  
@@ -1743,7 +1797,7 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.  
 ```  
   
-##  <a name="a-namebasicstringerasea--basicstringerase"></a><a name="basic_string__erase"></a>  basic_string::erase  
+##  <a name="erase"></a>  basic_string::erase  
  Удаляет элемент или диапазон элементов с указанного положения в строке.  
   
 ```  
@@ -1760,10 +1814,10 @@ basic_string<CharType, Traits, Allocator>& erase(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` first`  
+ `first`  
  Итератор, указывающий позицию первого элемента в диапазоне для очистки.  
   
- ` last`  
+ `last`  
  Итератор, указывающий позицию первого, следующую за последним элементом в диапазоне для очистки.  
   
  `_It`  
@@ -1772,7 +1826,7 @@ basic_string<CharType, Traits, Allocator>& erase(
  `_Pos`  
  Индекс первого символа в строке для удаления.  
   
- ` count`  
+ `count`  
  Число элементов, которые будут удалены, если их столько же, сколько в диапазоне строки, начинающемся с *_Pos*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1842,7 +1896,7 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .  
 ```  
   
-##  <a name="a-namebasicstringfinda--basicstringfind"></a><a name="basic_string__find"></a>  basic_string::find  
+##  <a name="find"></a>  basic_string::find  
  Поиск по строке в прямом направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.  
   
 ```  
@@ -1874,13 +1928,13 @@ size_type find(
  `_Off`  
  Индекс позиции, в которой следует начать поиск.  
   
- ` ptr`  
+ `ptr`  
  Строка C-string, для которой следует искать функцию-член.  
   
- ` count`  
+ `count`  
  Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.  
   
- ` str`  
+ `str`  
  Строка, для которой следует искать функцию-член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2017,7 +2071,7 @@ The index of the 1st element of 'clear' after
 The index of the 1st element of 'clear' in str4 is: 0  
 ```  
   
-##  <a name="a-namebasicstringfindfirstnotofa--basicstringfindfirstnotof"></a><a name="basic_string__find_first_not_of"></a>  basic_string::find_first_not_of  
+##  <a name="find_first_not_of"></a>  basic_string::find_first_not_of  
  Выполняет поиск первого символа в строке, не совпадающего ни с одним из элементов заданной строки.  
   
 ```  
@@ -2049,13 +2103,13 @@ size_type find_first_not_of(
  `_Off`  
  Индекс позиции, в которой следует начать поиск.  
   
- ` ptr`  
+ `ptr`  
  Строка C-string, для которой следует искать функцию-член.  
   
- ` count`  
+ `count`  
  Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.  
   
- ` str`  
+ `str`  
  Строка, для которой следует искать функцию-член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2205,7 +2259,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
  the 0th position is: 2  
 ```  
   
-##  <a name="a-namebasicstringfindfirstofa--basicstringfindfirstof"></a><a name="basic_string__find_first_of"></a>  basic_string::find_first_of  
+##  <a name="find_first_of"></a>  basic_string::find_first_of  
  Выполняет поиск первого символа в строке, совпадающего с любым элементом заданной строки.  
   
 ```  
@@ -2237,13 +2291,13 @@ size_type find_first_of(
  `_Off`  
  Индекс позиции, в которой следует начать поиск.  
   
- ` ptr`  
+ `ptr`  
  Строка C-string, для которой следует искать функцию-член.  
   
- ` count`  
+ `count`  
  Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.  
   
- ` str`  
+ `str`  
  Строка, для которой следует искать функцию-член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2392,7 +2446,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
  the 0th position is: 1  
 ```  
   
-##  <a name="a-namebasicstringfindlastnotofa--basicstringfindlastnotof"></a><a name="basic_string__find_last_not_of"></a>  basic_string::find_last_not_of  
+##  <a name="find_last_not_of"></a>  basic_string::find_last_not_of  
  Выполняет поиск последнего символа в строке, не совпадающего ни с одним элементом заданной строки.  
   
 ```  
@@ -2424,13 +2478,13 @@ size_type find_last_not_of(
  `_Off`  
  Индекс позиции, в которой следует завершить поиск.  
   
- ` ptr`  
+ `ptr`  
  Строка C-string, для которой следует искать функцию-член.  
   
- ` count`  
+ `count`  
  Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.  
   
- ` str`  
+ `str`  
  Строка, для которой следует искать функцию-член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2581,7 +2635,7 @@ The index of the last occurrence of an element not in '12'
  in str4 before the end position is: 10  
 ```  
   
-##  <a name="a-namebasicstringfindlastofa--basicstringfindlastof"></a><a name="basic_string__find_last_of"></a>  basic_string::find_last_of  
+##  <a name="find_last_of"></a>  basic_string::find_last_of  
  Выполняет в строке поиск последнего символа, совпадающего с любым элементом заданной строки.  
   
 ```  
@@ -2616,13 +2670,13 @@ size_type find_last_of(
  `_Off`  
  Индекс позиции, в которой следует завершить поиск.  
   
- ` ptr`  
+ `ptr`  
  Строка C-string, для которой следует искать функцию-член.  
   
- ` count`  
+ `count`  
  Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.  
   
- ` str`  
+ `str`  
  Строка, для которой следует искать функцию-член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2758,7 +2812,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
  the 0th position is: 9  
 ```  
   
-##  <a name="a-namebasicstringfronta--basicstringfront"></a><a name="basic_string__front"></a>  basic_string::front  
+##  <a name="front"></a>  basic_string::front  
  Возвращает ссылку на первый элемент в строке.  
   
 ```  
@@ -2773,7 +2827,7 @@ reference front();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="a-namebasicstringgetallocatora--basicstringgetallocator"></a><a name="basic_string__get_allocator"></a>  basic_string::get_allocator  
+##  <a name="get_allocator"></a>  basic_string::get_allocator  
  Возвращает копию объекта allocator, используемого для создания строки.  
   
 ```  
@@ -2813,7 +2867,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringinserta--basicstringinsert"></a><a name="basic_string__insert"></a>  basic_string::insert  
+##  <a name="insert"></a>  basic_string::insert  
  Вставляет элемент или количество элементов или диапазон элементов в указанное положение в строке.  
   
 ```  
@@ -2873,13 +2927,13 @@ void insert(
  *_P0*  
  Индекс позиции за точкой вставки новых символов.  
   
- ` ptr`  
+ `ptr`  
  C-строка, которая полностью или частично вставляется в строку.  
   
- ` count`  
+ `count`  
  Число вставляемых знаков.  
   
- ` str`  
+ `str`  
  Строка, которая полностью или частично вставляется в целевую строку.  
   
  `_Off`  
@@ -2891,10 +2945,10 @@ void insert(
  `_It`  
  Итератор, разрешающий положение, за которым вставляется знак.  
   
- ` first`  
+ `first`  
  Итератор ввода, const_pointer или const_iterator, указывающий на первый элемент в диапазоне источника, который необходимо вставить.  
   
- ` last`  
+ `last`  
  Итератор ввода, const_pointer или const_iterator, указывающий на положение сразу за последним элементом в диапазоне источника, который необходимо вставить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2989,7 +3043,7 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ  
 ```  
   
-##  <a name="a-namebasicstringiteratora--basicstringiterator"></a><a name="basic_string__iterator"></a>  basic_string::iterator  
+##  <a name="iterator"></a>  basic_string::iterator  
  Тип, предоставляющий итератор произвольного доступа, который может читать элемент **const** в строке.  
   
 ```  
@@ -3000,9 +3054,9 @@ typedef implementation-defined iterator;
  Тип **iterator** не может использоваться для изменения значения символа и используется для выполнения итерации по строке в прямом направлении.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования **итератора** в примере для [begin](#basic_string__begin).  
+  См. пример объявления и использования **итератора** в примере для [begin](#begin).  
   
-##  <a name="a-namebasicstringlengtha--basicstringlength"></a><a name="basic_string__length"></a>  basic_string::length  
+##  <a name="length"></a>  basic_string::length  
  Возвращает текущее количество элементов в строке.  
   
 ```  
@@ -3010,7 +3064,7 @@ size_type length() const;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член такая же, как [size](#basic_string__size).  
+ Функция-член такая же, как [size](#size).  
   
 ### <a name="example"></a>Пример  
   
@@ -3066,7 +3120,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringmaxsizea--basicstringmaxsize"></a><a name="basic_string__max_size"></a>  basic_string::max_size  
+##  <a name="max_size"></a>  basic_string::max_size  
  Возвращает максимальное количество символов в строке.  
   
 ```  
@@ -3133,20 +3187,20 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringnposa--basicstringnpos"></a><a name="basic_string__npos"></a>  basic_string::npos  
- Интегральное значение без знака, которое инициализируется со значением –1, что означает «не найдено» или «все остальные символы» при сбое функции поиска.  
+##  <a name="npos"></a>  basic_string::npos  
+ Целочисленное значение без знака инициализируется со значением -1, что означает «не найдено» или «все остальные символы» при сбое функции поиска.  
   
 ```  
 static const size_type npos = -1;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если возвращаемое значение должно проверяться на значение `npos`, оно может не работать, если только возвращаемое значение не имеет тип [size_type](#basic_string__size_type) и является либо `int`, либо `unsigned`.  
+ Если возвращаемое значение должно проверяться на значение `npos`, оно может не работать, если только возвращаемое значение не имеет тип [size_type](#size_type) и является либо `int`, либо `unsigned`.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `npos` [find](#basic_string__find).  
+  См. пример объявления и использования `npos` [find](#find).  
   
-##  <a name="a-namebasicstringoperatoraddeqa--basicstringoperator"></a><a name="basic_string__operator_add_eq"></a>  basic_string::operator+=  
+##  <a name="op_add_eq"></a>  basic_string::operator+=  
  Присоединяет символы к строке.  
   
 ```  
@@ -3164,17 +3218,17 @@ basic_string<CharType, Traits, Allocator>& operator+=(
  `_Ch`  
  Символ значение для добавления.  
   
- ` ptr`  
+ `ptr`  
  Символы C-строки для добавления.  
   
- ` right`  
+ `right`  
  Символы строки для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на добавляемый объект строки с символами, переданными функцией-членом.  
   
 ### <a name="remarks"></a>Примечания  
- Символы могут добавляться в строку с помощью `operator+=` или функций-членов [append](#basic_string__append) или [push_back](#basic_string__push_back). `operator+=` добавляет значения одиночных аргументов, а функция-член append с несколькими аргументами позволяет указывать для добавления определенную часть строки.  
+ Символы могут добавляться в строку с помощью `operator+=` или функций-членов [append](#append) или [push_back](#push_back). `operator+=` добавляет значения одиночных аргументов, а функция-член append с несколькими аргументами позволяет указывать для добавления определенную часть строки.  
   
 ### <a name="example"></a>Пример  
   
@@ -3231,7 +3285,7 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.  
 ```  
   
-##  <a name="a-namebasicstringoperatoreqa--basicstringoperator"></a><a name="basic_string__operator_eq"></a>  basic_string::operator=  
+##  <a name="op_eq"></a>  basic_string::operator=  
  Назначает значения новых символов содержимому строки.  
   
 ```  
@@ -3252,17 +3306,17 @@ basic_string<CharType, Traits, Allocator>& operator=(
  `_Ch`  
  Символьное значение для присваивания.  
   
- ` ptr`  
+ `ptr`  
  Указатель на символы C-строки, которые должны быть назначены целевой строке.  
   
- ` right`  
+ `right`  
  Исходная строка, символы которой присваиваются целевой строке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на объект строки, которому функция-член будет присваивать новые символы.  
   
 ### <a name="remarks"></a>Примечания  
- Строкам можно присваивать новые символьные значения. Новое значение может быть строкой, C-строкой или одним символом. `operator=` может использоваться, если новое значение описывается одним параметром; в противном случае для указания, какая часть строки должна присваиваться целевой строке, можно использовать функцию-член [assign](#basic_string__assign), имеющую несколько параметров.  
+ Строкам можно присваивать новые символьные значения. Новое значение может быть строкой, C-строкой или одним символом. `operator=` может использоваться, если новое значение описывается одним параметром; в противном случае для указания, какая часть строки должна присваиваться целевой строке, можно использовать функцию-член [assign](#assign), имеющую несколько параметров.  
   
 ### <a name="example"></a>Пример  
   
@@ -3321,7 +3375,7 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.  
 ```  
   
-##  <a name="a-namebasicstringoperatorata--basicstringoperator"></a><a name="basic_string__operator_at"></a>  basic_string::operator[]  
+##  <a name="op_at"></a>  basic_string::operator[]  
  Предоставляет ссылку на символ с указанным индексом в строке.  
   
 ```  
@@ -3339,7 +3393,7 @@ reference operator[](size_type _Off);
 ### <a name="remarks"></a>Примечания  
  Первый элемент строки имеет индекс 0, и следующие элементы последовательно индексируются положительными целыми числами, так что в строке длины *n* *n*-й элемент имеет индекс *n* – 1.  
   
- `operator[]` работает быстрее, чем функция-член [at](#basic_string__at), когда нужно предоставить доступ на чтение и запись элементов строки.  
+ `operator[]` работает быстрее, чем функция-член [at](#at), когда нужно предоставить доступ на чтение и запись элементов строки.  
   
  `operator[]` не проверяет допустимость индекса, переданного в качестве параметра, а функция-член **at** проверяет, поэтому ее следует использовать, если нет уверенности в правильности индекса. Если передается недопустимый индекс (индекс меньше нуля или не меньше размера строки), то функция-член **at** вызывает исключение [out_of_range Class](../standard-library/out-of-range-class.md). Недопустимый индекс, переданный в `operator[]`, приводит к непредсказуемому поведению, однако индекс, равный длине строки, допустим для константных строк, и при передаче этого индекса оператор возвращает символ NULL.  
   
@@ -3386,7 +3440,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringpointera--basicstringpointer"></a><a name="basic_string__pointer"></a>  basic_string::pointer  
+##  <a name="pointer"></a>  basic_string::pointer  
  Тип, предоставляющий указатель на символьный элемент в строке или символьном массиве.  
   
 ```  
@@ -3421,7 +3475,7 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.  
 ```  
   
-##  <a name="a-namebasicstringpopbacka--basicstringpopback"></a><a name="basic_string__pop_back"></a>  basic_string::pop_back  
+##  <a name="pop_back"></a>  basic_string::pop_back  
  Удаляет последний элемент строки.  
   
 ```  
@@ -3431,7 +3485,7 @@ void pop_back();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член вызывает `erase(size() - 1)`, чтобы удалить последний элемент последовательности, который должен быть непустым.  
   
-##  <a name="a-namebasicstringpushbacka--basicstringpushback"></a><a name="basic_string__push_back"></a>  basic_string::push_back  
+##  <a name="push_back"></a>  basic_string::push_back  
  Добавляет элемент в конец строки.  
   
 ```  
@@ -3443,7 +3497,7 @@ void push_back(value_type _Ch);
  Символ, который нужно добавить в конец строки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эффективно вызывает [insert](#basic_string__insert)([end](#basic_string__end), _ *Ch*).  
+ Эта функция-член эффективно вызывает [insert](#insert)([end](#end), _ *Ch*).  
   
 ### <a name="example"></a>Пример  
   
@@ -3483,7 +3537,7 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc  
 ```  
   
-##  <a name="a-namebasicstringrbegina--basicstringrbegin"></a><a name="basic_string__rbegin"></a>  basic_string::rbegin  
+##  <a name="rbegin"></a>  basic_string::rbegin  
  Возвращает итератор на первый элемент в обратной строке.  
   
 ```  
@@ -3497,7 +3551,7 @@ reverse_iterator rbegin();
  Возвращает итератор произвольного доступа в первый элемент обращенной строки, указывая элемент, который был бы последним элементом в соответствующей необращенной строке.  
   
 ### <a name="remarks"></a>Примечания  
- `rbegin` используется с обращенной строкой точно так же, как [begin](#basic_string__begin) используется с необращенной строкой.  
+ `rbegin` используется с обращенной строкой точно так же, как [begin](#begin) используется с необращенной строкой.  
   
  Если возвращаемое значение `rbegin` присваивается `const_reverse_iterator`, то объект string не может быть изменен. Если возвращаемое значение `rbegin` присваивается `reverse_iterator`, то объект string может быть изменен.  
   
@@ -3557,7 +3611,7 @@ The full modified reversed string str1 is now:
 The string str2 is empty.  
 ```  
   
-##  <a name="a-namebasicstringreferencea--basicstringreference"></a><a name="basic_string__reference"></a>  basic_string::reference  
+##  <a name="reference"></a>  basic_string::reference  
  Тип, предоставляющий ссылку на элемент в строке.  
   
 ```  
@@ -3572,9 +3626,9 @@ typedef typename allocator_type::reference reference;
  Для типа **string** это эквивалентно **chr&**.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования **reference** в примере для [at](#basic_string__at).  
+  См. пример объявления и использования **reference** в примере для [at](#at).  
   
-##  <a name="a-namebasicstringrenda--basicstringrend"></a><a name="basic_string__rend"></a>  basic_string::rend  
+##  <a name="rend"></a>  basic_string::rend  
  Возвращает итератор, который указывает место, следующее за последним элементом в обращенной строке.  
   
 ```  
@@ -3588,7 +3642,7 @@ reverse_iterator rend();
  Обратный итератор произвольного доступа, который указывает место, следующее за последним элементом в обращенной строке.  
   
 ### <a name="remarks"></a>Примечания  
- `rend` используется с обращенной строкой точно так же, как [end](#basic_string__end) используется с необращенной строкой.  
+ `rend` используется с обращенной строкой точно так же, как [end](#end) используется с необращенной строкой.  
   
  Если возвращаемое значение `rend` присваивается `const_reverse_iterator`, то объект string не может быть изменен. Если возвращаемое значение `rend` присваивается `reverse_iterator`, то объект string может быть изменен.  
   
@@ -3650,7 +3704,7 @@ The full modified reversed string str1 is now:
 The string str2 is empty.  
 ```  
   
-##  <a name="a-namebasicstringreplacea--basicstringreplace"></a><a name="basic_string__replace"></a>  basic_string::replace  
+##  <a name="replace"></a>  basic_string::replace  
  Заменяет элементы в указанном положении в строке на указанные символы или символы, скопированные из других диапазонов, обычных строк или С-строк.  
   
 ```  
@@ -3726,7 +3780,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` str`  
+ `str`  
  Строка, представляющая источник символов для строки операнда.  
   
  `_Pos1`  
@@ -3741,7 +3795,7 @@ basic_string<CharType, Traits, Allocator>& replace(
  `_Num2`  
  Максимальное количество используемых символов из C-строки параметра.  
   
- ` ptr`  
+ `ptr`  
  C-строка, представляющая источник символов для строки операнда.  
   
  `_Ch`  
@@ -3753,13 +3807,13 @@ basic_string<CharType, Traits, Allocator>& replace(
  * last0*  
  Итератор, указывающий последний удаляемый символ в строке операнда.  
   
- ` first`  
+ `first`  
  Итератор, const_pointer или const_iterator, указывающий первый символ, который должен копироваться в строку параметра.  
   
- ` last`  
+ `last`  
  Итератор, const_pointer или const_iterator, указывающий последний символ, который должен копироваться в строку параметра.  
   
- ` count`  
+ `count`  
  Сколько раз `_Ch` копируется в строку операнда.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -3944,7 +3998,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
  is the string: OPPOOOO.  
 ```  
   
-##  <a name="a-namebasicstringreservea--basicstringreserve"></a><a name="basic_string__reserve"></a>  basic_string::reserve  
+##  <a name="reserve"></a>  basic_string::reserve  
  Устанавливает вместимость строки не меньше указанного числа.  
   
 ```  
@@ -3952,7 +4006,7 @@ void reserve(size_type count = 0);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` count`  
+ `count`  
  Число символов, для которых резервируется память.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4031,7 +4085,7 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.  
 ```  
   
-##  <a name="a-namebasicstringresizea--basicstringresize"></a><a name="basic_string__resize"></a>  basic_string::resize  
+##  <a name="resize"></a>  basic_string::resize  
  Указывает новый размер строки, добавляя или удаляя элементы по мере необходимости.  
   
 ```  
@@ -4044,7 +4098,7 @@ void resize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` count`  
+ `count`  
  Новый размер строки.  
   
  `_Ch`  
@@ -4138,7 +4192,7 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.  
 ```  
   
-##  <a name="a-namebasicstringreverseiteratora--basicstringreverseiterator"></a><a name="basic_string__reverse_iterator"></a>  basic_string::reverse_iterator  
+##  <a name="reverse_iterator"></a>  basic_string::reverse_iterator  
  Тип, предоставляющий ссылку на элемент в строке.  
   
 ```  
@@ -4149,9 +4203,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
  Тип `reverse_iterator` может изменять значение символа и используется для последовательного выполнения итерации по строке в обратном направлении.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `reverse_iterator` в примере для [rbegin](#basic_string__rbegin).  
+  См. пример объявления и использования `reverse_iterator` в примере для [rbegin](#rbegin).  
   
-##  <a name="a-namebasicstringrfinda--basicstringrfind"></a><a name="basic_string__rfind"></a>  basic_string::rfind  
+##  <a name="rfind"></a>  basic_string::rfind  
  Поиск по строке в обратном направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.  
   
 ```  
@@ -4183,13 +4237,13 @@ size_type rfind(
  `_Off`  
  Индекс позиции, в которой следует начать поиск.  
   
- ` ptr`  
+ `ptr`  
  Строка C-string, для которой следует искать функцию-член.  
   
- ` count`  
+ `count`  
  Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.  
   
- ` str`  
+ `str`  
  Строка, для которой следует искать функцию-член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -4326,7 +4380,7 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17  
 ```  
   
-##  <a name="a-namebasicstringshrinktofita--basicstringshrinktofit"></a><a name="basic_string__shrink_to_fit"></a>  basic_string::shrink_to_fit  
+##  <a name="shrink_to_fit"></a>  basic_string::shrink_to_fit  
  Удаляет излишнюю вместимость строки.  
   
 ```  
@@ -4336,7 +4390,7 @@ void shrink_to_fit();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член удаляет все ненужное хранилище в контейнере.  
   
-##  <a name="a-namebasicstringsizea--basicstringsize"></a><a name="basic_string__size"></a>  basic_string::size  
+##  <a name="size"></a>  basic_string::size  
  Возвращает текущее количество элементов в строке.  
   
 ```  
@@ -4400,7 +4454,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicstringsizetypea--basicstringsizetype"></a><a name="basic_string__size_type"></a>  basic_string::size_type  
+##  <a name="size_type"></a>  basic_string::size_type  
  Тип целого числа без знака, который может представлять число элементов и индексов в строке.  
   
 ```  
@@ -4441,7 +4495,7 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.  
 ```  
   
-##  <a name="a-namebasicstringsubstra--basicstringsubstr"></a><a name="basic_string__substr"></a>  basic_string::substr  
+##  <a name="substr"></a>  basic_string::substr  
  Копирует из указанного положения в строке подстроку, содержащую по крайней мере несколько символов.  
   
 ```  
@@ -4454,7 +4508,7 @@ basic_string<CharType, Traits, Allocator> substr(
  `_Off`  
  Индекс поиска элемента в позиции, от которой делается копия строки; значение по умолчанию — 0.  
   
- ` count`  
+ `count`  
  Число символов, которые должны быть скопированы, если они имеются.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -4497,7 +4551,7 @@ The default substring str3 is:
  which is the entire original string.  
 ```  
   
-##  <a name="a-namebasicstringswapa--basicstringswap"></a><a name="basic_string__swap"></a>  basic_string::swap  
+##  <a name="swap"></a>  basic_string::swap  
  Меняет местами содержимое двух строк.  
   
 ```  
@@ -4506,7 +4560,7 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` str`  
+ `str`  
  Исходная строка, элементы которой должны заменить элементы целевой строки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4555,7 +4609,7 @@ After swapping string s1 and s2:
  The basic_string s2 = Tweedledee.  
 ```  
   
-##  <a name="a-namebasicstringtraitstypea--basicstringtraitstype"></a><a name="basic_string__traits_type"></a>  basic_string::traits_type  
+##  <a name="traits_type"></a>  basic_string::traits_type  
  Тип, представляющий признаки символов для элементов, хранящихся в строке.  
   
 ```  
@@ -4568,9 +4622,9 @@ typedef Traits traits_type;
  Для типа **string** это эквивалентно **char_traits\<char>**.  
   
 ### <a name="example"></a>Пример  
-  См. пример объявления и использования `traits_type` в примере для [copy](../standard-library/char-traits-struct.md#char_traits__copy).  
+  См. пример объявления и использования `traits_type` в примере для [copy](../standard-library/char-traits-struct.md#copy).  
   
-##  <a name="a-namebasicstringvaluetypea--basicstringvaluetype"></a><a name="basic_string__value_type"></a>  basic_string::value_type  
+##  <a name="value_type"></a>  basic_string::value_type  
  Тип, представляющий тип символов, хранящихся в строке.  
   
 ```  

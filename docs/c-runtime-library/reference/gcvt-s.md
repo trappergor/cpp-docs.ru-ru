@@ -1,55 +1,72 @@
 ---
-title: "_gcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt_s"
-  - "gcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt_s - функция"
-  - "преобразования, значения с плавающей запятой к строкам"
-  - "CVTBUFSIZE"
-  - "функции с плавающей запятой, преобразование числа в строку"
-  - "gcvt_s - функция"
-  - "числа, преобразование в строки"
-  - "строки [C++], преобразование из чисел с плавающей запятой"
+title: "_gcvt_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt_s
+- gcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt_s function
+- _CVTBUFSIZE
+- floating-point functions, converting number to string
+- gcvt_s function
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# _gcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: cc1f34eae067f0d2cc0781c9001af550b291006f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Преобразует значение с плавающей запятой в строку.  Это версия [\_gcvt](../../c-runtime-library/reference/gcvt.md) с усовершенствованиями безопасности, как описано в [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="gcvts"></a>_gcvt_s
+Преобразует значение с плавающей запятой в строку. Это версия функции [_gcvt](../../c-runtime-library/reference/gcvt.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _gcvt_s(   
@@ -66,50 +83,50 @@ errno_t _gcvt_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
- \[исходящий\] `buffer`  
- Буфер для хранения результата преобразования.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `buffer`  
+ Буфер для сохранения результата преобразования.  
   
- \[входящий\] `sizeInBytes`  
+ [in] `sizeInBytes`  
  Размер буфера.  
   
- \[входящий\] `value`  
+ [in] `value`  
  Преобразуемое значение.  
   
- \[входящий\] `digits`  
- Количество хранящихся значащих цифр.  
+ [in] `digits`  
+ Количество значащих цифр хранятся.  
   
-## Возвращаемое значение  
- Ноль, если успешно.  В случае возникновения ошибки из\-за недопустимого параметра \(см. следующую таблицу для недопустимых значений\) обработчик недопустимого параметра вызывается как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнение разрешено, возвращается код ошибки.  Коды ошибок определенны в Errno.h.  Список этих ошибок см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль при успешном завершении. В случае отказа в связи с недопустимым параметром (см. недопустимые значения в следующей таблице) вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, возвращается код ошибки. Коды ошибок определяются в файле ERRNO.H. Список этих ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Условия возникновения ошибки  
+### <a name="error-conditions"></a>Условия ошибок  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|Return|Значение в `buffer`|  
-|--------------|-------------------|-------------|--------------|------------|-------------------------|  
-|`NULL`|any|any|any|`EINVAL`|Без изменений.|  
-|Не `NULL` \(указывает на допустимый адрес памяти\)|нуль|any|any|`EINVAL`|Без изменений.|  
-|Не `NULL` \(указывает на допустимый адрес памяти\)|any|any|\>\= `sizeInBytes`|`EINVAL`|Без изменений.|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|Назад|Значение в `buffer`|  
+|--------------|-------------------|-------------|--------------|------------|-----------------------|  
+|`NULL`|любые|любые|любые|`EINVAL`|Без изменений.|  
+|Не `NULL` (указывает на допустимый адрес в памяти)|нуль|any|любые|`EINVAL`|Без изменений.|  
+|Не `NULL` (указывает на допустимый адрес в памяти)|any|любые|>= `sizeInBytes`|`EINVAL`|Без изменений.|  
   
  **Проблемы безопасности**  
   
- `_gcvt_s` может создать ошибку нарушения прав доступа, если `buffer` не указывает на допустимый адрес памяти и не `NULL`.  
+ Функция `_gcvt_s` может вызвать ошибку нарушения прав доступа, если `buffer` не указывает на допустимый адрес в памяти и не имеет значение `NULL`.  
   
-## Заметки  
- Функция `_gcvt_s` преобразует `value` с плавающей запятой на символьную строку \(которая включает десятичную запятую и возможный байт знака\) и запоминает строку в `buffer`.  `buffer` должен быть достаточным для размещения преобразованного значения и конечного нулевого символа, который добавляется автоматически.  Буфер длины `_CVTBUFSIZE` достаточен для любого значения с плавающей запятой.  Если используется размер буфера `digits` \+ 1, то функция не перезапишет конец буфера, поэтому убедитесь, что предоставлен достаточный буфер для данной операции.  `_gcvt_s` пытается создать числа `digits` в десятичном формате.  Если не удается, он создает числа `digits` в степенном формате.  Замыкающие нули можно отключить при преобразовании.  
+## <a name="remarks"></a>Примечания  
+ Функция `_gcvt_s` преобразует значение с плавающей запятой `value` в строку символов (включает знак десятичной запятой и при необходимости байт знака) и сохраняет эту строку в `buffer`. Длина `buffer` должна быть достаточной для хранения преобразованного значения, а также автоматически добавляемого нуль-символа. Буфер длины `_CVTBUFSIZE` достаточен для любого значения с плавающей запятой. Если буфер имеет размер `digits` + 1, функция не перезаписывает конец буфера, поэтому для этой операции необходимо использовать буфер достаточного размера. Функция `_gcvt_s` пытается создать `digits` разрядов в десятичном формате. Если это не удается, создается `digits` разрядов в экспоненциальном формате. Нули в конце могут исключаться из преобразования.  
   
- В C\+\+ использование этой функции упрощено шаблонной перегрузкой; перегрузка может определить длину буфера автоматически, устранена необходимость указывать аргумент size.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
- Отладочная версия этой функции сначала заполняет буфер значением 0xFD.  Для отключения данного поведения используйте [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Отладочная версия этой функции сначала заполняет буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_gcvt_s`|\<stdlib.h\>|\<error.h\>|  
+|-------------|---------------------|---------------------|  
+|`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_gcvt_s.c  
@@ -137,14 +154,14 @@ int main()
 }  
 ```  
   
-  **Преобразованное значение: 1,2**   
-## Эквивалент в .NET Framework  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 1.2  
+```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../Topic/_ecvt_s.md)   
- [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

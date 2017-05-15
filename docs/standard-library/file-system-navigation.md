@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>Навигация по файловой системе
-Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает `false` в Windows. Заголовок основан на черновом варианте технической спецификации, не включенном в стандарт C++17 на момент выпуска Visual Studio 2015 RTM. Его члены находятся в пространстве имен `std::experimental::filesystem`, встроенном из `std::experimental::filesystem::v1`.  
+Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает `false` в Windows.   
   
 ## <a name="overview"></a>Обзор  
 Используйте API-интерфейсы \<filesystem> для выполнения следующих задач:  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 Для запуска этого кода вставьте его в полный пример выше перед `main` и раскомментируйте строку, которая вызывает его в основном объекте.  
   
 ### <a name="converting-between-path-and-string-types"></a>Преобразование между типами пути и строки  
-Объект `path` может быть неявно преобразован в `std::wstring` или `std::string`. Это означает, что путь можно передать в функции, например в [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open), как показано в следующем примере:  
+Объект `path` может быть неявно преобразован в `std::wstring` или `std::string`. Это означает, что путь можно передать в функции, например в [wofstream::open](../standard-library/basic-ofstream-class.md#open), как показано в следующем примере:  
   
 ```cpp  
 // filesystem_path_conversion.cpp  

@@ -1,48 +1,65 @@
 ---
-title: "_memccpy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_memccpy"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_memccpy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_memccpy - функция"
-  - "memccpy - функция"
+title: "_memccpy | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _memccpy
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _memccpy
+dev_langs:
+- C++
+helpviewer_keywords:
+- _memccpy function
+- memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _memccpy
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 289043b95095fbff3e25deaf464e9eca23c23457
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="memccpy"></a>_memccpy
 Копирует символы из буфера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -54,39 +71,39 @@ caps.handback.revision: 12
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *dest*  
- Указатель на место назначения.  
+ Указатель на назначение.  
   
  *src*  
  Указатель на источник.  
   
  `c`  
- Последний символ, который нужно скопировать.  
+ Последний символ для копирования.  
   
  *count*  
- Число символов,  
+ Число символов.  
   
-## Возвращаемое значение  
- Если символ `c` копируется, `_memccpy` возвращает указатель на char в *dest*, который следует сразу за символом.  Если `c` не копируется, то возвращается значение **NULL**.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Если символ `c` копируется, функция `_memccpy` возвращает указатель на тип char в *dest*, сразу после символа в строке. Если `c` не копируется, эта функция возвращает значение **NULL**.  
   
-## Заметки  
- Функция `_memccpy` копирует 0 или более символов из *src* в *dest*, останавливаясь, когда символ `c` скопирован, или когда *count* символов были скопированы, в зависимости от того, что наступит раньше.  
+## <a name="remarks"></a>Примечания  
+ Функция `_memccpy` копирует 0 или более символов из *src* в *dest*, останавливаясь после того, как был скопирован символ `c` или если было скопировано *count* символов (в зависимости от того, что наступит раньше).  
   
- **Примечание по безопасности** Убедитесь, что буфер места назначения равен или превосходит буфер источника.  Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Примечание о безопасности.** Убедитесь в том, что буфер назначения равен по размеру исходному буферу или превосходит его. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_memccpy`|\<memory.h\> или \<string.h\>|  
+|-------------|---------------------|  
+|`_memccpy`|\<memory.h> или \<string.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_memccpy.c  
@@ -111,7 +128,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 Function: _memccpy 60 characters or to character 's'  
@@ -120,15 +137,9 @@ Result: The quick brown dog jumps
 Length: 25 characters  
 ```  
   
-## Эквивалент в .NET Framework  
-  
--   [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
-  
--   [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
-  
-## См. также  
- [Манипуляция буфером](../Topic/Buffer%20Manipulation.md)   
- [memchr, wmemchr](../Topic/memchr,%20wmemchr.md)   
+## <a name="see-also"></a>См. также  
+ [Управление буфером](../../c-runtime-library/buffer-manipulation.md)   
+ [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)

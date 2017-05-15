@@ -1,88 +1,108 @@
 ---
-title: "_setmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_setmode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_setmode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setmode - функция"
-  - "перевод файла [C++], задание режима"
-  - "файлы [C++], режимы"
-  - "файлы [C++], преобразование"
-  - "setmode - функция"
-  - "Юникод [C++], вывод консоли"
+title: "_setmode | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _setmode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _setmode
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode [C++], console output
+- files [C++], modes
+- _setmode function
+- file translation [C++], setting mode
+- files [C++], translation
+- setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _setmode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f6d84d5f40b49edaf4e79059a6661a51ca6c209a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="setmode"></a>_setmode
 Задает режим преобразования файлов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-int _setmode (    int fd,    int mode  );  
+int _setmode (  
+   int fd,  
+   int mode   
+);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `fd`  
  Дескриптор файла.  
   
  `mode`  
  Новый режим преобразования.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  При успешном выполнении возвращает предыдущий режим преобразования.  
   
- Если в эту функцию передается недопустимый параметр, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция возвращает значение \-1 и задает для `errno` значение `EBADF`, которое указывает на недопустимый дескриптор файла, или `EINVAL`, которое указывает на недопустимый аргумент `mode`.  
+ Если функции переданы недопустимые параметры, вызывается обработчик недопустимого параметра, как описано в разделе [Parameter Validation](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает -1 и задает `errno` либо `EBADF`, который указывает на недопустимый дескриптор файла, или `EINVAL`, которое указывает на недопустимый `mode` аргумент.  
   
- Дополнительные сведения об этих и других кодах возврата см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `_setmode` задает в качестве параметра `mode` режим преобразования файла, заданный `fd`.  При передаче `_O_TEXT` как параметра `mode` задается текстовый \(преобразованный\) режим.  Комбинация символов возврата каретки и перевода строки \(CR\-LF\) преобразуется в один символ перевода строки в выводе.  Символы перевода строки преобразуются в комбинацию CR\-LF в выводе.  Передача `_O_BINARY` задает двоичный режим \(без преобразования\), в котором такие преобразования подавляются.  
+## <a name="remarks"></a>Примечания  
+ Функция `_setmode` задает в качестве параметра `mode` режим преобразования файла, заданный `fd`. При передаче `_O_TEXT` как параметра `mode` задается текстовый (преобразованный) режим. Символ каретки возврат строки веб-канала (CR-LF) преобразуются в один символ перевода строки в входных данных. Символы перевода строки преобразуются в комбинацию CR-LF в выводе. Передача `_O_BINARY` задает двоичный режим (без преобразования), в котором такие преобразования подавляются.  
   
- Можно также передать флаги `_O_U16TEXT`, `_O_U8TEXT` или \_`O_WTEXT`, чтобы включить режим Юникода, как демонстрируется во втором примере ниже в этом документе.  `_setmode`, как правило, используется для изменения режима преобразования `stdin` и `stdout` по умолчанию, однако ее можно использовать для любого файла.  Если вы применяете функцию `_setmode` к дескриптору файла для потока, ее необходимо вызывать до выполнения любых операций ввода или вывода в потоке.  
+ Можно также передать `_O_U16TEXT`, `_O_U8TEXT`, или `_O_WTEXT` для перехода в режим Юникода, как показано во втором примере далее в этом документе. `_setmode`, как правило, используется для изменения режима преобразования `stdin` и `stdout` по умолчанию, однако ее можно использовать для любого файла. Если вы применяете функцию `_setmode` к дескриптору файла для потока, ее необходимо вызывать `_setmode` до выполнения любых операций ввода или вывода в потоке.  
   
 > [!CAUTION]
->  Если выполняется запись данных в файловый поток, необходимо явно сбросить код, используя [fflush](../Topic/fflush.md) перед использованием функции `_setmode` для изменения режима.  Если не выполнить сброс кода, может возникнуть непредвиденное поведение.  Если данные не записывались в поток, выполнять сброс кода не нужно.  
+>  Если выполняется запись данных в файловый поток, необходимо явно сбросить код, используя [fflush](../../c-runtime-library/reference/fflush.md) перед использованием функции `_setmode` для изменения режима. Если не выполнить сброс кода, может возникнуть непредвиденное поведение. Если данные не записывались в поток, выполнять сброс кода не нужно.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательные заголовки|  
-|------------------|----------------------------|------------------------------|  
-|`_setmode`|\<io.h\>|\<fcntl.h\>|  
+|-------------|---------------------|----------------------|  
+|`_setmode`|\<io.h>|\<fcntl.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_setmode.c  
@@ -106,8 +126,11 @@ int main( void )
 }  
 ```  
   
-  **"stdin" успешно переведен в двоичный режим**   
-## Пример  
+```Output  
+'stdin' successfully changed to binary mode  
+```  
+  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_setmodeunicode.c  
@@ -125,18 +148,11 @@ int main(void) {
     wprintf(L"\x043a\x043e\x0448\x043a\x0430 \x65e5\x672c\x56fd\n");  
     return 0;  
 }  
-  
 ```  
   
-## Эквивалент .NET Framework  
-  
--   [\<caps:sentence id\="tgt28" sentenceid\="fe03c471a7a38d5378cea62467482dae" class\="tgtSentence"\>System::IO::BinaryReader Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.aspx)  
-  
--   [\<caps:sentence id\="tgt29" sentenceid\="105e62b7505c25e3e182779c87f145eb" class\="tgtSentence"\>System::IO::TextReader Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.io.textreader.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [Функция \_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_set\_fmode](../../c-runtime-library/reference/set-fmode.md)
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_set_fmode](../../c-runtime-library/reference/set-fmode.md)

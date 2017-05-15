@@ -1,51 +1,68 @@
 ---
-title: "_chsize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chsize"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_chsize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chsize - функция"
-  - "chsize - функция"
-  - "файлы [C++], изменение размера"
-  - "размер"
-  - "размер, изменение файла"
+title: "_chsize | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chsize
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _chsize
+dev_langs:
+- C++
+helpviewer_keywords:
+- size
+- _chsize function
+- size, changing file
+- files [C++], changing size
+- chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _chsize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Изменяет размер файла.  Доступна более безопасная версия; см. раздел [\_chsize\_s](../../c-runtime-library/reference/chsize-s.md).  
+---
+# <a name="chsize"></a>_chsize
+Изменяет размер файла. Доступна более безопасная версия этой функции; см. раздел [_chsize_s](../../c-runtime-library/reference/chsize-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _chsize(   
@@ -54,32 +71,32 @@ int _chsize(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `fd`  
- Идентификатор файла, ссылающийся на открытый файл.  
+ Дескриптор файла, ссылающийся на открытый файл.  
   
  `size`  
  Новая длина файла в байтах.  
   
-## Возвращаемое значение  
- `_chsize` возвращает значение 0, если размер файла успешно изменен.  Возвращаемое значение, равное \-1, указывает на ошибку: `errno` имеет значение `EACCES`, если указанный файл блокирован для доступа, значение `EBADF`, если указанный файл доступен только для чтения или дескриптор недопустим, значение `ENOSPC` при отсутствии свободного места на устройстве, или значение `EINVAL`, если `size` меньше нуля.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_chsize` возвращает значение 0, если размер файла успешно изменен. Возвращаемое значение-1 указывает на ошибку: `errno` равно `EACCES` Если указанный файл заблокирован от доступа, к `EBADF` Если указанный файл доступен только для чтения или является недопустимым, дескриптор `ENOSPC` Если недостаточно места на устройстве, или `EINVAL` Если `size` меньше нуля.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `_chsize` расширяет или усекает файл, связанный с `fd`, до длины, указанной в `size`.  Файл должен быть открыт в режиме, который позволяет запись.  В файл добавляются нуль\-символы \('\\0'\), если файл расширяется.  Если файл усекается, все данные от конца сокращенного файла до длины исходного файла теряются.  
+## <a name="remarks"></a>Примечания  
+ Функция `_chsize` расширяет или усекает файл, связанный с `fd`, до длины, указанной `size`. Файл должен быть открыт в режиме, позволяющем выполнять запись. Если файл доступен для расширения, к нему добавляются нули ('\0'). Если файл усекается, все данные в конце сокращенного файла усекаются до длины исходного файла.  
   
- Эта функция проверяет свои параметры.  Если `size` меньше нуля, или `fd` \- неправильный дескриптор файла, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
+ Эта функция проверяет свои параметры. Если параметр `size` меньше нуля или `fd` является недопустимым дескриптором, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_chsize`|\<io.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_chsize`|\<io.h>|\<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_chsize.c  
@@ -113,17 +130,14 @@ int main( void )
 }  
 ```  
   
-  **File length before: 0**  
-**Size successfully changed**  
-**File length after:  329678**   
-## Эквивалент в .NET Framework  
+```Output  
+File length before: 0  
+Size successfully changed  
+File length after:  329678  
+```  
   
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [\_close](../Topic/_close.md)   
- [\_sopen, \_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

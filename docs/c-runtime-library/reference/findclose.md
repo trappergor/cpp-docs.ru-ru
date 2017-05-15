@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 75a2b674f392b19bb37f26c977e8b79de7e715bb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fcd76f8daec9c90374989a82f4b4b2f85b4cb5c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findclose"></a>_findclose
@@ -72,7 +73,7 @@ int _findclose(
  Дескриптор поиска, возвращенный предыдущим вызовом `_findfirst`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успеха `_findclose` возвращает 0. В противном случае возвращается значение –1, а параметру `errno` присваивается значение `ENOENT`, указывающее, что больше не найдено ни одного соответствующего файла.  
+ В случае успеха `_findclose` возвращает 0. В противном случае возвращается значение -1 и задает `errno` для `ENOENT`, может быть найден, указывающее, что больше нет сопоставления файлов.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -81,9 +82,6 @@ int _findclose(
 |`_findclose`|\<io.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Системные вызовы](../../c-runtime-library/system-calls.md)   

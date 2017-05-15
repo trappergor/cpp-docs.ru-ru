@@ -57,10 +57,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ac8ef965bd904ecfa17f78d6898c2e21ccb1591a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5ff2c3bb0ce0a39e6481e2fbb5d690aa2972a0a0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
@@ -93,7 +94,7 @@ long double acoshl(
 ## <a name="return-value"></a>Возвращаемое значение  
  Функции `acosh` возвращают обратный гиперболический косинус (гиперболический арккосинус) `x`. Эти функции допустимы в домене значений `x` ≥ 1. Если `x` меньше 1, для `errno` задается значение `EDOM` и результатом является несигнальное значение NaN (QNAN). Если `x` является несигнальным значением NaN, неопределенным или бесконечным, возвращается то же значение.  
   
-|Входные данные|Исключение SEH|Исключение `_matherr`|  
+|Входные данные|Исключение SEH|Исключение`_matherr` |  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|Нет|Нет|  
 |x < 1|Нет|Нет|  
@@ -136,9 +137,6 @@ int main( void )
 cosh( 0.785398 ) = 1.324609  
 acosh( 1.324609 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   

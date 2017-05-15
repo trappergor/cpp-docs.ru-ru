@@ -1,48 +1,66 @@
 ---
-title: "bsearch_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "bsearch_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "bsearch_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [CRT], двоичный поиск"
-  - "bsearch_s - функция"
+title: "bsearch_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- bsearch_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- bsearch_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [CRT], binary search
+- bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# bsearch_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 67caa4f6f6f9ba43c5d4b8a23af8be9bebcc717b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Выполняет двоичный поиск по отсортированному массиву. Это версия функции [bsearch](../../c-runtime-library/reference/bsearch.md) с усовершенствованиями в части безопасности, описанными в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="bsearchs"></a>bsearch_s
+Выполняет двоичный поиск по отсортированному массиву. Это версия функции [bsearch](../../c-runtime-library/reference/bsearch.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void *bsearch_s(   
@@ -55,7 +73,7 @@ void *bsearch_s(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `key`  
  Искомый объект.  
   
@@ -69,47 +87,47 @@ void *bsearch_s(
  Ширина элементов.  
   
  `compare`  
- Функция обратного вызова, которая сравнивает два элемента. Первый аргумент — это указатель `context`. Второй аргумент — указатель на ключ `key` для поиска. Третий аргумент — указатель на элемент массива, который будет сравниваться со значением `key`.  
+ Функция обратного вызова, которая сравнивает два элемента. Первый аргумент — это указатель `context` . Второй аргумент — указатель на ключ `key` для поиска. Третий аргумент — указатель на элемент массива, который будет сравниваться со значением `key`.  
   
  `context`  
  Указатель на объект, доступ к которому может получить функция сравнения.  
   
-## Возвращаемое значение  
- Функция `bsearch_s` возвращает указатель на вхождение`key` в массиве, на который указывает `base`. Если `key` не найден, функция возвращает `NULL`. Если массив не отсортирован по возрастанию или содержит повторяющиеся записи с одинаковыми ключами, результат будет непредсказуемым.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `bsearch_s` возвращает указатель на вхождение `key` в массиве, на который указывает `base`. Если `key` не найден, функция возвращает `NULL`. Если массив не отсортирован по возрастанию или содержит повторяющиеся записи с одинаковыми ключами, результат будет непредсказуемым.  
   
- Если функции переданы недопустимые параметры, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, для `errno`задается значение `EINVAL`, и функция возвращает значение `NULL`. Дополнительные сведения см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Если функции переданы недопустимые параметры, вызывается обработчик недопустимого параметра, как описано в разделе [Parameter Validation](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL` , и функция возвращает значение `NULL`. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Условия ошибок  
+### <a name="error-conditions"></a>Условия ошибок  
   
 |||||||  
 |-|-|-|-|-|-|  
 |`key`|`base`|`compare`|`num`|`width`|`errno`|  
-|`NULL`|любые|any|any|any|`EINVAL`|  
-|any|`NULL`|любые|\!\= 0|любые|`EINVAL`|  
-|any|any|any|any|\= 0|`EINVAL`|  
+|`NULL`|любые|любые|любые|любые|`EINVAL`|  
+|любые|`NULL`|любые|!= 0|любые|`EINVAL`|  
+|любые|любые|любые|любые|= 0|`EINVAL`|  
 |любые|любые|`NULL`|любой|любые|`EINVAL`|  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Функция `bsearch_s` выполняет двоичный поиск по отсортированному массиву, состоящему из `num` элементов размером `width` байт каждый. Значение `base` — это указатель на начало массива, в котором должен производиться поиск, а `key` — искомое значение. Параметр `compare` — это указатель на предоставляемую пользователем подпрограмму, которая сравнивает заданный ключ с элементом массива и возвращает одно из следующих значений, показывающих, как соотносятся значения ключа и элемента массива:  
   
 |Значение, возвращаемое подпрограммой `compare`|Описание|  
-|----------------------------------------------------|--------------|  
+|-----------------------------------------|-----------------|  
 |\< 0|Ключ меньше, чем элемент массива.|  
 |0|Ключ равен элементу массива.|  
-|\> 0|Ключ больше, чем элемент массива.|  
+|> 0|Ключ больше, чем элемент массива.|  
   
  Указатель `context` может быть полезен, если структура данных, в которой производится поиск, является частью объекта, и функции сравнения требуется доступ к членам этого объекта. Функция `compare` может привести указатель void к соответствующему типу объекта и получить доступ к членам этого объекта. Добавление параметра `context` делает `bsearch_s` более безопасной, поскольку наличие дополнительного контекста может использоваться для предотвращения ошибок повторного входа, связанных с использованием статических переменных для предоставления функции `compare` доступа к данным.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`bsearch_s`|\<stdlib.h\> и \<search.h\>|  
+|-------------|---------------------|  
+|`bsearch_s`|\<stdlib.h> и \<search.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
- Программа сортирует массив строк с помощью функции [qsort\_s](../../c-runtime-library/reference/qsort-s.md), а затем использует bsearch\_s для поиска слова cat.  
+## <a name="example"></a>Пример  
+ Программа сортирует массив строк с помощью функции [qsort_s](../../c-runtime-library/reference/qsort-s.md), а затем использует bsearch_s для поиска слова cat.  
   
 ```  
 // crt_bsearch_s.cpp  
@@ -189,14 +207,12 @@ int main( void )
 ```  
   
 ```Output  
-cat cow dog goat horse human pig rat cat found at 002F0F04  
+cat cow dog goat horse human pig rat  
+cat found at 002F0F04  
 ```  
   
-## Эквивалент в .NET Framework  
- <xref:System.Collections.ArrayList.BinarySearch%2A>  
-  
-## См. также  
- [Сортировка и поиск](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+## <a name="see-also"></a>См. также  
+ [Поиск и сортировка](../../c-runtime-library/searching-and-sorting.md)   
+ [_lfind](../../c-runtime-library/reference/lfind.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

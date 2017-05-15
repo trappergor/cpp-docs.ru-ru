@@ -10,70 +10,67 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - array
-- std::array
 - array/std::array
-- std::array::const_iterator
 - array/std::array::const_iterator
-- std::array::const_pointer
 - array/std::array::const_pointer
-- std::array::const_reference
 - array/std::array::const_reference
-- std::array::const_reverse_iterator
 - array/std::array::const_reverse_iterator
-- std::array::difference_type
 - array/std::array::difference_type
-- std::array::iterator
 - array/std::array::iterator
-- std::array::pointer
 - array/std::array::pointer
-- std::array::reference
 - array/std::array::reference
-- std::array::reverse_iterator
 - array/std::array::reverse_iterator
-- std::array::size_type
 - array/std::array::size_type
-- std::array::value_type
 - array/std::array::value_type
-- std::array::assign
 - array/std::array::assign
-- std::array::at
 - array/std::array::at
-- std::array::back
 - array/std::array::back
-- std::array::begin
 - array/std::array::begin
-- std::array::cbegin
 - array/std::array::cbegin
-- std::array::cend
 - array/std::array::cend
-- std::array::crbegin
 - array/std::array::crbegin
-- std::array::crend
 - array/std::array::crend
-- std::array::data
 - array/std::array::data
-- std::array::empty
 - array/std::array::empty
-- std::array::end
 - array/std::array::end
-- std::array::fill
 - array/std::array::fill
-- std::array::front
 - array/std::array::front
-- std::array::max_size
 - array/std::array::max_size
-- std::array::rbegin
 - array/std::array::rbegin
-- std::array::rend
 - array/std::array::rend
-- std::array::size
 - array/std::array::size
-- std::array::swap
 - array/std::array::swap
-- std::array::operator=
 - array/std::array::operator=
-- std::array::operator[]
 - array/std::array::operator[]
+- array/std::array::const_iterator
+- array/std::array::const_pointer
+- array/std::array::const_reference
+- array/std::array::const_reverse_iterator
+- array/std::array::difference_type
+- array/std::array::iterator
+- array/std::array::pointer
+- array/std::array::reference
+- array/std::array::reverse_iterator
+- array/std::array::size_type
+- array/std::array::value_type
+- array/std::array::assign
+- array/std::array::at
+- array/std::array::back
+- array/std::array::begin
+- array/std::array::cbegin
+- array/std::array::cend
+- array/std::array::crbegin
+- array/std::array::crend
+- array/std::array::data
+- array/std::array::empty
+- array/std::array::end
+- array/std::array::fill
+- array/std::array::front
+- array/std::array::max_size
+- array/std::array::rbegin
+- array/std::array::rend
+- array/std::array::size
+- array/std::array::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,10 +94,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e5e79e423d268da61ac9062edd099330f742b59
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9ac4c0becd32ca50e4f56fb38218b4c69cc4d0bd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="array-class-c-standard-library"></a>Класс array (стандартная библиотека C++)
@@ -126,46 +124,46 @@ class array;
 |||  
 |-|-|  
 |Определение типа|Описание|  
-|[array::const_iterator](#array__const_iterator)|Тип постоянного итератора для управляемой последовательности.|  
-|[array::const_pointer](#array__const_pointer)|Тип постоянного указателя на элемент.|  
-|[array::const_reference](#array__const_reference)|Тип постоянной ссылки на элемент.|  
-|[array::const_reverse_iterator](#array__const_reverse_iterator)|Тип постоянного обратного итератора для управляемой последовательности.|  
-|[array::difference_type](#array__difference_type)|Тип расстояния со знаком между двумя элементами.|  
-|[array::iterator](#array__iterator)|Тип итератора для управляемой последовательности.|  
-|[array::pointer](#array__pointer)|Тип указателя на элемент.|  
-|[array::reference](#array__reference)|Тип ссылки на элемент.|  
-|[array::reverse_iterator](#array__reverse_iterator)|Тип обратного итератора для управляемой последовательности.|  
-|[array::size_type](#array__size_type)|Тип беззнакового расстояния между двумя элементами.|  
-|[array::value_type](#array__value_type)|Тип элемента.|  
+|[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|  
+|[const_pointer](#const_pointer)|Тип постоянного указателя на элемент.|  
+|[const_reference](#const_reference)|Тип постоянной ссылки на элемент.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Тип постоянного обратного итератора для управляемой последовательности.|  
+|[difference_type](#difference_type)|Тип расстояния со знаком между двумя элементами.|  
+|[iterator](#iterator)|Тип итератора для управляемой последовательности.|  
+|[pointer](#pointer)|Тип указателя на элемент.|  
+|[reference](#reference)|Тип ссылки на элемент.|  
+|[reverse_iterator](#reverse_iterator)|Тип обратного итератора для управляемой последовательности.|  
+|[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|  
+|[value_type](#value_type)|Тип элемента.|  
   
 |||  
 |-|-|  
 |Функция-член|Описание|  
-|[array::array](#array__array)|Создает объект массива.|  
-|[array::assign](#array__assign)|Заменяет все элементы.|  
-|[array::at](#array__at)|Обращается к элементу в указанной позиции.|  
-|[array::back](#array__back)|Обращается к последнему элементу.|  
-|[array::begin](#array__begin)|Задает начало управляемой последовательности.|  
-|[array::cbegin](#array__cbegin)|Возвращает постоянный итератор произвольного доступа, указывающий на первый элемент в массиве.|  
-|[array::cend](#array__cend)|Возвращает постоянный итератор произвольного доступа, указывающий на предпоследнюю позицию массива.|  
-|[array::crbegin](#array__crbegin)|Возвращает константный итератор, который указывает на первый элемент в обращенном массиве.|  
-|[array::crend](#array__crend)|Возвращает постоянный итератор, который указывает на последний элемент в обратном массиве.|  
-|[array::data](#array__data)|Получает адрес первого элемента.|  
-|[array::empty](#array__empty)|Проверяет наличие элементов.|  
-|[array::end](#array__end)|Задает конец управляемой последовательности.|  
-|[array::fill](#array__fill)|Заменяет все элементы указанным значением.|  
-|[array::front](#array__front)|Обращается к первому элементу.|  
-|[array::max_size](#array__max_size)|Подсчитывает количество элементов.|  
-|[array::rbegin](#array__rbegin)|Задает начало обратной управляемой последовательности.|  
-|[array::rend](#array__rend)|Задает конец обратной управляемой последовательности.|  
-|[array::size](#array__size)|Подсчитывает количество элементов.|  
-|[array::swap](#array__swap)|Меняет местами содержимое двух контейнеров.|  
+|[array](#array)|Создает объект массива.|  
+|[assign](#assign)|Заменяет все элементы.|  
+|[at](#at)|Обращается к элементу в указанной позиции.|  
+|[back](#back)|Обращается к последнему элементу.|  
+|[begin](#begin)|Задает начало управляемой последовательности.|  
+|[cbegin](#cbegin)|Возвращает постоянный итератор произвольного доступа, указывающий на первый элемент в массиве.|  
+|[cend](#cend)|Возвращает постоянный итератор произвольного доступа, указывающий на предпоследнюю позицию массива.|  
+|[crbegin](#crbegin)|Возвращает константный итератор, который указывает на первый элемент в обращенном массиве.|  
+|[crend](#crend)|Возвращает постоянный итератор, который указывает на последний элемент в обратном массиве.|  
+|[data](#data)|Получает адрес первого элемента.|  
+|[empty](#empty)|Проверяет наличие элементов.|  
+|[end](#end)|Задает конец управляемой последовательности.|  
+|[fill](#fill)|Заменяет все элементы указанным значением.|  
+|[front](#front)|Обращается к первому элементу.|  
+|[max_size](#max_size)|Подсчитывает количество элементов.|  
+|[rbegin](#rbegin)|Задает начало обратной управляемой последовательности.|  
+|[rend](#rend)|Задает конец обратной управляемой последовательности.|  
+|[size](#size)|Подсчитывает количество элементов.|  
+|[swap](#swap)|Меняет местами содержимое двух контейнеров.|  
   
 |||  
 |-|-|  
 |Оператор|Описание|  
-|[array::operator=](#array__operator_eq)|Заменяет управляемую последовательность.|  
-|[array::operator[]](#array__operator_at)|Обращается к элементу в указанной позиции.|  
+|[array::operator=](#op_eq)|Заменяет управляемую последовательность.|  
+|[array::operator[]](#op_at)|Обращается к элементу в указанной позиции.|  
   
 ## <a name="remarks"></a>Примечания  
  У этого типа есть конструктор по умолчанию `array()` и оператор присваивания по умолчанию `operator=`. Тип удовлетворяет требованиям для `aggregate`. Поэтому объекты типа `array<Ty, N>` можно инициализировать с помощью агрегатного инициализатора. Например:  
@@ -181,7 +179,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **Пространство имен:** std  
   
-##  <a name="array__array"></a>  array::array  
+##  <a name="array"></a>  array::array  
  Создает объект массива.  
   
 ```  
@@ -236,8 +234,8 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__assign"></a>  array::assign  
-Устаревший в C ++&11;, заменен на [fill](#array__fill). Заменяет все элементы.  
+##  <a name="assign"></a>  array::assign  
+Устаревший в C ++ 11, заменен на [fill](#fill). Заменяет все элементы.  
   
 ```  
 void assign(const Ty& val);
@@ -288,7 +286,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="array__at"></a>  array::at  
+##  <a name="at"></a>  array::at  
  Обращается к элементу в указанной позиции.  
   
 ```  
@@ -333,7 +331,7 @@ int main()
   
 ```  
   
-##  <a name="array__back"></a>  array::back  
+##  <a name="back"></a>  array::back  
  Обращается к последнему элементу.  
   
 ```  
@@ -378,7 +376,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__begin"></a>  array::begin  
+##  <a name="begin"></a>  array::begin  
  Задает начало управляемой последовательности.  
   
 ```  
@@ -423,7 +421,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__cbegin"></a>  array::cbegin  
+##  <a name="cbegin"></a>  array::cbegin  
  Возвращает итератор `const`, направленный на первый элемент в диапазоне.  
   
 ```  
@@ -446,7 +444,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="array__cend"></a>  array::cend  
+##  <a name="cend"></a>  array::cend  
  Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
   
 ```  
@@ -471,7 +469,7 @@ auto i2 = Container.cend();
   
  Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
   
-##  <a name="array__const_iterator"></a>  array::const_iterator  
+##  <a name="const_iterator"></a>  array::const_iterator  
  Тип постоянного итератора для управляемой последовательности.  
   
 ```  
@@ -522,7 +520,7 @@ it2: 0
   
 ```  
   
-##  <a name="array__const_pointer"></a>  array::const_pointer  
+##  <a name="const_pointer"></a>  array::const_pointer  
  Тип постоянного указателя на элемент.  
   
 ```  
@@ -566,7 +564,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__const_reference"></a>  array::const_reference  
+##  <a name="const_reference"></a>  array::const_reference  
  Тип постоянной ссылки на элемент.  
   
 ```  
@@ -610,7 +608,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  array::const_reverse_iterator  
  Тип постоянного обратного итератора для управляемой последовательности.  
   
 ```  
@@ -654,7 +652,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__crbegin"></a>  array::crbegin  
+##  <a name="crbegin"></a>  array::crbegin  
  Возвращает константный итератор, который указывает на первый элемент в обращенном массиве.  
   
 ```  
@@ -697,7 +695,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="array__crend"></a>  array::crend  
+##  <a name="crend"></a>  array::crend  
  Возвращает константный итератор, который обращается к месту, следующему за последним элементом в обращенном массиве.  
   
 ```  
@@ -708,7 +706,7 @@ const_reverse_iterator crend() const noexcept;
  Константный обратный итератор произвольного доступа, адресующий расположение после последнего элемента в обращенном массиве (расположение перед первым элементом в необращенном массиве).  
   
 ### <a name="remarks"></a>Примечания  
- `crend` используется с обращенным массивом точно так же, как [array::cend](#array__cend) используется с массивом.  
+ `crend` используется с обращенным массивом точно так же, как [array::cend](#cend) используется с массивом.  
   
  Если возвращается значение `crend` (соответственно уменьшенное), объект массива нельзя изменить.  
   
@@ -740,7 +738,7 @@ int main( )
 1  
 ```  
   
-##  <a name="array__data"></a>  array::data  
+##  <a name="data"></a>  array::data  
  Получает адрес первого элемента.  
   
 ```  
@@ -786,7 +784,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__difference_type"></a>  array::difference_type  
+##  <a name="difference_type"></a>  array::difference_type  
  Тип расстояния со знаком между двумя элементами.  
   
 ```  
@@ -830,7 +828,7 @@ int main()
 -4  
 ```  
   
-##  <a name="array__empty"></a>  array::empty  
+##  <a name="empty"></a>  array::empty  
  Проверяет отсутствие элементов.  
   
 ```  
@@ -880,7 +878,7 @@ false
 true  
 ```  
   
-##  <a name="array__end"></a>  array::end  
+##  <a name="end"></a>  array::end  
  Задает конец управляемой последовательности.  
   
 ```  
@@ -926,7 +924,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__fill"></a>  array::fill  
+##  <a name="fill"></a>  array::fill  
  Удаляет массив и копирует указанные элементы в пустой массив.  
   
 ```  
@@ -970,7 +968,7 @@ int main( )
 }  
 ```  
   
-##  <a name="array__front"></a>  array::front  
+##  <a name="front"></a>  array::front  
  Обращается к первому элементу.  
   
 ```  
@@ -1015,7 +1013,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__iterator"></a>  array::iterator  
+##  <a name="iterator"></a>  array::iterator  
  Тип итератора для управляемой последовательности.  
   
 ```  
@@ -1066,7 +1064,7 @@ it2: 0
   
 ```  
   
-##  <a name="array__max_size"></a>  array::max_size  
+##  <a name="max_size"></a>  array::max_size  
  Подсчитывает количество элементов.  
   
 ```  
@@ -1109,7 +1107,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__operator_at"></a>  array::operator[]  
+##  <a name="op_at"></a>  array::operator[]  
  Обращается к элементу в указанной позиции.  
   
 ```  
@@ -1125,7 +1123,7 @@ constexpr const_reference operator[](size_type off) const;
 ### <a name="remarks"></a>Примечания  
  Функции-члены возвращают ссылку на элемент управляемой последовательности в позиции `off`. Если эта позиция недопустима, поведение станет неопределенным.  
   
-Имеется также не являющаяся членом функция [get](array-functions.md#get_function), которая может получать ссылку на элемент `array`.  
+Имеется также не являющаяся членом функция [get](array-functions.md#get), которая может получать ссылку на элемент `array`.  
   
 ### <a name="example"></a>Пример  
   
@@ -1161,7 +1159,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="array__operator_eq"></a>  array::operator=  
+##  <a name="op_eq"></a>  array::operator=  
  Заменяет управляемую последовательность.  
   
 ```  
@@ -1213,7 +1211,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__pointer"></a>  array::pointer  
+##  <a name="pointer"></a>  array::pointer  
  Тип указателя на элемент.  
   
 ```  
@@ -1257,7 +1255,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__rbegin"></a>  array::rbegin  
+##  <a name="rbegin"></a>  array::rbegin  
  Задает начало обратной управляемой последовательности.  
   
 ```  
@@ -1302,7 +1300,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__reference"></a>  array::reference  
+##  <a name="reference"></a>  array::reference  
  Тип ссылки на элемент.  
   
 ```  
@@ -1346,7 +1344,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__rend"></a>  array::rend  
+##  <a name="rend"></a>  array::rend  
  Задает конец обратной управляемой последовательности.  
   
 ```  
@@ -1391,7 +1389,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__reverse_iterator"></a>  array::reverse_iterator  
+##  <a name="reverse_iterator"></a>  array::reverse_iterator  
  Тип обратного итератора для управляемой последовательности.  
   
 ```  
@@ -1435,7 +1433,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__size"></a>  array::size  
+##  <a name="size"></a>  array::size  
  Подсчитывает количество элементов.  
   
 ```  
@@ -1478,7 +1476,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__size_type"></a>  array::size_type  
+##  <a name="size_type"></a>  array::size_type  
  Тип беззнакового расстояния между двумя элементами.  
   
 ```  
@@ -1522,7 +1520,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__swap"></a>  array::swap  
+##  <a name="swap"></a>  array::swap  
 Выполняет обмен содержимым между этим и другим массивом.  
   
 ```  
@@ -1536,7 +1534,7 @@ void swap(array& right);
 ### <a name="remarks"></a>Примечания  
 Функция-член меняет местами управляемые последовательности между `*this` и `right`. Он выполняет присваивания элементов и вызовы конструктора у количестве, пропорционально пропорциональном `N`.  
 
-Имеется также не являющаяся членом функция [swap](array-functions.md#swap_function), которая может переставлять местами два экземпляра `array`.  
+Имеется также не являющаяся членом функция [swap](array-functions.md#swap), которая может переставлять местами два экземпляра `array`.  
   
 ### <a name="example"></a>Пример  
   
@@ -1585,7 +1583,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__value_type"></a>  array::value_type  
+##  <a name="value_type"></a>  array::value_type  
  Тип элемента.  
   
 ```  

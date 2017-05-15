@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>Макросы _RPT, _RPTF, _RPTW, _RPTFW
@@ -162,7 +163,7 @@ _RPTFWn(
  Аргументы подстановки, используемые параметром `format`.  
   
 ## <a name="remarks"></a>Примечания  
- Все эти макросы принимают параметры `reportType` и `format`. Кроме того, они также могут принимать до четырех дополнительных аргументов, обозначенных числом, добавленным к имени макроса. Например, макросы `_RPT0` и `_RPTF0` не принимают дополнительные аргументы, макросы `_RPT1` и `_RPTF1` принимают `arg1`, макросы `_RPT2` и `_RPTF2` принимают `arg1` и `arg2` и т. д.  
+ Эти макросы занять `reportType` и `format` параметров. Кроме того, они также могут принимать до четырех дополнительных аргументов, обозначенных числом, добавленным к имени макроса. Например, макросы `_RPT0` и `_RPTF0` не принимают дополнительные аргументы, макросы `_RPT1` и `_RPTF1` принимают `arg1`, макросы `_RPT2` и `_RPTF2` принимают `arg1` и `arg2` и т. д.  
   
  Макросы `_RPT` и `_RPTF` аналогичны функции [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), поскольку их можно использовать для отслеживания хода выполнения приложения в процессе отладки. Однако эти макросы обеспечивают большую гибкость, чем функция `printf`, поскольку нет необходимости включать их в операторы `#ifdef`, чтобы предотвратить их вызов в коммерческой сборке приложения. Эта гибкость достигается с помощью макроса [_DEBUG](../../c-runtime-library/debug.md); макросы `_RPT` и `_RPTF` доступны только в том случае, если определен флаг `_DEBUG`. Если флаг `_DEBUG` не определен, вызовы этих макросов удаляются во время предварительной обработки.  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>Пример  
  См. пример в разделе [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

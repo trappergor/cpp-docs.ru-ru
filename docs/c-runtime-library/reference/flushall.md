@@ -1,76 +1,94 @@
 ---
-title: "_flushall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_flushall"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_flushall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Функция flushall"
-  - "сохранение потоков"
-  - "потоки, сохранение"
-  - "Функция _flushall"
+title: "_flushall | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _flushall
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _flushall
+dev_langs:
+- C++
+helpviewer_keywords:
+- flushall function
+- flushing streams
+- streams, flushing
+- _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _flushall
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 230d52cf98e7dc563ea5d0067de7df31af8549f9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Сбрасываются все потоки; очищаются все буферы.  
+---
+# <a name="flushall"></a>_flushall
+Сбрасывает все потоки; очищает все буферы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _flushall( void );  
 ```  
   
-## Возвращаемое значение  
- `_flushall` возвращает число открытых потоков \(ввода и вывода\).  Нет какого\-либо возврата ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_flushall` возвращает число открытых потоков (ввода и вывода). Ошибка не возвращается.  
   
-## Заметки  
- По умолчанию функция `_flushall` записывает в соответствующие файлы содержимое всех буферов, связанных с открытыми потоками вывода.  Все буферы, связанные с открытыми входными потоками, очищаются. \(Эти буферы обычно обслуживаются операционной системой, которая определяет оптимальное время записи данных на диск автоматически: если буфер заполнен, при закрытии потока или когда нормально завершается выполнение программы без закрытия потоков\).  
+## <a name="remarks"></a>Примечания  
+ По умолчанию функция `_flushall` записывает в соответствующие файлы содержимое всех буферов, связанных с открытыми потоками вывода. Все буферы, связанные с открытыми входными потоками, очищаются. (Эти буферы обычно обслуживаются операционной системой, которая автоматически определяет оптимальное время записи данных на диск: при заполнении буфера, при закрытии потока или при нормальном завершении программы без закрытия потоков).  
   
- Если после чтения следует вызов `_flushall`, новые данные считываются из входных файлов в буферы.  Все потоки остаются открытыми после вызова `_flushall`.  
+ Если после вызова функции `_flushall` выполняется операция чтения, из входных файлов в буферы считываются новые данные. После вызова функции `_flushall` все потоки остаются открытыми.  
   
- Функция фиксации на диск библиотеки времени выполнения позволяет убедиться в том, что критические данные записаны непосредственно на диск, а не в буферы операционной системы.  Можно включить эту функцию без переписывания программы, связав объектные файлы программы с Commode.obj.  В появившемся исполняемом файле вызовы `_flushall` записывают содержимое всех буферов на диск.  Только `_flushall` и `fflush` подвержены влиянию Commode.obj.  
+ Предусмотренная в библиотеке времени выполнения функция фиксации на диск позволяет обеспечить запись критически важных данных непосредственно на диск, а не в буферы операционной системы. Эту функцию можно включить, не переписывая программу, а скомпоновав объектные файлы программы с файлом Commode.obj. В создаваемом исполняемом файле вызовы функции `_flushall` записывают содержимое всех буферов на диск. Файл Commode.obj влияет только на функции `_flushall` и `fflush`.  
   
- Дополнительные сведения о управлении функцией фиксации на диск см. в разделах [Stream I\/O](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) и [\_fdopen](../Topic/_fdopen,%20_wfdopen.md).  
+ Дополнительные сведения об управлении возможностью фиксации на диск см. в разделах [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) и [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_flushall`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`_flushall`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_flushall.c  
@@ -88,20 +106,13 @@ int main( void )
 }  
 ```  
   
-  **Были сброшены 3 потока**   
-## Эквивалент в .NET Framework  
+```Output  
+There were 3 streams flushed  
+```  
   
--   [System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)  
-  
--   [System::IO::StreamWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.flush.aspx)  
-  
--   [System::IO::TextWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.textwriter.flush.aspx)  
-  
--   [System::IO::BinaryWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.flush.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [\_commit](../../c-runtime-library/reference/commit.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../Topic/fflush.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [_commit](../../c-runtime-library/reference/commit.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

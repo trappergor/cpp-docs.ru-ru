@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 18fafc735fe05dbba24058394bbcd7fefd45cffd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9d7f8ff1d198e8608cb5aa96852dc5b263277e02
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt-operators"></a>Операторы &lt;deque&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
-|[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.  
   
 ```
@@ -68,7 +69,7 @@ The deques are not equal.
 *\  
 ```  
   
-##  <a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="op_lt"></a>  оператор&lt;  
  Проверяет, меньше ли объект deque слева от оператора объекта deque справа от оператора.  
   
 ```
@@ -118,7 +119,7 @@ Deque c1 is less than deque c2.
 *\   
 ```  
   
-##  <a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a>  оператор&lt;=  
  Проверяет, меньше или равен объект deque слева от оператора объекту deque справа от оператора.  
   
 ```
@@ -169,7 +170,7 @@ Deque c1 is less than or equal to deque c2.
   
 ```  
   
-##  <a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Проверяет равенство объекта deque слева от оператора объекту deque справа от оператора.  
   
 ```
@@ -223,7 +224,7 @@ The deques are not equal.
   
 ```  
   
-##  <a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="op_gt"></a>  оператор&gt;  
  Проверяет, больше ли объект deque слева от оператора объекта deque справа от оператора.  
   
 ```
@@ -275,7 +276,7 @@ Deque c1 is greater than deque c2.
   
 ```  
   
-##  <a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a>  оператор&gt;=  
  Проверяет, больше или равен ли объект deque слева от оператора объекту deque справа от оператора.  
   
 ```

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>Объект _1
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Объекты `_1, _2, ... _M` — это заполнители, обозначающие первой, второй, ..., M-й аргумент соответственно в вызове функции в объекте, возвращаемом [функцией привязки](../standard-library/functional-functions.md#bind_function). Можно использовать `_N` для указания, куда необходимо вставить N-й аргумент при вычислении выражения привязки.  
+ Объекты `_1, _2, ... _M` заполнители назначается первый, второй,..., аргумент мес, соответственно, в вызове функции в объект, возвращаемый [привязки](../standard-library/functional-functions.md#bind). Можно использовать `_N` для указания, куда необходимо вставить N-й аргумент при вычислении выражения привязки.  
   
  В этой реализации значение `M` — 20.  
   
@@ -116,6 +117,6 @@ int main()
  **Пространство имен:** std  
   
 ## <a name="see-also"></a>См. также  
- [Функция bind](../standard-library/functional-functions.md#bind_function)   
+ [BIND](../standard-library/functional-functions.md#bind)   
  [Класс is_placeholder](../standard-library/is-placeholder-class.md)
 

@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e30d7ca25c2b121de0c042f3c78398db2268d59c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d442d5d1d32fe7ab1a6dfe4e16e64b3dd994b73e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
@@ -96,7 +97,7 @@ wchar_t *_wstrtime(
  Возвращает указатель на строку символов `timestr`.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_strtime` копирует текущее локальное время в буфер, на который указывает `timestr`*.* Время представлено в формате `hh:mm:ss`, где `hh` — две цифры, представляющие час в 24-часовом формате, `mm` — две цифры, представляющие минуты после начала часа, `ss` — две цифры, представляющие секунды. Например, строка `18:23:44` представляет 23 минуты 44 секунды после 18 часов. Размер буфера должен быть не менее 9 байтов.  
+ `_strtime` Функция копирует текущее местное время в буфере, на который указывает `timestr`. Время представлено в формате `hh:mm:ss`, где `hh` — две цифры, представляющие час в 24-часовом формате, `mm` — две цифры, представляющие минуты после начала часа, `ss` — две цифры, представляющие секунды. Например, строка `18:23:44` представляет 23 минуты 44 секунды после 18 часов. Размер буфера должен быть не менее 9 байтов.  
   
  `_wstrtime` — это версия с расширенными символами для `_strtime`; аргумент и возвращаемое значение `_wstrtime` являются строками с расширенными символами. В остальном эти функции работают одинаково. Если `timestr` является пустым указателем (`NULL`) или если `timestr` отформатирован неправильно, вызывается обработчик неправильного параметра. Это описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если исключение может быть продолжено, эти функции возвращают значение NULL и устанавливают для `errno` значение `EINVAL`, если `timestr` имеет значение NULL, или для `errno` устанавливается значение `ERANGE`, если `timestr` имеет неверный формат.  
   
@@ -138,18 +139,6 @@ int main( void )
 ```Output  
 The current time is 14:21:44  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Управление временем](../../c-runtime-library/time-management.md)   

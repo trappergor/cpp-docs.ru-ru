@@ -1,59 +1,110 @@
 ---
-title: "Класс lock_guard | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::lock_guard"
-dev_langs: 
-  - "C++"
+title: "Класс lock_guard | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::lock_guard
+- mutex/std::lock_guard::lock_guard
+dev_langs:
+- C++
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Класс lock_guard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
-Представляет шаблон, можно создать для создания объекта деструктор которого пропустить `mutex`.  
+---
+# <a name="lockguard-class"></a>Класс lock_guard
+Представляет шаблон, для которого можно создать экземпляры и объект, деструктор которого разблокирует `mutex`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+template <class Mutex>
+class lock_guard;
 ```  
-template<class Mutex>  
-class lock_guard;  
-```  
   
-## Заметки  
- Аргумент `Mutex` шаблона должен иметь имя *тип мьютексов*.  
+## <a name="remarks"></a>Примечания  
+ В аргументе шаблона `Mutex` должно быть указано имя *типа мьютекс*.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Name|Описание|  
-|----------|--------------|  
-|`lock_guard::mutex_type`|Синоним для аргумента `Mutex` шаблона.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|`lock_guard::mutex_type`|Синоним для аргумента шаблона `Mutex`.|  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Конструктор lock\_guard::lock\_guard](../Topic/lock_guard::lock_guard%20Constructor.md)|Создает объект `lock_guard`.|  
-|[Деструктор lock\_guard::~lock\_guard](../Topic/lock_guard::~lock_guard%20Destructor.md)|Удаление `mutex`, которое было передаватьсяо в конструктор.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[lock_guard](#lock_guard)|Создает объект `lock_guard`.|  
+|[Деструктор lock_guard::~lock_guard](#dtorlock_guard_destructor)|Снимает блокировку `mutex`, переданного в конструктор.|  
   
-## Требования  
- **Заголовок:** mutex  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<мьютекс >  
   
  **Пространство имен:** std  
   
-## См. также  
- [Справочные материалы по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+##  <a name="lock_guard"></a>  Конструктор lock_guard::lock_guard  
+ Создает объект `lock_guard`.  
+  
+```cpp  
+explicit lock_guard(mutex_type& Mtx);
+
+lock_guard(mutex_type& Mtx, adopt_lock_t);
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `Mtx`  
+ Объект *типа мьютекс*.  
+  
+### <a name="remarks"></a>Примечания  
+ Первый конструктор создает объект типа `lock_guard` и блокирует `Mtx`. Если `Mtx` не является рекурсивным мьютексом, его необходимо разблокировать при вызове этого конструктора.  
+  
+ Второй конструктор не блокирует `Mtx`. `Mtx` должен быть заблокирован при вызове этого конструктора. Конструктор не выдает никаких исключений.  
+  
+##  <a name="dtorlock_guard_destructor"></a>  Деструктор lock_guard::~lock_guard  
+ Снимает блокировку `mutex`, переданного в конструктор.  
+  
+```
+~lock_guard() noexcept;
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Если `mutex` не существует при выполнении деструктора, поведение не определено.  
+  
+## <a name="see-also"></a>См. также  
+ [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

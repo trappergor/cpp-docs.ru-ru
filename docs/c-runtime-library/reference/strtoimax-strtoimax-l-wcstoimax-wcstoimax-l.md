@@ -1,59 +1,76 @@
 ---
-title: "strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcstoimax"
-  - "_wcstoimax_l"
-  - "_strtoimax_l"
-  - "strtoimax"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcstoimax"
-  - "_tcstoimax"
-  - "strtoimax"
-  - "_wcstoimax_l"
-  - "_strtoimax_l"
-  - "_tcstoimax_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strtoimax_l - функция"
-  - "_wcstoimax_l - функция"
-  - "функции преобразования"
-  - "strtoimax - функция"
-  - "wcstoimax - функция"
+title: "strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcstoimax
+- _wcstoimax_l
+- _strtoimax_l
+- strtoimax
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcstoimax
+- _tcstoimax
+- strtoimax
+- _wcstoimax_l
+- _strtoimax_l
+- _tcstoimax_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- strtoimax funciton
+- conversion functions
+- _strtoimax_l function
+- _wcstoimax_l function
+- wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8bfc864245fbf2d45b6cc800c2f063dfb8c4ede3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Преобразование строки в целочисленное значение наибольшего поддерживаемого типа целого числа со знаком.  
+---
+# <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
+Преобразует строку в целочисленное значение наибольшего поддерживаемого целочисленного типа со знаком.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 intmax_t strtoimax(  
@@ -80,64 +97,64 @@ intmax_t _wcstoimax_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nptr`  
- Строка, заканчивающаяся нулевым символом, для преобразования.  
+ Строка, завершающаяся символом NULL, для преобразования.  
   
  `endptr`  
  Указатель на символ, который останавливает сканирование.  
   
  `base`  
- Основание системы счисления, который следует использовать.  
+ Используемое числовое основание.  
   
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- `strtoimax` возвращает значение, которое представлено в строке `nptr`, кроме случаев, когда представление вызвало бы переполнение — в этом случае возвращается значение `INTMAX_MAX` или `INTMAX_MIN`, а `errno` имеет значение `ERANGE`.  Функция возвращает 0, если преобразование не может быть выполнено.  `wcstoimax` возвращает значения аналогично `strtoimax`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `strtoimax` возвращает значение, представленное в строке `nptr`, кроме случаев, когда представление вызвало бы переполнение; в этом случае возвращается значение `INTMAX_MAX` или `INTMAX_MIN`, и `errno` устанавливается в значение `ERANGE`. Функция возвращает 0, если преобразование не может быть выполнено. `wcstoimax` возвращает значения аналогично `strtoimax`.  
   
- `INTMAX_MAX` и `INTMAX_MIN` определены в stdint.h.  
+ `INTMAX_MAX` и `INTMAX_MIN` задаются в STDLIB.H.  
   
- Если `nptr` имеет значение `NULL` или `base` отлично от нуля или либо меньше 2 или больше 36, то параметр `errno` получает значение `EINVAL`.  
+ Если `nptr` — `NULL` или `base` имеет ненулевое значение и либо меньше 2, либо больше 36, то `errno` устанавливается в значение `EINVAL`.  
   
- Дополнительные сведения о кодах возврата см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `strtoimax` преобразует `nptr` в `intmax_t`.  версия двухбайтового символа `strtoimax` — `wcstoimax`; ее аргумент `nptr` — строка двухбайтовых символов.  В противном случае эти функции ведут себя идентично.  Обе функции прекращают чтение строки `nptr` на первом знаке, который они не могут распознать как часть числа.  Это может быть конечный символ null или первый числовой символ, больше или равный `base`.  
+## <a name="remarks"></a>Примечания  
+ Функция `strtoimax` преобразует `nptr` в `intmax_t`. `wcstoimax` — это версия `strtoimax` с расширенными символами; ее аргумент `nptr` — строка расширенных символов. В остальном эти функции ведут себя одинаково. Обе функции прекращают чтение строки `nptr` на первом знаке, который они не могут распознать как часть числа. Это может быть завершающий нуль-символ или первый числовой символ, который больше или равен `base`.  
   
- Параметр категории `LC_NUMERIC` языкового стандарта определяет распознавание символа системы счисления в `nptr`; дополнительные сведения см. в разделе [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md).  Функции, не имеющие суффикса `_l`, используют текущий языковой стандарт; `_strtoimax_l` и `_wcstoimax_l` идентичны соответствующим функциям, которые не имеют суффикса `_l`, за исключением того, что они используют переданный им языковой стандарт.  Для получения дополнительной информации см. [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Параметр категории `LC_NUMERIC` языкового стандарта определяет распознавание символа основания системы счисления в `nptr`; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Функции, не имеющие суффикс `_l`, используют текущий языковой стандарт; `_strtoimax_l` и `_wcstoimax_l` идентичны соответствующим функциям, которые не имеют суффикс `_l`, за исключением того, что они вместо этого используют переданный им языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
- Если значение параметра `endptr` отлично от `NULL`, то указатель на символ, из\-за которого было прекращено сканирование, сохраняется в расположении, на которое указывает параметр `endptr`.  Если выполнить преобразование невозможно \(не были найдены допустимые цифры, или было указано недопустимое основание\), значение `nptr` сохраняется в расположении, на которое указывает параметр `endptr`.  
+ Если `endptr` не является значением `NULL`, указатель на символ, который останавливает сканирование, хранится в расположении, на которое указывает `endptr`. Если не удается выполнить преобразование (не найдены допустимые цифры или указано недопустимое основание), значение `nptr` сохраняется в расположении, указанном `endptr`.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstoimax`|`strtoimax`|`strtoimax`|`wcstoimax`|  
 |`_tcstoimax_l`|`strtoimax_l`|`_strtoimax_l`|`_wcstoimax_l`|  
   
- `strtoimax` ожидает, что `nptr` указывает на строку следующей формы:  
+ `strtoimax` ожидает, что `nptr` указывает на строку следующего вида:  
   
- \[`whitespace`\] \[{`+` &#124; `–`}\] \[`0` \[{ `x` &#124; `X` }\]\] \[`digits` &#124; `letters`\]  
+ [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
   
- `whitespace` может состоять из пробелов и символов табуляции, которые игнорируются; `digits` — одна или несколько десятичных цифр; `letters` — одна или несколько букв от "a" до "z" \(или от "A" до "Z"\).  Первый символ, который не удовлетворяет этой форме, прекращает сканирование.  Если `base` от 2 до 36, то он используется как основание системы счисления.  Если значение `base` равно 0, то начальные символы строки, указанной в `nptr` используются для идентификации базы.  Если первый символ — «0», а второй символ не равен «x» или «x», строка интерпретируется как восьмеричное целое число.  Если первый символ — «0», а второй символ не равен «x» или «x», строка интерпретируется как шестнадцатеричное целое число.  Если первый символ от «1» до «9», строка интерпретируется как десятичное целое число.  Буквы от «а» до «z» присваиваются значения от 10 до 35; разрешены только буквы с присвоенными значениями меньше `base`.  Первый символ вне диапазона базы останавливает сканирование.  Например, если `base` — 0 и первый сканированный символ — «0», то восьмеричное целое число предполагается и символ «8» или «9» останавливает сканирование.  
+ Строка `whitespace` может состоять из пробелов и символов табуляции, которые игнорируются. `digits` — одна или несколько десятичных цифр; `letters` — одна или несколько букв от a до z (или от A до Z). Первый символ, который не соответствует этой форме, останавливает сканирование. Если значение `base` лежит в диапазоне от 2 до 36, оно используется как основание системы счисления. Если `base` равно 0, то начальные символы строки, на которую указывает `nptr`, используются для определения основания. Если первый символ — "0", а второй символ не равен "x" или "X", строка интерпретируется как восьмеричное целое число. Если первый символ — 0, а второй символ равен x или X, строка интерпретируется как шестнадцатеричное целое число. Если первый символ — от 1 до 9, строка интерпретируется как десятичное целое число. Буквам от а до z (или от А до Z) присваиваются значения от 10 до 35. Допускаются только буквы с присвоенными значениями меньше `base`. Первый символ за пределами диапазона основания останавливает сканирование. Например, если значение `base` равно 0 и первый считанный символ — "0", то предполагается восьмеричное целое число, и символ "8" или "9" остановит сканирование.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h\>|  
+|-------------|---------------------|  
+|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Функции преобразования строк в числовое значение](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, \_strtod\_l, wcstod, \_wcstod\_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, \_strtol\_l, \_wcstol\_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, \_strtoul\_l, wcstoul, \_wcstoul\_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [strtoumax, \_strtoumax\_l, wcstoumax, \_wcstoumax\_l](../Topic/strtoumax,%20_strtoumax_l,%20wcstoumax,%20_wcstoumax_l.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
+ [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
+ [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
+ [strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l](../../c-runtime-library/reference/strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

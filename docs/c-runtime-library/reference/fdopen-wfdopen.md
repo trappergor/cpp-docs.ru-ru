@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7c55b4d9f7de124e7bbcc89e4c649e09e35efc42
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3efc15f9d9fa6544ad7af2c3809ee6562b7f36e0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
@@ -216,9 +217,6 @@ Line two
 ```  
 Lines in file: 2  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   

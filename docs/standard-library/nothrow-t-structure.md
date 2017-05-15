@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: b490cccf048b5d5b9be53508331cba89e66c952f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 69b654efb796b567f6a24ca2b6d2b65139a3a8c8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="nothrowt-structure"></a>Структура nothrow_t
@@ -52,7 +53,7 @@ struct std::nothrow_t {};
  Структура помогает компилятору выбрать подходящую версию конструктора. [nothrow](../standard-library/new-functions.md#nothrow) является синонимом для объектов типа `std::nothrow_t`.  
   
 ## <a name="example"></a>Пример  
- См. разделы [operator new](../standard-library/new-operators.md#operator_new) и [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) с примерами использования `std::nothrow_t` в качестве параметра функции.  
+ См. разделы [operator new](../standard-library/new-operators.md#op_new) и [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) с примерами использования `std::nothrow_t` в качестве параметра функции.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<new>  

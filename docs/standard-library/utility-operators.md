@@ -6,22 +6,24 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff42eebac50a016990a26dc358684dd70a33af84
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 46b2da82830b734ffd44eba5f72e8c5e912c3915
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltutilitygt-operators"></a>Операторы &lt;utility&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#operator_neq)|[оператор&gt;](#operator_gt_)|[оператор&gt;=](#operator_gt__eq)|  
-|[оператор&lt;](#operator_lt_)|[оператор&lt;=](#operator_lt__eq)|[оператор==](#operator_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  оператор!=  
  Проверяет неравенство объекта pair слева от оператора объекту pair справа от оператора.  
   
 ```  
@@ -33,10 +35,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **pair**.  
   
- ` right`  
+ `right`  
  Объект типа `pair`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -92,7 +94,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  оператор==  
  Проверяет равенство объекта pair слева от оператора объекту pair справа от оператора.  
   
 ```  
@@ -101,17 +103,17 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа **pair**.  
   
- ` right`  
+ `right`  
  Объект типа `pair`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  **true**, если объекты pair равны; **false**, если объекты `pair` не равны.  
   
 ### <a name="remarks"></a>Примечания  
- Один объект pair равен другому объекту pair, если все их соответствующие элементы равны. Функция возвращает ` left`. **first** == ` right`. **first** && ` left`. **second** == ` right`. **second**. Два объекта pair не равны, если первый или второй элемент одного объекта не равен соответствующему элементу другого.  
+ Один объект pair равен другому объекту pair, если все их соответствующие элементы равны. Функция возвращает `left`. **first** == `right`. **first** && `left`. **second** == `right`. **second**. Два объекта pair не равны, если первый или второй элемент одного объекта не равен соответствующему элементу другого.  
   
 ### <a name="example"></a>Пример  
   
@@ -151,7 +153,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  оператор&lt;  
+##  <a name="op_lt"></a>  оператор&lt;  
  Проверяет, меньше ли объект pair слева от оператора объекта pair справа от оператора.  
   
 ```  
@@ -160,17 +162,17 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа `pair` в левой части оператора.  
   
- ` right`  
+ `right`  
  Объект типа `pair` в правой части оператора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  **true**, если `pair` слева от оператора строго меньше `pair` справа от оператора; в противном случае **false**.  
   
 ### <a name="remarks"></a>Примечания  
- Объект ` left``pair` строго меньше объекта ` right``pair`, если ` left` меньше и не равно ` right.`.  
+ `left` `pair` Объект считается строго меньше, чем `right` `pair` объекта, если `left` меньше и не равно `right`.  
   
  При сравнении объектов pair первые элементы значений двух объектов имеют самый высокий приоритет. Если они отличаются, результат их сравнения рассматривается как результат сравнения объектов pair. Если значения первых элементов совпадают, сравниваются значения вторых элементов и результат их сравнения рассматривается как результат сравнения объектов pair.  
   
@@ -221,7 +223,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a>  оператор&lt;=  
  Проверяет, что объект pair слева от оператора меньше или равен объекту pair справа от оператора.  
   
 ```  
@@ -233,10 +235,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа `pair` в левой части оператора.  
   
- ` right`  
+ `right`  
  Объект типа `pair` в правой части оператора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -302,7 +304,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  оператор&gt;  
+##  <a name="op_gt"></a>  оператор&gt;  
  Проверяет, больше ли объект pair слева от оператора объекта pair справа от оператора.  
   
 ```  
@@ -314,17 +316,17 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа `pair` в левой части оператора.  
   
- ` right`  
+ `right`  
  Объект типа `pair` в правой части оператора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  **true**, если `pair` слева от оператора больше `pair` справа от оператора; в противном случае **false**.  
   
 ### <a name="remarks"></a>Примечания  
- Объект ` left``pair` строго больше объекта ` right``pair`, если ` left` больше и не равно ` right.`.  
+ `left` `pair` Объект считается строго больше `right` `pair` объекта, если `left` больше и не равно `right`.  
   
  При сравнении объектов pair первые элементы значений двух объектов имеют самый высокий приоритет. Если они отличаются, результат их сравнения рассматривается как результат сравнения объектов pair. Если значения первых элементов совпадают, сравниваются значения вторых элементов и результат их сравнения рассматривается как результат сравнения объектов pair.  
   
@@ -385,7 +387,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a>  оператор&gt;=  
  Проверяет, больше или равен ли объект pair слева от оператора объекту pair справа от оператора.  
   
 ```  
@@ -397,10 +399,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` left`  
+ `left`  
  Объект типа `pair` в левой части оператора.  
   
- ` right`  
+ `right`  
  Объект типа `pair` в правой части оператора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

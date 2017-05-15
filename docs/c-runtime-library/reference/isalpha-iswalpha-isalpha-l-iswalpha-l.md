@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2f60a63af85bed19a1393798cb03f03004ae5828
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6e8a0fce6ad16a34a8c6e51d1810fd7116a79e17
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
@@ -101,7 +102,7 @@ int _iswalpha_l(
  Языковой стандарт, используемый вместо текущего.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление алфавитного символа. Функция `isalpha` возвращает ненулевое значение, если `c` находится в диапазоне A–Z или a–z. Функция `iswalpha` возвращает ненулевое значение только для расширенных символов, для которых `iswupper` или `iswlower` не равно нулю. К ним относятся любые расширенные символы, принадлежащие определяемым реализацией наборам, для которых `iswcntrl`, `iswdigit`, `iswpunct` или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление алфавитного символа. `isalpha`возвращает ненулевое значение, если `c` находится в диапазоне A - Z или a - z. Функция `iswalpha` возвращает ненулевое значение только для расширенных символов, для которых `iswupper` или `iswlower` не равно нулю. К ним относятся любые расширенные символы, принадлежащие определяемым реализацией наборам, для которых `iswcntrl`, `iswdigit`, `iswpunct` или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
  Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -124,9 +125,6 @@ int _iswalpha_l(
 |`_iswalpha_l`|\<ctype.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::Char::IsLetter](https://msdn.microsoft.com/en-us/library/system.char.isletter.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   

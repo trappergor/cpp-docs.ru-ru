@@ -1,46 +1,64 @@
 ---
-title: "fread_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fread_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fread_s"
-  - "stdio/fread_s"
-dev_langs: 
-  - "C++"
+title: "fread_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fread_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fread_s
+- stdio/fread_s
+dev_langs:
+- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# fread_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6fa9d496bdb5f5d7b4dd4a772778a0f62a484fd8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Читает данные из потока.  Эта версия [fread](../../c-runtime-library/reference/fread.md) имеет усовершенствованную безопасность, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="freads"></a>fread_s
+Считывает данные из потока. Это версия функции [fread](../../c-runtime-library/reference/fread.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_t fread_s(   
@@ -52,7 +70,7 @@ size_t fread_s(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Место хранения данных.  
   
@@ -60,36 +78,35 @@ size_t fread_s(
  Размер буфера назначения в байтах.  
   
  `elementSize`  
- Размер элемента для чтения в байтах.  
+ Размер читаемого элемента в байтах.  
   
  `count`  
- Максимальное количество элементов, которые требуется прочитать.  
+ Максимальное число читаемых элементов.  
   
  `stream`  
- Указатель на структуру `FILE`.  
+ Указатель на структуру `FILE` .  
   
-## Возвращаемое значение  
- `fread_s` возвращает количество \(полных\) элементов, считанных в буфер, которое может быть меньше `count` при возникновении ошибки или конца файла до считывания `count` байт.  Используйте функцию `feof` или `ferror` для того, чтобы отличить ошибку от конца файла.  Если `size` или `count` равны 0, `fread_s` возвращает 0 и не меняет содержимое буфера.  Если `stream` или `buffer` является пустым указателем, `fread_s` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция устанавливает `errno` в значение `EINVAL` и возвращает 0.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Функция `fread_s` возвращает число полностью считанных в буфер элементов, которое может быть меньше `count`, если произошла ошибка чтения или конец файла был достигнут до того, как достигнуто значение `count`. Отличить ошибку от состояния, связанного с достижением конца файла, можно с помощью функции `feof` или `ferror`. Если `size` или `count` равно 0, функция `fread_s` возвращает 0, а содержимое буфера не изменяется. Если `stream` или `buffer` является указателем NULL, функция `fread_s` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функции задает для `errno` значение `EINVAL` и возвращает 0.  
   
- Дополнительные сведения о кодах ошибок см. в разделе [\_doserrno, errno, \_sys\_errlist и \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Дополнительные сведения об этих кодах ошибки см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Функция `fread_s` считывает до `count` элементов размером `elementSize` байтов из входного `stream` и сохраняет их в `buffer`.  Указатель файла, связанный с `stream` \(если такой есть\), увеличивается на число фактически считанных байтов.  Если данный поток открыт в текстовом режиме, пары возврата каретки\-перевода строки заменяются одиночными символами перевода строки.  Замена не влияет на указатель файла или возвращаемое значение.  Положение файлового указателя не определено при возникновении ошибки.  Значение частично прочитанного элемента невозможно определить.  
+## <a name="remarks"></a>Примечания  
+ Функция `fread_s` считывает максимум `count` элементов размером `elementSize` байт из входного потока `stream` и сохраняет их в `buffer`.  Указатель файла, связанный с `stream` (при наличии), возрастает на число фактически считанных байт. Если заданный поток открыт в текстовом режиме, символы перевода строки одной заменяются пары перевода строки возврата каретки. Замена не влияет на указатель файла или возвращаемое значение. В случае ошибки позиция указателя файла будет неопределенной. Значение частично считанного элемента не может быть определено.  
   
- Эта функция блокирует работу других потоков.  Если требуется неблокирующая версия, используйте `_fread_nolock`.  
+ Эта функция блокирует работу других потоков. Неблокирующая версия функции называется `_fread_nolock`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`fread_s`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fread_s`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```cpp  
-  
 // crt_fread_s.c  
 // Command line: cl /EHsc /nologo /W4 crt_fread_s.c  
 //  
@@ -142,13 +159,19 @@ int main( void )
 }  
 ```  
   
-  **Contents of buffer before write\/read:**   
- **zyxwvutsrqponmlkjihgfe**  
- **Wrote 22 items**   
- **Number of 11\-byte elements read \= 2**   
- **Contents of buffer after write\/read:**   
- **zyxwvutsrqponmlkjihgfe**    
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../Topic/fwrite.md)   
- [\_read](../Topic/_read.md)
+```Output  
+Contents of buffer before write/read:   
+        zyxwvutsrqponmlkjihgfe  
+  
+Wrote 22 items  
+  
+Number of 11-byte elements read = 2  
+  
+Contents of buffer after write/read:   
+        zyxwvutsrqponmlkjihgfe  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fwrite](../../c-runtime-library/reference/fwrite.md)   
+ [_read](../../c-runtime-library/reference/read.md)

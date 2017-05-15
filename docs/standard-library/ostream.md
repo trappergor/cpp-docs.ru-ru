@@ -1,72 +1,92 @@
 ---
-title: "&lt;ostream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<ostream>"
-  - "<ostream>"
-  - "ostream/std::<ostream>"
-  - "std::<ostream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ostream - заголовок"
+title: "&lt;ostream&gt; | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<ostream>
+- <ostream>
+- ostream/std::<ostream>
+- std::<ostream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;ostream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4b8e9c4f86ac9bab261824c10a8e6d8c3506bc1a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
-Определяет класс шаблона [basic\_ostream](../Topic/basic_ostream%20Class.md), который является посредником при вставке для iostreams.  Заголовок также определяет несколько связанных манипуляторов.  \(Этот заголовок обычно включается автоматически при использовании других заголовков iostream.  Его редко приходится включать напрямую.\)  
+---
+# <a name="ltostreamgt"></a>&lt;ostream&gt;
+Определяет класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md), который является посредником при вставке для iostreams. Заголовок также определяет несколько связанных манипуляторов. (Этот заголовок обычно включается автоматически при использовании других заголовков iostream. Его редко приходится включать напрямую.)  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 #include <ostream>  
   
 ```  
   
-### Typedefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[ostream](../Topic/ostream.md)|Создает тип из `basic_ostream`, который специализируется на `char`, и `char_traits`, который специализируется на `char`.|  
-|[wostream](../Topic/wostream.md)|Создает тип из `basic_ostream`, который специализируется на `wchar_t`, и `char_traits`, который специализируется на `wchar_t`.|  
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Создает тип из `basic_ostream`, который специализируется на `char`, и `char_traits`, который специализируется на `char`.|  
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Создает тип из `basic_ostream`, который специализируется на `wchar_t`, и `char_traits`, который специализируется на `wchar_t`.|  
   
-### Манипуляторы  
-  
-|||  
-|-|-|  
-|[endl](../Topic/endl.md)|Завершает строку и очищает буфер.|  
-|[концы](../Topic/ends%20\(Standard%20C++%20Library\).md)|Завершает строку.|  
-|[flush](../Topic/flush%20\(Standard%20C++%20Library\).md)|Очищает буфер.|  
-||Меняет местами значения левого параметра объекта `basic_ostream` со значениями правого параметра объекта `basic_ostream`.|  
-  
-### Операторы  
+### <a name="manipulators"></a>Манипуляторы  
   
 |||  
 |-|-|  
-|[\<\< \- оператор](../Topic/operator%3C%3C%20\(%3Costream%3E\).md)|Записывает в поток различные типы.|  
+|[endl](../standard-library/ostream-functions.md#endl)|Завершает строку и очищает буфер.|  
+|[ends](../standard-library/ostream-functions.md#ends)|Завершает строку.|  
+|[flush](../standard-library/ostream-functions.md#flush)|Очищает буфер.|  
+|[swap](../standard-library/ostream-functions.md#swap)|Меняет местами значения левого параметра объекта `basic_ostream` со значениями правого параметра объекта `basic_ostream`.|  
   
-### Классы  
+### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[basic\_ostream](../Topic/basic_ostream%20Class.md)|Класс шаблона, который описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока.|  
+|[оператор<<](../standard-library/ostream-operators.md#op_lt_lt)|Записывает в поток различные типы.|  
   
-## См. также  
- [Справочные материалы по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../Topic/iostream%20Programming.md)   
+### <a name="classes"></a>Классы  
+  
+|||  
+|-|-|  
+|[basic_ostream](../standard-library/basic-ostream-class.md)|Класс шаблона, который описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока.|  
+  
+## <a name="see-also"></a>См. также  
+ [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+ [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Программирование iostream](../standard-library/iostream-programming.md)   
  [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+
+
+
+

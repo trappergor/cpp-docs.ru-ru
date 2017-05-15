@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -119,7 +120,7 @@ int _resetstkoflw ( void );
   
  Есть ситуации, когда вызов функции **_resetstkoflw** может завершиться ошибкой, даже если осуществляется в правильном месте, например в блоке **__except**. Если даже после очистки стека не хватает пространства стека для выполнения функции **_resetstkoflw** без записи в последнюю страницу стека, то функции **_resetstkoflw** не удается восстановить последнюю страницу стека как защитную и она возвращает 0, что указывает на сбой. Поэтому для безопасного использования этой функции необходимо проверять возвращаемое значение, а не предполагать, что стеком можно безопасно пользоваться.  
   
- Структурированная обработка исключений не перехватывает `STATUS_STACK_OVERFLOW` исключения, когда приложение компилируется с `/clr` (см. [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md)).  
+ Структурированная обработка исключений не будет перехватывать `STATUS_STACK_OVERFLOW` исключения, когда приложение компилируется с `/clr` (см. [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [_alloca](../../c-runtime-library/reference/alloca.md)

@@ -37,17 +37,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 102682f0a48da8f0d9493bbacb3f690ea8dc8c2c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fa02312073af18591d25e31d465b268153b56784
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="gslice-class"></a>Класс gslice
 Служебный класс, используемый для определения многомерных подмножеств valarray. Если valarray рассматривается как многомерная матрица со всеми элементами в массиве, срез извлекает вектор из многомерного массива.  
   
 ## <a name="remarks"></a>Примечания  
- Класс хранит параметры, характеризующие объект типа [gslice_array](../standard-library/gslice-array-class.md). Подмножество valarray косвенно создается, когда объект класса gslice отображается как аргумент для объекта класса [valarray](../standard-library/valarray-class.md#valarray__operator_at)**\<Type>**. Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:  
+ Класс хранит параметры, характеризующие объект типа [gslice_array](../standard-library/gslice-array-class.md). Подмножество valarray косвенно создается, когда объект класса gslice отображается как аргумент для объекта класса [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:  
   
 -   Начальный индекс.  
   
@@ -65,22 +66,22 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[gslice](#gslice__gslice)|Определяет подмножество `valarray`, состоящее из нескольких фрагментов `valarray`, начинающихся с указанного элемента.|  
+|[gslice](#gslice)|Определяет подмножество `valarray`, состоящее из нескольких фрагментов `valarray`, начинающихся с указанного элемента.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[size](#gslice__size)|Находит значения массива, указывающие количество элементов в общем срезе `valarray`.|  
-|[start](#gslice__start)|Находит индекс начала общего среза `valarray`.|  
-|[stride](#gslice__stride)|Находит расстояние между элементами в общем срезе `valarray`.|  
+|[size](#size)|Находит значения массива, указывающие количество элементов в общем срезе `valarray`.|  
+|[start](#start)|Находит индекс начала общего среза `valarray`.|  
+|[stride](#stride)|Находит расстояние между элементами в общем срезе `valarray`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<valarray>  
   
  **Пространство имен:** std  
   
-##  <a name="gslice__gslice"></a>  gslice::gslice  
+##  <a name="gslice"></a>  gslice::gslice  
  Служебный класс, используемый для определения многомерных срезов valarray.  
   
 ```  
@@ -106,7 +107,7 @@ gslice(
  Конструктор по умолчанию хранит нуль для начального индекса и векторы нулевой длины для векторов длины и шага. Второй конструктор хранит `_StartIndex` для начального индекса, `_LenArray` для массива длины и `_IncArray` для массива шагов.  
   
 ### <a name="remarks"></a>Примечания  
- **gslice** определяет подмножество valarray, состоящее из нескольких срезов valarray, каждый из которых начинается с одного и того же указанного элемента. Единственным отличием между `gslice` и [slice::slice](../standard-library/slice-class.md#slice__slice) является возможность применения массивов для определения нескольких срезов. Первый срез содержит первый элемент с индексом `_StartIndex`, количество элементов, указанное первым элементом `_LenArray`, и шаг, задаваемый первым элементом `_IncArray`. Следующий набор ортогональных срезов имеет первые элементы, задаваемые первом срезом. Второй элемент `_LenArray` указывает число элементов. Шаг задается вторым элементом `_IncArray`. Третье измерение срезов будет брать элементы двумерного массива в качестве начальных элементов и продолжать аналогичным образом  
+ **gslice** определяет подмножество valarray, состоящее из нескольких срезов valarray, каждый из которых начинается с одного и того же указанного элемента. Единственным отличием между `gslice` и [slice::slice](../standard-library/slice-class.md#slice) является возможность применения массивов для определения нескольких срезов. Первый срез содержит первый элемент с индексом `_StartIndex`, количество элементов, указанное первым элементом `_LenArray`, и шаг, задаваемый первым элементом `_IncArray`. Следующий набор ортогональных срезов имеет первые элементы, задаваемые первом срезом. Второй элемент `_LenArray` указывает число элементов. Шаг задается вторым элементом `_IncArray`. Третье измерение срезов будет брать элементы двумерного массива в качестве начальных элементов и продолжать аналогичным образом  
   
 ### <a name="example"></a>Пример  
   
@@ -155,7 +156,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)  
 ```  
   
-##  <a name="gslice__size"></a>  gslice::size  
+##  <a name="size"></a>  gslice::size  
  Находит значения массива, указывающие количество элементов в общем срезе valarray.  
   
 ```  
@@ -230,7 +231,7 @@ The size of vaResult is:
  vaGSlice.size ( ) = ( 4 4 ).  
 ```  
   
-##  <a name="gslice__start"></a>  gslice::start  
+##  <a name="start"></a>  gslice::start  
  Находит начальный индекс общего среза valarray.  
   
 ```  
@@ -291,7 +292,7 @@ The valarray for vaGSlice is vaResult:
 The index of the first element of vaResult is: 0.  
 ```  
   
-##  <a name="gslice__stride"></a>  gslice::stride  
+##  <a name="stride"></a>  gslice::stride  
  Находит расстояние между элементами в общем срезе valarray.  
   
 ```  

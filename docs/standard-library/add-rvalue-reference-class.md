@@ -1,55 +1,70 @@
 ---
-title: "Класс add_rvalue_reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "type_traits/std::add_rvalue_reference"
-  - "std::add_rvalue_reference"
-  - "add_rvalue_reference"
-  - "std.add_rvalue_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс add_rvalue_reference"
+title: "Класс add_rvalue_reference | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- type_traits/std::add_rvalue_reference
+- add_rvalue_reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Класс add_rvalue_reference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: faa8014788d12841df6a0822ec7fe379198f06d1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
-Создает ссылочный тип rvalue параметра шаблона, если он является типом объекта или функции. В противном случае — из\-за семантики сворачивания ссылок, тип является таким же, как параметр шаблона.  
+---
+# <a name="addrvaluereference-class"></a>Класс add_rvalue_reference
+Создает ссылочный тип rvalue параметра-шаблона, если он является типом объекта или функции. В противном случае из-за семантики сворачивания ссылок этот тип является таким же, как параметр шаблона.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-template<class T>  
-    struct add_rvalue_reference;  
-  
-template<class T>  
-    using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;  
+template <class T>
+struct add_rvalue_reference;
+
+template <class T>
+using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  T  
  Тип для изменения.  
   
-## Заметки  
- `add_rvalue_reference` Класс содержит член с именем `type`, который является псевдонимом для типа rvalue ссылается на параметр шаблона `T`. Семантика сворачивания ссылок подразумевают, что, для типов без объектов и функции, не являющейся `T`, `T&&` — `T`. Например, если `T` является типом ссылки lvalue  `add_rvalue_reference<T>::type` является ссылочным типом lvalue, а не ссылка rvalue.  
+## <a name="remarks"></a>Примечания  
+ Класс `add_rvalue_reference` содержит член с именем `type`, который является псевдонимом для типа ссылки rvalue на параметр шаблона `T`. Семантика сворачивания ссылок подразумевает, что для типов `T`, не являющихся типами объектов или функций, `T&&` — `T`. Например, если `T` является типом ссылки lvalue `add_rvalue_reference<T>::type` является ссылочным типом lvalue, а не ссылкой rvalue.  
   
- Для удобства \< type\_traits \> определяет шаблон вспомогательных `add_rvalue_reference_t`, псевдонимы `type` членом `add_rvalue_reference`.  
+ Для удобства <type_traits> определяет вспомогательный шаблон `add_rvalue_reference_t`, который задает псевдоним члена `type` `add_rvalue_reference`.  
   
-## Пример  
- Данный пример кода использует static\_assert, чтобы показать, как ссылочные типы rvalue создаются с помощью `add_rvalue_reference` и `add_rvalue_reference_t`, и как результат `add_rvalue_reference` ссылки lvalue типа не ссылка rvalue, но сворачивается до типа ссылки lvalue.  
+## <a name="example"></a>Пример  
+ В данном примере кода используется static_assert, чтобы показать, как ссылочные типы rvalue создаются с помощью `add_rvalue_reference` и `add_rvalue_reference_t`, и что результат `add_rvalue_reference` в ссылочном типе lvalue не является ссылкой rvalue, но сворачивается до ссылочного типа lvalue.  
   
 ```cpp  
 // ex_add_rvalue_reference.cpp  
@@ -78,10 +93,11 @@ All static_assert tests of add_rvalue_reference passed.
 */  
 ```  
   
-## Требования  
- Заголовок: \<type\_traits\> Пространство имен: std  
+## <a name="requirements"></a>Требования  
+ Заголовок: <type_traits> Пространство имен: std  
   
-## См. также  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Класс add\_lvalue\_reference](../standard-library/add-lvalue-reference-class.md)   
- [Класс is\_rvalue\_reference](../Topic/is_rvalue_reference%20Class.md)
+## <a name="see-also"></a>См. также  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Класс add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)   
+ [Класс is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)
+

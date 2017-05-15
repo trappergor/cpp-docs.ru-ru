@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 01fb7ae608b710fca96b073e7b3ea0dcf07dbc53
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0e3e8a35d2b33417e952155313307aa55f181eb4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
@@ -94,7 +95,7 @@ void * _aligned_offset_realloc_dbg(
  `_aligned_offset_realloc_dbg` возвращает указатель void на перераспределенный (и, возможно, перемещенный) блок памяти. Возвращаемое значение — `NULL`, если размер равен нулю и аргумент буфера не `NULL`, а также если недостаточно памяти для расширения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.  
   
 ## <a name="remarks"></a>Примечания  
- `_aligned_offset_realloc_dbg` — это отладочная версия функции [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_aligned_offset_realloc_dbg` сокращается до вызова функции _`aligned_offset_realloc`. И \_`aligned_offset_realloc`, и `_aligned_offset_realloc_dbg` выполняют перераспределение блока памяти в основной куче, однако `_aligned_offset_realloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
+ `_aligned_offset_realloc_dbg` — это отладочная версия функции [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_aligned_offset_realloc_dbg` сокращается до вызова функции `_aligned_offset_realloc`. И `_aligned_offset_realloc`, и `_aligned_offset_realloc_dbg` выполняют перераспределение блока памяти в основной куче, однако `_aligned_offset_realloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
   
  Как и [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_realloc_dbg` позволяет выполнить выравнивание структуры со смещением в пределах структуры.  
   
@@ -114,9 +115,6 @@ void * _aligned_offset_realloc_dbg(
   
 ## <a name="libraries"></a>Библиотеки  
  Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры отладки](../../c-runtime-library/debug-routines.md)

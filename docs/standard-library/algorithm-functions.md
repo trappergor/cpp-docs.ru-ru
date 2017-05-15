@@ -8,253 +8,171 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- std::adjacent_find
 - adjacent_find
 - algorithm/std::all_of
-- std::all_of
 - all_of
 - algorithm/std::any_of
-- std::any_of
 - any_of
 - algorithm/std::binary_search
-- std::binary_search
 - binary_search
 - algorithm/std::copy
-- std::copy
 - copy
 - algorithm/std::copy_backward
-- std::copy_backward
 - copy_backward
 - algorithm/std::copy_if
-- std::copy_if
 - copy_if
 - algorithm/std::copy_n
-- std::copy_n
 - copy_n
 - algorithm/std::equal
-- std::equal
 - equal
 - algorithm/std::equal_range
-- std::equal_range
 - equal_range
 - algorithm/std::fill
-- std::fill
 - fill
 - algorithm/std::fill_n
-- std::fill_n
 - fill_n
 - algorithm/std::find
-- std::find
 - find
 - algorithm/std::find_end
-- std::find_end
 - find_end
 - algorithm/std::find_first_of
-- std::find_first_of
 - find_first_of
 - algorithm/std::find_if
-- std::find_if
 - find_if
 - algorithm/std::find_if_not
-- std::find_if_not
 - find_if_not
 - algorithm/std::for_each
-- std::for_each
 - for_each
 - algorithm/std::generate
-- std::generate
 - generate
 - algorithm/std::generate_n
-- std::generate_n
 - generate_n
 - algorithm/std::includes
-- std::includes
 - includes
 - algorithm/std::inplace_merge
-- std::inplace_merge
 - inplace_merge
 - algorithm/std::is_heap
-- std::is_heap
 - is_heap
 - algorithm/std::is_heap_until
-- std::is_heap_until
 - is_heap_until
 - algorithm/std::is_partitioned
-- std::is_partitioned
 - is_partitioned
 - algorithm/std::is_permutation
-- std::is_permutation
 - is_permutation
 - algorithm/std::is_sorted
-- std::is_sorted
 - is_sorted
 - algorithm/std::is_sorted_until
-- std::is_sorted_until
 - is_sorted_until
 - algorithm/std::iter_swap
-- std::iter_swap
 - iter_swap
 - algorithm/std::lexicographical_compare
-- std::lexicographical_compare
 - lexicographical_compare
 - algorithm/std::lower_bound
-- std::lower_bound
 - lower_bound
 - algorithm/std::make_heap
-- std::make_heap
 - make_heap
 - algorithm/std::max
-- std::max
 - max
 - algorithm/std::max_element
-- std::max_element
 - max_element
 - algorithm/std::merge
-- std::merge
 - merge
 - algorithm/std::min
-- std::min
 - min
 - algorithm/std::minmax
-- std::minmax
 - minmax
 - algorithm/std::minmax_element
-- std::minmax_element
 - minmax_element
 - algorithm/std::min_element
-- std::min_element
 - min_element
 - algorithm/std::mismatch
-- std::mismatch
 - mismatch
 - algorithm/std::move
-- std::move
 - move
 - algorithm/std::move_backward
-- std::move_backward
 - move_backward
 - algorithm/std::next_permutation
-- std::next_permutation
 - next_permutation
 - algorithm/std::none_of
-- std::none_of
 - none_of
 - algorithm/std::nth_element
-- std::nth_element
 - nth_element
 - algorithm/std::partial_sort
-- std::partial_sort
 - partial_sort
 - algorithm/std::partial_sort_copy
-- std::partial_sort_copy
 - partial_sort_copy
 - algorithm/std::partition
-- std::partition
 - partition
 - algorithm/std::partition_point
-- std::partition_point
 - partition_point
 - algorithm/std::pop_heap
-- std::pop_heap
 - pop_heap
 - algorithm/std::prev_permutation
-- std::prev_permutation
 - prev_permutation
 - algorithm/std::push_heap
-- std::push_heap
 - push_heap
 - algorithm/std::random_shuffle
-- std::random_shuffle
 - random_shuffle
 - algorithm/std::remove
-- std::remove
 - remove
 - algorithm/std::remove_copy
-- std::remove_copy
 - remove_copy
 - algorithm/std::remove_copy_if
-- std::remove_copy_if
 - remove_copy_if
 - algorithm/std::remove_if
-- std::remove_if
 - remove_if
 - algorithm/std::replace
-- std::replace
 - replace
 - algorithm/std::replace_copy
-- std::replace_copy
 - replace_copy
 - algorithm/std::replace_copy_if
-- std::replace_copy_if
 - replace_copy_if
 - algorithm/std::replace_if
-- std::replace_if
 - replace_if
 - algorithm/std::reverse
-- std::reverse
 - reverse
 - algorithm/std::reverse_copy
-- std::reverse_copy
 - reverse_copy
 - algorithm/std::rotate
-- std::rotate
 - rotate
 - algorithm/std::rotate_copy
-- std::rotate_copy
 - rotate_copy
 - algorithm/std::search
-- std::search
 - search
 - algorithm/std::search_n
-- std::search_n
 - search_n
 - algorithm/std::set_difference
-- std::set_difference
 - set_difference
 - algorithm/std::set_intersection
-- std::set_intersection
 - set_intersection
 - algorithm/std::set_symmetric_difference
-- std::set_symmetric_difference
 - set_symmetric_difference
 - algorithm/std::set_union
-- std::set_union
 - set_union
 - algorithm/std::shuffle
-- std::shuffle
 - shuffle
 - algorithm/std::sort
-- std::sort
 - sort
 - algorithm/std::sort_heap
-- std::sort_heap
 - sort_heap
 - algorithm/std::stable_partition
-- std::stable_partition
 - stable_partition
 - algorithm/std::stable_sort
-- std::stable_sort
 - stable_sort
 - algorithm/std::swap_ranges
-- std::swap_ranges
 - swap_ranges
 - algorithm/std::transform
-- std::transform
 - transform
 - algorithm/std::unique
-- std::unique
 - unique
 - algorithm/std::unique_copy
-- std::unique_copy
 - unique_copy
 - algorithm/std::upper_bound
-- std::upper_bound
 - upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- std::count
 - count
 - xutility/std::equal
 - xutility/std::fill
@@ -266,15 +184,21 @@ f1_keywords:
 - xutility/std::move_backward
 - xutility/std::reverse
 - xutility/std::rotate
+- algorithm/std::count_if
+- algorithm/std::partition_copy
+- algorithm/std::swap
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
 caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9916f5be3319b430104201387d6ab5b9b476e1c8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;функции&gt; алгоритмов
@@ -306,11 +230,11 @@ ms.lasthandoff: 02/24/2017
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
 |[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
-|[std::shuffle](#std__shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
 |[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
 |[upper_bound](#upper_bound)|  
   
-##  <a name="a-nameadjacentfinda--adjacentfind"></a><a name="adjacent_find"></a>  adjacent_find  
+##  <a name="adjacent_find"></a>  adjacent_find  
  Поиск двух соседних элементов, которые либо равны, либо удовлетворяют указанному условию.  
   
 ```  
@@ -342,7 +266,7 @@ template<class ForwardIterator , class BinaryPredicate>
 ### <a name="remarks"></a>Примечания  
  Алгоритм `adjacent_find` не изменяет последовательность. Диапазон, по которому ведется поиск, должен быть допустимым; все указатели должны поддерживать сброс ссылок должна быть возможность достижения последнего положения с первого путем приращения. Временная сложность алгоритма линейно зависит от количества элементов в диапазоне.  
   
- `operator==`, используемый для определения совпадения между элементами, налагает отношение эквивалентности между своими операндами..  
+ `operator==`, используемый для определения совпадения между элементами, налагает отношение эквивалентности между своими операндами.  
   
 ### <a name="example"></a>Пример  
   
@@ -406,7 +330,7 @@ There are two adjacent elements where the second is twice the first.
  They have values of 10 & 20.  
 ```  
   
-##  <a name="a-nameallofa--allof"></a><a name="all_of"></a>  all_of  
+##  <a name="all_of"></a>  all_of  
  Возвращает значение `true`, если условие выполняется каждым элементом заданного диапазона.  
   
 ```  
@@ -433,7 +357,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>Примечания  
  Функция шаблона возвращает значение `true`, только если для каждого `N` в диапазоне `[0,Last - first)` предикат `comp(*(_First + N))` имеет значение `true`.  
   
-##  <a name="a-nameanyofa--anyof"></a><a name="any_of"></a>  any_of  
+##  <a name="any_of"></a>  any_of  
  Возвращает значение `true`, если условие выполняется хотя бы один раз в указанном диапазоне элементов.  
   
 ```  
@@ -460,9 +384,9 @@ template<class InputIterator, class UnaryPredicate>
 ### <a name="remarks"></a>Примечания  
  Функция шаблона возвращает значение `true`, только если хотя бы для одного `N` в диапазоне  
   
- `[0,`  `last`  `-`   `first` `)` предикат `comp``(*(` `first` `+ N))` имеет значение true.  
+ `[0, last - first)`, предикат `comp(*(first + N))` имеет значение true.  
   
-##  <a name="a-namebinarysearcha--binarysearch"></a><a name="binary_search"></a>  binary_search  
+##  <a name="binary_search"></a>  binary_search  
  Проверяет, есть ли в отсортированном диапазоне элемент, равный указанному значению или эквивалентный ему в смысле, заданном двоичным предикатом.  
   
 ```  
@@ -492,7 +416,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
  Значение должно соответствовать значению элемента или удовлетворять условию со значением элемента, заданному двоичным предикатом.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает значение `true`, если условие удовлетворяется, или значение `false`, если не удовлетворяется.  
+ Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Бинарный предикат принимает два аргумента и возвращает `true` в случае соответствия и `false` в случае несоответствия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если в диапазоне обнаруживается элемент, равный или эквивалентный указанному значению; в противном случае — значение `false`.  
@@ -506,7 +430,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  В целях упорядочения типы значений прямых итераторов должны подлежать сравнению "меньше чем", чтобы при наличии двух элементов можно было определить, что они равны (т. е. ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов.  
   
- Отношение сложности алгоритма логарифмическое для итераторов произвольного доступа и линейное в ином случае, с числом шагов, пропорциональным (`last` – `first`).  
+ Сложности алгоритма логарифмической Итераторы произвольного доступа и линейное; в противном случае существует количество шагов, пропорционально ( `last`  -  `first`).  
   
 ### <a name="example"></a>Пример  
   
@@ -590,7 +514,7 @@ int main( )
 }   
 ```  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a>  copy  
+##  <a name="copy"></a>  copy  
  Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в прямом направлении.  
   
 ```  
@@ -612,7 +536,7 @@ template<class InputIterator, class OutputIterator>
  Итератор вывода указывает на позицию первого элемента в диапазоне назначения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор обращается к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения, т. е. данный итератор обращается к `result` + (`last` – `first`).  
+ Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, то есть, данный итератор обращается `result` + ( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Примечания  
  Диапазон источника должен быть допустимым, а в месте назначения должно быть достаточно свободного пространства для всех скопированных элементов.  
@@ -679,7 +603,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )  
 ```  
   
-##  <a name="a-namecopybackwarda--copybackward"></a><a name="copy_backward"></a>  copy_backward  
+##  <a name="copy_backward"></a>  copy_backward  
  Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в обратном направлении.  
   
 ```  
@@ -701,7 +625,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор обращается к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения, т. е. данный итератор обращается к `destEnd` – (`last` – `first`).  
+ Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, то есть, данный итератор обращается `destEnd` -( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Примечания  
  Диапазон источника должен быть допустимым, а в месте назначения должно быть достаточно свободного пространства для всех скопированных элементов.  
@@ -765,7 +689,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namecopyifa--copyif"></a><a name="copy_if"></a>  copy_if  
+##  <a name="copy_if"></a>  copy_if  
  Копирует из диапазона элементов те элементы, проверка которых на соответствие заданному условию дает значение `true`.  
   
 ```  
@@ -800,7 +724,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  один раз для каждого `N` в диапазоне `[0, last - first)` строго на увеличение значений `N`, начиная с наименьшего значения. Если `dest` и `first` обозначают области хранилища, то `dest` не должен находиться в диапазоне `[` `first``,` `last``)`.  
   
-##  <a name="a-namecopyna--copyn"></a><a name="copy_n"></a>  copy_n  
+##  <a name="copy_n"></a>  copy_n  
  Копирует указанное количество элементов.  
   
 ```  
@@ -825,9 +749,9 @@ template<class InputIterator, class Size, class OutputIterator>
  Возвращает выходной итератор, куда были скопированы элементы. То же, что и возвращенное значение третьего параметра `dest`.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет `*(dest + N) = *(first + N))` один раз для каждого `N` в диапазоне `[0,``count``)` строго на увеличение значений `N`, начиная с наименьшего значения. Затем она возвращает `dest` `+ N`. Если `dest`и `first` обозначают области хранилища, то `dest` не должен находиться в диапазоне `[``first``,` `Last``)`.  
+ Функция шаблона проверяет `*(dest + N) = *(first + N))` один раз для каждого `N` в диапазоне `[0, count)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `dest + N`. Если `dest` и `first` обозначают области хранилища, `dest` не должно быть в диапазоне `[first, last)`.  
   
-##  <a name="a-namecounta--count"></a><a name="count"></a>  count  
+##  <a name="count"></a>  count  
  Возвращает количество элементов в диапазоне, значения которых соответствуют заданному значению.  
   
 ```  
@@ -893,7 +817,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.  
 ```  
   
-##  <a name="a-namecountifa--countif"></a><a name="count_if"></a>  count_if  
+##  <a name="count_if"></a>  count_if  
  Возвращает количество элементов в диапазоне, значения которых соответствуют заданному условию.  
   
 ```  
@@ -963,12 +887,12 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.  
 ```  
   
-##  <a name="a-nameequala--equal"></a><a name="equal"></a>  equal  
+##  <a name="equal"></a>  equal  
  Сравнивает два диапазона поэлементно на признак равенства или равноценности в смысле, заданном бинарным предикатом.  
   
  Используйте функцию `std::equal` при сравнении элементов в контейнерах разного типа (например, в `vector` и `list`), или при сравнении элементов разного типа, или когда необходимо сравнить поддиапазоны контейнеров. При сравнении элементов одного типа в контейнерах одного типа используйте оператор `operator==`, предоставляемый для каждого контейнера.  
   
- Используйте двух-диапазонные перегрузки в коде C++&14;. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
+ Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -1060,7 +984,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameequalrangea--equalrange"></a><a name="equal_range"></a>  equal_range  
+##  <a name="equal_range"></a>  equal_range  
  Принимая во внимание упорядоченный диапазон, находит поддиапазон, в котором все элементы эквивалентны заданному значению.  
   
 ```  
@@ -1103,7 +1027,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  Элементы в возможно пустом поддиапазоне, который определяется парой итераторов, возвращенных `equal_range`, будут эквивалентны `val` в смысле, заданном используемым предикатом.  
   
- Отношение сложности алгоритма логарифмическое для итераторов произвольного доступа и линейное в ином случае, с числом шагов, пропорциональным (`last` – `first`).  
+ Сложности алгоритма логарифмической Итераторы произвольного доступа и линейное; в противном случае существует количество шагов, пропорционально ( `last`  -  `first`).  
   
 ### <a name="example"></a>Пример  
   
@@ -1223,7 +1147,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefilla--fill"></a><a name="fill"></a>  fill  
+##  <a name="fill"></a>  fill  
  Присваивает одно и то же новое значение каждому элементу в заданном диапазоне.  
   
 ```  
@@ -1288,7 +1212,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )  
 ```  
   
-##  <a name="a-namefillna--filln"></a><a name="fill_n"></a>  fill_n  
+##  <a name="fill_n"></a>  fill_n  
  Назначает новое значение указанному количеству элементов в диапазоне, начиная с определенного элемента.  
   
 ```  
@@ -1364,7 +1288,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefinda--find"></a><a name="find"></a>  find  
+##  <a name="find"></a>  find  
  Находит позицию первого вхождения элемента с заданным значением в диапазон.  
   
 ```  
@@ -1393,7 +1317,7 @@ InputIterator find(
   
  Пример кода с использованием `find()` см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-namefindenda--findend"></a><a name="find_end"></a>  find_end  
+##  <a name="find_end"></a>  find_end  
  Ищет в диапазоне последнюю подпоследовательность, совпадающую с заданной последовательностью, или эквивалентной согласно условию, заданному двоичным предикатом.  
   
 ```  
@@ -1533,7 +1457,7 @@ There is a sequence of elements in v1 that are equivalent to those
  in v2 under the binary predicate twice and that begins at position 8.  
 ```  
   
-##  <a name="a-namefindfirstofa--findfirstof"></a><a name="find_first_of"></a>  find_first_of  
+##  <a name="find_first_of"></a>  find_first_of  
  Выполняет поиск первого вхождения любого из нескольких значений в заданный диапазон или первого вхождения любого из нескольких элементов, равноценных в смысле, заданном бинарным предикатом, в указанный набор элементов.  
   
 ```  
@@ -1676,7 +1600,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namefindifa--findif"></a><a name="find_if"></a>  find_if  
+##  <a name="find_if"></a>  find_if  
  Находит позицию первого вхождения элемента, удовлетворяющего определенному условию, в диапазон.  
   
 ```  
@@ -1789,7 +1713,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefindifnota--findifnot"></a><a name="find_if_not"></a>  find_if_not  
+##  <a name="find_if_not"></a>  find_if_not  
  Возвращает первый элемент, который не удовлетворяет условию, в указанном диапазоне.  
   
 ```  
@@ -1818,7 +1742,7 @@ InputIterator find_if_not(
   
  Пример кода, готовый для адаптации к `find_if_not()`, см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-nameforeacha--foreach"></a><a name="for_each"></a>  for_each  
+##  <a name="for_each"></a>  for_each  
  Применяет заданный объект функции к каждому элементу в прямом порядке в пределах диапазона и возвращает объект функции.  
   
 ```  
@@ -1847,7 +1771,7 @@ Function for_each(
   
  Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
   
- Отношение сложности линейное; существует не более (`last` – `first`) сравнений.  
+ Сложности линейное; существует не более ( `last`  -   `first`) сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -1962,7 +1886,7 @@ The average of the elements of v1 is:
  Average ( v1mod2 ) = 10.  
 ```  
   
-##  <a name="a-namegeneratea--generate"></a><a name="generate"></a>  generate  
+##  <a name="generate"></a>  generate  
  Присваивает значения, создаваемые объектом функции, каждому элементу в диапазоне.  
   
 ```  
@@ -1988,7 +1912,7 @@ void generate(
   
  Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
   
- Отношение сложности линейное, требуется ровно (`last` –  `first`) вызовов генератора.  
+ Сложности линейное, точно ( `last`  -   `first`) вызовов генератора является обязательным.  
   
 ### <a name="example"></a>Пример  
   
@@ -2033,7 +1957,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).  
 ```  
   
-##  <a name="a-namegeneratena--generaten"></a><a name="generate_n"></a>  generate_n  
+##  <a name="generate_n"></a>  generate_n  
  Присваивает значения, создаваемые объектом функции, указанному количеству элементов в диапазоне и возвращается на позицию, следующую за последним присвоенным значением.  
   
 ```  
@@ -2105,7 +2029,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameincludesa--includes"></a><a name="includes"></a>  includes  
+##  <a name="includes"></a>  includes  
  Проверяет, содержит ли один отсортированный диапазон все элементы, содержащиеся во втором отсортированном диапазоне, где порядок сортировки или критерий эквивалентности элементов можно задать бинарным предикатом.  
   
 ```  
@@ -2155,7 +2079,7 @@ bool includes(
   
  В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Точнее, алгоритм проверяет, все ли элементы в первом упорядоченном диапазоне под указанным двоичным предикатом имеют порядок, эквивалентный порядку элементов во втором упорядоченном диапазоне.  
   
- Отношение сложности линейное; существует не более 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ Сложности линейное; существует не более 2 \* (( *last1 - first1*)-(* last2 - first2 *)) – 1 сравнений для непустых исходных диапазонов.  
   
 ### <a name="example"></a>Пример  
   
@@ -2306,7 +2230,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.  
 ```  
   
-##  <a name="a-nameinplacemergea--inplacemerge"></a><a name="inplace_merge"></a>  inplace_merge  
+##  <a name="inplace_merge"></a>  inplace_merge  
  Объединяет элементы из двух последовательных упорядоченных диапазонов в один упорядоченный диапазон, где критерий порядка сортировки может быть указан бинарным предикатом.  
   
 ```  
@@ -2342,7 +2266,7 @@ void inplace_merge(
   
  Предварительное условие для применения алгоритма `inplace_merge` состоит в том, что каждый упорядоченный последовательный диапазон должен быть упорядочен в соответствии с теми же правилами, которые будут использоваться этим алгоритмом для сортировки объединенных диапазонов. Операция стабильна, так как сохраняется относительный порядок элементов в каждом диапазоне. Если эквивалентные элементы имеются в обоих исходных диапазонах, в объединенном диапазоне элемент из первого диапазона будет предшествовать элементу из второго диапазона.  
   
- Сложность зависит от объема доступной памяти, так как алгоритм выделяет память для временного буфера. При наличии достаточного объема памяти лучшим вариантом является линейный с числом сравнений (*last – first*) – 1; если дополнительная память недоступна, худшим вариантом является *N* log *(N)*, где *N* = (*last – first*).  
+ Сложность зависит от объема доступной памяти, так как алгоритм выделяет память для временного буфера. Если доступно достаточно памяти, лучшим вариантом является линейной с (* фамилия - имя*) – 1 сравнений; вспомогательный памяти недостаточно, это худший возможный вариант при *N* журнала *(N)*, где *N* = (* фамилия - имя*).  
   
 ### <a name="example"></a>Пример  
   
@@ -2455,7 +2379,7 @@ Merged inplace with binary predicate mod_lesser specified,
  vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )  
 ```  
   
-##  <a name="a-nameisheapa--isheap"></a><a name="is_heap"></a>  is_heap  
+##  <a name="is_heap"></a>  is_heap  
  Возвращает значение `true`, если элементы в указанном диапазоне образуют кучу.  
   
 ```  
@@ -2479,7 +2403,7 @@ bool is_heap(
  Итератор произвольного доступа, указывающий конец диапазона.  
   
  `comp`  
- Условие для проверки порядка элементов. Двоичный предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ Условие для проверки порядка элементов. Двоичный предикат берет один аргумент и возвращает `true` или `false`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение `true`, если элементы в указанном диапазоне из кучи, в противном случае — значение `false`.  
@@ -2491,7 +2415,7 @@ bool is_heap(
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
-##  <a name="a-nameisheapuntila--isheapuntil"></a><a name="is_heap_until"></a>  is_heap_until  
+##  <a name="is_heap_until"></a>  is_heap_until  
  Возвращает итератор, расположенный в первом элементе диапазона [`begin`, `end`), который не удовлетворяет условию упорядочения кучи, или `end`, если диапазон образует кучу.  
   
 ```  
@@ -2525,7 +2449,7 @@ RandomAccessIterator is_heap_until(
   
  Вторая функция-шаблон работает так же, как первая, но использует в качестве условия упорядочения кучи предикат `compare` вместо `std::less<>`.  
   
-##  <a name="a-nameispartitioneda--ispartitioned"></a><a name="is_partitioned"></a>  is_partitioned  
+##  <a name="is_partitioned"></a>  is_partitioned  
  Возвращает значение `true`, если все элементы в заданном диапазоне, возвращающие `true` для какого-либо условия, расположены перед всеми элементами, возвращающими `false`.  
   
 ```  
@@ -2552,8 +2476,8 @@ bool is_partitioned(
 ### <a name="remarks"></a>Примечания  
  Функция шаблона возвращает `true`, только если все элементы в `[` `first``,` `last``)` секционированы по `comp`, то есть все элементы `X` в `[` `first``,` `last``)`, для которых `comp``(X)` имеет значение true, находятся перед всеми элементами `Y`, для которых `comp``(Y)` — `false`.  
   
-##  <a name="a-nameispermutationa--ispermutation"></a><a name="is_permutation"></a>  is_permutation  
- Возвращает значение true, если оба диапазона содержат одинаковые элементы и не важно, располагаются ли элементы в одном и том же порядке. Используйте двух-диапазонные перегрузки в коде C++&14;. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
+##  <a name="is_permutation"></a>  is_permutation  
+ Возвращает значение true, если оба диапазона содержат одинаковые элементы и не важно, располагаются ли элементы в одном и том же порядке. Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2608,7 +2532,7 @@ bool is_permutation(
 ### <a name="remarks"></a>Примечания  
  `is_permutation` в худшем случае имеет квадратичную сложность.  
   
- При выполнении первой функции шаблона предполагается, что в диапазоне, начинающемся с `First2`, имеется столько же элементов, сколько в диапазоне, указанном аргументами [`First1`, `Last1`). Если во втором диапазоне элементов больше, они игнорируются. Если элементов меньше — результат будет непредсказуемым. Третья функция шаблона (C++&14; и более поздние версии) не использует это допущение.  Обе функции возвращают `true`, только если для каждого элемента X в диапазоне [`First1`, `Last1`) имеется столько же элементов Y в том же диапазоне, для которых X == Y, сколько их имеется в диапазоне, начинающемся с `First2` или [`First2, Last2).`. Здесь `operator==` должен выполнять парные сравнения между операндами.  
+ При выполнении первой функции шаблона предполагается, что в диапазоне, начинающемся с `First2`, имеется столько же элементов, сколько в диапазоне, указанном аргументами [`First1`, `Last1`). Если во втором диапазоне элементов больше, они игнорируются. Если элементов меньше — результат будет непредсказуемым. Третья функция шаблона (C++ 14 и более поздние версии) не использует это допущение.  Обе функции возвращают `true`, только если для каждого элемента X в диапазоне [`First1`, `Last1`) имеется столько же элементов Y в том же диапазоне, для которых X == Y, сколько их имеется в диапазоне, начинающемся с `First2` или [`First2, Last2).`. Здесь `operator==` должен выполнять парные сравнения между операндами.  
   
  Вторая и четвертая функции шаблона действуют одинаково, за исключением того, что они заменяют `operator==(X, Y)` на `Pred(X, Y)`. Чтобы действия были правильными, предикат должен быть симметричным, рефлексивным и транзитивным.  
   
@@ -2668,7 +2592,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameissorteda--issorted"></a><a name="is_sorted"></a>  is_sorted  
+##  <a name="is_sorted"></a>  is_sorted  
  Возвращает значение `true`, если элементы в указанном диапазоне расположены в порядке сортировки.  
   
 ```  
@@ -2699,7 +2623,7 @@ bool is_sorted(
   
  Вторая функция шаблона возвращает `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`. Функция предиката `comp` выполняет сравнение порядка.  
   
-##  <a name="a-nameissorteduntila--issorteduntil"></a><a name="is_sorted_until"></a>  is_sorted_until  
+##  <a name="is_sorted_until"></a>  is_sorted_until  
  Возвращает `ForwardIterator`, установленный в последний элемент в порядке сортировки из указанного диапазона.  
   
  Вторая версия позволяет предоставить функцию `BinaryPredicate`, возвращающую значение `true`, если два конкретных элемента расположены в порядке сортировки, и значение `false` в противном случае.  
@@ -2736,7 +2660,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Вторая функция шаблона работает так же, за исключением того, что она заменяет `operator<(X, Y)` на `comp``(X, Y)`.  
   
-##  <a name="a-nameiterswapa--iterswap"></a><a name="iter_swap"></a>  iter_swap  
+##  <a name="iter_swap"></a>  iter_swap  
  Меняет местами два значения, указанные парой определенных итераторов.  
   
 ```  
@@ -2890,7 +2814,7 @@ After exchanging first elements,
  & deque deq2 is: deq2 = ( 0 5 ).  
 ```  
   
-##  <a name="a-namelexicographicalcomparea--lexicographicalcompare"></a><a name="lexicographical_compare"></a>  lexicographical_compare  
+##  <a name="lexicographical_compare"></a>  lexicographical_compare  
  Сравнивает две последовательности поэлементно для определения того, какой элемент из двух меньше.  
   
 ```  
@@ -2933,7 +2857,7 @@ bool lexicographical_compare(
 ### <a name="remarks"></a>Примечания  
  При лексикографическом сравнении двух последовательностей они сравниваются поэлементно до тех пор, пока не произойдет следующее.  
   
--   Находит&2; неравных соответствующих элемента и результат их сравнения считается результатом сравнения между двумя последовательностями.  
+-   Находит 2 неравных соответствующих элемента и результат их сравнения считается результатом сравнения между двумя последовательностями.  
   
 -   Неравенства не найдены, но одна последовательность имеет больше элементов, чем другая, и более короткая последовательность считается меньше, чем более длинная последовательность.  
   
@@ -3034,7 +2958,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.  
 ```  
   
-##  <a name="a-namelowerbounda--lowerbound"></a><a name="lower_bound"></a>  lower_bound  
+##  <a name="lower_bound"></a>  lower_bound  
  Находит позицию первого элемента в упорядоченном диапазоне, значение которого больше или равно указанному значению, где критерий упорядочивания может быть задан бинарным предикатом.  
   
 ```  
@@ -3078,7 +3002,7 @@ ForwardIterator lower_bound(
   
  В целях упорядочения типы значений прямых итераторов должны подлежать сравнению "меньше чем", чтобы при наличии двух элементов можно было определить, что они равны (т. е. ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов.  
   
- Отношение сложности алгоритма логарифмическое для итераторов произвольного доступа и линейное в ином случае, с числом шагов, пропорциональным (`last – first`).  
+ Отношение сложности алгоритма логарифмическое для итераторов произвольного доступа и линейное в ином случае, с числом шагов, пропорциональным (`last - first`).  
   
 ### <a name="example"></a>Пример  
   
@@ -3171,7 +3095,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namemakeheapa--makeheap"></a><a name="make_heap"></a>  make_heap  
+##  <a name="make_heap"></a>  make_heap  
  Преобразует элементы из указанного диапазона в кучу, в которой первый элемент является наибольшим и для которой критерий сортировки может быть определен бинарным предикатом.  
   
 ```  
@@ -3207,7 +3131,7 @@ void make_heap(
   
  Кучи — идеальный способ реализации очередей с приоритетами, и они используются в [классе priority_queue](../standard-library/priority-queue-class.md) адаптеров контейнеров библиотеки стандартных программ C++.  
   
- Отношение сложности линейное; требуется 3 \* (*last – first*) сравнений.  
+ Отношение сложности линейное; требуется 3 \* (* фамилия - имя *) сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -3251,7 +3175,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemaxa--max"></a><a name="max"></a>  max  
+##  <a name="max"></a>  max  
  Сравнивает два объекта и возвращает больший из них, где критерий упорядочивания может быть указан бинарным предикатом.  
   
 ```  
@@ -3464,7 +3388,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).  
 ```  
   
-##  <a name="a-namemaxelementa--maxelement"></a><a name="max_element"></a>  max_element  
+##  <a name="max_element"></a>  max_element  
  Находит первое вхождение наибольшего элемента в указанном диапазоне, где критерий упорядочивания может быть указан бинарным предикатом.  
   
 ```  
@@ -3492,7 +3416,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Примечания  
  Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
   
- Отношение сложности линейное: требуется (`last` – `first`) – 1 сравнений для непустого диапазона.  
+ Сложность линейной: ( `last`  -   `first`) – 1 сравнений являются обязательными для непустой диапазон.  
   
 ### <a name="example"></a>Пример  
   
@@ -3594,7 +3518,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemergea--merge"></a><a name="merge"></a>  merge  
+##  <a name="merge"></a>  merge  
  Объединяет все элементы из двух исходных упорядоченных диапазонов в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
   
 ```  
@@ -3650,7 +3574,7 @@ OutputIterator merge(
   
  В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона.  
   
- Отношение сложности алгоритма линейное; существует не более (*last1 – first1*) – (*last2 – first2*) – 1 сравнений.  
+ Сложности линейное; существует не более (* last1 - first1*)-(* last2 - first2*) – 1 сравнений.  
   
  Класс [list](../standard-library/list-class.md) предоставляет функцию-член merge для слияния элементов двух списков.  
   
@@ -3764,7 +3688,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemina--min"></a><a name="min"></a>  min  
+##  <a name="min"></a>  min  
  Сравнивает два объекта и возвращает меньший из них, где критерий упорядочивания может быть указан бинарным предикатом.  
   
 ```  
@@ -3975,7 +3899,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).  
 ```  
   
-##  <a name="a-nameminelementa--minelement"></a><a name="min_element"></a>  min_element  
+##  <a name="min_element"></a>  min_element  
  Находит первое вхождение наименьшего элемента в указанном диапазоне, где критерий упорядочивания может быть указан бинарным предикатом.  
   
 ```  
@@ -4003,7 +3927,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Примечания  
  Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
   
- Отношение сложности линейное: требуется (`last` – `first`) – 1 сравнений для непустого диапазона.  
+ Сложность линейной: ( `last`  -  `first`) – 1 сравнений являются обязательными для непустой диапазон.  
   
 ### <a name="example"></a>Пример  
   
@@ -4115,7 +4039,7 @@ The smallest element in v1 under the mod_lesser
  binary predicate is: 0  
 ```  
   
-##  <a name="a-nameminmaxelementa--minmaxelement"></a><a name="minmax_element"></a>  minmax_element  
+##  <a name="minmax_element"></a>  minmax_element  
  Выполняет работу, которую делают `min_element` и `max_element`, в одном вызове.  
   
 ```  
@@ -4162,7 +4086,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Если последовательность непустая, функция выполняет не более `3 * (``last` `-` `first` `- 1) / 2` сравнений.  
   
-##  <a name="a-nameminmaxa--minmax"></a><a name="minmax"></a>  minmax  
+##  <a name="minmax"></a>  minmax  
  Сравнивает два входных параметра и возвращает их в виде пары, в порядке от меньшего к большему.  
   
 ```  
@@ -4212,10 +4136,10 @@ template<class Type, class BinaryPredicate>
   
  Функция выполняет точно одно сравнение.  
   
-##  <a name="a-namemismatcha--mismatch"></a><a name="mismatch"></a>  mismatch  
+##  <a name="mismatch"></a>  mismatch  
  Сравнивает поэлементно два диапазона и находит первую позицию, где элементы отличаются.  
   
- Используйте двух-диапазонные перегрузки в коде C++&14;. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
+ Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4277,7 +4201,7 @@ mismatch(
  Применение определяемого пользователем предиката не требуется для наложения отношения эквивалентности (симметричной, рефлексивной и транзитивной) между операндами.  
   
 ### <a name="example"></a>Пример  
-  В следующем примере демонстрируется использование несовпадения. Перегрузка C++&03; показана только с целью демонстрации того, как она может привести к непредвиденному результату.  
+  В следующем примере демонстрируется использование несовпадения. Перегрузка C++ 03 показана только с целью демонстрации того, как она может привести к непредвиденному результату.  
   
 ```cpp  
 #include <vector>  
@@ -4372,7 +4296,7 @@ Press a key
   
 ```  
   
-##  <a name="a-namealgmovea--ltalggt-move"></a><a name="alg_move"></a>  &lt;alg&gt; move  
+##  <a name="alg_move"></a>  &lt;alg&gt; move  
  Перемещает элементы, связанные с заданным диапазоном.  
   
 ```  
@@ -4395,9 +4319,9 @@ template<class InputIterator, class OutputIterator>
  Выходной итератор, который должен содержать перемещенные элементы.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет `*(``dest` `+ N) =` move `(*(``first` `+ N)))` один раз для каждого `N`в диапазоне `[0,` `last` `-` `first``)`строго на увеличение значений `N` начиная с наименьшего значения. Затем она возвращает `dest` `+ N`. Если `dest` и `first` обозначают области хранилища, то `dest` не должен быть в диапазоне `[` `first``,` `last``)`.  
+ Функция шаблона проверяет `*(dest + N) = move(*(first + N))` один раз для каждого `N` в диапазоне `[0, last - first)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `dest + N`. Если `dest` и `first` обозначают области хранилища, `dest` не должно быть в диапазоне `[first, last)`.  
   
-##  <a name="a-namemovebackwarda--movebackward"></a><a name="move_backward"></a>  move_backward  
+##  <a name="move_backward"></a>  move_backward  
  Перемещает элементы одного итератора в другой. Перемещение начинается с последнего элементом в указанном диапазоне и завершается первым элементом в этом диапазоне.  
   
 ```  
@@ -4420,11 +4344,11 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет `*(``destEnd` `- N - 1) =` `move``(*(``last` `- N - 1)))` один раз для каждого `N` в диапазоне `[0,` `last` `-``first``)`строго на увеличение значений `N` начиная с наименьшего значения. Затем она возвращает `destEnd` `- (``last` `-`  `first``)`. Если `destEnd` и `first` обозначают области хранилища, то `destEnd` не должен находиться в диапазоне `[` `first``,` `last``)`.  
+ Функция шаблона проверяет `*(destEnd - N - 1) = move(*(last - N - 1))` один раз для каждого `N` в диапазоне `[0, last - first)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `destEnd - (last - first)`. Если `destEnd` и `first` обозначают области хранилища, `destEnd` не должно быть в диапазоне `[first, last)`.  
   
  `move` и `move_backward` — функциональный эквивалент использованию `copy` и `copy_backward` с итератором перемещения.  
   
-##  <a name="a-namenextpermutationa--nextpermutation"></a><a name="next_permutation"></a>  next_permutation  
+##  <a name="next_permutation"></a>  next_permutation  
  Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически следующий больший", если такая существует, где смысл термина "следующий" может быть задан бинарным предикатом.  
   
 ```  
@@ -4454,7 +4378,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  Двоичный предикат по умолчанию — "меньше чем", и элементы в диапазоне должны быть сравнимы на "меньше чем", чтобы следующая перестановка была задана правильно.  
   
- Отношение сложности линейное; существует не более (*last – first*) /&2; перестановок.  
+ Сложности линейное; существует не более (* фамилия - имя *) / 2 меняет местами.  
   
 ### <a name="example"></a>Пример  
   
@@ -4595,7 +4519,7 @@ After another next_permutation of vector v1,
  v1 =   ( -3 -2 -1 1 0 2 3 ).  
 ```  
   
-##  <a name="a-namenthelementa--nthelement"></a><a name="nth_element"></a>  nth_element  
+##  <a name="nth_element"></a>  nth_element  
  Разделяет диапазон элементов, правильно находя *n*-й элемент последовательности в диапазоне, чтобы все элементы перед ним были меньше или равны ему, а все элементы в последовательности после него — больше либо равны ему.  
   
 ```  
@@ -4627,7 +4551,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
  Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны.  
   
- Средняя сложность сортировки линейная по отношению к * last – first*.  
+ Среднее сложности сортировки по отношению к линейной * фамилия - имя *.  
   
 ### <a name="example"></a>Пример  
   
@@ -4695,7 +4619,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenoneofa--noneof"></a><a name="none_of"></a>  none_of  
+##  <a name="none_of"></a>  none_of  
  Возвращает значение `true`, если условие не выполняется ни одним элементом заданного диапазона.  
   
 ```  
@@ -4717,9 +4641,9 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
  Возвращает значение `true`, если не обнаружен ни один элемент в указанном диапазоне, соответствующий условию, и значение `false`, если обнаружен хотя бы один такой элемент.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона возвращает значение `true`, только если для некоторых `N` в диапазоне `[0,` `last` `-` `first``)` предикат `comp``(*(` `first` `+ N))` всегда имеет значение `false`.  
+ Функция шаблона возвращает `true` только если для некоторых `N` в диапазоне `[0, last - first)`, предикат `comp(*(first + N))` всегда `false`.  
   
-##  <a name="a-namepartialsorta--partialsort"></a><a name="partial_sort"></a>  partial_sort  
+##  <a name="partial_sort"></a>  partial_sort  
  Упорядочивает указанное число меньших элементов в диапазоне в не нисходящий порядок или согласно критерию упорядочивания, заданному бинарным предикатом.  
   
 ```  
@@ -4831,7 +4755,7 @@ Partially resorted (UDgreater) vector:
  v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )  
 ```  
   
-##  <a name="a-namepartialsortcopya--partialsortcopy"></a><a name="partial_sort_copy"></a>  partial_sort_copy  
+##  <a name="partial_sort_copy"></a>  partial_sort_copy  
  Копирует элементы из исходного диапазона в диапазон назначения, где исходные элементы упорядочены по критерию "меньше либо равно" или согласно другому заданному бинарному предикату.  
   
 ```  
@@ -4952,7 +4876,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namepartitiona--partition"></a><a name="partition"></a>  partition  
+##  <a name="partition"></a>  partition  
  Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют.  
   
 ```  
@@ -4982,7 +4906,7 @@ template<class BidirectionalIterator, class Predicate>
   
  Элементы *a* и *b* эквивалентны, но не обязательно равны, если и *Pr* (*a*, *b*) имеет значение false, и *Pr* (*b*, *a*) имеет значение false, где *Pr* — это предикат, заданный в параметре. Алгоритм **partition** нестабилен и не гарантирует, что относительный порядок эквивалентных элементов будет сохранен. Алгоритм **stable_ partition** сохраняет этот исходный порядок.  
   
- Отношение сложности линейное: существует (`last` – `first`) приложений `comp` и не более (`last` – `first`) /&2; перестановок.  
+ Сложность линейной: существует ( `last`  -   `first`) приложения `comp` и не более ( `last`  -   `first`) / 2 меняет.  
   
 ### <a name="example"></a>Пример  
   
@@ -5023,7 +4947,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namepartitioncopya--partitioncopy"></a><a name="partition_copy"></a>  partition_copy  
+##  <a name="partition_copy"></a>  partition_copy  
  Копирует элементы, возвращающие `true` для какого-либо условия, в одно место назначения, а возвращающие `false` — в другое. Эти элементы должны поступать из указанного диапазона.  
   
 ```  
@@ -5055,9 +4979,9 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  Условие для проверки. Это условие предоставляется определенным пользователем объектом функции предиката, который задает условие для проверки. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона копирует каждый элемент `X` из `[` `first``,` `last``)` в `*``dest1``++`, если `_Pred``(X)` имеет значение true, или в `*``dest2``++ if not`. Она возвращает `pair<OutputIterator1, OutputIterator2>(``dest1``,` `dest2``)`.  
+ Функция шаблона копирует каждый элемент `X` в `[first,last)` для `*dest1++` Если `_Pred(X)` имеет значение true, или к `*dest2++` в противном случае. Он возвращает `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
-##  <a name="a-namepartitionpointa--partitionpoint"></a><a name="partition_point"></a>  partition_point  
+##  <a name="partition_point"></a>  partition_point  
  Возвращает первый элемент, который не удовлетворяет условию, в данном диапазоне. Элементы сортируются так, чтобы те, которые соответствуют условию, располагались перед теми, что не соответствуют.  
   
 ```  
@@ -5083,9 +5007,9 @@ template<class ForwardIterator, class Predicate>
  Возвращает `ForwardIterator`, указывающий первый элемент, который не удовлетворяет условию, проверенному с помощью `comp`, или возвращает `last`, если таковой не найден.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона находит первый итератор `it` в `[` `first``,``last``)`, для которого `comp(*it)` имеет значение `false`. Последовательность должна быть упорядочена по `comp`.  
+ Шаблонная функция находит первый итератор `it` в `[first, last)` которого `comp(*it)` — `false`. Последовательность должна быть упорядочена по `comp`.  
   
-##  <a name="a-namepopheapa--popheap"></a><a name="pop_heap"></a>  pop_heap  
+##  <a name="pop_heap"></a>  pop_heap  
  Удаляет наибольший элемент из начала кучи до позиции, следующей за последней, в диапазоне, а затем формирует новую кучу из оставшихся элементов.  
   
 ```  
@@ -5122,7 +5046,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  Диапазон, исключая только что добавленный в конце элемент, должен быть кучей.  
   
- Отношение сложности логарифмическое; требуется не более (*last – first*) сравнений журналов.  
+ Сложность логарифмической требует более журнала (* фамилия - имя *) сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -5186,7 +5110,7 @@ int main( )  {
 }  
 ```  
   
-##  <a name="a-nameprevpermutationa--prevpermutation"></a><a name="prev_permutation"></a>  prev_permutation  
+##  <a name="prev_permutation"></a>  prev_permutation  
  Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически предыдущий больший", если такая существует, где смысл термина "предыдущий" может быть задан бинарным предикатом.  
   
 ```  
@@ -5221,7 +5145,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  Двоичный предикат по умолчанию — "меньше чем", и элементы в диапазоне должны быть сравнимы на "меньше чем", чтобы предыдущая перестановка была задана правильно.  
   
- Отношение сложности линейное; существует не более (`last` – `first`) /&2; перестановок.  
+ Сложности линейное, не более ( `last`  -   `first`) / 2 меняет местами.  
   
 ### <a name="example"></a>Пример  
   
@@ -5357,7 +5281,7 @@ After another prev_permutation of vector v1,
  v1 =   ( -3 -2 0 2 -1 1 3 ).  
 ```  
   
-##  <a name="a-namepushheapa--pushheap"></a><a name="push_heap"></a>  push_heap  
+##  <a name="push_heap"></a>  push_heap  
  Добавляет элемент, находящийся в конце диапазона, в существующую кучу, состоящую из предыдущих элементов диапазона.  
   
 ```  
@@ -5394,7 +5318,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  Диапазон, исключая только что добавленный в конце элемент, должен быть кучей.  
   
- Отношение сложности логарифмическое; требуется не более (*last – first*) сравнений журналов.  
+ Сложность логарифмической, требующие Максимум журналов ( *фамилия - имя*) сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -5463,10 +5387,10 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerandomshufflea--randomshuffle"></a><a name="random_shuffle"></a>  random_shuffle  
- Функция std::random_shuffle() не рекомендуется, она заменена функцией [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle). Пример кода и дополнительные сведения см. в разделах [\<random>](../standard-library/random.md) и в статье [Почему методы std::random_shuffle не рекомендуются в C++14?](http://go.microsoft.com/fwlink/?LinkId=397954) на веб-сайте Stackoverflow.  
+##  <a name="random_shuffle"></a>  random_shuffle  
+ Устаревшие функции std:: random_shuffle() заменена [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Пример кода и Дополнительные сведения см. в разделе [ \<случайных >](../standard-library/random.md) и сайте StackOverflow [почему методы std::random_shuffle удалены устарели в C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
-##  <a name="a-nameremovea--remove"></a><a name="remove"></a>  remove  
+##  <a name="remove"></a>  remove  
  Удаляет указанное значение из заданного диапазона без нарушения порядка остальных элементов и возвращает конец нового диапазона после удаления указанного значения.  
   
 ```  
@@ -5495,7 +5419,7 @@ template<class ForwardIterator, class Type>
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства.  
+ Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство.  
   
  Класс [list](../standard-library/list-class.md) содержит более эффективную версию функции-члена **remove**, которая также удаляет ссылки для указателей.  
   
@@ -5545,7 +5469,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-nameremovecopya--removecopy"></a><a name="remove_copy"></a>  remove_copy  
+##  <a name="remove_copy"></a>  remove_copy  
  Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы с заданным значением не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.  
   
 ```  
@@ -5579,7 +5503,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства и не более (`last` – `first`) назначений.  
+ Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство и максимум ( `last`  -   `first`) назначений.  
   
 ### <a name="example"></a>Пример  
   
@@ -5624,7 +5548,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremovecopyifa--removecopyif"></a><a name="remove_copy_if"></a>  remove_copy_if  
+##  <a name="remove_copy_if"></a>  remove_copy_if  
  Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы, соответствующие предикату, не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.  
   
 ```  
@@ -5658,7 +5582,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства и не более (`last` – `first`) назначений.  
+ Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство и в большинстве случаев ( `last`  -   `first`) назначений.  
   
  Сведения о действии этих функций см. в разделе [Checked Iterators](../standard-library/checked-iterators.md).  
   
@@ -5712,7 +5636,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremoveifa--removeif"></a><a name="remove_if"></a>  remove_if  
+##  <a name="remove_if"></a>  remove_if  
  Удаляет элементы, соответствующие предикату, из заданного диапазона без нарушения порядка остальных элементов и возвращает конец нового диапазона после удаления указанного значения.  
   
 ```  
@@ -5741,7 +5665,7 @@ template<class ForwardIterator, class Predicate>
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства.  
+ Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство.  
   
  Класс list содержит более эффективную версию функции-члена remove, которая удаляет ссылки для указателей.  
   
@@ -5795,7 +5719,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacea--replace"></a><a name="replace"></a>  replace  
+##  <a name="replace"></a>  replace  
  Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному значению.  
   
 ```  
@@ -5823,7 +5747,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства и не более (`last` – `first`) присвоений новых значений.  
+ Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство и максимум ( `last`  -   `first`) присвоений новых значений.  
   
 ### <a name="example"></a>Пример  
   
@@ -5863,7 +5787,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopya--replacecopy"></a><a name="replace_copy"></a>  replace_copy  
+##  <a name="replace_copy"></a>  replace_copy  
  Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному значению, одновременно копируя результат в новый диапазон назначения.  
   
 ```  
@@ -5903,7 +5827,7 @@ int main( ) {
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства и не более (`last` – `first`) присвоений новых значений.  
+ Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство и в большинстве случаев ( `last`  -   `first`) присвоений новых значений.  
   
 ### <a name="example"></a>Пример  
   
@@ -5962,7 +5886,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopyifa--replacecopyif"></a><a name="replace_copy_if"></a>  replace_copy_if  
+##  <a name="replace_copy_if"></a>  replace_copy_if  
  Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному предикату, одновременно копируя результат в новый диапазон назначения.  
   
 ```  
@@ -6002,7 +5926,7 @@ OutputIterator replace_copy_if(
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства и не более (`last` – `first`) присвоений новых значений.  
+ Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство и максимум ( `last`  -   `first`) присвоений новых значений.  
   
 ### <a name="example"></a>Пример  
   
@@ -6068,7 +5992,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplaceifa--replaceif"></a><a name="replace_if"></a>  replace_if  
+##  <a name="replace_if"></a>  replace_if  
  Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному предикату.  
   
 ```  
@@ -6099,7 +6023,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
   
- Отношение сложности линейное; существуют сравнения (`last` – `first`) для определения равенства и не более (`last` – `first`) присвоений новых значений.  
+ Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство и в большинстве случаев ( `last`  -   `first`) присвоений новых значений.  
   
 ### <a name="example"></a>Пример  
   
@@ -6145,7 +6069,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereversea--reverse"></a><a name="reverse"></a>  reverse  
+##  <a name="reverse"></a>  reverse  
  Изменяет порядок элементов в диапазоне на обратный.  
   
 ```  
@@ -6206,7 +6130,7 @@ The modified vector v1 with values reversed is:
  ( 9 8 7 6 5 4 3 2 1 0 ).  
 ```  
   
-##  <a name="a-namereversecopya--reversecopy"></a><a name="reverse_copy"></a>  reverse_copy  
+##  <a name="reverse_copy"></a>  reverse_copy  
  Изменяет порядок элементов в исходном диапазоне на обратный, одновременно копируя их в диапазон назначения  
   
 ```  
@@ -6274,7 +6198,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerotatea--rotate"></a><a name="rotate"></a>  rotate  
+##  <a name="rotate"></a>  rotate  
  Меняет местами элементы в двух соседних диапазонах.  
   
 ```  
@@ -6296,7 +6220,7 @@ template<class ForwardIterator>
 ### <a name="remarks"></a>Примечания  
  Указанные диапазоны должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
   
- Отношение сложности линейное; существует не более (`last` – `first`) перестановок.  
+ Сложности линейное; существует не более ( `last`  -   `first`) меняет местами.  
   
 ### <a name="example"></a>Пример  
   
@@ -6373,7 +6297,7 @@ After the rotation of a single deque element to the back,
  d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-namerotatecopya--rotatecopy"></a><a name="rotate_copy"></a>  rotate_copy  
+##  <a name="rotate_copy"></a>  rotate_copy  
  Меняет местами элементы в двух соседних диапазонах в пределах исходного диапазона и копирует результат в диапазон назначения.  
   
 ```  
@@ -6405,7 +6329,7 @@ OutputIterator rotate_copy(
 ### <a name="remarks"></a>Примечания  
  Указанные диапазоны должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
   
- Отношение сложности линейное; существует не более (`last` – `first`) перестановок.  
+ Сложности линейное; существует не более ( `last`  -   `first`) меняет местами.  
   
 ### <a name="example"></a>Пример  
   
@@ -6466,7 +6390,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesearcha--search"></a><a name="search"></a>  search  
+##  <a name="search"></a>  search  
  Выполняет поиск первого вхождения последовательности в целевой диапазон, элементы которого равны указанным в заданной последовательности элементов или элементы которого равноценны в смысле, заданным бинарным предикатом, элементам в заданной последовательности.  
   
 ```  
@@ -6611,7 +6535,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namesearchna--searchn"></a><a name="search_n"></a>  search_n  
+##  <a name="search_n"></a>  search_n  
  Выполняет поиск первой подпоследовательности в диапазоне заданного числа элементов, имеющих определенное значение или связанных с этим значением отношением, указанным бинарным предикатом.  
   
 ```  
@@ -6741,7 +6665,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
  predicate one_half in v1 and the first one begins at position 15.  
 ```  
   
-##  <a name="a-namesetdifferencea--setdifference"></a><a name="set_difference"></a>  set_difference  
+##  <a name="set_difference"></a>  set_difference  
  Объединяет все элементы, принадлежащие одному отсортированному исходному диапазону, но не второму отсортированному исходному диапазону, в один отсортированный диапазон назначения, где критерий упорядочивания может быть указан бинарным предикатом.  
   
 ```  
@@ -6797,7 +6721,7 @@ OutputIterator set_difference(
   
  В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы и в первом исходном диапазоне их больше, чем во втором, диапазон назначения будет содержать число, на которое вхождения этих элементов в первом исходном диапазоне превышают вхождения этих элементов во втором исходном диапазоне.  
   
- Отношение сложности линейное; существует не более 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ Сложности линейное; существует не более 2 \* (( *last1 - first1*)-( *last2 - first2*)) – 1 сравнений для непустых исходных диапазонов.  
   
 ### <a name="example"></a>Пример  
   
@@ -6918,7 +6842,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetintersectiona--setintersection"></a><a name="set_intersection"></a>  set_intersection  
+##  <a name="set_intersection"></a>  set_intersection  
  Объединяет все элементы, входящие в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
   
 ```  
@@ -6974,7 +6898,7 @@ OutputIterator set_intersection(
   
  В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы, диапазон назначения будет содержать максимальное количество элементов, входящих в оба исходных диапазона.  
   
- Отношение сложности линейное; существует не более 2 \* ((*last1 – first1*) + (*last2 – first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ Сложности линейное; существует не более 2 \* (( *last1 - first1*) + ( *last2 - first2*)) – 1 сравнений для непустых исходных диапазонов.  
   
 ### <a name="example"></a>Пример  
   
@@ -7089,7 +7013,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetsymmetricdifferencea--setsymmetricdifference"></a><a name="set_symmetric_difference"></a>  set_symmetric_difference  
+##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
  Объединяет все элементы, входящие в один, но не в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
   
 ```  
@@ -7145,7 +7069,7 @@ OutputIterator set_symmetric_difference(
   
  В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы, диапазон назначения будет содержать абсолютное значение числа, на которое вхождения этих элементов в одном исходном диапазоне превышают вхождения этих элементов во втором исходном диапазоне.  
   
- Отношение сложности линейное; существует не более 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ Сложности линейное; существует не более 2 \* ((*last1 - first1*)-(*last2 - first2*)) – 1 сравнений для непустых исходных диапазонов.  
   
 ### <a name="example"></a>Пример  
   
@@ -7266,7 +7190,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetuniona--setunion"></a><a name="set_union"></a>  set_union  
+##  <a name="set_union"></a>  set_union  
  Объединяет все элементы, входящие в хотя бы один из двух исходных упорядоченных диапазонов, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
   
 ```  
@@ -7321,7 +7245,7 @@ OutputIterator set_union(
   
  В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы, диапазон назначения будет содержать максимальное количество элементов, входящих в оба исходных диапазона.  
   
- Отношение сложности линейное; существует не более 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 сравнений.  
+ Сложности линейное; существует не более 2 \* (( *last1 - first1*)-( *last2 - first2*)) – 1 сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -7442,7 +7366,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namestdshufflea--stdshuffle"></a><a name="std__shuffle"></a>  std::shuffle  
+##  <a name="shuffle"></a>  std::shuffle  
  Перемешивает (изменяет порядок) элементы в указанном диапазоне, используя генератор случайных чисел.  
   
 ```  
@@ -7465,7 +7389,7 @@ void shuffle(RandomAccessIterator first,
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения и пример кода, использующего `shuffle()`, см. в разделе [\<random>](../standard-library/random.md).  
   
-##  <a name="a-namesorta--sort"></a><a name="sort"></a>  sort  
+##  <a name="sort"></a>  sort  
  Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом.  
   
 ```  
@@ -7497,7 +7421,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны. Алгоритм `sort` нестабилен и поэтому не гарантирует, что относительный порядок эквивалентных элементов будет сохранен. Алгоритм `stable_sort` сохраняет этот исходный порядок.  
   
- Средняя сложность сортировки: *O*(*N* log *N*), где *N* =  *last – first*.  
+ Среднее сложности сортировки — *O*( *N* журнала *N*), где *N* =  *фамилия - имя*.  
   
 ### <a name="example"></a>Пример  
   
@@ -7567,7 +7491,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )  
 ```  
   
-##  <a name="a-namesortheapa--sortheap"></a><a name="sort_heap"></a>  sort_heap  
+##  <a name="sort_heap"></a>  sort_heap  
  Преобразует кучу в упорядоченный диапазон.  
   
 ```  
@@ -7608,7 +7532,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
   
- Отношение сложности — не более *N* log *N*, где *N* = (*last – first*).  
+ Сложность не более *N* журнала *N*, где *N* = ( *фамилия - имя*).  
   
 ### <a name="example"></a>Пример  
   
@@ -7660,7 +7584,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namestablepartitiona--stablepartition"></a><a name="stable_partition"></a>  stable_partition  
+##  <a name="stable_partition"></a>  stable_partition  
  Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют, с сохранением относительного порядка равноценных элементов.  
   
 ```  
@@ -7735,7 +7659,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namestablesorta--stablesort"></a><a name="stable_sort"></a>  stable_sort  
+##  <a name="stable_sort"></a>  stable_sort  
  Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом, и сохраняет относительный порядок равноценных элементов.  
   
 ```  
@@ -7765,7 +7689,7 @@ void stable_sort(
   
  Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны. Алгоритм **sort** стабилен и гарантирует, что относительный порядок эквивалентных элементов будет сохранен.  
   
- Сложность выполнения `stable_sort` зависит от объема доступной памяти; в лучшем случае (при наличии достаточного объема памяти) это *O*(*N* log *N*), а в худшем — *O*(*N* (log *N*)2), где *N* =  *last – First.* Как правило, алгоритм **sort** работает значительно быстрее, чем `stable_sort`.  
+ Во время выполнения сложности `stable_sort` зависит от объема доступной памяти, лучшим вариантом (при наличии достаточного объема памяти), но *O*( *N* журнала *N*) и худшем случае *O*( *N* (журнала *N* ) 2), где *N* =  *фамилия - имя.* Как правило, алгоритм **sort** работает значительно быстрее, чем `stable_sort`.  
   
 ### <a name="example"></a>Пример  
   
@@ -7834,7 +7758,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Первое переопределение меняет местами значения двух объектов. Второе переопределение меняет местами значения двух массивов объектов.  
   
 ```  
@@ -7915,7 +7839,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).  
 ```  
   
-##  <a name="a-nameswaprangesa--swapranges"></a><a name="swap_ranges"></a>  swap_ranges  
+##  <a name="swap_ranges"></a>  swap_ranges  
  Меняет местами элементы одного диапазона с элементами другого диапазона такого же размера.  
   
 ```  
@@ -7943,7 +7867,7 @@ ForwardIterator2 swap_ranges(
 ### <a name="remarks"></a>Примечания  
  Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения. Второй диапазон должен достигать размеров первого диапазона.  
   
- Отношение сложности линейное; существует `last1` – `first1` выполненных перестановок. Если переставляются элементы из контейнеров одного и того же типа, то должна использоваться функция-член `swap` из этого контейнера, так как функция-член обычно имеет постоянную сложность.  
+ Отношение сложности линейное; существует `last1`  -   `first1` выполнить операции замены. Если переставляются элементы из контейнеров одного и того же типа, то должна использоваться функция-член `swap` из этого контейнера, так как функция-член обычно имеет постоянную сложность.  
   
 ### <a name="example"></a>Пример  
   
@@ -8006,7 +7930,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-nametransforma--transform"></a><a name="transform"></a>  transform  
+##  <a name="transform"></a>  transform  
  Применяет заданный объект функции к каждому элементу в исходном диапазоне или к паре элементов из двух исходных диапазонов и копирует возвращаемые значения объекта функции в диапазон назначения.  
   
 ```  
@@ -8049,9 +7973,9 @@ OutputIterator transform(
 ### <a name="remarks"></a>Примечания  
  Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения. Диапазон назначения должен быть достаточно большим, чтобы содержать преобразованный исходный диапазон.  
   
- Если `result` устанавливается равным `first1` в первой версии алгоритма *,* то исходный и целевой диапазоны будут совпадать и последовательность будет изменена на месте. Но `result` может не указывать позицию в диапазоне [`first1` +&1;, `last1`).  
+ Если `result` задана равной `first1` в первой версии алгоритма, затем исходный и конечный диапазоны будут совпадать, и последовательность будет изменен на месте. Но `result` не могут использоваться и положение в диапазоне [`first1` + 1, `last1`).  
   
- Отношение сложности линейное; существует не более (`last1` – `first1`) сравнений.  
+ Сложности линейное; существует не более (`last1` -  `first1`) сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -8140,7 +8064,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
  v3 = ( 320 180 80 20 0 20 80 ).  
 ```  
   
-##  <a name="a-nameuniquea--unique"></a><a name="unique"></a>  unique  
+##  <a name="unique"></a>  unique  
  Удаляет повторяющиеся элементы, расположенные в указанном диапазоне рядом друг с другом.  
   
 ```  
@@ -8177,7 +8101,7 @@ template<class ForwardIterator, class Predicate>
   
  Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один. Алгоритм **unique** не изменяет число элементов в последовательности, и ссылки на элементы за пределами измененной последовательности удаляются, но эти элементы не указываются.  
   
- Отношение сложности линейное; требуется (`last` – `first`) – 1 сравнений.  
+ Отношение сложности линейное; требуется ( `last`  -   `first`) – 1 сравнений.  
   
  В классе list имеется более эффективная функция-член unique, которая может работать лучше.  
   
@@ -8270,7 +8194,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).  
 ```  
   
-##  <a name="a-nameuniquecopya--uniquecopy"></a><a name="unique_copy"></a>  unique_copy  
+##  <a name="unique_copy"></a>  unique_copy  
  Копирует элементы из исходного диапазона в диапазон назначения за исключением повторяющихся элементов, расположенных рядом друг с другом.  
   
 ```  
@@ -8310,7 +8234,7 @@ OutputIterator unique_copy( InputIterator first,
   
  Диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать сброс ссылок. В каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
   
- Отношение сложности линейное; требуется (`last` – `first`) сравнений.  
+ Отношение сложности линейное; требуется ( `last`  -   `first`) сравнений.  
   
 ### <a name="example"></a>Пример  
   
@@ -8384,7 +8308,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameupperbounda--upperbound"></a><a name="upper_bound"></a>  upper_bound  
+##  <a name="upper_bound"></a>  upper_bound  
  Находит позицию первого элемента в упорядоченном диапазоне, который имеет значение больше указанного значения, где критерий упорядочивания может быть задан бинарным предикатом.  
   
 ```  

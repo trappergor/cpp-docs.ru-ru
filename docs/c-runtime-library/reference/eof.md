@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="eof"></a>_eof
@@ -75,7 +76,7 @@ int _eof(
  Дескриптор файла, ссылающийся на открытый файл.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_eof` возвращает 1, если текущее положение находится в конец файла, или 0, если это не так. Если возвращается значение -1, это означает ошибку; в этом случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, `errno` принимает значение `EBADF`, что указывает на недопустимый дескриптор файла.  
+ `_eof` возвращает 1, если текущее положение находится в конец файла, или 0, если это не так. Возвращаемое значение-1 указывает на ошибку; в этом случае вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, `errno` принимает значение `EBADF`, что указывает на недопустимый дескриптор файла.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_eof` определяет, достигнут ли конец файла, связанного с `fd`.  
@@ -139,9 +140,6 @@ This file contains some text.
 ```  
 Number of bytes read = 29  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)   

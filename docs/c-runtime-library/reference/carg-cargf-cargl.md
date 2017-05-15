@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 07710f9741066a1e7741bc6046e9d5108e74cdbd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f4239a5d0834938d80ae2054396e485eef127e4b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
@@ -92,7 +93,7 @@ long double cargl(
  Комплексное число.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Аргумент (или "этап") функции `z`. Результат находится в интервале [−π, +π].  
+ Аргумент (или "этап") функции `z`. Результатом является в интервале [-π, + π].  
   
 ## <a name="remarks"></a>Примечания  
  Так как C++ допускает перегрузку, можно вызывать перегрузки `carg`, которые принимают значения `_Fcomplex` или `_Lcomplex` и возвращают значения `float` или `long double`. В программе на языке C `carg` всегда принимает значение `_Dcomplex` и возвращает значение `double`.  

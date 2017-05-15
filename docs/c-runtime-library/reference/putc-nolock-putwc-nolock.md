@@ -1,60 +1,78 @@
 ---
-title: "_putc_nolock, _putwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putc_nolock"
-  - "_putwc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_puttc_nolock"
-  - "puttc_nolock"
-  - "putwc_nolock"
-  - "_putwc_nolock"
-  - "_putc_nolock"
-  - "putc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putc_nolock - функция"
-  - "_puttc_nolock - функция"
-  - "_putwc_nolock - функция"
-  - "знаки, написание"
-  - "putc_nolock - функция"
-  - "puttc_nolock - функция"
-  - "putwc_nolock - функция"
-  - "потоки, запись знаков в"
+title: "_putc_nolock, _putwc_nolock | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putc_nolock
+- _putwc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _puttc_nolock
+- puttc_nolock
+- putwc_nolock
+- _putwc_nolock
+- _putc_nolock
+- putc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- puttc_nolock function
+- putc_nolock function
+- _putc_nolock function
+- streams, writing characters to
+- characters, writing
+- putwc_nolock function
+- _puttc_nolock function
+- _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _putc_nolock, _putwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a92fc2fe740d52c2040c8dc479e2ffaa8607989a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Записывает символ в поток без блокирования потока.  
+---
+# <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
+Записывает символ в поток без блокировки потока.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -68,40 +86,40 @@ wint_t _putwc_nolock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `c`  
  Символ, который требуется записать.  
   
  `stream`  
  Указатель на структуру **FILE**.  
   
-## Возвращаемое значение  
- Смотрите раздел **putc, putwc**.  
+## <a name="return-value"></a>Возвращаемое значение  
+ См. **putc, putwc**.  
   
-## Заметки  
- `_putc_nolock` и `_putwc_nolock` идентичны версиям без суффикса **\_nolock**, за исключением того, что они не защищены от взаимодействия с другими потоками.  Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков.  Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
+## <a name="remarks"></a>Примечания  
+ Функции `_putc_nolock` и `_putwc_nolock` идентичны версиям без суффикса **_nolock**, но они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
- `_putwc_nolock` является версией `_putc_nolock` для расширенных символов; две функции ведут себя одинаково, если поток открывается в режиме ANSI.  `_putc_nolock` в настоящее время не поддерживает вывод в поток в юникоде.  
+ Функция `_putwc_nolock` является версией функции `_putc_nolock` с расширенными символами; обе функции ведут себя одинаково, если поток открыт в режиме ANSI. Функция `_putc_nolock` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**\_putwc\_nolock**|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_putc_nolock`|\<stdio.h\>|  
-|`_putwc_nolock`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_putc_nolock`|\<stdio.h>|  
+|`_putwc_nolock`|\<stdio.h> или \<wchar.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Стандартные дескрипторы потока, связанные с консолью — `stdin`, `stdout` и `stderr` — необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Библиотеки  
- Все версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Библиотеки  
+ Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_putc_nolock.c  
@@ -126,19 +144,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 This is the line of output  
 ```  
   
-## Эквивалент в .NET Framework  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

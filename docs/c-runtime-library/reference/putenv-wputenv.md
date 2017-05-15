@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
@@ -89,7 +90,7 @@ int _wputenv(
  Определение строки среды.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает 0 в случае успешного выполнения или –1 в случае ошибки.  
+ Возвращает 0 в случае успеха или значение -1 в случае ошибки.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_putenv` добавляет новые переменные среды или изменяет значения существующих переменных среды. Переменные среды определяют среду, в которой выполняется процесс (например, путь поиска по умолчанию для библиотек, связываемых с программой). `_wputenv` — это версия `_putenv` с расширенными символами; аргумент `envstring` для `_wputenv` — строка расширенных символов.  
@@ -106,7 +107,7 @@ int _wputenv(
   
  Не изменяйте запись среды напрямую: вместо этого используйте для изменения среды функцию `_putenv` или `_wputenv`. В частности, непосредственное освобождение элементов глобального массива `_environ[]` может привести к адресации недопустимой памяти.  
   
- Функции `getenv` и `_putenv` используют глобальную переменную `_environ` для доступа к таблице среды; функции `_wgetenv` и `_wputenv` используют таблицу `_wenviron`. Функции `_putenv` и `_wputenv` могут изменять значение `_environ` и `_wenviron`, таким образом делая недействительным аргумент `_envp` в функции `main` и аргумент _`wenvp` в функции `wmain`. Следовательно, для получения данных о среде безопаснее использовать `_environ` или `_wenviron`. Дополнительные сведения о связи функций `_putenv` и `_wputenv` с глобальными переменными см. в разделе [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+ Функции `getenv` и `_putenv` используют глобальную переменную `_environ` для доступа к таблице среды; функции `_wgetenv` и `_wputenv` используют таблицу `_wenviron`. `_putenv`и `_wputenv` может изменить значение `_environ` и `_wenviron`, таким образом делая недействительным `_envp` аргумент `main` и `_wenvp` аргумент `wmain`. Следовательно, для получения данных о среде безопаснее использовать `_environ` или `_wenviron`. Дополнительные сведения о связи функций `_putenv` и `_wputenv` с глобальными переменными см. в разделе [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
 >  Семейства функций `_putenv` и `_getenv` не являются потокобезопасными. Функция `_getenv` может вернуть указатель строки, в то время как функция `_putenv` изменяет строку, вызывая случайные сбои. Убедитесь, что вызовы этих функций синхронизированы.  
@@ -122,9 +123,6 @@ int _wputenv(
   
 ## <a name="example"></a>Пример  
  Пример использования функции `_putenv` см. в разделе [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   

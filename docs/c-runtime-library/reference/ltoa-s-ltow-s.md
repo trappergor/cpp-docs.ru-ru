@@ -1,56 +1,73 @@
 ---
-title: "_ltoa_s, _ltow_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ltoa_s"
-  - "_ltow_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ltow_s"
-  - "_ltoa_s"
-  - "ltoa_s"
-  - "ltow_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ltoa_s - функция"
-  - "_ltow_s - функция"
-  - "преобразование целых чисел"
-  - "преобразование чисел, к строкам"
-  - "преобразование длинного целого в строку"
-  - "ltoa_s - функция"
-  - "ltow_s - функция"
+title: "_ltoa_s, _ltow_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ltoa_s
+- _ltow_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _ltow_s
+- _ltoa_s
+- ltoa_s
+- ltow_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting integers
+- _ltoa_s function
+- ltow_s function
+- long integer conversion to string
+- converting numbers, to strings
+- ltoa_s function
+- _ltow_s function
 ms.assetid: d7dc61ea-1ccd-412d-b262-555a58647386
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _ltoa_s, _ltow_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 098bb1dcf673931ab4c0d3682fafcc442835d76f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Преобразует целое число типа long в строку.  Здесь представлены версии [\_ltoa, \_ltow](../Topic/_ltoa,%20_ltow.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="ltoas-ltows"></a>_ltoa_s, _ltow_s
+Преобразует целое число типа long в строку. Это версии функции [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствование безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t _ltoa_s(  
@@ -79,49 +96,46 @@ errno_t _ltow_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `value`  
- Число, которое нужно преобразовать.  
+ Число, которое требуется преобразовать.  
   
  `str`  
  Буфер для результирующей строки.  
   
  `sizeOfstr`  
- Размер `str` в байтах для `_ltoa_s` или словах для `_ltow_s`.  
+ Размер `str` в байтах для `_ltoa_s` или в словах для `_ltow_s`.  
   
  `radix`  
- Основание системы счисления для `value`.  
+ Основание системы счисления `value`.  
   
-## Возвращаемое значение  
- Ноль, если функция завершилась успешно, или код ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Нуль, если функция выполнена успешно, или код ошибки.  
   
-## Заметки  
- Функция `_ltoa_s` преобразует цифры `value` в строку знаков, завершающуюся значением null, и сохраняет результат \(до 33 байт\) в `str`.  Аргумент `radix` определяет основание системы счисления `value`, которое должно быть в диапазоне от 2 до 36.  Если `radix` равно 10 и `value` имеет отрицательное значение, то первым символом результирующей строки будет знак "минус" \(–\).  `_ltow_s` — это версия `_ltoa_s` для расширенных символов; второй аргумент функции `_ltow_s` представляет собой строки расширенных символов.  
+## <a name="remarks"></a>Примечания  
+ Функция `_ltoa_s` преобразует цифры `value` в строку знаков, завершающуюся значением NULL, и сохраняет результат (до 33 байт) в `str`. `radix` Аргумент задает основание системы счисления `value`, которое должно быть в диапазоне от 2-36. Если `radix` равно 10 и `value` имеет отрицательное значение, первым символом результирующей строки будет знак «минус» (-). `_ltow_s` — это версия функции `_ltoa_s` с расширенными символами; второй аргумент функции `_ltow_s` является строкой с расширенными символами.  
   
- Если `str` равен `NULL` или `sizeOfstr` меньше или равно нулю, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают \-1 и устанавливают `errno` в `EINVAL` , или если `value` или `str` вне диапазона длинного целого числа, эти функции возвращают \-1 и устанавливают `errno` в `ERANGE`.  
+ Если `str` является указателем `NULL` или `sizeOfstr` меньше или равно нулю, эти функции вызывают обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и присваивают `errno` значение `EINVAL`, либо, если значение `value` или `str` выходит за пределы диапазона типа данных long integer, эти функции возвращают значение -1 и присваивают `errno` значение `ERANGE`.  
   
- В C\+\+ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера \(что исключает необходимость указания аргумента с размером буфера\), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_ltoa_s`|\<stdlib.h\>|  
-|`_ltow_s`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_ltoa_s`|\<stdlib.h>|  
+|`_ltow_s`|\<stdlib.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Эквивалент в .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
- [\_itoa, \_i64toa, \_ui64toa, \_itow, \_i64tow, \_ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
- [\_ultoa, \_ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
- [\_ultoa\_s, \_ultow\_s](../Topic/_ultoa_s,%20_ultow_s.md)
+ [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
+ [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)

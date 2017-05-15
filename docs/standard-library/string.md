@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[оператор+](../standard-library/string-operators.md#operator_add)|Сцепляет два строковых объекта.|  
-|[оператор!=](../standard-library/string-operators.md#operator_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |  
-|[оператор==](../standard-library/string-operators.md#operator_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|  
-|[оператор<](../standard-library/string-operators.md#operator_lt_)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|  
-|[оператор<=](../standard-library/string-operators.md#operator_lt__eq)|Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.|  
-|[оператор<\<](../standard-library/string-operators.md#operator_lt__lt_)|Функция шаблона, вставляющая строку в выходной поток.|  
-|[оператор>](../standard-library/string-operators.md#operator_gt_)|Проверяет, что строковый объект слева от оператора больше строкового объекта справа от оператора.|  
-|[оператор>=](../standard-library/string-operators.md#operator_gt__eq)|Проверяет, что строковый объект слева от оператора больше или равен строковому объекту справа от оператора.|  
-|[оператор>>](../standard-library/string-operators.md#operator_gt__gt_)|Функция шаблона, извлекающая строку из входного потока.|  
+|[оператор+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|  
+|[оператор!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |  
+|[оператор==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|  
+|[оператор<](../standard-library/string-operators.md#op_lt)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|  
+|[оператор<=](../standard-library/string-operators.md#op_lt_eq)|Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.|  
+|[оператор<\<](../standard-library/string-operators.md#op_lt_lt)|Функция шаблона, вставляющая строку в выходной поток.|  
+|[оператор>](../standard-library/string-operators.md#op_gt)|Проверяет, что строковый объект слева от оператора больше строкового объекта справа от оператора.|  
+|[оператор>=](../standard-library/string-operators.md#op_gt_eq)|Проверяет, что строковый объект слева от оператора больше или равен строковому объекту справа от оператора.|  
+|[оператор>>](../standard-library/string-operators.md#op_gt_gt)|Функция шаблона, извлекающая строку из входного потока.|  
   
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[Функция шаблона getline](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|  
+|[getline шаблона](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|  
   
 ### <a name="classes"></a>Классы  
   

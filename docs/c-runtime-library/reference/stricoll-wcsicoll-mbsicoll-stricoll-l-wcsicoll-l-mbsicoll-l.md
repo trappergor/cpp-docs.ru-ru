@@ -78,10 +78,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d74ed4f6d99f8c3ef6be8cb1d85d7da52aba9d71
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4291a8027dd01c705642af0d3651cc2fbf1277cb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
@@ -130,7 +131,7 @@ int _mbsicoll_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает значение, которое соответствует отношению между `string1` и `string2`*,* как показано ниже.  
+ Каждая из этих функций возвращает значение, показывающее связь между `string1` для `string2`, как показано ниже.  
   
 |Возвращаемое значение|Отношение string1 к string2|  
 |------------------|----------------------------------------|  
@@ -162,10 +163,7 @@ int _mbsicoll_l(
 |`_wcsicoll`, `_wcsicoll_l`|\<wchar.h>, \<string.h>|  
 |`_mbsicoll`, `_mbsicoll_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Языковой стандарт](../../c-runtime-library/locale.md)   

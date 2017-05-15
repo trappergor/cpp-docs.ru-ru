@@ -1,48 +1,65 @@
 ---
-title: "fgetpos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgetpos"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fgetpos"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fgetpos - функция"
-  - "потоки, индикатор положения файла"
+title: "fgetpos | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgetpos
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fgetpos
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetpos function
+- streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# fgetpos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c53e5742a518934ad0afcfaa06ad4e5905c484e3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Получает индикатор позиции в файле потока.  
+---
+# <a name="fgetpos"></a>fgetpos
+Получает индикатор позиции файла потока.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int fgetpos(   
@@ -51,28 +68,28 @@ int fgetpos(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
  Целевой поток.  
   
  `pos`  
  Хранилище индикатора позиции.  
   
-## Возвращаемое значение  
- В случае успеха `fgetpos` возвращает 0.  При ошибке она возвращает ненулевое значение и устанавливает `errno` в одну из следующих констант манифеста \(определенных в STDIO.H\): `EBADF`, которая означает, что указанный поток не является допустимым файловым указателем или не доступен, или `EINVAL`, которая означает, что значение `stream` или значение `pos` недопустимо, например если одно из них является указателем на null.  Если `stream` или `pos` — указатель на `NULL`, то функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успеха `fgetpos` возвращает 0. В случае сбоя возвращает ненулевое значение и присваивает параметру `errno` одну из следующих констант манифеста (определяются в STDIO.H): `EBADF` (указанный поток не является допустимым указателем на файл или недоступен), `EINVAL` (недопустимое значение `stream` или `pos`, например, NULL). Если `stream` или `pos` является указателем `NULL`, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
-## Заметки  
- Функция `fgetpos` получает текущее значение индикатора позиции в файле аргумента `stream` и сохраняет его в указанном объекте, на который указывает `pos`.  Функция `fsetpos` может позже использовать информацию, хранящуюся в `pos`, чтобы сбросить указатель аргумента `stream` на его значение после вызова `fgetpos`.  Значение `pos` хранится во внутреннем формате и предназначено для использования только `fgetpos` и `fsetpos`.  
+## <a name="remarks"></a>Примечания  
+ Функция `fgetpos` возвращает текущее значение индикатора позиции файла для аргумента `stream` и сохраняет его в объекте, на который указывает `pos`. После этого функция `fsetpos` может использовать данные, хранящиеся в указателе `pos`, для сброса указателя аргумента `stream` в позицию на момент времени, когда была вызвана функция `fgetpos`. Значение `pos` хранится во внутреннем формате и предназначено для использования только в функциях `fgetpos` и `fsetpos`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`fgetpos`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fgetpos`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_fgetpos.c  
@@ -114,22 +131,19 @@ int main( void )
 }  
 ```  
   
-## Входные данные: crt\_fgetpos.txt  
+## <a name="input-crtfgetpostxt"></a>Входные данные: crt_fgetpos.txt  
   
 ```  
 fgetpos gets a stream's file-position indicator.  
 ```  
   
-### Выходные данные crt\_fgetpos.txt  
+### <a name="output-crtfgetpostxt"></a>Выходные данные: crt_fgetpos.txt  
   
 ```  
 after fgetpos: gets a stream  
 after fsetpos: gets a stream  
 ```  
   
-## Эквивалент в .NET Framework  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fsetpos](../Topic/fsetpos.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fsetpos](../../c-runtime-library/reference/fsetpos.md)

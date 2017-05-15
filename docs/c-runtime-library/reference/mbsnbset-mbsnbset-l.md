@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  Функция `_mbsnbset` возвращает указатель на измененную строку.  
   
 ## <a name="remarks"></a>Примечания  
- Функции `_mbsnbset` и `_mbsnbset_l` устанавливают максимум первые несколько байт (`count`) `str` до `c`. Если значение `count` больше длины строки `str`, вместо параметра `count` используется длина строки `str`. Если `c` является многобайтовым символом и не помещается полностью в последний байт, установленный параметром `count`, последний байт дополняется символом пробела. Функции `_mbsnbset` и `_mbsnbset_l` не добавляют завершающий нуль-символ в конце `str`.  
+ Функции `_mbsnbset` и `_mbsnbset_l` устанавливают максимум первые несколько байт (`count`) `str` до `c`. Если значение `count` больше длины строки `str`, вместо параметра `count` используется длина строки `str`. Если `c` является многобайтовым символом и не помещается полностью в последний байт, установленный параметром `count`, последний байт дополняется символом пробела. `_mbsnbset`и `_mbsnbset_l` не добавляют завершающий символ null в конце `str`.  
   
- Функции `_mbsnbset` и `_mbsnbset_l` схожи с функцией `_mbsnset`, однако устанавливают `count` байтов, а не `count` символов для `c`.  
+ `_mbsnbset`и `_mbsnbset_l` аналогичен `_mbsnset`, за исключением того, что он устанавливает `count` байт вместо `count` символов `c`.  
   
  Если `str` имеет значение `NULL` или `count` равно нулю, эта функция создает исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL` , и функция возвращает значение `NULL`. Кроме того, если `c` не является допустимым многобайтовым символом, вместо него используется пробел, а параметру `errno` присваивается значение `EINVAL`.  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   

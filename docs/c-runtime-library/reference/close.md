@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ddcd28eb65b174ba2e4bd901cf2556b99ac4de2c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9dab323afc6c70e81592119e0cec2775c239d87f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="close"></a>_close
@@ -72,7 +73,7 @@ int _close(
  Дескриптор файла, ссылающийся на открытый файл.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция `_close` возвращает 0, если файл был успешно закрыт. Возвращаемое значение -1 означает ошибку.  
+ Функция `_close` возвращает 0, если файл был успешно закрыт. Возвращаемое значение-1 указывает на ошибку.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_close` закрывает файл, связанный с `fd`.  

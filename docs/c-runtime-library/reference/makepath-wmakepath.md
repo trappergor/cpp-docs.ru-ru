@@ -1,59 +1,76 @@
 ---
-title: "_makepath, _wmakepath | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_makepath"
-  - "_wmakepath"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wmakepath"
-  - "_tmakepath"
-  - "makepath"
-  - "tmakepath"
-  - "wmakepath"
-  - "_makepath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_makepath - функция"
-  - "_tmakepath function"
-  - "_wmakepath - функция"
-  - "makepath - функция"
-  - "пути"
-  - "tmakepath - функция"
-  - "wmakepath - функция"
+title: "_makepath, _wmakepath | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _makepath
+- _wmakepath
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wmakepath
+- _tmakepath
+- makepath
+- tmakepath
+- wmakepath
+- _makepath
+dev_langs:
+- C++
+helpviewer_keywords:
+- _makepath function
+- wmakepath function
+- makepath function
+- _tmakepath function
+- paths
+- _wmakepath function
+- tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _makepath, _wmakepath
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: deb4333b36bf0b3eb2080d838ef3f23a052cf262
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Создание пути из компонентов.  Существуют более безопасные версии этих функций; см. раздел [\_makepath\_s, \_wmakepath\_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
+---
+# <a name="makepath-wmakepath"></a>_makepath, _wmakepath
+Создают путь из компонентов. Существуют более безопасные версии этих функций; см. раздел [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void _makepath(  
@@ -72,47 +89,47 @@ void _wmakepath(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `path`  
  Буфер полного пути.  
   
  `drive`  
- Содержит букву \(A, B и т д\), соответствующую требуемому диску и дополненную необязательным двоеточием.  `_makepath` вставляет двоеточие в составной путь автоматически, если оно отсутствует.  Если `drive` — `NULL` или указывает на пустую строку, то буква диска не отображается в составной строке `path`.  
+ Содержит букву (A, B и т. д.), соответствующую требуемому диску, с необязательным двоеточием после нее. Если двоеточие отсутствует, функция `_makepath` вставляет ее в составной путь автоматически. Если параметр `drive` имеет значение `NULL` или указывает на пустую строку, в составной строке `path` буква диска не отображается.  
   
  `dir`  
- Содержит путь каталогов, не включая обозначение диска или фактическое имя файла.  Конечная косая черта является необязательной; в одном аргументе `dir` может использоваться косая черта \(\/\), обратная косая черта \(\\\) или обе.  Если конечная косая черта \(\/ или \\\) не указана, она вставляется автоматически.  Если `dir` — `NULL` или указывает на пустую строку, то путь каталога не вставляется в составную строку `path`.  
+ Содержит путь каталогов, не включая обозначение диска или фактическое имя файла. Конечная косая черта является необязательной; в одном аргументе `dir` могут использоваться косая черта (/), обратная косая черта (\\) или обе. Если конечная косая черта (/ или \\) не указана, она вставляется автоматически. Если параметр `dir` имеет значение `NULL` или указывает на пустую строку, путь каталога не вставляется в составную строку `path`.  
   
  `fname`  
- Содержит базовое имя файла без расширений.  Если `fname` — `NULL` или указывает на пустую строку, то имя файла не вставляется в составную строку `path`.  
+ Содержит базовое имя файла без расширений. Если параметр `fname` имеет значение `NULL` или указывает на пустую строку, имя файла не вставляется в составную строку `path`.  
   
  `ext`  
- Содержит фактическое расширение имени файла с предшествующей точкой или без \(.\).  `_makepath` вставляет точку автоматически, если она отсутствует в `ext`.  Если `ext` — `NULL` или указывает на пустую строку, то расширение не вставляется в составную строку `path`.  
+ Содержит фактическое расширение имени файла с предшествующей точкой (.) или без нее. Функция `_makepath` вставляет точку автоматически, если она отсутствует в параметре `ext`. Если параметр `ext` имеет значение `NULL` или указывает на пустую строку, расширение не вставляется в составную строку `path`.  
   
-## Заметки  
- Функция `_makepath` создает строку составного пути из отдельных компонентов, сохраняя результат в `path`.  `path` может включать букву диска, путь к каталогу, имя файла и расширение имени файла.  `_wmakepath` — это двухбайтовая версия `_makepath`; аргументы для `_wmakepath` представляют собой двухбайтовые строки.  В остальных случаях поведение `_wmakepath` и `_makepath` идентично.  
+## <a name="remarks"></a>Примечания  
+ Функция `_makepath` создает строку составного пути из отдельных компонентов, сохраняя результат в параметре `path`. Путь `path` может включать букву диска, путь к каталогу, имя файла и расширение имени файла. `_wmakepath` — это двухбайтовая версия `_makepath`; аргументы для `_wmakepath` представляют собой двухбайтовые строки. Поведение `_wmakepath` и `_makepath` идентично в противном случае.  
   
- **Примечание о безопасности** Следует использовать строку, оканчивающуюся символом null.  Чтобы избежать переполнения буфера, строка, завершаемая нулевым символом, не должна превышать размер буфера `path`.  `_makepath` не гарантирует, что длина составной строки пути не превышает `_MAX_PATH`.  Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Примечание о безопасности.** Следует использовать строку, оканчивающуюся нуль-символом. Длина строки, завершающейся нуль-символом, не должна превышать размер буфера `path`. Функция `_makepath` не проверяет, чтобы длина строки составного пути не превышала `_MAX_PATH`. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmakepath`|`_makepath`|`_makepath`|`_wmakepath`|  
   
- Аргумент `path` должен указывать на пустой буфер достаточного для хранения полного пути размера.  Размер составного `path` не может превышать константу `_MAX_PATH`, определенную в Stdlib.h.  
+ Аргумент `path` должен указывать на пустой буфер достаточного для хранения полного пути размера. Размер составного пути `path` не должен быть больше константы `_MAX_PATH`, определенной в файле Stdlib.h.  
   
- Если путь имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Кроме того, `errno` устанавливается в `EINVAL`.  Значения `NULL` разрешены для всех остальных параметров.  
+ Если параметр path имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Кроме того, для параметра `errno` устанавливается значение `EINVAL`. Для всех остальных параметров допускаются значения `NULL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_makepath`|\<stdlib.h\>|  
-|`_wmakepath`|\<stdlib.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_makepath`|\<stdlib.h>|  
+|`_wmakepath`|\<stdlib.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_makepath.c  
@@ -140,17 +157,18 @@ int main( void )
 }  
 ```  
   
-  **Path created with \_makepath: c:\\sample\\crt\\makepath.c**  
-**Path extracted with \_splitpath:**  
- **Drive: c:**  
- **Dir: \\sample\\crt\\**  
- **Filename: makepath**  
- **Ext: .c**   
-## Эквивалент в .NET Framework  
- [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
+```Output  
+Path created with _makepath: c:\sample\crt\makepath.c  
   
-## См. также  
+Path extracted with _splitpath:  
+  Drive: c:  
+  Dir: \sample\crt\  
+  Filename: makepath  
+  Ext: .c  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_splitpath, \_wsplitpath](../Topic/_splitpath,%20_wsplitpath.md)   
- [\_makepath\_s, \_wmakepath\_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
+ [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)

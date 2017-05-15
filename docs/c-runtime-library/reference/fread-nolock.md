@@ -1,52 +1,69 @@
 ---
-title: "_fread_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fread_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fread_nolock"
-  - "fread_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fread_nolock - функция"
-  - "данные [C++], чтение из входящего потока"
-  - "fread_nolock - функция"
-  - "чтение данных [C++], из входящих потоков"
-  - "потоки [C++], чтение данных из"
+title: "_fread_nolock | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fread_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fread_nolock
+- fread_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- data [C++], reading from input stream
+- fread_nolock function
+- _fread_nolock function
+- streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _fread_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2f988855de03457411b2f26d4df112220c370f2a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Считывает данные из потока, не блокируя другие потоки.  
+---
+# <a name="freadnolock"></a>_fread_nolock
+Читает данные из потока, не блокируя другие потоки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_t _fread_nolock(   
@@ -57,7 +74,7 @@ size_t _fread_nolock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
  Место хранения данных.  
   
@@ -65,29 +82,26 @@ size_t _fread_nolock(
  Размер элемента в байтах.  
   
  `count`  
- Максимальное количество элементов, которые требуется прочитать.  
+ Максимальное число читаемых элементов.  
   
  `stream`  
  Указатель на структуру `FILE`.  
   
-## Возвращаемое значение  
- См. раздел [fread](../../c-runtime-library/reference/fread.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ См. [fread](../../c-runtime-library/reference/fread.md).  
   
-## Заметки  
- Эта функция \- неблокирующая версия `fread`.  Она идентична `fread` за исключением того, что она не защищена от взаимодействия с другими потоками.  Она может выполняться быстрее, поскольку она не создают дополнительную нагрузку, связанную с блокировкой работы других потоков.  Эту функцию следует использовать только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
+## <a name="remarks"></a>Примечания  
+ Эта функция представляет собой неблокирующую версию функции `fread`. Она идентична функции `fread`, но не защищена от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_fread_nolock`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`_fread_nolock`|\<stdio.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Эквивалент в .NET Framework  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../Topic/fwrite.md)   
- [\_read](../Topic/_read.md)
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fwrite](../../c-runtime-library/reference/fwrite.md)   
+ [_read](../../c-runtime-library/reference/read.md)

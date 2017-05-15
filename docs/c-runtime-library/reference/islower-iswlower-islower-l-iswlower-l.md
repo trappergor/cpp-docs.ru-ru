@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b7553152e92a2db61330dfa5267ade05a42a807d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9bdf8a39791fc03505d79446bbe0d46436006deb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
@@ -104,7 +105,7 @@ int _iswlower_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление символа в нижнем регистре. Функция `islower` возвращает ненулевое значение, если `c` является символом в нижнем регистре (a–z). Функция `iswlower` возвращает ненулевое значение только в том случае, если `c` является расширенным символом, соответствующим букве в нижнем регистре, или если `c` принадлежит определяемому реализацией набору расширенных символов, для которых `iswcntrl`, `iswdigit`, `iswpunct`или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление символа в нижнем регистре. `islower`возвращает ненулевое значение, если `c` является строчные буквы (– z). Функция `iswlower` возвращает ненулевое значение только в том случае, если `c` является расширенным символом, соответствующим букве в нижнем регистре, или если `c` принадлежит определяемому реализацией набору расширенных символов, для которых `iswcntrl`, `iswdigit`, `iswpunct`или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
  Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -127,9 +128,6 @@ int _iswlower_l(
 |`_swlower_l`|\<ctype.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- [System::Char::IsLower](https://msdn.microsoft.com/en-us/library/system.char.islower.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Классификация символов](../../c-runtime-library/character-classification.md)   

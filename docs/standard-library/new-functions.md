@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>Функции &lt;new&gt;
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  Объект используется в качестве аргумента функции для соответствия типу параметра [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
 ### <a name="example"></a>Пример  
-  См. разделы [operator new](../standard-library/new-operators.md#operator_new) и [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) с примерами использования `std::nothrow_t` в качестве параметра функции.  
+  См. разделы [operator new](../standard-library/new-operators.md#op_new) и [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) с примерами использования `std::nothrow_t` в качестве параметра функции.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
  Устанавливает пользовательскую функцию, вызываемую в случае сбоя `operator new` при попытке выделения памяти.  
@@ -51,7 +52,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
  0 для первого вызова и предыдущее `new_handler` при последующих вызовах.  
   
 ### <a name="remarks"></a>Примечания  
- Функция сохраняет `Pnew` в статическом указателе [нового обработчика](../standard-library/new-typedefs.md#new_handler), с которым она работает, затем возвращает значение, ранее хранившееся в указателе. Новый обработчик используется [оператором new](../standard-library/new-operators.md#operator_new)( **size_t**).  
+ Функция сохраняет `Pnew` в статическом указателе [нового обработчика](../standard-library/new-typedefs.md#new_handler), с которым она работает, затем возвращает значение, ранее хранившееся в указателе. Новый обработчик используется [оператором new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
 ### <a name="example"></a>Пример  
   

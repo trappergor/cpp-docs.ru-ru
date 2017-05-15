@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  Возвращаемое значение из предыдущего вызова функции `_popen`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает состояние завершения для завершающего обработчика команд или значение —&1; при возникновении ошибки. Формат возвращаемого значения является идентичным формату соответствующего значения `_cwait`, за исключением того, что байты низкого и байты высокого порядка меняются местами. Если поток имеет значение **NULL**, то функция `_pclose` задает для `errno` значение `EINVAL` и возвращает –1.  
+ Возвращает состояние завершения завершающий обработчик команд, или значение -1 при возникновении ошибки. Формат возвращаемого значения является идентичным формату соответствующего значения `_cwait`, за исключением того, что байты низкого и байты высокого порядка меняются местами. Если поток имеет значение **NULL**, то функция `_pclose` задает для `errno` значение `EINVAL` и возвращает –1.  
   
  Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>Библиотеки  
  Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   

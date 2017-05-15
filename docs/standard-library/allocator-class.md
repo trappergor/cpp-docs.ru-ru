@@ -9,10 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::allocator
 - allocator
 - memory/std::allocator
-- std.allocator
+- memory/std::allocator::const_pointer
+- memory/std::allocator::const_reference
+- memory/std::allocator::difference_type
+- memory/std::allocator::pointer
+- memory/std::allocator::reference
+- memory/std::allocator::size_type
+- memory/std::allocator::value_type
+- memory/std::allocator::address
+- memory/std::allocator::allocate
+- memory/std::allocator::construct
+- memory/std::allocator::deallocate
+- memory/std::allocator::destroy
+- memory/std::allocator::max_size
+- memory/std::allocator::rebind
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +48,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 4c9e2c1acffd7286644ca61a4ef782e7b3a11eef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a2447e0e42cc0a7fdc22db9de415f6dde46c40a5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="allocator-class"></a>Класс allocator
@@ -61,19 +74,19 @@ class allocator
   
  Например, объект распределителя может выделить память в закрытой куче или в общей памяти. Он также может выполнить оптимизацию для крупных или мелких объектов. Он может также указывать, посредством определения типов, которые он предоставляет, что доступ к элементам возможен только через специальные объекты метода доступа, управляющие общей памятью или выполняющие автоматическую сборку мусора. Таким образом, класс, который выделяет память с использованием объекта распределителя, должен использовать эти типы для объявления указателя и объектов ссылок, как это делают контейнеры в библиотеке стандартов C++.  
   
- **(Только C_++&98;/03)**При наследовании из класса allocator вы должны предоставить структуру [rebind](#allocator__rebind), у которой в определении типа `_Other` есть ссылки на созданный производный класс.  
+ **(Только C_++ 98/03)**При наследовании из класса allocator вы должны предоставить структуру [rebind](#rebind), у которой в определении типа `_Other` есть ссылки на созданный производный класс.  
   
  Таким образом, распределитель определяет следующие типы:  
   
-- [pointer](#allocator__pointer) действует как указатель на **Type**.  
+- [pointer](#pointer) действует как указатель на **Type**.  
   
-- [const_pointer](#allocator__const_pointer) действует как константный указатель на **Type**.  
+- [const_pointer](#const_pointer) действует как константный указатель на **Type**.  
   
-- [reference](#allocator__reference) действует как ссылка на **Type**.  
+- [reference](#reference) действует как ссылка на **Type**.  
   
-- [const_reference](#allocator__const_reference) действует как константная ссылка на **Type**.  
+- [const_reference](#const_reference) действует как константная ссылка на **Type**.  
   
- Эти типы**Type** определяют форму, какую должны принимать указатели и ссылки для выделенных элементов. ([allocator::pointer](#allocator__pointer) не обязательно совпадает с **Type**\* для всех объектов распределителя, даже если он содержит это очевидное определение для класса **allocator**.)  
+ Эти типы**Type** определяют форму, какую должны принимать указатели и ссылки для выделенных элементов. ([allocator::pointer](#pointer) не обязательно совпадает с **Type**\* для всех объектов распределителя, даже если он содержит это очевидное определение для класса **allocator**.)  
   
  **C++11 and later:** чтобы включить операции перемещения в распределитель, используйте минимальный интерфейс распределителя и реализуйте конструктор копирования, операторы == и !=, функции allocate и deallocate. Дополнительные сведения и пример см. в статье [Распределители](../standard-library/allocators.md).  
   
@@ -83,44 +96,44 @@ class allocator
   
 |||  
 |-|-|  
-|[allocator](#allocator__allocator)|Конструкторы, используемые для создания объектов `allocator`.|  
+|[allocator](#allocator)|Конструкторы, используемые для создания объектов `allocator`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[const_pointer](#allocator__const_pointer)|Тип, предоставляющий постоянный указатель на тип объекта, управляемого распределителем.|  
-|[const_reference](#allocator__const_reference)|Тип, предоставляющий постоянную ссылку на тип объекта, управляемого распределителем.|  
-|[difference_type](#allocator__difference_type)|Тип целого числа со знаком, который может представлять разницу между значениями указателей на тип объекта, управляемого распределителем.|  
-|[pointer](#allocator__pointer)|Тип, предоставляющий указатель на тип объекта, управляемого распределителем.|  
-|[reference](#allocator__reference)|Тип, предоставляющий ссылку на тип объекта, управляемого распределителем.|  
-|[size_type](#allocator__size_type)|Тип целого числа без знака, который может представлять длину любой последовательности, которую объект класса шаблона `allocator` может выделить.|  
-|[value_type](#allocator__value_type)|Тип, управляемый распределителем.|  
+|[const_pointer](#const_pointer)|Тип, предоставляющий постоянный указатель на тип объекта, управляемого распределителем.|  
+|[const_reference](#const_reference)|Тип, предоставляющий постоянную ссылку на тип объекта, управляемого распределителем.|  
+|[difference_type](#difference_type)|Тип целого числа со знаком, который может представлять разницу между значениями указателей на тип объекта, управляемого распределителем.|  
+|[pointer](#pointer)|Тип, предоставляющий указатель на тип объекта, управляемого распределителем.|  
+|[reference](#reference)|Тип, предоставляющий ссылку на тип объекта, управляемого распределителем.|  
+|[size_type](#size_type)|Тип целого числа без знака, который может представлять длину любой последовательности, которую объект класса шаблона `allocator` может выделить.|  
+|[value_type](#value_type)|Тип, управляемый распределителем.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[address](#allocator__address)|Находит адрес объекта, значение которого задано.|  
-|[allocate](#allocator__allocate)|Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.|  
-|[construct](#allocator__construct)|Создает определенный тип объекта по указанному адресу, инициализированный с использованием заданного значения.|  
-|[deallocate](#allocator__deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|  
-|[destroy](#allocator__destroy)|Вызывает деструктор объектов без освобождения памяти, в которой хранился объект.|  
-|[max_size](#allocator__max_size)|Возвращает число элементов типа `Type`, которые могут быть выделены объектом класса `allocator` в пределах имеющейся свободной памяти.|  
-|[rebind](#allocator__rebind)|Структура, позволяющая распределителю, предназначенному для объектов одного типа, выделять память для объектов другого типа.|  
+|[address](#address)|Находит адрес объекта, значение которого задано.|  
+|[allocate](#allocate)|Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.|  
+|[construct](#construct)|Создает определенный тип объекта по указанному адресу, инициализированный с использованием заданного значения.|  
+|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|  
+|[destroy](#destroy)|Вызывает деструктор объектов без освобождения памяти, в которой хранился объект.|  
+|[max_size](#max_size)|Возвращает число элементов типа `Type`, которые могут быть выделены объектом класса `allocator` в пределах имеющейся свободной памяти.|  
+|[rebind](#rebind)|Структура, позволяющая распределителю, предназначенному для объектов одного типа, выделять память для объектов другого типа.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор=](#allocator__operator_eq)|Назначает один объект `allocator` другому объекту `allocator`.|  
+|[оператор=](#op_eq)|Назначает один объект `allocator` другому объекту `allocator`.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<memory>  
   
  **Пространство имен:** std  
   
-##  <a name="a-nameallocatoraddressa--allocatoraddress"></a><a name="allocator__address"></a>  allocator::address  
+##  <a name="address"></a>  allocator::address  
  Находит адрес объекта, значение которого задано.  
   
 ```  
@@ -129,14 +142,14 @@ const_pointer address(const_reference val) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` val`  
+ `val`  
  Константное или неконстантное значение объекта, адрес которого ищется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Константный или неконстантный указатель на найденный объект соответственно константного или неконстантного значения.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает адрес ` val` в форме, которую указатели должны принимать для выделенных элементов.  
+ Функция-член возвращает адрес `val` в форме, которую указатели должны принимать для выделенных элементов.  
   
 ### <a name="example"></a>Пример  
   
@@ -182,7 +195,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.  
 ```  
   
-##  <a name="a-nameallocatorallocatea--allocatorallocate"></a><a name="allocator__allocate"></a>  allocator::allocate  
+##  <a name="allocate"></a>  allocator::allocate  
  Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.  
   
 ```  
@@ -190,7 +203,7 @@ pointer allocate(size_type count, const void* _Hint);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` count`  
+ `count`  
  Количество элементов, для которых необходимо выделить достаточный объем памяти.  
   
  *_Hint*  
@@ -200,7 +213,7 @@ pointer allocate(size_type count, const void* _Hint);
  Указатель на выделенный объект или значение null, если память не была выделена.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член выделяет память для массива элементов count типа **Type** путем вызова оператора new( ` count`). Она возвращает указатель на выделенный объект. Аргумент hint помогает некоторым распределителям улучшить расположение ссылок; недопустимый вариант — это адрес объекта, выделенный ранее тем же объектом allocator, который еще не был освобожден. Чтобы не предоставлять подсказок, используйте аргумент пустого указателя.  
+ Функция-член выделяет память для массива элементов count типа **Type** путем вызова оператора new( `count`). Она возвращает указатель на выделенный объект. Аргумент hint помогает некоторым распределителям улучшить расположение ссылок; недопустимый вариант — это адрес объекта, выделенный ранее тем же объектом allocator, который еще не был освобожден. Чтобы не предоставлять подсказок, используйте аргумент пустого указателя.  
   
 ### <a name="example"></a>Пример  
   
@@ -238,7 +251,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9   
 ```  
   
-##  <a name="a-nameallocatorallocatora--allocatorallocator"></a><a name="allocator__allocator"></a>  allocator::allocator  
+##  <a name="allocator"></a>  allocator::allocator  
  Конструкторы, используемые для создания объектов allocator.  
   
 ```  
@@ -249,7 +262,7 @@ allocator(const allocator<Other>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Объект allocator для копирования.  
   
 ### <a name="remarks"></a>Примечания  
@@ -318,7 +331,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-##  <a name="a-nameallocatorconstpointera--allocatorconstpointer"></a><a name="allocator__const_pointer"></a>  allocator::const_pointer  
+##  <a name="const_pointer"></a>  allocator::const_pointer  
  Тип, предоставляющий постоянный указатель на тип объекта, управляемого распределителем.  
   
 ```  
@@ -326,7 +339,7 @@ typedef const value_type *const_pointer;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот тип указателя описывает объект **ptr**, который с помощью выражения ** \*ptr** может обозначать любой константный объект, который может быть выделен объектом класса allocator шаблона.  
+ Этот тип указателя описывает объект **ptr**, который с помощью выражения  **\*ptr** может обозначать любой константный объект, который может быть выделен объектом класса allocator шаблона.  
   
 ### <a name="example"></a>Пример  
   
@@ -371,7 +384,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.  
 ```  
   
-##  <a name="a-nameallocatorconstreferencea--allocatorconstreference"></a><a name="allocator__const_reference"></a>  allocator::const_reference  
+##  <a name="const_reference"></a>  allocator::const_reference  
  Тип, предоставляющий постоянную ссылку на тип объекта, управляемого распределителем.  
   
 ```  
@@ -435,7 +448,7 @@ The value of the element referred to by vcref,
  after nofication through its nonconst iterator, is: 175.  
 ```  
   
-##  <a name="a-nameallocatorconstructa--allocatorconstruct"></a><a name="allocator__construct"></a>  allocator::construct  
+##  <a name="construct"></a>  allocator::construct  
  Создает определенный тип объекта по указанному адресу, инициализированный с использованием заданного значения.  
   
 ```  
@@ -446,14 +459,14 @@ void construct(pointer ptr, _Other&&...   val);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  Указатель места, в котором должен создаваться объект.  
   
- ` val`  
+ `val`  
  Значение, с которым создаваемый объект будет инициализирован.  
   
 ### <a name="remarks"></a>Примечания  
- Первая функция-член — эквивалент **new** ( ( `void` \*) ` ptr` ) **Type** ( ` val` ).  
+ Первая функция-член — эквивалент **new** ( ( `void` \*) `ptr` ) **Type** ( `val` ).  
   
 ### <a name="example"></a>Пример  
   
@@ -504,7 +517,7 @@ The modified vector v1 is:
  ( 3 7 9 12 15 18 21 ).  
 ```  
   
-##  <a name="a-nameallocatordeallocatea--allocatordeallocate"></a><a name="allocator__deallocate"></a>  allocator::deallocate  
+##  <a name="deallocate"></a>  allocator::deallocate  
  Освобождает указанное число объектов из памяти, начиная с заданной позиции.  
   
 ```  
@@ -512,19 +525,19 @@ void deallocate(pointer ptr, size_type count);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  Указатель на первый объект, который должен быть освобожден из хранилища.  
   
- ` count`  
+ `count`  
  Количество объектов для освобождения из хранилища.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член освобождает хранилище для массива объектов count типа **Type**, начиная с ` ptr`, путем вызова `operator delete`( ` ptr`). Указатель ` ptr` должен быть возвращен ранее путем вызова [allocate](#allocator__allocate) для объекта allocator, который сравнивает его с ** \*this**, выделяя объект массива того же типа и размера. `deallocate` никогда не создает исключений.  
+ Функция-член освобождает хранилище для массива, число объектов типа **тип** начиная `ptr`, путем вызова `operator delete(ptr)`. Указатель `ptr` должен быть возвращен ранее путем вызова [allocate](#allocate) для объекта allocator, который сравнивает его с  **\*this**, выделяя объект массива того же типа и размера. `deallocate` никогда не создает исключений.  
   
 ### <a name="example"></a>Пример  
-  Пример использования этой функции-члена см. в разделе [allocator::allocate](#allocator__allocate).  
+  Пример использования этой функции-члена см. в разделе [allocator::allocate](#allocate).  
   
-##  <a name="a-nameallocatordestroya--allocatordestroy"></a><a name="allocator__destroy"></a>  allocator::destroy  
+##  <a name="destroy"></a>  allocator::destroy  
  Вызывает деструктор объектов без освобождения памяти, в которой хранился объект.  
   
 ```  
@@ -532,11 +545,11 @@ void destroy(pointer ptr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` ptr`  
+ `ptr`  
  Указатель, обозначающий адрес уничтожаемого объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член уничтожает объект, указанный ` ptr`, путем вызова деструктора ` ptr` -> **Type**:: **~Type**.  
+ Функция-член удаляет объект, назначенному с помощью `ptr`, путем вызова деструктора `ptr->` **тип**::**~ типа**.  
   
 ### <a name="example"></a>Пример  
   
@@ -587,7 +600,7 @@ The modified vector v1 is:
  ( 2 4 6 8 10 -99 14 ).  
 ```  
   
-##  <a name="a-nameallocatordifferencetypea--allocatordifferencetype"></a><a name="allocator__difference_type"></a>  allocator::difference_type  
+##  <a name="difference_type"></a>  allocator::difference_type  
  Тип целого числа со знаком, который может представлять разницу между значениями указателей на тип объекта, управляемого распределителем.  
   
 ```  
@@ -646,7 +659,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.  
 ```  
   
-##  <a name="a-nameallocatormaxsizea--allocatormaxsize"></a><a name="allocator__max_size"></a> allocator::max_size  
+##  <a name="max_size"></a> allocator::max_size  
  Возвращает количество элементов типа **Type**, которые могут быть выделены объектом класса allocator в пределах имеющейся свободной памяти.  
   
 ```  
@@ -713,7 +726,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatoroperatoreqa--allocatoroperator"></a><a name="allocator__operator_eq"></a>  allocator::operator=  
+##  <a name="op_eq"></a>  allocator::operator=  
  Назначает один объект allocator другому объекту allocator.  
   
 ```  
@@ -722,7 +735,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- ` right`  
+ `right`  
  Объект allocator для назначения другому такому объекту.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -772,7 +785,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatorpointera--allocatorpointer"></a><a name="allocator__pointer"></a>  allocator::pointer  
+##  <a name="pointer"></a>  allocator::pointer  
  Тип, предоставляющий указатель на тип объекта, управляемого распределителем.  
   
 ```  
@@ -780,7 +793,7 @@ typedef value_type *pointer;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот тип указателя описывает объект **ptr**, который с помощью выражения ** \*ptr** может обозначать любой объект, который может быть выделен объектом класса allocator шаблона.  
+ Этот тип указателя описывает объект **ptr**, который с помощью выражения  **\*ptr** может обозначать любой объект, который может быть выделен объектом класса allocator шаблона.  
   
 ### <a name="example"></a>Пример  
   
@@ -825,7 +838,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.  
 ```  
   
-##  <a name="a-nameallocatorrebinda--allocatorrebind"></a><a name="allocator__rebind"></a>  allocator::rebind  
+##  <a name="rebind"></a>  allocator::rebind  
  Структура, позволяющая распределителю, предназначенному для объектов одного типа, выделять память для объектов другого типа.  
 ```  
 struct rebind {    typedef allocator<_Other> other ;    };  
@@ -876,7 +889,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatorreferencea--allocatorreference"></a><a name="allocator__reference"></a>  allocator::reference  
+##  <a name="reference"></a>  allocator::reference  
  Тип, предоставляющий ссылку на тип объекта, управляемого распределителем.  
   
 ```  
@@ -934,7 +947,7 @@ The value of the element referred to by vref is: 100,
 The element referred to by vref after being modified is: 150.  
 ```  
   
-##  <a name="a-nameallocatorsizetypea--allocatorsizetype"></a><a name="allocator__size_type"></a>  allocator::size_type  
+##  <a name="size_type"></a>  allocator::size_type  
  Тип целого числа без знака, который может представлять длину любой последовательности, которую объект класса allocator шаблона может выделить.  
   
 ```  
@@ -978,7 +991,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatorvaluetypea--allocatorvaluetype"></a><a name="allocator__value_type"></a>  allocator::value_type  
+##  <a name="value_type"></a>  allocator::value_type  
  Тип, управляемый распределителем.  
   
 ```  

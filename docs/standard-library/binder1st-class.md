@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::binder1st
-- std::binder1st
 - binder1st
-- std.binder1st
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 71d06115b1f6cc0df5a3dee9ce60482e641407ef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4f9198d5b3f29799d38036ce4fd0dd0a67b66137
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder1st-class"></a>Класс binder1st
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>Примечания  
  Класс шаблона сохраняет копию объекта бинарной функции `Func` в **op** и копию `left` — в **value**. Он определяет свою функцию-член `operator()` как возвращающую **op**( **value**, `right`).  
   
- Если `Func` — объект типа **Operation**, а `c` — константа, то [bind1st](../standard-library/functional-functions.md#bind1st_function) ( `Func`, `c` ) — эквивалент конструктора `binder1st`\< **Operation**> ( `Func`, `c` ) класса `binder1st` и является более удобным.  
+ Если `Func` — объект типа **Operation**, а `c` — константа, то [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) — эквивалент конструктора `binder1st`\< **Operation**> ( `Func`, `c` ) класса `binder1st` и является более удобным.  
   
 ## <a name="example"></a>Пример  
   

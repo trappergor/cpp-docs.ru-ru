@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>Параметры  
  `start`  
- Указатель на любой символ (или для `_mbsdec` и_ `mbsdec_l`, первый байт многобайтового символа) в исходной строке; `start` должен предшествовать `current` в исходной строке.  
+ Указатель на любой символ (или для `_mbsdec` и `_mbsdec_l`, первый байт многобайтового символа) в исходную строку; `start` должно предшествовать `current` в исходную строку.  
   
  `current`  
- Указатель на любой символ (или для `_mbsdec` и _`mbsdec_l`, первый байт многобайтового символа) в исходной строке; `current` должен следовать за `start` в исходной строке.  
+ Указатель на любой символ (или для `_mbsdec` и `_mbsdec_l`, первый байт многобайтового символа) в исходную строку; `current` должны следовать `start` в исходную строку.  
   
  `locale`  
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_mbsdec`, _`mbsdec_l`, `_strdec` и `_wcsdec` (каждая) возвращают указатель на символ, который предшествует `current`; `_mbsdec` возвращает `NULL`, если значение `start` больше или равно значению `current`. `_tcsdec` сопоставляется с одной из этих функций, и ее возвращаемое значение зависит от сопоставления.  
+ `_mbsdec`, `_mbsdec_l`, `_strdec`, и `_wcsdec` каждого возвращают указатель на символ, который непосредственно предшествует `current`; `_mbsdec` возвращает `NULL` Если значение `start` больше или равно этому значению `current`. `_tcsdec` сопоставляется с одной из этих функций, и ее возвращаемое значение зависит от сопоставления.  
   
 ## <a name="remarks"></a>Примечания  
  Функции `_mbsdec` и `_mbsdec_l` возвращают указатель на первый байт многобайтового символа, который непосредственно предшествует `current` в строке, содержащей `start`.  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   

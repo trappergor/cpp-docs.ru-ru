@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 60a870b9c0beff704511ab788d621b0f9697ed5d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 514e00148ec34a14a7b229d5b7e226d8be66636d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
@@ -107,15 +108,15 @@ unsigned int _mbcjmstojis_l(
  Для японского языкового стандарта эти функции возвращают преобразованный символ или 0, если преобразование невозможно. Для других языковых стандартов эти функции возвращают переданный символ.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_mbcjistojms` преобразует символ стандарта Japan Industry Standard (JIS) в символ Microsoft Kanji (Shift JIS). Символ преобразуется только в том случае, если старший и младший байты находятся в диапазоне 0x21–0x7E. Если старший или младший байт лежит вне этого диапазона, `errno` получает значение `EILSEQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Функция `_mbcjistojms` преобразует символ стандарта Japan Industry Standard (JIS) в символ Microsoft Kanji (Shift JIS). Символ преобразуется, только если руководитель и младший байт находятся в диапазоне 0x21 - 0x7E. Если старший или младший байт лежит вне этого диапазона, `errno` получает значение `EILSEQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Функция `_mbcjmstojis` преобразует символ стандарта Shift JIS в символ JIS. Символ преобразуется только в том случае, если старший байт находится в диапазоне 0x81–0x9F или 0xE0–0xFC, а младший байт — в диапазоне 0x40–0x7E или 0x80–0xFC. Обратите внимание, что некоторым кодовым точкам в этом диапазоне не соответствуют символы, в результате чего их преобразование невозможно.  
+ `_mbcjmstojis` Функция преобразует символов Shift JIS символов JIS. Символ преобразуется только в том случае, если старший байт в диапазон 0x81-0x9F и от 0xE0 - 0xFC и младший байт в диапазоне 0x40-0x7E и 0x80 - 0xFC. Обратите внимание, что некоторым кодовым точкам в этом диапазоне не соответствуют символы, в результате чего их преобразование невозможно.  
   
  Параметр `c` должен иметь 16-разрядное значение, старшие 8 бит которого представляют старший байт преобразуемого символа, а младшие 8 бит — соответственно его младший байт.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
- В более ранних версиях функции `_mbcjistojms` и `_mbcjmstojis` назывались `jistojms` и `jmstojis` соответственно. Вместо них следует использовать функции `_mbcjistojms`,`_mbcjistojms_l`,`_mbcjmstojis` и `_mbcjmstojis_l`.  
+ В более ранних версиях `_mbcjistojms` и `_mbcjmstojis` были вызваны `jistojms` и `jmstojis`соответственно. `_mbcjistojms`, `_mbcjistojms_l`, `_mbcjmstojis` и `_mbcjmstojis_l` следует использовать.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -127,9 +128,6 @@ unsigned int _mbcjmstojis_l(
 |`_mbcjmstojis_l`|\<mbstring.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызова неуправляемого кода](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   

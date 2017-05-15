@@ -1,54 +1,71 @@
 ---
-title: "_gcvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt - функция"
-  - "преобразования, значения с плавающей запятой к строкам"
-  - "CVTBUFSIZE"
-  - "функции с плавающей запятой, преобразование числа в строку"
-  - "gcvt - функция"
-  - "числа, преобразование в строки"
-  - "строки [C++], преобразование из чисел с плавающей запятой"
+title: "_gcvt | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt function
+- _CVTBUFSIZE
+- gcvt function
+- floating-point functions, converting number to string
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _gcvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 055d1e6d996a076ca7f1a49e21abf3771fa543fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
-Преобразует число с плавающей запятой в строку и сохраняет ее в буфере.  Существует более безопасная версия этой функции; см. раздел [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md).  
+---
+# <a name="gcvt"></a>_gcvt
+Преобразует значение с плавающей запятой в строку и сохраняет ее в буфер. Существует более безопасная версия этой функции; см. раздел [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 char *_gcvt(   
@@ -58,35 +75,35 @@ char *_gcvt(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `value`  
  Преобразуемое значение.  
   
  `digits`  
- Количество хранящихся значащих цифр.  
+ Количество значащих цифр хранятся.  
   
  `buffer`  
- Место хранения для результата.  
+ Место хранения результата.  
   
-## Возвращаемое значение  
- `_gcvt` возвращает указатель на строку цифр.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_gcvt` возвращает указатель на строку разрядов.  
   
-## Заметки  
- Функция `_gcvt` преобразует `value` с плавающей запятой на символьную строку \(которая включает десятичную запятую и возможный байт знака\) и запоминает строку в `buffer`.  `buffer` должен быть достаточным для размещения преобразованного значения и конечного нулевого символа, который добавляется автоматически.  Если используется размер буфера `digits` \+ 1, то функция перезапишет конец буфера.  Это происходит потому, что преобразованная строка включает десятичную запятую и может содержать знак и экспоненту.  Защита от переполнения не предусмотрена.  `_gcvt` пытается создать числа `digits` в десятичном формате.  Если не удается, он создает числа `digits` в степенном формате.  Замыкающие нули можно отключить при преобразовании.  
+## <a name="remarks"></a>Примечания  
+ Функция `_gcvt` преобразует значение с плавающей запятой `value` в строку символов (включает знак десятичной запятой и при необходимости байт знака) и сохраняет эту строку в `buffer`. Длина `buffer` должна быть достаточной для хранения преобразованного значения, а также автоматически добавляемого нуль-символа. Если размер буфера равен `digits` + 1, функция перезаписывает конец буфера. Это связано с тем, что преобразованная строка включает символ десятичной запятой и может содержать данные о знаке и степени. Ситуация переполнения не обрабатывается. Функция `_gcvt` пытается создать `digits` разрядов в десятичном формате. Если это не удается, создается `digits` разрядов в экспоненциальном формате. Нули в конце могут исключаться из преобразования.  
   
- Буфер `buffer` длины `_CVTBUFSIZE` достаточен для любого значения с плавающей запятой.  
+ Буфер `buffer` длиной `_CVTBUFSIZE` достаточен для любого значения с плавающей запятой.  
   
- Эта функция проверяет свои параметры.  Если параметр `buffer` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, функция устанавливает `errno` в `EINVAL` и возвращает `NULL`.  
+ Эта функция проверяет свои параметры. Если параметр `buffer` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `NULL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_gcvt`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_gcvt`|\<stdlib.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_gcvt.c  
@@ -129,21 +146,22 @@ int main( void )
 }  
 ```  
   
-  **The following numbers were converted by \_gcvt\(value,12,buffer\):**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-12345678901.2' \(14 chars\)**  
-**buffer: '\-123456789012' \(13 chars\)**  
-**buffer: '\-1.23456789012e\+012' \(19 chars\)**  
-**buffer: '\-12.3456789012' \(14 chars\)**  
-**buffer: '\-1.23456789012' \(14 chars\)**  
-**buffer: '\-0.123456789012' \(15 chars\)**  
-**buffer: '\-1.23456789012e\-002' \(19 chars\)**   
-## Эквивалент в .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+The following numbers were converted by _gcvt(value,12,buffer):  
+buffer: '-1234567890.12' (14 chars)  
+buffer: '-12345678901.2' (14 chars)  
+buffer: '-123456789012' (13 chars)  
+buffer: '-1.23456789012e+012' (19 chars)  
   
-## См. также  
+buffer: '-12.3456789012' (14 chars)  
+buffer: '-1.23456789012' (14 chars)  
+buffer: '-0.123456789012' (15 chars)  
+buffer: '-1.23456789012e-002' (19 chars)  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../Topic/_fcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

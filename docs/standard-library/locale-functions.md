@@ -25,10 +25,11 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ca6c94270b97f8b6e48871699628415e2133778
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlocalegt-functions"></a>Функции &lt;locale&gt;
@@ -162,7 +163,7 @@ bool isalpha(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является буквенным; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **alpha**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **alpha**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -223,7 +224,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является управляющим символом; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **cntrl**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **cntrl**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -284,7 +285,7 @@ bool isdigit(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является цифровым символом; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **digit**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **digit**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -345,7 +346,7 @@ bool isgraph(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является знаком пунктуации; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **graph**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **graph**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -406,7 +407,7 @@ bool islower(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является символом в нижнем регистре; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **lower**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **lower**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -467,7 +468,7 @@ bool isprint(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является печатным; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **print**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **print**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -527,7 +528,7 @@ bool ispunct(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является знаком пунктуации; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **punct**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **punct**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -588,7 +589,7 @@ bool isspace(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является пробелом; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **space**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **space**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -649,7 +650,7 @@ bool isupper(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является символом в верхнем регистре; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **upper**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **upper**, `Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -710,7 +711,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
  **true**, если проверяемый элемент является символом для записи шестнадцатеричных чисел; **false**, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#ctype__is)(**ctype**\< **CharType**>:: **xdigit**, `Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [is](../standard-library/ctype-class.md#is)(**ctype**\< **CharType**>:: **xdigit**, `Ch`).  
   
  В шестнадцатеричной системе для представления чисел используется база 16. С помощью цифр от 0 до 9, а также букв от A до F без учета регистра представляются десятичные числа от 0 до 15.  
   
@@ -773,7 +774,7 @@ CharType tolower(CharType Ch, const locale& Loc)
  Символ, преобразованный в нижний регистр.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [tolower](../standard-library/ctype-class.md#ctype__tolower)(`Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [tolower](../standard-library/ctype-class.md#tolower)(`Ch`).  
   
 ### <a name="example"></a>Пример  
   
@@ -818,7 +819,7 @@ CharType toupper(CharType Ch, const locale& Loc)
  Символ, преобразованный в верхний регистр.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [toupper](../standard-library/ctype-class.md#ctype__toupper)(`Ch`).  
+ Функция-шаблон возвращает [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >(`Loc`). [toupper](../standard-library/ctype-class.md#toupper)(`Ch`).  
   
 ### <a name="example"></a>Пример  
   

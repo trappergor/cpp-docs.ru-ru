@@ -1,61 +1,78 @@
 ---
-title: "_fgetc_nolock, _fgetwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fgetc_nolock"
-  - "_fgetwc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fgetwc_nolock"
-  - "fgettc_nolock"
-  - "fgetwc_nolock"
-  - "_fgetc_nolock"
-  - "_fgettc_nolock"
-  - "fgetc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgetc_nolock - функция"
-  - "_fgettc_nolock - функция"
-  - "_fgetwc_nolock - функция"
-  - "знаки, чтение"
-  - "fgetc_nolock - функция"
-  - "fgettc_nolock - функция"
-  - "fgetwc_nolock - функция"
-  - "чтение знаков из потоков"
-  - "потоки, чтение знаков из"
+title: "_fgetc_nolock, _fgetwc_nolock | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fgetc_nolock
+- _fgetwc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fgetwc_nolock
+- fgettc_nolock
+- fgetwc_nolock
+- _fgetc_nolock
+- _fgettc_nolock
+- fgetc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetc_nolock function
+- fgetwc_nolock function
+- _fgetwc_nolock function
+- characters, reading
+- _fgetc_nolock function
+- streams, reading characters from
+- fgettc_nolock function
+- reading characters from streams
+- _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _fgetc_nolock, _fgetwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9e22872f55161a78816c137ba3c4427c9efbd8cc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 Считывает символ из потока без блокирования потока.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _fgetc_nolock(   
@@ -66,32 +83,32 @@ wint_t _fgetwc_nolock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
  Указатель на структуру `FILE`.  
   
-## Возвращаемое значение  
- См.[fgetc, fgetwc](../Topic/fgetc,%20fgetwc.md).  
+## <a name="return-value"></a>Возвращаемое значение  
+ См. [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md).  
   
-## Заметки  
- Функции `_fgetc_nolock` и `_fgetwc_nolock` совпадают с `fgetc` и `fgetwc` соответственно, за исключением того, что они не защищены от вмешательства других потоков.  Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков.  Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
+## <a name="remarks"></a>Примечания  
+ Версии `_fgetc_nolock` и `_fgetwc_nolock` идентичны версиям `fgetc` и `fgetwc` соответственно, за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма Tchar.h|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_fgettc_nolock`|`_fgetc_nolock`|`_fgetc_nolock`|`_fgetwc_nolock`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`_fgetc_nolock`|\<stdio.h\>|  
-|`_fgetwc_nolock`|\<stdio.h\> или \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fgetc_nolock`|\<stdio.h>|  
+|`_fgetwc_nolock`|\<stdio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_fgetc_nolock.c  
@@ -127,27 +144,21 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_fgetc\_nolock.txt  
+## <a name="input-crtfgetcnolocktxt"></a>Входные данные: crt_fgetc_nolock.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## Эквивалент в .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx).  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

@@ -1,58 +1,75 @@
 ---
-title: "getc, getwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "getwc"
-  - "getc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gettc"
-  - "getwc"
-  - "_gettchar"
-  - "getc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_gettc - функция"
-  - "знаки, чтение"
-  - "getc - функция"
-  - "gettc - функция"
-  - "getwc - функция"
-  - "getwchar - функция"
-  - "чтение знаков из потоков"
-  - "потоки, чтение знаков из"
+title: "getc, getwc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- getwc
+- getc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gettc
+- getwc
+- _gettchar
+- getc
+dev_langs:
+- C++
+helpviewer_keywords:
+- characters, reading
+- _gettc function
+- getwchar function
+- streams, reading characters from
+- reading characters from streams
+- getc function
+- getwc function
+- gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# getc, getwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c49c803ade49a5434599690902856fd1f76d742
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="getc-getwc"></a>getc, getwc
 Считывает символ из потока.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int getc(   
@@ -63,43 +80,43 @@ wint_t getwc(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
  Входной поток.  
   
-## Возвращаемое значение  
- Возвращает считанный символ.  Чтобы указать на ошибку чтения или конец файла, `getc` возвращает `EOF`, а `getwc` возвращает `WEOF`.  Для `getc` используйте `ferror` или `feof` для проверки на наличие ошибок или на конец файла.  Если `stream` равен `NULL`, то `getc` и `getwc` вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешается, эти функции возвращают `EOF` \(или `WEOF` для`getwc`\) и устанавливают для `errno` значение `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает считанный символ. Чтобы указать на ошибку чтения или конец файла, функция `getc` возвращает `EOF`, а `getwc` возвращает `WEOF`. Для функции `getc` следует использовать `ferror` или `feof` для проверки наличия ошибки или достижения конца файла. Если параметр `stream` имеет значение `NULL`, функции `getc` и `getwc` вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают `EOF` (или `WEOF` для `getwc`) и задайте `errno` для `EINVAL`.  
   
- См. раздел [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) для дополнительных сведений по этим и другим кодам возврата.  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Заметки  
- Каждая процедура считывает один символ из текущей позиции в файле и увеличивает связанный файловый указатель \(если он определен\), чтобы он указывал на следующий символ.  Файл, связанный с объектом `stream`.  
+## <a name="remarks"></a>Примечания  
+ Каждая подпрограмма считывает один символ из файла в текущей позиции и увеличивает связанный указатель файла (если он определен), чтобы он указывал на следующий символ. Файл связан с `stream`.  
   
- Эти функции блокируют вызывающий поток и, следовательно, являются потокобезопасными.  Для неблокирующей версии см. [\_getc\_nolock, \_getwc\_nolock](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md).  
+ Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующей версии см. в разделе [_getc_nolock, _getwc_nolock](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md).  
   
- Замечания относительно особенностей процедур.  
+ Ниже приводятся примечания для конкретных подпрограмм.  
   
 |Подпрограмма|Примечания|  
-|------------------|----------------|  
-|`getc`|Аналогично `fgetc`, но с реализацией в виде функции и в качестве макроса.|  
-|`getwc`|Версия `getc` для работы с расширенными символами.  Считывает многобайтовый или расширенный символ согласно тому, открыт ли `stream` в текстовом режиме или в бинарном режиме.|  
+|-------------|-------------|  
+|`getc`|То же, что и функция `fgetc`, однако реализована как функция и как макрос.|  
+|`getwc`|Версия `getc` для расширенных символов. Считывает многобайтовый или расширенный символ согласно тому, открыт ли `stream` в текстовом или двоичном режиме.|  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_gettc`|`getc`|`getc`|`getwc`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`getc`|\<stdio.h\>|  
-|`getwc`|\<stdio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`getc`|\<stdio.h>|  
+|`getwc`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_getc.c  
@@ -136,28 +153,22 @@ int main()
 }  
 ```  
   
-## Ввод: crt\_getc.txt  
+## <a name="input-crtgetctxt"></a>Входные данные: crt_getc.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 Input was: Line one.  
 ```  
   
-## Эквивалент в .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx).  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## См. также  
- [Потоковый ввод\-вывод](../../c-runtime-library/stream-i-o.md)   
- [fgetc, fgetwc](../Topic/fgetc,%20fgetwc.md)   
- [\_getch, \_getwch](../Topic/_getch,%20_getwch.md)   
+## <a name="see-also"></a>См. также  
+ [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
+ [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)   
  [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

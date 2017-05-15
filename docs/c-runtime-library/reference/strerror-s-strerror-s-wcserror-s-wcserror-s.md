@@ -1,65 +1,82 @@
 ---
-title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__wcserror_s"
-  - "_strerror_s"
-  - "_wcserror_s"
-  - "strerror_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcserror_s"
-  - "__wcserror_s"
-  - "_tcserror_s"
-  - "_wcserror_s"
-  - "tcserror_s"
-  - "strerror_s"
-  - "_strerror_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__wcserror_s - функция"
-  - "_strerror_s - функция"
-  - "_tcserror_s - функция"
-  - "_wcserror_s - функция"
-  - "сообщения об ошибках, получение"
-  - "сообщения об ошибках, печать"
-  - "печать сообщений об ошибках"
-  - "strerror_s - функция"
-  - "tcserror_s - функция"
-  - "wcserror_s - функция"
+title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __wcserror_s
+- _strerror_s
+- _wcserror_s
+- strerror_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcserror_s
+- __wcserror_s
+- _tcserror_s
+- _wcserror_s
+- tcserror_s
+- strerror_s
+- _strerror_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- __wcserror_s function
+- error messages, printing
+- tcserror_s function
+- printing error messages
+- strerror_s function
+- _wcserror_s function
+- _tcserror_s function
+- _strerror_s function
+- wcserror_s function
+- error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 70875568a8f77f9e4039e69dadbe9daf3c1c5e01
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/04/2017
 
-Получает сообщение о системной ошибке \(`strerror_s`, `_wcserror_s`\) или печатает указанное пользователем сообщение об ошибке \(`_strerror_s`, `__wcserror_s`\).  Здесь представлены версии [strerror, \_strerror, \_wcserror, \_\_wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
+Получают системное сообщение об ошибке (`strerror_s`, `_wcserror_s`) или выводят указанное пользователем сообщение об ошибке (`_strerror_s`, `__wcserror_s`). Это версии функций [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 errno_t strerror_s(  
@@ -104,31 +121,31 @@ errno_t __wcserror_s(
 ); // C++ only  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `buffer`  
- Буфер для хранения строки ошибок.  
+ Буфер для строки ошибки.  
   
  `numberOfElements`  
- Размер buffer.  
+ Размер буфера.  
   
  `errnum`  
  Номер ошибки.  
   
  `strErrMsg`  
- Предоставленное пользователем сообщение.  
+ Пользовательское сообщение.  
   
-## Возвращаемое значение  
- Нуль, если успешно; код ошибки при неудаче.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает нуль в случае успеха или код ошибки в случае неудачи.  
   
-### Условия возникновения ошибки  
+### <a name="error-condtions"></a>Условия ошибки  
   
-|`buffer`|`numberOfElements`|`strErrMsg`|Содержимое `buffer`.|  
+|`buffer`|`numberOfElements`|`strErrMsg`|Содержимое `buffer`|  
 |--------------|------------------------|-----------------|--------------------------|  
-|`NULL`|any|any|Н\/Д|  
-|any|0|any|без изменений|  
+|`NULL`|any|any|Н/Д|  
+|any|0|any|не изменено|  
   
-## Заметки  
- Функция `strerror_s` сопоставляет `errnum` в строку сообщения об ошибке, возвращая строку в `buffer`.  `_strerror_s` не принимает номер ошибки; он использует текущее значение `errno` для определения соответствующего сообщения.  Ни `strerror_s`, ни `_strerror_s` не печатает сообщения: Для этого необходимо вызвать функцию вывода, например [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md).  
+## <a name="remarks"></a>Примечания  
+ Функция `strerror_s` сопоставляет параметр `errnum` со строкой сообщения об ошибке, возвращая строку в `buffer`. `_strerror_s` не принимает номер ошибки; она использует текущее значение `errno` для определения соответствующего сообщения. Ни функция `strerror_s`, ни функция `_strerror_s` не выполняют фактическую печать сообщения. Для этого необходимо вызвать функцию вывода, например [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
   
 ```  
 if (( _access( "datafile",2 )) == -1 )  
@@ -138,45 +155,42 @@ if (( _access( "datafile",2 )) == -1 )
 }  
 ```  
   
- Если `strErrMsg` равен `NULL`, `_strerror_s` возвращает строку в `buffer`, содержащий сообщение о системной ошибке для последнего вызова библиотеки, создавшего ошибку.  Строка сообщения об ошибке заканчивается символом новой строки \('\\n'\).  Если `strErrMsg` не равно `NULL`, то `_strerror_s` возвращает строку в `buffer`, содержащий \(в таком порядке\) строку сообщения, двоеточие, пробел, сообщение о системной ошибке для последнего вызова библиотеки, создавшего ошибку, и символ новой строки.  Строка сообщения может быть длиной не более 94 символа.  
+ Если `strErrMsg` имеет значение `NULL`, функция `_strerror_s` возвращает строку в `buffer`, содержащую системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если параметр `strErrMsg` не имеет значение `NULL`, функция `_strerror_s` возвращает строку в `buffer`, содержащую (в указанном порядке) строку сообщения, двоеточие, пробел, системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку, и символ новой строки. Длина сообщения строки не должна превышать 94 символа.  
   
- Эти функции усекают сообщение об ошибке, если его длина превышает `numberOfElements` \-1.  Результирующая строка в `buffer` всегда завершается символом null.  
+ Эти функции усекают сообщение об ошибке, если его длина превышает `numberOfElements` –1. Результирующая строка в `buffer` всегда завершается символом NULL.  
   
- Фактический номер ошибки для `_strerror_s` хранится в переменной [errno](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  Доступ к сообщениям о системной ошибке осуществляется через переменную [\_sys\_errlist](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки.  `_strerror_s` получает доступ к соответствующему сообщению об ошибке, используя значение `errno` в качестве индекса для массива `_sys_errlist`.  Значение переменной [\_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) определено как максимальное количество элементов в массиве `_sys_errlist`.  Для предоставления точных результатов следует вызывать `_strerror_s` сразу после того, как библиотечная подпрограммы возвращается с ошибкой.  В противном случае последующие вызовы `strerror_s` или `_strerror_s` могут перезаписать значение `errno`.  
+ Фактический номер ошибки для `_strerror_s` хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Доступ к системным сообщениям об ошибках осуществляется через переменную [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки. Функция `_strerror_s` получает доступ к соответствующему сообщению об ошибке, используя значение `errno` в качестве индекса для массива `_sys_errlist`. Значение переменной [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) определено как максимальное количество элементов в массиве `_sys_errlist`. Чтобы обеспечить точные результаты, вызывайте `_strerror_s` сразу после того, как подпрограмма библиотеки возвращает ошибку. В противном случае последующие вызовы `strerror_s` или `_strerror_s` могут перезаписать значение `errno`.  
   
- `_wcserror_s` и `__wcserror_s`версии с расширенными символами функций `strerror_s`и `_strerror_s` соответственно.  
+ `_wcserror_s` и `__wcserror_s` — это версии `strerror_s` и `_strerror_s` с расширенными символами.  
   
- Эти функции проверяют свои параметры.  Если буфер равен `NULL`, или если параметр размера равен 0, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` и устанавливают для `errno` значение `EINVAL`.  
+ Эти функции проверяют свои параметры. Если буфер имеет значение `NULL`, параметр размера равен 0, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают `EINVAL` и устанавливают параметр `errno` в значение `EINVAL`.  
   
- `_strerror_s, _wcserror_s,` и `__wcserror_s` не являются частью определения ANSI, а вместо этого они \- расширения Майкрософт для него.  Их не следует использовать там, где отдается предпочтение переносимости; для обеспечения совместимости с ANSI, используйте вместо них `strerror_s` .  
+ `_strerror_s`, `_wcserror_s`, и `__wcserror_s` не входят в определение ANSI, а представляют собой расширения Microsoft к нему. Их не следует использовать там, где требуется переносимость; для обеспечения совместимости с ANSI используйте функцию `strerror_s`.  
   
- В C\+\+ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устранена необходимость указывать аргумент size.  Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../Topic/Secure%20Template%20Overloads.md).  
+ В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
   
- Отладочные версии этих функций сначала заполняют буфер значением 0xFD.  Для отключения данного поведения используйте [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Подпрограмма TCHAR.H|\_UNICODE & \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcserror_s`|`strerror_s`|`strerror_s`|`_wcserror_s`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`strerror_s`, `_strerror_s`|\<string.h\>|  
-|`_wcserror_s`, `__wcserror_s`|\<string.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`strerror_s`, `_strerror_s`|\<string.h>|  
+|`_wcserror_s`, `__wcserror_s`|\<string.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
  См. пример для [perror](../../c-runtime-library/reference/perror-wperror.md).  
   
-## Эквивалент в .NET Framework  
- [System::Exception::Message](https://msdn.microsoft.com/en-us/library/system.exception.message.aspx)  
-  
-## См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

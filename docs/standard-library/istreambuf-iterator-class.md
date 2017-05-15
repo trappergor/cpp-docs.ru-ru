@@ -40,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: f06fb6bbc667be97267bb0a84564e6a36c837528
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 942f61a053e77bf3d677f51cc30d39b5f4c76db6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istreambufiterator-class"></a>Класс istreambuf_iterator
@@ -73,38 +74,38 @@ class istreambuf_iterator
   
 |||  
 |-|-|  
-|[istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)|Создает объект `istreambuf_iterator`, инициализируемый для чтения символов из входного потока.|  
+|[istreambuf_iterator](#istreambuf_iterator)|Создает объект `istreambuf_iterator`, инициализируемый для чтения символов из входного потока.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#istreambuf_iterator__char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|  
-|[int_type](#istreambuf_iterator__int_type)|Тип, предоставляющий целочисленный тип для `istreambuf_iterator`.|  
-|[istream_type](#istreambuf_iterator__istream_type)|Тип, обеспечивающий тип потока для `istream_iterator`.|  
-|[streambuf_type](#istreambuf_iterator__streambuf_type)|Тип, обеспечивающий тип потока для `istreambuf_iterator`.|  
-|[traits_type](../standard-library/istream-iterator-class.md#istream_iterator__traits_type)|Тип, обеспечивающий тип признаков символа для `istream_iterator`.|  
+|[char_type](#char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|  
+|[int_type](#int_type)|Тип, предоставляющий целочисленный тип для `istreambuf_iterator`.|  
+|[istream_type](#istream_type)|Тип, обеспечивающий тип потока для `istream_iterator`.|  
+|[streambuf_type](#streambuf_type)|Тип, обеспечивающий тип потока для `istreambuf_iterator`.|  
+|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|Тип, обеспечивающий тип признаков символа для `istream_iterator`.|  
   
 ### <a name="member-functions"></a>Функции-члены  
   
 |||  
 |-|-|  
-|[equal](#istreambuf_iterator__equal)|Тесты на равенство между двумя итераторами буфера входного потока.|  
+|[equal](#equal)|Тесты на равенство между двумя итераторами буфера входного потока.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор*](#istreambuf_iterator__operator_star)|Оператор удаления ссылки возвращает следующий символ в потоке.|  
-|[оператор++](#istreambuf_iterator__operator_add_add)|Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.|  
-|[оператор->](#istreambuf_iterator__operator-_gt_)|Возвращает значение члена при наличии.|  
+|[оператор*](#op_star)|Оператор удаления ссылки возвращает следующий символ в потоке.|  
+|[оператор++](#op_add_add)|Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.|  
+|[оператор->](#operator-_gt)|Возвращает значение члена при наличии.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<iterator>  
   
  **Пространство имен:** std  
   
-##  <a name="istreambuf_iterator__char_type"></a>  istreambuf_iterator::char_type  
+##  <a name="char_type"></a>  istreambuf_iterator::char_type  
  Тип, обеспечивающий тип символа для `ostreambuf_iterator`.  
   
 ```
@@ -147,7 +148,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__equal"></a>  istreambuf_iterator::equal  
+##  <a name="equal"></a>  istreambuf_iterator::equal  
  Тесты на равенство между двумя итераторами буфера входного потока.  
   
 ```
@@ -192,7 +193,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__int_type"></a>  istreambuf_iterator::int_type  
+##  <a name="int_type"></a>  istreambuf_iterator::int_type  
  Тип, предоставляющий целочисленный тип для `istreambuf_iterator`.  
   
 ```
@@ -221,7 +222,7 @@ The inttype1 = 100.
 *\  
 ```  
   
-##  <a name="istreambuf_iterator__istream_type"></a>  istreambuf_iterator::istream_type  
+##  <a name="istream_type"></a>  istreambuf_iterator::istream_type  
  Тип, обеспечивающий тип потока для `istreambuf_iterator`.  
   
 ```
@@ -232,9 +233,9 @@ typedef basic_istream<CharType, Traits> istream_type;
  Тип является синонимом для `basic_istream`\< **CharType**, **Traits**>.  
   
 ### <a name="example"></a>Пример  
-  См. раздел [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator) с примером объявления и использования `istream_type`.  
+  См. раздел [istreambuf_iterator](#istreambuf_iterator) с примером объявления и использования `istream_type`.  
   
-##  <a name="istreambuf_iterator__istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
+##  <a name="istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
  Создает istreambuf_iterator, инициализируемый для чтения символов из входного потока.  
   
 ```
@@ -284,7 +285,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator_star"></a>  istreambuf_iterator::operator*  
+##  <a name="op_star"></a>  istreambuf_iterator::operator*  
  Оператор удаления ссылки возвращает следующий символ в потоке.  
   
 ```
@@ -322,7 +323,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator_add_add"></a>  istreambuf_iterator::operator++  
+##  <a name="op_add_add"></a>  istreambuf_iterator::operator++  
  Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.  
   
 ```
@@ -364,7 +365,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator-_gt_"></a>  istreambuf_iterator::operator-&gt;  
+##  <a name="istreambuf_iterator__operator-_gt"></a>  istreambuf_iterator::operator-&gt;  
  Возвращает значение члена при наличии.  
   
 ```
@@ -374,7 +375,7 @@ const Elem* operator->() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Оператор возвращает **&\*\*this**.  
   
-##  <a name="istreambuf_iterator__streambuf_type"></a>  istreambuf_iterator::streambuf_type  
+##  <a name="streambuf_type"></a>  istreambuf_iterator::streambuf_type  
  Тип, обеспечивающий тип потока для istreambuf_iterator.  
   
 ```
@@ -385,9 +386,9 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
  Тип является синонимом для `basic_streambuf`\< **CharType**, **Traits**>.  
   
 ### <a name="example"></a>Пример  
-  См. раздел [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator) с примером объявления и использования **istreambuf_type**.  
+  См. раздел [istreambuf_iterator](#istreambuf_iterator) с примером объявления и использования **istreambuf_type**.  
   
-##  <a name="istreambuf_iterator__traits_type"></a>  istreambuf_iterator::traits_type  
+##  <a name="traits_type"></a>  istreambuf_iterator::traits_type  
  Тип, обеспечивающий тип признаков символа для `istream_iterator`.  
   
 ```

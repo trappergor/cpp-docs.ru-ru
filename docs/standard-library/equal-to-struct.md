@@ -1,78 +1,89 @@
 ---
-title: "Структура equal_to | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::equal_to"
-  - "equal_to"
-  - "xfunctional/std::equal_to"
-  - "std.equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_to - функция"
-  - "equal_to - структура"
+title: "Структура equal_to | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- equal_to
+- xfunctional/std::equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- equal_to function
+- equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Структура equal_to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/19/2017
 
-Бинарный предикат, выполняет операцию равенства \(`operator==`\) на основе своих аргументов.  
+---
+# <a name="equalto-struct"></a>Структура equal_to
+Двоичный предикат, который выполняет операцию равенства (`operator==`) на своих аргументах.  
   
-## Синтаксис  
-  
-```  
-template<class Type = void>  
-   struct equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator==  
-template<>  
-   struct equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            == std::forward<Type2>(Right));  
-   };  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
+template <class Type = void>  
+struct equal_to : public binary_function<Type, Type, bool>   
+ {  
+    bool operator()(const Type& Left, const Type& Right) const; 
+ };  
+ 
+// specialized transparent functor for operator== 
+template <>  
+struct equal_to<void>  
+ {  
+    template <class T, class U>  
+    auto operator()(T&& Left, U&& Right) const 
+      ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
+ };  
+```  
   
-#### Параметры  
- `Type`, `Type1`, `Type2`  
- Любой тип, поддерживающий `operator==`, принимающую операнды определение или возвращаемого типа.  
+#### <a name="parameters"></a>Параметры  
+ `Type`, `T`, `U`  
+ Любой тип, поддерживающий `operator==`, принимающий операнды указанного или выводимого типа.  
   
  `Left`  
- Левый операнд операции равенства.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type1`.  
+ Левый операнд в операции равенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
   
  `Right`  
- Правый операнд операции равенства.  Неспециализированный шаблон принимает аргумент ссылки значения типа `Type`.  Представляет шаблон повышает препровождение аргументов ссылки rvalue возвращаемого значения и типа `Type2`.  
+ Правый операнд в операции равенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
-## Возвращаемое значение  
- Результат `Left``==``Right`.  Представляет шаблон повышает препровождение результата, который имеет тип, который возвращается `operator==`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Результат `Left``==``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator==`.  
   
-## Заметки  
- Объекты типа `Type` должны быть равенство\-соответствующими.  Для этого необходимо, чтобы `operator==`, указанное для набора объектов удовлетворяет математически свойства отношения эквивалентности.  Все встроенные числовые типы указателей и удовлетворяют этим требованиям.  
+## <a name="remarks"></a>Примечания  
+ Объекты типа `Type` должны быть сравнимы. Для этого нужно, чтобы `operator==`, определенный в наборе объектов, удовлетворял математическим свойствам отношения эквивалентности. Этим требованиям удовлетворяют все встроенные числовые типы и типы указателей.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // functional_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -123,7 +134,11 @@ int main( )
 }  
 ```  
   
-  **Вектор v1 \= \(0 1 4 5 8 9\)**  
-**Вектор v2 \= \(\-0 1 \-4 5 \-8 9\)**  
-**Результат — мудрого сравнения equal\_to**  
-**между v1 & v2 выглядит следующим образом: \(1 1 0 1 0 1\)**
+```Output  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise equal_to comparison  
+between v1 & v2 is: ( 1 1 0 1 0 1 )  
+```
+
+

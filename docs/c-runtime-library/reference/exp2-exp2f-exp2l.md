@@ -1,57 +1,74 @@
 ---
-title: "exp2, exp2f, exp2l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "exp2"
-  - "exp2f"
-  - "exp2l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "exp2"
-  - "math/exp2"
-  - "exp2f"
-  - "math/exp2f"
-  - "exp2l"
-  - "math/exp2l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exp2 - функция"
-  - "exp2f - функция"
-  - "функция exp2l"
+title: "exp2, exp2f, exp2l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- exp2
+- exp2f
+- exp2l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- exp2
+- math/exp2
+- exp2f
+- math/exp2f
+- exp2l
+- math/exp2l
+dev_langs:
+- C++
+helpviewer_keywords:
+- exp2 function
+- exp2f function
+- exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# exp2, exp2f, exp2l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4c3e31359c096dddfc7d71dcd7887c405b9aa0af
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/01/2017
 
-Вычисляет 2 возникает с указанным значением \(например, 2ˣ\).  
+---
+# <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
+Вычисляет 2 возникает с указанным значением.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double exp2(  
@@ -73,39 +90,38 @@ float exp2f(
 long double exp2l(  
    long double x  
 );  
-  
 ```  
   
-#### Параметры  
- \[in\] `x`  
+#### <a name="parameters"></a>Параметры  
+ [in] `x`  
  Значение экспоненты.  
   
-## Возвращаемое значение  
- В случае успеха возвращает значение экспоненты по основанию 2 для `x` \(2ˣ\). В противном случае может возвращать одно из следующих значений:  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успеха возвращает 2 в степени экспоненты `x`, то есть 2<sup>x</sup>. В противном случае он возвращает одно из следующих значений:  
   
 |Проблеми|Назад|  
-|--------------|-----------|  
-|`x` \= ±0|1|  
-|`x` \= \- INFINITY|\+0|  
-|`x` \= \+ INFINITY|\+ INFINITY|  
-|`x` \= NaN|NaN|  
-|Ошибка переполнения диапазона|\+ HUGE\_VAL \+ HUGE\_VALF, или \+ HUGE\_VALL|  
-|Ошибка диапазона потери точности|правильный результат, после округления|  
+|-----------|------------|  
+|`x` = ±0|1|  
+|`x` = -INFINITY|+0|  
+|`x` = +INFINITY|+INFINITY|  
+|`x` = NaN|NaN|  
+|Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|  
+|Ошибка недостаточного заполнения диапазона|Правильный результат, после округления|  
   
- Сообщает об ошибках, как указано в [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Сообщает об ошибках, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки `exp2` принимающие и возвращающие float и long double типов. В программе на языке C `exp2` всегда принимает и возвращает значение типа double.  
+## <a name="remarks"></a>Примечания  
+ Поскольку C++ допускает перегрузку, можно вызывать перегрузки `exp2` , принимающие и возвращающие **float** и **long double** типов. В программе на языке C `exp2` всегда принимает и возвращает **двойные**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Подпрограмма|Заголовок C|Заголовок C\+\+|  
-|------------------|-----------------|---------------------|  
-|`exp`, `expf`, `expl`|\<math.h\>|\<cmath\>|  
+|Подпрограмма|Заголовок C|Заголовок C++|  
+|-------------|--------------|------------------|  
+|`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
   
  Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
- [LOG2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)
+ [EXP, expf, реш](../../c-runtime-library/reference/exp-expf.md)   
+ [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)

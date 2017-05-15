@@ -12,18 +12,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72389624e776a2e8334490c37a5ca628e033ffaa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-operators"></a>Операторы &lt;ostream&gt;
 ||  
 |-|  
-|[оператор&lt;&lt;](#operator_lt__lt_)|  
+|[оператор&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="operator_lt__lt_"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
  Записывает в поток различные типы.  
   
 ```
@@ -106,7 +107,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
  Поток.  
   
 ### <a name="remarks"></a>Примечания  
- Класс `basic_ostream` также определяет несколько операторов вставки. Дополнительные сведения см. в разделе [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt_).  
+ Класс `basic_ostream` также определяет несколько операторов вставки. Дополнительные сведения см. в разделе [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
   
  Функция-шаблон  
   
@@ -117,7 +118,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- определяет длину последовательности N = `traits_type::` [length](../standard-library/char-traits-struct.md#char_traits__length)(`str`), начиная с `str`, и вставляет последовательность. Если N < `_Ostr.`[width](../standard-library/ios-base-class.md#ios_base__width), то функция также вставляет повторение из `_Ostr.``width` – N символов заполнения. Повторение предшествует последовательности, если (`_Ostr`. [flags](../standard-library/ios-base-class.md#ios_base__flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). В противном случае повторение следует за последовательностью. Функция возвращает `_Ostr`.  
+ определяет длину последовательности N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)(`str`), начиная с `str`, и вставляет последовательность. Если N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), то функция также вставляет повторение из `_Ostr.``width` – N символов заполнения. Повторение предшествует последовательности, если (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). В противном случае повторение следует за последовательностью. Функция возвращает `_Ostr`.  
   
  Функция-шаблон  
   
@@ -148,14 +149,18 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- , за исключением того, что каждый элемент `_Ch` последовательности, начиная с `str`, преобразуется в объект типа `Elem` путем вызова `_Ostr.`[put](../standard-library/basic-ostream-class.md#basic_ostream__put)(`_Ostr.`[widen](../standard-library/basic-ios-class.md#basic_ios__widen)(`_Ch`)).  
+ , за исключением того, что каждый элемент `_Ch` последовательности, начиная с `str`, преобразуется в объект типа `Elem` путем вызова `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).  
   
  Функция-шаблон  
   
-``cpp template <class _Elem, class _Tr> basic_ostream<Elem, _Tr>& operator<<( basic_ostream<Elem, _Tr>& _Ostr, char _Ch);
+```cpp
+template <class _Elem, class _Tr>
+basic_ostream<Elem, _Tr>& operator<<(
+    basic_ostream<Elem, _Tr>& _Ostr,
+    char _Ch);
 ```  
   
- behaves the same as  
+ ведет себя так же, как  
   
 ```cpp  
 template <class _Elem, class _Tr>

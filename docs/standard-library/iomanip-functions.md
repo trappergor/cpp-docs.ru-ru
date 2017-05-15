@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>Функции &lt;iomanip&gt;
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  Флажки, которые нужно очистить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*), а затем возвращает **str**.  
+ Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), а затем возвращает **str**.  
   
 ### <a name="example"></a>Пример  
   См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `resetiosflags`.  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  Основание числа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags)), а затем возвращает **str**. В данном случае **mask** определяется так:  
+ Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает **str**. В данном случае **mask** определяется так:  
   
 -   Если _ *Base* имеет значение 8, то **mask** будет иметь значение `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   Если _ *Base* имеет значение 16, то **mask** будет иметь значение `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   Если _ *Base* имеет любое другое значение, то mask будет иметь значение `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0).  
+-   Если _ *Base* имеет любое другое значение, то mask будет иметь значение `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
 ### <a name="example"></a>Пример  
   См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setbase`.  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  Задает символ, который будет использоваться для заполнения пробелов при показе с выравниванием по правому краю.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Манипулятор шаблона возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`), а затем возвращает **str**. Тип **Elem** должен совпадать с типом элемента для потока **str**.  
+ Манипулятор шаблона возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`), а затем возвращает **str**. Тип **Elem** должен совпадать с типом элемента для потока **str**.  
   
 ### <a name="example"></a>Пример  
   См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setfill`.  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  Флажки, которые нужно установить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*), а затем возвращает **str**.  
+ Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*), а затем возвращает **str**.  
   
 ### <a name="example"></a>Пример  
   См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setiosflags`.  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  Точность для значений с плавающей запятой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`), а затем возвращает **str**.  
+ Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`), а затем возвращает **str**.  
   
 ### <a name="example"></a>Пример  
   См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setprecision`.  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  Ширина поля отображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*), а затем возвращает **str**.  
+ Манипулятор возвращает объект, который при извлечении из потока **str** или при вставке в него вызывает **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*), а затем возвращает **str**.  
   
 ### <a name="remarks"></a>Примечания  
  Setw задает ширину только для следующего элемента в потоке и должен вставляться перед каждым элементом, ширину которого нужно задать.  
