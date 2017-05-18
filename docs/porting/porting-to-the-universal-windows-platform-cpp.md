@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Перенос в универсальную платформу Windows (C++)
@@ -48,7 +50,7 @@ ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
   
  То же самое можно сделать при наличии классической DLL-библиотеки Win32, которую требуется вызывать из приложения UWP. С помощью таких процедур можно создать уровень пользовательского интерфейса UWP для существующего классического приложения Windows на языке C++ или кроссплатформенного стандартного кода C++. См. [Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
-##  <a name="a-namebk81storeappa-porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Перенос приложения для Магазина Windows 8.1 на UWP  
+##  <a name="BK_81StoreApp"></a> Перенос приложения для Магазина Windows 8.1 на UWP  
  Если у вас есть приложение для магазина Windows 8.1, эту процедуру можно использовать для того, чтобы оно могло работать на UWP и любом устройстве с ОС Windows 10.  Сначала рекомендуется построить проект с Visual Studio 2017 как проект Windows 8.1, чтобы устранить все проблемы, которые возникают вследствие изменений в компиляторе и библиотеках. После этого можно воспользоваться одним из двух способов преобразования проекта в проект UWP для Windows 10. Самый простой способ (как поясняется в следующей процедуре) — создание универсального проекта Windows и копирование в него существующего кода. Если вы использовали универсальный проект для классического приложения Windows 8.1 и Windows Phone 8.1, то проект будет запускаться с двумя разными макетами в XAML. Однако на выходе вы получите один динамический макет, адаптирующийся под размер экрана.  
   
 #### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Перенос приложения для магазина Windows 8.1 на UWP  
@@ -92,7 +94,7 @@ ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
   
 11. Запустите приложение и выполните его отладку в эмуляторе или физическом устройстве для каждого типа устройств, поддерживаемого приложением. Чтобы запустить эмулятор, Visual Studio необходимо запустить на физическом компьютере, а не на виртуальной машине.  
   
-##  <a name="a-namebk81componenta-porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Перенос компонента среды выполнения Windows 8.1 на UWP  
+##  <a name="BK_81Component"></a> Перенос компонента среды выполнения Windows 8.1 на UWP  
  Если у вас есть библиотека DLL или компонент среды выполнения Windows, которые уже работают с приложениями для магазина Windows 8.1, эту процедуру можно использовать для обеспечения работы компонента или библиотеки DLL с платформой UWP и Windows 10. Процедура в целом заключается в создании нового проекта и копировании в него кода.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Перенос компонента среды выполнения Windows 8.1 в UWP  
@@ -131,9 +133,4 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>См. также  
  [Visual C++: руководство по переносу](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Разработка приложений для универсальной платформы Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

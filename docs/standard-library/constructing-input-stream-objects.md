@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [Конструкторы потока входной строки](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a> Конструкторы потока входного файла  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a> Конструкторы потока входного файла  
  Существует два способа создания потока входного файла.  
   
 -   Используйте конструктор аргумента `void`, а затем вызовите функцию-член `open`:  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a> Конструкторы потока входной строки  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a> Конструкторы потока входной строки  
  В конструкторах потока входной строки требуется адрес предварительно выделенного и предварительно инициализированного хранилища:  
   
 ```  

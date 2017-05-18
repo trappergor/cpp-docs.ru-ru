@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 26eea5cc8ce8e18af84a9ca89e5ddc94272be44c
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
 
-##  <a name="a-namebegincategorymapa--begincategorymap"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
  Отмечает начало карты категории.  
   
 ```
@@ -74,7 +75,7 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="a-nameendcategorymapa--endcategorymap"></a><a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>END_CATEGORY_MAP  
  Отмечает конец карты категории.  
   
 ```
@@ -84,7 +85,7 @@ END_CATEGORY_MAP()
 ### <a name="example"></a>Пример  
  В примере показано [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
-##  <a name="a-nameimplementedcategorya--implementedcategory"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
  Добавить `IMPLEMENTED_CATEGORY` макрос к компоненту [карты категории](#begin_category_map) для указания, должен быть зарегистрирован как реализация категории, идентифицируемый `catID` параметр.  
   
 ```
@@ -117,7 +118,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="a-namerequiredcategorya--requiredcategory"></a><a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>REQUIRED_CATEGORY  
  Добавить `REQUIRED_CATEGORY` макрос к компоненту [карты категории](#begin_category_map) для указания, что он должен быть зарегистрирован как требующий категории, идентифицируемый `catID` параметр.  
   
 ```

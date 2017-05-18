@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 3a3abf5ad29b50c7f6708f02fd7c5aa193b3591c
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/24/2017
  **Заголовок:** файле atlcom.h  
   
     
-##  <a name="a-nameatlstaticregistrya--atlstaticregistry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
  Символ, указывающий, требуется код регистрации для объекта в объект во избежание зависимость от библиотеки ATL. БИБЛИОТЕКА DLL.  
   
 ```
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/24/2017
   
  [!code-cpp[NVC_ATL_EventHandlingSample&#5;](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="a-namedeclarelibida--declarelibid"></a><a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>DECLARE_LIBID  
  Предоставляет способ ATL для получения *libid* библиотеки типов.  
   
 ```
@@ -83,14 +84,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>Пример  
  Атрибуты не созданный мастером ATL-проекты будет пример использования этого макроса.  
   
-##  <a name="a-namedeclarenoregistrya--declarenoregistry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
  Используйте `DECLARE_NO_REGISTRY` , если вы хотите избежать любой регистрации ATL по умолчанию для класса, в котором находится этот макрос.  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="a-namedeclareregistrya--declareregistry"></a><a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>DECLARE_REGISTRY  
  Вводит стандартный класс регистрации в системном реестре или удаляет его из системного реестра.  
   
 ```
@@ -123,7 +124,7 @@ DECLARE_REGISTRY(
   
  При создании объекта или управление с помощью мастера добавления классов ATL, мастер автоматически реализует поддержку реестра на основе сценария и добавляет [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) макрос в файлы. Если не требуется поддержка реестра на основе сценария, необходимо заменить этот макрос с `DECLARE_REGISTRY`. `DECLARE_REGISTRY`вставляет только пять основных ключей, описанных выше, в реестр. Необходимо вручную написать код для вставки другие ключи в реестр.  
   
-##  <a name="a-namedeclareregistryappidresourceida--declareregistryappidresourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
  Указывает сведения, необходимые для автоматической регистрации *appid*.  
   
 ```
@@ -145,7 +146,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>Пример  
  Классы, добавленные в проекты ATL с помощью мастера добавления класса код будет иметь пример использования этого макроса.  
   
-##  <a name="a-namedeclareregistryresourcea--declareregistryresource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
  Получает именованный ресурс, содержащий файл реестра и запускает сценарий, введите объекты в системный реестр или удалить их из системного реестра.  
   
 ```
@@ -168,7 +169,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  Дополнительные сведения о подстановочных параметров и сценариев см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).  
   
-##  <a name="a-namedeclareregistryresourceida--declareregistryresourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
  То же, что [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) за исключением того, что он использует, создаваемые мастером **UINT** для определения ресурса, а не имя строки.  
   
 ```

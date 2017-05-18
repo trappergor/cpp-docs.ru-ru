@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
 ms.openlocfilehash: 87aadf7aacc31ded165a8e1380823cb20e614fb1
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/24/2017
   
  Эти операторы определены в файле atlsecurity.h.  
   
-##  <a name="a-nameoperatoreqeqa--operator-"></a><a name="operator_eq_eq"></a>оператор ==  
+##  <a name="operator_eq_eq"></a>оператор ==  
  Сравнивает `CSid` объектов или `SID` структуры (идентификатор безопасности) для проверки на равенство.  
   
 ```   
@@ -68,7 +69,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если объекты равны, **false** , если они не равны.  
   
-##  <a name="a-nameoperatorneqa--operator-"></a><a name="operator_neq"></a>оператор! =  
+##  <a name="operator_neq"></a>оператор! =  
  Сравнивает `CSid` объектов или `SID` структуры (идентификатор безопасности) для проверки на неравенство.  
   
 ```   
@@ -85,7 +86,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если объекты не равны, **false** если они равны.  
   
-##  <a name="a-nameoperatorlta--operator-"></a><a name="operator_lt"></a>оператор  
+##  <a name="operator_lt"></a>оператор  
  Проверяет, `CSid` объекта или `SID` структура в левой части оператора меньше, чем `CSid` объекта или `SID` структура справа (для совместимости Стандартная библиотека C++).  
   
 ```   
@@ -105,7 +106,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Примечания  
  Этот оператор выполняет действия по адресу `CSid` объекта или `SID` структура и реализован для обеспечения совместимости с классы коллекций стандартной библиотеки C++.  
   
-##  <a name="a-nameoperatorgta--operator-"></a><a name="operator_gt"></a>оператор настроек  
+##  <a name="operator_gt"></a>оператор настроек  
  Проверяет, `CSid` объекта или `SID` структура слева от оператора больше, чем `CSid` объекта или `SID` структура справа (для совместимости Стандартная библиотека C++).  
   
 ```   
@@ -125,7 +126,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Примечания  
  Этот оператор выполняет действия по адресу `CSid` объекта или `SID` структура и реализован для обеспечения совместимости с классы коллекций стандартной библиотеки C++.  
   
-##  <a name="a-nameoperatorlteqa--operator-"></a><a name="operator_lt__eq"></a>оператор<=></=>  
+##  <a name="operator_lt__eq"></a>оператор<=></=>  
  Проверяет, `CSid` объекта или `SID` структура слева от оператора меньше или равно `CSid` объекта или `SID` структура справа (для совместимости Стандартная библиотека C++).  
   
 ```   
@@ -145,7 +146,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Примечания  
  Этот оператор выполняет действия по адресу `CSid` объекта или `SID` структура и реализован для обеспечения совместимости с классы коллекций стандартной библиотеки C++.  
   
-##  <a name="a-nameoperatorgteqa--operator-"></a><a name="operator_gt__eq"></a>оператор настроек =  
+##  <a name="operator_gt__eq"></a>оператор настроек =  
  Проверяет, `CSid` объекта или `SID` структура слева от оператора больше или равно `CSid` объекта или `SID` структура справа (для совместимости Стандартная библиотека C++).  
   
 ```   

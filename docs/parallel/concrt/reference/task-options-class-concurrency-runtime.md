@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
 ms.openlocfilehash: 9b0d7d245ae204fd59715c8142a836adbb63c10a
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -74,7 +75,7 @@ class task_options;
   
  **Пространство имен:** concurrency  
   
-##  <a name="a-namegetcancellationtokena--taskoptionsgetcancellationtoken-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>Метод task_options::get_cancellation_token (среда выполнения с параллелизмом)  
+##  <a name="get_cancellation_token"></a>Метод task_options::get_cancellation_token (среда выполнения с параллелизмом)  
  Возвращает токен отмены  
   
 ```
@@ -83,7 +84,7 @@ cancellation_token get_cancellation_token() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namegetcontinuationcontexta--taskoptionsgetcontinuationcontext-method-concurrency-runtime"></a><a name="get_continuation_context"></a>Метод task_options::get_continuation_context (среда выполнения с параллелизмом)  
+##  <a name="get_continuation_context"></a>Метод task_options::get_continuation_context (среда выполнения с параллелизмом)  
  Возвращает контекст продолжения  
   
 ```
@@ -92,7 +93,7 @@ task_continuation_context get_continuation_context() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namegetschedulera--taskoptionsgetscheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>Метод task_options::get_scheduler (среда выполнения с параллелизмом)  
+##  <a name="get_scheduler"></a>Метод task_options::get_scheduler (среда выполнения с параллелизмом)  
  Возвращает планировщик  
   
 ```
@@ -101,7 +102,7 @@ scheduler_ptr get_scheduler() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namehascancellationtokena--taskoptionshascancellationtoken-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>Метод task_options::has_cancellation_token (среда выполнения с параллелизмом)  
+##  <a name="has_cancellation_token"></a>Метод task_options::has_cancellation_token (среда выполнения с параллелизмом)  
  Показывает, был ли определен токен отмены пользователем  
   
 ```
@@ -110,7 +111,7 @@ bool has_cancellation_token() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namehasschedulera--taskoptionshasscheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>Метод task_options::has_scheduler (среда выполнения с параллелизмом)  
+##  <a name="has_scheduler"></a>Метод task_options::has_scheduler (среда выполнения с параллелизмом)  
  Показывает, был ли определен планировщик n пользователем  
   
 ```
@@ -119,7 +120,7 @@ bool has_scheduler() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="a-namesetcancellationtokena--taskoptionssetcancellationtoken-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>Метод task_options::set_cancellation_token (среда выполнения с параллелизмом)  
+##  <a name="set_cancellation_token"></a>Метод task_options::set_cancellation_token (среда выполнения с параллелизмом)  
  Задает токен в параметрах  
   
 ```
@@ -129,7 +130,7 @@ void set_cancellation_token(cancellation_token _Token);
 ### <a name="parameters"></a>Параметры  
  `_Token`  
   
-##  <a name="a-namesetcontinuationcontexta--taskoptionssetcontinuationcontext-method-concurrency-runtime"></a><a name="set_continuation_context"></a>Метод task_options::set_continuation_context (среда выполнения с параллелизмом)  
+##  <a name="set_continuation_context"></a>Метод task_options::set_continuation_context (среда выполнения с параллелизмом)  
  Задает контекст данного продолжения в параметрах  
   
 ```
@@ -139,7 +140,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 ### <a name="parameters"></a>Параметры  
  `_ContinuationContext`  
   
-##  <a name="a-namectora--taskoptionstaskoptions-constructor-concurrency-runtime"></a><a name="ctor"></a>Конструктор task_options::task_options (среда выполнения с параллелизмом)  
+##  <a name="ctor"></a>Конструктор task_options::task_options (среда выполнения с параллелизмом)  
  Заданный по умолчанию список параметров создания задачи  
   
 ```
