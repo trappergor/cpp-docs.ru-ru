@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 89aa66d3a1e85183baaba21f001b60e080895f7f
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
 |[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Сопоставляет идентификатор команды команды редактирования HTML и элемент пользовательского интерфейса.|  
 |[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Сопоставляет идентификатор команды редактирования команды, обработчик сообщений и элемент пользовательского интерфейса HTML.|  
   
-##  <a name="a-namedeclaredhtmleditingcmdmapa--declaredhtmleditingcmdmap"></a><a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
+##  <a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
  Объявляет карты команд редактирования DHTML в классе.  
   
 ```  
@@ -72,7 +73,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxhtml.h  
   
-##  <a name="a-namebegindhtmleditingcmdmapa--begindhtmleditingcmdmap"></a><a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
+##  <a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
  Начинается определение сопоставления команд редактирования DHTML в пределах класса.  
   
 ```  
@@ -91,7 +92,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxhtml.h  
   
-##  <a name="a-nameenddhtmleditingcmdmapa--enddhtmleditingcmdmap"></a><a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
+##  <a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
  Отмечает конец карты команд редактирования DHTML.  
   
 ```  
@@ -107,7 +108,7 @@ END_DHTMLEDITING_CMDMAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentrya--dhtmleditingcmdentry"></a><a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
+##  <a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
  Сопоставляет идентификатор команды команду редактирования HTML.  
   
 ```  
@@ -127,7 +128,7 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentryfunca--dhtmleditingcmdentryfunc"></a><a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
+##  <a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
  Сопоставляет идентификатор команды команды редактирования HTML и обработчик сообщений.  
   
 ```  
@@ -150,7 +151,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentrytypea--dhtmleditingcmdentrytype"></a><a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
+##  <a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
  Сопоставляет идентификатор команды команды редактирования HTML и элемент пользовательского интерфейса.  
   
 ```  
@@ -173,7 +174,7 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentryfunctypea--dhtmleditingcmdentryfunctype"></a><a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
+##  <a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
  Сопоставляет идентификатор команды редактирования команды, обработчик сообщений и элемент пользовательского интерфейса HTML.  
   
 ```  

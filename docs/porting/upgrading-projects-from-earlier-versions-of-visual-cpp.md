@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
 ms.openlocfilehash: 9a08af4a82aa6adcdb9e03899195f5329866eca2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Обновление проектов, созданных в предыдущих версиях Visual C++
@@ -63,8 +65,3 @@ ms.openlocfilehash: 9a08af4a82aa6adcdb9e03899195f5329866eca2
  [Новые возможности Visual C++ в Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
  [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)   
  [Нестандартное поведение](../cpp/nonstandard-behavior.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

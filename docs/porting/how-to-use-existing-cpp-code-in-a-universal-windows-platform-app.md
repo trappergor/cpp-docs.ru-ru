@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
+ms.contentlocale: ru-ru
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows
@@ -74,7 +76,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
 3.  [Перенос библиотеки C++ в компонент среды выполнения Windows](#BK_WinRTComponent)  
   
-##  <a name="a-namebkwin32dlla-using-a-win32-dll-in-a-universal-windows-platform-app"></a><a name="BK_Win32DLL"></a> Использование библиотеки DLL Win32 в приложении универсальной платформы Windows  
+##  <a name="BK_Win32DLL"></a> Использование библиотеки DLL Win32 в приложении универсальной платформы Windows  
  В целях повышения безопасности и надежности универсальные приложения Windows работают в среде выполнения с ограниченным доступом, поэтому здесь способ использования собственных библиотек DLL отличается от использования в классическом настольном приложении Windows. Исходный код для библиотеки DLL можно перенести для выполнения на платформе UWP. Сначала следует изменить несколько параметров проекта и метаданных файла проекта, чтобы определять проект как проект UWP. Необходимо скомпилировать код библиотеки с помощью параметра /ZW для активации C++/CX. В приложениях UWP запрещены некоторые вызовы API. Это связано с более строгим уровнем управления этой средой. См. статью [Win32 and COM for Windows Runtime apps and Universal Windows Platform (UWP) apps](https://msdn.microsoft.com/library/windows/apps/br205757.aspx) (Win32 и модель COM для приложений среды выполнения Windows и приложений универсальной платформы Windows (UWP)).  
   
  Следующая процедура применяется в тех случаях, когда у вас есть собственная библиотека DLL, которая предоставляет функции с помощью __declspec(dllexport).  
@@ -209,7 +211,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
     ```  
   
-##  <a name="a-namebkstaticliba-using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a> Использование собственной статической библиотеки C++ в приложении UWP  
+##  <a name="BK_StaticLib"></a> Использование собственной статической библиотеки C++ в приложении UWP  
  Собственную статическую библиотеку C++ можно использовать в проекте UWP, однако существуют некоторые ограничения, которые необходимо принимать во внимание. Начните с изучения этого [раздела](https://msdn.microsoft.com/library/hh771041.aspx) о статических библиотеках C++/CX. Доступ к машинному коду в статической библиотеке можно выполнить из приложения UWP, однако в такой библиотеке не рекомендуется создавать открытые ссылочные типы. При компиляции статической библиотеки с параметром /ZW библиотекарь (фактически скрытый компоновщик) выводит следующее предупреждение.  
   
 ```  
@@ -230,7 +232,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      Не добавляйте ссылки в узел **Ссылки** в **обозревателе решений**. Этот механизм работает только для компонентов среды выполнения Windows.  
   
-##  <a name="a-namebkwinrtcomponenta-porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a> Перенос библиотеки C++ в компонент среды выполнения Windows  
+##  <a name="BK_WinRTComponent"></a> Перенос библиотеки C++ в компонент среды выполнения Windows  
  Если требуется использовать собственные интерфейсы API в статической библиотеке из приложения UWP и имеется исходный код для собственной библиотеки, можно перенести код в компонент среды выполнения Windows. Вместо статической библиотеки будет существовать библиотека DLL. Ее можно использовать в любом приложении UWP на C++, но в отличие от статической библиотеки появится возможность добавления ссылочных типов и других конструкций C ++/CX, которые доступны клиентам в любом коде приложения UWP независимо от языка. Таким образом, эти типы доступны из C#, Visual Basic или JavaScript.  Основная процедура заключается в создании проекта "Компонент среды выполнения Windows", копировании в него кода для статической библиотеки и исправления ошибок, возникающих в связи с перемещением кода из стандартной компиляции C++ в компиляцию /ZW.  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Перенос библиотеки C++ в компонент среды выполнения Windows  
@@ -257,8 +259,3 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 ## <a name="see-also"></a>См. также  
  [Перенос на универсальную платформу Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

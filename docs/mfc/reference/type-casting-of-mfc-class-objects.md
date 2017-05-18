@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/24/2017
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|При проверке, если допускается приведение приводит указатель на указатель на объект класса.|  
 |[STATIC_DOWNCAST](#static_downcast)|Приводит указатель на объект из одного класса в указатель связанного типа. В отладочном построении вызывает **ASSERT** , если объект не является «вида» тип целевого объекта.|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  Предоставляет удобный способ приведение указателя на указатель на объект класса при проверке, если приведение является допустимым.  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Если объект, который ссылается указатель «вида» идентифицируемый класс макрос возвращает указатель на соответствующий. Если это не юридические приведения, этот макрос возвращает **NULL**.  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  Приведение *pobject* указатель на *class_name* объекта.  
   
 ```   

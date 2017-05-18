@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/24/2017
   
  Контейнеры можно разделить на три категории: последовательные контейнеры, ассоциативные контейнеры и контейнеры-адаптеры.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> Последовательные контейнеры  
+##  <a name="sequence_containers"></a> Последовательные контейнеры  
  Последовательные контейнеры поддерживают указанный пользователем порядок вставляемых элементов.  
   
  Контейнер `vector` ведет себя как массив, но может автоматически увеличиваться по мере необходимости. Он поддерживает прямой доступ и связанное хранение и имеет очень гибкую длину. По этим и многим другим причинам контейнер `vector` является наиболее предпочтительным последовательным контейнером для большинства областей применения. Если вы сомневаетесь в выборе вида последовательного контейнера, начните с использования вектора. Дополнительные сведения см. в разделе [Класс vector](../standard-library/vector-class.md).  

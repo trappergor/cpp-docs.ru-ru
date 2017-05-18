@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/24/2017
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Определяет обработчик для обработки уведомлений свойство из набора элементов управления OLE.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Получает свойство уведомлений, отправленных с помощью элемента управления, прежде чем они будут обработаны с контейнера элемента управления.|  
   
-##  <a name="a-namebegineventsinkmapa--begineventsinkmap"></a><a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
  Начинается определение вашей картой приемника событий.  
   
 ```   
@@ -78,7 +79,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="a-namedeclareeventsinkmapa--declareeventsinkmap"></a><a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
  OLE-контейнер позволяет картой приемника событий для задания событий, которые будет уведомляться контейнера.  
   
 ```   
@@ -93,7 +94,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="a-nameendeventsinkmapa--endeventsinkmap"></a><a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
  Завершает определение вашей картой приемника событий.  
   
 ```   
@@ -103,7 +104,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="a-nameoneventa--onevent"></a><a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>ON_EVENT  
  Используйте `ON_EVENT` макрос, чтобы определить функцию обработчика событий для события, инициируемые элемента управления OLE.  
   
 ```   
@@ -138,7 +139,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="a-nameoneventrangea--oneventrange"></a><a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>ON_EVENT_RANGE  
  Используйте `ON_EVENT_RANGE` макрос, чтобы определить функцию обработчика событий для события, инициируемые любого элемента управления OLE, наличие идентификатор элемента управления на непрерывный диапазон идентификаторов.  
   
 ```   
@@ -185,7 +186,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="a-nameoneventreflecta--oneventreflect"></a><a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
  `ON_EVENT_REFLECT` Макрос, при использовании событий приемником сопоставления класса-оболочки элемента управления OLE, получает события, создаваемые элемента управления, прежде чем они будут обработаны с контейнера элемента управления.  
   
 ```   
@@ -219,7 +220,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="a-nameonpropnotifya--onpropnotify"></a><a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
  Используйте `ON_PROPNOTIFY` макрос для определения запись карты приемника событий для обработки уведомления свойства из элемента управления OLE.  
   
 ```   
@@ -252,7 +253,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  Список **VTS_** константы, в разделе [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="a-nameonpropnotifyrangea--onpropnotifyrange"></a><a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
  Используйте `ON_PROPNOTIFY_RANGE` макрос, определение запись карты приемника событий для обработки свойств уведомлений из любого элемента управления OLE, наличие идентификатор элемента управления на непрерывный диапазон идентификаторов.  
   
 ```  
@@ -283,7 +284,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="a-nameonpropnotifyreflecta--onpropnotifyreflect"></a><a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
  `ON_PROPNOTIFY_REFLECT` Макрос, при использовании событий приемником сопоставления класса-оболочки элемента управления OLE, Получает свойство уведомлений, отправленных с помощью элемента управления, прежде чем они будут обработаны с контейнера элемента управления.  
   
 ```  

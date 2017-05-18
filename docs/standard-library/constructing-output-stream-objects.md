@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: ca8d4e9a44f4550d02e6d224ce0130d15e81da14
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [конструкторов потока выходной строки](#vclrfoutputstringstreamconstructorsanchor2).  
   
-##  <a name="a-namevclrfoutputfilestreamconstructorsanchor1a-output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a> Конструкторы потока выходного файла  
+##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a> Конструкторы потока выходного файла  
  Вы можете создать поток выходного файла одним из двух следующих способов.  
   
 -   Используйте конструктор по умолчанию, а затем вызовите функцию-член `open`.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ofstream myFile("filename", ios_base::out);
 ```  
   
-##  <a name="a-namevclrfoutputstringstreamconstructorsanchor2a-output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a> Конструкторы потока выходной строки  
+##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a> Конструкторы потока выходной строки  
  Чтобы создать поток выходной строки, можно использовать `ostringstream` следующим образом.  
   
 ```  

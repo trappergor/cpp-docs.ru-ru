@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: 9fb8a907c8052c9816d6b87247e903a63f34a5be
+ms.contentlocale: ru-ru
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcom.h  
 
-##  <a name="a-namebeginsinkmapa--beginsinkmap"></a><a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
  Объявляет начало картой приемника событий для составного элемента управления.  
   
 ```
@@ -70,7 +71,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Примечания  
  Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
-##  <a name="a-nameendsinkmapa--endsinkmap"></a><a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>END_SINK_MAP  
  Объявляет конец картой приемника событий для составного элемента управления.  
   
 ```
@@ -83,7 +84,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Примечания  
  Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
-##  <a name="a-namesinkentrya--sinkentry"></a><a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>SINK_ENTRY  
  Объявляет функцию-обработчик ( `fn`) для указанного события ( `dispid`), определяемый элемента управления `id`.  
   
 ```
@@ -106,7 +107,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Примечания  
  Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
-##  <a name="a-namesinkentryexa--sinkentryex-and-sinkentryexp"></a><a name="sink_entry_ex"></a>SINK_ENTRY_EX и SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX и SINK_ENTRY_EX_P
  Объявляет функцию-обработчик ( `fn`) для указанного события ( `dispid`), интерфейс диспетчеризации ( *iid)*, для элемента управления, идентифицируемый `id`.  
   
 ```
@@ -136,7 +137,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Примечания  
  Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
-##  <a name="a-namesinkentryinfoa--sinkentryinfo-and-sinkentryinfop"></a><a name="sink_entry_info"></a>SINK_ENTRY_INFO и SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO и SINK_ENTRY_INFO_P  
  Используйте `SINK_ENTRY_INFO` макрос в картой приемника событий, чтобы предоставить сведения, необходимые для [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) направляет функция соответствующего обработчика события.  
   
 ```
