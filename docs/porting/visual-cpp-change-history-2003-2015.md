@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
-ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
+ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
@@ -317,7 +318,7 @@ ms.lasthandoff: 04/05/2017
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **Политики launch::any и launch::sync** The nonstandard Политики launch::any и launch::sync were removed. Вместо launch::any используйте launch:async | launch:deferred. Вместо launch::sync используйте launch::deferred. См. раздел [launch Enumeration](../standard-library/future-enums.md#launch_enumeration) (Перечисление launch).  
+-   **Политики launch::any и launch::sync** The nonstandard Политики launch::any и launch::sync were removed. Вместо launch::any используйте launch:async | launch:deferred. Вместо launch::sync используйте launch::deferred. См. раздел [launch Enumeration](../standard-library/future-enums.md#launch) (Перечисление launch).  
   
 ####  <a name="BK_MFC"></a> MFC и ATL  
   
@@ -864,6 +865,752 @@ ms.lasthandoff: 04/05/2017
 -   **Конструкторы копии**  
   
      Как в [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)], так и в [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] компилятор создает конструктор копии для класса, если этот класс имеет определяемый пользователем конструктор перемещения, но не имеет определяемого пользователем конструктора копии. В Dev14 этот неявно создаваемый конструктор копии также помечается как "= delete".  
+
+<!--From here to VS_Update1 added 04/21/2017-->
+
+-   Элемент **main, объявляемый с модификатором extern "C", теперь требует тип возвращаемого значения.**  
+
+Для следующего кода теперь возвращается ошибка C4430. 
+```cpp
+extern "C" __cdecl main(){} // C4430
+```
+Чтобы устранить такую ошибку, добавьте тип возвращаемого значения:
+```cpp
+extern "C" int __cdecl main(){} // OK
+```
+
+ -   **typename не может использоваться в инициализаторе члена**  
+
+Для следующего кода теперь возвращается ошибка C2059.
+ ```cpp
+template<typename T>
+struct S1 : public T::type
+{
+    S1() : typename T::type() // C2059
+    {
+    }
+};
+
+struct S2 {
+    typedef S2 type;
+};
+
+S1<S2> s;
+```
+Чтобы устранить эту ошибку, удалите `typename` из инициализатора:
+```cpp
+S1() : T::type() // OK
+...
+```
+
+-   **Класс хранения игнорируется для явной специализации.** 
+
+В следующем коде игнорируется статический описатель класса хранения 
+```cpp
+template <typename T>
+void myfunc(T h)
+{
+}
+
+template<>
+static void myfunc(double h) // static is ignored
+{
+}
+
+```
+
+-   **Использование константы в static_assert внутри шаблона класса будет всегда приводить к ошибке.**  
+
+В следующем коде вызов static_assert всегда приводит к сбою.
+```cpp
+template <size_t some_value>
+struct S1
+{
+    static_assert(false, "default not valid"); // always invoked
+
+};
+
+//other partial specializations here
+```
+
+Чтобы обойти это, заключите значение в такую структуру:
+```cpp
+template <size_t some_value>
+struct constant_false {
+    static const bool value = false;
+};
+
+template <size_t some_value>
+struct S1
+{
+    static_assert(constant_false<some_value>::value, "default not valid");
+};
+
+//other partial specializations here
+```
+
+-   **Правила применяются для прямого объявления. (Применимо только к C.)**  
+
+Для следующего кода теперь возвращается ошибка C2065.
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
+```
+
+Для устранения этой проблемы добавьте соответствующие опережающие объявления:
+
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+// forward declarations:
+typedef struct token_s TOKEN; 
+typedef TOKEN *PTOKEN;
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
+```
+
+-   **Более согласованное применение типов указателей функций**  
+
+Для следующего кода теперь возвращается ошибка C2197.
+
+```cpp
+typedef int(*F1)(int);
+typedef int(*F2)(int, int);
+
+void func(F1 f, int v1, int v2)
+{
+    f(v1, v2); // C2197
+}
+```
+
+-   **Неоднозначные вызовы перегруженных функций**  
+
+Для следующего кода теперь возвращается ошибка C266: 'N::bind': неоднозначный вызов перегруженной функции.
+```cpp 
+template<typename R, typename T, typename T1, typename A1>
+void bind(R(T::*)(T1), A1&&);
+
+namespace N
+{
+    template <typename T, typename R, typename ... Tx>
+    void bind(R(T::*)(Tx...), T* ptr);
+}
+
+using namespace N;
+
+class Manager
+{
+public:
+    void func(bool initializing);
+
+    void mf()
+    {
+        bind(&Manager::func, this); //C2668
+    }
+};
+```
+
+Чтобы устранить эту ошибку, полностью определите вызов для привязки: N::bind(...). Однако, если это изменение проявляется через необъявленный идентификатор (C2065), то его лучше исправить применением объявления "using".
+
+Такая ситуация часто возникает с ComPtr и другими типами в пространстве имен Microsoft::WRL.
+
+-   **Исправление неверного адреса**  
+
+Для следующего кода теперь возвращается ошибка C2440: "=": невозможно преобразовать "тип *" в "тип". Чтобы устранить эту ошибку, измените &(тип) на (тип) и (&f()) на (f()).
+ 
+```cpp
+\\ C
+typedef void (*type)(void);
+ 
+void f(int i, type p);
+void g(int);
+void h(void)
+{
+    f(0, &(type)g);
+}
+ 
+\\ C++
+typedef void(*type)(void);
+ 
+type f();
+ 
+void g(type);
+ 
+void h()
+{
+    g(&f());
+}
+
+```
+
+-   **Строковый литерал является массивом констант**  
+
+Для следующего кода теперь создается ошибка C2664: "void f (void *)": не удается преобразовать аргумент 1 из 'const char (*)[2]" в "void *"
+```cpp
+void f(void *);
+ 
+void h(void)
+{
+    f(&__FUNCTION__); 
+    void *p = &"";
+}
+```
+
+Чтобы устранить эту ошибку, измените тип параметра функции на "const void *" или измените текст h, чтобы он выглядел следующим образом:
+
+```cpp
+void h(void)
+{
+    char name[] = __FUNCTION__;
+    f( name); 
+    void *p = &"";
+}
+
+```
+
+-   **Строки UDL C++11**  
+
+Теперь для следующего кода создается ошибка C3688: недопустимый литеральный суффикс 'L'; литеральный оператор или литеральный шаблон оператора 'оператор ""L' не найден
+
+
+```cpp
+#define MACRO
+
+#define STRCAT(x, y) x\#\#y
+
+int main(){
+
+    auto *val1 = L"string"MACRO;
+    auto *val2 = L"hello "L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+```
+Чтобы устранить эту ошибку, измените код следующим образом:
+
+```cpp
+#define MACRO
+
+// Remove ##. Strings are automatically
+// concatenated so they are not needed
+#define STRCAT(x, y) x y
+
+int main(){
+    //Add space after closing quote
+    auto *val1 = L"string" MACRO;
+    auto *val2 = L"hello " L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+
+```
+В примере выше `MACRO` теперь не обрабатывается как два маркера (строка и макрос).  Теперь он рассматривается как единый токен UDL.  Это же правило применяется к L""L"", который ранее анализировался как L"" и L"", а теперь анализируется как L""L и "".
+
+Правила объединения строк также приведены в соответствие со стандартом, то есть L"a" "b" теперь эквивалентно L"ab". В предыдущих выпусках Visual Studio объединение строк с разной шириной символов не допускалось.
+
+
+-   **Удаление пустого символа C ++11**  
+
+Теперь для следующего кода создается ошибка C2137: Пустая символьная константа
+
+```cpp
+bool check(wchar_t c){
+    return c == L''; //implicit null character
+}
+```
+
+Чтобы устранить эту ошибку, измените код следующим образом:
+
+```cpp
+bool check(wchar_t c){
+    return c == L'\0';
+}
+```
+
+-   **Исключения MFC не могут быть перехвачены по значению, так как они не могут копироваться**  
+
+Следующий код в приложении MFC теперь вызывает ошибку C2316: 'D': не удается перехватить, поскольку деструктор и/или конструктор копии недоступен или удален
+
+```cpp
+struct B {
+public:
+    B();
+private:
+    B(const B &);
+};
+
+struct D : public B {
+};
+
+int main()
+{
+    try
+    {
+    }
+    catch (D) // C2316
+    {
+    }
+}
+
+```
+Чтобы исправить этот код, можно изменить блок catch на 'catch (const D &)', но обычно лучше использовать макросы MFC TRY/CATCH.
+
+-   **alignof теперь является ключевым словом**  
+
+Теперь для следующего кода создается ошибка C2332: 'класс': отсутствует имя тега. Чтобы исправить код, переименуйте класс. Если же класс выполняет те же действия, что и alignof, просто замените класс новым ключевым словом.
+```cpp
+class alignof{}
+```
+
+-   **constexpr теперь является ключевым словом**  
+
+Теперь для следующего кода создается ошибка C2059: синтаксическая ошибка: ")". Чтобы исправить код, измените имена всех функций или переменных с именем "constexpr". 
+```cpp
+int constexpr() {return 1;}
+```
+
+-   **Перемещаемые типы не могут являться константами**  
+
+Если функция возвращает тип, который предназначен для перемещения, его возвращаемый тип должен быть const.
+
+-   **Удаленные конструкторы копии**  
+
+Теперь для приведенного ниже кода возвращается ошибка C2280'S::S(S &&)': попытка ссылки на удаленную функцию":
+
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = S(2, 3); //C2280
+```
+Чтобы устранить эту ошибку, используйте прямую инициализацию S2:
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = {2,3}; //OK
+```
+
+-   **Преобразование в указатель функции создается только без лямбда-выражения**  
+
+Для следующего кода в Visual Studio 2015 создается ошибка C2664. 
+
+```cpp
+void func(int(*)(int)) {}
+
+int main() {
+
+    func([=](int val) { return val; });
+}
+```
+Чтобы устранить эту ошибку, удалите `=` из списка передаваемых параметров.
+
+-   **Неоднозначные вызовы с участием операторов преобразования**  
+
+Теперь для следующего кода создается ошибка C2440: "приведение типа": невозможно преобразовать "S2" в "S1":
+
+```cpp 
+struct S1 {
+    S1(int);
+};
+
+struct S2 {
+    operator S1();
+    operator int();
+};
+
+void f(S2 s2)
+{
+
+    (S1)s2;
+
+}
+```
+Чтобы устранить эту ошибку, явным образом вызовите оператор преобразования:
+
+```cpp
+void f(S2 s2)
+{
+    //Explicitly call the conversion operator
+    s2.operator S1();
+    // Or
+    S1((int)s2);
+}
+
+```
+
+Теперь для следующего кода создается ошибка C2593: "оператор =" является неоднозначным:
+
+```cpp
+struct S1 {};
+
+struct S2 {
+    operator S1&();
+    operator S1() const;
+};
+
+void f(S1 *p, S2 s)
+{
+    *p = s;
+}
+```
+Чтобы устранить эту ошибку, явным образом вызовите оператор преобразования:
+```cpp
+void f(S1 *p, S2 s)
+{
+       *p = s.operator S1&();
+}
+```
+
+-   **Исправление недопустимой инициализации копирования для инициализации нестатических данных-членов (NSDMI)**  
+
+Теперь для следующего кода создается ошибка C2664: 'S1::S1(S1 &&)': не удается преобразовать аргумент 1 из 'bool' в 'const S1 &':
+```cpp
+struct S1 {
+    explicit S1(bool);
+};
+
+struct S2 {
+    S1 s2 = true; // error
+};
+```
+Чтобы устранить эту ошибку, используйте прямую инициализацию:
+```cpp
+struct S2 {
+S1 s1{true}; // OK
+};
+```
+
+-   **Доступ к конструкторам внутри операторов decltype**  
+
+Для следующего кода теперь создается ошибка C2248: 'S::S': невозможно обратиться к частному члену, объявленному в классе 'S':
+```cpp
+class S {
+    S();
+public:
+    int i;
+};
+
+class S2 {
+    auto f() -> decltype(S().i);
+};
+```
+Чтобы исправить эту ошибку, добавьте в S объявление дружественных отношений для S2:
+```cpp
+class S {
+    S();
+    friend class S2; // Make S2 a friend
+public:
+    int i;
+};
+```
+
+-   **Конструктор по умолчанию для лямбда-выражения неявно удаляется**  
+
+Теперь для следующего кода создается ошибка C3497: нельзя создать экземпляр лямбда-выражения:
+```cpp
+void func(){
+    auto lambda = [](){};    
+ 
+    decltype(lambda) other;
+}
+```
+Чтобы устранить эту ошибку, избавьтесь от вызовов конструктора по умолчанию. Если лямбда-выражение ничего не записывает, ее можно преобразовать в указатель функции.
+
+-   **Лямбда-выражения с удаленным оператором назначения**  
+
+Для следующего кода теперь возвращается ошибка C2280.
+
+```cpp
+#include <memory>
+#include <type_traits>
+
+template <typename T, typename D>
+std::unique_ptr<T, typename std::remove_reference<D &&>::type> wrap_unique(T *p, D &&d);
+
+void f(int i)
+{
+    auto encodedMsg = wrap_unique<unsigned char>(nullptr, [i](unsigned char *p) {
+    });
+    encodedMsg = std::move(encodedMsg);
+}
+```
+Чтобы устранить эту ошибку, замените лямбда-выражение классом функтора или избавьтесь от использования оператора присваивания.
+
+-   **Попытка перемещения объекта с помощью удаленного конструктора копии**  
+
+Теперь для следующего кода создается ошибка C2280: 'moveable::moveable(const moveable &)': попытка сослаться на удаленную функцию
+```cpp
+struct moveable {
+
+    moveable() = default;
+    moveable(moveable&&) = default;
+    moveable(const moveable&) = delete;
+};
+
+struct S {
+    S(moveable && m) :
+        m_m(m)//copy constructor deleted
+    {}
+    moveable m_m;
+};
+
+```
+Чтобы устранить эту ошибку, используйте std::move.
+```cpp
+S(moveable && m) :
+    m_m(std::move(m))
+```
+-   **Локальный класс не может ссылаться на другой локальный класс, определенный позднее в той же функции**  
+
+Теперь для следующего кода создается ошибка C2079: 's' использует неопределенную структуру 'main::S2'
+```cpp
+int main()
+{
+    struct S2;
+    struct S1 {
+        void f() {
+            S2 s;
+        }
+    };
+    struct S2 {};
+}
+```
+Чтобы исправить эту ошибку, переместите определение S2:
+```cpp
+int main()
+{
+    struct S2 { //moved up
+    };
+ 
+struct S1 {
+    void f() {
+        S2 s;
+        }
+    };
+}
+```
+
+-   **Невозможно вызвать защищенный базовый конструктор в теле производного конструктора.**  
+
+Для следующего кода теперь создается ошибка C2248: 'S1::S1': невозможно обратиться к частному члену, объявленному в классе 'S1':
+```cpp
+struct S1 {
+protected:
+    S1();
+};
+
+struct S2 : public S1 {
+    S2() {
+        S1();
+    }
+};
+```
+Чтобы исправить эту ошибку, удалите из конструктора S2 вызов S1(), а при необходимости поместите его в другую функцию.
+
+-   **{} запрещает преобразование в указатель**  
+
+Для следующего кода теперь создается ошибка C2439 'S::p': не удалось инициализировать член    
+```cpp
+struct S {
+    S() : p({ 0 }) {}
+    void *p;
+};
+```
+Чтобы устранить эту ошибку, удалите скобки вокруг 0 или воспользуйтесь `nullptr`, как показано в следующем примере:
+```cpp
+struct S {
+    S() : p(nullptr) {}
+    void *p;
+};
+```
+
+-   **Неверное определение макросов и использование со скобками**  
+
+Для следующего примера кода теперь создается ошибка C2008: ';': не ожидается в определении макроса
+```cpp
+#define A; //cause of error
+
+struct S {
+    A(); // error
+};
+```
+Чтобы устранить эту проблему, замените код в верхней строке на `#define A();`
+
+Теперь для следующего кода создается ошибка C2059: синтаксическая ошибка: ')'.
+```cpp
+
+//notice the space after 'A'
+#define A () ;
+
+struct S {
+    A();
+};
+```
+Чтобы исправить этот код, удалите пробел между A и ().
+
+Для следующего кода создается ошибка C2091: функция возвращает функцию:
+
+```cpp
+
+#define DECLARE void f()
+
+struct S {
+    DECLARE();
+};
+```
+Чтобы устранить эту ошибку, удалите круглые скобки после DECLARE в S: `DECLARE;`.
+
+Для следующего кода создается ошибка C2062: непредвиденный тип 'int'
+
+```cpp
+#define A (int)
+
+struct S {
+    A a;
+};
+```
+Чтобы устранить эту проблему, определите A следующим образом:
+```cpp
+#define A int
+```
+
+-   **Дополнительные скобки в объявлениях**  
+
+Для следующего кода создается ошибка C2062: непредвиденный тип 'int'
+```cpp
+
+struct S {
+    int i;
+    (int)j;
+};
+```
+Чтобы устранить эту ошибку, удалите скобки из `j`. Если эти скобки необходимы для ясности, используйте typedef.
+
+-   **Создаваемые компилятором конструкторы и __declspec(novtable)**  
+
+В Visual Studio 2015 существует высокая вероятность, что создаваемые компилятором строковые конструкторы абстрактных классов с виртуальными базовыми классами неправильно используют __declspec(novtable) в сочетании с __declspec(dllimport).
+
+-   **auto требует одного выражения в инициализации прямого списка** теперь для следующего кода создается ошибка C3518: 'testPositions': в контексте инициализации прямого списка тип 'auto' можно определить только по одному выражению инициализатора
+
+```cpp
+auto testPositions{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+Чтобы устранить эту ошибку, testPositions можно инициализировать следующим образом:
+
+```cpp
+std::tuple<int, int> testPositions[]{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+
+-   **Проверка типов и указателей на типы для is_convertible**  
+
+В следующем коде проверочное утверждение теперь приводит к сбою. 
+
+```cpp
+struct B1 {
+private:
+    B1(const B1 &);
+};
+struct B2 : public B1 {};
+struct D : public B2 {};
+
+static_assert(std::is_convertible<D, B2>::value, "fail");
+```
+Чтобы устранить эту ошибку, измените static_assert так, чтобы в нем сравнивались указатели на D и B2:
+
+```cpp
+static_assert(std::is_convertible<D*, B2*>::value, "fail");
+```
+
+-   **объявления declspec(novtable) должны быть согласованы**  
+
+Объявления declspec должны быть согласованы во всех библиотеках. Следующий код теперь приводит к нарушению правила одного определения (ODR):
+
+```cpp
+
+//a.cpp
+class __declspec(dllexport)
+    A {
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+
+A::A() {}
+A::~A() {}
+A::A(const A&) {}
+
+//b.cpp
+// compile with cl.exe /nologo /LD /EHsc /Osx b.cpp
+#pragma comment(lib, "A")
+class __declspec(dllimport) A
+{
+public: A();
+         A(const A&);
+         virtual ~A();
+private:
+    int i;
+};
+
+struct __declspec(novtable) __declspec(dllexport) B
+    : virtual public A {
+    virtual void f() = 0;
+};
+
+//c.cpp
+#pragma comment(lib, "A")
+#pragma comment(lib, "B")
+class __declspec(dllimport) A
+{
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+struct  /* __declspec(novtable) */ __declspec(dllimport) B // Error. B needs to be novtable here also.
+    : virtual public A
+{
+    virtual void f() = 0;
+};
+
+struct C : virtual B
+{
+    virtual void f();
+};
+
+void C::f() {}
+C c;
+```
+
+
   
 ###  <a name="VS_Update1"></a> Улучшения соответствия в обновлении 1  
   
@@ -1509,7 +2256,7 @@ ms.lasthandoff: 04/05/2017
   
     ```  
   
--   `volatile`Переменные-члены **не допускают неявно определенных конструкторов и операторов присваивания**  
+-   `volatile`Переменные-члены  **не допускают неявно определенных конструкторов и операторов присваивания**  
   
      В предыдущих версиях компилятора допускалось автоматическое создание конструкторов копирования и перемещения по умолчанию, а также операторов присваивания копирования и перемещения по умолчанию для класса, содержащего переменные-члены `volatile`. Это поведение было неправильным и не соответствовало стандарту языка C++. Теперь компилятор рассматривает класс с переменными-членами volatile как имеющий нетривиальные конструкторы и операторы присваивания, что делает невозможным автоматическую реализацию этих операторов по умолчанию.  Если такой класс является членом объединения (или анонимного объединения внутри класса), конструкторы копирования и перемещения и операторы присваивания копирования и перемещения объединения (или класса, содержащего анонимное объединение) будут неявно определены как удаленные. Попытка создать или скопировать объединение (или класс, содержащий анонимное объединение), не объявляя их явно, будет являться ошибкой. В результате будет выдана ошибка компилятора C2280.  
   
@@ -2795,3 +3542,4 @@ ms.lasthandoff: 04/05/2017
   
 ## <a name="see-also"></a>См. также  
 [What's New for Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio)
+
