@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -38,79 +38,84 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1519fde9f60f9cb9b45db4a4921f2bec5185e549
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 507270783542ca0f76632c180b23330653b0018f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="secure-template-overloads"></a>Безопасные перегрузки шаблонов
-Многие функции CRT стали нерекомендуемыми в пользу новых более безопасных версий (например, `strcpy_s` является более безопасной заменой для `strcpy`). CRT предоставляет перегруженные шаблоны, которые помогают упростить переход к более безопасным вариантам.  
+Корпорация Майкрософт объявила устаревшими многие функции библиотеки C времени выполнения (CRT), заменив их версиями с более высоким уровнем безопасности. Например, `strcpy_s` является более безопасной заменой для `strcpy`. Устаревшие функции часто становятся причиной проблем с безопасностью, поскольку они допускают операции, изменяющие содержимое памяти. По умолчанию компилятор выдает предупреждение об устаревании, если в коде присутствует любая из этих функций. CRT предоставляет для этих функций перегруженные шаблоны C++, которые помогают упростить переход к более безопасным вариантам.  
   
- Например, этот код создает предупреждение, поскольку функция `strcpy` стала нерекомендуемой:  
+Например, для этого фрагмента кода создается предупреждение, поскольку функция `strcpy` объявлена устаревшей:  
   
- `char szBuf[10];`  
+```cpp  
+char szBuf[10];  
+strcpy(szBuf, "test"); // warning: deprecated  
+```
   
- `strcpy(szBuf, "test"); // warning: deprecated`  
+Предупреждение об устаревании сообщает вам, что используемый код может быть небезопасным. Если вы проверили и убедились, что ваш код не может перезаписать память, у вас есть несколько вариантов. Вы можете просто игнорировать это предупреждение. Вы можете добавить символ `_CRT_SECURE_NO_WARNINGS` перед инструкциями include в заголовках CRT, чтобы подавить предупреждение. Также вы можете изменить код, заменив эту функцию на `strcpy_s`:  
   
- Это предупреждение можно игнорировать. Определите символ `_CRT_SECURE_NO_WARNINGS`, чтобы отключить предупреждение, или обновите код для использования функции `strcpy_s`:  
+```cpp  
+char szBuf[10];  
+strcpy_s(szBuf, 10, "test"); // security-enhanced _s function  
+```
   
- `char szBuf[10];`  
+Перегруженные версии шаблонов предоставляют дополнительные возможности. Если вы определите `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` со значением "1", для стандартных функций CRT будет разрешено использование перегруженных шаблонов, которые автоматически используют более безопасные варианты. Если `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` имеет значение "1", никаких изменений в коде не требуется. Вызов функции `strcpy` в фоновом режиме заменяется вызовом функции `strcpy_s` с автоматической подстановкой аргумента размера.  
   
- `strcpy_s(szBuf, 10, "test"); // security-enhanced _s function`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- Перегруженные версии шаблонов предоставляют дополнительные возможности. Определение `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` как значения "1" включает использование перегруженных шаблонов стандартных функций CRT, вызывающих более безопасные варианты автоматически. Если `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` определен как значение "1", никаких изменений в коде не требуется. Вызов функции `strcpy` будет в фоновом режиме заменен вызовом функции `strcpy_s` с автоматически предоставленным аргументом размера.  
+// ...  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+char szBuf[10];  
+strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `...`  
-  
- `char szBuf[10];`  
-  
- `strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
-  
- `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` не влияет на функции, которые принимают количество, например `strncpy`. Чтобы включить перегруженные шаблоны для функций, принимающих количество, определите `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` как значение "1". Однако перед этим действием следует убедиться, что код передает количество символов, а не размер буфера (частая ошибка). Кроме того, код, который явно записывает значение NULL в конец буфера после вызова функции, является необязательным, если вызывается безопасный вариант. Если требуется поведение усечения см. документацию [_TRUNCATE](../c-runtime-library/truncate.md).  
+Макрос `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` не влияет на функции, которые принимают аргумент количества, например `strncpy`. Чтобы включить перегруженные шаблоны для функций, принимающих количество, определите `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` как значение "1". Однако перед этим действием следует убедиться, что код передает количество символов, а не размер буфера (частая ошибка). Кроме того, код, который явно записывает значение NULL в конец буфера после вызова функции, является необязательным, если вызывается безопасный вариант. Если требуется поведение усечения см. документацию [_TRUNCATE](../c-runtime-library/truncate.md).  
   
 > [!NOTE]
 >  Макрос `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` требует, чтобы `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` также был определен как значение "1". Если `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` определен как значение "1" и `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` определен как значение "0", в приложении не выполняются никакие перегрузки шаблонов.  
   
- Определение `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` как значения "1" включает перегрузки шаблонов безопасных вариантов (имена оканчиваются на "_s"). В этом случае, если `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` определен как значение "1", в исходном коде необходимо сделать одно небольшое изменение.  
+Если вы определите `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` со значением "1", включается перегрузка шаблонов безопасными вариантами (имена которых оканчиваются на "_s"). В этом случае, если `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` определен как значение "1", в исходном коде необходимо сделать одно небольшое изменение.  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `...`  
+// ...  
   
- `char szBuf[10];`  
+char szBuf[10];  
+strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
-  
- Требуется изменить только имена функций (путем добавления "_s"); перегрузка шаблона предоставит аргумент размера.  
+ Требуется изменить только имена функций (добавив к ним символы "_s"), а перегрузка шаблона автоматически подставит аргумент размера.  
   
  По умолчанию `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` и `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` определены как "0" (запрещено), а `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` определен как "1" (разрешено).  
   
  Обратите внимание, что эти перегрузки шаблонов работают только для статических массивов. Динамически выделенные буферы требуют дополнительных изменений исходного кода. В приведенных выше примерах:  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- `...`  
+// ...  
   
- `char *szBuf = (char*)malloc(10);`  
-  
- `strcpy(szBuf, "test"); // still deprecated; have to change to`  
-  
- `// strcpy_s(szBuf, 10, "test");`  
+char *szBuf = (char*)malloc(10);  
+strcpy(szBuf, "test"); // still deprecated; you have to change it to  
+                       // strcpy_s(szBuf, 10, "test");  
+```  
   
  А также:  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `...`  
+// ...  
   
- `char *szBuf = (char*)malloc(10);`  
-  
- `strcpy_s(szBuf, "test"); // doesn't compile; have to change to`  
-  
- `// strcpy_s(szBuf, 10, "test");`  
+char *szBuf = (char*)malloc(10);  
+strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to  
+                         // strcpy_s(szBuf, 10, "test");  
+```  
   
 ## <a name="see-also"></a>См. также  
  [Функции безопасности в CRT](../c-runtime-library/security-features-in-the-crt.md)   

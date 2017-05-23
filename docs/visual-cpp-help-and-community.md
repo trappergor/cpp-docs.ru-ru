@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
@@ -52,7 +54,7 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
 |[Центр разработчиков для Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Содержит сведения об использовании C++ и других языков для разработки приложений для [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|  
   
 ### <a name="online-and-offline-documentation"></a>Документация, доступная в сети и вне сети  
- Можно просмотреть содержимое как из библиотеки MSDN, так и из центра разработчиков Windows в сети. Это содержимое часто обновляется.  
+ Содержимое разработчика корпорации Майкрософт можно просмотреть в Интернете. Это содержимое регулярно обновляется. 
   
  Можно также загрузить и просмотреть содержимое локально в автономном средстве просмотра справки. Автономная документация организована по книгам со связанным содержимым, которые также периодически обновляются. Можно загрузить интересующие вас книги, как только они становятся доступными. Дополнительные сведения см. в [окне справки (Майкрософт)](/visualstudio/ide/microsoft-help-viewer).  
   
@@ -61,11 +63,6 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Блог команды разработчиков Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Содержит записи, создаваемые экспертами из группы разработчиков Visual C++ по различным темам.|  
-|[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Содержит видеоинтервью и лекции. Используйте поле поиска на домашней странице канала 9 для поиска содержимого по C++.|  
+|[Канал 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Содержит видеоинтервью и лекции. Используйте поле поиска на домашней странице канала 9 для поиска содержимого по C++.|  
 |[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Содержит статьи и новости о Visual Studio и связанных средствах разработки.|  
 |[Форумы MSDN](http://go.microsoft.com/fwlink/p/?LinkId=256538)|Официальные форумы Microsoft, где можно размещать вопросы и получать ответы от представителей Microsoft и специалистов сообщества. Используйте поле поиска на домашней странице форумов для поиска форумов, которые непосредственно связаны с C++.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-
