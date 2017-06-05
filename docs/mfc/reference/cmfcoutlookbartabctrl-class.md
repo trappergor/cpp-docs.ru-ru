@@ -62,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Элемент управления "вкладка", который имеет внешний вид раздела **Область переходов** в Microsoft Outlook.  
-  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -290,7 +290,7 @@ int GetBorderSize() const;
  Размер границы в пикселях.  
   
 ##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetVisiblePageButtons() const;  
@@ -447,7 +447,7 @@ BOOL SetToolbarImageList(
  Этот метод не должен вызываться не в Microsoft Office 2003 режиме. Дополнительные сведения см. в разделе [CMFCOutlookBar класса](../../mfc/reference/cmfcoutlookbar-class.md).  
   
 ##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetVisiblePageButtons(int nVisiblePageButtons);

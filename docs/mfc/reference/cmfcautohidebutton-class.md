@@ -65,7 +65,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcautohidebutton-class"></a>Класс CMFCAutoHideButton
 Кнопка, которая показывает или скрывает [CDockablePane класса](../../mfc/reference/cdockablepane-class.md) , настроенную на скрытие.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -120,7 +121,7 @@ class CMFCAutoHideButton : public CObject
  **Заголовок:** afxautohidebutton.h  
   
 ##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void BringToTop();
@@ -199,7 +200,7 @@ CDockablePane* GetAutoHideWindow() const;
  Чтобы связать кнопка автоматического скрытия с `CDockablePane`, передайте `CDockablePane` в качестве параметра [CMFCAutoHideButton::Create](#create) метод.  
   
 ##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCAutoHideBar* GetParentToolBar();
@@ -210,7 +211,7 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRect() const;  
@@ -270,7 +271,7 @@ BOOL IsHorizontal() const;
  Платформа задает ориентацию [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объекта при его создании.  Ориентацию можно управлять с помощью `dwAlignment` параметр в [CMFCAutoHideButton::Create](#create) метод.  
   
 ##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsTop() const;  
@@ -369,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
  Логическое значение, указывающее, следует ли отображать кнопка автоматического скрытия.  
   
 ##  <a name="move"></a>CMFCAutoHideButton::Move  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Move(int nOffset);
@@ -381,7 +382,7 @@ void Move(int nOffset);
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ReplacePane(CDockablePane* pNewBar);

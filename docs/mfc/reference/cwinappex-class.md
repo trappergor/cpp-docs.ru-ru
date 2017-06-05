@@ -100,6 +100,7 @@ ms.lasthandoff: 03/31/2017
 # <a name="cwinappex-class"></a>Класс CWinAppEx
 `CWinAppEx`обрабатывает состояние приложения, сохраняет состояние в реестр, загружает состояние из реестра, инициализирует диспетчеры приложения и содержит ссылки на те же диспетчеры приложения.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -321,7 +322,7 @@ BOOL EnableUserTools(
  Дополнительные сведения о пользовательских средств и включить их в приложение см. в разделе [определенные пользователем инструменты](../../mfc/user-defined-tools.md).  
   
 ##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int ExitInstance();
@@ -373,7 +374,7 @@ CContextMenuManager* GetContextMenuManager();
  Если CContextMenuManager объект не инициализирован, эта функция вызывает [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) прежде чем вернуть указателем.  
   
 ##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetDataVersion() const;  
@@ -762,7 +763,7 @@ BOOL InitTooltipManager();
  Если приложение уже имеет диспетчера всплывающих подсказок и вызывается `InitTooltipManager`, ваше приложение получит [ASSERT](diagnostic-services.md#assert) сбоя. Таким образом, не следует вызывать `InitTooltipManager` при создании `CTooltipManager` объекта напрямую. Если вы не используете настраиваемый `CTooltipManager`, следует использовать `GetTooltipManager` для создания `CTooltipManager` объекта.  
   
 ##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsResourceSmartUpdate() const;  
@@ -936,7 +937,7 @@ virtual BOOL OnViewDoubleClick(
  Для поддержки возможности пользовательских мыши эту функцию необходимо вызывать при обработке `WM_LBUTTONDBLCLK` сообщения. Этот метод будет выполняться команда, связанная с идентификатор представления, предоставляемые `iViewId`. Дополнительные сведения о поведении пользовательского мыши см. в разделе [Настройка мыши и клавиатуры](../../mfc/keyboard-and-mouse-customization.md).  
   
 ##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnWorkspaceIdle(CWnd*);

@@ -124,6 +124,8 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmfcpropertygridproperty-class"></a>Класс CMFCPropertyGridProperty
 Объект `CMFCPropertyGridProperty` объект представляет элемент списка в элементе управления списком свойств.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -1203,7 +1205,7 @@ virtual BOOL OnKillFocus(CWnd*);
  По умолчанию этот метод не выполняет никаких действий и возвращается `TRUE`. При переопределении этого метода возвращают `TRUE` Если платформа можно завершить операцию редактирования, когда свойство теряет фокус ввода.  
   
 ##  <a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
@@ -1216,7 +1218,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
  По умолчанию этот метод не выполняет никаких действий.  
   
 ##  <a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPosSizeChanged(CRect);
@@ -1287,7 +1289,7 @@ virtual BOOL OnSetCursor() const;
  This method supports the following variant types: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, and `VT_BSTR`.  
   
 ##  <a name="onsetselection"></a>CMFCPropertyGridProperty::OnSetSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnSetSelection(CMFCPropertyGridProperty*);
