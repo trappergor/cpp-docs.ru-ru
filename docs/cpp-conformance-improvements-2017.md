@@ -1,7 +1,7 @@
 ---
 title: "Улучшения соответствия компилятора C++ | Документы Майкрософт"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mikeblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
-ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 06/08/2017
 
 ---
    
@@ -143,7 +143,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-Visual Studio 2017 правильно выдает ошибку, если левый операнд в операции условного вычисления является недопустимым в контексте constexpr. Следующий код компилируется в Visual Studio 2015, но не в Visual Studio 2017:
+Visual Studio 2017 правильно выдает ошибку, если левый операнд в операции условного вычисления является недопустимым в контексте constexpr. Следующий код компилируется в Visual Studio 2015, но не в Visual Studio 2017 (ошибка C3615: функция «f» с квалификатором constexpr не может выдавать константное выражение):
 
 ```cpp  
 template<int N>
@@ -154,7 +154,7 @@ struct array
 
 constexpr bool f(const array<1> &arr)
 {
-       return arr.size() == 10 || arr.size() == 11; // error starting in Visual Studio 2017
+       return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
 Чтобы исправить эту ошибку, объявите функцию array::size() как constexpr или удалите квалификатор constexpr из f. 
@@ -355,12 +355,12 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 ```cpp
 template<typename T> 
 struct S { 
-template<typename U> static int f() = delete; 
+   template<typename U> static int f() = delete; 
 }; 
  
 void g() 
 { 
-decltype(S<int>::f<int>()) i; // this should fail 
+   decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
 Чтобы устранить эту ошибку, объявите элемент "i" как `int`.
@@ -372,8 +372,8 @@ decltype(S<int>::f<int>()) i; // this should fail
 struct S; 
 enum E; 
  
-static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
-static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
+static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>Новое предупреждение компилятора и проверки среды выполнения для маршалинга между собственными и управляемыми функциями
@@ -384,16 +384,16 @@ static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 R
 class A 
 { 
 public: 
-A() : p_(new int) {} 
-~A() { delete p_; } 
+   A() : p_(new int) {} 
+   ~A() { delete p_; } 
  
-A(A const &) = delete; 
-A(A &&rhs) { 
-p_ = rhs.p_; 
+   A(A const &) = delete; 
+   A(A &&rhs) { 
+   p_ = rhs.p_; 
 } 
  
 private: 
-int *p_; 
+   int *p_; 
 }; 
  
 #pragma unmanaged 
@@ -415,7 +415,7 @@ int main()
 API-интерфейсы WinRT, выпускаемые для экспериментов и обратной связи, будут обозначаться атрибутом `Windows.Foundation.Metadata.ExperimentalAttribute`. В обновлении версии 15.3 компилятор выдает предупреждение C4698 при обнаружении этого атрибута. Несколько интерфейсов API в предыдущих версиях Windows SDK уже помечены этим атрибутом, следовательно вызов таких интерфейсов API приведет к появлению указанного предупреждения компилятора. В новых Windows SDK атрибут будет удален из всех поставляемых типов, но если вы используете старые версии SDK, эти предупреждения нужно скрыть для всех вызовов поставляемых типов.
 Для следующего кода создается предупреждение C4698: "'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' предоставляется только для ознакомительных целей и подлежит изменению или удалению в будущих обновлениях":
 ```cpp
-Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
 Чтобы отключить это предупреждение, добавьте атрибут #pragma.
@@ -435,7 +435,7 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
 struct S {}; 
  
 template <typename T> 
-void S::f(T t) {}
+void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
 Чтобы исправить такую ошибку, добавьте в класс следующее объявление:
@@ -460,7 +460,7 @@ void S::f(T t) {}
 #include <memory> 
  
 class B { }; 
-class D : B { }; // should be public B { }; 
+class D : B { }; // C2243. should be public B { }; 
  
 void f() 
 { 
@@ -477,7 +477,7 @@ struct A {
 }; 
  
 template <typename T> 
-T A<T>::f(T t, bool b = false) 
+T A<T>::f(T t, bool b = false) // C5034
 { 
 ... 
 }
@@ -527,7 +527,7 @@ Constexpr auto off2 = offsetof(A, bar);
 
 ```cpp
  
-__declspec(noinline) extern "C" HRESULT __stdcall
+__declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
 Чтобы устранить это предупреждение, переместите extern "C" вперед:
@@ -535,6 +535,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
+Это предупреждение по умолчанию отключено и влияет только на код, скомпилированный с `/Wall /WX`.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype и вызовы удаленных деструкторов
 В предыдущих версиях Visual Studio компилятор не отслеживал возникновение вызовов удаленных деструкторов в контексте выражений, связанных с "decltype". В обновлении версии 15.3 для приведенного ниже кода возвращается ошибка C2280, "'A<T>::~A(void)': попытка ссылки на удаленную функцию":
@@ -557,11 +558,11 @@ void h()
    g(42); 
 }
 ```
-### <a name="unitialized-const-variables"></a>Неинициализированные переменные const
+### <a name="uninitialized-const-variables"></a>Неинициализированные переменные const
 В выпуске Visual Studio 2017 RTW была допущена регрессия, из-за которой компилятор C++ не выдавал диагностических сообщений о том, что переменная "const" не инициализирована. Эта регрессия была устранена в обновлении 1 для Visual Studio 2017. Для следующего примера кода теперь выдается "предупреждение C4132: 'Значение': объект const необходимо инициализировать":
 
 ```cpp
-const int Value;
+const int Value; //C4132
 ```
 Чтобы исправить эту ошибку, присвойте значение переменной `Value`.
 
@@ -583,6 +584,108 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
  
 Это предупреждение отключено при использовании /Wv:18 и включено по умолчанию на уровне предупреждений W2.
 
+
+### <a name="stdisconvertible-for-array-types"></a>std::is_convertible для типов массива
+В предыдущих версиях компилятора класс [std::is_convertible](standard-library/is-convertible-class.md) выдавал неверные результаты для типов массива. Из-за этого разработчикам библиотек необходимо было особым образом обрабатывать в компиляторе Visual C++ признаки типа `std::is_convertable<…>`. В следующем примере статические функции assert успешно срабатывают в предыдущих версиях Visual Studio, но в Visual Studio 2017 с обновлением версии 15.3 завершаются ошибкой.
+
+```cpp
+#include <type_traits>
+ 
+using Array = char[1];
+ 
+static_assert(std::is_convertible<Array, Array>::value);
+static_assert((std::is_convertible<const Array, const Array>::value), "");
+static_assert((std::is_convertible<Array&, Array>::value), "");
+static_assert((std::is_convertible<Array, Array&>::value), "");
+```
+
+**std::is_convertible<From, To>** проверяет, правильно ли сформировано определение произвольной функции:
+```cpp 
+   To test() { return std::declval<From>(); }
+``` 
+
+### <a name="private-destructors-and-stdisconstructible"></a>Закрытые деструкторы и std::is_constructible
+Предыдущие версии компилятора не проверяли, является ли деструктор закрытым, при получении результата [std::is_constructible](standard-library/is-constructible-class.md). Теперь это принимается во внимание. В следующем примере статические функции assert успешно срабатывают в предыдущих версиях Visual Studio, но в Visual Studio 2017 с обновлением версии 15.3 завершаются ошибкой.
+
+```cpp
+#include <type_traits>
+ 
+class PrivateDtor {
+   PrivateDtor(int) { }
+private:
+   ~PrivateDtor() { }
+};
+ 
+// This assertion used to succeed. It now correctly fails.
+static_assert(std::is_constructible<PrivateDtor, int>::value);
+```  
+
+Закрытые деструкторы могут сделать тип неконструируемым. При вычислении **std::is_constructible<T, Args...>** подразумевается следующее объявление.
+```cpp 
+   T obj(std::declval<Args>()…)
+``` 
+Этот вызов подразумевает вызов деструктора.
+
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668: неоднозначное разрешение перегрузки
+Предыдущим версиям компилятора иногда не удавалось обнаружить неоднозначность, когда при использовании объявлений и при поиске функций по аргументам выявлялись различные кандидаты. Это может привести к некорректному выбору перегрузки и непредсказуемому поведению в среде выполнения. В следующем примере Visual Studio 2017 с обновлением версии 15.3 корректно выдает ошибку C2668, неоднозначный вызов перегруженной функции «f».
+
+```cpp
+namespace N {
+   template<class T>
+   void f(T&, T&);
+ 
+   template<class T>
+   void f();
+}
+ 
+template<class T>
+void f(T&, T&);
+ 
+struct S {};
+void f()
+{
+   using N::f; 
+ 
+   S s1, s2;
+   f(s1, s2); // C2668
+}
+```
+Чтобы исправить код, удалите оператор «using N::f», если вы намереваетесь вызвать «::f()».
+
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: локальные объявления функций и проверка по аргументам
+При локальном объявлении функции скрываются внутри области, поэтому поиск по аргументам не осуществляется.
+Но предыдущие версии компилятора Visual C++ в этом случае выполняли поиск функции по аргументам, что могло привести к некорректному выбору перегрузки и непредсказуемому поведению в среде выполнения. Как правило, ошибка возникает из-за неправильной сигнатуры в локальном объявлении функции. В следующем примере Visual Studio 2017 с обновлением версии 15.3 корректно выдает ошибку C2660, функция «f» не принимает два аргумента.
+
+```cpp
+struct S {}; 
+void f(S, int);
+ 
+void g()
+{
+   void f(S); // C2660 'f': function does not take 2 arguments:
+   // or void f(S, int);
+   S s;
+   f(s, 0);
+}
+```
+
+Чтобы устранить эту проблему, либо измените сигнатуру **f(S)**, либо удалите ее.
+
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038: порядок инициализации в списках инициализатора
+Члены класса инициализируются в порядке их объявления, а не порядке их отображения в списках инициализаторов. В предыдущих версиях компилятора, когда порядок списка инициализаторов отличался от порядка объявления, никакого предупреждения не выводилось. Это могло приводить к неопределенному поведению во время выполнения, если инициализация одного члена зависела от другого уже инициализированного члена в списке. В следующем примере Visual Studio 2017 с обновлением версии 15.3 (с /Wall или /WX) выдает предупреждение C5038: элемент данных «A::y» будет инициализирован после элемента данных «A::x»:
+
+```cpp
+struct A
+{
+    A(int a) : y(a), x(y) {} // Initialized in reverse, y reused
+    int x;
+    int y;
+};
+
+```
+Чтобы устранить проблему, список инициализатора должен иметь тот же порядок, что и объявления. Похожее предупреждение возникает, когда один инициализатор или оба ссылаются на члены базового класса.
+
+Обратите внимание, что это предупреждение по умолчанию отключено и относится только к коду, скомпилированному с /Wall или /WX.
 
 ## <a name="see-also"></a>См. также  
 [Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)  

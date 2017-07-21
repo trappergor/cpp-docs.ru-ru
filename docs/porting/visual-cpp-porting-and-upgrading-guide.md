@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: eb4787147a249addbab6c6c2afabf67d2497f78b
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: d548106a8820c9eea4e6c2956615fff8c6cd514c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Руководство по переносу и обновлению Visual C++
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/24/2017
 |[Перенос сторонних библиотек](porting-third-party-libraries.md)|Сведения об использовании средства командной строки **vcpkg** для переноса старых библиотек с открытым исходным кодом на версии, скомпилированные с помощью более новых наборов инструментов Visual C++.|  
 |[Перенос и обновление: примеры и конкретные случаи](porting-and-upgrading-examples-and-case-studies.md)|Для этого раздела мы перенесли и обновили несколько примеров и приложений, а также рассмотрели достигнутые результаты. Содержимое данного раздела может помочь получить представление о том, что собой представляет процесс переноса и обновления. На протяжении всего процесса мы даем советы и рекомендации по обновлению, а также поясняем, каким образом были устранены конкретные ошибки.|  
 |[Перенос на универсальную платформу Windows](porting-to-the-universal-windows-platform-cpp.md)|Содержит сведения о переносе кода в Windows 10.|  
-|[Знакомство с Visual C++ для пользователей UNIX](introduction-to-visual-cpp-for-unix-users.md)|Здесь приведены сведения для пользователей UNIX, которые незнакомы с [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] и хотят его освоить.|  
+|[Знакомство с Visual C++ для пользователей UNIX](introduction-to-visual-cpp-for-unix-users.md)|Содержит сведения для пользователей UNIX, которые не знакомы с Visual C++ и хотят научиться работать с этой средой.|  
 |[Перенос приложений из UNIX в Win32](porting-from-unix-to-win32.md)|Здесь описываются параметры для переноса приложений из UNIX в Windows.|  
 |[Основы миграции C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Подробно показан процесс обновления ваших управляемых расширений для синтаксиса C++ с целью использования нового синтаксиса. Дополнительные сведения см. в статье [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).|  
   
