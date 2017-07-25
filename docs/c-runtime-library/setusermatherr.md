@@ -1,62 +1,79 @@
 ---
-title: "__setusermatherr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__setusermatherr"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcrt.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__setusermatherr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__setusermatherr"
+title: "__setusermatherr | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __setusermatherr
+apilocation:
+- msvcr80.dll
+- msvcr90.dll
+- msvcrt.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr100.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- __setusermatherr
+dev_langs:
+- C++
+helpviewer_keywords:
+- __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# __setusermatherr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 43b4b5ec6cddcb4a325201a4f9e2afe02ef9454a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Определяет предоставленную пользователем процедуру для обработки математических ошибок вместо процедуры [\_matherr](../c-runtime-library/reference/matherr.md).  
+---
+# <a name="setusermatherr"></a>__setusermatherr
+Задает предоставляемую пользователем подпрограмму для обработки математических ошибок вместо подпрограммы [_matherr](../c-runtime-library/reference/matherr.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 void __setusermatherr(  
    _HANDLE_MATH_ERROR pf   
    )  
-  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pf`  
- Указатель на реализацию `_matherr`, предоставленную пользователем.  
+ Указатель на реализацию `_matherr`, предоставляемую пользователем.  
   
- Тип параметра `pf` объявлен как `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.  
+ Тип параметра `pf` объявляется как `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|\_\_setusermatherr|matherr.c|
+|-------------|---------------------|  
+|__setusermatherr|matherr.c|
