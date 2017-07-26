@@ -49,17 +49,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c8635152582cab1ce3ad45ef2c5d74a1f7cbf4f7
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 4185587c69b8002c5e6efa99b4cf4815e6af6a71
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="outp-outpw"></a>outp, outpw
-Эти функции POSIX устарели. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md).  
+Эти функции POSIX устарели. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) .  
   
 > [!IMPORTANT]
 >  Эти функции устарели. Начиная с Visual Studio 2015 они недоступны в CRT.  
   
 > [!IMPORTANT]
->  Этот API не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).
