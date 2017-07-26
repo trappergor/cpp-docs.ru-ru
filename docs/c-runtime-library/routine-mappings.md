@@ -1,41 +1,58 @@
 ---
-title: "Сопоставления процедур | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "универсальные текстовые сопоставления"
-  - "типы данных TCHAR.H, список рутинных сопоставлений"
+title: "Сопоставления процедур | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Сопоставления процедур
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Сопоставления универсальных текстовых процедур определены в TCHAR.H.  `_tccpy` и `_tclen` сопоставляются с функциями в модели многобайтовой кодировки; они сопоставляются с макросам или встроенным функциям в моделях однобайтовой кодировки и Юникода для полноты.  Дополнительные сведения об универсальных текстовых процедурах см. в разделе о соответствующих процедурах, связанных с `SBCS`, `_MBCS` или `_UNICODE`.  
+---
+# <a name="routine-mappings"></a>Сопоставления процедур
+Сопоставления универсальных текстовых подпрограмм определены в файле TCHAR.H. Функции `_tccpy` и `_tclen` сопоставляются функциям в модели многобайтовой кодировки; для полноты они сопоставляются с макросам или подставляемыми функциям в моделях однобайтовой кодировки и Юникода. Дополнительные сведения об универсальных текстовых подпрограммах см. в разделе справки о соответствующей подпрограмме, связанной с `SBCS`, `_MBCS` или `_UNICODE`.  
   
- Более конкретные сведения об отдельных процедурах, описанных в левом столбце приведенной ниже таблицы, недоступны в этой документации.  Однако можно легко найти сведения о соответствующей процедуре, связанной с `SBCS`, `_MBCS` или `_UNICODE`.  Выберите команду **Поиск** в меню **Справка** для поиска любой универсальной текстовой процедуры, указанной ниже.  
+ Более конкретные сведения об отдельных подпрограммах, описанных в левом столбце приведенной ниже таблицы, недоступны в этой документации. Однако можно легко найти сведения о соответствующей подпрограмме, связанной с `SBCS`, `_MBCS` или `_UNICODE`. Выберите команду **Поиск** в меню **Справка** для поиска любой универсальной текстовой подпрограммы, указанной ниже.  
   
- Дополнительные сведения см. в разделе [Универсальные текстовые сопоставления в файле Tchar.h](../Topic/Generic-Text%20Mappings%20in%20Tchar.h.md).  
+ Дополнительные сведения см. в разделе [Универсальные текстовые сопоставления в файле TCHAR.H](../text/generic-text-mappings-in-tchar-h.md).  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Имена универсальных текстовых функций|SBCS \(\_UNICODE & MBCS не определены\)|\_MBCS определено|\_UNICODE определено|  
-|-------------------------------------------|---------------------------------------------|-----------------------|--------------------------|  
+|Имя универсальной текстовой подпрограммы|Однобайтовая кодировка (_UNICODE и MBCS не определены)|_MBCS определено|_UNICODE определено|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -61,8 +78,8 @@ caps.handback.revision: 9
 |`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|  
 |`_istdigit`|`isdigit`|`_ismbcdigit`|`iswdigit`|  
 |`_istgraph`|`isgraph`|`_ismbcgraph`|`iswgraph`|  
-|`_istlead`|Всегда возвращает значение "false"|`_ismbblead`|Всегда возвращает значение "false"|  
-|`_istleadbyte`|Всегда возвращает значение "false"|`isleadbyte`|Всегда возвращает значение "false"|  
+|`_istlead`|Всегда возвращает значение false|`_ismbblead`|Всегда возвращает значение false|  
+|`_istleadbyte`|Всегда возвращает значение false|`isleadbyte`|Всегда возвращает значение false|  
 |`_istlegal`|Всегда возвращает значение true|`_ismbclegal`|Всегда возвращает значение true|  
 |`_istlower`|`islower`|`_ismbclower`|`iswlower`|  
 |`_istprint`|`isprint`|`_ismbcprint`|`iswprint`|  
@@ -91,11 +108,11 @@ caps.handback.revision: 9
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
-|`_tccmp`|Сопоставляется макросу или встроенной функции|`_mbsncmp`|Сопоставляется макросу или встроенной функции|  
-|`_tccpy`|Сопоставляется макросу или встроенной функции|`_mbccpy`|Сопоставляется макросу или встроенной функции|  
+|`_tccmp`|Сопоставляется макросу или встраиваемой функции|`_mbsncmp`|Сопоставляется макросу или встраиваемой функции|  
+|`_tccpy`|Сопоставляется макросу или встраиваемой функции|`_mbccpy`|Сопоставляется макросу или встраиваемой функции|  
 |`_tccpy_s`|`strcpy_s`|`_mbccpy_s`|`wcscpy_s`|  
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
-|`_tclen`|Сопоставляется макросу или встроенной функции|`_mbclen`|Сопоставляется макросу или встроенной функции|  
+|`_tclen`|Сопоставляется макросу или встраиваемой функции|`_mbclen`|Сопоставляется макросу или встраиваемой функции|  
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|  
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|  
@@ -271,9 +288,9 @@ caps.handback.revision: 9
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Универсальные текстовые сопоставления](../c-runtime-library/generic-text-mappings.md)   
  [Сопоставления типов данных](../c-runtime-library/data-type-mappings.md)   
  [Сопоставления констант и глобальных переменных](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [Пример программы, использующей обычный текст](../c-runtime-library/a-sample-generic-text-program.md)   
+ [Пример программы с использованием универсального текста](../c-runtime-library/a-sample-generic-text-program.md)   
  [Использование универсальных текстовых сопоставлений](../c-runtime-library/using-generic-text-mappings.md)

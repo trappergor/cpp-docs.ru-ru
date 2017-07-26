@@ -1,31 +1,49 @@
 ---
-title: "Пример программы, использующей обычный текст | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Тип _TCHAR"
-  - "сопоставления, типы данных TCHAR.H"
-  - "пример с обычным текстом [CRT]"
-  - "Тип TCHAR"
-  - "типы данных TCHAR.H, сопоставление"
+title: "Пример программы, использующей обычный текст | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Пример программы, использующей обычный текст
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="a-sample-generic-text-program"></a>Пример программы, использующей обычный текст
 **Блок, относящийся только к системам Майкрософт**  
   
  Следующая программа, GENTEXT.C, предоставляет более подробный пример использования универсальных текстовых сопоставлений, определенных в TCHAR.H:  
@@ -69,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- Если `_MBCS` было определено, GENTEXT.C сопоставляется к следующей программе MBCS:  
+ Если определена константа `_MBCS`, GENTEXT.C сопоставляется следующей программе с многобайтовой кодировкой (MBCS):  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -107,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- Если `_UNICODE` было определено, GENTEXT.C сопоставляется к следующей версии программы Unicode.  Дополнительные сведения об использовании `wmain` в программах Unicode в роли замены для `main` см. в разделе [Использование wmain](../c-language/using-wmain.md) в *Справочнике по языку C*.  
+ Если определена константа `_UNICODE`, GENTEXT.C сопоставляется следующей Юникод-версии программы. Дополнительные сведения об использовании функции`wmain` в программах Юникод в качестве замены функции `main` см. в разделе [Использование функции wmain](../c-language/using-wmain.md) в *Справочнике по языку C*.  
   
 ```  
 // crt_unicgtxt.c  
@@ -145,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- Если ни `_MBCS`, ни `_UNICODE` не были определены, GENTEXT.C сопоставляется в однобайтовый код ASCII следующим образом:  
+ Если ни одна из констант `_MBCS` и `_UNICODE` не определена, GENTEXT.C сопоставляется однобайтовому коду ASCII следующим образом:  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,7 +202,7 @@ int __cdecl main(int argc, char **argv, char **envp)
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Универсальные текстовые сопоставления](../c-runtime-library/generic-text-mappings.md)   
  [Сопоставления типов данных](../c-runtime-library/data-type-mappings.md)   
  [Сопоставления констант и глобальных переменных](../c-runtime-library/constant-and-global-variable-mappings.md)   
