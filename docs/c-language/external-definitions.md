@@ -1,40 +1,57 @@
 ---
-title: "Внешние определения | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "внешние определения"
-  - "внешняя компоновка, объявления переменных"
+title: "Внешние определения | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- external definitions
+- external linkage, variable declarations
 ms.assetid: 41e37bfc-b360-43b1-9972-28af2d365b20
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Внешние определения
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 918775a68b7497bb931694c99e9f1b20bc304639
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-*блок\-трансляции*:  
- *внешнее\-объявление*  
+---
+# <a name="external-definitions"></a>Внешние определения
+*translation-unit*:  
+ *external-declaration*  
   
- *блок\-трансляции внешнее\-объявление*  
+ *translation-unit external-declaration*  
   
- *внешнее\-объявление*:       \/\* Разрешается только во внешней области \(файла\) \*\/  
- *определение\-функции*  
+ *external-declaration*:       /\* Разрешается только во внешней области (области файла) \*/  
+ *function-definition*  
   
  `declaration`  
   
- *определение\-функции*:         \/\* Декларатор здесь является декларатором функции \*\/  
- *спецификаторы\-объявления*  необ *декларатор список\-объявлений* необ *составной\-оператор*  
+ *function-definition*:         /\* Декларатор здесь является декларатором функции \*/  
+ *declaration-specifiers* opt*declarator declaration-list* opt*compound-statement*  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Грамматика структуры фразы](../c-language/phrase-structure-grammar.md)

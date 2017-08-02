@@ -1,33 +1,50 @@
 ---
-title: "Простое назначение (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "операторы присваивания [C++], простые"
-  - "преобразование типов данных [C++], простое присваивание"
-  - "знак равенства"
-  - "операторы [C], простое присваивание"
-  - "оператор простого присваивания"
-  - "преобразование типов [С++], простое присваивание"
+title: "Простое назначение в C | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type conversion [C++], simple assignment
+- data type conversion [C++], simple assignment
+- operators [C], simple assignment
+- assignment operators [C++], simple
+- simple assignment operator
+- equal sign
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Простое назначение (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a60ec2f6f6466b579f917d02dabc24736c5a2e92
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Оператор простого присваивания присваивает значение правого операнда левому операнду.  Значения правого операнда преобразуется в тип выражения присваивания и заменяет значение, хранящееся в объекте, определяемом левым операндом.  Применяются правила преобразования для присваивания \(см. раздел [Преобразования при присваивании](../c-language/assignment-conversions.md)\).  
+---
+# <a name="simple-assignment-c"></a>Простое назначение (C)
+Оператор простого присваивания присваивает значение правого операнда левому операнду. Значения правого операнда преобразуется в тип выражения присваивания и заменяет значение, хранящееся в объекте, определяемом левым операндом. Применяются правила преобразования для назначений (см. статью [Преобразования назначений](../c-language/assignment-conversions.md)).  
   
 ```  
 double x;  
@@ -38,5 +55,5 @@ x = y;
   
  В этом примере значение переменной `y` преобразуется в тип **double** и присваивается переменной `x`.  
   
-## См. также  
- [Операторы назначения в C](../c-language/c-assignment-operators.md)
+## <a name="see-also"></a>См. также  
+ [Операторы присваивания C](../c-language/c-assignment-operators.md)

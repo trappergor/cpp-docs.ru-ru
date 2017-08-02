@@ -1,49 +1,66 @@
 ---
-title: "Константы файлов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_O_EXCL"
-  - "_O_RDWR"
-  - "_O_APPEND"
-  - "_O_RDONLY"
-  - "_O_TRUNC"
-  - "_O_CREAT"
-  - "_O_WRONLY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_O_APPEND - константа"
-  - "_O_CREAT - константа"
-  - "_O_EXCL - константа"
-  - "_O_RDONLY - константа"
-  - "_O_RDWR - константа"
-  - "_O_TRUNC - константа"
-  - "_O_WRONLY - константа"
-  - "O_APPEND - константа"
-  - "O_CREAT - константа"
-  - "O_EXCL - константа"
-  - "O_RDONLY - константа"
-  - "O_RDWR - константа"
-  - "O_TRUNC - константа"
-  - "O_WRONLY - константа"
+title: "Константы файлов | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _O_EXCL
+- _O_RDWR
+- _O_APPEND
+- _O_RDONLY
+- _O_TRUNC
+- _O_CREAT
+- _O_WRONLY
+dev_langs:
+- C++
+helpviewer_keywords:
+- _O_RDWR constant
+- O_EXCL constant
+- O_RDWR constant
+- O_WRONLY constant
+- O_APPEND constant
+- O_CREAT constant
+- _O_CREAT constant
+- _O_APPEND constant
+- _O_EXCL constant
+- O_TRUNC constant
+- _O_RDONLY constant
+- _O_TRUNC constant
+- O_RDONLY constant
+- _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Константы файлов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 354d107b9bbaf3f60153fbce5ee66b14e2a5b96d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-## Синтаксис  
+---
+# <a name="file-constants"></a>Константы файлов
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -51,33 +68,33 @@ caps.handback.revision: 6
   
 ```  
   
-## Заметки  
- Целочисленное выражение, сформированное из одной или нескольких констант, определяет тип разрешенных операций чтения или записи.  Оно формируется путем объединения одной или нескольких константы с константой режима преобразования.  
+## <a name="remarks"></a>Примечания  
+ Целочисленное выражение, образуемое из одной или нескольких этих констант, определяет тип разрешенных операций чтения или записи. Выражение образуется путем объединения одной или нескольких констант с константой режима преобразования.  
   
  Константы файла выглядят следующим образом:  
   
  `_O_APPEND`  
- Перемещает указатель файла в конец файла перед каждой операцией записи.  
+ Перемещает файловый указатель в конец файла перед каждой операцией записи.  
   
  `_O_CREAT`  
- Создает и открывает новый файл для записи; ничего не происходит, если файл с указанным *filename* существует.  
+ Создает новый файл и открывает его для записи. Игнорируется, если уже существует файл, заданный параметром *filename*.  
   
  `_O_EXCL`  
- Возвращает значение ошибки, если файл, указанный *filename* существует.  Область применения: только при использовании с `_O_CREAT`.  
+ Возвращает значение ошибки, если уже существует файл, заданный параметром *filename*. Применяется только при использовании в сочетании с `_O_CREAT`.  
   
  `_O_RDONLY`  
- Файл будет открыт только для чтения; если указан этот флаг ни `_O_RDWR`, ни `_O_WRONLY` нельзя использовать.  
+ Открывает только для чтения; если задан этот флаг, нельзя задать `_O_RDWR`, ни `_O_WRONLY`.  
   
  `_O_RDWR`  
- Файл будет открыт как для чтения, так и для записи; если указан этот флаг ни `_O_RDONLY`, ни `_O_WRONLY` нельзя использовать.  
+ Открывает файл как для чтения, так и для записи; если задан этот флаг, нельзя задать `_O_RDONLY`, ни `_O_WRONLY`.  
   
  `_O_TRUNC`  
- Будет открыт и усечен до нулевой длины существующий файл; файл должен иметь разрешение на запись.  Содержимое файла уничтожается.  Если задан этот флаг, нельзя использовать `_O_RDONLY`.  
+ Открывает и усекает до нулевой длины существующий файл; файл должен иметь разрешение на запись. Содержимое файла уничтожается. Если задан этот флаг, задать `_O_RDONLY` нельзя.  
   
  `_O_WRONLY`  
- Файл будет открыт только для записи; если указан этот флаг ни `_O_RDONLY`, ни `_O_RDWR` нельзя использовать.  
+ Открывает файл только для записи; если задан этот флаг, нельзя задать `_O_RDONLY`, ни `_O_RDWR`.  
   
-## См. также  
- [\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)   
- [\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
+## <a name="see-also"></a>См. также  
+ [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
+ [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
  [Глобальные константы](../c-runtime-library/global-constants.md)

@@ -1,30 +1,47 @@
 ---
-title: "Набор символов исполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "кодировки [C++], выполнение и исходный код"
-  - "набор символов исполнения [C++]"
-  - "исходный набор символов [C++]"
+title: "Кодировка выполнения | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- execution character set [C++]
+- character sets [C++], execution and source
+- source character set [C++]
 ms.assetid: 39ffbb55-11c1-4b6d-a105-327c0fceb449
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Набор символов исполнения
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1a191bd9736184220146f4a761f08a1843e9f309
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Это содержимое часто называется "кодировкой выполнения". Кодировка выполнения не обязательно совпадает с исходной кодировкой, используемой при написании программ на языке C.  Кодировка выполнения содержит все символы исходной кодировки, а также нуль\-символ, символ новой строки, символ возврата, символ горизонтальной табуляции, символ вертикальной табуляции, символ возврата каретки и escape\-последовательности.  В других реализациях исходная кодировка и кодировка выполнения могут различаться.  
+---
+# <a name="execution-character-set"></a>Набор символов исполнения
+Это содержимое часто называется "кодировкой выполнения". Кодировка выполнения не обязательно совпадает с исходной кодировкой, используемой при написании программ на языке C. Кодировка выполнения содержит все символы исходной кодировки, а также нуль-символ, символ новой строки, символ возврата, символ горизонтальной табуляции, символ вертикальной табуляции, символ возврата каретки и escape-последовательности. В других реализациях исходная кодировка и кодировка выполнения могут различаться.  
   
-## См. также  
- [Константы символов в C](../Topic/C%20Character%20Constants.md)
+## <a name="see-also"></a>См. также  
+ [Константы символов в C](../c-language/c-character-constants.md)

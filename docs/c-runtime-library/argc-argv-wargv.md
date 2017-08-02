@@ -1,68 +1,87 @@
 ---
-title: "__argc, __argv, __wargv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__wargv"
-  - "__argv"
-  - "__argc"
-apilocation: 
-  - "msvcrt120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__argv"
-  - "__argc"
-  - "__wargv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__argc"
-  - "__argv"
-  - "__wargv"
+title: "__argc, __argv, __wargv | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __wargv
+- __argv
+- __argc
+apilocation:
+- msvcrt120.dll
+apitype: DLLExport
+f1_keywords:
+- __argv
+- __argc
+- __wargv
+dev_langs:
+- C++
+helpviewer_keywords:
+- __argv
+- __wargv
+- __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# __argc, __argv, __wargv
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1141b9fefd1a42a3ee8a84c8ea24e1d3996329d8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Глобальная переменная `__argc` — это счетчик числа аргументов командной строки, переданных программе.  `__argv` — указатель на массив одно\- или многобайтовых строк, который содержит аргументы программы, а `__wargv` — указатель на массив строк расширенных символов, который содержит аргументы программы.  Эти глобальные переменные обеспечивают аргументы для `main` или `wmain`.  
+---
+# <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
+Глобальная переменная `__argc` — это счетчик числа аргументов командной строки, переданных программе. `__argv` — указатель на массив одно- или многобайтовых строк, который содержит аргументы программы, а `__wargv` — указатель на массив строк расширенных символов, который содержит аргументы программы. Эти глобальные переменные обеспечивают аргументы для `main` или `wmain`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-extern int __argc; extern char ** __argv; extern wchar_t ** __wargv;  
+extern int __argc;  
+extern char ** __argv;  
+extern wchar_t ** __wargv;  
 ```  
   
-## Заметки  
- В программе, которая использует функцию `main`,  `__argc` и `__argv` инициализируются при запуске программы с помощью командной строки, которая используется для запуска программы.  Командная строка разбирается на отдельные аргументы, а подстановочные знаки разворачиваются.  Число аргументов назначается функции `__argc`, строки аргументов выделяются в куче, а указатель на массив аргументов назначается `__argv`.  В программе, которая скомпилирована для использования расширенных символов и функции `wmain`, аргументы анализируются и подстановочные знаки разворачиваются как строки расширенных символов, а указатель на массив строк аргументов назначается `__wargv`.  
+## <a name="remarks"></a>Примечания  
+ В программе, которая использует функцию `main`, `__argc` и `__argv` инициализируются при запуске программы на основе командной строки, которая используется для запуска программы. Командная строка разбирается на отдельные аргументы, а подстановочные знаки разворачиваются. Число аргументов назначается функции `__argc`, строки аргументов выделяются в куче, а указатель на массив аргументов назначается `__argv`. В программе, которая скомпилирована для использования расширенных символов и функции `wmain`, аргументы анализируются и подстановочные знаки разворачиваются как строки расширенных символов, а указатель на массив строк аргументов назначается `__wargv`.  
   
  Для создания переносимого кода рекомендуется использовать аргументы, переданные в `main`, чтобы получить аргументы командной строки в программе.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
-|Процедура Tchar.h|\_UNICODE не определен|\_UNICODE определено|  
-|-----------------------|----------------------------|--------------------------|  
+|Процедура Tchar.h|_UNICODE не определен|_UNICODE определено|  
+|---------------------|---------------------------|-----------------------|  
 |`__targv`|`__argv`|`__wargv`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Глобальная переменная|Обязательный заголовок|  
-|---------------------------|----------------------------|  
-|`__argc`, `__argv`, `__wargv`|\<stdlib.h\>, \<cstdlib\> \(C\+\+\)|  
+|---------------------|---------------------|  
+|`__argc`, `__argv`, `__wargv`|\<stdlib.h>, \<cstdlib> (C++)|  
   
- `__argc`, `__argv` и `__wargv` являются расширениями Майкрософт.  Сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md).  
+ `__argc`, `__argv` и `__wargv` являются расширениями Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Глобальные переменные](../c-runtime-library/global-variables.md)   
- [Функция main. Запуск программы](../Topic/main:%20Program%20Startup.md)   
+ [Функция main: запуск программы](../cpp/main-program-startup.md)   
  [Использование wmain вместо main](../cpp/using-wmain-instead-of-main.md)

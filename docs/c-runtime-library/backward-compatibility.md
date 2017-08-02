@@ -1,39 +1,56 @@
 ---
-title: "Обратная совместимость | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.programs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обратная совместимость"
-  - "обратная совместимость, библиотеки времени выполнения С"
-  - "совместимость, библиотеки времени выполнения С"
-  - "CRT - библиотека, совместимость"
+title: "Обратная совместимость | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT, compatibility
+- backward compatibility, C run-time libraries
+- compatibility, C run-time libraries
+- backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Обратная совместимость
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: eb334c84fb0b0eb04b9ef48443beedeece23eb0e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Для обеспечения совместимости между версиями продукта библиотека OLDNAMES.LIB сопоставляет старые имена в новые имена.  Например, `open` сопоставляется в `_open`.  Необходимо явно выполнять связывание с OLDNAMES.LIB только при компиляции со следующими параметрами командной строки:  
+---
+# <a name="backward-compatibility"></a>Обратная совместимость
+Для обеспечения совместимости между версиями продукта библиотека OLDNAMES.LIB сопоставляет старые имена с новыми именами. Например, `open` сопоставляется с `_open`. Явно выполнять компоновку с OLDNAMES.LIB необходимо только при компиляции со следующими параметрами командной строки:  
   
--   `/Zl` \(опустить имя библиотеки по умолчанию из объектного файла\) и `/Ze` \(по умолчанию — использование расширений Майкрософт\)  
+-   `/Zl` (опустить имя библиотеки по умолчанию из объектного файла) и `/Ze` (по умолчанию — использовать расширения Microsoft)  
   
--   `/link` \(управление компоновщиком\), `/NOD` \(отключить поиск библиотеки по умолчанию\), и `/Ze`  
+-   `/link` (управление компоновщиком), `/NOD` (отключить поиск библиотеки по умолчанию) и `/Ze`  
   
- Дополнительные сведения о параметрах компилятора командной строки см. в разделе [Compiler Reference](../build/reference/compiler-options.md).  
+ Дополнительные сведения о параметрах компилятора командной строки см. в [справочнике по компилятору](../build/reference/compiler-options.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Совместимость](../c-runtime-library/compatibility.md)

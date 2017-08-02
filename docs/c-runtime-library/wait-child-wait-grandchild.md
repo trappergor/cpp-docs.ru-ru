@@ -1,36 +1,53 @@
 ---
-title: "_WAIT_CHILD, _WAIT_GRANDCHILD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_WAIT_GRANDCHILD"
-  - "WAIT_CHILD"
-  - "WAIT_GRANDCHILD"
-  - "_WAIT_CHILD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_WAIT_CHILD - константа"
-  - "_WAIT_GRANDCHILD - константа"
-  - "WAIT_CHILD - константа"
-  - "WAIT_GRANDCHILD - константа"
+title: "_WAIT_CHILD, _WAIT_GRANDCHILD | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _WAIT_GRANDCHILD
+- WAIT_CHILD
+- WAIT_GRANDCHILD
+- _WAIT_CHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- WAIT_CHILD constant
+- WAIT_GRANDCHILD constant
+- _WAIT_CHILD constant
+- _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _WAIT_CHILD, _WAIT_GRANDCHILD
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 842d2121ae1bc1f90f50f7fe3feb2a109af5c813
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-## Синтаксис  
+---
+# <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,14 +55,14 @@ caps.handback.revision: 6
   
 ```  
   
-## Заметки  
- Функция `_cwait` может использоваться любым процессом для ожидания любого другого процесса \(если известен идентификатор процесса\).  Этот аргумент действия может быть равен одному из следующих значений:  
+## <a name="remarks"></a>Примечания  
+ Функция `_cwait` может использоваться любым процессом для ожидания любого другого процесса (если известен его идентификатор). Аргумент действия может принимать одно из следующих значений:  
   
 |Константа|Значение|  
-|---------------|--------------|  
-|`_WAIT_CHILD`|Вызывающий процесс ожидает, пока указанный новый процесс не завершится.|  
-|`_WAIT_GRANDCHILD`|Вызывающий процесс ожидает, пока указанный новый процесс и все процессы, созданный этим новым процессом, не завершатся.|  
+|--------------|-------------|  
+|`_WAIT_CHILD`|Вызывающий процесс ожидает завершения указанного нового процесса.|  
+|`_WAIT_GRANDCHILD`|Вызывающий процесс ожидает завершения указанного нового процесса и всех процессов, созданных этим новым процессом.|  
   
-## См. также  
- [\_cwait](../c-runtime-library/reference/cwait.md)   
+## <a name="see-also"></a>См. также  
+ [_cwait](../c-runtime-library/reference/cwait.md)   
  [Глобальные константы](../c-runtime-library/global-constants.md)

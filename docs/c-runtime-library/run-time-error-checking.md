@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: eb9db9ea42d50faa6e7a693c95795036e650a760
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 3aa56b70b02500998665289e69480570cfa39166
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="run-time-error-checking"></a>Проверка ошибок во время выполнения
-Библиотека времени выполнения C содержит функции, поддерживающие проверку ошибок во время выполнения (RTC). Проверка ошибок во время выполнения позволяет строить программы так, чтобы получать сообщения о некоторых типах ошибок, возникающих во время выполнения. Можно указать, каким образом происходит уведомление об ошибках, а также типы этих ошибок. Дополнительные сведения см. в статье о [проверках ошибок во время выполнения](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1).  
+Библиотека времени выполнения C содержит функции, поддерживающие проверку ошибок во время выполнения (RTC). Проверка ошибок во время выполнения позволяет строить программы так, чтобы получать сообщения о некоторых типах ошибок, возникающих во время выполнения. Можно указать, каким образом происходит уведомление об ошибках, а также типы этих ошибок. Дополнительная информация есть в статье [Практическое руководство. Настройка проверок во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).  
   
  Для настройки выполнения проверок на ошибки во время выполнения используются следующие функции.  
   
@@ -59,5 +59,4 @@ ms.lasthandoff: 03/30/2017
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)   
  [/RTC (проверки ошибок во время выполнения)](../build/reference/rtc-run-time-error-checks.md)   
  [runtime_checks](../preprocessor/runtime-checks.md)   
- [RTC Sample: Run-Time Error Checks](http://msdn.microsoft.com/en-us/b3415b09-f6fd-43dc-8c02-9a910bc2574e)  (Образец RTC: проверки ошибок во время выполнения)  
  [Процедуры отладки](../c-runtime-library/debug-routines.md)

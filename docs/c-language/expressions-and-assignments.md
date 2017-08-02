@@ -1,51 +1,68 @@
 ---
-title: "Выражения и назначения | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "назначение значений в C"
-  - "операторы присваивания, назначение значений в выражениях"
-  - "операторы назначения, значения в выражениях"
-  - "выражения [C]"
-  - "выражения [C], назначение значений"
-  - "операторы [C], назначение значений"
-  - "Visual C, назначения"
-  - "Visual C, выражения"
+title: "Выражения и присваивания | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- assignment statements, values in expressions
+- expressions [C]
+- expressions [C], assigning values
+- Visual C, expressions
+- assignment operators, assigning values in expressions
+- operators [C], assigning values
+- assigning values in C
+- Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Выражения и назначения
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b0a4089a7f6b3a3dba79eec364a1f9b399c96fbf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-В этом разделе описывается, как создать выражения и присвоить значения в языке C.  Константы, идентификаторы, строки и вызовы функций являются операндами, управляемыми в выражениях.  В языке C имеются все простые операторы языка.  В этом разделе описываются данные операторы и операторы, которые являются уникальными для C или Microsoft C.  В разделе рассматриваются следующие темы.  
+---
+# <a name="expressions-and-assignments"></a>Выражения и присваивания
+В этом разделе описывается, как создать выражения и присвоить значения в языке C. Константы, идентификаторы, строки и вызовы функций являются операндами, управляемыми в выражениях. В языке C имеются все простые операторы языка. В этом разделе описываются эти простые операторы и операторы, которые являются уникальными для C или Microsoft C. Рассматриваются следующие темы:  
   
--   [Выражения l\-значений и r\-значений](../Topic/L-Value%20and%20R-Value%20Expressions.md)  
+-   [Выражения L-Value и R-Value](../c-language/l-value-and-r-value-expressions.md)  
   
 -   [Константные выражения](../c-language/c-constant-expressions.md)  
   
 -   [Побочные эффекты](../c-language/side-effects.md)  
   
--   [Точки следования](../c-language/c-sequence-points.md)  
+-   [Точки последовательности](../c-language/c-sequence-points.md)  
   
 -   [Операторы](../c-language/c-operators.md)  
   
--   [Приоритет операторов](../Topic/Precedence%20and%20Order%20of%20Evaluation.md)  
+-   [Приоритет операторов](../c-language/precedence-and-order-of-evaluation.md)  
   
 -   [Преобразования типов](../c-language/type-conversions-c.md)  
   
--   [Приведения типов](../c-language/type-cast-conversions.md)  
+-   [Приведение типов](../c-language/type-cast-conversions.md)  
   
-## См. также  
- [Справочник по языку C](../Topic/C%20Language%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по языку C#](../c-language/c-language-reference.md)

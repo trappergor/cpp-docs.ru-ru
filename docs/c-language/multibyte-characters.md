@@ -1,28 +1,45 @@
 ---
-title: "Многобайтовая кодировка | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Многобайтовые символы | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 09fe1431-1006-41f9-bf47-ca82724c23ae
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Многобайтовая кодировка
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4498398764a674346de1b680644eddd852d8e868
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-**ANSI 2.2.1.2** Состояния сдвига для многобайтовых символов  
+---
+# <a name="multibyte-characters"></a>Многобайтовые символы
+**ANSI 2.2.1.2** Состояния сдвига для многобайтовых символов  
   
- В некоторых реализациях, включая Microsoft C, многобайтовые символы используются для отображения письменности языков, не включенных в базовый набор символов.  Однако кодировки, зависящие от состояния, в Microsoft C не поддерживаются.  Поэтому состояния сдвига отсутствуют.  Дополнительные сведения см. в разделе [Многобайтовые и расширенные символы](../Topic/Multibyte%20and%20Wide%20Characters.md).  
+ В некоторых реализациях, включая Microsoft C, многобайтовые символы используются для отображения письменности языков, не включенных в базовый набор символов. Однако кодировки, зависящие от состояния, в Microsoft C не поддерживаются. Поэтому состояния сдвига отсутствуют. Дополнительные сведения см. в разделе [Многобайтовая кодировка и расширенные символы](../c-language/multibyte-and-wide-characters.md).  
   
-## См. также  
- [Знаки](../c-language/characters.md)
+## <a name="see-also"></a>См. также  
+ [Символы](../c-language/characters.md)
