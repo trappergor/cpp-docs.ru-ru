@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,26 +37,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 665210ecf78fa0c76d598c9116fc19dc391a0585
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 07fcee10e916162dfd3662815171621ef653ee6a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="time-management"></a>Управление временем
 Эти функции следует использовать для получения текущего времени, его преобразования, корректировки и хранения, как требуется. Текущее время представляет собой системное время.  
   
- Подпрограммы `_ftime` и `localtime` используют переменную среды `TZ` . Если значение `TZ` не задано, библиотека времени выполнения пытается использовать данные часового пояса, определенные операционной системой. Если такие сведения недоступны, эти функции используют значение по умолчанию PST8PDT. Дополнительные сведения о переменной `TZ`см. в документации функций [_tzset](../c-runtime-library/reference/tzset.md) и [_daylight, timezone, _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).  
+ Подпрограммы `_ftime` и `localtime` используют переменную среды `TZ` . Если значение `TZ` не задано, библиотека времени выполнения пытается использовать данные часового пояса, определенные операционной системой. Если такие сведения недоступны, эти функции используют значение по умолчанию PST8PDT. Дополнительные сведения о переменной `TZ`см. в разделе [_tzset](../c-runtime-library/reference/tzset.md); также см. раздел [_daylight, timezone и _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).  
   
 ### <a name="time-routines"></a>Подпрограммы времени  
   
 |Функция|Применение|  
 |--------------|---------|  
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Преобразуют время из типа `struct tm` в символьную строку. Версии этих функций с суффиксом `_s` являются более безопасными.|  
-|[clock](../c-runtime-library/reference/clock.md)|Возвращают реальное прошедшее время для процесса.|  
+|[часы](../c-runtime-library/reference/clock.md)|Возвращают реальное прошедшее время для процесса.|  
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Преобразуют время из типа `time_t`, `__time32_t` или `__time64_t` в символьную строку. Версии этих функций с суффиксом `_s` являются более безопасными.|  
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Вычисляют разницу между двумя значениями времени.|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
-|[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Хранение текущего системного времени в переменной типа `struct _timeb` или `struct``__timeb64` Версии этих функций с суффиксом `_s` являются более безопасными.|  
+|[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Хранение текущего системного времени в переменной типа `struct _timeb` или `struct __timeb64` Версии этих функций с суффиксом `_s` являются более безопасными.|  
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Задают время изменения открытого файла|  
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Преобразуют время из типа `time_t` в тип `struct tm` или из типа `__time64_t` в тип `struct tm`. Версии этих функций с суффиксом `_s` являются более безопасными.|  
 |[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Преобразуют время из типа `time_t` в `struct tm` или из типа `__time64_t` в `struct tm` с поправкой на местное время. Версии этих функций с суффиксом `_s` являются более безопасными.|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/04/2017
 >  Во всех версиях Microsoft C/C++, кроме версии Microsoft C/C++ 7.0, и во всех версиях Visual C++ эта функция времени возвращает текущее время как количество секунд, прошедших с полуночи 1-го января 1970 года. В версии Microsoft C/C++ 7.0 функция `time` возвращает текущее время как количество секунд, истекших с полуночи 31-го декабря 1899 года.  
   
 > [!NOTE]
->  В версиях [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] и Microsoft C/C++ до Visual C++ 2005 тип `time_t` определялся как `long int` (32-разрядный). Поэтому его невозможно использовать для дат после 3:14:07 19 января 2038 года (время в формате UTC). Теперь тип `time_t`по умолчанию эквивалентен типу `__time64_t`, но при задании директивы `_USE_32BIT_TIME_T` тип `time_t` изменяется на тип `__time32_t`. Из-за этого многие функции времени вызывают версии, которые принимают 32-разрядный тип `time_t`. Дополнительные сведения см. в статье [Standard Types](../c-runtime-library/standard-types.md) (Стандартные типы) и в комментариях в документации для отдельных функций времени.  
+>  В версиях Visual C++ и Microsoft C/C++ ранее Visual C++ 2005 тип `time_t` определялся как `long int` (32-разрядный). Поэтому его невозможно использовать для дат после 3:14:07 19 января 2038 года (в формате UTC). Теперь тип`time_t` по умолчанию эквивалентен типу `__time64_t` , но при задании директивы `_USE_32BIT_TIME_T` тип `time_t` изменяется на тип `__time32_t` and forces many time functions изменяется на тип call versions that take the 32-bit `time_t`. Дополнительные сведения см. в статье [Standard Types](../c-runtime-library/standard-types.md) (Стандартные типы) и в комментариях в документации для отдельных функций времени.  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)

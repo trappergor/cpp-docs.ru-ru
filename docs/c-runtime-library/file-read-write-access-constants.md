@@ -1,69 +1,86 @@
 ---
-title: "Константы доступа чтения и записи файлов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.constants.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "константы доступа с правом чтения и записи файла"
-  - "константы [C++], атрибуты файла"
-  - "константы доступа с правом чтения и записи файла"
-  - "константы доступа с правом чтения и записи"
-  - "константы доступа с правом записи"
+title: "Константы доступа чтения и записи файлов | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.constants.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- read/write access constants
+- write access constants
+- access constants for file read/write
+- constants [C++], file attributes
+- file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Константы доступа чтения и записи файлов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2ec7e14c3bc943405eb115214f9b2eb424180b4e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-## Синтаксис  
+---
+# <a name="file-readwrite-access-constants"></a>Константы доступа чтения и записи файлов
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## Заметки  
- Эти константы определяют тип доступа \(«a», «r» или «w»\), запрошенный для файла.  И [translation mode](../c-runtime-library/file-translation-constants.md) \(«b» или «t»\), и [commit\-to\-disk mode](../Topic/Commit-To-Disk%20Constants.md) \(«с» или «n»\) можно указать с типом доступа.  
+## <a name="remarks"></a>Примечания  
+ Эти константы определяют запрашиваемый для файла тип доступа ("a", "r" или "w"). В типе доступа можно указать как [режим преобразования](../c-runtime-library/file-translation-constants.md) ("b" или "t"), так и [режим фиксации на диск](../c-runtime-library/commit-to-disk-constants.md) ("c" или "n").  
   
  Типы доступа описаны ниже.  
   
- **"a"**.  
- Открывает для записи в конец файла \(добавление\); сначала создает файл, если он не существует.  Все операции записи выполняются в конце файла.  Хотя указатель файла может быть перемещен с помощью `fseek` или **rewind**, он всегда возвращается в конец файла перед выполнением любой операции записи.  
+ **"a"**  
+ Открывает для записи в конец файла (добавление); сначала создает файл, если он не существует. Все операции записи выполняются в конце файла. Указатель файла можно перемещать с помощью функции `fseek` или **rewind**, но он всегда возвращается в конец файла перед выполнением любой операции записи.  
   
- **"a\+"**  
- То же, что и выше, но также поддерживает чтение.  
+ **"a+"**  
+ То же, что и выше, но допускает чтение.  
   
  **"r"**  
- Открывает для чтения.  Если файл не существует или не найден, вызов открытия файла завершится ошибкой.  
+ Открывает для чтения. Если файл не существует или его невозможно найти, открытие файла завершается ошибкой.  
   
- **"r\+"**  
- Открывает для чтения и записи.  Если файл не существует или не найден, вызов открытия файла завершится ошибкой.  
+ **"r+"**  
+ Открывает для чтения и записи. Если файл не существует или его невозможно найти, открытие файла завершается ошибкой.  
   
  **"w"**  
- Открывает пустой файл для записи.  Если указанный файл существует, его содержимое удаляется.  
+ Открывает пустой файл для записи. Если указанный файл существует, его содержимое удаляется.  
   
- **"w\+"**  
- Открывает пустой файл для чтения и записи.  Если указанный файл существует, его содержимое удаляется.  
+ **"w+"**  
+ Открывает пустой файл для чтения и записи. Если указанный файл существует, его содержимое удаляется.  
   
- Если задан тип доступа "r\+", "w\+" или "a\+", чтение и запись разрешены \(считается, что файл открыт для "обновления"\).  Однако при переключении между чтением и записью должны быть промежуточные операции `fflush`, `fsetpos`, `fseek` или **rewind**.  Для операции `fsetpos` или `fseek` можно задать текущее положение.  
+ Если задан тип доступа "r+", "w+" или "a+", разрешены чтение и запись (считается, что файл открыт "для обновления"). Но при переключении между чтением и записью необходимо использовать промежуточные операции `fflush`, `fsetpos`, `fseek` или **rewind**. Для операции `fsetpos` или `fseek` можно задать текущее положение.  
   
-## См. также  
- [\_fdopen, \_wfdopen](../Topic/_fdopen,%20_wfdopen.md)   
- [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, \_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
- [\_fsopen, \_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [\_popen, \_wpopen](../c-runtime-library/reference/popen-wpopen.md)   
+## <a name="see-also"></a>См. также  
+ [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
+ [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
+ [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)   
  [Глобальные константы](../c-runtime-library/global-constants.md)

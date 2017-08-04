@@ -1,66 +1,83 @@
 ---
-title: "Низкоуровневый ввод-вывод | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "файловые дескрипторы [C++]"
-  - "файловые дескрипторы [C++], функции ввода и вывода"
-  - "Ввод и вывод [CRT], функции"
-  - "Ввод и вывод [CRT], низкоуровневый"
-  - "процедуры низкоуровневого ввода и вывода"
+title: "Низкоуровневый ввод-вывод | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [CRT], low-level
+- I/O [CRT], functions
+- low-level I/O routines
+- file handles [C++]
+- file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Низкоуровневый ввод-вывод
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 36128b5f262ef84986c2a4e0db1b7eeceee14ec3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Эти функции вызывают непосредственно операционную систему для выполнения операций более низкого уровня, чем возможно с помощью потокового ввода\-вывода.  Низкоуровневые вызовы ввода и вывода данных не выполняют буферизацию или форматирование данных.  
+---
+# <a name="low-level-io"></a>Низкоуровневый ввод-вывод
+Эти функции напрямую обращаются к операционной системе для выполнения операций более низкого уровня, чем при потоковом вводе-выводе. Операции низкоуровневого ввода и вывода не поддерживают буферизацию или форматирование данных.  
   
- Низкоуровневые процедуры могут получить стандартные потоки, открытые при запуске программы, с помощью следующих предопределенных идентификаторов файлов.  
+ Низкоуровневые процедуры могут обращаться к стандартным потокам, открытым при запуске программы, с помощью следующих стандартных дескрипторов файла.  
   
 |Поток|Дескриптор файла|  
-|-----------|----------------------|  
+|------------|---------------------|  
 |`stdin`|0|  
 |`stdout`|1|  
 |`stderr`|2|  
   
- Низкоуровневые процедуры ввода\-вывода устанавливают глобальную переменную [errno](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) при возникновении ошибки.  Необходимо включать STDIO.H при использовании низкоуровневых функций только если программа требует константы, определенные в STDIO.H, например, индикатор конца файла \(`EOF`\).  
+ Набор подпрограмм низкоуровневого ввода-вывода при возникновении ошибки устанавливает глобальную переменную [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). При использовании низкоуровневых функций библиотеку STDIO.H нужно включать только в том случае, если программе требуется константа, определенная в STDIO.H, например индикатор конца файла (`EOF`).  
   
-### Низкоуровневые функции ввода\-вывода  
+### <a name="low-level-io-functions"></a>Процедуры низкоуровневого ввода и вывода  
   
 |Функция|Применение|  
-|-------------|----------------|  
-|[\_close](../Topic/_close.md)|Закрывает файл|  
-|[\_commit](../c-runtime-library/reference/commit.md)|Записывает файл на диск|  
-|[Функция \_creat, \_wcreat](../c-runtime-library/reference/creat-wcreat.md)|Создают файл|  
-|[\_dup](../c-runtime-library/reference/dup-dup2.md)|Возвращает следующий доступный идентификатор файла для указанного файла|  
-|[\_dup2](../c-runtime-library/reference/dup-dup2.md)|Создает второй идентификатор для указанного файла|  
-|[\_eof](../c-runtime-library/reference/eof.md)|Проверка наличия конца файла.|  
-|[\_lseek, \_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Перемещают указатель файла на заданное расположение|  
-|[\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)|Открывают файл|  
-|[\_read](../Topic/_read.md)|Считывает данные из файла|  
-|[\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md), [\_sopen\_s, \_wsopen\_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Открывают файл для совместного использования|  
-|[\_tell, \_telli64](../c-runtime-library/reference/tell-telli64.md)|Получают текущее положение файлового указателя|  
-|[\_umask](../c-runtime-library/reference/umask.md), [\_umask\_s](../Topic/_umask_s.md)|Задают маску разрешений файлов|  
-|[\_write](../c-runtime-library/reference/write.md)|Записывает данные в файл|  
+|--------------|---------|  
+|[_close](../c-runtime-library/reference/close.md)|Закрывает файл|  
+|[_commit](../c-runtime-library/reference/commit.md)|Сбрасывает файл на диск|  
+|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Создает файл|  
+|[_dup](../c-runtime-library/reference/dup-dup2.md)|Возвращает следующий доступный дескриптор файла для указанного файла|  
+|[_dup2](../c-runtime-library/reference/dup-dup2.md)|Создает второй дескриптор для указанного файла|  
+|[_eof](../c-runtime-library/reference/eof.md)|Проверяет достижение конца файла|  
+|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Перемещает указатель файла в указанное положение|  
+|[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Открывает файл|  
+|[_read](../c-runtime-library/reference/read.md)|Считывает данные из файла|  
+|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Открывает файл для совместного использования|  
+|[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Получает текущую позицию указателя файла|  
+|[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Задает маску разрешений для файла|  
+|[_write](../c-runtime-library/reference/write.md)|Записывает данные в файл|  
   
- `_dup` и `_dup2` обычно используются для связывания предопределенных идентификаторов файлов с другими файлами.  
+ Обычно `_dup` и `_dup2` используются для связи предопределенных дескрипторов файлов с разными файлами.  
   
-## См. также  
- [Ввод и вывод](../Topic/Input%20and%20Output.md)   
+## <a name="see-also"></a>См. также  
+ [Ввод и вывод](../c-runtime-library/input-and-output.md)   
  [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)   
- [Системные вызовы](../Topic/System%20Calls.md)
+ [Системные вызовы](../c-runtime-library/system-calls.md)

@@ -1,26 +1,43 @@
 ---
-title: "Объявления и определения в C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Объявления и определения в C | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 575f0c9b-5554-4346-be64-b2129ca9227f
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Объявления и определения в C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ad61f4fd319c646c704faba7bff40fe263fc3a44
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Объявление устанавливает связь между указанной переменной, функцией или типом и их атрибутами.  В разделе [Обзор объявлений](../Topic/Overview%20of%20Declarations.md) приводится синтаксис ANSI для нетерминальных символов `declaration`.  В объявлении также определяется, где и когда возможен доступ к идентификатору \("компоновка" идентификатора\).  Дополнительные сведения о компоновке см. в разделе [Время существования, область, видимость и компоновка](../Topic/Lifetime,%20Scope,%20Visibility,%20and%20Linkage.md).  
+---
+# <a name="c-declarations-and-definitions"></a>Объявления и определения в C
+Объявление устанавливает связь между указанной переменной, функцией или типом и их атрибутами. В статье [Общие сведения об объявлениях](../c-language/overview-of-declarations.md) приводится синтаксис ANSI для нетерминального элемента `declaration`. В объявлении также определяется, где и когда возможен доступ к идентификатору ("компоновка" идентификатора). Дополнительные сведения о компоновке см. в статье [Время существования, область, видимость и компоновка](../c-language/lifetime-scope-visibility-and-linkage.md).  
   
  Определение переменной устанавливает те же связи, что и объявление, но также приводит к выделению памяти для переменной.  
   
@@ -35,7 +52,7 @@ char find( fileptr ) {}
 int count( double f ) {}  
 ```  
   
- Переменные `var` и `val` могут использоваться в функциях `find` и `count`; никакие дополнительные объявления не требуются.  Однако в функции `main` эти имена не видны \(доступ к ним невозможен\).  
+ Переменные `var` и `val` могут использоваться в функциях `find` и `count`; никакие дополнительные объявления не требуются. Однако в функции `main` эти имена не видны (доступ к ним невозможен).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Файлы с исходным кодом и исходные программы](../c-language/source-files-and-source-programs.md)

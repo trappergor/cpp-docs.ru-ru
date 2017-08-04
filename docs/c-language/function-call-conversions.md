@@ -1,34 +1,51 @@
 ---
-title: "Преобразования вызова функции | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "вызовы функций, преобразования типов аргументов"
-  - "вызовы функций, преобразование"
-  - "функции [C], преобразования аргументов"
+title: "Преобразования вызова функции | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function calls, converting
+- function calls, argument type conversions
+- functions [C], argument conversions
 ms.assetid: 04ea0f81-509a-4913-8b12-0937a81babcf
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Преобразования вызова функции
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 35eee1be7c509d1d4bb6267164ec90e48c94d1d1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
-Тип преобразования, выполняемого над аргументами в вызове функции, зависит от того, имеется ли для вызываемой функции прототип функции \(предварительное объявление\) с объявленными типами аргументов.  
+---
+# <a name="function-call-conversions"></a>Преобразования вызова функции
+Тип преобразования, выполняемого над аргументами в вызове функции, зависит от того, имеется ли для вызываемой функции прототип функции (предварительное объявление) с объявленными типами аргументов.  
   
- Если прототип функции уже был указан и в нем объявлены типы аргументов, то компилятор выполняет проверку типа \(см. раздел [Функции](../Topic/Functions%20\(C\).md)\).  
+ Если существует прототип функции и в нем объявлены типы аргументов, то компилятор выполняет проверку типа (см. статью [Функции](../c-language/functions-c.md)).  
   
- Если прототипа нет, то над аргументами в вызове функции выполняются только обычные арифметические преобразования.  Для каждого аргумента в вызове они выполняются отдельно.  Иными словами, значение **float** преобразуется в **double**; значение `char` или **short** — в `int`; а значение `unsigned char` или **unsigned short** — в `unsigned int`.  
+ Если прототипа нет, то над аргументами в вызове функции выполняются только обычные арифметические преобразования. Для каждого аргумента в вызове они выполняются отдельно. Иными словами, значение **float** преобразуется в **double**, значение `char` или **short** — в `int`, а значение `unsigned char` или **unsigned short** преобразуется в `unsigned int`.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразования типов](../c-language/type-conversions-c.md)

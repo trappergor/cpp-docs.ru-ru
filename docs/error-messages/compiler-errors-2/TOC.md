@@ -684,6 +684,7 @@
 ## [Ошибка компилятора C3418](compiler-error-c3418.md)
 ## [Ошибка компилятора C3420](compiler-error-c3420.md)
 ## [Ошибка компилятора C3421](compiler-error-c3421.md)
+## [Ошибка компилятора C3446](compiler-error-c3446.md)
 ## [Ошибка компилятора C3450](compiler-error-c3450.md)
 ## [Ошибка компилятора C3451](compiler-error-c3451.md)
 ## [Ошибка компилятора C3452](compiler-error-c3452.md)
