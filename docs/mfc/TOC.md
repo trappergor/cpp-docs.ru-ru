@@ -637,7 +637,7 @@
 ## [TN060. Новые общие элементы управления Windows](tn060-the-new-windows-common-controls.md)
 ## [TN061. Сообщения ON_NOTIFY и WM_NOTIFY](tn061-on-notify-and-wm-notify-messages.md)
 ## [TN062. Отражение сообщений для элементов управления окнами](tn062-message-reflection-for-windows-controls.md)
-## [TN063. Отладка расширений DLL для Интернета](tn063-debugging-internet-extension-dlls.md)
+## [TN063. Отладка библиотек DLL расширений MFC для Интернета](tn063-debugging-internet-extension-dlls.md)
 ## [TN064. Потоки изолированной модели в элементах ActiveX](tn064-apartment-model-threading-in-activex-controls.md)
 ## [TN065. Поддержка сдвоенных интерфейсов для серверов автоматизации OLE](tn065-dual-interface-support-for-ole-automation-servers.md)
 ## [TN066. Обычные проблемы переноса приложений из MFC 3.x в 4.0](tn066-common-mfc-3-x-to-4-0-porting-issues.md)
