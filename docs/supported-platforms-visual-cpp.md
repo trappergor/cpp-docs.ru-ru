@@ -1,5 +1,5 @@
 ---
-title: "Поддерживаемые платформы (Visual C++) | Документы Майкрософт"
+title: Supported Platforms (Visual C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,17 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0192e9bd6ef9d93e274c43c24137a27e5aa53dab
-ms.openlocfilehash: c0c209c16ad4a264b851321a2879104112da81f2
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 78fac089c9b21825bfb014fe6f26776bac58bd93
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="supported-platforms-visual-c"></a>Поддерживаемые платформы (Visual C++)
-Приложения, разработанные с помощью [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)], могут быть нацелены на различные платформы, а именно:  
+# <a name="supported-platforms-visual-c"></a>Supported Platforms (Visual C++)
+
+Apps built by using [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] can be targeted to various platforms, as follows.  
   
-|Операционная система|x86|x64|ARM|  
+|Operating System|x86|x64|ARM|  
 |----------------------|---------|---------|---------|  
 |Windows XP|X*|X*||  
 |[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||  
@@ -54,14 +55,18 @@ ms.lasthandoff: 02/24/2017
 |Windows 8.1|X|X|X|  
 |Windows 10|X|X|X|  
 |Android **|X|X|X|  
-|iOS **|X|X|x|  
+|iOS **|X|X|X|  
+|Linux ***|X|X|X|  
   
- \* Можно использовать набор инструментов платформы Windows XP, включенный в Visual Studio 2015, Visual Studio 2013 и Visual Studio 2012 с обновлением 1 или более позднюю версию для построения проектов Windows XP и [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]. Сведения об использовании этого набора инструментов платформы см. в разделе [Настройка программ для Windows XP](build/configuring-programs-for-windows-xp.md). Дополнительную информацию об изменении набора инструментов платформы см. в разделе [Практическое руководство. Изменение требуемой версии .NET Framework и набора средств платформы](build/how-to-modify-the-target-framework-and-platform-toolset.md).  
+\* You can use the Windows XP platform toolset included in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013, and Visual Studio 2012 Update 1 or later to build Windows XP and [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)] projects. For information on how to use this platform toolset, see [Configuring Programs for Windows XP](build/configuring-programs-for-windows-xp.md). For additional information on changing the platform toolset, see [How to: Modify the Target Framework and Platform Toolset](build/how-to-modify-the-target-framework-and-platform-toolset.md).  
   
- ** Вы можете установить дополнительный компонент Visual C++ для кроссплатформенной мобильной разработки при настройке Visual Studio 2015, чтобы выбрать целевую платформу iOS или Android. Инструкции см. в разделе [Установка Visual C++ для разработки кроссплатформенных мобильных приложений](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Для создания кода iOS необходимо иметь компьютер Mac и выполнить другие требованиям. Список необходимых условий и инструкции для установки см. в разделе [Установка и настройка средств для разработки с помощью iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Вы можете создавать код x86 или ARM для соответствия целевому оборудованию. Используйте конфигурацию x86 для создания кода для имитатора iOS, Microsoft Visual Studio Emulator для Android и некоторых устройств Android. Используйте конфигурацию ARM для создания кода для устройств iOS и большинства устройств Android.    
+\*\* You can install the **Mobile development with C++** workload in the Visual Studio installer (or the optional **Visual C++ for Cross Platform Mobile Development** component in Visual Studio 2015 setup) to target iOS or Android platforms. For instructions, see [Install Visual C++ for Cross-Platform Mobile Development](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). To build iOS code, you must have a Mac computer and meet other requirements. For a list of prerequisites and installation instructions, see [Install And Configure Tools to Build using iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). You can build x86 or ARM code to match the target hardware. Use x86 configurations to build for the iOS simulator, Microsoft Visual Studio Emulator for Android, and some Android devices. Use ARM configurations to build for iOS devices and most Android devices.  
   
- Информацию о том, как задать конфигурацию целевой платформы, см. в разделе [Практическое руководство. Настройка проектов Visual C++ для 64-разрядных платформ](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
+\*\*\* You can install the **Linux development with C++** workload in the Visual Studio installer to target Linux platforms. For instructions, see [Download, Install and Setup the Linux Workload](linux/download-install-and-setup-the-linux-development-workload.md). This toolset compiles your executable on the target machine, so you can build for any supported architecture.  
+
+For information about how to set the target platform configuration, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
-## <a name="see-also"></a>См. также  
- [Инструменты и функции Visual C++ в выпусках Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
- [Начало работы](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)
+## <a name="see-also"></a>See Also  
+
+[Visual C++ Tools and Features in Visual Studio Editions](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
+[Getting Started](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)

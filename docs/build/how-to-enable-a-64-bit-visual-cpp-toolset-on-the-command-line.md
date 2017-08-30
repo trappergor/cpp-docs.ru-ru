@@ -1,69 +1,70 @@
 ---
-title: "Практическое руководство. Использование набора 64-разрядных инструментов Visual C++ в командной строке | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "64-разрядный компилятор [C++], использование командной строки"
-  - "64-разрядный компилятор [C++], набор инструментов, доступный в командной строке"
-  - "командная строка [C++], 64-разрядный компилятор"
-  - "IPF"
-  - "IPF, компилятор, работающий в режиме командной строки"
-  - "Itanium [C++]"
-  - "Itanium [C++], компилятор, работающий в режиме командной строки"
-  - "x64 [C++]"
-  - "x64 [C++], компилятор, работающий в режиме командной строки"
+title: 'How to: Enable a 64-Bit Visual C++ Toolset on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- x64 [C++]
+- 64-bit compiler [C++], command line usage
+- 64-bit compiler [C++], toolset enabling at command line
+- command line [C++], 64-bit compiler
+- Itanium [C++], command-line compiler
+- IPF
+- Itanium [C++]
+- IPF, command-line compiler
+- x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 caps.latest.revision: 30
-caps.handback.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Практическое руководство. Использование набора 64-разрядных инструментов Visual C++ в командной строке
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 88cd06c4ca6ac57fdb677cfc56fd8972983df4c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/30/2017
 
-Visual C\+\+ содержит компиляторы, которые можно использовать для создания приложений, выполняющихся в операционных системах Windows на основе 32\-разрядной, 64\-разрядной или ARM\-архитектуры.  
+---
+# <a name="how-to-enable-a-64-bit-x64-hosted-visual-c-toolset-on-the-command-line"></a>How to: Enable a 64-Bit, x64 hosted Visual C++ toolset on the command line
+
+Visual C++ includes compilers, linkers, and other tools that you can use to create platform-specific versions of your apps that can run on 32-bit, 64-bit, or ARM-based Windows operating systems. Other optional Visual Studio workloads let you use C++ tools to target other platforms, such as iOS, Android, and Linux. The default build architecture uses 32-bit, x86-hosted tools to build 32-bit, x86-native Windows code. However, you probably have a 64-bit computer. You can take advantage of the processor and memory space available to 64-bit code by using the 64-bit, x64-hosted toolset when you build code for x86, x64, or ARM processors.
   
 > [!NOTE]
->  Дополнительные сведения о различных средствах, включаемых в каждый выпуск Visual C\+\+, см. в разделе [Инструменты и шаблоны Visual C\+\+ в выпусках Visual Studio](../ide/visual-cpp-tools-and-templates-in-visual-studio-editions.md).  
+>  For information about the specific tools that are included with each Visual C++ edition, see [Visual C++ Tools and Features in Visual Studio Editions](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).  
 >   
->  Сведения о создании 64\-разрядных приложений в среде IDE Visual Studio см. в разделе [Практическое руководство. Настройка проектов Visual C\+\+ для 64\-разрядных платформ](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
+>  For information about how to use the Visual Studio IDE to create 64-bit applications, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] включает 32\-разрядные, размещенные на платформе x86 собственные и кросс\-компиляторы для целевых архитектур x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] и ARM.  Если [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] устанавливается в 64\-разрядной операционной системе Windows, для каждой целевой архитектуры \(x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] и ARM\) устанавливаются 32\-разрядные, размещенные на платформе x86 собственные и кросс\-компиляторы, а также 64\-разрядные, размещенные на платформе [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] собственные и кросс\-компиляторы.  32\-разрядные и 64\-разрядные компиляторы для каждой целевой архитектуры создают идентичный код, однако 64\-разрядные компиляторы поддерживают больше памяти для предварительно скомпилированных символов заголовков и оптимизации всей программы \(параметры [\/GL](../build/reference/gl-whole-program-optimization.md), [\/LTCG](../build/reference/ltcg-link-time-code-generation.md)\).  В случае превышения ограничений памяти при использовании 32\-разрядного компилятора попробуйте 64\-разрядный компилятор.  
+When you install a C++ workload in the Visual Studio installer, it always installs 32-bit, x86-hosted, native and cross compiler tools to build x86 and x64 code. If you include the Universal Windows Platform workload, it also installs x86-hosted cross compiler tools to build ARM code. If you install these workloads on a 64-bit, x64 processor, you also get 64-bit native and cross compiler tools to build x86, x64, and ARM code. The 32-bit and 64-bit tools generate identical code, but the 64-bit tools support more memory for precompiled header symbols and the Whole Program Optimization ([/GL](../build/reference/gl-whole-program-optimization.md) and [/LTCG](../build/reference/ltcg-link-time-code-generation.md)) options. If you run into memory limits when you use the 32-bit tools, try the 64-bit tools.  
+
+## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Use a 64-bit hosted developer command prompt shortcut
   
- При установке Visual Studio в 64\-разрядной операционной системе Windows для 64\-разрядных собственных [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] компиляторов и кросс\-компиляторов x86 доступны дополнительные ярлыки командной строки.  Для вызова этих командных строк в Windows 8 на **начальном** экране откройте плитку **Все приложения**.  В установленной версии **[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]** откройте **Инструменты Visual Studio** и выберите одну из командных строк собственного или кросс\-инструмента.  В более ранних версиях Windows нажмите кнопку **Пуск**, последовательно разверните **Все программы**, **[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]**, **Инструменты Visual Studio** и выберите командную строку.  
+When Visual Studio is installed on a 64-bit Windows operating system, additional developer command prompt shortcuts for the 64-bit, x64-hosted native and cross compilers are available. To access these command prompts on Windows 10, on the **Start** menu, open the folder for your version of Visual Studio, for example **Visual Studio 2017**, and then choose one of the x64 native or cross-tool developer command prompts. To access these command prompts on Windows 8, on the **Start** screen, open **All apps**. Under the heading for the installed version of Visual Studio, open the **Visual Studio** folder (in older versions of Visual Studio, it may be named **Visual Studio Tools**). On earlier versions of Windows, choose **Start**, expand **All Programs**, the folder for your version of **Visual Studio** (and on older versions of Visual Studio, **Visual Studio Tools**). For more information, see [Developer command prompt shortcuts](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts).  
   
-## Пакетный файл Vcvarsall.bat  
- Все компиляторы могут использоваться в командной строке путем запуска командного файла vcvarsall.bat для настройки переменных пути и среды, которые включают набор инструментов компилятора.  Поскольку ярлыки командной строки, позволяющие включить 64\-разрядный набор инструментов для ориентации на платформы x86 или ARM, не существуют, воспользуйтесь файлом vcvarsall.bat в окне командной строки, чтобы использовать вместо этого 64\-разрядный набор инструментов.  Для получения дополнительной информации см. [Установка переменных пути и среды при построении из командной строки](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Use Vcvarsall.bat to set a 64-bit hosted build architecture
   
- Ниже описана процедура настройки командной строки на использование 64\-разрядного набора инструментов для ориентации на платформы x86, x64 и ARM.  
+Any of the native or cross compiler tools build configurations can be used on the command line by running the vcvarsall.bat command file. This command file configures the path and environment variables that enable a particular build architecture in an existing command prompt window. For specific instructions, see [Developer command files and locations](../build/building-on-the-command-line.md#developer_command_files) .  
   
-#### Запуск vcvarsall.bat для использования 64\-разрядного набора инструментов  
-  
-1.  В командной строке перейдите в каталог установки [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].  \(Его расположение зависит от системы и установки [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], однако обычно он находится в C:\\Program Files \(x86\)\\Microsoft Visual Studio *версия*\\VC\\.\) Например, введите следующее:  
-  
-     cd "\\Program Files \(x86\)\\Microsoft Visual Studio 12.0\\VC"  
-  
-2.  Чтобы настроить окно командной строки для 64\-разрядных сборок командной строки, ориентированных на платформы x64, введите следующее в командной строке:  
-  
-     `vcvarsall amd64`  
-  
-3.  Чтобы настроить окно командной строки для 64\-разрядных сборок командной строки, ориентированных на платформы x86, введите следующее в командной строке:  
-  
-     `vcvarsall amd64_x86`  
-  
-4.  Чтобы настроить окно командной строки для 64\-разрядных сборок командной строки, ориентированных на платформы ARM, введите следующее в командной строке:  
-  
-     `vcvarsall amd64_arm`  
-  
-## См. также  
- [Настройка программ для 64\-разрядных систем](../build/configuring-programs-for-64-bit-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)

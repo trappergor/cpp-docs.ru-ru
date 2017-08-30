@@ -1,116 +1,72 @@
 ---
-title: "Установка переменных пути и среды при построении из командной строки | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "include"
-  - "Lib"
-  - "Path"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe - компилятор [C++], переменные среды"
-  - "компиляция исходного кода [C++], из командной строки"
-  - "переменные среды [C++]"
-  - "переменные среды [C++], CL - компилятор"
-  - "INCLUDE - зарезервированное слово"
-  - "LIB - переменная среды"
-  - "LINK - средство [C++], переменные среды"
-  - "LINK - средство [C++], путь"
-  - "PATH - зарезервированное слово"
-  - "VCVARS32.bat - файл"
+title: Set the Path and Environment Variables for Command-Line Builds | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- include
+- Lib
+- Path
+dev_langs:
+- C++
+helpviewer_keywords:
+- environment variables [C++]
+- VCVARS32.bat file
+- cl.exe compiler [C++], environment variables
+- LINK tool [C++], environment variables
+- PATH reserved word
+- INCLUDE reserved word
+- LINK tool [C++], path
+- LIB environment variable
+- compiling source code [C++], from command line
+- environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Установка переменных пути и среды при построении из командной строки
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e43003163d29eb3b731e374d0e56b2e9284aea26
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/30/2017
 
-Для программ сборки из командной строки [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] требуется несколько переменных среды, соответствующим образом настроенных для установки.  При установке [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] создаются командные файлы, которые задают необходимые переменные среды, а затем создаются ярлыки для открытия окна командной строки, в котором эти переменные уже заданы.  Если необходимо использовать программы командной строки, можно выбрать один из этих ярлыков или открыть простое окно командной строки, а затем запустить командный файл vcvarsall.bat.  
+---
+# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Set the Path and Environment Variables for Command-Line Builds
+
+The Visual C++ command-line build tools require several environment variables that are customized for your installation and build configuration. When a C++ workload is installed by the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installer, it creates customized command files, or batch files, that set the required environment variables. The installer then uses these command files to create shortcuts for the Windows Start menu to open a developer command prompt window. These shortcuts set up the environment variables for a specific build configuration. When you want to use the command-line tools, you can run one of these shortcuts, or you can open a plain command prompt window and then run one of the custom command files to set the build configuration environment yourself. For more information, see [Build C/C++ Code on the Command Line](building-on-the-command-line.md).  
   
- Программы командной строки [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] используют переменные среды PATH, TMP, INCLUDE, LIB и LIBPATH, а также могут использовать переменные среды, связанные с конкретными программами.  Так как значения этих переменных среды зависят от установки и могут меняться при обновлении продукта, мы рекомендуем вам использовать файл vcvarsall.bat или ярлык на окно командной строки разработчика вместо того, чтобы настраивать их самостоятельно.  Информацию о переменных среды, используемых компилятором и компоновщиком, см. в статьях [Переменные среды CL](../build/reference/cl-environment-variables.md) и [Переменные среды инструмента LINK](../build/reference/link-environment-variables.md).  
+The Visual C++ command-line tools use the PATH, TMP, INCLUDE, LIB, and LIBPATH environment variables, and also use other environment variables specific to your installed tools, platforms, and SDKs. Even a simple [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installation may set twenty or more environment variables. Because the values of these environment variables are specific to your installation and your choice of build configuration, and can be changed by product updates or upgrades, we strongly recommend that you use a developer command prompt shortcut or one of the customized command files to set them, instead of setting them in the Windows environment yourself. 
+
+To see which environment variables are set by a developer command prompt shortcut, you can use the SET command. Open a plain command prompt window and capture the output of the SET command for a baseline. Open a developer command prompt window and capture the output of the SET command for comparison. A diff tool such as the one built into the Visual Studio IDE can be useful to compare the environment variables and see what is set by the developer command prompt. For information about the specific environment variables used by the compiler and linker, see [CL Environment Variables](../build/reference/cl-environment-variables.md) and [LINK Environment Variables](../build/reference/link-environment-variables.md).  
   
 > [!NOTE]
->  Некоторые программы командной строки и параметры требуют разрешений администратора.  Для их использования мы рекомендуем открыть окно командной строки с помощью команды **Запуск от имени администратора** \(в контекстном меню окна командной строки, которое нужно открыть\).  
+>  Several command-line tools or tool options may require Administrator permission. If you have permission issues when you use them, we recommend that you open the developer command prompt window by using the **Run as Administrator** option. On Windows 10, right-click to open the shortcut menu for the command prompt window, then choose **More**, **Run as administrator**.  
   
-## Использование ярлыков на окно командной строки  
- Ярлык "Командная строка разработчика", включенный в каждый выпуск [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], служит для открытия окна командной строки и настройки среды для использования 32\-разрядного набора программ x86 Native, предназначенного для процессоров x86.  Также доступны командные строки для 32\-разрядных кросс\-компиляторов, предназначенных для платформ x64 и ARM.  В зависимости от системы и установленного выпуска [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] также может быть доступен ярлык "Командная строка" для 64\-разрядного набора программ x64 Native, предназначенного для процессоров x64, и ярлык для 64\-разрядного кросс\-компилятора, предназначенного для процессоров x86.  Эти версии набора программ командной строки доступны во всех выпусках Visual Studio.  
-  
- x86 для платформы x86  
- Используйте этот набор программ для создания выходных файлов для компьютеров с архитектурой x86.  Он выполняется как 32\-разрядный процесс: как машинный код на компьютерах с платформой x86 и как процесс WOW64 на компьютерах с 64\-разрядной операционной системой Windows.  
-  
- [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] для платформы x86 \(кросс\-компилятор [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]\)  
- Используйте этот набор программ для создания выходных файлов для [!INCLUDE[vcprx64](../Token/vcprx64_md.md)].  Он выполняется как 32\-разрядный процесс: как машинный код на компьютерах с платформой x86 и как процесс WOW64 на компьютерах с 64\-разрядной операционной системой Windows.  
-  
- ARM для x86 \(кросс\-компилятор ARM\)  
- Используйте этот набор программ для создания выходных файлов для компьютеров с архитектурой ARM.  Он выполняется как 32\-разрядный процесс: как машинный код на компьютерах с платформой x86 и как процесс WOW64 на компьютерах с 64\-разрядной операционной системой Windows.  
-  
- Эти версии набора программ командной строки доступны на 64\-разрядных платформах.  
-  
- x86 для [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]  
- Используйте этот набор программ для создания выходных файлов для компьютеров с архитектурой x86.  Он выполняется как собственный процесс на компьютере с 64\-разрядной операционной системой Windows.  
-  
- [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] для платформы [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]  
- Используйте этот набор программ для создания выходных файлов для компьютеров [!INCLUDE[vcprx64](../Token/vcprx64_md.md)].  Он выполняется как собственный процесс на компьютере с 64\-разрядной операционной системой Windows.  
-  
- ARM для x64 \(кросс\-компилятор ARM\)  
- Используйте этот набор программ для создания выходных файлов для компьютеров с архитектурой ARM.  Он выполняется как собственный 64\-разрядный процесс на компьютере с 64\-разрядной операционной системой Windows.  
-  
-#### Открытие окна "Командная строка разработчика"  
-  
-1.  На начальном экране Windows 8 введите "Инструменты Visual Studio".  Обратите внимание на то, что результаты поиска меняются по мере ввода. Когда появится пункт **Инструменты Visual Studio**, выберите его.  
-  
-     В более ранних версиях Windows нажмите кнопку **Пуск**, а затем в поле поиска введите "Инструменты Visual Studio".  Когда в результатах поиска появится пункт **Инструменты Visual Studio**, выберите его.  
-  
-2.  В папке **Инструменты Visual Studio** выберите ярлык **Командная строка разработчика** для используемой версии [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  \(Для запуска от имени администратора откройте контекстное меню пункта "Командная строка разработчика" и выберите команду **Запуск от имени администратора**.\)  
-  
- Окно командной строки разработчика настраивает среду для использования собственного 32\-разрядного набора программ, предназначенного для процессоров x86.  Выберите пункт **Командная строка x64 Cross Tools** для использования собственного 32\-разрядного набора программ, предназначенного для процессоров x64.  Выберите пункт **Командная строка ARM Cross Tools** для использования собственного 32\-разрядного набора программ, предназначенного для процессоров ARM.  Выберите пункт **Командная строка x64 Native Tools** для использования собственного 64\-разрядного набора программ, предназначенного для процессоров x64.  
-  
-## Использование файла vcvarsall.bat в окне командной строки  
- Запустив файл vcvarsall.bat в простом окне командной строки, можно задать переменные среды так, чтобы настроить командную строку для использования собственной 32\-разрядной или 64\-разрядной компиляции либо перекрестной компиляции для процессоров x86, x64 или ARM.  Если аргументы не предоставлены, файл vcvarsall.bat настраивает переменные среды для использования собственного 32\-разрядного компилятора для целевых платформ x86.  Однако его можно использовать для настройки любого из компиляторов.  Если указать конфигурацию компилятора, которая не установлена или недоступна в архитектуре компьютера сборки, появится сообщение.  В следующей таблице показаны поддерживаемые аргументы.  
-  
-|Аргумент Vcvarsall.bat|Компилятор|Архитектура компьютера сборки|Архитектура выходных данных сборки|  
-|----------------------------|----------------|-----------------------------------|----------------------------------------|  
-|x86|собственный 32\-разрядный x86|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|x86|  
-|x86\_amd64|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)] для x86 \(кросс\-компилятор\)|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|x86\_arm|ARM для x86 \(кросс\-компилятор\)|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|ARM|  
-|amd64|собственный 64\-разрядный [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|amd64\_x86|x86 для [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] \(кросс\-компилятор\)|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|x86|  
-|amd64\_arm|ARM для [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] \(кросс\-компилятор\)|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|ARM|  
-  
- Ниже приведены инструкции по настройке командной строки для использования собственного 32\-разрядного набора программ, предназначенного для платформ x86.  
-  
-#### Запуск файла vcvarsall.bat  
-  
-1.  В командной строке перейдите в каталог установки [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].  \(Расположение зависит от системы и установки [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], однако типичное расположение — C:\\Program Files \(x86\)\\Microsoft Visual Studio *версия*\\VC\\.\) Например, введите:  
-  
-     cd "\\Program Files \(x86\)\\Microsoft Visual Studio 12.0\\VC"  
-  
-2.  Чтобы настроить окно командной строки для 32\-разрядной сборки на платформе x86, введите в командной строке следующую команду.  
-  
-     `vcvarsall x86`  
-  
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] также предоставляет файл vcvars32.bat для настройки среды командной строки.  Файл vcvars32.bat предназначен только для настройки соответствующих переменных среды для 32\-разрядных сборок на платформе x86.  Его запуск аналогичен выполнению команды `vcvarsall x86`.  
-  
- Если вы используете [DEVENV](../Topic/Devenv%20Command%20Line%20Switches.md) для сборки из командной строки, среда, настроенная с помощью файла vcvarsall.bat или vcvars32.bat, не влияет на ваши сборки, если только не указан параметр **\/useenv**.  
-  
-> [!CAUTION]
->  Файл vcvarsall.bat может иметь отличия на разных компьютерах.  Не заменяйте отсутствующий или поврежденный файл vcvarsall.bat файлом с другого компьютера.  Чтобы заменить отсутствующий файл, запустите программу установки [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] повторно.  
->   
->  Файл vcvarsall.bat также может иметь отличия в разных версиях.  Если текущая версия [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] установлена на компьютере, на котором также имеется более ранняя версия [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)], не запускайте файл vcvarsall.bat или vcvars32.bat из других версий в том же окне командной строки.  
-  
-## См. также  
- [Построение из командной строки](../Topic/Building%20on%20the%20Command%20Line.md)   
- [Компоновка](../Topic/Linking.md)   
- [Параметры компоновщика](../build/reference/linker-options.md)   
- [Компилирование программы C\/C\+\+](../build/reference/compiling-a-c-cpp-program.md)   
- [Параметры компилятора](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+
+[Build C/C++ code on the command line](../build/building-on-the-command-line.md)   
+[Linking](../build/reference/linking.md)   
+[Linker Options](../build/reference/linker-options.md)   
+[Compiling a C/C++ Program](../build/reference/compiling-a-c-cpp-program.md)   
+[Compiler Options](../build/reference/compiler-options.md)
