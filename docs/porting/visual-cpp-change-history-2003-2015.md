@@ -1,5 +1,5 @@
 ---
-title: "Журнал изменений Visual C++ 2003–2015 | Документы Майкрософт"
+title: Visual C++ change history 2003 - 2015 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,140 +33,140 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
+ms.sourcegitcommit: 7e1281daaf729de6935774ba34e2387bf82446e8
+ms.openlocfilehash: ab1d4fed84fb7fc0dee28c0663bfb1afbee3c019
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
-В этой статье описываются критические изменения, начиная с Visual Studio 2015 и до Visual Studio 2003, а термины "новое поведение" и "теперь" относятся к Visual Studio 2015 и более поздним версиям. Термины "старое поведение" и "раньше" относятся к Visual Studio 2013 и более ранних версий. 
+# <a name="visual-c-change-history-2003---2015"></a>Visual C++ change history 2003 - 2015
+This article describes all the breaking changes from Visual Studio 2015 going back to Visual Studio 2003, and in this article the terms "new behavior" or "now" refer to Visual Studio 2015 and later. The terms "old behavior" and "before" refer to Visual Studio 2013 and earlier releases. 
  
- Сведения о Visual Studio 2017 см. в статьях [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017) и [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Улучшения соответствия в Visual C++ в Visual Studio 2017). 
+ For information about Visual Studio 2017, see [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) and [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
  > [!NOTE]
- > Принципы работы с двоичными файлами в Visual Studio 2017 по сравнению с Visual Studio 2015 существенно не изменились.
+ > There are no binary breaking changes between Visual Studio 2015 and Visual Studio 2017.
 
-При обновлении до новой версии компилятора C Visual C++ могут возникать ошибки компиляции и ошибки во время выполнения кода, который ранее правильно компилировался и выполнялся. Изменения в новой версии, вызывающие такие проблемы, именуются *критическими изменениями*и, как правило, связаны с изменениями стандарта языка C++, сигнатур функций или структуры объектов в памяти.  
+When you upgrade to a new version of the Visual C++ compiler, you might encounter compilation and/or runtime errors in code that previously compiled and ran correctly. Changes in the new version that cause such problems are known as *breaking changes*, and typically they're required by modifications in the C++ language standard, function signatures, or the layout of objects in memory.  
   
- Чтобы избежать ошибок во время выполнения, которые сложно выявить и диагностировать, рекомендуется не создавать статических ссылок на двоичные файлы, скомпилированные при помощи других версий компилятора. Кроме того, при обновлении проекта EXE или DLL обязательно обновите библиотеки, на которые он ссылается. При использовании типов CRT (среда выполнения языка C) или стандартной библиотеки C++ не передавайте их между двоичными файлами (в том числе файлами DLL), скомпилированными при помощи разных версий компилятора. Дополнительные сведения см. в статье [Потенциальные ошибки при передаче объектов среды CRT через границы DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
+ To avoid run-time errors that are difficult to detect and diagnose, we recommend that you never statically link to binaries that were compiled by using different versions of the compiler. Also, when you upgrade an EXE or DLL project, make sure to upgrade the libraries that it links to. If you're using CRT (C Runtime) or C++ Standard Library (C++ Standard Library) types, don't pass them between binaries (including DLLs) that were compiled by using different versions of the compiler. For more information, see [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
- Также рекомендуется не создавать код, зависящий от конкретной структуры, для объекта, который не является интерфейсом COM или объектом POD. Если вы написали подобный код, после обновления обязательно убедитесь в его работоспособности. Дополнительные сведения см. в статье [Переносимость на границах API](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
+ We further recommend that you never write code that depends on a particular layout for an object that is not a COM interface or a POD object. If you do write such code, then you must ensure that it works after you upgrade. For more information, see [Portability At ABI Boundaries](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
   
- Кроме того, постоянные улучшения соответствия компилятора иногда могут изменить то, как компилятор распознает существующий исходный код. В этом случае во время сборки могут возникнуть новые или другие ошибки или даже поведенческие различия в коде, который был построен ранее и, казалось, работал правильно. Несмотря на то, что они не являются критическими, подобно описываемым в данном документе, для устранения этих проблем может потребоваться внести изменения в исходный код.  
+ Additionally, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code. When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly. Although these are not breaking changes like the ones discussed in this document, source code changes might be needed to resolve these issues.  
   
   
-1.  [Критические изменения библиотеки времени выполнения C (CRT)](#BK_CRT)  
+1.  [C Runtime (CRT) Library Breaking Changes](#BK_CRT)  
   
-2.  [Критические изменения стандартного C++ и стандартной библиотеки C++](#BK_STL)  
+2.  [Standard C++ and C++ Standard Library Breaking Changes](#BK_STL)  
   
-3.  [Критические изменения MFC и ATL](#BK_MFC)  
+3.  [MFC and ATL Breaking Changes](#BK_MFC)  
   
-4.  [Критические изменения среды выполнения с параллелизмом](#BK_ConcRT)  
+4.  [Concurrency Runtime Breaking Changes](#BK_ConcRT)  
   
-## <a name="VC_2015"></a> Изменения соответствия Visual C++ 2015  
+## <a name="VC_2015"></a> Visual C++ 2015 Conformance Changes  
   
-###  <a name="BK_CRT"></a> Библиотека времени выполнения C (CRT)  
+###  <a name="BK_CRT"></a> C Runtime Library (CRT)  
   
-#### <a name="general-changes"></a>Общие изменения  
+#### <a name="general-changes"></a>General Changes  
   
--   **Двоичные файлы, полученные в результате рефакторинга** Был осуществлен рефакторинг библиотеки CRT, в результате чего она была разделена на два разных двоичных файла — универсальный CRT (ucrtbase), который содержит большинство стандартных функциональных возможностей, и библиотеку времени выполнения VC (vcruntime), которая содержит функции, связанные с компилятором, такие как обработка исключений и встроенные функции. В случае использования параметров проекта по умолчанию это изменение вас не затронет, так как компоновщик будет автоматически использовать новые библиотеки по умолчанию. Если вы установили для свойства **Игнорировать все стандартные библиотеки** **компоновщика** в проекте значение **Да** или используете параметр компоновщика /NODEFAULTLIB в командной строке, необходимо обновить список библиотек (в свойстве **Дополнительные зависимости** ), чтобы включить в него новые подвергнутые рефакторингу библиотеки. Замените старую библиотеку CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) эквивалентными подвергнутыми рефакторингу библиотеками. Для каждой из двух подвергнутых рефакторингу библиотек существует статическая (.lib) и динамическая (.dll) версии, а также версия выпуска (без суффикса) и отладочная версия (с суффиксом "d"). Динамические версии имеют библиотеку импорта, с которой выполняется связь. Рефакторингу подвергнуты две библиотеки: универсальная CRT (а именно ucrtbase.dll or .lib, ucrtbased.dll or .lib) и библиотека времени выполнения VC — libvcruntime.lib, vcruntime *версия*.dllи vcruntimed*версия*.dll. *Версия* в Visual Studio 2015 и Visual Studio 2017 — 140. См. статью [CRT Library Features](../c-runtime-library/crt-library-features.md) (Функции библиотеки CRT).  
+-   **Refactored binaries** The CRT Library  has been refactored into a two different binaries, a Universal CRT (ucrtbase), which contains most of the standard functionality, and a VC Runtime Library (vcruntime), which contains the compiler-related functionality, such as exception handling, and intrinsics. If you are using the default project settings, then this change does not impact you since the linker will use the new default libraries automatically. If you have set the project's **Linker** property **Ignore All Default Libraries** to **Yes** or you are using the /NODEFAULTLIB linker option on the command line, then you must update your list of libraries (in the **Additional Dependencies** property) to include the new, refactored libraries. Replace the old CRT library (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) with the equivalent refactored libraries. For each of the two refactored libraries, there are static (.lib) and dynamic (.dll) versions, and release (with no suffix) and debug versions (with the "d" suffix). The dynamic versions have an import library that you link with. The two refactored libraries are Universal CRT, specifically ucrtbase.dll or .lib, ucrtbased.dll or .lib, and the VC runtime library, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib, and vcruntimed*version*.dll. The *version* in both Visual Studio 2015 and Visual Studio 2017 is 140. See [CRT Library Features](../c-runtime-library/crt-library-features.md).  
   
 #### <a name="localeh"></a>\<locale.h>  
   
--   **localeconv**. Функция [localeconv](../c-runtime-library/reference/localeconv.md), объявленная в locale.h, теперь работает правильно при включенном [языковом стандарте отдельного потока](../parallel/multithreading-and-locales.md). В предыдущих версиях библиотеки эта функция возвращала бы данные lconv для глобального языкового стандарта, а не для языкового стандарта потока.  
+-   **localeconv** The [localeconv](../c-runtime-library/reference/localeconv.md) function declared in locale.h now works correctly when [per-thread locale](../parallel/multithreading-and-locales.md) is enabled. In previous versions of the library, this function would return the lconv data for the global locale, not the thread's locale.  
   
-     При использовании языкового стандарта отдельного потока следует проверить использование localeconv, чтобы узнать, предполагается ли в коде, что данные lconv возвращается для глобального языкового стандарта, и при необходимости внести соответствующие изменения.  
+     If you use per thread locale, you should check your use of localeconv to see if your code assumes that the lconv data returned is for the global locale and modify it appropriately.  
   
 #### <a name="mathh"></a>\<math.h>  
   
--   **Перегрузки C++ для функций математической библиотеки**. В предыдущих версиях в \<math.h> были определены некоторые, но не все перегрузки C++ для функций математической библиотеки. \<cmath> определял оставшиеся перегрузки, поэтому для получения всех перегрузок необходимо было включить заголовок \<cmath>. Это привело к проблемам с разрешением перегрузки функций в коде, содержащем только \<math.h>. Теперь все перегрузки C++ были удалены из \<math.h> и присутствуют только в \<cmath>.  
+-   **C++ overloads of math library functions** In previous versions, \<math.h> defined some, but not all, of the C++ overloads for the math library functions. \<cmath> defined the remaining overloads, so to get all of the overloads, one needed to include the \<cmath> header. This led to problems with function overload resolution in code that only included \<math.h>. Now, all C++ overloads have been removed from \<math.h> and are now present only in \<cmath>.  
   
-     Чтобы устранить ошибки, включите <cmath> для получения объявлений функций, которые были удалены из \<math.h>. В следующей таблице перечислены перемещенные функции.  
+     To resolve errors, include <cmath> to get the declarations of the functions that were removed from \<math.h>. The following table lists the functions that were moved.  
   
-     Перемещенные функции:  
+     Functions that were moved:  
   
-    1.  double abs(double) и float abs(float)  
+    1.  double abs(double) and float abs(float)  
   
     2.  double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)  
   
-    3.  Версии float и long double функций с плавающей запятой acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc  
+    3.  float and long double versions of floating point functions acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc  
   
-     Если имеется код, использующий abs с типом с плавающей запятой, содержащий только заголовок math.h, версии с плавающей запятой больше не будут доступны, поэтому вызов, даже имеющий аргумент с плавающей запятой, разрешается в abs(int). При этом выдается ошибка:  
+     If you have code that uses abs with a floating point type that only includes the math.h header, the floating point versions will no longer be available, so the call, even with a floating point argument, now resolves to abs(int). This produces the error:  
   
     ```Output  
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data  
     ```  
   
-     Для исправления этого предупреждения замените вызов abs на версию abs с плавающей запятой, например, fabs для аргумента типа double или fabsf для аргумента с плавающей запятой, либо включите заголовок cmath и продолжайте использовать abs.  
+     The fix for this warning is to replace the call to abs with a floating point version of abs, such as fabs for a double argument or fabsf for a float argument, or include the cmath header and continue to use abs.  
   
--   **Соответствие требованиям к плавающей запятой** В математическую библиотеку внесено множество изменений для повышения уровня соответствия спецификациям стандарта IEEE-754 и дополнения F стандарта C11 относительно специальных вариантов входных данных, например значений NaN и бесконечностей. Например, входные данные несигнальных NaN, которые часто обрабатывались как ошибки в предыдущих версиях библиотеки, больше не считаются ошибками. См. [стандарт IEEE 754](http://grouper.ieee.org/groups/754) и приложение F к [стандарту C11](http://www.iso-9899.info/wiki/The_Standard).  
+-   **Floating point conformance** Many changes to the math library have been made to improve conformance to the IEEE-754 and C11 Annex F specifications with respect to special case inputs such as NaNs and infinities. For example, quiet NaN inputs, which were often treated as errors in previous versions of the library, are no longer treated as errors. See [IEEE 754 Standard](http://grouper.ieee.org/groups/754) and Annex F of the [C11 Standard](http://www.iso-9899.info/wiki/The_Standard).  
   
-     Эти изменения не будут вызывать ошибки времени компиляции, но могут привести к изменению поведения программ, которое станет ближе соответствовать стандарту.  
+     These changes won't cause compile-time errors, but might cause programs to behave differently and more correctly according to the standard.  
   
--   **FLT_ROUNDS** В Visual Studio 2013 макрос FLT_ROUNDS расширен до константного выражения, которое было неверным, поскольку режим округления настраивается во время выполнения, например путем вызова fesetround. Теперь макрос FLT_ROUNDS является динамическим и правильно отражает текущий режим округления.  
+-   **FLT_ROUNDS** In Visual Studio 2013, the FLT_ROUNDS macro expanded to a constant expression, which was incorrect because the rounding mode is configurable at runtime, for example, by calling fesetround. The FLT_ROUNDS macro is now dynamic and correctly reflects the current rounding mode.  
   
-#### <a name="new-and-newh"></a>\<new> и \<new.h>  
+#### <a name="new-and-newh"></a>\<new> and \<new.h>  
   
--   **Операторы new и delete** В предыдущих версиях библиотеки функции new и delete определяемого реализацией оператора были экспортированы из библиотеки DLL библиотеки времени выполнения (например, msvcr120.dll). Эти функции оператора теперь всегда статически привязаны к двоичным файлам, даже если используются DLL библиотеки времени выполнения.  
+-   **new and delete** In previous versions of the library, the implementation-defined operator new and delete functions were exported from the runtime library DLL (for example, msvcr120.dll). These operator functions are now always statically linked into your binaries, even when using the runtime library DLLs.  
   
-     Это не является критическим изменением для машинного или смешанного кода (/clr), однако для кода, компилируемого как [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), это может привести к ошибке компиляции кода. При компиляции кода как /clr:pure может потребоваться добавить #include \<new> или #include \<new.h> для устранения ошибок сборки, вызванных этим изменением. Обратите внимание, что использовать /clr:pure в Visual Studio 2015 не рекомендуется, и этот параметр может быть удален в будущих выпусках.  
+     This is not a breaking change for native or mixed code (/clr), however for code compiled as [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), this might cause your code to fail to compile. If you compile code as /clr:pure, you may need to add #include \<new> or #include \<new.h> to work around build errors due to this change. Note that /clr:pure is deprecated in Visual Studio 2015 and might be removed in future releases.  
   
 #### <a name="processh"></a>\<process.h>  
   
--   **_beginthread и _beginthreadex**. Функции [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) и [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) теперь содержат ссылку на модуль, в котором определена процедура потока на протяжении всего потока. Это помогает гарантировать, что модули не будут выгружены до завершения потока.  
+-   **_beginthread and _beginthreadex** The [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) and [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) functions now hold a reference to the module in which the thread procedure is defined for the duration of the thread. This helps to ensure that modules are not unloaded until a thread has run to completion.  
   
 #### <a name="stdargh"></a>\<stdarg.h>  
   
--   **va_start и ссылочные типы**. Теперь при компиляции кода C++ [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) выполняет проверку во время компиляции, чтобы убедиться, что передаваемый ему аргумент не относится к ссылочному типу. Аргументы ссылочных типов запрещены стандартом C++.  
+-   **va_start and reference types** When compiling C++ code, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) now validates at compile-time that the argument passed to it is not of reference type. Reference-type arguments are prohibited by the C++ Standard.  
   
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> и \<conio.h>  
+#### <a name="stdioh-and-conioh"></a>\<stdio.h> and \<conio.h>  
   
--   **Теперь семейство функций printf и scanf определяется встроенным образом.** Определения всех функций printf и scanf были перемещены внутрь \<stdio.h>, \<conio.h> и других заголовков CRT. Это критическое изменение, которое приводит к ошибке компоновщика (LNK2019, неразрешенный внешний символ) для всех программ, где эти функции объявляются локально, однако отсутствуют соответствующие заголовки CRT. Если это возможно, следует обновить код, включив заголовки CRT (то есть добавьте #include \<stdio.h>) и встраиваемые функции, но если вы не хотите менять код, чтобы включить эти файлы заголовка, имеется и альтернативное решение: добавьте во входные данные компоновщика дополнительную библиотеку legacy_stdio_definitions.lib.  
+-   **The printf and scanf family of functions are now defined inline.** The definitions of all of the printf and scanf functions have been moved inline into \<stdio.h>, \<conio.h>, and other CRT headers. This is a breaking change that leads to a linker error (LNK2019, unresolved external symbol) for any programs that declared these functions locally without including the appropriate CRT headers. If possible, you should update the code to include the CRT headers (that is, add #include \<stdio.h>) and the inline functions, but if you do not want to modify your code to include these header files, an alternative solution is to add an additional library to your linker input, legacy_stdio_definitions.lib.  
   
-     Чтобы добавить эту библиотеку во входные данные компоновщика в интегрированной среде разработки, откройте контекстное меню узла проекта, выберите пункт **Свойства**, затем в диалоговом окне **Свойства проекта** выберите **Компоновщик**и измените **Входные данные компоновщика** , добавив legacy_stdio_definitions.lib в список, разделенный точкой с запятой.  
+     To add this library to your linker input in the IDE, open the context menu for the project node, choose **Properties**, then in the **Project Properties** dialog box, choose **Linker**, and edit the **Linker Input** to add legacy_stdio_definitions.lib to the semi-colon-separated list.  
   
-     Если проект связан со статическими библиотеками, которые были скомпилированы в выпуске Visual C++, предшествующем 2015, компоновщик может сообщить о неразрешенном внешнем символе. Эти ошибки могут ссылаться на внутренние определения stdio для _iob, _iob_func или связанные импорты для определенных функций stdio в форме _imp\_*. Корпорация Майкрософт рекомендует перекомпилировать все статические библиотеки с использованием последней версии компилятора и библиотек Visual C++ при обновлении проекта. Если библиотека создана сторонним разработчиком и ее исходный код недоступен, следует запросить обновленный двоичный файл у стороннего разработчика или инкапсулировать использование этой библиотеки в отдельную библиотеку DLL, компилируемую с использованием старой версии компилятора и библиотек Visual C++.  
+     If your project links with static libraries that were compiled with a release of Visual C++ earlier than 2015, the linker might report an unresolved external symbol. These errors might reference internal stdio definitions for _iob, _iob_func, or related imports for certain stdio functions in the form of _imp\_*. Microsoft recommends that you recompile all static libraries with the latest version of the Visual C++ compiler and libraries when you upgrade a project. If the library is a third-party library for which source is not available, you should either request an updated binary from the third party or encapsulate your usage of that library into a separate DLL that you compile with the older version of the Visual C++ compiler and libraries.  
   
     > [!WARNING]
-    >  При связывании с Windows SDK 8.1 или более ранней версии могут возникнуть следующие ошибки неразрешенного внешнего символа. В этом случае следует устранить ошибку, добавив legacy_stdio_definitions.lib во входные данные компоновщика, как описано выше.  
+    >  If you are linking with Windows SDK 8.1 or earlier, you might encounter these unresolved external symbol errors. In that case, you should resolve the error by adding legacy_stdio_definitions.lib to the linker input as described previously.  
   
-     Для устранения неполадок с неразрешенным символом попробуйте использовать [dumpbin.exe](../build/reference/dumpbin-reference.md) для изучения символов, определенных в двоичном файле. Попробуйте выполнить следующую команду для просмотра символов, определенных в библиотеке.  
+     To troubleshoot unresolved symbol errors, you can try using [dumpbin.exe](../build/reference/dumpbin-reference.md) to examine the symbols defined in a binary. Try the following command line to view symbols defined in a library.  
   
     ```cpp  
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **gets и _getws**. Функции [gets](../c-runtime-library/gets-getws.md) и [_getws](../c-runtime-library/gets-getws.md) были удалены. Функция gets была удалена из стандартной библиотеки C в C11, так как ее нельзя использовать безопасным образом. Функция _getws была эквивалентным функции gets расширением Майкрософт, предназначенным для двухбайтовых строк. В качестве альтернативы этим функциям можно использовать [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md) и [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
+-   **gets and _getws** The [gets](../c-runtime-library/gets-getws.md) and [_getws](../c-runtime-library/gets-getws.md) functions have been removed. The gets function was removed from the C Standard Library in C11 because it cannot be used securely. The _getws function was a Microsoft extension that was equivalent to gets but for wide strings. As alternatives to these functions, consider use of [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md), and [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
--   **_cgets и _cgetws**. Функции [_cgets](../c-runtime-library/cgets-cgetws.md) и [_cgetws](../c-runtime-library/cgets-cgetws.md) были удалены. В качестве альтернативы этим функциям можно использовать [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) и [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+-   **_cgets and _cgetws** The [_cgets](../c-runtime-library/cgets-cgetws.md) and [_cgetws](../c-runtime-library/cgets-cgetws.md) functions have been removed. As alternatives to these functions, consider use of [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) and [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
--   **Форматирование бесконечностей и значений NaN** В предыдущих версиях бесконечности и значения NaN форматировались с использованием строк sentinel из Visual C++.  
+-   **Infinity and NaN Formatting** In previous versions, infinities and NaNs would be formatted using a set of Visual C++-specific sentinel strings.  
   
-    -   Бесконечность: 1.#INF  
+    -   Infinity: 1.#INF  
   
-    -   Несигнальное значение NaN: 1. #QNAN  
+    -   Quiet NaN: 1.#QNAN  
   
-    -   Сигнальное значение NaN: 1.#SNAN  
+    -   Signaling NaN: 1.#SNAN  
   
-    -   Неопределенное значение NaN: 1.#IND  
+    -   Indefinite NaN: 1.#IND  
   
-     Любое из этих значений могло иметь префикс в виде знака и могло быть отформатировано немного иначе в зависимости от ширины поля и точности (иногда с необычными эффектами, например printf("%.2f\n", INFINITY) приведет к выводу 1.#J, так как #INF будет "округлено" до точности в два разряда). В C99 появились новые требования к форматированию бесконечностей и значений NaN. Реализация Visual C++ теперь соответствует этим требованиям. Далее приведены новые строки:  
+     Any of these may have been prefixed by a sign and may have been formatted slightly differently depending on field width and precision (sometimes with unusual effects, e.g. printf("%.2f\n", INFINITY) would print 1.#J because the #INF would be "rounded" to a precision of 2 digits). C99 introduced new requirements on how infinities and NaNs are to be formatted. The Visual C++ implementation now conforms to these requirements. The new strings are as follows:  
   
-    -   Бесконечность: inf  
+    -   Infinity: inf  
   
-    -   Несигнальное значение NaN: nan  
+    -   Quiet NaN: nan  
   
-    -   Сигнальное значение NaN: nan(snan)  
+    -   Signaling NaN: nan(snan)  
   
-    -   Неопределенное значение NaN: nan(ind)  
+    -   Indefinite NaN:nan(ind)  
   
-     Любая из них может иметь префикс в виде знака. Если используется описатель формата прописных букв (%F вместо %f), строки выводятся прописными буквами (INF вместо inf), как это и требуется.  
+     Any of these may be prefixed by a sign. If a capital format specifier is used (%F instead of %f) then the strings are printed in capital letters (INF instead of inf), as is required.  
   
-     Функции [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) были изменены, чтобы обеспечивать анализ этих новых строк, поэтому данные строки будут использовать круговой путь через функции printf и scanf.  
+     The [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) functions have been modified to parse these new strings, so these strings will round-trip through printf and scanf.  
   
--   **Форматирование и анализ при наличии плавающей запятой** В целях обеспечения правильности работы были введены новые алгоритмы форматирования и синтаксического анализа при наличии плавающей запятой. Это изменение влияет на семейства функций [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) и [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), а также на такие функции, как [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
+-   **Floating point formatting and parsing** New floating point formatting and parsing algorithms have been introduced to improve correctness. This change affects the [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) families of functions, as well as functions like [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
-     Старые алгоритмы форматирования могут создать лишь ограниченное число цифр, после чего заполняют оставшиеся десятичные знаки нулями. Обычно этого достаточно для создания строк, которые осуществляют круговой путь обратно к исходному значению с плавающей запятой, однако этот способ не подходит, если требуется точное значение (или его ближайшее десятичное представление). Новые алгоритмы форматирования создают любое необходимое число цифр для представления значения (или для обеспечения указанной точности). В качестве примера улучшения давайте рассмотрим результаты при выводе большого результата возведения в квадрат.  
+     The old formatting algorithms would generate only a limited number of digits, then would fill the remaining decimal places with zero. This is usually good enough to generate strings that will round-trip back to the original floating point value, but it's not great if you want the exact value (or the closest decimal representation thereof). The new formatting algorithms generate as many digits as are required to represent the value (or to fill the specified precision). As an example of the improvement; consider the results when printing a large power of two:  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -177,126 +177,126 @@ ms.lasthandoff: 08/11/2017
         Old:  1208925819614629200000000    New:  1208925819614629174706176  
     ```  
   
-     Старые алгоритмы анализа используют не более 17 значащих цифр из строки ввода, а остальные цифры не учитывают. Этого достаточно для создания очень хорошего приближения для значения, представленного этой строкой, и результат обычно очень близок к правильно округленному результату. Новая реализация учитывает все имеющиеся цифры и выдает правильно округленный результат для всех входных данных (длиной до 768 цифр). Кроме того, эти функции теперь учитывают режим округления (управляемый или fesetround).  Это критическое изменение поведения, так как эти функции могут выдавать различные результаты. Новые результаты всегда являются более правильными по сравнению со старыми.  
+     The old parsing algorithms would consider only up to 17 significant digits from the input string and would discard the rest of the digits. This is sufficient to generate a very close approximation of the value represented by the string, and the result is usually very close to the correctly rounded result. The new implementation considers all present digits and produces the correctly rounded result for all inputs (up to 768 digits in length). In addition, these functions now respect the rounding mode (controllable via fesetround).  This is a potentially breaking behavior change because these functions might output different results. The new results are always more correct than the old results.  
   
--   **Анализ шестнадцатеричных значений и значений бесконечности/NaN с плавающей запятой** Алгоритмы анализа выражений с плавающей запятой теперь будут анализировать шестнадцатеричные строки с плавающей запятой (например, созданные описателями %a и %A формата printf) и все строки бесконечностей и NaN, как описано выше.  
+-   **Hexadecimal and infinity/NaN floating point parsing** The floating point parsing algorithms will now parse hexadecimal floating point strings (such as those generated by the %a and %A printf format specifiers) and all infinity and NaN strings that are generated by the printf functions, as described above.  
   
--   **Заполнение нулями в %A и %a** Описатели формата %a и %A форматируют значение с плавающей запятой как шестнадцатеричную мантиссу и двоичный показатель степени. В предыдущих версиях функции printf заполняли строки нулями неправильно. Например, printf("%07.0a\n", 1.0) выводила 00x1p+0, хотя должна вывести 0x01p+0. Эта проблема была исправлена.  
+-   **%A and %a zero padding** The %a and %A format specifiers format a floating point number as a hexadecimal mantissa and binary exponent. In previous versions, the printf functions would incorrectly zero-pad strings. For example, printf("%07.0a\n", 1.0) would print 00x1p+0, where it should print 0x01p+0. This has been fixed.  
   
--   **Точность %A и %a** В предыдущих версиях библиотеки точность описателей формата %A и %a по умолчанию была равна 6. Теперь точность по умолчанию составляет 13 для обеспечения соответствия стандарту.  
+-   **%A and %a precision** The default precision of the %A and %a format specifiers was 6 in previous versions of the library. The default precision is now 13 for conformance with the C Standard.  
   
-     Это изменяет поведение во время выполнения в выходных данных любой функции, которая использует строку формата с %A или %a. При старом поведении описатель %A мог давать выходные данные "1.1A2B3Cp+111". Теперь для того же значения выводится "1.1A2B3C4D5E6F7p+111". Чтобы получить старое поведение, можно указать точность, например %.6A. См. раздел [Precision Specification](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision) (Спецификация точности).  
+     This is a runtime behavior change in the output of any function that uses a format string with %A or %a. In the old behavior, the output using the %A specifier might be "1.1A2B3Cp+111". Now the output for the same value is "1.1A2B3C4D5E6F7p+111". To get the old behavior, you can specify the precision, for example, %.6A. See [Precision Specification](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
--   **Описатель %F** Теперь поддерживается описатель формата/преобразования %F. Функционально он эквивалентен описателю формата %f, за исключением того, что бесконечности и значения NaN форматируются с помощью прописных букв.  
+-   **%F specifier** The %F format/conversion specifier is now supported. It is functionally equivalent to the %f format specifier, except that infinities and NaNs are formatted using capital letters.  
   
-     В предыдущих версиях данная реализация использовалась для анализа F и N в качестве модификаторов длины. Это поведение относится ко временам сегментированных адресных пространств: эти модификаторы длины использовались для обозначения дальнего и ближнего указателей соответственно как %Fp или %Ns. Такое поведение было удалено. Теперь при обнаружении %F он рассматривается как описатель формата %F, а %N при обнаружении теперь рассматривается как недопустимый параметр.  
+     In previous versions, the implementation used to parse F and N as length modifiers. This behavior dated back to the age of segmented address spaces: these length modifiers were used to indicate far and near pointers, respectively, as in %Fp or %Ns. This behavior has been removed. If %F is encountered, it is now treated as the %F format specifier; if %N is encountered, it is now treated as an invalid parameter.  
   
--   **Форматирование показателя степени** Описатели формата %e и %E форматируют значение с плавающей запятой как десятичную мантиссу и показатель степени. В некоторых случаях описатели формата %G и %g также форматируют числа в этой форме. В предыдущих версиях CRT всегда создает строки с показателями степени из трех цифр. Например, printf("%e\n", 1.0) выдает 1.000000e+000. Это неверно. C требует того, что если показатель степени можно представить с помощью одной или двух цифр, то следует вывести только две цифры.  
+-   **Exponent formatting** The %e and %E format specifiers format a floating point number as a decimal mantissa and exponent. The %g and %G format specifiers also format numbers in this form in some cases. In previous versions, the CRT would always generate strings with three-digit exponents. For example, printf("%e\n", 1.0) would print 1.000000e+000. This was incorrect: C requires that if the exponent is representable using only one or two digits, then only two digits are to be printed.  
   
-     В Visual Studio 2005 был добавлен переключатель глобальной согласованности: [_set_output_format](../c-runtime-library/set-output-format.md). Программа может вызвать эту функцию с аргументом _TWO_DIGIT_EXPONENT, чтобы обеспечить согласованный вывод показателя степени. Поведение по умолчанию было изменено на соответствующий стандартам режим вывода показателя степени.  
+     In Visual Studio 2005 a global conformance switch was added: [_set_output_format](../c-runtime-library/set-output-format.md). A program could call this function with the argument _TWO_DIGIT_EXPONENT, to enable conforming exponent printing. The default behavior has been changed to the standards-conforming exponent printing mode.  
   
--   **Проверка строки формата** В предыдущих версиях функции printf и scanf без уведомления принимали многие недопустимые строки формата, иногда с необычными эффектами. Например, % hlhlhld расценивалась как %d. Теперь все недопустимые строки формата считаются недопустимыми параметрами.  
+-   **Format string validation** In previous versions, the printf and scanf functions would silently accept many invalid format strings, sometimes with unusual effects. For example, %hlhlhld would be treated as %d. All invalid format strings are now treated as invalid parameters.  
   
--   **Проверка строки режима fopen**  
+-   **fopen mode string validation**  
   
-     В предыдущих версиях семейство функций fopen без уведомления принимало некоторые недопустимые строки режима (например, r+b+). Недопустимые строки режима теперь обнаруживаются и обрабатываются как недопустимые параметры.  
+     In previous versions, the fopen family of functions silently accepted some invalid mode strings (e.g. r+b+). Invalid mode strings are now detected and treated as invalid parameters.  
   
--   **Режим _O_U8TEXT**  
+-   **_O_U8TEXT mode**  
   
-     Функция [_setmode](../c-runtime-library/reference/setmode.md) теперь правильно сообщает режим для потоков, открытых в режиме _O_U8TEXT. В предыдущих версиях библиотеки такие потоки считались открытыми в режиме _O_WTEXT.  
+     The [_setmode](../c-runtime-library/reference/setmode.md) function now correctly reports the mode for streams opened in_O_U8TEXT mode. In previous versions of the library, it would report such streams as being opened in _O_WTEXT.  
   
-     Это критическое изменение, если код определяет режим _O_WTEXT для потоков, имеющих кодировку UTF-8. Если приложение не поддерживает UTF_8, рекомендуется добавить поддержку этой широко распространенной кодировки.  
+     This is a breaking change if your code interprets the _O_WTEXT mode for streams where the encoding is UTF-8. If your application doesn't support UTF_8, consider adding support for this increasingly common encoding.  
   
--   **snprintf и vsnprintf**. Теперь реализованы функции [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) и [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md). Устаревший код часто предоставлял определения версий макроса этих функций, так как они не были реализованы библиотекой CRT, но в более поздних версиях они не нужны. Если функция [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) или [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) определяется как макрос перед включением \<stdio.h>, теперь компиляция завершается с ошибкой, указывающей, где именно был определен макрос.  
+-   **snprintf and vsnprintf** The [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) and [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) functions are now implemented. Older code often provided definitions macro versions of these functions because they were not implemented by the CRT library, but these are no longer needed in newer versions. If [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) or [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) is defined as a macro before including \<stdio.h>, compilation now fails with an error that indicates where the macro was defined.  
   
-     Как правило, для исправления этой проблемы следует удалить все объявления snprintf или vsnprintf в пользовательском коде.  
+     Normally, the fix to this problem is to delete any declarations of snprintf or vsnprintf in user code.  
   
--   **Функция tmpnam создает удобные имена файлов** В предыдущих версиях функции tmpnam и tmpnam_s создавали имена файлов в корневом каталоге диска (например, \sd3c.). Теперь эти функции создают пути имен файлов во временном каталоге.  
+-   **tmpnam Generates Usable File Names** In previous versions, the tmpnam and tmpnam_s functions generated file names in the root of the drive (such as \sd3c.). These functions now generate usable file name paths in a temporary directory.  
   
--   **Инкапсуляция FILE**. В предыдущих версиях тип FILE был полностью определен в \<stdio.h>, поэтому пользовательский код был способен получить доступ к FILE и изменить его внутренние компоненты. Библиотека stdio была изменена, чтобы скрыть детали реализации. В рамках этого намерения FILE теперь определен в \<stdio.h> как непрозрачный тип, а его элементы недоступны извне CRT.  
+-   **FILE Encapsulation** In previous versions, the FILE type was completely defined in \<stdio.h>, so it was possible for user code to reach into a FILE and modify its internals. The stdio library has been changed to hide implementation details. As part of this, FILE as defined in \<stdio.h> is now an opaque type and its members are inaccessible from outside of the CRT itself.  
   
--   **_outp и _inp**. Функции [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md) и [_inpd](../c-runtime-library/inp-inpw-inpd.md) были удалены.  
+-   **_outp and _inp** The functions [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md), and [_inpd](../c-runtime-library/inp-inpw-inpd.md) have been removed.  
   
-#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h> и \<sys/stat.h>  
+#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h>, and \<sys/stat.h>  
   
--   **strtof и wcstof** The strtof и wcstof functions failed to set errno to ERANGE when the value was not representable as a float. Эта проблема была исправлена. (Обратите внимание, что данная ошибка касалась двух этих функций и не затрагивала функции strtod, wcstod, strtold и wcstold.) Это критическое изменение среды выполнения.  
+-   **strtof and wcstof** The strtof and wcstof functions failed to set errno to ERANGE when the value was not representable as a float. This has been fixed. (Note that this error was specific to these two functions; the strtod, wcstod, strtold, and wcstold functions were unaffected.) This is a runtime breaking change.  
   
--   **Выровненные функции выделения**. В предыдущих версиях выровненные функции выделения (_aligned_malloc, _aligned_offset_malloc и т. п.) без уведомления принимали запросы для блока с выравниванием 0. Требуемое выравнивание должно быть показателем степени 2, чем ноль не является. Эта проблема была исправлена, запрошенное выравнивание 0 теперь рассматривается как недопустимый параметр. Это критическое изменение среды выполнения.  
+-   **Aligned allocation functions** In previous versions, the aligned allocation functions (_aligned_malloc, _aligned_offset_malloc, etc.) would silently accept requests for a block with an alignment of 0. The requested alignment must be a power of two, which zero is not. This has been fixed, and a requested alignment of 0 is now treated as an invalid parameter. This is a runtime breaking change.  
   
--   **Функции кучи** Функции _heapadd, _heapset и _heapused были удалены. Эти функции стали неработоспособными после обновления CRT для использования кучи Windows.  
+-   **Heap functions** The _heapadd, _heapset, and _heapused functions have been removed. These functions have been nonfunctional since the CRT was updated to use the Windows heap.  
   
--   **smallheap** Параметр включения режимов smalheap был удален. См. раздел [Link Options](../c-runtime-library/link-options.md) (Параметры ссылок).  
+-   **smallheap** The smalheap link option has been removed. See [Link Options](../c-runtime-library/link-options.md).  
   
 #### <a name="stringh"></a>\<string.h>  
   
--   **wcstok** Сигнатура функции wcstok была изменена для обеспечения соответствия стандарту C. В предыдущих версиях библиотеки эта функция имела сигнатуру:  
+-   **wcstok** The signature of the wcstok function has been changed to match what is required by the C Standard. In previous versions of the library, the signature of this function was:  
   
     ```cpp  
     wchar_t* wcstok(wchar_t*, wchar_t const*)  
     ```  
   
-     Она использовала контекст потока для отслеживания состояния в рамках вызовов, как и для strtok. Теперь функция имеет сигнатуру wchar_t* wcstok(wchar_t\*, wchar_t const\*, wchar_t\*\*) и требует, чтобы вызывающий объект передал контекст в качестве третьего аргумента функции.  
+     It used an internal, per-thread context to track state across calls, as is done for strtok. The function now has the signature wchar_t* wcstok(wchar_t\*, wchar_t const\*, wchar_t\*\*), and requires the caller to pass the context as a third argument to the function.  
   
-     Была добавлена новая функция _wcstok со старой сигнатурой для упрощения переноса. При компиляции кода C++ присутствует также внутренняя перегрузка wcstok, имеющая старую сигнатуру. Эта перегрузка была признана нерекомендуемой. В коде C можно определить _CRT_NON_CONFORMING_WCSTOK, чтобы использовать _wcstok вместо wcstok.  
+     A new _wcstok function has been added with the old signature to ease porting. When compiling C++ code, there is also an inline overload of wcstok that has the old signature. This overload is declared as deprecated. In C code, you may define_CRT_NON_CONFORMING_WCSTOK to cause _wcstok to be used in place of wcstok.  
   
 #### <a name="timeh"></a>\<time.h>  
   
--   **clock**. В предыдущих версиях функция [clock](../c-runtime-library/reference/clock.md) была реализована с помощью функции API-интерфейса Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). При такой реализации функция clock зависела от системного времени и поэтому не была обязательно монотонной. Реализация функции clock была изменена с учетом [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) и теперь является монотонной.  
+-   **clock** In previous versions, the [clock](../c-runtime-library/reference/clock.md) function was implemented using the Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). With this implementation, the clock function was sensitive to the system time, and was thus not necessarily monotonic. The clock function has been reimplemented in terms of [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) and is now monotonic.  
   
--   **fstat и _utime**. В предыдущих версиях функция [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)и [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) неправильно обрабатывают летнее время. До Visual Studio 2013 все эти функции неправильно корректировали зимнее время, как если бы применялось летнее время.  
+-   **fstat and _utime** In previous versions, the [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), and [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) functions handle daylight savings time incorrectly. Prior to Visual Studio 2013, all of these functions incorrectly adjusted standard time times as if they were in daylight time.  
   
-     В Visual Studio 2013 эта проблема была исправлена в семействе функций _stat, однако не были исправлены аналогичные проблемы в семействах функций fstat и _utime. Это привело к проблемам, вызванным несогласованностью функций. Теперь семейства функций fstat и _utime исправлены, поэтому все эти функции обрабатывают летнее время правильно и согласованно.  
+     In Visual Studio 2013, the problem was fixed in the _stat family of functions, but the similar problems in the fstat and _utime families of functions were not fixed. This led to problems due to the inconsistency between the functions. The fstat and _utime families of functions have now been fixed, so all of these functions now handle daylight savings time correctly and consistently.  
   
--   **asctime**. В предыдущих версиях функция [asctime](../c-runtime-library/reference/asctime-wasctime.md) помещает ноль в начало числа для дней, у которых номер состоит из одной цифры, например: Пт. Июн 06 08:00:00 2014. Спецификация требует, чтобы такие дни дополнялись начальным пробелом, например: Пт. Июн 6 08:00:00 2014. Эта проблема была исправлена.  
+-   **asctime** In previous versions, the [asctime](../c-runtime-library/reference/asctime-wasctime.md) function would pad single-digit days with a leading zero, for example: Fri Jun 06 08:00:00 2014. The specification requires that such days be padded with a leading space, e.g. Fri Jun  6 08:00:00 2014. This has been fixed.  
   
--   **strftime и wcsftime** The strftime и wcsftime functions now support the %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u, and %V format specifiers. Кроме того, модификаторы E и O, анализируются, но игнорируются.  
+-   **strftime and wcsftime** The strftime and wcsftime functions now support the %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u, and %V format specifiers. Additionally, the E and O modifiers are parsed but ignored.  
   
-     Описатель формата %c указывается как обеспечивающий "соответствующее представление даты и времени" для текущего языкового стандарта. В языковом стандарте C это представление должно быть таким же, как и %a %b %e %T %Y. Это та же форма, которую выдает asctime. В предыдущих версиях описатель формата %c неправильно форматировал время с помощью представления ММ/ДД/ГГ ЧЧ:ММ:СС. Эта проблема была исправлена.  
+     The %c format specifier is specified as producing an "appropriate date and time representation" for the current locale. In the C locale, this representation is required to be the same as %a %b %e %T %Y. This is the same form as is produced by asctime. In previous versions, the %c format specifier incorrectly formatted times using a MM/DD/YY HH:MM:SS representation. This has been fixed.  
   
--   **timespec и TIME_UTC**. Заголовок \<time.h> теперь определяет тип timespec и функцию timespec_get из стандарта C11. Кроме того, теперь определен макрос TIME_UTC, предназначенный для использования с функцией timespec_get. Это критическое изменение для кода, имеющего конфликтующее определение для любого из этих элементов.  
+-   **timespec and TIME_UTC** The \<time.h> header now defines the timespec type and the timespec_get function from the C11 Standard. In addition, the TIME_UTC macro, for use with the timespec_get function, is now defined. This is a breaking change for code that has a conflicting definition for any of these.  
   
--   **CLOCKS_PER_SEC** Макрос CLOCKS_PER_SEC теперь расширяется до целого числа типа clock_t, как того требует язык C.  
+-   **CLOCKS_PER_SEC** The CLOCKS_PER_SEC macro now expands to an integer of type clock_t, as required by the C language.  
   
-####  <a name="BK_STL"></a>Стандартная библиотека C++  
- Для активации новых способов оптимизации и проверки результатов отладки стандартная библиотека C++, реализованная в Visual Studio, намеренно ограничивает совместимость двоичных данных из одной версии в следующей версии. Поэтому при использовании стандартной библиотеки C++ файлы объектов и статические библиотеки, скомпилированные с помощью разных версий, нельзя одновременно добавить в один двоичный файл (EXE или DLL), а объекты стандартной библиотеки C++ нельзя передать из одного двоичного файла в другой, если эти файлы скомпилированы при помощи разных версий. В этом случае возникает ошибка компоновщика, связанная с несоответствиями _MSC_VER. (_MSC_VER представляет собой макрос, содержащий основной номер версии компилятора, например 1800 для Visual Studio 2013.) Эта проверка не может обнаружить смешение DLL и смешение, в котором участвует Visual C++ 2008 или более ранних версий.  
+####  <a name="BK_STL"></a> C++ Standard Library  
+ To enable new optimizations and debugging checks, the Visual Studio implementation of the C++ Standard Library intentionally breaks binary compatibility from one version to the next. Therefore, when the C++ Standard Library is used, object files and static libraries that are compiled by using different versions can't be mixed in one binary (EXE or DLL), and C++ Standard Library objects can't be passed between binaries that are compiled by using different versions. Such mixing emits linker errors about _MSC_VER mismatches. (_MSC_VER is the macro that contains the compiler's major version—for example, 1800 for Visual Studio 2013.) This check cannot detect DLL mixing, and cannot detect mixing that involves Visual C++ 2008 or earlier.  
   
--   **Включение файлов стандартной библиотеки C++**. В структуру включения в заголовки стандартной библиотеки C++ были внесены некоторые изменения. Заголовки стандартной библиотеки C++ могут включать друг друга неопределенными способами. В общем случае следует писать код таким образом, чтобы он наверняка включал все заголовки, которые требуются в соответствии со стандартом C++, и не зависел от того, какие заголовки стандартной библиотеки C++ включают другие заголовки стандартной библиотеки C++. Позволяет переносить код между версиями и платформами. Как минимум два изменения в файлах заголовков Visual Studio 2015 могут затронуть пользовательский код. Во-первых, \<string> больше не включает в себя \<iterator>. Во-вторых, \<tuple> теперь объявляет std::array без включения всех \<array>, что может нарушить работу кода при наличии следующей комбинации конструкций кода: код содержит переменную с именем "array", и имеется директива using "using namespace std;", а вы включаете заголовок стандартной библиотеки C++ (например, \<functional>), содержащий \<tuple>, который теперь объявляет std::array.  
+-   **C++ Standard Library include files** Some changes have been made to the include structure in the C++ Standard Library headers. C++ Standard Library headers are allowed to include each other in unspecified ways. In general, you should write your code so that it carefully includes all of the headers that it needs according to the C++ standard and doesn't rely on which C++ Standard Library headers include which other C++ Standard Library headers. This makes code portable across versions and platforms. At least two header changes in Visual Studio 2015 affect user code. First, \<string> no longer includes \<iterator>. Second, \<tuple> now declares std::array without including all of \<array>, which can break code through the following combination of code constructs: your code has a variable named "array", and you have a using-directive "using namespace std;", and you include a C++ Standard Library header (such as \<functional>) that includes \<tuple>, which now declares std::array.  
   
--   **steady_clock**. Реализация \<chrono> для [steady_clock](../standard-library/steady-clock-struct.md) была изменена в соответствии с требованиями равномерности и монотонности стандарта C++. Функция steady_clock теперь основана на [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) , а high_resolution_clock теперь является определением типа для steady_clock. В результате, в Visual C++ steady_clock::time_point теперь является typedef для chrono::time_point<steady_clock>; однако это не является обязательным в случае других реализаций.  
+-   **steady_clock** The \<chrono> implementation of [steady_clock](../standard-library/steady-clock-struct.md) has changed to meet the C++ Standard requirements for steadiness and monotonicity. steady_clock is now based on [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) and high_resolution_clock is now a typedef for steady_clock. As a result, in Visual C++ steady_clock::time_point is now a typedef for chrono::time_point<steady_clock>; however, this is not necessarily the case for other implementations.  
   
--   **Распределители и константы** Теперь требуется, чтобы сравнения равенства и неравенства распределителей принимали аргументы-константы с обеих сторон.  Если ваши распределители определяют эти операторы следующим образом:  
+-   **allocators and const** We now require allocator equality/inequality comparisons to accept const arguments on both sides.  If your allocators define these operators as follows:  
   
     ```cpp  
     bool operator==(const MyAlloc& other)  
     ```  
   
-     Необходимо обновить их, объявив членами-константами.  
+     You should update these to declare them as const members.  
   
     ```cpp  
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **Элементы-константы**. Стандарт C++ всегда запрещал использовать контейнеры элементов-констант (такие как vector\<const T> или set\<const T>). Система Visual C++ 2013 и более ранних версий принимала такие контейнеры. В текущей версии при компиляции таких контейнеров выдается ошибка.  
+-   **const elements** The C++ standard has always forbidden containers of const elements (such as vector\<const T> or set\<const T>). Visual C++ 2013 and earlier accepted such containers. In the current version, such containers fail to compile.  
   
--   **std::allocator::deallocate** В Visual C++ 2013 и более ранних версиях std::allocator::deallocate(p, n) игнорировал аргумент, переданный для n.  Стандарт C++ всегда требовал, чтобы n было равно значению, переданному в качестве первого аргумента вызову выделения, которое возвратило p. Однако в текущей версии значение n проверяется. Код, который передает для n аргументы, отличающиеся от требований стандарта, может завершиться со сбоем во время выполнения.  
+-   **std::allocator::deallocate** In Visual C++ 2013 and earlier, std::allocator::deallocate(p, n) ignored the argument passed in for n.  The C++ standard has always required that n be equal to the value passed as the first argument to the invocation of allocate which returned p. However, in the current version, the value of n is inspected. Code that passes arguments for n that differ from what the standard requires might crash at runtime.  
   
--   **hash_map и hash_set**. Нестандартные файлы заголовков hash_map и hash_set являются нерекомендуемыми в Visual Studio 2015 и будут удалены в будущем выпуске. Вместо этого используйте unordered_map и unordered_set.  
+-   **hash_map and hash_set** The non-standard header files hash_map and hash_set are deprecated in Visual Studio 2015 and will be removed in a future release. Use unordered_map and unordered_set instead.  
   
--   **Средства сравнения и operator()**. Ассоциативные контейнеры (семейство \<map>) теперь требуют, чтобы их средства сравнения имели константно вызываемые операторы вызова функции. Компиляция следующего кода в объявлении класса средства сравнения теперь завершается со сбоем:  
+-   **comparators and operator()** Associative containers (the \<map> family) now require their comparators to have const-callable function call operators. The following code in a comparator class declaration now fails to compile:  
   
     ```cpp  
     bool operator()(const X& a, const X& b)  
     ```  
   
-     Чтобы устранить эту ошибку, измените объявление функции на:  
+     To resolve this error, change the function declaration to:  
   
     ```cpp  
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **Признаки типов** The old names for Признаки типов from an earlier version of the C++ draft standard have been removed. В C++11 они были изменены, и обновление до значений C++11 было сделано в Visual Studio 2015. В следующей таблице показаны старые и новые имена.  
+-   **type traits** The old names for type traits from an earlier version of the C++ draft standard have been removed. These were changed in C++11 and have been updated to the C++11 values in Visual Studio 2015. The following table shows the old and new names.  
   
-    |Старое имя|Новое имя|  
+    |Old name|New name|  
     |--------------|--------------|  
     |add_reference|add_lvalue_reference|  
     |has_default_constructor|is_default_constructible|  
@@ -318,50 +318,50 @@ ms.lasthandoff: 08/11/2017
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **Политики launch::any и launch::sync** The nonstandard Политики launch::any и launch::sync were removed. Вместо launch::any используйте launch:async | launch:deferred. Вместо launch::sync используйте launch::deferred. См. раздел [launch Enumeration](../standard-library/future-enums.md#launch) (Перечисление launch).  
+-   **launch::any and launch::sync policies** The nonstandard launch::any and launch::sync policies were removed. Instead, for launch::any, use launch:async &#124; launch:deferred. For launch::sync, use launch::deferred. See [launch Enumeration](../standard-library/future-enums.md#launch).  
   
-####  <a name="BK_MFC"></a> MFC и ATL  
+####  <a name="BK_MFC"></a> MFC and ATL  
   
--   **Microsoft Foundation Classes (MFC)** больше не входит в состав обычной установки Visual Studio из-за своего большого размера. Чтобы установить MFC, выберите параметр выборочной установки в программе установки Visual Studio 2015. При наличии Visual Studio 2015 можно установить MFC, повторно запустив программу установки Visual Studio, выбрав выборочную установку и указав Microsoft Foundation Classes. Программу установки Visual Studio можно повторно запустить из панели управления, из раздела "Программы и компоненты" или с установочного носителя.  
+-   **Microsoft Foundation Classes (MFC)** is no longer included in a "Typical" install of Visual Studio because of its large size. To install MFC, choose the Custom install option in Visual Studio 2015 setup. If you already have Visual Studio 2015 installed, you can install MFC by re-running Visual Studio setup, choosing the Custom install option, and choosing Microsoft Foundation Classes. You can re-run Visual Studio setup from the Control Panel, Programs and Features, or from the installation media.  
   
-     Распространяемый пакет Visual C++ по-прежнему содержит эту библиотеку.  
+     The Visual C++ Redistributable Package still includes this library.  
   
-####  <a name="BK_ConcRT"></a> Среда выполнения с параллелизмом  
+####  <a name="BK_ConcRT"></a> Concurrency Runtime  
   
--   **Макрос Yield из Windows.h конфликтует с concurrency::Context::Yield** Ранее среда выполнения с параллелизмом использовала #undef, чтобы отменить определение макроса Yield во избежание конфликтов между макросом Yield, определенным в Windows.h, и функцией concurrency::Context::Yield. Этот #undef был удален, и был добавлен новый эквивалентный вызов функции API-интерфейса [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution), не вызывающий конфликтов. Для устранения конфликтов с Yield можно обновить код для вызова функции YieldExecution или заключить имя функции Yield в скобки в местах вызова, как показано в следующем примере:  
+-   **Yield macro from Windows.h conflicting with concurrency::Context::Yield** The Concurrency Runtime previously used #undef to undefine the Yield macro to avoid conflicts between the Yield macro defined in Windows.h h and the concurrency::Context::Yield function. This #undef has been removed and a new non-conflicting equivalent API call [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) has been added. To work around conflicts with Yield, you can either update your code to call the YieldExecution function instead, or surround the Yield function name with parentheses at call sites, as in the following example:  
   
     ```cpp  
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Улучшения соответствия компилятора в Visual C++ 2015  
- При обновлении кода из предыдущих версий также могут возникнуть ошибки компилятора, связанные с улучшениями соответствия в Visual C++ 2015. Эти усовершенствования не нарушают совместимость двоичных данных из предыдущих версий Visual C++, но они могут приводить к ошибкам компилятора там, где они не были устранены ранее. Дополнительные сведения см. в статье [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Новые возможности Visual C++ 2003–2015).  
+## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Compiler Conformance Improvements in Visual C++ 2015  
+ When upgrading code from previous versions, you might also encounter compiler errors that are due to conformance improvements made in Visual C++ 2015. These improvements do not break binary compatibility from earlier versions of Visual C++, but they can produce compiler errors where none were emitted before. For more information, see [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
- В Visual C++ 2015 постоянные улучшения соответствия компилятора иногда могут изменить то, как компилятор распознает существующий исходный код. В этом случае во время сборки могут возникнуть новые или другие ошибки или даже поведенческие различия в коде, который был построен ранее и, казалось, работал правильно.  
+ In Visual C++ 2015, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code. When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly.  
   
- К счастью, эти различия имеют минимальное влияние или совсем не затрагивают большую часть исходного кода. Если же требуется внести изменения в исходный код, чтобы устранить эти различия, как правило, применяются незначительные исправления. Мы включили много примеров ранее допустимого исходного кода, который может потребоваться изменить *(раньше)*, и исправлений *(теперь)*.  
+ Fortunately, these differences  have little or no impact on most of your source code and when source code or other changes are needed to address these differences,  fixes are usually small and straight-forward. We've included many examples of previously-acceptable source code that might need to be changed *(before)* and the fixes to correct them *(after)*.  
   
- Несмотря на то, что эти различия могут повлиять на исходный код и другие артефакты сборки, они не влияют на совместимость двоичных файлов между обновлениями версий Visual C++. На совместимость двоичных файлов может повлиять более серьезный тип изменений (*критическое изменение*), но нарушения совместимости происходят только между основными версиями Visual C++. Например, между Visual C++ 2013 и Visual C++ 2015. Сведения о критических изменениях, введенных со времени выпуска Visual C++ 2013 до выпуска Visual C++ 2015, см. в статье [Visual C++ 2015 Conformance Changes](#VC_2015) (Улучшения соответствия в Visual C++ 2015).  
+ Although these differences can affect your source code or other build artifacts, they don't affect binary compatibility between updates to Visual C++ versions. A more-severe kind of change, the  *breaking change* can affect binary compatibility, but these kinds of binary compatibility breaks only occur between major versions of Visual C++. For example, between Visual C++ 2013 and Visual C++ 2015. For information on the breaking changes that occurred between Visual C++ 2013 and Visual C++ 2015, see [Visual C++ 2015 Conformance Changes](#VC_2015).  
   
--   [Улучшения соответствия в Visual C++ 2015](#VS_RTM)  
+-   [Conformance Improvements in Visual C++ 2015](#VS_RTM)  
   
--   [Улучшения соответствия в обновлении 1](#VS_Update1)  
+-   [Conformance Improvements in Update 1](#VS_Update1)  
   
--   [Улучшения соответствия в обновлении 2](#VS_Update2)  
+-   [Conformance Improvements in Update 2](#VS_Update2)  
   
--   [Улучшения соответствия в обновлении 3](#VS_Update3)  
+-   [Conformance Improvements in Update 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a> Улучшения соответствия в Visual C++ 2015  
+###  <a name="VS_RTM"></a> Conformance Improvements in Visual C++ 2015  
   
--   Параметр /Zc:forScope-  
+-   /Zc:forScope- option  
   
-     Параметр компилятора **/Zc:forScope-** является нерекомендуемым и будет удален в будущем выпуске.  
+     The compiler option **/Zc:forScope-** is deprecated and will be removed in a future release.  
   
     ```cpp  
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release  
     ```  
   
-     Этот параметр обычно использовался, чтобы разрешить нестандартный код, использующий переменные цикла после того момента, когда, согласно стандарту, они должны выйти из области действия. Это требовалось только при компиляции с параметром /Za, поскольку без него использование переменной цикла for после конца цикла всегда разрешено. Если вас не интересует соответствие стандартам (например, если код не предназначен для переноса в другие компиляторы), можно отключить параметр /Za (или задать для свойства "Отключить расширения языка" значение "Нет"). Если вам требуется написать переносимый и совместимый со стандартами код, следует переписать его в соответствии со стандартом, переместив объявления таких переменных в точку за пределами цикла.  
+     The option was usually used in order to allow nonstandard code that uses loop variables after the point where, according to the standard, they should have gone out of scope. It was only necessary when you are compiling with the /Za option, since without /Za, using a for loop variable after the end of the loop is always allowed. If you don't care about standards conformance (for example, if your code isn't meant to portable to other compilers), you could turn off the /Za option (or set the Disable Language Extensions property to No). If you do care about writing portable, standards-compliant code, you should rewrite your code so that it conforms to the standard by moving the declaration of such variables to a point outside the loop.  
   
     ```cpp  
     // C2065 expected  
@@ -374,17 +374,17 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **Параметр компилятора /Zg**  
+-   **/Zg compiler option**  
   
-     Параметр компилятора /Zg (создать прототипы функций) больше не доступен. Ранее этот параметр компилятора был признан нерекомендуемым.  
+     The /Zg compiler option (Generate Function Prototypes) is no longer available. This compiler option was previously deprecated.  
   
--   Вы больше не сможете выполнять модульные тесты с использованием C++/CLI из командной строки с помощью mstest.exe. Вместо этого используйте vstest.console.exe. См. раздел [VSTest.Console.exe command-line options](/devops-test-docs/test/vstest-console-exe-command-line-options) (Параметры командной строки для VSTest.Console.exe).  
+-   You can no longer run unit tests with C++/CLI from the command-line with mstest.exe. Instead, use vstest.console.exe. See [VSTest.Console.exe command-line options](/devops-test-docs/test/vstest-console-exe-command-line-options).  
   
--   **Ключевое слово mutable**  
+-   **mutable keyword**  
   
-     Описатель класса хранения `mutable` больше нельзя использовать в местах, где ранее он компилировался без ошибок. Теперь компилятор выдает ошибку C2071 (недопустимый класс хранения). Согласно стандарту, описатель mutable может применяться только к именам членов класса данных и не может применяться к именам, объявленным постоянными или статическими, а также не может применяться к элементам ссылки.  
+     The `mutable` storage class specifier is no longer allowed in places where previously it compiled without error. Now, the compiler gives error C2071 (illegal storage class). According to the standard, the mutable specifier can be applied only to names of class data members, and cannot be applied to names declared const or static, and cannot be applied to reference members.  
   
-     Рассмотрим следующий пример кода:  
+     For example, consider the following code:  
   
     ```cpp  
     struct S   
@@ -394,17 +394,17 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Предыдущие версии компилятора Visual C++ принимали его, но теперь компилятор выдает следующую ошибку:  
+     Previous versions of the Visual C++ compiler accepted this, but now the compiler gives the following error:  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
     ```  
   
-     Чтобы исправить ошибку, просто удалите избыточное ключевое слово mutable.  
+     To fix the error, simply remove the redundant mutable keyword.  
   
--   **char_16_t и char32_t**  
+-   **char_16_t and char32_t**  
   
-     `char16_t` или `char32_t` больше нельзя использовать в качестве псевдонимов в typedef, поскольку теперь эти типы считаются встроенными. Пользователи и разработчики библиотек повсеместно определяли char16_t и char32_t как псевдонимы uint16_t и uint32_t, соответственно.  
+     You can no longer use `char16_t` or `char32_t` as aliases in a typedef, because these types are now treated as built-in. It was common for users and library authors to define char16_t and char32_t as aliases of uint16_t and uint32_t, respectively.  
   
     ```cpp  
     #include <cstdint>  
@@ -422,11 +422,11 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Чтобы обновить код, удалите объявления typedef и переименуйте другие идентификаторы, которые конфликтуют с этими именами.  
+     To update your code, remove the typedef declarations and rename any other identifiers that collide with these names.  
   
--   **Параметры шаблона, не являющиеся типами**  
+-   **Non-type template parameters**  
   
-     Определенный код с параметрами шаблона, не являющимися типами, теперь правильно проверяется на совместимость типов при предоставлении явно заданных аргументов шаблона. Например, следующий код компилировался без ошибок в предыдущих версиях Visual C++.  
+     Certain code that involves non-type template parameters is now correctly checked for type compatibility when you provide explicit template arguments. For example, the following code compiled without error in previous versions of Visual C++.  
   
     ```cpp  
     struct S1  
@@ -448,27 +448,27 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Текущий компилятор правильно выдает ошибку, поскольку тип параметра шаблона не соответствует аргументу шаблона (параметр является указателем на член-константу, но функция f не является константной):  
+     The current compiler correctly gives an error, because the template parameter type doesn't match the template argument (the parameter is a pointer to a const member, but the function f is non-const):  
   
     ```Output  
     error C2893: Failed to specialize function template 'void S2::f(void)'note: With the following template arguments:note: 'C=S1'note: 'Function=S1::f'  
     ```  
   
-     Чтобы устранить эту ошибку в коде, убедитесь, что используемый тип аргумента шаблона соответствует объявленному типу параметра шаблона.  
+     To address this error in your code, make sure that the type of the template argument you use matches the declared type of the template parameter.  
   
 -   **__declspec(align)**  
   
-     Компилятор больше не принимает `__declspec(align)` для функций. Оно всегда игнорировалось, но теперь вызывает ошибку компилятора.  
+     The compiler no longer accepts `__declspec(align)` on functions. This was always ignored, but now it produces a compiler error.  
   
     ```cpp  
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations  
     ```  
   
-     Чтобы устранить эту проблему, удалите `__declspec(align)` из объявления функции. Поскольку оно не оказывает никакого влияния, его удаление ничего не меняет.  
+     To fix this problem, remove `__declspec(align)` from the function declaration. Since it had no effect, removing it does not change anything.  
   
--   **Обработка исключений**  
+-   **Exception handling**  
   
-     Существует несколько изменений в обработке исключений. Во-первых, объекты исключений должны быть доступны для перемещения или копирования. Следующий код компилировался в [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], но не компилируется в [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     There are a couple of changes to exception handling. First, exception objects have to be either copyable or movable. The following code compiled in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but does not compile in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     struct S  
@@ -486,7 +486,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Проблема заключается в том, что конструктор копии является закрытым, поэтому нельзя скопировать объект так, как это происходит во время обычной обработки исключения. То же самое происходит, когда конструктор копии объявлен `explicit`.  
+     The problem is that the copy constructor is private, so the object cannot be copied as happens in the normal course of handling an exception. The same applies when the copy constructor is declared `explicit`.  
   
     ```cpp  
     struct S  
@@ -502,9 +502,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Для обновления кода убедитесь в том, конструктор копии для объекта исключения является открытым и не отмечен как `explicit`.  
+     To update your code, make sure that the copy constructor for your exception object is public and not marked `explicit`.  
   
-     Перехват исключения по значению также требует, чтобы объект исключения был доступен для копирования. Следующий код компилировался в [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], но не компилируется в [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     Catching an exception by value also requires the exception object to be copyable. The following code compiled in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but does not compile in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     struct B  
@@ -529,7 +529,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Эту проблему можно устранить, изменив тип параметра для `catch` на ссылку.  
+     You can fix this issue by changing the parameter type for the `catch` to a reference.  
   
     ```cpp  
     catch (D& d)  
@@ -538,9 +538,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **Строковые литералы с последующими макросами**  
+-   **String literals followed by macros**  
   
-     Компилятор теперь поддерживает определенные пользователем литералы. В результате строковые литералы, за которыми следуют макросы без промежуточных пробелов, интерпретируются как определенные пользователем литералы, которые могут вызывать ошибки или приводить к непредвиденным результатам. Например, в предыдущих компиляторах следующий код компилируется успешно:  
+     The compiler now supports user defined literals. As a consequence, string literals followed by macros without any intervening whitespace are interpreted as user-defined literals, which might produce errors or unexpected results. For example, in previous compilers the following code compiled successfully:  
   
     ```cpp  
     #define _x "there"  
@@ -555,36 +555,36 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Компилятор интерпретировал этот код как строковый литерал hello с последующим макросом, который представляет собой расширяющийся there, после чего два строковых литерала были объединены в один. В [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] компилятор интерпретирует этот код как определенный пользователем литерал, но поскольку соответствующий определяемый пользователем литерал _x не определен, он выдает ошибку.  
+     The compiler interpreted this as a string literal "hello" followed by a macro, which is expanded "there", and then the two string literals were concatenated into one. In [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], the compiler interprets this as a user-defined literal, but since there is no matching user-defined literal _x defined, it gives an error.  
   
     ```Output  
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found  
     note: Did you forget a space between the string literal and the prefix of the following string literal?  
     ```  
   
-     Чтобы устранить эту проблему, добавьте пробел между строковым литералом и макросом.  
+     To fix this problem, add a space between the string literal and the macro.  
   
--   **Смежные строковые литералы**  
+-   **Adjacent string literals**  
   
-     Аналогично предыдущему случаю, из-за соответствующих изменений в синтаксическом анализе строк смежные строковые литералы (с широкими или узкими символами) без пробела интерпретировались в предыдущих версиях Visual C++ как одна объединенная строка. Теперь в [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] необходимо добавлять пробелы между двумя строками. Например, необходимо изменить следующий код:  
+     Similarly to the previous, due to related changes in string parsing, adjacent string literals (either wide or narrow character string literals) without any whitespace were interpreted as a single concatenated string in previous releases of Visaul C++. In [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], you must now add whitespace between the two strings. For example, the following code must be changed:  
   
     ```cpp  
     char * str = "abc""def";  
     ```  
   
-     Просто добавьте пробел между двумя строками.  
+     Simply add a space in between the two strings.  
   
     ```cpp  
     char * str = "abc" "def";  
     ```  
   
--   **Размещаемые операторы new и delete**  
+-   **Placement new and delete**  
   
-     В оператор delete были внесены изменения, чтобы привести его в соответствие со стандартом C++14. Сведения об изменении стандартов можно найти на странице [Освобождение с размером в C++](http://isocpp.org/files/papers/n3778.html). Эти изменения добавляют форму глобального оператора delete, принимающего параметр размера. Критическое изменение заключается в том, что если ранее использовался оператор delete с такой же сигнатурой (для соответствия размещаемому оператору new), вы получите ошибку компилятора (C2956, которая возникает в точке, где используется размещаемый оператор new, поскольку это именно та позиции в коде, где компилятор пытается определить соответствующий оператор delete).  
+     A change has been made to the delete operator in order to bring it into conformance with C++14 standard. Details of the standards change can be found at [C++ Sized Deallocation](http://isocpp.org/files/papers/n3778.html). The changes add a form of the global delete operator that takes a size parameter. The breaking change is that if you were previously using an operator delete with the same signature (to correspond with a placement new operator), you will receive a compiler error (C2956, which occurs at the point where the placement new is used, since that's the position in code where the compiler tries to identify an appropriate matching delete operator).  
   
-     Функция `void operator delete(void *, size_t)` была размещаемым оператором delete, соответствующим размещаемой функции new "void \* operator new(size_t, size_t)" в C++11. С появлением освобождения с размером в C++14 эта функция delete теперь является *функцией обычного освобождения* (глобальный оператор delete). Согласно стандарту, если использование размещаемого оператора new ищет соответствующую функцию delete и находит функции обычного освобождения, программа сформирована некорректно.  
+     The function `void operator delete(void *, size_t)` was a placement delete operator corresponding to the placement new function "void \* operator new(size_t, size_t)" in C++11. With C++14 sized deallocation, this delete function is now a *usual deallocation function* (global delete operator). The standard requires that if the use of a placement new looks up a corresponding delete function and finds a usual deallocation function, the program is ill-formed.  
   
-     Например, предположим, что код определяет как размещаемый оператор new, так и размещаемый оператор delete:  
+     For example, suppose your code defines both a placement new and a placement delete:  
   
     ```cpp  
     void * operator new(std::size_t, std::size_t);  
@@ -592,22 +592,22 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Проблема возникает из-за совпадения сигнатур функций между определенным вами размещаемым оператором new и новым глобальным оператором delete с размером. Рассмотрим, можно ли использовать другой тип, отличный от size_t, для любых размещаемых операторов new и delete.  Обратите внимание, что тип size_t typedef зависит от компилятора; для unsigned int в Visual C++ используется typedef. Хорошим решением является использование перечисляемого типа, например:  
+     The problem occurs because of the match in function signatures between a placement delete operator you've defined, and the new global sized delete operator. Consider whether you can use a different type other than size_t for any placement new and delete operators.  Note that the type of the size_t typedef is compiler-dependent; it is a typedef for unsigned int in Visual C++. A good solution is to use an enumerated type such as this:  
   
     ```cpp  
     enum class my_type : size_t {};  
   
     ```  
   
-     Затем измените определение размещаемых операторов new и delete, чтобы использовать этот тип в качестве второго аргумента вместо size_t. Также потребуется обновить вызовы размещаемого оператора new для передачи нового типа (например, с помощью `static_cast<my_type>` для преобразования из целого числа) и обновить определение операторов new и delete для приведения к типу integer. Не нужно использовать для этого перечисление; тип класса с членом size_t также будет работать.  
+     Then, change your definition of placement new and delete to use this type as the second argument instead of size_t. You’ll also need to update the calls to placement new to pass the new type (for example, by using `static_cast<my_type>` to convert from the integer value) and update the definition of new and delete to cast back to the integer type. You don’t need to use an enum for this; a class type with a size_t member would also work.  
   
-     Альтернативным решением является возможность полного удаления размещаемого оператора new. Если ваш код использует размещаемый оператор new для реализации пула памяти, где аргументом размещения является размер выделяемого или удаляемого объекта, функция освобождения с размером может подойти для замены кода пула памяти, что позволит избавиться от функций размещения и просто использовать собственный оператор delete с двумя аргументами вместо функции размещения.  
+     An alternative solution is that you might be able to eliminate the placement new altogether. If your code uses placement new to implement a memory pool where the placement argument is the size of the object being allocated or deleted, then sized deallocation feature might be suitable to replace your own custom memory pool code, and you can get rid of the placement functions and just use your own two-argument delete operator instead of the placement functions.  
   
-     Если вы не хотите немедленно обновлять код, можно вернуться к старому поведению с помощью параметра компилятора /Zc:sizedDealloc-. При использовании этого параметра функции delete с двумя аргументами не существуют и не конфликтуют с вашим размещаемым оператором delete.  
+     If you don't want to update your code immediately, you can revert to the old behavior by using the compiler option /Zc:sizedDealloc-. If you use this option, the two-argument delete functions don’t exist and won't cause a conflict with your placement delete operator.  
   
--   **Элементы данных объединений**  
+-   **Union data members**  
   
-     Элементы данных объединений больше не могут иметь ссылочные типы. Следующий код успешно компилировался в [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], но приводит к ошибке в [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
+     Data members of unions can no longer have reference types. The following code compiled successfully in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but produces an error in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
   
     ```cpp  
     union U1   
@@ -625,7 +625,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Предыдущий код вызывает следующие ошибки:  
+     The preceding code produces the following errors:  
   
     ```Output  
   
@@ -634,9 +634,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Чтобы устранить эту проблему, измените ссылочные типы на указатель или значение. Для изменения типа на указатель требуется внести изменения в код, который использует поле объединения. При изменении кода на значение будут изменены данные, хранящиеся в объединении, что повлияет на другие поля, поскольку поля в типах объединений имеют общую память. В зависимости от величины значения оно также может изменить размер объединения.  
+     To address this issue, change reference types either to a pointer or a value. Changing the type to a pointer requires changes in the code that uses the union field. Changing the code to a value would change the data stored in the union, which affects other fields since fields in union types share the same memory. Depending on the size of the value, it might also change the size of the union.  
   
--   Анонимные объединения стали более полно соответствовать требованиям стандарта. Компилятор предыдущей версии создавал для анонимных объединений явный конструктор и деструктор. В [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] они удалены.  
+-   Anonymous unions are now more conformant to the standard. Previous versions of the compiler generated an explicit constructor and destructor for anonymous unions. These are deleted in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
   
     ```cpp  
     struct S   
@@ -654,7 +654,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Предыдущий код вызывает следующие ошибки в [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     The preceding code generates the following error in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     error C2280: '<unnamed-type-u>::<unnamed-type-u>(void)': attempting to reference a deleted function  
@@ -662,7 +662,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Чтобы устранить эту проблему, предоставьте собственные определения конструктора и/или деструктора.  
+     To resolve this issue, provide your own definitions of the constructor and/or destructor.  
   
     ```cpp  
     struct S   
@@ -681,9 +681,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **Объединения с анонимными структурами**  
+-   **Unions with anonymous structs**  
   
-     В целях обеспечения соответствия стандарту было изменено поведение для членов анонимных структур в объединениях. Конструктор для членов анонимных структур в объединении больше не вызывается неявно при создании такого объединения. Кроме того, деструктор для членов анонимных структур в объединении больше не вызывается неявно при выходе такого объединения из области действия. Рассмотрим следующий код, в котором объединение U содержит анонимную структуру, содержащую элемент, представляющий собой именованную структуру S с деструктором.  
+     In order to conform with the standard, the runtime behavior has changed for members of anonymous structures in unions. The constructor for anonymous structure members in a union is no longer implicitly called when such a union is created. Also, the destructor for anonymous structure members in a union is no longer implicitly called when the union goes out of scope. Consider the following code, in which a union U contains an anonymous structure that contains a member which is a named structure S that has a destructor.  
   
     ```cpp  
     #include <stdio.h>  
@@ -719,13 +719,13 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     В [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] конструктор для S вызывается при создании объединения, а деструктор для S вызывается при очистке стека для функции f. Однако в [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] конструктор и деструктор не вызываются. Компилятор выдает предупреждение об изменении этого поведения.  
+     In [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], the constructor for S is called when the union is created, and the destructor for S is called when the stack for function f is cleaned up. But in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], the constructor and destructor are not called. The compiler gives a warning about this behavior change.  
   
     ```Output  
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called  
     ```  
   
-     Чтобы восстановить первоначальное поведение, присвойте анонимной структуре имя. Поведение неанонимных структур во время выполнения остается прежним независимо от версии компилятора.  
+     To restore the original behavior, give the anonymous structure a name. The runtime behavior of non-anonymous structures is the same, regardless of the compiler version.  
   
     ```cpp  
     #include <stdio.h>  
@@ -762,7 +762,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Кроме того, попробуйте переместить код конструктора и деструктора в новые функции и добавьте вызовы этих функций из конструктора и деструктора для объединения.  
+     Alternatively, try moving the constructor and destructor code into new functions, and add calls to these functions from the constructor and destructor for the union.  
   
     ```cpp  
     #include <stdio.h>  
@@ -799,11 +799,11 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **Разрешение шаблонов**  
+-   **Template resolution**  
   
-     В разрешение имен для шаблонов были внесены изменения. При рассмотрении кандидатов для разрешения имени d C++ может возникнуть ситуация, когда одно или несколько рассматриваемых имен приводят к созданию недопустимого экземпляра шаблона. Эти недопустимые экземпляры обычно не вызывают ошибки компилятора, данный принцип известен как SFINAE (сбой подстановки не является ошибкой).  
+     Changes have been made to name resolution for templates. In C++, when considering candidates for the resolution of a name, it can be the case that one or more names under consideration as potential matches produces an invalid template instantiation. These invalid instantiations do not normally cause compiler errors, a principle which is known as SFINAE (Substitution Failure Is Not An Error).  
   
-     Если принцип SFINAE требует от компилятора создать экземпляр специализации шаблона класса, то любые ошибки, возникающие во время этого процесса, являются ошибками компилятора. В предыдущих версиях компилятор игнорирует такие ошибки. Рассмотрим следующий пример кода:  
+     Now, if SFINAE requires the compiler to instantiate the specialization of a class template, then any errors that occur during this process are compiler errors. In previous versions, the compiler would ignore such errors. For example, consider the following code:  
   
     ```cpp  
     #include <type_traits>  
@@ -843,7 +843,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     При компиляции с помощью текущего компилятора появляется следующая ошибка:  
+     If you compile with the current compiler, you get the following error:  
   
     ```Output  
   
@@ -858,30 +858,30 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     Это происходит из-за того, что при первом вызове is_base_of класс "D" еще не был определен.  
+     This is because at the point of the first invocation of the is_base_of the class 'D' has not yet been defined.  
   
-     В этом случае исправление заключается в том, чтобы не использовать такие характеристики типов, пока не будет определен класс. При перемещении определений B и D в начало файла с кодом ошибка будет устранена. Если определения указаны в файлах заголовков, проверьте порядок операторов include для этих файлов заголовков, чтобы убедиться в том, что все определения классов компилируются до использования проблемных шаблонов.  
+     In this case, the fix is not to use such type traits until the class has been defined. If you move the definitions of B and D to the beginning of the code file, the error is resolved. If the definitions are in header files, check the order of the include statements for the header files to make sure that any class definitions are compiled before the problematic templates are used.  
   
--   **Конструкторы копии**  
+-   **Copy constructors**  
   
-     Как в [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)], так и в Visual Studio 2015, если пользователь создал в классе конструктор перемещения, но не создал конструктор копии, конструктор копии будет создан компилятором. В Dev14 этот неявно создаваемый конструктор копии также помечается как "= delete".  
+     In both [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] and Visual Studio 2015, the compiler generates a copy constructor for a class if that class has a user-defined move constructor but no user-defined copy constructor. In Dev14, this implicitly generated copy constructor is also marked "= delete".  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
--   Элемент **main, объявляемый с модификатором extern "C", теперь требует тип возвращаемого значения.**  
+-   **main declared as extern "C" now requires a return type.**  
 
-Для следующего кода теперь возвращается ошибка C4430. 
+The following code now produces C4430. 
 ```cpp
 extern "C" __cdecl main(){} // C4430
 ```
-Чтобы устранить такую ошибку, добавьте тип возвращаемого значения:
+To fix the error, add the return type:
 ```cpp
 extern "C" int __cdecl main(){} // OK
 ```
 
- -   **typename не может использоваться в инициализаторе члена**  
+ -   **typename is not allowed in a member initializer**  
 
-Для следующего кода теперь возвращается ошибка C2059.
+The following code now produces C2059:
  ```cpp
 template<typename T>
 struct S1 : public T::type
@@ -897,15 +897,15 @@ struct S2 {
 
 S1<S2> s;
 ```
-Чтобы устранить эту ошибку, удалите `typename` из инициализатора:
+To fix the error, remove `typename` from the initializer:
 ```cpp
 S1() : T::type() // OK
 ...
 ```
 
--   **Класс хранения игнорируется для явной специализации.** 
+-   **The storage class on explicit specializations is ignored.** 
 
-В следующем коде игнорируется статический описатель класса хранения 
+In the following code, the static storage class specifier is ignored 
 ```cpp
 template <typename T>
 void myfunc(T h)
@@ -919,9 +919,9 @@ static void myfunc(double h) // static is ignored
 
 ```
 
--   **Использование константы в static_assert внутри шаблона класса будет всегда приводить к ошибке.**  
+-   **A constant used in a static_assert inside a class template will always fail.**  
 
-В следующем коде вызов static_assert всегда приводит к сбою.
+The following code causes the static_assert to always fail:
 ```cpp
 template <size_t some_value>
 struct S1
@@ -933,7 +933,7 @@ struct S1
 //other partial specializations here
 ```
 
-Чтобы обойти это, заключите значение в такую структуру:
+To work around this, wrap the value in a struct:
 ```cpp
 template <size_t some_value>
 struct constant_false {
@@ -949,9 +949,9 @@ struct S1
 //other partial specializations here
 ```
 
--   **Правила применяются для прямого объявления. (Применимо только к C.)**  
+-   **Rules enforced for forward declarations. (Applies only to C.)**  
 
-Для следующего кода теперь возвращается ошибка C2065.
+The following code now produces C2065:
 ```cpp
 struct token_s;
 typedef int BOOL;
@@ -962,7 +962,7 @@ typedef int INT;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
 ```
 
-Для устранения этой проблемы добавьте соответствующие опережающие объявления:
+To fix the problem add the proper forward declarations:
 
 ```cpp
 struct token_s;
@@ -976,9 +976,9 @@ typedef TOKEN *PTOKEN;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
 ```
 
--   **Более согласованное применение типов указателей функций**  
+-   **More consistent enforcement of function pointer types**  
 
-Для следующего кода теперь возвращается ошибка C2197.
+The following code now produces C2197:
 
 ```cpp
 typedef int(*F1)(int);
@@ -990,9 +990,9 @@ void func(F1 f, int v1, int v2)
 }
 ```
 
--   **Неоднозначные вызовы перегруженных функций**  
+-   **Ambiguous calls to overloaded functions**  
 
-Для следующего кода теперь возвращается ошибка C266: 'N::bind': неоднозначный вызов перегруженной функции.
+The following code now produces C266: 'N::bind': ambiguous call to overloaded function
 ```cpp 
 template<typename R, typename T, typename T1, typename A1>
 void bind(R(T::*)(T1), A1&&);
@@ -1017,13 +1017,13 @@ public:
 };
 ```
 
-Чтобы устранить эту ошибку, полностью определите вызов для привязки: N::bind(...). Однако, если это изменение проявляется через необъявленный идентификатор (C2065), то его лучше исправить применением объявления "using".
+To fix the error, you can fully qualify the call to bind: N::bind(...). However, if this change is manifest through an undeclared identifier (C2065), then it may be appropriate to fix this with a 'using' declaration instead.
 
-Такая ситуация часто возникает с ComPtr и другими типами в пространстве имен Microsoft::WRL.
+This pattern happens frequently with ComPtr and other types in the Microsoft::WRL namespace.
 
--   **Исправление неверного адреса**  
+-   **Fix incorrect address of**  
 
-Для следующего кода теперь возвращается ошибка C2440: "=": невозможно преобразовать "тип *" в "тип". Чтобы устранить эту ошибку, измените &(тип) на (тип) и (&f()) на (f()).
+The following code now produces C2440:  '=': cannot convert from 'type *' to 'type'. To fix the error, change &(type) to (type) and (&f()) to (f()).
  
 ```cpp
 \\ C
@@ -1050,9 +1050,9 @@ void h()
 
 ```
 
--   **Строковый литерал является массивом констант**  
+-   **String literal is a constant array**  
 
-Для следующего кода теперь создается ошибка C2664: "void f (void *)": не удается преобразовать аргумент 1 из 'const char (*)[2]" в "void *"
+The following code now produces C2664: 'void f(void *)': cannot convert argument 1 from 'const char (*)[2]' to 'void *'
 ```cpp
 void f(void *);
  
@@ -1063,7 +1063,7 @@ void h(void)
 }
 ```
 
-Чтобы устранить эту ошибку, измените тип параметра функции на "const void *" или измените текст h, чтобы он выглядел следующим образом:
+To fix the error, change the function parameter type to 'const void*', or else change the body of h to look like this:
 
 ```cpp
 void h(void)
@@ -1075,9 +1075,9 @@ void h(void)
 
 ```
 
--   **Строки UDL C++11**  
+-   **C++11 UDL strings**  
 
-Теперь для следующего кода создается ошибка C3688: недопустимый литеральный суффикс 'L'; литеральный оператор или литеральный шаблон оператора 'оператор ""L' не найден
+The following code now produces error C3688: invalid literal suffix 'L'; literal operator or literal operator template 'operator ""L' not found
 
 
 ```cpp
@@ -1093,7 +1093,7 @@ int main(){
     std::cout << STRCAT(L"hi ", L"there");
 }
 ```
-Чтобы устранить эту ошибку, измените код следующим образом:
+To fix the error, change the code to this:
 
 ```cpp
 #define MACRO
@@ -1111,14 +1111,14 @@ int main(){
 }
 
 ```
-В примере выше `MACRO` теперь не обрабатывается как два маркера (строка и макрос).  Теперь он рассматривается как единый токен UDL.  Это же правило применяется к L""L"", который ранее анализировался как L"" и L"", а теперь анализируется как L""L и "".
+In the example above, `MACRO` is no longer parsed as two tokens (a string followed by a macro).  Now it is parsed as a single token UDL.  The same applies to L""L"", which was parsed previously as L"" and L"", and is now parsed as L""L and "".
 
-Правила объединения строк также приведены в соответствие со стандартом, то есть L"a" "b" теперь эквивалентно L"ab". В предыдущих выпусках Visual Studio объединение строк с разной шириной символов не допускалось.
+String concatenation rules were also brought into compliance with the standard, which means L"a" "b" is equivalent to L"ab". Previous editions of Visual Studio did not accept concatenation of strings with different character width.
 
 
--   **Удаление пустого символа C ++11**  
+-   **C++11 empty character removed**  
 
-Теперь для следующего кода создается ошибка C2137: Пустая символьная константа
+The following code now produces error C2137: empty character constant
 
 ```cpp
 bool check(wchar_t c){
@@ -1126,7 +1126,7 @@ bool check(wchar_t c){
 }
 ```
 
-Чтобы устранить эту ошибку, измените код следующим образом:
+To fix the error, change the code to this:
 
 ```cpp
 bool check(wchar_t c){
@@ -1134,9 +1134,9 @@ bool check(wchar_t c){
 }
 ```
 
--   **Исключения MFC не могут быть перехвачены по значению, так как они не могут копироваться**  
+-   **MFC exceptions can't be caught by value because they are not copyable**  
 
-Следующий код в приложении MFC теперь вызывает ошибку C2316: 'D': не удается перехватить, поскольку деструктор и/или конструктор копии недоступен или удален
+The following code in an MFC application now causes error C2316: 'D': cannot be caught as the destructor and/or copy constructor are inaccessible or deleted
 
 ```cpp
 struct B {
@@ -1160,29 +1160,29 @@ int main()
 }
 
 ```
-Чтобы исправить этот код, можно изменить блок catch на 'catch (const D &)', но обычно лучше использовать макросы MFC TRY/CATCH.
+To fix the code, you can change the catch block to `catch (const D &)' but the better solution is usually to use the MFC TRY/CATCH macros.
 
--   **alignof теперь является ключевым словом**  
+-   **alignof is now a keyword**  
 
-Теперь для следующего кода создается ошибка C2332: 'класс': отсутствует имя тега. Чтобы исправить код, переименуйте класс. Если же класс выполняет те же действия, что и alignof, просто замените класс новым ключевым словом.
+The following code now produces error C2332: 'class': missing tag name. To fix the code you must rename the class or, if the class is performing the same work as alignof, just replace the class with the new keyword.
 ```cpp
 class alignof{}
 ```
 
--   **constexpr теперь является ключевым словом**  
+-   **constexpr is now a keyword**  
 
-Теперь для следующего кода создается ошибка C2059: синтаксическая ошибка: ")". Чтобы исправить код, измените имена всех функций или переменных с именем "constexpr". 
+The following code now produces error C2059: syntax error: ')'. To fix the code, you must rename any function or variable names that are called "constexpr". 
 ```cpp
 int constexpr() {return 1;}
 ```
 
--   **Перемещаемые типы не могут являться константами**  
+-   **Movable types cannot be const**  
 
-Если функция возвращает тип, который предназначен для перемещения, его возвращаемый тип должен быть const.
+When a function returns a type that is intended to be moved, its return type should not be const.
 
--   **Удаленные конструкторы копии**  
+-   **Deleted copy constructors**  
 
-Теперь для приведенного ниже кода возвращается ошибка C2280'S::S(S &&)': попытка ссылки на удаленную функцию":
+The following code now produces C2280 'S::S(S &&)': attempting to reference a deleted function:
 
 ```cpp
 struct S{
@@ -1193,7 +1193,7 @@ struct S{
 
 S s2 = S(2, 3); //C2280
 ```
-Чтобы устранить эту ошибку, используйте прямую инициализацию S2:
+To fix the error, use direct initialization for S2:
 ```cpp
 struct S{
     S(int, int);
@@ -1204,9 +1204,9 @@ struct S{
 S s2 = {2,3}; //OK
 ```
 
--   **Преобразование в указатель функции создается только без лямбда-выражения**  
+-   **Conversion to function pointer only generated when no lambda capture**  
 
-Для следующего кода в Visual Studio 2015 создается ошибка C2664. 
+The following code produces C2664 in Visual Studio 2015. 
 
 ```cpp
 void func(int(*)(int)) {}
@@ -1216,11 +1216,11 @@ int main() {
     func([=](int val) { return val; });
 }
 ```
-Чтобы устранить эту ошибку, удалите `=` из списка передаваемых параметров.
+To fix the error, remove the `=` from the capture list.
 
--   **Неоднозначные вызовы с участием операторов преобразования**  
+-   **Ambiguous calls involving conversion operators**  
 
-Теперь для следующего кода создается ошибка C2440: "приведение типа": невозможно преобразовать "S2" в "S1":
+The following code now produces error C2440: 'type cast': cannot convert from 'S2' to 'S1':
 
 ```cpp 
 struct S1 {
@@ -1239,7 +1239,7 @@ void f(S2 s2)
 
 }
 ```
-Чтобы устранить эту ошибку, явным образом вызовите оператор преобразования:
+To fix the error, explicitly call the conversion operator:
 
 ```cpp
 void f(S2 s2)
@@ -1252,7 +1252,7 @@ void f(S2 s2)
 
 ```
 
-Теперь для следующего кода создается ошибка C2593: "оператор =" является неоднозначным:
+The following code now produces error C2593: 'operator =' is ambiguous:
 
 ```cpp
 struct S1 {};
@@ -1267,7 +1267,7 @@ void f(S1 *p, S2 s)
     *p = s;
 }
 ```
-Чтобы устранить эту ошибку, явным образом вызовите оператор преобразования:
+To fix the error, explicitly call the conversion operator:
 ```cpp
 void f(S1 *p, S2 s)
 {
@@ -1275,9 +1275,9 @@ void f(S1 *p, S2 s)
 }
 ```
 
--   **Исправление недопустимой инициализации копирования для инициализации нестатических данных-членов (NSDMI)**  
+-   **Fix invalid copy initialization in non-static data member initialization (NSDMI)**  
 
-Теперь для следующего кода создается ошибка C2664: 'S1::S1(S1 &&)': не удается преобразовать аргумент 1 из 'bool' в 'const S1 &':
+The following code now produces error C2664: 'S1::S1(S1 &&)': cannot convert argument 1 from 'bool' to 'const S1 &':
 ```cpp
 struct S1 {
     explicit S1(bool);
@@ -1287,16 +1287,16 @@ struct S2 {
     S1 s2 = true; // error
 };
 ```
-Чтобы устранить эту ошибку, используйте прямую инициализацию:
+To fix the error, use direct initialization:
 ```cpp
 struct S2 {
 S1 s1{true}; // OK
 };
 ```
 
--   **Доступ к конструкторам внутри операторов decltype**  
+-   **Accessing constructors inside decltype statements**  
 
-Для следующего кода теперь создается ошибка C2248: 'S::S': невозможно обратиться к частному члену, объявленному в классе 'S':
+The following code now produces C2248: 'S::S': cannot access private member declared in class 'S':
 ```cpp
 class S {
     S();
@@ -1308,7 +1308,7 @@ class S2 {
     auto f() -> decltype(S().i);
 };
 ```
-Чтобы исправить эту ошибку, добавьте в S объявление дружественных отношений для S2:
+To fix the error, add a friend declaration for S2 in S:
 ```cpp
 class S {
     S();
@@ -1318,9 +1318,9 @@ public:
 };
 ```
 
--   **Конструктор по умолчанию для лямбда-выражения неявно удаляется**  
+-   **Default ctor of lambda is implicitly deleted**  
 
-Теперь для следующего кода создается ошибка C3497: нельзя создать экземпляр лямбда-выражения:
+The following code now produces error C3497: you cannot construct an instance of a lambda:
 ```cpp
 void func(){
     auto lambda = [](){};    
@@ -1328,11 +1328,11 @@ void func(){
     decltype(lambda) other;
 }
 ```
-Чтобы устранить эту ошибку, избавьтесь от вызовов конструктора по умолчанию. Если лямбда-выражение ничего не записывает, ее можно преобразовать в указатель функции.
+To fix the error, remove the need for the default constructor to be called. If the lambda does not capture anything then it can be cast to a function pointer.
 
--   **Лямбда-выражения с удаленным оператором назначения**  
+-   **Lambdas with a deleted assignment operator**  
 
-Для следующего кода теперь возвращается ошибка C2280.
+The following code now produces error C2280:
 
 ```cpp
 #include <memory>
@@ -1348,11 +1348,11 @@ void f(int i)
     encodedMsg = std::move(encodedMsg);
 }
 ```
-Чтобы устранить эту ошибку, замените лямбда-выражение классом функтора или избавьтесь от использования оператора присваивания.
+To fix the error, replace the lambda with a functor class or remove the need to use the assignment operator.
 
--   **Попытка перемещения объекта с помощью удаленного конструктора копии**  
+-   **Attempting to move an object with deleted copy constructor**  
 
-Теперь для следующего кода создается ошибка C2280: 'moveable::moveable(const moveable &)': попытка сослаться на удаленную функцию
+The following code now produces  error C2280: 'moveable::moveable(const moveable &)': attempting to reference a deleted function
 ```cpp
 struct moveable {
 
@@ -1369,14 +1369,14 @@ struct S {
 };
 
 ```
-Чтобы устранить эту ошибку, используйте std::move.
+To fix the error, use std::move instead:
 ```cpp
 S(moveable && m) :
     m_m(std::move(m))
 ```
--   **Локальный класс не может ссылаться на другой локальный класс, определенный позднее в той же функции**  
+-   **Local class can't reference other local class defined later in the same function**  
 
-Теперь для следующего кода создается ошибка C2079: 's' использует неопределенную структуру 'main::S2'
+The following code now produces error C2079: 's' uses undefined struct 'main::S2'
 ```cpp
 int main()
 {
@@ -1389,7 +1389,7 @@ int main()
     struct S2 {};
 }
 ```
-Чтобы исправить эту ошибку, переместите определение S2:
+To fix the error, move up the definition of S2:
 ```cpp
 int main()
 {
@@ -1404,9 +1404,9 @@ struct S1 {
 }
 ```
 
--   **Невозможно вызвать защищенный базовый конструктор в теле производного конструктора.**  
+-   **Cannot call a protected base ctor in the body of derived ctor.**  
 
-Для следующего кода теперь создается ошибка C2248: 'S1::S1': невозможно обратиться к частному члену, объявленному в классе 'S1':
+The following code now produces error C2248: 'S1::S1': cannot access protected member declared in class 'S1'
 ```cpp
 struct S1 {
 protected:
@@ -1419,18 +1419,18 @@ struct S2 : public S1 {
     }
 };
 ```
-Чтобы исправить эту ошибку, удалите из конструктора S2 вызов S1(), а при необходимости поместите его в другую функцию.
+To fix the error, in S2 remove the call to S1() from the constructor and if necessary put it in another function.
 
--   **{} запрещает преобразование в указатель**  
+-   **{} prevents conversion to pointer**  
 
-Для следующего кода теперь создается ошибка C2439 'S::p': не удалось инициализировать член   
+The following code now produces C2439 'S::p': member could not be initialized   
 ```cpp
 struct S {
     S() : p({ 0 }) {}
     void *p;
 };
 ```
-Чтобы устранить эту ошибку, удалите скобки вокруг 0 или воспользуйтесь `nullptr`, как показано в следующем примере:
+To fix the error, remove the braces from around the 0 or else use `nullptr` instead, as shown in this example:
 ```cpp
 struct S {
     S() : p(nullptr) {}
@@ -1438,9 +1438,9 @@ struct S {
 };
 ```
 
--   **Неверное определение макросов и использование со скобками**  
+-   **Incorrect macro definition and usage with parentheses**  
 
-Для следующего примера кода теперь создается ошибка C2008: ';': не ожидается в определении макроса
+The following example now produces error C2008: ';': unexpected in macro definition
 ```cpp
 #define A; //cause of error
 
@@ -1448,9 +1448,9 @@ struct S {
     A(); // error
 };
 ```
-Чтобы устранить эту проблему, замените код в верхней строке на `#define A();`
+To fix the problem change the top line to `#define A();`
 
-Теперь для следующего кода создается ошибка C2059: синтаксическая ошибка: ')'.
+The following code produces error C2059: syntax error: ')'
 ```cpp
 
 //notice the space after 'A'
@@ -1460,9 +1460,9 @@ struct S {
     A();
 };
 ```
-Чтобы исправить этот код, удалите пробел между A и ().
+To fix the code remove the space between A and ().
 
-Для следующего кода создается ошибка C2091: функция возвращает функцию:
+The following code produces error C2091: function returns function:
 
 ```cpp
 
@@ -1472,9 +1472,9 @@ struct S {
     DECLARE();
 };
 ```
-Чтобы устранить эту ошибку, удалите круглые скобки после DECLARE в S: `DECLARE;`.
+To fix the error, remove the parentheses after DECLARE in S: `DECLARE;`.
 
-Для следующего кода создается ошибка C2062: непредвиденный тип 'int'
+The following code produces error C2062: type 'int' unexpected
 
 ```cpp
 #define A (int)
@@ -1483,14 +1483,14 @@ struct S {
     A a;
 };
 ```
-Чтобы устранить эту проблему, определите A следующим образом:
+To fix the problem, define A like this:
 ```cpp
 #define A int
 ```
 
--   **Дополнительные скобки в объявлениях**  
+-   **Extra parens in declarations**  
 
-Для следующего кода создается ошибка C2062: непредвиденный тип 'int'
+The following code produces error C2062: type 'int' unexpected
 ```cpp
 
 struct S {
@@ -1498,13 +1498,13 @@ struct S {
     (int)j;
 };
 ```
-Чтобы устранить эту ошибку, удалите скобки из `j`. Если эти скобки необходимы для ясности, используйте typedef.
+To fix the error, remove the parens from `j`. If the parens are needed for clarity, then use a typedef.
 
--   **Создаваемые компилятором конструкторы и __declspec(novtable)**  
+-   **Compiler-generated constructors and __declspec(novtable)**  
 
-В Visual Studio 2015 существует высокая вероятность, что создаваемые компилятором строковые конструкторы абстрактных классов с виртуальными базовыми классами неправильно используют __declspec(novtable) в сочетании с __declspec(dllimport).
+In Visual Studio 2015, there is an increased likelihood that inline compiler-generated constructors of abstract classes with virtual base classes may expose improper usage of __declspec(novtable) when used in combination with __declspec(dllimport).
 
--   **auto требует одного выражения в инициализации прямого списка** теперь для следующего кода создается ошибка C3518: 'testPositions': в контексте инициализации прямого списка тип 'auto' можно определить только по одному выражению инициализатора
+-   **auto requires single expression in direct-list-initialization** The following code now produces error C3518: 'testPositions': in a direct-list-initialization context the type for 'auto' can only be deduced from a single initializer expression
 
 ```cpp
 auto testPositions{
@@ -1514,7 +1514,7 @@ auto testPositions{
     std::tuple<int, int>{-21, 17}
 };
 ```
-Чтобы устранить эту ошибку, testPositions можно инициализировать следующим образом:
+To fix the error, one possibility is to initialize testPositions as follows:
 
 ```cpp
 std::tuple<int, int> testPositions[]{
@@ -1525,9 +1525,9 @@ std::tuple<int, int> testPositions[]{
 };
 ```
 
--   **Проверка типов и указателей на типы для is_convertible**  
+-   **Checking types vs. pointers to types for is_convertible**  
 
-В следующем коде проверочное утверждение теперь приводит к сбою. 
+The following code now causes the static assertion to fail. 
 
 ```cpp
 struct B1 {
@@ -1539,15 +1539,15 @@ struct D : public B2 {};
 
 static_assert(std::is_convertible<D, B2>::value, "fail");
 ```
-Чтобы устранить эту ошибку, измените static_assert так, чтобы в нем сравнивались указатели на D и B2:
+To fix the error, change the static_assert so that it compares pointers to D and B2:
 
 ```cpp
 static_assert(std::is_convertible<D*, B2*>::value, "fail");
 ```
 
--   **объявления declspec(novtable) должны быть согласованы**  
+-   **declspec(novtable) declarations must be consistent**  
 
-Объявления declspec должны быть согласованы во всех библиотеках. Следующий код теперь приводит к нарушению правила одного определения (ODR):
+declspec declarations must be consistent across all libraries. The following code will now produce a one-definition rule (ODR) violation:
 
 ```cpp
 
@@ -1612,11 +1612,11 @@ C c;
 
 
   
-###  <a name="VS_Update1"></a> Улучшения соответствия в обновлении 1  
+###  <a name="VS_Update1"></a> Conformance Improvements in Update 1  
   
--   **Закрытые виртуальные базовые классы и косвенное наследование**  
+-   **Private virtual base classes and indirect inheritance**  
   
-     В предыдущих версиях компилятора производному классу разрешалось вызывать функции-члены *косвенных*`private virtual` базовых классов. Это поведение было неправильным и не соответствовало стандарту языка C++. Компилятор больше не принимает код, написанный таким образом, и выдает в результате ошибку C2280.  
+     Previous versions of the compiler allowed a derived class to call member functions of its *indirectly-derived*`private virtual` base classes. This old behavior was incorrect and does not conform to the C++ standard. The compiler no longer accepts code written in this way and issues compiler error C2280 as a result.  
   
     ```Output  
   
@@ -1624,7 +1624,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     class base  
@@ -1643,7 +1643,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     class base;  // as above  
@@ -1658,7 +1658,7 @@ C c;
   
     ```  
   
-     -или-  
+     -or -  
   
     ```cpp  
     class base;  // as above  
@@ -1673,9 +1673,9 @@ C c;
   
     ```  
   
--   **Перегруженный оператор new и оператор delete**  
+-   **Overloaded operator new and operator delete**  
   
-     В предыдущих версиях компилятора можно было объявлять `operator new` , не являющийся членом, и `operator delete` , не являющийся членом, статически и в пространствах имен, отличных от глобального пространства имен.  При этом создавался риск того, что программа вызовет не ту реализацию оператора `new` или `delete` , которую планировал программист, результатом чего будет неправильное поведение во время выполнения. Компилятор больше не принимает код, написанный таким образом, и выдает вместо этого ошибку C2323.  
+     Previous versions of the compiler allowed non-member `operator new` and non-member `operator delete` to be declared static, and to be declared in namespaces other than the global namespace.  This old behavior created a risk that the program would not call the `new` or `delete` operator implementation that the programmer intended, resulting in silent bad runtime behavior. The compiler no longer accepts code written in this way and issues compiler error C2323 instead.  
   
     ```Output  
   
@@ -1683,25 +1683,25 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     static inline void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // error C2323  
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'  
   
     ```  
   
-     Кроме того, хотя компилятор не выдает соответствующего диагностического сообщения, встроенный оператор new считается некорректным.  
+     Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.  
   
--   **Вызов "operator *тип*()" (пользовательское преобразование) для типов, не являющихся классами**  
+-   **Calling 'operator *type*()' (user-defined conversion) on non-class types**  
   
-     В предыдущих версиях компилятора допускался вызов "operator *тип*()" для типов, не являющихся классами, при этом он игнорировался без вывода предупреждения. Это создавало риск создания некорректного кода и непредсказуемого поведения во время выполнения. Компилятор больше не принимает код, написанный таким образом, и выдает вместо этого ошибку C2228.  
+     Previous versions of the compiler allowed 'operator *type*()' to be called on non-class types while silently ignoring it. This old behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior. The compiler no longer accepts code written in this way and issues compiler error C2228 instead.  
   
     ```Output  
   
@@ -1709,7 +1709,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     typedef int index_t;  
@@ -1721,7 +1721,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     typedef int index_t;  
@@ -1733,15 +1733,15 @@ C c;
   
     ```  
   
--   **Избыточное ключевое слово typename в сложных спецификаторах типов**  
+-   **Redundant typename in elaborated type specifiers**  
   
-     В предыдущих версиях компилятора допускалось ключевое слово `typename` в сложных спецификаторах типов. Код, написанный таким образом, семантически неправилен. Компилятор больше не принимает код, написанный таким образом, и выдает вместо этого ошибку C3406.  
+     Previous versions of the compiler allowed `typename` in an elaborated type specifiers; code written in this way is semantically incorrect. The compiler no longer accepts code written in this way and issues compiler error C3406 instead.  
   
     ```Output  
     error C3406: 'typename' cannot be used in an elaborated type specifier  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     template <typename class T>  
@@ -1749,7 +1749,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     template <class T>  // alternatively, could be 'template <typename T>'; 'typename' is not elaborating a type specifier in this case  
@@ -1757,11 +1757,11 @@ C c;
   
     ```  
   
--   **Выведение типов массивов из списка инициализаторов**  
+-   **Type deduction of arrays from an initializer list**  
   
-     В предыдущих версиях компилятора не поддерживалось выведение типов массивов из списка инициализаторов. Теперь компилятор поддерживает подобное выведение типов, и в результате вызовы шаблонов функций с помощью списков инициализаторов теперь могут быть неоднозначными либо может выбираться не та перегрузка, что в предыдущих версиях компилятора. Для устранения этой проблемы теперь необходимо явно указывать в программе требуемую перегрузку.  
+     Previous versions of the compiler did not support type deduction of arrays from an initializer list. The compiler now supports this form of type deduction and, as a result, calls to function templates using initializer lists might now be ambiguous or a different overload might be chosen than in previous versions of the compiler. To resolve these issues, the program must now explicitly specify the overload that the programmer intended.  
   
-     Если в результате этого нового поведения при разрешении перегрузки дополнительный кандидат считается равноценным ранее существовавшему, вызов становится неоднозначным, и компилятор выдает ошибку C2668.  
+     When this new behavior causes overload resolution to consider an additional candidate that is equally as good as the historic candidate, the call becomes ambiguous and the compiler issues compiler error C2668 as a result.  
   
     ```Output  
   
@@ -1769,7 +1769,7 @@ C c;
   
     ```  
   
-     Пример 1. Неоднозначный вызов перегруженной функции (раньше)  
+     Example 1: Ambiguous call to overloaded function (before)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)  
@@ -1787,7 +1787,7 @@ C c;
   
     ```  
   
-     Пример 1. Неоднозначный вызов перегруженной функции (теперь)  
+     Example 1: ambiguous call to overloaded function (after)  
   
     ```cpp  
     template < typename... Args>  
@@ -1804,9 +1804,9 @@ C c;
   
     ```  
   
-     Если в результате этого нового поведения при разрешении перегрузки дополнительный кандидат считается лучше ранее существовавшего, вызов разрешается однозначно в нового кандидата, что приводит к изменению поведения программы, которое, возможно, не планировалось программистом.  
+     When this new behavior causes overload resolution to consider an additional candidate that is a better match than the historic candidate, the call resolves unambiguously to the new candidate, causing a change in program behavior that is probably different than the programmer intended.  
   
-     Пример 2. Изменение в разрешении перегрузки (раньше)  
+     Example 2: change in overload resolution (before)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(S, Args...)  
@@ -1830,7 +1830,7 @@ C c;
   
     ```  
   
-     Пример 2. Изменение в разрешении перегрузки (теперь)  
+     Example 2: change in overload resolution (after)  
   
     ```cpp  
     struct S;  // as before  
@@ -1849,9 +1849,9 @@ C c;
   
     ```  
   
--   **Восстановление предупреждений, касающихся оператора switch**  
+-   **Restoration of switch statement warnings**  
   
-     В предыдущей версии компилятора были удалены ранее существовавшие предупреждения, касающиеся операторов `switch` . Теперь эти предупреждения восстановлены. Компилятор теперь выдает эти предупреждения. Предупреждения, связанные с определенными вариантами (включая вариант по умолчанию), теперь выдаются в строке, содержащей неправильный вариант, а не в последней строке оператора switch. В результате того, что теперь предупреждения выдаются не в тех строках, что раньше, предупреждения, которые ранее подавлялись с помощью `#pragma warning(disable:####)` , могут больше не подавляться, как планировалось. Для правильного подавления этих предупреждений может потребоваться перенести директиву `#pragma warning(disable:####)` в строку перед первым потенциально неправильным вариантом. Ниже приведены восстановленные предупреждения.  
+     A Previous version of the compiler removed previously-existing warnings related to `switch` statements; these warnings have now been restored. The compiler now issues the restored warnings, and warnings related to specific cases (including the default case) are now issued on the line containing the offending case, rather than on the last line of the switch statement. As a result of now issuing those warnings on different lines than in the past, warnings previously suppressed by using `#pragma warning(disable:####)` may no longer be suppressed as intended. To suppress these warnings as intended, it might be necessary to move the `#pragma warning(disable:####)` directive to a line above the first potentially-offending case. The following are the restored warnings.  
   
     ```Output  
     warning C4060: switch statement contains no 'case' or 'default' labels  
@@ -1895,7 +1895,7 @@ C c;
     Warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given  
     ```  
   
-     Пример предупреждения C4063 (раньше)  
+     Example of C4063 (before)  
   
     ```cpp  
     class settings  
@@ -1929,7 +1929,7 @@ C c;
   
     ```  
   
-     Пример предупреждения C4063 (теперь)  
+     Example of C4063 (after)  
   
     ```cpp  
     class settings { ... };  // as above  
@@ -1955,41 +1955,41 @@ C c;
   
     ```  
   
-     Примеры других восстановленных предупреждений приведены в соответствующей документации.  
+     Examples of the other restored warnings are provided in their documentation.  
   
--   **#include: использование спецификатора parent-directory ".." в пути** (касается только /Wall /WX)  
+-   **#include: use of parent-directory specifier '..' in pathname** (only affects /Wall /WX)  
   
-     В предыдущих версиях компилятора не определялись случаи использования спецификатора parent-directory ".." в пути директив  `#include` . Код, написанный таким образом, обычно предназначен для включения заголовков, находящихся за пределами проекта, путем неправильного использования относительных путей к проектам. Это прежнее поведение создавало риск того, что при компиляции программы мог включаться не тот файл исходного кода, который планировал программист, или что эти относительные пути невозможно было бы перенести в другие среды сборки. Компилятор теперь обнаруживает код, написанный таким образом, уведомляет о нем программиста и выдает необязательное предупреждение C4464, если оно включено.  
+     Previous versions of the compiler did not detect the use of the parent-directory specifier '..' in the pathname of  `#include` directives. Code written in this way is usually intended to include headers that exist outside of the project by incorrectly using project-relative paths. This old behavior created a risk that the program could be compiled by including a different source file than the programmer intended, or that these relative paths would not be portable to other build environments. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4464, if enabled.  
   
     ```Output  
     warning C4464: relative include path contains '..'  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     #include "..\headers\C4426.h"  // emits warning C4464  
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories  
   
     ```  
   
-     Кроме того, хотя компилятор не выдает соответствующего диагностического сообщения, мы также рекомендуем не использовать спецификатор parent-directory ".." для указания включаемых в проект каталогов.  
+     Additionally, although the compiler does not give a specific diagnostic, we also recommend that the parent-directory specifier ".." should note be used to specify your project's include directories.  
   
--   **#pragma optimize() выходит за пределы файла заголовка** (касается только /Wall /WX)  
+-   **#pragma optimize() extends past end of header file** (only affects /Wall /WX)  
   
-     В предыдущих версиях компилятора не определялись изменения в параметрах флагов оптимизации за пределами файла заголовка, включенного в запись преобразования. Компилятор теперь обнаруживает код, написанный таким образом, уведомляет о нем программиста и выдает необязательное предупреждение C4426 в месте нахождения неправильного `#include`, если оно включено. Это предупреждение выдается только в том случае, если изменения конфликтуют с флагами оптимизации, установленными аргументами командной строки, переданными в компилятор.  
+     Previous versions of the compiler did not detect changes to  optimization flag settings that escape a header file included within a translation unit. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4426 at the location of the offending `#include`, if enabled. This warning is only issued if the changes conflict with the optimization flags set by command-line arguments to the compiler.  
   
     ```Output  
     warning C4426: optimization flags changed after including header, may be due to #pragma optimize()  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     // C4426.h  
@@ -2002,7 +2002,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     // C4426.h  
@@ -2016,15 +2016,15 @@ C c;
   
     ```  
   
--   **Несоответствие #pragma warning(push)** и **#pragma warning(pop)** (касается только /Wall /WX)  
+-   **Mismatched #pragma warning(push)** and **#pragma warning(pop)** (only affects /Wall /WX)  
   
-     В предыдущих версиях компилятора не обнаруживалось сопоставление изменений состояния `#pragma warning(push)` с изменениями состояния `#pragma warning(pop)` в другом файле исходного кода, которое редко бывает намеренным. Это создавало риск компиляции программы с набором включенных предупреждений, отличным от того, которое запланировал программист, что могло приводить к неправильному поведению во время выполнения. Компилятор теперь обнаруживает код, написанный таким образом, уведомляет о нем программиста и выдает необязательное предупреждение C5031 в месте нахождения соответствующего `#pragma warning(pop)`, если это предупреждение включено. Это предупреждение включает примечание, ссылающееся на расположение соответствующего #pragma warning(push).  
+     Previous versions of the compiler did not detect `#pragma warning(push)` state changes being paired with `#pragma warning(pop)` state changes in a different source file, which is rarely intended. This old behavior created a risk that the program would be compiled with a different set of warnings enabled than the programmer intended, possibly resulting in silent bad runtime behavior. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5031 at the location of the matching `#pragma warning(pop)`, if enabled. This warning includes a note referencing the location of the corresponding #pragma warning(push).  
   
     ```Output  
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     // C5031_part1.h  
@@ -2047,7 +2047,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     // C5031_part1.h  
@@ -2072,17 +2072,17 @@ C c;
   
     ```  
   
-     Хотя и редко, иногда код намеренно пишется таким образом. Такой код зависит от изменений в порядке `#include`. Мы рекомендуем, чтобы по возможности файлы исходного кода самостоятельно управляли состояниями предупреждений.  
+     Though uncommon, code written in this way is sometimes intentional. Code written in this way is sensitive to changes in `#include` order; when possible, we recommend that source code files manage warning state in a self-contained way.  
   
--   **Несоответствие #pragma warning(push)** (касается только /Wall /WX)  
+-   **Unmatched #pragma warning(push)** (only affects /Wall /WX)  
   
-     В предыдущих версиях компилятора не определялось несоответствие изменений состояния `#pragma warning(push)` в конце записи преобразования. Теперь компилятор обнаруживает код, написанный таким образом, уведомляет о нем программиста и выдает необязательное предупреждение C5032 в месте нахождения несоответствующего выражения #pragma warning(push), если это предупреждение включено. Это предупреждение выдается только в том случае, если в записи преобразования нет ошибок компиляции.  
+     Previous versions of the compiler did not detect unmatched `#pragma warning(push)` state changes at the end of a translation unit. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5032 at the location of the unmatched #pragma warning(push), if enabled. This warning is only issued if there are no compilation errors in the translation unit.  
   
     ```Output  
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     // C5032.h  
@@ -2098,7 +2098,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     // C5032.h  
@@ -2115,23 +2115,23 @@ C c;
   
     ```  
   
--   **В результате усовершенствования отслеживания состояния #pragma warning могут выдаваться дополнительные предупреждения**  
+-   **Additional warnings might be issued as a result of improved #pragma warning state tracking**  
   
-     В предыдущей версии компилятора изменения состояния #pragma warning отслеживались недостаточно хорошо для того, чтобы выдавались все необходимые предупреждения. В результате возникал риск того, что некоторые предупреждения могли подавляться в ситуациях, не предусмотренных программистом. Теперь компилятор более тщательно отслеживает состояние #pragma, а особенно изменения состояния #pragma warning внутри шаблонов. При необходимости он также выдает новые предупреждения C5031 и C5032, которые призваны помочь программисту в определении случаев непредусмотренного использования `#pragma warning(push)` и `#pragma warning(pop)`.  
+     Previous versions of the compiler tracked #pragma warning state changes insufficiently well to issue all intended warnings. This behavior created a risk that certain warnings would be effectively suppressed in circumstances different than the programmer intended. The compiler now tracks #pragma warning state more robustly -- especially related to #pragma warning state changes inside of templates -- and optionally issues new warnings C5031 and C5032 which are intended to help the programmer locate unintended uses of `#pragma warning(push)` and `#pragma warning(pop)`.  
   
-     В результате усовершенствованного отслеживания изменения состояния #pragma warning теперь могут выдаваться предупреждения, которые раньше некорректно подавлялись, или предупреждения о проблемах, которые ранее диагностировались неправильно.  
+     As a result of improved #pragma warning state change tracking, warnings formerly incorrectly suppressed or warnings related to issues formerly misdiagnosed might now be issued.  
   
--   **Улучшенное определение недостижимого кода**  
+-   **Improved identification of unreachable code**  
   
-     Изменения, внесенные в стандартную библиотеку C++, и улучшенная возможность встраивания вызовов функций по сравнению с предыдущими версиями компилятора позволяют компилятору определять недостижимость определенного кода. Это может привести к тому, что предупреждение C4720 будет выдаваться чаще.  
+     C++ Standard Library changes and improved ability to inline function calls over previous versions of the compiler might allow the compiler to prove that certain code is now unreachable. This new behavior can result in new and more-frequently issued instances of warning C4720.  
   
     ```Output  
     warning C4720: unreachable code  
     ```  
   
-     Зачастую это предупреждение выдается только при компиляции с включенными оптимизациями, так как при этом может встраиваться больше вызовов функций, удаляться избыточный код или могут производиться другие действия, позволяющие определить недостижимость определенного кода. По нашим наблюдениям, предупреждение C4720 начало часто появляться в блоках try/catch, особенно в связи с использованием [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
+     In many cases, this warning might only be issued when compiling with optimizations enabled, since optimizations may inline more function calls, eliminate redundant code, or otherwise make it possible to determine that certain code is unreachable. We have observed that new instances of warning C4720 have frequently occurred in try/catch blocks, especially in relation to use of [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     try  
@@ -2144,7 +2144,7 @@ C c;
     }  
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     try  
@@ -2157,20 +2157,20 @@ C c;
     }  
     ```  
   
-###  <a name="VS_Update2"></a> Улучшения соответствия в обновлении 2  
+###  <a name="VS_Update2"></a> Conformance Improvements in Update 2  
   
--   **В результате частичной поддержки правила SFINAE для выражений могут возникать дополнительные предупреждения и ошибки**  
+-   **Additional warnings and errors might be issued as a result of partial support for expression SFINAE**  
   
-     В предыдущих версиях компилятора из-за отсутствия поддержки правила SFINAE для выражений не анализировались некоторые типы выражений внутри описателей `decltype`. Это поведение было неправильным и не соответствовало стандарту языка C++. В результате непрерывной оптимизации соответствия компилятор теперь анализирует эти выражения и частично поддерживает правило SFINAE для выражений. Поэтому компилятор теперь выдает предупреждения и сообщения об ошибках, найденных в выражениях, которые в предыдущих версиях компилятора не анализировались.  
+     Previous versions of the compiler did not parse certain kinds of expressions inside `decltype` specifiers due to lack of  support for expression SFINAE. This old behavior was incorrect and does not conform to the C++ standard. The compiler now parses these expressions and has partial support for expression SFINAE due to  ongoing conformance improvements. As a result, the compiler now issues warnings and errors found in  expressions that previous versions of the compiler did not parse.  
   
-     Если в новой версии анализируется выражение `decltype`, включающее тип, который еще не был объявлен, выдается ошибка компилятора C2039.  
+     When this new behavior parses a `decltype` expression that includes a type that has not yet been declared, the compiler issues compiler error C2039 as a result.  
   
     ```Output  
   
     error C2039: 'type': is not a member of '`global namespace''  
     ```  
   
-     Пример 1. Использование необъявленного типа в предыдущих версиях  
+     Example 1:  use of an undeclared type (before)  
   
     ```cpp  
     struct s1  
@@ -2184,7 +2184,7 @@ C c;
   
     ```  
   
-     Пример 1 в текущей версии  
+     Example 1 (after)  
   
     ```cpp  
     struct s1  
@@ -2200,7 +2200,7 @@ C c;
   
     ```  
   
-     Если в новой версии анализируется выражение `decltype`, в котором не используется обязательное ключевое слово `typename` для указания на то, что зависимое имя представляет собой тип, выдается предупреждение компилятора C4346, а также ошибка компилятора C2923.  
+     When this new behavior parses a `decltype` expression that is missing a necessary use of the `typename` keyword to specify that a dependent name is a type, the compiler issues  compiler warning C4346 together with compiler error C2923.  
   
     ```Output  
   
@@ -2213,7 +2213,7 @@ C c;
     error C2923: 's1': 'S2<T>::Type' is not a valid template type argument for parameter 'T'  
     ```  
   
-     Пример 2. Зависимое имя не является типом (в предыдущих версиях)  
+     Example 2: dependent name is not a type (before)  
   
     ```cpp  
     template < typename T>  
@@ -2239,7 +2239,7 @@ C c;
   
     ```  
   
-     Пример 2 в текущей версии  
+     Example 2 (after)  
   
     ```cpp  
     template < typename T> struct s1 { ... };  // as above  
@@ -2256,9 +2256,9 @@ C c;
   
     ```  
   
--   `volatile`Переменные-члены  **не допускают неявно определенных конструкторов и операторов присваивания**  
+-   `volatile` **member variables prevent implicitly defined constructors and assignment operators**  
   
-     В предыдущих версиях компилятора допускалось автоматическое создание конструкторов копирования и перемещения по умолчанию, а также операторов присваивания копирования и перемещения по умолчанию для класса, содержащего переменные-члены `volatile`. Это поведение было неправильным и не соответствовало стандарту языка C++. Теперь компилятор рассматривает класс с переменными-членами volatile как имеющий нетривиальные конструкторы и операторы присваивания, что делает невозможным автоматическую реализацию этих операторов по умолчанию.  Если такой класс является членом объединения (или анонимного объединения внутри класса), конструкторы копирования и перемещения и операторы присваивания копирования и перемещения объединения (или класса, содержащего анонимное объединение) будут неявно определены как удаленные. Попытка создать или скопировать объединение (или класс, содержащий анонимное объединение), не объявляя их явно, будет являться ошибкой. В результате будет выдана ошибка компилятора C2280.  
+     Previous versions of the compiler allowed a class that has `volatile` member variables to have default copy/move constructors and default copy/move assignment operators automatically generated. This old behavior was incorrect and does not conform to the C++ standard. The compiler now considers a class that has volatile member variables to have non-trivial construction and assignment operators which prevents default implementations of these operators from being automatically generated.  When such a class is a member of a union (or an anonymous union inside of a class), the copy/move constructors and copy/move assignment operators of the union (or the class containing the unonymous union) will be implicitly defined as deleted. Attempting to construct or copy the union (or class containing the anonymous union) without explicitly defining them is an error and the compiler  issues compiler error C2280 as a result.  
   
     ```Output  
   
@@ -2266,7 +2266,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     struct A  
@@ -2290,7 +2290,7 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     struct A  
@@ -2314,15 +2314,15 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
--   **Статические функции-члены не поддерживают CV-квалификаторы.**  
+-   **Static member functions do not support cv-qualifiers.**  
   
-     В предыдущих версиях Visual C++ 2015 допускалось наличие CV-квалификаторов у статических функций-членов. Это поведение связано с регрессией в Visual C++ 2015 и Visual C++ 2015 с обновлением 1. В Visual C++ 2013 и более ранних версиях Visual C++ код, написанный таким образом, отклонялся. Такое поведение Visual C++ 2015 и Visual C++ 2015 с обновлением 1 является неправильным и не соответствует стандарту C++.  Среда Visual Studio 2015 с обновлением 2 отклоняет код, написанный таким образом, и выдает вместо этого ошибку компилятора C2511.  
+     Previous versions of Visual C++ 2015 allowed static member functions to have cv-qualifiers. This behavior is due to a regression in Visual C++ 2015 and Visual C++ 2015 Update 1; Visual C++ 2013 and previous versions of Visual C++ reject code written in this way. The behavior of Visual C++ 2015 and Visual C++ 2015 Update 1 is incorrect and does not conform to the C++ standard.  Visual Studio 2015 Update 2 rejects code written in this way and issues compiler error C2511 instead.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     struct A  
@@ -2334,7 +2334,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example(after)  
   
     ```cpp  
     struct A  
@@ -2346,9 +2346,9 @@ C c;
   
     ```  
   
--   **Опережающее объявление перечисления недопустимо в коде WinRT** (влияет только на параметр /ZW)  
+-   **Forward declaration of enum is not allowed in WinRT code** (affects /ZW only)  
   
-     Код, скомпилированный для среды выполнения Windows (WinRT), не допускает опережающего объявления типов `enum`. Это аналогично случаю, когда управляемый код C++ компилируется для платформы .Net Framework с помощью параметра компилятора /clr. Таким образом гарантируется, что размер перечисления всегда известен и может быть правильно спрогнозирован для системы типов WinRT. Компилятор отклоняет код, написанный таким образом, и выдает ошибку компилятора C2599, а также ошибку компилятора C3197.  
+     Code compiled for the Windows Runtime (WinRT) doesn't allow `enum` types to be forward declared, similarly to when managed C++ code is compiled for the .Net Framework using the /clr compiler switch. This behavior is ensures that the size of an enumeration is always known and can be correctly projected to the WinRT type system. The compiler rejects code written in this way and  issues compiler error C2599 together with compiler error C3197.  
   
     ```Output  
   
@@ -2362,7 +2362,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     namespace A {  
@@ -2387,7 +2387,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
               // forward declaration of CustomEnum removed  
@@ -2410,9 +2410,9 @@ C c;
   
     ```  
   
--   **Встроенное объявление перегруженных операторов new и delete, не являющихся членами, невозможно** (уровень 1 (/W1) включен по умолчанию)  
+-   **Overloaded non-member operator new and operator delete may not be declared inline** (Level 1 (/W1) on-by-default)  
   
-     При встроенном объявлении функций с операторами new и delete, не являющимися членами, в предыдущих версиях компилятора не выводилось предупреждение. Код, написанный таким образом, является неверно сформированным (диагностика не требуется) и может приводить к проблемам с памятью, которые возникают в результате несоответствия операторов new и delete (особенно при совместном использовании в размерных функциях удаления) и которые может быть трудно диагностировать.   Для выявления кода, написанного таким образом, компилятор теперь выдает предупреждение C4595.  
+     Previous versions of the compiler do not issue a warning when non-member operator new and operator delete functions are declared inline. Code written in this way is ill-formed (no diagnostic required) and can cause memory issues  resulting from mismatched new and delete operators (especially when used together with sized deallocation) that can be difficult to diagnose.   The compiler now issues compiler warning C4595 to help identify code written in this way.  
   
     ```Output  
   
@@ -2420,7 +2420,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
               inline void* operator new(size_t sz)  // warning C4595  
@@ -2430,7 +2430,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
               void* operator new(size_t sz)  // removed inline  
@@ -2440,17 +2440,17 @@ C c;
   
     ```  
   
-     Для исправления кода, написанного таким образом, может потребоваться перенести определения операторов из файла заголовка в соответствующий исходный файл.  
+     Fixing code that's written in this way might require that the operator definitions be moved out of a header file and into a corresponding source file.  
   
-###  <a name="VS_Update3"></a> Улучшения соответствия в обновлении 3  
+###  <a name="VS_Update3"></a> Conformance Improvements in Update 3  
   
--   **std::is_convertable теперь обнаруживает присваивания самому себе** (стандартная библиотека)  
+-   **std::is_convertable now detects self-assignment**  (standard library)  
   
-     Предыдущие версии признака типа `std::is_convertable` некорректно обнаруживали присваивание типа класса самому себе, когда конструктор копии удален или является закрытым. Теперь для `std::is_convertable<>::value` правильно задано `false` при применении к типу класса с удаленным или закрытым конструктором копии.  
+     Previous versions of the `std::is_convertable` type-trait did not correctly detect self-assignment of a class type when its copy constructor is deleted or private. Now, `std::is_convertable<>::value` is correctly set to `false` when applied to a class type with a deleted or private copy constructor.  
   
-     Диагностические данные компилятора, связанные с этим изменением, отсутствуют.  
+     There is no compiler diagnostic associated with this change.  
   
-     Пример  
+     Example  
   
     ```cpp  
     #include <type_traits>  
@@ -2470,18 +2470,18 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     В предыдущих версиях Visual C++ статические утверждения в нижней части этого примера выполнялись, так как для `std::is_convertable<>::value` было неправильно задано `true`. Теперь `std::is_convertable<>::value` правильно задано `false`, что приводит к ошибкам статических утверждений.  
+     In previous versions of Visual C++, the static assertions at the bottom of this example pass because `std::is_convertable<>::value` was incorrectly set to `true`. Now, `std::is_convertable<>::value` is correctly set to `false`, causing the static assertions to fail.  
   
--   **Заданные по умолчанию или удаленные упрощенные конструкторы копии и перемещения поддерживают описатели доступа**  
+-   **Defaulted or deleted trivial copy and move constructors respect access specifiers**  
   
-     Предыдущие версии компилятора не проверяли описатель доступа заданных по умолчанию или удаленных упрощенных конструкторов копии и перемещения перед предоставлением им возможности получать вызовы. Это поведение было неправильным и не соответствовало стандарту языка C++. В некоторых случаях это создавало риск формирования некорректного кода и непредсказуемого поведения во время выполнения. Теперь компилятор проверяет описатель доступа заданных по умолчанию или удаленных упрощенных конструкторов копии и перемещения, чтобы определить, могут ли они быть вызваны, и если нет, выдает предупреждение компилятора C2248.  
+     Previous versions of the compiler did not check the access specifier of defaulted or deleted trivial copy and move constructors before allowing them to be called. This old behavior was incorrect and does not conform to the C++ standard. In some cases, this old  behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior. The compiler now checks the access specifier  of defaulted or deleted trivial copy and move constructors to determine whether it can be called, and if not, issues compiler warning C2248 as a result.  
   
     ```Output  
   
     error C2248: 'S::S' cannot access private member declared in class 'S'  
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```cpp  
     class S {  
@@ -2501,7 +2501,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```cpp  
     class S {  
@@ -2521,17 +2521,17 @@ C c;
   
     ```  
   
--   **Недопустимость поддержки атрибутивного кода ATL** (уровень 1 (/ W1) включен по умолчанию)  
+-   **Deprecation of attributed ATL code support** (Level 1 (/W1) on-by-default)  
   
-     Предыдущие версии компилятора поддерживали атрибутивный код ATL. На следующем этапе процесса отмены поддержки атрибутивного кода ATL, который [начался в Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), атрибутивный код ATL выведен из эксплуатации. Для выявления такого нерекомендуемого кода компилятор теперь выдает предупреждение C4467.  
+     Previous versions of the compiler supported attributed ATL code. As the next phase of removing support for attributed ATL code that [began in Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), attributed ATL code has been deprecated. The compiler now issues compiler warning C4467 to help identify this kind of deprecated code.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     Если вы хотите продолжить использование атрибутивного кода ATL вплоть до отмены поддержки в компиляторе, это предупреждение можно отключить, передав аргументы командной строки `/Wv:18` или `/wd:4467` в компилятор или добавив `#pragma warning(disable:4467)` в исходный код.  
+     If you want to continue using attributed ATL code until support is removed from the compiler, you can disable this warning by passing the `/Wv:18` or `/wd:4467` command line arguments to the compiler, or by adding  `#pragma warning(disable:4467)` in your source code.  
   
-     Пример 1 (раньше)  
+     Example 1 (before)  
   
     ```cpp  
               [uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")]  
@@ -2539,16 +2539,16 @@ C c;
   
     ```  
   
-     Пример 1 в текущей версии  
+     Example 1 (after)  
   
     ```cpp  
     __declspec(uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")) A {};  
   
     ```  
   
-     Иногда может потребоваться создать IDL-файл, чтобы избежать использования нерекомендуемых атрибутов ATL, как показано в следующем примере кода.  
+     Sometimes you might need or want to create an IDL file to avoid the use deprecated ATL attributes, as in the example code below  
   
-     Пример 2 (раньше)  
+     Example 2 (before)  
   
     ```cpp  
     [emitidl];  
@@ -2568,11 +2568,11 @@ C c;
   
     ```  
   
-     Сначала создайте *.idl-файл. Созданный файл vc140.idl можно использовать для получения файла \*.idl, содержащий интерфейсы и заметки.  
+     First, create the *.idl file; the vc140.idl generated file can be used to obtain an \*.idl file containing the interfaces and annotations.  
   
-     Затем добавьте в сборку шаг MIDL, чтобы убедиться в создании определений интерфейса C++.  
+     Next, add a MIDL step to your build to make sure that the C++ interface definitions are generated.  
   
-     Пример 2. IDL (теперь)  
+     Example 2 IDL (after)  
   
     ```cpp  
     import "docobj.idl";  
@@ -2603,9 +2603,9 @@ C c;
   
     ```  
   
-     Затем используйте ATL непосредственно в файле реализации, как показано в следующем примере кода.  
+     Then, use ATL directly in the implementation file, as in the example code below.  
   
-     Пример 2. Реализация (теперь)  
+     Example 2  Implementation (after)  
   
     ```cpp  
     #include <idl.header.h>  
@@ -2623,9 +2623,9 @@ C c;
   
     ```  
   
--   **Файлы предкомпилированных заголовков (PCH) и несовпадающие директивы #include** (влияет только на /WX/Wall)  
+-   **Precompiled header (PCH) files and mismatched #include directives** (only affects /Wall /WX)  
   
-     Предыдущие версии компилятора принимали несовпадающие директивы `#include` в файлах исходного кода между компиляциями `-Yc` и `-Yu` при использовании файлов предкомпилированных заголовков (PCH). Компилятор больше не принимает код, написанный таким образом.   Теперь для выявления несовпадающих директив `#include` при использовании PCH-файлов компилятор выдает предупреждение CC4598.  
+     Previous versions of the compiler accepted mismatched `#include` directives in source files between `-Yc` and `-Yu` compilations when using precompiled header (PCH)  files. Code written in this way is no longer accepted by the compiler.   The compiler now issues compiler warning CC4598 to help identify mismatched `#include` directives when using PCH files.  
   
     ```Output  
   
@@ -2633,7 +2633,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before):  
   
      X.cpp (-Ycc.h)  
   
@@ -2653,7 +2653,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
      X.cpp (-Ycc.h)  
   
@@ -2673,9 +2673,9 @@ C c;
   
     ```  
   
--   **Файлы предкомпилированных заголовков (PCH) и несовпадающие каталоги включаемых файлов** (влияет только на /Wall /WX)  
+-   **Precompiled header (PCH) files and mismatched include directories** (only affects /Wall /WX)  
   
-     Предыдущие версии компилятора принимали аргументы командной строки несовпадающего каталога включаемых файлов (`-I`) в компиляторе между компиляциями `-Yc` и `-Yu` при использовании файлов предкомпилированных заголовков (PCH). Компилятор больше не принимает код, написанный таким образом.   Теперь для выявления аргументов командной строки несовпадающего каталога включаемых файлов (`-I`) при использовании PCH-файлов компилятор выдает предупреждение CC4599.  
+     Previous versions of the compiler accepted mismatched include directory (`-I`) command line arguments to the compiler between `-Yc` and `-Yu` compilations when using precompiled header (PCH)  files. Code written in this way is no longer accepted by the compiler.   The compiler now issues compiler warning CC4599 to help identify mismatched include directory (`-I`) command line arguments when using PCH files.  
   
     ```Output  
   
@@ -2683,7 +2683,7 @@ C c;
   
     ```  
   
-     Пример (раньше)  
+     Example (before)  
   
     ```ms-dos  
   
@@ -2692,7 +2692,7 @@ C c;
   
     ```  
   
-     Пример (теперь)  
+     Example (after)  
   
     ```ms-dos  
   
@@ -2701,11 +2701,11 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Изменения соответствия в Visual C++ 2013  
+## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 Conformance Changes  
   
-### <a name="compiler"></a>Компилятор  
+### <a name="compiler"></a>Compiler  
   
--   Ключевое слово final теперь выдаёт ошибку неразрешённого символа в коде, который ранее компилировался без ошибок:  
+-   The final keyword now generates an unresolved symbol error where it would have compiled previously:  
   
     ```cpp  
     struct S1 {  
@@ -2723,9 +2723,9 @@ C c;
   
     ```  
   
-     В более ранних версиях ошибка не выдавалась, поскольку вызов был виртуальным вызовом; тем не менее во время выполнения программа давала сбой. Теперь выдается ошибка компоновщика, поскольку известно, что класс является конечным. В этом примере для устранения ошибки нужно выполнить компоновку по объекту, который содержит определение S2::f.  
+     In earlier versions, an error wasn't issued because the call was a virtual call; nevertheless, the program would crash at runtime. Now, a linker error is issued because the class is known to be final. In this example, to fix the error, you would link against the obj that contains the definition of S2::f.  
   
--   При использовании дружественных функций в пространствах имен необходимо повторно объявить дружественную функцию, прежде чем сослаться на нее; в противном случае возникнет ошибка, поскольку компилятор теперь соответствует стандарту ISO C++. Например, больше не компилируется следующий код:  
+-   When you use friend functions in namespaces, you must re-declare the friend function before you refer to it or you will get an error because the compiler now conforms to the ISO C++ Standard. For example, this no longer compiles:  
   
     ```cpp  
     namespace NS {  
@@ -2741,7 +2741,7 @@ C c;
   
     ```  
   
-     Для исправления этого кода объявите дружественную функцию:  
+     To correct this code, declare the friend function:  
   
     ```cpp  
     namespace NS {  
@@ -2758,7 +2758,7 @@ C c;
   
     ```  
   
--   Стандарт C++ не допускает явной специализации в классе. В некоторых случаях Visual C++ в некоторых случаях это допускает, однако в таких случаях, как в следующем примере, возникает ошибка, потому что компилятор не считает вторую функцию специализацией первой.  
+-   The C++ Standard does not allow explicit specialization in a class. Although Visual C++ allows it in some cases, in cases such as the following example, an error is now generated because the compiler doesn't consider the second function to be a specialization of the first one.  
   
     ```cpp  
     template < int N>  
@@ -2772,14 +2772,14 @@ C c;
   
     ```  
   
-     Для исправления этого кода измените вторую функцию:  
+     To correct this code, modify the second function:  
   
     ```cpp  
     template <> void f(char& val);  
   
     ```  
   
--   Visual C++ больше не пытается устранить неоднозначность между двумя функциями в следующем примере, и теперь выдает ошибку:  
+-   Visual C++ no longer tries to disambiguate the two functions in the following example, and now emits an error:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2791,7 +2791,7 @@ C c;
   
     ```  
   
-     Для исправления этого кода уточните вызов:  
+     To correct this code, clarify the call:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2803,7 +2803,7 @@ C c;
   
     ```  
   
--   До того, как компилятор стал совместимым с ISO C++11, следующий код скомпилировался бы и переменная x разрешилась в тип int:  
+-   Before the compiler was made compliant with ISO C++11, the following code would have compiled and caused x to resolve to type int:  
   
     ```cpp  
     auto x = {0};  
@@ -2811,7 +2811,7 @@ C c;
   
     ```  
   
-     Теперь в этом коде x разрешается в тип std::initializer_list\<int>, что вызывает ошибку на следующей строке, где производится попытка присвоить x типу int. (По умолчанию преобразования нет.) Для исправления этого кода используйте int вместо auto:  
+     This code now resolves x to a type of std::initializer_list\<int> and causes an error on the next line that tries to assign x to type int. (There is no conversion by default.) To correct this code, use int to replace auto:  
   
     ```cpp  
     int x = {0};  
@@ -2819,7 +2819,7 @@ C c;
   
     ```  
   
--   Агрегатная инициализация больше не допускается, если тип значения справа не соответствует типу инициализируемого значения слева; в этом случае возникает ошибка, поскольку стандарт ISO C++11 требует, чтобы унифицированная инициализация работала без сужающих преобразований. Ранее, если сужающее преобразование было доступно, вместо ошибки выдавалось [предупреждение компилятора (уровень 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md).  
+-   Aggregate initialization is no longer allowed when the type of the right-hand value does not match the type of the left-hand value that's being initialized, and an error is issued because the ISO C++11 Standard requires uniform initialization to work without narrowing conversions. Previously, if a narrowing conversion was available, a [Compiler Warning (level 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) warning would have been issued instead of an error.  
   
     ```cpp  
     int i = 0;  
@@ -2827,7 +2827,7 @@ C c;
   
     ```  
   
-     Для исправления этого кода добавьте явное сужающее преобразование:  
+     To correct this code, add an explicit narrowing conversion:  
   
     ```cpp  
     int i = 0;  
@@ -2835,14 +2835,14 @@ C c;
   
     ```  
   
--   Следующая инициализация больше не является допустимой:  
+-   The following initialization is no longer allowed:  
   
     ```cpp  
     void *p = {{0}};  
   
     ```  
   
-     Для исправления этого кода используйте одну из следующих форм записи:  
+     To correct this code, use either of these forms:  
   
     ```cpp  
     void *p = 0;  
@@ -2851,7 +2851,7 @@ C c;
   
     ```  
   
--   Изменился поиск имен. Следующий код разрешается по-разному в Visual C++ в Visual Studio 2012 и Visual C++ в Visual Studio 2013:  
+-   Name lookup has changed. The following code is resolved differently in Visual C++ in Visual Studio 2012 and Visual C++ in Visual Studio 2013:  
   
     ```cpp  
     enum class E1 { a };  
@@ -2865,9 +2865,9 @@ C c;
   
     ```  
   
-     В Visual C++ в Visual Studio 2012 E1 в выражении E1::b разрешается в ::E1 в глобальной области видимости. В Visual C++ в Visual Studio 2013 E1 в выражении E1::b разрешается в определение typedef E2 в main() и имеет тип ::E2.  
+     In Visual C++ in Visual Studio 2012, the E1 in expression E1::b resolved to ::E1 in the global scope. In Visual C++ in Visual Studio 2013, E1 in expression E1::b resolves to the typedef E2 definition in main() and has type ::E2.  
   
--   Макет объектов изменен. В x64 макет объектов класса может отличаться от аналогичного макета в предыдущих выпусках. Если он обладает виртуальной функцией, но не обладает базовым классом, обладающим виртуальной функцией, то модель объекта компилятора вставляет указатель в таблицу виртуальной функции после макета данных-членов. Это означает, что макет не во всех случаях будет оптимальным. В предыдущих выпусках технология оптимизации x64 предпринимала попытку улучшения макета в соответствии с требованиями пользователя, но поскольку в случае работы со сложными кодами она не выполняла свои функции должным образом, из Visual C++ в Visual Studio 2013 данная технология была удалена. Например, рассмотрим следующий код.  
+-   Object layout has changed. On x64, the object layout of a class may change from previous releases. If it has a virtual function but it doesn’t have a base class that has a virtual function, the object model of the compiler inserts a pointer to a virtual function table after the data member layout. This means the layout may not be optimal in all cases. In previous releases, an optimization for x64 would try to improve the layout for you, but because it failed to work correctly in complex code situations, it was removed in Visual C++ in Visual Studio 2013. For example, consider this code:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2881,7 +2881,7 @@ C c;
   
     ```  
   
--   В Visual C++ в Visual Studio 2013 результат sizeof(S2) в x64 — 48, но в предыдущих выпусках он равен 32. Чтобы получить значение 32 в Visual C++ в Visual Studio 2013 для x64, добавьте фиктивный базовый класс, обладающий виртуальной функцией:  
+-   In Visual C++ in Visual Studio 2013, the result of sizeof(S2) on x64 is 48, but in previous releases, it evaluates to 32. To make this evaluate to 32 in Visual C++ in Visual Studio 2013 for x64, add a dummy base class that has a virtual function:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2898,7 +2898,7 @@ C c;
   
     ```  
   
-     Чтобы найти сегменты кода, которые предыдущие версии попытались бы оптимизировать, используйте компилятор из данного выпуска в сочетании с параметром компилятора /W3 и включите предупреждение 4370. Например:  
+     To find places in your code that an earlier release would have tried to optimize, use a compiler from that release together with the /W3 compiler option and turn on Warning 4370. For example:  
   
     ```cpp  
     #pragma warning(default:4370)  
@@ -2914,9 +2914,9 @@ C c;
   
     ```  
   
-     Для компиляторов Visual C++ C до версии Visual C++ в Visual Studio 2013 этот код выводит следующее сообщение: warning C4370: 'S2' : layout of class has changed from a previous version of the compiler due to better packing  
+     On Visual C++ compilers before Visual C++ in Visual Studio 2013, this code outputs this message: warning C4370: 'S2' : layout of class has changed from a previous version of the compiler due to better packing  
   
-     Проблема неоптимального макета характерна для компилятора x86 во всех версиях Visual C++. Например, если такой код компилируется для x86:  
+     The x86 compiler has the same sub-optimal layout issue in all versions of Visual C++. For example, if this code is compiled for x86:  
   
     ```cpp  
     struct S {  
@@ -2927,7 +2927,7 @@ C c;
   
     ```  
   
-     Результатом sizeof(S) является 24. Однако это значение можно уменьшить до 16 при помощи вышеуказанного решения данной проблемы для x64:  
+     The result of sizeof(S) is 24. However, this can be reduced to 16 if you use the workaround just mentioned for x64:  
   
     ```cpp  
     struct dummy {  
@@ -2942,34 +2942,34 @@ C c;
   
     ```  
   
-### <a name="standard-library"></a>Стандартная библиотека  
- Visual C++ в Visual Studio 2013 обнаруживает несоответствия в _ITERATOR_DEBUG_LEVEL (функция, реализованная в Visual C++ 2010), а также несоответствия RuntimeLibrary. Это происходит при смешении параметров компилятора /MT (статический выпуск), /MTd (статическая отладка), /MD (динамический выпуск) и /MDd (динамическая отладка).  
+### <a name="standard-library"></a>Standard Library  
+ Visual C++ in Visual Studio 2013 detects mismatches in _ITERATOR_DEBUG_LEVEL, which was implemented in Visual C++ 2010, and RuntimeLibrary mismatches. These occur when compiler options /MT (static release), /MTd (static debug), /MD (dynamic release), and /MDd (dynamic debug) are mixed.  
   
--   Если код признает имитируемые шаблоны псевдонима предыдущего выпуска, необходимо внести в него изменения. Например, вместо instead of allocator_traits\<A>::rebind_alloc\<U>::other теперь следует использовать allocator_traits\<A>::rebind_alloc\<U>. Несмотря на то, что ratio_add\<R1, R2>::type больше не требуется и теперь мы рекомендуем использовать ratio_add\<R1, R2>, первый вариант по-прежнему будет компилироваться, поскольку отношение ratio\<N, D> обязательно должно иметь typedef "тип" для уменьшенного отношения (то есть тот же тип, если оно уже уменьшено).  
+-   If your code acknowledges the previous release's simulated alias templates, you have to change it. For example, instead of allocator_traits\<A>::rebind_alloc\<U>::other, now you have to say allocator_traits\<A>::rebind_alloc\<U>. Although ratio_add\<R1, R2>::type is no longer necessary and we now recommend that you say ratio_add\<R1, R2>, the former will still compile because ratio\<N, D> is required to have a "type" typedef for a reduced ratio, which will be the same type if it's already reduced.  
   
--   Необходимо использовать #include \<algorithm> при вызове std::min() или std::max().  
+-   You must use #include \<algorithm> when you call std::min() or std::max().  
   
--   Если в существующем коде используются имитируемые ограниченные перечисления предыдущего выпуска (традиционные неограниченные перечисления с оболочкой из пространства имен), в него необходимо внести изменения. Например, если вы ссылались на тип std::future_status::future_status, теперь необходима запись std::future_status. Однако на большую часть кода это не влияет, например std::future_status::ready по-прежнему компилируется.  
+-   If your existing code uses the previous release’s simulated scoped enums—traditional unscoped enums wrapped in namespaces—you have to change it. For example, if you referred to the type std::future_status::future_status, now you have to say std::future_status. However, most code is unaffected—for example, std::future_status::ready still compiles.  
   
--   explicit operator bool() строже, чем operator unspecified-bool-type(). explicit operator bool() разрешает явные преобразования в bool, например, при shared_ptr\<X> sp, both static_cast\<bool>(sp) и bool b(sp) являются допустимыми — и логически проверяемые "контекстные преобразования", например, if (sp), !sp, sp && whatever. Однако explicit operator bool() запрещает неявные преобразования в bool, поэтому нельзя написать bool b = sp;, а при возвращаемом типе bool нельзя написать return sp.  
+-   explicit operator bool() is stricter than operator unspecified-bool-type(). explicit operator bool() permits explicit conversions to bool—for example, given shared_ptr\<X> sp, both static_cast\<bool>(sp) and bool b(sp) are valid—and Boolean-testable "contextual conversions" to bool—for example, if (sp), !sp, sp && whatever. However, explicit operator bool() forbids implicit conversions to bool, so you can't say bool b = sp; and given a bool return type, you can't say return sp.  
   
--   Теперь, когда реализованы настоящие шаблоны с переменным числом аргументов, определение препроцессора _VARIADIC_MAX и связанные с ним макросы не имеют силы. Если теперь определить _VARIADIC_MAX, это определение просто игнорируется. Если вы признали механизмы макросов, предназначенные для поддержки имитируемых шаблонов с переменным числом аргументов каким-либо другим способом, необходимо внести изменения в код.  
+-   Now that real variadic templates are implemented, _VARIADIC_MAX and related macros have no effect. If you're still defining _VARIADIC_MAX, it is just ignored. If you acknowledged our macro machinery intended to support simulated variadic templates in any other way, you have to change your code.  
   
--   В дополнение к обычным ключевым словам в заголовках стандартной библиотеки C++ теперь запрещено использование макросов, связанных с контекстом ключевых слов override и final.  
+-   In addition to ordinary keywords, C++ Standard Library headers now forbid the macro-izing of the context-sensitive keywords "override" and "final".  
   
--   reference_wrapper/ref()/cref() теперь запрещает привязку к временным объектам.  
+-   reference_wrapper/ref()/cref() now forbid binding to temporary objects.  
   
--   \<random> теперь строго контролирует соблюдение своих предусловий времени компиляции.  
+-   \<random> now strictly enforces its compile-time preconditions.  
   
--   Различные характеристики типов стандартной библиотеки C++ имеют предусловие "T должен быть полным типом". Несмотря на то, что теперь компилятор контролирует это предусловие более строго, он не может обеспечивать его выполнение во всех ситуациях. (Поскольку нарушение предусловия стандартной библиотеки C++ инициирует неопределенное поведение, стандарт не гарантирует принудительное применение этого предусловия.)  
+-   Various C++ Standard Library type traits have the precondition "T shall be a complete type". Although the compiler now enforces this more strictly, it may not enforce it in all situations. (Because C++ Standard Library precondition violations trigger undefined behavior, the Standard doesn't guarantee enforcement.)  
   
--   Стандартная библиотека C++ не поддерживает /clr:oldSyntax.  
+-   The C++ Standard Library does not support /clr:oldSyntax.  
   
--   Спецификация C++11 для common_type<> имела неожиданные и нежелательные последствия; в частности, в соответствии с ней common_type\<int, int>::type возвращает int&&. Поэтому Visual C++ реализует предлагаемое решение проблемы рабочей группы библиотек 2141, которое заставляет common_type\<int, int="">::type возвращать int.  
+-   The C++11 specification for common_type<> had unexpected and undesired consequences; in particular, it makes common_type\<int, int>::type return int&&. Therefore, Visual C++ implements the Proposed Resolution for Library Working Group issue 2141, which makes common_type\<int, int="">::type return int.  
   
-     В качестве побочного эффекта этого изменения вариант с идентификатором больше не работает (common_type\<T> не всегда дает тип T). Это соответствует предлагаемому решению, однако нарушает работу кода, в котором предполагается ранее существовавшее поведение.  
+     As a side-effect of this change, the identity case no longer works (common_type\<T> does not always result in type T). This complies with the Proposed Resolution, but it breaks any code that relied on the previous behavior.  
   
-     Если требуется характеристика типа идентификатора, не используйте нестандартную структуру std::identity, определенную в <type_traits>, поскольку она не будет работать для \<void>. Вместо этого реализуйте собственную характеристику типа идентификатора в соответствии со своими потребностями. Ниже приведен пример:  
+     If you require an identity type trait, don't use the non-standard std::identity that's defined in <type_traits>                 because it won't work for \<void>                 . Instead, implement your own identity type trait to suit your needs. Here's an example:  
   
     ```cpp  
     template < typename T> struct Identity {  
@@ -2978,49 +2978,49 @@ C c;
   
     ```  
   
-### <a name="mfc-and-atl"></a>MFC и ATL  
+### <a name="mfc-and-atl"></a>MFC and ATL  
   
--   Библиотека MFC MBCS больше не входит в состав Visual Studio, поскольку из-за популярности Юникода многобайтовая кодировка теперь используется значительно реже. Это изменение также обеспечивает более точное соответствие MFC самому Windows SDK, поскольку многие из новых элементов управления и сообщений поддерживают только Юникод. Однако если необходимо продолжить использование библиотеки MFC с многобайтовой кодировкой, ее можно загрузить из Центра загрузки MSDN. Распространяемый пакет Visual C++ по-прежнему содержит эту библиотеку.  
+-  **Visual Studio 2013 only**: MFC MBCS Library is not included in Visual Studio because Unicode is so popular and use of MBCS is significantly reduced. This change also keeps MFC more closely aligned with the Windows SDK itself, because many of the new controls and messages are Unicode-only. However, if you must continue to use the MFC MBCS library, you can download it from the MSDN Download Center at [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). The Visual C++ Redistributable Package still includes this library.  (Note: The MBCS DLL is included in Visual C++ setup components in Visual Studio 2015 and later).
   
--   Изменился порядок доступа к ленте MFC.  Вместо одноуровневой архитектуры теперь используется иерархическая архитектура. Старое поведение по-прежнему можно использовать, вызывая CRibbonBar::EnableSingleLevelAccessibilityMode().  
+-   Accessibility for the MFC ribbon is changed.  Instead of a one-level architecture, there is now a hierarchical architecture. You can still use the old behavior by calling CRibbonBar::EnableSingleLevelAccessibilityMode().  
   
--   Удален метод CDatabase::GetConnect. Для большей безопасности строка подключения теперь хранится в зашифрованном виде и расшифровывается только по мере необходимости.  Получить строку можно с помощью метода CDatabase::Dump.  
+-   CDatabase::GetConnect method is removed. To improve security, the connection string is now stored encrypted and is decrypted only as needed; it cannot be returned as plain text.  The string can be obtained by using the CDatabase::Dump method.  
   
--   Изменилась сигнатура CWnd::OnPowerBroadcast. Сигнатура этого обработчика сообщений теперь принимает LPARAM в качестве второго параметра.  
+-   Signature of CWnd::OnPowerBroadcast is changed. The signature of this message handler is changed to take an LPARAM as the second parameter.  
   
--   Изменились сигнатуры для поддержки обработчиков сообщений. Списки параметров следующих функций были изменены для использования вновь добавленных обработчиков сообщений ON_WM_*:  
+-   Signatures are changed to accommodate message handlers. The parameter lists of the following functions have been changed to use newly added ON_WM_* message handlers:  
   
-    -   Функция CWnd::OnDisplayChange изменилась с (UINT, int, int) на (WPARAM, LPARAM), чтобы можно было использовать в схеме сообщений новый макрос ON_WM_DISPLAYCHANGE.  
+    -   CWnd::OnDisplayChange changed to (UINT, int, int) instead of (WPARAM, LPARAM) so that the new ON_WM_DISPLAYCHANGE macro can be used in the message map.  
   
-    -   Функция CFrameWnd::OnDDEInitiate изменилась с (CWnd*, UINT, UNIT) на (WPARAM, LPARAM), чтобы можно было использовать в схеме сообщений новый макрос ON_WM_DDE_INITIATE.  
+    -   CFrameWnd::OnDDEInitiate changed to (CWnd*, UINT, UNIT) instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_INITIATE macro can be used in the message map.  
   
-    -   Функция CFrameWnd::OnDDEExecute изменилась с (CWnd*, HANDLE) на (WPARAM, LPARAM), чтобы можно было использовать в схеме сообщений новый макрос ON_WM_DDE_EXECUTE.  
+    -   CFrameWnd::OnDDEExecute changed to (CWnd*, HANDLE) instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_EXECUTE macro can be used in the message map.  
   
-    -   В функции CFrameWnd::OnDDETerminate вместо (CWnd*) теперь используется параметр (WPARAM, LPARAM), чтобы можно было использовать в схеме сообщений новый макрос ON_WM_DDE_TERMINATE.  
+    -   CFrameWnd::OnDDETerminate changed to (CWnd*) as the parameter instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_TERMINATE macro can be used in the message map.  
   
-    -   У функции CMFCMaskedEdit::OnCut вместо (WPARAM, LPARAM) теперь нет параметров, чтобы можно было использовать в схеме сообщений новый макрос ON_WM_CUT.  
+    -   CMFCMaskedEdit::OnCut changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_CUT macro can be used in the message map.  
   
-    -   У функции CMFCMaskedEdit::OnClear вместо (WPARAM, LPARAM) теперь нет параметров, чтобы можно было использовать в схеме сообщений новый макрос ON_WM_CLEAR.  
+    -   CMFCMaskedEdit::OnClear changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_CLEAR macro can be used in the message map.  
   
-    -   У функции CMFCMaskedEdit::OnPaste вместо (WPARAM, LPARAM) теперь нет параметров, чтобы можно было использовать в схеме сообщений новый макрос ON_WM_PASTE.  
+    -   CMFCMaskedEdit::OnPaste changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_PASTE macro can be used in the message map.  
   
--   \#ifdefs-директивы в файлах заголовков MFC удалены. Многочисленные директивы #ifdefs в файлах заголовков MFC, относящиеся к старым неподдерживаемым версиям Windows (WINVER &lt; 0x0501), удалены.  
+-   \#ifdefs in the MFC header files are removed. Numerous #ifdefs in the MFC header files related to unsupported versions of Windows (WINVER &lt; 0x0501) are removed.  
   
--   Удалена библиотека ATL DLL (atl120.dll). ATL теперь предоставляется в виде заголовков и статической библиотеки (atls.lib).  
+-   ATL DLL (atl120.dll) is removed. ATL is now provided as headers and a static library (atls.lib).  
   
--   Удалены библиотеки atlsd.lib, atlsn.lib и atlsnd.lib. Библиотека Atls.lib больше не имеет зависимостей от кодировки или кода, относящегося исключительно к отладке или выпуску. Поскольку она работает одинаково для Юникода/ANSI и отладки/выпуска, достаточно одной версии библиотеки.  
+-   Atlsd.lib, atlsn.lib, and atlsnd.lib are removed. Atls.lib no longer has character-set dependencies or code that's specific for debug/release. Because it works the same for Unicode/ANSI and debug/release, only one version of the library is required.  
   
--   Средство трассировки ATL/MFC удалено вместе с DLL-библиотекой ATL, и механизм трассировки упрощен. Конструктор CTraceCategory теперь принимает один параметр (имя категории), а макросы TRACE вызывают функции отчетов отладки CRT.  
+-   ATL/MFC Trace tool is removed together with the ATL DLL, and the tracing mechanism is simplified. The CTraceCategory constructor now takes one parameter (the category name), and the TRACE macros call the CRT debug reporting functions.  
   
-## <a name="visual-c-2012-breaking-changes"></a>Критические изменения Visual C++ 2012  
+## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 Breaking Changes  
   
-### <a name="compiler"></a>Компилятор  
+### <a name="compiler"></a>Compiler  
   
--   /Yl-параметр компилятора был изменен. По умолчанию компилятор использует этот параметр, который при определенных условиях может привести к ошибкам LNK2011. Дополнительные сведения см. в статье [/Yl (Inject PCH Reference for Debug Library)](../build/reference/yl-inject-pch-reference-for-debug-library.md) (Параметр /Yl (вставка ссылки на PCH-файл для библиотеки отладки) (C++)).  
+-   The /Yl compiler option has changed. By default, the compiler uses this option, which can lead to LNK2011 errors under certain conditions. For more information, see [/Yl (Inject PCH Reference for Debug Library)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
--   В коде, который компилируется с параметром /clr, ключевое слово enum class определяет перечисление C++11, а не перечисление среды CLR. Чтобы определить перечисление CLR, необходимо явно указать его доступность.  
+-   In code that's compiled by using /clr, the enum class keyword defines a C++11 enum, not a common language runtime (CLR) enum. To define a CLR enum, you must be explicit about its accessibility.  
   
--   Используйте ключевое слово template, чтобы явно исключить неоднозначность зависимого имени (в соответствии со стандартом языка C++). В следующем примере ключевое слово выделенного шаблона необходимо, чтобы устранить неоднозначность. Дополнительные сведения см. в разделе [Разрешение имен для зависимых типов](../cpp/name-resolution-for-dependent-types.md).  
+-   Use the template keyword to explicitly disambiguate a dependent name (C++ Language Standard compliance). In the following example, the highlighted template keyword is mandatory to resolve the ambiguity. For more information, see [Name Resolution for Dependent Types](../cpp/name-resolution-for-dependent-types.md).  
   
     ```cpp  
     template < typename X = "", typename = "" AY = "">  
@@ -3028,7 +3028,7 @@ C c;
   
     ```  
   
--   Константное выражение типа float больше не поддерживается как аргумент шаблона, как показано в следующем примере.  
+-   Constant expression of type float is no longer allowed as a template argument, as shown in the following example.  
   
     ```cpp  
     template<float n=3.14>  
@@ -3036,104 +3036,96 @@ C c;
   
     ```  
   
--   Код, который компилируется с помощью параметра командной строки /GS и имеет одну уязвимость, может привести к завершению процесса во время выполнения, как показано в следующем примере псевдокода.  
+-   Code that's compiled by using the /GS command-line option and that has an off-by-one vulnerability may lead to process termination at                 runtime, as shown in the following pseudocode example.  
   
     ```cpp  
     char buf[MAX]; int cch; ManipulateString(buf, &cch); // ... buf[cch] = '\0'; // if cch >= MAX, process will terminate  
     ```  
   
--   По умолчанию архитектура сборки x86 изменена на SSE2. Таким образом, компилятор может создавать инструкции SSE и будет использовать регистры XMM для выполнения вычислений с плавающей запятой. Если вы хотите вернуться к предыдущему поведению, используйте флаг компилятора /arch:IA32 для указания архитектуры как IA32.  
+-   The default architecture for x86 builds is changed to SSE2; therefore, the compiler may emit SSE instructions, and will use the XMM                 registers to perform floating-point calculations. If you want to revert to previous behavior, then use the /arch:IA32 compiler flag to specify the                 architecture as IA32.  
   
--   Компилятор может выдавать предупреждения [Предупреждение компилятора (уровень 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md), а ранее в C4701 этого не было. Компилятор применяет более строгие проверки для использования неинициализированных локальных переменных типа указателя.  
+-   The compiler may issue warnings [Compiler Warning (level 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) and C4701 where previously it did not. The compiler applies stronger checks for use of                 uninitialized local variables of pointer type.  
   
--   Когда установлен новый флаг компоновщика HIGHENTROPYVA, Windows 8 обычно при выделении памяти возвращает 64-разрядный адрес.                 (В ОС, более ранних, чем Windows 8, такие выделения памяти более часто возвращали адреса, которые были менее 2 ГБ.)  Это может привести к ошибкам усечения указателя в имеющемся коде. По умолчанию этот параметр включен.  Чтобы отключить это поведение, укажите /HIGHENTROPYVA:NO.  
+-   When the new linker flag /HIGHENTROPYVA is specified, Windows 8 typically causes memory allocations to return a 64-bit address.                 (Prior to Windows 8, such allocations more often returned addresses that were less than 2 GB.)  This may expose pointer truncation bugs in existing code. By default, this switch is on.  To disable this behavior, specify /HIGHENTROPYVA:NO.  
   
--   Управляемый компилятор (Visual Basic или C#) также поддерживает /HIGHENTROPYVA для управляемых сборок.  Однако в этом случае параметр /HIGHENTROPYVA отключен по умолчанию.  
+-   The managed compiler (Visual Basic/C#) also supports /HIGHENTROPYVA for managed builds.  However, in this case,                 the /HIGHENTROPYVAswitch is off by default.  
   
 ### <a name="ide"></a>IDE  
   
--   Хотя рекомендуется не создавать приложения Windows Forms в C++/CLI, поддерживается обслуживание существующих приложений пользовательского интерфейса C++/CLI. Если необходимо создать приложение Windows Forms или любое другое приложение пользовательского интерфейса .NET, используйте C# или Visual Basic. Используйте C++/CLI только в целях взаимодействия.  
+-   Although we recommend that you do not create Windows Forms applications in C++/CLI, maintenance of existing C++/CLI UI applications is supported. If you have to create a Windows Forms application, or any other .NET UI application, use C# or Visual Basic. Use C++/CLI for interoperability purposes only.  
   
-### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Библиотека параллельных шаблонов и библиотека среды выполнения с параллелизмом  
- Перечисление SchedulerType UmsThreadDefault является устаревшим. Спецификация UmsThreadDefault выдает предупреждение о нерекомендуемом использовании и внутренне сопоставляется с ThreadScheduler.  
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Parallel Patterns Library and Concurrency Runtime Library  
+ The SchedulerType enumeration of UmsThreadDefault is deprecated. Specification of UmsThreadDefault produces a deprecated warning, and internally maps back to the ThreadScheduler.  
   
-### <a name="standard-library"></a>Стандартная библиотека  
+### <a name="standard-library"></a>Standard Library  
   
--   После критических изменений между стандартами C++98/03 и C++11 код, использующий явное указание шаблонных аргументов для вызова make_pair(), как, например, inmake_pair\<int, int >(x, y), обычно не компилируется в Visual C++ в Visual Studio 2012. Решение: всегда вызывать make_pair() без явного указания аргументов шаблона, например make_pair(x, y). Предоставление явно заданных аргументов шаблона уничтожает назначение функции. Если требуется точный контроль над результирующим типом, используйте pair вместо make_pair — как, например, pair\<short, short>(int1, int2).  
+-   Following a breaking change between the C++98/03 and C++11 standards, using explicit template arguments to call make_pair()—as inmake_pair\<int, int>(x, y)—typically does not compile in Visual C++ in Visual Studio 2012. The solution is to always call make_pair()without explicit template arguments—as in make_pair(x, y). Providing explicit template arguments defeats the purpose of the function. If you require precise control over the resulting type, use pair instead of make_pair—as in pair\<short, short>(int1, int2).  
   
--   Еще одно критическое изменение между стандартами C++98/03 и C++11: когда A может быть неявно преобразовано в B, а B может быть неявно преобразовано в C, но A не может быть неявно преобразовано в C, C++98/03 и Visual C++ 2010 разрешают преобразование (неявное или явное) pair\<A, X> в pair\<C, X>. (Тип X несущественен здесь и не относятся к первому типу пары.) Поскольку C++ 11 и Visual C++ в Visual Studio 2012 определяют, что A не может быть неявно преобразован в C, они исключают такое преобразование пар в перегрузках. Это изменение является положительным для многих сценариев. Например, перегрузка func(const pair\<int, int>&) и func(const pair\<string, string>&) и вызов func() с pair\<const char *, const char \*> компилируются с этим изменением. Однако это изменение нарушает код, основанный на агрессивных преобразованиях пар. Такой код обычно может быть исправлен выполнением одной из частей преобразования явно, например путем передачи make_pair(static_cast\<B>(A), X) в функцию, ожидающую pair\<C, X>.  
+-   Another breaking change between the C++98/03 and C++11 standards: When A is implicitly convertible to B and B is implicitly convertible to C, but A is not implicitly convertible to C, C++98/03 and Visual C++ 2010 permitted pair\<A, X> to be converted (implicitly or explicitly) to pair\<C, X>. (The other type, X, is not of interest here, and this is not specific to the first type in the pair.) Because C++11 and Visual C++ in Visual Studio 2012 detect that A is not implicitly convertible to C, they remove the pair conversion from overload resolution. This is a positive change for many scenarios. For example, overloading func(const pair\<int, int>&) and func(const pair\<string, string>&), and calling func() with pair\<const char *, const char \*> will compile with this change. However, this change breaks code that relied on aggressive pair conversions. Such code can typically be fixed by performing one part of the conversion explicitly—for example, by passing make_pair(static_cast\<B>(a), x) to a function that expects pair\<C, X>.  
   
--   Visual C++ 2010 имитировала variadic-шаблоны (шаблоны с переменным числом аргументов), например, make_shared\<T>(arg1, arg2, argN), с ограничением до 10 аргументов, маркируя перегрузки и специализации с помощью аппаратных ресурсов процессора. В Visual C++ в Visual Studio 2012 это ограничение уменьшено до 5 аргументов, чтобы улучшить время компиляции и памяти компилятора для большинства пользователей. Однако можно задать предыдущее ограничение, явно определяя _VARIADIC_MAX как 10, для всего проекта.  
+-   Visual C++ 2010 simulated variadic templates—for example, make_shared\<T>(arg1, arg2, argN)—up to a limit of 10 arguments, by stamping out overloads and specializations with preprocessor machinery. In Visual C++ in Visual Studio 2012, this limit is reduced to 5 arguments to improve compile times and compiler memory consumption for the majority of users. However, you can set the previous limit by explicitly defining _VARIADIC_MAX as 10, project-wide.  
   
--   C++ 11 17.6.4.3.1 [macro.names]/2 запрещает ключевые слова макроса -izing, если включены заголовки стандартной библиотеки C++. Теперь заголовки выдают ошибки компилятора при обнаружении ключевых слов - ized макроса. (Определение _ALLOW_KEYWORD_MACROS позволяет компиляции такого кода, но такое использование настоятельно не рекомендуется.) В виде исключения макрос -ized new разрешен по умолчанию, так как заголовки комплексно защищают себя с помощью #pragma push_macro("new")/#undef new/#pragma pop_macro("new"). Определение _ENFORCE_BAN_OF_MACRO_NEW делает именно то, что предполагает его имя.  
+-   C++11 17.6.4.3.1 [macro.names]/2 forbids macro-izing keywords when C++ Standard Library headers are included. The headers now emit compiler errors if they detect macro-ized keywords. (Defining _ALLOW_KEYWORD_MACROS allows such code to compile, but we strongly discourage that usage.) As an exception, macro-ized new is permitted by default, because the headers comprehensively defend themselves by using #pragma push_macro("new")/#undef new/#pragma pop_macro("new"). Defining _ENFORCE_BAN_OF_MACRO_NEW does exactly what its name implies.  
   
--   Для реализации новых способов оптимизации и проверки результатов отладки стандартная библиотека C++, представленная в Visual Studio, намеренно ограничивает совместимость двоичных данных между версиями Visual Studio (2005, 2008, 2010, 2012). Поэтому при использовании стандартной библиотеки C++ файлы объектов и статические библиотеки, скомпилированные с помощью разных версий, нельзя одновременно добавить в один двоичный файл (EXE или DLL), а объекты стандартной библиотеки C++ нельзя передать из одного двоичного файла в другой, если эти файлы скомпилированы при помощи разных версий. Смешивание файлов объектов и статических библиотек (использующих стандартную библиотеку C++), одни из которых были скомпилированы с помощью Visual C++ 2010, а другие — с помощью Visual C++ в Visual Studio 2012, вызывает ошибки компоновщика о несоответствии _MSC_VER, где _MSC_VER является макросом, содержащим основной номер версии компилятора (1700 для Visual C++ в Visual Studio 2012). Эта проверка не может обнаружить смешение DLL и смешение, в котором участвует Visual C++ 2008 или более ранних версий.  
+-   To implement various optimizations and debugging checks, the C++ Standard Library implementation intentionally breaks binary compatibility among versions of Visual Studio (2005, 2008, 2010, 2012). When the C++ Standard Library is used, this forbids the mixing of object files and static libraries that are compiled by using different versions into one binary (EXE or DLL), and forbids the passing of C++ Standard Library objects between binaries that are compiled by using different versions. The mixing of object files and static libraries (using the C++ Standard Library that were compiled by using Visual C++ 2010 with those that were compiled by using Visual C++ in Visual Studio 2012 emits linker errors about _MSC_VER mismatch, where _MSC_VER is the macro that contains the compiler's major version (1700 for Visual C++ in Visual Studio 2012). This check cannot detect DLL mixing, and cannot detect mixing that involves Visual C++ 2008 or earlier.  
   
--   Наряду с обнаружением несоответствия в _ITERATOR_DEBUG_LEVEL (функция, реализованная в Visual C++ 2010) Visual C++ в Visual Studio 2012 обнаруживает несоответствия библиотеки времени выполнения. Это происходит при смешении параметров компилятора /MT (статический выпуск), /MTd (статическая отладка), /MD (динамический выпуск) и /MDd (динамическая отладка).  
+-   In addition to detecting _ITERATOR_DEBUG_LEVEL mismatches, which was implemented in Visual C++ 2010, Visual C++ in Visual Studio 2012 detects Runtime Library mismatches. These occur when the compiler options /MT (static release), /MTd (static debug), /MD (dynamic release), and /MDd (dynamic debug) are mixed.  
   
--   operator\<(), operator>(), operator\<=(), and operator>=() ранее были доступны для семейств контейнеров std::unordered_map andstdext::hash_map, хотя их реализации не были полезными на самом деле. Эти нестандартные операторы были удалены в Visual C++ в Visual Studio 2012. Кроме того, реализация operator==() и operator!=() для семейства thestd::unordered_map была расширена для поддержки семейства stdext::hash_map. (Рекомендуется избегать использования семейства thestdext::hash_map в новом коде.)  
+-   operator\<(), operator>(), operator\<=(), and operator>=() were previously available for the std::unordered_map andstdext::hash_map families of containers, although their implementations were not actually useful. These non-standard operators have been removed in Visual C++ in Visual Studio 2012. Additionally, the implementation of operator==() and operator!=() for thestd::unordered_map family has been extended to cover the stdext::hash_map family. (We recommend that you avoid the use of thestdext::hash_map family in new code.)  
   
--   C++ 11 22.4.1.4 [locale.codecvt] указывает, что codecvt::length() и codecvt::do_length() должны принимать изменяемые параметры stateT&, но Visual C++ 2010 принимал только const stateT&. Visual C++ в Visual Studio 2012 принимает stateT& в соответствии со стандартом. Это различие важно для всех, кто пытается переопределить виртуальную функцию do_length().  
+-   C++11 22.4.1.4 [locale.codecvt] specifies that codecvt::length() and codecvt::do_length() should take modifiable stateT&parameters, but Visual C++ 2010 took const stateT&. Visual C++ in Visual Studio 2012 takes stateT& as mandated by the standard. This difference is significant for anyone who is attempting to override the virtual function do_length().  
   
-### <a name="crt"></a>CRT - библиотека  
+### <a name="crt"></a>CRT  
   
--   Куча среды выполнения C (CRT), которая используется для new и malloc(), больше не является закрытой. CRT теперь использует кучу процесса. Это означает, что куча не уничтожается при выгрузке библиотеки DLL, поэтому библиотека DLL, которая статически привязана к CRT, должна убедиться, что память, выделенная ее кодом, очищена до выгрузки этой библиотеки.  
+-   The C Runtime (CRT) heap, which is used for new and malloc(), is no longer private. The CRT now uses the process heap. This means that the heap is not destroyed when a DLL is unloaded, so DLLs that link statically to the CRT must ensure memory that's allocated by the DLL code is cleaned up before it’s unloaded.  
   
--   Функция iscsymf() подтверждает с отрицательными значениями.  
+-   The iscsymf() function asserts with negative values.  
   
--   Структура threadlocaleinfostruct была изменена в соответствии с изменениями функций языкового стандарта.  
+-   The threadlocaleinfostruct struct has changed to accommodate the changes to locale functions.  
   
--   Функции CRT, имеющие соответствующие встроенные функции, такие как memxxx(), strxxx(), удалены из intrin.h. Если файл включен intrin.h только для этих функций, теперь необходимо включить соответствующие заголовки CRT.  
+-   CRT functions that have corresponding intrinsics such as memxxx(), strxxx() are removed from intrin.h. If you included intrin.h only for these functions, you must now include the corresponding CRT headers.  
   
-### <a name="mfc-and-atl"></a>MFC и ATL  
+### <a name="mfc-and-atl"></a>MFC and ATL  
   
--   Удалена поддержка Fusion (afxcomctl32.h), поэтому все методы, определенные в afxcomctl32.h, были удалены. Заголовочные файлы afxcomctl32.h и afxcomctl32.inl были удалены.  
+-   Removed Fusion support (afxcomctl32.h); therefore, all methods that are defined in afxcomctl32.h have been removed. Header files afxcomctl32.h and afxcomctl32.inl have been deleted.  
   
--   Имя CDockablePane::RemoveFromDefaultPaneDividier изменено на CDockablePane::RemoveFromDefaultPaneDivider.  
+-   Changed the name of CDockablePane::RemoveFromDefaultPaneDividier to CDockablePane::RemoveFromDefaultPaneDivider.  
   
--   Сигнатура CFileDialog::SetDefExt изменена для использования LPCTSTR, поэтому затронуты сборки Юникода.  
+-   Changed the signature of CFileDialog::SetDefExt to use LPCTSTR; therefore, Unicode builds are affected.  
   
--   Удалены устаревшие категории трассировки ATL.  
+-   Removed obsolete ATL tracing categories.  
   
--   Сигнатура CBasePane::MoveWindow изменена для принятия константного выражения CRect.  
+-   Changed the signature of CBasePane::MoveWindow to take a const CRect.  
   
--   Изменена сигнатура CMFCEditBrowseCtrl::EnableBrowseButton.  
+-   Changed the signature of CMFCEditBrowseCtrl::EnableBrowseButton.  
   
--   Удалены m_fntTabs и m_fntTabsBold из CMFCBaseTabCtrl.  
+-   Removed m_fntTabs and m_fntTabsBold from CMFCBaseTabCtrl.  
   
--   Добавлен параметр в конструкторы CMFCRibbonStatusBarPane. (Это параметр по умолчанию, поэтому он не нарушает код.)  
+-   Added a parameter to the CMFCRibbonStatusBarPane constructors. (It is a default parameter, and so it is not source-breaking.)  
   
--   Добавлен параметр в конструктор CMFCRibbonCommandsListBox. (Это параметр по умолчанию, поэтому он не нарушает код.)  
+-   Added a parameter to the CMFCRibbonCommandsListBox constructor. (It is a default parameter, and so it is not source-breaking.)  
   
--   Удален API AFXTrackMouse (и связанный таймер proc). Вместо него следует использовать API Win32 TrackMouseEvent.  
+-   Removed the AFXTrackMouse API (and related timer proc). Use the Win32 TrackMouseEvent API instead.  
   
--   Добавлен параметр CFolderPickerDialog в конструктор. (Это параметр по умолчанию, поэтому он не нарушает код.)  
+-   Added a parameter to the CFolderPickerDialog constructor. (It is a default parameter, and so it is not source-breaking.)  
   
--   Изменен размер структуры CFileStatus: элемент m_attribute изменен с BYTE на DWORD (для соответствия значению, возвращенному fromGetFileAttributes).  
+-   CFileStatus structure size changed: The m_attribute member changed from BYTE to DWORD (to match the value that's returned fromGetFileAttributes).  
   
--   CRichEditCtrl и CRichEditView используют MSFTEDIT_CLASS (элемент управления RichEdit 4.1) вместо RICHEDIT_CLASS (элемент управления RichEdit 3.0) в сборках Юникода.  
+-   CRichEditCtrl and CRichEditView use MSFTEDIT_CLASS (RichEdit 4.1 control) instead of RICHEDIT_CLASS (RichEdit 3.0 control) in Unicode builds.  
   
--   Удален AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground, поскольку он всегда имеет значение TRUE в Windows Vista, Windows 7 и Windows 8.  
+-   Removed AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground because it is always TRUE on Windows Vista, Windows 7, and Windows 8.  
   
--   Удален AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable, поскольку он всегда имеет значение TRUE в Windows Vista, Windows 7 и Windows 8.  
+-   Removed AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable because it is always TRUE on Windows Vista, Windows 7, and Windows 8.  
   
--   Удален AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Вызывайте Windows API непосредственно в Windows Vista, Windows 7 и Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Call Windows API directly on Windows Vista, Windows 7, and Windows 8.  
   
--   Удален AFX_GLOBAL_DATA::DwmDefWindowProc. Вызывайте Windows API непосредственно в Windows Vista, Windows 7 и Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Call Windows API directly on Windows Vista, Windows 7, and Windows 8.  
   
--   Во избежание конфликта имен метод AFX_GLOBAL_DATA::DwmIsCompositionEnabled переименован в IsDwmCompositionEnabled.  
+-   Renamed AFX_GLOBAL_DATA::DwmIsCompositionEnabled to IsDwmCompositionEnabled to eliminate name collision.  
   
--   Изменены идентификаторы для ряда внутренних таймеров MFC и перемещены определения в afxres.h (AFX_TIMER_ID_ *).  
+-   Changed identifiers for a number of MFC internal timers and moved the definitions to afxres.h (AFX_TIMER_ID_*).  
   
--   Изменена сигнатура метода OnExitSizeMove для соответствия макросу ON_WM_EXITSIZEMOVE:  
-  
-    -   CFrameWndEx  
-  
-    -   CMDIFrameWndEx  
-  
-    -   CPaneFrameWnd  
-  
--   Изменены имя и сигнатура метода OnDWMCompositionChanged для соответствия макросу ON_WM_DWMCOMPOSITIONCHANGED:  
+-   Changed the signature of OnExitSizeMove method to agree with the ON_WM_EXITSIZEMOVE macro:  
   
     -   CFrameWndEx  
   
@@ -3141,7 +3133,15 @@ C c;
   
     -   CPaneFrameWnd  
   
--   Изменена сигнатура метода OnMouseLeave для соответствия макросу ON_WM_MOUSELEAVE:  
+-   Changed the name and signature of OnDWMCompositionChanged to agree with the ON_WM_DWMCOMPOSITIONCHANGED macro:  
+  
+    -   CFrameWndEx  
+  
+    -   CMDIFrameWndEx  
+  
+    -   CPaneFrameWnd  
+  
+-   Changed the signature of OnMouseLeave method to agree with the ON_WM_MOUSELEAVE macro:  
   
     -   CMFCCaptionBar  
   
@@ -3167,21 +3167,21 @@ C c;
   
     -   CMFCAutoHideBar  
   
--   Изменена сигнатура OnPowerBroadcast для соответствия макросу ON_WM_POWERBROADCAST:  
+-   Changed the signature of OnPowerBroadcast to agree with the ON_WM_POWERBROADCAST macro:  
   
     -   CFrameWndEx  
   
     -   CMDIFrameWndEx  
   
--   Изменена сигнатура OnStyleChanged для соответствия макросу ON_WM_STYLECHANGED:  
+-   Changed the signature of OnStyleChanged to agree with the ON_WM_STYLECHANGED macro:  
   
-    -   CMFCLinkCtrl  
+    -   CMFCListCtrl  
   
     -   CMFCStatusBar  
   
--   Внутренний метод FontFamalyProcFonts переименован в FontFamilyProcFonts.  
+-   Renamed the internal method FontFamalyProcFonts to FontFamilyProcFonts.  
   
--   Удалены многочисленные глобальные статические объекты CString во избежание утечки памяти в некоторых ситуациях (заменены на #defines) и следующие переменные-члены класса:  
+-   Removed numerous global static CString objects to eliminate memory leaks in some situations (replaced with #defines), and the following class member variables:  
   
     -   CKeyBoardManager::m_strDelimiter  
   
@@ -3203,13 +3203,13 @@ C c;
   
     -   CMFCPropertyGridProperty::m_strFormat  
   
--   Изменена сигнатура CKeyboardManager::ShowAllAccelerators и удален параметр разделителя сочетаний клавиш.  
+-   Changed the signature of CKeyboardManager::ShowAllAccelerators and removed the accelerator delimiter parameter.  
   
--   Добавлен метод CPropertyPage::GetParentSheet. Его следует вызывать в классе PropertyPage вместо GetParent для возврата правильного родительского окна таблицы, которое может быть родителем или прародителем окна CPropertyPage. Для вызова GetParentSheet вместо ofGetParent может потребоваться изменить код.  
+-   Added CPropertyPage::GetParentSheet, and in the CPropertyPage class, call it instead of GetParent to get the correct parent sheet window, which may be the parent or a grandparent window to CPropertyPage. You might have to change your code to call GetParentSheet instead ofGetParent.  
   
--   Исправлено несбалансированное #pragma warning(push) в ATLBASE. H, которое неправильно отключало предупреждения. Теперь после проверки ATLBASE.H предупреждения включены правильно.  
+-   Fixed unbalanced #pragma warning(push) in ATLBASE.H, which caused warnings to be disabled incorrectly. Those warnings are now enabled correctly after ATLBASE.H has been parsed.  
   
--   Методы, связанные с D2D, перемещены из AFX_GLOBAL_DATA в _AFX_D2D_STATE:  
+-   Moved D2D-related methods from AFX_GLOBAL_DATA to _AFX_D2D_STATE:  
   
     -   GetDirectD2dFactory  
   
@@ -3225,113 +3225,113 @@ C c;
   
     -   D2D1MakeRotateMatrix  
   
-    -   Вместо вызова, например, метода afxGlobalData.IsD2DInitialized вызовите AfxGetD2DState->IsD2DInitialized.  
+    -   Instead of calling, for example, afxGlobalData.IsD2DInitialized, call AfxGetD2DState->IsD2DInitialized.  
   
--   Удалить устаревшие CPP-файлы ATL из папки \atlmfc\include\.  
+-   Removed obsolete ATL*.CPP files from the \atlmfc\include\ folder.  
   
--   Инициализация afxGlobalData выполняется по запросу, а не во время инициализации CRT, чтобы удовлетворить требования DLLMain.  
+-   Moved afxGlobalData initialization to on-demand instead of at CRT initialization time, to satisfy DLLMain requirements.  
   
--   Метод RemoveButtonByIndex добавлен в класс CMFCOutlookBarPane.  
+-   Added the RemoveButtonByIndex method to the CMFCOutlookBarPane class.  
   
--   CMFCCmdUsageCount::IsFreqeuntlyUsedCmd исправлен на IsFrequentlyUsedCmd.  
+-   Corrected CMFCCmdUsageCount::IsFreqeuntlyUsedCmd to IsFrequentlyUsedCmd.  
   
--   Несколько экземпляров RestoreOriginalstate исправлено на RestoreOriginalState (CMFCToolBar CMFCMenuBar, CMFCOutlookBarPane).  
+-   Corrected several instances of RestoreOriginalstate to RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane).  
   
--   Удалены неиспользуемые методы из CDockablePane: SetCaptionStyle, IsDrawCaption, IsHideDisabledButtons, GetRecentSiblingPaneInfo и CanAdjustLayout.  
+-   Removed unused methods from CDockablePane: SetCaptionStyle, IsDrawCaption, IsHideDisabledButtons, GetRecentSiblingPaneInfo, andCanAdjustLayout.  
   
--   Удалены переменные-члены CDockablePane m_bCaptionText и m_bHideDisabledButtons.  
+-   Removed CDockablePane static member variables m_bCaptionText and m_bHideDisabledButtons.  
   
--   Добавлено переопределение метода DeleteString в CMFCFontComboBox.  
+-   Added an override DeleteString method to CMFCFontComboBox.  
   
--   Удалены неиспользуемые методы из CPane: GetMinLength и IsLastPaneOnLastRow.  
+-   Removed unused methods from CPane: GetMinLength and IsLastPaneOnLastRow.  
   
--   Метод CPane::GetDockSiteRow(CDockingPanesRow *) переименован в CPane::SetDockSiteRow.  
+-   Renamed CPane::GetDockSiteRow(CDockingPanesRow *) to CPane::SetDockSiteRow.  
   
-## <a name="visual-c-2010-breaking-changes"></a>Критические изменения Visual C++ 2010  
+## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 Breaking Changes  
   
-### <a name="compiler"></a>Компилятор  
+### <a name="compiler"></a>Compiler  
   
--   Ключевое слово auto имеет новое значение по умолчанию. Поскольку старое значение используется редко, на большинство приложений это изменение не окажет влияния.  
+-   The auto keyword has a new default meaning. Because use of the old meaning is rare, most applications will not be affected by this change.  
   
--   Введено новое ключевое слово static_assert, которое может вызвать конфликт имен, если в коде уже есть идентификатор с таким именем.  
+-   The new static_assert keyword is introduced, which will cause a name conflict if there is already an identifier by that name in your code.  
   
--   Поддержка новой лямбда-нотации исключает поддержку указания в коде GUID без кавычек в атрибуте uuid IDL.  
+-   Support for the new lambda notation excludes support for coding an unquoted GUID in an IDL uuid attribute.  
   
--   .NET Framework 4 вводит концепцию исключений поврежденных состояний — исключений, оставляющих процесс в состоянии неустранимых повреждений. По умолчанию невозможно перехватить исключение поврежденного состояния даже с помощью параметра компилятора /EHa, который перехватывает все прочие исключения.                 Чтобы явно перехватить исключение поврежденного состояния, используйте инструкции __try-\__except. Или примените атрибут [HandledProcessCorruptedStateExceptions], чтобы включить функцию перехвата исключений поврежденного состояния.  Это изменение влияет главным образом на системных программистов, которым может потребоваться перехватить исключение поврежденного состояния. Восемь исключений: STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 Дополнительные сведения об этих исключениях см. в разделе о макросе [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx).  
+-   The .NET Framework 4 introduces the concept of corrupted state exceptions, which are exceptions that leave a process in an unrecoverable                 corrupted state. By default, you cannot catch a corrupted state exception, even with the /EHa compiler option that catches all other exceptions.                 To explicitly catch a corrupted state exception, use __try-\__except statements. Or, apply the [HandledProcessCorruptedStateExceptions]attribute                 to enable a function to catch corrupted state exceptions.  This change affects primarily system programmers who might have to catch a corrupted                 state exception. The eight exceptions are STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION,                 EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 For more information about these exceptions, see the [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx) macro.  
   
--   Измененный параметр компилятора /GS предотвращает переполнение буфера более комплексно, чем в предыдущих версиях. Эта версия может включать в стек дополнительные проверки безопасности, которые могут отрицательно сказываться на общей производительности. Используйте ключевое слово new __declspec(safebuffers), чтобы указать компилятору на то, что не следует вставлять проверки безопасности для конкретной функции.  
+-   The revised /GS compiler option guards against buffer overruns more comprehensively than in earlier versions. This version might insert additional security checks in the stack that might decrease performance. Use the new __declspec(safebuffers) keyword to instruct the compiler to not insert security checks for a particular function.  
   
--   При одновременном использовании параметров компилятора /GL (оптимизация всей программы) и /clr (компиляция CLR) параметр /GL игнорируется. Это изменение внесено по той причине, что использование сочетания параметров компилятора было малоэффективным. В результате изменения повысилась производительность сборки.  
+-   If you compile with both the /GL (Whole Program Optimization) and /clr (Common Language Runtime Compilation) compiler options, the /GLoption is ignored. This change was made because the combination of compiler options provided little benefit. As a result of this change, the performance of the build is improved.  
   
--   По умолчанию поддержка триграфов в Visual C++ 2010 отключена. Для включения поддержки триграфов используйте параметр компилятора/Zc: trigraphs. Триграф состоит из двух последовательных вопросительных знаков ("??"), за которыми следует третий уникальный знак. Компилятор заменяет триграф соответствующим знаком пунктуации. Например, компилятор заменяет триграф "??=" на знак '#'. Следует использовать триграфы в файлах исходного кода на С, которые используют набор символов, не содержащий подходящего графического представления для некоторых знаков пунктуации.  
+-   By default, support for trigraphs is disabled in Visual C++ 2010 . Use the /Zc:trigraphs compiler option to enable trigraphs support. A trigraph consists of two consecutive question marks ("??") followed by a unique third character. The compiler replaces a trigraph with a corresponding punctuation character. For example, the compiler replaces the "??=" trigraph with the '#' character. Use trigraphs in C source files that use a character set that does not contain convenient graphic representations for some punctuation characters.  
   
--   Компоновщик больше не поддерживает оптимизацию для Windows 98. Параметр /OPT (оптимизации) вызывает ошибку времени компиляции, если указать /OPT:WIN98 или /OPT:NOWIN98.  
+-   The linker no longer supports optimizing for Windows 98. The /OPT (Optimizations) option produces a compile time error if you specify/OPT:WIN98 or /OPT:NOWIN98.  
   
--   Параметры компилятора по умолчанию, указываемые свойствами системы построения RuntimeLibrary и DebugInformationFormat, изменены. По умолчанию эти свойства построения указываются в проектах, созданных с помощью Visual C++ выпусков 7.0–10.0. При миграции проекта, созданного с помощью Visual C++ выпуска 6.0, продумайте, имеет ли смысл указать значения этих свойств.  
+-   The default compiler options that are specified by the RuntimeLibrary and DebugInformationFormat build system properties have been changed. By default, these build properties are specified in projects that are created by Visual C++ releases 7.0 through 10.0. If you migrate a project that was created by Visual C++ 6.0, consider whether to specify a value for these properties.  
   
--   В Visual C++ 2010 RuntimeLibrary = MultiThreaded (/MD), а DebugInformationFormat = ProgramDatabase (/Zi). Visual C++ 9.0 RuntimeLibrary = MultiThreaded (/MT), а DebugInformationFormat = Disabled.  
+-   In Visual C++ 2010, RuntimeLibrary = MultiThreaded (/MD) and DebugInformationFormat = ProgramDatabase (/Zi). In Visual C++ 9.0,RuntimeLibrary = MultiThreaded (/MT) and DebugInformationFormat = Disabled.  
   
 ### <a name="clr"></a>CLR  
   
--   Компиляторы Microsoft C# и Visual Basic теперь могут создавать неосновную сборку взаимодействия (no-PIA). Сборка no-PIA может использовать типы COM без развертывания связанной с ними основной сборки взаимодействия (PIA). При использовании сборок no-PIA, созданных в Visual C# или Visual Basic, необходимо ссылаться на сборку PIA в команде компилятора до ссылки на какие-либо сборки no-PIA, использующие библиотеку.  
+-   The Microsoft C# and Visual Basic compilers can now produce a no primary interop assembly (no-PIA). A no-PIA assembly can use COM types without the deployment of the relevant primary interop assembly (PIA). When consuming no-PIA assemblies produced by Visual C# or Visual Basic, you must reference the PIA assembly on the compile command before you reference any no-PIA assembly that uses the library.  
   
-### <a name="visual-c-projects-and-msbuild"></a>Проекты Visual C++ и MSBuild  
+### <a name="visual-c-projects-and-msbuild"></a>Visual C++ Projects and MSBuild  
   
--   Проекты Visual C++ теперь основываются на средстве MSBuild. Следовательно, файлы проекта используют новый формат XML-файла и суффикс файла .vcxproj. Visual C++ 2010 автоматически преобразует файлы проекта более ранней версии Visual Studio в новый формат файла. На существующий проект оказывается влияние, если он зависим от ранее использовавшегося средства построения, VCBUILD.exe или файла проекта с суффиксом .vcproj.  
+-   Visual C++ projects are now based on the MSBuild tool. Consequently, project files use a new XML file format and a .vcxproj file suffix. Visual C++ 2010 automatically converts project files from earlier versions of Visual Studio to the new file format. An existing project is affected if it depends on the previous build tool, VCBUILD.exe, or project file suffix, .vcproj.  
   
--   В более ранних версиях язык Visual C++ поддерживал позднее использование страниц свойств. Например, родительская страница свойств может импортировать дочернюю страницу свойств и использовать переменную, определенную в дочернем элементе, для определения других переменных. Позднее использование позволяет родителю использовать дочернюю переменную еще до импорта дочерней страницы свойств. В Visual C++ 2010 переменная страницы проекта не может быть использована, пока она не определена, потому что MSBuild поддерживает только раннее использование.  
+-   In earlier releases, Visual C++ supported the late evaluation of property sheets. For example, a parent property sheet could import a child property sheet, and the parent could use a variable defined in the child to define other variables. Late evaluation enabled the parent to use the child variable even before the child property sheet was imported. In Visual C++ 2010, a project sheet variable cannot be used before it is defined because MSBuild supports only early evaluation.  
   
 ### <a name="ide"></a>IDE  
   
--   Диалоговое окно завершения приложения теперь не завершает приложение. В предыдущих выпусках, когда функция abort() или terminate() завершала коммерческое построение приложения, библиотека времени выполнения языка С отображала сообщение о завершении работы приложения в окне консоли или в диалоговом окне. В сообщении указывалось: "Приложение потребовало от среды выполнения завершить работу ненормальным образом. Для получения дополнительных сведений обратитесь в службу поддержки приложения".                 Сообщение о завершении работы приложения было лишним, поскольку затем операционная система Windows отображала текущий обработчик завершения, которым, как правило, было диалоговое окно отчета об ошибках Windows (Dr. Watson) или отладчик Visual Studio. Начиная с версии Visual Studio 2010 библиотека времени выполнения языка С не отображает это сообщение. Более того, среда выполнения не допускает завершение работы приложения до запуска отладчика. Это критическое изменение ощутимо только в том случае, если есть зависимость от прежнего поведения сообщения о завершении приложения.  
+-   The application termination dialog box no longer ends an application. In previous releases, when the abort() or terminate() function closed the                 retail build of an application, the C Run-Time Library displayed an application termination message in a console window or dialog box. The message said in part, "This                 application has requested the Runtime to terminate it in an unusual way. Please contact the application's support team for more information."                 The application termination message was redundant because Windows subsequently displayed the current termination handler, which was usually the Windows Error Reporting                 (Dr. Watson) dialog box or the Visual Studio debugger. Starting in Visual Studio 2010, the C Run-Time Library does not display the message. Furthermore, the runtime                 prevents the application from ending before a debugger starts. This is a breaking change only if you depend on the previous behavior of the application termination                 message.  
   
--   В частности, в Visual Studio 2010 IntelliSense не работает с кодами или атрибутами C++/CLI, команда "Найти все ссылки" не работает с локальными переменными, а функция "Модель кода" не извлекает имена типов из импортированных сборок и не разрешает типы в их полные имена.  
+-   Specifically for Visual Studio 2010, IntelliSense does not work for C++/CLI code or attributes, Find All References does not work for local                 variables, and Code Model does not retrieve type names from imported assemblies or resolve types to their fully qualified names.  
   
-### <a name="libraries"></a>Библиотеки  
+### <a name="libraries"></a>Libraries  
   
--   Класс SafeInt включен в Visual C++, и более нет необходимости в его отдельной загрузке. Это изменение может вызвать трудности, если есть собственный класс с именем "SafeInt".  
+-   The SafeInt class is included in Visual C++ and is no longer in a separate download. This is a breaking change only if you have developed a class that is also named "SafeInt".  
   
--   Модель развертывания библиотек больше не использует манифесты для поиска конкретной версии библиотеки динамической компоновки (DLL). Вместо этого имя каждой динамической библиотеки компоновки содержит номер версии, это имя и используется для поиска библиотеки.  
+-   The libraries deployment model no longer uses manifests to find a particular version of a dynamic link library. Instead, the name of each dynamic link library contains its version number, and you use that name to locate the library.  
   
--   В предыдущих версиях Visual Studio можно было перестраивать библиотеки времени выполнения. Visual C++ 2010 больше не поддерживает построение собственных копий файлов библиотеки времени выполнения C.  
+-   In previous versions of Visual Studio, you could rebuild the run time libraries. Visual C++ 2010 no longer supports building your own copies of the C run time library files.  
   
-### <a name="standard-library"></a>Стандартная библиотека  
+### <a name="standard-library"></a>Standard Library  
   
--   Заголовок \<iterator> больше не включается автоматически многими другими файлами заголовков. Вместо этого заголовок необходимо включать явно, если требуется поддержка отдельных итераций, определенных в заголовке <iterator>. Существующий проект затрагивается, если он зависит от предыдущего средства построения VCBUILD.exe или файла проекта с суффиксом. .vcproj.interator>.  
+-   The \<iterator>                 header is no longer included automatically by many other header files. Instead, include that header explicitly if you require support                 for the standalone iterators defined in the An existing project is affected if it depends on the previous build tool, VCBUILD.exe, or project file suffix,                  .vcproj.interator> header.  
   
--   В заголовке \<algorithm> удалены функции checked_* и unchecked_\*. В заголовке \<iterator> удален класс checked_iterator и добавлен класс unchecked_array_iterator.  
+-   In the \<algorithm>                 header, the checked_* and unchecked_\* functions are removed. And in the \<iterator>> header, the                  checked_iteratorclass is removed, and the unchecked_array_iterator class has been added.  
   
--   Удален конструктор CComPtr::CComPtr(int). Конструктор позволял построить объект CComPtr при помощи макроса NULL, но был не нужен и допускал бессмысленные конструкции из ненулевых целых чисел.  
+-   The CComPtr::CComPtr(int) constructor is removed. That constructor allowed a CComPtr object to be constructed from the NULL macro, but was unnecessary and allowed nonsensical constructions from non-zero integers.  
   
-     CComPtr может быть построен при помощи макроса NULL, который определен как 0, но допустит ошибку, если будет строиться из целого числа, отличного от 0. Вместо этого используйте nullptr.  
+     A CComPtr can still be constructed from NULL, which is defined as 0, but will fail if constructed from an integer other than literal 0. use nullptr instead.  
   
--   Были удалены следующие функции-члены: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. Если в приложении используется одна или несколько из этих функций-членов, необходимо заменить их на соответствующие небезопасные версии: ctype::do_narrow,ctype::do_widen, ctype::narrow, ctype::widen.  
+-   The following ctype member functions were removed: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. If an application uses one of these member functions, you must replace it with the corresponding non-secure version: ctype::do_narrow,ctype::do_widen, ctype::narrow, ctype::widen.  
   
-### <a name="crt-mfc-and-atl-libraries"></a>Библиотеки ATL, MFC и CRT  
+### <a name="crt-mfc-and-atl-libraries"></a>CRT, MFC, and ATL Libraries  
   
--   Удалена поддержка построения библиотек CRT, MFC и ATL пользователями. Например, отсутствует файл nmake.                 Однако пользователи по-прежнему имеют доступ к исходному коду этих библиотек. Документ, описывающий параметры MSBuild, используемые корпорацией Майкрософт для построения этих библиотек, вероятно, будет опубликован в блоге группы разработчиков Visual C++.  
+-   Support has been removed for users to build the CRT, MFC, and ATL libraries. For example, an appropriate nmake file is not provided.                 However, users still have access to the source code for these libraries. And a document that describes the MSBuild options that Microsoft uses to build these                 libraries will probably be posted in a Visual C++ Team Blog.  
   
--   Удалена поддержка MFC для IA64. Однако по-прежнему предоставляется поддержка для CRT и ATL с IA64.  
+-   MFC support for IA64 has been removed. However, support for the CRT and ATL on IA64 is still provided.  
   
--   В файлах определения модулей (DEF) библиотеки MFC порядковые числа больше не используются многократно. Это изменение означает, что порядковые номера не будут отличаться в дополнительных версиях и будет улучшена двоичная совместимость пакетов обновления и выпусков исправлений QFE.  
+-   Ordinals are no longer reused in MFC module-definition (.def) files. This change means ordinals will not be different between minor versions, and binary compatibility for service packs and quick fix engineering releases will be improved.  
   
--   В класс CDocTemplate добавлена новая виртуальная функция. Это функция [CDocTemplate — класс](../mfc/reference/cdoctemplate-class.md). У предыдущей версии OpenDocumentFile было два параметра. У новой версии три параметра. Чтобы класс, производный от CDocTemplate, поддерживал диспетчер перезапуска, в нем должна быть реализована версия с тремя параметрами. Новый параметр — bAddToMRU.  
+-   A new virtual function was added to the CDocTemplate class. This new virtual function is [CDocTemplate Class](../mfc/reference/cdoctemplate-class.md). The previous version of OpenDocumentFile had two parameters. The new version has three parameters. To support the restart manager, any class derived from CDocTemplate must implement the version that has three parameters. The new parameter is bAddToMRU.  
   
-### <a name="macros-and-environment-variables"></a>Макросы и переменные среды  
+### <a name="macros-and-environment-variables"></a>Macros and Environment Variables  
   
--   Переменная среды __MSVCRT_HEAP_SELECT больше не поддерживается. Эта переменная среды удалена, и замена ей не предусмотрена.  
+-   The environment variable __MSVCRT_HEAP_SELECT is no longer supported. This environment variable is removed and there is no replacement.  
   
-### <a name="microsoft-macro-assembler-reference"></a>Справочные материалы по ассемблеру Microsoft Macro Assembler  
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler Reference  
   
--   Некоторые директивы были удалены из компилятора справочных материалов по ассемблеру Microsoft Macro Assembler. Удаленные директивы: .186, .286, .286P, .287,.8086, .8087 и .NO87.  
+-   Several directives were removed from the Microsoft Macro Assembler Reference compiler. The removed directives are .186, .286, .286P, .287,.8086, .8087, and .NO87.  
   
-## <a name="visual-c-2008-breaking-changes"></a>Критические изменения Visual C++ 2008  
+## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 Breaking Changes  
   
-### <a name="compiler"></a>Компилятор  
+### <a name="compiler"></a>Compiler  
   
--   Платформы Windows 95, Windows 98, Windows ME и Windows NT больше не поддерживаются. Эти операционные системы были удалены из списка целевых платформ.  
+-   The Windows 95, Windows 98, Windows ME, and Windows NT platforms are no longer supported. These operating systems have been removed from the list of targeted platforms.  
   
--   Компилятор больше не поддерживает некоторые атрибутов, которые были непосредственно связаны с сервером ATL. Следующие атрибуты больше не поддерживаются:  
+-   The compiler no longer supports multiple attributes that were directly associated with ATL Server. The following attributes are no longer supported:  
   
     -   perf_counter  
   
@@ -3349,21 +3349,21 @@ C c;
   
     -   tag_name  
   
-### <a name="visual-c-projects"></a>Проекты Visual C++  
+### <a name="visual-c-projects"></a>Visual C++ Projects  
   
--   При обновлении проектов из предыдущих версий Visual Studio необходимо изменить макросы WINVER и _WIN32_WINNT так, чтобы они были не меньше значения 0x0500.  
+-   When upgrading projects from previous versions of Visual Studio, you might have to modify the WINVER and _WIN32_WINNT macros so that they are greater than or equal to 0x0500.  
   
--   Начиная с версии Visual Studio 2008, мастер создания проектов не поддерживает возможности создания проекта C++ SQL Server. Проекты SQL Server, созданные в более ранней версии Visual Studio, компилируются и работают правильно.  
+-   Beginning with Visual Studio 2008, the new project wizard does not have an option to create a C++ SQL Server project. SQL Server projects created by using an earlier version of Visual Studio will still compile and work correctly.  
   
--   Файл заголовка Winable.h Windows API был удален. Вместо него следует использовать файл WinUser.h.  
+-   The Windows API header file Winable.h has been removed. Include Winuser.h instead.  
   
--   Библиотека Rpcndr.lib Windows API была удалена. Вместо нее следует использовать библиотеку rpcrt4.lib.  
+-   The Windows API library Rpcndr.lib has been removed. Link with rpcrt4.lib instead.  
   
-### <a name="crt"></a>CRT - библиотека  
+### <a name="crt"></a>CRT  
   
--   Удалена поддержка для Windows 95, Windows 98, Windows Millennium Edition и Windows NT 4.0.  
+-   Support for Windows 95, Windows 98, Windows Millennium Edition, and Windows NT 4.0 has been removed.  
   
--   Были удалены следующие глобальные переменные:  
+-   The following global variables have been removed:  
   
     -   _osplatform  
   
@@ -3375,7 +3375,7 @@ C c;
   
     -   _winver  
   
--   Были удалены следующие функции. Вместо них используйте функции Windows API GetVersion или GetVersionEx.  
+-   The following functions have been removed. Use the Windows API functions GetVersion or GetVersionEx instead:  
   
     -   _get_osplatform  
   
@@ -3387,88 +3387,88 @@ C c;
   
     -   _get_winver  
   
--   Изменился синтаксис для примечаний SAL. Дополнительные сведения см. в статье [SAL Annotations](../c-runtime-library/sal-annotations.md) (Примечания SAL).  
+-   The syntax for SAL Annotations has changed. For more information, see [SAL Annotations](../c-runtime-library/sal-annotations.md).  
   
--   Фильтр IEEE теперь поддерживает набор инструкций SSE 4.1. Дополнительные сведения см. в статье [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.  
+-   The IEEE filter now supports the SSE 4.1 instruction set. For more information, see [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.  
   
--   Библиотеки времени выполнения C, поставляемые с Visual Studio, больше не зависят от системной DLL msvcrt.dll.  
+-   The C Run-Time Libraries that ship with Visual Studio are no longer dependent on the system DLL msvcrt.dll.  
   
-### <a name="standard-library"></a>Стандартная библиотека  
+### <a name="standard-library"></a>Standard Library  
   
--   Удалена поддержка для Windows 95, Windows 98, Windows Millennium Edition и Windows NT 4.0.  
+-   Support for Windows 95, Windows 98, Windows Millennium Edition, and Windows NT 4.0 has been removed.  
   
--   При компиляции в режиме отладки с определенным _HAS_ITERATOR_DEBUGGING (заменен на [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) после Visual Studio 2010) приложение будет подтверждать, когда итератор пытается увеличить или уменьшить границы базового контейнера.  
+-   When compiling in debug mode with _HAS_ITERATOR_DEBUGGING defined (superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) after Visual Studio 2010), an application will now assert when an iterator attempts to increment or decrement past the bounds of the underlying container.  
   
--   Переменная-член c класса stack теперь объявляется как защищенная. Ранее эта переменная-член объявлялась как открытая.  
+-   The member variable c of the stack Class is now declared protected. Previously, this member variable was declared public.  
   
--   Изменилось поведение money_get::do_get. Ранее при синтаксическом анализе денежной суммы с несколькими цифрами после запятой вызывались frac_digits do_get для использования их всех. Теперь do_get прекращает разбор после использования максимального числа символов frac_digits.  
+-   The behavior of money_get::do_get has changed. Previously, when parsing a monetary amount with more fraction digits than are called for by frac_digits, do_get used to consume them all. Now, do_get stops parsing after consuming at most frac_digits characters.  
   
 ### <a name="atl"></a>ATL  
   
--   ATL не может быть построена без зависимости от CRT. В более ранних версиях Visual Studio можно было использовать #define ATL_MIN_CRT, чтобы установить минимальную зависимость проекта ATL от CRT. В Visual C++ 2008 все проекты ATL минимально зависят от CRT независимо от того, определен ли ATL_MIN_CRT.  
+-   ATL cannot be built without a dependency on CRT. In earlier versions of Visual Studio, you could use #define ATL_MIN_CRT to make an ATL project minimally dependent on CRT. In Visual C++ 2008, all ATL projects are minimally dependent on CRT regardless of whether ATL_MIN_CRT is defined.  
   
--   База кода сервера ATL была выпущена в виде проекта с общим исходным кодом в CodePlex и не устанавливается как часть Visual Studio. Классы кодирования и декодирования данных из файла atlenc.h и служебных функций и классы из файлов atlutil.h и atlpath.h сохранились и теперь входят в библиотеку ATL. Некоторые файлы, связанные с сервером ATL, больше не являются частью Visual Studio.  
+-   The ATL Server codebase has been released as a shared source project on CodePlex and is not installed as part of Visual Studio. Data encoding and decoding classes from atlenc.h and utility functions and classes from atlutil.h and atlpath.h have been kept and are now part of the ATL library. Several files associated with ATL Server are no longer part of Visual Studio.  
   
--   Некоторые функции больше не входят в библиотеку DLL. Они по-прежнему находятся в библиотеке импорта. Это не повлияет на код, который использует функции в статическом режиме. Изменения затронут только код, использующий эти функции динамически.  
+-   Some functions are no longer included in the DLL. They are still located in the import library. This will not affect code that uses the functions statically. It will affect only the code that uses these functions dynamically.  
   
--   Макросы PROP_ENTRY и PROP_ENTRY_EX устарели и заменены макросами PROP_ENTRY_TYPE_EX и PROP_ENTRY_TYPE по соображениям безопасности.  
+-   The macros PROP_ENTRY and PROP_ENTRY_EX have been deprecated and replaced with the macros PROP_ENTRY_TYPE andPROP_ENTRY_TYPE_EX for security reasons.  
   
-### <a name="atlmfc-shared-classes"></a>Общие классы ATL и MFC  
+### <a name="atlmfc-shared-classes"></a>ATL/MFC Shared Classes  
   
--   ATL не может быть построена без зависимости от CRT. В более ранних версиях Visual Studio можно было использовать #define ATL_MIN_CRT, чтобы установить минимальную зависимость проекта ATL от CRT. В Visual C++ 2008 все проекты ATL минимально зависят от CRT независимо от того, определен ли ATL_MIN_CRT.  
+-   ATL cannot be built without a dependency on CRT. In earlier versions of Visual Studio, you could use #define ATL_MIN_CRT to make an ATL project minimally dependent on CRT. In Visual C++ 2008, all ATL projects are minimally dependent on CRT regardless of whether ATL_MIN_CRT is defined.  
   
--   База кода сервера ATL была выпущена в виде проекта с общим исходным кодом в CodePlex и не устанавливается как часть Visual Studio. Классы кодирования и декодирования данных из файла atlenc.h и служебных функций и классы из файлов atlutil.h и atlpath.h сохранились и теперь входят в библиотеку ATL. Некоторые файлы, связанные с сервером ATL, больше не являются частью Visual Studio.  
+-   The ATL Server codebase has been released as a shared source project on CodePlex and is not installed as part of Visual Studio. Data encoding and decoding classes from atlenc.h and utility functions and classes from atlutil.h and atlpath.h have been kept and are now part of the ATL library. Several files associated with ATL Server are no longer part of Visual Studio.  
   
--   Некоторые функции больше не входят в библиотеку DLL. Они по-прежнему находятся в библиотеке импорта. Это не повлияет на код, который использует функции в статическом режиме. Изменения затронут только код, использующий эти функции динамически.  
+-   Some functions are no longer included in the DLL. They are still located in the import library. This will not affect code that uses the functions statically. It will affect only the code that uses these functions dynamically.  
   
 ### <a name="mfc"></a>MFC  
   
--   Класс CTime: теперь класс CTime принимает даты, начиная с 01/01/1900 г. н. э. вместо 01/01/1970 г. н. э.              
--   Последовательность табуляций элементов управления в диалоговых окнах MFC: правильная последовательность нескольких элементов управления в диалоговом окне MFC нарушается, если в нее вставляется элемент управления MFC ActiveX. Это изменение устраняет данную проблему.  
+-   CTime Class: The CTime class now accepts dates starting from 1/1/1900 C.E. instead of 1/1/1970 C.E.              
+-   Tab order of controls in MFC dialogs: The correct tab order of multiple controls in an MFC dialog is disturbed if an MFC ActiveX control is inserted in the tab order. This change corrects that problem.  
   
-     Например, создайте диалоговое приложение MFC с элементом управления ActiveX и несколькими элементами управления редактированием. Поместите элемент управления ActiveX в середине последовательности табуляции элементов управления редактирования. Запустите приложение, щелкните элемент управления редактирования, последовательность табуляции которого находится после элемента управления ActiveX, а затем выполните табуляцию. До этого изменения фокус переходил в элемент управления редактирования, идущий за элементом управления ActiveX, а не в следующий элемент управления редактирования в последовательности табуляции.  
+     For example, create an MFC dialog application that has an ActiveX control and several edit controls. Position the ActiveX control in the middle of the tab order of the edit controls. Start the application, click an edit control whose tab order is after the ActiveX control, then tab. Prior to this change, the focus went to the edit control following the ActiveX control instead of the next edit control in the tab order.  
   
--   Класс CFileDialog: пользовательские шаблоны для класса CFileDialog нельзя перенести автоматически в Windows Vista. Их по-прежнему можно использовать, но у них не будет дополнительной функциональности или вида диалоговых окон в стиле Windows Vista.  
+-   CFileDialog Class:   Custom templates for the CFileDialog class cannot be automatically ported to Windows Vista. They are still usable, but will not have the additional functionality or looks of Windows Vista style dialogs.  
   
--   Класс CWnd и класс CFrameWnd: метод CWnd::GetMenuBarInfo был удален.  
+-   CWnd Class and CFrameWnd Class:    The CWnd::GetMenuBarInfo method was removed.  
   
-     Метод CFrameWnd::GetMenuBarInfo теперь является невиртуальным. Дополнительные сведения см. в разделе о функции GetMenuBarInfo в пакете SDK для Windows.  
+     The CFrameWnd::GetMenuBarInfo method is now a non-virtual method. For more information, see GetMenuBarInfo Functionin the Windows SDK.  
   
--   Поддержка MFC ISAPI: MFC больше не поддерживает создание приложений с помощью интерфейса ISAPI. Чтобы создать приложение ISAPI, вызывайте расширения ISAPI напрямую.  
+-   MFC ISAPI support:  MFC no longer supports building applications with the Internet Server Application Programming Interface (ISAPI). If you want to build an ISAPI application, call the ISAPI extensions directly.  
   
--   Нерекомендуемые API ANSI: не рекомендуется использовать версии ANSI нескольких методов MFC. В будущих приложениях следует использовать версии Юникод этих методов. Дополнительные сведения см. в разделе о требованиях к сборке для использования стандартных элементов управления в Windows Vista.  
+-   Deprecated ANSI APIs:    The ANSI versions of several MFC methods are deprecated. Use the Unicode versions of those methods in your future applications. For more information, see Build Requirements for Windows Vista Common Controls.  
   
-## <a name="visual-c-2005-breaking-changes"></a>Критические изменения Visual C++ 2005  
+## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 Breaking Changes  
   
-### <a name="crt"></a>CRT - библиотека  
+### <a name="crt"></a>CRT  
   
--   Многие функции теперь являются нерекомендуемыми. См. раздел о нерекомендуемых функциях CRT.  
+-   Many functions have been deprecated. See Deprecated CRT Functions.  
   
--   Теперь многие функции проверяют свои параметры и прекращают выполнение в случае обнаружения недопустимых параметров. Это может привести к приостановке кода, в который переданы недопустимые параметры, и зависит от того, проигнорирует ли функция эти параметры или просто вернет код ошибки. См. раздел о проверке параметров.  
+-   Many functions now validate their parameters, halting execution if given invalid parameters. This may break code that passes invalid parameters and relies on the function ignoring them or just returning an error code. See Parameter Validation.  
   
--   Значение -2 дескриптора файла теперь используется для указания, что stdout и stderr недоступны для выходных данных, например в приложении Windows без окна консоли. Ранее использовалось значение -1. Дополнительные сведения см. в разделе [_fileno](../c-runtime-library/reference/fileno.md).  
+-   The file descriptor value -2 is now used to indicate that stdout and stderr are not available for output, as for example in a Windows application that has no console window. The previous value used was -1. For more information, see [_fileno](../c-runtime-library/reference/fileno.md).  
   
--   Были удалены однопоточные библиотеки CRT libc.lib и libcd.lib. Следует использовать многопоточные библиотеки CRT. Флаг компилятора /ML больше не поддерживается. Незаблокированные версии некоторых функций добавлены для случаев, когда разница в производительности между однопоточным и многопоточным кодом может быть существенной.  
+-   The single-threaded CRT libraries, libc.lib and libcd.lib, have been removed. Use the multi-threaded CRT libraries. The /ML compiler flag is no longer supported. Non-locking versions of some functions have been added in cases where the performance difference between the multithreaded code and the single-threaded code is potentially significant.  
   
--   Перегрузка pow, double pow(int, int) была удалена в целях улучшения соответствия стандарту.  
+-   The overload of pow, double pow(int, int), was removed to better conform with the standard.  
   
--   Описатель формата %n больше не поддерживается по умолчанию ни в одной из функций семейства printf, поскольку он изначально небезопасен. Если описатель формата %n обнаруживается, то по умолчанию вызывается обработчик недопустимого параметра. Чтобы включить поддержку %n, используйте _set_printf_count_output (см. также описание see_get_printf_count_output).  
+-   The %n format specifier is no longer supported by default in any of the printf family of functions because it is inherently insecure. The default behavior if %n is encountered is to invoke the invalid parameter handler. To enable %n support, use _set_printf_count_output (also see_get_printf_count_output).  
   
--   Функция sprintf теперь печатает знак "минус" для нуля со знаком.  
+-   sprintf now prints the negative sign of a signed zero.  
   
--   Функция swprintf изменена для соответствия стандарту, в ней теперь необходимо указывать параметр размера. Форма swprintf без параметра размера не рекомендуется.  
+-   swprintf has been changed to conform with the Standard; it now requires a size parameter. The form of swprintf without a size parameter has been deprecated.  
   
--   Функция _set_security_error_handler удалена. Следует удалить все вызовы этой функции; более безопасно работать с ошибками безопасности с помощью обработчика по умолчанию.  
+-   _set_security_error_handler has been removed. Remove any calls to that function; the default handler is a much safer way of dealing with security errors.  
   
--   time_t теперь является 64-разрядным значением (пока не задано _USE_32BIT_TIME_T).  
+-   time_t is now a 64-bit value (unless _USE_32BIT_TIME_T is defined).  
   
--   При успешном выполнении _spawn, _wspawn Functions теперь оставляют номер ошибки неизмененным, согласно стандарту C.  
+-   The _spawn, _wspawn Functions now leave errno untouched on success, as specified by the C Standard.  
   
--   RTC теперь по умолчанию использует широкие (многобайтовые) символы.  
+-   RTC now uses wide characters by default.  
   
--   Функции поддержки слов с плавающей запятой не рекомендуются в приложениях, скомпилированных с параметром /CLR или /CLR:PURE. Это функции _clear87, _clearfp, _control87, _controlfp, _fpreset, _status87, _statusfp. Соответствующее предупреждающее сообщение можно отключить, задав параметр _CRT_MANAGED_FP_NO_DEPRECATE, однако следует иметь в виду, что использование этих функций в управляемом коде непредсказуемо и не поддерживается.  
+-   Floating-point control word support functions have been deprecated for applications compiled with /CLR or /CLR:PURE. The affected functions are _clear87, _clearfp, _control87, _controlfp, _fpreset, _status87, _statusfp. You can disable the deprecation warning by defining _CRT_MANAGED_FP_NO_DEPRECATE, but the use of these functions in managed code is unpredictable and unsupported.  
   
--   Некоторые функции теперь возвращают указатели const. Можно восстановить старое поведение с указателями, не являющимися константами, задав параметр _CONST_RETURN. Вот эти функции:  
+-   Some functions now return const pointers. The old, non-const behavior can be reinstated by defining _CONST_RETURN. The affected functions are  
   
     1.  memchr, wmemchr  
   
@@ -3480,66 +3480,66 @@ C c;
   
     5.  strstr, wcsstr, _mbsstr, _mbsstr_l  
   
--   При связывании с Setargv.obj или Wsetargv.obj более невозможно запретить расширение подстановочного знака в командной строке путем заключения его в двойные кавычки. Дополнительные сведения см. в статье [Expanding Wildcard Arguments](../c-language/expanding-wildcard-arguments.md) (Расширение аргументов заполнителей).  
+-   When linking with Setargv.obj or Wsetargv.obj, it is no longer possible to suppress the expansion of a wildcard character on the command line by enclosing it in double quotes. For more information, see [Expanding Wildcard Arguments](../c-language/expanding-wildcard-arguments.md).  
   
-### <a name="standard-library-2005"></a>Стандартная библиотека (2005)  
+### <a name="standard-library-2005"></a>Standard Library (2005)  
   
--   Класс исключений (расположенный в заголовке \<exception>) был перемещен в пространство имен std. В предыдущих версиях этот класс находился в глобальном пространстве имен. Чтобы устранить ошибки, указывающие на невозможность найти класс исключений, добавьте следующий оператор using в код: using namespace std;  
+-   The exception class (located in the \<exception> header) has been moved to the std namespace. In previous versions, this class was in the global namespace. To resolve any errors indicating that the exception class cannot be found, add the following using statement to your code:                 using namespace std;  
   
--   При вызове valarray::resize() содержимое valarray будет утеряно и заменено значениями по умолчанию. Метод resize() предназначен для повторной инициализации valarray, а не для его динамического увеличения подобно вектору.  
+-   When calling valarray::resize(), the contents of the valarray will be lost and will be replaced by default values. The resize() method is intended to reinitialize the valarray rather than grow it dynamically like a vector.  
   
--   Итераторы отладки: в приложениях, построенных с помощью отладочной версии библиотеки времени выполнения C и неправильно использующих итераторы, во время выполнения могут появляться утверждения. Чтобы отключить эти утверждения, необходимо определить для _HAS_ITERATOR_DEBUGGING (заменен [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) после выхода Visual Studio 2010) значение 0. Дополнительные сведения см. в статье [Debug Iterator Support](../standard-library/debug-iterator-support.md) (Поддержка итераторов при отладке).  
+-   Debug Iterators: Applications built with a debug version of the C-Runtime Library and which use iterators incorrectly might begin to see asserts at runtime. To disable these asserts, you must define _HAS_ITERATOR_DEBUGGING (superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) after Visual Studio 2010) to 0. For more information, see [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
-## <a name="visual-c-net-2003-breaking-changes"></a>Критические изменения в Visual C++ .NET 2003  
+## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 Breaking Changes  
   
-### <a name="compiler"></a>Компилятор  
+### <a name="compiler"></a>Compiler  
   
--   Для определенной директивы препроцессора (C2004) теперь требуется закрывающая скобка.  
+-   Closing parentheses now required for the defined preprocessor directive (C2004).  
   
--   Явные специализации больше не находят параметры шаблона из основного шаблона ([Ошибка компилятора C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
+-   Explicit specializations no longer find template parameters from primary template ([Compiler Error C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
   
--   Защищенный член (n) может быть доступен только посредством функции-члена класса (B), который наследует от класса (A), членом которой он (n) является ([Ошибка компилятора C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
+-   A protected member (n) can only be accessed through a member function of a class (B) that inherits from the class (A) of which it (n) is a member ([Compiler Error C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
   
--   Улучшенные проверки доступности проверки в компиляторе теперь обнаруживают недоступные базовые классы ([Ошибка компилятора C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
+-   Improved accessibility checks in compiler now detect inaccessible base classes ([Compiler Error C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
   
--   Исключение не может быть перехвачено, если деструктор и (или) конструктор копии недоступны (C2316).  
+-   An exception cannot be caught if the destructor and/or copy constructor is inaccessible (C2316).  
   
--   Аргументы по умолчанию в указателях на функции больше не допускаются ([Ошибка компилятора C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
+-   Default arguments on pointers to functions no longer allowed ([Compiler Error C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
   
--   Статические данные-член не могут быть инициализированы в производном классе ([Ошибка компилятора C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
+-   A static data member cannot be initialized via derived class ([Compiler Error C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
   
--   Инициализация typedef не допускается согласно стандарту и теперь приводит к ошибке компилятора ([Ошибка компилятора C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
+-   The initialization of a typedef is not allowed by the standard and now generates a compiler error ([Compiler Error C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
   
--   bool теперь является правильным типом ([Ошибка компилятора C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
+-   bool is now a proper type ([Compiler Error C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
   
--   UDC теперь может приводить к неоднозначности с перегруженными операторами ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
+-   A UDC can now create ambiguity with overloaded operators ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
   
--   Увеличено количество выражений, считающихся допустимыми константами пустого указателя ([Ошибка компилятора C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
+-   More expressions are now considered valid null pointer constants ([Compiler Error C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
   
--   Шаблон <> теперь требуется там, где компилятор ранее подразумевал его ([Ошибка компилятора C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
+-   template<> is now required in places where the compiler would previously imply it ([Compiler Error C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
   
--   Явная cпециализация функции-члена вне класса является недопустимой, если функция уже была явно задана через специализацию класса шаблона ([Ошибка компилятора C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
+-   The expilicit specialization of a member function ourside the class is not valid if the function has already been explicitly specialized via a template class specialization ([Compiler Error C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
   
--   Параметры шаблона, не являющегося типом с плавающей запятой, больше не допускаются ([Ошибка компилятора C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
+-   Floating point non-type template parameters are no longer allowed ([Compiler Error C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
   
--   Шаблоны классов недопустимы в качестве аргументов типа шаблона (C3206).  
+-   Class templates are not allowed as template type arguments (C3206).  
   
--   Понятные имена функций более не вводятся в содержащее пространство имен ([Ошибка компилятора C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
+-   Friend function names are no longer introduced into containing namespace ([Compiler Error C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
   
--   Компилятор больше не принимает лишние запятые в макросе (C4002).  
+-   The compiler will no longer accept extra commas in a macro (C4002).  
   
--   Для объекта типа POD, созданного с помощью инициализатора вида (), будет выполнена инициализация по умолчанию (C4345).  
+-   An object of POD type constructed with an initializer of the form () will be default-initialized (C4345).  
   
--   typename теперь является обязательным, если зависимое имя обрабатывается как тип ([Предупреждение компилятора (уровень 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
+-   typename is now required if a dependent name is to be treated as a type ([Compiler Warning (level 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
   
--   Функции, которые неправильно считались специализациями шаблонов, больше таковыми не считаются (C4347).  
+-   Functions that were incorrectly considered template specializations are no longer considered so (C4347).  
   
--   Статические данные-член не могут быть инициализированы в производном классе (C4356).  
+-   Static data members cannot be initialized via derived class (C4356).  
   
--   Специализация шаблона класса должна быть задана до ее использования в возвращаемом типе ([Предупреждение компилятора (уровень 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
+-   A class template specialization needs to be defined before it was used in a return type ([Compiler Warning (level 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
   
--   Теперь компилятор сообщает о недостижимом коде (C4702).  
+-   The compiler now reports unreachable code (C4702).  
   
-## <a name="see-also"></a>См. также  
-[What's New for Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio)
+## <a name="see-also"></a>See Also  
+[What's New for Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
 
