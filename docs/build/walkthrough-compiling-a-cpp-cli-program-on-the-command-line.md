@@ -1,52 +1,68 @@
 ---
-title: "Пошаговое руководство. Компиляция программы на языке C++/CLI из командной строки | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Walkthrough: Compiling a C++/CLI Program on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Пошаговое руководство. Компиляция программы на языке C++/CLI из командной строки
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 44d67c8e7f83ca5433436cf6b851e3f066a930ad
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/30/2017
 
-Вы можете создавать программы Visual C\+\+, предназначенные для среды CLR и использующие платформу .NET Framework, и выполнять их сборку из командной строки.  Visual C\+\+ поддерживает язык программирования C\+\+\/CLI, который предоставляет дополнительные типы и операторы для модели программирования .NET.  Вводную информацию о языке C\+\+\/CLI см. в статье [Pure C\+\+: Hello, C\+\+\/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx).  Общие сведения см. в статье [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
+---
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Walkthrough: Compiling a C++/CLI Program on the Command Line
+You can create Visual C++ programs that target the Common Language Runtime (CLR) and use the .NET Framework, and build them on the command line. Visual C++ supports the C++/CLI programming language, which has additional types and operators to target the .NET programming model. For an introduction to the C++/CLI language, see [Pure C++: Hello, C++/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). For general information, see [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
   
- В этом руководстве мы используем текстовый редактор для создания простой программы C\+\+\/CLI, а затем компилируем эту программу в командной строке.  \(Можно использовать вашу собственную программу C\+\+\/CLI вместо ввода показанной здесь, или же можно использовать образец кода C\+\+\/CLI из другой статьи справки.  Эта методика полезна для сборки и тестирования небольших модулей, не содержащих элементы пользовательского интерфейса.\)  
+ In this walkthrough, you use a text editor to create a basic C++/CLI program, and then compile it on the command line. (You can use your own C++/CLI program instead of typing the one that's shown, or you can use a C++/CLI code sample from another help article. This technique is useful for building and testing small modules that contain no UI elements.)  
   
 > [!NOTE]
->  В интегрированной среде разработки \(IDE\) Visual Studio также можно компилировать программы C\+\+\/CLI.  Для получения дополнительной информации см. [Пошаговое руководство. Компиляция программы на языке C\+\+, предназначенной для среды CLR, в Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  
+>  You can also use the Visual Studio IDE to compile C++/CLI programs. For more information, see [Walkthrough: Compiling a C++ Program that Targets the CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  
   
-## Обязательные компоненты  
- Необходимо понимать основы языка C\+\+.  
+## <a name="prerequisites"></a>Prerequisites  
+ You must understand the fundamentals of the C++ language.  
   
-## Компиляция программы на C\+\+\/CLI  
- Ниже приведены инструкции по компиляции консольного приложения C\+\+\/CLI, использующего классы .NET Framework.  
+## <a name="compiling-a-ccli-program"></a>Compiling a C++/CLI Program  
+ The following steps show how to compile a C++/CLI console application that uses .NET Framework classes.  
   
- Чтобы включить компиляцию для C\+\+\/CLI, нужно использовать параметр компилятора [\/clr](../build/reference/clr-common-language-runtime-compilation.md).  Компилятор Visual C\+\+ создает EXE\-файл, содержащий код MSIL \(или смешанный код MSIL и собственный код\) и ссылки на необходимые библиотеки .NET Framework.  
+ To enable compilation for C++/CLI, you must use the [/clr](../build/reference/clr-common-language-runtime-compilation.md) compiler option. The Visual C++ compiler generates an .exe file that contains MSIL code—or mixed MSIL and native code—and links to the required .NET Framework libraries.  
   
-#### Компиляция приложения C\+\+\/CLI из командной строки  
+#### <a name="to-compile-a-ccli-application-on-the-command-line"></a>To compile a C++/CLI application on the command line  
   
-1.  Откройте окно **Командная строка разработчика**.  \(В меню **Пуск** выберите пункт **Приложения**.  Откройте папку **Средства Visual Studio** для соответствующей версии [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], а затем выберите ярлык **Командная строка разработчика**.\) Дополнительные сведения о том, как открыть окно командной строки, см. в разделе [Установка переменных пути и среды при построении из командной строки](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+1.  Open a **Developer Command Prompt** window. For specific instructions, see [To open a developer command prompt window](../build/building-on-the-command-line.md#developer_command_prompt).  
   
-     В зависимости от операционной системы и конфигурации компьютера для успешной компиляции кода могут потребоваться учетные данные администратора.  Чтобы запустить окно командной строки от имени администратора, щелкните правой кнопкой мыши элемент **Командная строка разработчика** и выберите команду **Запуск от имени администратора**.  
+     Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration. To run the command prompt window as an administrator, right-click to open the shortcut menu for the command prompt and then choose **More**, **Run as administrator**.  
   
-2.  В командной строке введите **notepad basicclr.cpp**.  
+2.  At the command prompt, enter **notepad basicclr.cpp**.  
   
-     Когда появится запрос на создание файла, нажмите кнопку **Да**.  
+     Choose **Yes** when you are prompted to create a file.  
   
-3.  В Блокноте введите следующие строки:  
+3.  In Notepad, enter these lines:  
   
     ```  
     int main()  
@@ -55,20 +71,21 @@ manager: "ghogen"
     }  
     ```  
   
-4.  В меню выберите **Файл**, **Сохранить**.  
+4.  On the menu bar, choose **File**, **Save**.  
   
-     Вы создали файл исходного кода Visual C\+\+, использующий класс .NET Framework \(<xref:System.Console>\) в пространстве имен <xref:System>.  
+     You have created a Visual C++ source file that uses a .NET Framework class (<xref:System.Console>) in the <xref:System> namespace.  
   
-5.  В командной строке введите **cl \/clr basicclr.cpp**.  Компилятор cl.exe скомпилирует исходный код в OBJ\-файл, содержащий код MSIL, а затем запустит компоновщик для создания исполняемой программы с именем basicclr.exe.  
+5.  At the command prompt, enter **cl /clr basicclr.cpp**. The cl.exe compiler compiles the source code into an .obj file that contains MSIL, and then runs the linker to generate an executable program named basicclr.exe.  
   
-6.  Чтобы запустить программу basicclr.exe, в командной строке введите **basicclr**.  
+6.  To run the basicclr.exe program, at the command prompt, enter **basicclr**.  
   
-     Программа выводит следующий текст и закрывается:  
+     The program displays this text and exits:  
   
-  **This is a C\+\+\/CLI program.**  
+    ```Output  
+    This is a C++/CLI program.  
+    ```  
   
-## См. также  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ru-ru/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [Справочник по языку C\+\+](../cpp/cpp-language-reference.md)   
- [Сборка программ C\/C\+\+](../build/building-c-cpp-programs.md)   
- [Параметры компилятора](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compiler Options](../build/reference/compiler-options.md)

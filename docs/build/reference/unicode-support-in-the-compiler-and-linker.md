@@ -1,58 +1,75 @@
 ---
-title: "Поддержка Юникода в компиляторе и компоновщике | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCLibrarianTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Юникод, Visual C++"
+title: Unicode Support in the Compiler and Linker | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.UseUnicodeResponseFiles
+- VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
+- VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles
+- VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode, Visual C++
 ms.assetid: acc1d322-56b9-4696-a30e-2af891a4e288
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Поддержка Юникода в компиляторе и компоновщике
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 650d8fd430ff0825f0e2fb08d279c509dc62c5a6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/30/2017
 
-В данном разделе рассматривается поддержка Юникода в инструментах построения Visual C\+\+.  
+---
+# <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode Support in the Compiler and Linker
+This topic describes Unicode support in the Visual C++ build tools.  
   
- Имена файлов  
- Имена файлов, указываемые в командной строке или директивах компилятора \(например, \#include\), теперь могут содержать символы Юникода.  
+ Filenames  
+ Filenames specified on the command line or in compiler directives (such as #include) may now contain Unicode characters.  
   
- Файлы исходного кода  
- Символы Юникода теперь поддерживаются в идентификаторах, макросах, строковых и символьных литералах, а также в комментариях.  Также поддерживаются универсальные имена.  
+ Source code files  
+ Unicode characters are now supported in identifiers, macros, string and character literals, and in comments.  Universal character names are also now supported.  
   
- Символы Юникода могут вводиться в файлы исходного кода в следующих кодировках.  
+ Unicode can be input into a source code file in the following encodings:  
   
--   UTF\-16 с прямым порядком байтов, с отметкой порядка байтов или без нее  
+-   UTF-16 little endian with or without byte order mark (BOM)  
   
--   UTF\-16 с обратным порядком байтов, с отметкой порядка байтов или без нее  
+-   UTF-16 big endian with or without BOM  
   
--   UTF\-8 с отметкой порядка байтов  
+-   UTF-8 with BOM  
   
  Output  
- В процессе компиляции компилятор выводит на консоль диагностические сообщения в кодировке UTF\-16.  Символы, которые могут отображаться на консоли, зависят от свойств окна консоли.  Выходные данные компилятора, перенаправляемые в файл, имеют кодировку текущей кодовой страницы ANSI консоли.  
+ During compilation, compiler outputs diagnostics to the console in UTF-16.  The characters that can be displayed at your console depend on the console window properties.  Compiler output redirected to a file is in the current ANSI console codepage.  
   
- DEF\-файлы и файлы отклика компоновщика  
- Файлы отклика и DEF\-файлы могут иметь либо кодировку UTF\-16 с отметкой порядка байтов, либо кодировку ANSI.  Ранее поддерживалась только кодировка ANSI.  
+ Linker response files and .DEF files  
+ Response files and DEF files can be either UTF-16 with a Byte Order Mark or ANSI.  Previously only ANSI was supported.  
   
- Файлы дампа ASM и COD  
- Файлы дампа COD и ASM по умолчанию имеют кодировку ANSI в целях совместимости с MASM.  Для вывода в кодировке UTF\-8 используйте параметр \/FAu.  Обратите внимание, что при указании параметра \/FAs смешанный источник будет печататься напрямую и выводиться в искаженном виде. Например, если исходный код имеет кодировку UTF\-8, а параметр \/FAsu не указан.  
+ .asm and .cod dumps  
+ .asm and .cod dumps are in ANSI by default for compatibility with MASM.  Use /FAu to output UTF-8.  Note that if you specify /FAs, the intermingled source will just be directly printed and may look garbled, for example if source code is UTF-8 and you didn't specify /FAsu.  
   
- Имена файлов в Юникоде можно включить в среде разработки \([Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md)\), выбрав соответствующий инструмент и затем выбрав свойство **Использовать Юникод файлы ответа**, которое включено по умолчанию.  Одной из причин, по которой может понадобиться изменить данную настройку по умолчанию, является необходимость в настройке среды разработки на использование компилятора, не поддерживающего формат Юникода.  
+ You can enable Unicode file names in the development environment (see  [Working with Project Properties](../../ide/working-with-project-properties.md)) by selecting the appropriate tool and by selecting the **Enable Unicode Response Files** property, which is enabled by default. One reason you might change this default is if you modify your development environment to use a compiler that does not have Unicode support.  
   
-## См. также  
- [Построение из командной строки](../Topic/Building%20on%20the%20Command%20Line.md)
+## <a name="see-also"></a>See Also  
+ [Build C/C++ code on the command line](../../build/building-on-the-command-line.md)

@@ -1,11 +1,11 @@
 ---
-title: "wcstombs_s, _wcstombs_s_l | Документы Майкрософт"
+title: wcstombs_s, _wcstombs_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -56,17 +56,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c407068c475f866062f8973fbacf70fcf6e6cae9
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 913ee4f1b4b9e9c228ef13d78d26742529bbdc0e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
-Преобразует последовательность расширенных символов в соответствующую последовательность многобайтовых символов. Версии функций [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+
+Converts a sequence of wide characters to a corresponding sequence of multibyte characters. A version of [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) with security enhancements as described in [Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t wcstombs_s(  
@@ -76,6 +77,7 @@ errno_t wcstombs_s(
    const wchar_t *wcstr,  
    size_t count   
 );  
+
 errno_t _wcstombs_s_l(  
    size_t *pReturnValue,  
    char *mbstr,  
@@ -84,6 +86,7 @@ errno_t _wcstombs_s_l(
    size_t count,  
    _locale_t locale  
 );  
+
 template <size_t size>  
 errno_t wcstombs_s(  
    size_t *pReturnValue,  
@@ -91,6 +94,7 @@ errno_t wcstombs_s(
    const wchar_t *wcstr,  
    size_t count   
 ); // C++ only  
+
 template <size_t size>  
 errno_t _wcstombs_s_l(  
    size_t *pReturnValue,  
@@ -101,74 +105,78 @@ errno_t _wcstombs_s_l(
 ); // C++ only  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- [выходной] `pReturnValue`  
- Количество символов для преобразования.  
+#### <a name="parameters"></a>Parameters  
+
+[out] *pReturnValue*  
+The number of characters converted.  
   
- [выходной] `mbstr`  
- Адрес буфера для итоговой преобразованной строки многобайтовых символов.  
+[out] *mbstr*  
+The address of a buffer for the resulting converted multibyte character string.  
   
- [in]`sizeInBytes`  
- Размер (в байтах) буфера `mbstr`.  
+[in] *sizeInBytes*  
+The size in bytes of the *mbstr* buffer.  
   
- [in] `wcstr`  
- Указывает на строку расширенных символов, которую необходимо преобразовать.  
+[in] *wcstr*  
+Points to the wide character string to be converted.  
   
- [in] `count`  
- Максимальное число байтов для хранения в буфере `mbstr`, не считая завершающий нуль-символ, или [_TRUNCATE](../../c-runtime-library/truncate.md).  
+[in] *count*  
+The maximum number of bytes to store in the *mbstr* buffer, not including the terminating null character, or [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
- [in] `locale`  
- Используемый языковой стандарт.  
+[in] *locale*  
+The locale to use.  
   
-## <a name="return-value"></a>Возвращаемое значение  
- Нуль в случае успеха или код ошибки в случае неудачи.  
+## <a name="return-value"></a>Return Value  
+
+Zero if successful, an error code on failure.  
   
-|Условие ошибки|Возвращаемое значение и `errno`|  
+|Error condition|Return value and `errno`|  
 |---------------------|------------------------------|  
-|`mbstr` содержит значение `NULL` и `sizeInBytes` > 0|`EINVAL`|  
-|`wcstr` равно `NULL`|`EINVAL`|  
-|Буфер назначения слишком мал, чтобы вместить преобразованную строку (если параметр `count` не имеет значение `_TRUNCATE`; см. примечания ниже).|`ERANGE`|  
+|*mbstr* is `NULL` and *sizeInBytes* > 0|`EINVAL`|  
+|*wcstr* is `NULL`|`EINVAL`|  
+|The destination buffer is too small to contain the converted string (unless *count* is `_TRUNCATE`; see Remarks below)|`ERANGE`|  
   
- Если выполняется какое-либо из этих условий, вызывается исключение о недопустимом параметре, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, то функция возвращает код ошибки и устанавливает `errno`, как показано в таблице.  
+If any of these conditions occurs, the invalid parameter exception is invoked as described in [Parameter Validation](../../c-runtime-library/parameter-validation.md) . If execution is allowed to continue, the function returns an error code and sets `errno` as indicated in the table.  
   
-## <a name="remarks"></a>Примечания  
- Функция `wcstombs_s` преобразует строку расширенных символов, на которую указывает `wcstr`, в многобайтовые символы, сохраненные в буфере, на который указывает `mbstr`. Преобразование будет продолжаться для каждого символа до тех пор, пока не будет выполнено одно из указанных ниже условий.  
+## <a name="remarks"></a>Remarks  
+
+The `wcstombs_s` function converts a string of wide characters pointed to by *wcstr* into multibyte characters stored in the buffer pointed to by *mbstr*. The conversion will continue for each character until one of these conditions is met:  
   
--   Встретился расширенный нуль-символ.  
+-   A null wide character is encountered  
   
--   Встретился расширенный символ, который не может быть преобразован.  
+-   A wide character that cannot be converted is encountered  
   
--   Число байтов, сохраненных в буфере `mbstr`, равно `count`.  
+-   The number of bytes stored in the *mbstr* buffer equals *count*.  
   
- Строка назначения всегда завершается нуль-символом (даже в случае ошибки).  
+The destination string is always null-terminated (even in the case of an error).  
   
- Если `count` имеет специальное значение [_TRUNCATE](../../c-runtime-library/truncate.md), то функция `wcstombs_s` преобразует строки до тех пор, пока буфер назначения не будет заполнен с учетом завершающего нуль-символа.  
+If *count* is the special value [_TRUNCATE](../../c-runtime-library/truncate.md), then `wcstombs_s` converts as much of the string as will fit into the destination buffer, while still leaving room for a null terminator. If the string is truncated, the return value is `STRUNCATE`, and the conversion is considered successful.  
   
- Если функция `wcstombs_s` успешно преобразует исходную строку, то размер преобразованной строки в байтах с учетом завершающего нуль-символа будет помещен в параметр `*``pReturnValue` (при условии, что `pReturnValue` не является `NULL`). Это происходит, даже если аргумент `mbstr` имеет значение `NULL`, что позволяет задать необходимый размер буфера. Обратите внимание, что если `mbstr` — `NULL`, `count` игнорируется.  
+If `wcstombs_s` successfully converts the source string, it puts the size in bytes of the converted string, including the null terminator, into `*pReturnValue` (provided *pReturnValue* is not `NULL`). This occurs even if the *mbstr* argument is `NULL` and provides a way to determine the required buffer size. Note that if *mbstr* is `NULL`, *count* is ignored.  
   
- Если функция `wcstombs_s` обнаруживает расширенный символ, который не удается преобразовать в многобайтовый символ, то помещает в `*``pReturnValue` значение 0, устанавливает пустую строку в качестве целевого буфера, устанавливает `errno` в `EILSEQ` и возвращает `EILSEQ`.  
+If `wcstombs_s` encounters a wide character it cannot convert to a multibyte character, it puts 0 in `*pReturnValue`, sets the destination buffer to an empty string, sets `errno` to `EILSEQ`, and returns `EILSEQ`.  
   
- Если последовательности, на которые указывают параметры `wcstr` и `mbstr`, перекрываются, то поведение `wcstombs_s` не определено.  
+If the sequences pointed to by *wcstr* and *mbstr* overlap, the behavior of `wcstombs_s` is undefined.  
   
 > [!IMPORTANT]
->  Убедитесь, что строки `wcstr` и `mbstr` не перекрываются, и что параметр `count` правильно отражает количество преобразуемых расширенных символов.  
+>  Ensure that *wcstr* and *mbstr* do not overlap, and that *count* correctly reflects the number of wide characters to convert.  
   
- Функция `wcstombs_s` использует текущий языковой стандарт для любых аспектов поведения, зависящих от языкового стандарта; функция `_wcstombs_s_l` идентична `wcstombs` за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+`wcstombs_s` uses the current locale for any locale-dependent behavior; `_wcstombs_s_l` is identical to `wcstombs` except that it uses the locale passed in instead. For more information, see [Locale](../../c-runtime-library/locale.md).  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+In C++, using these functions is simplified by template overloads; the overloads can infer buffer length automatically (eliminating the need to specify a size argument) and they can automatically replace older, non-secure functions with their newer, secure counterparts. For more information, see [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Requirements  
   
-|Подпрограмма|Обязательный заголовок|  
+|Routine|Required header|  
 |-------------|---------------------|  
 |`wcstombs_s`|\<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+For additional compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).  
   
-## <a name="example"></a>Пример  
- Эта программа иллюстрирует поведение функции `wcstombs_s`.  
+## <a name="example"></a>Example  
+
+This program illustrates the behavior of the `wcstombs_s` function.  
   
-```  
+```C  
 // crt_wcstombs_s.c  
 // This example converts a wide character  
 // string to a multibyte character string.  
@@ -209,11 +217,12 @@ Convert wide-character string:
     Multibyte character: Hello, world.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Преобразование данных](../../c-runtime-library/data-conversion.md)   
- [Языковой стандарт](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+## <a name="see-also"></a>See Also  
+
+[Data Conversion](../../c-runtime-library/data-conversion.md)   
+[Locale](../../c-runtime-library/locale.md)   
+[_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+[mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+[mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+[wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)   
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

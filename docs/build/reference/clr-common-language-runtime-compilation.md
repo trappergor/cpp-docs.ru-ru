@@ -1,134 +1,151 @@
 ---
-title: "-clr (компиляция CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLR"
-  - "VC.Project.VCNMakeTool.CompileAsManaged"
-  - "VC.Project.VCCLCompilerTool.CompileAsManaged"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe — компилятор, параметр среды CLR"
-  - "-clr - параметр компилятора [C++]"
-  - "clr - параметр компилятора [C++]"
-  - "/clr - параметр компилятора [C++]"
-  - "Управляемые расширения для C++, компиляция"
-  - "среда CLR, /clr — параметр компилятора"
+title: -clr (Common Language Runtime Compilation) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /CLR
+- VC.Project.VCNMakeTool.CompileAsManaged
+- VC.Project.VCCLCompilerTool.CompileAsManaged
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, common language runtime option
+- -clr compiler option [C++]
+- clr compiler option [C++]
+- /clr compiler option [C++]
+- Managed Extensions for C++, compiling
+- common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
 caps.latest.revision: 72
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 72
----
-# /clr (компиляция CLR)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 9fc7c7e1155b9556e66db4e9be109ee26628beca
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/30/2017
 
-Позволяет приложениям и компонентам использовать возможности из среды CLR.  
+---
+# <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime Compilation)
+Enables applications and components to use features from the common language runtime (CLR).  
   
-## Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /clr[:options]  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Arguments  
  `options`  
- Один или несколько из следующих параметров, разделенных запятыми.  
+ One or more of the following switches, comma-separated.  
   
- **\/clr**  
- Создает метаданные для приложения. Создает метаданные для приложения, которые могут использовать другие CLR\-приложения, а также позволяет приложению применять типы и данные в метаданных других CLR\-компонентов.  
+ **/clr**  
+ Creates metadata for the application. The metadata can be consumed by other CLR applications, and enables the application to consume types and data in the metadata of other CLR components.  
   
- Дополнительные сведения см. в разделе .  
+ For more information, see  
   
- [Смешанные \(собственные и управляемые\) сборки](../Topic/Mixed%20\(Native%20and%20Managed\)%20Assemblies.md) и  
+ [Mixed (Native and Managed) Assemblies](../../dotnet/mixed-native-and-managed-assemblies.md) and  
   
- [Практическое руководство. Переход на \/clr](../../dotnet/how-to-migrate-to-clr.md).  
+ [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
   
- **\/clr:pure**  
- Создает выходной файл в формате MSIL без исполняемого неуправляемого кода. Тем не менее может содержать типы неуправляемого кода, скомпилированные в MSIL.  
+ **/clr:pure**  
+ Produces a Microsoft Intermediate Language (MSIL)-only output file that has no native executable code. However, it can contain native types compiled to MSIL.  
   
- Дополнительные сведения см. в разделе [Чистый и проверяемый код](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ For more information, see [Pure and Verifiable Code (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- \/clr:pure не рекомендуется к использованию. Будущие версии компилятора могут не поддерживать этот параметр. Мы рекомендуем перенести код, который должен быть чистым кодом MSIL, на C\#.  
+ /clr:pure is deprecated. A future version of the compiler may not support this option. We recommend that you port code that must be pure MSIL to C#.  
   
- **\/clr:safe**  
- Создает проверяемый выходной файл MSIL \(без исполняемого машинного кода\).**\/clr:safe** включает диагностические проверки \([средство PEVerify \(Peverify.exe\)](../Topic/Peverify.exe%20\(PEVerify%20Tool\).md)\).  
+ **/clr:safe**  
+ Produces an MSIL-only (no native executable code), verifiable output file. **/clr:safe** enables verification diagnostics ([PEVerify Tool (Peverify.exe)](/dotnet/framework/tools/peverify-exe-peverify-tool)).  
   
- Дополнительные сведения см. в разделе [NIB. Написание проверяемого строго типизированного кода](http://msdn.microsoft.com/ru-ru/d18f10ef-3b48-4f47-8726-96714021547b).  
+
+ /clr:safe is deprecated. A future version of the compiler may not support this option. We recommend that you port code that must be pure, verifiable MSIL to C#.  
   
- \/clr:safe не рекомендуется к использованию. Будущие версии компилятора могут не поддерживать этот параметр. Мы рекомендуем перенести код, который должен быть чистым, проверяемым кодом MSIL, на C\#.  
+ **/clr:noAssembly**  
+ Specifies that an assembly manifest should not be inserted into the output file. By default, the **noAssembly** option is not in effect.  
   
- **\/clr:noAssembly**  
- Указывает, что манифест сборки не должен быть включен в выходной файл. По умолчанию параметр **noAssembly** отключен.  
+ The **noAssembly** option is deprecated. Use [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) instead.  
   
- Параметр **NoAssembly** не рекомендуется. Взамен рекомендуется использовать [\/LN \(создание модуля MSIL\)](../../build/reference/ln-create-msil-module.md).  
+ A managed program that does not have assembly metadata in the manifest is known as a *module*. The **noAssembly** option can be used only to produce a module. If you compile by using [/c](../../build/reference/c-compile-without-linking.md) and **/clr:noAssembly**, then specify the [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) option in the linker phase to create a module.  
   
- Управляемая программа, которая не содержит метаданных сборки в манифесте, называется *модулем*. Параметр **noAssembly** можно использовать только для создания модуля. Если компиляция выполняется с параметром [\/c](../../build/reference/c-compile-without-linking.md) и **\/clr:noAssembly**, укажите параметр [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) на фазе компоновщика, чтобы создать модуль.  
+ Before Visual C++ 2005, **/clr:noAssembly** required **/LD**. **/LD** is now implied when you specify **/clr:noAssembly**.  
   
- До выпуска Visual C\+\+ 2005 параметр **\/clr:noAssembly** требовал указания **\/LD**. Теперь параметр **\/LD** подразумевается при указании **\/clr:noAssembly**.  
+ **/clr:initialAppDomain**  
+ Enables a [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] application to run on version 1 of the CLR. If you use **initialAppDomain**, then you may see some of the problems that are discussed in [BUG: AppDomainUnloaded exception when you use managed extensions for Visual C++ components](http://go.microsoft.com/fwlink/?LinkID=169465) on the Microsoft Support Web site.  
   
- **\/clr:initialAppDomain**  
- Позволяет приложению [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] работать в среде CLR версии 1. При использовании параметра **initialAppDomain** могут возникнуть некоторые проблемы, которые рассматриваются в статье [ОШИБКА. Исключение AppDomainUnloaded при использовании управляемых расширений для компонентов Visual C\+\+](http://go.microsoft.com/fwlink/?LinkID=169465) на сайте технической поддержки Майкрософт.  
+ An application that is compiled by using **initialAppDomain** should not be used by an application that uses ASP.NET because it is not supported in version 1 of the CLR.  
   
- Приложения, скомпилированные с использованием **initialAppDomain**, не должны использоваться приложением, которое применяет ASP.NET, так как этот компонент не поддерживается в версии 1 среды CLR.  
+ **/clr:nostdlib**  
+ Instructs the compiler to ignore the default \clr directory. The compiler produces errors if you are including multiple versions of a DLL such as System.dll. Using this option lets you specify the specific framework to use during compilation.  
   
- **\/clr:nostdlib**  
- Указывает компилятору игнорировать каталог \\clr по умолчанию. Компилятор выдает ошибки при включении нескольких версий библиотеки DLL, например System.dll. При использовании этого параметра вы можете указать конкретную платформу для компиляции.  
+## <a name="remarks"></a>Remarks  
+ Managed code is code that can be inspected and managed by the CLR. Managed code can access managed objects. For more information, see [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
-## Заметки  
- Управляемый код — это код, который среда CLR может проверять и контролировать. Управляемый код может обращаться к управляемым объектам. Для получения дополнительной информации см. [Ограничения \/clr](../../build/reference/clr-restrictions.md).  
+ For information about how to develop applications that define and consume managed types, see [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).  
   
- Сведения о разработке приложений, которые определяют и используют управляемые типы, см. в разделе [Расширения компонентов для платформ среды выполнения](../../windows/component-extensions-for-runtime-platforms.md).  
+ An application compiled by using **/clr** may or may not contain managed data.  
   
- Приложение, скомпилированное с использованием **\/clr**, может содержать или не содержать управляемые данные.  
+ To enable debugging on a managed application, see [/ASSEMBLYDEBUG (Add DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
- Сведения о включении отладки управляемых приложений см. в разделе [\/ASSEMBLYDEBUG \(добавление атрибута DebuggableAttribute\)](../Topic/-ASSEMBLYDEBUG%20\(Add%20DebuggableAttribute\).md).  
+ Only CLR types will be instantiated on the garbage-collected heap. For more information, see [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md). To compile a function to native code, use the `unmanaged` pragma. For more information, see [managed, unmanaged](../../preprocessor/managed-unmanaged.md).  
   
- В куче сбора мусора будут созданы экземпляры только типов среды CLR. Для получения дополнительной информации см. [Классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md). Для компиляции функции в машинный код используйте директиву `unmanaged` pragma. Дополнительные сведения см. в разделе [managed, unmanaged](../../preprocessor/managed-unmanaged.md).  
+ By default, **/clr** is not in effect. When **/clr** is in effect, **/MD** is also in effect. For more information, see [/MD, /MT, /LD (Use Run-Time Library)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** ensures that the dynamically linked, multithreaded versions of the runtime routines are selected from the standard header (.h) files. Multithreading is required for managed programming because the CLR garbage collector runs finalizers in an auxiliary thread.  
   
- По умолчанию параметр **\/clr** отключен. Если **\/clr** включен, также действует и параметр **\/MD**. Дополнительные сведения см. в разделе [\/MD, \/MT, \/LD \(использование библиотеки времени выполнения\)](../../build/reference/md-mt-ld-use-run-time-library.md). Параметр **\/MD** гарантирует, что из файлов стандартных заголовков \(H\-файлов\) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.  
+ If you compile by using **/c**, you can specify the CLR type (IJW, safe, or pure) of the resulting output file with [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
- Если компиляция выполняется с помощью **\/c**, можно указать тип среды CLR \(IJW, safe или pure\) выходного файла, задав параметр [\/CLRIMAGETYPE](../Topic/-CLRIMAGETYPE%20\(Specify%20Type%20of%20CLR%20Image\).md).  
+ **/clr** implies **/EHa**, and no other **/EH** options are supported for **/clr**. For more information, see [/EH (Exception Handling Model)](../../build/reference/eh-exception-handling-model.md).  
   
- **\/clr** подразумевает указание **\/EHa**, и никакие другие параметры **\/EH** не поддерживаются для **\/clr**. Дополнительные сведения см. в разделе [Параметр \/EH \(модель обработки исключений\)](../../build/reference/eh-exception-handling-model.md).  
+ For information about how to determine the CLR image type of a file, see [/CLRHEADER](../../build/reference/clrheader.md).  
   
- Сведения о том, как определить тип образа среды файла CLR, см. в разделе [\/CLRHEADER](../../build/reference/clrheader.md).  
+ All modules passed to a given invocation of the linker must be compiled by using the same run-time library compiler option (**/MD** or **/LD**).  
   
- Все модули, передаваемые компоновщику при определенном вызове, должны компилироваться с одним и тем же параметром компилятора, указывающим библиотеку времени выполнения \(**\/MD** или **\/LD**\).  
+ Use the [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) linker option to embed a resource in an assembly. [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md), and [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) linker options also let you customize how an assembly is created.  
   
- Используйте параметр компоновщика [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) для внедрения ресурса в сборку. Параметры компоновщика [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [\/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md) и [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) также позволяют настраивать способ создания сборки.  
+ When **/clr** is used, the `_MANAGED` symbol is defined to be 1. For more information, see [Predefined Macros](../../preprocessor/predefined-macros.md).  
   
- При использовании **\/clr** символ `_MANAGED` определяется как 1. Для получения дополнительной информации см. [Предустановленный макрос](../../preprocessor/predefined-macros.md).  
+ The global variables in a native object file are initialized first (during DllMain if the executable is a DLL), and then the global variables in the managed section are initialized (before any managed code is run). `#pragma`[init_seg](../../preprocessor/init-seg.md) only affects the order of initialization in the managed and unmanaged categories.  
   
- Глобальные переменные в файлах собственных объектов инициализируются первыми \(во время выполнения DllMain, если исполняемый файл — библиотека DLL\), а затем инициализируются глобальные переменные управляемого раздела \(перед выполнением любого управляемого кода\).`#pragma`[init\_seg](../../preprocessor/init-seg.md) влияет только на порядок инициализации в управляемых и неуправляемых категориях.  
+ Compiling by using **/clr:safe** is analogous to compiling by using [/platform:anycpu](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option) in languages such as C#.  
   
- Компиляция с помощью **\/clr:safe** аналогична компиляции с использованием [\/platform: anycpu](../Topic/-platform%20\(C%23%20Compiler%20Options\).md) на таких языках, как C\#.  
+## <a name="safe-and-pure-images"></a>Safe and Pure Images  
+ A pure image uses a CLR version of the C run-time (CRT) library. However, the CRT is not verifiable, so you cannot use the CRT when you compile by using **/clr:safe**. For more information, see [CRT Library Features](../../c-runtime-library/crt-library-features.md).  
   
-## Безопасные и чистые образы  
- Чистый образ использует CLR\-версию библиотеки времени выполнения C \(CRT\). Однако среда CRT не поддается проверке, поэтому ее невозможно использовать при компиляции с помощью **\/clr:safe**. Дополнительные сведения см. в разделе [Особенности библиотеки CRT](../../c-runtime-library/crt-library-features.md).  
+ Examples of native code that cannot appear in a pure image include inline assembly, [setjmp](../../c-runtime-library/reference/setjmp.md), and [longjmp](../../c-runtime-library/reference/longjmp.md).  
   
- К примерам машинного кода, который невозможно использовать в чистом образе, относятся встроенная сборка, [setjmp](../../c-runtime-library/reference/setjmp.md) и [longjmp](../../c-runtime-library/reference/longjmp.md).  
+ Every entry point of a pure or safe image is managed. When you compile by using **/clr**, the entry point is native. For more information, see [__clrcall](../../cpp/clrcall.md).  
   
- Каждая точка входа чистого и безопасного образа является управляемой. При компиляции с помощью **\/clr** точка входа является неуправляемой. Для получения дополнительной информации см. [\_\_clrcall](../../cpp/clrcall.md).  
+ When you compile by using **/clr:safe**, by default, variables are [appdomain](../../cpp/appdomain.md) and cannot be per-process. For **/clr:pure**, although **appdomain** is the default, you can use [process](../../cpp/process.md) variables.  
   
- При компиляции с помощью **\/clr:safe** по умолчанию переменные относятся к [домену приложения](../Topic/appdomain.md), а не к уровню процесса. Хотя по умолчанию применяется **домен приложения**, для **\/clr:pure** можно использовать переменные [процесса](../../cpp/process.md).  
+ When running a 32-bit .exe file that was compiled by using **/clr** or **/clr:pure** on a 64-bit operating system, the application will be run under WOW64, which enables a 32-bit application to run on the 32-bit CLR on a 64-bit operating system. By default, an .exe file that is compiled by using **/clr:safe** will be run on the 64-bit CLR on a computer that is running a 64-bit operating system. (On a 32-bit operating system, the same .exe file would run on the 32-bit CLR.) However, a safe application could load a 32-bit component. In that case, a safe image running under operating system 64-bit support will fail when it loads the 32-bit application (BadFormatException). To ensure that a safe image continues to run when it loads a 32-bit image on a 64-bit operating system, you must use [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md) to change the metadata (.corflags), and mark it to be run under WOW64. The following command line is an example. (Substitute your own entry symbol.)  
   
- При запуске 32\-разрядного EXE\-файла, скомпилированного с помощью **\/clr** или **\/clr:pure** в 64\-разрядной операционной системе, приложение будет выполняться в режиме WOW64, который позволяет запускать 32\-разрядное приложение в 32\-разрядной среде CLR в 64\-разрядной операционной системе. По умолчанию EXE\-файл, скомпилированный с помощью **\/clr:safe**, будет выполняться в 64\-разрядной среде CLR на компьютере под управлением 64\-разрядной операционной системы. \(В 32\-разрядной операционной системе тот же EXE\-файл будет запускаться в 32\-разрядной среде CLR.\) Однако безопасное приложение может загрузить 32\-разрядный компонент. В этом случае безопасный образ, выполняющийся в 64\-разрядной операционной системе, завершится ошибкой при загрузке 32\-разрядного приложения \(BadFormatException\). Чтобы безопасный образ продолжал работать при загрузке 32\-разрядного образа в 64\-разрядной операционной системе, необходимо использовать параметр [\/CLRIMAGETYPE](../Topic/-CLRIMAGETYPE%20\(Specify%20Type%20of%20CLR%20Image\).md) для изменения метаданных \(.corflags\) и отметить образ для запуска в режиме WOW64. Ниже представлен пример команды. \(Укажите ваш символ записи.\)  
+ **cl /clr:safe t.cpp /link /clrimagetype:pure /entry:?main@@$$HYMHXZ /subsystem:console**  
   
- **cl \/clr:safe t.cpp \/link \/clrimagetype:pure \/entry:?main@@$$HYMHXZ \/subsystem:console**  
+ For information about how to get a decorated name, see [Decorated Names](../../build/reference/decorated-names.md). For more information about 64-bit targets, see [Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md). For information about using pure CLR code, see [How to: Migrate to /clr:pure (C++/CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) and [Pure and Verifiable Code (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Сведения о получении декорированного имени см. в разделе [Внутренние имена](../Topic/Decorated%20Names.md). Дополнительные сведения о программировании 64\-разрядных приложений см. в разделе [Настройка программ для 64\-разрядных систем](../../build/configuring-programs-for-64-bit-visual-cpp.md). Сведения об использовании "чистого" кода CLR см. в статьях [Практическое руководство. Миграция в \/clr:pure](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) и [Чистый и проверяемый код](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
-## Метаданные и неименованные классы  
- Неименованные классы отображаются в метаданных следующим образом: `$UnnamedClass$`*crc\-текущего\-файла*`$`*индекс*`$`, где *индекс* — это номер неименованного класса в компиляции. Например, следующий код создает неименованный класс в метаданных.  
+## <a name="metadata-and-unnamed-classes"></a>Metadata and Unnamed Classes  
+ Unnamed classes will appear in metadata named as follows: `$UnnamedClass$`*crc-of-current-file-name*`$`*index*`$`, where *index* is a sequential count of the unnamed classes in the compilation. For example, the following code sample generates an unnamed class in metadata.  
   
 ```  
 // clr_unnamed_class.cpp  
@@ -136,32 +153,32 @@ caps.handback.revision: 72
 class {} x;  
 ```  
   
- Для просмотра метаданных используйте ildasm.exe.  
+ Use ildasm.exe to view metadata.  
   
-## Управляемые расширения для C\+\+  
- Visual C\+\+ больше не поддерживает параметр **\/clr:oldsyntax**. Этот параметр перестал поддерживаться в Visual Studio 2005. Поддерживаемый синтаксис для написания управляемого кода на C\+\+ — C\+\+\/CLI. Для получения дополнительной информации см. [Расширения компонентов для платформ среды выполнения](../../windows/component-extensions-for-runtime-platforms.md).  
+## <a name="managed-extensions-for-c"></a>Managed Extensions for C++  
+ Visual C++ no longer supports the **/clr:oldsyntax** option. This option was deprecated in Visual Studio 2005. The supported syntax for writing managed code in C++ is C++/CLI. For more information, see [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).  
   
- Если у вас есть код, использующий управляемые расширения для C\+\+, мы рекомендуем портировать его с использованием синтаксиса C\+\+\/CLI. Сведения о том, как перенести код, см. в разделе [Основы миграции C\+\+\/CLI](../../dotnet/cpp-cli-migration-primer.md).  
+ If you have code that uses Managed Extensions for C++, we recommend that you port it to use C++/CLI syntax. For information on how to port your code, see [C++/CLI Migration Primer](../../dotnet/cpp-cli-migration-primer.md).  
   
-#### Установка параметра компилятора в Visual Studio  
+#### <a name="to-set-this-compiler-option-in-visual-studio"></a>To set this compiler option in Visual Studio  
   
-1.  В области **Обозреватель решений** щелкните правой кнопкой мыши имя проекта и выберите пункт **Свойства**, чтобы открыть диалоговое окно **Страницы свойств**.  
+1.  In **Solution Explorer**, right-click the project name, and then click **Properties** to open the project **Property Pages** dialog box.  
   
-2.  Выберите папку **Свойства конфигурации**.  
+2.  Select the **Configuration Properties** folder.  
   
-3.  На странице свойств **Общие** измените свойство **Поддержка общеязыковой среды выполнения \(CLR\)**.  
+3.  On the **General** property page, modify the **Common Language Runtime support** property.  
   
     > [!NOTE]
-    >  Если параметр **\/clr** включен в диалоговом окне **Страницы свойств**, будут также изменены свойства параметров компилятора, несовместимые с **\/clr**. Например, если задан параметр **\/RTC** и затем включен **\/clr**, параметр **\/RTC** будет отключен.  
+    >  When **/clr** is enabled in the **Property Pages** dialog box, compiler option properties that are not compatible with **/clr** are also adjusted, as required. For example, if **/RTC** is set and then **/clr** is enabled, **/RTC** will be turned off.  
     >   
-    >  Кроме того, при отладке приложения **\/clr** следует установить для свойства **Тип отладчика** значение **Смешанный** или **Только управляемый код**. Для получения дополнительной информации см. [Параметры проекта для конфигурации отладки C\+\+](../Topic/Project%20Settings%20for%20a%20C++%20Debug%20Configuration.md).  
+    >  Also, when you debug a **/clr** application, set the **Debugger Type** property to **Mixed** or **Managed only**. For more information, see [Project Settings for a C++ Debug Configuration](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
   
-     Сведения о том, как создать модуль, см. в разделе [\/NOASSEMBLY \(создать модуль MSIL\)](../../build/reference/noassembly-create-a-msil-module.md).  
+     For information about how the create a module, see [/NOASSEMBLY (Create a MSIL Module)](../../build/reference/noassembly-create-a-msil-module.md).  
   
-#### Установка данного параметра компилятора программным способом  
+#### <a name="to-set-this-compiler-option-programmatically"></a>To set this compiler option programmatically  
   
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.  
+-   See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.  
   
-## См. также  
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+## <a name="see-also"></a>See Also  
+ [Compiler Options](../../build/reference/compiler-options.md)   
+ [Setting Compiler Options](../../build/reference/setting-compiler-options.md)

@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: eaa816f145dc46ca45ea761ab52f9c3bb7d9e343
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="c-run-time-library-reference"></a>Справочник по библиотеке времени выполнения C
@@ -76,8 +76,8 @@ ms.lasthandoff: 02/24/2017
  [Проверка ошибок во время выполнения](../c-runtime-library/run-time-error-checking.md)  
  Содержит ссылки на функции, поддерживающие проверку ошибок во время выполнения.  
   
- [Run-Time Library Behavior](../build/run-time-library-behavior.md) (Поведение библиотеки времени выполнения)  
- Описывает точку входа в библиотеку CRT DLL.  
+ [Библиотеки DLL и поведение библиотеки времени выполнения Visual C++](../build/run-time-library-behavior.md)  
+ Описание точки входа и кода запуска, используемого для DLL.  
   
  [Справочные материалы по библиотекам Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
  Содержит ссылки на различные библиотеки, входящие в состав Visual C++, включая шаблоны ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C++.  

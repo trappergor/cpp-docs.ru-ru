@@ -1,5 +1,5 @@
 ---
-title: "Ошибка средств компоновщика LNK2001 | Документы Microsoft"
+title: Linker Tools Error LNK2001 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,100 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: c7a2d48507c5c6f5f6c469f0a524e6e392bdd166
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: b84789e0de5b8da870dbfa7cb636440704cc022e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="linker-tools-error-lnk2001"></a>Ошибка средств компоновщика LNK2001
-неразрешенный внешний символ "*символ*»  
+# <a name="linker-tools-error-lnk2001"></a>Linker Tools Error LNK2001
+unresolved external symbol "*symbol*"  
   
-Скомпилированный код делает ссылку или вызов *символ*, однако этот символ не определен ни в одном из библиотеки или объектные файлы, указанные в компоновщик.  
+The compiled code makes a reference or call to *symbol*, but that symbol isn't defined in any of the libraries or object files specified to the linker.  
   
-Это сообщение об ошибке сопровождается неустранимой ошибки [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Необходимо исправить ошибки все LNK2001 и ошибки LNK2019 для устранения ошибки LNK1120.  
+This error message is followed by fatal error [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). You must fix all LNK2001 and LNK2019 errors to fix error LNK1120.  
   
-## <a name="possible-causes"></a>Возможные причины  
+## <a name="possible-causes"></a>Possible causes  
   
-Существует множество способов, чтобы получить эту ошибку, но все они требуют ссылку на функцию или переменную, компоновщик не может *устранить*, или найти определение. Компилятор может указать, когда символ не *объявлен*, но не при не *определенные*, так как определение может находиться в другом файле исходного кода или библиотеки. Если символ имеется ссылка, но не определена, компоновщик создает ошибку.  
+There are many ways to get this error, but all of them involve a reference to a function or variable that the linker can't *resolve*, or find a definition for. The compiler can identify when a symbol is not *declared*, but not when it is not *defined*, because the definition may be in a different source file or library. If a symbol is referred to but never defined, the linker generates an error.  
   
-### <a name="coding-issues"></a>Проблем кодирования  
+### <a name="coding-issues"></a>Coding issues  
   
-Эта ошибка может вызываться несоответствующие варианта в исходный код или определения модуля (DEF) файла. Например, если имя переменной `var1` в C++ один исходный файл и получить доступ к его как `VAR1` в другом, возникает эта ошибка. Чтобы устранить эту проблему, используйте постоянно написания и регистр имен.  
+This error can be caused by mismatched case in your source code or module-definition (.def) file. For example, if you name a variable `var1` in one C++ source file and try to access it as `VAR1` in another, this error is generated. To fix this issue, use consistently spelled and cased names.  
   
-Эта ошибка может быть вызвана в проект, использующий [встраивания функции](../../error-messages/tool-errors/function-inlining-problems.md) при определении функции в исходном файле, а не в файле заголовка. Встроенных функций не будут отображаться за пределами исходного файла, который определяет их. Чтобы устранить эту проблему, определите встроенных функций в заголовках которых они объявлены.  
+This error can be caused in a project that uses [function inlining](../../error-messages/tool-errors/function-inlining-problems.md) if you define the functions in a source file rather than in a header file. Inlined functions can't be seen outside the source file that defines them. To fix this issue, define the inlined functions in the headers where they are declared.  
   
-Эта ошибка может возникать при вызове функции C из программы на C++ без использования `extern "C"` объявление функции C. Компилятор использует другой символ внутренние соглашения об именовании для кода C и C++, а имя внутреннего символа, которое ищет компоновщик при разрешении символы. Чтобы устранить эту проблему, используйте `extern "C"` оболочки для всех объявлений функции C, используемые в коде C++ и предписывает компилятору использовать внутренние соглашения об именовании C для этих символов. Параметры компилятора [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) и [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) заставляют компилятор компилировать файлы как C++ или C, соответственно, независимо от расширения имени файла. Эти параметры могут привести к имена Внутренняя функция отличается от ожидаемого.  
+This error can be caused if you call a C function from a C++ program without using an `extern "C"` declaration for the C function. The compiler uses different internal symbol naming conventions for C and C++ code, and it is the internal symbol name that the linker looks for when resolving symbols. To fix this issue, use an `extern "C"` wrapper around all declarations of C functions used in your C++ code, which causes the compiler to use the C internal naming convention for those symbols. Compiler options [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) and [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) cause the compiler to compile files as C++ or C, respectively, regardless of the filename extension. These options can cause internal function names different from what you expect.  
   
-Эта ошибка может быть вызвано попытка ссылки на функции или данные, которые не имеют внешнюю компоновку. В C++ встроенные функции и `const` данных имеют внутреннюю компоновку, если явно не указаны как `extern`. Чтобы устранить эту проблему, используйте явную `extern` называют объявления на символы за пределами определяющей исходного файла.  
+This error can be caused by an attempt to reference functions or data that don't have external linkage. In C++, inline functions and `const` data have internal linkage unless explicitly specified as `extern`. To fix this issue, use explicit `extern` declarations on symbols referred to outside the defining source file.  
   
-Эта ошибка может быть вызвана [отсутствует тело функции или переменная](../../error-messages/tool-errors/missing-function-body-or-variable.md) определения. Эта ошибка проявляется в тех случаях, когда объявлена, но не определил, переменные, функции или классы в коде. Компилятор должен только прототип функции или `extern` объявление переменной для создания объектного файла без ошибок, но компоновщик не может разрешить вызов функции или ссылки на переменные, поскольку код функции или переменная интервала зарезервированы. Чтобы устранить эту проблему, убедитесь, что все функции и переменной полностью определен в исходном файле или в библиотеке, включенных в ссылке.  
+This error can be caused by a [missing function body or variable](../../error-messages/tool-errors/missing-function-body-or-variable.md) definition. This error is common when you declare, but don't define, variables, functions, or classes in your code. The compiler only needs a function prototype or `extern` variable declaration to generate an object file without error, but the linker cannot resolve a call to the function or a reference to the variable because there is no function code or variable space reserved. To fix this issue, make sure that every referenced function and variable is fully defined in a source file or library included in your link.  
   
-Эта ошибка может быть вызвана вызов функции, который использует типы параметров и возвращаемого или соглашения о вызовах, которые не соответствуют его атрибутам в определении функции. В C++ файлы объектов [Декорирование имен](../../error-messages/tool-errors/name-decoration.md) включает соглашение о вызовах, область действия класса или пространства имен и типы параметров и возвращаемого функции в окончательное дополненное имя функции, которые используются в качестве символа будет выполняться, когда вызовы функции из других файлов объектов будут разрешены. Чтобы устранить эту проблему, убедитесь, что объявление, определение и вызовы все функции использовать теми же областями, типы и соглашения о вызовах.  
+This error can be caused by a function call that uses return and parameter types or calling conventions that do not match those in the function definition. In C++ object files, [Name decoration](../../error-messages/tool-errors/name-decoration.md) incorporates the calling convention, class or namespace scope, and return and parameter types of a function into the final decorated function name, which is used as the symbol to match when calls to the function from other object files are resolved. To fix this issue, make sure that the declaration, definition, and calls to the function all use the same scopes, types, and calling conventions.  
   
-Эта ошибка может возникать в коде C++ при включают прототип функции в определении класса, но не [включают реализация](../../error-messages/tool-errors/missing-function-body-or-variable.md) функции, а затем вызвать. Чтобы устранить эту проблему, не забудьте предоставить определение для всех вызывается объявленных членов класса.  
+This error can be caused in C++ code when you include a function prototype in a class definition but fail to [include the implementation](../../error-messages/tool-errors/missing-function-body-or-variable.md) of the function, and then call it. To fix this issue, be sure to provide a definition for all called declared members of a class.  
   
-Эта ошибка может быть вызвано быть попытка вызова чистой виртуальной функции от абстрактного базового класса. Чистой виртуальной функции не имеет базового класса реализации. Чтобы устранить эту проблему, убедитесь, что все виртуальные функции вызывается реализованы.  
+This error can be caused by an attempt to call a pure virtual function from an abstract base class. A pure virtual function has no base class implementation. To fix this issue, make sure all called virtual functions are implemented.  
   
-Эта ошибка может вызываться используется переменная, объявленная внутри функции ([локальной переменной](../../error-messages/tool-errors/automatic-function-scope-variables.md)) за пределами видимости данной функции. Чтобы устранить эту проблему, удалите ссылку на переменную, которая не находится в области или переместить переменную в области более высокого уровня.  
+This error can be caused by trying to use a variable declared within a function ([a local variable](../../error-messages/tool-errors/automatic-function-scope-variables.md)) outside the scope of that function. To fix this issue, remove the reference to the variable that is not in scope, or move the variable to a higher scope.  
   
-Эта ошибка может возникать при построении окончательной версии проекта ATL, формирующего сообщение, код запуска CRT не требуется. Чтобы устранить эту проблему, выполните одно из следующих значений  
+This error can occur when you build a Release version of an ATL project, producing a message that CRT startup code is required. To fix this issue, do one of the following,  
   
--   Удалите `_ATL_MIN_CRT` из списка препроцессор определяет, чтобы разрешить включение кода запуска CRT. В разделе [свойств «Общие» (проект)](../../ide/general-property-page-project.md) для получения дополнительной информации.  
+-   Remove `_ATL_MIN_CRT` from the list of preprocessor defines to allow CRT startup code to be included. See [General Property Page (Project)](../../ide/general-property-page-project.md) for more information.  
   
--   Если это возможно удалите вызовы функций CRT, требующие код запуска CRT. Вместо этого используйте эквиваленты для Win32. Например, использовать `lstrcmp` вместо `strcmp`. Известные функции, требующие код запуска CRT приведены некоторые строки и функции с плавающей запятой.  
+-   If possible, remove calls to CRT functions that require CRT startup code. Instead, use their Win32 equivalents. For example, use `lstrcmp` instead of `strcmp`. Known functions that require CRT startup code are some of the string and floating point functions.  
   
-### <a name="compilation-and-link-issues"></a>Проблемы компиляции и ссылки  
+### <a name="compilation-and-link-issues"></a>Compilation and link issues  
   
-Эта ошибка может возникать, если в проекте отсутствует ссылка на библиотеку (. LIB) или объекта (. Файл OBJ). Чтобы устранить эту проблему, добавьте ссылку на библиотеку, необходимую или объектный файл в проект. Дополнительные сведения см. в разделе [LIB-файлы в качестве входных данных компоновщика](../../build/reference/dot-lib-files-as-linker-input.md).  
+This error can occur when the project is missing a reference to a library (.LIB) or object (.OBJ) file. To fix this issue, add a reference to the required library or object file to your project. For more information, see [.lib Files as Linker Input](../../build/reference/dot-lib-files-as-linker-input.md).  
   
-Эта ошибка может возникать, если вы используете [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) или [/Zl](../../build/reference/zl-omit-default-library-name.md) параметры. При указании этих параметров библиотеки, содержащие необходимый код не связаны в проект, если включены явно. Чтобы устранить эту проблему, явным образом включите все библиотеки, используемой в командную строку компоновки. Появление много отсутствующие имена функций CRT и стандартной библиотеке при использовании этих параметров, явно включите файлы CRT и стандартной библиотеки DLL или библиотеки в ссылке.  
+This error can occur if you use the [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) or [/Zl](../../build/reference/zl-omit-default-library-name.md) options. When you specify these options, libraries that contain required code are not linked into the project unless you have explicitly included them. To fix this issue, explicitly include all the libraries you use on the link command line. If you see many missing CRT or Standard Library function names when you use these options, explicitly include the CRT and Standard Library DLLs or library files in the link.  
 
-Если компиляция выполняется с помощью **/CLR** , то может быть отсутствует ссылка на .cctor. Чтобы устранить эту проблему, в разделе [Инициализация смешанных сборок](../../dotnet/initialization-of-mixed-assemblies.md) для получения дополнительной информации.  
+If you compile using the **/clr** option, there can be a missing reference to .cctor. To fix this issue, see [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md) for more information.  
   
-Эта ошибка может возникать при связывании библиотеками в режиме выпуска при построении отладочной версии приложения. Аналогичным образом при использовании параметров **/MTd** или **/MDd** или определить `_DEBUG` и свяжите версию библиотеки, следует ожидать, что многие потенциальные неразрешенных внешних элементов, помимо других проблем. Связывание построения в режиме выпуска с отладочными библиотеками, также вызывает подобных проблем. Чтобы устранить эту проблему, убедитесь, что использовать отладочные библиотеки в отладочных построениях, и библиотеки розничной торговли в вашей окончательных сборок.  
+This error can occur if you link to the release mode libraries when building a debug version of an application. Similarly, if you use options **/MTd** or **/MDd** or define `_DEBUG` and then link to the release libraries, you should expect many potential unresolved externals, among other problems. Linking a release mode build with the debug libraries also causes similar problems. To fix this issue, make sure you use the debug libraries in your debug builds, and retail libraries in your retail builds.  
   
-Эта ошибка может возникать, если ваш код ссылается на символ из одной версии библиотек, но указать другую версию библиотеки в компоновщик. Как правило нельзя смешивать файлов объектов или библиотек, которые построены для разных версий компилятора. Библиотеки, входящие в новой версии может содержать символы, которые не удается найти в библиотеках предыдущих версий и наоборот. Чтобы устранить эту проблему, построение всех объектных файлов и библиотек, с той же версии компилятора перед их связи друг с другом.  
+This error can occur if your code refers to a symbol from one version of a library, but you supply a different version of the library to the linker. Generally, you can't mix object files or libraries that are built for different versions of the compiler. The libraries that ship in a new version may contain symbols that cannot be found in the libraries included with previous versions, and vice-versa. To fix this issue, build all the object files and libraries with the same version of the compiler before linking them together.  
   
--  Средства &#124; Параметры &#124; Проекты &#124; Диалоговое окно каталоги VC ++, при выборе файлов библиотек позволяет изменить порядок поиска библиотеки. Папка "компоновщик" в диалоговом окне страницы свойств проекта может также содержать пути, которые могут быть устаревшими.  
+-  The Tools &#124; Options &#124; Projects &#124; VC++ Directories dialog, under the Library files selection, allows you to change the library search order. The Linker folder in the project's Property Pages dialog box may also contain paths that could be out of date.  
   
--  Такая проблема может возникнуть при установке нового SDK (возможно, чтобы новое место), а порядок поиска не обновляется, чтобы он указывал на новое место. Как правило, необходимо указать путь для нового SDK директорий перед расположение по умолчанию Visual C++. Кроме того проект, содержащий встроенные пути, по-прежнему может указывать на старые пути, которые допустимы, но истек срок для новых функций, встроенных новой версией, которая устанавливается в другом месте.  
+-  This problem may appear when a new SDK is installed (perhaps to a different location), and the search order is not updated to point to the new location. Normally, you should put the path to new SDK include and lib directories in front of the default Visual C++ location. Also, a project containing embedded paths may still point to old paths that are valid, but out of date for new functionality added by the new version that is installed to a different location.  
   
--   Если построение из командной строки и создали собственные переменные среды, проверьте, пути к средства, библиотеки и заголовочные файлы перейти к согласованность версий. Дополнительные сведения см. в разделе [Установка переменных пути и среды при построении из командной строки](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+-   If you build at the command line and have created your own environment variables, verify that the paths to tools, libraries, and header files go to a consistent version. For more information, see [Set the Path and Environment Variables for Command-Line Builds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
   
-В настоящее время отсутствует стандарт для [об именовании C++](../../error-messages/tool-errors/name-decoration.md) между поставщиками компиляторов и даже между различными версиями одного компилятора. Таким образом при связывании объектных файлов с помощью других компиляторов может не создавать различные схемы именования, таким образом, вызвать ошибку LNK2001.  
+There is currently no standard for [C++ naming](../../error-messages/tool-errors/name-decoration.md) between compiler vendors or even between different versions of a compiler. Therefore, linking object files compiled with other compilers may not produce the same naming scheme and thus cause error LNK2001.  
   
-[Смешивание встроенной и не являющиеся встроенными компиляции параметры](../../error-messages/tool-errors/function-inlining-problems.md) в различных модулях может вызвать ошибку LNK2001. Если библиотека C++ создается с функциональная возможность встраивания включена (**/Ob1** или **/Ob2**), но в соответствующем файле заголовка, описывающем функции встраивания отключена (не `inline` ключевое слово), эта ошибка возникает. Чтобы устранить эту проблему, необходимо определить функции `inline` в файле заголовка можно включить в других исходных файлах.  
+[Mixing inline and non-inline compile options](../../error-messages/tool-errors/function-inlining-problems.md) on different modules can cause LNK2001. If a C++ library is created with function inlining turned on (**/Ob1** or **/Ob2**) but the corresponding header file describing the functions has inlining turned off (no `inline` keyword), this error occurs. To fix this issue, define the functions `inline` in the header file you include in other source files.  
   
-Если вы используете `#pragma inline_depth` компилятора директив, убедитесь, что у вас есть [значение 2 или более](../../error-messages/tool-errors/function-inlining-problems.md)и убедитесь, что также используют [/Ob1](../../build/reference/ob-inline-function-expansion.md) или [/Ob2](../../build/reference/ob-inline-function-expansion.md) параметр компилятора.  
+If you use the `#pragma inline_depth` compiler directive, make sure you have a [value of 2 or greater set](../../error-messages/tool-errors/function-inlining-problems.md), and make sure you also use the [/Ob1](../../build/reference/ob-inline-function-expansion.md) or [/Ob2](../../build/reference/ob-inline-function-expansion.md) compiler option.  
   
-Эта ошибка может возникать, если связь не указан параметр/NOENTRY при создании Библиотеку ресурсов. Чтобы устранить эту проблему, добавьте параметр/NOENTRY команде link.  
+This error can occur if you omit the LINK option /NOENTRY when you create a resource-only DLL. To fix this issue, add the /NOENTRY option to the link command.  
   
-Эта ошибка может возникать, если используется неправильный параметр/SUBSYSTEM или/Entry параметры в своем проекте. Например, если вы пишете консольное приложение и указываете/SUBSYSTEM: Windows, неразрешенная внешняя ошибка создается для `WinMain`. Чтобы устранить эту проблему, убедитесь, что соответствует параметры для данного типа проектов. Дополнительные сведения об этих параметрах и точки входа см. в разделе [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) и [/Entry](../../build/reference/entry-entry-point-symbol.md) параметры компоновщика.  
+This error can occur if you use incorrect /SUBSYSTEM or /ENTRY settings in your project. For example, if you write a console application and specify /SUBSYSTEM:WINDOWS, an unresolved external error is generated for `WinMain`. To fix this issue, make sure you match the options to the project type. For more information on these options and entry points, see the [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) and [/ENTRY](../../build/reference/entry-entry-point-symbol.md) linker options.  
   
-### <a name="exported-symbol-issues"></a>Экспортированному символу проблемы  
+### <a name="exported-symbol-issues"></a>Exported symbol issues  
   
-Эта ошибка возникает, если экспорт в DEF-файл не найден. Возможно, не существует, неверно указан или использует внутреннее имя C++. DEF-файла не принимают внутренние имена. Чтобы устранить эту проблему, удалите ненужные экспорты и используйте `extern "C"` объявления для экспортируемых символах.  
+This error occurs when an export listed in a .def file is not found. This could be because it does not exist, is spelled incorrectly, or uses C++ decorated names. A .def file does not take decorated names. To fix this issue, remove unneeded exports, and use `extern "C"` declarations for exported symbols.  
   
-## <a name="what-is-an-unresolved-external-symbol"></a>Что такое неразрешенный внешний символ  
+## <a name="what-is-an-unresolved-external-symbol"></a>What is an unresolved external symbol?  
   
-Объект *символ* — это имя функции или глобальной переменной используется системой скомпилированного объекта файла или библиотеки. Символ — *определенные* в объектном файле где хранилища, выделенного для глобальной переменной или функции, где размещается скомпилированный код тела функции. *Внешний символ* — это символ, который *упоминаемого*, то есть, или вызывается в одном объектном файле, однако в другом файле библиотеки или объекта. *Экспортировать символ* , сделанный общедоступным файл объекта или библиотеки, которая определяет его. Компоновщик должен *устранить*, или найти соответствующее определение для каждого внешнего символа ссылаются объектный файл, если она связана с приложением или DLL. Компоновщик создает ошибку при невозможности разрешить внешнего символа путем нахождения соответствия экспортированному символу во всех связанных файлов.    
+A *symbol* is the name for a function or global variable used internally by a compiled object file or library. A symbol is *defined* in the object file where storage is allocated for a global variable, or for a function, where the compiled code for the function body is placed. An *external symbol* is a symbol that's *referenced*, that is, used or called in one object file, but defined in a different library or object file. An *exported symbol* is one that's made publicly available by the object file or library that defines it. The linker must *resolve*, or find the matching definition for, every external symbol referenced by an object file when it is linked into an application or DLL. The linker generates an error when it can't resolve an external symbol by finding a matching exported symbol in any of the linked files.    
   
-## <a name="use-the-decorated-name-to-find-the-error"></a>Использовать декорированное имя для поиска ошибок
+## <a name="use-the-decorated-name-to-find-the-error"></a>Use the decorated name to find the error
   
-Используйте компилятор и компоновщик C++ [Декорирование имен](../../error-messages/tool-errors/name-decoration.md), также известных как *искажение имени*, для кодирования дополнительных сведений о типа переменной или типа возвращаемого значения, типы параметров, область и соглашение о вызовах функции с именем символа. Это внутреннее имя является имя символа, который ищет компоновщик для разрешения внешних символов.  
+The C++ compiler and linker use [Name Decoration](../../error-messages/tool-errors/name-decoration.md), also known as *name-mangling*, to encode extra information about the type of a variable or the return type, parameter types, scope, and calling convention of a function in the symbol name. This decorated name is the symbol name the linker searches for to resolve external symbols.  
   
-Из-за дополнительных сведений становится частью имени символа, если объявление функции или переменной точно соответствует определению функции или переменной могут занимать ошибка связи. Это может произойти, даже при использовании того же файла заголовка в вызывающий код и код, определяющий, при использовании флаги компилятора при компиляции исходных файлов. Например, эта ошибка может возникнуть при компиляции кода для использования `__vectorcall` соглашение о вызовах, но ссылки на библиотеку, которая ожидает клиентам вызывать его, используя значение по умолчанию `__cdecl` или `__fastcall` соглашение о вызовах. В этом случае символы не совпадают, так как различаются эти соглашения о вызовах   
+Because the extra information becomes part of the symbol name, a link error can result if the declaration of a function or variable does not exactly match the definition of the function or variable. This can happen even if the same header file is used in both the calling code and the defining code, if different compiler flags are used when compiling the source files. For example, you can get this error if your code is compiled to use the `__vectorcall` calling convention, but you link to a library that expects clients to call it using the default `__cdecl` or `__fastcall` calling convention. In this case, the symbols do not match because the calling conventions are different   
   
-Чтобы определить причину возникновения такой ошибки, сообщение об ошибке компоновщика показано как «понятное имя,» имя, используемое в исходный код и внутреннее имя (в скобках) для неразрешенный внешний символ. Не нужно знать, как перевести внутреннее имя, чтобы иметь возможность сравнить его с другим декорированные имена. Можно использовать средства командной строки, включенных с помощью компилятора для сравнения ожидаемый символ имя и имя фактического символа:  
+To help you find the cause of this kind of error, the linker error message shows you both the "friendly name," the name used in source code, and the decorated name (in parentheses) for the unresolved external symbol. You don't need to know how to translate the decorated name to be able to compare it with other decorated names. You can use command line tools that are included with the compiler to compare the expected symbol name and the actual symbol name:  
 
--   [/EXPORTS](../../build/reference/dash-exports.md) и [/SYMBOLS](../../build/reference/symbols.md) возможностей средства командной строки программы DUMPBIN помогут определить, какие символы определены в файлах .dll и объекта или библиотеки. Это можно использовать, чтобы убедиться, что экспортированные декорированные имена совпадают, декорированные имена компоновщик ищет.  
+-   The [/EXPORTS](../../build/reference/dash-exports.md) and [/SYMBOLS](../../build/reference/symbols.md) options of the DUMPBIN command line tool can help you discover which symbols are defined in your .dll and object or library files. You can use this to verify that the exported decorated names match the decorated names the linker searches for.  
   
-В некоторых случаях Компоновщик сообщает только о декорированное имя символа. Программа UNDNAME командной строки можно использовать для получения недекорированной форме декорированного имени.  
+In some cases, the linker can only report the decorated name for a symbol. You can use the UNDNAME command line tool to get the undecorated form of a decorated name.  
   
-## <a name="additional-resources"></a>Дополнительные ресурсы  
+## <a name="additional-resources"></a>Additional resources  
   
-Дополнительные сведения о возможных причинах проблем и решений для LNK2001 см. в разделе вопросу переполнения стека [возможности ошибка неопределенной ссылки или неразрешенного внешнего символа и как ее исправить?](http://stackoverflow.com/q/12573816/2002113).  
+For more information about possible causes and solutions for LNK2001, see the Stack Overflow question [What is an undefined reference/unresolved external symbol error and how do I fix it?](http://stackoverflow.com/q/12573816/2002113).  
 
 
