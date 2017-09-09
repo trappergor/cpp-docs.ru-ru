@@ -1,15 +1,14 @@
 ---
-title: "Структура logical_or | Документы Майкрософт"
+title: logical_or Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- logical_or
 - xfunctional/std::logical_or
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3e8c5a109c882669231967ea06a8770e07057da6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="logicalor-struct"></a>Структура logical_or
-Предопределенный объект функции, который выполняет над своими аргументами операцию логического сложения ( `operator||`).  
+# <a name="logicalor-struct"></a>logical_or Struct
+A predefined function object that performs the logical disjunction operation ( `operator||`) on its arguments.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct logical_or<void>
  };
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Любой тип, поддерживающий `operator||`, принимающий операнды указанного или выводимого типа.  
+ Any type that supports an `operator||` that takes operands of the specified or inferred types.  
   
  `Left`  
- Левый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
+ The left operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Правый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
+ The right operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Возвращаемое значение  
- Результат `Left``||``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator||`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left || Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator||`.  
   
-## <a name="remarks"></a>Примечания  
- Для определяемых пользователем типов нет сокращенного вычисления операнда. Оба аргумента вычисляются `operator||`.  
+## <a name="remarks"></a>Remarks  
+ For user-defined types, there is no short-circuiting of operand evaluation. Both arguments are evaluated by `operator||`.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_logical_or.cpp  
@@ -140,14 +140,14 @@ The deque which is the disjuction of d1 & d2 is:
   
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

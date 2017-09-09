@@ -1,48 +1,52 @@
 ---
-title: "Функции &lt;random&gt; | Документы Майкрософт"
+title: '&lt;random&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
+helpviewer_keywords:
+- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>Функции &lt;random&gt;
+# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
   
 ##  <a name="generate_canonical"></a>  generate_canonical  
- Возвращает значение с плавающей запятой из случайной последовательности.  
+ Returns a floating-point value from a random sequence.  
   
 > [!NOTE]
->  В стандарте ISO C++ указано, что эта функция должна возвращать значения в диапазоне [ `0`, `1`). Visual Studio еще не выполняет это требование. Для получения значений в этом диапазоне используйте [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
+>  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `RealType`  
- Тип с плавающей запятой. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+ The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `Bits`  
- Генератор случайных чисел.  
+ The random number generator.  
   
  `Gen`  
- Генератор случайных чисел.  
+ The random number generator.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона повторно вызывает `operator()` класса `Gen` и преобразует возвращенные значения в значение с плавающей запятой `x` типа `RealType`, пока в `x` не будет получено указанное число разрядов мантиссы. Это число меньше значения `Bits` (которое не должно быть нулевым) и меньше полного количества разрядов мантиссы в `RealType`. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.  
+### <a name="remarks"></a>Remarks  
+ The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

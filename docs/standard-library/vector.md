@@ -1,5 +1,5 @@
 ---
-title: "&lt;vector&gt; | Документы Майкрософт"
+title: '&lt;vector&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <vector>
-- std.<vector>
-- std::<vector>
+- <vector>", "std::<vector>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,21 +33,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 77c13a5f8d813bbeaa0dae2307769a575bb22fa8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d1f299db45d83e5d669703d6df0c966aefd89c82
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
-Определяет вектор классов шаблонов контейнеров и некоторые вспомогательные шаблоны.  
+Defines the container template class vector and several supporting templates.  
   
- `vector` — это контейнер, который упорядочивает элементы данного типа в виде линейной последовательности. Он обеспечивает быстрый произвольный доступ к любому элементу и позволяет динамически добавлять элементы в последовательность и удалять их. `vector` является наиболее подходящим типом контейнера для последовательности, когда на первом месте стоит производительность произвольного доступа.  
+ The `vector` is a container that organizes elements of a given type in a linear sequence. It enables fast random access to any element, and dynamic additions and removals to and from the sequence. The `vector` is the preferred container for a sequence when random-access performance is at a premium.  
   
- Подробнее о классе `vector` см. в разделе [Класс vector](../standard-library/vector-class.md). Сведения о специализации `vector<bool>` см. в разделе [Класс vector\<bool>](../standard-library/vector-bool-class.md).  
+ For more information about the class `vector`, see [vector Class](../standard-library/vector-class.md). For information about the specialization `vector<bool>`, see [vector\<bool> Class](../standard-library/vector-bool-class.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace std {  
@@ -99,50 +97,50 @@ void swap (
 }  // namespace std  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- Тип  
- Параметр-шаблон для типа данных, хранящихся в векторе.  
+#### <a name="parameters"></a>Parameters  
+ Type  
+ The template parameter for the type of data stored in the vector.  
   
  Allocator  
- Параметр-шаблон для хранимого объекта распределителя, отвечающего за выделение и освобождение памяти.  
+ The template parameter for the stored allocator object responsible for memory allocation and deallocation.  
   
  `left`  
- Первый (левый) вектор в операции сравнения.  
+ The first (left) vector in a compare operation  
   
  `right`  
- Второй (правый) вектор в операции сравнения.  
+ The second (right) vector in a compare operation.  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор! =](../standard-library/vector-operators.md#op_neq)|Проверяет следующее условие: объект вектора слева от оператора не равен объекту вектора справа от оператора.|  
-|[оператор<](../standard-library/vector-operators.md#op_lt)|Проверяет следующее условие: объект вектора слева от оператора меньше, чем объект вектора справа от оператора.|  
-|[оператор\<=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора меньше или равен объекту вектора справа от оператора.|  
-|[оператор==](../standard-library/vector-operators.md#op_eq_eq)|Проверяет следующее условие: объект вектора слева от оператора равен объекту вектора справа от оператора.|  
-|[оператор>](../standard-library/vector-operators.md#op_gt)|Проверяет следующее условие: объект вектора слева от оператора больше, чем объект вектора справа от оператора.|  
-|[оператор>=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора больше или равен объекту вектора справа от оператора.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[Класс vector](../standard-library/vector-class.md)|Класс шаблона контейнеров последовательностей для хранения элементов заданного типа в линейном порядке и быстрого произвольного доступа к любому элементу.|  
+|[operator! =](../standard-library/vector-operators.md#op_neq)|Tests if the vector object on the left side of the operator is not equal to the vector object on the right side.|  
+|[operator<](../standard-library/vector-operators.md#op_lt)|Tests if the vector object on the left side of the operator is less than the vector object on the right side.|  
+|[operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Tests if the vector object on the left side of the operator is less than or equal to the vector object on the right side.|  
+|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Tests if the vector object on the left side of the operator is equal to the vector object on the right side.|  
+|[operator>](../standard-library/vector-operators.md#op_gt)|Tests if the vector object on the left side of the operator is greater than the vector object on the right side.|  
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Tests if the vector object on the left side of the operator is greater than or equal to the vector object on the right side.|  
   
-### <a name="specializations"></a>Специализации  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[Класс vector\<bool>](../standard-library/vector-bool-class.md)|Полная специализация вектора шаблонного класса для элементов типа `bool` с распределителем для базового типа, используемого специализацией.|  
+|[vector Class](../standard-library/vector-class.md)|A template class of sequence containers that arrange elements of a given type in a linear arrangement and allow fast random access to any element.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<vector>  
+### <a name="specializations"></a>Specializations  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[vector\<bool> Class](../standard-library/vector-bool-class.md)|A full specialization of the template class vector for elements of type `bool` with an allocator for the underlying type used by the specialization.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="requirements"></a>Requirements  
+ **Header:** \<vector>  
+  
+ **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

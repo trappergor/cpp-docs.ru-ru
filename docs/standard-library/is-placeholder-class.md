@@ -1,5 +1,5 @@
 ---
-title: "Класс is_placeholder | Документы Майкрософт"
+title: is_placeholder Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_placeholder
 - functional/std::is_placeholder
 dev_langs:
 - C++
@@ -34,26 +33,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15cd09104039d45df72e2bc0476d9d6005b69a68
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isplaceholder-class"></a>Класс is_placeholder
-Проверяет, является ли тип заполнителем.  
+# <a name="isplaceholder-class"></a>is_placeholder Class
+Tests if type is a placeholder.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 struct is_placeholder {  
    static const int value;  
    };  
   
-## <a name="remarks"></a>Примечания  
- Значение константы `value` равно 0, если тип `Ty` не является заполнителем. В противном случае значение — это положение аргумента вызова функции, к которому он привязывается. Используется для определения значения `N` n-ного заполнителя `_N`.  
+## <a name="remarks"></a>Remarks  
+ The constant value `value` is 0 if the type `Ty` is not a placeholder; otherwise, its value is the position of the function call argument that it binds to. You use it to determine the value `N` for the Nth placeholder `_N`.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__is_placeholder.cpp   
@@ -83,12 +82,12 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Объект _1](../standard-library/1-object.md)
+## <a name="see-also"></a>See Also  
+ [_1 Object](../standard-library/1-object.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Класс time_put | Документы Майкрософт"
+title: time_put Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_put
 - xloctime/std::time_put
 - locale/std::time_put::char_type
 - locale/std::time_put::iter_type
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- time_put class
+- std::time_put [C++]
+- std::time_put [C++], char_type
+- std::time_put [C++], iter_type
+- std::time_put [C++], do_put
+- std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 caps.latest.revision: 22
 author: corob-msft
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0331580941a30b8d6ab9468ce95182950478ddcb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 23b872d1a24639f7537dd0941bbcfc9439c57e8d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timeput-class"></a>Класс time_put
-Данный класс шаблона описывает объект, который можно использовать как аспект языкового стандарта для управления преобразованием значений времени в последовательности типа `CharType`.  
+# <a name="timeput-class"></a>time_put Class
+The template class describes an object that can serve as a locale facet to control conversions of time values to sequences of type `CharType`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -56,53 +59,53 @@ template <class CharType,
 class time_put : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Тип, используемый внутри программы для кодирования символов.  
+ The type used within a program to encode characters.  
   
  `OutputIterator`  
- Тип итератора, в который функции записи времени записывают свои выходные данные.  
+ The type of iterator into which the time put functions write their output.  
   
-## <a name="remarks"></a>Примечания  
- Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.**  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[time_put](#time_put)|Конструктор для объектов типа `time_put`.|  
+|[time_put](#time_put)|The constructor for objects of type `time_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|  
-|[iter_type](#iter_type)|Тип, который описывает итератор вывода.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an output iterator.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_put](#do_put)|Виртуальная функция, выводящая информацию о времени и дате в виде последовательности `CharType`.|  
-|[put](#put)|Выводит информацию о времени и дате в виде последовательности `CharType`.|  
+|[do_put](#do_put)|A virtual function that outputs time and date information as a sequence of `CharType`s.|  
+|[put](#put)|Outputs time and date information as a sequence of `CharType`s.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  time_put::char_type  
- Тип, используемый для описания символа, используемого языковым стандартом.  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот тип является синонимом для параметра-шаблона **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_put"></a>  time_put::do_put  
- Виртуальная функция, выводящая информацию о времени и дате в виде последовательности объектов **CharType**.  
+ A virtual function that outputs time and date information as a sequence of **CharType**s.  
   
 ```  
 virtual iter_type do_put(
@@ -113,45 +116,45 @@ virtual iter_type do_put(
     char _Mod = 0) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `next`  
- Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.  
+ An output iterator where the sequence of characters representing time and date are to be inserted.  
   
  `_Iosbase`  
- Не используется.  
+ Unused.  
   
  `_Pt`  
- Выводимые сведения о дате и времени.  
+ The time and date information being output.  
   
  `_Fmt`  
- Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).  
+ The format of the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `_Mod`  
- Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).  
+ A modifier for the format. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор для первой позиции после последнего вставленного элемента.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the first position after the last element inserted.  
   
-### <a name="remarks"></a>Примечания  
- Виртуально защищенная функция-член создает последовательные элементы, начиная с `next` со значений времени, сохраненных в объекте \* `_Pt` типа **tm**. Функция возвращает итератор, обозначающий следующую позицию для вставки элемента после сформированного вывода.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function generates sequential elements beginning at `next` from time values stored in the object \* `_Pt`, of type **tm**. The function returns an iterator designating the next place to insert an element beyond the generated output.  
   
- Вывод создается по тем же правилам, которые используются `strftime`, с последним аргументом `_Pt`, для создания серии элементов `char` в массиве. Предполагается, что каждый такой элемент `char` подбирается к эквивалентному элементу типа **CharType** с помощью простого соответствия "один к одному". Если `_Mod` равно нулю, эффективный формат имеет вид "%F", где F заменяется `_Fmt`. В противном случае эффективный формат имеет вид "%MF", где M заменяется `_Mod`.  
+ The output is generated by the same rules used by `strftime`, with a last argument of `_Pt`, for generating a series of `char` elements into an array. Each such `char` element is assumed to map to an equivalent element of type **CharType** by a simple, one-to-one mapping. If `_Mod` equals zero, the effective format is "%F", where F is replaced by `_Fmt`. Otherwise, the effective format is "%MF", where M is replaced by `_Mod`.  
   
-### <a name="example"></a>Пример  
-  См. пример для метода [put](#put), который вызывает `do_put`.  
+### <a name="example"></a>Example  
+  See the example for [put](#put), which calls `do_put`.  
   
 ##  <a name="iter_type"></a>  time_put::iter_type  
- Тип, который описывает итератор вывода.  
+ A type that describes an output iterator.  
   
 ```  
 typedef OutputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот тип является синонимом параметра-шаблона **OutputIterator**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **OutputIterator**.  
   
 ##  <a name="put"></a>  time_put::put  
- Выводит информацию о времени и дате в виде последовательности объектов **CharType**.  
+ Outputs time and date information as a sequence of **CharType**s.  
   
 ```  
 iter_type put(iter_type next,
@@ -169,38 +172,38 @@ iter_type put(iter_type next,
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `next`  
- Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.  
+ An output iterator where the sequence of characters representing time and date are to be inserted.  
   
  `_Iosbase`  
- Не используется.  
+ Unused.  
   
  `_Fill`  
- Символ типа **CharType** применяется для интервала.  
+ The character of type **CharType** used for spacing.  
   
  `_Pt`  
- Выводимые сведения о дате и времени.  
+ The time and date information being output.  
   
  `_Fmt`  
- Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).  
+ The format of the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `_Mod`  
- Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).  
+ A modifier for the format. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `first`  
- Начало строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).  
+ The beginning of the formatting string for the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `last`  
- Конец строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).  
+ The end of the formatting string for the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор для первой позиции после последнего вставленного элемента.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the first position after the last element inserted.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция-член возвращает значения [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). Вторая функция-член копирует в \* `next` ++ любой элемент в интервале [ `first`, `last`), отличный от процента (%). Что касается процента, за которым следует символ *C* в интервале [ `first`, `last`), функция вместо этого оценивает `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) и пропускает *C*. Однако если *C* является символом квалификатора из набора EOQ#, за которым следует символ `C2` в интервале [ `first`, `last`), функция вместо этого оценивает `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) и пропускает `C2`.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). The second member function copies to \* `next` ++ any element in the interval [ `first`, `last`) other than a percent (%). For a percent followed by a character *C* in the interval [ `first`, `last`), the function instead evaluates `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) and skips past *C*. If, however, *C* is a qualifier character from the set EOQ#, followed by a character `C2` in the interval [ `first`, `last`), the function instead evaluates `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) and skips past `C2`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_put_put.cpp  
@@ -245,30 +248,30 @@ strftime( ) = x: 05:30:40 07/04/00
 ```  
   
 ##  <a name="time_put"></a>  time_put::time_put  
- Конструктор для объектов типа `time_put`.  
+ Constructor for objects of type `time_put`.  
   
 ```  
 explicit time_put(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- Целочисленное значение, используемое для указания типа управления памятью для объекта.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>Примечания  
- Возможные значения параметра `_Refs` и их важность:  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: время существования объекта управляется языковыми стандартами, которые его содержат.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: время существования объекта должно управляться вручную.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: эти значения не определены.  
+-   \> 1: These values are not defined.  
   
- Конструктор инициализирует его базовым объектом с [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).  
+ The constructor initializes its base object with [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [Класс time_base](../standard-library/time-base-class.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [time_base Class](../standard-library/time-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

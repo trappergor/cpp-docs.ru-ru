@@ -1,5 +1,5 @@
 ---
-title: "Класс reference_wrapper | Документы Майкрософт"
+title: reference_wrapper Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
@@ -22,8 +21,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- reference_wrapper class
-- reference_wrapper
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++], result_type
+- std::reference_wrapper [C++], type
+- std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4e6acb873221133edb3000eeb82bd72ac9185744
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="referencewrapper-class"></a>Класс reference_wrapper
-Создает оболочку для ссылки.  
+# <a name="referencewrapper-class"></a>reference_wrapper Class
+Wraps a reference.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -75,54 +77,54 @@ private:
 };  
 ```  
   
-## <a name="remarks"></a>Примечания  
-`reference_wrapper<Ty>` — это конструируемый и назначаемый копированием класс-оболочка вокруг ссылки на объект или функцию типа `Ty`. Он содержит указатель на объект этого типа. `reference_wrapper` может использоваться для хранения ссылок в стандартных контейнерах и для передачи объектов по ссылке на `std::bind`.  
+## <a name="remarks"></a>Remarks  
+A `reference_wrapper<Ty>` is a copy constructible and copy assignable wrapper around a reference to an object or a function of type `Ty`, and holds a pointer that points to an object of that type. A `reference_wrapper` can be used to store references in standard containers, and to pass objects by reference to `std::bind`.  
   
-Тип `Ty` должен иметь тип "Объект" или "Функция". В противном случае статическое утверждение во время компиляции завершится ошибкой.  
+The type `Ty` must be an object type or a function type, or a static assert fails at compile time.  
   
-Вспомогательные функции [std::ref](functional-functions.md#ref) и [std::cref](functional-functions.md#cref) можно использовать для создания объектов `reference_wrapper`.  
+The helper functions [std::ref](functional-functions.md#ref) and [std::cref](functional-functions.md#cref) can be used to create `reference_wrapper` objects.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[reference_wrapper](#reference_wrapper)|Создает документ `reference_wrapper`.|  
+|[reference_wrapper](#reference_wrapper)|Constructs a `reference_wrapper`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[result_type](#result_type)|Слабый тип результата ссылки в оболочке.|  
-|[Тип](#type)|Тип ссылки в оболочке.|  
+|[result_type](#result_type)|The weak result type of the wrapped reference.|  
+|[type](#type)|The type of the wrapped reference.|  
   
-### <a name="member-functions"></a>Функции-члены  
-  
-|||  
-|-|-|  
-|[get](#get)|Получает ссылку в оболочке.|  
-  
-### <a name="operators"></a>Операторы  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Получает указатель на ссылку в оболочке.|  
-|[reference_wrapper::operator()](#op_call)|Вызывает ссылку в оболочке.|  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+|[get](#get)|Obtains the wrapped reference.|  
   
- **Пространство имен:** std  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Gets a pointer to the wrapped reference.|  
+|[reference_wrapper::operator()](#op_call)|Calls the wrapped reference.|  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
+  
+ **Namespace:** std  
   
 ##  <a name="get"></a>  reference_wrapper::get  
- Получает ссылку в оболочке.  
+ Obtains the wrapped reference.  
   
 ```  
 Ty& get() const noexcept;
 ```  
   
-### <a name="remarks"></a>Примечания  
-Функция-член возвращает ссылку в оболочке.  
+### <a name="remarks"></a>Remarks  
+The member function returns the wrapped reference.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_get.cpp   
@@ -150,16 +152,16 @@ i = -1
 ```  
   
 ##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
- Получение ссылки в оболочке.  
+ Gets the wrapped reference.  
   
 ```  
 operator Ty&() const noexcept;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оператор-член возвращает `*ptr`.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `*ptr`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_cast.cpp   
@@ -184,24 +186,24 @@ i = 1
 ```  
   
 ##  <a name="op_call"></a>  reference_wrapper::operator()  
- Вызывает ссылку в оболочке.  
+ Calls the wrapped reference.  
   
 ```  
 template <class... Types>  
 auto operator()(Types&&... args);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Types`  
- Типы списка аргументов.  
+ The argument list types.  
   
  `args`  
- Список аргументов.  
+ The argument list.  
   
-### <a name="remarks"></a>Примечания  
- Элемент шаблона `operator()` возвращает `std::invoke(get(), std::forward<Types>(args)...)`.  
+### <a name="remarks"></a>Remarks  
+ The template member `operator()` returns `std::invoke(get(), std::forward<Types>(args)...)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_call.cpp   
@@ -227,23 +229,23 @@ rwi(3) = -3
 ```  
   
 ##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
- Создает документ `reference_wrapper`.  
+ Constructs a `reference_wrapper`.  
   
 ```  
 reference_wrapper(Ty& val) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип для упаковки.  
+ The type to wrap.  
   
  `val`  
- Значение для упаковки.  
+ The value to wrap.  
   
-### <a name="remarks"></a>Примечания  
- Конструктор устанавливает сохраненное значение `ptr` в `&val`.  
+### <a name="remarks"></a>Remarks  
+ The constructor sets the stored value `ptr` to `&val`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_reference_wrapper.cpp   
@@ -275,16 +277,16 @@ i = -1
 ```  
   
 ##  <a name="result_type"></a>  reference_wrapper::result_type  
- Слабый тип результата ссылки в оболочке.  
+ The weak result type of the wrapped reference.  
   
 ```  
 typedef R result_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Определение типа `result_type` является синонимом слабого типа результата функции в оболочке. Это определение типа имеет смысл только для типов функций.  
+### <a name="remarks"></a>Remarks  
+ The `result_type` typedef is a synonym for the weak result type of a wrapped function. This typedef is only meaningful for function types.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_result_type.cpp   
@@ -312,16 +314,16 @@ val = -3
 ```  
   
 ##  <a name="type"></a>  reference_wrapper::type  
- Тип ссылки в оболочке.  
+ The type of the wrapped reference.  
   
 ```  
 typedef Ty type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Определение типа является синонимом параметра шаблона `Ty`.  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template argument `Ty`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_type.cpp   
@@ -351,7 +353,7 @@ i = 1
 rwi = 1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [cref](../standard-library/functional-functions.md#cref)   
  [ref](../standard-library/functional-functions.md#ref)
 

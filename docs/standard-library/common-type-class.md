@@ -1,5 +1,5 @@
 ---
-title: "Класс common_type | Документы Майкрософт"
+title: common_type Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- common_type
 - type_traits/std::common_type
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: de91723a1957090d9df279cc1ad4788bdd20b696
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="commontype-class"></a>Класс common_type
-Определяет общий тип одного или нескольких типов.  
+# <a name="commontype-class"></a>common_type Class
+Determines the common type of one or more types.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class... T>  
@@ -68,14 +67,14 @@ struct common_type<T, U, V...> {
 };
 ```  
   
-#### <a name="parameters"></a>Параметры  
- Список типов, которые могут быть [полными типами](../c-language/incomplete-types.md) или void.  
+#### <a name="parameters"></a>Parameters  
+ List of types that are either [complete types](../c-language/incomplete-types.md) or void.  
   
-## <a name="remarks"></a>Примечания  
- Член `type` является распространенным типом, в который можно преобразовать все типы в списке параметров.  
+## <a name="remarks"></a>Remarks  
+ The `type` member is the common type to which all types in the parameter list can be converted.  
   
-## <a name="example"></a>Пример  
- В следующей программе демонстрируется несколько сценариев правильного использования и тестирование результатов.  
+## <a name="example"></a>Example  
+ The following program demonstrates some correct usage scenarios and tests for results.  
   
 ```cpp  
 // Compile using cl.exe /EHsc  
@@ -116,7 +115,7 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Вывод  
+## <a name="output"></a>Output  
   
 ```
 Test for typedefs of common_type int
@@ -138,12 +137,12 @@ ModifiedIntType: false
 ClassType: true
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

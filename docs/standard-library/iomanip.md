@@ -1,5 +1,5 @@
 ---
-title: "&lt;iomanip&gt; | Документы Майкрософт"
+title: '&lt;iomanip&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iomanip/std::<iomanip>
-- std::<iomanip>
-- <iomanip>
-- std.<iomanip>
+- iomanip/std::<iomanip>", "std::<iomanip>", "<iomanip>", "std.<iomanip>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,47 +33,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 753e2a5bab18a3643456504bda2ab84df530754e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ab8205775eddc79fcf8e644e1a903eaf794d005e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
-Включите стандартный заголовок `<iomanip>` объекта `iostreams` для определения нужного числа манипуляторов, каждый из которых принимает один аргумент.  
+Include the `iostreams` standard header `<iomanip>` to define several manipulators that each take a single argument.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <iomanip>  
   
 ```  
   
-## <a name="remarks"></a>Примечания  
- Все эти манипуляторы возвращают неопределенный тип с названиями от **T1** до **T10**, который перегружает как `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt), так и `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
+## <a name="remarks"></a>Remarks  
+ Each of these manipulators returns an unspecified type, called **T1** through **T10**, that overloads both `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) and `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
   
-### <a name="manipulators"></a>Манипуляторы  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Получает денежную сумму (при необходимости в международном формате).|  
-|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Получает время в структуре времени с использованием указанного формата.|  
-|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Предоставляет денежную сумму (при необходимости в международном формате).|  
-|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Предоставляет время в структуре времени и строку формата, которую следует использовать.|  
-|[quoted](../standard-library/iomanip-functions.md#quoted)|Обеспечивает удобное обращение строк с помощью операторов вставки и извлечения.|  
-|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Удаляет указанные флаги.|  
-|[setbase](../standard-library/iomanip-functions.md#setbase)|Задает основание целых чисел.|  
-|[setfill](../standard-library/iomanip-functions.md#setfill)|Задает символ, который будет использоваться для заполнения пробелов на экране с выравниванием по правому краю.|  
-|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Задает указанные флаги.|  
-|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Задает точность для значений с плавающей запятой.|  
-|[setw](../standard-library/iomanip-functions.md#setw)|Задает ширину отображаемого поля.|  
+|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Obtains a monetary amount, optionally in international format.|  
+|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Obtains a time in a time structure by using a specified format.|  
+|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Provides a monetary amount, optionally in international format.|  
+|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Provides a time in a time structure and a format string to use.|  
+|[quoted](../standard-library/iomanip-functions.md#quoted)|Enables convenient round-tripping of strings with insertion and extraction operators.|  
+|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Clears the specified flags.|  
+|[setbase](../standard-library/iomanip-functions.md#setbase)|Set base for integers.|  
+|[setfill](../standard-library/iomanip-functions.md#setfill)|Sets the character that will be used to fill spaces in a right-justified display.|  
+|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Sets the specified flags.|  
+|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Sets the precision for floating-point values.|  
+|[setw](../standard-library/iomanip-functions.md#setw)|Specifies the width of the display field.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../standard-library/iostream-programming.md)   
- [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

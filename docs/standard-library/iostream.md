@@ -1,5 +1,5 @@
 ---
-title: "&lt;iostream&gt; | Документы Майкрософт"
+title: '&lt;iostream&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<iostream>
-- std::<iostream>
-- <iostream>
+- std::<iostream>", "<iostream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,63 +33,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 55f88be1849809e7e569160aa3848d59120c7082
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 63b4e34b8fb6d503dd53fc4f2f5cc64f56d16b28
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
-Объявляет объекты, управляющие чтением из стандартных потоков и записью в них. Зачастую для ввода и вывода из программы на языке С++ нужно включить только заголовок.  
+Declares objects that control reading from and writing to the standard streams. This is often the only header you need to include to perform input and output from a C++ program.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <iostream>  
   
 ```  
   
-## <a name="remarks"></a>Примечания  
- Объекты можно разделить на две группы:  
+## <a name="remarks"></a>Remarks  
+ The objects fall into two groups:  
   
-- [cin](#cin), [cout](#cout), [cerr](#cerr) и [clog](#clog) — для байтовых значений, они выполняют обычную побайтовую передачу.  
+- [cin](#cin), [cout](#cout), [cerr](#cerr), and [clog](#clog) are byte oriented, performing conventional byte-at-a-time transfers.  
   
-- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr) и [wclog](#wclog) — для двухбайтовых значений, они выполняют преобразования в двухбайтовые символы и из двухбайтовых символов, управление которыми осуществляется внутри программы.  
+- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr), and [wclog](#wclog) are wide oriented, translating to and from the wide characters that the program manipulates internally.  
   
- После выполнения определенных операций с потоком, например, операции стандартного ввода, невозможно выполнять операции с другой ориентацией этого же потока. Поэтому, например, программа не может работать одинаково на [cin](#cin) и [wcin](#wcin).  
+ Once you perform certain operations on a stream, such as the standard input, you cannot perform operations of a different orientation on the same stream. Therefore, a program cannot operate interchangeably on both [cin](#cin) and [wcin](#wcin), for example.  
   
- Все объекты, объявленные в этом заголовке, имеют общее особое свойство: можно исходить из того, что они построены до любых определяемых вами статических объектов, в записи преобразования, включающей \<iostream>. Также можно предположить, эти объекты не уничтожаются до деструкторов для всех таких определяемых статических объектов. (При этом выходные потоки очищаются при завершении работы программы.) Поэтому можно безопасно читать из стандартных потоков или записывать в них до запуска программы и после ее завершения.  
+ All the objects declared in this header share a peculiar property — you can assume they are constructed before any static objects you define, in a translation unit that includes \<iostream>. Equally, you can assume that these objects are not destroyed before the destructors for any such static objects you define. (The output streams are, however, flushed during program termination.) Therefore, you can safely read from or write to the standard streams before program startup and after program termination.  
   
- Но такая возможность есть не всегда. Статический конструктор может вызвать функцию в другой записи преобразования. Вызываемая функция не может исходить из того, что объекты, объявленные в этом заголовке, были построены, в силу неопределенности порядка, в котором записи преобразования участвуют в статической конструкции. Для использования этих объектов в таком контексте нужно сначала создать объект класса [ios_base::Init](../standard-library/ios-base-class.md#init).  
+ This guarantee is not universal, however. A static constructor may call a function in another translation unit. The called function cannot assume that the objects declared in this header have been constructed, given the uncertain order in which translation units participate in static construction. To use these objects in such a context, you must first construct an object of class [ios_base::Init](../standard-library/ios-base-class.md#init).  
   
-### <a name="global-stream-objects"></a>Глобальные объекты потоков  
+### <a name="global-stream-objects"></a>Global Stream Objects  
   
 |||  
 |-|-|  
-|[cerr](#cerr)|Указывает глобальный поток `cerr`.|  
-|[cin](#cin)|Указывает глобальный поток `cin`.|  
-|[clog](#clog)|Указывает глобальный поток `clog`.|  
-|[cout](#cout)|Указывает глобальный поток `cout`.|  
-|[wcerr](#wcerr)|Указывает глобальный поток `wcerr`.|  
-|[wcin](#wcin)|Указывает глобальный поток `wcin`.|  
-|[wclog](#wclog)|Указывает глобальный поток `wclog`.|  
-|[wcout](#wcout)|Указывает глобальный поток `wcout`.|  
+|[cerr](#cerr)|Specifies the `cerr` global stream.|  
+|[cin](#cin)|Specifies the `cin` global stream.|  
+|[clog](#clog)|Specifies the `clog` global stream.|  
+|[cout](#cout)|Specifies the `cout` global stream.|  
+|[wcerr](#wcerr)|Specifies the `wcerr` global stream.|  
+|[wcin](#wcin)|Specifies the `wcin` global stream.|  
+|[wclog](#wclog)|Specifies the `wclog` global stream.|  
+|[wcout](#wcout)|Specifies the `wcout` global stream.|  
   
 ###  <a name="cerr"></a>  cerr  
- Объект `cerr` управляет выводом в буфер потока, связанного с объектом `stderr`, объявленным в \<cstdio>.  
+ The object `cerr` controls output to a stream buffer associated with the object `stderr`, declared in \<cstdio>.  
   
 ```  
 extern ostream cerr;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [ostream](../standard-library/ostream-typedefs.md#ostream).  
+#### <a name="return-value"></a>Return Value  
+ An [ostream](../standard-library/ostream-typedefs.md#ostream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет вставкой без буферизации в стандартный вывод ошибок в виде байтового потока. После создания объекта выражение `cerr.` [флаги](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) отлично от нуля, и `cerr.tie() == &cout`.  
+#### <a name="remarks"></a>Remarks  
+ The object controls unbuffered insertions to the standard error output as a byte stream. Once the object is constructed, the expression `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) is nonzero, and `cerr.tie() == &cout`.  
   
-#### <a name="example"></a>Пример  
+#### <a name="example"></a>Example  
   
 ```cpp  
 // iostream_cerr.cpp  
@@ -122,20 +120,20 @@ int main( )
 ```  
   
 ###  <a name="cin"></a>  cin  
- Указывает глобальный поток `cin`.  
+ Specifies the `cin` global stream.  
   
 ```  
 extern istream cin;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [istream](../standard-library/istream-typedefs.md#istream).  
+#### <a name="return-value"></a>Return Value  
+ An [istream](../standard-library/istream-typedefs.md#istream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Объект контролирует получение данных из стандартного ввода, как потока байтов. После создания объекта вызов `cin.` [tie](../standard-library/basic-ios-class.md#tie) возвращает `&` [cout](#cout).  
+#### <a name="remarks"></a>Remarks  
+ The object controls extractions from the standard input as a byte stream. Once the object is constructed, the call `cin.`[tie](../standard-library/basic-ios-class.md#tie) returns `&`[cout](#cout).  
   
-#### <a name="example"></a>Пример  
-  В этом примере `cin` устанавливает бит "fail" потока, если встречает символы, отличные от цифр. Затем программа очищает бит "fail" и удаляет некорректный символ из потока, затем продолжает выполнение.  
+#### <a name="example"></a>Example  
+  In this example, `cin` sets the fail bit on the stream when it encounters non-numeric characters. The program clears the fail bit and strips the invalid character from the stream to proceed.  
   
 ```  
 // iostream_cin.cpp  
@@ -171,102 +169,102 @@ int main()
 ```  
   
 ###  <a name="clog"></a>  clog  
- Указывает глобальный поток `clog`.  
+ Specifies the `clog` global stream.  
   
 ```  
 extern ostream clog;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [ostream](../standard-library/ostream-typedefs.md#ostream).  
+#### <a name="return-value"></a>Return Value  
+ An [ostream](../standard-library/ostream-typedefs.md#ostream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет вставкой с буферизацей в стандартный вывод ошибок в виде байтового потока.  
+#### <a name="remarks"></a>Remarks  
+ The object controls buffered insertions to the standard error output as a byte stream.  
   
-#### <a name="example"></a>Пример  
-  См. [cerr](#cerr) с примером использования `clog`.  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `clog`.  
   
 ###  <a name="cout"></a>  cout  
- Указывает глобальный поток `cout`.  
+ Specifies the `cout` global stream.  
   
 ```  
 extern ostream cout;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [ostream](../standard-library/ostream-typedefs.md#ostream).  
+#### <a name="return-value"></a>Return Value  
+ An [ostream](../standard-library/ostream-typedefs.md#ostream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет вставкой в стандартный вывод в виде байтового потока.  
+#### <a name="remarks"></a>Remarks  
+ The object controls insertions to the standard output as a byte stream.  
   
-#### <a name="example"></a>Пример  
-  См. [cerr](#cerr) с примером использования `cout`.  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `cout`.  
   
 ###  <a name="wcerr"></a>  wcerr  
- Указывает глобальный поток `wcerr`.  
+ Specifies the `wcerr` global stream.  
   
 ```  
 extern wostream wcerr;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [wostream](../standard-library/ostream-typedefs.md#wostream).  
+#### <a name="return-value"></a>Return Value  
+ A [wostream](../standard-library/ostream-typedefs.md#wostream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет вставкой без буферизации в стандартный вывод ошибок в виде двухбайтового потока. После создания объекта выражение `wcerr.` [флаги](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) отлично от нуля.  
+#### <a name="remarks"></a>Remarks  
+ The object controls unbuffered insertions to the standard error output as a wide stream. Once the object is constructed, the expression `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) is nonzero.  
   
-#### <a name="example"></a>Пример  
-  См. [cerr](#cerr) с примером использования `wcerr`.  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wcerr`.  
   
 ###  <a name="wcin"></a>  wcin  
- Указывает глобальный поток `wcin`.  
+ Specifies the `wcin` global stream.  
   
 ```  
 extern wistream wcin;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [wistream](../standard-library/istream-typedefs.md#wistream).  
+#### <a name="return-value"></a>Return Value  
+ A [wistream](../standard-library/istream-typedefs.md#wistream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет извлечением из стандартного ввода в виде двухбайтового потока. После создания объекта вызов `wcin.` [tie](../standard-library/basic-ios-class.md#tie) возвращает `&` [wcout](#wcout).  
+#### <a name="remarks"></a>Remarks  
+ The object controls extractions from the standard input as a wide stream. Once the object is constructed, the call `wcin.`[tie](../standard-library/basic-ios-class.md#tie) returns `&`[wcout](#wcout).  
   
-#### <a name="example"></a>Пример  
-  См. [cerr](#cerr) с примером использования `wcin`.  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wcin`.  
   
 ###  <a name="wclog"></a>  wclog  
- Указывает глобальный поток `wclog`.  
+ Specifies the `wclog` global stream.  
   
 ```  
 extern wostream wclog;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [wostream](../standard-library/ostream-typedefs.md#wostream).  
+#### <a name="return-value"></a>Return Value  
+ A [wostream](../standard-library/ostream-typedefs.md#wostream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет вставкой с буферизацей в стандартный вывод ошибок в виде двухбайтового потока.  
+#### <a name="remarks"></a>Remarks  
+ The object controls buffered insertions to the standard error output as a wide stream.  
   
-#### <a name="example"></a>Пример  
-  См. [cerr](#cerr) с примером использования `wclog`.  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wclog`.  
   
 ###  <a name="wcout"></a>  wcout  
- Указывает глобальный поток `wcout`.  
+ Specifies the `wcout` global stream.  
   
 ```  
 extern wostream wcout;  
 ```  
   
-#### <a name="return-value"></a>Возвращаемое значение  
- Объект [wostream](../standard-library/ostream-typedefs.md#wostream).  
+#### <a name="return-value"></a>Return Value  
+ A [wostream](../standard-library/ostream-typedefs.md#wostream) object.  
   
-#### <a name="remarks"></a>Примечания  
- Этот объект управляет вставкой в стандартный вывод в качестве широкого потока.  
+#### <a name="remarks"></a>Remarks  
+ The object controls insertions to the standard output as a wide stream.  
   
-#### <a name="example"></a>Пример  
-  См. [cerr](#cerr) с примером использования `wcout`.  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wcout`.  
   
- Экземпляры `CString`в операторе `wcout` необходимо привести к `const wchar_t*`, как показано в следующем примере.  
+ `CString` instances in a `wcout` statement must be cast to `const wchar_t*`, as shown in the following example.  
   
 ```  
  
@@ -275,12 +273,12 @@ extern wostream wcout;
     wcout <<(const wchar_t*) cs <<endl;  
 ```  
   
- Дополнительные сведения см. в разделе [Базовые операции CString](../atl-mfc-shared/basic-cstring-operations.md).  
+ For more information, see [Basic CString Operations](../atl-mfc-shared/basic-cstring-operations.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../standard-library/iostream-programming.md)   
- [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Класс extreme_value_distribution | Документы Майкрософт"
+title: extreme_value_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- extreme_value_distribution
 - random/std::extreme_value_distribution
 - random/std::extreme_value_distribution::reset
 - random/std::extreme_value_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- extreme_value_distribution class
+- std::extreme_value_distribution [C++]
+- std::extreme_value_distribution [C++], reset
+- std::extreme_value_distribution [C++], a
+- std::extreme_value_distribution [C++], b
+- std::extreme_value_distribution [C++], param
+- std::extreme_value_distribution [C++], min
+- std::extreme_value_distribution [C++], max
+- std::extreme_value_distribution [C++], param_type
+- std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
 caps.latest.revision: 16
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 146a9b5efeda58af066af1c9c5ce6f652b07bacc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bdcb04e77e139446b138717b3b4bdf6a133ed279
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="extremevaluedistribution-class"></a>Класс extreme_value_distribution
-Формирует распределение экстремальных значений.  
+# <a name="extremevaluedistribution-class"></a>extreme_value_distribution Class
+Generates an extreme value distribution.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class extreme_value_distribution  
@@ -87,27 +94,27 @@ public:
    result_type max() const;
    };  
 ```    
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-По умолчанию тип с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*URNG* The random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
   
-## <a name="remarks"></a>Примечания  
- Класс шаблона описывает распределение, которое формирует значения указанного типа с плавающей запятой или типа `double` (если тип не указан), распределенные в соответствии с распределением экстремальных значений. В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Extreme Value Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
 |`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|  
   
- Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения `a` и `b`.  
+ The property functions `a()` and `b()` return their respective values for stored distribution parameters `a` and `b`.  
   
- Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
- Дополнительные сведения о распределении экстремальных значений см. в статье [Распределение экстремальных значений](http://go.microsoft.com/fwlink/LinkId=401110) на веб-сайте Wolfram MathWorld.  
+ For detailed information about the extreme value distribution, see the Wolfram MathWorld article [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -190,38 +197,38 @@ Distribution for 10 samples:
     10: 2.0568757061  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution  
- Формирует распределение.  
+ Constructs the distribution.  
   
 ```  
 explicit extreme_value_distribution(result_type a_value = 0.0, result_type b_value = 1.0);
 explicit extreme_value_distribution(const param_type& parm);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *a_value*  
- Параметр распределения `a`.  
+ The `a` distribution parameter.  
   
 *b_value*  
- Параметр распределения `b`.  
+ The `b` distribution parameter.  
   
 *parm*  
- Структура `param_type`, используемая для формирования распределения.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `0.0 < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < b`  
   
- Первый конструктор создает объект, хранимое значение `a` которого содержит значение *a_value*, а значение `b` содержит значение *b_value*.  
+ The first constructor constructs an object whose stored `a` value holds the value *a_value* and whose stored `b` value holds the value *b_value*.  
   
- Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  extreme_value_distribution::param_type  
-Сохраняет параметры распределения.  
+Stores the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -235,22 +242,22 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *a_value*  
- Параметр распределения `a`.  
+ The `a` distribution parameter.  
   
 *b_value*  
- Параметр распределения `b`.  
+ The `b` distribution parameter.  
   
 *right*  
- Объект `param_type`, который требуется сравнить с данным объектом.  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `0.0 < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < b`  
   
- Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+ This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

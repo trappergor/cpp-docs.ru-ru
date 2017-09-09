@@ -1,30 +1,45 @@
 ---
-title: "Операторы &lt;list&gt; | Документы Майкрософт"
+title: '&lt;list&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- list/std::operator!=
+- list/std::operator&gt;
+- list/std::operator&gt;=
+- list/std::operator&lt;
+- list/std::operator&lt;=
+- list/std::operator==
+dev_langs:
+- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5713a02d534f8e4e2245ba3d181d78c529adbe79
+helpviewer_keywords:
+- std::operator!= (list)
+- std::operator&gt; (list)
+- std::operator&gt;= (list)
+- std::operator&lt; (list)
+- std::operator&lt;= (list)
+- std::operator== (list)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 575dcc65565bf004da19238b743f1802e023668c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlistgt-operators"></a>Операторы &lt;list&gt;
+# <a name="ltlistgt-operators"></a>&lt;list&gt; operators
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
- Проверяет неравенство объекта-списка слева от оператора объекту-списку справа от оператора.  
+##  <a name="op_neq"></a>  operator!=  
+ Tests if the list object on the left side of the operator is not equal to the list object on the right side.  
   
 ```
 bool operator!=(
@@ -32,20 +47,20 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа **list**.  
+ An object of type **list**.  
   
  `right`  
- Объект типа **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если списки не равны; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lists are not equal; **false** if the lists are equal.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами списков основывается на попарном сравнении элементов этих списков. Два списка равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ne.cpp  
@@ -70,8 +85,8 @@ Lists not equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
- Проверяет, меньше ли объект-список слева от оператора, чем объект-список справа от оператора.  
+##  <a name="op_lt"></a>  operator&lt;  
+ Tests if the list object on the left side of the operator is less than the list object on the right side.  
   
 ```
 bool operator<(
@@ -79,20 +94,20 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа **list**.  
+ An object of type **list**.  
   
  `right`  
- Объект типа **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если список слева от оператора меньше, чем список справа от оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than but not equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами списков основывается на попарном сравнении элементов этих списков. Отношение «меньше» между двумя объектами основывается на сравнении первой пары неравных элементов.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_lt.cpp  
@@ -121,8 +136,8 @@ List c1 is less than list c2.
 *\   
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
- Проверяет, что объект-список слева от оператора меньше или равен объекту-списку справа от оператора.  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Tests if the list object on the left side of the operator is less than or equal to the list object on the right side.  
   
 ```
 bool operator<=(
@@ -130,20 +145,20 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа **list**.  
+ An object of type **list**.  
   
  `right`  
- Объект типа **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если список в левой части оператора меньше или равен списку в правой части оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами списков основывается на попарном сравнении элементов этих списков. Отношение «меньше или равно» между двумя объектами основывается на сравнении первой пары неравных элементов.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_le.cpp  
@@ -172,8 +187,8 @@ List c1 is less than or equal to list c2.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
- Проверяет, равен ли объект-список слева от оператора объекту-списку справа от оператора.  
+##  <a name="op_eq_eq"></a>  operator==  
+ Tests if the list object on the left side of the operator is equal to the list object on the right side.  
   
 ```
 bool operator==(
@@ -181,20 +196,20 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа **list**.  
+ An object of type **list**.  
   
  `right`  
- Объект типа **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если список слева от оператора равен списку справа от оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами списков основывается на попарном сравнении элементов этих списков. Два списка равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_eq.cpp  
@@ -219,8 +234,8 @@ The lists are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
- Проверяет, больше ли объект-список слева от оператора, чем объект-список справа от оператора.  
+##  <a name="op_gt"></a>  operator&gt;  
+ Tests if the list object on the left side of the operator is greater than the list object on the right side.  
   
 ```
 bool operator>(
@@ -228,20 +243,20 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа **list**.  
+ An object of type **list**.  
   
  `right`  
- Объект типа **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если список слева от оператора больше списка справа от оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами списков основывается на попарном сравнении элементов этих списков. Отношение «больше» между двумя объектами основывается на сравнении первой пары неравных элементов.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_gt.cpp  
@@ -270,8 +285,8 @@ List c1 is greater than list c2.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
- Проверяет, что объект-список слева от оператора больше или равен объекту-списку справа от оператора.  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Tests if the list object on the left side of the operator is greater than or equal to the list object on the right side.  
   
 ```
 bool operator>=(
@@ -279,20 +294,20 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа **list**.  
+ An object of type **list**.  
   
  `right`  
- Объект типа **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если список слева от оператора больше или равен списку справа от оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами списков основывается на попарном сравнении элементов этих списков. Отношение «больше или равно» между двумя объектами основывается на сравнении первой пары неравных элементов.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ge.cpp  
@@ -322,7 +337,7 @@ List c1 is greater than or equal to list c2.
 *\  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)
 
 

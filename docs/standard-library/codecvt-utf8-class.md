@@ -1,5 +1,5 @@
 ---
-title: "codecvt_utf8 | Документы Майкрософт"
+title: codecvt_utf8 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_utf8
 - codecvt/std::codecvt_utf8
 dev_langs:
 - C++
@@ -34,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 1f6c2724747d22aa662779fa8f6433647a7853f3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8294e0edecb56016671223ee7f0d23e6ff0c3d71
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
-Представляет аспект [языкового стандарта](../standard-library/locale-class.md), который выполняет преобразование между расширенными символами в кодировке UCS-2 или UCS-4 и потоком байтов в кодировке UTF-8.
+Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UCS-2 or UCS-4, and a byte stream encoded as UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Parameters
 
 `Elem`  
-Тип двухбайтового элемента.  
+The wide-character element type.  
 `Maxcode`  
-Максимальное количество символов для аспекта языкового стандарта.  
+The maximum number of characters for the locale facet.  
 `Mode`  
-Сведения о конфигурации для аспекта языкового стандарта.  
+Configuration information for the locale facet.  
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поток байтов может записываться в двоичный файл или текстовый файл.  
+The byte stream can be written to either a binary file or a text file.  
 
-## <a name="requirements"></a>Требования
+## <a name="requirements"></a>Requirements
 
-Заголовок: <codecvt> Пространство имен: std
+Header: <codecvt> Namespace: std
 

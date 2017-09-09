@@ -1,15 +1,14 @@
 ---
-title: "Структура negate | Документы Майкрософт"
+title: negate Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- negate
 - xfunctional/std::negate
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 810861f1f1343d13b5e539a1a21206a72bcb3ec1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: be2718d8884f1ae91b252dbe5839c6c54857a82f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="negate-struct"></a>Структура negate
-Стандартный объект функции, который выполняет над своим аргументом арифметическую операцию замены знака (унарное `operator-`).  
+# <a name="negate-struct"></a>negate Struct
+A predefined function object that performs the arithmetic negation operation (unary `operator-`) on its argument.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,17 +64,17 @@ struct negate<void>
  };
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Type`  
- Любой тип, поддерживающий `operator-`, принимающий операнды указанного или выводимого типа.  
+ Any type that supports an `operator-` that takes an operand of the specified or inferred type.  
   
  `Left`  
- Операнд для замены знака. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `Type`.  
+ The operand to be negated. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `Type`.  
   
-## <a name="return-value"></a>Возвращаемое значение  
- Результат `-``Left.`. Специализированный шаблон выполняет точную пересылку результата, который имеет тип, возвращаемый унарным `operator-`.  
+## <a name="return-value"></a>Return Value  
+ The result of `-Left.` The specialized template does perfect forwarding of the result, which has the type that's returned by unary `operator-`.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_negate.cpp  
@@ -116,14 +116,14 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 *\  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Класс thread | Документы Майкрософт"
+title: thread Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,100 +40,110 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b1c5282d284a70917c6c14511bacda305180d778
+helpviewer_keywords:
+- std::thread [C++]
+- std::thread [C++], thread
+- std::thread [C++], detach
+- std::thread [C++], get_id
+- std::thread [C++], hardware_concurrency
+- std::thread [C++], join
+- std::thread [C++], joinable
+- std::thread [C++], native_handle
+- std::thread [C++], swap
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a1fbc3d94a1f2081bc29fd7b469f87bc54b89728
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="thread-class"></a>Класс thread
-Определяет объект, который позволяет наблюдать за потоком выполнения в приложении и управлять этим потоком.  
+# <a name="thread-class"></a>thread Class
+Defines an object that's used to observe and manage a thread of execution within an application.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 class thread;
 ```  
   
-## <a name="remarks"></a>Примечания  
- Объект `thread` можно использовать для наблюдения за потоком выполнения в приложении и управления этим потоком. Объект потока, который создан с помощью конструктора по умолчанию, не связан ни с каким потоком выполнения. Объект потока, который создается с использованием вызываемого объекта, создает новый поток выполнения и вызывает вызываемый объект в этом потоке. Объекты потока можно переместить, но не копировать. Следовательно, поток выполнения может быть связан только с одним объектом потока.  
+## <a name="remarks"></a>Remarks  
+ You can use a `thread` object to observe and manage a thread of execution within an application. A thread object that's created by using the default constructor is not associated with any thread of execution. A thread object that's constructed by using a callable object creates a new thread of execution and calls the callable object in that thread. Thread objects can be moved but not copied. Therefore, a thread of execution can be associated with only one thread object.  
   
- Каждый поток выполнения имеет уникальный идентификатор типа `thread::id`. Функция `this_thread::get_id` возвращает идентификатор вызывающего потока. Функция-член `thread::get_id` возвращает идентификатор потока, который управляется объектом потока. Для объекта потока, созданного конструктором по умолчанию, метод `thread::get_id` возвращает объект с одинаковым значением для всех объектов потока, созданных конструктором по умолчанию; это значение отличается от значения, которое возвращается `this_thread::get_id` для любого потока выполнения, который может быть присоединен во время вызова.  
+ Every thread of execution has a unique identifier of type `thread::id`. The function `this_thread::get_id` returns the identifier of the calling thread. The member function `thread::get_id` returns the identifier of the thread that's managed by a thread object. For a default-constructed thread object, the `thread::get_id` method returns an object that has a value that's the same for all default-constructed thread objects and different from the value that's returned by `this_thread::get_id` for any thread of execution that could be joined at the time of the call.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-classes"></a>Открытые классы  
+### <a name="public-classes"></a>Public Classes  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[Класс thread::id](#id_class)|Уникально идентифицирует соответствующий поток.|  
+|[thread::id Class](#id_class)|Uniquely identifies the associated thread.|  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread](#thread)|Создает объект `thread`.|  
+|[thread](#thread)|Constructs a `thread` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[отсоединение](#detach)|Отсоединяет связанный поток от объекта `thread`.|  
-|[get_id](#get_id)|Возвращает уникальный идентификатор связанного потока.|  
-|[hardware_concurrency](#hardware_concurrency)|Статический. Возвращает приблизительное число контекстов аппаратного потока.|  
-|[join](#join)|Блокируется до завершения соответствующего потока.|  
-|[joinable](#joinable)|Указывает, возможно ли присоединение связанного потока.|  
-|[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор потока.|  
-|[swap](#swap)|Заменяет состояние потока заданным объектом `thread`.|  
+|[detach](#detach)|Detaches the associated thread from the `thread` object.|  
+|[get_id](#get_id)|Returns the unique identifier of the associated thread.|  
+|[hardware_concurrency](#hardware_concurrency)|Static. Returns an estimate of the number of hardware thread contexts.|  
+|[join](#join)|Blocks until the associated thread completes.|  
+|[joinable](#joinable)|Specifies whether the associated thread is joinable.|  
+|[native_handle](#native_handle)|Returns the implementation-specific type that represents the thread handle.|  
+|[swap](#swap)|Swaps the object state with a specified `thread` object.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread::operator=](#op_eq)|Связывает поток с текущим объектом `thread`.|  
+|[thread::operator=](#op_eq)|Associates a thread with the current `thread` object.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<поток >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<thread>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-##  <a name="detach"></a>Thread::Detach
- Отсоединяет связанный поток. Операционная система становится ответственной за освобождение ресурсов потока при завершении.  
+##  <a name="detach"></a>  thread::detach
+ Detaches the associated thread. The operating system becomes responsible for releasing thread resources on termination.  
   
 ```
 void detach();
 ```  
   
-### <a name="remarks"></a>Примечания  
- После вызова `detach` последующие вызовы [get_id](#get_id) возвращают [id](#id_class).  
+### <a name="remarks"></a>Remarks  
+ After a call to `detach`, subsequent calls to [get_id](#get_id) return [id](#id_class).  
   
- Если поток, связанный с вызываемым объектом, присоединить невозможно, функция создает ошибку [system_error](../standard-library/system-error-class.md) с кодом `invalid_argument`.  
+ If the thread that's associated with the calling object is not joinable, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`.  
   
- Если поток, связанный с вызывающим объектом, является недопустимым, функция создает ошибку `system_error` с кодом `no_such_process`.  
+ If the thread that's associated with the calling object is invalid, the function throws a `system_error` that has an error code of `no_such_process`.  
   
-##  <a name="get_id"></a>Thread::get_id
- Возвращает уникальный идентификатор связанного потока.  
+##  <a name="get_id"></a>  thread::get_id
+ Returns a unique identifier for the associated thread.  
   
 ```
 id get_id() const noexcept;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [thread::id](#id_class), уникально идентифицирующий связанный поток, или `thread::id()`, если с объектом не связан никакой поток.  
+### <a name="return-value"></a>Return Value  
+ A [thread::id](#id_class) object that uniquely identifies the associated thread, or `thread::id()` if no thread is associated with the object.  
   
-##  <a name="hardware_concurrency"></a>Thread::hardware_concurrency
- Статический метод, который возвращает приблизительное число контекстов аппаратного потока.  
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
+ Static method that returns an estimate of the number of hardware thread contexts.  
   
 ```
 static unsigned int hardware_concurrency() noexcept;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Приблизительное число контекстов аппаратного потока. Если значение не может быть вычислено или не является правильно определенным, этот метод возвращает значение 0.  
+### <a name="return-value"></a>Return Value  
+ An estimate of the number of hardware thread contexts. If the value cannot be computed or is not well defined, this method returns 0.  
   
-##  <a name="id_class"></a> Класс thread::id  
- Предоставляет уникальный идентификатор для каждого потока выполнения в процессе.  
+##  <a name="id_class"></a>  thread::id Class  
+ Provides a unique identifier for each thread of execution in the process.  
   
 ```
 class thread::id {
@@ -141,76 +151,76 @@ class thread::id {
 };
 ```  
   
-### <a name="remarks"></a>Примечания  
- Конструктор по умолчанию создает объект, который не равен объекту `thread::id` ни для какого из существующих потоков.  
+### <a name="remarks"></a>Remarks  
+ The default constructor creates an object that does not compare equal to the `thread::id` object for any existing thread.  
   
- Все созданные конструктором по умолчанию объекты `thread::id` равны.  
+ All default-constructed `thread::id` objects compare equal.  
   
-##  <a name="join"></a>Thread::JOIN
- Блокируется до завершения потока выполнения, связанного с вызывающим объектом.  
+##  <a name="join"></a>  thread::join
+ Blocks until the thread of execution that's associated with the calling object completes.  
   
 ```
 void join();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если вызов завершается успешно, последующие вызовы [get_id](#get_id) для вызывающего объекта возвращают значение по умолчанию [thread::id](#id_class), которое не равно значению `thread::id` ни одного из существующих потоков; если вызов завершается неудачно, возвращаемое `get_id` значение остается неизменным.  
+### <a name="remarks"></a>Remarks  
+ If the call succeeds, subsequent calls to [get_id](#get_id) for the calling object return a default [thread::id](#id_class) that does not compare equal to the `thread::id` of any existing thread; if the call does not succeed, the value that's returned by `get_id` is unchanged.  
   
-##  <a name="joinable"></a>Thread::joinable
- Указывает, возможно ли *присоединение* связанного потока.  
+##  <a name="joinable"></a>  thread::joinable
+ Specifies whether the associated thread is *joinable*.  
   
 ```
 bool joinable() const noexcept;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если связанный поток *присоединяем*; в противном случае — значение `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the associated thread is *joinable*; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Объект потока *присоединяем*, если `get_id() != id()`.  
+### <a name="remarks"></a>Remarks  
+ A thread object is *joinable* if `get_id() != id()`.  
   
-##  <a name="native_handle"></a>Thread::native_handle
- Возвращает тип реализации, представляющий дескриптор потока. Дескриптор потока может использоваться разными способами в зависимости от реализации.  
+##  <a name="native_handle"></a>  thread::native_handle
+ Returns the implementation-specific type that represents the thread handle. The thread handle can be used in implementation-specific ways.  
   
 ```
 native_handle_type native_handle();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `native_handle_type` определяется как `HANDLE` Win32, который приводится к `void *`.  
+### <a name="return-value"></a>Return Value  
+ `native_handle_type` is defined as a Win32 `HANDLE` that's cast as `void *`.  
   
-##  <a name="op_eq"></a> thread::operator=  
- Связывает поток заданного объекта с текущим объектом.  
+##  <a name="op_eq"></a>  thread::operator=  
+ Associates the thread of a specified object with the current object.  
   
 ```
 thread& operator=(thread&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Объект `thread`.  
+ A `thread` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>Примечания  
- Вызовы метода удаляются окончательно, если вызывающий объект присоединяем.  
+### <a name="remarks"></a>Remarks  
+ The method calls detach if the calling object is joinable.  
   
- После установления связи `Other` присваивается состояние, созданное по умолчанию.  
+ After the association is made, `Other` is set to a default-constructed state.  
   
-##  <a name="swap"></a>Thread::Swap
- Заменяет состояние потока состоянием заданного объекта `thread`.  
+##  <a name="swap"></a>  thread::swap
+ Swaps the object state with that of a specified `thread` object.  
   
 ```
 void swap(thread& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Объект `thread`.  
+ A `thread` object.  
   
-##  <a name="thread"></a> Конструктор thread::thread  
- Создает объект `thread`.  
+##  <a name="thread"></a>  thread::thread Constructor  
+ Constructs a `thread` object.  
   
 ```
 thread() noexcept;
@@ -220,25 +230,25 @@ explicit thread(Fn&& F, Args&&... A);
 thread(thread&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `F`  
- Определяемая приложением функция, которая должна быть выполнена потоком.  
+ An application-defined function to be executed by the thread.  
   
  `A`  
- Список аргументов, которые необходимо передать `F`.  
+ A list of arguments to be passed to `F`.  
   
  `Other`  
- Существующий объект `thread`.  
+ An existing `thread` object.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор создает объект, который не связан с потоком выполнения. Значение, возвращаемое вызовом `get_id` для созданного объекта, — это `thread::id()`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object that's not associated with a thread of execution. The value that's returned by a call to `get_id` for the constructed object is `thread::id()`.  
   
- Второй конструктор создает объект, который связан с новым потоком выполнения, и выполняет псевдофункцию `INVOKE`, которая определена в [\<functional>](../standard-library/functional.md). Если не хватает ресурсов для начала нового потока, функция создает объект [system_error](../standard-library/system-error-class.md) с кодом ошибки `resource_unavailable_try_again`. Если вызов `F` завершается с неперехваченным исключением, вызывается метод [terminate](../standard-library/exception-functions.md#terminate).  
+ The second constructor constructs an object that's associated with a new thread of execution and executes the pseudo-function `INVOKE` that's defined in [\<functional>](../standard-library/functional.md). If not enough resources are available to start a new thread, the function throws a [system_error](../standard-library/system-error-class.md) object that has an error code of `resource_unavailable_try_again`. If the call to `F` terminates with an uncaught exception, [terminate](../standard-library/exception-functions.md#terminate) is called.  
   
- Третий конструктор создает объект, связанный с потоком, который, в свою очередь, связан с `Other`. `Other` затем присваивается состояние, созданное по умолчанию.  
+ The third constructor constructs an object that's associated with the thread that's associated with `Other`. `Other` is then set to a default-constructed state.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<thread>](../standard-library/thread.md)
 
 

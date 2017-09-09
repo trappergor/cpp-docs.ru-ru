@@ -1,5 +1,5 @@
 ---
-title: "Класс promise | Документы Майкрософт"
+title: promise Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,87 +38,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2f052d1af76e8f874e2bbe0187a82b838e47f45e
+helpviewer_keywords:
+- std::promise [C++]
+- std::promise [C++], promise
+- std::promise [C++], get_future
+- std::promise [C++], set_exception
+- std::promise [C++], set_exception_at_thread_exit
+- std::promise [C++], set_value
+- std::promise [C++], set_value_at_thread_exit
+- std::promise [C++], swap
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fb4ba5da5b2d7a65e1214e97b19ccf00d1bcca1c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="promise-class"></a>Класс promise
-Описывает *асинхронный поставщик*.  
+# <a name="promise-class"></a>promise Class
+Describes an *asynchronous provider*.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class promise;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[Объект Promise](#promise)|Создает объект `promise`.|  
+|[promise](#promise)|Constructs a `promise` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[get_future](#get_future)|Возвращает [future](../standard-library/future-class.md), связанный с этим объектом promise.|  
-|[set_exception](#set_exception)|Атомарно устанавливает результат этого объекта promise для обозначения исключения.|  
-|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Атомарно устанавливает результат этого объекта promise для обозначения исключения и доставляет уведомление только после того, как все локальные объекты в текущем потоке уничтожены (обычно при выходе из потока).|  
-|[set_Value](#set_value)|Атомарно устанавливает результат этого объекта promise для обозначения значения.|  
-|[set_value_at_thread_exit](#set_value_at_thread_exit)|Атомарно устанавливает результат этого объекта promise для обозначения значения и доставляет уведомление только после того, как все локальные объекты в текущем потоке уничтожены (обычно при выходе из потока).|  
-|[swap](#swap)|Выполняет обмен *связанного асинхронного состояния* этого объекта promise с состоянием указанного объекта promise.|  
+|[get_future](#get_future)|Returns a [future](../standard-library/future-class.md) associated with this promise.|  
+|[set_exception](#set_exception)|Atomically sets the result of this promise to indicate an exception.|  
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Atomically sets the result of this promise to indicate an exception, and delivers the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).|  
+|[set_value](#set_value)|Atomically sets the result of this promise to indicate a value.|  
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|Atomically sets the result of this promise to indicate a value, and delivers the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).|  
+|[swap](#swap)|Exchanges the *associated asynchronous state* of this promise with that of a specified promise object.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[promise::operator=](#op_eq)|Назначение общего состояния этого объекта promise.|  
+|[promise::operator=](#op_eq)|Assignment of the shared state of this promise object.|  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `promise`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<будущих >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="get_future"></a>  promise::get_future  
- Возвращает объект [future](../standard-library/future-class.md), который имеет то же самое *связанное асинхронное состояние*, что и данный объект promise.  
+ Returns a [future](../standard-library/future-class.md) object that has the same *associated asynchronous state* as this promise.  
   
 ```
 future<Ty> get_future();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если объект promise пустой, этот метод выдает [future_error](../standard-library/future-error-class.md) с [error_code](../standard-library/error-code-class.md) `no_state`.  
+### <a name="remarks"></a>Remarks  
+ If the promise object is empty, this method throws a [future_error](../standard-library/future-error-class.md) that has an [error_code](../standard-library/error-code-class.md) of `no_state`.  
   
- Если этот метод уже вызывался для объекта promise с тем же самым связанным асинхронным состоянием, метод выдает `future_error` с `error_code` `future_already_retrieved`.  
+ If this method has already been called for a promise object that has the same associated asynchronous state, the method throws a `future_error` that has an `error_code` of `future_already_retrieved`.  
   
 ##  <a name="op_eq"></a>  promise::operator=  
- Передает *связанное асинхронное состояние* от указанного объекта `promise`.  
+ Transfers the *associated asynchronous state* from a specified `promise` object.  
   
 ```
 promise& operator=(promise&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Объект `promise`.  
+ A `promise` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>Примечания  
- Этот оператор передает связанное асинхронное состояние от `Other`. После передачи `Other` получает значение *empty*.  
+### <a name="remarks"></a>Remarks  
+ This operator transfers the associated asynchronous state from `Other`. After the transfer, `Other` is *empty*.  
   
-##  <a name="promise"></a>  Конструктор promise::promise  
- Создает объект `promise`.  
+##  <a name="promise"></a>  promise::promise Constructor  
+ Constructs a `promise` object.  
   
 ```
 promise();
@@ -127,58 +136,58 @@ promise(allocator_arg_t, const Alloc& Al);
 promise(promise&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Al`  
- Распределитель памяти. Более подробную информацию см. в разделе [\<allocators>](../standard-library/allocators-header.md).  
+ A memory allocator. See [\<allocators>](../standard-library/allocators-header.md) for more information.  
   
  `Other`  
- Объект `promise`.  
+ A `promise` object.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор создает *пустой*`promise` объект.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an *empty*`promise` object.  
   
- Второй конструктор создает пустой объект `promise` и использует `Al` для распределения памяти.  
+ The second constructor constructs an empty `promise` object and uses `Al` for memory allocation.  
   
- Третий конструктор создает объект `promise` и передает асинхронное состояние из `Other`, затем оставляет `Other` пустым.  
+ The third constructor constructs a `promise` object and transfers the associated asynchronous state from `Other`, and leaves `Other` empty.  
   
 ##  <a name="set_exception"></a>  promise::set_exception  
- Автоматически сохраняет исключение в качестве результата объекта `promise` и устанавливает *связанное асинхронное состояние* в значение *ready*.  
+ Atomically stores an exception as the result of this `promise` object and sets the *associated asynchronous state* to *ready*.  
   
 ```
 void set_exception(exception_ptr Exc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Exc`  
- [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), который сохраняется этим методом как результат исключения.  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) that's stored by this method as the exception result.  
   
-### <a name="remarks"></a>Примечания  
- Если объект `promise` не имеет связанного асинхронного состояния, этот метод выдает [future_error](../standard-library/future-error-class.md) с кодом ошибки `no_state`.  
+### <a name="remarks"></a>Remarks  
+ If the `promise` object has no associated asynchronous state, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- Если `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value) или [set_value_at_thread_exit](#set_value_at_thread_exit) уже вызывались для объекта `promise`, который имеет то же самое связанное асинхронное состояние, то этот метод выдает `future_error` с кодом ошибки `promise_already_satisfied`.  
+ If `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- В результате работы этого метода все потоки, которые заблокированы на связанном асинхронном состоянии, разблокируются.  
+ As a result of this method, any threads that are blocked on the associated asynchronous state become unblocked.  
   
 ##  <a name="set_exception_at_thread_exit"></a>  promise::set_exception_at_thread_exit  
- Атомарно устанавливает результат `promise` для указания исключения, доставляя уведомление только после того, как все локальные объекты в текущем потоке уничтожены (обычно при завершении потока).  
+ Atomically sets the result of this `promise` to indicate an exception, delivering the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).  
   
 ```
 void set_exception_at_thread_exit(exception_ptr Exc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Exc`  
- [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), который сохраняется этим методом как результат исключения.  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) that's stored by this method as the exception result.  
   
-### <a name="remarks"></a>Примечания  
- Если объект promise не имеет *связанного асинхронного состояния*, этот метод выдает [future_error](../standard-library/future-error-class.md) с кодом ошибки `no_state`.  
+### <a name="remarks"></a>Remarks  
+ If the promise object has no *associated asynchronous state*, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- Если [set_exception](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value) или [set_value_at_thread_exit](#set_value_at_thread_exit) уже вызывались для объекта `promise`, имеющего то же самое связанное асинхронное состояние, то этот метод выдает `future_error` с кодом ошибки `promise_already_satisfied`.  
+ If [set_exception](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value), or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- В отличие от [set_exception](#set_exception) этот метод не устанавливает связанное асинхронное состояние в значение ready до тех пор, пока не будут уничтожены все локальные объекты в текущем потоке. Обычно потоки, которые заблокированы в связанном асинхронном состоянии, не разблокируются до завершения текущего потока.  
+ In contrast to [set_exception](#set_exception), this method does not set the associated asynchronous state to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state are not unblocked until the current thread exits.  
   
 ##  <a name="set_value"></a>  promise::set_value  
- Атомарно сохраняет значение в виде результата этого объекта `promise` и устанавливает *связанное асинхронное состояние* в значение *ready*.  
+ Atomically stores a value as the result of this `promise` object and sets the *associated asynchronous state* to *ready*.  
   
 ```
 void promise::set_value(const Ty& Val);
@@ -187,27 +196,27 @@ void promise<Ty&>::set_value(Ty& Val);
 void promise<void>::set_value();
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Val`  
- Значение, которое будет сохранено в качестве результата.  
+ The value to be stored as the result.  
   
-### <a name="remarks"></a>Примечания  
- Если объект `promise` не имеет связанного асинхронного состояния, этот метод выдает [future_error](../standard-library/future-error-class.md) с кодом ошибки `no_state`.  
+### <a name="remarks"></a>Remarks  
+ If the `promise` object has no associated asynchronous state, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- Если [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit) `set_value` или [set_value_at_thread_exit](#set_value_at_thread_exit) уже вызывались для объекта `promise`, имеющего то же самое связанное асинхронное состояние, то этот метод выдает `future_error` с кодом ошибки `promise_already_satisfied`.  
+ If [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value`, or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- В результате работы этого метода все потоки, которые заблокированы на связанном асинхронном состоянии, разблокируются.  
+ As a result of this method, any threads that are blocked on the associated asynchronous state become unblocked.  
   
- Первый метод также выдает любое исключение, вызванное при копировании `Val` в связанное асинхронное состояние. В этой ситуации связанное асинхронное состояние не устанавливается в значение ready.  
+ The first method also throws any exception that is thrown when `Val` is copied into the associated asynchronous state. In this situation, the associated asynchronous state is not set to ready.  
   
- Второй метод также выдает любое исключение, вызванное при перемещении `Val` в связанное асинхронное состояние. В этой ситуации связанное асинхронное состояние не устанавливается в значение ready.  
+ The second method also throws any exception that is thrown when `Val` is moved into the associated asynchronous state. In this situation, the associated asynchronous state is not set to ready.  
   
- Для частичной специализации `promise<Ty&>` сохраненное значение по сути является ссылкой на `Val`.  
+ For the partial specialization `promise<Ty&>`, the stored value is in effect a reference to `Val`.  
   
- Для специализации `promise<void>` сохраненные значения не существуют.  
+ For the specialization `promise<void>`, no stored value exists.  
   
 ##  <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit  
- Атомарно сохраняет значение в качестве результата этого объекта `promise`.  
+ Atomically stores a value as the result of this `promise` object.  
   
 ```
 void promise::set_value_at_thread_exit(const Ty& Val);
@@ -216,38 +225,38 @@ void promise<Ty&>::set_value_at_thread_exit(Ty& Val);
 void promise<void>::set_value_at_thread_exit();
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Val`  
- Значение, которое будет сохранено в качестве результата.  
+ The value to be stored as the result.  
   
-### <a name="remarks"></a>Примечания  
- Если объект promise не имеет *связанного асинхронного состояния*, этот метод выдает [future_error](../standard-library/future-error-class.md) с кодом ошибки `no_state`.  
+### <a name="remarks"></a>Remarks  
+ If the promise object has no *associated asynchronous state*, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- Если [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value) или `set_value_at_thread_exit` уже вызывались для объекта `promise`, имеющего то же самое связанное асинхронное состояние, этот метод выдает `future_error` с кодом ошибки `promise_already_satisfied`.  
+ If [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), or `set_value_at_thread_exit` has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- В отличие от `set_value` связанное асинхронное состояние не устанавливается в значение ready до тех пор, пока все локальные объекты текущего потока не будут уничтожены. Обычно потоки, которые заблокированы в связанном асинхронном состоянии, не разблокируются до завершения текущего потока.  
+ In contrast to `set_value`, the associated asynchronous state is not set to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state are not unblocked until the current thread exits.  
   
- Первый метод также выдает любое исключение, вызванное при копировании `Val` в связанное асинхронное состояние.  
+ The first method also throws any exception that is thrown when `Val` is copied into the associated asynchronous state.  
   
- Второй метод также выдает любое исключение, вызванное при перемещении `Val` в связанное асинхронное состояние.  
+ The second method also throws any exception that is thrown when `Val` is moved into the associated asynchronous state.  
   
- Для частичной специализации `promise<Ty&>` сохраненное значение по сути является ссылкой на `Val`.  
+ For the partial specialization `promise<Ty&>`, the stored value is effectively a reference to `Val`.  
   
- Для специализации `promise<void>` сохраненные значения не существуют.  
+ For the specialization `promise<void>`, no stored value exists.  
   
 ##  <a name="swap"></a>  promise::swap  
- Обменивает *связанное асинхронное состояние* данного объекта promise с состоянием указанного объекта.  
+ Exchanges the *associated asynchronous state* of this promise object with that of a specified object.  
   
 ```
 void swap(promise& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Объект `promise`.  
+ A `promise` object.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

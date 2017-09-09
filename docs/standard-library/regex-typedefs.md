@@ -1,5 +1,5 @@
 ---
-title: "Определения типов &lt;regex&gt; | Документы Майкрософт"
+title: '&lt;regex&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -7,41 +7,23 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- cmatch
 - regex/std::cmatch
-- cregex_iterator
 - regex/std::cregex_iterator
-- cregex_token_iterator
 - regex/std::cregex_token_iterator
-- csub_match
 - regex/std::csub_match
-- regex
 - regex/std::regex
-- smatch
 - regex/std::smatch
-- sregex_iterator
 - regex/std::sregex_iterator
-- sregex_token_iterator
 - regex/std::sregex_token_iterator
-- ssub_match
 - regex/std::ssub_match
-- wcmatch
 - regex/std::wcmatch
-- wcregex_iterator
 - regex/std::wcregex_iterator
-- wcregex_token_iterator
 - regex/std::wcregex_token_iterator
-- wcsub_match
 - regex/std::wcsub_match
-- wregex
 - regex/std::wregex
-- wsmatch
 - regex/std::wsmatch
-- wsregex_iterator
 - regex/std::wsregex_iterator
-- wsregex_token_iterator
 - regex/std::wsregex_token_iterator
-- wssub_match
 - regex/std::wssub_match
 dev_langs:
 - C++
@@ -50,14 +32,14 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 99e7c52466e94e34af0fa2e933e8c9132a440e3c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2424639155dc62847fef992a48b5c44d29b2f334
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-typedefs"></a>Определения типов &lt;regex&gt;
+# <a name="ltregexgt-typedefs"></a>&lt;regex&gt; typedefs
 ||||  
 |-|-|-|  
 |[cmatch](#cmatch)|[cregex_iterator](#cregex_iterator)|[cregex_token_iterator](#cregex_token_iterator)|  
@@ -67,196 +49,196 @@ ms.lasthandoff: 04/19/2017
 |[wcsub_match](#wcsub_match)|[wregex](#wregex)|[wsmatch](#wsmatch)|  
 |[wsregex_iterator](#wsregex_iterator)|[wsregex_token_iterator](#wsregex_token_iterator)|[wssub_match](#wssub_match)|  
   
-##  <a name="cmatch"></a>  Определение типа cmatch  
- Определение типа для char match_results.  
+##  <a name="cmatch"></a>  cmatch Typedef  
+ Type definition for char match_results.  
   
 ```  
 typedef match_results<const char*> cmatch;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс match_results](../standard-library/match-results-class.md) для итераторов типа `const char*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [match_results Class](../standard-library/match-results-class.md) for iterators of type `const char*`.  
   
-##  <a name="cregex_iterator"></a>  Определение типа cregex_iterator  
- Определение типа для char regex_iterator.  
+##  <a name="cregex_iterator"></a>  cregex_iterator Typedef  
+ Type definition for char regex_iterator.  
   
 ```  
 typedef regex_iterator<const char*> cregex_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_iterator](../standard-library/regex-iterator-class.md) для итераторов типа `const char*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_iterator Class](../standard-library/regex-iterator-class.md) for iterators of type `const char*`.  
   
-##  <a name="cregex_token_iterator"></a>  Определение типа cregex_token_iterator  
- Определение типа для char regex_token_iterator  
+##  <a name="cregex_token_iterator"></a>  cregex_token_iterator Typedef  
+ Type definition for char regex_token_iterator  
   
 ```  
 typedef regex_token_iterator<const char*> cregex_token_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md) для итераторов типа `const char*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) for iterators of type `const char*`.  
   
-##  <a name="csub_match"></a>  Определение типа csub_match  
- Определение типа для char sub_match.  
+##  <a name="csub_match"></a>  csub_match Typedef  
+ Type definition for char sub_match.  
   
 ```  
 typedef sub_match<const char*> csub_match;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс sub_match](../standard-library/sub-match-class.md) для итераторов типа `const char*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [sub_match Class](../standard-library/sub-match-class.md) for iterators of type `const char*`.  
   
-##  <a name="regex"></a>  Определение типа regex Typedef  
- Определение типа для char basic_regex.  
+##  <a name="regex"></a>  regex Typedef  
+ Type definition for char basic_regex.  
   
 ```  
 typedef basic_regex<char> regex;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс basic_regex](../standard-library/basic-regex-class.md) для итераторов типа `char`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_regex Class](../standard-library/basic-regex-class.md) for elements of type `char`.  
   
 > [!NOTE]
->  Символы старших разрядов будут иметь непредсказуемые результаты с `regex`. Значения вне диапазона от 0 до 127 могут привести к неопределенному поведению.  
+>  High-bit characters will have unpredictable results with `regex`. Values outside the range of 0 to 127 may result in undefined behavior.  
   
-##  <a name="smatch"></a>  Определение типа smatch  
- Определение типа для string match_results.  
+##  <a name="smatch"></a>  smatch Typedef  
+ Type definition for string match_results.  
   
 ```  
 typedef match_results<string::const_iterator> smatch;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс match_results](../standard-library/match-results-class.md) для итераторов типа `string::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [match_results Class](../standard-library/match-results-class.md) for iterators of type `string::const_iterator`.  
   
-##  <a name="sregex_iterator"></a>  Определение типа sregex_iterator  
- Определение типа для string regex_iterator.  
+##  <a name="sregex_iterator"></a>  sregex_iterator Typedef  
+ Type definition for string regex_iterator.  
   
 ```  
 typedef regex_iterator<string::const_iterator> sregex_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_iterator](../standard-library/regex-iterator-class.md) для итераторов типа `string::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_iterator Class](../standard-library/regex-iterator-class.md) for iterators of type `string::const_iterator`.  
   
-##  <a name="sregex_token_iterator"></a>  Определение типа sregex_token_iterator  
- Определение типа для string regex_token_iterator.  
+##  <a name="sregex_token_iterator"></a>  sregex_token_iterator Typedef  
+ Type definition for string regex_token_iterator.  
   
 ```  
 typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md) для итераторов типа `string::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) for iterators of type `string::const_iterator`.  
   
-##  <a name="ssub_match"></a>  Определение типа ssub_match  
- Определение типа для string sub_match.  
+##  <a name="ssub_match"></a>  ssub_match Typedef  
+ Type definition for string sub_match.  
   
 ```  
 typedef sub_match<string::const_iterator> ssub_match;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс sub_match](../standard-library/sub-match-class.md) для итераторов типа `string::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [sub_match Class](../standard-library/sub-match-class.md) for iterators of type `string::const_iterator`.  
   
-##  <a name="wcmatch"></a>  Определение типа wcmatch  
- Определение типа для wchar_t match_results.  
+##  <a name="wcmatch"></a>  wcmatch Typedef  
+ Type definition for wchar_t match_results.  
   
 ```  
 typedef match_results<const wchar_t *> wcmatch;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс match_results](../standard-library/match-results-class.md) для итераторов типа `const wchar_t*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [match_results Class](../standard-library/match-results-class.md) for iterators of type `const wchar_t*`.  
   
-##  <a name="wcregex_iterator"></a>  Определение типа wcregex_iterator  
- Определение типа для wchar_t regex_iterator.  
+##  <a name="wcregex_iterator"></a>  wcregex_iterator Typedef  
+ Type definition for wchar_t regex_iterator.  
   
 ```  
 typedef regex_iterator<const wchar_t*> wcregex_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_iterator](../standard-library/regex-iterator-class.md) для итераторов типа `const wchar_t*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_iterator Class](../standard-library/regex-iterator-class.md) for iterators of type `const wchar_t*`.  
   
-##  <a name="wcregex_token_iterator"></a>  Определение типа wcregex_token_iterator  
- Определение типа для wchar_t regex_token_iterator.  
+##  <a name="wcregex_token_iterator"></a>  wcregex_token_iterator Typedef  
+ Type definition for wchar_t regex_token_iterator.  
   
 ```  
 typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md) для итераторов типа `const wchar_t*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) for iterators of type `const wchar_t*`.  
   
-##  <a name="wcsub_match"></a>  Определение типа wcsub_match  
- Определение типа для wchar_t sub_match.  
+##  <a name="wcsub_match"></a>  wcsub_match Typedef  
+ Type definition for wchar_t sub_match.  
   
 ```  
 typedef sub_match<const wchar_t*> wcsub_match;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс sub_match](../standard-library/sub-match-class.md) для итераторов типа `const wchar_t*`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [sub_match Class](../standard-library/sub-match-class.md) for iterators of type `const wchar_t*`.  
   
-##  <a name="wregex"></a>  Определение типа wregex  
- Определение типа для wchar_t basic_regex.  
+##  <a name="wregex"></a>  wregex Typedef  
+ Type definition for wchar_t basic_regex.  
   
 ```  
 typedef basic_regex<wchar_t> wregex;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс basic_regex](../standard-library/basic-regex-class.md) для итераторов типа `wchar_t`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_regex Class](../standard-library/basic-regex-class.md) for elements of type `wchar_t`.  
   
-##  <a name="wsmatch"></a>  Определение типа wsmatch  
- Определение типа для wstring match_results.  
+##  <a name="wsmatch"></a>  wsmatch Typedef  
+ Type definition for wstring match_results.  
   
 ```  
 typedef match_results<wstring::const_iterator> wsmatch;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс match_results](../standard-library/match-results-class.md) для итераторов типа `wstring::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [match_results Class](../standard-library/match-results-class.md) for iterators of type `wstring::const_iterator`.  
   
-##  <a name="wsregex_iterator"></a>  Определение типа wsregex_iterator  
- Определение типа для wstring regex_iterator.  
+##  <a name="wsregex_iterator"></a>  wsregex_iterator Typedef  
+ Type definition for wstring regex_iterator.  
   
 ```  
 typedef regex_iterator<wstring::const_iterator> wsregex_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_iterator](../standard-library/regex-iterator-class.md) для итераторов типа `wstring::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_iterator Class](../standard-library/regex-iterator-class.md) for iterators of type `wstring::const_iterator`.  
   
-##  <a name="wsregex_token_iterator"></a>  Определение типа wsregex_token_iterator  
- Определение типа для wstring regex_token_iterator.  
+##  <a name="wsregex_token_iterator"></a>  wsregex_token_iterator Typedef  
+ Type definition for wstring regex_token_iterator.  
   
 ```  
 typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md) для итераторов типа `wstring::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) for iterators of type `wstring::const_iterator`.  
   
-##  <a name="wssub_match"></a>  Определение типа wssub_match  
- Определение типа для wstring sub_match.  
+##  <a name="wssub_match"></a>  wssub_match Typedef  
+ Type definition for wstring sub_match.  
   
 ```  
 typedef sub_match<wstring::const_iterator> wssub_match;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [Класс sub_match](../standard-library/sub-match-class.md) для итераторов типа `wstring::const_iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [sub_match Class](../standard-library/sub-match-class.md) for iterators of type `wstring::const_iterator`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[Класс regex_constants](../standard-library/regex-constants-class.md)  
-[Класс regex_error](../standard-library/regex-error-class.md)  
-[Функции \<regex>](../standard-library/regex-functions.md)  
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)  
-[Операторы \<regex>](../standard-library/regex-operators.md)  
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Класс regex_traits](../standard-library/regex-traits-class.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
 

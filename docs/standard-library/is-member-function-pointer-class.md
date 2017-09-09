@@ -1,5 +1,5 @@
 ---
-title: "Класс is_member_function_pointer | Документы Майкрософт"
+title: is_member_function_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_member_function_pointer
 - type_traits/std::is_member_function_pointer
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 69b84eea79b1019e1be16c1c57977e95e00f58b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0d3b940c339247d1373c56d85759d5aa85949bdb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismemberfunctionpointer-class"></a>Класс is_member_function_pointer
-Проверяет, является ли тип указателем на функцию-член.  
+# <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer Class
+Tests if type is a pointer to member function.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_member_function_pointer;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Запрашиваемый тип.  
+ The type to query.  
   
-## <a name="remarks"></a>Примечания  
- Экземпляр предиката типа содержит значение true, если тип `Ty` является указателем на функцию-член или указателем `cv-qualified` на функцию-член; в противном случае — значение false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a pointer to member function or a `cv-qualified` pointer to member function, otherwise it holds false.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_member_function_pointer.cpp   
@@ -103,12 +102,12 @@ is_member_function_pointer<int trivial::*> == false
 is_member_function_pointer<int (functional::*)()> == true  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Класс is_member_pointer](../standard-library/is-member-pointer-class.md)
+ [is_member_pointer Class](../standard-library/is-member-pointer-class.md)
 

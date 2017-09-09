@@ -1,31 +1,45 @@
 ---
-title: "&lt;операторы&gt; complex | Документы Майкрософт"
+title: '&lt;complex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- complex/std::operator!=
+- complex/std::operator&gt;&gt;
+- complex/std::operator&lt;&lt;
+- complex/std::operator*
+- complex/std::operator+
+- complex/std::operator-
+- complex/std::operator/
+- complex/std::operator==
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+helpviewer_keywords:
+- std::operator!= (complex)
+- std::operator&gt;&gt; (complex)
+- std::operator&lt;&lt; (complex), std::operator== (complex)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 92d32d428e109c8e52d25328025e98030d5fc304
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltcomplexgt-operators"></a>&lt;операторы&gt; complex
+# <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;&gt;](#op_gt_gt)|[оператор&lt;&lt;](#op_lt_lt)|  
-|[оператор*](#op_star)|[оператор+](#op_add)|[оператор-](#operator-)|  
-|[оператор/](#op_div)|[оператор==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
- Проверяет на неравенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
+##  <a name="op_neq"></a>  operator!=  
+ Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -45,22 +59,22 @@ bool operator!=(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Комплексное число или объект типа его параметра для проверки на неравенство.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
  `right`  
- Комплексное число или объект типа его параметра для проверки на неравенство.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если числа не равны; значение **false**, если числа равны.  
+### <a name="return-value"></a>Return Value  
+ **true** if the numbers are not equal; **false** if numbers are equal.  
   
-### <a name="remarks"></a>Примечания  
- Два комплексных числа равны только в том случае, если равны их вещественные части и мнимые части. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
   
- Операция перегружена, так что сравнительные проверки могут выполняться без преобразования данных в определенный формате.  
+ The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_NE.cpp  
@@ -160,8 +174,8 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="op_star"></a>  оператор*  
- Умножает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
+##  <a name="op_star"></a>  operator*  
+ Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -181,20 +195,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Первое из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет умножено с помощью операции *.  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
   
  `right`  
- Второе из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет умножено с помощью операции *.  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Комплексное число, полученное в результате умножения двух чисел, значение и тип которых задаются входными данными параметров.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the multiplication of the two numbers whose value and type are specified by the parameter inputs.  
   
-### <a name="remarks"></a>Примечания  
- Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_mult.cpp  
@@ -254,8 +268,8 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add"></a>  оператор+  
- Складывает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
+##  <a name="op_add"></a>  operator+  
+ Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -278,20 +292,20 @@ template <class Type>
 complex<Type> operator+(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Первое из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет сложено с помощью операции +.  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
   
  `right`  
- Второе из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет сложено с помощью операции +.  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Комплексное число, являющееся результатом сложения двух чисел, значение и тип которых задаются входными данными параметров.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the addition of the two numbers whose value and type are specified by the parameter inputs.  
   
-### <a name="remarks"></a>Примечания  
- Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат. Возвращает унарный оператор `left`.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format. The unary operator returns `left`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_add.cpp  
@@ -391,8 +405,8 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="operator-"></a>  оператор-  
- Вычитает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
+##  <a name="operator-"></a>  operator-  
+ Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```   
 template <class Type>  
@@ -414,22 +428,22 @@ template <class Type>
 complex<Type> operator-(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Первое из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, для выполнения вычитания с помощью операции –.  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
   
  `right`  
- Второе из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, для выполнения вычитания с помощью операции –.  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Комплексное число, являющееся результатом вычитания `right``left` чисел, значение и тип которых задаются входными данными параметров.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the subtraction of `right` from `left`, the two numbers whose values are specified by the parameter inputs.  
   
-### <a name="remarks"></a>Примечания  
- Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
- Унарный оператор изменяет знак комплексного числа и возвращает значение, вещественная часть которого является отрицательной по отношению к вещественной части указанного числа, а мнимая часть — отрицательной по отношению к мнимой части указанного числа.  
+ The unary operator changes the sign of a complex number and returns a value whose real part is the negative of the real part of the number input and whose imaginary part is the negative of the imaginary part of the number input.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_sub.cpp  
@@ -529,8 +543,8 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.  
 ```  
   
-##  <a name="op_div"></a>  оператор/  
- Делит два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
+##  <a name="op_div"></a>  operator/  
+ Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```   
 template <class Type>  
@@ -549,20 +563,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Комплексное число или число, имеющее тип параметра для комплексного числа, которое является делимым для деления на делитель с помощью операции /.  
+ A complex number or a number that is of the parameter type for a complex number that is the numerator to be divided by the denominator with the / operation.  
   
  `right`  
- Комплексное число или число, имеющее тип параметра для комплексного числа, которое является делителем для деления делимого с помощью операции /.  
+ A complex number or a number that is of the parameter type for a complex number that is the denominator to be used to divide the numerator with the / operation.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Комплексное число, полученное в результате деления делимого на делитель, значения которых задаются входными данными параметров.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the division of the numerator by the denominator, the values of which are specified by the parameter inputs.  
   
-### <a name="remarks"></a>Примечания  
- Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_div.cpp  
@@ -645,8 +659,8 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
- Вставляет указанное комплексное число в выходной поток.  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+ Inserts a complex number specified into the output stream.  
   
 ```   
 template <class Type, class Elem, class Traits>  
@@ -655,20 +669,20 @@ basic_ostream<Elem, Traits>& operator<<(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ostr`  
- Выходной поток, в который будет введено комплексное число.  
+ The output stream into which the complex number is being entered.  
   
  `right`  
- Комплексное число для ввода в выходной поток.  
+ The complex number to be entered into the output stream  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Записывает значение указанного комплексного числа в `Ostr` в декартовой системе координат формате: (*действительная часть, мнимая часть*).  
+### <a name="return-value"></a>Return Value  
+ Writes the value of the specified complex number to the `Ostr` in a Cartesian format: ( *real part, imaginary part* ).  
   
-### <a name="remarks"></a>Примечания  
- Выходной поток перегружен, так что он будет принимать любую форму комплексного числа; его формат вывода по умолчанию — декартов (арифметический).  
+### <a name="remarks"></a>Remarks  
+ The output stream is overloaded so that it will accept any form of a complex number, and its default output format is the Cartesian format.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_insert.cpp  
@@ -703,8 +717,8 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
- Проверяет на равенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
+##  <a name="op_eq_eq"></a>  operator==  
+ Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -724,22 +738,22 @@ bool operator==(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Комплексное число или объект типа его параметра для проверки на неравенство.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
  `right`  
- Комплексное число или объект типа его параметра для проверки на неравенство.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если числа равны; значение **false**, если числа не равны.  
+### <a name="return-value"></a>Return Value  
+ **true** if the numbers are equal; **false** if numbers are not equal.  
   
-### <a name="remarks"></a>Примечания  
- Два комплексных числа равны только в том случае, если равны их вещественные части и мнимые части. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
   
- Операция перегружена, так что сравнительные проверки могут выполняться без преобразования данных в определенный формате.  
+ The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_EQ.cpp  
@@ -839,8 +853,8 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="op_gt_gt"></a>  оператор&gt;&gt;  
- Извлекает комплексное число из входного потока.  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+ Extracts a complex value from the input stream.  
   
 ```  
  
@@ -850,26 +864,26 @@ basic_istream<Elem, Traits>& operator>>(
    complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Istr`  
- Входной поток, из которого будет извлечено комплексное число.  
+ The input stream from which the complex number is being extracted.  
   
  `right`  
- Комплексное число, которое извлекается из входного потока.  
+ The complex number that is being extracted from the input stream.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Считывает значение из указанного комплексного числа `Istr` и возвращает его в `right`.  
+### <a name="return-value"></a>Return Value  
+ Reads the value of the specified complex number from `Istr` and returns it into `right`.  
   
-### <a name="remarks"></a>Примечания  
- Допустимые форматы входных данных:  
+### <a name="remarks"></a>Remarks  
+ The valid input formats are  
   
-- *(действительная часть, мнимая часть)*  
+- *( real part, imaginary part )*  
   
-- *(действительная часть)*  
+- *( real part )*  
   
-- *действительная часть*  
+- *real part*  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_extract.cpp  
@@ -896,7 +910,7 @@ int main( )
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<complex>](../standard-library/complex.md)
 
 

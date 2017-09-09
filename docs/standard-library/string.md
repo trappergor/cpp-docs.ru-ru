@@ -1,5 +1,5 @@
 ---
-title: "&lt;string&gt; | Документы Майкрософт"
+title: '&lt;string&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<string>
-- string/std::<string>
-- std.<string>
-- <string>
+- std::<string>", "string/std::<string>", "<string>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,100 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89e99200f1ee6f680c76e748df23cdfe3569ce68
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
-Определяет класс шаблонов контейнеров `basic_string` и некоторые вспомогательные шаблоны.  
+Defines the container template class `basic_string` and various supporting templates.  
   
- Дополнительные сведения о классе `basic_string` см. в разделе [Класс basic_string](../standard-library/basic-string-class.md)  
+ For more information about `basic_string`, see [basic_string Class](../standard-library/basic-string-class.md)  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <string>  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Язык C++ и библиотека Standard C++ поддерживают два типа строк:  
+## <a name="remarks"></a>Remarks  
+ The C++ language and the C++ Standard Library support two types of strings:  
   
--   Массивы символов, оканчивающиеся нулевым символов, часто называют строками C.  
+-   Null-terminated character arrays often referred to as C strings.  
   
--   Объекты класса шаблонов типа `basic_string`, обрабатывающие все аргументы шаблонов, подобные `char`.  
+-   Template class objects, of type `basic_string`, that handle all `char`-like template arguments.  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса шаблона `basic_string` элементами типа `char` как `string`.|  
-|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса шаблона `basic_string` элементами типа `wchar_t` как `wstring`.|  
-|[u16string](../standard-library/string-typedefs.md#u16string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char16_t`.|  
-|[u32string](../standard-library/string-typedefs.md#u32string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char32_t`.|  
+|[string](../standard-library/string-typedefs.md#string)|A type that describes a specialization of the template class `basic_string` with elements of type `char` as a `string`.|  
+|[wstring](../standard-library/string-typedefs.md#wstring)|A type that describes a specialization of the template class `basic_string` with elements of type `wchar_t` as a `wstring`.|  
+|[u16string](../standard-library/string-typedefs.md#u16string)|A type that describes a specialization of the template class `basic_string` based on elements of type `char16_t`.|  
+|[u32string](../standard-library/string-typedefs.md#u32string)|A type that describes a specialization of the template class `basic_string` based on elements of type `char32_t`.|  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|  
-|[оператор!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |  
-|[оператор==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|  
-|[оператор<](../standard-library/string-operators.md#op_lt)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|  
-|[оператор<=](../standard-library/string-operators.md#op_lt_eq)|Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.|  
-|[оператор<\<](../standard-library/string-operators.md#op_lt_lt)|Функция шаблона, вставляющая строку в выходной поток.|  
-|[оператор>](../standard-library/string-operators.md#op_gt)|Проверяет, что строковый объект слева от оператора больше строкового объекта справа от оператора.|  
-|[оператор>=](../standard-library/string-operators.md#op_gt_eq)|Проверяет, что строковый объект слева от оператора больше или равен строковому объекту справа от оператора.|  
-|[оператор>>](../standard-library/string-operators.md#op_gt_gt)|Функция шаблона, извлекающая строку из входного потока.|  
-  
-### <a name="specialized-template-functions"></a>Специализированные функции шаблонов  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[swap](../standard-library/string-functions.md#swap)|Меняет местами массивы символов двух строк.|  
-|[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов в `double.`|  
-|[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов в `float`.|  
-|[stoi](../standard-library/string-functions.md#stoi)|Преобразует последовательность символов в целое число.|  
-|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов в `long double`.|  
-|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов в `long long`.|  
-|[stoul](../standard-library/string-functions.md#stoul)|Преобразует последовательность символов в `unsigned long`.|  
-|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов в `unsigned long long`.|  
-|[to_string](../standard-library/string-functions.md#to_string)|Преобразует значение в `string`.|  
-|[to_wstring](../standard-library/string-functions.md#to_wstring)|Преобразует значение в двухбайтовое `string`.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatenates two string objects.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Tests if the string object on the left side of the operator is not equal to the string object on the right side.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Tests if the string object on the left side of the operator is equal to the string object on the right side.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Tests if the string object on the left side of the operator is less than to the string object on the right side.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|A template function that inserts a string into the output stream.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Tests if the string object on the left side of the operator is greater than to the string object on the right side.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|A template function that extracts a string from the input stream.|  
   
-### <a name="functions"></a>Функции  
-  
-|||  
-|-|-|  
-|[getline шаблона](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="specialized-template-functions"></a>Specialized Template Functions  
   
 |||  
 |-|-|  
-|[Класс basic_string](../standard-library/basic-string-class.md)|Класс шаблона, описывающий объекты, которые могут хранить последовательность произвольных символьных объектов.|  
-|[Структура char_traits](../standard-library/char-traits-struct.md)|Класс шаблона, описывающий атрибуты, связанные с символом типа CharType|  
+|[swap](../standard-library/string-functions.md#swap)|Exchanges the arrays of characters of two strings.|  
+|[stod](../standard-library/string-functions.md#stod)|Converts a character sequence to a `double.`|  
+|[stof](../standard-library/string-functions.md#stof)|Converts a character sequence to a `float`.|  
+|[stoi](../standard-library/string-functions.md#stoi)|Converts a character sequence to an integer.|  
+|[stold](../standard-library/string-functions.md#stold)|Converts a character sequence to a `long double`.|  
+|[stoll](../standard-library/string-functions.md#stoll)|Converts a character sequence to a `long long`.|  
+|[stoul](../standard-library/string-functions.md#stoul)|Converts a character sequence to an `unsigned long`.|  
+|[stoull](../standard-library/string-functions.md#stoull)|Converts a character sequence to an `unsigned long long`.|  
+|[to_string](../standard-library/string-functions.md#to_string)|Converts a value to a `string`.|  
+|[to_wstring](../standard-library/string-functions.md#to_wstring)|Converts a value to a wide `string`.|  
   
-### <a name="specializations"></a>Специализации  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[Структура char_traits\<char>](../standard-library/char-traits-char-struct.md)|Структура, которая является специализацией структуры шаблона `char_traits`\<CharType> к элементу типа `char`.|  
-|[Структура char_traits<wchar_t>](../standard-library/char-traits-wchar-t-struct.md)|Структура, которая является специализацией структуры шаблона `char_traits`\<CharType> к элементу типа `wchar_t`.|  
-|[Структура char_traits<char16_t>](../standard-library/char-traits-char16-t-struct.md)|Структура, которая является специализацией структуры шаблона `char_traits`\<CharType> к элементу типа `char16_t`.|  
-|[Структура char_traits<char32_t>](../standard-library/char-traits-char32-t-struct.md)|Структура, которая является специализацией структуры шаблона `char_traits`\<CharType> к элементу типа `char32_t`.|  
+|[getline Template](../standard-library/string-functions.md#getline)|Extract strings from the input stream line by line.|  
   
-## <a name="requirements"></a>Требования  
+### <a name="classes"></a>Classes  
   
-- **Заголовок:** \<string>  
+|||  
+|-|-|  
+|[basic_string Class](../standard-library/basic-string-class.md)|A template class that describes objects that can store a sequence of arbitrary character-like objects.|  
+|[char_traits Struct](../standard-library/char-traits-struct.md)|A template class that describes attributes associated with a character of type CharType|  
   
-- **Пространство имен:** std  
+### <a name="specializations"></a>Specializations  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+|||  
+|-|-|  
+|[char_traits\<char> Struct](../standard-library/char-traits-char-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char`.|  
+|[char_traits<wchar_t> Struct](../standard-library/char-traits-wchar-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `wchar_t`.|  
+|[char_traits<char16_t> Struct](../standard-library/char-traits-char16-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char16_t`.|  
+|[char_traits<char32_t> Struct](../standard-library/char-traits-char32-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char32_t`.|  
+  
+## <a name="requirements"></a>Requirements  
+  
+- **Header:** \<string>  
+  
+- **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;forward_list&gt; | Документы Майкрософт"
+title: '&lt;forward_list&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <forward_list>
-- std::<forward_list>
-- std.<forward_list>
+- <forward_list>", "std::<forward_list>", "std.<forward_list>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,47 +33,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3493d1897018e203e3918c3368c68f5b112908b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8177a16536343b85978d1a2a861559b0387840c8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
-Определяет прямой список классов шаблонов контейнеров и некоторые вспомогательные шаблоны.  
+Defines the container template class forward_list and several supporting templates.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <forward_list>  
 ```  
   
-### <a name="operators"></a>Операторы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|  
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|  
-|[оператор<](../standard-library/forward-list-operators.md#op_lt)|Проверяет, меньше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.|  
-|[оператор<=](../standard-library/forward-list-operators.md#op_lt_eq)|Проверяет, меньше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.|  
-|[оператор>](../standard-library/forward-list-operators.md#op_gt)|Проверяет, больше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.|  
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Проверяет, больше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.|  
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Tests if the forward list object on the left side of the operator is equal to the forward list object on the right side.|  
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Tests if the forward list object on the left side of the operator is not equal to the forward list object on the right side.|  
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|Tests if the forward list object on the left side of the operator is less than the forward list object on the right side.|  
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is less than or equal to the forward list object on the right side.|  
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Tests if the forward list object on the left side of the operator is greater than the forward list object on the right side.|  
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is greater than or equal to the forward list object on the right side.|  
   
-### <a name="functions"></a>Функции  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/forward-list-functions.md#swap)|Меняет местами элементы двух прямых списков.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[forward_list](../standard-library/forward-list-class.md)|Описывает объект, управляющий последовательностью элементов переменной длины. Последовательность хранится в виде однонаправленного связанного списка элементов, каждый из которых содержит член типа `Type`.|  
+|[swap](../standard-library/forward-list-functions.md#swap)|Exchanges the elements of two forward lists.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[forward_list](../standard-library/forward-list-class.md)|Describes an object that controls a varying-length sequence of elements. The sequence is stored as a singly-linked list of elements, each containing a member of type `Type`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

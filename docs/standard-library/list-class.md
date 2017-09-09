@@ -1,5 +1,5 @@
 ---
-title: "Класс list | Документы Майкрософт"
+title: list Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- list
 - list/std::list
 - list/std::list::allocator_type
 - list/std::list::const_iterator
@@ -60,7 +59,53 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- list class
+- std::list [C++]
+- std::list [C++], allocator_type
+- std::list [C++], const_iterator
+- std::list [C++], const_pointer
+- std::list [C++], const_reference
+- std::list [C++], const_reverse_iterator
+- std::list [C++], difference_type
+- std::list [C++], iterator
+- std::list [C++], pointer
+- std::list [C++], reference
+- std::list [C++], reverse_iterator
+- std::list [C++], size_type
+- std::list [C++], value_type
+- std::list [C++], assign
+- std::list [C++], back
+- std::list [C++], begin
+- std::list [C++], cbegin
+- std::list [C++], cend
+- std::list [C++], clear
+- std::list [C++], crbegin
+- std::list [C++], crend
+- std::list [C++], emplace
+- std::list [C++], emplace_back
+- std::list [C++], emplace_front
+- std::list [C++], empty
+- std::list [C++], end
+- std::list [C++], erase
+- std::list [C++], front
+- std::list [C++], get_allocator
+- std::list [C++], insert
+- std::list [C++], max_size
+- std::list [C++], merge
+- std::list [C++], pop_back
+- std::list [C++], pop_front
+- std::list [C++], push_back
+- std::list [C++], push_front
+- std::list [C++], rbegin
+- std::list [C++], remove
+- std::list [C++], remove_if
+- std::list [C++], rend
+- std::list [C++], resize
+- std::list [C++], reverse
+- std::list [C++], size
+- std::list [C++], sort
+- std::list [C++], splice
+- std::list [C++], swap
+- std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 caps.latest.revision: 20
 author: corob-msft
@@ -80,125 +125,125 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b53e8b2f708b03d1b2575beee7e93b51fbf4b398
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a1d5b3f567b69282e65cdcbe140f3128b97c17b2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="list-class"></a>Класс list
-Класс списка стандартной библиотеки С++ — это класс-шаблон контейнеров последовательностей, содержащих элементы в линейном порядке и позволяющие вставлять и удалять элементы в любом месте в пределах этих последовательностей. Последовательность сохраняется в виде двунаправленного связанного списка элементов, каждый из которых содержит член какого-либо типа *Type*.  
+# <a name="list-class"></a>list Class
+The C++ Standard Library list class is a template class of sequence containers that maintain their elements in a linear arrangement and allow efficient insertions and deletions at any location within the sequence. The sequence is stored as a bidirectional linked list of elements, each containing a member of some type *Type*.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Type, class Allocator= allocator<Type>>  
 class list  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- *Тип*  
- Тип данных элементов, сохраняемых в списке.  
+#### <a name="parameters"></a>Parameters  
+ *Type*  
+ The element data type to be stored in the list.  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении списка и отмене распределения памяти. Этот аргумент является необязательным, и значение по умолчанию — **распределителя**\<*тип*>.  
+ The type that represents the stored allocator object that encapsulates details about the list's allocation and deallocation of memory. This argument is optional, and the default value is **allocator**\<*Type*>.  
   
-## <a name="remarks"></a>Примечания  
- Выбор типа контейнера должен в общем случае производиться на основе типа поиска и вставки, который требуется приложению. Векторы должны быть предпочитаемыми контейнерами для управления последовательностями, когда важен произвольный доступ к любому элементу, а вставка и удаление элементов требуется лишь в конце последовательности. Производительность контейнера класса двусторонней очереди выше, когда требуется произвольный доступ, а также вставка и удаление элементов и в начале последовательности, и в ее конце.  
+## <a name="remarks"></a>Remarks  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Vectors should be the preferred container for managing a sequence when random access to any element is at a premium and insertions or deletions of elements are only required at the end of a sequence. The performance of the class deque container is superior when random access is needed and insertions and deletions at both the beginning and the end of a sequence are at a premium.  
   
- Функции-члены списка [merge](#merge), [reverse](#reverse), [unique](#unique), [remove](#remove) и [remove_if](#remove_if) оптимизированы для объектов-списков и являются быстродействующими альтернативами своим универсальным аналогам.  
+ The list member functions [merge](#merge), [reverse](#reverse), [unique](#unique), [remove](#remove), and [remove_if](#remove_if) have been optimized for operation on list objects and offer a high-performance alternative to their generic counterparts.  
   
- Перераспределение списка происходит, когда функция-член должна вставить или удалить элементы списка. Во всех таких случаях только итераторы или ссылки, указывающие на удаленные части последовательности, становятся недействительными .  
+ List reallocation occurs when a member function must insert or erase elements of the list. In all such cases, only iterators or references that point at erased portions of the controlled sequence become invalid.  
   
- Добавьте заголовок \<list> стандартной библиотеки С++, чтобы определить [контейнерный](../standard-library/stl-containers.md) класс-шаблон списка и некоторые вспомогательные шаблоны.  
+ Include the C++ Standard Library standard header \<list> to define the [container](../standard-library/stl-containers.md) template class list and several supporting templates.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[list](#list)|Создает список определенного размера, или с элементами определенного значения, или с определенным `allocator`, или в качестве копии какого-либо другого списка.|  
+|[list](#list)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other list.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта списка.|  
-|[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать элемент `const` в списке.|  
-|[const_pointer](#const_pointer)|Тип, предоставляющий указатель на элемент `const` в списке.|  
-|[const_reference](#const_reference)|Тип, предоставляющий ссылку на элемент `const`, хранящийся в списке, для чтения и выполнения операций `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать любой элемент `const` в списке.|  
-|[difference_type](#difference_type)|Тип, предоставляющий разницу между двумя итераторами, ссылающимися на элементы в одном и том же списке.|  
-|[iterator](#iterator)|Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в списке.|  
-|[pointer](#pointer)|Тип, предоставляющий указатель на элемент в списке.|  
-|[reference](#reference)|Тип, предоставляющий ссылку на элемент `const`, хранящийся в списке, для чтения и выполнения операций `const`.|  
-|[reverse_iterator](#reverse_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в обратном списке.|  
-|[size_type](#size_type)|Тип, считающий количество элементов в списке.|  
-|[value_type](#value_type)|Тип, представляющий тип данных, хранящихся в списке.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for a list object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in a list.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a list.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a list for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in a list.|  
+|[difference_type](#difference_type)|A type that provides the difference between two iterators that refer to elements within the same list.|  
+|[iterator](#iterator)|A type that provides a bidirectional iterator that can read or modify any element in a list.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a list.|  
+|[reference](#reference)|A type that provides a reference to a `const` element stored in a list for reading and performing `const` operations.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed list.|  
+|[size_type](#size_type)|A type that counts the number of elements in a list.|  
+|[value_type](#value_type)|A type that represents the data type stored in a list.|  
   
-### <a name="member-functions"></a>Функции-члены  
-  
-|||  
-|-|-|  
-|[assign](#assign)|Удаляет элементы из списка и копирует новый набор элементов в список назначения.|  
-|[back](#back)|Возвращает ссылку на последний элемент в списке.|  
-|[begin](#begin)|Возвращает итератор, адресующий первый элемент в списке.|  
-|[cbegin](#cbegin)|Возвращает константный итератор, адресующий первый элемент в списке.|  
-|[cend](#cend)|Возвращает константный итератор, адресующий расположение после последнего элемента в списке.|  
-|[clear](#clear)|Удаляет все элементы списка.|  
-|[crbegin](#crbegin)|Возвращает константный итератор, адресующий первый элемент в обратном списке.|  
-|[crend](#crend)|Возвращает константный итератор, адресующий расположение после последнего элемента в обратном списке.|  
-|[emplace](#emplace)|Вставляет элемент, созданный на месте, в указанное положение в списке.|  
-|[emplace_back](#emplace_back)|Добавляет элемент, созданный на месте, в конец списка.|  
-|[emplace_front](#emplace_front)|Добавляет элемент, созданный на месте, в начало списка.|  
-|[empty](#empty)|Проверяет, пуст ли список.|  
-|[end](#end)|Возвращает итератор, адресующий расположение после последнего элемента в списке.|  
-|[erase](#erase)|Удаляет элемент или диапазон элементов с указанных положений в списке.|  
-|[front](#front)|Возвращает ссылку на первый элемент в списке.|  
-|[get_allocator](#get_allocator)|Возвращает копию объекта объекта `allocator`, использованного для создания списка.|  
-|[insert](#insert)|Вставляет элемент или количество элементов или диапазон элементов в указанное положение в списке.|  
-|[max_size](#max_size)|Возвращает максимальную длину списка.|  
-|[merge](#merge)|Удаляет элементы из списка аргументов, вставляет их в список назначения и сортирует новый объединенный набор элементов по возрастанию или в ином указанном порядке.|  
-|[pop_back](#pop_back)|Удаляет элемент в конце списка.|  
-|[pop_front](#pop_front)|Удаляет элемент в начале списка.|  
-|[push_back](#push_back)|Добавляет элемент в конец списка.|  
-|[push_front](#push_front)|Добавляет элемент в начало списка.|  
-|[rbegin](#rbegin)|Возвращает итератор, адресующий первый элемент в обратном списке.|  
-|[remove](#remove)|Удаляет из списка элементы, совпадающие с заданным значением.|  
-|[remove_if](#remove_if)|Удаляет из списка элементы, для которых выполняется заданный предикат.|  
-|[rend](#rend)|Возвращает итератор, адресующий расположение после последнего элемента в обратном списке.|  
-|[resize](#resize)|Указывает новый размер списка.|  
-|[reverse](#reverse)|Изменяет порядок следования элементов в списке на обратный.|  
-|[size](#size)|Возвращает количество элементов в списке.|  
-|[sort](#sort)|Упорядочивает элементы списка по возрастанию или в другом порядке.|  
-|[splice](#splice)|Удаляет элементы из списка аргументов и вставляет их в список назначения.|  
-|[swap](#swap)|Меняет местами элементы двух списков.|  
-|[unique](#unique)|Удаляет из списка повторяющиеся соседние элементы или соседние элементы, удовлетворяющие условию какого-либо другого двоичного предиката.|  
-  
-### <a name="operators"></a>Операторы  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[list::operator=](#op_eq)|Заменяет элементы списка копией другого списка.|  
+|[assign](#assign)|Erases elements from a list and copies a new set of elements to the target list.|  
+|[back](#back)|Returns a reference to the last element of a list.|  
+|[begin](#begin)|Returns an iterator addressing the first element in a list.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in a list.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a list.|  
+|[clear](#clear)|Erases all the elements of a list.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed list.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed list.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a list at a specified position.|  
+|[emplace_back](#emplace_back)|Adds an element constructed in place to the end of a list.|  
+|[emplace_front](#emplace_front)|Adds an element constructed in place to the beginning of a list.|  
+|[empty](#empty)|Tests if a list is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a list.|  
+|[erase](#erase)|Removes an element or a range of elements in a list from specified positions.|  
+|[front](#front)|Returns a reference to the first element in a list.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct a list.|  
+|[insert](#insert)|Inserts an element or a number of elements or a range of elements into a list at a specified position.|  
+|[max_size](#max_size)|Returns the maximum length of a list.|  
+|[merge](#merge)|Removes the elements from the argument list, inserts them into the target list, and orders the new, combined set of elements in ascending order or in some other specified order.|  
+|[pop_back](#pop_back)|Deletes the element at the end of a list.|  
+|[pop_front](#pop_front)|Deletes the element at the beginning of a list.|  
+|[push_back](#push_back)|Adds an element to the end of a list.|  
+|[push_front](#push_front)|Adds an element to the beginning of a list.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed list.|  
+|[remove](#remove)|Erases elements in a list that match a specified value.|  
+|[remove_if](#remove_if)|Erases elements from the list for which a specified predicate is satisfied.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed list.|  
+|[resize](#resize)|Specifies a new size for a list.|  
+|[reverse](#reverse)|Reverses the order in which the elements occur in a list.|  
+|[size](#size)|Returns the number of elements in a list.|  
+|[sort](#sort)|Arranges the elements of a list in ascending order or with respect to some other order relation.|  
+|[splice](#splice)|Removes elements from the argument list and inserts them into the target list.|  
+|[swap](#swap)|Exchanges the elements of two lists.|  
+|[unique](#unique)|Removes adjacent duplicate elements or adjacent elements that satisfy some other binary predicate from the list.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<list>  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[list::operator=](#op_eq)|Replaces the elements of the list with a copy of another list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<list>  
   
 ##  <a name="allocator_type"></a>  list::allocator_type  
- Тип, представляющий класс распределителя для объекта списка.  
+ A type that represents the allocator class for a list object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `allocator_type` является синонимом параметра-шаблона **Распределитель**.  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter **Allocator.**  
   
-### <a name="example"></a>Пример  
-  См. пример для [get_allocator](#get_allocator).  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator).  
   
 ##  <a name="assign"></a>  list::assign  
- Удаляет элементы из списка и копирует новый набор элементов в список назначения.  
+ Erases elements from a list and copies a new set of elements to a target list.  
   
 ```  
 void assign(
@@ -214,26 +259,26 @@ void assign(
     InputIterator Last);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First`  
- Положение первого элемента в диапазоне элементов, копируемых из списка аргументов.  
+ Position of the first element in the range of elements to be copied from the argument list.  
   
  `Last`  
- Положение первого элемента после диапазона элементов, копируемых из списка аргументов.  
+ Position of the first element just beyond the range of elements to be copied from the argument list.  
   
  `Count`  
- Количество копий элемента, вставляемых в список.  
+ The number of copies of an element being inserted into the list.  
   
  `Val`  
- Значение элемента, вставляемого в список.  
+ The value of the element being inserted into the list.  
   
  `IList`  
- Список initializer_list содержит вставляемые элементы.  
+ The initializer_list that contains the elements to be inserted.  
   
-### <a name="remarks"></a>Примечания  
- После удаления любых существующих элементов в списке назначения операция назначения либо вставляет указанный диапазон элементов из исходного списка или какого-либо другого списка в список назначения, либо вставляет копии нового элемента указанного значения в список назначения  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in the target list, assign either inserts a specified range of elements from the original list or from some other list into the target list or inserts copies of a new element of a specified value into the target list  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_assign.cpp  
@@ -284,7 +329,7 @@ c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```  
   
 ##  <a name="back"></a>  list::back  
- Возвращает ссылку на последний элемент в списке.  
+ Returns a reference to the last element of a list.  
   
 ```  
 reference back();
@@ -292,15 +337,15 @@ reference back();
 const_reference back() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Последний элемент списка. Если список пуст, возвращаемое значение не определено.  
+### <a name="return-value"></a>Return Value  
+ The last element of the list. If the list is empty, the return value is undefined.  
   
-### <a name="remarks"></a>Примечания  
- Если возвращаемое значение **back** назначается `const_reference`, то объект списка изменить нельзя. Если возвращаемое значение **back** назначается **ссылке**, то объект списка можно изменить.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **back** is assigned to a `const_reference`, the list object cannot be modified. If the return value of **back** is assigned to a **reference**, the list object can be modified.  
   
- При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, при попытке доступа к элементу в пустом списке возникнет ошибка времени выполнения.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty list.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_back.cpp  
@@ -331,7 +376,7 @@ The next-to-last integer of c1 is 10
 ```  
   
 ##  <a name="begin"></a>  list::begin  
- Возвращает итератор, адресующий первый элемент в списке.  
+ Returns an iterator addressing the first element in a list.  
   
 ```  
 const_iterator begin() const;
@@ -339,13 +384,13 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор, адресующий расположение первого элемента в списке или расположение после пустого списка.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the list or to the location succeeding an empty list.  
   
-### <a name="remarks"></a>Примечания  
- Если возвращаемое значение **begin** назначается `const_iterator`, то элемент в списке изменить нельзя. Если возвращаемое значение **begin** назначается **итератору**, то элемент в списке можно изменить.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the elements in the list object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the elements in the list object can be modified.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_begin.cpp  
@@ -381,19 +426,19 @@ The first element of c1 is now 20
 ```  
   
 ##  <a name="cbegin"></a>  list::cbegin  
- Возвращает итератор `const`, направленный на первый элемент в диапазоне.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор двунаправленного доступа `const`, который указывает на первый элемент диапазона или расположение прямо за концом пустого диапазона (`cbegin() == cend()` для пустого диапазона).  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Примечания  
- Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `begin()` и `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -404,19 +449,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  list::cend  
- Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор двунаправленного доступа `const`, который указывает на позицию сразу за концом диапазона.  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Примечания  
- `cend` используется для проверки того, прошел ли итератор конец диапазона.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `end()` и `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -426,16 +471,16 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  list::clear  
- Удаляет все элементы списка.  
+ Erases all the elements of a list.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_clear.cpp  
@@ -463,41 +508,41 @@ The size of list after clearing is 0
 ```  
   
 ##  <a name="const_iterator"></a>  list::const_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать элемент **const** в списке.  
+ A type that provides a bidirectional iterator that can read a **const** element in a list.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_iterator`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>Пример  
-  См. пример для [back](#back).  
+### <a name="example"></a>Example  
+  See the example for [back](#back).  
   
 ##  <a name="const_pointer"></a>  list::const_pointer  
- Предоставляет указатель на элемент `const` в списке.  
+ Provides a pointer to a `const` element in a list.  
   
 ``` 
 typedef typename Allocator::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_pointer`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- В большинстве случаев [итератор](#iterator) должен использоваться для доступа к элементам в объекте-списке.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a list object.  
   
 ##  <a name="const_reference"></a>  list::const_reference  
- Тип, предоставляющий ссылку на элемент **const**, хранящийся в списке, для чтения и выполнения операций **const**.  
+ A type that provides a reference to a **const** element stored in a list for reading and performing **const** operations.  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_reference`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reference` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_const_ref.cpp  
@@ -530,34 +575,34 @@ The second element is 20
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  list::const_reverse_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать любой элемент **const** в списке.  
+ A type that provides a bidirectional iterator that can read any **const** element in a list.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_reverse_iterator` не может изменять значение элемента и используется для последовательного прохождения через список в обратную сторону.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is used to iterate through the list in reverse.  
   
-### <a name="example"></a>Пример  
-  См. пример для [rbegin](#rbegin).  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin).  
   
 ##  <a name="crbegin"></a>  list::crbegin  
- Возвращает константный итератор, адресующий первый элемент в обратном списке.  
+ Returns a const iterator addressing the first element in a reversed list.  
   
 ```  
 const_reverse_iterator rbegin() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константный обратный двунаправленный итератор, адресующий первый элемент в обратном списке (или адресующий элемент, ранее бывший первым элементом в `list` до изменения его порядка на обратный).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed list (or addressing what had been the last element in the unreversed `list`).  
   
-### <a name="remarks"></a>Примечания  
- `crbegin` используется с обратным списком точно так же, как [list::begin](#begin) используется с `list`.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed list just as [list::begin](#begin) is used with a `list`.  
   
- Если возвращаемое значение `crbegin`, то объект списка невозможно изменить. [list::rbegin](#rbegin) можно использовать для последовательного прохождения по списку в обратную сторону.  
+ With the return value of `crbegin`, the list object cannot be modified. [list::rbegin](#rbegin) can be used to iterate through a list backwards.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_crbegin.cpp  
@@ -584,25 +629,25 @@ The last element in the list is 30.
 ```  
   
 ##  <a name="crend"></a>  list::crend  
- Возвращает константный итератор, адресующий расположение после последнего элемента в обратном списке.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed list.  
   
 ```  
 const_reverse_iterator rend() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константный обратный двунаправленный итератор, адресующий расположение после последнего элемента в обратном [списке](../standard-library/list-class.md) (расположение перед первым элементом в `list` до изменения его порядка на обратный).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [list](../standard-library/list-class.md) (the location that had preceded the first element in the unreversed `list`).  
   
-### <a name="remarks"></a>Примечания  
- `crend` используется с обратным списком точно так же, как [list::end](#end) используется с `list`.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed list just as [list::end](#end) is used with a `list`.  
   
- Если возвращаемое значение `crend`, то объект `list` невозможно изменить.  
+ With the return value of `crend`, the `list` object cannot be modified.  
   
- `crend` используется, чтобы проверить, достиг ли итератор конца `list`.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `list`.  
   
- Значение, возвращаемое `crend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_crend.cpp  
@@ -632,18 +677,18 @@ The first element in the list is: 10
 ```  
   
 ##  <a name="difference_type"></a>  list::difference_type  
- Тип целого числа со знаком, который можно использовать для представления количества элементов в списке в диапазоне между элементами, на которые указывают итераторы.  
+ A signed integer type that can be used to represent the number of elements of a list in a range between elements pointed to by iterators.  
   
 ```  
 typedef typename Allocator::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `difference_type` — тип, возвращаемый при вычитании или приращении через итераторы контейнера. `difference_type` обычно используется для представления количества элементов в диапазоне [`first`, `last`) между итераторами `first` и `last`, включает элемент, на который указывает `first`, и диапазон элементов до элемента (не включая этот элемент), на который указывает `last`.  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range [ `first`, `last`) between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- `difference_type` доступен для всех итераторов, удовлетворяющих требованиям входного итератора, что включает класс двунаправленных итераторов, поддерживаемых обратимыми контейнерами, такими как набор. Несмотря на это, вычитание между итераторами поддерживается лишь итераторами произвольного доступа, предоставляемыми контейнерами произвольного доступа, такими как [класс vector](../standard-library/vector-class.md).  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers like set, subtraction between iterators is only supported by random-access iterators provided by a random-access container, such as [vector Class](../standard-library/vector-class.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_diff_type.cpp  
@@ -687,24 +732,24 @@ The number '30' is in c1 collection 3 times.
 ```  
   
 ##  <a name="emplace"></a>  list::emplace  
- Вставляет элемент, созданный на месте, в указанное положение в списке.  
+ Inserts an element constructed in place into a list at a specified position.  
   
 ```  
-void emplace_back(iterator Where, Type&& val);
+void emplace(iterator Where, Type&& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Where`|Положение в целевом [списке](../standard-library/list-class.md), куда вставляется первый элемент.|  
-|`val`|Элемент, добавляемый в конец `list`.|  
+|Parameter|Description|  
+|`Where`|The position in the target [list](../standard-library/list-class.md) where the first element is inserted.|  
+|`val`|The element added to the end of the `list`.|  
   
-### <a name="remarks"></a>Примечания  
- При создании исключения `list` не изменяется, а исключение создается снова.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace.cpp  
@@ -729,23 +774,23 @@ Moved first element: a
 ```  
   
 ##  <a name="emplace_back"></a>  list::emplace_back  
- Добавляет элемент, созданный на месте, в начало списка.  
+ Adds an element constructed in place to the end of a list.  
   
 ```  
 void emplace_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`val`|Элемент, добавляемый в конец [списка](../standard-library/list-class.md).|  
+|Parameter|Description|  
+|`val`|The element added to the end of the [list](../standard-library/list-class.md).|  
   
-### <a name="remarks"></a>Примечания  
- При создании исключения `list` не изменяется, а исключение создается снова.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace_back.cpp  
@@ -770,23 +815,23 @@ Moved first element: a
 ```  
   
 ##  <a name="emplace_front"></a>  list::emplace_front  
- Добавляет элемент, созданный на месте, в начало списка.  
+ Adds an element constructed in place to the beginning of a list.  
   
 ```  
 void emplace_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`val`|Элемент, добавляемый в начало [списка](../standard-library/list-class.md).|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the [list](../standard-library/list-class.md).|  
   
-### <a name="remarks"></a>Примечания  
- При создании исключения `list` не изменяется, а исключение создается снова.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace_front.cpp  
@@ -811,16 +856,16 @@ Moved first element: a
 ```  
   
 ##  <a name="empty"></a>  list::empty  
- Проверяет, пуст ли список.  
+ Tests if a list is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если список пуст; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list is empty; **false** if the list is not empty.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_empty.cpp  
@@ -846,20 +891,20 @@ The list is not empty.
 ```  
   
 ##  <a name="end"></a>  list::end  
- Возвращает итератор, адресующий расположение после последнего элемента в списке.  
+ Returns an iterator that addresses the location succeeding the last element in a list.  
   
 ```  
 const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор, адресующий расположение после последнего элемента в списке. Если список пуст, то `list::end == list::begin`.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that addresses the location succeeding the last element in a list. If the list is empty, then `list::end == list::begin`.  
   
-### <a name="remarks"></a>Примечания  
- **end** используется для проверки, достиг ли итератор конца своего списка.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its list.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_end.cpp  
@@ -903,32 +948,32 @@ The list is now: 10 400 30
 ```  
   
 ##  <a name="erase"></a>  list::erase  
- Удаляет элемент или диапазон элементов с указанных положений в списке.  
+ Removes an element or a range of elements in a list from specified positions.  
   
 ```  
 iterator erase(iterator Where);
 iterator erase(iterator first, iterator last);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Положение элемента, удаляемого из списка.  
+ Position of the element to be removed from the list.  
   
  `first`  
- Положение первого элемента, удаленного из списка.  
+ Position of the first element removed from the list.  
   
  `last`  
- Положение после последнего элемента, удаленного из списка.  
+ Position just beyond the last element removed from the list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор, указывающий на первый элемент, оставшийся после удаленных элементов, или на указатель конца списка, если такого элемента не существует.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the list if no such element exists.  
   
-### <a name="remarks"></a>Примечания  
- Перераспределение не происходит, поэтому итераторы и ссылки становятся недействительными только для удаленных элементов.  
+### <a name="remarks"></a>Remarks  
+ No reallocation occurs, so iterators and references become invalid only for the erased elements.  
   
- **erase** никогда не создает исключений.  
+ **erase** never throws an exception.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_erase.cpp  
@@ -974,22 +1019,22 @@ After erasing all elements but the first, the list becomes:  20
 ```  
   
 ##  <a name="front"></a>  list::front  
- Возвращает ссылку на первый элемент в списке.  
+ Returns a reference to the first element in a list.  
   
 ```  
 reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если список пуст, возвращаемое значение не определено.  
+### <a name="return-value"></a>Return Value  
+ If the list is empty, the return is undefined.  
   
-### <a name="remarks"></a>Примечания  
- Если возвращаемое значение `front` назначается `const_reference`, то объект списка невозможно изменить. Если возвращаемое значение `front` назначается **reference**, объект-список можно изменить.  
+### <a name="remarks"></a>Remarks  
+ If the return value of `front` is assigned to a `const_reference`, the list object cannot be modified. If the return value of `front` is assigned to a **reference**, the list object can be modified.  
   
- При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, при попытке доступа к элементу в пустом списке возникнет ошибка времени выполнения.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty list.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_front.cpp  
@@ -1018,19 +1063,19 @@ The first integer of c1 is 11
 ```  
   
 ##  <a name="get_allocator"></a>  list::get_allocator  
- Возвращает копию объекта объекта распределителя, использованного для создания списка.  
+ Returns a copy of the allocator object used to construct a list.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Распределитель, используемый списком.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the list.  
   
-### <a name="remarks"></a>Примечания  
- Распределители для класса списка определяют, как это класс управляет хранилищем. Для большинства задач программирования достаточно иметь распределители по умолчанию, поставляемые вместе с классами контейнеров стандартной библиотеки C++. Написание и использование собственного класса распределителя требует расширенных навыков работы с C++.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the list class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_get_allocator.cpp  
@@ -1055,7 +1100,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  list::insert  
- Вставляет элемент или количество элементов или диапазон элементов в указанное положение в списке.  
+ Inserts an element or a number of elements or a range of elements into a list at a specified position.  
   
 ```  
 iterator insert(iterator Where, const Type& Val);
@@ -1068,21 +1113,21 @@ template <class InputIterator>
 void insert(iterator Where, InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Where`|Положение в целевом списке, куда вставляется первый элемент.|  
-|`Val`|Значение элемента, вставляемого в список.|  
-|`Count`|Количество элементов, вставляемых в список.|  
-|`First`|Положение первого элемента в диапазоне элементов в копируемом списке аргументов.|  
-|`Last`|Положение первого элемента после диапазона элементов в копируемом списке аргументов.|  
+|Parameter|Description|  
+|`Where`|The position in the target list where the first element is inserted.|  
+|`Val`|The value of the element being inserted into the list.|  
+|`Count`|The number of elements being inserted into the list.|  
+|`First`|The position of the first element in the range of elements in the argument list to be copied.|  
+|`Last`|The position of the first element beyond the range of elements in the argument list to be copied.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Две первые функции вставки возвращают итератор, указывающий на положение вставки нового элемента в список.  
+### <a name="return-value"></a>Return Value  
+ The first two insert functions return an iterator that points to the position where the new element was inserted into the list.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_class_insert.cpp  
@@ -1153,20 +1198,20 @@ int main()
 ```  
   
 ##  <a name="iterator"></a>  list::iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в списке.  
+ A type that provides a bidirectional iterator that can read or modify any element in a list.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип **iterator** можно использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type **iterator** can be used to modify the value of an element.  
   
-### <a name="example"></a>Пример  
-  См. пример для [begin](#begin).  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin).  
   
 ##  <a name="list"></a>  list::list  
- Создает список определенного размера, или с элементами определенного значения, или с определенным распределителем, или в качестве копии какого-либо другого списка или его части.  
+ Constructs a list of a specific size or with elements of a specific value or with a specific allocator or as a copy of all or part of some other list.  
   
 ```  
 list();
@@ -1186,41 +1231,41 @@ template <class InputIterator>
 list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Al`|Класс распределителя для использования с данным объектом.|  
-|`Count`|Количество элементов в создаваемом списке.|  
-|`Val`|Значение элементов в списке.|  
-|`Right`|Список, для которого создаваемый список станет копией.|  
-|`First`|Положение первого элемента в диапазоне копируемых элементов.|  
-|`Last`|Положение первого элемента после диапазона копируемых элементов.|  
-|`IList`|Список initializer_list с элементами, которые необходимо скопировать.|  
+|Parameter|Description|  
+|`Al`|The allocator class to use with this object.|  
+|`Count`|The number of elements in the list constructed.|  
+|`Val`|The value of the elements in the list.|  
+|`Right`|The list of which the constructed list is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list that contains the elements to be copied.|  
   
-### <a name="remarks"></a>Примечания  
- Все конструкторы сохраняют объект-распределитель ( `Al`) и инициализируют список.  
+### <a name="remarks"></a>Remarks  
+ All constructors store an allocator object ( `Al`) and initialize the list.  
   
- [get_allocator](#get_allocator) возвращает копию объекта-распределителя, использовавшегося для создания списка.  
+ [get_allocator](#get_allocator) returns a copy of the allocator object used to construct a list.  
   
- Первые два конструктора указывают пустой начальный список, второй указывает тип распределителя ( `Al`) для использования.  
+ The first two constructors specify an empty initial list, the second specifying the allocator type ( `Al`) to be used.  
   
- Третий конструктор указывает число повторений определенного количества ( `Count`) элементов значения по умолчанию для класса **Тип**.  
+ The third constructor specifies a repetition of a specified number ( `Count`) of elements of the default value for class **Type**.  
   
- Четвертый и пятый конструкторы указывают повтор (`Count`) элементов со значением `Val`.  
+ The fourth and fifth constructors specify a repetition of ( `Count`) elements of value `Val`.  
   
- Шестой конструктор задает копию списка `Right`.  
+ The sixth constructor specifies a copy of the list `Right`.  
   
- Седьмой конструктор перемещает список `Right`.  
+ The seventh constructor moves the list `Right`.  
   
- Восьмой конструктор использует initializer_list, чтобы указать элементы.  
+ The eighth constructor uses an initializer_list to specify the elements.  
   
- Два следующих конструктора копируют диапазон `[First, Last)` списка.  
+ The next two constructors copy the range `[First, Last)` of a list.  
   
- Ни один из конструкторов не выполняет промежуточные перераспределения.  
+ None of the constructors perform any interim reallocations.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_class_list.cpp  
@@ -1312,16 +1357,16 @@ c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 =
 ```  
   
 ##  <a name="max_size"></a>  list::max_size  
- Возвращает максимальную длину списка.  
+ Returns the maximum length of a list.  
   
 ```
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Максимально возможная длина списка.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the list.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_max_size.cpp  
@@ -1341,7 +1386,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  list::merge  
- Удаляет элементы из списка аргументов, вставляет их в список назначения и сортирует новый объединенный набор элементов по возрастанию или в ином указанном порядке.  
+ Removes the elements from the argument list, inserts them into the target list, and orders the new, combined set of elements in ascending order or in some other specified order.  
   
 ```  
 void merge(list<Type, Allocator>& right);
@@ -1350,19 +1395,19 @@ template <class Traits>
 void merge(list<Type, Allocator>& right, Traits comp);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Список аргументов для слияния со списком назначения.  
+ The argument list to be merged with the target list.  
   
  `comp`  
- Оператор сравнения, использованный для упорядочения элементов списка назначения.  
+ The comparison operator used to order the elements of the target list.  
   
-### <a name="remarks"></a>Примечания  
- Список аргументов `right` объединен со списком назначения.   
+### <a name="remarks"></a>Remarks  
+ The argument list `right` is merged with the target list.  
   
- И список аргументов, и список назначения должны быть упорядочены с использованием того же отношения сравнения, по которому должно быть упорядочена готовая последовательность. По умолчанию для первой функции-члена используется порядок по возрастанию. Для второй функции-члена налагается использование указанной пользователем операции сравнения `comp` класса **Traits**.  
+ Both argument and target lists must be ordered with the same comparison relation by which the resulting sequence is to be ordered. The default order for the first member function is ascending order. The second member function imposes the user-specified comparison operation `comp` of class **Traits**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_merge.cpp  
@@ -1422,24 +1467,24 @@ After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 
 ```  
   
 ##  <a name="op_eq"></a>  list::operator=  
- Заменяет элементы списка копией другого списка.  
+ Replaces the elements of the list with a copy of another list.  
   
 ```  
 list& operator=(const list& right);
 list& operator=(list&& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`right`|[Список](../standard-library/list-class.md), копируемый в `list`.|  
+|Parameter|Description|  
+|`right`|The [list](../standard-library/list-class.md) being copied into the `list`.|  
   
-### <a name="remarks"></a>Примечания  
- После удаления всех существующих элементов в `list` оператор копирует или перемещает содержимое `right` в `list`.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `list`, the operator either copies or moves the contents of `right` into the `list`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_operator_as.cpp  
@@ -1481,28 +1526,28 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  list::pointer  
- Предоставляет указатель на элемент в списке.  
+ Provides a pointer to an element in a list.  
   
 ```
 typedef typename Allocator::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип **pointer** можно использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- В большинстве случаев [итератор](#iterator) должен использоваться для доступа к элементам в объекте-списке.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a list object.  
   
 ##  <a name="pop_back"></a>  list::pop_back  
- Удаляет элемент в конце списка.  
+ Deletes the element at the end of a list.  
   
 ``` 
 void pop_back();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Последний элемент не должен быть пустым. `pop_back` никогда не создает исключений.  
+### <a name="remarks"></a>Remarks  
+ The last element must not be empty. `pop_back` never throws an exception.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_pop_back.cpp  
@@ -1533,16 +1578,16 @@ After deleting the element at the end of the list, the last element is: 1
 ```  
   
 ##  <a name="pop_front"></a>  list::pop_front  
- Удаляет элемент в начале списка.  
+ Deletes the element at the beginning of a list.  
   
 ``` 
 void pop_front();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Первый элемент не должен быть пустым. `pop_front` никогда не создает исключений.  
+### <a name="remarks"></a>Remarks  
+ The first element must not be empty. `pop_front` never throws an exception.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_pop_front.cpp  
@@ -1573,23 +1618,23 @@ After deleting the element at the beginning of the list, the first element is: 2
 ```  
   
 ##  <a name="push_back"></a>  list::push_back  
- Добавляет элемент в конец списка.  
+ Adds an element to the end of a list.  
   
 ```  
 void push_back(void push_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`val`|Элемент, добавляемый в конец списка.|  
+|Parameter|Description|  
+|`val`|The element added to the end of the list.|  
   
-### <a name="remarks"></a>Примечания  
- При создании исключения список не изменяется, а исключение создается снова.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the list is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_push_back.cpp  
@@ -1627,24 +1672,24 @@ Moved first element: a
 ```  
   
 ##  <a name="push_front"></a>  list::push_front  
- Добавляет элемент в начало списка.  
+ Adds an element to the beginning of a list.  
   
 ```  
 void push_front(const Type& val);
 void push_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`val`|Элемент, добавляемый в начало списка.|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the list.|  
   
-### <a name="remarks"></a>Примечания  
- При создании исключения список не изменяется, а исключение создается снова.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the list is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_push_front.cpp  
@@ -1682,24 +1727,24 @@ Moved first element: a
 ```  
   
 ##  <a name="rbegin"></a>  list::rbegin  
- Возвращает итератор, который адресует первый элемент в обратном списке.  
+ Returns an iterator that addresses the first element in a reversed list.  
   
 ``` 
 const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обратный двунаправленный итератор, адресующий первый элемент в обратном списке (или элемент, бывший последним в списке до изменения его порядка на обратный).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed list (or addressing what had been the last element in the unreversed list).  
   
-### <a name="remarks"></a>Примечания  
- `rbegin` используется с обратным списком точно так же, как [begin](#begin) используется со списком.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed list just as [begin](#begin) is used with a list.  
   
- Если возвращаемое значение `rbegin` назначается `const_reverse_iterator`, то объект списка невозможно изменить. Если возвращаемое значение `rbegin` назначается `reverse_iterator`, то объект списка изменить нельзя.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, the list object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, the list object can be modified.  
   
- `rbegin` можно использовать для последовательного прохождения по списку в обратную сторону.  
+ `rbegin` can be used to iterate through a list backwards.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_rbegin.cpp  
@@ -1750,13 +1795,13 @@ The last element in the list is now 40.
 ```  
   
 ##  <a name="reference"></a>  list::reference  
- Тип, предоставляющий ссылку на элемент в списке.  
+ A type that provides a reference to an element stored in a list.  
   
 ```  
 typedef typename Allocator::reference reference;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_ref.cpp  
@@ -1785,20 +1830,20 @@ The second element is 20
 ```  
   
 ##  <a name="remove"></a>  list::remove  
- Удаляет из списка элементы, совпадающие с заданным значением.  
+ Erases elements in a list that match a specified value.  
   
 ``` 
 void remove(const Type& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `val`  
- Значение, которое должен иметь элемент для удаления этого элемента из списка.  
+ The value which, if held by an element, will result in that element's removal from the list.  
   
-### <a name="remarks"></a>Примечания  
- Порядок оставшихся элементов не изменяется.  
+### <a name="remarks"></a>Remarks  
+ The order of the elements remaining is not affected.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_remove.cpp  
@@ -1839,18 +1884,18 @@ After removing elements with value 5, the list becomes c2 = 100 200 300
 ```  
   
 ##  <a name="remove_if"></a>  list::remove_if  
- Удаляет из списка элементы, для которых выполняется заданный предикат.  
+ Erases elements from a list for which a specified predicate is satisfied.  
   
 ``` 
 template <class Predicate>  
 void remove_if(Predicate pred)  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pred`  
- Унарный предикат, который в случае совпадения с элементом приводит к удалению этого элемента из списка.  
+ The unary predicate which, if satisfied by an element, results in the deletion of that element from the list.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_remove_if.cpp  
@@ -1902,26 +1947,26 @@ After removing the odd elements, the list becomes c2 = 4 6 8
 ```  
   
 ##  <a name="rend"></a>  list::rend  
- Возвращает итератор, адресующий расположение после последнего элемента в обратном списке.  
+ Returns an iterator that addresses the location that follows the last element in a reversed list.  
   
 ``` 
 const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обратный двунаправленный итератор, адресующий расположение после последнего элемента в обратном списке (расположение перед первым элементом в списке до изменения его порядка на обратный).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed list (the location that had preceded the first element in the unreversed list).  
   
-### <a name="remarks"></a>Примечания  
- `rend` используется с обратным списком точно так же, как [end](#end) используется со списком.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed list just as [end](#end) is used with a list.  
   
- Если возвращаемое значение `rend` назначается `const_reverse_iterator`, то объект списка невозможно изменить. Если возвращаемое значение `rend` назначается `reverse_iterator`, то объект списка изменить нельзя.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, the list object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, the list object can be modified.  
   
- `rend` можно использовать для проверки, достиг ли итератор конца списка.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its list.  
   
- Значение, возвращаемое `rend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_rend.cpp  
@@ -1985,30 +2030,30 @@ The modified reversed list is: 30 20 40
 ```  
   
 ##  <a name="resize"></a>  list::resize  
- Указывает новый размер списка.  
+ Specifies a new size for a list.  
   
 ``` 
 void resize(size_type _Newsize);
 void resize(size_type _Newsize, Type val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Newsize`  
- Новый размер списка.  
+ The new size of the list.  
   
  `val`  
- Значение новых элементов для добавления в список, если новый размер больше исходного. Если значение не задано, новым элементам назначается значение по умолчанию для класса.  
+ The value of the new elements to be added to the list if the new size is larger that the original size. If the value is omitted, the new elements are assigned the default value for the class.  
   
-### <a name="remarks"></a>Примечания  
- Если размер списка меньше запрошенного размера, `_Newsize`, элементы добавляются в список, пока он не достигнет требуемого размера.  
+### <a name="remarks"></a>Remarks  
+ If the list's size is less than the requested size, `_Newsize`, elements are added to the list until it reaches the requested size.  
   
- Если размер списка больше запрошенного размера, ближайшие к концу списка элементы удаляются, пока размер списка не станет равным `_Newsize`.  
+ If the list's size is larger than the requested size, the elements closest to the end of the list are deleted until the list reaches the size `_Newsize`.  
   
- Если текущий размер списка совпадает с запрошенным, никакие действия не выполняются.  
+ If the present size of the list is the same as the requested size, no action is taken.  
   
- [size](#size) — это текущий размер списка.  
+ [size](#size) reflects the current size of the list.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_resize.cpp  
@@ -2049,13 +2094,13 @@ The value of the last element is now 20
 ```  
   
 ##  <a name="reverse"></a>  list::reverse  
- Изменяет порядок следования элементов в списке на обратный.  
+ Reverses the order in which the elements occur in a list.  
   
 ``` 
 void reverse();
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_reverse.cpp  
@@ -2092,29 +2137,29 @@ Reversed c1 = 30 20 10
 ```  
   
 ##  <a name="reverse_iterator"></a>  list::reverse_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в обратном списке.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed list.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `reverse_iterator` используется для последовательного прохождения через список в обратную сторону.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is used to iterate through the list in reverse.  
   
-### <a name="example"></a>Пример  
-  См. пример для [rbegin](#rbegin).  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin).  
   
 ##  <a name="size"></a>  list::size  
- Возвращает количество элементов в списке.  
+ Returns the number of elements in a list.  
   
 ``` 
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущая длина списка.  
+### <a name="return-value"></a>Return Value  
+ The current length of the list.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_size.cpp  
@@ -2144,17 +2189,17 @@ List length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  list::size_type  
- Тип, считающий количество элементов в списке.  
+ A type that counts the number of elements in a list.  
   
 ```  
 typedef typename Allocator::size_type size_type;  
 ```  
   
-### <a name="example"></a>Пример  
-  См. пример для [size](#size).  
+### <a name="example"></a>Example  
+  See the example for [size](#size).  
   
 ##  <a name="sort"></a>  list::sort  
- Упорядочивает элементы списка по возрастанию или в другом указанном пользователем порядке.  
+ Arranges the elements of a list in ascending order or with respect to some other user-specified order.  
   
 ``` 
 void sort();
@@ -2163,16 +2208,16 @@ template <class Traits>
 void sort(Traits comp);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `comp`  
- Оператор сравнения, использованный для упорядочивания последовательных элементов.  
+ The comparison operator used to order successive elements.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция-член по умолчанию помещает элементы в порядке возрастания.  
+### <a name="remarks"></a>Remarks  
+ The first member function puts the elements in ascending order by default.  
   
- Шаблонная функция-член упорядочивает элементы в соответствии с указанной пользователем операцией сравнения `comp` класса **Traits**.  
+ The member template function orders the elements according to the user-specified comparison operation `comp` of class **Traits**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_sort.cpp  
@@ -2216,7 +2261,7 @@ After sorting with 'greater than' operation, c1 = 30 20 10
 ```  
   
 ##  <a name="splice"></a>  list::splice  
- Удаляет элементы из исходного списка и вставляет их в целевой список.  
+ Removes elements from a source list and inserts them into a destination list.  
   
 ```  
 // insert the entire source list  
@@ -2232,34 +2277,34 @@ void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator 
 void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator First, const_iterator Last);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Позиция в целевом списке, после которого будут вставлены элементы.  
+ The position in the destination list before which to insert.  
   
  `Source`  
- Исходный список, который необходимо вставить в целевой список.  
+ The source list that is to be inserted into the destination list.  
   
  `Iter`  
- Элемент, который будет вставлен из исходного списка.  
+ The element to be inserted from the source list.  
   
  `First`  
- Первый элемент в диапазоне, который будет вставлен из исходного списка.  
+ The first element in the range to be inserted from the source list.  
   
  `Last`  
- Первая позиция за пределами диапазона, в которой будут вставлены элементы из исходного списка.  
+ The first position beyond the last element in the range to be inserted from the source list.  
   
-### <a name="remarks"></a>Примечания  
- Первая пара функций-членов вставляет все элементы исходного списка в целевой список перед позицией, указанной `Where`, и удаляет все элементы из исходного списка. (Значение `&Source` не должно быть равно `this`.)  
+### <a name="remarks"></a>Remarks  
+ The first pair of member functions inserts all elements in the source list into the destination list before the position referred to by `Where` and removes all elements from the source list. ( `&Source` must not equal `this`.)  
   
- Вторая пара функций-членов вставляет элемент, указанный `Iter`, перед позицией в целевом списке, указанной `Where`, и удаляет `Iter` из исходного списка. (Если `Where == Iter || Where == ++Iter`, изменения не происходят.)  
+ The second pair of member functions inserts the element referred to by `Iter` before the position in the destination list referred to by `Where` and removes `Iter` from the source list. (If `Where == Iter || Where == ++Iter`, no change occurs.)  
   
- Третья пара функций-членов вставляет диапазон, обозначенный [`First`, `Last`), перед элементом в целевом списке, указанном `Where`, и удаляет этот диапазон элементов из исходного списка. (Если `&Source == this`, диапазон `[First, Last)` не должен содержать элемент, на который указывает `Where`.)  
+ The third pair of member functions inserts the range designated by [ `First`, `Last`) before the element in the destination list referred to by `Where` and removes that range of elements from the source list. (If `&Source == this`, the range `[First, Last)` must not include the element pointed to by `Where`.)  
   
- Если срез с диапазоном вставляет `N` элементов и `&Source != this`, объект класса [iterator](../standard-library/forward-list-class.md#iterator) `N` раз увеличивается.  
+ If the ranged splice inserts `N` elements, and `&Source != this`, an object of class [iterator](../standard-library/forward-list-class.md#iterator) is incremented `N` times.  
   
- Во всех случаях итераторы, указатели и ссылки, указывающие на соединенные элементы, остаются действительными и переносятся в целевой контейнер.  
+ In all cases iterators, pointers, or references that refer to spliced elements remain valid and are transferred to the destination container.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_splice.cpp  
@@ -2337,21 +2382,21 @@ Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (2
 ```  
   
 ##  <a name="swap"></a>  list::swap  
- Меняет местами элементы двух списков.  
+ Exchanges the elements of two lists.  
   
 ``` 
 void swap(list<Type, Allocator>& right);
 friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Список, предоставляющий элементы для обмена местами, или список, элементы которого должны быть заменены на элементы списка `left`.  
+ The list providing the elements to be swapped, or the list whose elements are to be exchanged with those of the list `left`.  
   
  `left`  
- Список, элементы которого должны быть заменены на элементы списка `right`.  
+ A list whose elements are to be exchanged with those of the list `right`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_swap.cpp  
@@ -2400,7 +2445,7 @@ After swapping with c3, list c1 is: 100
 ```  
   
 ##  <a name="unique"></a>  list::unique  
- Удаляет из списка повторяющиеся соседние элементы или соседние элементы, удовлетворяющие условию какого-либо другого двоичного предиката.  
+ Removes adjacent duplicate elements or adjacent elements that satisfy some other binary predicate from a list.  
   
 ```  
 void unique();
@@ -2409,18 +2454,18 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate pred);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pred`  
- Двоичный предикат, используемый для сравнения последовательных элементов.  
+ The binary predicate used to compare successive elements.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция исходит из того, что список упорядочен, поэтому все повторяющиеся элементы находятся рядом друг с другом. Повторяющиеся элементы, находящиеся не рядом друг с другом, не будут удалены.  
+### <a name="remarks"></a>Remarks  
+ This function assumes that the list is sorted, so that all duplicate elements are adjacent. Duplicates that are not adjacent will not be deleted.  
   
- Первая функция-член удаляет каждый элемент, равный предшествующему элементу.  
+ The first member function removes every element that compares equal to its preceding element.  
   
- Вторая функция-член удаляет каждый элемент, удовлетворяющий функции предиката `pred` при сравнении с предшествующим элементом. Можно использовать любые объекты-двоичные функции, объявленные в заголовке `<functional>` для аргумента pred, или же можно создать свой собственный.  
+ The second member function removes every element that satisfies the predicate function `pred` when compared with its preceding element. You can use any of the binary function objects declared in the `<functional>`header for the argument  pred or you can create your own.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_unique.cpp  
@@ -2470,16 +2515,16 @@ After removing successive unequal elements, c3 = -10 -10
 ```  
   
 ##  <a name="value_type"></a>  list::value_type  
- Тип, представляющий тип данных, хранящихся в списке.  
+ A type that represents the data type stored in a list.  
   
 ```  
 typedef typename Allocator::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `value_type` — синоним параметра-шаблона **Type**.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_value_type.cpp  
@@ -2500,9 +2545,9 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

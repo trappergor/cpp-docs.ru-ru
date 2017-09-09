@@ -1,5 +1,5 @@
 ---
-title: "Операторы &lt;regex&gt; | Документы Майкрософт"
+title: '&lt;regex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,22 +19,22 @@ dev_langs:
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c5bf713f65c26a1a46becf846fa21f17ac867628
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 507f422cf476e7d6c928c22c516ee2e242282b04
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
+# <a name="ltregexgt-operators"></a>&lt;regex&gt; operators
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
-|[оператор==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
- Сравнение различных объектов на неравенство.  
+##  <a name="op_neq"></a>  operator!=  
+ Not equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -71,26 +71,26 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `left`  
- Левый из сравниваемых объектов.  
+ The left object to compare.  
   
  `right`  
- Правый из сравниваемых объектов.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Примечания  
- Каждый оператор-шаблон возвращает `!(left == right)`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left == right)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ne.cpp   
@@ -150,8 +150,8 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
- Сравнение "меньше, чем" для различных объектов.  
+##  <a name="op_lt"></a>  operator&lt;  
+ Less than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -184,26 +184,26 @@ bool operator<(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `left`  
- Левый из сравниваемых объектов.  
+ The left object to compare.  
   
  `right`  
- Правый из сравниваемых объектов.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Примечания  
- Каждый оператор-шаблон преобразует свои аргументы в тип string и возвращает значение true только в случае, если преобразованное значение `left` оказывается меньше преобразованного значения `right`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts its arguments to a string type and returns true only if the converted value of `left` compares less than the converted value of `right`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_lt.cpp   
@@ -258,8 +258,8 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
- Вставляет в поток sub_match.  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+ Inserts a sub_match in a stream.  
   
 ```  
 template <class Elem, class IOtraits, class Alloc, class BidIt>  
@@ -267,29 +267,29 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
     const sub_match<BidIt>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- Тип элемента.  
+ The element type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `os`  
- Выходной поток.  
+ The output stream.  
   
  `right`  
- Вставляемый объект.  
+ The object to insert.  
   
-### <a name="remarks"></a>Примечания  
- Оператор-шаблон возвращает `os << right.str()`.  
+### <a name="remarks"></a>Remarks  
+ The template operator returns `os << right.str()`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ins.cpp   
@@ -316,8 +316,8 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
- Сравнение "меньше или равно" для различных объектов.  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Less than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -350,26 +350,26 @@ bool operator<=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `left`  
- Левый из сравниваемых объектов.  
+ The left object to compare.  
   
  `right`  
- Правый из сравниваемых объектов.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Примечания  
- Каждый оператор-шаблон возвращает `!(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(right < left)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_le.cpp   
@@ -424,8 +424,8 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
- Сравнение различных объектов на равенство.  
+##  <a name="op_eq_eq"></a>  operator==  
+ Equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -462,34 +462,34 @@ bool operator==(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `left`  
- Левый из сравниваемых объектов.  
+ The left object to compare.  
   
  `right`  
- Правый из сравниваемых объектов.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Примечания  
- Каждый оператор-шаблон преобразует каждый из своих аргументов в тип string и возвращает результат сравнения преобразованных объектов на равенство.  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts each of its arguments to a string type and returns the result of comparing the converted objects for equality.  
   
- При преобразовании аргументов в тип string оператор-шаблон использует первое из следующего списка преобразований, которое можно применить:  
+ When a template operator converts its arguments to a string type it uses the first of the following transformations that applies:  
   
- аргументы, типы которых — специализация класса-шаблона `match_results` или `sub_match`, преобразуются вызовом функции-члена `str`;  
+ arguments whose types are a specialization of template class `match_results` or `sub_match` are converted by calling the `str` member function;  
   
- аргументы, типы которых — специализация класса-шаблона `basic_string`, остаются без изменений;  
+ arguments whose types are a specialization of the template class `basic_string` are unchanged;  
   
- все остальные типы аргументов преобразуются путем передачи значения аргумента в конструктор для подходящей специализации класса-шаблона `basic_string`.  
+ all other argument types are converted by passing the argument value to the constructor for an appropriate specialization of the template class `basic_string`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_eq.cpp   
@@ -549,8 +549,8 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
- Сравнение "больше, чем" для различных объектов.  
+##  <a name="op_gt"></a>  operator&gt;  
+ Greater than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -583,26 +583,26 @@ bool operator>(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `left`  
- Левый из сравниваемых объектов.  
+ The left object to compare.  
   
  `right`  
- Правый из сравниваемых объектов.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Примечания  
- Каждый оператор-шаблон возвращает `right < left`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `right < left`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_gt.cpp   
@@ -657,8 +657,8 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
- Сравнение "больше или равно" для различных объектов.  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Greater than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -691,26 +691,26 @@ bool operator>=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- Тип итератора.  
+ The iterator type.  
   
  `IOtraits`  
- Класс характеристик строки.  
+ The string traits class.  
   
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `left`  
- Левый из сравниваемых объектов.  
+ The left object to compare.  
   
  `right`  
- Правый из сравниваемых объектов.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Примечания  
- Каждый оператор-шаблон возвращает `!(left < right)`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left < right)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ge.cpp   
@@ -764,15 +764,15 @@ sub >= "aab" == false
 sub >= 'a' == true  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[Класс regex_constants](../standard-library/regex-constants-class.md)  
-[Класс regex_error](../standard-library/regex-error-class.md)  
-[Функции \<regex>](../standard-library/regex-functions.md)  
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)  
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Класс regex_traits](../standard-library/regex-traits-class.md)  
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 
 

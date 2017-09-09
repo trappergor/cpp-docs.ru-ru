@@ -1,5 +1,5 @@
 ---
-title: "Операторы &lt;array&gt; | Документы Майкрософт"
+title: '&lt;array&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,23 +18,23 @@ dev_langs:
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c85e1930bc8bfe492368fd40fe488156cf9a3ed1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4bd1ed8f2c2ea40d7f500e302189762bc7f24962
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-operators"></a>Операторы &lt;array&gt;
-Заголовок \<array> включает эти функции `array` шаблона сравнения, не являющиеся функциями-членами.  
+# <a name="ltarraygt-operators"></a>&lt;array&gt; operators
+The \<array> header includes these `array` non-member comparison template functions.  
   
 ||||  
 |-|-|-|  
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Сравнение массивов на неравенство.  
+ Array comparison, not equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -43,23 +43,23 @@ bool operator!=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип элемента.  
+ The type of an element.  
   
  `N`  
- Размер массива.  
+ The size of the array.  
   
  `left`  
- Левый контейнер для сравнения.  
+ Left container to compare.  
   
  `right`  
- Правый контейнер для сравнения.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона возвращает `!(left == right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left == right)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ne.cpp   
@@ -104,7 +104,7 @@ true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Сравнение массивов "меньше, чем".  
+ Array comparison, less than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -113,23 +113,23 @@ bool operator<(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип элемента.  
+ The type of an element.  
   
  `N`  
- Размер массива.  
+ The size of the array.  
   
  `left`  
- Левый контейнер для сравнения.  
+ Left container to compare.  
   
  `right`  
- Правый контейнер для сравнения.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона перегружает `operator<` для сравнения двух объектов класса шаблона [array](../standard-library/array-class-stl.md). Функция возвращает `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator<` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_lt.cpp   
@@ -175,7 +175,7 @@ true
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Сравнение массивов "меньше или равно".  
+ Array comparison, less than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -184,23 +184,23 @@ bool operator<=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип элемента.  
+ The type of an element.  
   
  `N`  
- Размер массива.  
+ The size of the array.  
   
  `left`  
- Левый контейнер для сравнения.  
+ Left container to compare.  
   
  `right`  
- Правый контейнер для сравнения.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона возвращает `!(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(right < left)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_le.cpp   
@@ -246,7 +246,7 @@ false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Сравнение массивов на равенство.  
+ Array comparison, equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -255,23 +255,23 @@ bool operator==(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип элемента.  
+ The type of an element.  
   
  `N`  
- Размер массива.  
+ The size of the array.  
   
  `left`  
- Левый контейнер для сравнения.  
+ Left container to compare.  
   
  `right`  
- Правый контейнер для сравнения.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона перегружает `operator==` для сравнения двух объектов класса шаблона [array](../standard-library/array-class-stl.md). Функция возвращает `equal(left.begin(), left.end(), right.begin())`.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator==` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_eq.cpp   
@@ -317,7 +317,7 @@ false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Сравнение массивов "больше, чем".  
+ Array comparison, greater than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -326,23 +326,23 @@ bool operator>(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип элемента.  
+ The type of an element.  
   
  `N`  
- Размер массива.  
+ The size of the array.  
   
  `left`  
- Левый контейнер для сравнения.  
+ Left container to compare.  
   
  `right`  
- Правый контейнер для сравнения.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона возвращает `(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `(right < left)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_gt.cpp   
@@ -388,7 +388,7 @@ true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Сравнение массивов "больше или равно".  
+ Array comparison, greater than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -397,23 +397,23 @@ bool operator>=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип элемента.  
+ The type of an element.  
   
  `N`  
- Размер массива.  
+ The size of the array.  
   
  `left`  
- Левый контейнер для сравнения.  
+ Left container to compare.  
   
  `right`  
- Правый контейнер для сравнения.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона возвращает `!(left < right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left < right)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ge.cpp   
@@ -458,7 +458,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

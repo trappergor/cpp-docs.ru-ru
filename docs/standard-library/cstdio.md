@@ -1,5 +1,5 @@
 ---
-title: "&lt;cstdio&gt; | Документы Майкрософт"
+title: '&lt;cstdio&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<cstdio>
-- std.<cstdio>
-- <cstdio>
+- std::<cstdio>", "<cstdio>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,30 +33,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6237f271d73c2ee992021b55daccdc4809b0cf67
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: eedf659a1492ec5c0ab72cae98d2bfc31285b9f5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcstdiogt"></a>&lt;cstdio&gt;
-Включает заголовок \<stdio.h> стандартной библиотеки C и добавляет связанные имена в пространство имен `std`.  
+Includes the Standard C library header \<stdio.h> and adds the associated names to the `std` namespace.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <cstdio>  
   
 ```  
   
-## <a name="remarks"></a>Примечания  
- Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.  
+## <a name="remarks"></a>Remarks  
+ Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Функции &lt;new&gt; | Документы Майкрософт"
+title: '&lt;new&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,49 +12,49 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0f796dc89314f9f6ac6da5c54f9afd16604fd1f6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-functions"></a>Функции &lt;new&gt;
+# <a name="ltnewgt-functions"></a>&lt;new&gt; functions
 |||  
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
 ##  <a name="nothrow"></a>  nothrow  
- Предоставляет объект для использования в качестве аргумента для версий `nothrow` **new** и **delete**.  
+ Provides an object to be used as an argument for the `nothrow` versions of **new** and **delete**.  
   
 ```  
 extern const std::nothrow_t nothrow;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Объект используется в качестве аргумента функции для соответствия типу параметра [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
+### <a name="remarks"></a>Remarks  
+ The object is used as a function argument to match the parameter type [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
-### <a name="example"></a>Пример  
-  См. разделы [operator new](../standard-library/new-operators.md#op_new) и [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) с примерами использования `std::nothrow_t` в качестве параметра функции.  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) and [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of how `std::nothrow_t` is used as a function parameter.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
- Устанавливает пользовательскую функцию, вызываемую в случае сбоя `operator new` при попытке выделения памяти.  
+ Installs a user function that is to be called when `operator new` fails in its attempt to allocate memory.  
   
 ```  
 new_handler set_new_handler(new_handler Pnew) throw();
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Pnew`  
- New_handler для установки.  
+ The new_handler to be installed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- 0 для первого вызова и предыдущее `new_handler` при последующих вызовах.  
+### <a name="return-value"></a>Return Value  
+ 0 on the first call and the previous `new_handler` on subsequent calls.  
   
-### <a name="remarks"></a>Примечания  
- Функция сохраняет `Pnew` в статическом указателе [нового обработчика](../standard-library/new-typedefs.md#new_handler), с которым она работает, затем возвращает значение, ранее хранившееся в указателе. Новый обработчик используется [оператором new](../standard-library/new-operators.md#op_new)( **size_t**).  
+### <a name="remarks"></a>Remarks  
+ The function stores `Pnew` in a static [new handler](../standard-library/new-typedefs.md#new_handler) pointer that it maintains, then returns the value previously stored in the pointer. The new handler is used by [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_set_new_handler.cpp  
@@ -117,7 +117,7 @@ The new_handler is called:
 bad allocation  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 

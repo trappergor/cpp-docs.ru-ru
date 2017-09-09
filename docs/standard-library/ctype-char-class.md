@@ -1,5 +1,5 @@
 ---
-title: "Класс ctype&lt;char&gt; | Документы Майкрософт"
+title: ctype&lt;char&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 28fc5cf88c6a50b5fcd9950b68d7c6ef3529ccee
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 45f94354962f3312ef7f935d1461d4ca54c42915
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ctypeltchargt-class"></a>Класс ctype&lt;char&gt;
-Этот класс представляет собой явную специализацию класса шаблона **ctype\<CharType**> для типа `char`, описывающего объект, который может использоваться в качестве аспекта языкового стандарта для характеристики различных свойств символа, относящегося к типу `char`.  
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; Class
+The class is an explicit specialization of template class **ctype\<CharType**> to type `char`, describing an object that can serve as a locale facet to characterize various properties of a character of type `char`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
@@ -144,31 +144,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Явная специализация отличается от класса шаблона несколькими аспектами.  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization differs from the template class in several ways:  
   
--   Объект класса ctype< `char`> сохраняет указатель на первый элемент таблицы маски ctype, массив UCHAR_MAX + 1 элементов типа **ctype_base::mask**. Он также хранит объект логического типа, указывающий, следует ли удалять массив (с помощью `operator delete[]`), когда удаляется объект ctype\< **Elem**>.  
+-   An object of class ctype< `char`> stores a pointer to the first element of a ctype mask table, an array of UCHAR_MAX + 1 elements of type **ctype_base::mask**. It also stores a Boolean object that indicates whether the array should be deleted (using `operator delete[]`) when the ctype\< **Elem**> object is destroyed.  
   
--   Его единственный открытый конструктор позволяет указать **tab**, таблицу маски ctype и **del**, логический объект, имеющий значение true, если массив должен удаляться при удалении объекта ctype< `char`>, настроек объект уничтожается, а также ссылки параметра reference-count.  
+-   Its sole public constructor lets you specify **tab**, the ctype mask table, and **del**, the Boolean object that is true if the array should be deleted when the ctype< `char`> object is destroyed, as well as the reference-count parameter refs.  
   
--   Защищенная функция-член **table** возвращает сохраненную таблицу маски ctype.  
+-   The protected member function **table** returns the stored ctype mask table.  
   
--   Статический объект-член **table_size** указывает минимальное количество элементов в таблице маски ctype.  
+-   The static member object **table_size** specifies the minimum number of elements in a ctype mask table.  
   
--   Защищенная статическая функция-член **classic_table** (возвращает таблицу маски ctype, соответствующую языковому стандарту "C".  
+-   The protected static member function **classic_table**( returns the ctype mask table appropriate to the "C" locale.  
   
--   Отсутствуют защищенные виртуальные функции-члены [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) или [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Соответствующие открытые функции-члены самостоятельно выполняют эквивалентные операции.  
+-   There are no protected virtual member functions [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is), or [do_scan_not](../standard-library/ctype-class.md#do_scan_not). The corresponding public member functions perform the equivalent operations themselves.  
   
- Функции-члены [do_narrow](../standard-library/ctype-class.md#do_narrow) и [do_widen](../standard-library/ctype-class.md#do_widen) копируют элементы без изменений.  
+ The member functions [do_narrow](../standard-library/ctype-class.md#do_narrow) and [do_widen](../standard-library/ctype-class.md#do_widen) copy elements unaltered.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Класс facet](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
- [Класс ctype_base](../standard-library/ctype-base-class.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [facet Class](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
+ [ctype_base Class](../standard-library/ctype-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

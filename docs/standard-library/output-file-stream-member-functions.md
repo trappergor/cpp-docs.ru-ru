@@ -1,5 +1,5 @@
 ---
-title: "Функции-члены файлового потока вывода | Документы Майкрософт"
+title: Output File Stream Member Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,8 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- output streams, member functions
-f1_keywords: []
+- output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -32,24 +31,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 571e2c0248317511773e9d33cf6745b446d82b7f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="output-file-stream-member-functions"></a>Функции-члены потока выходного файла
-Функции-члены потока вывода делятся на три типа: эквивалентные манипуляторам, выполняющие неформатированные операции записи и изменяющие состояние потока другим образом и при этом не имеющие эквивалентных манипуляторов или операторов вставки. Для последовательного форматированного вывода можно использовать только операторы вставки и манипуляторы. Для двоичного дискового вывода с произвольным доступом следует использовать другие функции-члены с операторами вставки или без них.  
+# <a name="output-file-stream-member-functions"></a>Output File Stream Member Functions
+Output stream member functions have three types: those that are equivalent to manipulators, those that perform unformatted write operations, and those that otherwise modify the stream state and have no equivalent manipulator or insertion operator. For sequential, formatted output, you might use only insertion operators and manipulators. For random-access binary disk output, you use other member functions, with or without insertion operators.  
   
-## <a name="the-open-function-for-output-streams"></a>Функция open для потоков вывода  
- Для использования файлового потока вывода ([ofstream](../standard-library/basic-ofstream-class.md)) следует связать этот поток с конкретным файлом на диске в конструкторе или в функции **open**. При использовании функции **open** можно повторно использовать один и тот же объект-поток с рядом файлов. В любом случае аргументы, описывающие файл, одни и те же.  
+## <a name="the-open-function-for-output-streams"></a>The open Function for Output Streams  
+ To use an output file stream ([ofstream](../standard-library/basic-ofstream-class.md)), you must associate that stream with a specific disk file in the constructor or the **open** function. If you use the **open** function, you can reuse the same stream object with a series of files. In either case, the arguments describing the file are the same.  
   
- При открытии файла, связанного с потоком вывода, обычно указывается флаг **open_mode**. Эти флаги, определенные как перечислители в классе `ios`, можно комбинировать с помощью побитового оператора OR (&#124;). Список перечислителей приведен в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ When you open the file associated with an output stream, you generally specify an **open_mode** flag. You can combine these flags, which are defined as enumerators in the `ios` class, with the bitwise OR ( &#124; ) operator. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for a list of the enumerators.  
   
- Три типовые ситуации для потока вывода используют параметры режима:  
+ Three common output stream situations involve mode options:  
   
--   Создание файла. Если файл уже существует, старая версия удаляется.  
+-   Creating a file. If the file already exists, the old version is deleted.  
   
  ```  
     ostream ofile("FILENAME");
@@ -59,13 +58,13 @@ ms.lasthandoff: 04/29/2017
 // Equivalent to above  
 ```  
   
--   Добавление записей к существующему файлу или создание нового, если он не существует.  
+-   Appending records to an existing file or creating one if it does not exist.  
   
  ```  
     ofstream ofile("FILENAME", ios::app);
 ```  
   
--   Открытие двух файлов в одном и том же потоке, по одному за раз.  
+-   Opening two files, one at a time, on the same stream.  
   
  ```  
     ofstream ofile();
@@ -83,8 +82,8 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put"></a>Put
- Функция **put** записывает в поток вывода один символ. Следующие две конструкции по умолчанию одинаковы, но вторая зависит от аргументов формата потока:  
+## <a name="the-put"></a>The put
+ The **put** function writes one character to the output stream. The following two statements are the same by default, but the second is affected by the stream's format arguments:  
   
 ```  
 cout.put('A');
@@ -93,8 +92,8 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write"></a>Запись
- Функция **write** записывает блок памяти в файловый поток вывода. Аргумент length указывает количество записанных байт. Следующий пример создает файловый поток вывода и записывает в него двоичное значение структуры `Date`:  
+## <a name="the-write"></a>The write
+ The **write** function writes a block of memory to an output file stream. The length argument specifies the number of bytes written. This example creates an output file stream and writes the binary value of the `Date` structure to it:  
   
 ```  
 // write_function.cpp  
@@ -115,55 +114,55 @@ int main( )
 }  
 ```  
   
- Функция **write** не останавливается при достижении символа null, поэтому записывается полная структура класса. Функция имеет два аргумента: указатель `char` и количество символов для записи. Обратите внимание на необходимость преобразования в тип **char\*** перед адресом объекта-структуры.  
+ The **write** function does not stop when it reaches a null character, so the complete class structure is written. The function takes two arguments: a `char` pointer and a count of characters to write. Note the required cast to **char\*** before the address of the structure object.  
   
-## <a name="the-seekp-and-tellp-functions"></a>Функции seekp и tellp  
- Файловый поток вывода хранит внутренний указатель на позицию следующей записи данных. Функция-член `seekp` устанавливает этот указатель, предоставляя тем самым вывод произвольного доступа в дисковый файл. Функция-член `tellp` возвращает позицию в файле. Примеры использования эквивалентов входного потока для `seekp` и `tellp` см. в разделе [Функции seekg и tellg](../standard-library/input-stream-member-functions.md).  
+## <a name="the-seekp-and-tellp-functions"></a>The seekp and tellp Functions  
+ An output file stream keeps an internal pointer that points to the position where data is to be written next. The `seekp` member function sets this pointer and thus provides random-access disk file output. The `tellp` member function returns the file position. For examples that use the input stream equivalents to `seekp` and `tellp`, see [The seekg and tellg Functions](../standard-library/input-stream-member-functions.md).  
   
-## <a name="the-close-function-for-output-streams"></a>Функция close для потоков вывода  
- Функция-член **close** закрывает дисковый файл, связанный с файловым потоком вывода. Для завершения всех операций вывода на диск файл должен быть закрыт. При необходимости деструктор `ofstream` закрывает файл, но можно использовать функцию **close**, если нужно открыть другой файл для того же объекта-потока.  
+## <a name="the-close-function-for-output-streams"></a>The close Function for Output Streams  
+ The **close** member function closes the disk file associated with an output file stream. The file must be closed to complete all disk output. If necessary, the `ofstream` destructor closes the file for you, but you can use the **close** function if you need to open another file for the same stream object.  
   
- Деструктор потока вывода автоматически закрывает файл потока, только если файл был открыт конструктором или функцией-членом **open**. Если конструктору передается дескриптор для уже открытого файла или используется функция-член **attach**, необходимо явно закрыть файл.  
+ The output stream destructor automatically closes a stream's file only if the constructor or the **open** member function opened the file. If you pass the constructor a file descriptor for an already-open file or use the **attach** member function, you must close the file explicitly.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Функции обработки ошибок  
- Используйте эти функции-члены для проверки на ошибки при записи в поток:  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Error Processing Functions  
+ Use these member functions to test for errors while writing to a stream:  
   
-|Функция|Возвращаемое значение|  
+|Function|Return value|  
 |--------------|------------------|  
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Возвращает значение **true** в случае неустранимой ошибки.|  
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Возвращает значение **true** при неустранимой ошибке или "ожидаемом" условии, например при ошибке преобразования или если файл не найден. Обработку часто можно возобновить после вызова **clear** с нулевым аргументом.|  
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Возвращает значение **true**, если нет ошибок (неустранимых или других) и флаг конца файла не установлен.|  
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Возвращает значение **true** при достижении конца файла.|  
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Устанавливает внутреннее состояние ошибки. Если вызывается с аргументами по умолчанию, он очищает все биты ошибок.|  
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Возвращает текущее состояние ошибки.|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Returns **true** if there is an unrecoverable error.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Returns **true** if there is an unrecoverable error or an "expected" condition, such as a conversion error, or if the file is not found. Processing can often resume after a call to **clear** with a zero argument.|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Returns **true** if there is no error condition (unrecoverable or otherwise) and the end-of-file flag is not set.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Returns **true** on the end-of-file condition.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Sets the internal error state. If called with the default arguments, it clears all error bits.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Returns the current error state.|  
   
- Оператор **!** перегружается для выполнения тех же действий, что и функция **fail**. Таким образом выражение:  
+ The **!** operator is overloaded to perform the same function as the **fail** function. Thus the expression:  
   
 ```  
 if(!cout)...  
 ```  
   
- эквивалентно выражению:  
+ is equivalent to:  
   
 ```  
 if(cout.fail())...  
 ```  
   
- Оператор **void\*()** перегружается, чтобы быть противоположностью оператора **!**; таким образом выражение:  
+ The **void\*()** operator is overloaded to be the opposite of the **!** operator; thus the expression:  
   
 ```  
 if(cout)...  
 ```  
   
- эквивалентно:  
+ is equal to:  
   
 ```  
 if(!cout.fail())...  
 ```  
   
- Оператор **void\*()** не эквивалентен **good**, так как он не выполняет проверку на достижение конца файла.  
+ The **void\*()** operator is not equivalent to **good** because it does not test for the end of file.  
   
-## <a name="see-also"></a>См. также  
- [Потоки вывода](../standard-library/output-streams.md)
+## <a name="see-also"></a>See Also  
+ [Output Streams](../standard-library/output-streams.md)
 
 

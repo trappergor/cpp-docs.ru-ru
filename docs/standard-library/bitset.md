@@ -1,5 +1,5 @@
 ---
-title: "&lt;bitset&gt; | Документы Майкрософт"
+title: '&lt;bitset&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<bitset>
-- std.<bitset>
-- <bitset>
+- std::<bitset>", "<bitset>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d0b9f494cec6212616813f9d622b97ff9d54bd3e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9d78841f96bcff52cf7ffd68bc18263dd012e8ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
-Определяет битовый массив класса шаблона и две вспомогательные функции шаблона для представления и обработки последовательности битов фиксированного размера.  
+Defines the template class bitset and two supporting template functions for representing and manipulating fixed-size sequences of bits.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -54,25 +52,25 @@ ms.lasthandoff: 04/29/2017
   
 ```  
   
-### <a name="operators"></a>Операторы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator&](../standard-library/bitset-operators.md#op_amp)|Выполняет побитовую операцию И между двумя битовыми массивами.|  
-|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Вставляет текстовое представление битовой последовательности в стандартный поток вывода.|  
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Вставляет текстовое представление битовой последовательности в стандартный входной поток.|  
-|[operator^](../standard-library/bitset-operators.md#op_xor)|Выполняет побитовую операцию ИСКЛЮЧАЮЩЕЕ-ИЛИ между двумя битовыми массивами.|  
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Выполняет побитовую операцию ИЛИ между двумя битовыми массивами.|  
+|[operator&](../standard-library/bitset-operators.md#op_amp)|Performs a bitwise AND between two bitsets.|  
+|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Inserts a text representation of the bit sequence into the standard output stream.|  
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Inserts a text representation of the bit sequence into the standard input stream.|  
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Performs a bitwise EXCLUSIVE-OR between two bitsets.|  
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Performs a bitwise OR between two bitsets.|  
   
-### <a name="classes"></a>Классы  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[Класс bitset](../standard-library/bitset-class.md)|Этот класс шаблона описывает тип объекта, который хранит последовательность, состоящую из фиксированного числа битов, предоставляющих компактный способ хранения флагов для набора элементов или условий.|  
+|[bitset Class](../standard-library/bitset-class.md)|The template class describes a type of object that stores a sequence consisting of a fixed number of bits that provide a compact way of keeping flags for a set of items or conditions.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

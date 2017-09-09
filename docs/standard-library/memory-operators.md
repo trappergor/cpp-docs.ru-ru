@@ -1,5 +1,5 @@
 ---
-title: "Операторы &lt;memory&gt; | Документы Майкрософт"
+title: '&lt;memory&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,22 +21,22 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9a8504cadcd584e423a1050c7fa02b935a1fa0e9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmemorygt-operators"></a>операторы &lt;memory&gt;
+# <a name="ltmemorygt-operators"></a>&lt;memory&gt; operators
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
-|[оператор==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
- Проверяет неравенство между объектами.  
+##  <a name="op_neq"></a>  operator!=  
+ Tests for inequality between objects.  
   
 ```  
 template <class Type, class Other>  
@@ -55,28 +55,28 @@ bool operator!=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из объектов для проверки на неравенство.  
+ One of the objects to be tested for inequality.  
   
  `right`  
- Один из объектов для проверки на неравенство.  
+ One of the objects to be tested for inequality.  
   
  `Ty1`  
- Тип, управляемый левым общим указателем.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Тип, управляемый правым общим указателем.  
+ The type controlled by the right shared pointer.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если объекты не равны, значение **false**, если объекты равны.  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are not equal; **false** if objects are equal.  
   
-### <a name="remarks"></a>Примечания  
- Первый оператор шаблона возвращает значение false. (Все распределители по умолчанию равны.)  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns false. (All default allocators are equal.)  
   
- Второй и третий операторы шаблона возвращают `!(left == right)`.  
+ The second and third template operators return `!(left == right)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // memory_op_me.cpp  
@@ -105,7 +105,7 @@ int main( )
 The allocator objects Alloc & v1Alloc are equal.  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_ne.cpp   
@@ -133,8 +133,8 @@ sp0 != sp0 == false
 sp0 != sp1 == true  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
- Проверяет равенство между объектами.  
+##  <a name="op_eq_eq"></a>  operator==  
+ Tests for equality between objects.  
   
 ```  
 template <class Type, class Other>  
@@ -153,28 +153,28 @@ bool operator==(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из объектов для проверки на равенство.  
+ One of the objects to be tested for equality.  
   
  `right`  
- Один из объектов для проверки на равенство.  
+ One of the objects to be tested for equality.  
   
  `Ty1`  
- Тип, управляемый левым общим указателем.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Тип, управляемый правым общим указателем.  
+ The type controlled by the right shared pointer.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если объекты равны, значение `false`, если объекты не равны.  
+### <a name="return-value"></a>Return Value  
+ `true` if the objects are equal, `false` if objects are not equal.  
   
-### <a name="remarks"></a>Примечания  
- Первый оператор шаблона возвращает значение true. (Все распределители по умолчанию равны.)  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns true. (All default allocators are equal.)  
   
- Второй и третий операторы шаблона возвращают ` left.get() ==  right.get()`.  
+ The second and third template operators return ` left.get() ==  right.get()`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // memory_op_eq.cpp  
@@ -214,7 +214,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_eq.cpp   
@@ -242,8 +242,8 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
- Проверяет, больше или равен один объект второму объекту.  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Tests for one object being greater than or equal to a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -257,24 +257,24 @@ bool operator>=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `right`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Тип, управляемый левым общим указателем.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Тип, управляемый правым общим указателем.  
+ The type controlled by the right shared pointer.  
   
-### <a name="remarks"></a>Примечания  
- Операторы шаблона возвращают `left.get() >= right.get()`.  
+### <a name="remarks"></a>Remarks  
+ The template operators return `left.get() >= right.get()`.  
   
-##  <a name="op_lt"></a> operator&lt;  
- Проверяет, меньше ли один объект второго объекта.  
+##  <a name="op_lt"></a>  operator&lt;  
+ Tests for one object being less than a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -288,21 +288,21 @@ bool operator<(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `right`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Тип, управляемый левым указателем.  
+ The type controlled by the left pointer.  
   
  `Ty2`  
- Тип, управляемый правым указателем.  
+ The type controlled by the right pointer.  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
- Проверяет, меньше или равен один объект второму объекту.  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Tests for one object being less than or equal to a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -316,24 +316,24 @@ bool operator<=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `right`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Тип, управляемый левым общим указателем.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Тип, управляемый правым общим указателем.  
+ The type controlled by the right shared pointer.  
   
-### <a name="remarks"></a>Примечания  
- Операторы шаблона возвращают`left.get() <= right.get()`  
+### <a name="remarks"></a>Remarks  
+ The template operators return `left.get() <= right.get()`  
   
-##  <a name="op_gt"></a> operator&gt;  
- Проверяет, больше ли один объект второго объекта.  
+##  <a name="op_gt"></a>  operator&gt;  
+ Tests for one object being greater than a second object.  
   
 ```  
 template <class Ty1, class Del1, class Ty2, class Del2>  
@@ -347,21 +347,21 @@ bool operator>(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `right`  
- Один из сравниваемых объектов.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Тип, управляемый левым общим указателем.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Тип, управляемый правым общим указателем.  
+ The type controlled by the right shared pointer.  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
-Записывает в поток общий указатель.  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+Writes the shared pointer to the stream.  
   
 ```  
 template <class Elem, class Tr, class Ty>  
@@ -369,26 +369,26 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
     shared_ptr<Ty>& sp);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- Тип элемента потока.  
+ The type of the stream element.  
   
  `Tr`  
- Тип признаков элемента потока.  
+ The type the stream element traits.  
   
  `Ty`  
- Тип, управляемый общим указателем.  
+ The type controlled by the shared pointer.  
   
  `out`  
- Выходной поток.  
+ The output stream.  
   
  `sp`  
- Общий указатель.  
+ The shared pointer.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона возвращает `out << sp.get()`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `out << sp.get()`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_sl.cpp   
@@ -411,7 +411,7 @@ int main()
 sp0 == 3f3040 (varies)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)
 
 

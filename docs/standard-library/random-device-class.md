@@ -1,5 +1,5 @@
 ---
-title: "Класс random_device | Документы Майкрософт"
+title: random_device Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- random_device
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
@@ -20,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- random_device class
+- std::random_device [C++]
+- std::random_device [C++], min
+- std::random_device [C++], max
+- std::random_device [C++], entropy
+- std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
 caps.latest.revision: 27
 author: corob-msft
@@ -40,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 842e4f9b53a06373df8e00f64b1ab24a48a5c6b9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a648fa7c939371e0138a9d279ddfefd405e26db6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="randomdevice-class"></a>Класс random_device
-Формирует случайную последовательность с помощью внешнего устройства.  
+# <a name="randomdevice-class"></a>random_device Class
+Generates a random sequence from an external device.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 class random_device {  
@@ -74,24 +77,24 @@ public:
    };  
 ```  
 
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|[random_device](#random_device)|[энтропия](#entropy)|  
+|[random_device](#random_device)|[entropy](#entropy)|  
 |[random_device::operator()](#op_call)||  
   
-## <a name="remarks"></a>Примечания  
-Этот класс описывает источник случайных чисел и, согласно стандарту ISO C++, может быть недетерминистическим или криптостойким (но это необязательно). В реализации в Visual Studio полученные значения являются недетерминистическими и криптостойкими, но производительность ниже, чем у генераторов, созданных на основе механизмов и адаптеров механизмов (таких как [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), быстрого и качественного механизма для большинства приложений).  
+## <a name="remarks"></a>Remarks  
+The class describes a source of random numbers, and is allowed but not required to be non-deterministic or cryptographically secure by the ISO C++ Standard. In the Visual Studio implementation the values produced are non-deterministic and cryptographically secure, but runs more slowly than generators created from engines and engine adaptors (such as [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), the high quality and fast engine of choice for most applications).  
   
-Результаты `random_device` равномерно распределены в замкнутом диапазоне [`0, 2`<sup>32</sup>).  
+`random_device` results are uniformly distributed in the closed range [ `0, 2`<sup>32</sup>).  
   
-Не гарантируется, что `random_device` приведет к неблокирующему вызову.  
+`random_device` is not guaranteed to result in a non-blocking call.  
   
-В целом, `random_device` используется для получения начальных значений для других генераторов, созданных с помощью механизмов или адаптеров механизмов. Дополнительные сведения см. в разделе [\<random>](../standard-library/random.md).  
+Generally, `random_device` is used to seed other generators created with engines or engine adaptors. For more information, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Пример  
-В следующем коде показаны основные функции класса и результаты его применения. Из-за недетерминистической природы `random_device` случайные значения, показанные в разделе **Выходные данные**, не будут совпадать с вашими результатами. Подобный результат является нормальным и ожидаемым.  
+## <a name="example"></a>Example  
+The following code demonstrates basic functionality of this class and example results. Because of the non-deterministic nature of `random_device`, the random values shown in the **Output** section will not match your results. This is normal and expected.  
   
 ```cpp  
 // random_device_engine.cpp   
@@ -123,44 +126,44 @@ a random value == 3633694716
 a random value == 213725214
 ```  
   
-Этот пример упрощен и не представляет собой общего примера применения этого генератора. Более полный пример приведен в разделе [\<random>](../standard-library/random.md).  
+This example is simplistic and not representative of the general use-case for this generator. For a more representative code example, see [\<random>](../standard-library/random.md).  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="random_device"></a>  random_device::random_device  
-Формирует генератор.  
+Constructs the generator.  
   
 ```  
 random_device(const std::string& = "");
 ```  
   
-### <a name="remarks"></a>Примечания  
-Конструктор инициализирует генератор, как требуется, игнорируя строковый параметр. Возвращает значение определенного в реализации типа, производного из [exception](../standard-library/exception-class.md), если не удалось инициализировать `random_device`.  
+### <a name="remarks"></a>Remarks  
+The constructor initializes the generator as needed, ignoring the string parameter. Throws a value of an implementation-defined type derived from [exception](../standard-library/exception-class.md) if the `random_device` could not be initialized.  
   
 ##  <a name="entropy"></a>  random_device::entropy  
-Оценивает стохастичность источника.  
+Estimates the randomness of the source.  
   
 ```  
 double entropy() const noexcept;  
 ```  
   
-### <a name="remarks"></a>Примечания  
-Эта функция-член возвращает оценку стохастичности источника в битах.  
+### <a name="remarks"></a>Remarks  
+The member function returns an estimate of the randomness of the source, as measured in bits.  
   
 ##  <a name="op_call"></a>  random_device::operator()  
-Возвращает случайное значение.  
+Returns a random value.  
   
 ```  
 result_type operator()();
 ```  
   
-### <a name="remarks"></a>Примечания  
-Возвращает значения с равномерным распределением в замкнутом интервале [`min, max`] в соответствии с функциями-членами `min()` и `max()`. Если случайное число не удалось получить, возвращается значение определенного в реализации типа, производного от [exception](../standard-library/exception-class.md).  
+### <a name="remarks"></a>Remarks  
+Returns values uniformly distributed in the closed interval [ `min, max`] as determined by member functions `min()` and `max()`. Throws a value of an implementation-defined type derived from [exception](../standard-library/exception-class.md) if a random number could not be obtained.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

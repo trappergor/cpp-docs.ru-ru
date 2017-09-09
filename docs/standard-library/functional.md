@@ -1,5 +1,5 @@
 ---
-title: "&lt;functional&gt; | Документы Майкрософт"
+title: '&lt;functional&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <functional>
-- functional/std::<functional>
-- std::<functional>
+- <functional>", "functional/std::<functional>", "std::<functional>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,152 +34,152 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0863a6bc58f28a18c6e5b6d301c792009882a36c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
-Определяет функции стандартной библиотеки C++, помогающие создавать *объекты-функции*, которые также называются функторами, и их привязки. Объект-функция — это объект типа, который определяет `operator()`. Объект-функция может быть указателем на функцию, но, как правило, он используется для хранения дополнительных сведений, которые могут потребоваться при вызове функции.  
+Defines C++ Standard Library functions that help construct *function objects*—also known as functors—and their binders. A function object is an object of a type that defines `operator()`. A function object can be a function pointer, but more typically, the object is used to store additional information that can be accessed during a function call.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <functional>  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Алгоритмам требуются два вида объектов-функций: унарные и бинарные. Унарным объектам-функциям требуется один аргумент, и бинарным — два аргумента. Объект-функция и указатели на функции могут передаваться как предикат для алгоритма, но объекты-функции также могут настраиваться и расширяют область, а также повышают гибкость и эффективность стандартной библиотеки C++. Если, например, требуется привязать значение к функции перед передачей алгоритму, указатель на функцию не может использоваться. Адаптеры функций преобразуют указатели на функции в гибкие объекты-функции, которые можно привязать к значению. Заголовок \<functional> также содержит адаптеры функций-членов, позволяющие вызывать функции-члены как настраиваемые объекты-функции. Функции могут настраиваться, если у них есть объявления вложенных типов, указывающие типы аргументов и типы возвращаемого значения. Согласно стандарту C++ такая адаптивность должна реализоваться следующим образом: все стандартные классы объектов наследуют от базовых классов unary_function или binary_function. Объекты-функции и их адаптеры позволяют стандартной библиотеке C++ обновить существующие приложения и облегчают интеграцию библиотеки в среду программирования C++.  
+## <a name="remarks"></a>Remarks  
+ Algorithms require two types of function objects: unary and binary. Unary function objects require one argument, and binary function objects require two arguments. A function object and function pointers can be passed as a predicate to an algorithm, but function objects are also adaptable and increase the scope, flexibility, and efficiency of the C++ Standard Library. If, for example, a value needed to be bound to a function before being passed to an algorithm, then a function pointer could not be used. Function adaptors convert function pointers into adaptable function objects that can be bound to a value. The header \<functional> also contains member function adaptors that allow member functions to be called as adaptable function objects. Functions are adaptable if they have nested type declarations specifying their argument and return types. The C++ Standard requires that this adaptability is implemented by having all standard object classes inherit from the unary_function or binary_function base classes. Function objects and their adaptors allow the C++ Standard Library to upgrade existing applications and help integrate the library into the C++ programming environment.  
   
- Реализация [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] объектов-функций в \<functional> включает *прозрачные функторы операторов*, которые представляют собой специализации стандартных объектов-функций, не принимают никаких параметров шаблона, выполняют точную пересылку аргументов функций и возвращают точный результат. Эта возможность является частью спецификации черновой версии стандарта C++ 14. Эти специализации шаблона не требуют указывать типы аргументов при вызове функторов арифметических операций, операций сравнения, логических операций и функторов побитовых операторов. Вы можете перегружать арифметические, логические, побитовые операторы и операторы сравнения для собственных типов или сочетания разнородных типов, а затем использовать прозрачные функторы операторов в качестве аргументов функции. Например, если тип *MyType* реализует `operator<`, вы можете вызвать `sort(my_collection.begin(), my_collection.end(), less<>())` вместо явного указания типа `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.  
+ The Visual C++ implementation of the function objects in \<functional> includes *transparent operator functors*, which are specializations of standard function objects and take no template parameters, and perform perfect forwarding of the function arguments and perfect return of the result. This feature is part of the C++14 Draft Standard specification. These template specializations do not require that you specify argument types when you invoke arithmetic, comparison, logical, and bitwise operator functors. You can overload arithmetic, comparison, logical, or bitwise operators for your own types, or for heterogeneous combinations of types, and then use the transparent operator functors as function arguments. For example, if your type *MyType* implements `operator<`, you can call `sort(my_collection.begin(), my_collection.end(), less<>())` instead of explicitly specifying the type `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.  
   
-## <a name="c11c14-implementation"></a>Реализация C++ 11/C++ 14  
- В реализации C++ 11/C++ 14 в Visual C++ добавлены следующие возможности.  
+## <a name="c11c14-implementation"></a>C++11/C++14 Implementation  
+ The following features are added in the Visual C++ implementation of C++11/C++14:  
   
--   *Сигнатура вызова* — имя типа возвращаемого значения, за которым следует список разделенных запятыми из нуля или более типов аргументов, заключенный в круглые скобки.  
+-   A *call signature* is the name of a return type followed by a parenthesized comma-separated list of zero or more argument types.  
   
--   *Вызываемый тип* — это указатель на функцию, указатель на функцию-член, указатель на данные-член или тип класса, объекты которого могут размещаться непосредственно слева от оператора вызова функции.  
+-   A *callable type* is a pointer to function, a pointer to member function, a pointer to member data, or a class type whose objects can appear immediately to the left of a function call operator.  
   
--   *Вызываемый объект* — это объект вызываемого типа.  
+-   A *callable object* is an object of a callable type.  
   
--   *Тип оболочки вызова* — это тип, который содержит вызываемый объект и поддерживает операцию вызова, которая перенаправляет на этот объект.  
+-   A *call wrapper type* is a type that holds a callable object and supports a call operation that forwards to that object.  
   
--   *Оболочка вызова* — это объект типа оболочки вызова.  
+-   A *call wrapper* is an object of a call wrapper type.  
   
--   *Целевой объект* — это вызываемый объект, который содержится в объекте оболочки вызова.  
+-   A *target object* is the callable object held by a call wrapper object.  
   
- Псевдофункция `INVOKE(f, t1, t2, ..., tN)` означает одно из следующего:  
+ The pseudo-function `INVOKE(f, t1, t2, ..., tN)` means one of the following things:  
   
-- `(t1.*f)(t2, ..., tN)`, если `f` — это указатель на функцию-член класса `T`, а `t1` — это объект типа `T`, ссылка на объект типа `T` или ссылка на объект типа, производного от `T`.  
+- `(t1.*f)(t2, ..., tN)` when `f` is a pointer to member function of class `T` and `t1` is an object of type `T` or a reference to an object of type `T` or a reference to an object of a type derived from `T`.  
   
-- `((*t1).*f)(t2, ..., tN)`, если `f` — это указатель на функцию-член класса `T`, а `t1` не является одним из типов, описанных в предыдущем пункте.  
+- `((*t1).*f)(t2, ..., tN)` when `f` is a pointer to member function of class `T` and `t1` is not one of the types described in the previous item.  
   
-- `t1.*f`, если N == 1, а `f` — это указатель на данные-член класса `T` и `t1` — это объект типа `T`, ссылка на объект типа `T` или ссылка на объект типа, производного от `T`.  
+- `t1.*f` when N == 1 and `f` is a pointer to member data of a class `T` and `t1` is an object of type `T` or a reference to an object of type `T` or a reference to an object of a type derived from `T`.  
   
-- `(*t1).*f`, если N == 1, а `f` — это указатель на данные-член класса `T` и `t1` не является одним из типов, описанных в предыдущем пункте.  
+- `(*t1).*f` when N == 1 and `f` is a pointer to member data of a class `T` and `t1` is not one of the types described in the previous item.  
   
-- В остальных случаях — `f(t1, t2, ..., tN)`.  
+- `f(t1, t2, ..., tN)` in all other cases.  
   
- Псевдофункция `INVOKE(f, t1, t2, ..., tN, R)` означает `INVOKE(f, t1, t2, ..., tN)`, неявно преобразованный в `R`.  
+ The pseudo-function `INVOKE(f, t1, t2, ..., tN, R)` means `INVOKE(f, t1, t2, ..., tN)` implicitly converted to `R`.  
   
- Если у оболочки вызова есть *слабый результирующий тип*, тип его члена `result_type` основан на типе `T` целевого объекта оболочки, как показано ниже:  
+ If a call wrapper has a *weak result type*, the type of its member type `result_type` is based on the type `T` of the target object of the wrapper, as follows:  
   
--   Если `T` — указатель на функцию, `result_type` — это синоним возвращаемого типа `T`.  
+-   If `T` is a pointer to function, `result_type` is a synonym for the return type of `T`.  
   
--   Если `T` — указатель на функцию-член, `result_type` — это синоним возвращаемого типа `T`.  
+-   If `T` is a pointer to member function, `result_type` is a synonym for the return type of `T`.  
   
--   Если `T` — тип класса с типом члена `result_type`, `result_type` — это синоним `T::result_type`.  
+-   If `T` is a class type that has a member type `result_type`, then `result_type` is a synonym for `T::result_type`.  
   
--   В противном случае член `result_type` не существует.  
+-   Otherwise, there is no member `result_type`.  
   
- У каждой оболочки вызова есть конструктор перемещения и конструктор копирования. *Простая оболочка вызова* — это оболочка с оператором присваивания, конструктор копирования, конструктор перемещения и оператор присваивания которой не вызывают исключений. *Пересылающая оболочка вызова* — это оболочка, которая может вызываться с помощью списка произвольных аргументов и которая предоставляет аргументы вызываемому объекту в оболочке в виде ссылок. Все аргументы rvalue предоставляются как ссылки rvalue, а аргументы lvalue — как ссылки lvalue.  
+ Every call wrapper has a move constructor and a copy constructor. A *simple call wrapper* is a call wrapper that has an assignment operator and whose copy constructor, move constructor, and assignment operator do not throw exceptions. A *forwarding call wrapper* is a call wrapper that can be called by using an arbitrary argument list and that delivers the arguments to the wrapped callable object as references. All rvalue arguments are delivered as rvalue references, and lvalue arguments are delivered as lvalue references.  
   
-### <a name="classes"></a>Классы  
-  
-|||  
-|-|-|  
-|[bad_function_call](../standard-library/bad-function-call-class.md)|Класс, который описывает исключение, указывающий, что вызов `operator()` в объекте-[function](../standard-library/function-class.md) завершился ошибкой, так как объект был пуст.|  
-|[binary_negate](../standard-library/binary-negate-class.md)|Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной бинарной функции.|  
-|[binder1st](../standard-library/binder1st-class.md)|Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.|  
-|[binder2nd](../standard-library/binder2nd-class.md)|Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению.|  
-|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, не принимающую аргументы, как объект унарной функции при инициализации с ссылочным аргументом.|  
-|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, не принимающую аргументы, как объект унарной функции при инициализации с аргументом указателя.|  
-|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, принимающую один аргумент, как объект бинарной функции при инициализации с ссылочным аргументом.|  
-|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом указателя.|  
-|[function](../standard-library/function-class.md)|Класс, создающий оболочку для вызываемого объекта.|  
-|[hash](../standard-library/hash-class.md)|Класс, который вычисляет хэш-код для значения.|  
-|[is_bind_expression](../standard-library/is-bind-expression-class.md)|Класс, который проверяет, можно ли создать определенный тип, вызывая `bind`.|  
-|[is_placeholder](../standard-library/is-placeholder-class.md)|Класс, который проверяет, является ли определенный тип заполнителем.|  
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член **non_const**, не принимающую аргументы, как объект унарной функции при инициализации со ссылочным аргументом.|  
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член **non_const**, не принимающую аргументы, как объект унарной функции при инициализации с аргументом указателя.|  
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член **non_const**, принимающую один аргумент, как объект бинарной функции при инициализации со ссылочным аргументом.|  
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член **non_const**, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом указателя.|  
-|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Преобразует указатель на бинарную функцию в адаптируемую бинарную функцию.|  
-|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Преобразует указатель на унарную функцию в адаптируемую унарную функцию.|  
-|[reference_wrapper](../standard-library/reference-wrapper-class.md)|Класс, который создает оболочку для ссылки.|  
-|[unary_negate](../standard-library/unary-negate-class.md)|Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной унарной функции.|  
-  
-### <a name="functions"></a>Функции  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind)|Привязывает аргументы к вызываемому объекту.|  
-|[bind1st](../standard-library/functional-functions.md#bind1st)|Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению.|  
-|[bit_and](../standard-library/functional-functions.md#bit_and)|Возвращает результат применения побитовой логической операции И (бинарный оператор &) между двумя параметрами.|  
-|[bit_not](../standard-library/functional-functions.md#bit_not)|Возвращает результат применения логического дополнения (оператор ~) к параметру.|  
-|[bit_or](../standard-library/functional-functions.md#bit_or)|Возвращает результат применения логической операции ИЛИ (оператор &#124;) между двумя параметрами.|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Возвращает результат применения логической операции ИСКЛЮЧАЮЩЕЕ ИЛИ (оператор ^) между двумя параметрами.|  
-|[cref](../standard-library/functional-functions.md#cref)|Создает конструкцию `reference_wrapper` из аргумента.|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Создает простую оболочку вызова.|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Вспомогательные функции шаблона, которые используются для создания адаптеров объекта-функции для функций-членов при инициализации с аргументами указателя.|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Вспомогательная функция шаблона, которая используется для создания адаптеров объекта-функции для функций-членов при инициализации с ссылочными аргументами.|  
-|[not1](../standard-library/functional-functions.md#not1)|Возвращает дополнение унарного предиката.|  
-|[not2](../standard-library/functional-functions.md#not2)|Возвращает дополнение бинарного предиката.|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Вспомогательная функция шаблона, которая используется для преобразования указателей на унарные и бинарные функция в унарные и бинарные адаптируемые функции соответственно.|  
-|[ref](../standard-library/functional-functions.md#ref)|Создает `reference_wrapper` из аргумента.|  
-|[swap](../standard-library/functional-functions.md#swap)|Меняет местами два объекта `function`.|  
+|[bad_function_call](../standard-library/bad-function-call-class.md)|A class that describes an exception thrown to indicate that a call to `operator()` on a [function](../standard-library/function-class.md) object failed because the object was empty.|  
+|[binary_negate](../standard-library/binary-negate-class.md)|A template class providing a member function that negates the return value of a specified binary function.|  
+|[binder1st](../standard-library/binder1st-class.md)|A template class providing a constructor that converts a binary function object into a unary function object by binding the first argument of the binary function to a specified value.|  
+|[binder2nd](../standard-library/binder2nd-class.md)|A template class providing a constructor that converts a binary function object into a unary function object by binding the second argument of the binary function to a specified value.|  
+|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|An adapter class that allows a const member function that takes no arguments to be called as a unary function object when initialized with a reference argument.|  
+|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|An adapter class that allows a const member function that takes no arguments to be called as a unary function object when initialized with a pointer argument.|  
+|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|An adapter class that allows a const member function that takes a single argument to be called as a binary function object when initialized with a reference argument.|  
+|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|An adapter class that allows a const member function that takes a single argument to be called as a binary function object when initialized with a pointer argument.|  
+|[function](../standard-library/function-class.md)|A class that wraps a callable object.|  
+|[hash](../standard-library/hash-class.md)|A class that computes a hash code for a value.|  
+|[is_bind_expression](../standard-library/is-bind-expression-class.md)|A class that tests if a particular type is generated by calling `bind`.|  
+|[is_placeholder](../standard-library/is-placeholder-class.md)|A class that tests if a particular type is a placeholder.|  
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|An adapter class that allows a **non_const** member function that takes no arguments to be called as a unary function object when initialized with a reference argument.|  
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|An adapter class that allows a **non_const** member function that takes no arguments to be called as a unary function object when initialized with a pointer argument.|  
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|An adapter class that allows a **non_const** member function that takes a single argument to be called as a binary function object when initialized with a reference argument.|  
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|An adapter class that allows a **non_const** member function that takes a single argument to be called as a binary function object when initialized with a pointer argument.|  
+|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Converts a binary function pointer into an adaptable binary function.|  
+|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Converts a unary function pointer into an adaptable unary function.|  
+|[reference_wrapper](../standard-library/reference-wrapper-class.md)|A class that wraps a reference.|  
+|[unary_negate](../standard-library/unary-negate-class.md)|A template class providing a member function that negates the return value of a specified unary function.|  
   
-### <a name="structs"></a>Структуры  
-  
-|||  
-|-|-|  
-|[binary_function](../standard-library/binary-function-struct.md)|Пустой базовый класс, определяющий типы, которые могут наследоваться производным классом, предоставляющим объект бинарной функции.|  
-|[divides](../standard-library/divides-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию деления элементов заданного типа значения.|  
-|[equal_to](../standard-library/equal-to-struct.md)|Бинарный предикат, который проверяет, равно ли значение заданного типа другому значению этого типа.|  
-|[greater](../standard-library/greater-struct.md)|Бинарный предикат, который проверяет, больше ли значение заданного типа другого значения этого типа.|  
-|[greater_equal](../standard-library/greater-equal-struct.md)|Бинарный предикат, который проверяет, больше или равно ли значение заданного типа другого значения этого типа.|  
-|[less](../standard-library/less-struct.md)|Бинарный предикат, который проверяет, меньше ли значение заданного типа другого значения этого типа.|  
-|[less_equal](../standard-library/less-equal-struct.md)|Бинарный предикат, который проверяет, меньше или равно ли значение заданного типа другого значения этого типа.|  
-|[logical_and](../standard-library/logical-and-struct.md)|Этот класс предоставляет стандартный объект-функцию, который применяет логическую операцию конъюнкции к элементам заданного типа значения и проверяет истинность или ложность результата.|  
-|[logical_not](../standard-library/logical-not-struct.md)|Этот класс предоставляет стандартный объект-функцию, который применяет логическую операцию отрицания к элементам заданного типа значения и проверяет истинность или ложность результата.|  
-|[logical_or](../standard-library/logical-or-struct.md)|Этот класс предоставляет стандартный объект-функцию, который применяет логическую операцию логического сложения к элементам заданного типа значения и проверяет истинность или ложность результата.|  
-|[minus](../standard-library/minus-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию вычитания для элементов заданного типа значения.|  
-|[modulus](../standard-library/modulus-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию модуля для элементов заданного типа значения.|  
-|[multiplies](../standard-library/multiplies-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию умножения для элементов заданного типа значения.|  
-|[negate](../standard-library/negate-struct.md)|Этот класс предоставляет стандартный объект-функцию, который возвращает отрицательное значение элемента.|  
-|[not_equal_to](../standard-library/not-equal-to-struct.md)|Бинарный предикат, который проверяет, не равно ли значение заданного типа другому значению этого типа.|  
-|[plus](../standard-library/plus-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию сложения для элементов заданного типа значения.|  
-|[unary_function](../standard-library/unary-function-struct.md)|Пустой базовый класс, определяющий типы, которые могут наследоваться производным классом, предоставляющим объект унарной функции.|  
-  
-### <a name="objects"></a>Объекты  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[_1.._M](../standard-library/1-object.md)|Заполнители для подстановочных аргументов.|  
+|[bind](../standard-library/functional-functions.md#bind)|Binds arguments to a callable object.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the first argument of the binary function to a specified value.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the second argument of the binary function to a specified value.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Returns the bitwise logical AND (binary operator&) of the two parameters.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Returns the bitwise logical complement (operator~) of the parameter.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Returns the bitwise logical OR (operator&#124;) of the two parameters.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Returns the bitwise logical XOR (operator^) of the two parameters.|  
+|[cref](../standard-library/functional-functions.md#cref)|Constructs a const `reference_wrapper` from an argument.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generates a simple call wrapper.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Helper template functions used to construct function object adaptors for member functions when initialized with pointer arguments.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|A helper template function used to construct function object adaptors for member functions when initialized with reference arguments.|  
+|[not1](../standard-library/functional-functions.md#not1)|Returns the complement of a unary predicate.|  
+|[not2](../standard-library/functional-functions.md#not2)|Returns the complement of a binary predicate.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|A helper template function used to convert unary and binary function pointers, respectively, into unary and binary adaptable functions.|  
+|[ref](../standard-library/functional-functions.md#ref)|Constructs a `reference_wrapper` from an argument.|  
+|[swap](../standard-library/functional-functions.md#swap)|Swaps two `function` objects.|  
   
-### <a name="operators"></a>Операторы  
+### <a name="structs"></a>Structs  
   
 |||  
 |-|-|  
-|[оператор==](../standard-library/functional-operators.md#op_eq_eq)|Запрещает сравнение вызываемых объектов на равенство.|  
-|[оператор!=](../standard-library/functional-operators.md#op_neq)|Запрещает сравнение вызываемых объектов на неравенство.|  
+|[binary_function](../standard-library/binary-function-struct.md)|An empty base class that defines types that may be inherited by derived class that provides a binary function object.|  
+|[divides](../standard-library/divides-struct.md)|The class provides a predefined function object that performs the arithmetic operation of division on elements of a specified value type.|  
+|[equal_to](../standard-library/equal-to-struct.md)|A binary predicate that tests whether a value of a specified type is equal to another value of that type.|  
+|[greater](../standard-library/greater-struct.md)|A binary predicate that tests whether a value of a specified type is greater than another value of that type.|  
+|[greater_equal](../standard-library/greater-equal-struct.md)|A binary predicate that tests whether a value of a specified type is greater than or equal to another value of that type.|  
+|[less](../standard-library/less-struct.md)|A binary predicate that tests whether a value of a specified type is less than another value of that type.|  
+|[less_equal](../standard-library/less-equal-struct.md)|A binary predicate that tests whether a value of a specified type is less than or equal to another value of that type.|  
+|[logical_and](../standard-library/logical-and-struct.md)|The class provides a predefined function object that performs the logical operation of conjunction on elements of a specified value type and tests for the truth or falsity of the result.|  
+|[logical_not](../standard-library/logical-not-struct.md)|The class provides a predefined function object that performs the logical operation of negation on elements of a specified value type and tests for the truth or falsity of the result.|  
+|[logical_or](../standard-library/logical-or-struct.md)|The class provides a predefined function object that performs the logical operation of disjunction on elements of a specified value type and tests for the truth or falsity of the result.|  
+|[minus](../standard-library/minus-struct.md)|The class provides a predefined function object that performs the arithmetic operation of subtraction on elements of a specified value type.|  
+|[modulus](../standard-library/modulus-struct.md)|The class provides a predefined function object that performs the arithmetic operation of modulus on elements of a specified value type.|  
+|[multiplies](../standard-library/multiplies-struct.md)|The class provides a predefined function object that performs the arithmetic operation of multiplication on elements of a specified value type.|  
+|[negate](../standard-library/negate-struct.md)|The class provides a predefined function object that returns the negative of an element value.|  
+|[not_equal_to](../standard-library/not-equal-to-struct.md)|A binary predicate that tests whether a value of a specified type is not equal to another value of that type.|  
+|[plus](../standard-library/plus-struct.md)|The class provides a predefined function object that performs the arithmetic operation of addition on elements of a specified value type.|  
+|[unary_function](../standard-library/unary-function-struct.md)|An empty base class that defines types that may be inherited by derived class that provides a unary function object.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+### <a name="objects"></a>Objects  
+  
+|||  
+|-|-|  
+|[_1.._M](../standard-library/1-object.md)|Placeholders for replaceable arguments.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Disallows equality comparison of callable objects.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Disallows inequality comparison of callable objects.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

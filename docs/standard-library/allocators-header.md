@@ -1,5 +1,5 @@
 ---
-title: "&lt;Распределители&gt; | Документы Майкрософт"
+title: '&lt;allocators&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::<allocators>
-- allocators/stdext::allocators
-- <allocators>
-- stdext.<allocators>
+- stdext::<allocators>", "allocators/stdext::allocators", "<allocators>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,40 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 536e39fdb795580a770c6bee474d3bc03614879c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0cfd1a9593fd41e8c5faf930086f10f27ec34a8c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltallocatorsgt"></a>&lt;Распределители&gt;
-Определяются несколько шаблонов, упрощающих выделение и освобождение блоков памяти для контейнеров на основе узлов.  
+# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
+Defines several templates that help allocate and free memory blocks for node-based containers.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <allocators>  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Заголовок \<allocators> предоставляет шесть шаблонов распределителя, которые могут использоваться для выбора стратегии управления памятью для контейнеров на основе узлов. Для использования с этими шаблонами он также предоставляет несколько разных фильтров синхронизации, позволяющих настроить стратегию управления памятью во множестве разных многопоточных схем (включая отсутствие). Сопоставление стратегии управления памятью с известными шаблонами использования памяти и требованиями к синхронизации конкретного приложения часто может повысить скорость или уменьшить требования к общей памяти приложения.  
+## <a name="remarks"></a>Remarks  
+ The \<allocators> header provides six allocator templates that can be used to select memory-management strategies for node-based containers. For use with these templates, it also provides several different synchronization filters to tailor the memory-management strategy to a variety of different multithreading schemes (including none). Matching a memory management strategy to the known memory usage patterns, and synchronization requirements, of a particular application can often increase the speed or reduce the overall memory requirements of an application.  
   
- Шаблоны распределителя реализуются с многократно используемыми компонентами, которые можно настраивать или заменять, чтобы обеспечить дополнительные стратегии управления памятью.  
+ The allocator templates are implemented with reusable components that can be customized or replaced to provide additional memory-management strategies.  
   
- Контейнеры на основе узла в стандартной библиотеке C++ (std::list, std::set, std::multiset, std::map и std::multimap) хранят свои элементы в отдельных узлах. Все узлы для конкретного типа контейнера имеют одинаковый размер, поэтому не требуется гибкость диспетчера памяти общего назначения. Так как размер каждого блока памяти становится известен во время компиляции, диспетчер памяти может быть гораздо проще и быстрее.  
+ The node-based containers in the C++ Standard Library (std::list, std::set, std::multiset, std::map and std::multimap) store their elements in individual nodes. All the nodes for a particular container type are the same size, so the flexibility of a general-purpose memory manager is not needed. Because the size of each memory block is known at compile time, the memory manager can be much simpler and faster.  
   
- При использовании с контейнерами, которые не основаны на узлах (такими как контейнеры std::vector, std::deque и std::basic_string стандартной библиотеки C++), шаблоны распределителя будут работать правильно, но скорее всего не обеспечат повышение производительности на основе распределителя по умолчанию.  
+ When used with containers that are not node-based (such as the C++ Standard Library containers std::vector std::deque, and std::basic_string), the alllocator templates will work correctly, but are not likely to provide any performance improvement over the default allocator.  
   
- Allocator — это класс шаблона, описывающий объект, который управляет выделением и освобождением памяти для объектов и массивов объектов шаблона, а также объект, который управляет выделением и освобождением памяти для массивов объектов указанного типа. Объекты распределителя используются несколькими классами шаблонов контейнера из стандартной библиотеки C++.  
+ An allocator is a template class that describes an object that manages storage allocation and freeing for objects and arrays of objects of a designated type. Allocator objects are used by several container template classes in the C++ Standard Library.  
   
- Распределители представляют собой шаблоны типа  
+ The allocators are all templates of this type:  
   
  `template<class` `Type` `>`  
   
  `class allocator;`  
   
- где аргумент шаблона `Type` — это тип, управляемый экземпляром распределителя. Стандартная библиотека C++ предоставляет распределитель по умолчанию, [allocator](../standard-library/allocator-class.md) класса шаблона, который задается в [ \<memory>](../standard-library/memory.md). Заголовок \<allocators> предоставляет следующие распределители:  
+ where the template argument `Type` is the type managed by the allocator instance. The C++ Standard Library provides a default allocator, template class [allocator](../standard-library/allocator-class.md), which is defined in [\<memory>](../standard-library/memory.md). The \<allocators> header provides the following allocators:  
   
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)  
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 04/29/2017
   
 - [allocator_chunklist](../standard-library/allocator-chunklist-class.md)  
   
- При создании контейнера используйте соответствующий экземпляр распределителя как второй аргумент типа, как показано в следующем примере кода.  
+ Use an appropriate instantiation of an allocator as the second type argument when creating a container, such as the following code example.  
   
  `#include <list>`  
   
@@ -91,9 +88,9 @@ ms.lasthandoff: 04/29/2017
   
  `std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`  
   
- _List0 выделяет узлы с `allocator_chunklist` и фильтром синхронизации по умолчанию.  
+ _List0 allocates nodes with `allocator_chunklist` and the default synchronization filter.  
   
- Используйте макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) для создания шаблонов распределителя с фильтрами синхронизации, отличными от установленных по умолчанию:  
+ Use the macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) to create allocator templates with synchronization filters other than the default:  
   
  `#include <list>`  
   
@@ -103,13 +100,13 @@ ms.lasthandoff: 04/29/2017
   
  `std::list<int, alloc<int> > _List1;`  
   
- _Lst1 выделяет узлы с `allocator_chunklist` и фильтр синхронизации [sync_per_thread](../standard-library/sync-per-thread-class.md).  
+ _Lst1 allocates nodes with `allocator_chunklist` and the [sync_per_thread](../standard-library/sync-per-thread-class.md) synchronization filter.  
   
- Распределитель блоков — это кэш или фильтр. Кэш — это класс шаблона, принимающий один аргумент типа std::size_t. Он определяет распределитель блоков, который выделяет и освобождает блоки памяти одного размера. Он должен получать память с помощью оператора `new`, но отдельный вызов оператора `new` для каждого блока выполнять не требуется. Он может, например, дополнительно выделить память из блока большего размера или кэша освобожденных блоков для последующего перераспределения.  
+ A block allocator is a cache or a filter. A cache is a template class that takes one argument of type std::size_t. It defines a block allocator that allocates and deallocates memory blocks of a single size. It must obtain memory using operator `new`, but it need not make a separate call to operator `new` for each block. It may, for example, suballocate from a larger block or cache deallocated blocks for subsequent reallocation.  
   
- С компилятором, которому не удается скомпилировать повторную привязку значения аргумента std::size_t, использовавшегося при создании экземпляра шаблона, необязательно передавать значение аргумента _Sz в функции-члены кэша для выделения и освобождения.  
+ With a compiler that cannot compile rebind the value of the std::size_t argument used when the template was instantiated is not necessarily the value of the argument _Sz passed to a cache's member functions allocate and deallocate.  
   
- \<allocators> предоставляет следующие шаблоны кэша:  
+ \<allocators> provides the following cache templates:  
   
 - [cache_freelist](../standard-library/cache-freelist-class.md)  
   
@@ -117,7 +114,7 @@ ms.lasthandoff: 04/29/2017
   
 - [cache_chunklist](../standard-library/cache-chunklist-class.md)  
   
- Фильтр — это распределитель блоков, который реализует свои функции-члены с помощью другого распределителя блоков, который передается в него как аргумент шаблона. Наиболее распространенная форма фильтра — это фильтр синхронизации, который применяет политику синхронизации для управления доступом к функциям-членам экземпляра другого распределителя блоков. \<allocators> предоставляет следующие фильтры синхронизации:  
+ A filter is a block allocator that implements its member functions using another block allocator which is passed to it as a template argument. The most common form of filter is a synchronization filter, which applies a synchronization policy to control access to the member functions of an instance of another block allocator. \<allocators> provides the following synchronization filters:  
   
 - [sync_none](../standard-library/sync-none-class.md)  
   
@@ -127,15 +124,15 @@ ms.lasthandoff: 04/29/2017
   
 - [sync_shared](../standard-library/sync-shared-class.md)  
   
- \<allocators> также предоставляет фильтр [rts_alloc](../standard-library/rts-alloc-class.md), который содержит несколько экземпляров распределителей блоков и определяет, какой экземпляр нужно использовать для выделения и освобождения во время выполнения, а не во время компиляции. Он используется с компиляторами, которые не могут скомпилировать повторную привязку.  
+ \<allocators> also provides the filter [rts_alloc](../standard-library/rts-alloc-class.md), which holds multiple block allocator instances and determines which instance to use for allocation or deallocation at runtime instead of at compile time. It is used with compilers that cannot compile rebind.  
   
- Политика синхронизации определяет, как экземпляр распределителя обрабатывает одновременные запросы на выделение и освобождение из нескольких потоков. Самая простая политика заключается в том, что все запросы передаются напрямую в базовый объект кэша, оставляя управление синхронизацией пользователю. Более сложная политика может заключаться в использовании мьютекса для сериализации доступа к базовому объекту кэша.  
+ A synchronization policy determines how an allocator instance handles simultaneous allocation and deallocation requests from multiple threads. The simplest policy is to pass all requests directly through to the underlying cache object, leaving synchronization management to the user. A more complex policy could be to use a mutex to serialize access to the underlying cache object.  
   
- Если компилятор поддерживает компиляцию как однопоточных, так и многопоточных приложений, фильтр синхронизации по умолчанию для однопоточных приложений — `sync_none`; для всех остальных случаев — это `sync_shared`.  
+ If a compiler supports compiling both single-threaded and multi-threaded applications, the default synchronization filter for single-threaded applications is `sync_none`; for all other cases it is `sync_shared`.  
   
- Шаблон кэша `cache_freelist` принимает аргумент класса max, который определяет максимальное число элементов для хранения в списке свободных элементов.  
+ The cache template `cache_freelist` takes a max class argument which determines the maximum number of elements to be stored in the free list.  
   
- \<allocators> предоставляет следующие классы max:  
+ \<allocators> provides the following max classes:  
   
 - [max_none](../standard-library/max-none-class.md)  
   
@@ -145,55 +142,55 @@ ms.lasthandoff: 04/29/2017
   
 - [max_variable_size](../standard-library/max-variable-size-class.md)  
   
-### <a name="macros"></a>Макросы  
+### <a name="macros"></a>Macros  
   
 |||  
 |-|-|  
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Создает класс шаблона распределителя.|  
-|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Создает `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
-|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Создает `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
-|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Создает `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
-|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Создает фильтр синхронизации.|  
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Yields an allocator template class.|  
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Yields `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Yields `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Yields `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Yields a synchronization filter.|  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|  
-|[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[allocator_base](../standard-library/allocator-base-class.md)|Определяет базовый класс и общие функции, необходимые для создания определяемого пользователем распределителя из фильтра синхронизации.|  
-|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов, использующих кэш типа [cache_chunklist](../standard-library/cache-chunklist-class.md).|  
-|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_freelist](../standard-library/cache-freelist-class.md) с длиной, управляемой классом [max_fixed_size](../standard-library/max-fixed-size-class.md).|  
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Реализует распределителя, который использует `operator delete` для освобождения блока памяти и `operator new` для выделения блока памяти.|  
-|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
-|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_freelist](../standard-library/cache-freelist-class.md) с длиной, управляемой классом [max_unbounded](../standard-library/max-unbounded-class.md).|  
-|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_freelist](../standard-library/cache-freelist-class.md) с длиной, управляемой классом [max_variable_size](../standard-library/max-variable-size-class.md).|  
-|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Задает распределитель блоков, который выделяет и освобождает блоки памяти одного размера.|  
-|[cache_freelist](../standard-library/cache-freelist-class.md)|Задает распределитель блоков, который выделяет и освобождает блоки памяти одного размера.|  
-|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Задает распределитель блоков, который выделяет и освобождает блоки памяти одного размера.|  
-|[freelist](../standard-library/freelist-class.md)|Управляет списком блоков памяти.|  
-|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Описывает объект класса max, который ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md) определенным значением.|  
-|[max_none](../standard-library/max-none-class.md)|Описывает объект класса max, который ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md) нулем.|  
-|[max_unbounded](../standard-library/max-unbounded-class.md)|Описывает объект класса max, который не ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md).|  
-|[max_variable_size](../standard-library/max-variable-size-class.md)|Описывает объект класса max, который ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md) значением, приблизительно пропорциональным количеству выделенных блоков памяти.|  
-|[rts_alloc](../standard-library/rts-alloc-class.md)|Класс шаблона rts_alloc описывает [фильтр](../standard-library/allocators-header.md), содержащий массив экземпляров кэша, и определяет, какой экземпляр нужно использовать для выделения и освобождения во время выполнения, а не во время компиляции.|  
-|[sync_none](../standard-library/sync-none-class.md)|Описывает фильтр синхронизации, который не предоставляет синхронизацию.|  
-|[sync_per_container](../standard-library/sync-per-container-class.md)|Описывает фильтр синхронизации, предоставляющий отдельный объект кэша для каждого объекта распределителя.|  
-|[sync_per_thread](../standard-library/sync-per-thread-class.md)|Описывает фильтр синхронизации, предоставляющий отдельный объект кэша для каждого потока.|  
-|[sync_shared](../standard-library/sync-shared-class.md)|Описывает фильтр синхронизации, использующий мьютекс для управления доступом к объекту кэша, который является общим для всех распределителей.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Tests for inequality between allocator objects of a specified class.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Tests for equality between allocator objects of a specified class.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<allocators>  
+### <a name="classes"></a>Classes  
   
- **Пространство имен:** stdext  
+|||  
+|-|-|  
+|[allocator_base](../standard-library/allocator-base-class.md)|Defines the base class and common functions needed to create a user-defined allocator from a synchronization filter.|  
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Describes an object that manages storage allocation and freeing for objects using a cache of type [cache_chunklist](../standard-library/cache-chunklist-class.md).|  
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max_fixed_size](../standard-library/max-fixed-size-class.md).|  
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implements an allocator that uses `operator delete` to deallocate a memory block and `operator new` to allocate a memory block.|  
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max_unbounded](../standard-library/max-unbounded-class.md).|  
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max_variable_size](../standard-library/max-variable-size-class.md).|  
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
+|[cache_freelist](../standard-library/cache-freelist-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
+|[freelist](../standard-library/freelist-class.md)|Manages a list of memory blocks.|  
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a fixed maximum length.|  
+|[max_none](../standard-library/max-none-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length of zero.|  
+|[max_unbounded](../standard-library/max-unbounded-class.md)|Describes a max class object that does not limit the maximum length of a [freelist](../standard-library/freelist-class.md) object.|  
+|[max_variable_size](../standard-library/max-variable-size-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length that is roughly proportional to the number of allocated memory blocks.|  
+|[rts_alloc](../standard-library/rts-alloc-class.md)|The rts_alloc template class describes a [filter](../standard-library/allocators-header.md) that holds an array of cache instances and determines which instance to use for allocation and deallocation at runtime instead of at compile time.|  
+|[sync_none](../standard-library/sync-none-class.md)|Describes a synchronization filter that provides no synchronization.|  
+|[sync_per_container](../standard-library/sync-per-container-class.md)|Describes a synchronization filter that provides a separate cache object for each allocator object.|  
+|[sync_per_thread](../standard-library/sync-per-thread-class.md)|Describes a synchronization filter that provides a separate cache object for each thread.|  
+|[sync_shared](../standard-library/sync-shared-class.md)|Describes a synchronization filter that uses a mutex to control access to a cache object that is shared by all allocators.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

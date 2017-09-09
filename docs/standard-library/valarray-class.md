@@ -1,5 +1,5 @@
 ---
-title: "Класс valarray | Документы Майкрософт"
+title: valarray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- valarray
 - valarray/std::valarray
 - valarray/std::valarray::value_type
 - valarray/std::valarray::apply
@@ -25,7 +24,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- valarray class
+- std::valarray [C++]
+- std::valarray [C++], value_type
+- std::valarray [C++], apply
+- std::valarray [C++], cshift
+- std::valarray [C++], free
+- std::valarray [C++], max
+- std::valarray [C++], min
+- std::valarray [C++], resize
+- std::valarray [C++], shift
+- std::valarray [C++], size
+- std::valarray [C++], sum
+- std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 caps.latest.revision: 23
 author: corob-msft
@@ -45,86 +55,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b54bd0f6ca1dcd2efba32817c9c732045775cd8c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d5d6c8c2ea51fc2eb1172cbad773e2269affd058
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="valarray-class"></a>Класс valarray
-Класс шаблона описывает объект, который управляет последовательностью элементов типа **Type**. Эти элементы хранятся в виде массива, предназначены для быстрого выполнения математических операций и оптимизированы для повышения производительности вычислений.  
+# <a name="valarray-class"></a>valarray Class
+The template class describes an object that controls a sequence of elements of type **Type** that are stored as an array, designed for performing high-speed mathematical operations, and optimized for computational performance.  
   
-## <a name="remarks"></a>Примечания  
- Класс является представлением математического понятия упорядоченного набора значений, а для элементов применяется последовательная нумерация, начиная с нуля. Класс описывается почти как контейнер, так как он поддерживает некоторые, хотя и не все, возможности, поддерживаемые контейнерами последовательности первого класса, такими как [vector](../standard-library/vector-class.md). Он имеет два важных отличия от класса шаблона vector:  
+## <a name="remarks"></a>Remarks  
+ The class is a representation of the mathematical concept of an ordered set of values and the elements are numbered sequentially from zero. The class is described as a near container because it supports some, but not all, of the capabilities that first-class sequence containers, such as [vector](../standard-library/vector-class.md), support. It differs from template class vector in two important ways:  
   
--   Он определяет множество арифметических операций между соответствующими элементами объектов **valarray\<Type>** одного типа и одной длины, такими как *xarr* = cos(*yarr*) + sin(*zarr*).  
+-   It defines numerous arithmetic operations between corresponding elements of **valarray\<Type>** objects of the same type and length, such as *xarr* = cos( *yarr*) + sin( *zarr*).  
   
--   Он определяет ряд интересных способов назначения индекса объекту **valarray\<Type>** путем перегрузки оператора [operator[]](#op_at).  
+-   It defines a variety of interesting ways to subscript a **valarray\<Type>** object, by overloading [operator&#91;&#93;](#op_at).  
   
- Объект класса **Type**.  
+ An object of class **Type**:  
   
--   Имеет открытый конструктор по умолчанию, деструктор, конструктор копии и оператор присваивания, работающие обычным образом.  
+-   Has a public default constructor, destructor, copy constructor, and assignment operator, with conventional behavior.  
   
--   При необходимости определяет арифметические операторы и математические функции, определенные для типов с плавающей запятой и работающие обычным образом.  
+-   Defines the arithmetic operators and math functions, as needed, that are defined for the floating-point types, with conventional behavior.  
   
- В частности, между конструкцией копирования и конструкцией по умолчанию, за которыми следует присваивание, не может существовать даже малейших отличий. Ни одна из операций с объектами класса **Type** не может вызывать исключения.  
+ In particular, no subtle differences may exist between copy construction and default construction followed by assignment. None of the operations on objects of class **Type** may throw exceptions.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[valarray](#valarray)|Создает `valarray` определенного размера или с элементами, имеющими указанное значение, либо в качестве копии другого `valarray` или подмножества другого `valarray`.|  
+|[valarray](#valarray)|Constructs a `valarray` of a specific size or with elements of a specific value or as a copy of another `valarray` or subset of another `valarray`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|Тип, представляющий тип элемента, хранящегося в `valarray`.|  
+|[value_type](#value_type)|A type that represents the type of element stored in a `valarray`.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[apply](#apply)|Применяет заданную функцию для каждого элемента объекта `valarray`.|  
-|[cshift](#cshift)|Циклически смещает все элементы в `valarray` на заданное число позиций.|  
-|[free](#free)|Освобождает память, используемую `valarray`.|  
-|[max](#max)|Находит наибольший элемент в `valarray`.|  
-|[min](#min)|Находит наименьший элемент в `valarray`.|  
-|[resize](#resize)|Изменяет количество элементов в `valarray` на заданное число, при необходимости добавляя или удаляя элементы.|  
-|[shift](#shift)|Смещает все элементы в `valarray` на заданное число позиций.|  
-|[size](#size)|Находит количество элементов в `valarray`.|  
-|[sum](#sum)|Определяет сумму всех элементов в `valarray` с ненулевой длиной.|  
+|[apply](#apply)|Applies a specified function to each element of a `valarray`.|  
+|[cshift](#cshift)|Cyclically shifts all the elements in a `valarray` by a specified number of positions.|  
+|[free](#free)|Frees the memory used by the `valarray`.|  
+|[max](#max)|Finds the largest element in a `valarray`.|  
+|[min](#min)|Finds the smallest element in a `valarray`.|  
+|[resize](#resize)|Changes the number of elements in a `valarray` to a specified number, adding or removing elements as required.|  
+|[shift](#shift)|Shifts all the elements in a `valarray` by a specified number of positions.|  
+|[size](#size)|Finds the number of elements in a `valarray`.|  
+|[sum](#sum)|Determines the sum of all the elements in a `valarray` of nonzero length.|  
 |[swap](#swap)||  
   
-### <a name="operators"></a>Операторы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[оператор!](#op_not)|Унарный оператор, который получает логические значения `NOT` каждого элемента в `valarray`.|  
-|[оператор%=](#op_mod_eq)|Получает остаток от поэлементного деления элементов массива на указанный `valarray` или на значение типа элемента.|  
-|[оператор&=](#op_amp_eq)|Получает битовый `AND` элементов в массиве при помощи соответствующих элементов в указанном `valarray` или при помощи значения типа элемента.|  
-|[оператор>>=](#op_gt_gt_eq)|Сдвигает вправо биты для каждого элемента операнда `valarray` на указанное число позиций или на поэлементную сумму, указанную вторым `valarray`.|  
-|[оператор<<=](#op_lt_lt_eq)|Сдвигает влево биты для каждого элемента операнда `valarray` на указанное число позиций или на поэлементную сумму, указанную вторым `valarray`.|  
-|[оператор*=](#op_star_eq)|Поэлементно умножает элементы указанного `valarray` или значение типа элемента на операнд `valarray`.|  
-|[оператор+](#op_add)|Унарный оператор, который прибавляет единицу к каждому элементу в `valarray`.|  
-|[оператор+=](#op_add_eq)|Поэлементно прибавляет элементы указанного `valarray` или значение типа элемента к операнду `valarray`.|  
-|[оператор-](#operator-)|Унарный оператор, который отнимает единицу от каждого элемента в `valarray`.|  
-|[оператор-=](#operator-_eq)|Поэлементно вычитает элементы указанного `valarray` или значение типа элемента из операнда `valarray`.|  
-|[оператор/=](#op_div_eq)|Поэлементно делит операнд `valarray` на элементы указанного `valarray` или значение типа элемента.|  
-|[оператор=](#op_eq)|Назначает элементы для `valarray`, значения которых задаются либо непосредственно или как часть другого `valarray`, либо с помощью `slice_array`, `gslice_array`, `mask_array` или `indirect_array`.|  
-|[оператор[]](#op_at)|Возвращает ссылку на элемент или его значение по указанному индексу или для определенного подмножества.|  
-|[оператор^=](#op_xor_eq)|Получает поэлементное исключающее логическое "ИЛИ" или применяет оператор (`XOR`) для массива с указанным valarray или с указанным значением типа элемента.|  
-|[оператор|=](#op_or_eq)|Получает битовый `OR` элементов в массиве при помощи соответствующих элементов в указанном `valarray` или при помощи значения типа элемента.|  
-|[оператор~](#op_dtor)|Унарный оператор, который получает битовые значения `NOT` каждого элемента в `valarray`.|  
+|[operator!](#op_not)|A unary operator that obtains the logical `NOT` values of each element in a `valarray`.|  
+|[operator%=](#op_mod_eq)|Obtains the remainder of dividing the elements of an array element-wise either by a specified `valarray` or by a value of the element type.|  
+|[operator&=](#op_amp_eq)|Obtains the bitwise `AND` of elements in an array either with the corresponding elements in a specified `valarray` or with a value of the element type.|  
+|[operator>>=](#op_gt_gt_eq)|Right-shifts the bits for each element of a `valarray` operand a specified number of positions or by an element-wise amount specified by a second `valarray`.|  
+|[operator<<=](#op_lt_lt_eq)|Left-shifts the bits for each element of a `valarray` operand a specified number of positions or by an element-wise amount specified by a second `valarray`.|  
+|[operator*=](#op_star_eq)|Multiplies the elements of a specified `valarray` or a value of the element type, element-wise, to an operand `valarray`.|  
+|[operator+](#op_add)|A unary operator that applies a plus to each element in a `valarray`.|  
+|[operator+=](#op_add_eq)|Adds the elements of a specified `valarray` or a value of the element type, element-wise, to an operand `valarray`.|  
+|[operator-](#operator-)|A unary operator that applies a minus to each element in a `valarray`.|  
+|[operator-=](#operator-_eq)|Subtracts the elements of a specified `valarray` or a value of the element type, element-wise, from an operand `valarray`.|  
+|[operator/=](#op_div_eq)|Divides an operand `valarray` element-wise by the elements of a specified `valarray` or a value of the element type.|  
+|[operator=](#op_eq)|Assigns elements to a `valarray` whose values are specified either directly or as part of some other `valarray` or by a `slice_array`, `gslice_array`, `mask_array`, or `indirect_array`.|  
+|[operator&#91;&#93;](#op_at)|Returns a reference to an element or its value at specified index or a specified subset.|  
+|[operator^=](#op_xor_eq)|Obtains the element-wise exclusive logical or operator ( `XOR`) of an array with either a specified valarray or a value of the element type.|  
+|[operator&#124;=](#op_or_eq)|Obtains the bitwise `OR` of elements in an array either with the corresponding elements in a specified `valarray` or with a value of the element type.|  
+|[operator~](#op_dtor)|A unary operator that obtains the bitwise `NOT` values of each element in a `valarray`.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="apply"></a>  valarray::apply  
- Применяет заданную функцию для каждого элемента объекта valarray.  
+ Applies a specified function to each element of a valarray.  
   
 ```  
 valarray<Type> apply(Type _Func(Type)) const;
@@ -132,20 +142,20 @@ valarray<Type> apply(Type _Func(Type)) const;
 valarray<Type> apply(Type _Func(constType&)) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *_Func(Type)*  
- Объект функции, который будет применен к каждому элементу операнда valarray.  
+ The function object to be applied to each element of the operand valarray.  
   
  *_Func(const Type&)*  
- Объект функции для константы, который будет применен к каждому элементу операнда valarray.  
+ The function object for const to be applied to each element of the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, к элементам которого была применена функция `_Func`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements have had `_Func` applied element-wise to the elements of the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает объект класса [valarray](../standard-library/valarray-class.md)**\<Type>** размера [size](#size), каждый из элементов которого `I` представляет собой **func**(( **\*this**)[ `I`]).  
+### <a name="remarks"></a>Remarks  
+ The member function returns an object of class [valarray](../standard-library/valarray-class.md)**\<Type>**, of length [size](#size), each of whose elements `I` is **func**(( **\*this**)[ `I`]).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_apply.cpp  
@@ -195,25 +205,25 @@ valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 ```  
   
 ##  <a name="cshift"></a>  valarray::cshift  
- Циклически смещает все элементы в valarray на заданное число позиций.  
+ Cyclically shifts all the elements in a valarray by a specified number of positions.  
   
 ```  
 valarray<Type> cshift(int count) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `count`  
- Количество позиций, на которые элементы будут сдвинуты вперед.  
+ The number of places the elements are to be shifted forward.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Новый объект valarray, все элементы которого были перемещены на `count` позиций к началу массива (т. е. влево по отношению к их исходным позициям в аргументе типа valarray).  
+### <a name="return-value"></a>Return Value  
+ A new valarray in which all the elements have been moved `count` positions cyclically toward the front of the valarray, left with respect to their positions in the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- При передаче положительного значения `count` элементы циклически смещаются влево на `count` позиций.  
+### <a name="remarks"></a>Remarks  
+ A positive value of `count` shifts the elements cyclically left `count` places.  
   
- При передаче отрицательного значения `count` элементы циклически смещаются вправо на `count` позиций.  
+ A negative value of `count` shifts the elements cyclically right `count` places.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cshift.cpp  
@@ -268,14 +278,14 @@ va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 ```  
   
 ##  <a name="free"></a>  valarray::free  
- Освобождает память, используемую объектом valarray.  
+ Frees the memory used by the valarray.  
   
 ```  
 void free();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта нестандартная функция эквивалентна присваиванию пустого объекта valarray. Например:  
+### <a name="remarks"></a>Remarks  
+ This nonstandard function is equivalent to assigning an empty valarray. For example:  
   
 ```  
 valarray<T> v;  
@@ -285,19 +295,19 @@ v = valarray<T>();
 ```  
   
 ##  <a name="max"></a>  valarray::max  
- Находит наибольший элемент объекта valarray.  
+ Finds the largest element in a valarray.  
   
 ```  
 Type max() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Максимальное значение элемента в операнде valarray.  
+### <a name="return-value"></a>Return Value  
+ The maximum value of the elements in the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член сравнивает значения, применяя **operator\<** или **operator>** между парами элементов класса **Type** (должны быть указаны операторы для элементов типа **Type**).  
+### <a name="remarks"></a>Remarks  
+ The member function compares values by applying **operator\<** or **operator>** between pairs of elements of class **Type**, for which operators must be provided for the element **Type**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_max.cpp  
@@ -334,19 +344,19 @@ The largest element in the valarray is: 13.
 ```  
   
 ##  <a name="min"></a>  valarray::min  
- Находит наименьший элемент объекта valarray.  
+ Finds the smallest element in a valarray.  
   
 ```  
 Type min() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Минимальное значение элемента в операнде valarray.  
+### <a name="return-value"></a>Return Value  
+ The minimum value of the elements in the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член сравнивает значения, применяя **operator\<** или **operator>** между парами элементов класса **Type** (должны быть указаны операторы для элементов типа **Type**).  
+### <a name="remarks"></a>Remarks  
+ The member function compares values by applying **operator\<** or **operator>** between pairs of elements of class **Type**, for which operators must be provided for the element **Type**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_min.cpp  
@@ -383,21 +393,21 @@ The smallest element in the valarray is: -9.
 ```  
   
 ##  <a name="op_not"></a>  valarray::operator!  
- Унарный оператор, который получает логическое **НЕ** для каждого элемента valarray.  
+ A unary operator that obtains the logical **NOT** values of each element in a valarray.  
   
 ```  
 valarray<bool> operator!() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, каждый из элементов которого представляет собой логическое отрицание для соответствующего элемента операнда valarray.  
+### <a name="return-value"></a>Return Value  
+ The valarray of Boolean values that are the negation of the element values of the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- Логическая операция **НЕ** инвертирует элементы, то есть, она преобразует все нулевые элементы в единицу, а все ненулевые элементы считает равными единице и поэтому преобразует их в нули. Возвращаемый объект valarray состоит из логических значений и имеет тот же размер, что и operand valarray.  
+### <a name="remarks"></a>Remarks  
+ The logical operation **NOT** negates the elements because it converts all zeros into ones and regards all nonzero values as ones and converts them into zeros. The returned valarray of Boolean values is of the same size as the operand valarray.  
   
- Также существует оператор побитового **НЕ** [valarray::operator~](#op_dtor), который выполняет отрицание на уровне отдельных битов в бинарном представлении элементов `char` и `int` объекта valarray.  
+ There is also a bitwise **NOT**[valarray::operator~](#op_dtor) that negates on the level of individual bits within the binary representation of `char` and `int` elements of a valarray.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_lognot.cpp  
@@ -437,7 +447,7 @@ The element-by-element result of the logical NOT operator! is the
 ```  
   
 ##  <a name="op_mod_eq"></a>  valarray::operator%=  
- Получает остаток от поэлементного деления элементов массива на указанный объект valarray или на значение типа элемента.  
+ Obtains the remainder of dividing the elements of an array element-wise either by a specified valarray or by a value of the element type.  
   
 ```  
 valarray<Type>& operator%=(const valarray<Type>& right);
@@ -445,14 +455,14 @@ valarray<Type>& operator%=(const valarray<Type>& right);
 valarray<Type>& operator%=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, на которое будет поэлементно делиться операнд valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to divide, element-wise, the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, каждый элемент которого представляет собой остаток от деления соответствующего элемента операнда valarray на `right`  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the remainder from the element-wise division of the operand valarray by `right`  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_rem.cpp  
@@ -499,7 +509,7 @@ The remainders from the element-by-element division is the
 ```  
   
 ##  <a name="and_eq"></a>  valarray::operator&amp;=  
- Получает побитовое **И** для элементов в массиве и соответствующих элементов в указанном объекте valarray или значений типа элемента.  
+ Obtains the bitwise **AND** of elements in an array either with the corresponding elements in a specified valarray or with a value of the element type.  
   
 ```  
 valarray<Type>& operator&=(const valarray<Type>& right);
@@ -507,19 +517,19 @@ valarray<Type>& operator&=(const valarray<Type>& right);
 valarray<Type>& operator&=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, для которого будет выполняться операция логического **И** с операндом valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to be combined, element-wise, by the logical **AND** with the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, каждый элемент которого представляет собой результат логического **И** с операндом valarray `right`  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise logical **AND** of the operand valarray by `right`  
   
-### <a name="remarks"></a>Примечания  
- Побитовые операции могут использоваться только с типами данных `char` и `int` и их разновидностями и не могут использоваться с типами **float**, **double**, **longdouble**, `void`, `bool` или другими, более сложными типами данных.  
+### <a name="remarks"></a>Remarks  
+ A bitwise operation can only be used to manipulate bits in `char` and `int` data types and variants and not on **float**, **double**, **longdouble**, `void`, `bool`, or other, more complex data types.  
   
- Побитовое "И" имеет ту же таблицу истинности, что и логическое **И** , но применяется к типам данных на уровне отдельных битов. Если взять биты *b*1 и *b*2, то *b*1 **И** *b*2 имеет значение **true**, если оба бита имеют значение true, и имеет значение **false**, если хотя бы один из битов имеет значение false.  
+ The bitwise AND has the same truth table as the logical **AND** but applies to the data type on the level of the individual bits. Given bits *b*1 and *b*2, *b*1 **AND** *b*2 is **true** if both bits are true; **false** if at least one is false.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_bitand.cpp  
@@ -566,7 +576,7 @@ The element-by-element result of the logical AND operator&= is the
 ```  
   
 ##  <a name="op_gt_gt_eq"></a>  valarray::operator&gt;&gt;=  
- Сдвигает вправо биты для каждого элемента valarray на указанное число позиций или на поэлементное количество позиций, определяемое вторым объектом valarray.  
+ Right-shifts the bits for each element of a valarray operand a specified number of positions or by an element-wise amount specified by a second valarray.  
   
 ```  
 valarray<Type>& operator>>=(const valarray<Type>& right);
@@ -574,17 +584,17 @@ valarray<Type>& operator>>=(const valarray<Type>& right);
 valarray<Type>& operator>>=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Значение, которое указывает количество позиций для сдвига вправо, или объект valarray, элементы которого указывают поэлементное количество позиций для сдвига вправо.  
+ The value indicating the amount of right shift or valarray whose elements indicate the element-wise amount of right shift.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, элементы которого были сдвинуты вправо на количество позиций, указанное в `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements have been shifted right the amount specified in `right`.  
   
-### <a name="remarks"></a>Примечания  
- Для чисел со знаком их знак сохраняется.  
+### <a name="remarks"></a>Remarks  
+ Signed numbers have their signs preserved.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_rs.cpp  
@@ -631,7 +641,7 @@ The element-by-element result of the right shift is the
 ```  
   
 ##  <a name="op_lt_lt_eq"></a>  valarray::operator&lt;&lt;=  
- Сдвигает влево биты для каждого элемента valarray на указанное число позиций или на поэлементное количество позиций, определяемое вторым объектом valarray.  
+ Left-shifts the bits for each element of a valarray operand a specified number of positions or by an element-wise amount specified by a second valarray.  
   
 ```  
 valarray<Type>& operator<<=(const valarray<Type>& right);
@@ -639,17 +649,17 @@ valarray<Type>& operator<<=(const valarray<Type>& right);
 valarray<Type>& operator<<=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Значение, которое указывает количество позиций для сдвига влево, или объект valarray, элементы которого указывают поэлементное количество позиций для сдвига влево.  
+ The value indicating the amount of left shift or valarray whose elements indicate the element-wise amount of left shift.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, элементы которого были сдвинуты влево на количество позиций, указанное в `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements have been shifted left the amount specified in `right`.  
   
-### <a name="remarks"></a>Примечания  
- Для чисел со знаком их знак сохраняется.  
+### <a name="remarks"></a>Remarks  
+ Signed numbers have their signs preserved.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_ls.cpp  
@@ -697,7 +707,7 @@ The element-by-element result of the left shift
 ```  
   
 ##  <a name="op_star_eq"></a>  valarray::operator*=  
- Поэлементно умножает элементы указанного объекта valarray или значение типа элемента на операнд valarray.  
+ Multiplies the elements of a specified valarray or a value of the element type, element-wise, to an operand valarray.  
   
 ```  
 valarray<Type>& operator*=(const valarray<Type>& right);
@@ -705,14 +715,14 @@ valarray<Type>& operator*=(const valarray<Type>& right);
 valarray<Type>& operator*=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, которое будет поэлементно умножаться на операнд valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to multiply, element-wise, the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Valarray, элементы которого являются учитывающего элементы произведения операнде valarray и `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise product of the operand valarray and `right`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_emult.cpp  
@@ -759,16 +769,16 @@ The element-by-element result of the multiplication is the
 ```  
   
 ##  <a name="op_add"></a>  valarray::operator+  
- Унарный оператор, который прибавляет единицу к каждому элементу объекта valarray.  
+ A unary operator that applies a plus to each element in a valarray.  
   
 ```  
 valarray<Type> operator+() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, содержащий элементы операнда valarray после сложения.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are plus those of the operand array.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_eplus.cpp  
@@ -808,7 +818,7 @@ The element-by-element result of the operator+ is the
 ```  
   
 ##  <a name="op_add_eq"></a>  valarray::operator+=  
- Поэлементно складывает элементы указанного объекта valarray или значение типа элемента с операндом valarray.  
+ Adds the elements of a specified valarray or a value of the element type, element-wise, to an operand valarray.  
   
 ```  
 valarray<Type>& operator+=(const valarray<Type>& right);
@@ -816,14 +826,14 @@ valarray<Type>& operator+=(const valarray<Type>& right);
 valarray<Type>& operator+=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, которое будет поэлементно складываться с операндом valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to be added, element-wise, to the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Valarray, элементы которого являются суммой поэлементно операнде valarray и `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise sum of the operand valarray and `right`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_eadd.cpp  
@@ -870,16 +880,16 @@ The element-by-element result of the sum is the
 ```  
   
 ##  <a name="valarray__operator-"></a>  valarray::operator-  
- Унарный оператор, который отнимает единицу от каждого элемента в valarray.  
+ A unary operator that applies a minus to each element in a valarray.  
   
 ```  
 valarray<Type> operator-() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, содержащий элементы операнда valarray после вычитания.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are minus those of the operand array.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_eminus.cpp  
@@ -919,7 +929,7 @@ The element-by-element result of the operator+ is the
 ```  
   
 ##  <a name="valarray__operator-_eq"></a>  valarray::operator-=  
- Поэлементно вычитает элементы указанного объекта valarray или значение типа элемента из операнда valarray.  
+ Subtracts the elements of a specified valarray or a value of the element type, element-wise, from an operand valarray.  
   
 ```  
 valarray<Type>& operator-=(const valarray<Type>& right);
@@ -927,14 +937,14 @@ valarray<Type>& operator-=(const valarray<Type>& right);
 valarray<Type>& operator-=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, которое будет поэлементно вычитаться из операнда valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to be subtracted, element-wise, from the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Valarray, элементы которого являются результат поэлементного вычитания операнде valarray и `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise difference of the operand valarray and `right`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_esub.cpp  
@@ -981,7 +991,7 @@ The element-by-element result of the difference is the
 ```  
   
 ##  <a name="op_div_eq"></a>  valarray::operator/=  
- Поэлементно делит операнд valarray на элементы указанного объекта valarray или на значение типа элемента.  
+ Divides an operand valarray element-wise by the elements of a specified valarray or a value of the element type.  
   
 ```  
 valarray<Type>& operator/=(const valarray<Type>& right);
@@ -989,14 +999,14 @@ valarray<Type>& operator/=(const valarray<Type>& right);
 valarray<Type>& operator/=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, на которое будет поэлементно делиться операнд valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to be divided, element-wise, into the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Деленный valarray, элементы которого являются результат поэлементного деления операнде valarray `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise quotient of the operand valarray divided by `right`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_ediv.cpp  
@@ -1043,7 +1053,7 @@ The element-by-element result of the quotient is the
 ```  
   
 ##  <a name="op_eq"></a>  valarray::operator=  
- Присваивает элементы объекту valarray, значения которого указываются непосредственно, с помощью другого объекта valarray или с помощью функций slice_array, gslice_array, mask_array или indirect_array.  
+ Assigns elements to a valarray whose values are specified either directly or as part of some other valarray or by a slice_array, gslice_array, mask_array, or indirect_array.  
   
 ```  
 valarray<Type>& operator=(const valarray<Type>& right);
@@ -1061,40 +1071,40 @@ valarray<Type>& operator=(const mask_array<Type>& _Maskarray);
 valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray, который необходимо скопировать в операнд valarray.  
+ The valarray to be copied into the operand valarray.  
   
  `val`  
- Значение, которое будет присвоено элементам операнда valarray.  
+ The value to be assigned to the elements of the operand valarray.  
   
  `_Slicearray`  
- Результат функции slice_array, который необходимо скопировать в операнд valarray.  
+ The slice_array to be copied into the operand valarray.  
   
  `_Gslicearray`  
- Результат функции gslice_array, который необходимо скопировать в операнд valarray.  
+ The gslice_array to be copied into the operand valarray.  
   
  `_Maskarray`  
- Результат функции mask_array, который необходимо скопировать в операнд valarray.  
+ The mask_array to be copied into the operand valarray.  
   
  `_Indarray`  
- Результат функции indirect_array, который необходимо скопировать в операнд valarray.  
+ The indirect_array to be copied into the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Первый оператор-член заменяет управляемую последовательность копией последовательности, управляемой `right`.  
+### <a name="return-value"></a>Return Value  
+ The first member operator replaces the controlled sequence with a copy of the sequence controlled by `right`.  
   
- Второй оператор-член аналогичен первому, но использует [декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ The second member operator is the same as the first, but with an [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- Третий оператор-член заменяет каждый элемент управляемой последовательностью копией `val`.  
+ The third member operator replaces each element of the controlled sequence with a copy of `val`.  
   
- Остальные операторы-члены заменяют эти элементы контролируемой последовательности на их аргументы, которые создаются только оператором [operator[]](#op_at).  
+ The remaining member operators replace those elements of the controlled sequence selected by their arguments, which are generated only by [operator&#91;&#93;](#op_at).  
   
- Если значение элемента в новой управляемой последовательности зависит от элемента в начальной управляемой последовательности, результат не определен.  
+ If the value of a member in the replacement controlled sequence depends on a member in the initial controlled sequence, the result is undefined.  
   
-### <a name="remarks"></a>Примечания  
- При изменении длины управляемой последовательности результат обычно не определен. Однако в этой реализации эффект ограничится только тем, что все указатели или ссылки на элементы в управляемой последовательности станут недействительными.  
+### <a name="remarks"></a>Remarks  
+ If the length of the controlled sequence changes, the result is generally undefined. In this implementation, however, the effect is merely to invalidate any pointers or references to elements in the controlled sequence.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_assign.cpp  
@@ -1147,7 +1157,7 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 ```  
   
 ##  <a name="op_at"></a>  valarray::operator[]  
- Возвращает ссылку на элемент или его значение по указанному индексу или для определенного подмножества.  
+ Returns a reference to an element or its value at specified index or a specified subset.  
   
 ```  
 Type& operator[](size_t _Off);
@@ -1175,35 +1185,35 @@ valarray<Type> operator[](const valarray<bool>& _Boolarray) const;
 valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Индекс элемента, которому будет присвоено значение.  
+ The index of the element to be assigned a value.  
   
  `_Slicearray`  
- Результат функции slice_array для объекта valarray, который содержит подмножество, которое будет выбрано или возвращено в новый объект valarray.  
+ A slice_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
  `_Gslicearray`  
- Результат функции gslice_array для объекта valarray, который содержит подмножество, которое будет выбрано или возвращено в новый объект valarray.  
+ A gslice_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
  *_Boolarray*  
- Результат функции bool_array для объекта valarray, который содержит подмножество, которое будет выбрано или возвращено в новый объект valarray.  
+ A bool_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
  `_Indarray`  
- Результат функции indirect_array для объекта valarray, который содержит подмножество, которое будет выбрано или возвращено в новый объект valarray.  
+ An indirect_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на элемент или его значение для указанного индекса или подмножества.  
+### <a name="return-value"></a>Return Value  
+ A reference to an element or its value at specified index or a specified subset.  
   
-### <a name="remarks"></a>Примечания  
- Оператор-член перегружен. Это позволяет предоставить несколько способов для выбора последовательностей элементов из тех элементов, которые находятся под управлением *\****this**. Первая группа из пяти операторов-членов совместно с различными перегрузками [operator=](#op_eq) (и другими операторами присваивания) позволяют осуществить выборочную замену (фрагментирование) в управляемой последовательности. Выбранные элементы должны существовать.  
+### <a name="remarks"></a>Remarks  
+ The member operator is overloaded to provide several ways to select sequences of elements from among those controlled by *\****this**. The first group of five member operators work in conjunction with various overloads of [operator=](#op_eq) (and other assigning operators) to allow selective replacement (slicing) of the controlled sequence. The selected elements must exist.  
   
- При компиляции с флагом [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу за пределами объекта valarray.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error occurs if you attempt to access an element outside the bounds of the valarray.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>Пример  
-  См. примеры объявления и использования оператора в разделах [slice::slice](../standard-library/slice-class.md#slice) и [gslice::gslice](../standard-library/gslice-class.md#gslice).  
+### <a name="example"></a>Example  
+  See the examples for [slice::slice](../standard-library/slice-class.md#slice) and [gslice::gslice](../standard-library/gslice-class.md#gslice) for an example of how to declare and use the operator.  
   
 ##  <a name="op_xor_eq"></a>  valarray::operator^=  
- Вычисляет поэлементное исключающее **ИЛИ** для массива с указанным valarray или для значения типа элемента.  
+ Obtains the element-wise exclusive logical or operator ( **XOR**) of an array with either a specified valarray or a value of the element type.  
   
 ```  
 valarray<Type>& operator|=(const valarray<Type>& right);
@@ -1211,17 +1221,17 @@ valarray<Type>& operator|=(const valarray<Type>& right);
 valarray<Type>& operator|=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, для которого будет выполняться операция логического исключающего **ИЛИ** с операндом valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to be combined, element-wise, by the exclusive logical **XOR** with the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Valarray, элементы которого являются поэлементно исключающее логическое **XOR** из операнде valarray и `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise, exclusive logical **XOR** of the operand valarray and `right`.  
   
-### <a name="remarks"></a>Примечания  
- Логическое исключающее **ИЛИ** имеет следующую семантику: если взять элементы *e*1 и *e*2, то *e*1 **исключающее логическое ИЛИ** *e*2 имеет значение **true**, если ровно один из элементов имеет значение true, и значение **false**, если оба элемента имеют значение false или оба элемента имеют значение true.  
+### <a name="remarks"></a>Remarks  
+ The exclusive logical or, referred to as **XOR**, has the following semantics: Given elements *e*1 and *e*2, *e*1 **XOR** *e*2 is **true** if exactly one of the elements is true; **false** if both elements are false or if both elements are true.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_exor.cpp  
@@ -1271,8 +1281,8 @@ The element-by-element result of the bitwise XOR operator^= is the
 *\  
 ```  
   
-##  <a name="op_or_eq"></a>  valarray::operator|=  
- Вычисляет побитовое `OR` между элементами массива и соответствующими элементами указанного объекта valarray или значением типа элемента.  
+##  <a name="op_or_eq"></a>  valarray::operator&#124;=  
+ Obtains the bitwise `OR` of elements in an array either with the corresponding elements in a specified valarray or with a value of the element type.  
   
 ```  
 valarray<Type>& operator|=(const valarray<Type>& right);
@@ -1280,19 +1290,19 @@ valarray<Type>& operator|=(const valarray<Type>& right);
 valarray<Type>& operator|=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Объект valarray или значение типа элемента, для которого будет выполняться операция побитового `OR` с операндом valarray.  
+ The valarray or value of an element type identical to that of the operand valarray that is to be combined, element-wise, by the bitwise `OR` with the operand valarray.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Valarray, элементы которого являются поэлементно побитового `OR` из операнде valarray по `right`.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise bitwise `OR` of the operand valarray by `right`.  
   
-### <a name="remarks"></a>Примечания  
- Побитовые операции могут использоваться только с типами данных `char` и `int` и их разновидностями и не могут использоваться с типами **float**, **double**, **longdouble**, `void`, `bool` или другими, более сложными типами данных.  
+### <a name="remarks"></a>Remarks  
+ A bitwise operation can only be used to manipulate bits in `char` and `int` data types and variants and not on **float**, **double**, **longdouble**, `void`, `bool`, or other, more complex data types.  
   
- Побитовое `OR` имеет ту же таблицу истинности, что и логическое `OR`, но применяется к типам данных на уровне отдельных битов. Если взять биты *b*1 и *b*2, то*b*1 `OR` *b*2 имеет значение **true**, если хотя бы один из битов имеет значение true, и имеет значение **false**, если оба бита имеют значение false.  
+ The bitwise `OR` has the same truth table as the logical `OR` but applies to the data type on the level of the individual bits. Given bits *b*1 and *b*2, *b*1 `OR` *b*2 is **true** if at least one of the bits is true; **false** if both bits are false.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_bitor.cpp  
@@ -1346,21 +1356,21 @@ The element-by-element result of the logical OR
 ```  
   
 ##  <a name="op_dtor"></a>  valarray::operator~  
- Унарный оператор, который получает побитовое **НЕ** для каждого элемента valarray.  
+ A unary operator that obtains the bitwise **NOT** values of each element in a valarray.  
   
 ```  
 valarray<Type> operator~() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект valarray, каждый из элементов которого представляет собой побитовое **НЕ** для соответствующего элемента операнда valarray.  
+### <a name="return-value"></a>Return Value  
+ The valarray of Boolean values that are the bitwise **NOT** of the element values of the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- Побитовые операции могут использоваться только с типами данных `char` и `int` и их разновидностями и не могут использоваться с типами **float**, **double**, **longdouble**, `void`, `bool` или другими, более сложными типами данных.  
+### <a name="remarks"></a>Remarks  
+ A bitwise operation can only be used to manipulate bits in `char` and `int` data types and variants and not on **float**, **double**, **longdouble**, `void`, `bool` or other, more complex data types.  
   
- Побитовое **НЕ** имеет ту же таблицу истинности, что и логическое **НЕ**, но применяется к типам данных на уровне отдельных битов. Если взять бит *b*, то ~*b* имеет значение true если бит *b* имеет значение false, и имеет значение false, если бит *b* имеет значение true. Логический оператор **НЕ** [operator!](#op_not) применяется на уровне элемента, интерпретируя все ненулевые значения как **true**. Результатом является объект valarray из логических значений. Применение оператора побитового **НЕ operator ~**, напротив, может привести к появлению в объекте valarray значений, отличных от 0 или 1, в зависимости от результата побитовой операции.  
+ The bitwise **NOT** has the same truth table as the logical **NOT** but applies to the data type on the level of the individual bits. Given bit *b*, ~ *b* is true if *b* is false and false if *b* is true. The logical **NOT**[operator!](#op_not) applies on an element level, counting all nonzero values as **true**, and the result is a valarray of Boolean values. The bitwise **NOToperator~**, by contrast, can result in a valarray of values other than 0 or 1, depending on outcome of the bitwise operation.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_bitnot.cpp  
@@ -1437,7 +1447,7 @@ The element-by-element result of adding one
 ```  
   
 ##  <a name="resize"></a>  valarray::resize  
- Изменяет число элементов в объекте valarray на заданное.  
+ Changes the number of elements in a valarray to a specified number.  
   
 ```  
 void resize(
@@ -1448,20 +1458,20 @@ void resize(
     const Type val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Newsize`  
- Число элементов в объекте valarray с измененным размером.  
+ The number of elements in the resized valarray.  
   
  `val`  
- Значение, присваиваемое элементам объекта valarray с измененным размером.  
+ The value to be given to the elements of the resized valarray.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция-член инициализирует элементы с помощью их конструктора по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ The first member function initializes elements with their default constructor.  
   
- Все указатели и ссылки на элементы в управляемой последовательности становятся недействительными.  
+ Any pointers or references to elements in the controlled sequence are invalidated.  
   
-### <a name="example"></a>Пример  
-  В следующем примере иллюстрируется использование функции-члена valarray::resize.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the valarray::resize member function.  
   
 ```  
 // valarray_resize.cpp  
@@ -1508,25 +1518,25 @@ The number of elements in the resized valarray is: 15.
 ```  
   
 ##  <a name="shift"></a>  valarray::shift  
- Смещает все элементы в valarray на заданное число позиций.  
+ Shifts all the elements in a valarray by a specified number of places.  
   
 ```  
 valarray<Type> shift(int count) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `count`  
- Количество позиций, на которые элементы будут сдвинуты вперед.  
+ The number of places the elements are to be shifted forward.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Новый объект valarray, все элементы которого были перемещены на `count` позиций к началу массива (т. е. влево по отношению к их исходным позициям в аргументе типа valarray).  
+### <a name="return-value"></a>Return Value  
+ A new valarray in which all the elements have been moved `count` positions toward the front of the valarray, left with respect to their positions in the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- При передаче положительного значения `count` элементы смещаются влево на `count` позиций с заполнением освобожденных позиций нулями.  
+### <a name="remarks"></a>Remarks  
+ A positive value of `count` shifts the elements left `count` places, with zero fill.  
   
- При передаче отрицательного значения `count` элементы смещаются вправо на `count` позиций с заполнением освобожденных позиций нулями.  
+ A negative value of `count` shifts the elements right `count` places, with zero fill.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_shift.cpp  
@@ -1578,17 +1588,17 @@ The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 ```  
   
 ##  <a name="size"></a>  valarray::size  
- Определяет число элементов в объекте valarray.  
+ Finds the number of elements in a valarray.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов в операнде valarray.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the operand valarray.  
   
-### <a name="example"></a>Пример  
-  В следующем примере иллюстрируется использование функции-члена valarray::size.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the valarray::size member function.  
   
 ```  
 // valarray_size.cpp  
@@ -1651,19 +1661,19 @@ The number of elements in the valarray va2 is still: 12.
 ```  
   
 ##  <a name="sum"></a>  valarray::sum  
- Определяет сумму всех элементов в объекте valarray с ненулевой длиной.  
+ Determines the sum of all the elements in a valarray of nonzero length.  
   
 ```  
 Type sum() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Сумма элементов для операнда valarray.  
+### <a name="return-value"></a>Return Value  
+ The sum of the elements of the operand valarray.  
   
-### <a name="remarks"></a>Примечания  
- Если длина больше единицы, функция-член добавляет значения к сумме, применяя операцию `operator+=` между парами элементов класса **Type**. Следовательно, необходимо предоставить этот оператор для элементов типа **Type**.  
+### <a name="remarks"></a>Remarks  
+ If the length is greater than one, the member function adds values to the sum by applying `operator+=` between pairs of elements of class **Type**, which operator, consequently, needs be provided for elements of type **Type**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sum.cpp  
@@ -1697,23 +1707,23 @@ The sum of elements in the valarray is: 45.
 ```  
   
 ##  <a name="swap"></a>  valarray::swap  
- Выполняет обмен элементами между двумя объектами `valarray`.  
+ Exchanges the elements of two `valarray`s.  
   
 ```  
 void swap(valarray& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|Объект `valarray`, предоставляющий элементы, которые следует поменять местами.|  
+|`right`|A `valarray` providing the elements to be swapped.|  
   
-### <a name="remarks"></a>Примечания  
- Функция-член меняет местами управляемые последовательности между `*this` и `right`. Она делает это в константном времени, не создает исключения и не делает недействительными ссылки, указатели или итераторы, которые указывают элементы в двух управляемых последовательностях.  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. It does so in constant time, it throws no exceptions, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences.  
   
 ##  <a name="valarray"></a>  valarray::valarray  
- Создает объект valarray указанного размера или с элементами, имеющими указанное значение, либо в качестве копии другого объекта valarray или подмножества другого объекта valarray.  
+ Constructs a valarray of a specific size or with elements of a specific value or as a copy of another valarray or subset of another valarray.  
   
 ```  
 valarray();
@@ -1751,48 +1761,48 @@ valarray(
     initializer_list<Type> IList);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Count`  
- Число элементов в объекте valarray.  
+ The number of elements to be in the valarray.  
   
  `Val`  
- Значение, которое будет использоваться при инициализации элементов в объекте valarray.  
+ The value to be used in initializing the elements in the valarray.  
   
  `Ptr`  
- Указатель на значения, которые будут использоваться при инициализации элементов в объекте valarray.  
+ Pointer to the values to be used to initialize the elements in the valarray.  
   
  `Right`  
- Существующий объект valarray для инициализации нового объекта valarray.  
+ An existing valarray to initialize the new valarray.  
   
  `SliceArray`  
- Функция slice_array, значения элементов которой будут использоваться при инициализации создаваемого объекта valarray.  
+ A slice_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `GsliceArray`  
- Функция gslice_array, значения элементов которой будут использоваться при инициализации создаваемого объекта valarray.  
+ A gslice_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `MaskArray`  
- Функция mask_array, значения элементов которой будут использоваться при инициализации создаваемого объекта valarray.  
+ A mask_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `IndArray`  
- Функция indirect_array, значения элементов которой будут использоваться при инициализации создаваемого объекта valarray.  
+ A indirect_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `IList`  
- Объект initializer_list, содержащий копируемые элементы.  
+ The initializer_list containing the elements to copy.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор (конструктор по умолчанию) инициализирует объект, записывая в него пустой массив. Каждый из трех следующих конструкторов инициализирует объект, записывая в него следующий массив из `Count` элементов:  
+### <a name="remarks"></a>Remarks  
+ The first (default) constructor initializes the object to an empty array. The next three constructors each initialize the object to an array of `Count` elements as follows:  
   
--   Для явного `valarray(size_t Count)` каждый элемент инициализируется с помощью конструктора по умолчанию.  
+-   For explicit `valarray(size_t Count)`, each element is initialized with the default constructor.  
   
--   Для `valarray(const Type& Val, Count)` каждый элемент инициализируется значением `Val`.  
+-   For `valarray(const Type& Val, Count)`, each element is initialized with `Val`.  
   
--   Для `valarray(const Type* Ptr, Count)` элемент в позиции `I` инициализируется значением `Ptr`[ `I`].  
+-   For `valarray(const Type* Ptr, Count)`, the element at position `I` is initialized with `Ptr`[ `I`].  
   
- Каждый из оставшихся конструкторов инициализирует объект, записывая в него объект valarray\<Type>, определяемый подмножеством, указанным в аргументе.  
+ Each remaining constructor initializes the object to a valarray\<Type> object determined by the subset specified in the argument.  
   
- Последний конструктор аналогичен предпоследнему, но использует [декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ The last constructor is the same as the next to last, but with an [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_ctor.cpp  
@@ -1843,16 +1853,16 @@ The operand valarray va is:( 0 2 2 2 2 2 2 2 2 2 )The new valarray initialized f
 ```  
   
 ##  <a name="value_type"></a>  valarray::value_type  
- Тип, который представляет тип элемента, хранящегося в объекте valarray.  
+ A type that represents the type of element stored in a valarray.  
   
 ```  
 typedef Type value_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот тип является синонимом для параметра-шаблона **Type**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_value_type.cpp  
@@ -1893,7 +1903,7 @@ The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 *\  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

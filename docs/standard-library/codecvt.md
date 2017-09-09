@@ -1,5 +1,5 @@
 ---
-title: "&lt;codecvt&gt; | Документы Майкрософт"
+title: '&lt;codecvt&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt
-- std::<codecvt>
-- std.<codecvt>
-- <codecvt>
+- codecvt", "std::<codecvt>", "<codecvt>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,74 +33,74 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: 75f527ca1e0742a1958076b49446b257793c69a5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ebfd3f17d03d7cdb83a5ac8d25e6a1fda472cebb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
-Определяет несколько классов шаблонов, которые описывают объекты на основе класса шаблона [codecvt](../standard-library/codecvt-class.md). Эти объекты могут служить как [аспекты языкового стандарта](../standard-library/locale-class.md#facet_class) для управления преобразованиями между последовательностями значений типа `Elem` и последовательностями значений типа `char`.  
+Defines several template classes that describe objects based on template class [codecvt](../standard-library/codecvt-class.md). These objects can serve as [locale facets](../standard-library/locale-class.md#facet_class) that control conversions between a sequence of values of type `Elem` and a sequence of values of type `char`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <codecvt>  
   
 ```  
   
-## <a name="remarks"></a>Примечания  
- Аспекты языкового стандарта, объявленные в этом заголовке, преобразуются между несколькими кодировками символов. Для расширенных символов (хранящихся в программе в виде целых чисел фиксированного размера):  
+## <a name="remarks"></a>Remarks  
+ The locale facets declared in this header convert between several character encodings. For wide characters (stored within the program in fixed-size integers):  
   
--   UCS-4 — в кодировке Юникод (ISO 10646) в рамках программы;  
+-   UCS-4 is Unicode (ISO 10646) encoded within the program  
   
--   UCS-4 — в кодировке Юникод (ISO 10646) в рамках программы в виде 32-разрядного целого числа;  
+-   UCS-4 is Unicode (ISO 10646) encoded within the program as a 32-bit integer.  
   
--   UCS-2 — в кодировке Юникод в рамках программы;  
+-   UCS-2 is Unicode encoded within the program  
   
--   UCS-2 — в кодировке Юникод в рамках программы в виде 16-разрядного целого числа;  
+-   UCS-2 is Unicode encoded within the program as a 16-bit integer.  
   
--   UTF-16 — в кодировке Юникод в рамках программы в виде одного  
+-   UTF-16 is Unicode encoded within the program as either one  
   
--   UTF-16 — в кодировке Юникод в рамках программы в виде одного или двух 16-разрядных целых чисел. (Обратите внимание, что это не соответствует всем требованиям допустимых кодировок Юникода для расширенных символов в стандартном языке C или C++. Тем не менее это широко используется.)  
+-   UTF-16 is Unicode encoded within the program as either one or two 16-bit integers. (Note that this does not meet all the requirements of a valid wide-character encoding for Standard C or Standard C++. Nevertheless it is widely used as such.)  
   
- Для потоков байтов (хранящихся в файле, передаваемых в виде последовательности байтов или сохраненных в программе в массиве `char`):  
+ For byte streams (stored in a file, transmitted as a byte sequence, or stored within the program in an array of `char`):  
   
--   UTF-8 — в кодировке Юникод;  
+-   UTF-8 is Unicode encoded  
   
--   UTF-8 — в кодировке Юникод в потоке байтов как один или несколько 8-битовых байтов с детерминированным порядком байтов;  
+-   UTF-8 is Unicode encoded within a byte stream as one or more eight-bit bytes with a deterministic byte order.  
   
--   UTF-16LE — в кодировке Юникод;  
+-   UTF-16LE is Unicode encoded  
   
--   UTF-16LE — в кодировке Юникод в потоке байтов в виде UTF-16 с каждым 16-разрядным целым числом, представленным в виде двух 8-битовых байт, с первым менее старшим байтом;  
+-   UTF-16LE is Unicode encoded within a byte stream as UTF-16 with each 16-bit integer presented as two eight-bit bytes, less significant byte first.  
   
--   UTF-16BE — в кодировке Юникод;  
+-   UTF-16BE is Unicode encoded  
   
--   UTF-16BE — в кодировке Юникод в потоке байтов в виде UTF-16 с каждым 16-разрядным целым числом, представленным в виде двух 8-битовых байт, с первым более старшим байтом.  
+-   UTF-16BE is Unicode encoded within a byte stream as UTF-16 with each 16-bit integer presented as two eight-bit bytes, more significant byte first.  
   
-### <a name="enumerations"></a>Перечисления  
-  
-|||  
-|-|-|  
-|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Указывает сведения о конфигурации для аспектов языкового стандарта.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="enumerations"></a>Enumerations  
   
 |||  
 |-|-|  
-|[codecvt_utf8](codecvt-utf8-class.md)|Представляет аспект языкового стандарта, который выполняет преобразование между расширенными символами в кодировке UCS-2 или UCS-4 и потоком байтов в кодировке UTF-8.|  
-|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Представляет аспект языкового стандарта, который выполняет преобразование между расширенными символами в кодировке UTF-16 и потоком байтов в кодировке UTF-8.|  
-|[codecvt_utf16](codecvt-utf16-class.md)|Представляет аспект языкового стандарта, который выполняет преобразование между расширенными символами в кодировке UCS-2 или UCS-4 и потоком байтов в кодировке UTF-16LE или UTF-16BE.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Specifies configuration information for locale facets.|  
+  
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[codecvt_utf8](codecvt-utf8-class.md)|Represents a locale facet that converts between wide characters encoded as UCS-2 or UCS-4, and a byte stream encoded as UTF-8.|  
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Represents a locale facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.|  
+|[codecvt_utf16](codecvt-utf16-class.md)|Represents a locale facet that converts between wide characters encoded as UCS-2 or UCS-4 and a byte stream encoded as UTF-16LE or UTF-16BE.|  
 
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<codecvt>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<codecvt>  
   
- **Пространство имен:** stdt  
+ **Namespace:** stdt  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

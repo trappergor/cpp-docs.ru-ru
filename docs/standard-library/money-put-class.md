@@ -1,5 +1,5 @@
 ---
-title: "Класс money_put | Документы Майкрософт"
+title: money_put Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocmon/std::money_put
-- money_put
 - locale/std::money_put::char_type
 - locale/std::money_put::iter_type
 - locale/std::money_put::string_type
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- money_put class
+- std::money_put [C++]
+- std::money_put [C++], char_type
+- std::money_put [C++], iter_type
+- std::money_put [C++], string_type
+- std::money_put [C++], do_put
+- std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 caps.latest.revision: 19
 author: corob-msft
@@ -39,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 825edc66a7b4b565222133ebb47a789efbdba52b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cac0d424273a2c497f42b6aec2cfb78281d20b9d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="moneyput-class"></a>Класс money_put
-Шаблонный класс описывает объект, который можно использовать как аспект языкового стандарта для управления преобразованиями денежных значений в последовательности типа `CharType`.  
+# <a name="moneyput-class"></a>money_put Class
+The template class describes an object that can serve as a locale facet to control conversions of monetary values to sequences of type `CharType`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -57,54 +61,54 @@ template <class CharType,
 class money_put : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Тип, используемый внутри программы для кодирования символов в языковом стандарте.  
+ The type used within a program to encode characters in a locale.  
   
  `OutputIterator`  
- Тип итератора, куда функции записи денежных значений записывают свои выходные данные.  
+ The type of iterator to which the monetary put functions write their output.  
   
-## <a name="remarks"></a>Примечания  
- Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.**  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[money_put](#money_put)|Конструктор для объектов типа `money_put`.|  
+|[money_put](#money_put)|The constructor for objects of type `money_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|  
-|[iter_type](#iter_type)|Тип, который описывает итератор вывода.|  
-|[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an output iterator.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_put](#do_put)|Виртуальная функция, вызываемая для преобразования числа или строки в последовательность символов, представляющую денежное значение.|  
-|[put](#put)|Преобразует число или строку в последовательность символов, представляющую денежное значение.|  
+|[do_put](#do_put)|A virtual function called to convert either number or a string to a character sequence that represents a monetary value.|  
+|[put](#put)|Converts either number or a string to a character sequence that represents a monetary value.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  money_put::char_type  
- Тип, используемый для описания символа, используемого языковым стандартом.  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом для параметра-шаблона **Chartype**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_put"></a>  money_put::do_put  
- Виртуальная функция, вызываемая для преобразования числа или строки в последовательность символов, представляющую денежное значение.  
+ A virtual function called to convert either number or a string to a character sequence that represents a monetary value.  
   
 ```  
 virtual iter_type do_put(
@@ -123,101 +127,101 @@ virtual iter_type do_put(
     long double val) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `next`  
- Итератор, адресующий первый элемент во вставляемой строке.  
+ An iterator addressing the first element of the inserted string.  
   
  `_Intl`  
- Логическое значение, указывающее тип символа валюты, ожидаемого в последовательности: **true** для международного символа, **false** для внутреннего.  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `_Iosbase`  
- Флаг формата, который при установке указывает, что символ валюты является необязательным. В противном случае он обязателен.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `_Fill`  
- Символ, используемый для пробелов.  
+ A character which is used for spacing.  
   
  `val`  
- Строковый объект для преобразования.  
+ A string object to be converted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор вывода, который адресует позицию после последнего сформированного элемента.  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>Примечания  
- Первая виртуальная защищенная функция-член создает последовательные элементы, начиная с `next` для создания выходного денежного поля из объекта [string_type](#string_type) `val`. Последовательности, контролируемой `val` должно начинаться с одного или нескольких десятичных цифр, при необходимости предшествует знак минуса (-), который представляет объем. Функция возвращает итератор, обозначающий первый элемент за пределами созданного выходного денежного поля.  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function generates sequential elements beginning at `next` to produce a monetary output field from the [string_type](#string_type) object `val`. The sequence controlled by `val` must begin with one or more decimal digits, optionally preceded by a minus sign (-), which represents the amount. The function returns an iterator designating the first element beyond the generated monetary output field.  
   
- Вторая защищенная виртуальная функция-член ведет себя так же, как и первая, за исключением того, что она фактически сначала преобразует `val` в последовательность десятичных цифр, при необходимости начинающуюся со знака минус, затем преобразует эту последовательность, как описано выше.  
+ The second virtual protected member function behaves the same as the first, except that it effectively first converts `val` to a sequence of decimal digits, optionally preceded by a minus sign, then converts that sequence as above.  
   
- Формат выходного поля денежных значений определяется [аспектом языкового стандарта](../standard-library/locale-class.md#facet_class) fac, возвращаемого эффективным вызовом [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >(**iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
+ The format of a monetary output field is determined by the [locale facet](../standard-library/locale-class.md#facet_class) fac returned by the (effective) call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
   
- В частности:  
+ Specifically:  
   
-- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) определяет порядок, в котором компоненты поля создаются для неотрицательного значения.  
+- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) determines the order in which components of the field are generated for a nonnegative value.  
   
-- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) определяет порядок, в котором компоненты поля создаются для отрицательного значения.  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determines the order in which components of the field are generated for a negative value.  
   
-- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) определяет последовательность элементов для создания символа валюты.  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) determines the sequence of elements to generate for a currency symbol.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) определяет последовательность элементов для создания положительного знака.  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) determines the sequence of elements to generate for a positive sign.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#negative_sign) определяет последовательность элементов для создания отрицательного знака.  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determines the sequence of elements to generate for a negative sign.  
   
-- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) определяет, как группируются цифры слева от любого десятичного разделителя.  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
   
-- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) определяет элемент, разделяющий группы цифр слева от любого десятичного разделителя.  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determines the element that separates groups of digits to the left of any decimal point.  
   
-- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) определяет элемент, который отделяет целочисленное значение от любых цифр дробного значения.  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) determines the element that separates the integer digits from any fraction digits.  
   
-- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) определяет количество значимых цифр справа от любого десятичного разделителя.  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) determines the number of significant fraction digits to the right of any decimal point.  
   
- Если строка знака (**fac**. `negative_sign` или **fac**. `positive_sign`) имеет более одного элемента, только первый элемент создается, если элемент, равный **money_base::sign**, отображается в шаблоне формата (**fac**. `neg_format` или **fac**. `pos_format`). Все оставшиеся элементы создаются в конце поля вывода денежных значений.  
+ If the sign string ( **fac**. `negative_sign` or **fac**. `positive_sign`) has more than one element, only the first element is generated where the element equal to **money_base::sign** appears in the format pattern ( **fac**. `neg_format` or **fac**. `pos_format`). Any remaining elements are generated at the end of the monetary output field.  
   
- Если **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) не равно нулю, то строка **fac**. `curr_symbol`создается, когда в шаблоне формата появляется элемент, равный **money_base::symbol**. В противном символ валюты не создается.  
+ If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) is nonzero, the string **fac**. `curr_symbol` is generated where the element equal to **money_base::symbol** appears in the format pattern. Otherwise, no currency symbol is generated.  
   
- Если не накладываются ограничения по группированию со стороны **fac**. **grouping** (первый элемент имеет значение CHAR_MAX), то никакие экземпляры **fac**. `thousands_sep` не создаются в разделе значения денежных полей (если в шаблоне формата появляется элемент, равный **money_base::value**). Если **fac**. `frac_digits` — нуль, то после десятичных цифр не создаются никакие экземпляры **fac**. `decimal_point`. В противном случае результат поля вывода денежных значений будет иметь младшие десятичные цифры **fac**. `frac_digits` справа от десятичного разделителя.  
+ If no grouping constraints are imposed by **fac**. **grouping** (its first element has the value CHAR_MAX), then no instances of **fac**. `thousands_sep` are generated in the value portion of the monetary output field (where the element equal to **money_base::value** appears in the format pattern). If **fac**. `frac_digits` is zero, then no instance of **fac**. `decimal_point` is generated after the decimal digits. Otherwise, the resulting monetary output field places the low-order **fac**. `frac_digits` decimal digits to the right of the decimal point.  
   
- Заполнение происходит как для любого числового поля вывода, за исключением того, что, если значение **iosbase**. **flags** & **iosbase**. [internal](../standard-library/ios-functions.md#internal) не нулевое, любое внутреннее заполнение создается там, где в шаблоне формата появляется элемент, равный **money_base::space**, если он есть. В противном случае внутреннее заполнение предшествует создаваемой последовательности. Символ заполнения — **fill**.  
+ Padding occurs as for any numeric output field, except that if **iosbase**. **flags** & **iosbase**. [internal](../standard-library/ios-functions.md#internal) is nonzero, any internal padding is generated where the element equal to **money_base::space** appears in the format pattern, if it does appear. Otherwise, internal padding occurs before the generated sequence. The padding character is **fill**.  
   
- Функция вызывает **iosbase**. **width**(0) для сброса ширины поля в нуль.  
+ The function calls **iosbase**. **width**(0) to reset the field width to zero.  
   
-### <a name="example"></a>Пример  
-  См. пример для [put](#put), где виртуальная функция-член вызывается из **put**.  
+### <a name="example"></a>Example  
+  See the example for [put](#put), where the virtual member function is called by **put**.  
   
 ##  <a name="iter_type"></a>  money_put::iter_type  
- Тип, который описывает итератор вывода.  
+ A type that describes an output iterator.  
   
 ```  
 typedef OutputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом параметра-шаблона **OutputIterator.**  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **OutputIterator.**  
   
 ##  <a name="money_put"></a>  money_put::money_put  
- Конструктор для объектов типа `money_put`.  
+ The constructor for objects of type `money_put`.  
   
 ```  
 explicit money_put(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- Целочисленное значение, используемое для указания типа управления памятью для объекта.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>Примечания  
- Возможные значения параметра `_Refs` и их важность:  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: время существования объекта управляется языковыми стандартами, которые его содержат.  
+-   0: the lifetime of the object is managed by the locales that contain it.  
   
--   1: время существования объекта должно управляться вручную.  
+-   1: the lifetime of the object must be manually managed.  
   
--   \>1: эти значения не определены.  
+-   \> 1: these values are not defined.  
   
- Прямые примеры привести нельзя, так как деструктор защищен.  
+ No direct examples are possible, because the destructor is protected.  
   
- Конструктор инициализирует свой базовый объект с **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="put"></a>  money_put::put  
- Преобразует число или строку в последовательность символов, представляющую денежное значение.  
+ Converts either number or a string to a character sequence that represents a monetary value.  
   
 ```  
 iter_type put(
@@ -236,29 +240,29 @@ iter_type put(
     long double val) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `next`  
- Итератор, адресующий первый элемент во вставляемой строке.  
+ An iterator addressing the first element of the inserted string.  
   
  `_Intl`  
- Логическое значение, указывающее тип символа валюты, ожидаемого в последовательности: **true** для международного символа, **false** для внутреннего.  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `_Iosbase`  
- Флаг формата, который при установке указывает, что символ валюты является необязательным. В противном случае он обязателен.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `_Fill`  
- Символ, используемый для пробелов.  
+ A character which is used for spacing.  
   
  `val`  
- Строковый объект для преобразования.  
+ A string object to be converted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор вывода, который адресует позицию после последнего сформированного элемента.  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>Примечания  
- Обе функции-члены возвращают [do_put](#do_put)(`next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).  
+### <a name="remarks"></a>Remarks  
+ Both member functions return [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // money_put_put.cpp  
@@ -291,18 +295,18 @@ money_put( ) = "CAD1,000.12"
 ```  
   
 ##  <a name="string_type"></a>  money_put::string_type  
- Тип, который описывает строку символов типа **CharType**.  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [basic_string](../standard-library/basic-string-class.md), объекты которого могут хранить последовательности элементов из входной последовательности.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store sequences of elements from the source sequence.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [Класс facet](../standard-library/locale-class.md#facet_class)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

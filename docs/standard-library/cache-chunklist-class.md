@@ -1,5 +1,5 @@
 ---
-title: "Класс cache_chunklist | Документы Майкрософт"
+title: cache_chunklist Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
-- stdext::cache_chunklist
-- cache_chunklist
 - allocators/stdext::cache_chunklist::allocate
 - allocators/stdext::cache_chunklist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
-- cache_chunklist class
+- stdext::cache_chunklist
+- stdext::cache_chunklist [C++], allocate
+- stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
 caps.latest.revision: 17
 author: corob-msft
@@ -37,96 +37,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6ffeb2a0ac7f1d5b6f45ea351e8448475b232b88
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cachechunklist-class"></a>Класс cache_chunklist
-Задает [распределитель блоков](../standard-library/allocators-header.md), который выделяет и освобождает блоки памяти одного размера.  
+# <a name="cachechunklist-class"></a>cache_chunklist Class
+Defines a [block allocator](../standard-library/allocators-header.md) that allocates and deallocates memory blocks of a single size.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Sz, std::size_t Nelts = 20>  
 class cache_chunklist
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Sz`|Число элементов в массиве, которые нужно выделить.|  
+|`Sz`|The number of elements in the array to be allocated.|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс шаблона использует `operator new` для выделения участков необработанной памяти, распределяющей блоки, чтобы выделять хранилище для блока памяти при необходимости; он хранит освобожденные блоки памяти в отдельном списке свободных для каждого участка памяти и применяет `operator delete` для освобождения участка памяти, если ни один из его блоков памяти не используется.  
+## <a name="remarks"></a>Remarks  
+ This template class uses `operator new` to allocate chunks of raw memory, suballocating blocks to allocate storage for a memory block when needed; it stores deallocated memory blocks in a separate free list for each chunk, and uses `operator delete` to deallocate a chunk when none of its memory blocks is in use.  
   
- Каждый блок памяти содержит `Sz` байт свободной памяти и указатель на участок памяти, к которому он принадлежит. Каждый участок памяти содержит `Nelts` блоков памяти, три указателя, int и данные, которые требуются `operator new` и `operator delete`.  
+ Each memory block holds `Sz` bytes of usable memory and a pointer to the chunk that it belongs to. Each chunk holds `Nelts` memory blocks, three pointers, an int and the data that `operator new` and `operator delete` require.  
   
-### <a name="constructors"></a>Конструкторы  
-  
-|||  
-|-|-|  
-|[cache_chunklist](#cache_chunklist)|Создает объект типа `cache_chunklist`.|  
-  
-### <a name="member-functions"></a>Функции-члены  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Выделяет блок памяти.|  
-|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|  
+|[cache_chunklist](#cache_chunklist)|Constructs an object of type `cache_chunklist`.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **Пространство имен:** stdext  
+|||  
+|-|-|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  cache_chunklist::allocate  
- Выделяет блок памяти.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|Число элементов в массиве, которые нужно выделить.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на выделяемый объект.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
- Создает объект типа `cache_chunklist`.  
+ Constructs an object of type `cache_chunklist`.  
   
 ```
 cache_chunklist();
 ```  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="deallocate"></a>  cache_chunklist::deallocate  
- Освобождает указанное число объектов из памяти, начиная с заданной позиции.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|  
-|`count`|Количество объектов для освобождения из хранилища.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

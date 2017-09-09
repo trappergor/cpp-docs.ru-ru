@@ -1,5 +1,5 @@
 ---
-title: "Класс collate | Документы Майкрософт"
+title: collate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - locale/std::collate
-- collate
-- Collate
 - locale/std::collate::char_type
 - locale/std::collate::string_type
 - locale/std::collate::compare
@@ -23,7 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- collate class
+- std::collate [C++]
+- std::collate [C++], char_type
+- std::collate [C++], string_type
+- std::collate [C++], compare
+- std::collate [C++], do_compare
+- std::collate [C++], do_hash
+- std::collate [C++], do_transform
+- std::collate [C++], hash
+- std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 caps.latest.revision: 18
 author: corob-msft
@@ -43,71 +49,71 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 070813dde1fc118e35ade636261541e585504c50
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: db02822b3e5e2e5fbf1851c6b8709a4963f70e15
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="collate-class"></a>Класс collate
-Класс шаблона, описывающий объект, который может использоваться как аспект языкового стандарта для управления порядком и группированием символов в строке, их сравнением и хэшированием строк.  
+# <a name="collate-class"></a>collate Class
+A template class that describes an object that can serve as a locale facet to control the ordering and grouping of characters within a string, comparisons between them and the hashing of strings.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class collate : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Тип, используемый внутри программы для кодирования символов.  
+ The type used within a program to encode characters.  
   
-## <a name="remarks"></a>Примечания  
- Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.** В одних языка символы группируются и обрабатываются как один символ, в других отдельные символы обрабатываются так, как если бы каждый из них представлял собой два символа. Службы упорядочивания, предоставленные классом collate, обеспечивают способ сортировки в таких случаях.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.** In some languages, characters are grouped and treated as a single character, and in others, individual characters are treated as if they were two characters. The collating services provided by the collate class provide the way to sort these cases.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[collate](#collate)|Конструктор для объектов класса `collate`, который служит в качестве аспекта языкового стандарта для обработки преобразований сортировки строк.|  
+|[collate](#collate)|The constructor for objects of class `collate` that serves as a locale facet to handle string sorting conventions.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Тип, описывающий символ типа `CharType`.|  
-|[string_type](#string_type)|Тип, описывающий строку типа `basic_string`, содержащую символы типа `CharType`.|  
+|[char_type](#char_type)|A type that describes a character of type `CharType`.|  
+|[string_type](#string_type)|A type that describes a string of type `basic_string` containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[compare](#compare)|Проверяет две последовательности символов на равенство или неравенство в соответствии с правилами для конкретных аспектов.|  
-|[do_compare](#do_compare)|Виртуальная функция, вызываемая для проверки двух последовательностей символов на равенство или неравенство в соответствии с правилами для конкретных аспектов.|  
-|[do_hash](#do_hash)|Виртуальная функция, вызываемая для определения хэш-значения последовательностей в соответствии с правилами для конкретных аспектов.|  
-|[do_transform](#do_transform)|Виртуальная функция, вызываемая для преобразования последовательности символов из языкового стандарта в строку, которая может быть использована для лексикографического сравнения с другими последовательностями символов, аналогичным образом преобразованными из того же языкового стандарта.|  
-|[hash](#hash)|Определяет хэш-значение последовательности в соответствии с правилами для конкретных аспектов.|  
-|[transform](#transform)|Преобразует последовательность символов из языкового стандарта в строку, которая может быть использована для лексикографического сравнения с другими последовательностями символов, аналогичным образом преобразованными из того же языкового стандарта.|  
+|[compare](#compare)|Compares two character sequences according to their facet-specific rules for equality or inequality.|  
+|[do_compare](#do_compare)|A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.|  
+|[do_hash](#do_hash)|A virtual function called to determine the hash value of sequences according to their facet-specific rules.|  
+|[do_transform](#do_transform)|A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.|  
+|[hash](#hash)|Determines the hash value of sequence according to their facet-specific rules.|  
+|[transform](#transform)|Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  collate::char_type  
- Тип, описывающий символ типа **CharType**.  
+ A type that describes a character of type **CharType**.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом для параметра-шаблона **Chartype**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="collate"></a>  collate::collate  
- Конструктор для объектов класса collate, который служит в качестве аспекта языкового стандарта для обработки преобразований сортировки строк.  
+ The constructor for objects of class collate that serves as a locale facet to handle string sorting conventions.  
   
 ```  
 public:  
@@ -120,26 +126,26 @@ protected:
     size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- Целочисленное значение, используемое для указания типа управления памятью для объекта.  
+ Integer value used to specify the type of memory management for the object.  
   
  `_Locname`  
- Имя языкового стандарта.  
+ The name of the locale.  
   
-### <a name="remarks"></a>Примечания  
- Возможные значения параметра `_Refs` и их важность:  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: время существования объекта управляется языковыми стандартами, которые его содержат.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: время существования объекта должно управляться вручную.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: эти значения не определены.  
+-   \> 1: These values are not defined.  
   
- Конструктор инициализирует его базовым объектом с **locale::**[аспекта](../standard-library/locale-class.md#facet_class)(`_Refs`).  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
 ##  <a name="compare"></a>  collate::compare  
- Проверяет две последовательности символов на равенство или неравенство в соответствии с правилами для конкретных аспектов.  
+ Compares two character sequences according to their facet-specific rules for equality or inequality.  
   
 ```  
 int compare(const CharType* first1,
@@ -148,34 +154,34 @@ int compare(const CharType* first1,
     const CharType* last2) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first1`  
- Указатель на первый элемент в первой последовательности для сравнения.  
+ Pointer to the first element in the first sequence to be compared.  
   
  `last1`  
- Указатель на последний элемент в первой последовательности для сравнения.  
+ Pointer to the last element in the first sequence to be compared.  
   
  `first2`  
- Указатель на первый элемент во второй последовательности для сравнения.  
+ Pointer to the first element in the second sequence to be compared.  
   
  `last2`  
- Указатель на последний элемент во второй последовательности для сравнения.  
+ Pointer to the last element in the second sequence to be compared.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Функция-член возвращает:  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   –1, если первая последовательность оказывается меньше, чем вторая;  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   +1, если вторая последовательность оказывается меньше, чем первая;  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   0, если последовательности являются эквивалентными.  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>Примечания  
- Первая последовательность оценивается как меньшая, если в ней находится меньший элемент в первой неравной паре значений последовательностей или если неравные пары отсутствуют, но первая последовательность короче.  
+### <a name="remarks"></a>Remarks  
+ The first sequence compares less if it has the smaller element in the earliest unequal pair in the sequences, or, if no unequal pairs exist, but the first sequence is shorter.  
   
- Функция-член возвращает [do_compare](#do_compare)(`first1`, `last1`, `first2`, `last2`).  
+ The member function returns [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_compare.cpp  
@@ -201,7 +207,7 @@ int main() {
 ```  
   
 ##  <a name="do_compare"></a>  collate::do_compare  
- Виртуальная функция, вызываемая для проверки двух последовательностей символов на равенство или неравенство в соответствии с правилами для конкретных аспектов.  
+ A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.  
   
 ```  
 virtual int do_compare(const CharType* first1,
@@ -210,103 +216,103 @@ virtual int do_compare(const CharType* first1,
     const CharType* last2) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first1`  
- Указатель на первый элемент в первой последовательности для сравнения.  
+ Pointer to the first element in the first sequence to be compared.  
   
  `last1`  
- Указатель на последний элемент в первой последовательности для сравнения.  
+ Pointer to the last element in the first sequence to be compared.  
   
  `first2`  
- Указатель на первый элемент во второй последовательности для сравнения.  
+ Pointer to the first element in the second sequence to be compared.  
   
  `last2`  
- Указатель на последний элемент во второй последовательности для сравнения.  
+ Pointer to the last element in the second sequence to be compared.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Функция-член возвращает:  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   –1, если первая последовательность оказывается меньше, чем вторая;  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   +1, если вторая последовательность оказывается меньше, чем первая;  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   0, если последовательности являются эквивалентными.  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>Примечания  
- Защищенные виртуальная функция-член сравнивает последовательность [* first1, Last1) * с последовательность *[first2, last2*). Она сравнивает значения, применяя **operator<** между парами соответствующих элементов типа **CharType**. Первая последовательность оценивается как меньшая, если в ней находится меньший элемент в первой неравной паре значений последовательностей или если неравные пары отсутствуют, но первая последовательность короче.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function compares the sequence at [ * first1, Last1)* with the sequence at *[ first2,  last2*). It compares values by applying **operator<** between pairs of corresponding elements of type **CharType**. The first sequence compares less if it has the smaller element in the earliest unequal pair in the sequences or if no unequal pairs exist but the first sequence is shorter.  
   
-### <a name="example"></a>Пример  
-  См. пример для [collate::compare](#compare), в котором вызывается метод `do_compare`.  
+### <a name="example"></a>Example  
+  See the example for [collate::compare](#compare), which calls `do_compare`.  
   
 ##  <a name="do_hash"></a>  collate::do_hash  
- Виртуальная функция, вызываемая для определения хэш-значения последовательностей в соответствии с правилами для конкретных аспектов.  
+ A virtual function called to determine the hash value of sequences according to their facet-specific rules.  
   
 ```  
 virtual long do_hash(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Указатель на первый символ в последовательности, чье хэш-значение требуется определить.  
+ A pointer to the first character in the sequence whose has value is to be determined.  
   
  `last`  
- Указатель на последний символ в последовательности, чье хэш-значение требуется определить.  
+ A pointer to the last character in the sequence whose has value is to be determined.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Хэш-значение типа **long** для последовательности.  
+### <a name="return-value"></a>Return Value  
+ A hash value of type **long** for the sequence.  
   
-### <a name="remarks"></a>Примечания  
- Хэш-значение может быть полезно, например при псевдослучайном распределении последовательностей по массиву списков.  
+### <a name="remarks"></a>Remarks  
+ A hash value can be useful, for example, in distributing sequences pseudo-randomly across an array of lists.  
   
-### <a name="example"></a>Пример  
-  См. пример для [hash](#hash), в котором вызывается `do_hash`.  
+### <a name="example"></a>Example  
+  See the example for [hash](#hash), which calls `do_hash`.  
   
 ##  <a name="do_transform"></a>  collate::do_transform  
- Виртуальная функция, вызываемая для преобразования последовательности символов из языкового стандарта в строку, которая может быть использована для лексикографического сравнения с другими последовательностями символов, аналогичным образом преобразованными из того же языкового стандарта.  
+ A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.  
   
 ```  
 virtual string_type do_transform(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Указатель на первый символ в преобразуемой последовательности.  
+ A pointer to the first character in the sequence to be converted.  
   
  `last`  
- Указатель на последний символ в преобразуемой последовательности.  
+ A pointer to the last character in the sequence to be converted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Строка, представляющая преобразованную последовательность символов.  
+### <a name="return-value"></a>Return Value  
+ A string that is the transformed character sequence.  
   
-### <a name="remarks"></a>Примечания  
- Защищенная виртуальная функция-член возвращает объект класса [string_type](#string_type), управляемая последовательность которого является копией последовательности [`first`, `last`). Если класс, производный от collate\< **CharType**>, переопределяет [do_compare](#do_compare), следует также переопределить `do_transform` для соответствия. При передаче в `collate::compare` две преобразованные строки должны дать тот же результат, который был бы получен при передаче непреобразованных строк для сравнения в производном классе.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns an object of class [string_type](#string_type) whose controlled sequence is a copy of the sequence [ `first`, `last`). If a class derived from collate\< **CharType**> overrides [do_compare](#do_compare), it should also override `do_transform` to match. When passed to `collate::compare`, two transformed strings should yield the same result that you would get from passing the untransformed strings to compare in the derived class.  
   
-### <a name="example"></a>Пример  
-  См. пример для [transform](#transform), в котором вызывается `do_transform`.  
+### <a name="example"></a>Example  
+  See the example for [transform](#transform), which calls `do_transform`.  
   
 ##  <a name="hash"></a>  collate::hash  
- Определяет хэш-значение последовательности в соответствии с правилами для конкретных аспектов.  
+ Determines the hash value of sequence according to their facet-specific rules.  
   
 ```  
 long hash(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Указатель на первый символ в последовательности, чье хэш-значение требуется определить.  
+ A pointer to the first character in the sequence whose has value is to be determined.  
   
  `last`  
- Указатель на последний символ в последовательности, чье хэш-значение требуется определить.  
+ A pointer to the last character in the sequence whose has value is to be determined.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Хэш-значение типа **long** для последовательности.  
+### <a name="return-value"></a>Return Value  
+ A hash value of type **long** for the sequence.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает [do_hash](#do_hash)(`first`, `last`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_hash](#do_hash)( `first`, `last`).  
   
- Хэш-значение может быть полезно, например при псевдослучайном распределении последовательностей по массиву списков.  
+ A hash value can be useful, for example, in distributing sequences pseudo-randomly across an array of lists.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_hash.cpp  
@@ -335,39 +341,39 @@ int main( )
 ```  
   
 ##  <a name="string_type"></a>  collate::string_type  
- Тип, описывающий строку типа `basic_string`, содержащую символы типа **CharType**.  
+ A type that describes a string of type `basic_string` containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType> string_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип описывает специализацию класса-шаблона [basic_string](../standard-library/basic-string-class.md), объекты которого могут хранить копии исходной последовательности.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the source sequence.  
   
-### <a name="example"></a>Пример  
-  См. пример объявления и использования `string_type` в разделе [transform](#transform).  
+### <a name="example"></a>Example  
+  For an example of how to declare and use `string_type`, see [transform](#transform).  
   
 ##  <a name="transform"></a>  collate::transform  
- Преобразует последовательность символов из языкового стандарта в строку, которая может быть использована для лексикографического сравнения с другими последовательностями символов, аналогичным образом преобразованными из того же языкового стандарта.  
+ Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.  
   
 ```  
 string_type transform(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Указатель на первый символ в преобразуемой последовательности.  
+ A pointer to the first character in the sequence to be converted.  
   
  `last`  
- Указатель на последний символ в преобразуемой последовательности.  
+ A pointer to the last character in the sequence to be converted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Строка, содержащая преобразованную последовательность символов.  
+### <a name="return-value"></a>Return Value  
+ A string that contains the transformed character sequence.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает [do_transform](#do_transform)(`first`, `last`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_transform](#do_transform)( `first`, `last`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_transform.cpp  
@@ -412,8 +418,8 @@ int main( )
 -1-11  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

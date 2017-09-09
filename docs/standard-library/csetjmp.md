@@ -1,5 +1,5 @@
 ---
-title: "&lt;csetjmp&gt; | Документы Майкрософт"
+title: '&lt;csetjmp&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <csetjmp>
-- std::<csetjmp>
-- std.<csetjmp>
+- <csetjmp>", "std::<csetjmp>", "std.<csetjmp>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,30 +33,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6d13c38f664010ad86876ff2c6c949d09d032876
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 66313020c171ad26523899df39b2bd7fa15ef12a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcsetjmpgt"></a>&lt;csetjmp&gt;
-Включает заголовок \<setjmp.h> стандартной библиотеки C и добавляет связанные имена в пространство имен `std`.  
+Includes the Standard C library header \<setjmp.h> and adds the associated names to the `std` namespace.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <csetjmp>  
   
 ```  
   
-## <a name="remarks"></a>Примечания  
- Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.  
+## <a name="remarks"></a>Remarks  
+ Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

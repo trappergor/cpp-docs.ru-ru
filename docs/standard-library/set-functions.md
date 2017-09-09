@@ -1,5 +1,5 @@
 ---
-title: "Функции &lt;set&gt; | Документы Майкрософт"
+title: '&lt;set&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,69 +12,69 @@ f1_keywords:
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6c26128064b2f20a55ab1b9d1c013829e72523e0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2590e6add10e367b708c295ceedd6570ef611b59
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsetgt-functions"></a>Функции &lt;set&gt;
+# <a name="ltsetgt-functions"></a>&lt;set&gt; functions
 |||  
 |-|-|  
 |[swap (map)](#swap)|[swap (multiset)](#swap_multiset)|  
   
 ##  <a name="swap"></a>  swap  (map)
- Обмен элементами между двумя наборами.  
+ Exchanges the elements of two sets.  
   
 ```
 template <class Key, class Traits, class Allocator>  
 void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Набор, предоставляющий элементы для обмена местами, или набор, элементы которого должны быть заменены элементами набора `left`.  
+ The set providing the elements to be swapped, or the set whose elements are to be exchanged with those of the set `left`.  
   
  `left`  
- Набор, элементы которого должны быть заменены элементами списка `right`.  
+ The set whose elements are to be exchanged with those of the set `right`.  
   
-### <a name="remarks"></a>Примечания  
- Функция-шаблон является специальным алгоритмом, специализированным на классе контейнера, который настроен выполнять функцию-член `left``.`[swap](../standard-library/set-class.md#swap)( `right`). Это экземпляр частичного упорядочивания шаблонов функций компилятором. Когда функции-шаблоны перегружаются таким образом, что соответствие шаблона и вызова функции не является уникальным, компилятор выберет наиболее специализированную версию функции-шаблона. Общая версия функции-шаблона  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class set to execute the member function `left.`[swap](../standard-library/set-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
- в классе алгоритма работает путем назначения и является медленной операцией. Специализированная версия в каждом контейнере работает гораздо быстрее, так как она может работать с внутренним представлением класса контейнера.  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
-### <a name="example"></a>Пример  
-  См. пример кода для класса-члена [set::swap](../standard-library/set-class.md#swap), в котором используется версия шаблона `swap`.  
+### <a name="example"></a>Example  
+  See the code example for the member class [set::swap](../standard-library/set-class.md#swap) for an example of the use of the template version of `swap`.  
   
 ##  <a name="swap_multiset"></a>  swap  (multiset)
- Меняет местами элементы двух мультинаборов.  
+ Exchanges the elements of two multisets.  
   
 ```
 template <class Key, class Traits, class Allocator>  
 void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Мультинабор, предоставляющий элементы для обмена, или мультинабор, элементы которого должны быть заменены элементами мультинабора `left`.  
+ The multiset providing the elements to be swapped, or the multiset whose elements are to be exchanged with those of the multiset `left`.  
   
  `left`  
- Мультинабор, элементы которого должны быть заменены элементами мультинабора `right`.  
+ The multiset whose elements are to be exchanged with those of the multiset `right`.  
   
-### <a name="remarks"></a>Примечания  
- Функция-шаблон является алгоритмом, специализированном на мультинаборе класса контейнеров для выполнения функции-члена `left``.`[swap](../standard-library/multiset-class.md#swap)( `right`). Это экземпляр частичного упорядочивания шаблонов функций компилятором. Когда функции-шаблоны перегружаются таким образом, что соответствие шаблона и вызова функции не является уникальным, компилятор выберет наиболее специализированную версию функции-шаблона. Общая версия функции-шаблона  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class multiset to execute the member function `left.`[swap](../standard-library/multiset-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
- в классе алгоритма работает путем назначения и является медленной операцией. Специализированная версия в каждом контейнере работает гораздо быстрее, так как она может работать с внутренним представлением класса контейнера.  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
-### <a name="example"></a>Пример  
-  См. пример кода для класса-члена [multiset::swap](../standard-library/multiset-class.md#swap), в котором используется версия шаблона `swap`.  
+### <a name="example"></a>Example  
+  See the code example for the member class [multiset::swap](../standard-library/multiset-class.md#swap)for an example of the use of the template version of `swap`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<set>](../standard-library/set.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;&gt; алгоритмов | Документы Майкрософт"
+title: '&lt;algorithm&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,172 +8,90 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- adjacent_find
 - algorithm/std::all_of
-- all_of
 - algorithm/std::any_of
-- any_of
 - algorithm/std::binary_search
-- binary_search
 - algorithm/std::copy
-- copy
 - algorithm/std::copy_backward
-- copy_backward
 - algorithm/std::copy_if
-- copy_if
 - algorithm/std::copy_n
-- copy_n
 - algorithm/std::equal
-- equal
 - algorithm/std::equal_range
-- equal_range
 - algorithm/std::fill
-- fill
 - algorithm/std::fill_n
-- fill_n
 - algorithm/std::find
-- find
 - algorithm/std::find_end
-- find_end
 - algorithm/std::find_first_of
-- find_first_of
 - algorithm/std::find_if
-- find_if
 - algorithm/std::find_if_not
-- find_if_not
 - algorithm/std::for_each
-- for_each
 - algorithm/std::generate
-- generate
 - algorithm/std::generate_n
-- generate_n
 - algorithm/std::includes
-- includes
 - algorithm/std::inplace_merge
-- inplace_merge
 - algorithm/std::is_heap
-- is_heap
 - algorithm/std::is_heap_until
-- is_heap_until
 - algorithm/std::is_partitioned
-- is_partitioned
 - algorithm/std::is_permutation
-- is_permutation
 - algorithm/std::is_sorted
-- is_sorted
 - algorithm/std::is_sorted_until
-- is_sorted_until
 - algorithm/std::iter_swap
-- iter_swap
 - algorithm/std::lexicographical_compare
-- lexicographical_compare
 - algorithm/std::lower_bound
-- lower_bound
 - algorithm/std::make_heap
-- make_heap
 - algorithm/std::max
-- max
 - algorithm/std::max_element
-- max_element
 - algorithm/std::merge
-- merge
 - algorithm/std::min
-- min
 - algorithm/std::minmax
-- minmax
 - algorithm/std::minmax_element
-- minmax_element
 - algorithm/std::min_element
-- min_element
 - algorithm/std::mismatch
-- mismatch
 - algorithm/std::move
-- move
 - algorithm/std::move_backward
-- move_backward
 - algorithm/std::next_permutation
-- next_permutation
 - algorithm/std::none_of
-- none_of
 - algorithm/std::nth_element
-- nth_element
 - algorithm/std::partial_sort
-- partial_sort
 - algorithm/std::partial_sort_copy
-- partial_sort_copy
 - algorithm/std::partition
-- partition
 - algorithm/std::partition_point
-- partition_point
 - algorithm/std::pop_heap
-- pop_heap
 - algorithm/std::prev_permutation
-- prev_permutation
 - algorithm/std::push_heap
-- push_heap
 - algorithm/std::random_shuffle
-- random_shuffle
 - algorithm/std::remove
-- remove
 - algorithm/std::remove_copy
-- remove_copy
 - algorithm/std::remove_copy_if
-- remove_copy_if
 - algorithm/std::remove_if
-- remove_if
 - algorithm/std::replace
-- replace
 - algorithm/std::replace_copy
-- replace_copy
 - algorithm/std::replace_copy_if
-- replace_copy_if
 - algorithm/std::replace_if
-- replace_if
 - algorithm/std::reverse
-- reverse
 - algorithm/std::reverse_copy
-- reverse_copy
 - algorithm/std::rotate
-- rotate
 - algorithm/std::rotate_copy
-- rotate_copy
 - algorithm/std::search
-- search
 - algorithm/std::search_n
-- search_n
 - algorithm/std::set_difference
-- set_difference
 - algorithm/std::set_intersection
-- set_intersection
 - algorithm/std::set_symmetric_difference
-- set_symmetric_difference
 - algorithm/std::set_union
-- set_union
 - algorithm/std::shuffle
-- shuffle
 - algorithm/std::sort
-- sort
 - algorithm/std::sort_heap
-- sort_heap
 - algorithm/std::stable_partition
-- stable_partition
 - algorithm/std::stable_sort
-- stable_sort
 - algorithm/std::swap_ranges
-- swap_ranges
 - algorithm/std::transform
-- transform
 - algorithm/std::unique
-- unique
 - algorithm/std::unique_copy
-- unique_copy
 - algorithm/std::upper_bound
-- upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- count
 - xutility/std::equal
 - xutility/std::fill
 - xutility/std::fill_n
@@ -194,14 +112,113 @@ caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+helpviewer_keywords:
+- std::adjacent_find [C++]
+- std::all_of [C++]
+- std::any_of [C++]
+- std::binary_search [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_if [C++]
+- std::copy_n [C++]
+- std::equal [C++]
+- std::equal_range [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::find_end [C++]
+- std::find_first_of [C++]
+- std::find_if [C++]
+- std::find_if_not [C++]
+- std::for_each [C++]
+- std::generate [C++]
+- std::generate_n [C++]
+- std::includes [C++]
+- std::inplace_merge [C++]
+- std::is_heap [C++]
+- std::is_heap_until [C++]
+- std::is_partitioned [C++]
+- std::is_permutation [C++]
+- std::is_sorted [C++]
+- std::is_sorted_until [C++]
+- std::iter_swap [C++]
+- std::lexicographical_compare [C++]
+- std::lower_bound [C++]
+- std::make_heap [C++]
+- std::max [C++]
+- std::max_element [C++]
+- std::merge [C++]
+- std::min [C++]
+- std::minmax [C++]
+- std::minmax_element [C++]
+- std::min_element [C++]
+- std::mismatch [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::next_permutation [C++]
+- std::none_of [C++]
+- std::nth_element [C++]
+- std::partial_sort [C++]
+- std::partial_sort_copy [C++]
+- std::partition [C++]
+- std::partition_point [C++]
+- std::pop_heap [C++]
+- std::prev_permutation [C++]
+- std::push_heap [C++]
+- std::random_shuffle [C++]
+- std::remove [C++]
+- std::remove_copy [C++]
+- std::remove_copy_if [C++]
+- std::remove_if [C++]
+- std::replace [C++]
+- std::replace_copy [C++]
+- std::replace_copy_if [C++]
+- std::replace_if [C++]
+- std::reverse [C++]
+- std::reverse_copy [C++]
+- std::rotate [C++]
+- std::rotate_copy [C++]
+- std::search [C++]
+- std::search_n [C++]
+- std::set_difference [C++]
+- std::set_intersection [C++]
+- std::set_symmetric_difference [C++]
+- std::set_union [C++]
+- std::shuffle [C++]
+- std::sort [C++]
+- std::sort_heap [C++]
+- std::stable_partition [C++]
+- std::stable_sort [C++]
+- std::swap_ranges [C++]
+- std::transform [C++]
+- std::unique [C++]
+- std::unique_copy [C++]
+- std::upper_bound [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_n [C++]
+- std::count [C++]
+- std::equal [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::is_permutation [C++]
+- std::lexicographical_compare [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::reverse [C++]
+- std::rotate [C++]
+- std::count_if [C++]
+- std::partition_copy [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 941b66bd40b1b14fd07f823023675d9ac52e141c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltalgorithmgt-functions"></a>&lt;функции&gt; алгоритмов
+# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; functions
 ||||  
 |-|-|-|  
 |[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|  
@@ -235,7 +252,7 @@ ms.lasthandoff: 04/19/2017
 |[upper_bound](#upper_bound)|  
   
 ##  <a name="adjacent_find"></a>  adjacent_find  
- Поиск двух соседних элементов, которые либо равны, либо удовлетворяют указанному условию.  
+ Searches for two adjacent elements that are either equal or satisfy a specified condition.  
   
 ```  
 template<class ForwardIterator>  
@@ -250,25 +267,25 @@ template<class ForwardIterator , class BinaryPredicate>
         BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `comp`  
- Двоичный предикат, задающий условие, которому должны удовлетворять значения соседних элементов в диапазоне, по которому выполняется поиск.  
+ The binary predicate giving the condition to be satisfied by the values of the adjacent elements in the range being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор на первый элемент из пары соседних элементов, которые либо равны друг другу (в первой версии), либо удовлетворяют условию двоичного предиката (во второй версии), если такая пара элементов найдена. В противном случае возвращает итератор, указывающий на `last`.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the first element of the adjacent pair that are either equal to each other (in the first version) or that satisfy the condition given by the binary predicate (in the second version), provided that such a pair of elements is found. Otherwise, an iterator pointing to `last` is returned.  
   
-### <a name="remarks"></a>Примечания  
- Алгоритм `adjacent_find` не изменяет последовательность. Диапазон, по которому ведется поиск, должен быть допустимым; все указатели должны поддерживать сброс ссылок должна быть возможность достижения последнего положения с первого путем приращения. Временная сложность алгоритма линейно зависит от количества элементов в диапазоне.  
+### <a name="remarks"></a>Remarks  
+ The `adjacent_find` algorithm is a nonmutating sequence algorithm. The range to be searched must be valid; all pointers must be dereferenceable and the last position is reachable from the first by incrementation. The time complexity of the algorithm is linear in the number of elements contained in the range.  
   
- `operator==`, используемый для определения совпадения между элементами, налагает отношение эквивалентности между своими операндами.  
+ The `operator==` used to determine the match between elements must impose an equivalence relation between its operands.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_adj_fnd.cpp  
@@ -331,7 +348,7 @@ There are two adjacent elements where the second is twice the first.
 ```  
   
 ##  <a name="all_of"></a>  all_of  
- Возвращает значение `true`, если условие выполняется каждым элементом заданного диапазона.  
+ Returns `true` when a condition is present at each element in the given range.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -341,24 +358,24 @@ template<class InputIterator, class Predicate>
         BinaryPredicatecomp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий, откуда должна начинаться проверка условия. Итератор отмечает, где начинается диапазон элементов.  
+ An input iterator that indicates where to start to check for a condition. The iterator marks where a range of elements starts.  
   
  `last`  
- Входной итератор, указывающий конец диапазона элементов для проверки условия.  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- Условие для проверки. Это определенный пользователем объект функции предиката, задающий условие, которому должен соответствовать проверяемый элемент. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ A condition to test for. This is a user-defined predicate function object that defines the condition to be satisfied by an element being checked. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение `true`, если каждый элемент в указанном диапазоне соответствует условию, и значение `false`, если хотя бы один элемент не соответствует условию.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at each element in the indicated range, and `false` if the condition is not detected at least one time.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона возвращает значение `true`, только если для каждого `N` в диапазоне `[0,Last - first)` предикат `comp(*(_First + N))` имеет значение `true`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for each `N` in the range `[0,Last - first)`, the predicate `comp(*(_First + N))` is `true`.  
   
 ##  <a name="any_of"></a>  any_of  
- Возвращает значение `true`, если условие выполняется хотя бы один раз в указанном диапазоне элементов.  
+ Returns `true` when a condition is present at least once in the specified range of elements.  
   
 ```  
 template<class InputIterator, class UnaryPredicate>  
@@ -368,26 +385,26 @@ template<class InputIterator, class UnaryPredicate>
         UnaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий, откуда должна начинаться проверка диапазона элементов на соответствие условию.  
+ An input iterator that indicates where to start checking a range of elements for a condition.  
   
  `last`  
- Входной итератор, указывающий конец диапазона элементов для проверки условия.  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- Условие для проверки. Оно предоставляется определенным пользователем объектом функции предиката. Предикат задает условие, которому должен соответствовать проверяемый элемент. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ A condition to test for. This is provided by a user-defined predicate function object. The predicate defines the condition to be satisfied by the element being tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение `true`, если хотя бы один элемент в указанном диапазоне соответствует условию, и значение `false`, если ни один элемент не соответствует условию.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at least once in the indicated range, `false` if the condition is never detected.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона возвращает значение `true`, только если хотя бы для одного `N` в диапазоне  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range  
   
- `[0, last - first)`, предикат `comp(*(first + N))` имеет значение true.  
+ `[0, last - first)`, the predicate `comp(*(first + N))` is true.  
   
 ##  <a name="binary_search"></a>  binary_search  
- Проверяет, есть ли в отсортированном диапазоне элемент, равный указанному значению или эквивалентный ему в смысле, заданном двоичным предикатом.  
+ Tests whether there is an element in a sorted range that is equal to a specified value or that is equivalent to it in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>      
@@ -405,34 +422,34 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- Значение должно соответствовать значению элемента или удовлетворять условию со значением элемента, заданному двоичным предикатом.  
+ The value required to be matched by the value of the element or that must satisfy the condition with the element value specified by the binary predicate.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Бинарный предикат принимает два аргумента и возвращает `true` в случае соответствия и `false` в случае несоответствия.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если в диапазоне обнаруживается элемент, равный или эквивалентный указанному значению; в противном случае — значение `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if an element is found in the range that is equal or equivalent to the specified value; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченный исходный диапазон, на который указывает ссылка, должен быть допустим. Все указатели должны поддерживать отмену ссылок. В последовательности должна иметься возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- Предварительное условие для применения алгоритма `binary_search` состоит в том, что каждый упорядоченный диапазон должен быть упорядочен в соответствии с теми же правилами, которые будут использоваться этим алгоритмом для сортировки объединенных диапазонов.  
+ The sorted range must each be arranged as a precondition to the application of the `binary_search` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Алгоритм `binary_search` не изменяет исходные диапазоны.  
+ The source ranges are not modified by `binary_search`.  
   
- В целях упорядочения типы значений прямых итераторов должны подлежать сравнению "меньше чем", чтобы при наличии двух элементов можно было определить, что они равны (т. е. ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов.  
+ The value types of the forward iterators need to be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- Сложности алгоритма логарифмической Итераторы произвольного доступа и линейное; в противном случае существует количество шагов, пропорционально ( `last`  -  `first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_bin_srch.cpp  
@@ -515,7 +532,7 @@ int main( )
 ```  
   
 ##  <a name="copy"></a>  copy  
- Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в прямом направлении.  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a forward direction.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -525,27 +542,27 @@ template<class InputIterator, class OutputIterator>
         OutputIterator destBeg);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор ввода, обращающийся к позиции первого элемента в исходном диапазоне.  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last`  
- Итератор ввода, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в исходном диапазоне.  
+ An input iterator addressing the position that is one past the final element in the source range.  
   
  *destBeg*  
- Итератор вывода указывает на позицию первого элемента в диапазоне назначения.  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, то есть, данный итератор обращается `result` + ( `last`  -   `first` ).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `result` + ( `last` -  `first` ).  
   
-### <a name="remarks"></a>Примечания  
- Диапазон источника должен быть допустимым, а в месте назначения должно быть достаточно свободного пространства для всех скопированных элементов.  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- Так как алгоритм копирует исходные элементы по порядку, начиная с первого элемента, диапазон назначения может перекрывать исходный диапазон, если позиция `last` исходного диапазона не содержится в диапазоне назначения. **copy** можно использовать для сдвигания элементов влево, но не вправо, кроме случаев, когда исходный диапазон и диапазон назначения перекрывают друг друга. Для сдвига вправо на любое количество позиций используйте алгоритм [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
+ Because the algorithm copies the source elements in order beginning with the first element, the destination range can overlap with the source range provided the `last` position of the source range is not contained in the destination range. **copy** can be used to shift elements to the left but not the right, unless there is no overlap between the source and destination ranges. To shift to the right any number of positions, use the [copy_backward](../standard-library/algorithm-functions.md#copy_backward) algorithm.  
   
- Алгоритм **copy** изменяет только значения, на которые указывают итераторы, задавая новые значения элементам в диапазоне назначения. Его нельзя использовать для создания новых элементов и для вставки элементов напрямую в пустой контейнер.  
+ The **copy** algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy.cpp  
@@ -604,7 +621,7 @@ v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```  
   
 ##  <a name="copy_backward"></a>  copy_backward  
- Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в обратном направлении.  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a backward direction.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -614,31 +631,31 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
         BidirectionalIterator2 destEnd);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор, обращающийся к положению первого элемента в исходном диапазоне.  
+ A bidirectional iterator addressing the position of the first element in the source range.  
   
  `last`  
- Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в исходном диапазоне.  
+ A bidirectional iterator addressing the position that is one past the final element in the source range.  
   
  `destEnd`  
- Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения.  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, то есть, данный итератор обращается `destEnd` -( `last`  -   `first` ).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `destEnd` - ( `last` -  `first` ).  
   
-### <a name="remarks"></a>Примечания  
- Диапазон источника должен быть допустимым, а в месте назначения должно быть достаточно свободного пространства для всех скопированных элементов.  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- Алгоритм `copy_backward` обладает более строгими требованиями, чем алгоритм копирования. Его итераторы ввода и вывода должны быть двунаправленными.  
+ The `copy_backward` algorithm imposes more stringent requirements than that the copy algorithm. Both its input and output iterators must be bidirectional.  
   
- Алгоритмы `copy_backward` и [move_backward](../standard-library/algorithm-functions.md#move_backward) — единственные алгоритмы в библиотеке стандартных программ C++, назначающие выходной диапазон с итератором, указывающим на конец диапазона назначения.  
+ The `copy_backward` and [move_backward](../standard-library/algorithm-functions.md#move_backward) algorithms are the only C++ Standard Library algorithms designating the output range with an iterator pointing to the end of the destination range.  
   
- Так как алгоритм копирует исходные элементы по порядку, начиная с последнего элемента, диапазон назначения может перекрывать исходный диапазон, если позиция `first` исходного диапазона не содержится в диапазоне назначения. `copy_backward` можно использовать для сдвигания элементов вправо, но не влево, кроме случаев, когда исходный диапазон и диапазон назначения перекрывают друг друга. Для сдвига влево на любое количество позиций используйте алгоритм [copy](../standard-library/algorithm-functions.md#copy).  
+ Because the algorithm copies the source elements in order beginning with the last element, the destination range can overlap with the source range provided the  `first` position of the source range is not contained in the destination range. `copy_backward` can be used to shift elements to the right but not the left, unless there is no overlap between the source and destination ranges. To shift to the left any number of positions, use the [copy](../standard-library/algorithm-functions.md#copy) algorithm.  
   
- Алгоритм `copy_backward` изменяет только значения, на которые указывают итераторы, задавая новые значения элементам в диапазоне назначения. Его нельзя использовать для создания новых элементов и для вставки элементов напрямую в пустой контейнер.  
+ The `copy_backward` algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy_bkwd.cpp  
@@ -690,7 +707,7 @@ int main() {
 ```  
   
 ##  <a name="copy_if"></a>  copy_if  
- Копирует из диапазона элементов те элементы, проверка которых на соответствие заданному условию дает значение `true`.  
+ In a range of elements, copies the elements that are `true` for the specified condition.  
   
 ```  
 template<class InputIterator, class OutputIterator, class BinaryPredicate>  
@@ -701,31 +718,31 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий начало диапазона для проверки условия.  
+ An input iterator that indicates the start of a range to check for the condition.  
   
  `last`  
- Входной итератор, указывающий конец диапазона.  
+ An input iterator that indicates the end of the range.  
   
  `dest`  
- Выходной итератор, указывающий место назначения для скопированных элементов.  
+ The output iterator that indicates the destination for the copied elements.  
   
  `_Pred`  
- Условие, на соответствие которому проверяется каждый элемент в диапазоне. Это условие предоставляется определенным пользователем объектом функции предиката. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ The condition against which every element in the range is tested. This condition is provided by a user-defined predicate function object. A predicate takes one argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, который увеличивает `dest` на единицу после каждого элемента, удовлетворяющего условию. Другими словами, возвращаемое значение минус `dest` равно количеству скопированных элементов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator that equals `dest` incremented once for each element that fulfills the condition. In other words, the return value minus `dest` equals the number of copied elements.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates  
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
- один раз для каждого `N` в диапазоне `[0, last - first)` строго на увеличение значений `N`, начиная с наименьшего значения. Если `dest` и `first` обозначают области хранилища, то `dest` не должен находиться в диапазоне `[` `first``,` `last``)`.  
+ once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. If `dest` and  `first` designate regions of storage, `dest` must not be in the range `[ first, last )`.  
   
 ##  <a name="copy_n"></a>  copy_n  
- Копирует указанное количество элементов.  
+ Copies a specified number of elements.  
   
 ```  
 template<class InputIterator, class Size, class OutputIterator>  
@@ -735,24 +752,24 @@ template<class InputIterator, class Size, class OutputIterator>
         OutputIterator dest);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Входной итератор, указывающий, откуда копировать элементы.  
+ An input iterator that indicates where to copy elements from.  
   
  `count`  
- Целое число со знаком или без знака, указывающее количество копируемых элементов.  
+ A signed or unsigned integer type specifying the number of elements to copy.  
   
  `dest`  
- Выходной итератор, указывающий, куда копировать элементы.  
+ An output iterator that indicates where to copy elements to.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает выходной итератор, куда были скопированы элементы. То же, что и возвращенное значение третьего параметра `dest`.  
+### <a name="return-value"></a>Return Value  
+ Returns an output iterator where elements have been copied to. It is the same as the returned value of the third parameter, `dest`.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет `*(dest + N) = *(first + N))` один раз для каждого `N` в диапазоне `[0, count)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `dest + N`. Если `dest` и `first` обозначают области хранилища, `dest` не должно быть в диапазоне `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = *(first + N))` once for each `N` in the range `[0, count)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="count"></a>  count  
- Возвращает количество элементов в диапазоне, значения которых соответствуют заданному значению.  
+ Returns the number of elements in a range whose values match a specified value.  
   
 ```  
 template<class InputIterator, class Type> 
@@ -762,25 +779,25 @@ template<class InputIterator, class Type>
         const Type& val);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, адресующий положение первого элемента в диапазоне для прохода.  
+ An input iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- Входной итератор, указывающий позицию, следующую за последним элементом в диапазоне для прохода.  
+ An input iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- Значение элементов для подсчета.  
+ The value of the elements to be counted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Тип различия **InputIterator**, который подсчитывает число элементов в диапазоне [`first`, `last`), имеющий значение `val`.  
+### <a name="return-value"></a>Return Value  
+ The difference type of the **InputIterator** that counts the number of elements in the range [  `first`, `last` ) that have value `val`.  
   
-### <a name="remarks"></a>Примечания  
- `operator==`, используемый для определения совпадения между элементом и указанным значением, должен применять отношение эквивалентности между своими операндами.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Этот алгоритм обобщается для подсчета элементов, которые соответствуют любому предикату, с помощью функции шаблона [count_if](../standard-library/algorithm-functions.md#count_if).  
+ This algorithm is generalized to count elements that satisfy any predicate with the template function [count_if](../standard-library/algorithm-functions.md#count_if).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count.cpp  
@@ -818,7 +835,7 @@ The number of 10s in v2 is: 3.
 ```  
   
 ##  <a name="count_if"></a>  count_if  
- Возвращает количество элементов в диапазоне, значения которых соответствуют заданному условию.  
+ Returns the number of elements in a range whose values satisfy a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>
@@ -828,23 +845,23 @@ template<class InputIterator, class Predicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Входной итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `_Pred`  
- Определенный пользователем объект функции предиката, задающий условие, которое должно удовлетворяться, чтобы элемент был подсчитан. Предикат принимает один аргумент и возвращает значение **true** или **false**.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be counted. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество элементов, которые удовлетворяют условию, заданному предикатом.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that satisfy the condition specified by the predicate.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона представляет собой обобщение алгоритма [count](../standard-library/algorithm-functions.md#count) с заменой предиката "равно определенному значению" на любой предикат.  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [count](../standard-library/algorithm-functions.md#count), replacing the predicate "equals a specific value" with any predicate.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count_if.cpp  
@@ -888,11 +905,11 @@ The number of elements in v1 greater than 10 is: 2.
 ```  
   
 ##  <a name="equal"></a>  equal  
- Сравнивает два диапазона поэлементно на признак равенства или равноценности в смысле, заданном бинарным предикатом.  
+ Compares two ranges element by element for equality or equivalence in a sense specified by a binary predicate.  
   
- Используйте функцию `std::equal` при сравнении элементов в контейнерах разного типа (например, в `vector` и `list`), или при сравнении элементов разного типа, или когда необходимо сравнить поддиапазоны контейнеров. При сравнении элементов одного типа в контейнерах одного типа используйте оператор `operator==`, предоставляемый для каждого контейнера.  
+ Use `std::equal` when comparing elements in different container types (for example `vector` and `list`) or when comparing different element types, or when you need to compare sub-ranges of containers. Otherwise, when comparing elements of the same type in the same container type, use the non-member `operator==` that is provided for each container.  
   
- Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -924,33 +941,33 @@ bool equal(
     BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Входной итератор, указывающий на положение первого элемента в первом диапазоне для тестирования.  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- Входной итератор, указывающий на положение, следующее за последним элементом, в первом диапазоне для тестирования.  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- Входной итератор, указывающий на положение первого элемента во втором диапазоне для тестирования.  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `First2`  
- Входной итератор, указывающий на положение, следующее за последним элементом, во втором диапазоне для тестирования.  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true** в том и только в том случае, когда диапазоны идентичны или эквивалентны в смысле, заданном бинарным предикатом, при поэлементном сравнении. В противном случае — значение **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if and only if the ranges are identical or equivalent under the binary predicate when compared element by element; otherwise, **false**.  
   
-### <a name="remarks"></a>Примечания  
- Диапазон, по которому ведется поиск, должен быть допустимым. Все итераторы должны поддерживать сброс ссылок и должна быть возможность достижения последнего положения, начиная от первого, путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- Если два диапазона имеют одинаковую длину, то временная сложность алгоритма линейно зависит от числа элементов в диапазоне. В противном случае функция немедленно возвращает значение `false`.  
+ If the two ranges are equal length, then the time complexity of the algorithm is linear in the number of elements contained in the range. Otherwise the function immediately returns `false`.  
   
- Ни `operator==`, ни определяемый пользователем предикат не требуется применять для наложения отношения эквивалентности (симметричной, рефлексивной и транзитивной) между операндами.  
+ Neither the `operator==` nor the user-defined predicate is required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <iostream>  
@@ -985,7 +1002,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  equal_range  
- Принимая во внимание упорядоченный диапазон, находит поддиапазон, в котором все элементы эквивалентны заданному значению.  
+ Given an ordered range, finds the subrange in which all elements are equivalent to a given value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1002,34 +1019,34 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `val`  
- Значение для поиска в упорядоченном диапазоне.  
+ The value being searched for in the ordered range.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого.  
+ User-defined predicate function object that defines the sense in which one element is less than another.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Пара прямых итераторов, задающих поддиапазон в искомом диапазоне, в котором все элементы эквивалентны `val` в смысле, заданном используемым двоичным предикатом (`comp` или по умолчанию "меньше чем").  
+### <a name="return-value"></a>Return Value  
+ A pair of forward iterators that specify a subrange, contained within the range searched, in which all of the elements are equivalent to `val` in the sense defined by the binary predicate used (either `comp` or the default, less-than).  
   
- Если ни один элемент в диапазоне не эквивалентен `val`, два возвращенных прямых итератора равны и указывают точку, где можно вставить `val`, не нарушая порядок диапазона.  
+ If no elements in the range are equivalent to `val`, the returned pair of forward iterators are equal and specify the point where `val` could be inserted without disturbing the order of the range.  
   
-### <a name="remarks"></a>Примечания  
- Первый итератор из пары, возвращаемой алгоритмом, — это [lower_bound](../standard-library/algorithm-functions.md#lower_bound), а второй итератор — [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
+### <a name="remarks"></a>Remarks  
+ The first iterator of the pair returned by the algorithm is [lower_bound](../standard-library/algorithm-functions.md#lower_bound), and the second iterator is [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
   
- Диапазон должен быть упорядочен согласно предикату, предоставленному в `equal_range`. Например, если вы собираетесь использовать предикат "больше чем", диапазон должен быть отсортирован в порядке убывания.  
+ The range must be sorted according to the predicate provided to `equal_range`. For example, if you are going to use the greater-than predicate, the range must be sorted in descending order.  
   
- Элементы в возможно пустом поддиапазоне, который определяется парой итераторов, возвращенных `equal_range`, будут эквивалентны `val` в смысле, заданном используемым предикатом.  
+ Elements in the possibly empty subrange defined by the pair of iterators returned by `equal_range` will be equivalent to `val` in the sense defined by the predicate used.  
   
- Сложности алгоритма логарифмической Итераторы произвольного доступа и линейное; в противном случае существует количество шагов, пропорционально ( `last`  -  `first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_equal_range.cpp  
@@ -1148,7 +1165,7 @@ int main()
 ```  
   
 ##  <a name="fill"></a>  fill  
- Присваивает одно и то же новое значение каждому элементу в заданном диапазоне.  
+ Assigns the same new value to every element in a specified range.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1158,20 +1175,20 @@ void fill(
     const Type& val);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в диапазоне для прохода.  
+ A forward iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне для прохода.  
+ A forward iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- Значение, которое назначается элементам в диапазоне [`first`, `last`).  
+ The value to be assigned to elements in the range [  `first`, `last`).  
   
-### <a name="remarks"></a>Примечания  
- Целевой диапазон должен быть допустимым; все указатели должны поддерживать сброс ссылок; должна быть возможность достижения последнего положения с первого путем приращения. Сложность линейная по отношению к размеру диапазона.  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill.cpp  
@@ -1213,7 +1230,7 @@ Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```  
   
 ##  <a name="fill_n"></a>  fill_n  
- Назначает новое значение указанному количеству элементов в диапазоне, начиная с определенного элемента.  
+ Assigns a new value to a specified number of elements in a range beginning with a particular element.  
   
 ```  
 template<class OutputIterator, class Size, class Type>  
@@ -1223,23 +1240,23 @@ OutputIterator fill_n(
     const Type& Val);   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First`  
- Выходной итератор, указывающий позицию первого элемента в диапазоне, в котором должны назначаться значения `Val`.  
+ An output iterator addressing the position of the first element in the range to be assigned the value `Val`.  
   
  `Count`  
- Целое число со знаком или без знака, указывающее количество элементов, которым следует назначить значение.  
+ A signed or unsigned integer type specifying the number of elements to be assigned the value.  
   
  `Val`  
- Значение, которое назначается элементам в диапазоне [`First`,          *First + Count*).  
+ The value to be assigned to elements in the range [ `First`,          *First + Count*).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор для элемента, следующего за последним заполненным элементом, если `Count` больше нуля; в противном случае — первый элемент.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the element that follows the last element filled if `Count` > zero, otherwise the first element.  
   
-### <a name="remarks"></a>Примечания  
- Целевой диапазон должен быть допустимым; все указатели должны поддерживать сброс ссылок; должна быть возможность достижения последнего положения с первого путем приращения. Сложность линейная по отношению к размеру диапазона.  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill_n.cpp  
@@ -1289,7 +1306,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  find  
- Находит позицию первого вхождения элемента с заданным значением в диапазон.  
+ Locates the position of the first occurrence of an element in a range that has a specified value.  
   
 ```  
 template<class InputIterator, class T>  
@@ -1299,26 +1316,26 @@ InputIterator find(
     const T& val);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Входной итератор, адресующий положение первого элемента в диапазоне для поиска заданного значения.  
+ An input iterator addressing the position of the first element in the range to be searched for the specified value.  
   
  `last`  
- Входной итератор, адресующий положение после последнего элемента в диапазоне для поиска заданного значения.  
+ An input iterator addressing the position one past the final element in the range to be searched for the specified value.  
   
  `val`  
- Значение, которое нужно найти.  
+ The value to be searched for.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Входной итератор, адресующий первое вхождение заданного значения в диапазоне, в котором выполняется поиск. Если не найдено ни одного элемента с эквивалентным значением, возвращается `last`.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first occurrence of the specified value in the range being searched. If no element is found with an equivalent value, returns `last`.  
   
-### <a name="remarks"></a>Примечания  
- `operator==`, используемый для определения совпадения между элементом и указанным значением, должен применять отношение эквивалентности между своими операндами.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Пример кода с использованием `find()` см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).  
+ For a code example using `find()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="find_end"></a>  find_end  
- Ищет в диапазоне последнюю подпоследовательность, совпадающую с заданной последовательностью, или эквивалентной согласно условию, заданному двоичным предикатом.  
+ Looks in a range for the last subsequence that is identical to a specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1337,31 +1354,31 @@ ForwardIterator1 find_end(
     Pred Comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `Last1`  
- Прямой итератор, указывающий на положение, следующее за последним элементом в диапазоне для поиска.  
+ A forward iterator addressing the position one past the last element in the range to be searched.  
   
  `First2`  
- Прямой итератор, указывающий на положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to search for.  
   
  `Last2`  
- Прямой итератор, указывающий на положение, следующее за последним элементом в диапазоне для поиска.  
+ A forward iterator addressing the position one past the last element in the range to search for.  
   
  `Comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, указывающий на положение первого элемента последней подпоследовательности в интервале [First1, Last1), совпадающей с указанной последовательностью [First2, Last2).  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the last subsequence within [First1, Last1) that matches the specified sequence [First2, Last2).  
   
-### <a name="remarks"></a>Примечания  
- `operator==`, используемый для определения совпадения между элементом и указанным значением, должен применять отношение эквивалентности между своими операндами.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_end.cpp  
@@ -1458,7 +1475,7 @@ There is a sequence of elements in v1 that are equivalent to those
 ```  
   
 ##  <a name="find_first_of"></a>  find_first_of  
- Выполняет поиск первого вхождения любого из нескольких значений в заданный диапазон или первого вхождения любого из нескольких элементов, равноценных в смысле, заданном бинарным предикатом, в указанный набор элементов.  
+ Searches for the first occurrence of any of several values within a target range or for the first occurrence of any of several elements that are equivalent in a sense specified by a binary predicate to a specified set of the elements.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1477,31 +1494,31 @@ ForwardIterator1 find_first_of(
     BinaryPredicate  comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для сравнения.  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для сравнения.  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, адресующий положение первого элемента первой последовательности, совпадающей с определенной последовательностью или эквивалентной согласно условию, заданному двоичным предикатом.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>Примечания  
- `operator==`, используемый для определения совпадения между элементом и указанным значением, должен применять отношение эквивалентности между своими операндами.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_first_of.cpp  
@@ -1601,7 +1618,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="find_if"></a>  find_if  
- Находит позицию первого вхождения элемента, удовлетворяющего определенному условию, в диапазон.  
+ Locates the position of the first occurrence of an element in a range that satisfies a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1611,23 +1628,23 @@ InputIterator find_if(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Входной итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Входной итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- Определенный пользователем объект функции предиката или [лямбда-выражение](../cpp/lambda-expressions-in-cpp.md), определяющее условие, которому должен соответствовать искомый элемент. Предикат берет один аргумент и возвращает `true` (условие удовлетворено) или `false` (условие не удовлетворено). Подпись `pred` должна быть `bool pred(const T& arg);`, где `T` — тип, к которому можно явным образом привести `InputIterator` при сбросе ссылки. Ключевое слово `const` показано только для демонстрации того, что объект функции или лямбда не должен изменять аргумент.  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Входной итератор, ссылающийся на первый элемент в диапазоне, удовлетворяющий условию, заданному предикатом (результат предиката `true`). Если не найдено ни одного элемента, удовлетворяющего условию предиката,  возвращается `last`.  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that satisfies the condition specified by the predicate (the predicate results in `true`). If no element is found to satisfy the predicate, returns `last`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона представляет собой обобщение алгоритма [find](../standard-library/algorithm-functions.md#find) с заменой предиката "равно определенному значению" на любой предикат. Сведения о противоположной по назначению функции (которая находит первый элемент, не удовлетворяющий условию предиката), см. в разделе [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does not satisfy the predicate), see [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /W4 /nologo /EHsc /MTd  
@@ -1714,7 +1731,7 @@ int main()
 ```  
   
 ##  <a name="find_if_not"></a>  find_if_not  
- Возвращает первый элемент, который не удовлетворяет условию, в указанном диапазоне.  
+ Returns the first element in the indicated range that does not satisfy a condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1724,26 +1741,26 @@ InputIterator find_if_not(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Входной итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Входной итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- Определенный пользователем объект функции предиката или [лямбда-выражение](../cpp/lambda-expressions-in-cpp.md), определяющее условие, которому не должен соответствовать искомый элемент. Предикат берет один аргумент и возвращает `true` (условие удовлетворено) или `false` (условие не удовлетворено). Подпись `pred` должна быть `bool pred(const T& arg);`, где `T` — тип, к которому можно явным образом привести `InputIterator` при сбросе ссылки. Ключевое слово `const` показано только для демонстрации того, что объект функции или лямбда не должен изменять аргумент.  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be not satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Входной итератор, ссылающийся на первый элемент в диапазоне, не удовлетворяющий условию, заданному предикатом (результат предиката `false`). Если все элементы удовлетворяют условию предиката (результат предиката `true` для всех элементов), возвращает `last`.  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that does not satisfy the condition specified by the predicate (the predicate results in `false`). If all elements satisfy the predicate (the predicate results in `true` for every element), returns `last`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция шаблона представляет собой обобщение алгоритма [find](../standard-library/algorithm-functions.md#find) с заменой предиката "равно определенному значению" на любой предикат. Сведения о противоположной по назначению функции (которая находит первый элемент, удовлетворяющий условию предиката), см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does satisfy the predicate), see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
- Пример кода, готовый для адаптации к `find_if_not()`, см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).  
+ For a code example readily adaptable to `find_if_not()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="for_each"></a>  for_each  
- Применяет заданный объект функции к каждому элементу в прямом порядке в пределах диапазона и возвращает объект функции.  
+ Applies a specified function object to each element in a forward order within a range and returns the function object.  
   
 ```  
 template<class InputIterator, class Function>  
@@ -1753,27 +1770,27 @@ Function for_each(
     Function _Func);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор ввода содержит позицию первого элемента из нужного диапазона.  
+ An input iterator addressing the position of the first element in the range to be operated on.  
   
  `last`  
- Итератор ввода содержит положение элемента, стоящего за последним рассматриваемым элементом в нужном диапазоне.  
+ An input iterator addressing the position one past the final element in the range operated on.  
   
  `_Func`  
- Определенный пользователем объект функции, который применяется к каждому элементу в диапазоне.  
+ User-defined function object that is applied to each element in the range.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Копия объекта функции после того, как он будет применён ко всем элементам в диапазоне.  
+### <a name="return-value"></a>Return Value  
+ A copy of the function object after it has been applied to all of the elements in the range.  
   
-### <a name="remarks"></a>Примечания  
- Алгоритм `for_each` весьма гибок, что позволяет изменять каждый элемент в пределах диапазона разными способами, определенными пользователем. Шаблонизируемые функции могут использоваться многократно в измененной форме путем передачи разных параметров. Определяемые пользователем функции могут накапливать сведения во внутреннем состоянии, которое может возвращать алгоритм после обработки всех элементов в диапазоне.  
+### <a name="remarks"></a>Remarks  
+ The algorithm `for_each` is very flexible, allowing the modification of each element within a range in different, user-specified ways. Templatized functions may be reused in a modified form by passing different parameters. User-defined functions may accumulate information within an internal state that the algorithm may return after processing all of the elements in the range.  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- Сложности линейное; существует не более ( `last`  -   `first`) сравнений.  
+ The complexity is linear with at most ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_for_each.cpp  
@@ -1887,7 +1904,7 @@ The average of the elements of v1 is:
 ```  
   
 ##  <a name="generate"></a>  generate  
- Присваивает значения, создаваемые объектом функции, каждому элементу в диапазоне.  
+ Assigns the values generated by a function object to each element in a range.  
   
 ```  
 template<class ForwardIterator, class Generator>  
@@ -1897,24 +1914,24 @@ void generate(
     Generator _Gen);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий позицию первого элемента в диапазоне, которому назначаются значения.  
+ A forward iterator addressing the position of the first element in the range to which values are to be assigned.  
   
  `last`  
- Прямой итератор, указывающий позицию, следующую за последним элементом в диапазоне, которому назначаются значения.  
+ A forward iterator addressing the position one past the final element in the range to which values are to be assigned.  
   
  `_Gen`  
- Объект функции, который вызывается без аргументов и используется для формирования значений, которые необходимо назначить каждому из элементов в диапазоне.  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>Примечания  
- Этот объект функции вызывается для всех элементов в диапазоне; он необязательно должен возвращать одинаковое значение при вызове. Например, он может читать данные из файла или ссылаться на локальное состояние и изменять его. Тип результата должен поддерживать преобразование в тип значения прямых итераторов диапазона.  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- Сложности линейное, точно ( `last`  -   `first`) вызовов генератора является обязательным.  
+ The complexity is linear, with exactly ( `last` -  `first`) calls to the generator being required.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_generate.cpp  
@@ -1958,7 +1975,7 @@ Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```  
   
 ##  <a name="generate_n"></a>  generate_n  
- Присваивает значения, создаваемые объектом функции, указанному количеству элементов в диапазоне и возвращается на позицию, следующую за последним присвоенным значением.  
+ Assigns the values generated by a function object to a specified number of elements in a range and returns to the position one past the last assigned value.  
   
 ```  
 template<class OutputIterator, class Diff, class Generator>  
@@ -1968,24 +1985,24 @@ void generate_n(
     Generator Gen);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First`  
- Выходной итератор, обращающийся к позиции первого элемента в диапазоне, которому назначаются значения.  
+ An output iterator addressing the position of first element in the range to which values are to be assigned.  
   
  `Count`  
- Целочисленный тип со знаком или без знака, указывающий количество элементов, которым функция генератора назначит значение.  
+ A signed or unsigned integer type specifying the number of elements to be assigned a value by the generator function.  
   
  `Gen`  
- Объект функции, который вызывается без аргументов и используется для формирования значений, которые необходимо назначить каждому из элементов в диапазоне.  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>Примечания  
- Этот объект функции вызывается для всех элементов в диапазоне; он необязательно должен возвращать одинаковое значение при вызове. Например, он может читать данные из файла или ссылаться на локальное состояние и изменять его. Тип результата должен поддерживать преобразование в тип значения прямых итераторов диапазона.  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- Отношение сложности линейное, требуется ровно `Count` вызовов генератора.  
+ The complexity is linear, with exactly `Count` calls to the generator being required.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -2030,7 +2047,7 @@ int main()
 ```  
   
 ##  <a name="includes"></a>  includes  
- Проверяет, содержит ли один отсортированный диапазон все элементы, содержащиеся во втором отсортированном диапазоне, где порядок сортировки или критерий эквивалентности элементов можно задать бинарным предикатом.  
+ Tests whether one sorted range contains all the elements contained in a second sorted range, where the ordering or equivalence criterion between elements may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2049,39 +2066,39 @@ bool includes(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Входной итератор, указывающий позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last1`  
- Входной итератор, указывающий позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
   `first2`  
- Входной итератор, указывающий позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last2`  
- Входной итератор, указывающий позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если первый упорядоченный диапазон содержит все элементы из второго упорядоченного диапазона; в противном случае — значение **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first sorted range contains all the elements in the second sorted range; otherwise, **false**.  
   
-### <a name="remarks"></a>Примечания  
- Можно также представить себе этот тест как проверку, является ли второй исходный диапазон подмножеством первого исходного диапазона.  
+### <a name="remarks"></a>Remarks  
+ Another way to think of this test is that it determined whether the second source range is a subset of the first source range.  
   
- Упорядоченные исходные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- Предварительное условие для применения алгоритма includes состоит в том, что каждый упорядоченный диапазон должен быть упорядочен в соответствии с теми же правилами, которые будут использоваться этим алгоритмом для сортировки объединенных диапазонов.  
+ The sorted source ranges must each be arranged as a precondition to the application of the algorithm includes in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Алгоритм **merge**не изменяет исходные диапазоны.  
+ The source ranges are not modified by the algorithm **merge**.  
   
- В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Точнее, алгоритм проверяет, все ли элементы в первом упорядоченном диапазоне под указанным двоичным предикатом имеют порядок, эквивалентный порядку элементов во втором упорядоченном диапазоне.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. More precisely, the algorithm tests whether all the elements in the first sorted range under a specified binary predicate have equivalent ordering to those in the second sorted range.  
   
- Сложности линейное; существует не более 2 \* (( *last1 - first1*)-(* last2 - first2 *)) – 1 сравнений для непустых исходных диапазонов.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( * last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_includes.cpp  
@@ -2231,7 +2248,7 @@ At least one of the elements in vector v3b is  not contained under mod_lesser in
 ```  
   
 ##  <a name="inplace_merge"></a>  inplace_merge  
- Объединяет элементы из двух последовательных упорядоченных диапазонов в один упорядоченный диапазон, где критерий порядка сортировки может быть указан бинарным предикатом.  
+ Combines the elements from two consecutive sorted ranges into a single sorted range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -2248,27 +2265,27 @@ void inplace_merge(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор, указывающий позицию первого элемента в первом из двух последовательных упорядоченных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ A bidirectional iterator addressing the position of the first element in the first of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `middle`  
- Двунаправленный итератор, указывающий позицию первого элемента во втором из двух последовательных упорядоченных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ A bidirectional iterator addressing the position of the first element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `last`  
- Двунаправленный итератор, указывающий позицию, следующую за последним элементом во втором из двух последовательных упорядоченных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ A bidirectional iterator addressing the position one past the last element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченные последовательные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted consecutive ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- Предварительное условие для применения алгоритма `inplace_merge` состоит в том, что каждый упорядоченный последовательный диапазон должен быть упорядочен в соответствии с теми же правилами, которые будут использоваться этим алгоритмом для сортировки объединенных диапазонов. Операция стабильна, так как сохраняется относительный порядок элементов в каждом диапазоне. Если эквивалентные элементы имеются в обоих исходных диапазонах, в объединенном диапазоне элемент из первого диапазона будет предшествовать элементу из второго диапазона.  
+ The sorted consecutive ranges must each be arranged as a precondition to the application of the `inplace_merge` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges. The operation is stable as the relative order of elements within each range is preserved. When there are equivalent elements in both source ranges, the element is the first range precedes the element from the second in the combined range.  
   
- Сложность зависит от объема доступной памяти, так как алгоритм выделяет память для временного буфера. Если доступно достаточно памяти, лучшим вариантом является линейной с (* фамилия - имя*) – 1 сравнений; вспомогательный памяти недостаточно, это худший возможный вариант при *N* журнала *(N)*, где *N* = (* фамилия - имя*).  
+ The complexity depends on the available memory as the algorithm allocates memory to a temporary buffer. If sufficient memory is available, the best case is linear with ( * last - first*) - 1 comparisons; if no auxiliary memory is available, the worst case is  *N* log *(N)*, where  *N* = ( * last - first*).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_inplace_merge.cpp  
@@ -2380,7 +2397,7 @@ Merged inplace with binary predicate mod_lesser specified,
 ```  
   
 ##  <a name="is_heap"></a>  is_heap  
- Возвращает значение `true`, если элементы в указанном диапазоне образуют кучу.  
+ Returns `true` if the elements in the specified range form a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2395,28 +2412,28 @@ bool is_heap(
     BinaryPredicate comp);   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор произвольного доступа, указывающий начало диапазона для проверки кучи.  
+ A random access iterator that indicates the start of a range to check for a heap.  
   
  `last`  
- Итератор произвольного доступа, указывающий конец диапазона.  
+ A random access iterator that indicates the end of a range.  
   
  `comp`  
- Условие для проверки порядка элементов. Двоичный предикат берет один аргумент и возвращает `true` или `false`.  
+ A condition to test to order elements. A binary predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение `true`, если элементы в указанном диапазоне из кучи, в противном случае — значение `false`.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the elements in the specified range form a heap, `false` if they do not.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция шаблона возвращает [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until) `(` `first``,` `last``) ==` `last`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.  
   
- Вторая функция шаблона возвращает  
+ The second template function returns  
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
 ##  <a name="is_heap_until"></a>  is_heap_until  
- Возвращает итератор, расположенный в первом элементе диапазона [`begin`, `end`), который не удовлетворяет условию упорядочения кучи, или `end`, если диапазон образует кучу.  
+ Returns an iterator positioned at the first element in the range [ `begin`, `end`) that does not satisfy the heap ordering condition, or `end` if the range forms a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2431,26 +2448,26 @@ RandomAccessIterator is_heap_until(
     BinaryPredicate compare);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `begin`  
- Итератор произвольного доступа, который задает первый элемент диапазона для проверки кучи.  
+ A random access iterator that specifies the first element of a range to check for a heap.  
   
  `end`  
- Итератор произвольного доступа, который задает конец диапазона для проверки кучи.  
+ A random access iterator that specifies the end of the range to check for a heap.  
   
  `compare`  
- Двухместный предикат, который задает условие строгого слабого упорядочения, определяющее кучу. Предикат по умолчанию, если параметр `compare` не указан, — `std::less<>`.  
+ A binary predicate that specifies the strict weak ordering condition that defines a heap. The default predicate when `compare` is not specified is `std::less<>`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `end`, если указанный диапазон формирует кучу или содержит один элемент либо менее. В противном случае возвращает итератор для первого найденного элемента, который не удовлетворяет условию кучи.  
+### <a name="return-value"></a>Return Value  
+ Returns `end` if the specified range forms a heap or contains one or fewer elements. Otherwise, returns an iterator for the first element found that does not satisfy the heap condition.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция шаблона возвращает последний итератор `next` в `[``begin``,` `end``]`, где `[``begin``, next)` — это куча, упорядоченная по объекту функции `std::less<>`. Если расстояние `end` `-` `begin` `< 2`, функция возвращает `end`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[ begin , end ]` where `[ begin , next)` is a heap ordered by the function object `std::less<>`. If the distance `end - begin < 2`, the function returns `end`.  
   
- Вторая функция-шаблон работает так же, как первая, но использует в качестве условия упорядочения кучи предикат `compare` вместо `std::less<>`.  
+ The second template function behaves the same as the first, except that it uses the predicate `compare` instead of `std::less<>` as the heap ordering condition.  
   
 ##  <a name="is_partitioned"></a>  is_partitioned  
- Возвращает значение `true`, если все элементы в заданном диапазоне, возвращающие `true` для какого-либо условия, расположены перед всеми элементами, возвращающими `false`.  
+ Returns `true` if all the elements in the given range that test `true` for a condition come before any elements that test `false`.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
@@ -2460,24 +2477,24 @@ bool is_partitioned(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий, где начинается диапазон для проверки условия.  
+ An input iterator that indicates where a range starts to check for a condition.  
   
  `last`  
- Входной итератор, указывающий конец диапазона.  
+ An input iterator that indicates the end of a range.  
   
  `comp`  
- Условие для проверки. Оно предоставляется определенным пользователем объектом функции, задающим условие, которому должен соответствовать искомый элемент. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если все элементы в заданном диапазоне, проверка которых на соответствие условию дает `true`, расположены перед всеми элементами, проверка которых дает `false`. В противном случае возвращает значение `false`.  
+### <a name="return-value"></a>Return Value  
+ Returns true when all of the elements in the given range that test `true` for a condition come before any elements that test `false`, and otherwise returns `false`.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона возвращает `true`, только если все элементы в `[` `first``,` `last``)` секционированы по `comp`, то есть все элементы `X` в `[` `first``,` `last``)`, для которых `comp``(X)` имеет значение true, находятся перед всеми элементами `Y`, для которых `comp``(Y)` — `false`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if all elements in `[` `first ,` `last )` are partitioned by `comp`; that is, all elements `X` in `[` `first ,` `last )` for which `comp (X)` is true occur before all elements `Y` for which `comp (Y)` is `false`.  
   
 ##  <a name="is_permutation"></a>  is_permutation  
- Возвращает значение true, если оба диапазона содержат одинаковые элементы и не важно, располагаются ли элементы в одном и том же порядке. Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
+ Returns true if both ranges contain the same elements, whether or not the elements are in the same order. Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2510,34 +2527,34 @@ bool is_permutation(
     Predicate Pred);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Прямой итератор, указывающий на первый элемент диапазона.  
+ A forward iterator that refers to the first element of the range.  
   
  `Last1`  
- Прямой итератор, указывающий на место, следующее за последним элементом диапазона.  
+ A forward iterator that refers one past the last element of the range.  
   
  `First2`  
- Прямой итератор, указывающий на первый элемент второго диапазона, используемый для сравнения.  
+ A forward iterator that refers to the first element of a second range, used for comparison.  
   
  `Last2`  
- Прямой итератор, указывающий на место, следующее за последним элементом второго диапазона, используемым для сравнения.  
+ A forward iterator that refers to one past the last element of a second range, used for comparison.  
   
  `Pred`  
- Предикат, который проверяет равенство и возвращает `bool`.  
+ A predicate that tests for equivalence and returns a `bool`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`, когда диапазоны можно переупорядочить так, чтобы они стали совпадающими в соответствии с предикатом сравнения. В противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` when the ranges can be rearranged so as to be identical according to the comparator predicate; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- `is_permutation` в худшем случае имеет квадратичную сложность.  
+### <a name="remarks"></a>Remarks  
+ `is_permutation` has quadratic complexity in the worst case.  
   
- При выполнении первой функции шаблона предполагается, что в диапазоне, начинающемся с `First2`, имеется столько же элементов, сколько в диапазоне, указанном аргументами [`First1`, `Last1`). Если во втором диапазоне элементов больше, они игнорируются. Если элементов меньше — результат будет непредсказуемым. Третья функция шаблона (C++ 14 и более поздние версии) не использует это допущение.  Обе функции возвращают `true`, только если для каждого элемента X в диапазоне [`First1`, `Last1`) имеется столько же элементов Y в том же диапазоне, для которых X == Y, сколько их имеется в диапазоне, начинающемся с `First2` или [`First2, Last2).`. Здесь `operator==` должен выполнять парные сравнения между операндами.  
+ The first template function assumes that there are as many elements in the range beginning at `First2` as there are in the range designated by [ `First1`, `Last1`). If there are more elements in the second range, they are ignored; if there are less, undefined behavior will occur. The third template function (C++14 and later) does not make this assumption.  Both return `true` only if, for each element X in the range designated by [ `First1`, `Last1`) there are as many elements Y in the same range for which X == Y as there are in the range beginning at `First2` or [ `First2, Last2).` Here, `operator==` must perform a pairwise comparison between its operands.  
   
- Вторая и четвертая функции шаблона действуют одинаково, за исключением того, что они заменяют `operator==(X, Y)` на `Pred(X, Y)`. Чтобы действия были правильными, предикат должен быть симметричным, рефлексивным и транзитивным.  
+ The second and fourth template functions behave the same, except that they replace `operator==(X, Y)` with `Pred(X, Y)`. To behave correctly, the predicate must be symmetric, reflexive and transitive.  
   
-### <a name="example"></a>Пример  
-  В следующем примере показано использование `is_permutation`.  
+### <a name="example"></a>Example  
+  The following example shows how to use `is_permutation`:  
   
 ```cpp  
 #include <vector>  
@@ -2593,7 +2610,7 @@ int main()
 ```  
   
 ##  <a name="is_sorted"></a>  is_sorted  
- Возвращает значение `true`, если элементы в указанном диапазоне расположены в порядке сортировки.  
+ Returns `true` if the elements in the specified range are in sorted order.  
   
 ```  
 template<class ForwardIterator>  
@@ -2608,25 +2625,25 @@ bool is_sorted(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий, где начинается диапазон для проверки.  
+ A forward iterator that indicates where the range to check begins.  
   
  `last`  
- Прямой итератор, указывающий конец диапазона.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- Условие теста для определения порядка между двумя элементами. Предикат принимает один аргумент и возвращает значение `true` или `false`. Он выполняет ту же задачу, что и `operator<`.  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`. This performs the same task as `operator<`.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция шаблона возвращает [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`(` `first``,` `last``) ==` `last`. Функция-оператор < выполняет сравнение порядка.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. The `operator<` function performs the order comparison.  
   
- Вторая функция шаблона возвращает `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`. Функция предиката `comp` выполняет сравнение порядка.  
+ The second template function returns `is_sorted_until( first, last , comp ) == last`. The `comp` predicate function performs the order comparison.  
   
 ##  <a name="is_sorted_until"></a>  is_sorted_until  
- Возвращает `ForwardIterator`, установленный в последний элемент в порядке сортировки из указанного диапазона.  
+ Returns a `ForwardIterator` that is set to the last element that is in sorted order from a specified range.  
   
- Вторая версия позволяет предоставить функцию `BinaryPredicate`, возвращающую значение `true`, если два конкретных элемента расположены в порядке сортировки, и значение `false` в противном случае.  
+ The second version lets you provide a `BinaryPredicate` function that returns `true` when two given elements are in sorted order, and `false` otherwise.  
   
 ```  
 template<class ForwardIterator>  
@@ -2642,26 +2659,26 @@ template<class ForwardIterator, class BinaryPredicate>
     );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий, где начинается диапазон для проверки.  
+ A forward iterator that indicates where the range to check starts.  
   
  `last`  
- Прямой итератор, указывающий конец диапазона.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- Условие теста для определения порядка между двумя элементами. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `ForwardIterator`, установленный в последний элемент в порядке сортировки. Отсортированная последовательность начинается с `first`.  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` set to the last element in sorted order. The sorted sequence starts from  `first`.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция-шаблон возвращает последний итератор `next` в `[` `first``,` `last``]`, так что `[` `first``, next)` — это последовательность, упорядоченная по `operator<`. Если `distance()` `< 2`, функция возвращает `last`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[` `first ,` `last ]` so that `[` `first , next)` is a sorted sequence ordered by `operator<`. If `distance()` `< 2` the function returns `last`.  
   
- Вторая функция шаблона работает так же, за исключением того, что она заменяет `operator<(X, Y)` на `comp``(X, Y)`.  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
 ##  <a name="iter_swap"></a>  iter_swap  
- Меняет местами два значения, указанные парой определенных итераторов.  
+ Exchanges two values referred to by a pair of specified iterators.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2669,19 +2686,19 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Один из прямых итераторов, значение которого должно быть изменено.  
+ One of the forward iterators whose value is to be exchanged.  
   
  `right`  
- Второй из прямых итераторов, значение которого должно быть изменено.  
+ The second of the forward iterators whose value is to be exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Рекомендуется использовать функцию `swap` вместо i **ter_swap**, которая включена в стандарт C++ для обеспечения обратной совместимости. Если `Fit1` и `Fit2` являются прямыми итераторами, то `iter_swap` (`Fit1`, `Fit2`) — эквивалент `swap` (* `Fit1`, \* `Fit2`).  
+### <a name="remarks"></a>Remarks  
+ `swap` should be used in preference to i **ter_swap**, which was included in the C++ Standard for backward compatibility. If `Fit1` and `Fit2` are forward iterators, then `iter_swap` ( `Fit1`, `Fit2` ), is equivalent to `swap` ( * `Fit1`, \* `Fit2` ).  
   
- Типы значений входных прямых итераторов должны иметь одно и то же значение.  
+ The value types of the input forward iterators must have the same value.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_iter_swap.cpp  
@@ -2815,7 +2832,7 @@ After exchanging first elements,
 ```  
   
 ##  <a name="lexicographical_compare"></a>  lexicographical_compare  
- Сравнивает две последовательности поэлементно для определения того, какой элемент из двух меньше.  
+ Compares element by element between two sequences to determine which is lesser of the two.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2835,35 +2852,35 @@ bool lexicographical_compare(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Входной итератор, указывающий на положение первого элемента в первом диапазоне для сравнения.  
+ An input iterator addressing the position of the first element in the first range to be compared.  
   
  `last1`  
- Входной итератор, указывающий на положение, следующее за последним элементом в первом диапазоне для сравнения.  
+ An input iterator addressing the position one past the final element in the first range to be compared.  
   
   `first2`  
- Входной итератор, указывающий на положение первого элемента во втором диапазоне для сравнения.  
+ An input iterator addressing the position of the first element in the second range to be compared.  
   
  `last2`  
- Входной итератор, указывающий на положение, следующее за последним элементом во втором диапазоне для сравнения.  
+ An input iterator addressing the position one past the final element in the second range to be compared.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если первый диапазон лексикографически меньше второго диапазона; в противном случае — значение **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first range is lexicographically less than the second range; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- При лексикографическом сравнении двух последовательностей они сравниваются поэлементно до тех пор, пока не произойдет следующее.  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between sequences compares them element by element until:  
   
--   Находит 2 неравных соответствующих элемента и результат их сравнения считается результатом сравнения между двумя последовательностями.  
+-   It finds two corresponding elements unequal, and the result of their comparison is taken as the result of the comparison between sequences.  
   
--   Неравенства не найдены, но одна последовательность имеет больше элементов, чем другая, и более короткая последовательность считается меньше, чем более длинная последовательность.  
+-   No inequalities are found, but one sequence has more elements than the other, and the shorter sequence is considered less than the longer sequence.  
   
--   Неравенства не найдены и последовательности имеют одинаковое количество элементов, поэтому последовательности равны и результат сравнения ложен.  
+-   No inequalities are found and the sequences have the same number of elements, and so the sequences are equal and the result of the comparison is false.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lex_comp.cpp  
@@ -2959,7 +2976,7 @@ Vector v1 is not lexicographically_less than v2 under twice.
 ```  
   
 ##  <a name="lower_bound"></a>  lower_bound  
- Находит позицию первого элемента в упорядоченном диапазоне, значение которого больше или равно указанному значению, где критерий упорядочивания может быть задан бинарным предикатом.  
+ Finds the position of the first element in an ordered range that has a value greater than or equivalent to a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator, class Type>  
@@ -2977,34 +2994,34 @@ ForwardIterator lower_bound(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- Значение, чья первая позиция или возможная первая позиция ищется в упорядоченном диапазоне.  
+ The value whose first position or possible first position is being searched for in the ordered range.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Однонаправленный итератор в позиции первого элемента в упорядоченном диапазоне, который имеет значение большее или эквивалентное указанному значению, где эквивалентность задана двоичным предикатом.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator at the position of the first element in an ordered range with a value that is greater than or equivalent to a specified value, where the equivalence is specified with a binary predicate.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченный исходный диапазон, на который указывает ссылка, должен быть допустим. Все итераторы должны поддерживать отмену ссылок. В последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- Предварительным условием для использования `lower_bound` является упорядоченный диапазон, порядок в котором тот же, что и заданный двоичным предикатом.  
+ A sorted range is a precondition of using `lower_bound` and where the ordering is the same as specified by with binary predicate.  
   
- Диапазон не изменяется алгоритмом `lower_bound`.  
+ The range is not modified by the algorithm `lower_bound`.  
   
- В целях упорядочения типы значений прямых итераторов должны подлежать сравнению "меньше чем", чтобы при наличии двух элементов можно было определить, что они равны (т. е. ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов.  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- Отношение сложности алгоритма логарифмическое для итераторов произвольного доступа и линейное в ином случае, с числом шагов, пропорциональным (`last - first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lower_bound.cpp  
@@ -3096,7 +3113,7 @@ int main( )
 ```  
   
 ##  <a name="make_heap"></a>  make_heap  
- Преобразует элементы из указанного диапазона в кучу, в которой первый элемент является наибольшим и для которой критерий сортировки может быть определен бинарным предикатом.  
+ Converts elements from a specified range into a heap in which the first element is the largest and for which a sorting criterion may be specified with a binary predicate.  
   
 ```  
  template<class RandomAccessIterator>  
@@ -3112,28 +3129,28 @@ void make_heap(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор произвольного доступа, обращающийся к позиции первого элемента в диапазоне, подлежащем преобразованию в кучу.  
+ A random-access iterator addressing the position of the first element in the range to be converted into a heap.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в диапазоне, подлежащем преобразованию в кучу.  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Кучи имеют два следующих свойства.  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   Первый элемент — всегда наибольший.  
+-   The first element is always the largest.  
   
--   Элементы могут добавляться и удаляться в логарифмическое время.  
+-   Elements may be added or removed in logarithmic time.  
   
- Кучи — идеальный способ реализации очередей с приоритетами, и они используются в [классе priority_queue](../standard-library/priority-queue-class.md) адаптеров контейнеров библиотеки стандартных программ C++.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- Отношение сложности линейное; требуется 3 \* (* фамилия - имя *) сравнений.  
+ The complexity is linear, requiring 3 \* ( * last - first*) comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_make_heap.cpp  
@@ -3176,7 +3193,7 @@ int main() {
 ```  
   
 ##  <a name="max"></a>  max  
- Сравнивает два объекта и возвращает больший из них, где критерий упорядочивания может быть указан бинарным предикатом.  
+ Compares two objects and returns the larger of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3201,26 +3218,26 @@ template<class Type, class Pr>
     );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Первый из сравниваемых объектов.  
+ The first of the two objects being compared.  
   
  `right`  
- Второй из сравниваемых объектов.  
+ The second of the two objects being compared.  
   
  `comp`  
- Двоичный предикат, используемый для сравнения двух объектов.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- Список initializer с объектами, которые необходимо сравнить.  
+ The initializer list that contains the objects to be compared.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Больший из двух объектов, если ни один из них не больше — в этом случае возвращается первый из двух объектов. В случае с initializer_list возвращается самый большой из объектов в списке.  
+### <a name="return-value"></a>Return Value  
+ The greater of the two objects, unless neither is greater; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the greatest of the objects in the list.  
   
-### <a name="remarks"></a>Примечания  
- При использовании алгоритма `max` очень редко объекты передаются как параметры. Большинство алгоритмов библиотеки стандартных программ C++ работают в диапазоне элементов, позиция которых задается итераторами, передаваемыми в качестве параметров. Если требуется функция, которая работает в диапазоне элементов, рекомендуется использовать [max_element](../standard-library/algorithm-functions.md#max_element).  
+### <a name="remarks"></a>Remarks  
+ The `max` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that operates on a range of elements, use [max_element](../standard-library/algorithm-functions.md#max_element) instead.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max.cpp  
@@ -3389,7 +3406,7 @@ Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```  
   
 ##  <a name="max_element"></a>  max_element  
- Находит первое вхождение наибольшего элемента в указанном диапазоне, где критерий упорядочивания может быть указан бинарным предикатом.  
+ Finds the first occurrence of largest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator>  
@@ -3400,25 +3417,25 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий положение первого элемента в диапазоне для поиска наибольшего элемента.  
+ A forward iterator addressing the position of the first element in the range to be searched for the largest element.  
   
  `last`  
- Прямой итератор, указывающий положение, следующее за последним элементом в диапазоне для поиска наибольшего элемента.  
+ A forward iterator addressing the position one past the final element in the range to be searched for the largest element.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, указывающий положение первого вхождения наибольшего элемента в диапазоне для поиска.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the largest element in the range searched.  
   
-### <a name="remarks"></a>Примечания  
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- Сложность линейной: ( `last`  -   `first`) – 1 сравнений являются обязательными для непустой диапазон.  
+ The complexity is linear: ( `last` -  `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max_element.cpp  
@@ -3519,7 +3536,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  merge  
- Объединяет все элементы из двух исходных упорядоченных диапазонов в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
+ Combines all of the elements from two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -3541,44 +3558,44 @@ OutputIterator merge(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Входной итератор, обращающийся к позиции первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
  `last1`  
- Входной итератор, обращающийся к позиции, следующей за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
   `first2`  
- Входной итератор, обращающийся к позиции первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `last2`  
- Входной итератор, обращающийся к позиции, следующей за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `result`  
- Выходной итератор, обращающийся к позиции первого элемента в диапазоне назначения, где два исходных диапазона следует объединить в один диапазон.  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be combined into a single sorted range.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом, в упорядоченном диапазоне назначения.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченные исходные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Диапазон назначения не должен перекрывать исходные диапазоны и должен быть достаточно большим, чтобы содержать диапазон назначения.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Каждый упорядоченный исходный диапазон должен быть упорядочен в качестве предусловия для применения алгоритма **merge** в соответствии с теми же правилами, что использовались алгоритмом для упорядочения объединенных диапазонов.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Операция стабильна, так как в диапазоне назначения сохраняется относительный порядок элементов в каждом диапазоне. Алгоритм **merge**не изменяет исходные диапазоны.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range.  
   
- Сложности линейное; существует не более (* last1 - first1*)-(* last2 - first2*) – 1 сравнений.  
+ The complexity of the algorithm is linear with at most ( * last1 - first1*) - ( * last2 - first2*) - 1 comparisons.  
   
- Класс [list](../standard-library/list-class.md) предоставляет функцию-член merge для слияния элементов двух списков.  
+ The [list class](../standard-library/list-class.md) provides a member function "merge" to merge the elements of two lists.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_merge.cpp  
@@ -3689,7 +3706,7 @@ int main() {
 ```  
   
 ##  <a name="min"></a>  min  
- Сравнивает два объекта и возвращает меньший из них, где критерий упорядочивания может быть указан бинарным предикатом.  
+ Compares two objects and returns the lesser of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3713,26 +3730,26 @@ template<class Type, class Pr>    Type min (
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Первый из сравниваемых объектов.  
+ The first of the two objects being compared.  
   
  `right`  
- Второй из сравниваемых объектов.  
+ The second of the two objects being compared.  
   
  `comp`  
- Двоичный предикат, используемый для сравнения двух объектов.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- Списокinitializer_list с объектами для сравнения.  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Меньший из двух объектов; если ни один из них не меньше, то возвращается первый из двух объектов. В случае с initializer_list возвращается наименьший из объектов в списке.  
+### <a name="return-value"></a>Return Value  
+ The lesser of the two objects, unless neither is lesser; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the least of the objects in the list.  
   
-### <a name="remarks"></a>Примечания  
- При использовании алгоритма `min` очень редко объекты передаются как параметры. Большинство алгоритмов библиотеки стандартных программ C++ работают в диапазоне элементов, позиция которых задается итераторами, передаваемыми в качестве параметров. Если требуется функция, которая работает в диапазоне элементов, используйте [min_element](../standard-library/algorithm-functions.md#min_element).  
+### <a name="remarks"></a>Remarks  
+ The `min` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that uses a range of elements, use [min_element](../standard-library/algorithm-functions.md#min_element).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min.cpp  
@@ -3900,7 +3917,7 @@ Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```  
   
 ##  <a name="min_element"></a>  min_element  
- Находит первое вхождение наименьшего элемента в указанном диапазоне, где критерий упорядочивания может быть указан бинарным предикатом.  
+ Finds the first occurrence of smallest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator>  
@@ -3911,25 +3928,25 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Прямой итератор, указывающий положение первого элемента в диапазоне для поиска наименьшего элемента.  
+ A forward iterator addressing the position of the first element in the range to be searched for the smallest element.  
   
  `last`  
- Прямой итератор, указывающий положение, следующее за последним элементом в диапазоне для поиска наименьшего элемента.  
+ A forward iterator addressing the position one past the final element in the range to be searched for the smallest element.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, указывающий положение первого вхождения наименьшего элемента в диапазоне для поиска.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the smallest element in the range searched.  
   
-### <a name="remarks"></a>Примечания  
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- Сложность линейной: ( `last`  -  `first`) – 1 сравнений являются обязательными для непустой диапазон.  
+ The complexity is linear: ( `last` - `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min_element.cpp  
@@ -4040,7 +4057,7 @@ The smallest element in v1 under the mod_lesser
 ```  
   
 ##  <a name="minmax_element"></a>  minmax_element  
- Выполняет работу, которую делают `min_element` и `max_element`, в одном вызове.  
+ Performs the work performed by `min_element` and `max_element` in one call.  
   
 ```  
 template<class ForwardIterator>  
@@ -4058,36 +4075,36 @@ template<class ForwardIterator, class BinaryPredicate>
                 );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий начало диапазона.  
+ A forward iterator that indicates the beginning of a range.  
   
  `last`  
- Прямой итератор, указывающий конец диапазона.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- Дополнительный тест, используемый для упорядочивания элементов.  
+ An optional test used to order elements.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
  Returns  
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(` [min_element](../standard-library/algorithm-functions.md#min_element)(`first`, `last`), [max_element](../standard-library/algorithm-functions.md#max_element)(`first`, `last`)).  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция шаблона возвращает  
+### <a name="remarks"></a>Remarks  
+ The first template function returns  
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last),max_element(_First,Last))`.  
+ `(min_element(_First,Last), max_element(_First,Last))`.  
   
- Вторая функция шаблона работает так же, за исключением того, что она заменяет `operator<(X, Y)` на `comp``(X, Y)`.  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
- Если последовательность непустая, функция выполняет не более `3 * (``last` `-` `first` `- 1) / 2` сравнений.  
+ If the sequence is non-empty, the function performs at most `3 * (last - first - 1) / 2` comparisons.  
   
 ##  <a name="minmax"></a>  minmax  
- Сравнивает два входных параметра и возвращает их в виде пары, в порядке от меньшего к большему.  
+ Compares two input parameters and returns them as a pair, in order of lesser to greater.  
   
 ```  
 template<class Type>  
@@ -4114,32 +4131,32 @@ template<class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Первый из сравниваемых объектов.  
+ The first of the two objects being compared.  
   
  `right`  
- Второй из сравниваемых объектов.  
+ The second of the two objects being compared.  
   
  `comp`  
- Двоичный предикат, используемый для сравнения двух объектов.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- Списокinitializer_list с объектами для сравнения.  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция шаблона возвращает `pair<const Type&, const Type&>(``right``,` `left``)`, если `right` меньше, чем `left`. В противном случае возвращается значение `pair<const Type&, const Type&>(``left``,``right``)`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns `pair<const Type&, const Type&>( right , left )` if `right` is less than `left`. Otherwise, it returns `pair<const Type&, const Type&>( left , right )`.  
   
- Вторая функция-член возвращает пару, в которой первый элемент меньше, а второй — больше при сравнении по предикату `comp`.  
+ The second member function returns a pair where the first element is the lesser and the second is the greater when compared by the predicate `comp`.  
   
- Остальные функции шаблона действуют одинаково, за исключением того, что они заменяют параметры `left` и `right` на `_IList`.  
+ The remaining template functions behave the same, except that they replace the `left` and `right` parameters with `_IList`.  
   
- Функция выполняет точно одно сравнение.  
+ The function performs exactly one comparison.  
   
 ##  <a name="mismatch"></a>  mismatch  
- Сравнивает поэлементно два диапазона и находит первую позицию, где элементы отличаются.  
+ Compares two ranges element by element and locates the first position where a difference occurs.  
   
- Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4172,36 +4189,36 @@ mismatch(
      BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Входной итератор, указывающий на положение первого элемента в первом диапазоне для тестирования.  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- Входной итератор, указывающий на положение, следующее за последним элементом, в первом диапазоне для тестирования.  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- Входной итератор, указывающий на положение первого элемента во втором диапазоне для тестирования.  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `Last2`  
- Входной итератор, указывающий на положение, следующее за последним элементом, во втором диапазоне для тестирования.  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- Определяемый пользователем объект функции предиката, который сравнивает текущие элементы в каждом диапазоне и определяет, являются ли они равными. Он возвращает значение **true** при выполнении условия и значение **false** — в противном случае.  
+ User-defined predicate function object that compares the current elements in each range and determines whether they are equivalent. It returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Пара итераторов, указывающих на положения несовпадений в двух диапазонах: первый компонентный итератор — на положение в первом диапазоне, второй итератор — на положение во втором диапазоне. Если между элементами сравниваемых диапазонов нет разницы или если бинарный предикат во второй версии показывает соответствие для всех пар элементов из двух диапазонов, то первый компонентный итератор указывает на положение, следующее за последним проверенным элементом в первом диапазоне, а второй итератор — на положение, следующее за последним проверенным элементом во втором диапазоне.  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators addressing the positions of the mismatch in the two ranges, the first component iterator to the position in the first range and the second component iterator to the position in the second range. If there is no difference between the elements in the ranges compared or if the binary predicate in the second version is satisfied by all element pairs from the two ranges, then the first component iterator points to the position one past the final element in the first range and the second component iterator to position one past the final element tested in the second range.  
   
-### <a name="remarks"></a>Примечания  
- При выполнении первой функции шаблона предполагается, что в диапазоне, начинающемся с first2, имеется столько же элементов, сколько в диапазоне, указанном аргументами [first1, last1). Если во втором диапазоне элементов больше, они игнорируются. Если элементов меньше — результат будет непредсказуемым.  
+### <a name="remarks"></a>Remarks  
+ The first template function assumes that there are as many elements in the range beginning at first2 as there are in the range designated by [first1, last1). If there are more in the second range, they are ignored; if there are less then undefined behavior will result.  
   
- Диапазон, по которому ведется поиск, должен быть допустимым. Все итераторы должны поддерживать сброс ссылок и должна быть возможность достижения последнего положения, начиная от первого, путем приращения.  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- Временная сложность алгоритма линейно зависит от количества элементов в более коротком диапазоне.  
+ The time complexity of the algorithm is linear in the number of elements contained in the shorter range.  
   
- Применение определяемого пользователем предиката не требуется для наложения отношения эквивалентности (симметричной, рефлексивной и транзитивной) между операндами.  
+ The user-defined predicate is not required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>Пример  
-  В следующем примере демонстрируется использование несовпадения. Перегрузка C++ 03 показана только с целью демонстрации того, как она может привести к непредвиденному результату.  
+### <a name="example"></a>Example  
+  The following example demonstrates how to use mismatch. The C++03 overload is shown only in order to demonstrate how it can produce an unexpected result.  
   
 ```cpp  
 #include <vector>  
@@ -4297,7 +4314,7 @@ Press a key
 ```  
   
 ##  <a name="alg_move"></a>  &lt;alg&gt; move  
- Перемещает элементы, связанные с заданным диапазоном.  
+ Move elements associated with a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -4308,21 +4325,21 @@ template<class InputIterator, class OutputIterator>
                   );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий, откуда начинается диапазон элементов для перемещения.  
+ An input iterator that indicates where to start the range of elements to move.  
   
  `last`  
- Входной итератор, указывающий конец диапазона элементов для перемещения.  
+ An input iterator that indicates the end of a range of elements to move.  
   
  `dest`  
- Выходной итератор, который должен содержать перемещенные элементы.  
+ The output iterator that is to contain the moved elements.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет `*(dest + N) = move(*(first + N))` один раз для каждого `N` в диапазоне `[0, last - first)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `dest + N`. Если `dest` и `first` обозначают области хранилища, `dest` не должно быть в диапазоне `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = move(*(first + N))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
- Перемещает элементы одного итератора в другой. Перемещение начинается с последнего элементом в указанном диапазоне и завершается первым элементом в этом диапазоне.  
+ Moves the elements of one iterator to another. The move starts with the last element in a specified range, and ends with the first element in that range.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -4333,23 +4350,23 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор, указывающий начало диапазона, из которого должны перемещаться элементы.  
+ An iterator that indicates the start of a range to move elements from.  
   
  `last`  
- Итератор, указывающий конец диапазона, из которого должны перемещаться элементы. Этот элемент не перемещается.  
+ An iterator that indicates the end of a range to move elements from. This element is not moved.  
   
  `destEnd`  
- Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения.  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона проверяет `*(destEnd - N - 1) = move(*(last - N - 1))` один раз для каждого `N` в диапазоне `[0, last - first)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `destEnd - (last - first)`. Если `destEnd` и `first` обозначают области хранилища, `destEnd` не должно быть в диапазоне `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(destEnd - N - 1) = move(*(last - N - 1))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `destEnd - (last - first)`. If `destEnd` and  `first` designate regions of storage, `destEnd` must not be in the range `[first, last)`.  
   
- `move` и `move_backward` — функциональный эквивалент использованию `copy` и `copy_backward` с итератором перемещения.  
+ `move` and `move_backward` are functionally equivalent to using `copy` and `copy_backward` with a move iterator.  
   
 ##  <a name="next_permutation"></a>  next_permutation  
- Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически следующий больший", если такая существует, где смысл термина "следующий" может быть задан бинарным предикатом.  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically next greater permutation if it exists, where the sense of next may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -4360,27 +4377,27 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор, указывающий позицию первого элемента в диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- Двунаправленный итератор, указывающий позицию, следующую за последним элементом в диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если лексикографически следующая перестановка существует и заменила исходный порядок в диапазоне; в противном случае — значение **false**, указывающее, что порядок преобразуется в лексикографически наименьшую перестановку.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lexicographically next permutation exists and has replaced the original ordering of the range; otherwise **false**, in which case the ordering is transformed into the lexicographically smallest permutation.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Двоичный предикат по умолчанию — "меньше чем", и элементы в диапазоне должны быть сравнимы на "меньше чем", чтобы следующая перестановка была задана правильно.  
+ The default binary predicate is less than and the elements in the range must be less than comparable to insure that the next permutation is well defined.  
   
- Сложности линейное; существует не более (* фамилия - имя *) / 2 меняет местами.  
+ The complexity is linear with at most ( * last - first*)/2 swaps.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_next_perm.cpp  
@@ -4520,7 +4537,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- Разделяет диапазон элементов, правильно находя *n*-й элемент последовательности в диапазоне, чтобы все элементы перед ним были меньше или равны ему, а все элементы в последовательности после него — больше либо равны ему.  
+ Partitions a range of elements, correctly locating the                 *n*th element of the sequence in the range so that all the elements in front of it are less than or equal to it and all the elements that follow it in the sequence are greater than or equal to it.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4531,29 +4548,29 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор произвольного доступа, указывающий позицию первого элемента в разделяемом диапазоне.  
+ A random-access iterator addressing the position of the first element in the range to be partitioned.  
   
  *_Nth*  
- Итератор произвольного доступа, указывающий позицию элемента для правильного упорядочивания на границе раздела.  
+ A random-access iterator addressing the position of element to be correctly ordered on the boundary of the partition.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в разделяемом диапазоне.  
+ A random-access iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Алгоритм `nth_element` не гарантирует упорядочивание элементов в поддиапазонах с каждой стороны *n*-го элемента. Таким образом, он дает меньшие гарантии, чем `partial_sort`, который упорядочивает элементы в диапазоне ниже некоторого выбранного элемента, и может использоваться в качестве более быстрой альтернативы `partial_sort`, когда упорядочивание нижнего диапазона не требуется.  
+ The `nth_element` algorithm does not guarantee that elements in the sub-ranges either side of the  *n*th element are sorted. It thus makes fewer guarantees than `partial_sort`, which orders the elements in the range below some chosen element, and may be used as a faster alternative to `partial_sort` when the ordering of the lower range is not required.  
   
- Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other.  
   
- Среднее сложности сортировки по отношению к линейной * фамилия - имя *.  
+ The average of a sort complexity is linear with respect to  * last - first*.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_nth_elem.cpp  
@@ -4620,31 +4637,31 @@ int main() {
 ```  
   
 ##  <a name="none_of"></a>  none_of  
- Возвращает значение `true`, если условие не выполняется ни одним элементом заданного диапазона.  
+ Returns `true` when a condition is never present among elements in the given range.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий, откуда должна начинаться проверка диапазона элементов на соответствие условию.  
+ An input iterator that indicates where to start to check a range of elements for a condition.  
   
  `last`  
- Входной итератор, указывающий конец диапазона элементов.  
+ An input iterator that indicates the end of a range of elements.  
   
  `comp`  
- Условие для проверки. Это условие предоставляется определенным пользователем объектом функции предиката, который задает условие. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение `true`, если не обнаружен ни один элемент в указанном диапазоне, соответствующий условию, и значение `false`, если обнаружен хотя бы один такой элемент.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is not detected at least once in the indicated range, and `false` if the condition is detected.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона возвращает `true` только если для некоторых `N` в диапазоне `[0, last - first)`, предикат `comp(*(first + N))` всегда `false`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range `[0, last - first)`, the predicate `comp(*(first + N))` is always `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
- Упорядочивает указанное число меньших элементов в диапазоне в не нисходящий порядок или согласно критерию упорядочивания, заданному бинарным предикатом.  
+ Arranges a specified number of the smaller elements in a range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4662,27 +4679,27 @@ template<class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Итератор произвольного доступа, обращающийся к позиции первого элемента в сортируемом диапазоне.  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `sortEnd`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в сортируемом поддиапазоне.  
+ A random-access iterator addressing the position one past the final element in the subrange to be sorted.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в диапазоне для частичной сортировки.  
+ A random-access iterator addressing the position one past the final element in the range to be partially sorted.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны. Алгоритм **sort** нестабилен и не гарантирует, что относительный порядок эквивалентных элементов будет сохранен. Алгоритм `stable_sort` сохраняет этот исходный порядок.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- Средняя сложность частичной сортировки — *O*((`last`- `first`) log (`sortEnd`- `first`)).  
+ The average partial sort complexity is  *O*(( `last`- `first`) log ( `sortEnd`- `first`)).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort.cpp  
@@ -4756,7 +4773,7 @@ Partially resorted (UDgreater) vector:
 ```  
   
 ##  <a name="partial_sort_copy"></a>  partial_sort_copy  
- Копирует элементы из исходного диапазона в диапазон назначения, где исходные элементы упорядочены по критерию "меньше либо равно" или согласно другому заданному бинарному предикату.  
+ Copies elements from a source range into a destination range where the source elements are ordered by either less than or another specified binary predicate.  
   
 ```  
  template<class InputIterator, class RandomAccessIterator>  
@@ -4776,31 +4793,31 @@ template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Итератор ввода, обращающийся к позиции первого элемента в исходном диапазоне.  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last1`  
- Входной итератор, указывающий позицию, следующую за последним элементом в исходном диапазоне.  
+ An input iterator addressing the position one past the final element in the source range.  
   
   `first2`  
- Итератор произвольного доступа, указывающий позицию первого элемента в сортируемом диапазоне назначения.  
+ A random-access iterator addressing the position of the first element in the sorted destination range.  
   
  `last2`  
- Итератор произвольного доступа, указывающий позицию, следующую за последним элементом в сортируемом диапазоне назначения.  
+ A random-access iterator addressing the position one past the final element in the sorted destination range.  
   
  `comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Бинарный предикат принимает два аргумента и возвращает `true` в случае соответствия и `false` в случае несоответствия.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор произвольного доступа, указывающий элемент в диапазоне назначения, находящийся на позиции, следующей за последним элементом, вставленным из исходного диапазона.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator addressing the element in the destination range one position beyond the last element inserted from the source range.  
   
-### <a name="remarks"></a>Примечания  
- Исходный диапазон и диапазон назначения не должны перекрываться и должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в каждой последовательности должна быть доступна из первой позиции путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges must not overlap and must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Бинарный предикат должен предоставлять строгую квазиупорядоченность, чтобы элементы, которые не являются эквивалентными, упорядочивались, а эквивалентные элементы — нет. Два элемента эквивалентны в рамках условия "меньше чем", но они не обязательно равны, если ни один из элементов не меньше другого.  
+ The binary predicate must provide a strict weak ordering so that elements that are not equivalent are ordered, but elements that are equivalent are not. Two elements are equivalent under less than, but not necessarily equal, if neither is less than the other.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort_copy.cpp  
@@ -4877,7 +4894,7 @@ int main() {
 ```  
   
 ##  <a name="partition"></a>  partition  
- Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют.  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -4888,27 +4905,27 @@ template<class BidirectionalIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор адресует позицию первого элемента в разделяемом диапазоне.  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- Двунаправленный итератор, указывающий позицию, следующую за последним элементом в разделяемом диапазоне.  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- Определенный пользователем объект функции предиката, задающий условие, которое должно удовлетворяться, чтобы элемент был классифицирован. Предикат принимает один аргумент и возвращает значение **true** или **false**.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes a single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор указывает позицию первого элемента в диапазоне, не соответствующего условию предиката.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Элементы *a* и *b* эквивалентны, но не обязательно равны, если и *Pr* (*a*, *b*) имеет значение false, и *Pr* (*b*, *a*) имеет значение false, где *Pr* — это предикат, заданный в параметре. Алгоритм **partition** нестабилен и не гарантирует, что относительный порядок эквивалентных элементов будет сохранен. Алгоритм **stable_ partition** сохраняет этот исходный порядок.  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **partition** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm **stable_ partition** does preserve this original ordering.  
   
- Сложность линейной: существует ( `last`  -   `first`) приложения `comp` и не более ( `last`  -   `first`) / 2 меняет.  
+ The complexity is linear: there are ( `last` -  `first`) applications of `comp` and at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partition.cpp  
@@ -4948,7 +4965,7 @@ int main( ) {
 ```  
   
 ##  <a name="partition_copy"></a>  partition_copy  
- Копирует элементы, возвращающие `true` для какого-либо условия, в одно место назначения, а возвращающие `false` — в другое. Эти элементы должны поступать из указанного диапазона.  
+ Copies elements for which a condition is `true` to one destination, and for which the condition is `false` to another. The elements must come from a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>  
@@ -4962,27 +4979,27 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
         );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий начало диапазона для проверки условия.  
+ An input iterator that indicates the beginning of a range to check for a condition.  
   
  `last`  
- Входной итератор, указывающий конец диапазона.  
+ An input iterator that indicates the end of a range.  
   
  `dest1`  
- Выходной итератор, используемый для копирования элементов, которые возвращают значение true при проверке на соответствие условию с использованием `_Pred`.  
+ An output iterator used to copy elements that return true for a condition tested by using `_Pred`.  
   
  `dest2`  
- Выходной итератор, используемый для копирования элементов, которые возвращают значение false при проверке на соответствие условию с использованием `_Pred`.  
+ An output iterator used to copy elements that return false for a condition tested by using `_Pred`.  
   
  `_Pred`  
- Условие для проверки. Это условие предоставляется определенным пользователем объектом функции предиката, который задает условие для проверки. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона копирует каждый элемент `X` в `[first,last)` для `*dest1++` Если `_Pred(X)` имеет значение true, или к `*dest2++` в противном случае. Он возвращает `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
+### <a name="remarks"></a>Remarks  
+ The template function copies each element `X` in `[first,last)` to `*dest1++` if `_Pred(X)` is true, or to `*dest2++` if not. It returns `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
- Возвращает первый элемент, который не удовлетворяет условию, в данном диапазоне. Элементы сортируются так, чтобы те, которые соответствуют условию, располагались перед теми, что не соответствуют.  
+ Returns the first element in the given range that does not satisfy the condition. The elements are sorted so that those that satisfy the condition come before those that do not.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -4993,24 +5010,24 @@ template<class ForwardIterator, class Predicate>
     );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- `ForwardIterator`, указывающий начало диапазона для проверки условия.  
+ A `ForwardIterator` that indicates the start of a range to check for a condition.  
   
  `last`  
- `ForwardIterator`, указывающий конец диапазона.  
+ A `ForwardIterator` that indicates the end of a range.  
   
  `comp`  
- Условие для проверки. Оно предоставляется определенным пользователем объектом функции, задающим условие, которому должен соответствовать искомый элемент. Предикат принимает один аргумент и возвращает значение `true` или `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `ForwardIterator`, указывающий первый элемент, который не удовлетворяет условию, проверенному с помощью `comp`, или возвращает `last`, если таковой не найден.  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` that refers to the first element that does not fulfill the condition tested for by `comp`, or returns `last` if one is not found.  
   
-### <a name="remarks"></a>Примечания  
- Шаблонная функция находит первый итератор `it` в `[first, last)` которого `comp(*it)` — `false`. Последовательность должна быть упорядочена по `comp`.  
+### <a name="remarks"></a>Remarks  
+ The template function finds the first iterator `it` in `[first, last)` for which `comp(*it)` is `false`. The sequence must be ordered by `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
- Удаляет наибольший элемент из начала кучи до позиции, следующей за последней, в диапазоне, а затем формирует новую кучу из оставшихся элементов.  
+ Removes the largest element from the front of a heap to the next-to-last position in the range and then forms a new heap from the remaining elements.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5021,34 +5038,34 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор произвольного доступа, обращающийся к позиции первого элемента в куче.  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в куче.  
+ A random-access iterator addressing the position one past the final element in the heap.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Алгоритм `pop_heap` представляет операцию, противоположную выполняемой алгоритмом push_heap, в которой элемент в позиции, следующей за последним элементом в диапазоне, добавляется в кучу, состоящую из предыдущих элементов в диапазоне, в том случае, когда элемент, добавляемый в кучу, больше, чем любые элементы, уже находящиеся в куче.  
+### <a name="remarks"></a>Remarks  
+ The `pop_heap` algorithm is the inverse of the operation performed by the push_heap algorithm, in which an element at the next-to-last position of a range is added to a heap consisting of the prior elements in the range, in the case when the element being added to the heap is larger than any of the elements already in the heap.  
   
- Кучи имеют два следующих свойства.  
+ Heaps have two properties:  
   
--   Первый элемент — всегда наибольший.  
+-   The first element is always the largest.  
   
--   Элементы могут добавляться и удаляться в логарифмическое время.  
+-   Elements may be added or removed in logarithmic time.  
   
- Кучи — идеальный способ реализации очередей с приоритетами, и они используются в [классе priority_queue](../standard-library/priority-queue-class.md) адаптеров контейнеров библиотеки стандартных программ C++.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Диапазон, исключая только что добавленный в конце элемент, должен быть кучей.  
+ The range excluding the newly added element at the end must be a heap.  
   
- Сложность логарифмической требует более журнала (* фамилия - имя *) сравнений.  
+ The complexity is logarithmic, requiring at most log ( * last - first*) comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_pop_heap.cpp  
@@ -5111,7 +5128,7 @@ int main( )  {
 ```  
   
 ##  <a name="prev_permutation"></a>  prev_permutation  
- Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически предыдущий больший", если такая существует, где смысл термина "предыдущий" может быть задан бинарным предикатом.  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically previous greater permutation if it exists, where the sense of previous may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -5127,27 +5144,27 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор, указывающий позицию первого элемента в диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- Двунаправленный итератор, указывающий позицию, следующую за последним элементом в диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Бинарный предикат принимает два аргумента и возвращает `true` в случае соответствия и `false` в случае несоответствия.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если лексикографически предыдущая перестановка существует и заменила исходный порядок в диапазоне; в противном случае — значение `false`, указывающее, что порядок преобразуется в лексикографически наибольшую перестановку.  
+### <a name="return-value"></a>Return Value  
+ `true` if the lexicographically previous permutation exists and has replaced the original ordering of the range; otherwise `false`, in which case the ordering is transformed into the lexicographically largest permutation.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Двоичный предикат по умолчанию — "меньше чем", и элементы в диапазоне должны быть сравнимы на "меньше чем", чтобы предыдущая перестановка была задана правильно.  
+ The default binary predicate is less than and the elements in the range must be less-than comparable to ensure that the previous permutation is well defined.  
   
- Сложности линейное, не более ( `last`  -   `first`) / 2 меняет местами.  
+ The complexity is linear, with at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_prev_perm.cpp  
@@ -5282,7 +5299,7 @@ After another prev_permutation of vector v1,
 ```  
   
 ##  <a name="push_heap"></a>  push_heap  
- Добавляет элемент, находящийся в конце диапазона, в существующую кучу, состоящую из предыдущих элементов диапазона.  
+ Adds an element that is at the end of a range to an existing heap consisting of the prior elements in the range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5293,34 +5310,34 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор произвольного доступа, обращающийся к позиции первого элемента в куче.  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в диапазоне, подлежащем преобразованию в кучу.  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Элемент сначала должен быть помещен обратно в конец существующей кучи; затем используется алгоритм для добавления этого элемента в существующую кучу.  
+### <a name="remarks"></a>Remarks  
+ The element must first be pushed back to the end of an existing heap and then the algorithm is used to add this element to the existing heap.  
   
- Кучи имеют два следующих свойства.  
+ Heaps have two properties:  
   
--   Первый элемент — всегда наибольший.  
+-   The first element is always the largest.  
   
--   Элементы могут добавляться и удаляться в логарифмическое время.  
+-   Elements may be added or removed in logarithmic time.  
   
- Кучи — идеальный способ реализации очередей с приоритетами, и они используются в [классе priority_queue](../standard-library/priority-queue-class.md) адаптеров контейнеров библиотеки стандартных программ C++.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Диапазон, исключая только что добавленный в конце элемент, должен быть кучей.  
+ The range excluding the newly added element at the end must be a heap.  
   
- Сложность логарифмической, требующие Максимум журналов ( *фамилия - имя*) сравнений.  
+ The complexity is logarithmic, requiring at most log ( *last - first*) comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_push_heap.cpp  
@@ -5388,10 +5405,10 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- Устаревшие функции std:: random_shuffle() заменена [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Пример кода и Дополнительные сведения см. в разделе [ \<случайных >](../standard-library/random.md) и сайте StackOverflow [почему методы std::random_shuffle удалены устарели в C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ The std::random_shuffle() function is deprecated, replaced by [std::shuffle](../standard-library/algorithm-functions.md#shuffle). For a code example and more information, see [\<random>](../standard-library/random.md) and the Stackoverflow posting  [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
 ##  <a name="remove"></a>  remove  
- Удаляет указанное значение из заданного диапазона без нарушения порядка остальных элементов и возвращает конец нового диапазона после удаления указанного значения.  
+ Eliminates a specified value from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -5399,31 +5416,31 @@ template<class ForwardIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, обращающийся к положению первого элемента в диапазоне, в котором удаляются элементы.  
+ A forward iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Прямой итератор, обращающийся к положению за последним элементом в диапазоне, в котором удаляются элементы.  
+ A forward iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `val`  
- Значение, которое необходимо удалить из диапазона.  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, обращающийся к новой конечной позиции измененного диапазона сразу за последним элементом оставшейся последовательности без указанного значения.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Порядок неудаляемых элементов не меняется.  
+ The order of the elements not removed remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality.  
   
- Класс [list](../standard-library/list-class.md) содержит более эффективную версию функции-члена **remove**, которая также удаляет ссылки для указателей.  
+ The [list class](../standard-library/list-class.md) has a more efficient member function version of **remove**, which also relinks pointers.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove.cpp  
@@ -5470,7 +5487,7 @@ int main( ) {
 ```  
   
 ##  <a name="remove_copy"></a>  remove_copy  
- Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы с заданным значением не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.  
+ Copies elements from a source range to a destination range, except that elements of a specified value are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Type>  
@@ -5478,34 +5495,34 @@ template<class InputIterator, class OutputIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором удаляются элементы.  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором удаляются элементы.  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который удаляются элементы.  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `val`  
- Значение, которое необходимо удалить из диапазона.  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, обращающийся к новой конечной позиции диапазона назначения, следующей за последним элементом копии оставшейся последовательности без указанного значения.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the copy of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>Примечания  
- Исходный и конечный диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Диапазон назначения должен иметь достаточно места для хранения оставшихся элементов, которые будут скопированы после удаления элементов с указанным значением.  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- Порядок неудаляемых элементов не меняется.  
+ The order of the elements not removed remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство и максимум ( `last`  -   `first`) назначений.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy.cpp  
@@ -5549,7 +5566,7 @@ int main() {
 ```  
   
 ##  <a name="remove_copy_if"></a>  remove_copy_if  
- Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы, соответствующие предикату, не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.  
+ Copies elements from a source range to a destination range, except that satisfying a predicate are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate>  
@@ -5557,36 +5574,36 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором удаляются элементы.  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором удаляются элементы.  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который удаляются элементы.  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `_Pred`  
- Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, указывающий на новую конечную позицию диапазона назначения, следующую за последним элементом копии оставшейся последовательности без элементов, удовлетворяющих предикату.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the remnant sequence free of the elements satisfying the predicate.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Диапазон назначения должен иметь достаточно места для хранения оставшихся элементов, которые будут скопированы после удаления элементов с указанным значением.  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- Порядок неудаляемых элементов не меняется.  
+ The order of the elements not removed remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство и в большинстве случаев ( `last`  -   `first`) назначений.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
- Сведения о действии этих функций см. в разделе [Checked Iterators](../standard-library/checked-iterators.md).  
+ For information on how these functions behave, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy_if.cpp  
@@ -5637,7 +5654,7 @@ int main() {
 ```  
   
 ##  <a name="remove_if"></a>  remove_if  
- Удаляет элементы, соответствующие предикату, из заданного диапазона без нарушения порядка остальных элементов и возвращает конец нового диапазона после удаления указанного значения.  
+ Eliminates elements that satisfy a predicate from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -5645,31 +5662,31 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в диапазоне, из которого удаляются элементы.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне, из которого удаляются элементы.  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being removed.  
   
  `_Pred`  
- Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, обращающийся к новой конечной позиции измененного диапазона сразу за последним элементом оставшейся последовательности без указанного значения.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Порядок неудаляемых элементов не меняется.  
+ The order of the elements not removed remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality.  
   
- Класс list содержит более эффективную версию функции-члена remove, которая удаляет ссылки для указателей.  
+ List has a more efficient member function version of remove which relinks pointers.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_if.cpp  
@@ -5720,36 +5737,36 @@ int main( ) {
 ```  
   
 ##  <a name="replace"></a>  replace  
- Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному значению.  
+ Examines each element in a range and replaces it if it matches a specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
 void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, const Type& _NewVal);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_OldVal`  
- Старое значение заменяемых элементов.  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- Новое значение, присваиваемое элементам со старым значением.  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Порядок незаменяемых элементов не меняется.  
+ The order of the elements not replaced remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство и максимум ( `last`  -   `first`) присвоений новых значений.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace.cpp  
@@ -5788,7 +5805,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy"></a>  replace_copy  
- Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному значению, одновременно копируя результат в новый диапазон назначения.  
+ Examines each element in a source range and replaces it if it matches a specified value while copying the result into a new destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class Type>  
@@ -5801,35 +5818,35 @@ int main( ) {
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- Выходной итератор, указывающий на первый элемент в диапазоне назначения, в который копируется измененная последовательность элементов.  
+ An output iterator pointing to the first element in the destination range to where the altered sequence of elements is being copied.  
   
  `_OldVal`  
- Старое значение заменяемых элементов.  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- Новое значение, присваиваемое элементам со старым значением.  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, в который копируется измененная последовательность элементов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>Примечания  
- Исходный и конечный диапазоны, на которые указывают ссылки, не должны перекрываться и должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- Порядок незаменяемых элементов не меняется.  
+ The order of the elements not replaced remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство и в большинстве случаев ( `last`  -   `first`) присвоений новых значений.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy.cpp  
@@ -5887,7 +5904,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy_if"></a>  replace_copy_if  
- Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному предикату, одновременно копируя результат в новый диапазон назначения.  
+ Examines each element in a source range and replaces it if it satisfies a specified predicate while copying the result into a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate, class Type>  
@@ -5900,35 +5917,35 @@ OutputIterator replace_copy_if(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который копируются элементы.  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
  `_Pred`  
- Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- Новое значение, присваиваемое элементам, старые значения которых удовлетворяют предикату.  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, в который копируется измененная последовательность элементов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>Примечания  
- Исходный и конечный диапазоны, на которые указывают ссылки, не должны перекрываться и должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- Порядок незаменяемых элементов не меняется.  
+ The order of the elements not replaced remains stable.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное; Нет ( `last`  -   `first`) сравнения на равенство и максимум ( `last`  -   `first`) присвоений новых значений.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy_if.cpp  
@@ -5993,7 +6010,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_if"></a>  replace_if  
- Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному предикату.  
+ Examines each element in a range and replaces it if it satisfies a specified predicate.  
   
 ```  
 template<class ForwardIterator, class Predicate, class Type>  
@@ -6001,31 +6018,31 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.  
+ An iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_Pred`  
- Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- Новое значение, присваиваемое элементам, старые значения которых удовлетворяют предикату.  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Порядок незаменяемых элементов не меняется.  
+ The order of the elements not replaced remains stable.  
   
- Алгоритм `replace_if` представляет собой обобщение алгоритма **replace** и позволяет указывать любой предикат вместо равенства указанной константе.  
+ The algorithm `replace_if` is a generalization of the algorithm **replace**, allowing any predicate to be specified, rather than equality to a specified constant value.  
   
- Оператор `operator==` , который используется для определения равенства между элементами, должен применить отношение эквивалентности между операндами.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- Отношение сложности линейное: существует ( `last`  -   `first`) сравнения на равенство и в большинстве случаев ( `last`  -   `first`) присвоений новых значений.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_if.cpp  
@@ -6070,7 +6087,7 @@ int main( ) {
 ```  
   
 ##  <a name="reverse"></a>  reverse  
- Изменяет порядок элементов в диапазоне на обратный.  
+ Reverses the order of the elements within a range.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -6078,17 +6095,17 @@ template<class BidirectionalIterator>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор, указывающий на позицию первого элемента в диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position of the first element in the range within which the elements are being permuted.  
   
  `last`  
- Двунаправленный итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position one past the final element in the range within which the elements are being permuted.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse.cpp  
@@ -6131,7 +6148,7 @@ The modified vector v1 with values reversed is:
 ```  
   
 ##  <a name="reverse_copy"></a>  reverse_copy  
- Изменяет порядок элементов в исходном диапазоне на обратный, одновременно копируя их в диапазон назначения  
+ Reverses the order of the elements within a source range while copying them into a destination range  
   
 ```  
 template<class BidirectionalIterator, class OutputIterator>  
@@ -6142,23 +6159,23 @@ OutputIterator reverse_copy(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор, указывающий на позицию первого элемента в исходном диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position of the first element in the source range within which the elements are being permuted.  
   
  `last`  
- Двунаправленный итератор, указывающий на позицию, следующую за последним элементом в исходном диапазоне, в котором переставляются элементы.  
+ A bidirectional iterator pointing to the position one past the final element in the source range within which the elements are being permuted.  
   
  `result`  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который копируются элементы.  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, в который копируется измененная последовательность элементов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>Примечания  
- Исходный и конечный диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse_copy.cpp  
@@ -6199,7 +6216,7 @@ int main( ) {
 ```  
   
 ##  <a name="rotate"></a>  rotate  
- Меняет местами элементы в двух соседних диапазонах.  
+ Exchanges the elements in two adjacent ranges.  
   
 ```  
 template<class ForwardIterator>  
@@ -6207,22 +6224,22 @@ template<class ForwardIterator>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в диапазоне для изменения места.  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- Прямой итератор, определяющий границу в диапазоне и указывающий на позицию первого элемента во второй части диапазона, элементы которого должны поменяться местами с элементами в первой части диапазона.  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
 `Last`  
- Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне для изменения места.  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
-### <a name="remarks"></a>Примечания  
- Указанные диапазоны должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Сложности линейное; существует не более ( `last`  -   `first`) меняет местами.  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate.cpp  
@@ -6298,7 +6315,7 @@ After the rotation of a single deque element to the back,
 ```  
   
 ##  <a name="rotate_copy"></a>  rotate_copy  
- Меняет местами элементы в двух соседних диапазонах в пределах исходного диапазона и копирует результат в диапазон назначения.  
+ Exchanges the elements in two adjacent ranges within a source range and copies the result to a destination range.  
   
 ```  
 template<class ForwardIterator, class OutputIterator>  
@@ -6310,28 +6327,28 @@ OutputIterator rotate_copy(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в диапазоне для изменения места.  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- Прямой итератор, определяющий границу в диапазоне и указывающий на позицию первого элемента во второй части диапазона, элементы которого должны поменяться местами с элементами в первой части диапазона.  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
  _ `Last`  
- Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне для изменения места.  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
  `result`  
- Итератор вывода указывает на позицию первого элемента в диапазоне назначения.  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range.  
   
-### <a name="remarks"></a>Примечания  
- Указанные диапазоны должны быть допустимыми. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Сложности линейное; существует не более ( `last`  -   `first`) меняет местами.  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate_copy.cpp  
@@ -6391,7 +6408,7 @@ int main() {
 ```  
   
 ##  <a name="search"></a>  search  
- Выполняет поиск первого вхождения последовательности в целевой диапазон, элементы которого равны указанным в заданной последовательности элементов или элементы которого равноценны в смысле, заданным бинарным предикатом, элементам в заданной последовательности.  
+ Searches for the first occurrence of a sequence within a target range whose elements are equal to those in a given sequence of elements or whose elements are equivalent in a sense specified by a binary predicate to the elements in the given sequence.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -6411,33 +6428,33 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для сравнения.  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для сравнения.  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, адресующий положение первого элемента первой последовательности, совпадающей с определенной последовательностью или эквивалентной согласно условию, заданному двоичным предикатом.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>Примечания  
- `operator==`, используемый для определения совпадения между элементом и указанным значением, должен применять отношение эквивалентности между своими операндами.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- Средняя сложность — линейная относительно размера диапазона для поиска; и в наихудшем случае сложность также линейная относительно размера искомой последовательности.  
+ Average complexity is linear with respect to the size of the searched range, and worst case complexity is also linear with respect to the size of the sequence being searched for.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search.cpp  
@@ -6536,7 +6553,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="search_n"></a>  search_n  
- Выполняет поиск первой подпоследовательности в диапазоне заданного числа элементов, имеющих определенное значение или связанных с этим значением отношением, указанным бинарным предикатом.  
+ Searches for the first subsequence in a range that of a specified number of elements having a particular value or a relation to that value as specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class Diff2, class Type>  
@@ -6556,33 +6573,33 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `count`  
- Размер искомой последовательности.  
+ The size of the subsequence being searched for.  
   
  `val`  
- Значение элементов в искомой последовательности.  
+ The value of the elements in the sequence being searched for.  
   
  `comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, адресующий положение первого элемента первой последовательности, совпадающей с определенной последовательностью или эквивалентной согласно условию, заданному двоичным предикатом.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>Примечания  
- `operator==`, используемый для определения совпадения между элементом и указанным значением, должен применять отношение эквивалентности между своими операндами.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Сложность линейная по отношению к размеру диапазона поиска.  
+ Complexity is linear with respect to the size of the searched.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search_n.cpp  
@@ -6666,7 +6683,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 ```  
   
 ##  <a name="set_difference"></a>  set_difference  
- Объединяет все элементы, принадлежащие одному отсортированному исходному диапазону, но не второму отсортированному исходному диапазону, в один отсортированный диапазон назначения, где критерий упорядочивания может быть указан бинарным предикатом.  
+ Unites all of the elements that belong to one sorted source range, but not to a second sorted source range, into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6688,42 +6705,42 @@ OutputIterator set_difference(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first1`  
- Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last1`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `first2`  
- Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last2`  
- Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `result`  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в котором два исходных диапазона следует объединить в один упорядоченный диапазон, представляющий разность двух исходных диапазонов.  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the difference of the two source ranges.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в упорядоченном диапазоне назначения, представляющем разность двух исходных диапазонов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the difference of the two source ranges.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченные исходные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Диапазон назначения не должен перекрывать исходные диапазоны и должен быть достаточно большим, чтобы содержать первый исходный диапазон.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the first source range.  
   
- Каждый упорядоченный исходный диапазон должны быть упорядочен в качестве предусловия для применения алгоритма `set_difference` в соответствии с теми же правилами, чтобы использоваться алгоритмом для упорядочения объединенных диапазонов.  
+ The sorted source ranges must each be arranged as a precondition to the application of the `set_difference` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Операция стабильна, так как в диапазоне назначения сохраняется относительный порядок элементов в каждом диапазоне. Алгоритм merge не изменяет исходные диапазоны.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы и в первом исходном диапазоне их больше, чем во втором, диапазон назначения будет содержать число, на которое вхождения этих элементов в первом исходном диапазоне превышают вхождения этих элементов во втором исходном диапазоне.  
+ The value types of the input iterators need be less-than-comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element such that there are more in the first source range than in the second, then the destination range will contain the number by which the occurrences of those elements in the first source range exceed the occurrences of those elements in the second source range.  
   
- Сложности линейное; существует не более 2 \* (( *last1 - first1*)-( *last2 - first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_diff.cpp  
@@ -6843,7 +6860,7 @@ int main( )
 ```  
   
 ##  <a name="set_intersection"></a>  set_intersection  
- Объединяет все элементы, входящие в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
+ Unites all of the elements that belong to both sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6865,42 +6882,42 @@ OutputIterator set_intersection(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last1`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
   `first2`  
- Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last2`  
- Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
- **_** *Результат*  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в котором два исходных диапазона следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the intersection of the two source ranges.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в упорядоченном диапазоне назначения, представляющем пересечение двух исходных диапазонов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the intersection of the two source ranges.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченные исходные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Диапазон назначения не должен перекрывать исходные диапазоны и должен быть достаточно большим, чтобы содержать диапазон назначения.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Каждый упорядоченный исходный диапазон должен быть упорядочен в качестве предусловия для применения алгоритма merge в соответствии с тем же правилами, чтобы использоваться алгоритмом для упорядочения объединенных диапазонов.  
+ The sorted source ranges must each be arranged as a precondition to the application of the merge algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Операция стабильна, так как в диапазоне назначения сохраняется относительный порядок элементов в каждом диапазоне. Алгоритм не изменяет исходные диапазоны.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm.  
   
- В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы, диапазон назначения будет содержать максимальное количество элементов, входящих в оба исходных диапазона.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- Сложности линейное; существует не более 2 \* (( *last1 - first1*) + ( *last2 - first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) + ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_intersection.cpp  
@@ -7014,7 +7031,7 @@ int main() {
 ```  
   
 ##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
- Объединяет все элементы, входящие в один, но не в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
+ Unites all of the elements that belong to one, but not both, of the sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7036,42 +7053,42 @@ OutputIterator set_symmetric_difference(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last1`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
   `first2`  
- Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last2`  
- Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
- **_** *Результат*  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в котором два исходных диапазона следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the symmetric difference of the two source ranges.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в упорядоченном диапазоне назначения, представляющем симметрическую разность двух исходных диапазонов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the symmetric difference of the two source ranges.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченные исходные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Диапазон назначения не должен перекрывать исходные диапазоны и должен быть достаточно большим, чтобы содержать диапазон назначения.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Каждый упорядоченный исходный диапазон должен быть упорядочен в качестве предусловия для применения алгоритма **merge** в соответствии с теми же правилами, что использовались алгоритмом для упорядочения объединенных диапазонов.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Операция стабильна, так как в диапазоне назначения сохраняется относительный порядок элементов в каждом диапазоне. Алгоритм merge не изменяет исходные диапазоны.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы, диапазон назначения будет содержать абсолютное значение числа, на которое вхождения этих элементов в одном исходном диапазоне превышают вхождения этих элементов во втором исходном диапазоне.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the absolute value of the number by which the occurrences of those elements in the one of the source ranges exceeds the occurrences of those elements in the second source range.  
   
- Сложности линейное; существует не более 2 \* ((*last1 - first1*)-(*last2 - first2*)) – 1 сравнений для непустых исходных диапазонов.  
+ The complexity of the algorithm is linear with at most 2 \* ( (*last1 - first1*) - (*last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_sym_diff.cpp  
@@ -7191,7 +7208,7 @@ int main( )
 ```  
   
 ##  <a name="set_union"></a>  set_union  
- Объединяет все элементы, входящие в хотя бы один из двух исходных упорядоченных диапазонов, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.  
+ Unites all of the elements that belong to at least one of two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7212,42 +7229,42 @@ OutputIterator set_union(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last1`  
- Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
   `first2`  
- Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last2`  
- Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
- **_** *Результат*  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в котором два исходных диапазона следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the union of the two source ranges.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в упорядоченном диапазоне назначения, представляющем объединение двух исходных диапазонов.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the union of the two source ranges.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченные исходные диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать отмену ссылок. В каждой последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Диапазон назначения не должен перекрывать исходные диапазоны и должен быть достаточно большим, чтобы содержать диапазон назначения.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Каждый упорядоченный исходный диапазон должен быть упорядочен в качестве предусловия для применения алгоритма **merge** в соответствии с теми же правилами, что использовались алгоритмом для упорядочения объединенных диапазонов.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Операция стабильна, так как в диапазоне назначения сохраняется относительный порядок элементов в каждом диапазоне. Алгоритм **merge**не изменяет исходные диапазоны.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- В целях упорядочения типы значений входных итераторов должны подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. Если эквивалентные элементы имеются в обоих исходных диапазонах, в диапазоне назначения элементы из первого диапазона будут предшествовать элементам из второго исходного диапазона. Если исходные диапазоны содержат повторяющиеся элементы, диапазон назначения будет содержать максимальное количество элементов, входящих в оба исходных диапазона.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- Сложности линейное; существует не более 2 \* (( *last1 - first1*)-( *last2 - first2*)) – 1 сравнений.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_union.cpp  
@@ -7367,7 +7384,7 @@ int main( )
 ```  
   
 ##  <a name="shuffle"></a>  std::shuffle  
- Перемешивает (изменяет порядок) элементы в указанном диапазоне, используя генератор случайных чисел.  
+ Shuffles (rearranges) elements for a given range by using a random number generator.  
   
 ```  
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>  
@@ -7376,21 +7393,21 @@ void shuffle(RandomAccessIterator first,
     UniformRandomNumberGenerator&& gen);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Итератор первого элемента в диапазоне, который необходимо перемешать (инклюзивно). Должен соответствовать требованиям `RandomAccessIterator` и `ValueSwappable`.  
+ An iterator to the first element in the range to be shuffled, inclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `last`  
- Итератор последнего элемента в диапазоне, который необходимо перемешать (эксклюзивно). Должен соответствовать требованиям `RandomAccessIterator` и `ValueSwappable`.  
+ An iterator to the last element in the range to be shuffled, exclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `gen`  
- Генератор случайных чисел, который будет использовать функция `shuffle()`. Должен соответствовать требованиям `UniformRandomNumberGenerator`.  
+ The random number generator that the `shuffle()` function will use for the operation. Must meet the requirements of a `UniformRandomNumberGenerator`.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения и пример кода, использующего `shuffle()`, см. в разделе [\<random>](../standard-library/random.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, and a code sample that uses `shuffle()`, see [\<random>](../standard-library/random.md).  
   
 ##  <a name="sort"></a>  sort  
- Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом.  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7406,24 +7423,24 @@ template<class RandomAccessIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Итератор произвольного доступа, обращающийся к позиции первого элемента в сортируемом диапазоне.  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции после последнего элемента в сортируемом диапазоне.  
+ A random-access iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Этот бинарный предикат принимает два аргумента и возвращает значение `true`, если эти два аргумента упорядочены, или значение `false` в противном случае. Эта функция средства сравнения должна задать строгое слабое упорядочение пар элементов последовательности. Дополнительные сведения см. в разделе [Алгоритмы](../standard-library/algorithms.md).  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. This binary predicate takes two arguments and returns `true` if the two arguments are in order and `false` otherwise. This comparator function must impose a strict weak ordering on pairs of elements from the sequence. For more information, see [Algorithms](../standard-library/algorithms.md).  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны. Алгоритм `sort` нестабилен и поэтому не гарантирует, что относительный порядок эквивалентных элементов будет сохранен. Алгоритм `stable_sort` сохраняет этот исходный порядок.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The `sort` algorithm is not stable and so does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- Среднее сложности сортировки — *O*( *N* журнала *N*), где *N* =  *фамилия - имя*.  
+ The average of a sort complexity is  *O*( *N* log  *N*), where  *N* =  *last - first*.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort.cpp  
@@ -7492,7 +7509,7 @@ Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```  
   
 ##  <a name="sort_heap"></a>  sort_heap  
- Преобразует кучу в упорядоченный диапазон.  
+ Converts a heap into a sorted range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7507,34 +7524,34 @@ template<class RandomAccessIterator, class Predicate>
       Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Итератор произвольного доступа, обращающийся к позиции первого элемента в целевой куче.  
+ A random-access iterator addressing the position of the first element in the target heap.  
   
  `last`  
- Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в целевой куче.  
+ A random-access iterator addressing the position one past the final element in the target heap.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Кучи имеют два следующих свойства.  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   Первый элемент — всегда наибольший.  
+-   The first element is always the largest.  
   
--   Элементы могут добавляться и удаляться в логарифмическое время.  
+-   Elements may be added or removed in logarithmic time.  
   
- После применения этого алгоритма диапазон, к которому он был применен, больше не является кучей.  
+ After the application if this algorithm, the range it was applied to is no longer a heap.  
   
- Это не устойчивая сортировка, так как относительный порядок эквивалентных элементов не обязательно сохраняется.  
+ This is not a stable sort because the relative order of equivalent elements is not necessarily preserved.  
   
- Кучи — идеальный способ реализации очередей с приоритетами, и они используются в [классе priority_queue](../standard-library/priority-queue-class.md) адаптеров контейнеров библиотеки стандартных программ C++.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Сложность не более *N* журнала *N*, где *N* = ( *фамилия - имя*).  
+ The complexity is at most  *N* log  *N*, where  *N* = ( *last - first*).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort_heap.cpp  
@@ -7585,7 +7602,7 @@ int main() {
 ```  
   
 ##  <a name="stable_partition"></a>  stable_partition  
- Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют, с сохранением относительного порядка равноценных элементов.  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it, preserving the relative order of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -7596,25 +7613,25 @@ BidirectionalIterator stable_partition(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор адресует позицию первого элемента в разделяемом диапазоне.  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- Двунаправленный итератор, указывающий позицию, следующую за последним элементом в разделяемом диапазоне.  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `_Pred`  
- Определенный пользователем объект функции предиката, задающий условие, которое должно удовлетворяться, чтобы элемент был классифицирован. Предикат принимает один аргумент и возвращает значение **true** или **false**.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор указывает позицию первого элемента в диапазоне, не соответствующего условию предиката.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Элементы *a* и *b* эквивалентны, но не обязательно равны, если и *Pr* (*a*, *b*) имеет значение false, и *Pr* (*b*, *a*) имеет значение false, где *Pr* — это предикат, заданный в параметре. Алгоритм **stable_ partition** стабилен и гарантирует, что относительный порядок эквивалентных элементов будет сохранен. Алгоритм **partition** не обязательно сохраняет этот исходный порядок.  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **stable_ partition** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved. The algorithm **partition** does not necessarily preserve this original ordering.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_partition.cpp  
@@ -7660,7 +7677,7 @@ int main( ) {
 ```  
   
 ##  <a name="stable_sort"></a>  stable_sort  
- Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом, и сохраняет относительный порядок равноценных элементов.  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate and preserves the relative ordering of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -7674,24 +7691,24 @@ void stable_sort(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Двунаправленный итератор указывает позицию первого элемента в диапазоне для сортировки.  
+ A bidirectional iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- Двунаправленный итератор указывает позицию, следующую за последним элементом в диапазоне для сортировки.  
+ A bidirectional iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Примечания  
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Если ни один из элементов не меньше другого, то эти элементы эквивалентны, но не обязательно равны. Алгоритм **sort** стабилен и гарантирует, что относительный порядок эквивалентных элементов будет сохранен.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved.  
   
- Во время выполнения сложности `stable_sort` зависит от объема доступной памяти, лучшим вариантом (при наличии достаточного объема памяти), но *O*( *N* журнала *N*) и худшем случае *O*( *N* (журнала *N* ) 2), где *N* =  *фамилия - имя.* Как правило, алгоритм **sort** работает значительно быстрее, чем `stable_sort`.  
+ The run-time complexity of `stable_sort` depends on the amount of memory available, but the best case (given sufficient memory) is  *O*( *N* log  *N*) and the worst case is  *O*(  *N* ( log  *N* )2 ), where  *N* =  *last - First.* Usually, the **sort** algorithm is significantly faster than `stable_sort`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_sort.cpp  
@@ -7759,7 +7776,7 @@ Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```  
   
 ##  <a name="swap"></a>  swap  
- Первое переопределение меняет местами значения двух объектов. Второе переопределение меняет местами значения двух массивов объектов.  
+ The first override exchanges the values of two objects. The second override exchanges the values between two arrays of objects.  
   
 ```  
 template<class Type>  
@@ -7773,17 +7790,17 @@ template<class Type, size_t N>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Для первого переопределения — первый объект для обмена его содержимого. Для второго переопределения — первый массив для обмена его содержимого.  
+ For the first override, the first object to have its contents exchanged. For the second override, the first array of objects to have its contents exchanged.  
   
  `right`  
- Для первого переопределения — второй объект для обмена его содержимого. Для второго переопределения — второй массив для обмена его содержимого.  
+ For the first override, the second object to have its contents exchanged. For the second override, the second array of objects to have its contents exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Первая перегрузка предназначена для работы с отдельными объектами. Вторая перегрузка меняет местами содержимое объектов в двух массивах.  
+### <a name="remarks"></a>Remarks  
+ The first overload is designed to operate on individual objects. The second overload swaps the contents of objects between two arrays.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap.cpp  
@@ -7840,7 +7857,7 @@ Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```  
   
 ##  <a name="swap_ranges"></a>  swap_ranges  
- Меняет местами элементы одного диапазона с элементами другого диапазона такого же размера.  
+ Exchanges the elements of one range with the elements of another, equal sized range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -7851,25 +7868,25 @@ ForwardIterator2 swap_ranges(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Прямой итератор, указывающий первую позицию первого диапазона элементов для обмена.  
+ A forward iterator pointing to the first position of the first range whose elements are to be exchanged.  
   
  `last1`  
- Прямой итератор, указывающий позицию, следующую за последней позицией первого диапазона элементов для обмена.  
+ A forward iterator pointing to one past the final position of the first range whose elements are to be exchanged.  
   
   `first2`  
- Прямой итератор, указывающий первую позицию второго диапазона элементов для обмена.  
+ A forward iterator pointing to the first position of the second range whose elements are to be exchanged.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, указывающий позицию, следующую за последней позицией второго диапазона элементов для обмена.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator pointing to one past the final position of the second range whose elements are to be exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения. Второй диапазон должен достигать размеров первого диапазона.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation. The second range has to be as large as the first range.  
   
- Отношение сложности линейное; существует `last1`  -   `first1` выполнить операции замены. Если переставляются элементы из контейнеров одного и того же типа, то должна использоваться функция-член `swap` из этого контейнера, так как функция-член обычно имеет постоянную сложность.  
+ The complexity is linear with `last1` -  `first1` swaps performed. If elements from containers of the same type are being swapped, them the `swap` member function from that container should be used, because the member function typically has constant complexity.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap_ranges.cpp  
@@ -7931,7 +7948,7 @@ After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```  
   
 ##  <a name="transform"></a>  transform  
- Применяет заданный объект функции к каждому элементу в исходном диапазоне или к паре элементов из двух исходных диапазонов и копирует возвращаемые значения объекта функции в диапазон назначения.  
+ Applies a specified function object to each element in a source range or to a pair of elements from two source ranges and copies the return values of the function object into a destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class UnaryFunction>  
@@ -7951,33 +7968,33 @@ OutputIterator transform(
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Итератор ввода указывает на позицию первого элемента в первом исходном обрабатываемом диапазоне.  
+ An input iterator addressing the position of the first element in the first source range to be operated on.  
   
  `last1`  
- Итератор ввода указывает на позицию, следующую за последним элементом в первом исходном обрабатываемом диапазоне.  
+ An input iterator addressing the position one past the final element in the first source range operated on.  
   
   `first2`  
- Итератор ввода указывает на позицию первого элемента во втором исходном обрабатываемом диапазоне.  
+ An input iterator addressing the position of the first element in the second source range to be operated on.  
   
  `result`  
- Итератор вывода указывает на позицию первого элемента в диапазоне назначения.  
+ An output iterator addressing the position of the first element in the destination range.  
   
  `_Func`  
- Определенный пользователем объект унарной функции, используемый в первой версии алгоритма, который применяется к каждому элементу в первом исходном диапазоне, или определенный пользователем объект бинарной функции, используемый во второй версии алгоритма, который применяется попарно в прямом порядке к двум исходным диапазонам.  
+ User-defined unary function object used in the first version of the algorithm that is applied to each element in the first source range or A user-defined (UD) binary function object used in the second version of the algorithm that is applied pairwise, in a forward order, to the two source ranges.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор вывода указывает на позицию после последнего элемента в диапазоне назначения, который получает выходные элементы, преобразованные объектом функции.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the output elements transformed by the function object.  
   
-### <a name="remarks"></a>Примечания  
- Диапазоны, на которые указывают ссылки, должны быть допустимыми; все указатели должны поддерживать сброс ссылок; в каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения. Диапазон назначения должен быть достаточно большим, чтобы содержать преобразованный исходный диапазон.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation. The destination range must be large enough to contain the transformed source range.  
   
- Если `result` задана равной `first1` в первой версии алгоритма, затем исходный и конечный диапазоны будут совпадать, и последовательность будет изменен на месте. Но `result` не могут использоваться и положение в диапазоне [`first1` + 1, `last1`).  
+ If `result` is set equal to  `first1` in the first version of the algorithm, then the source and destination ranges will be the same and the sequence will be modified in place. But the `result` may not address a position within the range [`first1` + 1, `last1`).  
   
- Сложности линейное; существует не более (`last1` -  `first1`) сравнений.  
+ The complexity is linear with at most (`last1` -  `first1`) comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_transform.cpp  
@@ -8065,7 +8082,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 ```  
   
 ##  <a name="unique"></a>  unique  
- Удаляет повторяющиеся элементы, расположенные в указанном диапазоне рядом друг с другом.  
+ Removes duplicate elements that are adjacent to each other in a specified range.  
   
 ```  
 template<class ForwardIterator>  
@@ -8081,33 +8098,33 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий позицию первого элемента в диапазоне, который должен проверяться для поиска и удаления дубликатов.  
+ A forward iterator addressing the position of the first element in the range to be scanned for duplicate removal.  
   
  `last`  
- Прямой итератор, указывающий позицию, следующую за последним элементом в диапазоне, который должен проверяться для поиска и удаления дубликатов.  
+ A forward iterator addressing the position one past the final element in the range to be scanned for duplicate removal.  
   
  `comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор в новый конец измененной последовательности, которая не содержит последовательных дубликатов, указывающий позицию, следующую за последним неудаленным элементом.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the new end of the modified sequence that contains no consecutive duplicates, addressing the position one past the last element not removed.  
   
-### <a name="remarks"></a>Примечания  
- Обе формы алгоритма удаляют второй дубликат последовательной пары равных элементов.  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- Действие алгоритма стабильно, поэтому относительный порядок неудаленных элементов не изменяется.  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один. Алгоритм **unique** не изменяет число элементов в последовательности, и ссылки на элементы за пределами измененной последовательности удаляются, но эти элементы не указываются.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation. he number of elements in the sequence is not changed by the algorithm **unique** and the elements beyond the end of the modified sequence are dereferenceable but not specified.  
   
- Отношение сложности линейное; требуется ( `last`  -   `first`) – 1 сравнений.  
+ The complexity is linear, requiring ( `last` -  `first`) - 1 comparisons.  
   
- В классе list имеется более эффективная функция-член unique, которая может работать лучше.  
+ List provides a more efficient member function "unique", which may perform better.  
   
- Эти алгоритмы не могут использоваться в ассоциативном контейнере.  
+ These algorithms cannot be used on an associative container.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique.cpp  
@@ -8195,7 +8212,7 @@ Removing adjacent elements satisfying the binary
 ```  
   
 ##  <a name="unique_copy"></a>  unique_copy  
- Копирует элементы из исходного диапазона в диапазон назначения за исключением повторяющихся элементов, расположенных рядом друг с другом.  
+ Copies elements from a source range into a destination range except for the duplicate elements that are adjacent to each other.  
   
 ```  
  template<class InputIterator, class OutputIterator>  
@@ -8211,32 +8228,32 @@ OutputIterator unique_copy( InputIterator first,
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   `first`  
- Прямой итератор, указывающий на позицию первого элемента в исходном диапазоне для копирования.  
+ A forward iterator addressing the position of the first element in the source range to be copied.  
   
  `last`  
- Прямой итератор, указывающий на позицию, следующую за последним элементом в исходном диапазоне для копирования.  
+ A forward iterator addressing the position one past the final element in the source range to be copied.  
   
  `result`  
- Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, получающем копию с последовательными удаленными дубликатами.  
+ An output iterator addressing the position of the first element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
  `comp`  
- Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выходной итератор, указывающий на позицию, следующую за последним элементом в диапазоне назначения, получающем копию с последовательными удаленными дубликатами.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
-### <a name="remarks"></a>Примечания  
- Обе формы алгоритма удаляют второй дубликат последовательной пары равных элементов.  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- Действие алгоритма стабильно, поэтому относительный порядок неудаленных элементов не изменяется.  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- Диапазоны, на которые указывают ссылки, должны быть допустимыми. Все указатели должны поддерживать сброс ссылок. В каждой последовательности должна быть возможность достижения последнего положения с первого путем приращения.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within a sequence the last position is reachable from the first by incrementation.  
   
- Отношение сложности линейное; требуется ( `last`  -   `first`) сравнений.  
+ The complexity is linear, requiring ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique_copy.cpp  
@@ -8309,7 +8326,7 @@ int main() {
 ```  
   
 ##  <a name="upper_bound"></a>  upper_bound  
- Находит позицию первого элемента в упорядоченном диапазоне, который имеет значение больше указанного значения, где критерий упорядочивания может быть задан бинарным предикатом.  
+ Finds the position of the first element in an ordered range that has a value that is greater than a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -8327,34 +8344,34 @@ template<class ForwardIterator, class Type, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Позиция первого элемента в диапазоне для поиска.  
+ The position of the first element in the range to be searched.  
   
  `last`  
- Позиция, следующая за последним элементом в диапазоне для поиска.  
+ The position one past the final element in the range to be searched.  
   
  `value`  
- Значение в упорядоченном диапазоне, которое должно превышаться значением элемента, указанного возвращенным итератором.  
+ The value in the ordered range that needs to be exceeded by the value of the element addressed by the iterator returned.  
   
  `comp`  
- Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямой итератор, указывающий позицию первого элемента со значением, превышающим указанное значение.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the position of the first element that has a value greater than a specified value.  
   
-### <a name="remarks"></a>Примечания  
- Упорядоченный исходный диапазон, на который указывает ссылка, должен быть допустим. Все итераторы должны поддерживать отмену ссылок. В последовательности должна быть возможность достижения последней позиции с первой путем приращения.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- Предварительным условием для использования `upper_bound` является упорядоченный диапазон, критерий упорядочения которого совпадает с заданным двоичным предикатом.  
+ A sorted range is a precondition of the use of `upper_bound` and where the ordering criterion is the same as specified by the binary predicate.  
   
- Диапазон не изменяется алгоритмом `upper_bound`.  
+ The range is not modified by `upper_bound`.  
   
- В целях упорядочения типы значений прямых итераторов должны подлежать сравнению "меньше чем", чтобы при наличии двух элементов можно было определить, что они равны (т. е. ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов.  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- Отношение сложности алгоритма логарифмическое для итераторов произвольного доступа и линейное в ином случае, с числом шагов, пропорциональным (`last - first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_upper_bound.cpp  
@@ -8444,5 +8461,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>См. также   
+## <a name="see-also"></a>See Also   
  [\<algorithm>](../standard-library/algorithm.md)

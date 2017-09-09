@@ -1,16 +1,15 @@
 ---
-title: "Класс map | Документы Майкрософт"
+title: map Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - map/std::map
-- map
 - map/std::map::allocator_type
 - map/std::map::const_iterator
 - map/std::map::const_pointer
@@ -55,7 +54,48 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- map class
+- std::map [C++]
+- std::map [C++], allocator_type
+- std::map [C++], const_iterator
+- std::map [C++], const_pointer
+- std::map [C++], const_reference
+- std::map [C++], const_reverse_iterator
+- std::map [C++], difference_type
+- std::map [C++], iterator
+- std::map [C++], key_compare
+- std::map [C++], key_type
+- std::map [C++], mapped_type
+- std::map [C++], pointer
+- std::map [C++], reference
+- std::map [C++], reverse_iterator
+- std::map [C++], size_type
+- std::map [C++], value_type
+- std::map [C++], at
+- std::map [C++], begin
+- std::map [C++], cbegin
+- std::map [C++], cend
+- std::map [C++], clear
+- std::map [C++], count
+- std::map [C++], crbegin
+- std::map [C++], crend
+- std::map [C++], emplace
+- std::map [C++], emplace_hint
+- std::map [C++], empty
+- std::map [C++], end
+- std::map [C++], equal_range
+- std::map [C++], erase
+- std::map [C++], find
+- std::map [C++], get_allocator
+- std::map [C++], insert
+- std::map [C++], key_comp
+- std::map [C++], lower_bound
+- std::map [C++], max_size
+- std::map [C++], rbegin
+- std::map [C++], rend
+- std::map [C++], size
+- std::map [C++], swap
+- std::map [C++], upper_bound
+- std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 caps.latest.revision: 27
 author: corob-msft
@@ -75,19 +115,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a4fa9aa24f2e6cdf9be4127f38637f57c08e588e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1e239176d8c9c52269720a0548438f2417d0aa1b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="map-class"></a>Класс map
-Используется для хранения и извлечения данных из коллекции, в которой каждый элемент является парой, обладающей одновременно значением данных и ключом сортировки. Значение ключа уникально и применяется для автоматической сортировки данных.  
+# <a name="map-class"></a>map Class
+Used for the storage and retrieval of data from a collection in which each element is a pair that has both a data value and a sort key. The value of the key is unique and is used to automatically sort the data.  
   
- Значение элемента в сопоставлении можно изменить напрямую. Значение ключа является константой, и его нельзя изменить. Вместо этого значения ключей, связанные со старыми элементами, необходимо удалить и вставить новые значения ключей для новых элементов.  
+ The value of an element in a map can be changed directly. The key value is a constant and cannot be changed. Instead, key values associated with old elements must be deleted, and new key values must be inserted for new elements.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,   
@@ -97,132 +137,132 @@ template <class Key,
 class map;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Key`  
- Тип данных ключа для сохранения в сопоставлении.  
+ The key data type to be stored in the map.  
   
  `Type`  
- Тип данных элемента для сохранения в сопоставлении.  
+ The element data type to be stored in the map.  
   
  `Traits`  
- Тип, предоставляющий объект функции, который может сравнить два значения элемента как ключи сортировки, чтобы определить их относительный порядок в сопоставлении. Этот аргумент является необязательным, и в качестве значения по умолчанию используется бинарный предикат `less<Key>`.  
+ The type that provides a function object that can compare two element values as sort keys to determine their relative order in the map. This argument is optional and the binary predicate `less<Key>` is the default value.  
   
- В C++ 14 вы можете включить разнородный поиск, указав предикат std::less<>, не имеющий параметров типа. Более подробные сведения см. в разделе [Разнородный поиск в ассоциативных контейнерах](../standard-library/stl-containers.md#sequence_containers)  
+ In C++14 you can enable heterogeneous lookup by specifying the std::less<> predicate that has no type parameters. For more information, see [Heterogeneous Lookup in Associative Containers](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для сопоставления. Этот аргумент является необязательным, и значением по умолчанию является `allocator<pair<const Key, Type> >`.  
+ The type that represents the stored allocator object that encapsulates details about the map's allocation and deallocation of memory. This argument is optional and the default value is `allocator<pair<const Key, Type> >`.  
   
-## <a name="remarks"></a>Примечания  
- Класс map в стандартной библиотеке С++ — это:  
+## <a name="remarks"></a>Remarks  
+ The C++ Standard Library map class is:  
   
--   Контейнер переменного размера, фактически извлекающий значения элементов на основе связанных значений ключей.  
+-   A container of variable size that efficiently retrieves element values based on associated key values.  
   
--   Реверсивный, поскольку он предоставляет двунаправленные итераторы для получения доступа к его элементам.  
+-   Reversible, because it provides bidirectional iterators to access its elements.  
   
--   Сортируется, поскольку его элементы упорядочены по значениям ключей в соответствии с заданной функцией сравнения.  
+-   Sorted, because its elements are ordered by key values according to a specified comparison function.  
   
--   Является уникальным, поскольку каждый его элемент должен обладать уникальным ключом.  
+-   Unique. because each of its elements must have a unique key.  
   
--   Является контейнером ассоциативной пары, поскольку его значения данных элементов отличаются от его значений ключей.  
+-   A pair-associative container, because its element data values are distinct from its key values.  
   
--   Класс шаблона, поскольку функции, которые он предоставляет, являются универсальными и не зависят от типа элемента или ключа. Типы данных, используемые для элементов и ключей, определяются как параметры в шаблоне класса вместе с функцией и распределителем сравнения.  
+-   A template class, because the functionality it provides is generic and independent of element or key type. The data types used for elements and keys are specified as parameters in the class template together with the comparison function and allocator.  
   
- Итератор, предоставляемый классом сопоставления, является двунаправленным итератором, но функции-члены класса [insert](#insert) и [map](#map) обладают версиями, принимающими в качестве параметров шаблона более слабый итератор ввода, чьи функциональные требования ниже, чем гарантированные классом двунаправленных итераторов. Различные концепции итераторов связаны уточнениями функциональности. Каждая концепция итератора обладает собственным набором требований, и совместимые с ней алгоритмы должны быть ограничены этими требованиями. Итератор ввода может быть разыменован для обращения к определенному объекту и инкрементирован следующему итератору в последовательности.  
+ The iterator provided by the map class is a bidirectional iterator, but the [insert](#insert) and [map](#map) class member functions have versions that take as template parameters a weaker input iterator, whose functionality requirements are fewer than those guaranteed by the class of bidirectional iterators. The different iterator concepts are related by refinements in their functionality. Each iterator concept has its own set of requirements, and the algorithms that work with it must be limited by those requirements. An input iterator may be dereferenced to refer to some object and may be incremented to the next iterator in the sequence.  
   
- Рекомендуется выбирать тип контейнера на основе типа поиска и вставки, который требуется приложению. Ассоциативные контейнеры оптимизированы для операций поиска, вставки и удаления. Функции-члены, которые явно поддерживают данные операторы, выполняют их в самом неблагоприятном случае, пропорционально логарифму числа элементов в контейнере. Вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие конкретно на удаленные элементы.  
+ We recommend that you base the choice of container type on the kind of searching and inserting that is required by the application. Associative containers are optimized for the operations of lookup, insertion, and removal. The member functions that explicitly support these operations perform them in a worst-case time that is proportional to the logarithm of the number of elements in the container. Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that specifically pointed to the removed elements.  
   
- Рекомендуется сделать сопоставление предпочтительным ассоциативным контейнером, где условия, ассоциирующие значения с ключами, удовлетворяют требованиям приложения. Модель для этого типа структуры представляет собой упорядоченный список уникальных ключевых слов, с которыми связаны значения строк, предоставляющие определения. Если для слова существует несколько правильных определений и ключ не является уникальным, предпочтительным контейнером будет множественное сопоставление. Если сохранен обычный список слов, подходящим контейнером будет набор. Если допускается многократное использование слов, допустимым вариантом будет множественный набор.  
+ We recommend that you make the map the associative container of choice when conditions that associate values with keys are satisfied by the application. A model for this kind of structure is an ordered list of uniquely occurring key words that have associated string values that provide definitions. If a word has more than one correct definition, so that key is not unique, then a multimap would be the container of choice. If just the list of words is being stored, then a set would be the appropriate container. If multiple occurrences of the words are allowed, then a multiset would be appropriate.  
   
- Сопоставление упорядочивает контролируемые им элементы путем вызова сохраненного объекта-функции типа [key_compare](#key_compare). Этот сохраненный объект является функцией сравнения, для доступа к которой нужно обратиться к методу [key_comp](#key_comp). Как правило, любые два заданных элемента сравниваются, чтобы определить, что один из них меньше другого или они равны. После сравнения всех элементов создается упорядоченная последовательность неэквивалентных элементов.  
+ The map orders the elements it controls by calling a stored function object of type [key_compare](#key_compare). This stored object is a comparison function that is accessed by calling the [key_comp](#key_comp) method. In general, any two given elements are compared to determine whether one is less than the other or whether they are equivalent. As all elements are compared, an ordered sequence of non-equivalent elements is created.  
   
 > [!NOTE]
->  Функция сравнения — это бинарный предикат, который вызывает строгое слабое упорядочение в стандартном математически смысле. Бинарный предикат                      f(x,y) является объектом-функцией с двумя объектами-аргументами                     x и                     y и возвращаемым значением `true` или `false`. Порядок, применяемый в наборе, — это строгое слабое упорядочивание, если бинарный предикат является нерефлексивным, антисимметричным и транзитивным и если эквивалентность является транзитивной, где два объекта                      x и                     y определены как эквивалентные, когда и                     f(x,y), и                      f(y,x) равны `false`. Если более строгое условие равенства между ключами заменяет условие эквивалентности, порядок становится общим (т. е. все элементы упорядочиваются в соответствии друг с другом) и сопоставленные ключи будут неотличимы друг от друга.  
+>  The comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense. A binary predicate                     f(x,y) is a function object that has two argument objects                     x and                     y, and a return value of `true` or `false`. An ordering imposed on a set is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive, and if equivalence is transitive, where two objects                     x and                     y are defined to be equivalent when both                     f(x,y)and                     f(y,x) are `false`. If the stronger condition of equality between keys replaces that of equivalence, the ordering becomes total (in the sense that all the elements are ordered with regard to one other), and the keys matched will be indiscernible from one other.  
 >   
->  В C++ 14 вы можете включить разнородный поиск, указав предикат `std::less<>` или `std::greater<>`, не имеющий параметров типа. Более подробные сведения см. в разделе [Разнородный поиск в ассоциативных контейнерах](../standard-library/stl-containers.md#sequence_containers)  
+>  In C++14 you can enable heterogeneous lookup by specifying the `std::less<>` or `std::greater<>` predicate that has no type parameters. For more information, see [Heterogeneous Lookup in Associative Containers](../standard-library/stl-containers.md#sequence_containers)  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[map](#map)|Создание списка определенного размера или с элементами, обладающими указанным значением или указанным `allocator`, либо в качестве копии другого сопоставления.|  
+|[map](#map)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other map.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Typedef для класса `allocator` для объекта сопоставления.|  
-|[const_iterator](#const_iterator)|Typedef для двунаправленного итератора, который может считывать элемент `const` в сопоставлении.|  
-|[const_pointer](#const_pointer)|Typedef для указателя на элемент `const` в сопоставлении.|  
-|[const_reference](#const_reference)|Typedef для ссылки на элемент `const`, хранящийся в сопоставлении для чтения и выполнения операций `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать любой элемент `const` в сопоставлении.|  
-|[difference_type](#difference_type)|Цельночисленный Typedef со знаком для числа элементов в сопоставлении, в диапазоне между элементами, на которые указывают итераторы.|  
-|[iterator](#iterator)|Typedef для двунаправленного итератора, который может считывать или изменять любой элемент в сопоставлении.|  
-|[key_compare](#key_compare)|Typedef для объекта функции, который может сравнить два ключа сортировки для определения относительного порядка двух элементов в сопоставлении.|  
-|[key_type](#key_type)|Typedef для ключа сортировки, хранящегося в каждом элементе сопоставления.|  
-|[mapped_type](#mapped_type)|Typedef для данных, хранящихся в каждом элементе сопоставления.|  
-|[pointer](#pointer)|Typedef для указателя на элемент `const` в сопоставлении.|  
-|[reference](#reference)|Typedef для ссылки на элемент, сохраненный в сопоставлении.|  
-|[reverse_iterator](#reverse_iterator)|Typedef для двунаправленного итератора, который может считывать или изменять элемент в обратном сопоставлении.|  
-|[size_type](#size_type)|Целочисленный Typedef без знака для числа элементов в сопоставлении|  
-|[value_type](#value_type)|Typedef для типа объекта, хранящейся в виде элемента в сопоставлении.|  
+|[allocator_type](#allocator_type)|A typedef for the `allocator` class for the map object.|  
+|[const_iterator](#const_iterator)|A typedef for a bidirectional iterator that can read a `const` element in the map.|  
+|[const_pointer](#const_pointer)|A typedef for a pointer to a `const` element in a map.|  
+|[const_reference](#const_reference)|A typedef for a reference to a `const` element stored in a map for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in the map.|  
+|[difference_type](#difference_type)|A signed integer typedef for the number of elements of a map in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A typedef for a bidirectional iterator that can read or modify any element in a map.|  
+|[key_compare](#key_compare)|A typedef for a function object that can compare two sort keys to determine the relative order of two elements in the map.|  
+|[key_type](#key_type)|A typedef for the sort key stored in each element of the map.|  
+|[mapped_type](#mapped_type)|A typedef for the data stored in each element of a map.|  
+|[pointer](#pointer)|A typedef for a pointer to a `const` element in a map.|  
+|[reference](#reference)|A typedef for a reference to an element stored in a map.|  
+|[reverse_iterator](#reverse_iterator)|A typedef for a bidirectional iterator that can read or modify an element in a reversed map.|  
+|[size_type](#size_type)|An unsigned integer typedef for the number of elements in a map|  
+|[value_type](#value_type)|A typedef for the type of object stored as an element in a map.|  
   
-### <a name="member-functions"></a>Функции-члены  
-  
-|||  
-|-|-|  
-|[at](#at)|Поиск элемента с заданным значением ключа.|  
-|[begin](#begin)|Возврат итератора, указывающего на первый элемент в сопоставлении.|  
-|[begin](#cbegin)|Возвращает итератор const, указывающего на первый элемент в сопоставлении.|  
-|[cend](#cend)|Возврат итератора const после конца.|  
-|[clear](#clear)|Стирает все элементы в сопоставлении.|  
-|[count](#count)|Возврат числа элементов в сопоставлении, ключ которого соответствует ключу, заданному в параметре.|  
-|[crbegin](#crbegin)|Возврат итератора const, указывающего на первый элемент в обратном сопоставлении.|  
-|[crend](#crend)|Возврат итератора const, указывающего на местоположение после завершающего элемента в обратном сопоставлении.|  
-|[emplace](#emplace)|Вставка в сопоставление элемента, созданного в качестве замены.|  
-|[emplace_hint](#emplace_hint)|Вставка в сопоставление элемента, созданного в качестве замены, с подсказкой о размещении.|  
-|[empty](#empty)|Возврат `true`, если сопоставление является пустым.|  
-|[end](#end)|Возврат итератора после конца.|  
-|[equal_range](#equal_range)|Возвращает пару итераторов. Первый итератор в паре указывает на первый элемент в `map` с ключом, который больше указанного ключа. Второй итератор в паре указывает на первый элемент в `map` с ключом, который больше или равен данному ключу.|  
-|[erase](#erase)|Удаление элемента или диапазона элементов в сопоставлении с заданных позиций.|  
-|[find](#find)|Возврат итератора, указывающего на расположение элемента в сопоставлении с ключом, равным указанному ключу.|  
-|[get_allocator](#get_allocator)|Возврат копии объекта `allocator`, который используется для формирования сопоставления.|  
-|[insert](#insert)|Вставка элемента или диапазона элементов в сопоставление в заданной позиции.|  
-|[key_comp](#key_comp)|Возврат копии объекта сравнения, который используется для упорядочивания ключей в сопоставлении.|  
-|[lower_bound](#lower_bound)|Возврат итератора, указывающего на первый элемент в сопоставлении с ключом, который больше или равен указанному ключу.|  
-|[max_size](#max_size)|Возврат максимальной длины сопоставления.|  
-|[rbegin](#rbegin)|Возврат итератора, указывающего на первый элемент в обратном сопоставлении.|  
-|[rend](#rend)|Возврат итератора, указывающего на местоположение после завершающего элемента в обратном сопоставлении.|  
-|[size](#size)|Возврат количества элементов в сопоставлении.|  
-|[swap](#swap)|Обмен элементами между двумя сопоставлениями.|  
-|[upper_bound](#upper_bound)|Возврат итератора, указывающего на первый элемент в сопоставлении со значением ключа, которое больше указанного ключа.|  
-|[value_comp](#value_comp)|Извлечение копии объекта сравнения, который используется для упорядочивания значений элементов в сопоставлении.|  
-  
-### <a name="operators"></a>Операторы  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#op_at)|Вставка элемента в сопоставление с заданным значением ключа.|  
-|[operator=](#op_eq)|Замена элементов сопоставления копией другого сопоставления.|  
+|[at](#at)|Finds an element with a specified key value.|  
+|[begin](#begin)|Returns an iterator that points to the first element in the map.|  
+|[cbegin](#cbegin)|Returns a const iterator that points to the first element in the map.|  
+|[cend](#cend)|Returns a const past-the-end iterator.|  
+|[clear](#clear)|Erases all the elements of a map.|  
+|[count](#count)|Returns the number of elements in a map whose key matches the key specified in a parameter.|  
+|[crbegin](#crbegin)|Returns a const iterator that points to the first element in a reversed map.|  
+|[crend](#crend)|Returns a const iterator that points to the location after the last element in a reversed map.|  
+|[emplace](#emplace)|Inserts an element constructed in place into the map.|  
+|[emplace_hint](#emplace_hint)|Inserts an element constructed in place into the map, with a placement hint.|  
+|[empty](#empty)|Returns `true` if a map is empty.|  
+|[end](#end)|Returns the past-the-end iterator.|  
+|[equal_range](#equal_range)|Returns a pair of iterators. The first iterator in the pair points to the first element in a `map` with a key that is greater than a specified key. The second iterator in the pair points to the first element in the `map` with a key that is equal to or greater than the key.|  
+|[erase](#erase)|Removes an element or a range of elements in a map from the specified positions.|  
+|[find](#find)|Returns an iterator that points to the location of an element in a map that has a key equal to a specified key.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object that is used to construct the map.|  
+|[insert](#insert)|Inserts an element or a range of elements into the map at a specified position.|  
+|[key_comp](#key_comp)|Returns a copy of the comparison object that used to order keys in a map.|  
+|[lower_bound](#lower_bound)|Returns an iterator to the first element in a map that has a key value that is equal to or greater than that of a specified key.|  
+|[max_size](#max_size)|Returns the maximum length of the map.|  
+|[rbegin](#rbegin)|Returns an iterator that points to the first element in a reversed map.|  
+|[rend](#rend)|Returns an iterator that points to the location after the last element in a reversed map.|  
+|[size](#size)|Returns the number of elements in the map.|  
+|[swap](#swap)|Exchanges the elements of two maps.|  
+|[upper_bound](#upper_bound)|Returns an iterator to the first element in a map that has a key value that is greater than that of a specified key.|  
+|[value_comp](#value_comp)|Retrieves a copy of the comparison object that is used to order element values in a map.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<map>  
+### <a name="operators"></a>Operators  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[operator&#91;&#93;](#op_at)|Inserts an element into a map with a specified key value.|  
+|[operator=](#op_eq)|Replaces the elements of a map with a copy of another map.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<map>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  map::allocator_type  
- Тип, представляющий класс распределителя для объекта-сопоставления.  
+ A type that represents the allocator class for the map object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="example"></a>Пример  
-  См. пример для [get_allocator](#get_allocator) в качестве примера использования `allocator_type`.  
+### <a name="example"></a>Example  
+  See example for [get_allocator](#get_allocator) for an example that uses `allocator_type`.  
   
 ##  <a name="at"></a>  map::at  
- Поиск элемента с заданным значением ключа.  
+ Finds an element with a specified key value.  
   
 ```  
 Type& at(const Key& key);
@@ -230,20 +270,20 @@ Type& at(const Key& key);
 const Type& at(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`key`|Значение ключа, которое необходимо найти.|  
+|Parameter|Description|  
+|`key`|The key value to find.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на значение данных найденного элемента.  
+### <a name="return-value"></a>Return Value  
+ A reference to the data value of the element found.  
   
-### <a name="remarks"></a>Примечания  
- Если ключевое значение-аргумент не найдено, то функция выдает объект класса [класс out_of_range](../standard-library/out-of-range-class.md).  
+### <a name="remarks"></a>Remarks  
+ If the argument key value is not found, then the function throws an object of class [out_of_range Class](../standard-library/out-of-range-class.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_at.cpp  
@@ -270,7 +310,7 @@ int main()
 ```  
   
 ##  <a name="begin"></a>  map::begin  
- Возвращает итератор, адресующий первый элемент в сопоставлении.  
+ Returns an iterator addressing the first element in the map.  
   
 ```  
 const_iterator begin() const;
@@ -278,10 +318,10 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор, адресующий первый элемент в сопоставлении или положение после пустого сопоставления.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the map or the location succeeding an empty map.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_begin.cpp  
@@ -323,19 +363,19 @@ The first element of m1 is now 1
 ```  
   
 ##  <a name="cbegin"></a>  map::cbegin  
- Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор двунаправленного доступа `const`, который обращается к первому элементу диапазона или к расположению непосредственно за концом пустого диапазона (`cbegin() == cend()` для пустого диапазона).  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional iterator addressing the first element in the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Примечания  
- Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В примере `Container` следует рассматривать как изменяемый (не-`const`) контейнер любого вида, который поддерживает `begin()` и `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -346,19 +386,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  map::cend  
- Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор двунаправленного доступа `const`, который указывает на позицию сразу за концом диапазона.  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Примечания  
- `cend` используется для проверки того, прошел ли итератор конец диапазона.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `end()` и `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -368,17 +408,17 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  map::clear  
- Стирает все элементы в сопоставлении.  
+ Erases all the elements of a map.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>Пример  
-  В следующем примере демонстрируется использование функции-члена map::clear.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the map::clear member function.  
   
 ```  
 // map_clear.cpp  
@@ -413,46 +453,46 @@ The size of the map after clearing is 0.
 ```  
   
 ##  <a name="const_iterator"></a>  map::const_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать элемент **const** сопоставления.  
+ A type that provides a bidirectional iterator that can read a **const** element in the map.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_iterator`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
- `const_iterator`, определенный сопоставлением, указывает на элементы, которые являются объектами [value_type](#value_type) типа `pair`\< **constKey**, **Type**>, первый член которых — ключ элемента, а второй — сопоставленные данные, хранящиеся в элементе.  
+ The `const_iterator` defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair`\< **constKey**, **Type**>, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Для разыменования `const_iterator``cIter`, указывающего на элемент в сопоставлении, используйте оператор **->**.  
+ To dereference a `const_iterator` `cIter` pointing to an element in a map, use the **->** operator.  
   
- Для получения доступа к значению ключа для элемента используйте `cIter` -> **first**, что эквивалентно (\* `cIter`). **first**.  
+ To access the value of the key for the element, use `cIter` -> **first**, which is equivalent to (\* `cIter`). **first**.  
   
- Для получения доступа к значению сопоставленных данных элемента используйте `cIter` -> **second**, что эквивалентно (\* `cIter`). **second**.  
+ To access the value of the mapped datum for the element, use `cIter` -> **second**, which is equivalent to (\* `cIter`). **second**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [begin](#begin) в качестве примера использования `const_iterator`.  
+### <a name="example"></a>Example  
+  See example for [begin](#begin) for an example that uses `const_iterator`.  
   
 ##  <a name="const_pointer"></a>  map::const_pointer  
- Тип, предоставляющий указатель на элемент **const** в сопоставлении.  
+ A type that provides a pointer to a **const** element in a map.  
   
 ```  
 typedef typename allocator_type::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_pointer`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- В большинстве случаев для доступа к элементам в объекте-сопоставлении следует использовать [итератор](#iterator).  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a map object.  
   
 ##  <a name="const_reference"></a>  map::const_reference  
- Тип, предоставляющий ссылку на элемент **const**, хранящийся в сопоставлении, для чтения и выполнения операций **const**.  
+ A type that provides a reference to a **const** element stored in a map for reading and performing **const** operations.  
   
 ```  
 typedef typename allocator_type::const_reference const_reference;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_const_ref.cpp  
@@ -495,49 +535,49 @@ The data value of first element in the map is 10.
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  map::const_reverse_iterator  
- Тип, предоставляющий двунаправленный итератор, который может считать любой элемент **const** в сопоставлении.  
+ A type that provides a bidirectional iterator that can read any **const** element in the map.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_reverse_iterator` не может изменять значение элемента и используется для перебора сопоставления в обратном порядке.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is use to iterate through the map in reverse.  
   
- `const_reverse_iterator` Определяется точек карты для элементов, которые являются объектами [value_type](#value_type), то есть типа `pair<const Key, Type>`, которого первый элемент — это ключ к элементу и которого второй член является сопоставленных datum, удерживаемые элемента.  
+ The `const_reverse_iterator` defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair<const Key, Type>`, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Для разыменования `const_reverse_iterator crIter`, указывающего на элемент в сопоставлении, используйте оператор **->**.  
+ To dereference a `const_reverse_iterator crIter` pointing to an element in a map, use the **->** operator.  
   
- Чтобы получить значение ключа для элемента, используйте `crIter`  ->  **первый**, что эквивалентно (\* `crIter`). **Первый**.  
+ To access the value of the key for the element, use `crIter` -> **first**, which is equivalent to (\* `crIter`).**first**.  
   
- Для доступа к значению сопоставленных datum для элемента, используйте `crIter`  ->  **второй**, что эквивалентно (\* `crIter`). **Первый**.  
+ To access the value of the mapped datum for the element, use `crIter` -> **second**, which is equivalent to (\* `crIter`).**first**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [rend](#rend) в качестве примера объявления и использования `const_reverse_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [rend](#rend) for an example of how to declare and use `const_reverse_iterator`.  
   
 ##  <a name="count"></a>  map::count  
- Возвращает число элементов в объекте map, ключи которых соответствуют ключу, заданному параметром.  
+ Returns the number of elements in a map whose key matches a parameter-specified key.  
   
 ```  
 size_type count(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Значение ключа для сравнения с ключами элементов объекта map.  
+ The key value of the elements to be matched from the map.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- 1, если объект map содержит элемент, ключ сортировки которого совпадает с ключом параметра. 0, если объект map не содержит ни одного элемента с соответствующим ключом.  
+### <a name="return-value"></a>Return Value  
+ 1 if the map contains an element whose sort key matches the parameter key; 0 if the map does not contain an element with a matching key.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает количество элементов *x* в диапазоне  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements *x* in the range  
   
  [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )  
   
- — 0 или 1 для map, который является уникальным ассоциативным контейнером.  
+ which is 0 or 1 in the case of map, which is a unique associative container.  
   
-### <a name="example"></a>Пример  
-  В следующем примере демонстрируется использование функции-члена map::count.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the map::count member function.  
   
 ```  
 // map_count.cpp  
@@ -579,23 +619,23 @@ The number of elements in m1 with a sort key of 3 is: 0.
 ```  
   
 ##  <a name="crbegin"></a>  map::crbegin  
- Возвращает константный итератор на первый элемент в обратной карте.  
+ Returns a const iterator addressing the first element in a reversed map.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константный обратный двунаправленный итератор, адресующий первый элемент в обратном [сопоставлении](../standard-library/map-class.md) или адресующий то, что было последним элементом в `map` до замены его порядка на обратный.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed [map](../standard-library/map-class.md) or addressing what had been the last element in the unreversed `map`.  
   
-### <a name="remarks"></a>Примечания  
- `crbegin` используется с обратным `map` так же, как [begin](#begin) используется с обычным `map`.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed `map` just as [begin](#begin) is used with a `map`.  
   
- При возвращенном значении `crbegin` объект `map` изменить нельзя.  
+ With the return value of `crbegin`, the `map` object cannot be modified  
   
- `crbegin` можно использовать для перебора `map` в обратном порядке.  
+ `crbegin` can be used to iterate through a `map` backwards.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_crbegin.cpp  
@@ -626,25 +666,25 @@ The first element of the reversed map m1 is 3.
 ```  
   
 ##  <a name="crend"></a>  map::crend  
- Возвращает константный итератор, адресующий положение после последнего элемента в обратном сопоставлении.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed map.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константный обратный двунаправленный итератор, адресующий положение после последнего элемента в обратном [сопоставлении](../standard-library/map-class.md) (положение, которое предшествовало первому элементу в `map` до изменения его порядка на противоположный).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [map](../standard-library/map-class.md) (the location that had preceded the first element in the unreversed `map`).  
   
-### <a name="remarks"></a>Примечания  
- `crend` используется с обратным сопоставлением так же, как [end](#end) используется с обычным `map`.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed map just as [end](#end) is used with a `map`.  
   
- Если возвращаемое значение `crend`, то объект `map` невозможно изменить.  
+ With the return value of `crend`, the `map` object cannot be modified.  
   
- `crend` используется, чтобы проверить, достиг ли итератор конца `map`.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `map`.  
   
- Значение, возвращаемое `crend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_crend.cpp  
@@ -676,18 +716,18 @@ The last element of the reversed map m1 is 1.
 ```  
   
 ##  <a name="difference_type"></a>  map::difference_type  
- Целочисленный тип со знаком, который можно использовать для представления количества элементов в сопоставлении в диапазоне между элементами, на которые указывают итераторы.  
+ A signed integer type that can be used to represent the number of elements of a map in a range between elements pointed to by iterators.  
   
 ```  
 typedef allocator_type::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `difference_type` — тип, возвращаемый при вычитании или приращении через итераторы контейнера. `difference_type` обычно используется для представления количества элементов в диапазоне *[ first,  last)* между итераторами `first` и `last`, включая элемент, на который указывает `first`, и диапазон элементов до элемента, на который указывает `last`, но не включая его.  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range *[ first,  last)* between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- Обратите внимание, что хотя `difference_type` доступен для всех итераторов, соответствующих требованиям для итератора ввода, что включает класс двунаправленных итераторов, поддерживаемых обратимыми контейнерами, например наборами, вычитание между итераторами поддерживается только итераторами произвольного доступа, предоставляемыми контейнерами произвольного доступа, например векторами.  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random access iterators provided by a random access container such as vector.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_diff_type.cpp  
@@ -730,7 +770,7 @@ The number of elements in the map m1 is: 4.
 ```  
   
 ##  <a name="emplace"></a>  map::emplace  
- Вставляет в сопоставление элемент, созданный на месте (без выполнения операций копирования или перемещения).  
+ Inserts an element constructed in place (no copy or move operations are performed) into a map.  
   
 ```  
 template <class... Args>  
@@ -739,26 +779,26 @@ emplace(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`args`|Аргументы, передаваемые для создания элемента для вставки в сопоставление, кроме случаев, когда сопоставление уже содержит элемент, значение которого правильным образом упорядочено.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the map unless it already contains an element whose value is equivalently ordered.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- [Пара](../standard-library/pair-structure.md), чей компонент `bool` имеет значение true, если вставка была выполнена, и false, если сопоставление уже содержало элемент с эквивалентным значением в порядке. Компонент итератора пары возвращаемых значений указывает на вставленный элемент, если значение компонента `bool` равно true, или на существующий элемент, если значение компонента `bool` равно false.  
+### <a name="return-value"></a>Return Value  
+ A [pair](../standard-library/pair-structure.md) whose `bool` component is true if an insertion was made, and false if the map already contained an element of equivalent value in the ordering. The iterator component of the return-value pair points to the newly inserted element if the `bool` component is true, or to the existing element if the `bool` component is false.  
   
- Для доступа к компоненту-итератору `pair``pr` используйте `pr.first`; для разыменования его используйте `*pr.first`. Для доступа к компоненту `bool` используйте `pr.second`. См. пример кода далее в этой статье.  
+ To access the iterator component of a `pair` `pr`, use `pr.first`; to dereference it, use `*pr.first`. To access the `bool` component, use `pr.second`. For an example, see the sample code later in this article.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не делает недействительными никакие итераторы или ссылки.  
+### <a name="remarks"></a>Remarks  
+ No iterators or references are invalidated by this function.  
   
- Если во время размещения создается исключение, состояние контейнера не изменяется.  
+ During emplacement, if an exception is thrown, the container's state is not modified.  
   
- [value_type](#value_type) элемента — это pair, поэтому значением элемента будет упорядоченная пара, первый компонент которой равен значению ключа, а второй — значению данных элемента.  
+ The [value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_emplace.cpp  
@@ -816,7 +856,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  map::emplace_hint  
- Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются) с подсказкой размещения.  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -825,27 +865,27 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`args`|Аргументы, передаваемые для создания элемента, который будет вставлен в сопоставление, кроме ситуации, когда сопоставление уже содержит этот элемента или, в более общем случае, кроме ситуации, когда сопоставление уже содержит элемент, ключ которого правильно упорядочен.|  
-|`where`|Место начала поиска правильной точки вставки. (Если эта точка находится непосредственно перед `where`, вставка может быть выполнена в постоянном времени с поправкой на амортизацию, а не в логарифмическом времени.)|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the map unless the map already contains that element or, more generally, unless it already contains an element whose key is equivalently ordered.|  
+|`where`|The place to start searching for the correct point of insertion. (If that point immediately precedes `where`, insertion can occur in amortized constant time instead of logarithmic time.)|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор, указывающий на вновь вставленный элемент.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
- Если вставка не удалась, так как элемент уже существует, возвращается итератор, указывающий на существующий элемент с его ключом.  
+ If the insertion failed because the element already exists, returns an iterator to the existing element with its key.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не делает недействительными никакие итераторы или ссылки.  
+### <a name="remarks"></a>Remarks  
+ No iterators or references are invalidated by this function.  
   
- Если во время размещения создается исключение, состояние контейнера не изменяется.  
+ During emplacement, if an exception is thrown, the container's state is not modified.  
   
- [value_type](#value_type) элемента — это pair, поэтому значением элемента будет упорядоченная пара, первый компонент которой равен значению ключа, а второй — значению данных элемента.  
+ The [value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_emplace.cpp  
@@ -891,16 +931,16 @@ int main()
 ```  
   
 ##  <a name="empty"></a>  map::empty  
- Проверяет, что сопоставление пустое.  
+ Tests if a map is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если сопоставление пустое; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the map is empty; **false** if the map is nonempty.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_empty.cpp  
@@ -934,7 +974,7 @@ The map m2 is empty.
 ```  
   
 ##  <a name="end"></a>  map::end  
- Возврат итератора после конца.  
+ Returns the past-the-end iterator.  
   
 ```  
 const_iterator end() const;
@@ -944,18 +984,18 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор после конца. Если карта пуста, то `map::end() == map::begin()`.  
+### <a name="return-value"></a>Return Value  
+ The past-the-end iterator. If the map is empty, then `map::end() == map::begin()`.  
   
-### <a name="remarks"></a>Примечания  
- **end** используется для проверки, прошел ли итератор конец своего сопоставления.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has passed the end of its map.  
   
- Значение, возвращаемое **end**, не должно разыменовываться.  
+ The value returned by **end** should not be dereferenced.  
   
- Пример кода см. в [map::find](#find).  
+ For a code example, see [map::find](#find).  
   
 ##  <a name="equal_range"></a>  map::equal_range  
- Возвращает пару итераторов, представляющих [lower_bound](#lower_bound) ключа и [upper_bound](#upper_bound) ключа.  
+ Returns a pair of iterators that represent the [lower_bound](#lower_bound) of the key and the [upper_bound](#upper_bound) of the key.  
   
 ```  
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -963,14 +1003,14 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Ключевое значение для сравнения с ключом сортировки элемента из сопоставления, в котором ведется поиск.  
+ The argument key value to be compared with the sort key of an element from the map being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Для доступа к первому итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **first**, а для сброса ссылки на итератор нижней границы — \*( `pr`. **first**). Для доступа ко второму итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **second**, а для сброса ссылки на итератор верхней границы — \*( `pr`. **second**).  
+### <a name="return-value"></a>Return Value  
+ To access the first iterator of a pair `pr` returned by the member function, use `pr`. **first**, and to dereference the lower bound iterator, use \*( `pr`. **first**). To access the second iterator of a pair `pr` returned by the member function, use `pr`. **second**, and to dereference the upper bound iterator, use \*( `pr`. **second**).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_equal_range.cpp  
@@ -1031,7 +1071,7 @@ The map m1 doesn't have an element with a key less than 40.
 ```  
   
 ##  <a name="erase"></a>  map::erase  
- Удаляет элемент или диапазон элементов из сопоставления из указанной позиции или удаляет элементы, которые соответствуют указанному ключу.  
+ Removes an element or a range of elements in a map from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(
@@ -1047,25 +1087,25 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Положение удаляемого элемента.  
+ Position of the element to be removed.  
   
  `First`  
- Положение первого удаляемого элемента.  
+ Position of the first element to be removed.  
   
  `Last`  
- Положение перед последним удаляемым элементом.  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- Значение ключа удаляемых элементов.  
+ The key value of the elements to be removed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Для первых двух функций-членов это двунаправленный итератор, обозначающий первый элемент, остающийся после любых удаленных элементов, или элемент в конце сопоставления, если таких элементов нет.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the map if no such element exists.  
   
- Третья функция-член возвращает количество элементов, которые были удалены из сопоставления.  
+ For the third member function, returns the number of elements that have been removed from the map.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_erase.cpp  
@@ -1147,7 +1187,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  map::find  
- Возвращает итератор, ссылающийся на элемент в карте, ключ которого эквивалентен заданному ключу.  
+ Returns an iterator that refers to the location of an element in a map that has a key equivalent to a specified key.  
   
 ```  
 iterator find(const Key& key);
@@ -1156,19 +1196,19 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Значение ключа, с которым сравнивается ключ сортировки элемента из карты, по которой выполняется поиск.  
+ The key value to be matched by the sort key of an element from the map being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор, ссылающийся на положение элемента с указанным ключом, или положение после последнего элемента в сопоставлении ( `map::end()`), если соответствие для ключа не найдено.  
+### <a name="return-value"></a>Return Value  
+ An iterator that refers to the location of an element with a specified key, or the location succeeding the last element in the map ( `map::end()`) if no match is found for the key.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает итератор, который ссылается на элемент в карте с ключом сортировки, эквивалентным ключу аргумента согласно двоичному предикату, применяющему упорядочение на основе отношения сравнения «меньше».  
+### <a name="remarks"></a>Remarks  
+ The member function returns an iterator that refers to an element in the map whose sort key is equivalent to the argument key under a binary predicate that induces an ordering based on a less than comparability relation.  
   
- Если возвращаемое значение **find** назначается **const_iterator**, объект-сопоставление изменить нельзя. Если возвращаемое значение **find** назначается **iterator**, объект-сопоставление можно изменить.  
+ If the return value of **find** is assigned to a **const_iterator**, the map object cannot be modified. If the return value of **find** is assigned to an **iterator**, the map object can be modified  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4 /MTd  
@@ -1232,19 +1272,19 @@ int main()
 ```  
   
 ##  <a name="get_allocator"></a>  map::get_allocator  
- Возвращает копию объекта-распределителя, использованного для создания сопоставления.  
+ Returns a copy of the allocator object used to construct the map.  
   
 ```  
 allocator_type get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Распределитель, используемый сопоставлением.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the map.  
   
-### <a name="remarks"></a>Примечания  
- Распределители для класса map определяют, как это класс управляет памятью. Распределители по умолчанию для классов контейнеров из стандартной библиотеки C++ достаточны для большинства задач программирования. Написание и использование собственного класса распределителя требует расширенных навыков работы с C++.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the map class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_get_allocator.cpp  
@@ -1299,7 +1339,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  map::insert  
- Вставляет элемент или диапазон элементов в сопоставление.  
+ Inserts an element or a range of elements into a map.  
   
 ```  
 // (1) single element  
@@ -1340,40 +1380,40 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Val`|Значение элемента, вставляемого в сопоставление, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.|  
-|`Where`|Место начала поиска правильной точки вставки. (Если эта точка находится непосредственно перед `Where`, вставка может быть выполнена в постоянном времени с поправкой на амортизацию, а не в логарифмическом времени.)|  
-|`ValTy`|Параметр-шаблон, определяющий тип аргумента, с помощью которого сопоставление формирует элемент типа [value_type`Val` и точно пересылает ](#value_type) в качестве аргумента.|  
-|`First`|Позиция первого элемента, который следует скопировать.|  
-|`Last`|Позиция непосредственно перед последним элементом, который следует скопировать.|  
-|`InputIterator`|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](#value_type).|  
-|`IList`|[initializer_list](../standard-library/initializer-list.md), из которого нужно скопировать элементы.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the map unless it already contains an element whose key is equivalently ordered.|  
+|`Where`|The place to start searching for the correct point of insertion. (If that point immediately precedes `Where`, insertion can occur in amortized constant time instead of logarithmic time.)|  
+|`ValTy`|Template parameter that specifies the argument type that the map can use to construct an element of [value_type](#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](#value_type) objects.|  
+|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Одноэлементные функции-члены (1) и (2) возвращают [пару](../standard-library/pair-structure.md), компонент `bool` которой имеет значение true, если была осуществлена вставка, и значение false, если сопоставление уже содержало элемент с эквивалентным порядковым значением ключа. Компонент итератора пары возвращаемых значений указывает на вставленный элемент, если значение компонента `bool` равно true, или на существующий элемент, если значение компонента `bool` равно false.  
+### <a name="return-value"></a>Return Value  
+ The single-element member functions, (1) and (2), return a [pair](../standard-library/pair-structure.md) whose `bool` component is true if an insertion was made, and false if the map already contained an element whose key had an equivalent value in the ordering. The iterator component of the return-value pair points to the newly inserted element if the `bool` component is true, or to the existing element if the `bool` component is false.  
   
- Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, который указывает на позицию, где новый элемент был вставлен, или, если элемент с эквивалентным ключом уже существует, указывает на существующий элемент.  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the map or, if an element with an equivalent key already exists, to the existing element.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не делает никакие итераторы, указатели или ссылки недействительными.  
+### <a name="remarks"></a>Remarks  
+ No iterators, pointers, or references are invalidated by this function.  
   
- Если во время вставки одного элемента вызывается исключение, состояние контейнера не изменяется. Если во время вставки нескольких элементов вызывается исключение, контейнер остается в неопределенном, но допустимом состоянии.  
+ During the insertion of just one element, if an exception is thrown, the container's state is not modified. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- Для доступа к компоненту итератора `pair``pr`, возвращаемого одноэлементными функциями-членами, используйте `pr.first`. Для разыменования итератора в возвращенной паре используйте `*pr.first` (эта функция возвращает сам элемент). Для доступа к компоненту `bool` используйте `pr.second`. См. пример кода далее в этой статье.  
+ To access the iterator component of a `pair` `pr` that's returned by the single-element member functions, use `pr.first`; to dereference the iterator within the returned pair, use `*pr.first`, giving you an element. To access the `bool` component, use `pr.second`. For an example, see the sample code later in this article.  
   
- [value_type](#value_type) контейнера — это определение типа, который принадлежит контейнеру. Для сопоставления `map<K, V>::value_type` — это `pair<const K, V>`. Значение элемента — это упорядоченная пара, в которой первый компонент эквивалентен значению ключа, а второй компонент — значению данных элемента.  
+ The [value_type](#value_type) of a container is a typedef that belongs to the container, and for map, `map<K, V>::value_type` is `pair<const K, V>`. The value of an element is an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- Функция-член с диапазоном (5) вставляет последовательность значений элементов в сопоставление, соответствующее каждому элементу, адресованному итератором в диапазоне `[First, Last)`. Следовательно, `Last` не вставляется. Контейнер функции-члена `end()` ссылается на позицию сразу после последнего элемента в контейнере. Например, оператор `m.insert(v.begin(), v.end());` пытается вставить все элементы `v` в `m`. Вставляются только элементы с уникальными значениями в диапазоне. Повторяющиеся значения игнорируются. Чтобы увидеть, какие элементы отклонены, используйте одноэлементные версии `insert`.  
+ The range member function (5) inserts the sequence of element values into a map that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` attempts to insert all elements of `v` into `m`. Only elements that have unique values in the range are inserted; duplicates are ignored. To observe which elements are rejected, use the single-element versions of `insert`.  
   
- Функция-член списка инициализатора (6) использует [initializer_list](../standard-library/initializer-list.md) для копирования элементов в сопоставление.  
+ The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the map.  
   
- Для вставки элемента, созданного на месте (то есть без операций копирования или перемещения) см. разделы [map::emplace](#emplace) и [map::emplace_hint](#emplace_hint).  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see [map::emplace](#emplace) and [map::emplace_hint](#emplace_hint).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_insert.cpp  
@@ -1473,40 +1513,40 @@ int main()
 ```  
   
 ##  <a name="iterator"></a>  map::iterator  
- Тип, предоставляющий двунаправленный итератор, который может считывать или изменять любой элемент в сопоставлении.  
+ A type that provides a bidirectional iterator that can read or modify any element in a map.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- **Итератор**, определенный сопоставлением, указывает на элементы, которые являются объектами [value_type](#value_type) типа `pair`*\<***constKey**, **Type***>*, первый член которых — ключ элемента, а второй — сопоставленные данные, хранящиеся в элементе.  
+### <a name="remarks"></a>Remarks  
+ The **iterator** defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair`*\<***constKey**, **Type***>*, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Для разыменования **итератора**`Iter`, указывающего на элемент сопоставления, используйте оператор **->**.  
+ To dereference an **iterator**`Iter` pointing to an element in a map, use the **->** operator.  
   
- Для получения доступа к значению ключа для элемента используйте `Iter` -> **first**, что эквивалентно (\* `Iter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `Iter` -> **second**, что эквивалентно (\* `Iter`). **second**.  
+ To access the value of the key for the element, use `Iter` -> **first**, which is equivalent to (\* `Iter`). **first**. To access the value of the mapped datum for the element, use `Iter` -> **second**, which is equivalent to (\* `Iter`). **second**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [begin](#begin) в качестве примера объявления и использования **iterator**.  
+### <a name="example"></a>Example  
+  See example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
 ##  <a name="key_comp"></a>  map::key_comp  
- Извлекает копию объекта сравнения, использованного для упорядочивания ключей в сопоставлении.  
+ Retrieves a copy of the comparison object used to order keys in a map.  
   
 ```  
 key_compare key_comp() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект-функцию, которую сопоставление использует для упорядочивания своих элементов.  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a map uses to order its elements.  
   
-### <a name="remarks"></a>Примечания  
- Хранимый объект определяет функцию-член  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function  
   
  **bool operator**( **constKey&**`left`, **const Key&**`right`);  
   
- которая возвращает **true**, если `left` предшествует `right` в порядке сортировки и не равен ему.  
+ which returns **true** if `left` precedes and is not equal to `right` in the sort order.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_key_comp.cpp  
@@ -1558,37 +1598,37 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```  
   
 ##  <a name="key_compare"></a>  map::key_compare  
- Тип, предоставляющий объект-функцию, которая может сравнить два ключа сортировки для определения относительного порядка двух элементов в сопоставлении.  
+ A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the map.  
   
 ```  
 typedef Traits key_compare;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `key_compare` является синонимом для параметра-шаблона `Traits`.  
+### <a name="remarks"></a>Remarks  
+ `key_compare` is a synonym for the template parameter `Traits`.  
   
- Дополнительные сведения о `Traits` см. в разделе [Класс map](../standard-library/map-class.md).  
+ For more information on `Traits` see the [map Class](../standard-library/map-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [key_comp](#key_comp) в качестве примера объявления и использования `key_compare`.  
+### <a name="example"></a>Example  
+  See example for [key_comp](#key_comp) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="key_type"></a>  map::key_type  
- Тип, который описывает ключ сортировки, хранящийся в каждом элементе сопоставления.  
+ A type that describes the sort key stored in each element of the map.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `key_type` является синонимом для параметра-шаблона `Key`.  
+### <a name="remarks"></a>Remarks  
+ `key_type` is a synonym for the template parameter `Key`.  
   
- Дополнительные сведения по `Key` см. в подразделе "Примечания" раздела [Класс map](../standard-library/map-class.md).  
+ For more information on `Key`, see the Remarks section of the [map Class](../standard-library/map-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.  
+### <a name="example"></a>Example  
+  See example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
 ##  <a name="lower_bound"></a>  map::lower_bound  
- Возвращает итератор, указывающий на первый элемент в сопоставлении с ключом, значение которого больше указанного ключа или равно ему.  
+ Returns an iterator to the first element in a map with a key value that is equal to or greater than that of a specified key.  
   
 ```  
 iterator lower_bound(const Key& key);
@@ -1596,16 +1636,16 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Ключевое значение для сравнения с ключом сортировки элемента из сопоставления, в котором ведется поиск.  
+ The argument key value to be compared with the sort key of an element from the map being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **iterator** или `const_iterator`, который адресует положение элемента в сопоставлении с ключом, который равен ключу-аргументу или больше него, либо адресует положение после последнего элемента в сопоставлении, если соответствие для ключа не найдено.  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element in a map that with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the map if no match is found for the key.  
   
- Если возвращаемое значение `lower_bound` присвоено `const_iterator`, то объект сопоставления изменить нельзя. Если возвращаемое значение `lower_bound` присвоено **iterator**, то объект сопоставления можно изменить.  
+ If the return value of `lower_bound` is assigned to a `const_iterator`, the map object cannot be modified. If the return value of `lower_bound` is assigned to an **iterator**, the map object can be modified.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_lower_bound.cpp  
@@ -1656,7 +1696,7 @@ The element of m1 with a key matching that of the last element is: 30.
 ```  
   
 ##  <a name="map"></a>  map::map  
- Создает сопоставление, которое является пустым или копией части или целого другого сопоставления.  
+ Constructs a map that is empty or that is a copy of all or part of some other map.  
   
 ```  
 map();
@@ -1705,36 +1745,36 @@ map(
     const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Al`|Класс распределителя памяти, который будет использоваться для этого объекта-сопоставления. Значение по умолчанию — `Allocator`.|  
-|`Comp`|Функция сравнения типа `const Traits` для использования при упорядочивании элементов в сопоставлении. Значение по умолчанию — `hash_compare`.|  
-|`Right`|Сопоставление, копией которого будет создаваемое сопоставление.|  
-|`First`|Положение первого элемента в диапазоне копируемых элементов.|  
-|`Last`|Положение первого элемента после диапазона копируемых элементов.|  
-|`IList`|Объект initializer_list, из которого будут скопированы элементы.|  
+|Parameter|Description|  
+|`Al`|The storage allocator class to be used for this map object, which defaults to `Allocator`.|  
+|`Comp`|The comparison function of type `const Traits` used to order the elements in the map, which defaults to `hash_compare`.|  
+|`Right`|The map of which the constructed set is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list from which the elements are to be copied.|  
   
-### <a name="remarks"></a>Примечания  
- Все конструкторы сохраняют тип объекта-распределителя, управляющего памятью для сопоставления. Затем его можно получить путем вызова [get_allocator](#get_allocator). Параметр-распределитель часто не указывается в объявлениях класса и в макросах предварительной обработки, используемых для замены альтернативных распределителей.  
+### <a name="remarks"></a>Remarks  
+ All constructors store a type of allocator object that manages memory storage for the map and that can later be returned by calling [get_allocator](#get_allocator). The allocator parameter is often omitted in the class declarations and preprocessing macros used to substitute alternative allocators.  
   
- Все конструкторы инициализируют свои сопоставления.  
+ All constructors initialize their map.  
   
- Все конструкторы хранят объект-функцию типа Traits, которая используется для упорядочивания ключей сопоставления. Затем функцию можно получить путем вызова [key_comp](#key_comp).  
+ All constructors store a function object of type Traits that is used to establish an order among the keys of the map and that can later be returned by calling [key_comp](#key_comp).  
   
- Первые три конструктора указывают пустое начальное сопоставление, второй указывает тип функции сравнения ( `Comp`) для использовании при установлении порядка элементов, а третий явно указывает тип распределителя ( `Al`) для использования. Ключевое слово `explicit` подавляет некоторые виды автоматического преобразования типов.  
+ The first three constructors specify an empty initial map, the second specifying the type of comparison function ( `Comp`) to be used in establishing the order of the elements and the third explicitly specifying the allocator type ( `Al`) to be used. The key word `explicit` suppresses certain kinds of automatic type conversion.  
   
- Четвертый конструктор указывает копию сопоставления `Right`.  
+ The fourth constructor specifies a copy of the map `Right`.  
   
- Пятый конструктор указывает копию сопоставления путем перемещения `Right`.  
+ The fifth constructor specifies a copy of the map by moving `Right`.  
   
- Шестой, седьмой и восьмой конструкторы указывают initializer_list, из которого будут копироваться элементы.  
+ The sixth, seventh, and eighth constructors use an initializer_list from which to copy the members.  
   
- Следующие три конструктора копируют диапазон `[First, Last)` сопоставления с повышением точности при указании типа функции сравнения класса `Traits` и распределителя.  
+ The next three constructors copy the range `[First, Last)` of a map with increasing explicitness in specifying the type of comparison function of class `Traits` and allocator.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_map.cpp  
@@ -1852,31 +1892,31 @@ int main()
 ```  
   
 ##  <a name="mapped_type"></a>  map::mapped_type  
- Тип, который представляет данные, хранящиеся в сопоставлении.  
+ A type that represents the data stored in a map.  
   
 ```  
 typedef Type mapped_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `mapped_type` является синонимом для параметра-шаблона класса `Type`.  
+### <a name="remarks"></a>Remarks  
+ The type `mapped_type` is a synonym for the class's `Type` template parameter.  
   
- Дополнительные сведения о `Type` см. в разделе [Класс map](../standard-library/map-class.md).  
+ For more information on `Type` see the [map Class](../standard-library/map-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [value_type](#value_type) в качестве примера объявления и использования `mapped_type`.  
+### <a name="example"></a>Example  
+  See example for [value_type](#value_type) for an example of how to declare and use `mapped_type`.  
   
 ##  <a name="max_size"></a>  map::max_size  
- Возврат максимальной длины сопоставления.  
+ Returns the maximum length of the map.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Максимально возможная длина сопоставления.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the map.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_max_size.cpp  
@@ -1898,7 +1938,7 @@ int main( )
 ```  
   
 ##  <a name="op_at"></a>  map::operator[]  
- Вставка элемента в сопоставление с заданным значением ключа.  
+ Inserts an element into a map with a specified key value.  
   
 ```  
 Type& operator[](const Key& key);
@@ -1906,24 +1946,24 @@ Type& operator[](const Key& key);
 Type& operator 0-(Key&& key);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`key`|Ключевое значение элемента для вставки.|  
+|Parameter|Description|  
+|`key`|The key value of the element that is to be inserted.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на значение данных вставленного элемента.  
+### <a name="return-value"></a>Return Value  
+ A reference to the data value of the inserted element.  
   
-### <a name="remarks"></a>Примечания  
- Если значение ключа аргумента не найдено, он вставляется вместе со значением по умолчанию для такого типа данных.  
+### <a name="remarks"></a>Remarks  
+ If the argument key value is not found, then it is inserted along with the default value of the data type.  
   
- `operator[]` можно использовать для вставки элементов в сопоставление `m` с помощью `m[ key] = DataValue;`, где `DataValue` — это значение элемента `mapped_type` со значением ключа `key`.  
+ `operator[]` may be used to insert elements into a map `m` using `m[ key] = DataValue;` where `DataValue` is the value of the `mapped_type` of the element with a key value of `key`.  
   
- При использовании `operator[]` для вставки элементов возвращаемая ссылка не отображает, меняет ли вставка уже существующий элемент или создает новый. Функции-члены [find](#find) и [insert](#insert) можно использовать для определения перед вставкой того, существует ли уже элемент с указанным ключом.  
+ When using `operator[]` to insert elements, the returned reference does not indicate whether an insertion is changing a pre-existing element or creating a new one. The member functions [find](#find) and [insert](#insert) can be used to determine whether an element with a specified key is already present before an insertion.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_op_insert.cpp  
@@ -1995,7 +2035,7 @@ c2["abc"] == 1
 ```  
   
 ##  <a name="op_eq"></a>  map::operator=  
- Замена элементов сопоставления копией другого сопоставления.  
+ Replaces the elements of a map with a copy of another map.  
   
 ```  
 map& operator=(const map& right);
@@ -2003,17 +2043,17 @@ map& operator=(const map& right);
 map& operator=(map&& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`right`|[Сопоставление](../standard-library/map-class.md), копируемое в `map`.|  
+|Parameter|Description|  
+|`right`|The [map](../standard-library/map-class.md) being copied into the `map`.|  
   
-### <a name="remarks"></a>Примечания  
- После удаления всех существующих элементов в `map` `operator=` копирует или перемещает содержимое `right` в сопоставление.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `map`, `operator=` either copies or moves the contents of `right` into the map.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_operator_as.cpp  
@@ -2051,19 +2091,19 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  map::pointer  
- Тип, предоставляющий указатель на элемент в сопоставлении.  
+ A type that provides a pointer to an element in a map.  
   
 ```  
 typedef typename allocator_type::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип **pointer** может использоваться для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- В большинстве случаев для доступа к элементам в объекте-сопоставлении следует использовать [итератор](#iterator).  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a map object.  
   
 ##  <a name="rbegin"></a>  map::rbegin  
- Возвращает итератор, адресующий первый элемент в обратном сопоставлении.  
+ Returns an iterator addressing the first element in a reversed map.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -2071,17 +2111,17 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обратный двунаправленный итератор, адресующий первый элемент в обратном сопоставлении или адресующий элемент, который был последним элементов в сопоставлении до изменения его порядка на противоположный.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed map or addressing what had been the last element in the unreversed map.  
   
-### <a name="remarks"></a>Примечания  
- `rbegin` используется с обратным сопоставлением так же, как [begin](#begin) используется с обычным сопоставлением.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed map just as [begin](#begin) is used with a map.  
   
- Если возвращенное значение `rbegin` назначается `const_reverse_iterator`, то объект-сопоставление изменить нельзя. Если возвращенное значение `rbegin` назначается `reverse_iterator`, то объект-сопоставление можно изменить.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, then the map object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, then the map object can be modified.  
   
- `rbegin` можно использовать для перебора сопоставления в обратном порядке.  
+ `rbegin` can be used to iterate through a map backwards.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_rbegin.cpp  
@@ -2140,13 +2180,13 @@ After the erasure, the first element in the reversed map is 2.
 ```  
   
 ##  <a name="reference"></a>  map::reference  
- Тип, предоставляющий ссылку на элемент, хранящийся в сопоставлении.  
+ A type that provides a reference to an element stored in a map.  
   
 ```  
 typedef typename allocator_type::reference reference;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_reference.cpp  
@@ -2196,7 +2236,7 @@ The modified data value of first element is 15.
 ```  
   
 ##  <a name="rend"></a>  map::rend  
- Возвращает итератор, адресующий положение после последнего элемента в обратном сопоставлении.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed map.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -2204,19 +2244,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обратный двунаправленный итератор, адресующий положение после последнего элемента в обратном сопоставлении (положение, которое предшествовало первому элементу в сопоставлении до изменения его порядка на противоположный).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed map (the location that had preceded the first element in the unreversed map).  
   
-### <a name="remarks"></a>Примечания  
- `rend` используется с обратным сопоставлением так же, как [end](#end) используется с обычным сопоставлением.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed map just as [end](#end) is used with a map.  
   
- Если возвращенное значение `rend` назначается `const_reverse_iterator`, то объект-сопоставление изменить нельзя. Если возвращенное значение `rend` назначается `reverse_iterator`, то объект-сопоставление можно изменить.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, then the map object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, then the map object can be modified.  
   
- `rend` можно использовать для проверки, достиг ли итератор конца своего сопоставления.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its map.  
   
- Значение, возвращаемое `rend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_rend.cpp  
@@ -2277,36 +2317,36 @@ After the erasure, the last element in the reversed map is 2.
 ```  
   
 ##  <a name="reverse_iterator"></a>  map::reverse_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать или изменять элементы в обратном сопоставлении.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed map.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `reverse_iterator` не может изменять значение элемента и используется для перебора сопоставления в обратном порядке.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` cannot modify the value of an element and is use to iterate through the map in reverse.  
   
- `reverse_iterator`, определенный сопоставлением, указывает на элементы, которые являются объектами [value_type](#value_type) типа `pair`*\<***constKey**, **Type***>*, первый член которых — ключ элемента, а второй — сопоставленные данные, хранящиеся в элементе.  
+ The `reverse_iterator` defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair`*\<***constKey**, **Type***>*, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Для разыменования `reverse_iterator``rIter`, указывающего на элемент в сопоставлении, используйте оператор **->**.  
+ To dereference a `reverse_iterator` `rIter` pointing to an element in a map, use the **->** operator.  
   
- Для получения доступа к значению ключа для элемента используйте `rIter` -> **first**, что эквивалентно (\* `rIter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `rIter` -> **second**, что эквивалентно (\* `rIter`). **first**.  
+ To access the value of the key for the element, use `rIter` -> **first**, which is equivalent to (\* `rIter`). **first**. To access the value of the mapped datum for the element, use `rIter` -> **second**, which is equivalent to (\* `rIter`). **first**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.  
+### <a name="example"></a>Example  
+  See example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
 ##  <a name="size"></a>  map::size  
- Возврат количества элементов в сопоставлении.  
+ Returns the number of elements in the map.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущая длина сопоставления.  
+### <a name="return-value"></a>Return Value  
+ The current length of the map.  
   
-### <a name="example"></a>Пример  
-  В следующем примере иллюстрируется использование функции-члена map::size.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the map::size member function.  
   
 ```  
 // map_size.cpp  
@@ -2337,31 +2377,31 @@ The map length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  map::size_type  
- Беззнаковый целочисленный тип, который может представлять количество элементов в сопоставлении.  
+ An unsigned integer type that can represent the number of elements in a map.  
   
 ```  
 typedef typename allocator_type::size_type size_type;  
 ```  
   
-### <a name="example"></a>Пример  
-  См. пример для [size](#size) в качестве примера объявления и использования `size_type`.  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`.  
   
 ##  <a name="swap"></a>  map::swap  
- Обмен элементами между двумя сопоставлениями.  
+ Exchanges the elements of two maps.  
   
 ```  
 void swap(
     map<Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Сопоставление-аргумент предоставляет элементы для обмена с целевым сопоставлением.  
+ The argument map providing the elements to be swapped with the target map.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член не делает недействительными никакие ссылки, указатели или итераторы, обозначающие элементы в двух сопоставлениях, между которыми выполняется обмен элементами.  
+### <a name="remarks"></a>Remarks  
+ The member function invalidates no references, pointers, or iterators that designate elements in the two maps whose elements are being exchanged.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_swap.cpp  
@@ -2414,7 +2454,7 @@ After swapping with m3, map m1 is: 300.
 ```  
   
 ##  <a name="upper_bound"></a>  map::upper_bound  
- Возвращает итератор, указывающий на первый элемент в сопоставлении с ключом, значение которого равно указанному ключу или больше его.  
+ Returns an iterator to the first element in a map that with a key having a value that is greater than that of a specified key.  
   
 ```  
 iterator upper_bound(const Key& key);
@@ -2422,16 +2462,16 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Аргумент-значение ключа для сравнения с значением ключа сортировки элемента сопоставления, в котором проводится поиск.  
+ The argument key value to be compared with the sort key value of an element from the map being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **Итератор** или `const_iterator`, адресующий положение элемента в сопоставлении с ключом, значение которого больше ключа-аргумента, или адресующий положение после последнего элемента в сопоставлении, если соответствие для ключа не найдено.  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element in a map that with a key that is greater than the argument key, or that addresses the location succeeding the last element in the map if no match is found for the key.  
   
- Если возвращенное значение назначается `const_iterator`, объект-сопоставление изменить нельзя. Если возвращенное значение назначается **iterator**, объект-сопоставление можно изменить.  
+ If the return value is assigned to a `const_iterator`, the map object cannot be modified. If the return value is assigned to a **iterator**, the map object can be modified.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_upper_bound.cpp  
@@ -2483,23 +2523,23 @@ that of the initial element of m1 is: 20.
 ```  
   
 ##  <a name="value_comp"></a>  map::value_comp  
- Функция-член возвращает объект-функцию, которая определяет порядок элементов в сопоставлении путем сравнения значений их ключей.  
+ The member function returns a function object that determines the order of elements in a map by comparing their key values.  
   
 ```  
 value_compare value_comp() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект-функцию сравнения, которую сопоставление использует для упорядочивания своих элементов.  
+### <a name="return-value"></a>Return Value  
+ Returns the comparison function object that a map uses to order its elements.  
   
-### <a name="remarks"></a>Примечания  
- Для сопоставления *m*, если два элемента — *e*1( *k*1, *d*1) и *e*2( *k*2, `d`2) являются объектами типа `value_type`, где *k*1 и *k*2 — это их ключи типа `key_type`, а `d`1 и `d`2 — их данные типа `mapped_type`, то *m.*`value_comp`( *e*1, *e*2) эквивалентно *m.*`key_comp`*(k*1, *k*2). Сохраненный объект определяет функцию-член  
+### <a name="remarks"></a>Remarks  
+ For a map *m*, if two elements *e*1( *k*1, *d*1) and *e*2( *k*2, `d`2) are objects of type `value_type`, where *k*1 and *k*2 are their keys of type `key_type` and `d`1 and `d`2 are their data of type `mapped_type`, then *m.*`value_comp`( *e*1, *e*2) is equivalent to *m.*`key_comp`*(k*1, *k*2). A stored object defines the member function  
   
  **bool operator**( **value_type&**`left`, **value_type&**`right`);  
   
- которая возвращает **true**, если значение ключа `left` предшествует значению ключа `right` в порядке сортировки и не равно ему.  
+ which returns **true** if the key value of `left` precedes and is not equal to the key value of `right` in the sort order.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_value_comp.cpp  
@@ -2548,13 +2588,13 @@ The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```  
   
 ##  <a name="value_type"></a>  map::value_type  
- Тип объекта, хранящегося в качестве элемента в сопоставлении.  
+ The type of object stored as an element in a map.  
   
 ```  
 typedef pair<const Key, Type> value_type;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_value_type.cpp  
@@ -2606,10 +2646,10 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Члены \<map>](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
- [Контейнеры](../cpp/containers-modern-cpp.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [\<map> Members](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

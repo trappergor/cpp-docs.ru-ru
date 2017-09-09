@@ -1,5 +1,5 @@
 ---
-title: "Класс unary_negate | Документы Майкрософт"
+title: unary_negate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unary_negate
 - xfunctional/std::unary_negate
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 314d93badc71760c3b71492991dbe16f11df7686
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aec04f9e8cd63ed5e5a201bd48d02f5f1500ad6d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unarynegate-class"></a>Класс unary_negate
-Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной унарной функции.  
+# <a name="unarynegate-class"></a>unary_negate Class
+A template class providing a member function that negates the return value of a specified unary function.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Predicate>
@@ -57,22 +56,22 @@ public:
 };
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Func`  
- Унарная функция, которая должна быть инвертирована.  
+ The unary function to be negated.  
   
  `left`  
- Операнд унарной функции, которая должна быть инвертирована.  
+ The operand of the unary function to be negated.  
   
-## <a name="return-value"></a>Возвращаемое значение  
- Отрицание унарной функции.  
+## <a name="return-value"></a>Return Value  
+ The negation of the unary function.  
   
-## <a name="remarks"></a>Примечания  
- Класс шаблона сохраняет копию объекта унарной функции _ *Func.* В нем определяется функция-член `operator()`, которая возвращает **!**\_ *Func(left).*  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of a unary function object _ *Func.* It defines its member function `operator()` as returning **!**\_ *Func(left).*  
   
- Конструктор `unary_negate` редко используется напрямую. Вспомогательная функция [not1](../standard-library/functional-functions.md#not1) позволяет удобно объявить и использовать предикат адаптера **unary_negator**.  
+ The constructor of `unary_negate` is rarely used directly. The helper function [not1](../standard-library/functional-functions.md#not1) provides an easier way to declare and use the **unary_negator** adaptor predicate.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_unary_negate.cpp  
@@ -124,14 +123,14 @@ The number of elements in v1 not greater than 10 is: 3.
 */  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

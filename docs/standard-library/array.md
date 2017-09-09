@@ -1,5 +1,5 @@
 ---
-title: "&lt;array&gt; | Документы Майкрософт"
+title: '&lt;array&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 780406772c509cb1320e1b8a1124cdc535b9c852
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
-Определяет класс шаблонов контейнеров `array` и некоторые вспомогательные шаблоны.  
+Defines the container template class `array` and several supporting templates.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <array>  
 ```  
   
-### <a name="classes"></a>Классы  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[array](../standard-library/array-class-stl.md)|Хранит последовательность элементов фиксированной длины.|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Заключает в оболочку тип элемента массива.|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Создает оболочку размера элемента массива.|  
+|[array](../standard-library/array-class-stl.md)|Stores a fixed-length sequence of elements.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Wraps the type of an array element.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Wraps the size of an array element.|  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/array-operators.md#op_eq_eq)|Сравнение массивов на равенство.|  
-|[operator!=](../standard-library/array-operators.md#op_neq)|Сравнение массивов на неравенство.|  
-|[operator\<](../standard-library/array-operators.md#op_lt)|Сравнение массивов "меньше, чем".|  
-|[operator>=](../standard-library/array-operators.md#op_gt_eq)|Сравнение массивов "больше или равно".|  
-|[operator>](../standard-library/array-operators.md#op_gt)|Сравнение массивов "больше, чем".|  
-|[operator<=](../standard-library/array-operators.md#op_lt_eq)|Сравнение массивов "меньше или равно".|  
-  
-### <a name="functions"></a>Функции  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get)|Получает указанный элемент массива.|  
-|[swap](../standard-library/array-functions.md#swap)|Меняет местами содержимое одного массива с содержимым другого массива.|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|array comparison, equal|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|array comparison, not equal|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|array comparison, less than|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|array comparison, greater than or equal|  
+|[operator>](../standard-library/array-operators.md#op_gt)|array comparison, greater than|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|array comparison, less than or equal|  
   
-## <a name="see-also"></a>См. также  
+### <a name="functions"></a>Functions  
+  
+|||  
+|-|-|  
+|[get](../standard-library/array-functions.md#get)|Get specified array element.|  
+|[swap](../standard-library/array-functions.md#swap)|Exchanges the contents of one array with the contents of another array.|  
+  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

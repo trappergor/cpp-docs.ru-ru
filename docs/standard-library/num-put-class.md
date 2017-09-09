@@ -1,5 +1,5 @@
 ---
-title: "Класс num_put | Документы Майкрософт"
+title: num_put Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocnum/std::num_put
-- num_put
 - locale/std::num_put::char_type
 - locale/std::num_put::iter_type
 - locale/std::num_put::do_put
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- num_put class
+- std::num_put [C++]
+- std::num_put [C++], char_type
+- std::num_put [C++], iter_type
+- std::num_put [C++], do_put
+- std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 caps.latest.revision: 21
 author: corob-msft
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a3161373a3a0edec1bf7272e3099432c7282b0cf
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b1cc5cde768311e5ffb4155021a17fa32d357bcd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numput-class"></a>Класс num_put
-Шаблонный класс, описывающий объект, который можно использовать как аспект языкового стандарта для управления преобразованиями числовых значений в последовательности типа `CharType`.  
+# <a name="numput-class"></a>num_put Class
+A template class that describes an object that can serve as a locale facet to control conversions of numeric values to sequences of type `CharType`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -56,53 +59,53 @@ template <class CharType,
 class num_put : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Тип, используемый внутри программы для кодирования символов в языковом стандарте.  
+ The type used within a program to encode characters in a locale.  
   
  `OutputIterator`  
- Тип итератора, куда численные функции записывают свои выходные данные.  
+ The type of iterator to which the numeric put functions write their output.  
   
-## <a name="remarks"></a>Примечания  
- Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.**  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[num_put](#num_put)|Конструктор для объектов типа `num_put`.|  
+|[num_put](#num_put)|The constructor for objects of type `num_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|  
-|[iter_type](#iter_type)|Тип, который описывает итератор вывода.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an output iterator.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_put](#do_put)|Виртуальная функция, которая вызывается для преобразования числа в последовательность `CharType`, представляющую это число в формате для определенного языкового стандарта.|  
-|[put](#put)|Преобразует число в последовательность `CharType`, представляющую число в формате для определенного языкового стандарта.|  
+|[do_put](#do_put)|A virtual function that is called to convert a number into a sequence of `CharType`s that represents the number formatted for a given locale.|  
+|[put](#put)|Converts a number into a sequence of `CharType`s which represents the number formatted for a given locale.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  num_put::char_type  
- Тип, используемый для описания символа, используемого языковым стандартом.  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом для параметра-шаблона **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_put"></a>  num_put::do_put  
- Виртуальная функция, которая вызывается для преобразования числа в последовательность объектов типа **CharType**, которая представляет число в формате заданного языкового стандарта.  
+ A virtual function that is called to convert a number into a sequence of **CharType**s that represents the number formatted for a given locale.  
   
 ```  
 virtual iter_type do_put(
@@ -160,58 +163,58 @@ virtual iter_type do_put(
     const unsigned long long val) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `next`  
- Итератор, адресующий первый элемент во вставляемой строке.  
+ An iterator addressing the first element of the inserted string.  
   
  `_Iosbase`  
- Указывает поток, который содержит языковой стандарт с аспектом numpunct, используемым для расстановки знаков препинания в выводе, и флагами для форматирования вывода.  
+ Specified the stream which contains locale with the numpunct facet used to punctuate the output and flags for formatting the output.  
   
  `_Fill`  
- Символ, используемый для расстановки интервалов.  
+ A character that is used for spacing.  
   
  `val`  
- Числовой или логический тип для возвращаемого значения.  
+ The number or Boolean type that is to be output.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор вывода, который адресует позицию после последнего сформированного элемента.  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>Примечания  
- Первая виртуальная защищенная функция-член создает последовательные элементы, начиная с `next`, для формирования целочисленного поля вывода из значения `val`. Функция возвращает итератор, обозначающий следующую позицию для вставки элемента после сформированного целочисленного поля вывода.  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function generates sequential elements beginning at `next` to produce an integer output field from the value of `val`. The function returns an iterator designating the next place to insert an element beyond the generated integer output field.  
   
- Целочисленное поле вывода формируется теми же правилами, которые используются функциями печати для выдачи рядов элементов `char` в файл. Предполагается, что каждый такой символьный элемент подбирается к эквивалентному элементу типа **CharType** с помощью простого соответствия "один к одному". Однако в случаях, когда функция печати дополняет поле пробелами или цифрой 0, `do_put` вместо этого использует **fill**. Эквивалентная спецификация преобразования печати определяется следующим образом:  
+ The integer output field is generated by the same rules used by the print functions for generating a series of `char` elements to a file. Each such char element is assumed to map to an equivalent element of type **CharType** by a simple, one-to-one mapping. Where a print function pads a field with either spaces or the digit 0, however, `do_put` instead uses **fill**. The equivalent print conversion specification is determined as follows:  
   
--   Если **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), спецификация преобразования будет иметь значение **lo**.  
+-   If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is **lo**.  
   
--   Если **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), спецификация преобразования будет иметь значение **lx**.  
+-   If **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is **lx**.  
   
--   В противном случае спецификация преобразования будет иметь значение **ld**.  
+-   Otherwise, the conversion specification is **ld**.  
   
- Если **iosbase**. [width](../standard-library/ios-base-class.md#width) не равно нулю, ширина поля этого значения добавляется в начало. Затем функция вызывает **iosbase**. **width**(0) для сброса ширины поля в нуль.  
+ If **iosbase**. [width](../standard-library/ios-base-class.md#width) is nonzero, a field width of this value is prepended. The function then calls **iosbase**. **width**(0) to reset the field width to zero.  
   
- Заполнение происходит, только если минимальное количество элементов *N*, требуемое для указания поля вывода, меньше, чем **iosbase**. [width](../standard-library/ios-base-class.md#width). Такого заполнения состоит из последовательности *N* - **ширина** копий **заполнения**. Заполнение выполняется следующим образом:  
+ Padding occurs only if the minimum number of elements *N* required to specify the output field is less than **iosbase**. [width](../standard-library/ios-base-class.md#width). Such padding consists of a sequence of *N* - **width** copies of **fill**. Padding then occurs as follows:  
   
--   Если **iosbase**. **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left), the flag **-** is prepended. (Заполнение происходит после сформированного текста.)  
+-   If **iosbase**. **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left), the flag **-** is prepended. (Padding occurs after the generated text.)  
   
--   Если **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), в начало добавляется флаг **0**. (Для числового поля вывода заполнение происходит там, где функции печати заполняют цифрой 0.)  
+-   If **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), the flag **0** is prepended. (For a numeric output field, padding occurs where the print functions pad with 0.)  
   
--   В противном случае никакие дополнительные флаги в начало не добавляются. (Заполнение происходит перед сформированной последовательностью.)  
+-   Otherwise, no additional flag is prepended. (Padding occurs before the generated sequence.)  
   
- Как итог:  
+ Finally:  
   
--   Если **iosbase**. **flags** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) не равно нулю, флаг **+** добавляется в начало спецификации преобразования.  
+-   If **iosbase**. **flags** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) is nonzero, the flag **+** is prepended to the conversion specification.  
   
--   Если **iosbase**. **flags** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase) не равно нулю, флаг **#** добавляется в начало спецификации преобразования.  
+-   If **iosbase**. **flags** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase) is nonzero, the flag **#** is prepended to the conversion specification.  
   
- Формат целочисленного поля вывода далее определяется [аспектом языкового стандарта](../standard-library/locale-class.md#facet_class)**fac**, возвращаемым вызовом [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>(**iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). В частности:  
+ The format of an integer output field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Specifically:  
   
-- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) определяет, как будут группироваться цифры слева от любого десятичного разделителя;  
+- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) determines how digits are grouped to the left of any decimal point  
   
-- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) определяет последовательность, которая разделяет группы цифр слева от любого десятичного разделителя.  
+- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) determines the sequence that separates groups of digits to the left of any decimal point  
   
- Если не накладываются ограничения по группированию со стороны **fac**. **grouping** (первый элемент имеет значение CHAR_MAX), то никакие экземпляры **fac**. `thousands_sep` не будут формироваться в поле вывода. В противном случае после преобразования печати будут вставлены разделители.  
+ If no grouping constraints are imposed by **fac**. **grouping** (its first element has the value CHAR_MAX), then no instances of **fac**. `thousands_sep` are generated in the output field. Otherwise, separators are inserted after the print conversion occurs.  
   
- Вторая виртуальная защищенная функция-член:  
+ The second virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -220,9 +223,9 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что она заменяет спецификацию преобразования **ld** на **lu**.  
+ behaves the same as the first, except that it replaces a conversion specification of **ld** with **lu**.  
   
- Третья виртуальная защищенная функция-член:  
+ The third virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -231,21 +234,21 @@ virtual iter_type do_put(iter_type next,
     double val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что она создает поле вывода с плавающей запятой из значения **val**. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) определяет последовательность, которая отделяет цифры целой части от цифр дробной части. Эквивалентная спецификация преобразования печати определяется следующим образом:  
+ behaves the same as the first, except that it produces a floating-point output field from the value of **val**. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determines the sequence that separates the integer digits from the fraction digits. The equivalent print conversion specification is determined as follows:  
   
--   Если **iosbase**. **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed), спецификация преобразования будет иметь значение **lf**.  
+-   If **iosbase**. **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed), the conversion specification is **lf**.  
   
--   Если **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), спецификация преобразования будет иметь значение `le`. Если **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) не равно нулю, **e** заменяется на **E**.  
+-   If **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), the conversion specification is `le`. If **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) is nonzero, **e** is replaced with **E**.  
   
--   В противном случае спецификация преобразования будет иметь значение **lg**. Если **iosbase**. **flags** & **ios_base::uppercase** не равно нулю, **g** заменяется на **G**.  
+-   Otherwise, the conversion specification is **lg**. If **iosbase**. **flags** & **ios_base::uppercase** is nonzero, **g** is replaced with **G**.  
   
- Если **iosbase**. **flags** & **ios_base::fixed** не равно нулю или если **iosbase**. [precision](../standard-library/ios-base-class.md#precision) больше нуля, точность со значением **iosbase**. **precision** добавляется в начало спецификации преобразования. Любое заполнение происходит так же, как для целочисленного поля вывода. Символ заполнения — **fill**. Как итог:  
+ If **iosbase**. **flags** & **ios_base::fixed** is nonzero or if **iosbase**. [precision](../standard-library/ios-base-class.md#precision) is greater than zero, a precision with the value **iosbase**. **precision** is prepended to the conversion specification. Any padding behaves the same as for an integer output field. The padding character is **fill**. Finally:  
   
--   Если **iosbase**. **flags** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) не равно нулю, флаг **+** добавляется в начало спецификации преобразования.  
+-   If **iosbase**. **flags** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) is nonzero, the flag **+** is prepended to the conversion specification.  
   
--   Если **iosbase**. **flags** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) не равно нулю, в начало спецификации преобразования добавляется флаг **#**.  
+-   If **iosbase**. **flags** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) is nonzero, the flag **#** is prepended to the conversion specification.  
   
- Четвертая виртуальная защищенная функция-член:  
+ The fourth virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -254,9 +257,9 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что квалификатор **l** в спецификации преобразования заменяется на **L**.  
+ behaves the same the third, except that the qualifier **l** in the conversion specification is replaced with **L**.  
   
- Пятая виртуальная защищенная функция-член:  
+ The fifth virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -265,9 +268,9 @@ virtual iter_type do_put(iter_type next,
     const void* val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что спецификация преобразования — `p`**,** плюс любые квалификаторы, необходимые для указания заполнения.  
+ behaves the same the first, except that the conversion specification is `p`**,** plus any qualifier needed to specify padding.  
   
- Шестая виртуальная защищенная функция-член:  
+ The sixth virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -276,11 +279,11 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что она формирует из `val` логическое поле вывода.  
+ behaves the same as the first, except that it generates a Boolean output field from `val`.  
   
- Логическое поле вывода принимает одну из двух форм. Если **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) имеет значение **false**, функция-член возвращает `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, (**long**) `val`), что обычно формирует созданную последовательность из 0 (для значения **false**) или 1 (для значения **true**). В противном случае сформированная последовательность либо **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (для значения **false**), либо **fac**. [truename](../standard-library/numpunct-class.md#truename) (для значения **true**).  
+ A Boolean output field takes one of two forms. If **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is **false**, the member function returns `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`), which typically produces a generated sequence of either 0 (for **false**) or 1 (for **true**). Otherwise, the generated sequence is either **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (for **false**), or **fac**. [truename](../standard-library/numpunct-class.md#truename) (for **true**).  
   
- Седьмая виртуальная защищенная функция-член:  
+ The seventh virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -289,9 +292,9 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что она заменяет спецификацию преобразования **ld** на **lld**.  
+ behaves the same as the first, except that it replaces a conversion specification of **ld** with **lld**.  
   
- Восьмая виртуальная защищенная функция-член:  
+ The eighth virtual protected member function:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -300,47 +303,47 @@ virtual iter_type do_put(iter_type next,
     unsigned long long val) const;
 ```  
   
- ведет себя так же, как первая, за исключением того, что она заменяет спецификацию преобразования `ld` на `llu`.  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `llu`.  
   
-### <a name="example"></a>Пример  
-  См. пример для [put](#put), который вызывает `do_put`.  
+### <a name="example"></a>Example  
+  See the example for [put](#put), which calls `do_put`.  
   
 ##  <a name="iter_type"></a>  num_put::iter_type  
- Тип, который описывает итератор вывода.  
+ A type that describes an output iterator.  
   
 ```  
 typedef OutputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом параметра-шаблона **OutputIterator.**  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **OutputIterator.**  
   
 ##  <a name="num_put"></a>  num_put::num_put  
- Конструктор для объектов типа `num_put`.  
+ The constructor for objects of type `num_put`.  
   
 ```  
 explicit num_put(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- Целочисленное значение, используемое для указания типа управления памятью для объекта.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>Примечания  
- Возможные значения параметра `_Refs` и их важность:  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: время существования объекта управляется языковыми стандартами, которые его содержат.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: время существования объекта должно управляться вручную.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: эти значения не определены.  
+-   \> 1: These values are not defined.  
   
- Прямые примеры привести нельзя, так как деструктор защищен.  
+ No direct examples are possible, because the destructor is protected.  
   
- Конструктор инициализирует свой базовый объект через **locale::**[facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
 ##  <a name="put"></a>  num_put::put  
- Преобразует число в последовательность объектов типа **CharType**, которая представляет число в формате заданного языкового стандарта.  
+ Converts a number into a sequence of **CharType**s that represents the number formatted for a given locale.  
   
 ```  
 iter_type put(
@@ -400,26 +403,26 @@ iter_type put(
     const void* val) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dest`  
- Итератор, адресующий первый элемент во вставляемой строке.  
+ An iterator addressing the first element of the inserted string.  
   
  `_Iosbase`  
- Указывает поток, который содержит языковой стандарт с аспектом numpunct, используемым для расстановки знаков препинания вывода и флагами для форматирования вывода.  
+ Specified the stream that contains locale with the numpunct facet used to punctuate the output and flags for formatting the output.  
   
  `_Fill`  
- Символ, используемый для расстановки интервалов.  
+ A character that is used for spacing.  
   
  `val`  
- Числовой или логический тип для возвращаемого значения.  
+ The number or Boolean type that is to be output.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор вывода, который адресует позицию после последнего сформированного элемента.  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>Примечания  
- Все функции-члены возвращают [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `val`).  
+### <a name="remarks"></a>Remarks  
+ All member functions return [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // num_put_put.cpp  
@@ -455,9 +458,9 @@ The thousands separator is: .
 num_put( ) = 1.000,67  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [Класс facet](../standard-library/locale-class.md#facet_class)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
