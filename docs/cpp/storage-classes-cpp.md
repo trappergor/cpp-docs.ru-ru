@@ -1,64 +1,87 @@
 ---
-title: "Классы хранения (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "thread_local_cpp"
-  - "external_cpp"
-  - "static_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы хранения, основные понятия"
+title: Storage classes (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- thread_local_cpp
+- external_cpp
+- static_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- storage classes, basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Классы хранения (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
-Объект *класс хранения* в контексте объявления переменных C\+\+ — это описатель типа, который управляет временем существования, компоновкой и расположением объектов в памяти.  Каждый объект может иметь только один класс хранения.  Переменные, определяемые в блоке, имеют автоматическое хранилище, если не указано иное с помощью описателей `extern`, `static` или `thread_local`.  Автоматически создаваемые объекты и переменные не имеют компоновки. Они не доступны для кода за пределами блока.  
+---
+# <a name="storage-classes-c"></a>Storage classes (C++)  
   
- **Примечания**  
+A *storage class* in the context of C++ variable declarations is a type specifier that governs the lifetime, linkage, and memory location of objects. A given object can have only one storage class. Variables defined within a block have automatic storage unless otherwise specified using the `extern`, `static`, or `thread_local` specifiers. Automatic objects and variables have no linkage; they are not visible to code outside the block.  
   
-1.  Ключевое слово [mutable](../cpp/mutable-data-members-cpp.md) может рассматриваться как спецификатор класса хранения.  Однако он доступен только в списке членов в определении класса.  
+**Notes**  
   
-2.  Начиная с версии [!INCLUDE[cpp_dev10_long](../Token/cpp_dev10_long_md.md)], ключевое слово `auto` не является описателем класса хранения C\+\+, а ключевое слово `register` считается устаревшим.  
+1.  The [mutable](../cpp/mutable-data-members-cpp.md) keyword may be considered a storage class specifier. However, it is only available in the member list of a class definition.  
   
--   [Static](#static)  
+2.  **Visual C++ 2010 and later:** The `auto` keyword is no longer a C++ storage-class specifier, and the `register` keyword is deprecated. **Visual Studio 2017 version 15.3 and later:** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The `register` keyword is no longer a supported storage class. The keyword is still reserved in the standard for future use. 
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="in-this-section"></a>In this section:
   
+-   [static](#static)  
 -   [extern](#extern)  
+-   [thread_local](#thread_local)
+
+<a name="static"></a>
   
--   [thread\_local](#thread_local)  
+## <a name="static"></a>static  
   
-## статический  
- Ключевое слово `static` может использоваться для объявления переменных и функций в глобальной области видимости, в области видимости пространства имен и области видимости класса.  Статические переменные также могут быть объявлены в локальной области видимости.  
+The `static` keyword can be used to declare variables and functions at global scope, namespace scope, and class scope. Static variables can also be declared at local scope.  
   
- Статическая длительность означает, что объект или переменная выделяется при запуске программы и освобождается при ее завершении.  Внешняя компоновка означает, что имя переменной видно за пределами файла, в котором эта переменная объявлена.  Внутренняя компоновка означает, что имя не видно за пределами файла, в котором объявлена переменная.  По умолчанию объект или переменная, определенные в глобальном пространстве имен, имеют статическую длительность и внешнюю компоновку.  Ключевое слово `static` можно использовать в следующих случаях.  
+Static duration means that the object or variable is allocated when the program starts and is deallocated when the program ends. External linkage means that the name of the variable is visible from outside the file in which the variable is declared. Conversely, internal linkage means that the name is not visible outside the file in which the variable is declared. By default, an object or variable that is defined in the global namespace has static duration and external linkage. The `static` keyword can be used in the following situations.  
   
-1.  При объявлении переменной или функции в области видимости файла \(в глобальной области видимости и \(или\) области видимости пространства имен\) ключевое слово `static` указывает, что переменная или функция имеет внутреннюю компоновку.  При объявлении переменной она имеет статическую длительность и компилятор инициализирует ее со значением 0, если не указано другое значение.  
+1.  When you declare a variable or function at file scope (global and/or namespace scope), the `static` keyword specifies that the variable or function has internal linkage. When you declare a variable, the variable has static duration and the compiler initializes it to 0 unless you specify another value.  
   
-2.  При объявлении переменной в функции ключевое слово `static` указывает, что переменная сохраняет свое состояние между вызовами этой функции.  
+2.  When you declare a variable in a function, the `static` keyword specifies that the variable retains its state between calls to that function.  
   
-3.  При объявлении данных\-члена в объявлении класса ключевое слово `static` указывает, что всеми экземплярами этого класса совместно используется одна копия этого члена.  Статические данные\-член должны быть определены в области видимости файла.  Целочисленные данные\-член, объявляемые как `const` `static`, могут иметь инициализатор.  
+3.  When you declare a data member in a class declaration, the `static` keyword specifies that one copy of the member is shared by all instances of the class. A static data member must be defined at file scope. An integral data member that you declare as `const static` can have an initializer.  
   
-4.  При объявлении функции\-члена в объявлении класса ключевое слово `static` указывает, что эта функция совместно используется всеми экземплярами данного класса.  Статическая функция\-член не может получать доступ к члену экземпляра, поскольку она не имеет неявного указателя `this`.  Для доступа к члену экземпляра следует объявить функцию с параметром, являющимся указателем или ссылкой на экземпляр.  
+4.  When you declare a member function in a class declaration, the `static` keyword specifies that the function is shared by all instances of the class. A static member function cannot access an instance member because the function does not have an implicit `this` pointer. To access an instance member, declare the function with a parameter that is an instance pointer or reference.  
   
-5.  Объявление членов объединения как статических невозможно.  Однако глобально объявляемое анонимное объединение должно явно объявляться как `static`.  
+5.  You cannot declare the members of a union as static. However, a globally declared anonymous union must be explicitly declared `static`.  
   
- В следующем примере показано, как переменная, объявленная как `static` в функции, сохраняет свое состояние между вызовами этой функции.  
+This example shows how a variable declared `static` in a function retains its state between calls to that function.  
   
-```  
+```cpp  
 // static1.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,13 +100,17 @@ int main() {
 }  
 ```  
   
-  **nStatic — 0**  
-**nStatic — 1**  
-**nStatic — 3**  
-**nStatic — 6**  
-**nStatic — 10** В следующем примере показано использование ключевого слова `static` в классе.  
-  
+```Output  
+nStatic is 0  
+nStatic is 1  
+nStatic is 3  
+nStatic is 6  
+nStatic is 10  
 ```  
+  
+This example shows the use of `static` in a class.  
+  
+```cpp  
 // static2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -116,16 +143,20 @@ int main() {
 }  
 ```  
   
-  **0**  
-**0**  
-**1**  
-**1**  
-**2**  
-**2**  
-**3**  
-**3** В следующем примере показана локальная переменная, объявленная как `static` в функции\-члене.  Статическая переменная доступна всей программе; все экземпляры типа будут совместно использовать одну и ту же копию этой переменной.  
-  
+```Output  
+0  
+0  
+1  
+1  
+2  
+2  
+3  
+3  
 ```  
+  
+This example shows a local variable declared `static` in a member function. The static variable is available to the whole program; all instances of the type share the same copy of the static variable.  
+  
+```cpp  
 // static3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -150,82 +181,89 @@ int main() {
 }  
 ```  
   
-  **пер \!\= значение**  
-**пер \=\= значение** Начиная с версии C\+\+ 11 для инициализации статических локальных переменных гарантируется потокобезопасность.  Эта функция иногда называется *магическая статика*.  Однако в многопоточном приложении все последующие назначения должны быть синхронизированы.  Функцию потокобезопасной статики можно отключить с помощью флага \/Zc:threadSafeInit\-. Это позволит избежать создания зависимости от CRT.  
-  
-## extern  
- Объекты и переменные, объявленные как `extern`, объявляют объект, определенный в другой записи преобразования или во внешней области видимости, как имеющий внешнюю компоновку.  
-  
- Объявление переменных **const** с классом хранения `extern` принудительно задают для переменной внешнюю компоновку.  Инициализация переменной **extern const** допускается в записи преобразования, в которой эта переменная определена.  Инициализации в записях преобразования, отличных от записи, содержащей определение, дает неопределенные результаты.  Дополнительные сведения см. в статье [Использование ключевого слова extern для задания компоновки](../cpp/using-extern-to-specify-linkage.md)  
-  
- В следующем коде показаны два объявления `extern`, `DefinedElsewhere` \(обозначает имя, определенное в другой записи преобразования\) и `DefinedHere` \(обозначает имя, определенное во внешней области видимости\):  
-  
+```Output  
+var != value  
+var == value  
 ```  
+  
+Starting in C++11, a static local variable initialization is guaranteed to be thread-safe. This feature is sometimes called *magic statics*. However, in a multithreaded application all subsequent assignments must be synchronized. The thread-safe static initialization feature can be disabled by using the [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) flag to avoid taking a dependency on the CRT.  
+  
+<a name="extern"></a>  
+  
+## <a name="extern"></a>extern  
+  
+Objects and variables declared as `extern` declare an object that is defined in another translation unit or in an enclosing scope as having external linkage.  
+  
+Declaration of `const` variables with the `extern` storage class forces the variable to have external linkage. An initialization of an `extern const` variable is allowed in the defining translation unit. Initializations in translation units other than the defining translation unit produce undefined results. For more information, see [Using extern to Specify Linkage](../cpp/using-extern-to-specify-linkage.md)  
+  
+The following code shows two `extern` declarations, `DefinedElsewhere` (which refers to a name defined in a different translation unit) and `DefinedHere` (which refers to a name defined in an enclosing scope):  
+  
+```cpp  
 // external.cpp  
-// defined in another translation unit  
+// DefinedElsewhere is defined in another translation unit  
 extern int DefinedElsewhere;     
 int main() {  
    int DefinedHere;   
    {  
       // refers to DefinedHere in the enclosing scope  
       extern int DefinedHere;  
-    }  
+   }  
 }  
 ```  
   
-## thread\_local \(C\+\+11\)  
- Переменная, объявленная с описателем `thread_local`, доступна только в том потоке, в котором она была создана.  Переменная создается при создании потока и уничтожается при его уничтожении.  Каждый поток имеет свою собственную копию переменной.  В Windows `thread_local` функционально эквивалентен атрибуту [\_\_declspec\( thread \)](../cpp/thread.md), который тесно связан с системами Майкрософт.  
+<a name="thread_local"></a>  
   
-```  
-thread_local float f = 42.0; //global namespace  
+## <a name="threadlocal-c11"></a>thread_local (C++11)  
   
-struct C // cannot be applied to type definition  
+A variable declared with the `thread_local` specifier is accessible only on the thread on which it is created. The variable is created when the thread is created, and destroyed when the thread is destroyed. Each thread has its own copy of the variable. On Windows, `thread_local` is functionally equivalent to the Microsoft-specific [__declspec( thread )](../cpp/thread.md) attribute.  
+  
+```cpp  
+thread_local float f = 42.0; // Global namespace. Not implicitly static.
+  
+struct S // cannot be applied to type definition  
 {  
-thread_local int i; //local  
-thread_local static char buf[10]; // local and static  
+    thread_local int i; // Illegal. The member must be static.  
+    thread_local static char buf[10]; // OK 
 };  
   
 void DoSomething()  
 {  
-thread_local C my_struct; // Apply  thread_local to a variable  
+    // Apply thread_local to a local variable.
+    // Implicitly "thread_local static S my_struct".
+    thread_local S my_struct;  
 }  
 ```  
   
-1.  Описатель thread\_local можно совместно использовать с `static` или `extern`.  
+Things to note about the `thread_local` specifier:  
   
-2.  `thread_local` можно применять только в объявлениях и определениях данных. **thread\_local** нельзя использовать в объявлениях и определениях функций.  
+-  The `thread_local` specifier may be combined with `static` or `extern`.  
   
-3.  Использование `thread_local` может помешать [отложенной загрузке](../build/reference/linker-support-for-delay-loaded-dlls.md) импортов DLL**.**  
+-  You can apply `thread_local` only to data declarations and definitions; `thread_local` cannot be used on function declarations or definitions.  
   
-4.  В системах XP `thread_local` может работать неправильно, если библиотека DLL использует данные `thread_local` и динамически загружается через LoadLibrary.  
+-  The use of `thread_local` may interfere with [delay loading](../build/reference/linker-support-for-delay-loaded-dlls.md) of DLL imports. 
   
-5.  `thread_local` можно задавать только для элементов данных со статической длительностью хранения.  К ним относятся глобальные объекты данных \(**статические** и `extern`\), локальные статические объекты и статические данные\-члены классов.  Нельзя объявлять автоматические объекты данных с использованием **thread\_local**.  
+-  On XP systems, `thread_local` may not function correctly if a DLL uses `thread_local` data and it is loaded dynamically via `LoadLibrary`.  
   
-6.  `thread_local` следует использовать для объявления и определения локального объекта потока независимо от того, выполняются ли объявление и определение в одном файле или в отдельных файлах.  
+-  You can specify `thread_local` only on data items with static storage duration. This includes global data objects (both `static` and `extern`), local static objects, and static data members of classes. Any local variable declared `thread_local` is implicitly static if no other storage class is provided; in other words, at block scope `thread_local` is equivalent to `thread_local static`. 
   
- В Windows `thread_local` функционально эквивалентно [\_\_declspec\(thread\)](../cpp/thread.md) за исключением того, что \_\_declspec\(thread\) может применяться для определения типа и является допустимым в коде C.  По возможности следует использовать `thread_local`, поскольку он является частью стандарта C\+\+ и поэтому обладает большей переносимостью.  
+-  You must specify `thread_local` for both the declaration and the definition of a thread local object, whether the declaration and definition occur in the same file or separate files.  
   
- Дополнительные сведения см. в статье [Локальное хранилище потока \(TLS\)](../parallel/thread-local-storage-tls.md).  
+On Windows, `thread_local` is functionally equivalent to  [__declspec(thread)](../cpp/thread.md) except that `__declspec(thread)` can be applied to a type definition and is valid in C code. Whenever possible, use `thread_local` because it is part of the C++ standard and is therefore more portable.  
   
-## register  
- В C\+\+ 11 ключевое слово **register** является устаревшим.  Оно указывает, что переменную по возможности следует сохранить в регистре компьютера.  В классе регистрового хранения можно объявлять только аргументы функций и локальные переменные.  
+##  <a name="register"></a>  register  
+**Visual Studio 2017 version 15.3 and later** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The `register` keyword is no longer a supported storage class. The keyword is still reserved in the standard for future use. 
+
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="example-automatic-vs-static-initialization"></a>Example: automatic vs. static initialization  
   
-```  
-register int num;  
-```  
+A local automatic object or variable is initialized every time the flow of control reaches its definition. A local static object or variable is initialized the first time the flow of control reaches its definition.  
   
- Как и автоматические переменные, регистровые переменные существуют только до конца блока, в котором они были объявлены.  
+Consider the following example, which defines a class that logs initialization and destruction of objects and then defines three objects, `I1`, `I2`, and `I3`:  
   
- Компилятор не учитывает пользовательские запросы на регистровые переменные; вместо этого он самостоятельно назначает регистры, если включена глобальная оптимизация.  Однако компилятор учитывает всю остальную семантику, связанную с ключевым словом [register](http://msdn.microsoft.com/ru-ru/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).  
-  
- Если оператор взятия адреса \(**&**\) используется для объекта, объявленного с регистром, компилятор должен поместить объект в память, а не в регистр.  
-  
-## Пример. Автоматическая истатическая инициализация  
- Локальные автоматически создаваемые объекты или переменные инициализируются каждый раз, когда поток элемента управления достигает их определения.  Локальные статические объекты или переменные инициализируются, когда поток элемента управления достигает их определения в первый раз.  
-  
- Рассмотрим следующий пример, в котором определяется класс, который регистрирует инициализацию и удаление объектов, а затем определяет три объекта: `I1`, `I2` и `I3`.  
-  
-```  
+```cpp  
 // initialization_of_objects.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -235,65 +273,74 @@ using namespace std;
 // Define a class that logs initializations and destructions.  
 class InitDemo {  
 public:  
-   InitDemo( const char *szWhat );  
-   ~InitDemo();  
+    InitDemo( const char *szWhat );  
+    ~InitDemo();  
   
 private:  
-   char *szObjName;  
-   size_t sizeofObjName;  
+    char *szObjName;  
+    size_t sizeofObjName;  
 };  
   
 // Constructor for class InitDemo  
 InitDemo::InitDemo( const char *szWhat ) :  
-   szObjName(NULL), sizeofObjName(0) {  
-   if( szWhat != 0 && strlen( szWhat ) > 0 ) {  
-      // Allocate storage for szObjName, then copy  
-      // initializer szWhat into szObjName, using  
-      // secured CRT functions.  
-      sizeofObjName = strlen( szWhat ) + 1;  
+    szObjName(NULL), sizeofObjName(0) {  
+    if ( szWhat != 0 && strlen( szWhat ) > 0 ) {  
+        // Allocate storage for szObjName, then copy  
+        // initializer szWhat into szObjName, using  
+        // secured CRT functions.  
+        sizeofObjName = strlen( szWhat ) + 1;  
   
-      szObjName = new char[ sizeofObjName ];  
-      strcpy_s( szObjName, sizeofObjName, szWhat );  
+        szObjName = new char[ sizeofObjName ];  
+        strcpy_s( szObjName, sizeofObjName, szWhat );  
   
-      cout << "Initializing: " << szObjName << "\n";  
-   }  
-   else  
-      szObjName = 0;  
+        cout << "Initializing: " << szObjName << "\n";  
+    }  
+    else {  
+        szObjName = 0;  
+    }
 }  
   
 // Destructor for InitDemo  
 InitDemo::~InitDemo() {  
-   if( szObjName != 0 ) {  
-      cout << "Destroying: " << szObjName << "\n";  
-      delete szObjName;  
-   }  
+    if( szObjName != 0 ) {  
+        cout << "Destroying: " << szObjName << "\n";  
+        delete szObjName;  
+    }  
 }  
   
 // Enter main function  
 int main() {  
-   InitDemo I1( "Auto I1" ); {  
-      cout << "In block.\n";  
-      InitDemo I2( "Auto I2" );  
-      static InitDemo I3( "Static I3" );  
-   }  
-   cout << "Exited block.\n";  
+    InitDemo I1( "Auto I1" ); {  
+        cout << "In block.\n";  
+        InitDemo I2( "Auto I2" );  
+        static InitDemo I3( "Static I3" );  
+    }  
+    cout << "Exited block.\n";  
 }  
 ```  
   
-  **Инициализация: Auto I1**  
-**В блоке.  Инициализация: Auto I2**  
-**Инициализация: Static I3**  
-**Удаление: Auto I2**  
-**Завершенный блок.  Удаление: Auto I1**  
-**Удаление: Static I3**  В предыдущем примере показан способ и время инициализации объектов `I1`, `I2` и `I3`, а также время их удаления.  
+```Output  
+Initializing: Auto I1  
+In block.  
+Initializing: Auto I2  
+Initializing: Static I3  
+Destroying: Auto I2  
+Exited block.  
+Destroying: Auto I1  
+Destroying: Static I3  
+```  
   
- Следует обратить внимание на следующие моменты, связанные с программой.  
+This example demonstrates how and when the objects `I1`, `I2`, and `I3` are initialized and when they are destroyed.  
   
- Во\-первых, `I1` и `I2` автоматически удаляются, когда поток элемента управления выходит за пределы блока, в котором они определены.  
+There are several points to note about the program:  
   
- Во\-вторых, в C\+\+ не обязательно объявлять объекты или переменные в начале блока.  Более того, эти объекты инициализируются, только если поток элемента управления достигает их определения.  \(Примерами таких определений являются `I2` и `I3`.\) С помощью выходных данных можно точно определить время их инициализации.  
+- First, `I1` and `I2` are automatically destroyed when the flow of control exits the block in which they are defined.  
   
- Наконец, статические локальные переменные, например `I3`, сохраняют свои значения длительности программы, но удаляются при завершении работы программы.  
+- Second, in C++, it is not necessary to declare objects or variables at the beginning of a block. Furthermore, these objects are initialized only when the flow of control reaches their definitions. (`I2` and `I3` are examples of such definitions.) The output shows exactly when they are initialized.  
   
-## См. также  
- [Объявления и определения](../cpp/declarations-and-definitions-cpp.md)
+- Finally, static local variables such as `I3` retain their values for the duration of the program, but are destroyed as the program terminates.  
+  
+## <a name="see-also"></a>See Also  
+  
+ [Declarations and Definitions](../cpp/declarations-and-definitions-cpp.md)
+
