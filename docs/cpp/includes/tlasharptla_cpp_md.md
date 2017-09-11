@@ -15,8 +15,9 @@ translation.priority.ht:
 - zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
-ms.openlocfilehash: 91fc7553888d77b2d1284f7b09031c99c0eab37a
+ms.openlocfilehash: 11c5bbd805a4eb227bf14bb0a25a9f051a6ef719
 ms.contentlocale: ru-ru
+ms.lasthandoff: 09/11/2017
 
 ---
-Itanium
+C++

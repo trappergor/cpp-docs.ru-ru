@@ -1,125 +1,141 @@
 ---
-title: "Интеллектуальные указатели (современный C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Smart Pointers (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Интеллектуальные указатели (современный C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 6b25a9c39f09aef0958c475b663151b97285a6fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/11/2017
 
-В современном программировании на С\+\+ стандартная библиотека содержит *интеллектуальные указатели*, которые помогают гарантировать, что программы свободны от утечек памяти и ресурсов и безопасны в плане исключений.  
+---
+# <a name="smart-pointers-modern-c"></a>Smart Pointers (Modern C++)
+In modern C++ programming, the Standard Library includes *smart pointers*, which are used to help ensure that programs are free of memory and resource leaks and are exception-safe.  
   
-## Использование интеллектуальных указателей  
- Интеллектуальные указатели определены в пространстве имен `std` в файле заголовка [\<memory\>](../standard-library/memory.md).  Они чрезвычайно важны для идиомы программирования [RAII](../cpp/objects-own-resources-raii.md) или *Resource Acquisition Is Initialialization — получение ресурса является инициализацией*.  Главная задача этой идиомы — обеспечить, чтобы одновременно с получением ресурса производилась инициализация объекта, чтобы все ресурсы для объекта создавались и подготавливались в одной строке кода.  На практике основным принципом RAII является предоставление владения любым ресурсом в куче \(например, динамически выделенной памятью или дескрипторами системных объектов\) объекту, выделенному стеком, деструктор которого содержит код для удаления или освобождения ресурса, а также весь связанный код очистки.  
+## <a name="uses-for-smart-pointers"></a>Uses for smart pointers  
+ Smart pointers are defined in the `std` namespace in the [\<memory>](../standard-library/memory.md) header file. They are crucial to the [RAII](../cpp/objects-own-resources-raii.md) or *Resource Acquisition Is Initialialization* programming idiom. The main goal of this idiom is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In practical terms, the main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code.  
   
- В большинстве случаев при инициализации необработанного указателя или дескриптора ресурса для указания на фактический ресурс следует сразу же передать указатель в интеллектуальный указатель.  В современном C\+\+ необработанные указатели используются только в небольших блоках кода с ограниченной областью, циклах или вспомогательных функциях, когда важна производительность и вероятность проблем с владением низкая.  
+ In most cases, when you initialize a raw pointer or resource handle to point to an actual resource, pass the pointer to a smart pointer immediately. In modern C++, raw pointers are only used in small code blocks of limited scope, loops, or helper functions where performance is critical and there is no chance of confusion about ownership.  
   
- В следующем примере сравниваются объявления необработанного и интеллектуального указателей.  
+ The following example compares a raw pointer declaration to a smart pointer declaration.  
   
  [!code-cpp[smart_pointers_intro#1](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_1.cpp)]  
   
- Как показано в примере, интеллектуальный указатель — это шаблон класса, который объявляется в стеке и инициализируется с помощью необработанного указателя, указывающего на размещенный в куче объект.  После инициализации интеллектуальный указатель становится владельцем необработанного указателя.  Это означает, что интеллектуальный указатель отвечает за удаление памяти, заданной необработанным указателем.  Деструктор интеллектуального указателя содержит вызов для удаления, и поскольку интеллектуальный указатель объявлен в стеке, его деструктор вызывается, как только интеллектуальный указатель оказывается вне области, даже если исключение создается где\-либо в другой части стека.  
+ As shown in the example, a smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.  
   
- Доступ к инкапсулированному указателю осуществляется с помощью знакомых операторов указателя `->` и `*`, которые класс интеллектуального указателя перегружает для возврата инкапсулированного необработанного указателя.  
+ Access the encapsulated pointer by using the familiar pointer operators, `->` and `*`, which the smart pointer class overloads to return the encapsulated raw pointer.  
   
- Этот интеллектуальный указатель C\+\+ напоминает создание объектов в таких языках, как C\#: вы создаете объект, а система удаляет его в правильный момент.  Отличие заключается в том, что отсутствует отдельный сборщик мусора, работающий в фоновом режиме; память управляется через стандартные правила области C\+\+, чтобы среда выполнения функционировала быстрее и эффективнее.  
+ The C++ smart pointer idiom resembles object creation in languages such as C#: you create the object and then let the system take care of deleting it at the correct time. The difference is that no separate garbage collector runs in the background; memory is managed through the standard C++ scoping rules so that the runtime environment is faster and more efficient.  
   
 > [!IMPORTANT]
->  Всегда создавайте интеллектуальные указатели в отдельной строке кода; ни в коем случае не делайте это в списке параметров, чтобы не произошла небольшая утечка ресурсов, связанная с определенными правилами выделения памяти спискам параметров.  
+>  Always create smart pointers on a separate line of code, never in a parameter list, so that a subtle resource leak won't occur due to certain parameter list allocation rules.  
   
- В следующем примере показано, как тип интеллектуального указателя `unique_ptr` из стандартной библиотеки шаблонов может использоваться для инкапсуляции указателя на большой объект.  
+ The following example shows how a `unique_ptr` smart pointer type from the C++ Standard Library could be used to encapsulate a pointer to a large object.  
   
  [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
- В этом примере показаны следующие важные шаги, необходимые для использования интеллектуальных указателей.  
+ The example demonstrates the following essential steps for using smart pointers.  
   
-1.  Объявите интеллектуальный указатель как автоматическую \(локальную\) переменную. \(Не используйте выражение `new` или `malloc` для самого интеллектуального указателя.\)  
+1.  Declare the smart pointer as an automatic (local) variable. (Do not use the `new` or `malloc` expression on the smart pointer itself.)  
   
-2.  В параметре типа укажите тип, на который указывает инкапсулированный указатель.  
+2.  In the type parameter, specify the pointed-to type of the encapsulated pointer.  
   
-3.  Передайте необработанный указатель в объект `new` в конструкторе интеллектуального указателя. \(Некоторые служебные функции или конструкторы интеллектуальных указателей делают это автоматически.\)  
+3.  Pass a raw pointer to a `new`-ed object in the smart pointer constructor. (Some utility functions or smart pointer constructors do this for you.)  
   
-4.  Используйте перегруженные операторы `->` и `*` для доступа к объекту.  
+4.  Use the overloaded `->` and `*` operators to access the object.  
   
-5.  Интеллектуальный указатель удаляет объект автоматически.  
+5.  Let the smart pointer delete the object.  
   
- Интеллектуальные указатели разработаны для обеспечения максимальной эффективности в отношении памяти и производительности.  Например, единственный элемент данных в `unique_ptr` — это инкапсулированный указатель.  Это означает, что размер `unique_ptr` точно такой же, как и у указателя — 4 или 8 байтов.  Доступ к инкапсулированному указателю с помощью перегруженных операторов интеллектуального указателя \* и \-\> осуществляется ненамного медленнее, чем доступ к необработанным указателям напрямую.  
+ Smart pointers are designed to be as efficient as possible both in terms of memory and performance. For example, the only data member in `unique_ptr` is the encapsulated pointer. This means that `unique_ptr` is exactly the same size as that pointer, either four bytes or eight bytes. Accessing the encapsulated pointer by using the smart pointer overloaded * and -> operators is not significantly slower than accessing the raw pointers directly.  
   
- Интеллектуальные указатели имеют собственные функции\-члены, доступ к которым осуществляется с помощью нотации с "точками".  Например, некоторые интеллектуальные указатели STL имеют функцию\-член сброса, отменяющую владение указателем.  Это полезно, когда нужно освободить память, принадлежащую интеллектуальному указателю, не дожидаясь, пока интеллектуальный указатель окажется вне области, как показано в следующем примере.  
+ Smart pointers have their own member functions, which are accessed by using “dot” notation. For example, some C++ Standard Library smart pointers have a reset member function that releases ownership of the pointer. This is useful when you want to free the memory owned by the smart pointer before the smart pointer goes out of scope, as shown in the following example.  
   
  [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- Интеллектуальные указатели обычно предоставляют способ прямого доступа к необработанному указателю.  Интеллектуальные указатели STL для этой цели содержат функцию\-член `get`, а `CComPtr` имеет открытый член класса `p`.  Предоставляя прямой доступ к базовому указателю, можно использовать интеллектуальный указатель для управления памятью в своем коде и по\-прежнему передавать необработанный указатель коду, который не поддерживает интеллектуальные указатели.  
+ Smart pointers usually provide a way to access their  raw pointer directly. C++ Standard Library smart pointers have a `get` member function for this purpose, and `CComPtr` has a public `p` class member. By providing direct access to the underlying pointer, you can use the smart pointer to manage memory in your own code and still pass the raw pointer to code that does not support smart pointers.  
   
  [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
-## Виды интеллектуальных указателей  
- В следующем разделе приведены различные виды интеллектуальных указателей, доступные в среде программирования Windows, и приводится описание их использования.  
+## <a name="kinds-of-smart-pointers"></a>Kinds of Smart Pointers  
+ The following section summarizes the different kinds of smart pointers that are available in the Windows programming environment and describes when to use them.  
   
- **Интеллектуальные указатели стандартной библиотеки C\+\+**  
- Используйте эти интеллектуальные указатели как основной вариант для инкапсуляции указателей на простые старые объекты C\+\+ \(POCO\).  
+ **C++ Standard Library Smart Pointers**  
+ Use these smart pointers as a first choice for encapsulating pointers to plain old C++ objects (POCO).  
   
--   `unique_ptr`    
-    Обеспечивает, чтобы у базового указателя был только один владелец.  Используйте как вариант по умолчанию для POCO, кроме случая, когда вы точно знаете, что требуется `shared_ptr`.  Может быть передан новому владельцу, но не может быть скопирован или сделан общим.  Заменяет `auto_ptr`, использовать который не рекомендуется.  Сравните с `boost::scoped_ptr`.  `unique_ptr` мал и эффективен; размер — один указатель, и он поддерживает ссылки rvalue для быстрой вставки и извлечения из коллекций STL.  Файл заголовка: `<memory>`.  Дополнительные сведения см. в разделах [Практическое руководство. Создание и использование экземпляров unique\_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) и [Класс unique\_ptr](../standard-library/unique-ptr-class.md).  
+-   `unique_ptr`   
+     Allows exactly one owner of the underlying pointer. Use as the default choice for POCO unless you know for certain that you require a `shared_ptr`. Can be moved to a new owner, but not copied or shared. Replaces `auto_ptr`, which is deprecated. Compare to `boost::scoped_ptr`. `unique_ptr` is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections. Header file: `<memory>`. For more information, see [How to: Create and Use unique_ptr Instances](../cpp/how-to-create-and-use-unique-ptr-instances.md) and [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
--   `shared_ptr`    
-    Интеллектуальный указатель с подсчитанными ссылками.  Используйте, когда необходимо присвоить один необработанный указатель нескольким владельцам, например, когда копия указателя возвращается из контейнера, но требуется сохранить оригинал.  Необработанный указатель не будет удален до тех пор, пока все владельцы `shared_ptr` не выйдут из области или не откажутся от владения.  Размер — 2 указателя; один — для объекта и второй — для блока общего элемента управления, который содержит счетчик ссылок.  Файл заголовка: `<memory>`.  Дополнительные сведения см. в разделах [Практическое руководство. Создание и использование экземпляров shared\_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) и [Класс shared\_ptr](../standard-library/shared-ptr-class.md).  
+-   `shared_ptr`   
+     Reference-counted smart pointer. Use when you want to assign one raw pointer to multiple owners, for example, when you return a copy of a pointer from a container but want to keep the original. The raw pointer is not deleted until all `shared_ptr` owners have gone out of scope or have otherwise given up ownership. The size is two pointers; one for the object and one for the shared control block that contains the reference count. Header file: `<memory>`. For more information, see [How to: Create and Use shared_ptr Instances](../cpp/how-to-create-and-use-shared-ptr-instances.md) and [shared_ptr Class](../standard-library/shared-ptr-class.md).  
   
--   `weak_ptr`    
-    Интеллектуальный указатель для особых случаев использования с `shared_ptr`.  `weak_ptr` предоставляет доступ к объекту, который принадлежит одному или нескольким экземплярам `shared_ptr`, но не участвует в подсчете ссылок.  Используйте, когда требуется отслеживать объект, но не требуется, чтобы он оставался в активном состоянии.  Требуется в некоторых случаях для разрыва циклических ссылок между экземплярами `shared_ptr`.  Файл заголовка: `<memory>`.  Дополнительные сведения см. в разделах [Практическое руководство. Создание и использование экземпляров weak\_ptr](../Topic/How%20to:%20Create%20and%20Use%20weak_ptr%20Instances.md) и [Класс weak\_ptr](../standard-library/weak-ptr-class.md).  
+-   `weak_ptr`   
+    Special-case smart pointer for use in conjunction with `shared_ptr`. A `weak_ptr` provides access to an object that is owned by one or more `shared_ptr` instances, but does not participate in reference counting. Use when you want to observe an object, but do not require it to remain alive. Required in some cases to break circular references between `shared_ptr` instances. Header file: `<memory>`. For more information, see [How to: Create and Use weak_ptr Instances](../cpp/how-to-create-and-use-weak-ptr-instances.md) and [weak_ptr Class](../standard-library/weak-ptr-class.md).  
   
- **Интеллектуальные указатели для COM\-объектов \(классическое программирование для Windows\)**  
- При работе с COM\-объектами создайте оболочку для указателей интерфейса в соответствующем типе интеллектуальных указателей.  Библиотека шаблонных классов \(ATL\) определяет несколько интеллектуальных указателей для различных целей.  Можно также использовать тип интеллектуального указателя `_com_ptr_t`, который компилятор использует при создании классов оболочки из файлов с расширением TLB.  Это лучший вариант, если вы не хотите включать файлы заголовков ATL.  
+ **Smart Pointers for COM Objects (Classic Windows Programming)**  
+ When you work with COM objects, wrap the interface pointers in an appropriate smart pointer type. The Active Template Library (ATL) defines several smart pointers for various purposes. You can also use the `_com_ptr_t` smart pointer type, which the compiler uses when it creates wrapper classes from .tlb files. It's the best choice when you do not want to include the ATL header files.  
   
  [CComPtr Class](../atl/reference/ccomptr-class.md)  
- Используйте, если невозможно использовать ATL.  Выполняет подсчет ссылок с помощью методов `AddRef` и `Release`.  Дополнительные сведения см. в разделе [Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr](../Topic/How%20to:%20Create%20and%20Use%20CComPtr%20and%20CComQIPtr%20Instances.md).  
+ Use this unless you cannot use ATL. Performs reference counting by using the `AddRef` and `Release` methods. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComQIPtr Class](../atl/reference/ccomqiptr-class.md)  
- Похож на `CComPtr`, но также предоставляет упрощенный синтаксис для вызова `QueryInterface` COM\-объекта.  Дополнительные сведения см. в разделе [Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr](../Topic/How%20to:%20Create%20and%20Use%20CComPtr%20and%20CComQIPtr%20Instances.md).  
+ Resembles `CComPtr` but also provides simplified syntax for calling `QueryInterface` on COM objects. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr Class](../atl/reference/ccomheapptr-class.md)  
- Интеллектуальный указатель на объекты, которые используют `CoTaskMemFree` для освобождения памяти.  
+ Smart pointer to objects that use `CoTaskMemFree` to free memory.  
   
- [CComGITPtr Class](../Topic/CComGITPtr%20Class.md)  
- Интеллектуальный указатель для интерфейсов, получаемых из глобальной таблицы интерфейсов \(GIT\).  
+ [CComGITPtr Class](../atl/reference/ccomgitptr-class.md)  
+ Smart pointer for interfaces that are obtained from the global interface table (GIT).  
   
- [Класс \_com\_ptr\_t](../cpp/com-ptr-t-class.md)  
- По функциональности аналогичен `CComQIPtr`, но не зависит от заголовков ATL.  
+ [_com_ptr_t Class](../cpp/com-ptr-t-class.md)  
+ Resembles `CComQIPtr` in functionality but does not depend on ATL headers.  
   
- **Интеллектуальные указатели ATL для объектов POCO**  
- Помимо интеллектуальных указателей для COM\-объектов, ATL определяет также интеллектуальные указатели и коллекции интеллектуальных указателей для простых старых объектов C\+\+ \(POCO\).  В классическом программировании Windows эти типы являются полезными альтернативами коллекциям STL, особенно если переносимость кода не требуется или если вы не хотите смешивать модели программирования библиотек STL и ATL.  
+ **ATL Smart Pointers for POCO Objects**  
+ In addition to smart pointers for COM objects, ATL also defines smart pointers, and collections of smart pointers, for plain old C++ objects. In classic Windows programming, these types are useful alternatives to the C++ Standard Library collections, especially when code portability is not required or when you do not want to mix the programming models of the C++ Standard Library and ATL.  
   
  [CAutoPtr Class](../atl/reference/cautoptr-class.md)  
- Интеллектуальный указатель, принудительно реализующий уникальное владение путем переноса владения на копию.  Сравним с нерекомендуемым классом `std::auto_ptr`.  
+ Smart pointer that enforces unique ownership by transferring ownership on copy. Comparable to the deprecated `std::auto_ptr` Class.  
   
  [CHeapPtr Class](../atl/reference/cheapptr-class.md)  
- Интеллектуальный указатель для объектов, память для которых выделяется с помощью функции C [malloc](../c-runtime-library/reference/malloc.md).  
+ Smart pointer for objects that are allocated by using the C [malloc](../c-runtime-library/reference/malloc.md) function.  
   
  [CAutoVectorPtr Class](../atl/reference/cautovectorptr-class.md)  
- Интеллектуальный указатель для массивов, память для которых выделяется с помощью `new[]`.  
+ Smart pointer for arrays that are allocated by using `new[]`.  
   
  [CAutoPtrArray Class](../atl/reference/cautoptrarray-class.md)  
- Класс, инкапсулирующий массив элементов `CAutoPtr`.  
+ Class that encapsulates an array of `CAutoPtr` elements.  
   
  [CAutoPtrList Class](../atl/reference/cautoptrlist-class.md)  
- Класс, инкапсулирующий методы для управления списком узлов `CAutoPtr`.  
+ Class that encapsulates methods for manipulating a list of `CAutoPtr` nodes.  
   
-## См. также  
- [Возвращение к C\+\+](../Topic/Welcome%20Back%20to%20C++%20\(Modern%20C++\).md)   
- [Справочник по языку C\+\+](../cpp/cpp-language-reference.md)   
- [Стандартная библиотека C\+\+](../standard-library/cpp-standard-library-reference.md)   
- [общие сведения: Управление памятью в C\+\+](http://msdn.microsoft.com/ru-ru/2201885d-3d91-4a6e-aaa6-7a554e0362a8)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)   
+

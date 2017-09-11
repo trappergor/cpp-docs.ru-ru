@@ -1,47 +1,63 @@
 ---
-title: "Разрешение неоднозначностей | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Resolving ambiguous declarations (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Разрешение неоднозначностей
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0f49a3b4b7c131a477dc7ff25c95b15173d0bb85
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/11/2017
 
-Для выполнения явных преобразований из одного типа в другой необходимо использовать приведения, указывая имя требуемого типа.  Некоторые приведения типов ведут к синтаксической неоднозначности.  Следующее приведение типов в стиле функции неоднозначно.  
+---
+# <a name="resolving-ambiguous-declarations-c"></a>Resolving ambiguous declarations (C++)
+To perform explicit conversions from one type to another, you must use casts, specifying the desired type name. Some type casts result in syntactic ambiguity. The following function-style type cast is ambiguous:  
   
 ```  
 char *aName( String( s ) );  
 ```  
   
- Неясно, является ли этот оператор объявлением функции или объявлением объекта с приведением типов в стиле функции в качестве инициализатора: такой оператор может объявлять функцию, возвращающую тип **char \***, который принимает один аргумент типа `String`, или объявлять объект `aName` и инициализировать его со значением приведения `s` в тип `String`.  
+ It is unclear whether it is a function declaration or an object declaration with a function-style cast as the initializer: It could declare a function returning type **char \*** that takes one argument of type `String`, or it could declare the object `aName` and initialize it with the value of `s` cast to type `String`.  
   
- Если объявление может считаться допустимым объявлением функции, оно считается таковым.  Оператор проверяется на предмет того, представляет ли он приведение типов в стиле функции, только в том случае, если объявление не может считаться объявлением функции, т. е. оно синтаксически неверно.  Поэтому компилятор считает данный оператор объявлением функции и игнорирует скобки вокруг идентификатора `s`.  С другой стороны, операторы  
+ If a declaration can be considered a valid function declaration, it is treated as such. Only if it cannot possibly be a function declaration — that is, if it would be syntactically incorrect — is a statement examined to see if it is a function-style type cast. Therefore, the compiler considers the statement to be a declaration of a function and ignores the parentheses around the identifier `s`. On the other hand, the statements:  
   
 ```  
 char *aName( (String)s );  
 ```  
   
- и  
+ and  
   
 ```  
 char *aName = String( s );  
 ```  
   
- однозначно являются объявлениями объектов и для инициализации объекта `aName` вызывается пользовательское преобразование типа `String` в тип **char \***.  
+ are clearly declarations of objects, and a user-defined conversion from type `String` to type **char \*** is invoked to perform the initialization of `aName`.  
   
-## См. также  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/ru-ru/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>See Also  
+ 

@@ -1,92 +1,101 @@
 ---
-title: "Алгоритмы (современный C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Algorithms (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Алгоритмы (современный C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 13b5b6c097bd8a68b0c91e6ede508559344a89ad
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/11/2017
 
-Для современного программирования на C\+\+ рекомендуется использовать алгоритмы в [библиотеке стандартных шаблонов](../standard-library/cpp-standard-library-reference.md) \(STL\).  Далее представлено несколько важных примеров:  
+---
+# <a name="algorithms-modern-c"></a>Algorithms (Modern C++)
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:  
   
--   `for_each`, который представляет собой алгоритм обхода по умолчанию. \(Также `transform` для семантики "не вместо".\)  
+-   `for_each`, which is the default traversal algorithm. (Also `transform` for not-in-place semantics.)  
   
--   `find_if`, который представляет собой алгоритм поиска по умолчанию.  
+-   `find_if`, which is the default search algorithm.  
   
--   `sort`, `lower_bound` и другие параметры сортировки по умолчанию и алгоритмы поиска.  
+-   `sort`, `lower_bound`, and the other default sorting and searching algorithms.  
   
- При создании компаратора по мере возможности используйте строгое неравенство `<` и *именованные лямбда\-выражения*.  
+ To write a comparator, use strict `<` and use  *named lambdas* when you can.  
   
 ```cpp  
-  
 auto comp = [](const widget& w1, const widget& w2)  
       { return w1.weight() < w2.weight(); }  
   
 sort( v.begin(), v.end(), comp );  
   
 auto i = lower_bound( v.begin(), v.end(), comp );  
-  
 ```  
   
-## Циклы  
- Если возможно, используйте циклы `for` на основе диапазона или вызовы алгоритма, а не написанные вручную циклы.  `copy`, `transform`, `count_if`, `remove_if` и другие подобные им намного лучше, чем рукописные циклы, поскольку их предназначение очевидно и они облегчают написание кода без ошибок.  Кроме того, многие алгоритмы STL имеют оптимизации реализации, которые делают их более эффективными.  
+## <a name="loops"></a>Loops  
+ When possible, use range-based `for` loops or algorithm calls, or both, instead of hand-written loops.`copy`, `transform`, `count_if`, `remove_if`, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.  
   
- Вместо старого C\+\+:  
+ Instead of old C++ like this:  
   
 ```cpp  
-  
-for( auto i = strings.begin(); i != strings.end(); ++i ) {  
-  :::  
-  :::  
+for ( auto i = strings.begin(); i != strings.end(); ++i ) {  
+   /* ... */  
 }  
   
 auto i = v.begin();  
   
-for( ; i != v.end(); ++i ) {  
+for ( ; i != v.end(); ++i ) {  
   if (*i > x && *i < y) break;  
 }  
-  
 ```  
   
- Используйте современный язык C\+\+ следующим образом:  
+ Use modern C++ like this:  
   
 ```cpp  
-  
 for_each( begin(strings), end(strings), [](string& s) {  
-  :::  
-  :::  
+   // ...  
 } );  
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; }  );  
   
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
 ```  
   
-### Циклы "for" на основе диапазона  
- Цикл `for` на основе диапазона является функцией языка С\+\+11, а не алгоритма STL.  Тем не менее он заслуживает упоминания в этой дискуссии о циклах.  Основанные на диапазоне циклы `for` представляют собой расширение ключевого слова `for` и являются удобным и эффективным способом записи циклов, выполняющих итерацию с диапазоном значений.  Контейнеры, строки и массивы STL готовы для циклов `for` на базе диапазонов.  Чтобы включить этот новый синтаксис итераций для пользовательского типа, добавьте следующую поддержку:  
+### <a name="range-based-for-loops"></a>Range-based for loops  
+ The range-based `for` loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based `for` loops are an extension of the `for` keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based `for` loops. To enable this new iteration syntax for your user-defined type, add the following support:  
   
--   Метод `begin`, возвращающий итератор в начало структуры и метод `end`, который возвращает итератор в конец структуры.  
+-   A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.  
   
--   Поддержка в итераторе этих методов: `operator*`, `operator!=` и `operator++` \(версия префикса\).  
+-   Support in the iterator for these methods: `operator*`, `operator!=`, and `operator++` (prefix version).  
   
- Эти методы могут представлять собой члены или отдельные функции.  
+ These methods can be either members or stand-alone functions.  
   
-## Случайные числа  
- Не секрет, что старая функция CRT `rand()` имеет много изъянов, которые подробно обсуждаются в сообществе С\+\+.  В современном C\+\+ нет необходимости мириться с этим недостатками, равно как и нет необходимости изобретать собственный генератор равномерно распределенных случайных чисел, потому что инструменты для простого и быстрого его создания доступны в STL, как показано в разделе [\<random\>](../standard-library/random.md).  
+## <a name="random-numbers"></a>Random Numbers  
+ It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).  
   
-## См. также  
- [Возвращение к C\+\+](../Topic/Welcome%20Back%20to%20C++%20\(Modern%20C++\).md)   
- [Справочник по языку C\+\+](../cpp/cpp-language-reference.md)   
- [Стандартная библиотека C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)
