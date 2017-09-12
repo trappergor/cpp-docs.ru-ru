@@ -1,5 +1,5 @@
 ---
-title: "Класс CDockablePaneAdapter | Документы Microsoft"
+title: CDockablePaneAdapter Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDockablePaneAdapter class
+- CDockablePaneAdapter [MFC], GetWrappedWnd
+- CDockablePaneAdapter [MFC], LoadState
+- CDockablePaneAdapter [MFC], SaveState
+- CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
 caps.latest.revision: 22
 author: mikeblome
@@ -38,63 +41,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 05d34e3ec84db48e50328b99c38abf1ef73747b4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 619d092046b8464e9349f35eecfa2d08baea6003
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdockablepaneadapter-class"></a>Класс CDockablePaneAdapter
-Обеспечивает поддержку прикрепления производных панелей от `CWnd`.  
+# <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter Class
+Provides docking support for `CWnd`-derived panes.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDockablePaneAdapter : public CDockablePane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Возвращает окно в оболочке.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Переопределяет [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Переопределяет [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Returns the wrapped window.|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Overrides [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Overrides [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
-## <a name="remarks"></a>Примечания  
- Как правило, платформа создает объекты этого класса, при использовании [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) или [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) методы.  
+## <a name="remarks"></a>Remarks  
+ Usually, the framework instantiates objects of this class when you use the [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) or [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) methods.  
   
- Если вы хотите настроить `CDockablePaneAdapter` поведение, просто наследовать новый класс и информация о классе среды выполнения для настройки окна с вкладками в [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
+ If you want to customize the `CDockablePaneAdapter` behavior, just derive a new class from it and set the runtime class information to a tabbed window by using [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
  [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxDockablePaneAdapter.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
- Возвращает окна для закрепляемой области адаптера.  
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
+ Returns the underlying window for the dockable pane adapter.  
   
 ```  
 virtual CWnd* GetWrappedWnd() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на оболочку окна.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the wrapped window.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для доступа к окну оболочку.  
+### <a name="remarks"></a>Remarks  
+ Use this function to access the wrapped window.  
   
-##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
- Загружает состояние области из реестра.  
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
+ Loads the state of the pane from the registry.  
   
 ```  
 virtual BOOL LoadState(
@@ -103,22 +106,22 @@ virtual BOOL LoadState(
     UINT uiID = (UINT) -1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Имя профиля.  
+ The profile name.  
   
  [in] `nIndex`  
- Индекс профиля.  
+ The profile index.  
   
  [in] `uiID`  
- Идентификатор области.  
+ The pane ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
- Сохраняет состояние области реестра.  
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
+ Saves the state of the pane to the registry.  
   
 ```  
 virtual BOOL SaveState(
@@ -127,37 +130,37 @@ virtual BOOL SaveState(
     UINT uiID = (UINT) -1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Имя профиля.  
+ The profile name.  
   
  [in] `nIndex`  
- Индекс профиля (идентификатор элемента управления окна по умолчанию).  
+ The profile index (defaults to the control ID of the window).  
   
  [in] `uiID`  
- Идентификатор области.  
+ The pane ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
- Задает нижележащего окна для закрепляемой области адаптера.  
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
+ Sets the underlying window for the dockable pane adapter.  
   
 ```  
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Указатель в окно панели адаптера для упаковки.  
+ A pointer to the window for the pane adapter to wrap.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

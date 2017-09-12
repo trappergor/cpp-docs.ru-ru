@@ -1,83 +1,102 @@
 ---
-title: "Контейнеры. Дополнительные возможности | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения контейнера и сервера [C++]"
-  - "контейнеры [C++], дополнительные возможности"
-  - "контейнеры [C++], приложения контейнера"
-  - "контейнеры [C++], ссылки на внедренные объекты OLE"
-  - "внедренные объекты [C++]"
-  - "ссылки [C++], во внедренные объекты OLE"
-  - "OLE - контейнеры, дополнительные возможности"
-  - "элементы управления OLE, контейнеры"
-  - "приложения сервера и контейнера"
+title: 'Containers: Advanced Features | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- links [MFC], to embedded OLE objects
+- containers [MFC], links to embedded OLE objects
+- containers [MFC], advanced features
+- container/server applications [MFC]
+- embedded objects [MFC]
+- OLE controls [MFC], containers
+- OLE containers [MFC], advanced features
+- server/container applications [MFC]
+- containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Контейнеры. Дополнительные возможности
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c598d96f64dc309cbd80797879c3810bdd21d235
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются шаги, которые необходимо включать необязательные дополнительные функции в существующем приложение\-контейнеры.  Эти функции:  
+---
+# <a name="containers-advanced-features"></a>Containers: Advanced Features
+This article describes the steps necessary to incorporate optional advanced features into existing container applications. These features are:  
   
--   [Приложение, которое является и контейнером, и сервер](#_core_creating_a_container.2f.server_application)  
+-   [An application that is both a container and a server](#_core_creating_a_container_server_application)  
   
--   [Ссылка на объект OLE внедренному](#_core_links_to_embedded_objects)  
+-   [An OLE link to an embedded object](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container.2f.server_application"></a> Создание контейнера или серверное приложение  
- Контейнер или серверное приложение, действующий как контейнер, и как сервер.  Microsoft Word Windows для этого образца.  Можно внедрить ключевое слово Windows для документов в других приложениях, а также включить элементы в слове для документов Windows.  Процесс для внесения изменений в приложение контейнера и контейнером, и полным сервером \(нельзя создать приложение контейнера или miniserver сочетания\) аналогичен процессу для создания полного сервера.  
+##  <a name="_core_creating_a_container_server_application"></a> Creating a Container/Server Application  
+ A container/server application is an application that acts as both a container and a server. Microsoft Word for Windows is an example of this. You can embed Word for Windows documents in other applications, and you can also embed items in Word for Windows documents. The process for modifying your container application to be both a container and a full server (you cannot create a combination container/miniserver application) is similar to the process for creating a full server.  
   
- Раздел [Серверы: Реализация сервера](../mfc/servers-implementing-a-server.md) содержит несколько задач, необходимые снабдила серверное приложение.  При преобразовании контейнерное приложение на контейнер или серверное приложение, необходимо выполнить некоторые из этих одних и тех же задач, добавление кода на контейнер.  Ниже перечислены важные моменты, которые необходимо учитывать.  
+ The article [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md) lists a number of tasks required to implement a server application. If you convert a container application to a container/server application, then you need to perform some of those same tasks, adding code to the container. The following lists the important things to consider:  
   
--   Код контейнера созданный мастером приложений уже инициализирует OLE подсистема.  Не нужно изменять или добавлять к данной поддержки.  
+-   The container code created by the application wizard already initializes the OLE subsystem. You will not need to change or add anything for that support.  
   
--   Где бы ни базовый класс класса документа `COleDocument`, изменить базовый класс в `COleServerDoc`.  
+-   Wherever the base class of a document class is `COleDocument`, change the base class to `COleServerDoc`.  
   
--   Переопределите `COleClientItem::CanActivate` во избежание изменение элементов на месте, пока сервер сам используется для редактирования на месте.  
+-   Override `COleClientItem::CanActivate` to avoid editing items in place while the server itself is being used to edit in place.  
   
-     Например, в примере MFC [OCLIENT](../top/visual-cpp-samples.md) OLE внедрял элемент, созданный с контейнером\/серверными приложениями.  При открытии приложения и OCLIENT на месте имеется элемент, созданный с контейнером\/серверными приложениями.  При редактировании элемент приложения, следует решить, требуется внедрить элемент, созданный в примере MFC [HIERSVR](../top/visual-cpp-samples.md) OLE.  Это можно сделать не встроенная функция активация использования.  Необходимо открыть полностью HIERSVR активировать этот элемент.  Поскольку библиотеки Microsoft Foundation Class не поддерживает эту функцию OLE, переопределить `COleClientItem::CanActivate` позволяет для проверки этой ситуации и предотвращает возможную ошибку во время выполнения в приложении.  
+     For example, the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) has embedded an item created by your container/server application. You open the OCLIENT application and in-place edit the item created by your container/server application. While editing your application's item, you decide you want to embed an item created by the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). To do this, you cannot use in-place activation. You must fully open HIERSVR to activate this item. Because the Microsoft Foundation Class Library does not support this OLE feature, overriding `COleClientItem::CanActivate` allows you to check for this situation and prevent a possible run-time error in your application.  
   
- При создании нового приложения и требуется его в функции в качестве контейнера или серверное приложение, выберите этот параметр в диалоговом окне OLE в мастере приложений и этой поддержки будет создан автоматически.  Дополнительные сведения см. в статье [Общие сведения: Создание контейнера элементов управления ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md).  Дополнительные сведения об образцах MFC см. в образцах MFC.  
+ If you are creating a new application and want it to function as a container/server application, choose that option in the OLE Options dialog box in the application wizard and this support will be created automatically. For more information, see the article [Overview: Creating an ActiveX Control Container](../mfc/reference/creating-an-mfc-activex-control-container.md). For information about MFC samples, see MFC Samples.  
   
- Обратите внимание, что нельзя вставить в приложение с интерфейсом MDI самостоятельно.  Приложение, контейнер\/сервер нельзя вставить на себя, если не будет SDI.  
+ Note that you cannot insert an MDI application into itself. An application that is a container/server cannot be inserted into itself unless it is an SDI application.  
   
-##  <a name="_core_links_to_embedded_objects"></a> Ссылки на объекты во внедренные  
- Ссылки на функции внедренных объектов позволяют пользователю создать документ с OLE по ссылке к внедренному объект внутри данного приложения.  Например, создайте документ в текстовом процессоре, содержащий внедренную электронную таблицу.  Если приложение указател поддержки к внедренным объектам, оно может вставить ссылку к таблице, содержащейся в документе текстового процессора.  Эта функция позволяет приложению использовать сведения, содержащиеся в электронной таблице без использования, текстовый процессор исходного получил его.  
+##  <a name="_core_links_to_embedded_objects"></a> Links to Embedded Objects  
+ The Links to Embedded Objects feature enables a user to create a document with an OLE link to an embedded object inside your container application. For example, create a document in a word processor containing an embedded spreadsheet. If your application supports links to embedded objects, it could paste a link to the spreadsheet contained in the word processor's document. This feature allows your application to use the information contained in the spreadsheet without knowing where the word processor originally got it.  
   
-#### Связывание с внедренным объекты в приложении  
+#### <a name="to-link-to-embedded-objects-in-your-application"></a>To link to embedded objects in your application  
   
-1.  Создайте производный класс из документа `COleLinkingDoc` вместо `COleDocument`.  
+1.  Derive your document class from `COleLinkingDoc` instead of `COleDocument`.  
   
-2.  Создайте идентификатор класса OLE \(**CLSID**\) для приложения с помощью генератора идентификаторов класса включенного с OLE средствами разработки.  
+2.  Create an OLE class ID (**CLSID**) for your application by using the Class ID Generator included with the OLE Development Tools.  
   
-3.  Зарегистрируйте приложение с OLE.  
+3.  Register the application with OLE.  
   
-4.  Создайте объект `COleTemplateServer` как член класса приложения.  
+4.  Create a `COleTemplateServer` object as a member of your application class.  
   
-5.  В функции\-члене `InitInstance` класса приложения, выполните следующие действия:  
+5.  In your application class's `InitInstance` member function, do the following:  
   
-    -   Подключиться данный объект `COleTemplateServer`, к шаблонам документов, вызвав функцию\-член `ConnectTemplate` объекта.  
+    -   Connect your `COleTemplateServer` object to your document templates by calling the object's `ConnectTemplate` member function.  
   
-    -   Вызовите функцию\-член **COleTemplateServer::RegisterAll** для регистрации все объекты класса с OLE системой.  
+    -   Call the **COleTemplateServer::RegisterAll** member function to register all class objects with the OLE system.  
   
-    -   Вызов метода `COleTemplateServer::UpdateRegistry`.  Единственным параметром в `UpdateRegistry` должен быть `OAT_CONTAINER`, если приложение не запускается с параметром «\/Embedded».  Это регистрирует приложение в качестве контейнера, который может указатели поддержки к внедренным объекты.  
+    -   Call `COleTemplateServer::UpdateRegistry`. The only parameter to `UpdateRegistry` should be `OAT_CONTAINER` if the application is not launched with the "/Embedded" switch. This registers the application as a container that can support links to embedded objects.  
   
-         Если приложение запускается с параметром «\/Embedded», оно не должно отображать его главного окна, аналогична серверному приложению.  
+         If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.  
   
- В примере MFC [OCLIENT](../top/visual-cpp-samples.md) OLE реализует эту функцию.  Пример того, как это делается см. функцию `InitInstance` в файле OCLIENT.CPP этого примера приложения.  
+ The MFC OLE sample [OCLIENT](../visual-cpp-samples.md) implements this feature. For an example of how this is done, see the `InitInstance` function in the OCLIENT.CPP file of this sample application.  
   
-## См. также  
- [Контейнеры](../mfc/containers.md)   
- [Серверы](../mfc/servers.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

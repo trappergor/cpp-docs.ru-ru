@@ -1,46 +1,65 @@
 ---
-title: "Создание элемента управления &quot;Список&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl - класс, создание элемента управления"
-  - "Список - элементы управления"
+title: Creating the List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], creating control
+- list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Создание элемента управления &quot;Список&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3a1bd5a720f7acd8053bbdc8b673c4884ae3644c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В элементе управления списка \([CListCtrl](../Topic/CListCtrl%20Class.md)\) создается зависит от того, используется ли элемент управления непосредственно или используется класс [CListView](../mfc/reference/clistview-class.md).  При использовании `CListView`, платформа создает представление как часть своей последовательности создания документов и представлений.  Чтобы создать представление списка создает элемент управления также Список \(2 те же действия\).  Элемент управления создается в функции обработчика [OnCreate](../Topic/CWnd::OnCreate.md) представления.  В этом случае элемент управления к автоматически добавить элементы, через вызов метода [GetListCtrl](../Topic/CListView::GetListCtrl.md).  
+---
+# <a name="creating-the-list-control"></a>Creating the List Control
+How the list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) is created depends on whether you're using the control directly or using class [CListView](../mfc/reference/clistview-class.md) instead. If you use `CListView`, the framework constructs the view as part of its document/view creation sequence. Creating the list view creates the list control as well (the two are the same thing). The control is created in the view's [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler function. In this case, the control is ready for you to add items, via a call to [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  
   
-### Использовать CListCtrl непосредственно в диалоговом окне  
+### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>To use CListCtrl directly in a dialog box  
   
-1.  В редакторе диалоговых окон, добавьте элемент управления в Список ресурс шаблона диалоговых окон.  Укажите его идентификатор элемента управления.  
+1.  In the dialog editor, add a List Control to your dialog template resource. Specify its control ID.  
   
-2.  Используйте [Мастер добавления переменной\-члена](../ide/adding-a-member-variable-visual-cpp.md), чтобы добавить переменную\-член типа `CListCtrl` со свойством элемента управления.  Можно использовать этот член вызова функции\-члены `CListCtrl`.  
+2.  Use the [Add Member Variable Wizard](../ide/adding-a-member-variable-visual-cpp.md) to add a member variable of type `CListCtrl` with the Control property. You can use this member to call `CListCtrl` member functions.  
   
-3.  Используйте окно свойств для сопоставления функции обработчика в классе диалогового окна для всех сообщений уведомлений элемента управления "Список" необходимо обработать \(см. [Сообщения сопоставления в функции](../Topic/Mapping%20Messages%20to%20Functions.md)\).  
+3.  Use the Properties window to map handler functions in the dialog class for any list control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-4.  В [OnInitDialog](../Topic/CDialog::OnInitDialog.md), задайте стили для `CListCtrl`.  В разделе [Изменение стилей элемента управления "Список"](../Topic/Changing%20List%20Control%20Styles.md).  Указывает тип «представления» полученные в элементе управления, хотя можно изменить представление позже.  
+4.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), set the styles for the `CListCtrl`. See [Changing List Control Styles](../mfc/changing-list-control-styles.md). This determines the kind of "view" you get in the control, although you can change the view later.  
   
-### Использовать CListCtrl в окне nondialog  
+### <a name="to-use-clistctrl-in-a-nondialog-window"></a>To use CListCtrl in a nondialog window  
   
-1.  Указать элемент управления в представлении или класса окна.  
+1.  Define the control in the view or window class.  
   
-2.  Вызовите функцию\-член [Создать](../Topic/CListCtrl::Create.md) элемента управления, возможно, в [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md), возможно начиная с функции обработчика [OnCreate](../Topic/CWnd::OnCreate.md) родительского окна \(если создание подкласса для элемента управления\).  Задайте стили для элемента управления.  
+2.  Call the control's [Create](../mfc/reference/clistctrl-class.md#create) member function, possibly in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), possibly as early as the parent window's [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler function (if you're subclassing the control). Set the styles for the control.  
   
-## См. также  
- [Использование CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

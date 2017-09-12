@@ -1,11 +1,11 @@
 ---
-title: "Класс CMDIFrameWndEx | Документы Microsoft"
+title: CMDIFrameWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -89,7 +89,81 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMDIFrameWndEx class
+- CMDIFrameWndEx [MFC], ActiveItemRecalcLayout
+- CMDIFrameWndEx [MFC], AddPane
+- CMDIFrameWndEx [MFC], AdjustClientArea
+- CMDIFrameWndEx [MFC], AdjustDockingLayout
+- CMDIFrameWndEx [MFC], AreMDITabs
+- CMDIFrameWndEx [MFC], CanCovertControlBarToMDIChild
+- CMDIFrameWndEx [MFC], ControlBarToTabbedDocument
+- CMDIFrameWndEx [MFC], CreateDocumentWindow
+- CMDIFrameWndEx [MFC], CreateNewWindow
+- CMDIFrameWndEx [MFC], DockPane
+- CMDIFrameWndEx [MFC], DockPaneLeftOf
+- CMDIFrameWndEx [MFC], EnableAutoHidePanes
+- CMDIFrameWndEx [MFC], EnableDocking
+- CMDIFrameWndEx [MFC], EnableFullScreenMainMenu
+- CMDIFrameWndEx [MFC], EnableFullScreenMode
+- CMDIFrameWndEx [MFC], EnableLoadDockState
+- CMDIFrameWndEx [MFC], EnableMDITabbedGroups
+- CMDIFrameWndEx [MFC], EnableMDITabs
+- CMDIFrameWndEx [MFC], EnableMDITabsLastActiveActivation
+- CMDIFrameWndEx [MFC], EnablePaneMenu
+- CMDIFrameWndEx [MFC], EnableWindowsDialog
+- CMDIFrameWndEx [MFC], GetActivePopup
+- CMDIFrameWndEx [MFC], GetPane
+- CMDIFrameWndEx [MFC], GetDefaultResId
+- CMDIFrameWndEx [MFC], GetMDITabGroups
+- CMDIFrameWndEx [MFC], GetMDITabs
+- CMDIFrameWndEx [MFC], GetMDITabsContextMenuAllowedItems
+- CMDIFrameWndEx [MFC], GetMenuBar
+- CMDIFrameWndEx [MFC], GetRibbonBar
+- CMDIFrameWndEx [MFC], GetTearOffBars
+- CMDIFrameWndEx [MFC], GetToolbarButtonToolTipText
+- CMDIFrameWndEx [MFC], InsertPane
+- CMDIFrameWndEx [MFC], IsFullScreen
+- CMDIFrameWndEx [MFC], IsMDITabbedGroup
+- CMDIFrameWndEx [MFC], IsMemberOfMDITabGroup
+- CMDIFrameWndEx [MFC], IsMenuBarAvailable
+- CMDIFrameWndEx [MFC], IsPointNearDockSite
+- CMDIFrameWndEx [MFC], IsPrintPreview
+- CMDIFrameWndEx [MFC], LoadFrame
+- CMDIFrameWndEx [MFC], LoadMDIState
+- CMDIFrameWndEx [MFC], MDITabMoveToNextGroup
+- CMDIFrameWndEx [MFC], MDITabNewGroup
+- CMDIFrameWndEx [MFC], NegotiateBorderSpace
+- CMDIFrameWndEx [MFC], OnCloseDockingPane
+- CMDIFrameWndEx [MFC], OnCloseMiniFrame
+- CMDIFrameWndEx [MFC], OnClosePopupMenu
+- CMDIFrameWndEx [MFC], OnCmdMsg
+- CMDIFrameWndEx [MFC], OnDrawMenuImage
+- CMDIFrameWndEx [MFC], OnDrawMenuLogo
+- CMDIFrameWndEx [MFC], OnEraseMDIClientBackground
+- CMDIFrameWndEx [MFC], OnMenuButtonToolHitTest
+- CMDIFrameWndEx [MFC], OnMoveMiniFrame
+- CMDIFrameWndEx [MFC], OnSetPreviewMode
+- CMDIFrameWndEx [MFC], OnShowCustomizePane
+- CMDIFrameWndEx [MFC], OnShowMDITabContextMenu
+- CMDIFrameWndEx [MFC], OnShowPanes
+- CMDIFrameWndEx [MFC], OnShowPopupMenu
+- CMDIFrameWndEx [MFC], OnSizeMDIClient
+- CMDIFrameWndEx [MFC], OnTearOffMenu
+- CMDIFrameWndEx [MFC], OnUpdateFrameMenu
+- CMDIFrameWndEx [MFC], PaneFromPoint
+- CMDIFrameWndEx [MFC], RecalcLayout
+- CMDIFrameWndEx [MFC], RemovePaneFromDockManager
+- CMDIFrameWndEx [MFC], SaveMDIState
+- CMDIFrameWndEx [MFC], SetPrintPreviewFrame
+- CMDIFrameWndEx [MFC], SetupToolbarMenu
+- CMDIFrameWndEx [MFC], ShowFullScreen
+- CMDIFrameWndEx [MFC], ShowPane
+- CMDIFrameWndEx [MFC], ShowWindowsDialog
+- CMDIFrameWndEx [MFC], TabbedDocumentToControlBar
+- CMDIFrameWndEx [MFC], UpdateCaption
+- CMDIFrameWndEx [MFC], UpdateMDITabbedBarsIcons
+- CMDIFrameWndEx [MFC], WinHelp
+- CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
+- CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 caps.latest.revision: 42
 author: mikeblome
@@ -110,121 +184,122 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b9946f59b9ed789604ac6a02d2148188831bae56
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd2c86f6aacf302deb7dc004fc12341a55af2658
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
-Расширяет функциональность [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), рамка окна Windows многодокументного интерфейса (MDI).  
+# <a name="cmdiframewndex-class"></a>CMDIFrameWndEx Class
+Extends the functionality of [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), a Windows Multiple Document Interface (MDI) frame window.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMDIFrameWndEx : public CMDIFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Повторно вычисляет макет активный элемент.|  
-|`CMDIFrameWndEx::AddDockSite`|Этот метод не используется.|  
-|[CMDIFrameWndEx::AddPane](#addpane)|Регистрирует область закрепления manager.|  
-|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|Уменьшает для границы клиентской области.|  
-|[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Повторно вычисляет все закрепленные панели макета.|  
-|[CMDIFrameWndEx::AreMDITabs](#aremditabs)|Определяет, включена ли функция вкладками MDI или функции групп с вкладками MDI.|  
-|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Вызывается средой, чтобы определить, может ли окно преобразовать области закрепления документов с вкладками.|  
-|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Преобразует указанный закрепляемой области документа с вкладками.|  
-|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Создание дочернего окна документа.|  
-|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Вызывается платформой для создания нового окна.|  
-|`CMDIFrameWndEx::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|[CMDIFrameWndEx::DockPane](#dockpane)|Закрепляет область указанного окна фрейма.|  
-|[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Закрепляет одну область слева от другой области.|  
-|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Включает автоматическое скрытие режим для области при они закрепляются в указанной части фрейма главного окна.|  
-|[CMDIFrameWndEx::EnableDocking](#enabledocking)|Включает закрепление областей, которые принадлежат окно области MDI.|  
-|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Показывает или скрывает главного меню в полноэкранном режиме.|  
-|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Включение полноэкранного режима для рамки окна.|  
-|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Включает или отключает загрузку состояние стыковки.|  
-|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Включает или отключает функцию групп с вкладками MDI.|  
-|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Включает или отключает функцию вкладок MDI. При включении фрейме окна вкладка для каждого дочернего окна MDI.|  
-|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Указывает, активировано ли последний активной вкладке при закрытии пользователем текущей вкладки.|  
-|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Включение или отключение автоматического создания и управления ими меню всплывающие панели, где отображается список областей приложения.  .|  
-|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|Вставляет элемент меню, чей идентификатор команды вызывает [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) диалоговое окно.|  
-|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Возвращает указатель на отображаемое в данный момент контекстное меню.|  
-|[CMDIFrameWndEx::GetPane](#getpane)|Возвращает указатель на область идентификатор указанного элемента управления.|  
-|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|Возвращает идентификатор общих ресурсов окно области MDI.|  
-|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|Возвращает список MDI с вкладками windows.|  
-|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|Возвращает ссылку на подчеркнутый окна с вкладками.|  
-|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Возвращает сочетание флагов, которое определяет, какие элементы контекстного меню являются допустимыми при включенной функции групп с вкладками MDI.|  
-|[CMDIFrameWndEx::GetMenuBar](#getmenubar)|Возвращает указатель в объект панели меню, присоединенный к фрейме окна.|  
-|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|Возвращает элемент управления панели ленты для фрейма.|  
-|[CMDIFrameWndEx::GetTearOffBars](#gettearoffbars)|Возвращает список [CPane](../../mfc/reference/cpane-class.md)-производных объектов, которые находятся в состоянии перемещаемые.|  
-|`CMDIFrameWndEx::GetThisClass`|Вызывается средой для получения указателя [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Вызывается платформой, когда приложение отображает подсказки для кнопки панели инструментов.|  
-|[CMDIFrameWndEx::InsertPane](#insertpane)|Регистрация указанной области закрепления диспетчером.|  
-|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|Определяет, является ли окно в полноэкранном режиме.|  
-|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|Определяет, включена ли функция групп с вкладками MDI.|  
-|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Определяет, является ли указанный окна с вкладками в списке окон групп с вкладками MDI.|  
-|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Определяет, имеет ли окно строку меню.|  
-|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Определяет, является ли указанная точка рядом с сайта закрепления.|  
-|[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Определяет, является ли окно в режиме предварительного просмотра печати.|  
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|Создает рамку окна из сведений о ресурсах. (Переопределяет `CMDIFrameWnd::LoadFrame`.)|  
-|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Загружает указанный макет групп с вкладками MDI и список ранее открывавшихся документов.|  
-|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Перемещает активную вкладку из активного окна с вкладками в предыдущей или следующей группе вкладок.|  
-|[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Создает новую группу с вкладками, с одного окна.|  
-|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Во время активации на месте OLE согласовывает граница места в окне фрейма.|  
-|[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Вызывается платформой, когда пользователь щелкает **закрыть** кнопку закрепляемой области.|  
-|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Вызывается платформой, когда пользователь щелкает **закрыть** кнопки в плавающем окне мини-кадра.|  
-|[CMDIFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Вызывается инфраструктурой при обработке активных всплывающего меню `WM_DESTROY` сообщение.|  
-|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|Вызывается платформой для маршрутизации и диспетчеризации сообщений команды и обновление объектов пользовательского интерфейса команды.|  
-|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Вызывается платформой при отрисовке изображения, связанного с пунктом меню.|  
-|[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Вызывается инфраструктурой при [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)процессов `WM_PAINT` сообщение.|  
-|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|Вызывается инфраструктурой при процессы окна фрейма MDI `WM_ERASEBKGND` сообщение.|  
-|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Вызывается инфраструктурой при [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)объекта процессов `WM_NCHITTEST` сообщение.|  
-|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Вызывается платформой для перемещения окна области.|  
-|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Задает режим предварительного приложения фрейма главного окна. (Переопределяет [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|  
-|[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Вызывается инфраструктурой при активации в области быстрого настройки.|  
-|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|Вызывается инфраструктурой при контекстном меню, которые должны отображаться на одной из вкладок. (Допустим, для группы с вкладками MDI только.)|  
-|[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|Вызывается платформой для отображения или скрытия панели.|  
-|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Вызывается платформой при активации всплывающего меню.|  
-|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Вызывается инфраструктурой при изменении размера окна MDI.|  
-|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Вызывается платформой при активации меню с перемещаемой панелью.|  
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Вызывается платформой для обновления меню фрейма. (Переопределяет `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
-|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Возвращает область закрепления, содержащего заданную точку.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для перевода оконных сообщений перед их отправкой [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows.  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|  
-|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Вызывается платформой для пересчета макет окна фрейма. (Переопределяет [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
-|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из диспетчера закрепления.|  
-|[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Сохраняет текущую структуру групп с вкладками MDI и список ранее открытые документы.|  
-|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Задает фрейме окна предварительного просмотра.|  
-|[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Изменяет объект панели инструментов путем поиска фиктивных элементов и замены их указанными элементами, определяемыми пользователем.|  
-|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|Переключает главного фрейма в обычном режиме в полноэкранном режиме.|  
-|[CMDIFrameWndEx::ShowPane](#showpane)|Показывает или скрывает указанной области.|  
-|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|Создает [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) поле и открывает его.|  
-|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Преобразует указанный документ с вкладками в области закрепления.|  
-|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Вызывается платформой для обновления заголовка рамки окна.|  
-|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Задает значок для каждой области с вкладками MDI.|  
-|[CMDIFrameWndEx::WinHelp](#winhelp)|Вызывается платформой для запуска приложения WinHelp или контекстной справки. (Переопределяет [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|  
+|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Recalculates the layout of the active item.|  
+|`CMDIFrameWndEx::AddDockSite`|This method is not used.|  
+|[CMDIFrameWndEx::AddPane](#addpane)|Registers a pane with the docking manager.|  
+|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|Reduces the client area to allow for a border.|  
+|[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Recalculates the layout of all docked panes.|  
+|[CMDIFrameWndEx::AreMDITabs](#aremditabs)|Determines whether the MDI Tabs feature or the MDI Tabbed Groups feature is enabled.|  
+|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Called by the framework to determine whether the frame window can convert docking panes to tabbed documents.|  
+|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Converts the specified docking pane to a tabbed document.|  
+|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Creates a child document window.|  
+|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Called by the framework to create a new window.|  
+|`CMDIFrameWndEx::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMDIFrameWndEx::DockPane](#dockpane)|Docks the specified pane to the frame window.|  
+|[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Docks one pane to the left of another pane.|  
+|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Enables auto-hide mode for panes when they are docked at specified sides of the main frame window.|  
+|[CMDIFrameWndEx::EnableDocking](#enabledocking)|Enables docking of the panes that belong to the MDI frame window.|  
+|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Shows or hides the main menu in full-screen mode.|  
+|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Enables full-screen mode for the frame window.|  
+|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Enables or disables the loading of the docking state.|  
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Enables or disables the MDI Tabbed Groups feature.|  
+|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Enables or disables the MDI Tabs feature. When enabled, the frame window displays a tab for each MDI child window.|  
+|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Specifies whether the last active tab should be activated when the user closes the current tab.|  
+|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Enables or disables automatic creation and management of the pop-up pane menu, which displays a list of application panes.  .|  
+|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|Inserts a menu item whose command ID calls a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialog box.|  
+|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Returns a pointer to the currently displayed popup menu.|  
+|[CMDIFrameWndEx::GetPane](#getpane)|Returns a pointer to the pane that has the specified control ID.|  
+|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|Returns the ID of shared resources of the MDI frame window.|  
+|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|Returns a list of MDI tabbed windows.|  
+|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|Returns a reference to the underlined tabbed window.|  
+|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Returns a combination of flags that determines what context menu items are valid when the MDI Tabbed Groups feature is enabled.|  
+|[CMDIFrameWndEx::GetMenuBar](#getmenubar)|Returns a pointer to a menu bar object attached to the frame window.|  
+|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|Retrieves the ribbon bar control for the frame.|  
+|[CMDIFrameWndEx::GetTearOffBars](#gettearoffbars)|Returns a list of [CPane](../../mfc/reference/cpane-class.md)-derived objects that are in a tear-off state.|  
+|`CMDIFrameWndEx::GetThisClass`|Called by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Called by the framework when the application displays the tooltip for a toolbar button.|  
+|[CMDIFrameWndEx::InsertPane](#insertpane)|Registers the specified pane with the docking manager.|  
+|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|Determines whether the frame window is in full-screen mode.|  
+|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|Determines whether the MDI Tabbed Groups feature is enabled.|  
+|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Determines whether the specified tabbed window is in the list of windows that are in MDI Tabbed Groups.|  
+|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determines whether the frame window has a menu bar.|  
+|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Determines whether a specified point is near the dock site.|  
+|[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Determines whether the frame window is in print-preview mode.|  
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|Creates a frame window from resource information. (Overrides `CMDIFrameWnd::LoadFrame`.)|  
+|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Loads the specified layout of MDI Tabbed Groups and the list of previously opened documents.|  
+|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Moves the active tab from the currently active tabbed window to the next or previous tabbed group.|  
+|[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Creates a new tabbed group that has a single window.|  
+|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Negotiates border space in a frame window during OLE in-place activation.|  
+|[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Called by the framework when the user clicks the **Close** button on a dockable pane.|  
+|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Called by the framework when the user clicks the **Close** button on a floating mini frame window.|  
+|[CMDIFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Called by the framework when an active pop-up menu processes a `WM_DESTROY` message.|  
+|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|Called by the framework to route and dispatch command messages and to update command user-interface objects.|  
+|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Called by the framework when the image associated with a menu item is drawn.|  
+|[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Called by the framework when a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processes a `WM_PAINT` message.|  
+|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|Called by the framework when the MDI frame window processes a `WM_ERASEBKGND` message.|  
+|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Called by the framework when a [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)object processes a `WM_NCHITTEST` message.|  
+|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Called by the framework to move a mini-frame window.|  
+|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Sets the application's main frame window print-preview mode. (Overrides [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|  
+|[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Called by the framework when a Quick Customize pane is activated.|  
+|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|Called by the framework when a context menu should be displayed on one of the tabs. (Valid for MDI Tabbed Groups only.)|  
+|[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|Called by the framework to show or hide panes.|  
+|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Called by the framework when a pop-up menu is activated.|  
+|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Called by the framework when the size of the client MDI window is changing.|  
+|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Called by the framework when a menu that has a tear-off bar is activated.|  
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Called by the framework to update the frame menu. (Overrides `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
+|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Returns the docking pane that contains the specified point.|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions.  (Overrides `CMDIFrameWnd::PreTranslateMessage`.)|  
+|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Called by the framework to recalculate the layout of the frame window. (Overrides [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
+|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Unregisters a pane and removes it from the docking manager.|  
+|[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Saves the current layout of MDI Tabbed Groups and the list of previously opened documents.|  
+|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Sets the print preview frame window.|  
+|[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modifies a toolbar object by searching for dummy items and replacing them with the specified user-defined items.|  
+|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|Switches the main frame from regular mode to full-screen mode.|  
+|[CMDIFrameWndEx::ShowPane](#showpane)|Shows or hides the specified pane.|  
+|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|Creates a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) box and opens it.|  
+|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Converts the specified tabbed document to a docking pane.|  
+|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Called by the framework to update the window frame caption.|  
+|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Sets the icon for each MDI tabbed pane.|  
+|[CMDIFrameWndEx::WinHelp](#winhelp)|Called by the framework to initiate the WinHelp application or context help. (Overrides [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|  
   
-### <a name="data-members"></a>Элементы данных  
+### <a name="data-members"></a>Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Определяет, можно ли преобразовать области закрепления для дочерних MDI-окон.|  
-|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Включает или отключает оптимизацию перерисовки для дочерних MDI-окон.|  
+|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determines whether docking panes can be converted to MDI child windows.|  
+|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Enables or disables redraw optimization for MDI child windows.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы воспользоваться преимуществами функции расширенной настройки в приложении MDI, создайте производный класс окна фрейма MDI приложения от `CMDIFrameWndEx` вместо `CMDIFrameWnd`.  
+## <a name="remarks"></a>Remarks  
+ To take advantage of extended customization features in your MDI application, derive the MDI frame window class of the application from `CMDIFrameWndEx` instead of `CMDIFrameWnd`.  
   
-## <a name="example"></a>Пример  
- Следующий пример является производным от класса `CMDIFrameWndEx`. В этом фрагменте кода поступают из [Образец DrawClient: MFC Ribbon-Based OLE объект приложения для рисования](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example derives a class from `CMDIFrameWndEx`. This code snippet comes from the [DrawClient Sample: MFC Ribbon-Based OLE Object Drawing Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient&#1;](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]  
+ [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -237,18 +312,18 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
  [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxMDIFrameWndEx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxMDIFrameWndEx.h  
   
-##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout  
- Повторно вычисляет макет активный элемент.  
+##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout  
+ Recalculates the layout of the active item.  
   
 ```  
 void ActiveItemRecalcLayout();
 ```  
   
-##  <a name="addpane"></a>CMDIFrameWndEx::AddPane  
- Регистрирует область закрепления manager.  
+##  <a name="addpane"></a>  CMDIFrameWndEx::AddPane  
+ Registers a pane with the docking manager.  
   
 ```  
 BOOL AddPane(
@@ -256,99 +331,99 @@ BOOL AddPane(
     BOOL bTail=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- Указатель на область для регистрации.  
+ Pointer to the pane to register.  
   
  [in] `bTail`  
- Указывает, следует ли добавить в конец списка в этой области.  
+ Specifies whether to add this pane to the end of the list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает ненулевое значение, если области успешно зарегистрирован. Возвращает 0, если область уже зарегистрирован с диспетчером, закрепления.  
+### <a name="return-value"></a>Return Value  
+ Returns a non-zero value if the pane is registered successfully. Returns 0 if the pane is already registered with the docking manager.  
   
-### <a name="remarks"></a>Примечания  
- Каждой области должен быть зарегистрирован с [CDockingManager класса](../../mfc/reference/cdockingmanager-class.md) перед занимает часть макета закрепления. Используйте этот метод для уведомления диспетчера закрепления требуется закрепить конкретную панель. После регистрации этой области закрепления manager выравнивает его на основе его выравнивания и позицию в списке, поддерживаемый диспетчером закрепляемых панелей.  
+### <a name="remarks"></a>Remarks  
+ Each pane must be registered with the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) before it can take a part in the docking layout. Use this method to notify the docking manager that you want to dock a specific pane. Once that pane is registered, the docking manager aligns it based on its alignment setting and position in the list of panes maintained by the docking manager.  
   
-##  <a name="adjustclientarea"></a>CMDIFrameWndEx::AdjustClientArea  
- Уменьшает для границы клиентской области.  
+##  <a name="adjustclientarea"></a>  CMDIFrameWndEx::AdjustClientArea  
+ Reduces the client area to allow for a border.  
   
 ```  
 virtual void AdjustClientArea();
 ```  
   
-##  <a name="adjustdockinglayout"></a>CMDIFrameWndEx::AdjustDockingLayout  
- Повторно вычисляет все закрепленные панели макета.  
+##  <a name="adjustdockinglayout"></a>  CMDIFrameWndEx::AdjustDockingLayout  
+ Recalculates the layout of all docked panes.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `hdwp`  
- Определяет структуру положение нескольких окна. Это значение можно получить путем вызова `BeginDeferWindowPos`.  
+ Identifies the multiple-window-position structure. You can obtain this value by calling `BeginDeferWindowPos`.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите эту функцию-член для пересчета макет закрепления в фрейме окна всех областей.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to recalculate the layout of all panes docked to the frame window.  
   
-##  <a name="aremditabs"></a>CMDIFrameWndEx::AreMDITabs  
- Определяет, включена ли функция вкладками MDI или функции групп с вкладками MDI.  
+##  <a name="aremditabs"></a>  CMDIFrameWndEx::AreMDITabs  
+ Determines whether the MDI tabs feature or the MDI tabbed groups feature is enabled.  
   
 ```  
 BOOL AreMDITabs(int* pnMDITabsType=NULL) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `pnMDITabsType`  
- Указатель на целочисленную переменную, указывает, какие компоненты включены.  
+### <a name="parameters"></a>Parameters  
+ [out] `pnMDITabsType`  
+ A pointer to an integer variable that indicates which features are enabled:  
   
--   0: все компоненты отключены.  
+-   0: All features are disabled.  
   
--   1: включена вкладок MDI.  
+-   1: MDI tabs is enabled.  
   
--   2: включен групп с вкладками MDI.  
+-   2: MDI tabbed groups is enabled.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `Returns TRUE`Если вкладок MDI или MDI с вкладками групп включено.  
+### <a name="return-value"></a>Return Value  
+ `Returns TRUE` if MDI tabs or MDI tabbed groups is enabled.  
   
- `Returns FALSE`Если ни одно из вышеперечисленных функций включена.  
+ `Returns FALSE` if none of the above features is enabled.  
   
-### <a name="remarks"></a>Примечания  
- Используйте эту функцию для определения ли вкладками MDI или MDI с вкладками группы включена для рамки окна. Используйте [CMDIFrameWndEx::EnableMDITabs](#enablemditabs) для включения или отключения функции вкладок MDI.  
+### <a name="remarks"></a>Remarks  
+ Use this function to determine whether MDI tabs or MDI tabbed groups is enabled for the frame window. Use [CMDIFrameWndEx::EnableMDITabs](#enablemditabs) to enable or disable the MDI tabs feature.  
   
- Используйте [CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups) для включения или отключения функции групп с вкладками MDI.  
+ Use [CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups) to enable or disable the MDI tabbed groups feature.  
   
-##  <a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx::CanCovertControlBarToMDIChild  
- Вызывается средой, чтобы определить, может ли окно преобразовать области закрепления документов с вкладками  
+##  <a name="cancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::CanCovertControlBarToMDIChild  
+ Called by the framework to determine whether the frame window can convert docking panes to tabbed documents  
   
 ```  
 virtual BOOL CanCovertControlBarToMDIChild();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` Если преобразовать области закрепления фрейме окна документов с вкладками; в противном случае возвращает `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the frame window can convert docking panes to tabbed documents; otherwise returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе и возвращают `TRUE` для преобразования закрепляемые панели для документов с вкладками. Кроме того, можно задать [CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) в `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class and return `TRUE` to enable the conversion of docking panes to tabbed documents. Alternatively, you can set [CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) to `TRUE`.  
   
-##  <a name="controlbartotabbeddocument"></a>CMDIFrameWndEx::ControlBarToTabbedDocument  
- Преобразует указанный закрепляемой области документа с вкладками.  
+##  <a name="controlbartotabbeddocument"></a>  CMDIFrameWndEx::ControlBarToTabbedDocument  
+ Converts the specified docking pane to a tabbed document.  
   
 ```  
 virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- Указатель закрепляемой области для преобразования.  
+ A pointer to the docking pane to convert.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель для нового дочернего окна MDI, содержащий закрепляемой области.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the new MDI child window that contains the docking pane.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод преобразует закрепляемой области документа с вкладками. При вызове этого метода, платформа создает [класс CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md) удаляет закрепляемой области из диспетчера закрепления объекта и добавляет закрепляемой области нового дочернего окна MDI. Дочерние окна MDI изменяет размер закрепляемой области, чтобы охватить всю клиентскую область  
+### <a name="remarks"></a>Remarks  
+ This method converts a docking pane to a tabbed document. When you call this method, the framework creates a [CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md) object, removes the docking pane from the docking manager, and adds the docking pane to the new MDI child window. The MDI child window resizes the docking pane to cover the entire client area  
   
-##  <a name="createdocumentwindow"></a>CMDIFrameWndEx::CreateDocumentWindow  
- Создание дочернего окна документа.  
+##  <a name="createdocumentwindow"></a>  CMDIFrameWndEx::CreateDocumentWindow  
+ Creates a child document window.  
   
 ```  
 virtual CMDIChildWndEx* CreateDocumentWindow(
@@ -356,30 +431,30 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
     CObject* pObj);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpcszDocName`  
- Текстовая строка, содержащая идентификатор документа. Как правило это полный путь к файлу документа.  
+ A text string that contains a document identifier. Typically, it is the full path of a document file.  
   
  [in] `pObj`  
- Указатель на определяемый пользователем объект. Например разработчик может создать структуру данных приложения, описания документа и о том, как документ должен быть инициализирован во время запуска.  
+ A pointer to a user-defined object. For example, a developer can create an application-specific data structure describing the document and telling how the document should be initialized at startup.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CMDIChildWndEx`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to `CMDIChildWndEx`.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод при загрузке списка документов, хранящихся в реестре.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it loads the list of documents previously saved in the registry.  
   
- Переопределите этот метод для создания документов, когда они загружаются из реестра.  
+ Override this method in order to create documents when they are being loaded from the registry.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `CreateDocumentWindow` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `CreateDocumentWindow` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- В этом примере `g_strStartViewName` может быть имя «виртуального документа» (например, «Начальная страница»), на самом деле не загружается из файла на диске. Поэтому мы должны особой обработки, чтобы обрабатывать этот случай.  
+ In this example, `g_strStartViewName` could be the name of a "virtual document" (for example, "Start Page") that is not actually loaded from a disk file. Therefore we need special processing to handle that case.  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#13;](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="createnewwindow"></a>CMDIFrameWndEx::CreateNewWindow  
- Вызывается платформой для создания нового окна.  
+##  <a name="createnewwindow"></a>  CMDIFrameWndEx::CreateNewWindow  
+ Called by the framework to create a new window.  
   
 ```  
 virtual CMDIChildWndEx* CreateNewWindow(
@@ -387,18 +462,18 @@ virtual CMDIChildWndEx* CreateNewWindow(
     CObject* pObj);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpcszDocName`  
- Имя документа.  
+ The document name.  
   
  [in] `pObj`  
- Зарезервировано для будущего использования.  
+ Reserved for future use.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель в новом окне.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new window.  
   
-##  <a name="dockpane"></a>CMDIFrameWndEx::DockPane  
- Закрепляет область указанного окна фрейма.  
+##  <a name="dockpane"></a>  CMDIFrameWndEx::DockPane  
+ Docks the specified pane to the frame window.  
   
 ```  
 void DockPane(
@@ -407,26 +482,26 @@ void DockPane(
     LPCRECT lpRect=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Указатель на панели, чтобы закрепить.  
+ Pointer to the pane to dock.  
   
  [in] `nDockBarID`  
- Указывает, какие стороны окна фрейма, чтобы закрепить.  
+ Specifies which sides of the frame window to dock to.  
   
  [in] `lpRect`  
- Не используется.  
+ Not used.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод размещает указанный панели для одной из сторон фрейма окна, которое было указано при [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) и [CMDIFrameWndEx::EnableDocking](#enabledocking) были вызваны.  
+### <a name="remarks"></a>Remarks  
+ This method docks the specified the pane to one of the sides of the frame window that was specified when [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) and [CMDIFrameWndEx::EnableDocking](#enabledocking) were called.  
   
-### <a name="example"></a>Пример  
- В следующем примере иллюстрируется использование метода `DockPane`. В этом фрагменте кода поступают из [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates the use of the `DockPane` method. This code snippet comes from the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#4;](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]  
   
-##  <a name="dockpaneleftof"></a>CMDIFrameWndEx::DockPaneLeftOf  
- Закрепляет одну область слева от другой области.  
+##  <a name="dockpaneleftof"></a>  CMDIFrameWndEx::DockPaneLeftOf  
+ Docks one pane to the left of another pane.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -434,34 +509,34 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Указатель на область закрепления.  
+ A pointer to the docking pane.  
   
  [in] `pLeftOf`  
- Указатель для области, которая служит в качестве сайта закрепления. .  
+ A pointer to the pane that serves as the dock site. .  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` , если операция выполнена успешно. В противном случае возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the operation is successful. Otherwise returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для прикрепления нескольких объектов области в заранее определенном порядке. Этот метод закрепляет область, определяемое `pBar` слева от области, определяемой `pLeftOf`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to dock several pane objects in a predefined order. This method docks the pane specified by `pBar` to the left of the pane specified by `pLeftOf`.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `DockPaneLeftOf` метод используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how the `DockPaneLeftOf` method is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#5;](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]  
   
-##  <a name="enableautohidepanes"></a>CMDIFrameWndEx::EnableAutoHidePanes  
- Включает автоматическое скрытие режим для области при они закрепляются в указанной части фрейма главного окна.  
+##  <a name="enableautohidepanes"></a>  CMDIFrameWndEx::EnableAutoHidePanes  
+ Enables auto-hide mode for panes when they are docked at the specified sides of the main frame window.  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- Задает стороны фрейма главного окна, которые будут использоваться. Используйте один или несколько из следующих флагов.  
+ Specifies the sides of the main frame window that will be enabled. Use one or more of the following flags.  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -471,79 +546,79 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 - `CBRS_ALIGN_BOTTOM`  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Эта функция используется для включения режима автоматического скрытия областей, если они закрепляются в указанной части фрейма главного окна.  
+### <a name="return-value"></a>Return Value  
+ Call this function to enable auto-hide mode for panes when they are docked at the specified sides of the main frame window.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `EnableAutoHidePanes` метод используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how the `EnableAutoHidePanes` method is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo №&6;](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabledocking"></a>CMDIFrameWndEx::EnableDocking  
- Включает закрепление областей, которые принадлежат окно области MDI.  
+##  <a name="enabledocking"></a>  CMDIFrameWndEx::EnableDocking  
+ Enables docking of the panes that belong to the MDI frame window.  
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- Задает стиль закрепления, который требуется применить.  
+ Specifies the docking style that you want to apply.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для Включение закрепления областей, которые принадлежат `CMDIFrameWndEx` объекта.  
+### <a name="remarks"></a>Remarks  
+ Call this function to enable docking of panes that belong to the `CMDIFrameWndEx` object.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `EnableDocking` метод используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how the `EnableDocking` method is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#7;](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]  
   
-##  <a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx::EnableFullScreenMainMenu  
- Показывает или скрывает главного меню в полноэкранном режиме.  
+##  <a name="enablefullscreenmainmenu"></a>  CMDIFrameWndEx::EnableFullScreenMainMenu  
+ Shows or hides the main menu in full-screen mode.  
   
 ```  
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnableMenu`  
- `TRUE`для отображения главного меню в полноэкранном режиме или `FALSE` Чтобы скрыть его.  
+ `TRUE` to show the main menu in full-screen mode, or `FALSE` to hide it.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx::EnableFullScreenMode  
- Включение полноэкранного режима для рамки окна.  
+##  <a name="enablefullscreenmode"></a>  CMDIFrameWndEx::EnableFullScreenMode  
+ Enables full-screen mode for the frame window.  
   
 ```  
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiFullScreenCmd`  
- Идентификатор команды, которая включает или отключает полноэкранный режим.  
+ The ID of a command that enables or disables full-screen mode.  
   
-### <a name="remarks"></a>Примечания  
- В полноэкранном режиме скрыты все закрепляемых панелей элементов управления, панели инструментов и меню и активное представление изменяется занимают в полноэкранном режиме. При включении полноэкранного режима, необходимо указать идентификатор команды, которая включает или отключает его. Можно вызвать `EnableFullScreenMode` из главного фрейма `OnCreate` функции. Когда рамка окна переключен в полноэкранном режиме, платформа создает плавающей панели инструментов с одной кнопки, которая имеет идентификатор указанной команды. Если вы хотите сохранить в главном меню на экране, вызвать [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
+### <a name="remarks"></a>Remarks  
+ In full-screen mode, all docking control bars, toolbars and menus are hidden and the active view is resized to occupy the full-screen.When you enable full-screen mode, you must specify an ID of the command that enables or disables it. You can call `EnableFullScreenMode` from the main frame's `OnCreate` function. When a frame window is being switched to full-screen mode, the framework creates a floating toolbar with one button that has the specified command ID.If you want to keep the main menu on the screen, call [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
-##  <a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState  
- Включает или отключает загрузку состояние стыковки.  
+##  <a name="enableloaddockstate"></a>  CMDIFrameWndEx::EnableLoadDockState  
+ Enables or disables the loading of the docking state.  
   
 ```  
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Чтобы включить загрузку состояние стыковки `FALSE` Чтобы отключить загрузку состояние стыковки.  
+ `TRUE` to enable the loading of the docking state, `FALSE` to disable the loading of the docking state.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx::EnableMDITabbedGroups  
- Включает или отключает функции групп с вкладками MDI для рамки окна.  
+##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx::EnableMDITabbedGroups  
+ Enables or disables the MDI tabbed groups feature for the frame window.  
   
 ```  
 void EnableMDITabbedGroups(
@@ -551,39 +626,39 @@ void EnableMDITabbedGroups(
     const CMDITabInfo& params);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- Если `TRUE`, включена функция групп с вкладками MDI; Если `FALSE`, отключения групп с вкладками MDI.  
+ If `TRUE`, the MDI tabbed groups feature is enabled; if `FALSE`, the MDI tabbed groups feature is disabled.  
   
  [in] `params`  
- Задает параметры, которые платформа применяются для дочерних окон, которые создаются в клиентской области MDI.  
+ Specifies parameters that the framework applies to child windows that are created in the MDI client area.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод для включения или отключения функции групп с вкладками MDI. Эта функция позволяет MDI-приложения для отображения дочерних окон в виде окон с вкладками, выровненные по вертикали или по горизонтали в клиентской области MDI. Группы окон с вкладками разделяются разделителей. Пользователь может изменить размер групп с вкладками с помощью разделителя.  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable or disable the MDI tabbed groups feature. This feature enables MDI applications to display child windows as tabbed windows that are aligned vertically or horizontally within the MDI client area. Groups of tabbed windows are separated by splitters. The user can resize tabbed groups by using a splitter.  
   
--   Пользователь может:  
+-   The user can:  
   
--   Перетащите отдельные вкладки между группами.  
+-   Drag individual tabs between groups.  
   
--   Перетащите отдельные вкладки края окна для создания новых групп.  
+-   Drag individual tabs to the edge of the window to create new groups.  
   
--   Перемещение вкладки или создавать новые группы с помощью контекстного меню.  
+-   Move tabs or create new groups by using a shortcut menu.  
   
--   Приложения можно сохранить текущее расположение окон с вкладками и список документов, открытых в данный момент.  
+-   Your application can save the current layout of tabbed windows and the list of currently opened documents.  
   
- При вызове этого метода с `bEnable` значение `FALSE`, `params` игнорируется.  
+ If you call this method with `bEnable` set to `FALSE`, `params` is ignored.  
   
- Даже если групп с вкладками MDI уже включена, можно вызвать этот метод еще раз, чтобы изменить параметры для дочерних окон. Вызов метода с `bEnable` значение `TRUE` и изменять элементы `CMDITabInfo` объект, указанный по `params` параметр.  
+ Even if MDI tabbed groups is already enabled, you can call this method again to modify the settings for child windows. Call the method with `bEnable` set to `TRUE` and modify the members of the `CMDITabInfo` object that are specified by the `params` parameter.  
   
- Дополнительные сведения об использовании интерфейса MDI с вкладками групп, см. в разделе [групп с вкладками MDI](../../mfc/mdi-tabbed-groups.md).  
+ For more information about how to use MDI tabbed groups, see [MDI Tabbed Groups](../../mfc/mdi-tabbed-groups.md).  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `EnableMDITabbedGroups` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `EnableMDITabbedGroups` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo №&8;](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]  
   
-##  <a name="enablemditabs"></a>CMDIFrameWndEx::EnableMDITabs  
- Включает или отключает функцию вкладками MDI для окно области MDI. При включении фрейме окна вкладка для каждого дочернего окна MDI.  
+##  <a name="enablemditabs"></a>  CMDIFrameWndEx::EnableMDITabs  
+ Enables or disables the MDI Tabs feature for the MDI frame window. When enabled, the frame window displays a tab for each MDI child window.  
   
 ```  
 void EnableMDITabs(
@@ -596,64 +671,64 @@ void EnableMDITabs(
     BOOL bActiveTabCloseButton=FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- Указывает, включены ли вкладок.  
+ Specifies whether tabs are enabled.  
   
  `bIcons`  
- Указывает, следует ли отображать значки на вкладках.  
+ Specifies whether icons should be displayed on the tabs.  
   
  `tabLocation`  
- Указывает расположение меток вкладки.  
+ Specifies the location of the tab labels.  
   
  `bTabCloseButton`  
- Определяет отображение кнопки Закрыть вкладку.  
+ Specifies whether to display tab close buttons.  
   
  `style`  
- Задает стиль вкладок. Используйте `STYLE_3D_SCROLLED` для обычные вкладки или `STYLE_3D_ONENOTE` для Microsoft OneNote вкладок.  
+ Specifies the style of tabs. Use `STYLE_3D_SCROLLED` for regular tabs or `STYLE_3D_ONENOTE` for Microsoft OneNote tabs.  
   
  `bTabCustomTooltips`  
- Указывает, включены ли настраиваемые всплывающие подсказки.  
+ Specifies whether custom tooltips are enabled.  
   
  `bActiveTabCloseButton`  
- Если `TRUE`, **закрыть** кнопки будут отображаться на активную вкладку, а не в правом углу области вкладки.  
+ If `TRUE`, a **Close** button will be displayed on the active tab instead of on the right corner of the tab area.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для включения или отключения функции вкладками MDI окно области MDI. При включении все дочерние окна отображаются в виде вкладок.  
+### <a name="remarks"></a>Remarks  
+ Call this method to enable or disable the MDI tabs feature for the MDI frame window. When enabled, all child windows are displayed as tabs.  
   
- Вкладка метки могут располагаться в верхней или нижней части окна, в зависимости от настройки параметра `tabLocation`. Можно указать либо `CMFCTabCtrl::LOCATION_BOTTOM` (значение по умолчанию) или `CMFCTabCtrl::LOCATION_TOP`.  
+ The tab labels can be located at the top or bottom of the frame, depending on the setting of the parameter `tabLocation`. You may specify either `CMFCTabCtrl::LOCATION_BOTTOM` (the default setting) or `CMFCTabCtrl::LOCATION_TOP`.  
   
- Если `bTabCustomTooltips` — `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` сообщения будут отправляться фрейма главного окна. Ваш код может обработать это сообщение и предоставляют платформу настраиваемые всплывающие подсказки для вкладок MDI.  
+ If `bTabCustomTooltips` is `TRUE`, an `AFX_WM_ON_GET_TAB_TOOLTIP` message will be sent to the main frame window. Your code can handle this message and provide the framework with custom tooltips for MDI tabs.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `EnableMDITabs` используется в [образце MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `EnableMDITabs` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MDITabsDemo&#3;](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]  
+ [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]  
   
-##  <a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
- Указывает, должен быть открыт последний активной вкладки, когда пользователь закрывает текущую вкладку.  
+##  <a name="enablemditabslastactiveactivation"></a>  CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
+ Specifies whether the last active tab should be opened when the user closes the current tab.  
   
 ```  
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bLastActiveTab`  
- Если `TRUE`, активации последней активной вкладки. Если `FALSE`, отключение активации по последней активной вкладки.  
+ If `TRUE`, enable activation of the last active tab. If `FALSE`, disable activation of the last active tab.  
   
-### <a name="remarks"></a>Примечания  
- Откройте вкладку при закрытии активной вкладке двумя способами:  
+### <a name="remarks"></a>Remarks  
+ There are two ways to open a tab when the active tab is closed:  
   
--   Активируйте следующую вкладку.  
+-   Activate the next tab.  
   
--   Активируйте ранее активной вкладки.  
+-   Activate the previously active tab.  
   
- Реализация по умолчанию использует первый способ.  
+ The default implementation uses the first way.  
   
- Используйте `EnableMDITabsLastActiveActivation` для включения второй способ активации вкладки. Она имитирует способ Windows открывает дочерние MDI-окна.  
+ Use `EnableMDITabsLastActiveActivation` to enable the second way of tab activation. It emulates the way Windows opens MDI child windows.  
   
-##  <a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu  
- Включение или отключение автоматического создания и управления ими меню всплывающие панели, где отображается список областей приложения.  
+##  <a name="enablepanemenu"></a>  CMDIFrameWndEx::EnablePaneMenu  
+ Enables or disables automatic creation and management of the pop-up pane menu, which displays a list of application panes.  
   
 ```  
 void EnablePaneMenu(
@@ -665,35 +740,35 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly=FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- Если `TRUE`, включена автоматическая обработка меню области; Если `FALSE`, автоматическая обработка отключена.  
+ If `TRUE`, automatic handling of the pane menu is enabled; if `FALSE`, automatic handling is disabled.  
   
  [in] `uiCustomizeCmd`  
- Идентификатор команды **Настройка** элемент меню. Обычно этот пункт меню добавляется в конец списка областей.  
+ Command ID of the **Customize** menu item. This menu item is usually added to the end of the list of panes.  
   
  [in] `strCustomizeLabel`  
- Текст, отображаемый для **Настройка** элемент меню (для локализации).  
+ The text to be displayed for the **Customize** menu item (for localization).  
   
  [in] `uiViewToolbarsMenuEntryID`  
- Указывает идентификатор элемента меню инструментов открывшейся панели меню. Обычно это **панели инструментов** подменю **представление** меню.  
+ Specifies the ID of a toolbar menu item that opens the pane menu. Usually this is the **Toolbars** submenu of the **View** menu.  
   
  [in] `bContextMenuShowsToolbarsOnly`  
- Если `TRUE`, меню «панель» отображает список панелей инструментов. Если `FALSE`, раскроется список панелей инструментов и закрепляемых панелей.  
+ If `TRUE`, the pane menu displays only a list of toolbars. If `FALSE`, the menu displays a list of toolbars and docking bars.  
   
  [in] `bViewMenuShowsToolbarsOnly`  
- Если `TRUE`, меню «панель» отображает список панелей инструментов. Если `FALSE`, раскроется список панелей инструментов и закрепляемых панелей.  
+ If `TRUE`, the pane menu displays only a list of toolbars. If `FALSE`, the menu displays a list of toolbars and docking bars.  
   
-### <a name="remarks"></a>Примечания  
- В области всплывающих меню отображается список областей приложения и позволяет пользователю отображать или скрывать отдельные области.  
+### <a name="remarks"></a>Remarks  
+ The pop-up pane menu displays the list of the application's panes and lets the user show or hide individual panes.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `EnablePaneMenu` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `EnablePaneMenu` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo №&9;](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]  
   
-##  <a name="enablewindowsdialog"></a>CMDIFrameWndEx::EnableWindowsDialog  
- Вставляет элемент меню, чей идентификатор команды вызывает [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) диалоговое окно.  
+##  <a name="enablewindowsdialog"></a>  CMDIFrameWndEx::EnableWindowsDialog  
+ Inserts a menu item whose command ID calls a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialog box.  
   
 ```  
 void EnableWindowsDialog(
@@ -710,156 +785,156 @@ void EnableWindowsDialog(
     BOOL bShowHelpButton=FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiMenuId`  
- Указывает идентификатор ресурса меню.  
+ Specifies the resource ID of a menu.  
   
  [in] `lpszMenuText`  
- Задает текст элемента.  
+ Specifies the item's text.  
   
  [in] `bShowHelpButton`  
- Указывает, следует ли отображать **помочь** кнопку в диалоговом окне Управление windows.  
+ Specifies whether to display a **Help** button on the windows management dialog box.  
   
  [in] `uiMenuTextResId`  
- Идентификатор ресурса строки, который содержит строку текста элемента.  
+ The string resource identifier that contains the item's text string.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод служит для вставки пункта меню команд которого вызывает диалоговое окно MDI дочернего окна управления ( [CMFCWindowsManagerDialog класса](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Новый элемент вставляется в меню, определяемое `uiMenuId`. Вызов `EnableWindowsDialog` при обработке `WM_CREATE` сообщение.  
+### <a name="remarks"></a>Remarks  
+ Use this method to insert a menu item whose command calls a MDI child window management dialog box ( [CMFCWindowsManagerDialog Class](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). The new item is inserted into the menu specified by `uiMenuId`. Call `EnableWindowsDialog` when you process the `WM_CREATE` message.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `EnableWindowsDialog` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `EnableWindowsDialog` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#10;](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]  
   
-##  <a name="getactivepopup"></a>CMDIFrameWndEx::GetActivePopup  
- Возвращает указатель на отображаемое в данный момент контекстное меню.  
+##  <a name="getactivepopup"></a>  CMDIFrameWndEx::GetActivePopup  
+ Returns a pointer to the currently displayed popup menu.  
   
 ```  
 CMFCPopupMenu* GetActivePopup() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на активный всплывающее меню; `NULL` Если меню не активен.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the active popup menu; `NULL` if no popup menu is active.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция используется для получения указателя [CMFCPopupMenu класс](../../mfc/reference/cmfcpopupmenu-class.md) объекта, который отображается в данный момент.  
+### <a name="remarks"></a>Remarks  
+ Use this function to obtain a pointer to the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object that is currently displayed.  
   
-##  <a name="getdefaultresid"></a>CMDIFrameWndEx::GetDefaultResId  
- Возвращает идентификатор общих ресурсов окно области MDI.  
+##  <a name="getdefaultresid"></a>  CMDIFrameWndEx::GetDefaultResId  
+ Returns the ID of shared resources of the MDI frame window.  
   
 ```  
 UINT GetDefaultResId() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение идентификатора ресурса. 0, если нет строки меню окна фрейма.  
+### <a name="return-value"></a>Return Value  
+ A resource ID value. 0 if the frame window has no menu bar.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращает идентификатор ресурса, который был указан при загрузке окно области MDI с [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).  
+### <a name="remarks"></a>Remarks  
+ This method returns the resource ID that was specified when the MDI frame window was loaded by [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).  
   
-##  <a name="getmditabgroups"></a>CMDIFrameWndEx::GetMDITabGroups  
- Возвращает список MDI с вкладками windows.  
+##  <a name="getmditabgroups"></a>  CMDIFrameWndEx::GetMDITabGroups  
+ Returns a list of MDI tabbed windows.  
   
 ```  
 const CObList& GetMDITabGroups() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылку на [CObList класс](../../mfc/reference/coblist-class.md) , содержащий список окон с вкладками. Не сохранять или изменения списка.  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a list of tabbed windows. Do not store or modify the list.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод для доступа к списку окон с вкладками. Может быть полезным, если вы хотите изменить или запросить некоторые параметры отдельных окон с вкладками.  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the list of tabbed windows. It can be helpful if you want to change or query some parameters of individual tabbed windows.  
   
-##  <a name="getmditabs"></a>CMDIFrameWndEx::GetMDITabs  
- Возвращает ссылку на подчеркнутый окна с вкладками.  
+##  <a name="getmditabs"></a>  CMDIFrameWndEx::GetMDITabs  
+ Returns a reference to the underlined tabbed window.  
   
 ```  
 CMFCTabCtrl& GetMDITabs();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на подчеркнутый окна с вкладками.  
+### <a name="return-value"></a>Return Value  
+ A reference to the underlined tabbed window.  
   
-##  <a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
- Возвращает сочетание флагов, которое определяет, какие операции являются допустимыми, если включена функция групп с вкладками MDI.  
+##  <a name="getmditabscontextmenualloweditems"></a>  CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
+ Returns a combination of flags that determines what operations are valid when the MDI Tabbed Groups feature is enabled.  
   
 ```  
 DWORD GetMDITabsContextMenuAllowedItems();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Побитовое или сочетание следующих флагов:  
+### <a name="return-value"></a>Return Value  
+ A bitwise-OR combination of the following flags:  
   
-- `BCGP_MDI_CREATE_VERT_GROUP`-можно создать группу вертикальной табуляции.  
+- `BCGP_MDI_CREATE_VERT_GROUP` - can create a vertical tab group.  
   
-- `BCGP_MDI_CREATE_HORZ_GROUP`-можно создать группу горизонтальной табуляции.  
+- `BCGP_MDI_CREATE_HORZ_GROUP` - can create a horizontal tab group.  
   
-- `BCGP_MDI_CAN_MOVE_PREV`-можно переместить знаки табуляции в предыдущую группу вкладок.  
+- `BCGP_MDI_CAN_MOVE_PREV` - can move a tab to the previous tab group.  
   
-- `BCGP_MDI_CAN_MOVE_NEXT`-можно переместить знаки табуляции в следующую группу вкладок.  
+- `BCGP_MDI_CAN_MOVE_NEXT` - can move a tab to the next tab group.  
   
-### <a name="remarks"></a>Примечания  
- При включении функции групп с вкладками MDI, необходимо знать, какие операции разрешены для конкретного окна с вкладками. Этот метод анализирует текущую структуру окон с вкладками и возвращает сочетание флагов, которые можно использовать для создания, например, контекстное меню.  
+### <a name="remarks"></a>Remarks  
+ When the MDI Tabbed Groups feature is enabled, you must know what operations are allowed on the tabs of a particular window. This method analyzes the current layout of tabbed windows and returns a combination of flags that can be used to build, for example, a shortcut menu.  
   
- Можно создать новую группу вертикальной табуляции при всех окон с вкладками выравниваются по вертикали или если имеется только одно окно с вкладками.  
+ You can create a new vertical tab group when all tabbed windows are aligned vertically, or when there is only one tabbed window.  
   
- Можно создать новую группу горизонтальной табуляции при всех окон с вкладками выравниваются по горизонтали или если имеется только одно окно с вкладками.  
+ You can create a new horizontal tab group when all tabbed windows are aligned horizontally, or when there is only one tabbed window.  
   
- Вкладка предыдущей группы можно переместить только в том случае, если имеется несколько вкладок в окно с вкладками.  
+ You can move a tab to the previous group only if there is more than one tab in a tabbed window.  
   
- Вкладка следующей группы можно переместить только в том случае, если имеется несколько вкладок в окно с вкладками.  
+ You can move a tab to the next group only if there is more than one tab in a tabbed window.  
   
-##  <a name="getmenubar"></a>CMDIFrameWndEx::GetMenuBar  
- Возвращает указатель в объект панели меню, присоединенный к фрейме окна.  
+##  <a name="getmenubar"></a>  CMDIFrameWndEx::GetMenuBar  
+ Returns a pointer to a menu bar object attached to the frame window.  
   
 ```  
 const CMFCMenuBar* GetMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на объект панели меню.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a menu bar object.  
   
-##  <a name="getpane"></a>CMDIFrameWndEx::GetPane  
- Возвращает указатель на область идентификатор указанного элемента управления.  
+##  <a name="getpane"></a>  CMDIFrameWndEx::GetPane  
+ Returns a pointer to the pane that has the specified control ID.  
   
 ```  
 CBasePane* GetPane(UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- Идентификатор элемента управления.  
+ The control ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на область имеет идентификатор указанного элемента управления, если он существует. В противном случае — значение `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane that has the specified control ID, if it exists. Otherwise, `NULL`.  
   
-##  <a name="getribbonbar"></a>CMDIFrameWndEx::GetRibbonBar  
- Возвращает элемент управления панели ленты для фрейма.  
+##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar  
+ Retrieves the ribbon bar control for the frame.  
   
 ```  
 CMFCRibbonBar* GetRibbonBar();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [класса CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) рамки.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) for the frame.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettearoffbars"></a>CMDIFrameWndEx::GetTearOffBars  
- Возвращает список перемещаемое меню.  
+##  <a name="gettearoffbars"></a>  CMDIFrameWndEx::GetTearOffBars  
+ Returns a list of tear-off menus.  
   
 ```  
 const CObList& GetTearOffBars() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылку на [класс CObList](../../mfc/reference/coblist-class.md) объект, содержащий коллекцию ссылок на `CPane`-производных объектов, которые находятся в состоянии перемещаемые.  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a collection of pointers to `CPane`-derived objects that are in a tear-off state.  
   
-### <a name="remarks"></a>Примечания  
- `CMDIFrameWndEx`поддерживает коллекцию перемещаемое меню. Используйте этот метод, чтобы получить ссылку на этот список.  
+### <a name="remarks"></a>Remarks  
+ `CMDIFrameWndEx` maintains a collection of tear-off menus. Use this method to retrieve a reference to this list.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText  
- Вызывается платформой, когда приложение отображает подсказки для кнопки панели инструментов.  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIFrameWndEx::GetToolbarButtonToolTipText  
+ Called by the framework when the application displays the tooltip for a toolbar button.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -867,20 +942,20 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- Указатель на кнопку панели инструментов.  
+ A pointer to a toolbar button.  
   
  [in] `strTTText`  
- Текст подсказки, отображаемый на кнопке.  
+ The tooltip text to display for the button.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если для отображения всплывающей подсказки. В противном случае — значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip has been displayed. `FALSE` otherwise.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="insertpane"></a>CMDIFrameWndEx::InsertPane  
- Регистрация указанной области закрепления диспетчером.  
+##  <a name="insertpane"></a>  CMDIFrameWndEx::InsertPane  
+ Registers the specified pane with the docking manager.  
   
 ```  
 BOOL InsertPane(
@@ -889,74 +964,74 @@ BOOL InsertPane(
     BOOL bAfter=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- Указатель на область для вставки.  
+ A pointer to the pane to be inserted.  
   
  [in] `pTarget`  
- Указатель на область до или после вставки области.  
+ A pointer to the pane before or after which to insert the pane.  
   
  [in] `bAfter`  
- Если `TRUE`, `pControlBar` вставляется после `pTarget`. Если `FALSE`, `pControlBar` вставляется перед `pTarget`.  
+ If `TRUE`, `pControlBar` is inserted after `pTarget`. If `FALSE`, `pControlBar` is inserted before `pTarget`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод успешно регистрирует области `FALSE` Если области уже был зарегистрирован с диспетчером, закрепления.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method successfully registers the pane, `FALSE` if the pane was already registered with the docking manager.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для закрепления диспетчеру об области, определяемой `pControlBar`. Закрепления manager выравнивания в этой области согласно выравнивания области и позиции в диспетчере закрепления внутренний список.  
+### <a name="remarks"></a>Remarks  
+ Use this method to tell the docking manager about a pane specified by `pControlBar`. The docking manager will align this pane according to the pane's alignment and position in the docking manager's internal list.  
   
-##  <a name="isfullscreen"></a>CMDIFrameWndEx::IsFullScreen  
- Определяет, является ли окно в полноэкранном режиме.  
+##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
+ Determines whether the frame window is in full-screen mode.  
   
 ```  
 BOOL IsFullScreen() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если окно фрейма в полноэкранном режиме; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window is in full screen mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Полноэкранный режим можно задать путем вызова [CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) метод.  
+### <a name="remarks"></a>Remarks  
+ You can set the full screen mode by calling the [CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) method.  
   
-##  <a name="ismditabbedgroup"></a>CMDIFrameWndEx::IsMDITabbedGroup  
- Указывает, включена ли функция групп с вкладками MDI.  
+##  <a name="ismditabbedgroup"></a>  CMDIFrameWndEx::IsMDITabbedGroup  
+ Specifies whether the MDI Tabbed Groups feature is enabled.  
   
 ```  
 BOOL IsMDITabbedGroup() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если включена функция групп с вкладками MDI; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the MDI Tabbed Groups feature is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы определить, включена ли обычные вкладки MDI или функции групп с вкладками MDI, используйте [CMDIFrameWndEx::AreMDITabs](#aremditabs).  
+### <a name="remarks"></a>Remarks  
+ To determine whether regular MDI tabs or the MDI Tabbed Groups feature is enabled, use [CMDIFrameWndEx::AreMDITabs](#aremditabs).  
   
-##  <a name="ismemberofmditabgroup"></a>CMDIFrameWndEx::IsMemberOfMDITabGroup  
- Определяет, является ли указанный окна с вкладками в списке окон групп с вкладками MDI.  
+##  <a name="ismemberofmditabgroup"></a>  CMDIFrameWndEx::IsMemberOfMDITabGroup  
+ Determines whether the specified tabbed window is in the list of windows that are in MDI Tabbed Groups.  
   
 ```  
 BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Указатель на окно со вкладками.  
+ A pointer to tabbed window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если в списке окон с вкладками, которые формируют групп с вкладками MDI указанного окна с вкладками. В противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified tabbed window is in the list of tabbed windows that form MDI Tabbed Groups. Otherwise `FALSE`.  
   
-##  <a name="ismenubaravailable"></a>CMDIFrameWndEx::IsMenuBarAvailable  
- Определяет, имеет ли окно строку меню.  
+##  <a name="ismenubaravailable"></a>  CMDIFrameWndEx::IsMenuBarAvailable  
+ Determines whether the frame window has a menu bar.  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указатель на объект панели меню не `NULL`; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pointer to the menu bar object is not `NULL`; otherwise `FALSE`.  
   
-##  <a name="ispointneardocksite"></a>CMDIFrameWndEx::IsPointNearDockSite  
- Определяет, является ли указанная точка рядом с сайта закрепления.  
+##  <a name="ispointneardocksite"></a>  CMDIFrameWndEx::IsPointNearDockSite  
+ Determines whether a specified point is near the dock site.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -965,36 +1040,36 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Указанная точка в экранных координатах.  
+ The specified point in screen coordinates.  
   
  [in] `dwBarAlignment`  
- Задает край приближается к точке. Возможные значения: `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, и`CBRS_ALIGN_BOTTOM`  
+ Specifies which edge the point is near. Possible values are `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, and `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`Если точка находится рядом с внешней границы сайта закрепления; `FALSE` в противном случае.  
+ `TRUE` if the point is near the outer border of the dock site; `FALSE` otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если точка находится рядом с сайта закрепления; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the point is near the dock site; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Точка расположено сайта закрепления, когда он находится в пределах чувствительности, установите в диспетчере закрепления. По умолчанию учет — 15 точек.  
+### <a name="remarks"></a>Remarks  
+ The point is near the dock site when it is within the sensitivity set in the docking manager. The default sensitivity is 15 pixels.  
   
-##  <a name="isprintpreview"></a>CMDIFrameWndEx::IsPrintPreview  
- Определяет, является ли окно в режиме предварительного просмотра печати.  
+##  <a name="isprintpreview"></a>  CMDIFrameWndEx::IsPrintPreview  
+ Determines whether the frame window is in print-preview mode.  
   
 ```  
 BOOL IsPrintPreview();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если окно находится в режиме предварительного просмотра печати; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window is in print-preview mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadframe"></a>CMDIFrameWndEx::LoadFrame  
- Создает рамку окна из сведений о ресурсах.  
+##  <a name="loadframe"></a>  CMDIFrameWndEx::LoadFrame  
+ Creates a frame window from resource information.  
   
 ```  
 virtual BOOL LoadFrame(
@@ -1004,115 +1079,115 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nIDResource`  
- Идентификатор общего ресурса, связанного с окном фрейма.  
+ The ID of a shared resource associated with the frame window.  
   
  [in] `dwDefaultStyle`  
- Стиль окна фрейма.  
+ The style of the frame window.  
   
  [in] `pParentWnd`  
- Указатель родительского фрейма.  
+ A pointer to the frame's parent.  
   
  [in] `pContext`  
- Указатель на [CCreateContext структуры](../../mfc/reference/ccreatecontext-structure.md). Этот параметр может иметь значение `NULL`.  
+ A pointer to a [CCreateContext Structure](../../mfc/reference/ccreatecontext-structure.md). This parameter can be `NULL`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод завершается успешно `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, otherwise `FALSE`.  
   
-##  <a name="loadmdistate"></a>CMDIFrameWndEx::LoadMDIState  
- Загружает указанный макет групп с вкладками MDI и список ранее открывавшихся документов.  
+##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState  
+ Loads the specified layout of MDI Tabbed Groups and the list of previously opened documents.  
   
 ```  
 virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Указывает имя профиля.  
+ Specifies the profile name.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если загрузка прошла успешно; `FALSE` сбой загрузки или нет данных для загрузки.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the load succeeded; `FALSE` if the load failed or there is no data to load.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы загрузить или сохранить состояние MDI вкладки и группы и список открытых документов, выполните следующие действия:  
+### <a name="remarks"></a>Remarks  
+ To load or save the state of MDI tabs and groups and the list of opened documents, do the following:  
   
--   Вызов [CMDIFrameWndEx::SaveMDIState](#savemdistate) при закрытии главного фрейма  
+-   Call [CMDIFrameWndEx::SaveMDIState](#savemdistate) when the main frame is being closed  
   
--   Вызов [CMDIFrameWndEx::LoadMDIState](#loadmdistate) при создании главного фрейма. Рекомендуемым местом для этого вызова является до отображения главного фрейма. Добавить `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` перед `pMainFrame->LoadFrame (IDR_MAINFRAME);.` добавить `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` после вызова `LoadMDIState` для отображения главного фрейма в позиции, хранящихся в реестре.  
+-   Call [CMDIFrameWndEx::LoadMDIState](#loadmdistate) when the main frame is being created. The recommended place for this call is before the main frame is displayed for the first time. Add `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` before `pMainFrame->LoadFrame (IDR_MAINFRAME);.` Add `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` after the call to `LoadMDIState` to display the main frame at the position that was stored in the registry.  
   
--   Переопределение `GetDocumentName` в `CMDIChildWndEx`-производного класса, если приложение отображает документы, которые не хранятся в виде файлов. Возвращаемая строка будет сохранен в реестре как идентификатор документа. Базовая реализация [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) возвращает значение, полученное от [CDocument::GetPathName](../../mfc/reference/cdocument-class.md#getpathname).  
+-   Override `GetDocumentName` in the `CMDIChildWndEx`- derived class if your application displays documents that are not stored as files. The returned string will be saved in the registry as the document identifier. The base implementation of [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) returns a value obtained from [CDocument::GetPathName](../../mfc/reference/cdocument-class.md#getpathname).  
   
--   Переопределение [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) правильно создавать документы, когда они загружаются из реестра. Первый параметр является строка, `GetDocumentName` возвращается.  
+-   Override [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) to correctly create documents when they are being loaded from the registry. The first parameter is the string that `GetDocumentName` returned.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `LoadMDIState` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `LoadMDIState` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&11;](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]  
   
-##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup  
- Перемещает активную вкладку из активного окна с вкладками в предыдущей или следующей группе вкладок.  
+##  <a name="mditabmovetonextgroup"></a>  CMDIFrameWndEx::MDITabMoveToNextGroup  
+ Moves the active tab from the currently active tabbed window to the next or previous tabbed group.  
   
 ```  
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bNext`  
- Если `TRUE`, перемещение вкладки к следующей группе вкладок. Если `FALSE`, переместите его предыдущей группы с вкладками.  
+ If `TRUE`, move the tab to the next tabbed group. If `FALSE`, move it to the previous tabbed group.  
   
-##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup  
- Создает новую группу с вкладками, с одного окна.  
+##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
+ Creates a new tabbed group that has a single window.  
   
 ```  
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bVert`  
- Задает выравнивание по новой группы. Если `TRUE`, новая группа выравнивается по вертикали. Если `FALSE`, новая группа выравнивается по горизонтали.  
+ Specifies the new group alignment. If `TRUE`, the new group is aligned vertically. If `FALSE`, the new group is aligned horizontally.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция позволяет создать новую с вкладками окне (новая группа с вкладками) и добавление первой позицией табуляции.  
+### <a name="remarks"></a>Remarks  
+ Use this function to create a new tabbed window (new tabbed group) and add the first tab to it.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `MDITabNewGroup` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `MDITabNewGroup` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#12;](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]  
   
-##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
- Указывает, возможно ли преобразование области закрепления для дочерних MDI-окон.  
+##  <a name="m_bcancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
+ Specifies whether docking panes can be converted to MDI child windows.  
   
 ```  
 BOOL m_bCanCovertControlBarToMDIChild;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Указывает, можно ли преобразовать закрепляемых панелей элементов управления для дочерних MDI-окон. Если этот флаг `TRUE`, платформа обрабатывает преобразование автоматически при выборе **вкладка** команды. Защищенный флаг и необходимо явно включить этот параметр, либо задав `m_bCanCovertControlBarToMDIChild` в конструктор `CMDIFrameWndEx`-производного класса или путем переопределения `CanConvertControlBarToMDIChild`.  
+### <a name="remarks"></a>Remarks  
+ Indicates whether docking control bars can be converted to MDI child windows. If this flag is `TRUE`, the framework handles the conversion automatically when the user selects the **Tabbed Document** command. The flag is protected and you must explicitly enable this option either by setting `m_bCanCovertControlBarToMDIChild` in a constructor of a `CMDIFrameWndEx`-derived class, or by overriding `CanConvertControlBarToMDIChild`.  
   
- Значение по умолчанию — `FALSE`.  
+ The default value is `FALSE`.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `m_bCanCovertControlBarToMDIChild` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `m_bCanCovertControlBarToMDIChild` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#13;](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw  
- Включает или отключает оптимизацию перерисовки для дочерних MDI-окон.  
+##  <a name="m_bdisablesetredraw"></a>  CMDIFrameWndEx::m_bDisableSetRedraw  
+ Enables or disables redraw optimization for MDI child windows.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Значение по умолчанию — `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ The default value is `TRUE`.  
   
- Этот флаг задается `FALSE` Если вы хотите оптимизировать перерисовку дочерние формы MDI. В этом случае платформа вызывает `SetRedraw (FALSE)` для главного фрейма, во время изменения активную вкладку приложения.  
+ Set this flag to `FALSE` if you want to optimize redrawing of MDI children. In this case the framework will call `SetRedraw (FALSE)` for the main frame when the application is changing the active tab.  
   
- Этот флаг может вызвать нежелательные эффекты (например, фонового приложения, которые становятся видимыми). Поэтому рекомендуется изменить значение по умолчанию только в том случае, если возникают заметно мерцание во время активации вкладке MDI.  
+ This flag can cause unwanted effects (such as background applications that become visible). Therefore we recommend that you change the default only if you experience noticeable flickering during MDI tab activation.  
   
-##  <a name="negotiateborderspace"></a>CMDIFrameWndEx::NegotiateBorderSpace  
- Во время активации на месте OLE согласовывает граница места в окне фрейма.  
+##  <a name="negotiateborderspace"></a>  CMDIFrameWndEx::NegotiateBorderSpace  
+ Negotiates border space in a frame window during OLE in-place activation.  
   
 ```  
 virtual BOOL NegotiateBorderSpace(
@@ -1120,9 +1195,9 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nBorderCmd`  
- Содержит одно из следующих значений из перечисления `CFrameWnd::BorderCmd`:  
+ Contains one of the following values from the enum `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
   
@@ -1131,68 +1206,68 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3  
   
  [in, out] `lpRectBorder`  
- Указатель на [структура RECT](../../mfc/reference/rect-structure1.md) или [CRect класса](../../atl-mfc-shared/reference/crect-class.md) , указывающий координаты границы.  
+ Pointer to a [RECT Structure](../../mfc/reference/rect-structure1.md) or a [CRect Class](../../atl-mfc-shared/reference/crect-class.md) object that specifies the coordinates of the border.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод был выполнен успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method was successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод является реализацией согласования пробел границы OLE.  
+### <a name="remarks"></a>Remarks  
+ This method is an implementation of OLE border space negotiation.  
   
-##  <a name="onclosedockingpane"></a>CMDIFrameWndEx::OnCloseDockingPane  
- Вызывается платформой, когда пользователь щелкает **закрыть** кнопку закрепляемой области.  
+##  <a name="onclosedockingpane"></a>  CMDIFrameWndEx::OnCloseDockingPane  
+ Called by the framework when the user clicks the **Close** button on a dockable pane.  
   
 ```  
 virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Указатель на область закрывается.  
+ Pointer to the pane being closed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемой области может быть закрыт. В противном случае — значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the docking pane can be closed. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод для обработки сокрытие закрепляемые панели. Возвращает `FALSE` Если вы хотите запретить закрепляемой области как скрытые.  
+### <a name="remarks"></a>Remarks  
+ Override this method to handle hiding of docking panes. Return `FALSE` if you want to prevent a docking pane from being hidden.  
   
- Реализация по умолчанию не выполняет никаких действий и возвращает `TRUE`.  
+ The default implementation does nothing and returns `TRUE`.  
   
-##  <a name="oncloseminiframe"></a>CMDIFrameWndEx::OnCloseMiniFrame  
- Вызывается платформой, когда пользователь щелкает **закрыть** кнопки в окна области с плавающей запятой.  
+##  <a name="oncloseminiframe"></a>  CMDIFrameWndEx::OnCloseMiniFrame  
+ Called by the framework when the user clicks the **Close** button on a floating mini-frame window.  
   
 ```  
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Указатель окна области, которые будут закрыты.  
+ Pointer to the mini-frame window being closed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если плавающее окно минифрейма может быть закрыт. В противном случае — значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the floating mini-frame window can be closed. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод для обработки сокрытие плавающие окна области. Возвращает `FALSE` Если вы хотите запретить скрываемый плавающей окна области.  
+### <a name="remarks"></a>Remarks  
+ Override this method to handle hiding of floating mini-frame windows. Return `FALSE` if you want to prevent a floating mini-frame window from being hidden.  
   
- Реализация по умолчанию не выполняет никаких действий и возвращает `TRUE`.  
+ The default implementation does nothing and returns `TRUE`.  
   
-##  <a name="onclosepopupmenu"></a>CMDIFrameWndEx::OnClosePopupMenu  
- Вызывается инфраструктурой при обработке активных всплывающего меню `WM_DESTROY` сообщение.  
+##  <a name="onclosepopupmenu"></a>  CMDIFrameWndEx::OnClosePopupMenu  
+ Called by the framework when an active pop-up menu processes a `WM_DESTROY` message.  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPopup`  
- Указатель на всплывающее меню.  
+ Pointer to a pop-up menu.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод, если требуется обрабатывать уведомления из [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объектов, принадлежащих окно области MDI при обработке этих объектов `WM_DESTROY` сообщений.  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to process notifications from [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) objects that belong to the MDI frame window when those objects process `WM_DESTROY` messages.  
   
-##  <a name="oncmdmsg"></a>CMDIFrameWndEx::OnCmdMsg  
- Вызывается платформой для маршрутизации и диспетчеризации сообщений команды и обновление объектов пользовательского интерфейса команды.  
+##  <a name="oncmdmsg"></a>  CMDIFrameWndEx::OnCmdMsg  
+ Called by the framework to route and dispatch command messages and to update command user-interface objects.  
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -1202,24 +1277,24 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- Идентификатор команды.  
+ The command ID.  
   
  [in] `nCode`  
- Определяет код команды уведомления. В разделе [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Дополнительные сведения о значениях `nCode`.  
+ Identifies the command notification code. See [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) for more information about values for `nCode`.  
   
  [in] `pExtra`  
- Используется в соответствии со значением `nCode`. В разделе [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Дополнительные сведения о `pExtra`.  
+ Used according to the value of `nCode`. See [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) for more information about `pExtra`.  
   
  [in, out] `pHandlerInfo`  
- Как правило, этот параметр должен быть `NULL`. Если не `NULL`, `OnCmdMsg` заполняет `pTarget` и `pmf` члены `pHandlerInfo` структуры вместо отправки команды.  
+ Typically, this parameter should be `NULL`.If not `NULL`, `OnCmdMsg` fills in the `pTarget` and `pmf` members of the `pHandlerInfo` structure instead of dispatching the command.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если сообщение обработано; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is handled; otherwise 0.  
   
-##  <a name="ondrawmenuimage"></a>CMDIFrameWndEx::OnDrawMenuImage  
- Вызывается платформой при отрисовке изображения, связанного с пунктом меню.  
+##  <a name="ondrawmenuimage"></a>  CMDIFrameWndEx::OnDrawMenuImage  
+ Called by the framework when the image associated with a menu item is drawn.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1228,24 +1303,24 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ Pointer to a device context.  
   
  [in] `pMenuButton`  
- Указатель на кнопке меню.  
+ Pointer to the menu button.  
   
  [in] `rectImage`  
- Ограничивающий прямоугольник для изображения.  
+ Bounding rectangle of the image.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод рисует изображение. Реализация по умолчанию возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method draws the image. The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод, если вы хотите настроить визуализации изображения для пунктов меню, принадлежащих к строке меню, принадлежащих `CMDIFrameWndEx`-производный объект. Реализация по умолчанию не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ Override this method  if you want to customize image rendering for the menu items that belong to the menu bar owned by the `CMDIFrameWndEx`-derived object. The default implementation does nothing.  
   
-##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo  
- Вызывается инфраструктурой при [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)процессов `WM_PAINT` сообщение.  
+##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
+ Called by the framework when a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processes a `WM_PAINT` message.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -1254,24 +1329,24 @@ virtual void OnDrawMenuLogo(
     const CRect&);
 ```  
   
-### <a name="remarks"></a>Примечания  
- Переопределить эту функцию для отображения всплывающего меню, к которой принадлежит строка меню, принадлежащих логотип `CMDIFrameWndEx`-производный объект. Реализация по умолчанию не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ Override this function to display a logo on the pop-up menu that belongs to the menu bar owned by the `CMDIFrameWndEx`-derived object. The default implementation does nothing.  
   
-##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground  
- Вызывается инфраструктурой при процессы окна фрейма MDI `WM_ERASEBKGND` сообщение.  
+##  <a name="onerasemdiclientbackground"></a>  CMDIFrameWndEx::OnEraseMDIClientBackground  
+ Called by the framework when the MDI frame window processes a `WM_ERASEBKGND` message.  
   
 ```  
 virtual BOOL OnEraseMDIClientBackground(CDC*);
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если приложение обрабатывает сообщение и удаляет фона.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the application processes the message and erases the background.  
   
-### <a name="remarks"></a>Примечания  
- Переопределить эту функцию-член, если нужно обработать `WM_ERASEBKGND` сообщений в `CMDIFrameWndEx`-производного класса.  
+### <a name="remarks"></a>Remarks  
+ Override this member function if you want to process the `WM_ERASEBKGND` message in a `CMDIFrameWndEx`-derived class.  
   
-##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest  
- Вызывается инфраструктурой при [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)объекта процессов `WM_NCHITTEST` сообщение.  
+##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
+ Called by the framework when a [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)object processes a `WM_NCHITTEST` message.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1279,35 +1354,35 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- Кнопка панели инструментов.  
+ The toolbar button.  
   
- [выходной] `pTI`  
- Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структуры.  
+ [out] `pTI`  
+ Pointer to a [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если приложение заполняет `pTI` параметр. Реализация по умолчанию возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the application fills the `pTI` parameter. The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод, чтобы предоставить сведения о конкретных элементов всплывающей подсказки. Реализация по умолчанию не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to provide information about specific menu items to a tooltip. The default implementation does nothing.  
   
-##  <a name="onmoveminiframe"></a>CMDIFrameWndEx::OnMoveMiniFrame  
- Вызывается платформой для перемещения окна области.  
+##  <a name="onmoveminiframe"></a>  CMDIFrameWndEx::OnMoveMiniFrame  
+ Called by the framework to move a mini-frame window.  
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pFrame`  
- Указатель окна области.  
+ A pointer to a mini-frame window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод завершается успешно `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, otherwise `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIFrameWndEx::OnSetPreviewMode  
- Задает режим предварительного приложения фрейма главного окна.  
+##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode  
+ Sets the application's main frame window print-preview mode.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -1315,18 +1390,18 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bPreview`  
- Если `TRUE`, задает режим предварительного просмотра печати. Если `FALSE`, отменяет режим предварительного просмотра.  
+ If `TRUE`, sets print-preview mode. If `FALSE`, cancels preview mode.  
   
  [in] `pState`  
- Указатель на `CPrintPreviewState` структуры.  
+ A pointer to a `CPrintPreviewState` structure.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
+### <a name="remarks"></a>Remarks  
+ This method overrides [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
   
-##  <a name="onshowcustomizepane"></a>CMDIFrameWndEx::OnShowCustomizePane  
- Вызывается инфраструктурой при активации в области быстрого настройки.  
+##  <a name="onshowcustomizepane"></a>  CMDIFrameWndEx::OnShowCustomizePane  
+ Called by the framework when a Quick Customize pane is activated.  
   
 ```  
 virtual BOOL OnShowCustomizePane(
@@ -1334,23 +1409,23 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPane`  
- Указатель на панель быстрого настройки.  
+ A pointer to the Quick Customize pane.  
   
  [in] `uiToolbarID`  
- Идентификатор элемента управления панели инструментов для настройки.  
+ Control ID of the toolbar to customize.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Этот метод всегда возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ This method always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Область быстро настраивать это меню, которое открывается при нажатии **Настройка** на панели инструментов.  
+### <a name="remarks"></a>Remarks  
+ The Quick Customize pane is a menu that opens when the user clicks **Customize** on a toolbar.  
   
- Переопределите этот метод в производном классе, чтобы вносить изменения в области быстрого настройки.  
+ Override this method in a derived class to make changes in the Quick Customize pane.  
   
-##  <a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx::OnShowMDITabContextMenu  
- Вызывается средой перед отображением контекстного меню на одной из вкладок. Допустим, для группы с вкладками MDI только.  
+##  <a name="onshowmditabcontextmenu"></a>  CMDIFrameWndEx::OnShowMDITabContextMenu  
+ Called by the framework before a shortcut menu is displayed on one of the tabs. Valid for MDI Tabbed Groups only.  
   
 ```  
 virtual BOOL OnShowMDITabContextMenu(
@@ -1359,73 +1434,73 @@ virtual BOOL OnShowMDITabContextMenu(
     BOOL bTabDrop);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Расположение меню в экранных координатах.  
+ The location of the menu in screen coordinates.  
   
  [in] `dwAllowedItems`  
- Побитовое или сочетание флагов, указывающее, какие действия разрешены для текущей вкладки:  
+ A bitwise-OR combination of flags that indicates what actions are allowed for the current tab:  
   
-- `BCGP_MDI_CREATE_VERT_GROUP`-можно создать группу вертикальной табуляции.  
+- `BCGP_MDI_CREATE_VERT_GROUP` - can create a vertical tab group.  
   
-- `BCGP_MDI_CREATE_HORZ_GROUP`-можно создать группу горизонтальной табуляции.  
+- `BCGP_MDI_CREATE_HORZ_GROUP` - can create a horizontal tab group.  
   
-- `BCGP_MDI_CAN_MOVE_PREV`-можно переместить знаки табуляции в предыдущую группу вкладок.  
+- `BCGP_MDI_CAN_MOVE_PREV` - can move a tab to the previous tab group.  
   
-- `BCGP_MDI_CAN_MOVE_NEXT`-можно переместить знаки табуляции в следующую группу вкладок.  
+- `BCGP_MDI_CAN_MOVE_NEXT` - can move a tab to the next tab group.  
   
-- `BCGP_MDI_CAN_BE_DOCKED`-Перейдите документа с вкладками в закрепленном состоянии (применимо для документов с вкладками).  
+- `BCGP_MDI_CAN_BE_DOCKED` - switch a tabbed document to docked state (relevant for tabbed documents only).  
   
  [in] `bTabDrop`  
- `TRUE`Чтобы открыть меню, в результате перетаскивания вкладки на другую группу с вкладками. `FALSE`для отображения меню в контекстное меню на активной вкладке.  
+ `TRUE` to display the menu as a result of dragging the tab onto another tabbed group. `FALSE` to display the menu as a shortcut menu on the currently active tab.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Переопределите этот метод в [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-производного класса.  
+### <a name="return-value"></a>Return Value  
+ Override this method in a [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-derived class.  
   
-### <a name="remarks"></a>Примечания  
- Если не обработать `OnShowMDITabContextMenu`, не будут отображаться в контекстном меню. Эта функция генерируется **мастер приложений MFC** при включении функции групп с вкладками MDI.  
+### <a name="remarks"></a>Remarks  
+ If you do not process `OnShowMDITabContextMenu`, the shortcut menu will not be displayed. This function is generated by the **MFC Application Wizard** when you enable the MDI Tabbed Groups feature.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `OnShowMDITabContextMenu` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `OnShowMDITabContextMenu` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#14;](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]  
   
-##  <a name="onshowpanes"></a>CMDIFrameWndEx::OnShowPanes  
- Вызывается платформой для отображения или скрытия панели.  
+##  <a name="onshowpanes"></a>  CMDIFrameWndEx::OnShowPanes  
+ Called by the framework to show or hide panes.  
   
 ```  
 virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- `TRUE`для отображения панелей, `FALSE` скрытие панелей.  
+ `TRUE` to show panes, `FALSE` to hide panes.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если состояние панели меняется в результате вызова этого метода `FALSE` Если области уже находятся в состоянии, указанном в `bShow`. Например, если скрыты панели и `bShow` — `FALSE`, возвращается значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the state of the panes changes as a result of calling this method, `FALSE` if the panes are already in the state specified by `bShow`. For example, if the panes are hidden and `bShow` is `FALSE`, the return value is `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию удаляет панели инструментов в окне фрейма верхнего уровня.  
+### <a name="remarks"></a>Remarks  
+ The default implementation removes the toolbar from the top-level frame window.  
   
- Если [CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) — `TRUE` (по умолчанию), будут скрыты все области закрепления.  
+ If [CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) is `TRUE` (the default), all docking panes will be hidden.  
   
-##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu  
- Вызывается инфраструктурой при открытии всплывающего меню.  
+##  <a name="onshowpopupmenu"></a>  CMDIFrameWndEx::OnShowPopupMenu  
+ Called by the framework when it opens a pop-up menu.  
   
 ```  
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если для отображения всплывающего меню. В противном случае — значение `FALSE`. Реализация по умолчанию возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pop-up menu is to be displayed. Otherwise, `FALSE`. The default implementation returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод, если требуется реализовать специальную обработку после активации всплывающего меню. Например если вы хотите изменить меню для кнопки меню цвета, настроить перемещаемые строки и так далее.  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to implement special processing upon pop-up menu activation. For example, if you want to change regular menu items to color menu buttons, set up tear-off bars, and so on.  
   
- Реализация по умолчанию не выполняет никаких действий.  
+ The default implementation does nothing.  
   
-##  <a name="onsizemdiclient"></a>CMDIFrameWndEx::OnSizeMDIClient  
- Вызывается инфраструктурой при изменении размера окна MDI.  
+##  <a name="onsizemdiclient"></a>  CMDIFrameWndEx::OnSizeMDIClient  
+ Called by the framework when the size of the client MDI window is changing.  
   
 ```  
 virtual void OnSizeMDIClient(
@@ -1433,17 +1508,17 @@ virtual void OnSizeMDIClient(
     const CRect& rectNew);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rectOld`  
- Текущий размер клиентского окна MDI.  
+ The current size of the MDI client window.  
   
  [in] `rectNew`  
- Новый размер окна MDI.  
+ The new size of the MDI client window.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ontearoffmenu"></a>CMDIFrameWndEx::OnTearOffMenu  
- Вызывается платформой при активации меню с перемещаемой панелью.  
+##  <a name="ontearoffmenu"></a>  CMDIFrameWndEx::OnTearOffMenu  
+ Called by the framework when a menu that has a tear-off bar is activated.  
   
 ```  
 virtual BOOL OnTearOffMenu(
@@ -1451,32 +1526,32 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPopup`  
- Указатель во всплывающем меню.  
+ A pointer to the pop-up menu.  
   
  [in] `pBar`  
- Указатель на панель перемещаемые.  
+ A pointer to the tear-off bar.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Чтобы разрешить контекстного меню с панели перемещаемые сделать их активации. в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` to allow the pop-up menu with the tear-off bar to be made activate; otherwise `FALSE`. The default is `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию, если нужно реализовать специальные настройки панели перемещаемые. Реализация по умолчанию не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ Override this function when you want to implement a special setup for the tear-off bar. The default implementation does nothing.  
   
-##  <a name="onupdateframemenu"></a>CMDIFrameWndEx::OnUpdateFrameMenu  
- Вызывается платформой для обновления меню фрейма.  
+##  <a name="onupdateframemenu"></a>  CMDIFrameWndEx::OnUpdateFrameMenu  
+ Called by the framework to update the frame menu.  
   
 ```  
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `hMenuAlt`  
- Дескриптор меню.  
+ A handle to a menu.  
   
-##  <a name="panefrompoint"></a>CMDIFrameWndEx::PaneFromPoint  
- Возвращает область закрепления, содержащего заданную точку.  
+##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
+ Returns the docking pane that contains the specified point.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -1492,44 +1567,44 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Точка (в экранных координатах).  
+ The point (in screen coordinates).  
   
  [in] `nSensitivity`  
- Это значение прямоугольника окна каждого проверенного области увеличивается во всех направлениях.  
+ The window rectangle of each checked pane is enlarged in all directions by this value.  
   
  [in] `bExactBar`  
- Если `TRUE`, `nSensitivity` параметр игнорируется.  
+ If `TRUE`, the `nSensitivity` parameter is ignored.  
   
  [in] `pRTCBarType`  
- Если не `NULL`, метод выполняет итерацию только области указанного типа.  
+ If non- `NULL`, the method iterates over only the panes of the specified type.  
   
- [выходной] `dwAlignment`  
- При обнаружении область, этот параметр указывается, какой стороне панели является ближайший к заданной точке.  
+ [out] `dwAlignment`  
+ If a pane is found, this parameter will specify which side of the pane is closest to the specified point.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на область закрепления или `NULL` Если элемент управления содержит точку, указанную `point`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a docking pane, or `NULL` if no control contains the point specified by `point`.  
   
-### <a name="remarks"></a>Примечания  
- Вызов перенаправляется на [CDockingManager класса](../../mfc/reference/cdockingmanager-class.md). В разделе [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) для получения дополнительной информации.  
+### <a name="remarks"></a>Remarks  
+ The call is redirected to the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md). See [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) for more information.  
   
-##  <a name="recalclayout"></a>CMDIFrameWndEx::RecalcLayout  
- Вызывается платформой для пересчета макет окна фрейма.  
+##  <a name="recalclayout"></a>  CMDIFrameWndEx::RecalcLayout  
+ Called by the framework to recalculate the layout of the frame window.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bNotify`  
- Определяет, получает ли активный элемент на месте для фрейма окна уведомления об изменении макета. Если `TRUE`, элемент оповещений; в противном случае `FALSE`.  
+ Determines whether the active in-place item for the frame window receives notification of the layout change. If `TRUE`, the item is notified; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
+### <a name="remarks"></a>Remarks  
+ This method overrides [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
   
-##  <a name="removepanefromdockmanager"></a>CMDIFrameWndEx::RemovePaneFromDockManager  
- Отменяет регистрацию область и удаляет его из диспетчера закрепления.  
+##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager  
+ Unregisters a pane and removes it from the docking manager.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -1540,76 +1615,76 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- Указатель на область удаляется.  
+ A pointer to a pane to be removed.  
   
  [in] `bDestroy`  
- `TRUE`для удаления области удален. `FALSE`Чтобы не удалить его.  
+ `TRUE` to destroy the removed pane. `FALSE` to not destroy it.  
   
  [in] `bAdjustLayout`  
- `TRUE`Чтобы настроить макет закрепления немедленно. Если `FALSE`, корректировка будет выполняться, только когда событие смены происходит по другим причинам (пользователь изменяет размер окна, перетаскивает главного фрейма, и т. д.).  
+ `TRUE` to adjust the docking layout immediately. If `FALSE`, the adjustment will occur only when a redraw event occurs for other reasons (the user resizes the window, drags the main frame, etc.).  
   
  [in] `bAutoHide`  
- `TRUE`Чтобы удалить область из списка автоматическое скрытие панелей. `FALSE`Чтобы удалить область из списка регулярных панелей.  
+ `TRUE` to remove the pane from the list of autohide panes. `FALSE` to remove the pane from the list of regular panes.  
   
  [in] `pBarReplacement`  
- Указатель на область, которая заменит область удален.  
+ A pointer to a pane that replaces the removed pane.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо зарегистрировать каждой области закрепления manager, чтобы принять участие в макет закрепления. Используйте [CMDIFrameWndEx::AddPane](#addpane) или [CMDIFrameWndEx::InsertPane](#insertpane) для регистрации области.  
+### <a name="remarks"></a>Remarks  
+ You must register each pane with the docking manager to take part in the docking layout. Use [CMDIFrameWndEx::AddPane](#addpane) or [CMDIFrameWndEx::InsertPane](#insertpane) to register panes.  
   
- Используйте этот метод, если область больше не является частью макета закрепления окна фрейма.  
+ Use this method when a pane is no longer a part of the docking layout of the frame window.  
   
-##  <a name="savemdistate"></a>CMDIFrameWndEx::SaveMDIState  
- Сохраняет текущую структуру групп с вкладками MDI и список ранее открытые документы.  
+##  <a name="savemdistate"></a>  CMDIFrameWndEx::SaveMDIState  
+ Saves the current layout of MDI Tabbed Groups and the list of previously opened documents.  
   
 ```  
 virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Указывает имя профиля.  
+ Specifies the profile name.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`При успешном завершении сохранения. `FALSE` Если произошла ошибка при сохранении.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the save succeeded; `FALSE` if the save failed.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы загрузить или сохранить состояние MDI вкладки и группы и список открытых документов, выполните следующие действия:  
+### <a name="remarks"></a>Remarks  
+ To load or save the state of MDI tabs and groups and the list of opened documents, do the following:  
   
--   Вызов `SaveMDIState` при закрытии главного фрейма  
+-   Call `SaveMDIState` when the main frame is being closed  
   
--   Вызов [CMDIFrameWndEx::LoadMDIState](#loadmdistate) при создании главного фрейма. Рекомендуемое расположение для этого вызова является до отображения главного фрейма.  
+-   Call [CMDIFrameWndEx::LoadMDIState](#loadmdistate) when the main frame is being created. The recommended location for this call is before the main frame is displayed for the first time.  
   
--   Вызовите `CWinAppEx::EnableLoadWindowPlacement(FALSE);` перед`pMainFrame->LoadFrame (IDR_MAINFRAME);`  
+-   Call `CWinAppEx::EnableLoadWindowPlacement(FALSE);` before `pMainFrame->LoadFrame (IDR_MAINFRAME);`  
   
--   Вызов `CWinAppEx::ReloadWindowPlacement``(pMainFrame)` после `LoadMDIState` для отображения главного фрейма в позиции, хранящихся в реестре.  
+-   Call `CWinAppEx::ReloadWindowPlacement(pMainFrame)` after `LoadMDIState` to display the main frame at the position that was stored in the registry.  
   
--   Переопределение `GetDocumentName` в `CMDIChildWndEx`-производного класса, если приложение отображает документы, которые не хранятся в виде файлов. Возвращаемая строка будет сохранен в реестре как идентификатор документа. Дополнительные сведения см. в разделе [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).  
+-   Override `GetDocumentName` in the `CMDIChildWndEx`- derived class if your application displays documents that are not stored as files. The returned string will be saved in the registry as a document identifier. For more information, see [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).  
   
--   Переопределение [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) правильно создавать документы, если они были загружены из реестра. Параметр `CreateDocumentWindow` — это строка, `GetDocumentName` возвращенное ранее.  
+-   Override [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) to correctly create documents when they are loaded from the registry. The parameter to `CreateDocumentWindow` is the string that `GetDocumentName` returned earlier.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `SaveMDIState` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `SaveMDIState` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#15;](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]  
   
-##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx::SetPrintPreviewFrame  
- Задает фрейме окна предварительного просмотра.  
+##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame  
+ Sets the print preview frame window.  
   
 ```  
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Указатель кадра окна предварительного просмотра.  
+ Pointer to a print preview frame window.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx::SetupToolbarMenu  
- Изменяет объект панели инструментов, заменив фиктивные элементы пользовательские элементы.  
+##  <a name="setuptoolbarmenu"></a>  CMDIFrameWndEx::SetupToolbarMenu  
+ Modifies a toolbar object by replacing dummy items with user-defined items.  
   
 ```  
 void SetupToolbarMenu(
@@ -1618,27 +1693,27 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `menu`  
- Ссылку на [CMenu-класс](../../mfc/reference/cmenu-class.md) объект для изменения.  
+ A reference to a [CMenu Class](../../mfc/reference/cmenu-class.md) object to be modified.  
   
  [in] `uiViewUserToolbarCmdFirst`  
- Команда первого определяемых пользователем.  
+ Specifies the first user-defined command.  
   
  [in] `uiViewUserToolbarCmdLast`  
- Указывает последнюю команду определяемых пользователем.  
+ Specifies the last user-defined command.  
   
-##  <a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen  
- Переключает главного фрейма в обычном режиме в полноэкранном режиме.  
+##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
+ Switches the main frame from regular mode to full-screen mode.  
   
 ```  
 void ShowFullScreen();
 ```  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="showpane"></a>CMDIFrameWndEx::ShowPane  
- Показывает или скрывает указанной области.  
+##  <a name="showpane"></a>  CMDIFrameWndEx::ShowPane  
+ Shows or hides the specified pane.  
   
 ```  
 void ShowPane(
@@ -1648,79 +1723,79 @@ void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Указатель на панели, чтобы быть отображены или скрыты.  
+ Pointer to the pane to be shown or hidden.  
   
  [in] `bShow`  
- `TRUE`для отображения области. `FALSE`Чтобы скрыть область.  
+ `TRUE` to show the pane. `FALSE` to hide the pane.  
   
  [in] `bDelay`  
- `TRUE`Чтобы отложить повторное вычисление макета закрепления. `FALSE`Чтобы повторно вычислить макет закрепления немедленно.  
+ `TRUE` to delay the recalculation of the docking layout. `FALSE` to recalculate the docking layout immediately.  
   
  [in] `bActivate`  
- `TRUE`для отображения области должны как активный. `FALSE`для отображения области как неактивные.  
+ `TRUE` to show the pane should as active. `FALSE` to show the pane as inactive.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для отображения или скрытия панели. Не используйте `ShowWindow` закрепления панели.  
+### <a name="remarks"></a>Remarks  
+ Call this method to show or hide the pane. Do not use `ShowWindow` for docking panes.  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `ShowPane` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `ShowPane` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo №&16;](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]  
   
-##  <a name="showwindowsdialog"></a>CMDIFrameWndEx::ShowWindowsDialog  
- Создает [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) поле и открывает его.  
+##  <a name="showwindowsdialog"></a>  CMDIFrameWndEx::ShowWindowsDialog  
+ Creates a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) box and opens it.  
   
 ```  
 void ShowWindowsDialog();
 ```  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `ShowWindowsDialog` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `ShowWindowsDialog` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&18;](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]  
   
-##  <a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx::TabbedDocumentToControlBar  
- Преобразует указанный документ с вкладками в области закрепления.  
+##  <a name="tabbeddocumenttocontrolbar"></a>  CMDIFrameWndEx::TabbedDocumentToControlBar  
+ Converts the specified tabbed document to a docking pane.  
   
 ```  
 virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pMDIChildWnd`  
- Указатель, содержащий закрепляемой области дочернего окна MDI.  
+ A pointer to MDI child window that contains a docking pane.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод был выполнен успешно, `FALSE` в случае сбоя.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful, `FALSE` on failure.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод для преобразования документа с вкладками в области закрепления. Документ с вкладками должен быть создан с помощью [CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument).  
+### <a name="remarks"></a>Remarks  
+ Use this method to convert a tabbed document to a docking pane. The tabbed document must have been created by using [CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument).  
   
-### <a name="example"></a>Пример  
- В следующем примере показан способ `TabbedDocumentToControlBar` используется в [образце VisualStudioDemo: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example shows how `TabbedDocumentToControlBar` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&19;](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]  
   
-##  <a name="updatecaption"></a>CMDIFrameWndEx::UpdateCaption  
- Вызывается платформой для обновления заголовка рамки окна.  
+##  <a name="updatecaption"></a>  CMDIFrameWndEx::UpdateCaption  
+ Called by the framework to update the window frame caption.  
   
 ```  
 void UpdateCaption();
 ```  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
- Задает значок для каждой области с вкладками MDI.  
+##  <a name="updatemditabbedbarsicons"></a>  CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
+ Sets the icon for each MDI tabbed pane.  
   
 ```  
 void UpdateMDITabbedBarsIcons();
 ```  
   
-##  <a name="winhelp"></a>CMDIFrameWndEx::WinHelp  
- Вызывается платформой для запуска приложения WinHelp или контекстной справки.  
+##  <a name="winhelp"></a>  CMDIFrameWndEx::WinHelp  
+ Called by the framework to initiate the WinHelp application or context help.  
   
 ```  
 virtual void WinHelp(
@@ -1728,19 +1803,19 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- Указывает данные, необходимые для справки, тип которой задан `nCmd`.  
+ Specifies data as required for the type of help specified by `nCmd`.  
   
  [in] `nCmd`  
- Задает тип запрошенной справки. Список возможных значений и их влияние на параметр `dwData` см. в разделе [Функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в Windows SDK.  
+ Specifies the type of help requested. For a list of possible values and how they affect the `dwData` parameter, see the [WinHelp Function](http://msdn.microsoft.com/library/windows/desktop/bb762267) in the Windows SDK.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  
+### <a name="remarks"></a>Remarks  
+ This method overrides [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)   
- [Класс CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)
+ [CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md)
 

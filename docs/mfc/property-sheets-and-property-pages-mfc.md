@@ -1,43 +1,62 @@
 ---
-title: "Вкладки свойств и страницы свойств (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPropertyPage - класс, вкладки свойств и страницы"
-  - "CPropertySheet - класс, вкладки свойств и страницы"
-  - "диалоговые окна MFC, вкладки"
-  - "страницы свойств, страницы свойств"
-  - "страницы свойств, страницы свойств"
+title: Property Sheets and Property Pages (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], tabs
+- property pages [MFC], property sheets
+- CPropertyPage class [MFC], property sheets and pages
+- CPropertySheet class [MFC], property sheets and pages
+- property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Вкладки свойств и страницы свойств (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8cb91f7a222fd78e5ccb53ce118b42f6938e420
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC [диалоговое окно](../mfc/dialog-boxes.md) может принимать на вкладке «диалоговое окно» обзор, включив страниц свойств.  Вызов «страницы свойств» в MFC, данного типа диалогового окна, аналогично различные диалоговые окна в Microsoft Word, Excel и о том, что содержит Visual C\+\+, стек предварительного таблиц, подобно стека папок, из файла увиденные перед подперло, или группу в составе каскадированные окна.  Элементы управления на передней вкладке отображаются; только на вкладку с надписью обратных вызовов отображается на вкладках.  Страницы свойств особенно полезны для управления большими объемами свойства или параметров, которые являются частью достаточно аккуратно в несколько групп.  Как правило, одна страница свойств может упростить интерфейс пользователя, заменив несколько отдельных диалоговых окон.  
+---
+# <a name="property-sheets-and-property-pages-mfc"></a>Property Sheets and Property Pages (MFC)
+An MFC [dialog box](../mfc/dialog-boxes.md) can take on a "tab dialog" look by incorporating property sheets and property pages. Called a "property sheet" in MFC, this kind of dialog box, similar to many dialog boxes in Microsoft Word, Excel, and Visual C++, appears to contain a stack of tabbed sheets, much like a stack of file folders seen from front to back, or a group of cascaded windows. Controls on the front tab are visible; only the labeled tab is visible on the rear tabs. Property sheets are particularly useful for managing large numbers of properties or settings that fall fairly neatly into several groups. Typically, one property sheet can simplify a user interface by replacing several separate dialog boxes.  
   
- Начиная с версии MFC 4.0, страниц свойств реализуются с помощью общие элементы управления, с версией 3.51 Windows 95 и Windows NT и далее.  
+ As of MFC version 4.0, property sheets and property pages are implemented using the common controls that come with Windows 95 and Windows NT version 3.51 and later.  
   
- Страницы свойств реализуются классы [CPropertySheet](../mfc/reference/cpropertysheet-class.md) и [CPropertyPage](../mfc/reference/cpropertypage-class.md) \(преобразований в справочнике по MFC\).  `CPropertySheet` определяет общее диалоговое окно, которое может содержать несколько «страницы» на основе `CPropertyPage`.  
+ Property sheets are implemented with classes [CPropertySheet](../mfc/reference/cpropertysheet-class.md) and [CPropertyPage](../mfc/reference/cpropertypage-class.md) (described in the *MFC Reference*). `CPropertySheet` defines the overall dialog box, which can contain multiple "pages" based on `CPropertyPage`.  
   
- Сведения о создании и работе с помощью страниц свойств см. в разделе [Вкладки свойств](../mfc/property-sheets-mfc.md).  
+ For information on creating and working with property sheets, see the topic [Property Sheets](../mfc/property-sheets-mfc.md).  
   
-## См. также  
- [Диалоговые окна](../mfc/dialog-boxes.md)   
- [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)   
- [Вкладки свойств и страницы свойств в MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
- [Обмен данными](../mfc/exchanging-data.md)   
- [Создание безмодальной вкладки свойства](../mfc/creating-a-modeless-property-sheet.md)   
- [Обработка кнопки "Применить"](../mfc/handling-the-apply-button.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Property Sheets and Property Pages in MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Creating a Modeless Property Sheet](../mfc/creating-a-modeless-property-sheet.md)   
+ [Handling the Apply Button](../mfc/handling-the-apply-button.md)
+
+

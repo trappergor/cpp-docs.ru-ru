@@ -1,116 +1,135 @@
 ---
-title: "TN002. Формат данных постоянного объекта | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive - класс, поддержка постоянных данных"
-  - "постоянные объекты C++"
-  - "данные постоянных объектов"
-  - "TN002"
-  - "VERSIONABLE_SCHEMA - макрос"
+title: 'TN002: Persistent Object Data Format | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- VERSIONABLE_SCHEMA macro [MFC]
+- persistent object data
+- CArchive class [MFC], support for persistent data
+- persistent C++ objects [MFC]
+- TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# TN002. Формат данных постоянного объекта
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b5e852c1d73a3166e0f518fa858d090ef6e62392
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта заметка описаны процедуры MFC, поддерживающие постоянные объекты C\+\+ формат данных объекта, если они хранятся в файле.  Это применяется только к классам с макросами [DECLARE\_SERIAL](../Topic/DECLARE_SERIAL.md) и [IMPLEMENT\_SERIAL](../Topic/IMPLEMENT_SERIAL.md).  
+---
+# <a name="tn002-persistent-object-data-format"></a>TN002: Persistent Object Data Format
+This note describes the MFC routines that support persistent C++ objects and the format of the object data when it is stored in a file. This applies only to classes with the [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) and [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macros.  
   
-## Проблема  
- Реализация MFC для упорных данных хранилищ данных для различных объектов в одной непрерывной части файла.  Метод `Serialize` объекта преобразует данные объекта в компактный бинарный формат.  
+## <a name="the-problem"></a>The Problem  
+ The MFC implementation for persistent data stores data for many objects in a single contiguous part of a file. The object's `Serialize` method translates the object's data into a compact binary format.  
   
- Реализация гарантирует, что все данные сохраняются в том же формате с помощью [CArchive Class](../mfc/reference/carchive-class.md).  Она использует объект `CArchive` как переводчику.  Этот объект сохраняется от времени создается до тех пор, пока не будет вызван [CArchive::Close](../Topic/CArchive::Close.md).  Этот метод может быть назван явно или неявно программистом или деструктором при выходы программы область, которая содержит `CArchive`.  
+ The implementation guarantees that all data is saved in the same format by using the [CArchive Class](../mfc/reference/carchive-class.md). It uses a `CArchive` object as a translator. This object persists from the time it is created until you call [CArchive::Close](../mfc/reference/carchive-class.md#close). This method can be called either explicitly by the programmer or implicitly by the destructor when the program exits the scope that contains the `CArchive`.  
   
- Эта заметка описывается реализация членов [CArchive::ReadObject](../Topic/CArchive::ReadObject.md) и [CArchive::WriteObject](../Topic/CArchive::WriteObject.md)`CArchive`.  Как только код этих функций в Arcobj.cpp и основной реализацией для `CArchive` в Arccore.cpp.  Код пользователя не вызывает `ReadObject` и `WriteObject` напрямую.  Вместо этого эти объекты используются вставкой и операторов извлечения для класса типобезопасной, которые были автоматически созданы макросами `DECLARE_SERIAL` и `IMPLEMENT_SERIAL`.  В следующем коде показано, как `WriteObject` и `ReadObject` неявно называются:  
+ This note describes the implementation of the `CArchive` members [CArchive::ReadObject](../mfc/reference/carchive-class.md#readobject) and [CArchive::WriteObject](../mfc/reference/carchive-class.md#writeobject). You will find the code for these functions in Arcobj.cpp, and the main implementation for `CArchive` in Arccore.cpp. User code does not call `ReadObject` and `WriteObject` directly. Instead, these objects are used by class-specific type-safe insertion and extraction operators that are generated automatically by the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. The following code shows how `WriteObject` and `ReadObject` are implicitly called:  
   
 ```  
 class CMyObject : public CObject  
 {  
-    DECLARE_SERIAL(CMyObject)  
+    DECLARE_SERIAL(CMyObject) 
 };  
-  
+ 
 IMPLEMENT_SERIAL(CMyObj, CObject, 1)  
-  
+ 
 // example usage (ar is a CArchive&)  
 CMyObject* pObj;  
 CArchive& ar;  
-ar << pObj;        // calls ar.WriteObject(pObj)  
-ar >> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))  
+ar <<pObj;        // calls ar.WriteObject(pObj)  
+ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))  
 ```  
   
-## Сохранение объекты в хранилище CArchive::WriteObject \(\)  
- Метод `CArchive::WriteObject` записывает сведения заголовка, которые используются для этой объект.  Эти данные состоит из 2 частей: тип объекта и состояние объекта.  Этот метод также отвечает за обслуживание идентификатора объекта записываются out, чтобы только один экземпляр будет сохранен, независимо от количества указателей на объект \(включая допускается указатели\).  
+## <a name="saving-objects-to-the-store-carchivewriteobject"></a>Saving Objects to the Store (CArchive::WriteObject)  
+ The method `CArchive::WriteObject` writes header data that is used to reconstruct the object. This data consists of two parts: the type of the object and the state of the object. This method is also responsible for maintaining the identity of the object being written out, so that only a single copy is saved, regardless of the number of pointers to that object (including circular pointers).  
   
- Сохранить \(вставка\) и восстановлении объектов \(\) для извлечения основаны на нескольких «очевидных констант.» Эти значения, хранящиеся в бинарный и содержат важные сведения архив \(обратите внимание, что префикс «w» отображается 16 разрядные числа\).  
+ Saving (inserting) and restoring (extracting) objects relies on several "manifest constants." These are values that are stored in binary and provide important information to the archive (note the "w" prefix indicates 16-bit quantities):  
   
-|Tag|Описание|  
-|---------|--------------|  
-|wNullTag|Используется для указателей пустой объект \(0\).|  
-|wNewClassTag|Указывает, что описание класса, заново применяются к этому контексту архива \(\- 1\).|  
-|wOldClassTag|Указывает, что класс, читанным объекта было показано в данном контексте \(0x8000\).|  
+|Tag|Description|  
+|---------|-----------------|  
+|wNullTag|Used for NULL object pointers (0).|  
+|wNewClassTag|Indicates class description that follows is new to this archive context (-1).|  
+|wOldClassTag|Indicates class of the object being read has been seen in this context (0x8000).|  
   
- Храните объекты, архив поддерживает [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) \( `m_pStoreMap`\), сопоставление из сохраненного объекта в 32 разрядному постоянное идентификатор \(PID\).  PID присваивается каждому уникальный объект и каждому уникального имени класса, сохраненные в контексте архива.  Вручают этим PIDs out последовательно запустить из 1.  Эти PIDs не имеет никакой значение вне области архива и, в частности, не следует путать с рекордными числом или другими элементами идентификатора.  
+ When storing objects, the archive maintains a [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) (the `m_pStoreMap`) which is a mapping from a stored object to a 32-bit persistent identifier (PID). A PID is assigned to every unique object and every unique class name that is saved in the context of the archive. These PIDs are handed out sequentially starting at 1. These PIDs have no significance outside the scope of the archive and, in particular, are not to be confused with record numbers or other identity items.  
   
- В классе `CArchive`, PIDs 32 бита, но они написаны, как 16, если только они не являются более 0x7FFE.  Большие PIDs записываются как 0x7FFF за 32 разрядным PID.  Это обеспечивает совместимость с проектами, созданных в предыдущих версиях.  
+ In the `CArchive` class, PIDs are 32-bit, but they are written out as 16-bit unless they are larger than 0x7FFE. Large PIDs are written as 0x7FFF followed by the 32-bit PID. This maintains compatibility with projects that were created in earlier versions.  
   
- При создании запроса сохранить объект в архив \(обычно с помощью глобального оператора вставки\), проверка выполняется для указателя NULL [CObject](../Topic/CObject%20Class.md).  Если указатель NULL, `wNullTag` вставляется в поток архива.  
+ When a request is made to save an object to an archive (usually by using the global insertion operator), a check is made for a NULL [CObject](../mfc/reference/cobject-class.md) pointer. If the pointer is NULL, the `wNullTag` is inserted into the archive stream.  
   
- Если указатель NOT NULL и может быть сериализуется \(класс `DECLARE_SERIAL` \), проверки кода `m_pStoreMap` для просмотра сохранен ли объект уже.  Если он имеет, код вставляет 32 — PID, связанный с этим объектом в поток архива.  
+ If the pointer is not NULL and can be serialized (the class is a `DECLARE_SERIAL` class), the code checks the `m_pStoreMap` to see whether the object has been saved already. If it has, the code inserts the 32-bit PID associated with that object into the archive stream.  
   
- Если объект не был сохранен, до 2 возможности, которые нужно учитывать: или и объект и точный тип \(класс\) объекта новыми к этому контексту архива или объекта явного уже увиденного типа.  Определить, является ли тип увиден, запросы кода `m_pStoreMap` для объекта [CRuntimeClass](../Topic/CRuntimeClass%20Structure.md), соответствующее объект `CRuntimeClass`, связанного с сохраняемого объекта.  Если совпадение, `WriteObject` вставляет тег, 32\-разрядные мудрое `OR``wOldClassTag` и этого индекса.  Если `CRuntimeClass` также к этому контексту архива, `WriteObject` присвоить новый PID к этому классу и вставляет его в архив, предшествуемый `wNewClassTag` значение.  
+ If the object has not been saved before, there are two possibilities to consider: either both the object and the exact type (that is, class) of the object are new to this archive context, or the object is of an exact type already seen. To determine whether the type has been seen, the code queries the `m_pStoreMap` for a [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) object that matches the `CRuntimeClass` object associated with the object being saved. If there is a match, `WriteObject` inserts a tag that is the bit-wise `OR` of `wOldClassTag` and this index. If the `CRuntimeClass` is new to this archive context, `WriteObject` assigns a new PID to that class and inserts it into the archive, preceded by the `wNewClassTag` value.  
   
- Дескриптор этого класса затем вставляется в архив с помощью метода `CRuntimeClass::Store`.  `CRuntimeClass::Store` вставляет число схемы \(см. ниже\) класса и имени класса текста ASCII.  Обратите внимание, что использование имени текста ASCII не гарантирует уникальность архива в различных приложениях.  Поэтому следует тег файлы данных во избежание повреждения.  После вставки данных класса, архив помещает объект в `m_pStoreMap` и затем вызывает метод `Serialize`, чтобы вставить данные для класса.  Параметр объекта в `m_pStoreMap` перед вызовом `Serialize` предотвращает несколько копий объекта из сохранены в хранилище.  
+ The descriptor for this class is then inserted into the archive using the `CRuntimeClass::Store` method. `CRuntimeClass::Store` inserts the schema number of the class (see below) and the ASCII text name of the class. Note that the use of the ASCII text name does not guarantee uniqueness of the archive across applications. Therefore, you should tag your data files to prevent corruption. Following the insertion of the class information, the archive puts the object into the `m_pStoreMap` and then calls the `Serialize` method to insert class-specific data. Placing the object into the `m_pStoreMap` before calling `Serialize` prevents multiple copies of the object from being saved to the store.  
   
- Возврат в первоначальный вызывающий объект \(обычно корня сети объектов\), необходимо вызвать метод [CArchive::Close](../Topic/CArchive::Close.md).  Если планируется выполнить другие операции [CFile](../mfc/reference/cfile-class.md) необходимо вызвать метод [Приток](../Topic/CArchive::Flush.md)`CArchive`, чтобы предотвратить повреждение архива.  
+ When returning to the initial caller (usually the root of the network of objects), you must call [CArchive::Close](../mfc/reference/carchive-class.md#close). If you plan to perform other [CFile](../mfc/reference/cfile-class.md)operations, you must call the `CArchive` method [Flush](../mfc/reference/carchive-class.md#flush) to prevent corruption of the archive.  
   
 > [!NOTE]
->  Эта реализация вызывает трудное ограничение индексов 0x3FFFFFFE на контекст архива.  Это значение представляет максимальное число уникальных объектов и классов, которые можно сохранить в одном журнала, но один дисковый файл может иметь неограниченное число контекстов архива.  
+>  This implementation imposes a hard limit of 0x3FFFFFFE indices per archive context. This number represents the maximum number of unique objects and classes that can be saved in a single archive, but a single disk file can have an unlimited number of archive contexts.  
   
-## Объекты загрузки из магазином \(CArchive::ReadObject\)  
- Загрузки \(извлекая\) объекты с помощью метода `CArchive::ReadObject` и converse `WriteObject`.  Как и `WriteObject`, `ReadObject` не вызывается напрямую кодом пользователя; код пользователя должен вызвать типобезопасный оператор извлечения, вызывающий `ReadObject` с ожиданным `CRuntimeClass`.  Это обеспечивает целостность типа операции риск.  
+## <a name="loading-objects-from-the-store-carchivereadobject"></a>Loading Objects from the Store (CArchive::ReadObject)  
+ Loading (extracting) objects uses the `CArchive::ReadObject` method and is the converse of `WriteObject`. As with `WriteObject`, `ReadObject` is not called directly by user code; user code should call the type-safe extraction operator that calls `ReadObject` with the expected `CRuntimeClass`. This insures the type integrity of the extract operation.  
   
- Поскольку реализация `WriteObject` ей повышение PIDs, начиная с 1 \(0 предопределено как пустой объект\), реализация `ReadObject` может использовать массив для поддержания состояния контекста архива.  Когда PID прочитан из магазина, если PID больше текущей верхняя граница `m_pLoadArray`, `ReadObject` знает, что новый объект \(или описание класса\) используется.  
+ Since the `WriteObject` implementation assigned increasing PIDs, starting with 1 (0 is predefined as the NULL object), the `ReadObject` implementation can use an array to maintain the state of the archive context. When a PID is read from the store, if the PID is larger than the current upper bound of the `m_pLoadArray`, `ReadObject` knows that a new object (or class description) follows.  
   
-## Номера схемы  
- Номер, присвоенный схемы, класс при достижении метод `IMPLEMENT_SERIAL` класса, «версия» реализации класса.  Схема ссылается на реализации класса, а не на количество раз данный объект был сделан упорным \(обычно с именем версии объекта\).  
+## <a name="schema-numbers"></a>Schema Numbers  
+ The schema number, which is assigned to the class when the `IMPLEMENT_SERIAL` method of the class is encountered, is the "version" of the class implementation. The schema refers to the implementation of the class, not to the number of times a given object has been made persistent (usually referred to as the object version).  
   
- Если планируется поддерживать несколько различных реализаций того же класса с течением времени, увеличить схему как была пересмотрена реализация метода `Serialize` объекта класса позволит возможность писать код, который может загрузить объекты, который хранит с помощью прежних версий реализации.  
+ If you intend to maintain several different implementations of the same class over time, incrementing the schema as you revise your object's `Serialize` method implementation will enable you to write code that can load objects stored by using older versions of the implementation.  
   
- Метод [CArchiveException](../mfc/reference/carchiveexception-class.md)`CArchive::ReadObject` возникает при обнаружении номер схемы в постоянном магазине, отличающегося от числа описания схемы классов в памяти.  Не легко восстановить из этого исключения.  
+ The `CArchive::ReadObject` method will throw a [CArchiveException](../mfc/reference/carchiveexception-class.md) when it encounters a schema number in the persistent store that differs from the schema number of the class description in memory. It is not easy to recover from this exception.  
   
- Можно использовать `VERSIONABLE_SCHEMA`, объединенным с \(побитовое `OR`\) версией схемы для упрощения этого исключения с делегатом.  С помощью `VERSIONABLE_SCHEMA`, код может принимать соответствующие действия в своей функции `Serialize` путем проверки возвращаемое значение в [CArchive::GetObjectSchema](../Topic/CArchive::GetObjectSchema.md).  
+ You can use `VERSIONABLE_SCHEMA` combined with (bitwise `OR`) your schema version to keep this exception from being thrown. By using `VERSIONABLE_SCHEMA`, your code can take the appropriate action in its `Serialize` function by checking the return value from [CArchive::GetObjectSchema](../mfc/reference/carchive-class.md#getobjectschema).  
   
-## Сериализует непосредственно вызывать  
- Во многих случаях нагрузка общей схемы архива объекта `WriteObject` и `ReadObject` не требуется.  Это общий случай сериализации данных в [CDocument](../Topic/CDocument%20Class.md).  В этом случае метод `Serialize``CDocument` вызывается сразу, а не с операторами извлекать или вставки.  Содержимое документа в свою очередь, могут использовать более общую схему архива объекта.  
+## <a name="calling-serialize-directly"></a>Calling Serialize Directly  
+ In many cases the overhead of the general object archive scheme of `WriteObject` and `ReadObject` is not necessary. This is the common case of serializing the data into a [CDocument](../mfc/reference/cdocument-class.md). In this case, the `Serialize` method of the `CDocument` is called directly, not with the extract or insert operators. The contents of the document may in turn use the more general object archive scheme.  
   
- Вызов `Serialize` непосредственно имеет следующие преимущества и недостатки:  
+ Calling `Serialize` directly has the following advantages and disadvantages:  
   
--   Использование дополнительных байтов не добавляются в архив до или после объект сериализуется.  Это не только в сохраненных данных более маленьким, но позволяет реализовать процедуры `Serialize`, могут обрабатывать все форматы файлов.  
+-   No extra bytes are added to the archive before or after the object is serialized. This not only makes the saved data smaller, but allows you to implement `Serialize` routines that can handle any file formats.  
   
--   MFC настроен таким образом реализации `WriteObject` и `ReadObject` и связанные коллекции не передается в приложение, если это не требуется более общую схему архива объекта для определенной других целях.  
+-   The MFC is tuned so the `WriteObject` and `ReadObject` implementations and related collections will not be linked into your application unless you need the more general object archive scheme for some other purpose.  
   
--   Код не должен выйти из старых чисел схемы.  Это делает код сериализации документа ответственным для кодирования числа схем, номер версии формата файла или все идентификационные номера используется в начале файлов данных.  
+-   Your code does not have to recover from old schema numbers. This makes your document serialization code responsible for encoding schema numbers, file format version numbers, or whatever identifying numbers you use at the start of your data files.  
   
--   Любой объект, который сериализует с прямым вызовом `Serialize` использовать `CArchive::GetObjectSchema` или обработки возвращаемое значение \(UINT\) — 1, что версия была неизестна.  
+-   Any object that is serialized with a direct call to `Serialize` must not use `CArchive::GetObjectSchema` or must handle a return value of (UINT)-1 indicating that the version was unknown.  
   
- Поскольку `Serialize` вызывается непосредственно в документе, обычно это невозможно для вложенных объектов документа к ссылкам архива к их родительскому документ.  Эти объекты должны быть указатель на их документ контейнера явным образом или необходимо использовать функцию [CArchive::MapObject](../Topic/CArchive::MapObject.md) для сопоставления указатель `CDocument` в PID до задние эти указатели архивированы.  
+ Because `Serialize` is called directly on your document, it is not usually possible for the sub-objects of the document to archive references to their parent document. These objects must be given a pointer to their container document explicitly or you must use [CArchive::MapObject](../mfc/reference/carchive-class.md#mapobject) function to map the `CDocument` pointer to a PID before these back pointers are archived.  
   
- Как было сказано выше, должны самостоятельно писать сведения о версии и класса при вызове `Serialize` непосредственно, позволяя необходимо изменить формат позже в то же время хранить обратную совместимость с более старыми файлами.  Функция `CArchive::SerializeClass` можно явно вызывать непосредственно перед сериализации объекта или до вызова базового класса.  
+ As noted earlier, you should encode the version and class information yourself when you call `Serialize` directly, enabling you to change the format later while still maintaining backward compatibility with older files. The `CArchive::SerializeClass` function can be called explicitly before directly serializing an object or before calling a base class.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

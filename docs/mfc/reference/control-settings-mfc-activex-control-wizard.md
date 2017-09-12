@@ -1,5 +1,5 @@
 ---
-title: "Параметры элементов управления, мастер элементов управления ActiveX MFC | Документы Microsoft"
+title: Control Settings, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,82 +33,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 35ec579e6f777a3dffd87adc5a86af2ea38b30f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a2d6f7e2db8002a276e5304301399c84182dffbb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-settings-mfc-activex-control-wizard"></a>Страница "Параметры элемента управления" мастера элементов управления ActiveX MFC
-Эта страница мастера можно указать, как вести себя элемент управления. Например базовый элемент управления на стандартные типы элементов управления Windows, оптимизировать его видом и поведением или указывают, что элемент управления может выступать в качестве контейнера для других элементов управления.  
+# <a name="control-settings-mfc-activex-control-wizard"></a>Control Settings, MFC ActiveX Control Wizard
+Use this page of the wizard to specify how you want the control to behave. For example, you can base the control on standard Windows control types, optimize its behavior and appearance, or indicate that the control can act as a container for other controls.  
   
- Дополнительные сведения о том, как выбрать параметры на этой странице для повышения эффективности управления см. в разделе [элементы управления ActiveX в MFC: оптимизация](../../mfc/mfc-activex-controls-optimization.md).  
+ For more information about how to select options on this page to maximize the efficiency of the control, see [MFC ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
- **Создание элемента управления на основе**  
- В этом списке можно выбрать тип элемента управления, из которого должны наследовать элемент управления. Список — это подмножество классов элементов управления, доступных для `CreateWindowEx` и дополнительные общие элементы управления, которые указаны в файле commctrl.h. Сделанный выбор определяет стиль элемента управления в `PreCreateWindow` работать в *имяПроекта*Ctrl.cpp файл. Дополнительные сведения см. в разделе [элементы управления ActiveX в MFC: Создание подкласса элемента управления Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
+## <a name="uielement-list"></a>UIElement List  
+ **Create control based on**  
+ On this list, you can select the kind of control from which your control should inherit. The list is a subset of the control classes that are available for `CreateWindowEx` and additional common controls that are specified in commctrl.h. Your selection determines the style of the control in the `PreCreateWindow` function in the *ProjName*Ctrl.cpp file. For more information, see [MFC ActiveX Controls: Subclassing a Windows Control](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-|Control|Описание|  
+|Control|Description|  
 |-------------|-----------------|  
-|**КНОПКА**|Элемент управления кнопки Windows|  
-|**ПОЛЕ СО СПИСКОМ**|Поле со списком Windows|  
-|**ИЗМЕНИТЬ**|Поле управления редактированием Windows|  
-|**ПОЛЕ СО СПИСКОМ**|Элемент управления списка Windows|  
-|**ПОЛОСА ПРОКРУТКИ**|Полосы прокрутки Windows|  
-|**СТАТИЧЕСКИЕ**|Статический элемент управления Windows|  
-|**msctls_hotkey32**|Сочетания клавиш общего элемента управления|  
-|**msctls_progress32**|Индикатор общего элемента управления|  
-|**msctls_statusbar32**|Строка стандартного элемента управления состояния|  
-|**msctls_trackbar32**|Общий элемент управления "бегунок"|  
-|**msctls_updown32**|Счетчик кнопки (или вверх вниз) стандартного элемента управления|  
-|**SysAnimate32**|Общий элемент управления анимации|  
-|**SysHeader32**|Общий элемент управления заголовка|  
-|**SysListView32**|Общего элемента управления представления списка|  
-|**SysTabControl32**|Общий элемент управления вкладка|  
-|**SysTreeView32**|Общие дерево|  
+|**BUTTON**|A Windows button control|  
+|**COMBOBOX**|A Windows combo box control|  
+|**EDIT**|A Windows edit box control|  
+|**LISTBOX**|A Windows list box control|  
+|**SCROLLBAR**|A Windows scroll bar control|  
+|**STATIC**|A Windows static control|  
+|**msctls_hotkey32**|A hot key common control|  
+|**msctls_progress32**|A progress bar common control|  
+|**msctls_statusbar32**|A status bar common control|  
+|**msctls_trackbar32**|A track bar common control|  
+|**msctls_updown32**|A spin button (or up-down) common control|  
+|**SysAnimate32**|An animation common control|  
+|**SysHeader32**|A header common control|  
+|**SysListView32**|A list view common control|  
+|**SysTabControl32**|A tab common control|  
+|**SysTreeView32**|A tree view common control|  
   
- **Активация при отображении**  
- Указывает, что окно создается для элемента управления при доступе. По умолчанию **Активация при отображении** выбран параметр. Если вы хотите отложить активации элемента управления до требует контейнера (например, когда пользователь нажимает кнопку мыши), снимите флажок. Если этот параметр выключен, элемент управления не создают затрат на создание окна пока она необходима. Дополнительные сведения см. в разделе [отключение активации при отображается параметр](../../mfc/turning-off-the-activate-when-visible-option.md).  
+ **Activates when visible**  
+ Specifies that a window is created for the control when it is accessed. By default, the **Activates when visible** option is selected. If you want to defer control activation until the container requires it (for example, when a user clicks the mouse), clear this option. When this feature is off, the control does not incur the expense of window creation until it is required. For more information, see [Turning off the Activate When Visible Option](../../mfc/turning-off-the-activate-when-visible-option.md).  
   
- **Невидимым во время выполнения**  
- Указывает, что элемент управления имеет без интерфейса пользователя во время выполнения. Таймер — это тип элемента управления, вы можете быть невидимым.  
+ **Invisible at run time**  
+ Specifies that the control has no user interface at run time. A timer is a kind of control that you might want to be invisible.  
   
- **Имеет диалоговое окно сведений о программе**  
- Указывает, что элемент управления имеет стандартный Windows **о** диалоговое окно отображает номер версии и сведения об авторских правах.  
+ **Has an About box dialog**  
+ Specifies that the control has the standard Windows **About** dialog box, which displays version number and copyright information.  
   
 > [!NOTE]
->  Как пользователь обращается к справке по элементу управления зависит от реализации справки и интеграции справки по элементам управления с помощью контейнера. Дополнительные сведения об интеграции справки, на [библиотеки MSDN](http://go.microsoft.com/fwlink/linkid=150542) веб-сайта, выполните поиск «Добавление контекстно-зависимые справки для элемента управления ActiveX MFC».  
+>  How the user accesses help for the control depends on how you have implemented the help and whether you have integrated the control help with the container help. For more information about how to integrate help, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Adding Context-Sensitive Help to an MFC ActiveX Control".  
   
- При выборе этого параметра вставляет `AboutBox` управления метод в класс элемента управления проекта (C*имяПроекта*Ctrl.cpp) и к добавлению AboutBox в карту диспетчеризации проекта. Этот параметр выбран по умолчанию.  
+ When you select this option, it inserts the `AboutBox` control method in the project control class (C*ProjName*Ctrl.cpp) and adds AboutBox to the project dispatch map. By default, this option is selected.  
   
- **Оптимизированный код рисования**  
- Указывает, что контейнер восстанавливает исходные объекты GDI автоматически в конце концов контейнерные элементы управления, которые отображаются в том же контексте устройства, был нарисован. Дополнительные сведения об этой функции см. в разделе [оптимизация рисования элементов управления](../../mfc/optimizing-control-drawing.md).  
+ **Optimized drawing code**  
+ Specifies that the container restores the original GDI objects automatically after all the container controls, which are drawn to the same device context, have been drawn. For more information about this feature, see [Optimizing Control Drawing](../../mfc/optimizing-control-drawing.md).  
   
- **Активация без окон**  
- Указывает, что элемент управления не создает окно при активации. Безоконный Активация позволяет непрямоугольные или прозрачные элементы управления и безоконный элемент управления требует требует меньше системных издержек, чем элемент управления с периодом. Безоконный элемент управления не может Необрезанный контекст устройства или активацию без мерцания. Контейнеры, созданные до 1996, не поддерживают активации без окна. Дополнительные сведения об использовании этого параметра см. в разделе [предоставление активации без окна](../../mfc/providing-windowless-activation.md).  
+ **Windowless activation**  
+ Specifies that the control does not produce a window when it is activated. Windowless activation allows for nonrectangular or transparent controls, and a windowless control requires less system overhead than a control that has a window requires. A windowless control does not allow for an unclipped device context or flicker-free activation. Containers that were created before 1996 do not support windowless activation. For more information about how to use this option, see [Providing Windowless Activation](../../mfc/providing-windowless-activation.md).  
   
- **Необрезанный контекст устройства**  
- Переопределяет [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) в заголовке элемента управления (*имяПроекта*ctrl.h) для отключения вызов `IntersectClipRect` внесенных `COleControl`. Если выбран этот параметр, он предоставляет скорость. При выборе **активации без окна**, эта функция недоступна. Дополнительные сведения см. в разделе [использование Необрезанного контекста устройства](../../mfc/using-an-unclipped-device-context.md).  
+ **Unclipped device context**  
+ Overrides [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) in the control header (*projname*ctrl.h) to disable the call to `IntersectClipRect` made by `COleControl`. When you select this option, it provides a small speed advantage. If you select **Windowless activation**, this feature is not available. For more information, see [Using an Unclipped Device Context](../../mfc/using-an-unclipped-device-context.md).  
   
- **Активацию без мерцания**  
- Устраняет операции рисования и им мерцание, которое происходит между активного и неактивного состояний элемента управления. При выборе **активации без окна**, эта функция недоступна. При выборе этого параметра `noFlickerActivate` флаг — один из флагов, возвращаемые [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Дополнительные сведения см. в разделе [предоставление активации без мерцания](../../mfc/providing-flicker-free-activation.md).  
+ **Flicker-free activation**  
+ Eliminates the drawing operations and the accompanying visual flicker that occur between the active and inactive states of the control. If you select **Windowless activation**, this feature is not available. When you set this option, the `noFlickerActivate` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information, see [Providing Flicker-Free Activation](../../mfc/providing-flicker-free-activation.md).  
   
- **В диалоговом окне Вставка объекта**  
- Указывает, что элемент управления будет доступен в **вставить объект** диалоговое окно для включенных контейнеров. При выборе этого параметра `afxRegInsertable` флаг — один из флагов, возвращаемых функцией `AfxOleRegisterControlClass`. С помощью **вставить объект** диалоговом пользователь может вставить только что созданный или существующие объекты в составной документ.  
+ **Available in Insert Object dialog**  
+ Specifies that the control will be available in the **Insert Object** dialog box for enabled containers. When you select this option, the `afxRegInsertable` flag is one of the flags that are returned by `AfxOleRegisterControlClass`. By using the **Insert Object** dialog box, a user can insert newly created or existing objects into a compound document.  
   
- **Уведомление указателя мыши в неактивном режиме**  
- Позволяет элементу управления уведомление указателя мыши в процесс, является ли элемент управления active. При выборе этого параметра `pointerInactive` флаг — один из флагов, возвращаемые [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Дополнительные сведения об использовании этого параметра см. в разделе [предоставление мыши взаимодействия при неактивных](../../mfc/providing-mouse-interaction-while-inactive.md).  
+ **Mouse pointer notifications when inactive**  
+ Enables the control to process mouse pointer notifications, whether control is active or not. When you select this option, the `pointerInactive` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information about how to use this option, see [Providing Mouse Interaction While Inactive](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
- **Выступает в качестве простого элемента управления frame**  
- Указывает, что элемент управления является контейнером для других элементов управления, установив `OLEMISC_SIMPLEFRAME` бит для элемента управления. Дополнительные сведения на [библиотеки MSDN](http://go.microsoft.com/fwlink/linkid=150542) веб-сайта, выполните поиск «Простой включения кадра сайта».  
+ **Acts as a simple frame control**  
+ Specifies that the control is a container for other controls by setting the `OLEMISC_SIMPLEFRAME` bit for the control. For more information, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Simple Frame Site Containment".  
   
- **Асинхронная загрузка свойств**  
- Разрешает сброс любых предыдущих асинхронных данных и инициализирует новую загрузку асинхронного свойства элемента управления.  
+ **Loads properties asynchronously**  
+ Enables a reset of any previous asynchronous data and initiates a new load of the asynchronous property of the control.  
   
-## <a name="see-also"></a>См. также  
- [Мастер элементов управления ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Параметры приложения, мастер элементов управления ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Имена элементов управления, мастер элементов управления ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
 
 

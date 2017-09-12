@@ -1,5 +1,5 @@
 ---
-title: "Класс COleMessageFilter | Документы Microsoft"
+title: COleMessageFilter Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,13 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleMessageFilter class
-- OLE [C++], managing concurrency
-- message filters [C++]
-- OLE applications [C++], managing interactions
-- OLE messages
-- applications [OLE], managing interactions
-- messages [C++], OLE
+- COleMessageFilter [MFC], COleMessageFilter
+- COleMessageFilter [MFC], BeginBusyState
+- COleMessageFilter [MFC], EnableBusyDialog
+- COleMessageFilter [MFC], EnableNotRespondingDialog
+- COleMessageFilter [MFC], EndBusyState
+- COleMessageFilter [MFC], OnMessagePending
+- COleMessageFilter [MFC], Register
+- COleMessageFilter [MFC], Revoke
+- COleMessageFilter [MFC], SetBusyReply
+- COleMessageFilter [MFC], SetMessagePendingDelay
+- COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
 caps.latest.revision: 21
 author: mikeblome
@@ -51,233 +55,233 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0cbc95bc492c69549a15bba3f4594e293be1c9f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3c45c56fa956ff5e11b28dc7ce6887ab6b339f57
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colemessagefilter-class"></a>Класс COleMessageFilter
-Управляет параллелизмом, требуемым для взаимодействия приложений OLE.  
+# <a name="colemessagefilter-class"></a>COleMessageFilter Class
+Manages the concurrency required by the interaction of OLE applications.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleMessageFilter : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleMessageFilter::COleMessageFilter](#colemessagefilter)|Создает объект `COleMessageFilter`.|  
+|[COleMessageFilter::COleMessageFilter](#colemessagefilter)|Constructs a `COleMessageFilter` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleMessageFilter::BeginBusyState](#beginbusystate)|Переводит приложение в состоянии занятости.|  
-|[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|Включает и отключает диалоговым окном, появляется, когда вызываемый приложение занято.|  
-|[COleMessageFilter::EnableNotRespondingDialog](#enablenotrespondingdialog)|Включает и отключает диалоговым окном, которое появляется при вызываемой приложение не отвечает.|  
-|[COleMessageFilter::EndBusyState](#endbusystate)|Завершает занят состояния приложения.|  
-|[COleMessageFilter::OnMessagePending](#onmessagepending)|Вызывается платформой для обработки сообщений, пока вызов OLE не выполняется.|  
-|[COleMessageFilter::Register](#register)|Регистрирует фильтр сообщений OLE системные библиотеки DLL.|  
-|[COleMessageFilter::Revoke](#revoke)|Отменяет регистрацию фильтр сообщений с OLE системные библиотеки DLL.|  
-|[COleMessageFilter::SetBusyReply](#setbusyreply)|Определяет, этому приложению ответ на вызов OLE.|  
-|[COleMessageFilter::SetMessagePendingDelay](#setmessagependingdelay)|Определяет, как долго приложение ожидает ответа на вызов OLE.|  
-|[COleMessageFilter::SetRetryReply](#setretryreply)|Определяет ответ вызывающему приложению работающее приложение.|  
+|[COleMessageFilter::BeginBusyState](#beginbusystate)|Puts the application in the busy state.|  
+|[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|Enables and disables the dialog box that appears when a called application is busy.|  
+|[COleMessageFilter::EnableNotRespondingDialog](#enablenotrespondingdialog)|Enables and disables the dialog box that appears when a called application is not responding.|  
+|[COleMessageFilter::EndBusyState](#endbusystate)|Terminates the application's busy state.|  
+|[COleMessageFilter::OnMessagePending](#onmessagepending)|Called by the framework to process messages while an OLE call is in progress.|  
+|[COleMessageFilter::Register](#register)|Registers the message filter with the OLE system DLLs.|  
+|[COleMessageFilter::Revoke](#revoke)|Revokes the message filter's registration with the OLE system DLLs.|  
+|[COleMessageFilter::SetBusyReply](#setbusyreply)|Determines the busy application's reply to an OLE call.|  
+|[COleMessageFilter::SetMessagePendingDelay](#setmessagependingdelay)|Determines how long the application waits for a response to an OLE call.|  
+|[COleMessageFilter::SetRetryReply](#setretryreply)|Determines the calling application's reply to a busy application.|  
   
-## <a name="remarks"></a>Примечания  
- `COleMessageFilter` Класс полезен в приложения визуального редактирования сервера и контейнера, а также приложений OLE-автоматизации. Для серверных приложений, которые вызываются этот класс может использоваться, чтобы сделать приложение «занят», чтобы входящие вызовы от других приложений контейнера отменено или повторно отправлен позже. Этот класс может также использоваться для определения действий, для выполнения вызывающем приложении при вызываемой приложение занято.  
+## <a name="remarks"></a>Remarks  
+ The `COleMessageFilter` class is useful in visual editing server and container applications, as well as OLE automation applications. For server applications that are being called, this class can be used to make the application "busy" so that incoming calls from other container applications are either canceled or retried later. This class can also be used to determine the action to be taken by a calling application when the called application is busy.  
   
- Распространенным вариантом применения является для серверного приложения для вызова [BeginBusyState](#beginbusystate) и [EndBusyState](#endbusystate) при было бы опасно для документа или других доступного объекта OLE будут уничтожены. Эти вызовы осуществляются в [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle) во время обновления пользовательского интерфейса.  
+ Common usage is for a server application to call [BeginBusyState](#beginbusystate) and [EndBusyState](#endbusystate) when it would be dangerous for a document or other OLE accessible object to be destroyed. These calls are made in [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle) during user-interface updates.  
   
- По умолчанию `COleMessageFilter` объект выделяется при инициализации приложения. Его можно извлечь с помощью [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
+ By default, a `COleMessageFilter` object is allocated when the application is initialized. It can be retrieved with [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
- Это дополнительно класс; редко требуется работать с ним напрямую.  
+ This is an advanced class; you seldom need to work with it directly.  
   
- Дополнительные сведения см. в статье [серверы: реализация сервера](../../mfc/servers-implementing-a-server.md).  
+ For more information, see the article [Servers: Implementing a Server](../../mfc/servers-implementing-a-server.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleMessageFilter`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
- Вызывайте эту функцию, чтобы начать занятое состояние.  
+##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
+ Call this function to begin a busy state.  
   
 ```  
 virtual void BeginBusyState();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оно работает в сочетании с [EndBusyState](#endbusystate) для контроля состояния занятости приложения. Функция [SetBusyReply](#setbusyreply) определяет приложения ответа на вызов приложения, если оно занято.  
+### <a name="remarks"></a>Remarks  
+ It works in conjunction with [EndBusyState](#endbusystate) to control the application's busy state. The function [SetBusyReply](#setbusyreply) determines the application's reply to calling applications when it is busy.  
   
- `BeginBusyState` И `EndBusyState` вызовы увеличения и уменьшения, соответственно, в счетчике, который определяет, является ли приложение занято. Например, два вызова к `BeginBusyState` и один вызов `EndBusyState` могут приводить к созданию занятое состояние. Для отмены занятое состояние, необходимо вызвать `EndBusyState` одинаковое количество раз `BeginBusyState` был вызван.  
+ The `BeginBusyState` and `EndBusyState` calls increment and decrement, respectively, a counter that determines whether the application is busy. For example, two calls to `BeginBusyState` and one call to `EndBusyState` still result in a busy state. To cancel a busy state it is necessary to call `EndBusyState` the same number of times `BeginBusyState` has been called.  
   
- По умолчанию платформа вводит занятое состояние во время простоя обработки, которая выполняется путем [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). При обработке приложения **ON_COMMANDUPDATEUI** уведомления входящих вызовов обрабатываются позже, после завершения обработки бездействия.  
+ By default, the framework enters the busy state during idle processing, which is performed by [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). While the application is handling **ON_COMMANDUPDATEUI** notifications, incoming calls are handled later, after idle processing is complete.  
   
-##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
- Создает объект `COleMessageFilter`.  
+##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
+ Creates a `COleMessageFilter` object.  
   
 ```  
 COleMessageFilter();
 ```  
   
-##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
- Включает и отключает занят диалоговым окном, которое отображается после истечения срока действия задержки ожидающих сообщений (в разделе [SetRetryReply](#setretryreply)) во время вызова OLE.  
+##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
+ Enables and disables the busy dialog box, which is displayed when the message-pending delay expires (see [SetRetryReply](#setretryreply)) during an OLE call.  
   
 ```  
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bEnableBusy*  
- Указывает, включен ли диалоговое окно «занят».  
+ Specifies whether the "busy" dialog box is enabled or disabled.  
   
-##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
- Включает и отключает «не отвечает» диалоговым окном, которое отображается, если сообщение клавиатуры или мыши ожидает во время OLE вызова и вызова истекло.  
+##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
+ Enables and disables the "not responding" dialog box, which is displayed if a keyboard or mouse message is pending during an OLE call and the call has timed out.  
   
 ```  
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bEnableNotResponding*  
- Указывает, включен ли диалоговое окно «не отвечает».  
+ Specifies whether the "not responding" dialog box is enabled or disabled.  
   
-##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
- Эта функция вызывается для завершения занятое состояние.  
+##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
+ Call this function to end a busy state.  
   
 ```  
 virtual void EndBusyState();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оно работает в сочетании с [BeginBusyState](#beginbusystate) для контроля состояния занятости приложения. Функция [SetBusyReply](#setbusyreply) определяет приложения ответа на вызов приложения, если оно занято.  
+### <a name="remarks"></a>Remarks  
+ It works in conjunction with [BeginBusyState](#beginbusystate) to control the application's busy state. The function [SetBusyReply](#setbusyreply) determines the application's reply to calling applications when it is busy.  
   
- `BeginBusyState` И `EndBusyState` вызовы увеличения и уменьшения, соответственно, в счетчике, который определяет, является ли приложение занято. Например, два вызова к `BeginBusyState` и один вызов `EndBusyState` могут приводить к созданию занятое состояние. Для отмены занятое состояние, необходимо вызвать `EndBusyState` одинаковое количество раз `BeginBusyState` был вызван.  
+ The `BeginBusyState` and `EndBusyState` calls increment and decrement, respectively, a counter that determines whether the application is busy. For example, two calls to `BeginBusyState` and one call to `EndBusyState` still result in a busy state. To cancel a busy state it is necessary to call `EndBusyState` the same number of times `BeginBusyState` has been called.  
   
- По умолчанию платформа вводит занятое состояние во время простоя обработки, которая выполняется путем [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Хотя приложение обрабатывает `ON_UPDATE_COMMAND_UI` уведомления входящих вызовов обрабатываются после завершения обработки бездействия.  
+ By default, the framework enters the busy state during idle processing, which is performed by [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). While the application is handling `ON_UPDATE_COMMAND_UI` notifications, incoming calls are handled after idle processing is complete.  
   
-##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
- Вызывается платформой для обработки сообщений, пока вызов OLE не выполняется.  
+##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
+ Called by the framework to process messages while an OLE call is in progress.  
   
 ```  
 virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pMsg`  
- Указатель ожидающих сообщений.  
+ Pointer to the pending message.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — значение 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Если вызывающее приложение ожидает завершения вызова, платформа вызывает `OnMessagePending` с указателем ожидающих сообщений. По умолчанию платформа отправляет `WM_PAINT` сообщений, чтобы окно могут обновляться во время вызова, который занимает больше времени.  
+### <a name="remarks"></a>Remarks  
+ When a calling application is waiting for a call to be completed, the framework calls `OnMessagePending` with a pointer to the pending message. By default, the framework dispatches `WM_PAINT` messages, so that window updates can occur during a call that is taking a long time.  
   
- Необходимо зарегистрировать фильтр сообщений с помощью вызова [зарегистрировать](#register) перед может стать активным.  
+ You must register your message filter by means of a call to [Register](#register) before it can become active.  
   
-##  <a name="register"></a>COleMessageFilter::Register  
- Регистрирует фильтр сообщений OLE системные библиотеки DLL.  
+##  <a name="register"></a>  COleMessageFilter::Register  
+ Registers the message filter with the OLE system DLLs.  
   
 ```  
 BOOL Register();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — значение 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Фильтр сообщений действует только после его регистрации в системные библиотеки DLL. Обычно код инициализации приложения регистрирует фильтр сообщений приложения. Любой другой фильтр сообщений, зарегистрированные для приложения, которые должны быть отозваны, перед завершением работы программы путем вызова [отозвать](#revoke).  
+### <a name="remarks"></a>Remarks  
+ A message filter has no effect unless it is registered with the system DLLs. Usually your application's initialization code registers the application's message filter. Any other message filter registered by your application should be revoked before the program terminates by a call to [Revoke](#revoke).  
   
- Фильтр сообщений по умолчанию платформа framework автоматически регистрируются во время инициализации и отменяется при завершении.  
+ The framework's default message filter is automatically registered during initialization and revoked at termination.  
   
-##  <a name="revoke"></a>COleMessageFilter::Revoke  
- Отменяет предыдущую регистрацию выполняется путем вызова [зарегистрировать](#register).  
+##  <a name="revoke"></a>  COleMessageFilter::Revoke  
+ Revokes a previous registration performed by a call to [Register](#register).  
   
 ```  
 void Revoke();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Фильтр сообщений должны быть отозваны, перед завершением работы программы.  
+### <a name="remarks"></a>Remarks  
+ A message filter should be revoked before the program terminates.  
   
- Фильтр сообщений по умолчанию, который создан и зарегистрирован автоматически платформой, также автоматически отменяется.  
+ The default message filter, which is created and registered automatically by the framework, is also automatically revoked.  
   
-##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
- Эта функция задает приложения «занят ответ.»  
+##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply  
+ This function sets the application's "busy reply."  
   
 ```  
 void SetBusyReply(SERVERCALL nBusyReply);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *nBusyReply*  
- Значение из `SERVERCALL` перечисления, который определен в COMPOBJ. З. Он может иметь одно из следующих значений:  
+ A value from the `SERVERCALL` enumeration, which is defined in COMPOBJ.H. It can have any one of the following values:  
   
-- **SERVERCALL_ISHANDLED** приложения могут принимать вызовы, но может завершиться ошибкой при обработке определенного вызова.  
+- **SERVERCALL_ISHANDLED** The application can accept calls but may fail in processing a particular call.  
   
-- **SERVERCALL_REJECTED** приложение, вероятно, никогда не будет обрабатывать вызов.  
+- **SERVERCALL_REJECTED** The application probably will never be able to process a call.  
   
-- **SERVERCALL_RETRYLATER** приложение является временно в состоянии, в котором он не может обработать вызов.  
+- **SERVERCALL_RETRYLATER** The application is temporarily in a state in which it cannot process a call.  
   
-### <a name="remarks"></a>Примечания  
- [BeginBusyState](#beginbusystate) и [EndBusyState](#endbusystate) функции управления состоянием занятости приложения.  
+### <a name="remarks"></a>Remarks  
+ The [BeginBusyState](#beginbusystate) and [EndBusyState](#endbusystate) functions control the application's busy state.  
   
- Если приложения были внесены занят с помощью вызова `BeginBusyState`, он реагирует на запросы из DLL-библиотеки OLE системы со значением, последний параметр `SetBusyReply`. Вызывающему приложению использует этот ответ занят, чтобы определить, какое действие необходимо выполнить.  
+ When an application has been made busy with a call to `BeginBusyState`, it responds to calls from the OLE system DLLs with a value determined by the last setting of `SetBusyReply`. The calling application uses this busy reply to determine what action to take.  
   
- По умолчанию — занят ответ **SERVERCALL_RETRYLATER**. Этот ответ приводит к как можно быстрее повторить вызов вызывающего приложения.  
+ By default, the busy reply is **SERVERCALL_RETRYLATER**. This reply causes the calling application to retry the call as soon as possible.  
   
-##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
- Определяет, как долго вызывающее приложение ожидает ответа от вызванной приложением перед выполнением дополнительных действий.  
+##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
+ Determines how long the calling application waits for a response from the called application before taking further action.  
   
 ```  
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nTimeout`  
- Количество миллисекунд для задержки ожидающих сообщений.  
+ Number of milliseconds for the message-pending delay.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция работает в сочетании с [SetRetryReply](#setretryreply).  
+### <a name="remarks"></a>Remarks  
+ This function works in concert with [SetRetryReply](#setretryreply).  
   
-##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
- Определяет действие, вызывающее приложение при получении занят ответа от вызванной приложения.  
+##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
+ Determines the calling application's action when it receives a busy response from a called application.  
   
 ```  
 void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nRetryReply`  
- Количество миллисекунд между повторными попытками.  
+ Number of milliseconds between retries.  
   
-### <a name="remarks"></a>Примечания  
- При вызываемой приложения указывает, что он занят, вызывающему приложению может потребоваться подождать, пока сервер больше не будет загружен, повторите прямо сейчас, или повторить попытку через заданный интервал. Он также может возникнуть необходимость отмены вызова вообще.  
+### <a name="remarks"></a>Remarks  
+ When a called application indicates that it is busy, the calling application may decide to wait until the server is no longer busy, to retry right away, or to retry after a specified interval. It may also decide to cancel the call altogether.  
   
- Управляет ответ вызывающей функции `SetRetryReply` и [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply`Определяет время ожидания между повторными попытками для данного вызова вызывающему приложению. `SetMessagePendingDelay`Определяет, как долго вызывающее приложение ожидает ответа от сервера перед выполнением дополнительные действия.  
+ The caller's response is controlled by the functions `SetRetryReply` and [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` determines how long the calling application should wait between retries for a given call. `SetMessagePendingDelay` determines how long the calling application waits for a response from the server before taking further action.  
   
- Обычно значения по умолчанию являются допустимыми и не обязательно должны быть изменены. Платформа повторяет вызов каждый `nRetryReply` миллисекунд до его вызов направляется или истек срок действия задержки ожидающих сообщений. Значение 0 для `nRetryReply` указывает немедленная повторная попытка и - 1 указывает, отмены вызова.  
+ Usually the defaults are acceptable and do not need to be changed. The framework retries the call every `nRetryReply` milliseconds until the call goes through or the message-pending delay has expired. A value of 0 for `nRetryReply` specifies an immediate retry, and - 1 specifies cancellation of the call.  
   
- При истечении срока действия задержки ожидающих сообщений, OLE «занят диалоговым окном» (см. [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) отображается, чтобы пользователь может выбрать отменить или повторить вызов. Вызовите [EnableBusyDialog](#enablebusydialog) для включения или отключения данным диалоговым окном.  
+ When the message-pending delay has expired, the OLE "busy dialog box" (see [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) is displayed so that the user can choose to cancel or retry the call. Call [EnableBusyDialog](#enablebusydialog) to enable or disable this dialog box.  
   
- Когда сообщение клавиатуры или мыши находится в состоянии ожидания во время вызова и вызова превышено время ожидания (превышает задержки ожидающих сообщений), откроется диалоговое окно «не отвечает». Вызовите [EnableNotRespondingDialog](#enablenotrespondingdialog) для включения или отключения данным диалоговым окном. Обычно это состояние дел указывает, что пошло так, и пользователь получает поспешит.  
+ When a keyboard or mouse message is pending during a call and the call has timed out (exceeded the message-pending delay), the "not responding" dialog box is displayed. Call [EnableNotRespondingDialog](#enablenotrespondingdialog) to enable or disable this dialog box. Usually this state of affairs indicates that something has gone wrong and the user is getting impatient.  
   
- При отключении диалоговые окна текущего «повторить ответ» всегда используется для вызовов занят приложений.  
+ When the dialogs are disabled, the current "retry reply" is always used for calls to busy applications.  
   
-## <a name="see-also"></a>См. также  
- [CCmdTarget-класс](../../mfc/reference/ccmdtarget-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)
 

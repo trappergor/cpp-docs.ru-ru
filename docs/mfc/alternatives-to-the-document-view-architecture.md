@@ -1,77 +1,96 @@
 ---
-title: "Альтернативы для архитектуры &quot;документ-представление&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument - класс, требования к пробелам"
-  - "документы, приложения без"
-  - "представления, приложения без"
+title: Alternatives to the Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], applications without
+- CDocument class [MFC], space requirements
+- views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Альтернативы для архитектуры &quot;документ-представление&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d9f1d9a04a85565096892cd0e2ead82d5b74e288
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Приложения MFC обычно используют архитектуру " документ\-представление " для управления сведения, формат файла и визуальное представление данных пользователям.  Для большинства приложений классических документ\/представление архитектура соответствующую и эффективная архитектура приложения.  Эта архитектура отделяет данные от просмотра и, в большинстве случаев упрощает приложение и уменьшает избыточный код.  
+---
+# <a name="alternatives-to-the-documentview-architecture"></a>Alternatives to the Document/View Architecture
+MFC applications normally use the document/view architecture to manage information, file formats, and the visual representation of data to users. For the majority of desktop applications, the document/view architecture is an appropriate and efficient application architecture. This architecture separates data from viewing and, in most cases, simplifies your application and reduces redundant code.  
   
- Однако документ\/архитектура представления не подходят для некоторых ситуациях.  Рассмотрим следующие примеры:  
+ However, the document/view architecture is not appropriate for some situations. Consider these examples:  
   
--   При миграции приложения, написанного в C для Windows, возможно, потребуется выполнить этот порт перед добавлением поддержка документ\/представление в приложение.  
+-   If you are porting an application written in C for Windows, you might want to complete your port before adding document/view support to your application.  
   
--   При создании упрощенной служебной программы, можно обнаружить, выполняемых без архитектуры документов и представлений.  
+-   If you are writing a lightweight utility, you might find that you can do without the document/view architecture.  
   
--   Если исходный код уже сочетает управление данными с помощью средства просмотра данных, переместить код в документ\/модели представлений не по стоимости, поскольку необходимо отделить 2.  Может потребоваться использование оставить код как.  
+-   If your original code already mixes data management with data viewing, moving the code to the document/view model is not worth the effort because you must separate the two. You might prefer to leave the code as is.  
   
- Чтобы создать приложение, в котором не используется архитектура документов и представлений, снимите флажок **Поддержка архитектуры документов и представлений** в шаге 1 мастера приложений MFC.  Дополнительные сведения см. в разделе [Мастер приложений MFC](../Topic/MFC%20Application%20Wizard.md).  
+ To create an application that does not use the document/view architecture, clear the **Document/View architecture support** check box in step 1 of the MFC Application Wizard. See [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) for details.  
   
 > [!NOTE]
->  Приложения на основе диалоговых окон, созданные с помощью мастера приложений MFC не используют архитектуру " документ\-представление ", поэтому флажок **Поддержка архитектуры документов и представлений** запрещен при размещении приложения тип диалогового окна.  
+>  Dialog-based applications produced by the MFC Application Wizard do not use the document/view architecture, so the **Document/View architecture support** check box is disabled if you select the dialog application type.  
   
- C мастеров Visual C\+\+, а также источник и редакторы диалоговых окон, работа с созданным применением так же, как и с любым другим мастером создания применением.  Приложение может поддерживать появляются, панели инструментов и строки состояния и имеется окно **О**.  Приложение не регистрирует отсутствуют шаблоны документов, и не будет содержать класс документа.  
+ The Visual C++ wizards, as well as the source and dialog editors, work with the generated application just as they would with any other Wizard-generated application. The application can support toolbars, scrollbars, and a status bar, and has an **About** box. Your application will not register any document templates, and it will not contain a document class.  
   
- Обратите внимание, что в создаваемое приложение имеет класс представления **CChildView**, производное от `CWnd`.  MFC создает и позиции один экземпляр класса представления в фреймовые окна, созданные приложением.  MFC по\-прежнему принудительно с помощью окна представления, так как он упрощает размещение и управлять содержимое приложения.  Можно добавить код рисования к члену `OnPaint` этого класса.  Код должен добавить появляются в представление, а не для кадра.  
+ Note that your generated application has a view class, **CChildView**, derived from `CWnd`. MFC creates and positions one instance of the view class within the frame windows created by your application. MFC still enforces using a view window, because it simplifies positioning and managing the application's content. You can add painting code to the `OnPaint` member of this class. Your code should add scrollbars to the view rather than to the frame.  
   
- Поскольку документ\/представление архитектура, предоставленные MFC за реализации многие из основных черт приложения, его нет в проекте означают, что ответственность за реализации несколько важных функций приложения:  
+ Because the document/view architecture provided by MFC is responsible for implementing many of an application's basic features, its absence in your project means that you are responsible for implementing many important features of your application:  
   
--   Как это предусмотрено с помощью мастера приложений MFC, меню для приложения содержит только `New` и команды `Exit` в меню **Файл**. \(Команда `New` поддерживается только в приложениях MDI, не приложений SDI без поддержки документов и представлений\). Созданный ресурс меню не поддерживает список последних выбиравшихся \(последний использовавшийся ся\).  
+-   As provided by the MFC Application Wizard, the menu for your application contains only `New` and `Exit` commands on the **File** menu. (The `New` command is supported only for MDI applications, not SDI applications without Document/View support.) The generated menu resource will not support an MRU (most recently used) list.  
   
--   Необходимо добавить функции и реализации для всех команд, которые приложение будет поддерживать, включая **Открыть** и **Сохранить** обработчика в меню **Файл**.  MFC обычно приводится код для поддержки этих функций, но эта поддержка тесно привязана к архитектуры " документ\-представление ".  
+-   You must add handler functions and implementations for any commands that your application will support, including **Open** and **Save** on the **File** menu. MFC normally provides code to support these features, but that support is tightly bound to the document/view architecture.  
   
--   Панель инструментов для приложения, если вашему запросу одно, будет незначителен.  
+-   The toolbar for your application, if you requested one, will be minimal.  
   
- Настоятельно рекомендуется использовать мастер приложений MFC для создания приложения без архитектуры документов и представлений, поскольку мастер гарантирует правильную архитектуры MFC.  Однако если необходимо избегать использования мастера, здесь несколько подходов для обхода архитектуры документов и представлений в коде:  
+ It is strongly recommended that you use the MFC Application Wizard to create applications without the document/view architecture, because the wizard guarantees a correct MFC architecture. However, if you must avoid using the wizard, here are several approaches for bypassing the document/view architecture in your code:  
   
--   Отображение документа как неиспользуемый придаток и реализовать пользовательский код управления данными в классе представления, как предложено выше.  Нагрузка на документа относительно небольшой.  Один объект [CDocument](../Topic/CDocument%20Class.md) создает небольшой объем нагрузки сама по себе, а также небольшую нагрузку базовых классов **CDocument**, [CCmdTarget](../Topic/CCmdTarget%20Class.md) и [CObject](../Topic/CObject%20Class.md).  Оба новых классов мал.  
+-   Treat the document as an unused appendage and implement your data management code in the view class, as suggested above. Overhead for the document is relatively low. A single [CDocument](../mfc/reference/cdocument-class.md) object incurs a small amount of overhead by itself, plus the small overhead of **CDocument**'s base classes, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) and [CObject](../mfc/reference/cobject-class.md). Both of the latter classes are small.  
   
-     Объявленный в **CDocument**:  
+     Declared in **CDocument**:  
   
-    -   2 Объекта `CString`.  
+    -   Two `CString` objects.  
   
-    -   **bool**3 S.  
+    -   Three **BOOL**s.  
   
-    -   Один указатель `CDocTemplate`.  
+    -   One `CDocTemplate` pointer.  
   
-    -   Один объект `CPtrList`, который содержит список представлений документа.  
+    -   One `CPtrList` object, which contains a list of the document's views.  
   
-     Кроме того, документ требует промежуток времени создает объект документа, его объекты представления фреймовое окно, и объект шаблона документа.  
+     Additionally, the document requires the amount of time to create the document object, its view objects, a frame window, and a document template object.  
   
--   Визуализация и документ и представление в качестве неиспользуемые придатки.  Поместите код управления данными и рисования в фреймовое окно, а не представление.  Этот подход ближе к модели программирования C\# языка.  
+-   Treat both the document and view as unused appendages. Put your data management and drawing code in the frame window rather than the view. This approach is closer to the C-language programming model.  
   
--   Переопределите части платформы MFC, которые создают документ и представление, чтобы исключить их создания вообще.  Процесс создания документа начинается с вызова `CWinApp::AddDocTemplate`.  Удалите этот вызов функции\-члена из `InitInstance` класса и приложения, вместо этого следует создать фреймовое окно самостоятельно в `InitInstance`.  Поместите код управления данными в класс фреймового окна.  Процесс создания документов и представлений проиллюстрирован в [Создание документов и представлений](../mfc/document-view-creation.md).  Это больше работы и требует более глубокого понимания платформы, но освобождает разработчика полностью нагрузки документов и представлений.  
+-   Override the parts of the MFC framework that create the document and view to eliminate creating them at all. The document creation process begins with a call to `CWinApp::AddDocTemplate`. Eliminate that call from your application class's `InitInstance` member function and, instead, create a frame window in `InitInstance` yourself. Put your data management code in your frame window class. The document/view creation process is illustrated in [Document/View Creation](../mfc/document-view-creation.md). This is more work and requires a deeper understanding of the framework, but it frees you entirely of the document/view overhead.  
   
- Статьи [MFC. Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md) предоставляет несколько конкретных примеров альтернативных документов и представлений в контексте приложений баз данных.  
+ The article [MFC: Using Database Classes Without Documents and Views](../data/mfc-using-database-classes-without-documents-and-views.md) gives more concrete examples of document/view alternatives in the context of database applications.  
   
-## См. также  
- [Архитектура "документ\-представление"](../Topic/Document-View%20Architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

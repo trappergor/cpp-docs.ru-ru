@@ -1,110 +1,128 @@
 ---
-title: "Пошаговое руководство. Размещение элементов управления на панели инструментов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Настраиваемое диалоговое окно, добавление элементов управления"
-  - "панели инструментов, добавление элементов управления"
+title: 'Walkthrough: Putting Controls On Toolbars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Customize dialog box, adding controls
+- toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Пошаговое руководство. Размещение элементов управления на панели инструментов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c79b45a2e33653cab514460395c4a7130997d687
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описывается добавление кнопки панели инструментов, которая содержит элемент управления Windows на панель инструментов.  В MFC кнопки панели инструментов должна быть [CMFCToolBarButton Class](../mfc/reference/cmfctoolbarbutton-class.md)\- производным классом, например [CMFCToolBarComboBoxButton Class](../Topic/CMFCToolBarComboBoxButton%20Class.md), [CMFCToolBarEditBoxButton Class](../Topic/CMFCToolBarEditBoxButton%20Class.md), [CMFCDropDownToolbarButton Class](../mfc/reference/cmfcdropdowntoolbarbutton-class.md) или [CMFCToolBarMenuButton Class](../mfc/reference/cmfctoolbarmenubutton-class.md).  
+---
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Walkthrough: Putting Controls On Toolbars
+This topic describes how to add a toolbar button that contains a Windows control to a toolbar. In MFC, a toolbar button must be a [CMFCToolBarButton Class](../mfc/reference/cmfctoolbarbutton-class.md)-derived class, for example [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton Class](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton Class](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), or [CMFCToolBarMenuButton Class](../mfc/reference/cmfctoolbarmenubutton-class.md).  
   
-## Добавление элементов управления в панели инструментов  
- Чтобы добавить элемент управления в панель инструментов, выполните следующие действия.  
+## <a name="adding-controls-to-toolbars"></a>Adding Controls to Toolbars  
+ To add a control to a toolbar, follow these steps:  
   
-1.  Резервируется вспомогательный идентификатор ресурса для кнопки в родительском диалоговом окне инструментов.  Дополнительные сведения о создании кнопки с помощью редактора панели инструментов в Visual Studio см. в разделе [Toolbar Editor](../mfc/toolbar-editor.md).  
+1.  Reserve a dummy resource ID for the button in the parent toolbar resource. For more information about how to create buttons by using the Toolbar Editor in Visual Studio, see the [Toolbar Editor](../windows/toolbar-editor.md) topic.  
   
-2.  Резервируется образ Значок кнопки панели инструментов \(\) для кнопки во всех трех изображениях родительского инструмента.  
+2.  Reserve a toolbar image (button icon) for the button in all bitmaps of the parent toolbar.  
   
-3.  В обработчике сообщений, процессы сообщение `AFX_WM_RESETTOOLBAR`, выполняющих следующее:  
+3.  In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, do the following:  
   
-    1.  Создайте элемент управления "кнопка" с помощью `CMFCToolbarButton`\- производного класса.  
+    1.  Construct the button control by using a `CMFCToolbarButton`-derived class.  
   
-    2.  Замените фиктивная кнопку новым элементом управления с помощью [CMFCToolBar::ReplaceButton](../Topic/CMFCToolBar::ReplaceButton.md).  Этот объект можно создать кнопки в стеке, поскольку `ReplaceButton` копирует объект кнопки и поддержку копию.  
+    2.  Replace the dummy button with the new control by using [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton). You can construct the button object on the stack, because `ReplaceButton` copies the button object and maintains the copy.  
   
 > [!NOTE]
->  Если включено настройки в приложении, можно сбросить панель инструментов, нажав кнопку **Сброс** на вкладке **Панели инструментов** диалогового окна **Настроить** для просмотра обновленный элемент управления в приложении после повторной компиляции.  Состояние " сохраняется в реестре Windows и загружаются и применяются данные реестра после вызова метода `ReplaceButton` выполняется во время запуска приложения.  
+>  If you enabled customization in your application, you may have to reset the toolbar by using the **Reset** button on the **Toolbars** tab of the **Customize** dialog box to see the updated control in your application after recompiling. The toolbar state is saved in the Windows registry, and the registry information is loaded and applied after the `ReplaceButton` method is executed during application startup.  
   
-## Элементы управления панели инструментов и настройки  
- Вкладка **Команды** диалогового окна **Настроить** содержится список команд, доступных в приложении.  По умолчанию процессы диалогового окна **Настроить** меню приложения и построения список стандартных кнопок панели инструментов в каждой категории меню.  Чтобы сохранить расширенная функциональность, элементы управления панели инструментов предоставляют, необходимо заменить стандартной кнопки панели инструментов с пользовательским элементом управления в диалоговом окне **Настроить**.  
+## <a name="toolbar-controls-and-customization"></a>Toolbar Controls and Customization  
+ The **Commands** tab of the **Customize** dialog box contains a list of commands that are available in the application. By default, the **Customize** dialog box processes the application menus and builds a list of standard toolbar buttons in each menu category. To retain the extended functionality that the toolbar controls provide, you must replace the standard toolbar button with the custom control in the **Customize** dialog box.  
   
- При включении настройки создается диалоговое окно **Настроить** в обработчике `OnViewCustomize` настройки с помощью класса [CMFCToolBarsCustomizeDialog Class](../mfc/reference/cmfctoolbarscustomizedialog-class.md).  Прежде чем отобразить диалоговое окно **Настроить**, можно вызвать метод [CMFCToolBarsCustomizeDialog::Create](../Topic/CMFCToolBarsCustomizeDialog::Create.md), вызов [CMFCToolBarsCustomizeDialog::ReplaceButton](../Topic/CMFCToolBarsCustomizeDialog::ReplaceButton.md), чтобы заменить стандартной кнопки новым элементом управления.  
+ When you enable customization, you create the **Customize** dialog box in the customization handler `OnViewCustomize` by using the [CMFCToolBarsCustomizeDialog Class](../mfc/reference/cmfctoolbarscustomizedialog-class.md) class. Before you display the **Customize** dialog box by calling [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), call [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) to replace the standard button with the new control.  
   
-## Пример: Создать поле со списком найти  
- В этом разделе описывается, как создать элемент управления " Поле со списком `Find`, отображается на панели инструментов и содержится недавн\-, используемые строки поиска.  Пользователь может добавлять строки в элементе управления, а затем нажать ключ в документ или нажмите ключ escape\-последовательности для возвращения фокуса наиболее ЭВМ.  В этом примере высказывать документа см. в разделе [CEditView Class](../Topic/CEditView%20Class.md)\- производном представлении.  
+## <a name="example-creating-a-find-combo-box"></a>Example: Creating a Find Combo Box  
+ This section describes how to create a `Find` combo box control that appears on a toolbar and contains recently-used search strings. The user can type a string in the control and then press the enter key to search a document, or press the escape key to return the focus to the main frame. This example assumes that the document is displayed in a [CEditView Class](../mfc/reference/ceditview-class.md)-derived view.  
   
-### Создание элемента управления найти  
- Сначала создайте элемент управления " Поле со списком `Find`:  
+### <a name="creating-the-find-control"></a>Creating the Find Control  
+ First, create the `Find` combo box control:  
   
-1.  Добавьте кнопку и его команды к ресурсам приложения:  
+1.  Add the button and its commands to the application resources:  
   
-    1.  В ресурсах приложения добавьте новой кнопки с идентификатором команды `ID_EDIT_FIND` к панели инструментов в приложении и ко всем растровым изображениям, связанным с панелью инструментов.  
+    1.  In the application resources, add a new button with an `ID_EDIT_FIND` command ID to a toolbar in your application and to any bitmaps associated with the toolbar.  
   
-    2.  Создайте новый пункт меню с идентификатором команды ID\_EDIT\_FIND  
+    2.  Create a new menu item with the ID_EDIT_FIND command ID.  
   
-    3.  Добавляет новую строку «поиск» text\\nFind в таблице строк и присвойте ей идентификатор команды. `ID_EDIT_FIND_COMBO` Этот идентификатор используется как идентификатор команды кнопки поля со списком `Find`.  
+    3.  Add a new string "Find the text\nFind" to the string table and assign it an `ID_EDIT_FIND_COMBO` command ID. This ID will be used as the command ID of the `Find` combo box button.  
   
         > [!NOTE]
-        >  Поскольку `ID_EDIT_FIND` стандартную команду, которая обрабатывается `CEditView`, не требуется реализовать специальный обработчик для этой команды.  Однако необходимо реализовать обработчик для новой команды `ID_EDIT_FIND_COMBO`.  
+        >  Because `ID_EDIT_FIND` is a standard command that is processed by `CEditView`, you are not required to implement a special handler for this command.  However, you must implement a handler for the new command `ID_EDIT_FIND_COMBO`.  
   
-2.  Создайте новый класс, `CFindComboBox`, производное от [CComboBox Class](../mfc/reference/ccombobox-class.md).  
+2.  Create a new class, `CFindComboBox`, derived from [CComboBox Class](../mfc/reference/ccombobox-class.md).  
   
-3.  В классе `CFindComboBox`, переопределите метод виртуального `PreTranslateMessage`.  Этот метод включает процесс поля со списком сообщение [WM\_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280).  Если пользователь ударяет ключ escape\-последовательности \(`VK_ESCAPE`\), возвращает фокус в главное окно фреймовому.  Если пользователь ударяет ключ \(`VK_ENTER`\), опубликовать на основном фреймовое окно сообщения `WM_COMMAND`, содержащее идентификатор команды. `ID_EDIT_FIND_COMBO`  
+3.  In the `CFindComboBox` class, override the `PreTranslateMessage` virtual method. This method will enable the combo box to process the [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) message. If the user hits the escape key (`VK_ESCAPE`), return the focus to the main frame window. If the user hits the Enter key (`VK_ENTER`), post to the main frame window a `WM_COMMAND` message that contains the `ID_EDIT_FIND_COMBO` command ID.  
   
-4.  Создание класса для кнопки поля со списком `Find`, производный от [CMFCToolBarComboBoxButton Class](../Topic/CMFCToolBarComboBoxButton%20Class.md).  В этом случае он — `CFindComboButton`.  
+4.  Create a class for the `Find` combo box button, derived from [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In this example, it is named `CFindComboButton`.  
   
-5.  Конструктор `CMFCToolbarComboBoxButton` принимает 3 параметра: идентификатор команды кнопки, индекса образа кнопки и стиля поля со списком.  Задайте следующие параметры:  
+5.  The constructor of `CMFCToolbarComboBoxButton` takes three parameters: the command ID of the button, the button image index, and the style of the combo box. Set these parameters as follows:  
   
-    1.  Передайте `ID_EDIT_FIND_COMBO` как идентификатор команды.  
+    1.  Pass the `ID_EDIT_FIND_COMBO` as the command ID.  
   
-    2.  Используйте [CCommandManager::GetCmdImage](http://msdn.microsoft.com/ru-ru/4094d08e-de74-4398-a483-76d27a742dca) с `ID_EDIT_FIND` для получения индекс образа.  
+    2.  Use [CCommandManager::GetCmdImage](http://msdn.microsoft.com/en-us/4094d08e-de74-4398-a483-76d27a742dca) with `ID_EDIT_FIND` to obtain the image index.  
   
-    3.  Стили поля со списком Для списка доступных см. в разделе [Стили полей со списками](../mfc/reference/combo-box-styles.md).  
+    3.  For a list of available combo box styles, see [Combo-Box Styles](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   
-6.  В классе `CFindComboButton` переопределите метод`CMFCToolbarComboBoxButton::CreateCombo`.  Далее необходимо создать объект `CFindComboButton` и вернуть указатель на него.  
+6.  In the `CFindComboButton` class, override the `CMFCToolbarComboBoxButton::CreateCombo` method. Here you should create the `CFindComboButton` object and return a pointer to it.  
   
-7.  Следует использовать макрос [IMPLEMENT\_SERIAL](../Topic/IMPLEMENT_SERIAL.md), чтобы сделать комбинированную кнопки упорным.  Диспетчер рабочих областей автоматически загружает и сохраняет состояние кнопки в реестре Windows.  
+7.  Use the [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macro to make the combo button persistent. The workspace manager automatically loads and saves the button's state in the Windows registry.  
   
-8.  Реализуйте обработчик `ID_EDIT_FIND_COMBO` в представлении документа.  Используйте [CMFCToolBar::GetCommandButtons](../Topic/CMFCToolBar::GetCommandButtons.md) с `ID_EDIT_FIND_COMBO` для извлечения всех кнопок поля со списком `Find`.  Может существовать несколько копий кнопки с таким же идентификатором команды из\-за настройки.  
+8.  Implement the `ID_EDIT_FIND_COMBO` handler in your document view. Use [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) with `ID_EDIT_FIND_COMBO` to retrieve all `Find` combo box buttons. There can be several copies of a button with the same command ID because of customization.  
   
-9. В обработчике сообщений `OnFind` ID\_EDIT\_FIND, используйте [CMFCToolBar::IsLastCommandFromButton](../Topic/CMFCToolBar::IsLastCommandFromButton.md), чтобы определить, выполняется ли команда кнопки, из поля со списком `Find`.  В этом случае поиск текста и добавьте строку поиска в поле со списком.  
+9. In the ID_EDIT_FIND message handler `OnFind`, use [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) to determine whether the find command was sent from the `Find` combo box button. If so, find the text and add the search string to the combo box.  
   
-### Добавление элемента управления найти на главной панели инструментов  
- Чтобы добавить кнопку поля со списком в панель инструментов, выполните следующие действия.  
+### <a name="adding-the-find-control-to-the-main-toolbar"></a>Adding the Find Control to the Main Toolbar  
+ To add the combo box button to the toolbar, follow these steps:  
   
-1.  Реализуйте обработчик сообщений `OnToolbarReset``AFX_WM_RESETTOOLBAR` в главном окне фреймовом.  
-  
-    > [!NOTE]
-    >  Платформа отправляет сообщение в главное окно при фреймовому инструмент инициализируется во время запуска приложения, или когда инструмент сброшен во время настройки.  В любом случае необходимо заменить стандартной кнопки панели инструментов с пользовательской кнопки поля со списком `Find`.  
-  
-2.  В обработчике `AFX_WM_RESETTOOLBAR` просмотрите идентификатор инструментов, т е `WPARAM` сообщения `AFX_WM_RESETTOOLBAR`.  Если идентификатор инструмента равно параметрам инструмента, который содержит кнопку поля со списком `Find`, вызовите метод [CMFCToolBar::ReplaceButton](../Topic/CMFCToolBar::ReplaceButton.md), чтобы заменить кнопку `Find` \(то есть кнопка с идентификатором `ID_EDIT_FIND)` команды с объектом `CFindComboButton`.  
+1.  Implement the `AFX_WM_RESETTOOLBAR` message handler `OnToolbarReset` in the main frame window.  
   
     > [!NOTE]
-    >  Можно создать объект `CFindComboBox` в стеке, поскольку `ReplaceButton` копирует объект кнопки и поддержку копию.  
+    >  The framework sends this message to the main frame window when a toolbar is initialized during application startup, or when a toolbar is reset during customization. In either case, you must replace the standard toolbar button with the custom `Find` combo box button.  
   
-### Добавление элемента управления найти в диалоговое окно настройки  
- В обработчике `OnViewCustomize` настройки необходимо вызвать метод [CMFCToolBarsCustomizeDialog::ReplaceButton](../Topic/CMFCToolBarsCustomizeDialog::ReplaceButton.md), чтобы заменить кнопку `Find` \(то есть кнопка с идентификатором `ID_EDIT_FIND)` команды с объектом `CFindComboButton`.  
+2.  In the `AFX_WM_RESETTOOLBAR` handler, examine the toolbar ID, that is, the `WPARAM` of the `AFX_WM_RESETTOOLBAR` message. If the toolbar ID is equal to that of the toolbar that contains the `Find` combo box button, call [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) to replace the `Find` button (that is, the button with the command ID `ID_EDIT_FIND)` with a `CFindComboButton` object.  
   
-## См. также  
- [Диаграмма иерархии](../mfc/hierarchy-chart.md)   
- [Классы](../Topic/MFC%20Classes.md)   
+    > [!NOTE]
+    >  You can construct a `CFindComboBox` object on the stack, because `ReplaceButton` copies the button object and maintains the copy.  
+  
+### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Adding the Find Control to the Customize Dialog Box  
+ In the customization handler `OnViewCustomize`, call [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) to replace the `Find` button (that is, the button with the command ID `ID_EDIT_FIND)` with a `CFindComboButton` object.  
+  
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../mfc/hierarchy-chart.md)   
+ [Classes](../mfc/reference/mfc-classes.md)   
  [CMFCToolBar Class](../mfc/reference/cmfctoolbar-class.md)   
  [CMFCToolBarButton Class](../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBarComboBoxButton Class](../Topic/CMFCToolBarComboBoxButton%20Class.md)   
+ [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
  [CMFCToolBarsCustomizeDialog Class](../mfc/reference/cmfctoolbarscustomizedialog-class.md)
+

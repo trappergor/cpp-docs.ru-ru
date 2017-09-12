@@ -1,5 +1,5 @@
 ---
-title: "Макросы вспомогательный DDX_DHtml | Документы Microsoft"
+title: DDX_DHtml Helper Macros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,11 +20,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, exchanging data with HMTL pages
-- DDX macros
-- HTML pages, helper macros
+- macros [MFC], exchanging data with HMTL pages
+- DDX macros [MFC]
+- HTML pages [MFC], helper macros
 - DDX (dialog data exchange), DHtml helper macros
-- macros, DDX_DHtml helpers
+- macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
 caps.latest.revision: 14
 author: mikeblome
@@ -44,34 +44,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d3c5136b52206a1ec67e1e1fc78ec291a2954faf
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0ef5d607ee9a3a0dcd9651141174201857d7330
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ddxdhtml-helper-macros"></a>DDX_DHtml вспомогательных макросов
-Макросы вспомогательный DDX_DHtml обеспечивают простой доступ к часто используемые свойства элементов управления на странице HTML.  
+# <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper Macros
+The DDX_DHtml helper macros allow easy access to the commonly used properties of controls on an HTML page.  
   
-### <a name="data-exchange-macros"></a>Макросы данных Exchange  
+### <a name="data-exchange-macros"></a>Data Exchange Macros  
   
 |||  
 |-|-|  
-|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Задает или получает значение свойства выбранного элемента управления.|  
-|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Задает или получает текст между тегами начала и окончания для текущего элемента.|  
-|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Устанавливает или извлекает HTML между открывающий и закрывающий теги текущего элемента.|  
-|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Задает или получает конечная точка URL-адрес или привязки.|  
-|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Задает или получает целевое окно или фрейм.|  
-|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Задает или получает имя изображения или видеоклипа в документ.|  
-|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Задает или получает URL-адрес связанного фрейма.|  
-|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Задает или получает URL-адрес связанного фрейма.|  
+|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Sets or retrieves the Value property from the selected control.|  
+|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Sets or retrieves the text between the start and end tags of the current element.|  
+|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Sets or retrieves the HTML between the start and end tags of the current element.|  
+|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Sets or retrieves the destination URL or anchor point.|  
+|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Sets or retrieves the target window or frame.|  
+|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Sets or retrieves the name of an image or a video clip in the document.|  
+|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Sets or retrieves the URL of the associated frame.|  
+|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Sets or retrieves the URL of the associated frame.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
-Задает или получает конечная точка URL-адрес или привязки.  
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
+Sets or retrieves the destination URL or anchor point.  
   
   
   
@@ -82,21 +82,21 @@ DDX_DHtml_Anchor_Href(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLANCHORELEMENT_HREF с помощью функции отправки идентификатора.
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLANCHORELEMENT_HREF dispatch ID.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
- Задает или получает целевое окно или фрейм.  
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
+ Sets or retrieves the target window or frame.  
     
 ```  
 DDX_DHtml_Anchor_Target(
@@ -105,21 +105,21 @@ DDX_DHtml_Anchor_Target(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLANCHORELEMENT_TARGET с помощью функции отправки идентификатора.  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLANCHORELEMENT_TARGET dispatch ID.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
- Устанавливает или извлекает HTML между открывающий и закрывающий теги текущего элемента.  
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
+ Sets or retrieves the HTML between the start and end tags of the current element.  
   
   
   
@@ -130,22 +130,22 @@ DDX_DHtml_ElementInnerHtml(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLELEMENT_INNERHTML с помощью функции отправки идентификатора.  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLELEMENT_INNERHTML dispatch ID.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
-Задает или получает текст между тегами начала и окончания для текущего элемента.  
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
+Sets or retrieves the text between the start and end tags of the current element.  
   
   
   
@@ -156,21 +156,21 @@ DDX_DHtml_ElementInnerText(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLELEMENT_INNERTEXT с помощью функции отправки идентификатора. 
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLELEMENT_INNERTEXT dispatch ID. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
-Задает или получает значение свойства выбранного элемента управления.  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
+Sets or retrieves the Value property from the selected control.  
  
 ```  
 DDX_DHtml_ElementValue(
@@ -179,23 +179,23 @@ DDX_DHtml_ElementValue(
     var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене. В разделе *значение* в [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
+ The value being exchanged. See *value* in [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос выполняется успешно только при запуске на элементы управления, имеющие свойство Value. Элементы управления, имеющие свойство Value включать поля ввода, списки и поля со списком.  
+## <a name="remarks"></a>Remarks  
+ This macro will only succeed when run on controls that have a Value property. Controls that have a Value property include edit boxes, list boxes, and combo boxes.  
   
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_A_VALUE с помощью функции отправки идентификатора.  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_A_VALUE dispatch ID.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
-Задает или получает URL-адрес связанного фрейма.  
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
+Sets or retrieves the URL of the associated frame.  
   
 ```  
 DDX_DHtml_Frame_Src(
@@ -204,21 +204,21 @@ DDX_DHtml_Frame_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLFRAMEBASE_SRC с помощью функции отправки идентификатора.  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLFRAMEBASE_SRC dispatch ID.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
-Задает или получает URL-адрес связанного фрейма.  
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
+Sets or retrieves the URL of the associated frame.  
   
   
   
@@ -229,21 +229,21 @@ DDX_DHtml_IFrame_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLFRAMEBASE_SRC с помощью функции отправки идентификатора. 
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLFRAMEBASE_SRC dispatch ID. 
 
 ## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
-Возвращает или получает имя изображения или видеоклипа в документ.  
+Gets or retrieves the name of an image or a video clip in the document.  
   
 ```  
 DDX_DHtml_Img_Src(
@@ -252,22 +252,22 @@ DDX_DHtml_Img_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- Значение, указанное для параметра ID HTML-элемент управления.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- Значение при обмене.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>Примечания  
- При использовании `DDX_DHtml_Img_Src` макрос, чтобы извлечь свойство src для элемента ИЗОБРАЖЕНИЯ объекта образа Internet Explorer вернет полностью escape-URL-адрес источника изображения. Например, если вы используете `DDX_DHtml_Img_Src` макрос установить свойство src ИЗОБРАЖЕНИЯ элемента в строку «некоторые интересные изображение» при получении этого свойства, Internet Explorer будет возвращать строку «res://d:\myapplication\myapp.exe/some%20interesting%20picture».  
+## <a name="remarks"></a>Remarks  
+ When using the `DDX_DHtml_Img_Src` macro to retrieve the src property for an IMAGE element, the Internet Explorer image object will return the fully escaped URL for the image source. For example, if you use the `DDX_DHtml_Img_Src` macro to set the src property of an IMAGE element to the string "some interesting picture," when you retrieve that property, Internet Explorer will return the string "res://d:\myapplication\myapp.exe/some%20interesting%20picture."  
   
- Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLIMGELEMENT_SRC с помощью функции отправки идентификатора.  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLIMGELEMENT_SRC dispatch ID.  
 
   
-## <a name="see-also"></a>См. также  
- [Класс CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)
 

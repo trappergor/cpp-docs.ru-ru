@@ -1,5 +1,5 @@
 ---
-title: "Класс CD2DRectF | Документы Microsoft"
+title: CD2DRectF Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRectF class
+- CD2DRectF [MFC], CD2DRectF
+- CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
 caps.latest.revision: 18
 author: mikeblome
@@ -36,52 +37,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5bca2dcce32679083e5917d855f711984989a489
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fade68a235bc93ff8dccce1d68c3b7d354a26c39
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2drectf-class"></a>Класс CD2DRectF
-Программа-оболочка для `D2D1_RECT_F`.  
+# <a name="cd2drectf-class"></a>CD2DRectF Class
+A wrapper for `D2D1_RECT_F`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DRectF : public D2D1_RECT_F;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Перегружен. Создает `CD2DRectF` объекта из `D2D1_RECT_F` объекта.|  
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Overloaded. Constructs a `CD2DRectF` object from `D2D1_RECT_F` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, содержит ли выражение недопустимые данные ( `null`).|  
+|[CD2DRectF::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::operator CRect](#operator_crect)|Преобразует `CD2DRectF` для `CRect` объектов.|  
+|[CD2DRectF::operator CRect](#operator_crect)|Converts `CD2DRectF` to `CRect` object.|  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_RECT_F`  
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
- Создает объект CD2DRectF из CRect объекта.  
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
+ Constructs a CD2DRectF object from CRect object.  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -96,42 +97,42 @@ CD2DRectF(
     FLOAT fBottom = 0.);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rect`  
- исходного прямоугольника.  
+ source rectangle  
   
  `fLeft`  
- Левая координата источника  
+ source left coordinate  
   
  `fTop`  
- Верхняя координата источника  
+ source top coordinate  
   
  `fRight`  
- Источник прямо координат  
+ source right coordinate  
   
  `fBottom`  
- Нижняя координата источника  
+ source bottom coordinate  
   
-##  <a name="isnull"></a>CD2DRectF::ISNULL  
- Возвращает логическое значение, указывающее, содержит ли выражение недопустимые данные (Null).  
+##  <a name="isnull"></a>  CD2DRectF::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если прямоугольника верхней, левой, нижней и правильные значения все равно 0; в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if rectangle's top, left, bottom, and right values are all equal to 0; otherwise FALSE.  
   
-##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
- Преобразует CD2DRectF CRect.  
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
+ Converts CD2DRectF to CRect object.  
   
 ```  
 operator CRect();
 ```   
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущее значение D2D прямоугольника.  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D rectangle.  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

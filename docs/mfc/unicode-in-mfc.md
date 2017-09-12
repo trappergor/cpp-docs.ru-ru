@@ -1,68 +1,87 @@
 ---
-title: "Юникод в MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "строки [C++], Юникод"
-  - "Юникод [C++], включение"
-  - "Юникод [C++], MFC - библиотека"
-  - "расширенные символы, кодировка"
-  - "расширенные символы, Юникод"
+title: Unicode in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, Unicode
+- Unicode [MFC], MFC
+- wide characters, encoding
+- strings [MFC], Unicode
+- Unicode [MFC], enabling
 ms.assetid: 1002004b-4113-4380-bf63-e1570934b793
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Юникод в MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66452e96c7ca61e3acad1ce1107b6ba24c0750b3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC поддерживает стандарт юникод для кодирования расширенных символов на платформах Windows NT, Windows 2000 и Windows XP.  Приложения юникода не могут работать на платформе Windows 98.  
+---
+# <a name="unicode-in-mfc"></a>Unicode in MFC
+MFC supports the Unicode standard for encoding wide characters on Windows NT, Windows 2000, and Windows XP platforms. Unicode applications cannot run on Windows 98 platforms.  
   
- Версии юникода библиотек MFC описаны ниже:  
+ The Unicode versions of the MFC libraries are described below:  
   
-### Статические библиотеки компоновки  
+### <a name="static-link-libraries"></a>Static Link Libraries  
   
-|Release|Отладочная информация|Описание|  
-|-------------|---------------------------|--------------|  
-|UAFXCW.lib,\)|UAFXCWD.lib,\)|Библиотека MFC статической компоновки юникода|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|UAFXCW.lib, .pdb|UAFXCWD.lib, .pdb|Unicode MFC static link library|  
   
-### Библиотеки динамической компоновки  
+### <a name="dynamic-link-libraries"></a>Dynamic-Link Libraries  
   
-|Release|Отладочная информация|Описание|  
-|-------------|---------------------------|--------------|  
-|MFC100U.lib, .dbg, DEF\- DLL, .map,\), .prf|MFC100UD.lib, технику, DLL, .map,\)|Библиотека импорта юникода MFC \(см. примечания ниже приведены объяснения расширений файлов\)|  
-|MFCS100U.lib,\)|MFCS100UD.lib,\)|Библиотека импорта юникода MFC, содержащий код, необходимый для статического связывания приложения или библиотеки DLL|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|Unicode MFC import library (see notes below for explanation of file extensions)|  
+|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|Unicode MFC import library containing code that must be statically linked in an application or DLL|  
   
- **Типы файлов**  
+ **File Types**  
   
--   Файлы библиотеки импорта имеют расширение \(LIB\).  
+-   Import library files have the extension (.lib).  
   
--   DLL\-файл имеют расширение \(DLL\).  
+-   Dynamic-link library files have the extension (.dll).  
   
--   Файлы определения модуля \(DEF\) текстовые файлы, содержащие выписки для определения EXE или DLL.  
+-   Module definition (.def) files are text files that contain statements for defining an .exe or .dll.  
   
--   Файлы сопоставления \(\) .map текстовые файлы, содержащие сведения, компоновщик использует компоновке программы.  
+-   Map (.map) files are text files that contain information that the linker uses when linking a program.  
   
--   Файлы библиотек \(LIB\) используются вместе с версиями библиотеки DLL MFC.  Эти файлы содержат код, необходимый для статического связывания в приложении или библиотеку DLL.  
+-   Library (.lib) files are used in conjunction with the DLL versions of MFC. These files contain code that must be statically linked in the application or DLL.  
   
--   Файлы базы данных программы \(PDB\) содержат отладки и состоянии проекта.  
+-   Program database (.pdb) files contain debugging and project state information.  
   
--   Отладочные файлы \(.dbg\) содержат сведения COFF \(FPO и CodeView\), отладчик Visual C\+\+ использует C.  
+-   Debug (.dbg) files contain information (COFF FPO, and CodeView) that the Visual C++ Debugger uses.  
   
- Дополнительные сведения о соглашениях об именовании см. в разделе [Соглашения об именовании библиотек](../Topic/Library%20Naming%20Conventions.md).  
+ For detailed information on naming conventions, see [Library Naming Conventions](../mfc/library-naming-conventions.md).  
   
- Дополнительные сведения об использовании юникода с MFC см. в разделе [Строки: Юникод и поддержка многобайтовой кодировки \(MBCS\)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
+ For information on using Unicode with MFC, see [Strings: Unicode and Multibyte Character Set (MBCS) Support](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-## См. также  
- [Основные понятия](../mfc/mfc-concepts.md)   
- [Общие разделы по MFC](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

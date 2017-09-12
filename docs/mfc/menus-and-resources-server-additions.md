@@ -1,80 +1,99 @@
 ---
-title: "Меню и ресурсы. Добавление серверов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDP_OLE_INIT_FAILED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "таблицы сочетаний клавиш [C++], серверные приложения"
-  - "IDP_OLE_INIT_FAILED - макрос"
-  - "сбой инициализации OLE"
-  - "приложения сервера OLE, меню и ресурсы"
-  - "серверы визуального редактирования OLE"
-  - "ресурсы [MFC], серверные приложения"
-  - "серверные приложения, таблица сочетаний клавиш"
-  - "серверные приложения, Меню и ресурсы OLE"
-  - "серверы, добавления меню"
-  - "редактирование строк, приложения визуального редактирования"
-  - "таблицы строк, приложения визуального редактирования"
-  - "визуальное редактирование, меню и ресурсы приложений"
+title: 'Menus and Resources: Server Additions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDP_OLE_INIT_FAILED
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE visual editing servers [MFC]
+- accelerator tables [MFC], server applications
+- visual editing [MFC], application menus and resources
+- server applications [MFC], accelerator table
+- string tables [MFC], visual editing applications
+- servers [MFC], menu additions
+- resources [MFC], server applications
+- OLE server applications [MFC], menus and resources
+- string editing [MFC], visual editing applications
+- IDP_OLE_INIT_FAILED macro [MFC]
+- server applications [MFC], OLE menus and resources
+- OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Меню и ресурсы. Добавление серверов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dfbeb53251242f545f35908c051ab18192965124
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается изменения, которые необходимо выполнить в меню и другим ресурсам в приложении сервера визуального редактирования \(компонента\).  Серверное приложение требует много добавлений к структуре меню и другие ресурсы, поскольку его можно запустить в одном из режимов: 3 автономный, внедренный на месте.  Как описано в статье [Меню и ресурсы \(OLE\)](../mfc/menus-and-resources-ole.md), максимум 4 наборов меню.  Все 4 используются для приложения с сервера MDI, а только 3 используются для miniserver.  Мастер приложений создается макет меню необходимый для типа сервера требуется.  Некоторые настройки может быть необходима.  
+---
+# <a name="menus-and-resources-server-additions"></a>Menus and Resources: Server Additions
+This article explains the changes that need to be made to the menus and other resources in a visual editing server (component) application. A server application requires many additions to the menu structure and other resources because it can be started in one of three modes: stand alone, embedded, or in place. As described in the [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md) article, there are a maximum of four sets of menus. All four are used for an MDI full-server application, while only three are used for a miniserver. The application wizard will create the menu layout necessary for the type of server you want. Some customization may be necessary.  
   
- Если мастер не используется приложений, может понадобиться просмотреть HIERSVR.RC скрипт ресурсов, пример приложения MFC [HIERSVR](../top/visual-cpp-samples.md), чтобы посмотреть, как этих изменений.  
+ If you do not use the application wizard, you may want to look at HIERSVR.RC, the resource script for the MFC sample application [HIERSVR](../visual-cpp-samples.md), to see how these changes are implemented.  
   
- Разделы описанные в этой статье:  
+ Topics covered in this article include:  
   
--   [Добавление меню сервера](#_core_server_menu_additions)  
+-   [Server Menu Additions](#_core_server_menu_additions)  
   
--   [Добавление таблицы сочетаний клавиш](#_core_server_application_accelerator_table_additions)  
+-   [Accelerator Table Additions](#_core_server_application_accelerator_table_additions)  
   
--   [Добавление строк таблицы](../mfc/menus-and-resources-container-additions.md)  
+-   [String Table Additions](../mfc/menus-and-resources-container-additions.md)  
   
--   [Добавление Miniserver](#_core_mini.2d.server_additions)  
+-   [Miniserver Additions](#_core_mini.2d.server_additions)  
   
-##  <a name="_core_server_menu_additions"></a> Добавление меню сервера  
- Приложения сервера \(компонента\) должны иметь ресурсов меню, добавляемые в поддержки OLE визуального редактирования.  Используемые меню при запуске приложения в изолированном режиме не должны быть изменены, но необходимо добавить 2 новых ресурсов меню до построения приложения. одно для поддержки встроенной активации и один для поддержки сервер может полностью открыты.  Оба ресурсов меню используются приложениями \(и miniserver.  
+##  <a name="_core_server_menu_additions"></a> Server Menu Additions  
+ Server (component) applications must have menu resources added to support OLE visual editing. The menus used when the application is run in stand-alone mode do not have to be changed, but you must add two new menu resources before building the application: one to support in-place activation and one to support the server being fully open. Both menu resources are used by full- and miniserver applications.  
   
--   Для поддержки встроенной активации необходимо создать ресурс меню, очень похож на ресурс меню, используемые при запуске в изолированном режиме.  Различие в этом меню, что элементы файла и окна \(и все остальные пункты меню, которые работают с приложением, а не данные\) отсутствует.  Контейнерное приложение будет эти пункты меню.  Дополнительные сведения о и примеры, этот метод возврата слияния см. в статье [Меню и ресурсы: Слияния меню](../mfc/menus-and-resources-menu-merging.md).  
+-   To support in-place activation, you must create a menu resource that is very similar to the menu resource used when run in stand-alone mode. The difference in this menu is that the File and Window items (and any other menu items that deal with the application, and not the data) are missing. The container application will supply these menu items. For more information on, and an example of, this menu-merging technique, see the article [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md).  
   
--   Для поддержки полностью открытую активацию необходимо создать ресурс меню практически аналогична ресурс меню, используемые при запуске в изолированном режиме.  Единственное изменение в этот ресурс меню, некоторые элементы reworded, чтобы отразить факт, сервер работает в составном элементе встроенной в документе.  
+-   To support fully open activation, you must create a menu resource nearly identical to the menu resource used when run in stand-alone mode. The only modification to this menu resource is that some items are reworded to reflect the fact that the server is operating on an item embedded in a compound document.  
   
- Помимо изменения из этого раздела, представленный в файл ресурсов необходимо включить AFXOLESV.RC, что необходимо для реализации библиотеки Microsoft Foundation Class.  Этот файл находится в подкаталоге MFC\\Include.  
+ In addition to the changes listed in this article, your resource file needs to include AFXOLESV.RC, which is required for the Microsoft Foundation Class Library implementation. This file is in the MFC\Include subdirectory.  
   
-##  <a name="_core_server_application_accelerator_table_additions"></a> Добавление таблицы сочетаний клавиш серверного приложения  
- 2 Новых ресурсов таблицы сочетаний клавиш для добавления к серверным приложениям. они соответствуют непосредственно к новым ранее описанным ресурсам меню.  Первая таблица сочетаний клавиш используется, когда серверное приложение активировано на месте.  Он состоит из всех записей в таблице сочетаний клавиш представления, кроме тех связанной в файл и меню окна.  
+##  <a name="_core_server_application_accelerator_table_additions"></a> Server Application Accelerator Table Additions  
+ Two new accelerator table resources must be added to server applications; they correspond directly to the new menu resources previously described. The first accelerator table is used when the server application is activated in place. It consists of all the entries in the view's accelerator table except those tied to the File and Window menus.  
   
- Вторая таблица почти точное копии таблицы сочетаний клавиш представления.  Любые изменения, внесенные в открытом различий параллельных полностью меню упомянутом в [Добавление меню сервера](#_core_server_menu_additions).  
+ The second table is nearly an exact copy of the view's accelerator table. Any differences parallel changes made in the fully open menu mentioned in [Server Menu Additions](#_core_server_menu_additions).  
   
- Пример эти изменения таблицы сочетаний клавиш, сравнение таблицы сочетаний клавиш **IDR\_HIERSVRTYPE\_SRVR\_IP** и **IDR\_HIERSVRTYPE\_SRVR\_EMB** с **IDR\_MAINFRAME** в файле HIERSVR.RC включенного в примере MFC [HIERSVR](../top/visual-cpp-samples.md) OLE.  Сочетания клавиш файла и окна отсутствует в на месте таблицы и точные копии их внедренной в таблице.  
+ For an example of these accelerator table changes, compare the **IDR_HIERSVRTYPE_SRVR_IP** and **IDR_HIERSVRTYPE_SRVR_EMB** accelerator tables with **IDR_MAINFRAME** in the HIERSVR.RC file included in the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). The File and Window accelerators are missing from the in-place table and exact copies of them are in the embedded table.  
   
-##  <a name="_core_string_table_additions_for_server_applications"></a> Добавление таблицы строк для серверных приложений  
- Только одно добавление строк таблицы требуется в серверном приложении — строки, чтобы знаменовать, что инициализация OLE завершается ошибкой.  Например, ниже запись со строками таблицы, мастер создает приложений:  
+##  <a name="_core_string_table_additions_for_server_applications"></a> String Table Additions for Server Applications  
+ Only one string table addition is necessary in a server application — a string to signify that the OLE initialization failed. As an example, here is the string-table entry that the application wizard generates:  
   
-|Идентификатор|Строковое|  
-|-------------------|---------------|  
-|**IDP\_OLE\_INIT\_FAILED**|Не удалось выполнить инициализацию OLE.  Убедитесь в том, что используются правильные версии библиотек OLE.|  
+|ID|String|  
+|--------|------------|  
+|**IDP_OLE_INIT_FAILED**|OLE initialization failed. Make sure that the OLE libraries are the correct version.|  
   
-##  <a name="_core_mini.2d.server_additions"></a> Добавление Miniserver  
- Те же дополнения применяются для miniservers их перечисленные выше для всего сервера.  Поскольку miniserver не может быть выполнено в изолированном режиме свое главное меню меньшего.  Главное меню, созданное мастером приложений имеет только меню Файл, содержащий только выход элементов и происходит.  Встроенный и на месте меню и сочетаний клавиш для miniservers одинаково их для всего сервера.  
+##  <a name="_core_mini.2d.server_additions"></a> Miniserver Additions  
+ The same additions apply for miniservers as those listed above for full-servers. Because a miniserver cannot be run in stand-alone mode, its main menu is much smaller. The main menu created by the application wizard has only a File menu, containing only the items Exit and About. Embedded and in-place menus and accelerators for miniservers are the same as those for full-servers.  
   
-## См. также  
- [Меню и ресурсы \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Меню и ресурсы. Слияние меню](../mfc/menus-and-resources-menu-merging.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md)
+
+

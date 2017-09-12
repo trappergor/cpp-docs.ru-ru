@@ -1,47 +1,66 @@
 ---
-title: "Всплывающие подсказки в Windows, не являющиеся производными CFrameWnd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления [MFC], всплывающие подсказки"
-  - "включение всплывающих подсказок"
-  - "функции обработчика, всплывающие подсказки"
-  - "Справка, всплывающие подсказки для элементов управления"
-  - "TOOLTIPTEXT - структура"
-  - "TTN_NEEDTEXT - сообщение"
+title: Tool Tips in Windows Not Derived from CFrameWnd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- enabling tool tips [MFC]
+- TOOLTIPTEXT structure [MFC]
+- Help [MFC], tool tips for controls
+- TTN_NEEDTEXT message [MFC]
+- controls [MFC], tool tips
+- handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Всплывающие подсказки в Windows, не являющиеся производными CFrameWnd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd2adc442eaa9a37522a276cca097bb9feda8fb6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Это семейство знаний описываются включение всплывающие подсказки для элементов управления, содержащиеся в поле, которое не является производным от [CFrameWnd](../mfc/reference/cframewnd-class.md).  Раздел [Всплывающие подсказки панелей инструментов](../Topic/Toolbar%20Tool%20Tips.md) содержит сведения о всплывающих подсказках для элементов управления в `CFrameWnd`.  
+---
+# <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Tool Tips in Windows Not Derived from CFrameWnd
+This article family covers enabling tool tips for controls contained in a window that is not derived from [CFrameWnd](../mfc/reference/cframewnd-class.md). The article [Toolbars Tool Tips](../mfc/toolbar-tool-tips.md) provides information about tool tips for controls in a `CFrameWnd`.  
   
- Семейство покрытое разделами в этой статье включает:  
+ Topics covered in this article family include:  
   
--   [Включение всплывающие подсказки](../mfc/enabling-tool-tips.md)  
+-   [Enabling Tool Tips](../mfc/enabling-tool-tips.md)  
   
--   [Обработка уведомления TTN\_NEEDTEXT для всплывающих подсказок](../Topic/Handling%20TTN_NEEDTEXT%20Notification%20for%20Tool%20Tips.md)  
+-   [Handling TTN_NEEDTEXT Notification for Tool Tips](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)  
   
--   [Структура TOOLTIPTEXT](../mfc/tooltiptext-structure.md)  
+-   [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md)  
   
- Всплывающие подсказки автоматически отображаются для кнопок и других элементов управления, содержащиеся в родительском окне, производном от `CFrameWnd`.  Это происходит потому, что `CFrameWnd` содержит обработчик по умолчанию для уведомления [TTN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269), которое обрабатывает уведомления **TTN\_NEEDTEXT** из элементов управления всплывающей подсказки, связанных с элементами управления.  
+ Tool tips are automatically displayed for buttons and other controls contained in a parent window derived from `CFrameWnd`. This is because `CFrameWnd` has a default handler for the [TTN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) notification, which handles **TTN_NEEDTEXT** notifications from tool tip controls associated with controls.  
   
- Однако этот обработчик по умолчанию не вызывается при уведомлении **TTN\_NEEDTEXT**  отправляется из элемента управления всплывающей подсказки, связанного с элементом управления в окне, не `CFrameWnd`, например элемента управления в диалоговом окне или в представлении формы.  Поэтому необходимо автоматически предоставить функцию обработчика для сообщения уведомления **TTN\_NEEDTEXT** для отображения всплывающих подсказок для дочерних элементов управления.  
+ However, this default handler is not called when the **TTN_NEEDTEXT** notification is sent from a tool tip control associated with a control in a window that is not a `CFrameWnd`, such as a control on a dialog box or a form view. Therefore, it is necessary for you to provide a handler function for the **TTN_NEEDTEXT** notification message in order to display tool tips for child controls.  
   
- Всплывающие подсказки по умолчанию, предоставляемые в windows [CWnd::EnableToolTips](../Topic/CWnd::EnableToolTips.md) не имеют текст, связанный с ними.  Для получения текста для всплывающей подсказки для отображения отправляется уведомление **TTN\_NEEDTEXT** к родительскому окну управления всплывающей подсказки непосредственно перед вызовом отображается окно всплывающей подсказки.  Если ни один обработчик этого сообщения, чтобы присвоить определенное значение к элементу **pszText** структуры **TOOLTIPTEXT**, будет никакой текст, отображаемый для всплывающей подсказки.  
+ The default tool tips provided for your windows by [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) do not have text associated with them. To retrieve text for the tool tip to display, the **TTN_NEEDTEXT** notification is sent to the tool tip control's parent window just before the tool tip window is displayed. If there is no handler for this message to assign some value to the **pszText** member of the **TOOLTIPTEXT** structure, there will be no text displayed for the tool tip.  
   
-## См. также  
- [Всплывающие подсказки](../mfc/tool-tips.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips](../mfc/tool-tips.md)
+
+

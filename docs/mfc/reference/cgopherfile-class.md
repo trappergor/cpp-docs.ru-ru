@@ -1,5 +1,5 @@
 ---
-title: "Класс CGopherFile | Документы Microsoft"
+title: CGopherFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gopher protocol files
-- Internet, gopher
-- CGopherFile class
+- CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
 caps.latest.revision: 23
 author: mikeblome
@@ -37,39 +35,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 40c1e385d0f58095c2aa79cc23168fc00f48ed9b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86d539c706a2b0f607d771142ae03dbd86be35ee
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cgopherfile-class"></a>Класс CGopherFile
-Обеспечивает возможность поиска и чтения файлов на сервере gopher.  
+# <a name="cgopherfile-class"></a>CGopherFile Class
+Provides the functionality to find and read files on a gopher server.  
   
 > [!NOTE]
->  Классы `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` и их члены устарели, так как они не работают на платформе Windows XP, но они будут продолжать работать на более старых платформ.  
+>  The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CGopherFile : public CInternetFile  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Защищенные конструкторы  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGopherFile::CGopherFile](#cgopherfile)|Создает объект `CGopherFile`.|  
+|[CGopherFile::CGopherFile](#cgopherfile)|Constructs a `CGopherFile` object.|  
   
-## <a name="remarks"></a>Примечания  
- Служба gopher не разрешает пользователям для записи данных в файл gopher, поскольку эта служба работает главным образом как интерфейс на основе меню для поиска сведений. `CGopherFile` Функции-члены **записи**, `WriteString`, и `Flush` не реализована для `CGopherFile`. Вызов этих функций для `CGopherFile` объекта возвращает [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+## <a name="remarks"></a>Remarks  
+ The gopher service does not allow users to write data to a gopher file because this service functions mainly as a menu-driven interface for finding information. The `CGopherFile` member functions **Write**, `WriteString`, and `Flush` are not implemented for `CGopherFile`. Calling these functions on a `CGopherFile` object, returns a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Дополнительные сведения о том, как `CGopherFile` работает с другими классами MFC Интернет, см. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ To learn more about how `CGopherFile` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -80,11 +78,11 @@ class CGopherFile : public CInternetFile
   
  `CGopherFile`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
- Эта функция-член вызывается для создания `CGopherFile` объекта.  
+##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
+ This member function is called to construct a `CGopherFile` object.  
   
 ```  
 CGopherFile(
@@ -101,38 +99,38 @@ CGopherFile(
     DWORD_PTR dwContext);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hFile`  
- Дескриптор `HINTERNET` файла.  
+ A handle to an `HINTERNET` file.  
   
  `refLocator`  
- Ссылку на [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) объекта.  
+ A reference to a [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object.  
   
  `pConnection`  
- Указатель на [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) объекта.  
+ A pointer to a [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) object.  
   
  `hSession`  
- Дескриптор текущего сеанса Интернета.  
+ A handle to the current Internet session.  
   
  `pstrLocator`  
- Указатель на строку, используемую для обнаружения сервера gopher. В разделе [сеансы Gopher](https://msdn.microsoft.com/library/24wz8xze.aspx) Дополнительные сведения о указатели gopher.  
+ A pointer to a string used to locate the gopher server. See [Gopher Sessions](https://msdn.microsoft.com/library/24wz8xze.aspx) for more information about gopher locators.  
   
  *dwLocLen*  
- Значение DWORD, содержащее число байтов в `pstrLocator`.  
+ A DWORD containing the number of bytes in `pstrLocator`.  
   
  `dwContext`  
- Указатель на идентификатор контекста для открытого файла.  
+ A pointer to the context identifier of the file being opened.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо `CGopherFile` для чтения из файла во время сеанса Internet gopher.  
+### <a name="remarks"></a>Remarks  
+ You need a `CGopherFile` object to read from a file during a gopher Internet session.  
   
- Никогда не создавать `CGopherFile` напрямую. Вместо этого необходимо вызвать [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) для открытия файла на сервере gopher.  
+ You never create a `CGopherFile` object directly. Instead, call [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) to open a file on a gopher server.  
   
-## <a name="see-also"></a>См. также  
- [Класс CInternetFile](../../mfc/reference/cinternetfile-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CInternetFile](../../mfc/reference/cinternetfile-class.md)   
- [Класс CGopherLocator](../../mfc/reference/cgopherlocator-class.md)   
- [Класс CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)   
- [Класс CGopherConnection](../../mfc/reference/cgopherconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherLocator Class](../../mfc/reference/cgopherlocator-class.md)   
+ [CGopherFileFind Class](../../mfc/reference/cgopherfilefind-class.md)   
+ [CGopherConnection Class](../../mfc/reference/cgopherconnection-class.md)
 

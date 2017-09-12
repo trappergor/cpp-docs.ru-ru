@@ -1,79 +1,99 @@
 ---
-title: "Настройка мыши и клавиатуры | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "настройки, клавиатура и мышь (расширения MFC)"
-  - "настройки клавиатуры и мыши (расширения MFC)"
+title: Keyboard and Mouse Customization | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- customizations [MFC], keyboard and mouse (MFC Extensions)
+- keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Настройка мыши и клавиатуры
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cbce5ace18bf7b4fc185055b00c9306a86e75090
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC позволяет пользователю приложения настраивать их обрабатывает ввода мыши и клавиатуры.  Пользователь может настраивать ввода с клавиатуры путем присвоения сочетания клавиш для команд.  Пользователь также может настраивать ввода мыши, выбрав команду, которая должна быть выполнена, когда пользователь дважды щелкает внутри конкретного окна приложения.  В этом разделе объясняется, как настраивать входные данные для приложения.  
+---
+# <a name="keyboard-and-mouse-customization"></a>Keyboard and Mouse Customization
+MFC allows the user of your application to customize how it handles keyboard and mouse input. The user can customize keyboard input by assigning keyboard shortcuts to commands. The user can also customize the mouse input by selecting the command that should be executed when the user double-clicks inside specific windows of the application. This topic explains how to customize the input for your application.  
   
- В диалоговом окне **Настройка**, пользователь может изменить пользовательские элементы управления для мыши и клавиатуры.  Чтобы открыть это диалоговое окно, точки пользователя в **Настроить** в меню **Вид** и нажмите кнопку **Закрепление панели инструментов и**.  В диалоговом окне, пользователем или вкладку **Клавиатура** или вкладку **Мышь**.  
+ In the **Customization** dialog box, the user can change the custom controls for the mouse and the keyboard. To display this dialog box, the user points to **Customize** on the **View** menu and then clicks **Toolbars and Docking**. In the dialog box, the user clicks either the **Keyboard** tab or the **Mouse** tab.  
   
-## Настройка клавиатуры  
- На следующем рисунке показана вкладка **Клавиатура** диалогового окна **Настройка**.  
+## <a name="keyboard-customization"></a>Keyboard Customization  
+ The following illustration shows the **Keyboard** tab of the **Customization** dialog box.  
   
- ![Вкладка "Клавиатура" в диалоговом окне настройки](../mfc/media/mfcnextkeyboardtab.png "MFCNextKeyboardTab")  
-Вкладка настроек клавиатуры  
+ ![Keyboard tab in the Customize dialog box](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab")  
+Keyboard Customization Tab  
   
- Пользователь взаимодействует со вкладкой клавиатуры для присвоения одного или нескольких сочетаний клавиш в команде.  Команды, перечисленные в левой части вкладки.  Пользователь может выбрать любую доступную команды из меню.  Только команды меню можно связать с сочетанием клавиш.  После того как пользователь вводит новый ярлык, кнопка **Назначить** становится доступной.  При нажатии этой кнопки, приложение связывает выбранную команду с этим ярлыком.  
+ The user interacts with the keyboard tab to assign one or more keyboard shortcuts to a command. The available commands are listed on the left side of the tab. The user can select any available command from the menu. Only menu commands can be associated with a keyboard shortcut. After the user enters a new shortcut, the **Assign** button becomes enabled. When the user clicks this button, the application associates the selected command with that shortcut.  
   
- Все в данный момент сочетания клавиш, перечислены в списке в правом столбце.  Пользователь также может выбрать отдельные ярлыки и удалять их, или сбросить все сопоставления для приложения.  
+ All of the currently assigned keyboard shortcuts are listed in the list box in the right column. The user can also select individual shortcuts and remove them, or reset all the mappings for the application.  
   
- Если требуется поддерживать эту настройку в приложении, необходимо создать объект [CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md).  Для создания объекта `CKeyboardManager`, вызовите функцию [CWinAppEx::InitKeyboardManager](../Topic/CWinAppEx::InitKeyboardManager.md).  Этот метод создает и инициализирует диспетчер клавиатуры.  При создании диспетчера клавиатуры вручную, то все равно необходимо вызвать `CWinAppEx::InitKeyboardManager` для инициализации его.  
+ If you want to support this customization in your application, you must create a [CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md) object. To create a `CKeyboardManager` object, call the function [CWinAppEx::InitKeyboardManager](../mfc/reference/cwinappex-class.md#initkeyboardmanager). This method creates and initializes a keyboard manager. If you create a keyboard manager manually, you still must call `CWinAppEx::InitKeyboardManager` to initialize it.  
   
- При использовании мастера для создания приложения, то мастер инициализирует диспетчер клавиатуры.  После того как приложение инициализирует диспетчер клавиатуры платформа добавляет на вкладку **Клавиатура** в диалоговом окне **Настройка**.  
+ If you use the Wizard to create your application, the Wizard will initialize the keyboard manager. After your application initializes the keyboard manager, the framework adds a **Keyboard** tab to the **Customization** dialog box.  
   
-## Настройка мыши  
- На следующем рисунке показана вкладка **Мышь** диалогового окна **Настройка**.  
+## <a name="mouse-customization"></a>Mouse Customization  
+ The following illustration shows the **Mouse** tab of the **Customization** dialog box.  
   
- ![Вкладка "Мышь" в диалоговом окне настройки](../mfc/media/mfcnextmousetab.png "MFCNextMouseTab")  
-Вкладка настройки мыши  
+ ![Mouse tab in the Customize dialog box](../mfc/media/mfcnextmousetab.png "mfcnextmousetab")  
+Mouse Customization Tab  
   
- Пользователь взаимодействует с этой вкладки для присвоения команды меню в действие двойного щелчка мыши.  Пользователь выбирает представление с левой стороны окна и затем использовать элементы управления в правой части для связывания команду с действием двойного щелчка.  После того как пользователь щелкает **Закрыть**, приложение выполняет команду, когда пользователь дважды щелкает в любом месте представления.  
+ The user interacts with this tab to assign a menu command to the mouse double-click action. The user selects a view from the left side of the window and then uses the controls on the right side to associate a command with the double-click action. After the user clicks **Close**, the application executes the associated command whenever the user double-clicks anywhere in the view.  
   
- По умолчанию при настройке мыши не включена при создании приложения с помощью мастера.  
+ By default, mouse customization is not enabled when you create an application by using the Wizard.  
   
-#### Включить настройки мыши  
+#### <a name="to-enable-mouse-customization"></a>To enable mouse customization  
   
-1.  Инициализируйте объект [CMouseManager](../mfc/reference/cmousemanager-class.md) с помощью метода [CWinAppEx::InitMouseManager](../Topic/CWinAppEx::InitMouseManager.md).  
+1.  Initialize a [CMouseManager](../mfc/reference/cmousemanager-class.md) object by calling [CWinAppEx::InitMouseManager](../mfc/reference/cwinappex-class.md#initmousemanager).  
   
-2.  Получите указатель мыши в диспетчер с помощью [CWinAppEx::GetMouseManager](../Topic/CWinAppEx::GetMouseManager.md).  
+2.  Obtain a pointer to the mouse manager by using [CWinAppEx::GetMouseManager](../mfc/reference/cwinappex-class.md#getmousemanager).  
   
-3.  Добавление представления в диспетчер мышь с помощью метода [CMouseManager::AddView](../Topic/CMouseManager::AddView.md).  Это необходимо сделать для каждого представления необходимо добавить к диспетчеру мыши.  
+3.  Add views to the mouse manager by using the [CMouseManager::AddView](../mfc/reference/cmousemanager-class.md#addview) method. Do this for every view you want to add to the mouse manager.  
   
- После того как приложение инициализирует диспетчер мыши платформа добавляет на вкладку **Мышь** в диалоговом окне **Настроить**.  Если не добавить какие\-либо представления, доступ к вкладку вызывает необработанное исключение.  После создания списка представлений, вкладка **Мышь** доступна для пользователя.  
+ After your application initializes the mouse manager, the framework adds the **Mouse** tab to the **Customize** dialog box. If you do not add any views, accessing the tab will cause an unhandled exception. After you have created a list of views, the **Mouse** tab is available to the user.  
   
- При добавлении нового представления в диспетчер мышь, необходимо присвоить ей уникальный идентификатор.  При необходимости поддержки настройки мыши для окна, то процесс сообщение `WM_LBUTTONDBLCLICK` и вызова функции [CWinAppEx::OnViewDoubleClick](../Topic/CWinAppEx::OnViewDoubleClick.md).  При вызове этой функции, один из параметров идентификатор для этого окна.  Обязанностью программиста отслеживания идентификаторов объектов и связанные с ними.  
+ When you add a new view to the mouse manager, you give it a unique ID. If you want to support mouse customization for a window, you must process the `WM_LBUTTONDBLCLICK` message and call the [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) function. When you call this function, one of the parameters is the ID for that window. It is the responsibility of the programmer to keep track of the ID numbers and the objects associated with them.  
   
-## Вопросы безопасности  
- Как описано в [Инструменты, определяемые пользователем](../Topic/User-defined%20Tools.md), пользователь может связать идентификатор пользовательского средства с событием двойного щелчка.  Когда пользователь дважды щелкает представление, приложение ищет средство пользователя, который соответствует удостоверению.  Если приложение обнаружит средство сопоставления, он выполняет инструмент.  Если приложение не сможет найти средство сопоставления, он отправляет сообщение WM\_COMMAND с идентификатором в представление, которое было щелкнуто дважды.  
+## <a name="security-concerns"></a>Security Concerns  
+ As described in [User-defined Tools](../mfc/user-defined-tools.md), the user can associate a user-defined tool ID with the double-click event. When the user double-clicks a view, the application looks for a user tool that matches the associated ID. If the application finds a matching tool, it executes the tool. If the application cannot find a matching tool, it sends a WM_COMMAND message with the ID to the view that was double-clicked.  
   
- Настраиваемых параметры сохраняются в реестре.  Путем редактирования реестра, злоумышленник может заменить идентификатор средства допустимого пользователя с произвольной командой.  Когда пользователь дважды щелкает представление, процессы представления команды, который засадил.  Это может вызвать непредвиденное и потенциально небезопасное расширения функциональности.  
+ The customized settings are stored in the registry. By editing the registry, an attacker can replace a valid user tool ID with an arbitrary command. When the user double-clicks a view, the view processes the command that the attacker planted. This could cause unexpected and potentially dangerous behavior.  
   
- Кроме того, этот тип атак может обойти ограничения интерфейса пользователя.  Например, предположим, что приложение содержит запрещенную печать.  То есть в пользовательский интерфейс, меню **Печать** и кнопку недоступны.  Обычно это предотвращает приложения из печати.  Но если ему изменил реестр, пользователь может теперь может отправлять команды непосредственно на принтер, дважды щелкнув представление, минуя начальный элементы интерфейса пользователя, недоступны.  
+ In addition, this kind of attack can bypass user interface safeguards. For example, suppose an application has printing disabled. That is, in its user interface, the **Print** menu and button are unavailable. Normally this prevents the application from printing. But if an attacker edited the registry, a user could now could send the print command directly by double-clicking the view, bypassing the user interface elements that are unavailable.  
   
- Для защиты от атак этого типа добавьте код в обработчик команды приложения, чтобы убедиться, что команда допустима, прежде чем она выполняется.  Не зависит от интерфейса пользователя для предотвращения команды из списка в приложение.  
+ To guard against this kind of attack, add code to your application command handler to verify that a command is valid before it is executed. Do not depend on the user interface to prevent a command from being sent to the application.  
   
-## См. также  
- [Настройка для MFC](../mfc/customization-for-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)   
  [CKeyboardManager Class](../mfc/reference/ckeyboardmanager-class.md)   
  [CMouseManager Class](../mfc/reference/cmousemanager-class.md)   
- [Вопросы безопасности во время настройки](../Topic/Security%20Implications%20of%20Customization.md)
+ [Security Implications of Customization](../mfc/security-implications-of-customization.md)
+
+

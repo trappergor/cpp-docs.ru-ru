@@ -1,92 +1,111 @@
 ---
-title: "Элементы пользовательского интерфейса (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC - библиотека, пользовательский интерфейс"
-  - "пользовательские интерфейсы"
-  - "пользовательские интерфейсы, создание"
+title: User Interface Elements (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, user interface
+- user interfaces, creating
+- user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Элементы пользовательского интерфейса (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 957f5a89d015dbc023cd5dd464ae1fb9176166fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Дополнительные сведения о создании пользовательского интерфейса приложения с помощью библиотеки Microsoft Foundation Class \(MFC\) см. в следующих разделах.  
+---
+# <a name="user-interface-elements-mfc"></a>User Interface Elements (MFC)
+For information about how to create the user interface for your application by using the Microsoft Foundation Class (MFC) Library, see the following topics.  
   
-## Содержание  
- [Элементы управления ActiveX](../Topic/ActiveX%20Controls.md)  
- Описывает, как использовать повторно программный компонент на основе модели COM \(COM\), который поддерживает разнообразные функции OLE и может быть страницы настраивается под конкретного в соответствии с много программного обеспечения  
+## <a name="in-this-section"></a>In This Section  
+ [ActiveX Controls](../mfc/activex-controls.md)  
+ Describes how to use reusable software component based on the Component Object Model (COM), which supports a wide variety of OLE functionality and can be customized to fit many software needs  
   
- [буфер обмена](../mfc/clipboard.md)  
- Описывает, как реализовать поддержку обмена Windows в приложениях MFC.  
+ [Clipboard](../mfc/clipboard.md)  
+ Describes how to implement support for the Windows Clipboard in MFC applications.  
   
- [Элементы управления](../mfc/controls-mfc.md)  
- Описывает общие элементы управления Windows, включая определяемых пользователем элементов управления, элементы управления ActiveX и другие классы элементов управления, предоставляемые библиотекой MFC.  
+ [Controls](../mfc/controls-mfc.md)  
+ Describes Windows common controls, including owner-drawn controls, ActiveX controls, and other control classes supplied by the MFC Library.  
   
- [Панели элементов управления](../Topic/Control%20Bars.md)  
- Описывает функции инструментов, строк состояния и диалоговых панелей.  
+ [Control Bars](../mfc/control-bars.md)  
+ Describes functionality of toolbars, status bars, and dialog bars.  
   
- [Диалоговые панели](../mfc/dialog-bars.md)  
- Описывает тип панели элементов управления, который может содержать любой тип элемента управления.  
+ [Dialog Bars](../mfc/dialog-bars.md)  
+ Describes a kind of control bar that can contain any kind of control.  
   
- [Диалоговые окна](../mfc/dialog-boxes.md)  
- Описание способов создания диалоговые окна с помощью редакторов и мастеров кода.  
+ [Dialog Boxes](../mfc/dialog-boxes.md)  
+ Describes how to create dialog boxes by using the editors and code wizards.  
   
- [Архитектура "документ\-представление"](../Topic/Document-View%20Architecture.md)  
- Описывает управление данными в MFC.  
+ [Document/View Architecture](../mfc/document-view-architecture.md)  
+ Describes data management in MFC.  
   
- [Представления форм](../Topic/Form%20Views%20\(MFC\).md)  
- Описывает, как добавить поддержку форм в приложение.  
+ [Form Views](../mfc/form-views-mfc.md)  
+ Describes how to add forms support to your application.  
   
- [Справка HTML. Контекстная справка для программ](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
- Описание способов добавления контекстная справка для приложений с помощью справки HTML.  
+ [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
+ Describes how to add context-sensitive help to your applications by using HTML Help.  
   
- [Группы с вкладками MDI](../mfc/mdi-tabbed-groups.md)  
- Позволяет приложениям \(MDI\)\) указать один или несколько нашитые окна \(или группы в составе нашитые окна, как *группы вкладок*\) в клиентской области MDI.  
+ [MDI Tabbed Groups](../mfc/mdi-tabbed-groups.md)  
+ Enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, which are known as *tabbed groups*) in the MDI client area.  
   
  [Menus](../mfc/menus-mfc.md)  
- Добавление меню в интерфейс пользователя.  
+ Describes how to add menus to your user interface.  
   
  [OLE](../mfc/ole-mfc.md)  
- Ссылки на разделы, посвященные объект компоновку и внедряя.  
+ Provides links to topics that discuss object linking and embedding.  
   
- [Печать и предварительный просмотр печати](../mfc/printing-and-print-preview.md)  
- Поддержка MFC для печати и предварительного просмотра из приложений.  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)  
+ Describes MFC support for printing and print preview from your applications.  
   
- [Страницы свойств](../mfc/property-sheets-mfc.md)  
- Описывает использование страниц свойств для управления большими объемами элемента управления в диалоговом окне.  
+ [Property Sheets](../mfc/property-sheets-mfc.md)  
+ Describes how to use property sheets to manage large numbers of control in a dialog box.  
   
- [Конструктор лент \(MFC\)](../mfc/ribbon-designer-mfc.md)  
- Поддержка MFC для создания и изменения ресурсов пользовательского интерфейса ленты.  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)  
+ Describes MFC support for creating and modifying ribbon UI resources.  
   
- [Строки состояния](../mfc/status-bars.md)  
- Описание использования строки состояния в приложениях.  
+ [Status Bars](../mfc/status-bars.md)  
+ Describes how to use status bars in your applications.  
   
- [Всплывающие подсказки](../mfc/tool-tips.md)  
- Описывает, как реализовать всплывающие подсказки для помощи пользователям в использовании приложений.  
+ [Tool Tips](../mfc/tool-tips.md)  
+ Describes how to implement tool tips to assist users in using your applications.  
   
- [Панели инструментов](../mfc/toolbars.md)  
- Описывает основные сведения об использовании инструментов в MFC.  
+ [Toolbars](../mfc/toolbars.md)  
+ Describes the fundamentals about how to use toolbars in MFC.  
   
- [Диспетчер визуализации](../mfc/visualization-manager.md)  
- Действует как один класс, где можно поместить весь код рисования для приложения.  
+ [Visualization Manager](../mfc/visualization-manager.md)  
+ Acts as one class where you can put all the drawing code for your application.  
   
  [Windows](../mfc/windows.md)  
- Описывает основные сведения об использовании окна в MFC.  
+ Describes the fundamentals about how to use windows in MFC.  
   
-## Связанные разделы  
- [Приложения MFC для рабочего стола](../mfc/mfc-desktop-applications.md)  
- Справочные материалы по библиотеки MFC.  MFC набор классов, используемых платформу приложения \(платформа приложения, написанного для API Windows.
+## <a name="related-sections"></a>Related Sections  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)  
+ Provides reference material for the MFC Library. MFC is a set of classes that constitute an application framework, which is the framework of an application written for the Windows API.
+
+

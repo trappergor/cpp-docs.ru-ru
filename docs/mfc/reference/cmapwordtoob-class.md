@@ -1,5 +1,5 @@
 ---
-title: "Класс CMapWordToOb | Документы Microsoft"
+title: CMapWordToOb Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,8 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- 16-bit word mapping
-- CMapWordToOb class
+- CMapStringToOb [MFC], CMapStringToOb
+- CMapStringToOb [MFC], GetCount
+- CMapStringToOb [MFC], GetHashTableSize
+- CMapStringToOb [MFC], GetNextAssoc
+- CMapStringToOb [MFC], GetSize
+- CMapStringToOb [MFC], GetStartPosition
+- CMapStringToOb [MFC], HashKey
+- CMapStringToOb [MFC], InitHashTable
+- CMapStringToOb [MFC], IsEmpty
+- CMapStringToOb [MFC], Lookup
+- CMapStringToOb [MFC], LookupKey
+- CMapStringToOb [MFC], RemoveAll
+- CMapStringToOb [MFC], RemoveKey
+- CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
 caps.latest.revision: 23
 author: mikeblome
@@ -49,83 +61,83 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 75c3a1dd3d0a0c4fdd6c9dea37e5ed143e4cb3cc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e5c025836b498eca20d8227d98a0e349664b9ac2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmapwordtoob-class"></a>Класс CMapWordToOb
-Поддерживает сопоставления указателей `CObject` , зашифрованных 16-разрядными словами.  
+# <a name="cmapwordtoob-class"></a>CMapWordToOb Class
+Supports maps of `CObject` pointers keyed by 16-bit words.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMapWordToOb : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
- Функции-члены `CMapWordToOb` похожи на функции-члены класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Если вы видите `CString` или **const** указатель `char` как параметр функции или возвращаемого значения, замените **WORD**.  
+## <a name="members"></a>Members  
+ The member functions of `CMapWordToOb` are similar to the member functions of class [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Because of this similarity, you can use the `CMapStringToOb` reference documentation for member function specifics. Wherever you see a `CString` or a **const** pointer to `char` as a function parameter or return value, substitute **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
  `CObject*& <rValue> ) const;`  
   
- , например, преобразуется в  
+ for example, translates to  
   
  `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|  
+|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Constructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает количество элементов в эту карту.|  
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в хэш-таблице.|  
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Получает следующий элемент для итерации.|  
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Возвращает количество элементов в эту карту.|  
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Возвращает позицию первого элемента.|  
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Вычисляет хэш-значение указанного ключа.|  
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Инициализирует хэш-таблицы.|  
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Проверяет условие пустой карты (нет элементов).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Ищет указатель void на основе ключа указатель void. Значение указателя, а не сущности, на которую он указывает, используется для сравнения ключей.|  
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Возвращает ссылку на ключ, связанный с указанным значением ключа.|  
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Удаляет все элементы из этой карты.|  
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Удаляет элемент с указанным ключом.|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Вставляет элемент в схеме; заменяет существующий элемент, если найден соответствующий ключ.|  
+|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Returns the number of elements in this map.|  
+|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determines the current number of elements in the hash table.|  
+|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Gets the next element for iterating.|  
+|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Returns the number of elements in this map.|  
+|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Returns the position of the first element.|  
+|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calculates the hash value of a specified key.|  
+|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Initializes the hash table.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Tests for the empty-map condition (no elements).|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Looks up a void pointer based on the void pointer key. The pointer value, not the entity it points to, is used for the key comparison.|  
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Returns a reference to the key associated with the specified key value.|  
+|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Removes all the elements from this map.|  
+|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Removes an element specified by a key.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в карте — оператор подстановки для `SetAt`.|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserts an element into the map — operator substitution for `SetAt`.|  
   
-## <a name="remarks"></a>Примечания  
- `CMapWordToOb` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, если карта хранится в архив с помощью перегруженных вставки ( ** << **) оператор или с `Serialize` функции-члена.  
+## <a name="remarks"></a>Remarks  
+ `CMapWordToOb` incorporates the `IMPLEMENT_SERIAL` macro to support serialization and dumping of its elements. Each element is serialized in turn if a map is stored to an archive, either with the overloaded insertion ( **<<**) operator or with the `Serialize` member function.  
   
- Если вам требуется дамп отдельных **WORD** -  `CObject` элементов, необходимо задать глубины контекста дампа 1 или больше.  
+ If you need a dump of individual **WORD**- `CObject` elements, you must set the depth of the dump context to 1 or greater.  
   
- Когда `CMapWordToOb` удалить объект, или при удалении элементов, `CObject` указатели, удаляются. Объекты, упоминаемые `CObject` указатели, не удаляются.  
+ When a `CMapWordToOb` object is deleted, or when its elements are removed, the `CObject` pointers are removed. The objects referenced by the `CObject` pointers are not destroyed.  
   
- Дополнительные сведения о `CMapWordToOb`, см. в статье [коллекции](../../mfc/collections.md).  
+ For more information on `CMapWordToOb`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-## <a name="see-also"></a>См. также  
- [CObject-класс](../../mfc/reference/cobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

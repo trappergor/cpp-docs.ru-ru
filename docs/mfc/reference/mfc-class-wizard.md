@@ -1,104 +1,122 @@
 ---
-title: "Мастер классов MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Мастер классов MFC"
-  - "мастера (MFC)"
+title: MFC Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Мастер классов MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Позволяет добавлять сообщения и обработчики сообщений в классы проекта.  Также можно запустить другие мастера или добавить класс в проект.  
+---
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- Чтобы открыть **Мастер классов MFC**, в меню **Проект** щелкните **Мастер классов**.  Чтобы открыть мастер сочетанием клавиш, введите CTRL\+SHIFT\+X.  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## Список элементов пользовательского интерфейса  
- **Проект**  
- Имя проекта в решении.  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- Можно выбрать в решении из раскрывающегося списка другие проекты.  
+ You can select other projects in your solution from the drop-down list box.  
   
- **Имя класса**  
- Имя класса в проекте.  
+ **Class name**  
+ The name of a class in your project.  
   
- При выборе класса в списке **Имя класса** данные из него заполняют элементы управления в **мастере классов MFC**.  При изменении значения элемента управления изменяются данные выбранного класса.  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **Добавить класс**  
- Позволяет добавить класс из одного из нескольких источников.  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- В зависимости от сделанного выбора запускается **мастер добавления классов MFC**, **мастер добавления классов из библиотеки типов**, **мастер добавления классов из элемента управления ActiveX** или **мастер потребителей MFC ODBC**.  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **Базовый класс**  
- Базовый класс для конкретного класса отображается в поле **Имя класса**.  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **Объявление класса**  
- Класс, в котором объявлен класс **Имя класса**.  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- Поле **Объявление класса** отображается только в том случае, если имя в нем отличается от имени в поле **Реализация класса**.  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **Ресурс**  
- Идентификатор ресурса в **имени класса**, если таковые имеются.  В противном случае поле **Ресурс** будет пустым.  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **Реализация класса**  
- Имя файла, который содержит реализацию класса в **Имя класса**.  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- Можно выбрать различные реализации файла, нажав кнопку со стрелкой.  Доступные параметры перечислены в следующей таблице.  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|Команда|Описание|  
-|-------------|--------------|  
-|**Open File**|Выполняет выход из мастера классов и открывает  текущий файл реализации класса.|  
-|**Откройте содержащую папку**|Открывает папку, содержащую текущий файл реализации класса.|  
-|**Копирование полного пути в буфер обмена**|Копирует путь файла текущей реализации в буфер обмена.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **Команды**  
- Позволяет добавлять, удалять, изменять или искать команду и ее обработчик сообщений.  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- Для добавления обработчика нажмите кнопку **Добавить обработчик** или дважды щелкните элемент в списке **Идентификаторы объектов** или **Сообщения**.  Результирующее имя функции, идентификатор и сообщение отображаются в списке **Функции\-члены**.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- Чтобы удалить обработчик, выберите элемент в списке **Функции\-члены** и нажмите кнопку **Удалить обработчик**.  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- Чтобы изменить обработчик, дважды щелкните соответствующий элемент в списке **Функции\-члены**.  Либо выберите элемент в списке и щелкните **Изменить код**.  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **Сообщения**  
- Позволяет добавлять, удалять, изменять или искать сообщение и его обработчик.  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- Для добавления обработчика нажмите кнопку **Добавить обработчик** или дважды щелкните элемент в списке **Сообщения**.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- Чтобы добавить пользовательское сообщение, нажмите кнопку **Добавить пользовательское сообщение** или нажмите клавишу ВВОД и задайте значения в диалоговом окне **Добавление пользовательского сообщения**.  В этом диалоговом окне можно также выбрать **Зарегистрированное сообщение**, чтобы обрабатывать сообщение окна, которое является гарантированно уникальным во всей операционной системе.  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **Виртуальные функции**  
- Позволяет добавлять, удалять, изменять и искать виртуальную функцию или переопределенную виртуальную функцию.  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **Переменные\-члены**  
- Позволяет добавлять, удалять, изменять и искать переменную\-член.  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **Методы**  
- Позволяет добавлять, удалять и искать метод, а также переходить к определению или объявлению метода.  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- Чтобы добавить метод, нажмите кнопку **Добавить метод** и задайте значения в диалоговом окне **Добавление метода**.  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- Чтобы удалить метод, выберите элемент в списке **Методы** и нажмите кнопку **Удалить метод**.  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- Чтобы просмотреть объявление, выберите элемент в списке **Методы** и нажмите кнопку **Перейти к объявлению**.  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- Чтобы отобразить определение, дважды щелкните элемент в списке **Методы**.  Либо выберите элемент в списке **Методы** и нажмите кнопку **Перейти к определению**.  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## См. также  
- [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

@@ -1,82 +1,99 @@
 ---
-title: "Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, оптимизация"
-  - "MFC ActiveX - элементы управления, рисование"
+title: 'MFC ActiveX Controls: Painting an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], painting
+- MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bb07151fa696f34c74c6ed1021d116b2dd21f2ae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает процесс рисования элементов управления ActiveX и как можно изменить код рисования, чтобы оптимизировать процесс. \(См. [Оптимизировать рисование элементов управления](../mfc/optimizing-control-drawing.md) для методов, как оптимизировать рисование не содержать элементы управления по отдельности восстановление ранее выбранные объекты GDI.  После того как все элементы управления, вычерченны контейнер может автоматически восстановить исходные объекты\).  
+---
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX Controls: Painting an ActiveX Control
+This article describes the ActiveX control painting process and how you can alter paint code to optimize the process. (See [Optimizing Control Drawing](../mfc/optimizing-control-drawing.md) for techniques on how to optimize drawing by not having controls individually restore previously selected GDI objects. After all of the controls have been drawn, the container can automatically restore the original objects.)  
   
- Примеры в этой статье от элемента управления, созданного мастером элемента управления ActiveX MFC с параметрами по умолчанию.  Дополнительные сведения о создании схемы приложение элемента управления с помощью мастера элементов управления ActiveX MFC см. в статье [Мастер элементов ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).  
+ Examples in this article are from a control created by the MFC ActiveX Control Wizard with default settings. For more information on creating a skeleton control application using the MFC ActiveX Control Wizard, see the article [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md).  
   
- В следующих разделах рассмотрены:  
+ The following topics are covered:  
   
--   [Общий процесс для заливки фона элемента управления и код, созданными с помощью мастера элементов управления ActiveX для поддержки рисование](#_core_the_painting_process_of_an_activex_control)  
+-   [The overall process for painting a control and the code created by the ActiveX Control Wizard to support painting](#_core_the_painting_process_of_an_activex_control)  
   
--   [Как оптимизировать процесс рисования](#_core_optimizing_your_paint_code)  
+-   [How to optimize the painting process](#_core_optimizing_your_paint_code)  
   
--   [Как элемент управления с помощью рисование метафайлов](#_core_painting_your_control_using_metafiles)  
+-   [How to paint your control using metafiles](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a> Процесс рисования элементов управления ActiveX  
- Если элементы управления ActiveX отображаются исходная или перерисовать, они подчиняются процесс рисования аналогично другим приложениям начатым использование MFC, одним важным отличием: Элементы управления ActiveX могут находиться в активном или неактивном состоянии.  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> The Painting Process of an ActiveX Control  
+ When ActiveX controls are initially displayed or are redrawn, they follow a painting process similar to other applications developed using MFC, with one important distinction: ActiveX controls can be in an active or an inactive state.  
   
- Активный элемент управления представлен в контейнере элементов управления ActiveX дочерние окна.  Как и другие окна, он отвечает за рисование при `WM_PAINT` получено сообщение.  Базовый класс элемента управления, [COleControl](../mfc/reference/colecontrol-class.md) обрабатывает это сообщение в своей функции `OnPaint`.  Эта реализация по умолчанию вызывает функцию `OnDraw` элемента управления.  
+ An active control is represented in an ActiveX control container by a child window. Like other windows, it is responsible for painting itself when a `WM_PAINT` message is received. The control's base class, [COleControl](../mfc/reference/colecontrol-class.md), handles this message in its `OnPaint` function. This default implementation calls the `OnDraw` function of your control.  
   
- Неактивный элемент управления создается по\-разному.  Если элемент управления бездействия, его окно или незаметного или ее, поэтому он не может получить сообщение изображения.  Вместо этого контейнер элементов управления непосредственно вызывает функцию `OnDraw` элемента управления.  Это отличается от процесса рисования активным элементом управления тем, что функция\-член `OnPaint` никогда не вызывается.  
+ An inactive control is painted differently. When the control is inactive, its window is either invisible or nonexistent, so it can not receive a paint message. Instead, the control container directly calls the `OnDraw` function of the control. This differs from an active control's painting process in that the `OnPaint` member function is never called.  
   
- Как описано в предыдущих абзацах, как элемент управления ActiveX обновляется зависит от состояния элемента управления.  Однако поскольку платформа вызывает функцию\-член `OnDraw` в обоих случаях необходимо добавить большая часть кода рисования в этом функции\-члене.  
+ As discussed in the preceding paragraphs, how an ActiveX control is updated depends on the state of the control. However, because the framework calls the `OnDraw` member function in both cases, you add the majority of your painting code in this member function.  
   
- Функция\-член `OnDraw` обрабатывает изображение элемента управления.  Если элемент управления бездействия, контейнер элементов управления вызывает `OnDraw`, передавая контекст устройства контейнера элементов управления и координаты занятой прямоугольной области элемента управления.  
+ The `OnDraw` member function handles control painting. When a control is inactive, the control container calls `OnDraw`, passing the device context of the control container and the coordinates of the rectangular area occupied by the control.  
   
- Прямоугольник, передаваемый платформой в функцию\-член `OnDraw` содержит область занятую элементом управления.  Если элемент управления активен, верхний левый угол \(0, 0\), и контекст устройства для дочернего окна, содержащего элемент управления.  Если элемент управления бездействия, то верхняя левая координата не обязательно \(0, 0\), и контекст устройства для контейнера элементов управления, содержащую элемент управления.  
-  
-> [!NOTE]
->  Важно, чтобы изменения `OnDraw`  не зависят от точки прямоугольника верхней левой, равно 0 \(0\), а также создаваемые только внутри прямоугольника, переданного в `OnDraw`.  Непредвиденные результаты могут возникать при рисовании прямоугольника, области.  
-  
- По умолчанию предоставленная мастером реализация элемента управления ActiveX MFC в файле реализации элемента управления \(CPP\), показанном ниже, рисует прямоугольник с белой кистью и заливка эллипса с текущим цветом фона.  
-  
- [!code-cpp[NVC_MFC_AxUI#1](../mfc/codesnippet/CPP/mfc-activex-controls-painting-an-activex-control_1.cpp)]  
+ The rectangle passed by the framework to the `OnDraw` member function contains the area occupied by the control. If the control is active, the upper-left corner is (0, 0) and the device context passed is for the child window that contains the control. If the control is inactive, the upper-left coordinate is not necessarily (0, 0) and the device context passed is for the control container containing the control.  
   
 > [!NOTE]
->  Рисования элемента управления, не следует делать предположения о состоянии контекста устройства, передается в качестве параметра *pdc* функции `OnDraw`.  Иногда контекст устройства предоставляется из приложения контейнера и не обязательно будет инициализирован в состояние по умолчанию.  В частности, явно выделите перья, кисти цвета, шрифты и другие ресурсы, код рисования зависит от.  
+>  It is important that your modifications to `OnDraw` do not depend on the rectangle's upper left point being equal to (0, 0) and that you draw only inside the rectangle passed to `OnDraw`. Unexpected results can occur if you draw beyond the rectangle's area.  
   
-##  <a name="_core_optimizing_your_paint_code"></a> Оптимизировать код рисования  
- После того как элемент управления рисует успешно, следующим шагом является оптимизированной функции `OnDraw`.  
+ The default implementation provided by the MFC ActiveX Control Wizard in the control implementation file (.CPP), shown below, paints the rectangle with a white brush and fills the ellipse with the current background color.  
   
- Реализация по умолчанию элемент управления ActiveX рисования рисования весь участок регулирования.  Для этого достаточно простых элементов управления но во многих случаях обновление элемент управления будет быстрее, если только часть, необходимое обновление обновления, вместо всех элементов управления.  
+ [!code-cpp[NVC_MFC_AxUI#1](../mfc/codesnippet/cpp/mfc-activex-controls-painting-an-activex-control_1.cpp)]  
   
- Функция `OnDraw` предоставляет удобный метод оптимизации путем передачи `rcInvalid`, прямоугольную область элемента управления, которому необходимо перерисовки.  Эта область, обычно более чем все небольшой участок регулирования, чтобы ускорить процесс рисования.  
+> [!NOTE]
+>  When painting a control, you should not make assumptions about the state of the device context that is passed as the *pdc* parameter to the `OnDraw` function. Occasionally the device context is supplied by the container application and will not necessarily be initialized to the default state. In particular, explicitly select the pens, brushes, colors, fonts, and other resources that your drawing code depends upon.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a> Элемент управления с помощью рисование метафайлов  
- В большинстве случаев параметр `pdc` функции `OnDraw` указывает на контекст устройства \(DC\) экрана.  Однако при печати изображения элемента управления или во время сеанса предварительного просмотра, DC полученное для отрисовки вызывается особый тип «DC метафайла».  В отличие от DC экрана, непосредственно обрабатывает запросы, отправленные в него DC метафайла хранят запросы, воспроизведенным обратно позднее.  Некоторые приложение\-контейнеры могут выбрать изображение отрисовки элемента управления с помощью DC метафайлов в режиме конструктора.  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimizing Your Paint Code  
+ After the control is successfully painting itself, the next step is to optimize the `OnDraw` function.  
   
- Запросы рисование метафайлов может быть сделан контейнером до 2 функции интерфейса: **IViewObject::Draw** \(этой функции можно вызвать для рисования не метафайла\) и **IDataObject::GetData**.  При DC метафайла передается в качестве одного из параметров платформа MFC выполняется вызов [COleControl::OnDrawMetafile](../Topic/COleControl::OnDrawMetafile.md).  Поскольку это виртуальная функция\-член, переопределите этой функции в обработке задачи класса элемента управления все специальные.  Реакция на событие по умолчанию вызывает `COleControl::OnDraw`.  
+ The default implementation of ActiveX control painting paints the entire control area. This is sufficient for simple controls, but in many cases repainting the control would be faster if only the portion that needed updating was repainted, instead of the entire control.  
   
- Убедиться в элемент управления можно создавать и на экране и контексты устройств метафайла, необходимо использовать только функции\-члены, поддерживаются в экране, так и в DC метафайлов.  Следует помнить, что система координат, не может быть измерена в пикселях.  
+ The `OnDraw` function provides an easy method of optimization by passing `rcInvalid`, the rectangular area of the control that needs redrawing. Use this area, usually smaller than the entire control area, to speed up the painting process.  
   
- Поскольку реализация по умолчанию `OnDrawMetafile` вызывает функцию `OnDraw` элемента управления используется только в функциях\-членах, можно использовать как для метафайла, так и для контекста устройства экрана, если не переопределено `OnDrawMetafile`.  Ниже перечислены некоторые функции\-члены `CDC`, которые можно использовать в метафайле, так и в контексте устройства экрана.  Дополнительные сведения об этих функциях см. в описании класса [CDC](../Topic/CDC%20Class.md) в *справочнике по MFC*.  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Painting Your Control Using Metafiles  
+ In most cases the `pdc` parameter to the `OnDraw` function points to a screen device context (DC). However, when printing images of the control or during a print preview session, the DC received for rendering is a special type called a "metafile DC". Unlike a screen DC, which immediately handles requests sent to it, a metafile DC stores requests to be played back at a later time. Some container applications may also choose to render the control image using a metafile DC when in design mode.  
   
-|Дуги|BibBlt|Хорда|  
-|----------|------------|-----------|  
-|**Эллипс**|**Escape\-символ**|`ExcludeClipRect`|  
+ Metafile drawing requests can be made by the container through two interface functions: **IViewObject::Draw** (this function can also be called for non-metafile drawing) and **IDataObject::GetData**. When a metafile DC is passed as one of the parameters, the MFC framework makes a call to [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Because this is a virtual member function, override this function in the control class to do any special processing. The default behavior calls `COleControl::OnDraw`.  
+  
+ To make sure the control can be drawn in both screen and metafile device contexts, you must use only member functions that are supported in both a screen and a metafile DC. Be aware that the coordinate system may not be measured in pixels.  
+  
+ Because the default implementation of `OnDrawMetafile` calls the control's `OnDraw` function, use only member functions that are suitable for both a metafile and a screen device context, unless you override `OnDrawMetafile`. The following lists the subset of `CDC` member functions that can be used in both a metafile and a screen device context. For more information on these functions, see class [CDC](../mfc/reference/cdc-class.md) in the *MFC Reference*.  
+  
+|Arc|BibBlt|Chord|  
+|---------|------------|-----------|  
+|**Ellipse**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
@@ -91,25 +108,27 @@ caps.handback.revision: 6
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|  
 |`StretchBlt`|`TextOut`||  
   
- В дополнение к функциям элемента `CDC` существует несколько других функций, которые совместимы в DC метафайлов.  Они включают [CPalette::AnimatePalette](../Topic/CPalette::AnimatePalette.md), [CFont::CreateFontIndirect](../Topic/CFont::CreateFontIndirect.md) и 3 функции\-члена `CBrush`: [CreateBrushIndirect](../Topic/CBrush::CreateBrushIndirect.md), [CreateDIBPatternBrush](../Topic/CBrush::CreateDIBPatternBrush.md) и [CreatePatternBrush](../Topic/CBrush::CreatePatternBrush.md).  
+ In addition to `CDC` member functions, there are several other functions that are compatible in a metafile DC. These include [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect), and three member functions of `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), and [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).  
   
- Функции, не записываются в метафайле: [DrawFocusRect](../Topic/CDC::DrawFocusRect.md), [DrawIcon](../Topic/CDC::DrawIcon.md), [DrawText](../Topic/CDC::DrawText.md), [ExcludeUpdateRgn](../Topic/CDC::ExcludeUpdateRgn.md), [FillRect](../Topic/CDC::FillRect.md), [FrameRect](../Topic/CDC::FrameRect.md), [GrayString](../Topic/CDC::GrayString.md), [InvertRect](../Topic/CDC::InvertRect.md), [ScrollDC](../Topic/CDC::ScrollDC.md) и [TabbedTextOut](../Topic/CDC::TabbedTextOut.md).  Поскольку DC метафайла фактически не связано с устройством, нельзя использовать SetDIBits, GetDIBits и CreateDIBitmap с DC метафайлов.  Можно использовать SetDIBitsToDevice и StretchDIBits с DC метафайлов в качестве назначения.  [CreateCompatibleDC](../Topic/CDC::CreateCompatibleDC.md)[CreateDiscardableBitmap](../Topic/CBitmap::CreateDiscardableBitmap.md), [CreateCompatibleBitmap](../Topic/CBitmap::CreateCompatibleBitmap.md) и не имеют смысла с DC метафайлов.  
+ Functions that are not recorded in a metafile are: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), and [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Because a metafile DC is not actually associated with a device, you cannot use SetDIBits, GetDIBits, and CreateDIBitmap with a metafile DC. You can use SetDIBitsToDevice and StretchDIBits with a metafile DC as the destination. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), and [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) are not meaningful with a metafile DC.  
   
- Другая точка, когда использовать DC метафайла, что система координат, не может быть измерена в пикселях.  По этой причине весь код рисования должен быть изменен в соответствии с в прямоугольник, переданный `OnDraw`  в параметре `rcBounds`.  Это предотвращает случайное рисование вне элемента управления, так как `rcBounds` представляет размер окна элемента управления.  
+ Another point to consider when using a metafile DC is that the coordinate system may not be measured in pixels. For this reason, all your drawing code should be adjusted to fit in the rectangle passed to `OnDraw` in the `rcBounds` parameter. This prevents accidental painting outside the control because `rcBounds` represents the size of the control's window.  
   
- После реализации отрисовку метафайла служат для элемента управления используется тестовый контейнер для выполнения метафайл.  Сведения о доступе к тестовому контейнеру см. в разделе [Тестирование свойств и событий при помощи тестового контейнера](../mfc/testing-properties-and-events-with-test-container.md).  
+ After you have implemented metafile rendering for the control, use Test Container to test the metafile. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
   
-#### Выполнить метафайл элемента управления с помощью тестового контейнера  
+#### <a name="to-test-the-controls-metafile-using-test-container"></a>To test the control's metafile using Test Container  
   
-1.  В меню  **Изменить** тестового контейнера, щелкните **Вставьте новый элемент управления.**  
+1.  On the Test Container's **Edit** menu, click **Insert New Control**.  
   
-2.  В окне **Вставьте новый элемент управления.**  выберите элемент управления и нажмите **ОК**.  
+2.  In the **Insert New Control** box, select the control and click **OK**.  
   
-     Элемент управления отобразится в тестовый контейнер.  
+     The control will appear in Test container.  
   
-3.  В меню **Управление**  выберите пункт **Метафайл рисования**.  
+3.  On the **Control** menu, click **Draw Metafile**.  
   
-     Отдельное окно. при этом метафайл.  Можно изменить размер этого окна, чтобы увидеть, как влияет на метафайл масштабирование элемента управления.  Можно закрыть это окно в любое время.  
+     A separate window appears in which the metafile is displayed. You can change the size of this window to see how scaling affects the control's metafile. You can close this window at any time.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

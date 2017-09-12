@@ -1,46 +1,65 @@
 ---
-title: "Использование CStatusBarCtrl для создания объекта CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl - класс, создание"
-  - "элементы управления строкой состояния, создание"
+title: Using CStatusBarCtrl to Create a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bar controls [MFC], creating
+- CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование CStatusBarCtrl для создания объекта CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cc4f7e0b0639b228c70ca438096e341627bb2a56
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Ниже приведен пример типичного использования [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
+---
+# <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Using CStatusBarCtrl to Create a CStatusBarCtrl Object
+Here is an example of a typical use of [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
   
-### Использование элемента управления в строке состояния с частями  
+### <a name="to-use-a-status-bar-control-with-parts"></a>To use a status bar control with parts  
   
-1.  Создайте объект `CStatusBarCtrl`.  
+1.  Construct the `CStatusBarCtrl` object.  
   
-2.  Вызовите [SetMinHeight](../Topic/CStatusBarCtrl::SetMinHeight.md), если требуется указать минимальную высоту области рисования элемента управления строки состояния.  
+2.  Call [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) if you want to set the minimum height of the status bar control's drawing area.  
   
-3.  Вызовите метод [SetBkColor](../Topic/CStatusBarCtrl::SetBkColor.md), чтобы задать цвет фона элемента управления в строке состояния.  
+3.  Call [SetBkColor](../mfc/reference/cstatusbarctrl-class.md#setbkcolor) to set the background color of the status bar control.  
   
-4.  Вызовите метод [SetParts](../Topic/CStatusBarCtrl::SetParts.md), чтобы задать число частей в элементе управления строки состояния и координату правого края каждой из них.  
+4.  Call [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) to set the number of parts in a status bar control and the coordinate of the right edge of each part.  
   
-5.  Вызовите метод [SetText](../Topic/CStatusBarCtrl::SetText.md), чтобы задать текст в определенной части элемента управления в строке состояния.  Сообщение, что часть элемента управления, который был изменен, вызывая его отображения новый текст, когда элемент управления затем получает сообщение `WM_PAINT`.  
+5.  Call [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) to set the text in a given part of the status bar control. The message invalidates the portion of the control that has changed, causing it to display the new text when the control next receives the `WM_PAINT` message.  
   
- В некоторых случаях строку состояния только для отображения линии текста.  В этом случае вызывать в [SetSimple](../Topic/CStatusBarCtrl::SetSimple.md).  Это размещение элемента управления в строке состояния в «простой режим», который указывает отдельную линии текста.  
+ In some cases, the status bar only needs to display a line of text. In this case, make a call to [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). This puts the status bar control into "simple" mode, which displays a single line of text.  
   
-## См. также  
- [Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

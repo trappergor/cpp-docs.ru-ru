@@ -1,72 +1,90 @@
 ---
-title: "Исключения. Изменения макроса исключений в версии 3.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка исключений С++, аспекты обновления"
-  - "CATCH - макрос"
-  - "исключения, изменения по сравнению с предыдущей версией"
-  - "THROW_LAST - макрос"
+title: 'Exceptions: Changes to Exception Macros in Version 3.0 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ exception handling [MFC], upgrade considerations
+- CATCH macro [MFC]
+- exceptions [MFC], what's changed
+- THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Исключения. Изменения макроса исключений в версии 3.0
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d3046dae0bad83d8fffc98e5c93573c4efb9d919
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Это дополнительный раздел.  
+---
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions: Changes to Exception Macros in Version 3.0
+This is an advanced topic.  
   
- В MFC версии 3.0 и более поздних версиях, макросы обработки исключений были изменены для использования C исключений C\+\+.  Этот раздел показывает, как эти изменения могут повлиять на расширение функциональности существующего кода, использующий макросы.  
+ In MFC version 3.0 and later, the exception-handling macros have been changed to use C++ exceptions. This article tells how those changes can affect the behavior of existing code that uses the macros.  
   
- Этот раздел охватывает следующее:  
+ This article covers the following topics:  
   
--   [Типы исключений и макрос ПЕРЕХВАТА](#_core_exception_types_and_the_catch_macro)  
+-   [Exception types and the CATCH macro](#_core_exception_types_and_the_catch_macro)  
   
--   [Повторно при порождении исключения](#_core_re.2d.throwing_exceptions)  
+-   [Re-throwing exceptions](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a> Типы исключений и макрос ПЕРЕХВАТА  
- В более ранних версиях, MFC макрос **CATCH** используется данные типа во время выполнения MFC для указания типа исключения; тип исключения определяется, другими словами, на сайте catch.  С исключениями C\+\+, однако тип исключения всегда определяется на сайте хода типом объекта исключения, возникает.  Это приведет к несовместимости в тех редких случаях, когда тип указателя на объект брошенному отличается от типа создание объекта.  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Exception Types and the CATCH Macro  
+ In earlier versions of MFC, the **CATCH** macro used MFC run-time type information to determine an exception's type; the exception's type is determined, in other words, at the catch site. With C++ exceptions, however, the exception's type is always determined at the throw site by the type of the exception object that is thrown. This will cause incompatibilities in the rare case where the type of the pointer to the thrown object differs from the type of the thrown object.  
   
- В следующем примере показано последствия данного отличия между версии MFC 3.0 и более ранних версиях:  
+ The following example illustrates the consequence of this difference between MFC version 3.0 and earlier versions:  
   
- [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
   
- Этот код работает по\-разному в версии 3.0, поскольку элемент управления всегда передает в первый блок исключений с объявлением **catch**  сопоставления.  Результат выражения хода  
+ This code behaves differently in version 3.0 because control always passes to the first **catch** block with a matching exception-declaration. The result of the throw expression  
   
- [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- создает как **CException\***, даже если он построен как **CCustomException**.  Макрос **CATCH** в версии MFC 2.5 и более ранних версий используется `CObject::IsKindOf` для выполнения тип во время выполнения.  Поскольку выражение  
+ is thrown as a **CException\***, even though it is constructed as a **CCustomException**. The **CATCH** macro in MFC versions 2.5 and earlier uses `CObject::IsKindOf` to test the type at run time. Because the expression  
   
- [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
- либо, первые два блока catch перехватывает исключение.  В версии 3.0, которая использует исключения C\+\+ для реализации многих макросов обработки исключений, второй блок catch соответствует брошенному `CException`.  
+ is true, the first catch block catches the exception. In version 3.0, which uses C++ exceptions to implement many of the exception-handling macros, the second catch block matches the thrown `CException`.  
   
- Код, как показано ниже неупотребителен.  Оно обычно возникает, когда объект исключения передается другой функции, которая принимает универсальный шаблон **CException\***, выполняет «,» ход обработки и, наконец создает исключение.  
+ Code like this is uncommon. It usually appears when an exception object is passed to another function that accepts a generic **CException\***, performs "pre-throw" processing, and finally throws the exception.  
   
- Для решения этой проблемы перемещение выражение хода из функции в вызывающий код и создание исключения фактического типа известного компилятору это исключение создается.  
+ To work around this problem, move the throw expression from the function to the calling code and throw an exception of the actual type known to the compiler at the time the exception is generated.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a> Повторно при порождении исключения  
- Блок catch не может создавать один указатель исключения, он уловил.  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Re-Throwing Exceptions  
+ A catch block cannot throw the same exception pointer that it caught.  
   
- Например, этот код был допустимым в предыдущих версиях, но будет иметь непредвиденные результаты с версией 3.0:  
+ For example, this code was valid in previous versions, but will have unexpected results with version 3.0:  
   
- [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- Использование **THROW** в блоке catch, то при наведении указателя `e` должен быть удален, так как внешний сайт catch получила недопустимый указатель.  С помощью ход `e``THROW_LAST`.  
+ Using **THROW** in the catch block causes the pointer `e` to be deleted, so that the outer catch site will receive an invalid pointer. Use `THROW_LAST` to re-throw `e`.  
   
- Дополнительные сведения см. в разделе [Исключения: Улавливающ и удаление исключения](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+ For more information, see [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## См. также  
- [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

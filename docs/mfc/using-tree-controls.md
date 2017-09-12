@@ -1,44 +1,63 @@
 ---
-title: "Использование элементов управления древовидного типа | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl - класс, использование"
-  - "элементы управления "дерево", об элементах управления типа "дерево""
+title: Using Tree Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], using
+- tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование элементов управления древовидного типа
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 906a4ba64103450e4c2d8e0496a33bd9543122e0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Типичное потребление управления дерева \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\), соответствует шаблон ниже:  
+---
+# <a name="using-tree-controls"></a>Using Tree Controls
+Typical usage of a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) follows the pattern below:  
   
--   Элемент управления.  Если элемент управления определен в шаблоне диалогового окна или при использовании `CTreeView`, создание автоматически, когда диалоговое окно или представления создаются.  Если требуется создать элемент управления "Дерево" как дочернее окно какого\-либо окна, используйте функции\-члена [Создать](../Topic/CTreeCtrl::Create.md).  
+-   The control is created. If the control is specified in a dialog box template or if you're using `CTreeView`, creation is automatic when the dialog box or view is created. If you want to create the tree control as a child window of some other window, use the [Create](../mfc/reference/ctreectrl-class.md#create) member function.  
   
--   Если требуется, чтобы элемент управления "Дерево" использование изображений, выберите в списке изображений с помощью метода [SetImageList](../Topic/CTreeCtrl::SetImageList.md).  Можно также изменить отступ с помощью метода [SetIndent](../Topic/CTreeCtrl::SetIndent.md).  Для работы в этом режиме это [OnInitDialog](../Topic/CDialog::OnInitDialog.md) \(для элементов управления в диалоговых окнах\) или [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) \(для представления\).  
+-   If you want your tree control to use images, set an image list by calling [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). You can also change the indentation by calling [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). A good time to do this is in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (for controls in dialog boxes) or [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (for views).  
   
--   Размещение данных в элемент управления путем вызова функции `CTreeCtrl`[InsertItem](../Topic/CTreeCtrl::InsertItem.md) один раз для каждого элемента данных.  `InsertItem` возвращает дескриптор к элементу можно использовать ссылки на него далее, например добавление дочерних элементов.  Самое время работы инициализировать данные в `OnInitDialog` \(для элементов управления в диалоговых окнах\) или `OnInitialUpdate` \(для представления\).  
+-   Put data into the control by calling the `CTreeCtrl`'s [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) function once for each data item. `InsertItem` returns a handle to the item you can use to refer to it later, such as when adding child items. A good time to initialize the data is in `OnInitDialog` (for controls in dialog boxes) or `OnInitialUpdate` (for views).  
   
--   По мере того, как пользователь взаимодействует с элементом управления, он отправляет различные сообщения\-уведомления.  Можно задать функцию для обработки каждого из сообщений необходимо обработать, добавив макрос **ON\_NOTIFY\_REFLECT** в схеме сообщений окна элемента управления или путем добавления макрос `ON_NOTIFY` к схеме сообщений своего родительского окна.  См. подраздел [Сообщения уведомления элемента управления "Дерево"](../mfc/tree-control-notification-messages.md) далее в этом разделе список возможных уведомлений.  
+-   As the user interacts with the control, it will send various notification messages. You can specify a function to handle each of the messages you want to handle by adding an **ON_NOTIFY_REFLECT** macro in your control window's message map or by adding an `ON_NOTIFY` macro to your parent window's message map. See [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md) later in this topic for a list of possible notifications.  
   
--   Вызовите различные функции\-члены к значениям, заданным для элемента управления.  Изменения, которые можно сделать, чтобы включить параметр отступов и изменять текст, изображение или данные, связанные с элементом.  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the indentation and changing the text, image, or data associated with an item.  
   
--   Используйте другое сообщение, что функция просмотреть содержимое элемента управления.  Можно также траверза содержимого элемента управления дерева с функциями, которые позволяют извлекать дескрипторы в родительскиям, дочерним и одноуровневым указанного элемента.  Можно даже сортировка дочерних элементов указанного узла.  
+-   Use the various Get functions to examine the contents of the control. You can also traverse the contents of the tree control with functions that allow you to retrieve handles to parents, children, and siblings of a specified item. You can even sort the children of a particular node.  
   
--   По завершении с элементом управления, убедитесь, что он правильно уничтожается.  Если элемент управления "Дерево" в диалоговом окне или если представление, его и объект `CTreeCtrl` будут уничтожены автоматически.  Если нет, необходимо убедиться, что и элемент управления и объект `CTreeCtrl` правильно уничтожены.  
+-   When you're done with the control, make sure it's properly destroyed. If the tree control is in a dialog box or if it's a view, it and the `CTreeCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CTreeCtrl` object are properly destroyed.  
   
-## См. также  
- [Использование CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

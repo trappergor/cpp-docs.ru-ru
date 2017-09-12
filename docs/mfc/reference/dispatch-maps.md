@@ -1,5 +1,5 @@
 ---
-title: "Съемы | Документы Microsoft"
+title: Dispatch Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dispatch maps. macros
-- dispatch maps
-- dispatch map macros
+- dispatch maps [MFC], macros
+- dispatch maps [MFC]
+- dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 caps.latest.revision: 14
 author: mikeblome
@@ -35,86 +35,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d3c8ce6d9099df6f5c19ce8e699c13f8739b878
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dispatch-maps"></a>Схемы подготовки к отправке
-OLE-автоматизации предоставляет способы для вызова методов и доступа к свойствам в приложениях. Механизм, предоставляемые библиотеки классов Microsoft Foundation для диспетчеризации эти запросы — «диспетчеризации карта» представляет внутренние и внешние имена объекта функции и свойства, а также типы данных непосредственно из свойств и аргументов функции.  
+# <a name="dispatch-maps"></a>Dispatch Maps
+OLE Automation provides ways to call methods and to access properties across applications. The mechanism supplied by the Microsoft Foundation Class Library for dispatching these requests is the "dispatch map," which designates the internal and external names of object functions and properties, as well as the data types of the properties themselves and of function arguments.  
   
-### <a name="dispatch-maps"></a>Схемы подготовки к отправке  
+### <a name="dispatch-maps"></a>Dispatch Maps  
   
 |||  
 |-|-|  
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Объявляет, что карта распределения будет использоваться для предоставления класса методы и свойства (необходимо использовать в объявлении класса).|  
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Начинается определение карту диспетчеризации.|  
-|[END_DISPATCH_MAP](#end_dispatch_map)|Завершает определение карту диспетчеризации.|  
-|[DISP_FUNCTION](#disp_function)|Используется в карте распределения для определения функции автоматизации OLE.|  
-|[DISP_PROPERTY](#disp_property)|Определяет свойство автоматизации OLE.|  
-|[DISP_PROPERTY_EX](#disp_property_ex)|Определяет свойство автоматизации OLE и имена функций Get и Set.|  
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Определяет свойство автоматизации OLE с уведомлением.|  
-|[DISP_PROPERTY_PARAM](#disp_property_param)|Определяет свойство автоматизации OLE, которая принимает параметры и имена функций Get и Set.|  
-|[DISP_DEFVALUE](#disp_defvalue)|Делает существующее свойство объекта, значение по умолчанию.|  
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Declares that a dispatch map will be used to expose a class's methods and properties (must be used in the class declaration).|  
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Starts the definition of a dispatch map.|  
+|[END_DISPATCH_MAP](#end_dispatch_map)|Ends the definition of a dispatch map.|  
+|[DISP_FUNCTION](#disp_function)|Used in a dispatch map to define an OLE automation function.|  
+|[DISP_PROPERTY](#disp_property)|Defines an OLE automation property.|  
+|[DISP_PROPERTY_EX](#disp_property_ex)|Defines an OLE automation property and names the Get and Set functions.|  
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Defines an OLE automation property with notification.|  
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Defines an OLE automation property that takes parameters and names the Get and Set functions.|  
+|[DISP_DEFVALUE](#disp_defvalue)|Makes an existing property the default value of an object.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
- Если `CCmdTarget`-производный класс в программе поддерживает OLE-автоматизации, что класс должен предоставлять карту диспетчеризации, чтобы предоставить его методы и свойства.  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
+ If a `CCmdTarget`-derived class in your program supports OLE Automation, that class must provide a dispatch map to expose its methods and properties.  
   
 ```   
 DECLARE_DISPATCH_MAP()  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Используйте `DECLARE_DISPATCH_MAP` макрос в конце объявления класса. Затем в. CPP-файл, который определяет член функции для класса, используйте `BEGIN_DISPATCH_MAP` макрос. Включите записи макроса для каждого класса представленной в методы и свойства ( `DISP_FUNCTION`, `DISP_PROPERTY`и так далее). Наконец, используйте `END_DISPATCH_MAP` макрос.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_DISPATCH_MAP` macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the `BEGIN_DISPATCH_MAP` macro. Then include macro entries for each of your class's exposed methods and properties ( `DISP_FUNCTION`, `DISP_PROPERTY`, and so on). Finally, use the `END_DISPATCH_MAP` macro.  
   
 > [!NOTE]
->  При объявлении элементов после `DECLARE_DISPATCH_MAP`, необходимо указать новый тип доступа ( **открытый**, `private`, или `protected`) для них.  
+>  If you declare any members after `DECLARE_DISPATCH_MAP`, you must specify a new access type ( **public**, `private`, or `protected`) for them.  
   
- Мастера приложений и кода мастера помогают в создании классов автоматизации и обслуживание схемы подготовки к отправке. Дополнительные сведения о картах диспетчеризации см [серверы автоматизации](../../mfc/automation-servers.md).  
+ The Application Wizard and code wizards assist in creating Automation classes and in maintaining dispatch maps. For more information on dispatch maps, see [Automation Servers](../../mfc/automation-servers.md).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCAutomation&#10;](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
- Объявляет определение карту диспетчеризации.  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
+ Declares the definition of your dispatch map.  
   
 ```  
 BEGIN_DISPATCH_MAP(theClass, baseClass)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Задает имя класса, который является владельцем этой карты распределения.  
+ Specifies the name of the class that owns this dispatch map.  
   
  `baseClass`  
- Указывает имя базового класса `theClass`.  
+ Specifies the base class name of `theClass`.  
   
-### <a name="remarks"></a>Примечания  
- В файле реализации (CPP), который определяет функции-члены класса, запустите карту диспетчеризации с `BEGIN_DISPATCH_MAP` макрос, добавьте записи макроса для каждой функции отправки и свойств и завершения отправки карты с `END_DISPATCH_MAP` макрос.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the dispatch map with the `BEGIN_DISPATCH_MAP` macro, add macro entries for each of your dispatch functions and properties, and complete the dispatch map with the `END_DISPATCH_MAP` macro.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
- Завершает определение карту диспетчеризации.  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
+ Ends the definition of your dispatch map.  
   
 ```   
 END_DISPATCH_MAP()  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Он должен использоваться в сочетании с `BEGIN_DISPATCH_MAP`.  
+### <a name="remarks"></a>Remarks  
+ It must be used in conjunction with `BEGIN_DISPATCH_MAP`.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
- Определяет функцию автоматизации OLE в карту диспетчеризации.  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
+ Defines an OLE automation function in a dispatch map.  
   
 ```   
 DISP_FUNCTION(
@@ -125,34 +125,34 @@ DISP_FUNCTION(
   vtsParams)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Имя класса.  
+ Name of the class.  
   
  `pszName`  
- Внешнее имя функции.  
+ External name of the function.  
   
  `pfnMember`  
- Имя функции-члена.  
+ Name of the member function.  
   
  `vtRetVal`  
- Значение, указывающее тип возвращаемого функцией значения.  
+ A value specifying the function's return type.  
   
  `vtsParams`  
- Разделенный пробелами список из одной или нескольких констант, указав список параметров функции.  
+ A space-separated list of one or more constants specifying the function's parameter list.  
   
-### <a name="remarks"></a>Примечания  
- `vtRetVal` Аргумент имеет тип **VARTYPE**. Следующие возможные значения для этого аргумента взяты из `VARENUM` перечисления:  
+### <a name="remarks"></a>Remarks  
+ The `vtRetVal` argument is of type **VARTYPE**. The following possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|Символ|Тип возвращаемого значения|  
+|Symbol|Return type|  
 |------------|-----------------|  
 |`VT_EMPTY`|`void`|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
-|`VT_CY`|**ПОЛУГОДИЕ**|  
-|`VT_DATE`|**ДАТА**|  
+|`VT_CY`|**CY**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`BSTR`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -160,47 +160,47 @@ DISP_FUNCTION(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из этих значений, разделенных пробелами (не запятые) Указывает список параметров функции. Например: 
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example, 
   
- [!code-cpp[NVC_MFCAutomation&#14;](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
   
- Указывает список, содержащий короткое целое число, следуют указатель короткое целое число со знаком.  
+ specifies a list containing a short integer followed by a pointer to a short integer.  
   
- **VTS_** константы имеют следующим образом:  
+ The **VTS_** constants and their meanings are as follows:  
   
-|Символ|Тип параметра|  
+|Symbol|Parameter type|  
 |------------|--------------------|  
 |**VTS_I2**|`Short`|  
 |**VTS_I4**|`Long`|  
-|**VTS_R4**|**Число с плавающей запятой**|  
+|**VTS_R4**|**Float**|  
 |**VTS_R8**|`Double`|  
-|**VTS_CY**|**const CY** или **кг\***|  
-|**VTS_DATE**|**ДАТА**|  
+|**VTS_CY**|**const CY** or **CY\***|  
+|**VTS_DATE**|**DATE**|  
 |**VTS_BSTR**|`LPCSTR`|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const ВАРИАНТ\* ** или **VARIANT &**|  
+|**VTS_VARIANT**|**const VARIANT\*** or **VARIANT&**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**короткий\***|  
-|**VTS_PI4**|**длинное\***|  
-|**VTS_PR4**|**число с плавающей запятой\***|  
-|**VTS_PR8**|**Double\***|  
-|**VTS_PCY**|**ПОЛУГОДИЕ\***|  
-|**VTS_PDATE**|**ДАТА\***|  
+|**VTS_PI2**|**short\***|  
+|**VTS_PI4**|**long\***|  
+|**VTS_PR4**|**float\***|  
+|**VTS_PR8**|**double\***|  
+|**VTS_PCY**|**CY\***|  
+|**VTS_PDATE**|**DATE\***|  
 |**VTS_PBSTR**|**BSTR\***|  
 |**VTS_PDISPATCH**|**LPDISPATCH\***|  
 |**VTS_PSCODE**|**SCODE\***|  
 |**VTS_PBOOL**|**BOOL\***|  
 |**VTS_PVARIANT**|**VARIANT\***|  
 |**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
-|**VTS_NONE**|Без параметров|  
+|**VTS_NONE**|No parameters|  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
- Определяет свойство автоматизации OLE в карту диспетчеризации.  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
+ Defines an OLE automation property in a dispatch map.  
   
 ```   
 DISP_PROPERTY(
@@ -210,30 +210,30 @@ DISP_PROPERTY(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Имя класса.  
+ Name of the class.  
   
  `pszName`  
- Внешнее имя свойства.  
+ External name of the property.  
   
  `memberName`  
- Имя переменной-члена, в котором хранится свойство.  
+ Name of the member variable in which the property is stored.  
   
  `vtPropType`  
- Значение, указывающее тип свойства.  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>Примечания  
- `vtPropType` Аргумент имеет тип **VARTYPE**. Возможные значения для этого аргумента взяты из `VARENUM` перечисления:  
+### <a name="remarks"></a>Remarks  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|Символ|**Тип свойства**|  
+|Symbol|**Property type**|  
 |------------|-----------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
-|`VT_CY`|**ПОЛУГОДИЕ**|  
-|`VT_DATE`|**ДАТА**|  
+|`VT_CY`|**CY**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -241,13 +241,13 @@ DISP_PROPERTY(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- Изменения свойства, значение переменной-члена, определяемое внешнего клиента `memberName` изменяет; нет уведомлений об изменении.  
+ When an external client changes the property, the value of the member variable specified by `memberName` changes; there is no notification of the change.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
- Определяет свойство автоматизации OLE и имя функции, используемые для получения и задания значения свойства в карту диспетчеризации.  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
+ Defines an OLE automation property and name the functions used to get and set the property's value in a dispatch map.  
   
 ```   
 DISP_PROPERTY_EX(
@@ -258,32 +258,32 @@ DISP_PROPERTY_EX(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Имя класса.  
+ Name of the class.  
   
  `pszName`  
- Внешнее имя свойства.  
+ External name of the property.  
   
  `memberGet`  
- Имя функции-члена используется для получения свойства.  
+ Name of the member function used to get the property.  
   
  `memberSet`  
- Имя функции-члена используется для задания свойства.  
+ Name of the member function used to set the property.  
   
  `vtPropType`  
- Значение, указывающее тип свойства.  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>Примечания  
- `memberGet` И `memberSet` функции имеют подписи определяется `vtPropType` аргумент. `memberGet` Функция не принимает аргументы и возвращает значение типа, указанного параметром `vtPropType`. `memberSet` Функция принимает аргумент типа, указанного в `vtPropType` и не возвращает ничего.  
+### <a name="remarks"></a>Remarks  
+ The `memberGet` and `memberSet` functions have signatures determined by the `vtPropType` argument. The `memberGet` function takes no arguments and returns a value of the type specified by `vtPropType`. The `memberSet` function takes an argument of the type specified by `vtPropType` and returns nothing.  
   
- `vtPropType` Аргумент имеет тип **VARTYPE**. Возможные значения для этого аргумента взяты из `VARENUM` перечисления. Список этих значений см `vtRetVal` параметр в [DISP_FUNCTION](#disp_function). Обратите внимание, что `VT_EMPTY`, перечисленных в `DISP_FUNCTION` примечания, запрещается использовать как тип данных свойства.  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration. For a list of these values, see the Remarks for the `vtRetVal` parameter in [DISP_FUNCTION](#disp_function). Note that `VT_EMPTY`, listed in the `DISP_FUNCTION` remarks, is not permitted as a property data type.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
- Определяет свойство автоматизации OLE с уведомлением в карту диспетчеризации.  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
+ Defines an OLE automation property with notification in a dispatch map.  
   
 ```   
 DISP_PROPERTY_NOTIFY(
@@ -294,35 +294,35 @@ DISP_PROPERTY_NOTIFY(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Имя класса.  
+ Name of the class.  
   
  `szExternalName`  
- Внешнее имя свойства.  
+ External name of the property.  
   
  `memberName`  
- Имя переменной-члена, в котором хранится свойство.  
+ Name of the member variable in which the property is stored.  
   
  `pfnAfterSet`  
- Имя функции уведомления для `szExternalName`.  
+ Name of the notification function for `szExternalName`.  
   
  `vtPropType`  
- Значение, указывающее тип свойства.  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>Примечания  
- В отличие от свойства, определяемые `DISP_PROPERTY`, свойство, определенное с `DISP_PROPERTY_NOTIFY` будет автоматически вызывать функции, указанной `pfnAfterSet` при изменении свойства.  
+### <a name="remarks"></a>Remarks  
+ Unlike properties defined with `DISP_PROPERTY`, a property defined with `DISP_PROPERTY_NOTIFY` will automatically call the function specified by `pfnAfterSet` when the property is changed.  
   
- `vtPropType` Аргумент имеет тип **VARTYPE**. Возможные значения для этого аргумента взяты из `VARENUM` перечисления:  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|Символ|**Тип свойства**|  
+|Symbol|**Property type**|  
 |------------|-----------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
-|`VT_CY`|**ПОЛУГОДИЕ**|  
-|`VT_DATE`|**ДАТА**|  
+|`VT_CY`|**CY**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -330,11 +330,11 @@ DISP_PROPERTY_NOTIFY(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
- Определяет свойство, доступ с помощью отдельных **получить** и `Set` функции-члены.  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
+ Defines a property accessed with separate **Get** and `Set` member functions.  
   
 ```   
 DISP_PROPERTY_PARAM(
@@ -346,70 +346,70 @@ DISP_PROPERTY_PARAM(
   vtsParams)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Имя класса.  
+ Name of the class.  
   
  *pszExternalName*  
- Внешнее имя свойства.  
+ External name of the property.  
   
  `pfnGet`  
- Имя функции-члена используется для получения свойства.  
+ Name of the member function used to get the property.  
   
  `pfnSet`  
- Имя функции-члена используется для задания свойства.  
+ Name of the member function used to set the property.  
   
  `vtPropType`  
- Значение, указывающее тип свойства.  
+ A value specifying the property's type.  
   
  `vtsParams`  
- Строка разделенных запятыми **VTS_** типов variant параметра, один для каждого параметра.  
+ A string of space-separated **VTS_** variant parameter types, one for each parameter.  
   
-### <a name="remarks"></a>Примечания  
- В отличие от `DISP_PROPERTY_EX` макрос, этот макрос можно указать список параметров для свойства. Это полезно для реализации, индексирование или параметризованные свойства.  
+### <a name="remarks"></a>Remarks  
+ Unlike the `DISP_PROPERTY_EX` macro, this macro allows you to specify a parameter list for the property. This is useful for implementing properties that are indexed or parameterized.  
   
-### <a name="example"></a>Пример  
- Рассмотрим следующее объявление get и набора функций, которые позволяют пользователю для запроса конкретных строк и столбцов при доступе к свойству:  
+### <a name="example"></a>Example  
+ Consider the following declaration of get and set member functions that allow the user to request a specific row and column when accessing the property:  
   
- [!code-cpp[NVC_MFCActiveXControl №&9;](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
+ [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
   
- Эти значения соответствуют следующим `DISP_PROPERTY_PARAM` макрос в карте распределения элементов управления:  
+ These correspond to the following `DISP_PROPERTY_PARAM` macro in the control dispatch map:  
   
- [!code-cpp[NVC_MFCActiveXControl&#10;](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]  
   
- В качестве другого примера рассмотрим следующие get и набора функций:  
+ As another example, consider the following get and set member functions:  
   
- [!code-cpp[NVC_MFCActiveXControl&11;](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]  
+ [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]  
   
- Эти значения соответствуют следующим `DISP_PROPERTY_PARAM` макрос в карте распределения элементов управления:  
+ These correspond to the following `DISP_PROPERTY_PARAM` macro in the control dispatch map:  
   
- [!code-cpp[NVC_MFCActiveXControl&#12;](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
- Делает существующее свойство объекта, значение по умолчанию.  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
+ Makes an existing property the default value of an object.  
   
 ```   
 DISP_DEFVALUE(theClass, pszName)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Имя класса.  
+ Name of the class.  
   
  `pszName`  
- Внешнее имя свойство, представляющее объекта «значение».  
+ External name of the property that represents the "value" of the object.  
   
-### <a name="remarks"></a>Примечания  
- Значения по умолчанию можно сделать программирование объекта автоматизации проще для приложений Visual Basic.  
+### <a name="remarks"></a>Remarks  
+ Using a default value can make programming your automation object simpler for Visual Basic applications.  
   
- «Значение по умолчанию» объекта — свойство, получить или задать, когда ссылка на объект не указывает свойство или функции-члена.  
+ The "default value" of your object is the property that is retrieved or set when a reference to an object does not specify a property or member function.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

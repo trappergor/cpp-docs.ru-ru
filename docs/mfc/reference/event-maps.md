@@ -1,5 +1,5 @@
 ---
-title: "Схемы событий | Документы Microsoft"
+title: Event Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- event maps
+- event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 caps.latest.revision: 15
 author: mikeblome
@@ -33,130 +33,130 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 4c4777496ce609d7c2fa20da726f211264095b6e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee32b4e0f891c71bbc899dbf93949d8abededcb2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="event-maps"></a>Схемы событий
-Всякий раз, когда элемент управления, которые будут уведомлять его контейнера, что произошло какое-либо действие (определяется разработчиком элемента управления), (например, нажатие клавиши, щелчок мыши или изменение состояния элемента управления), он вызывает функцию запуска событий. Эта функция уведомляет о произошедшем некоторые важные действия, связанные события контейнера элемента управления.  
+# <a name="event-maps"></a>Event Maps
+Whenever a control wishes to notify its container that some action (determined by the control developer) has happened (such as a keystroke, mouse click, or a change to the control's state) it calls an event-firing function. This function notifies the control container that some important action has occurred by firing the related event.  
   
- Библиотеки классов Microsoft Foundation предоставляет модель программирования, оптимизированный для инициирования событий. В этой модели «схемы событий» позволяют указать, какие функции срабатывают какие события для конкретного элемента управления. Схемы событий содержат один макрос для каждого события. Например схема событий, запускают stock щелкните событие может выглядеть следующим образом:  
+ The Microsoft Foundation Class Library offers a programming model optimized for firing events. In this model, "event maps" are used to designate which functions fire which events for a particular control. Event maps contain one macro for each event. For example, an event map that fires a stock Click event might look like this:  
   
- [!code-cpp[NVC_MFCAxCtl №&16;](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]  
   
- **EVENT_STOCK_CLICK** макрос указывает, что элемент управления будет срабатывать stock выберите событие каждый раз при обнаружении мышь, нажмите кнопку. Более подробное описание других стандартных событий, см. в статье [элементы управления ActiveX: события](../../mfc/mfc-activex-controls-events.md). Макросы используются также для указания пользовательских событий.  
+ The **EVENT_STOCK_CLICK** macro indicates that the control will fire a stock Click event every time it detects a mouse click. For a more detailed listing of other stock events, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md). Macros are also available to indicate custom events.  
   
- Несмотря на то, что макросы схемы событий являются важными, обычно не будет вставлена их напрямую. Это вызвано окно свойств автоматически создает записи карты событий в исходные файлы при использовании связывание функции обработки событий с событиями. Каждый раз, когда нужно изменить или добавить запись событий карты, можно использовать окно свойств.  
+ Although event-map macros are important, you generally do not insert them directly. This is because the Properties window automatically creates event-map entries in your source files when you use it to associate event-firing functions with events. Any time you want to edit or add an event-map entry, you can use the Properties window.  
   
- Для поддержки схемы событий, MFC предоставляет следующие макросы:  
+ To support event maps, MFC provides the following macros:  
   
-### <a name="event-map-declaration-and-demarcation"></a>Объявление события карты и определение границ  
-  
-|||  
-|-|-|  
-|[DECLARE_EVENT_MAP](#declare_event_map)|Объявляет, что схема событий будет использоваться в классе для сопоставления событий для события Click функции (необходимо использовать в объявлении класса).|  
-|[BEGIN_EVENT_MAP](#begin_event_map)|Начинается определение картой событий (необходимо использовать реализацию класса).|  
-|[END_EVENT_MAP](#end_event_map)|Завершает определение картой событий (необходимо использовать реализацию класса).|  
-  
-### <a name="event-mapping-macros"></a>Макросы сопоставления событий  
+### <a name="event-map-declaration-and-demarcation"></a>Event Map Declaration and Demarcation  
   
 |||  
 |-|-|  
-|[EVENT_CUSTOM](#event_custom)|Указывает, какую функцию запуска событий будут срабатывать указанного события.|  
-|[EVENT_CUSTOM_ID](#event_custom_id)|Указывает, какую функцию запуска событий будут срабатывать указанное событие с идентификатором назначенного диспетчеризации.|  
+|[DECLARE_EVENT_MAP](#declare_event_map)|Declares that an event map will be used in a class to map events to event-firing functions (must be used in the class declaration).|  
+|[BEGIN_EVENT_MAP](#begin_event_map)|Begins the definition of an event map (must be used in the class implementation).|  
+|[END_EVENT_MAP](#end_event_map)|Ends the definition of an event map (must be used in the class implementation).|  
   
-### <a name="message-mapping-macros"></a>Макросы сопоставления сообщений  
+### <a name="event-mapping-macros"></a>Event Mapping Macros  
   
 |||  
 |-|-|  
-|[ON_OLEVERB](#on_oleverb)|Указывает пользовательских команд, обрабатываются элементом управления OLE.|  
-|[ON_STDOLEVERB](#on_stdoleverb)|Переопределяет сопоставление стандартные команды управления OLE.|  
+|[EVENT_CUSTOM](#event_custom)|Indicates which event-firing function will fire the specified event.|  
+|[EVENT_CUSTOM_ID](#event_custom_id)|Indicates which event-firing function will fire the specified event, with a designated dispatch ID.|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
- Каждый `COleControl`-производный класс в программе может предоставлять картой событий для указания событий, элемент управления будет срабатывать.  
+### <a name="message-mapping-macros"></a>Message Mapping Macros  
+  
+|||  
+|-|-|  
+|[ON_OLEVERB](#on_oleverb)|Indicates a custom verb handled by the OLE control.|  
+|[ON_STDOLEVERB](#on_stdoleverb)|Overrides a standard verb mapping of the OLE control.|  
+  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
+ Each `COleControl`-derived class in your program can provide an event map to specify the events your control will fire.  
   
 ```   
 DECLARE_EVENT_MAP()   
 ```  
   
-### <a name="remarks"></a>Примечания  
- Используйте `DECLARE_EVENT_MAP` макрос в конце объявления класса. В CPP-файле, который определяет функции-члены класса, используйте `BEGIN_EVENT_MAP` макрос, макрос операции для каждого из событий элемента управления и `END_EVENT_MAP` макрос для объявления в конец списка событий.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_EVENT_MAP` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_EVENT_MAP` macro, macro entries for each of the control's events, and the `END_EVENT_MAP` macro to declare the end of the event list.  
   
- Дополнительные сведения о картах событий см. в статье [элементы управления ActiveX: события](../../mfc/mfc-activex-controls-events.md).  
+ For more information on event maps, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
- Начинается определение карты событий.  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
+ Begins the definition of your event map.  
   
 ```   
 BEGIN_EVENT_MAP(theClass,  baseClass)  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Указывает, что имя класса элемента управления, событие которого сопоставления.  
+ Specifies the name of the control class whose event map this is.  
   
  `baseClass`  
- Указывает имя базового класса `theClass`.  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>Примечания  
- В файле реализации (CPP), который определяет функции-члены класса, запустить сопоставление событий с `BEGIN_EVENT_MAP` макрос, затем добавить макрос записи для каждого события и выполнить сопоставление событий с `END_EVENT_MAP` макрос.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the event map with the `BEGIN_EVENT_MAP` macro, then add macro entries for each of your events, and complete the event map with the `END_EVENT_MAP` macro.  
   
- Дополнительные сведения о событии сопоставляет и `BEGIN_EVENT_MAP` макрос, см. в статье [элементы управления ActiveX: события](../../mfc/mfc-activex-controls-events.md).  
+ For more information on event maps and the `BEGIN_EVENT_MAP` macro, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
- Используйте `END_EVENT_MAP` макрос для завершения определения события карты.  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
+ Use the `END_EVENT_MAP` macro to end the definition of your event map.  
   
 ```   
 END_EVENT_MAP()   
 ```  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
- Определяет запись событий карты для пользовательских событий.  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
+ Defines an event-map entry for a custom event.  
   
 ```   
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pszName`  
- Имя события.  
+ The name of the event.  
   
  `pfnFire`  
- Имя события функции.  
+ The name of the event firing function.  
   
  `vtsParams`  
- Разделенный пробелами список из одной или нескольких констант, указав список параметров функции.  
+ A space-separated list of one or more constants specifying the function's parameter list.  
   
-### <a name="remarks"></a>Примечания  
- `vtsParams` Параметр является разделенный пробелами список значений из **VTS_** константы. Один или несколько из этих значений, разделенных пробелами (не запятые) Указывает список параметров функции. Пример:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` parameter is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCActiveXControl&#13;](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
- Указывает список, содержащий 32-разрядное целое число, представляющее RGB цвета значение, следуют указатель **IFontDisp** интерфейс OLE-объекта шрифта.  
+ specifies a list containing a 32-bit integer representing an RGB color value, followed by a pointer to the **IFontDisp** interface of an OLE font object.  
   
- **VTS_** константы имеют следующим образом:  
+ The **VTS_** constants and their meanings are as follows:  
   
-|Символ|Тип параметра|  
+|Symbol|Parameter type|  
 |------------|--------------------|  
 |**VTS_I2**|**short**|  
 |**VTS_I4**|**long**|  
 |**VTS_R4**|**float**|  
 |**VTS_R8**|**double**|  
 |**VTS_COLOR**|**OLE_COLOR**|  
-|**VTS_CY**|**ВАЛЮТА**|  
-|**VTS_DATE**|**ДАТА**|  
+|**VTS_CY**|**CURRENCY**|  
+|**VTS_DATE**|**DATE**|  
 |**VTS_BSTR**|**const char\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_FONT**|**IFontDispatch\***|  
@@ -179,13 +179,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_YSIZE_HIMETRIC**|**OLE_YSIZE_HIMETRIC**|  
   
 > [!NOTE]
->  Дополнительные variant константы определены для всех типов variant, за исключением класса **VTS_FONT** и **VTS_PICTURE**, обеспечивающие указатель константы данных variant. Эти константы именуются **VTS_P** `constantname` соглашение. Например **VTS_PCOLOR** — это указатель на **VTS_COLOR** константой.  
+>  Additional variant constants have been defined for all variant types, with the exception of **VTS_FONT** and **VTS_PICTURE**, that provide a pointer to the variant data constant. These constants are named using the **VTS_P**`constantname` convention. For example, **VTS_PCOLOR** is a pointer to a **VTS_COLOR** constant.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
- Определяет события для пользовательского события, относящегося к диспетчеризации Идентификатором, указанным параметром функцию `dispid`.  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
+ Defines an event firing function for a custom event belonging to the dispatch ID specified by `dispid`.  
   
 ```   
 EVENT_CUSTOM_ID(
@@ -196,83 +196,83 @@ EVENT_CUSTOM_ID(
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pszName`  
- Имя события.  
+ The name of the event.  
   
  `dispid`  
- Идентификатор диспетчеризации, используемые элементом управления при порождении события.  
+ The dispatch ID used by the control when firing the event.  
   
  `pfnFire`  
- Имя события функции.  
+ The name of the event firing function.  
   
  `vtsParams`  
- Список параметров переменной передается контейнера элемента управления, когда событие.  
+ A variable list of parameters passed to the control container when the event is fired.  
   
-### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из этих значений, разделенных пробелами, запятыми, указывает список параметров функции. Пример:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces, not commas, specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCActiveXControl&#13;](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
- Указывает список, содержащий 32-разрядное целое число, представляющее RGB цвета значение, следуют указатель **IFontDisp** интерфейс OLE-объекта шрифта.  
+ specifies a list containing a 32-bit integer representing an RGB color value, followed by a pointer to the **IFontDisp** interface of an OLE font object.  
   
- Список **VTS_** константы, в разделе [EVENT_CUSTOM](#event_custom).  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](#event_custom).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
- Этот макрос определяет запись карты сообщения, которая сопоставляет пользовательских команд для функции-члена конкретного элемента управления.  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
+ This macro defines a message map entry that maps a custom verb to a specific member function of your control.  
   
 ```   
 ON_OLEVERB(idsVerbName,  memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *idsVerbName*  
- Идентификатор строкового ресурса имени команды.  
+ The string resource ID of the verb's name.  
   
  `memberFxn`  
- Функция вызывается инфраструктурой при вызове команды.  
+ The function called by the framework when the verb is invoked.  
   
-### <a name="remarks"></a>Примечания  
- Редактор ресурсов может использоваться для создания имен пользовательских команд, которые добавляются в таблицу строки.  
+### <a name="remarks"></a>Remarks  
+ The resource editor can be used to create custom verb names that are added to your string table.  
   
- Прототип функции для `memberFxn` является:  
+ The function prototype for `memberFxn` is:  
   
  `BOOL memberFxn(`    
  `LPMSG` `lpMsg` `,`   
  `HWND` `hWndParent` `,`   
  `LPCRECT` `lpRect`   `);`  
   
- Значения `lpMsg`, `hWndParent`, и `lpRect` параметры берутся из соответствующих параметров **функция IOleObject::DoVerb** функции-члена.  
+ The values of the `lpMsg`, `hWndParent`, and `lpRect` parameters are taken from the corresponding parameters of the **IOleObject::DoVerb** member function.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxole.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxole.h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
- Используйте этот макрос для переопределения поведения по умолчанию используется стандартная команда.  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
+ Use this macro to override the default behavior of a standard verb.  
   
 ```   
 ON_STDOLEVERB(iVerb,   memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `iVerb`  
- Индекс стандартные команды для переопределения команды.  
+ The standard verb index for the verb being overridden.  
   
  `memberFxn`  
- Функция вызывается инфраструктурой при вызове команды.  
+ The function called by the framework when the verb is invoked.  
   
-### <a name="remarks"></a>Примечания  
- Индекс стандартная команда имеет вид **OLEIVERB_**, а затем действие. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, и `OLEIVERB_UIACTIVATE` приведены примеры стандартных команд.  
+### <a name="remarks"></a>Remarks  
+ The standard verb index is of the form **OLEIVERB_**, followed by an action. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, and `OLEIVERB_UIACTIVATE` are some examples of standard verbs.  
   
- В разделе [ON_OLEVERB](#on_oleverb) описание прототип функции для использования в качестве `memberFxn` параметр.  
+ See [ON_OLEVERB](#on_oleverb) for a description of the function prototype to be used as the `memberFxn` parameter.  
 
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxole.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxole.h  
     
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

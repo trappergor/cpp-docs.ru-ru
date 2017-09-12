@@ -1,41 +1,60 @@
 ---
-title: "Сокеты Windows. Сокеты датаграмм | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "сокеты датаграмм [C++]"
-  - "сокеты [C++], двунаправленный поток данных"
-  - "сокеты [C++], датаграмма"
-  - "Сокеты Windows [C++], двунаправленный поток данных"
-  - "Сокеты Windows [C++], датаграмма"
+title: 'Windows Sockets: Datagram Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], datagram
+- Windows Sockets [MFC], bi-directional data flow
+- datagram sockets [MFC]
+- Windows Sockets [MFC], datagram
+- sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Сокеты Windows. Сокеты датаграмм
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e48863aae635f8855cec24ebab023d07aeba12a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются сокеты датаграмм, один из 2 типов, доступных сокета Windows. Другой тип \( [сокет потока](../mfc/windows-sockets-stream-sockets.md)\).  
+---
+# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Datagram Sockets
+This article describes datagram sockets, one of the two Windows Socket types available. (The other type is the [stream socket](../mfc/windows-sockets-stream-sockets.md).)  
   
- Сокеты датаграмм поддерживают двунаправленный поток данных, который не гарантируется последовательного или unduplicated.  Не гарантируется единообразное датаграммы также надежны; они могут не знать, чтобы приехать.  Данные могут приехать датаграммы не по порядку и, возможно дублированный, но сохраняются границы записи в данных, пока записи, размер которых меньше внутреннее ограничение размера приемника.  Ответственность за управление последовательность и надежность. Надежность \(как правило, хороша на локальных сетях \[\] в Параметре только для глобальных сетях \[\], такие как глобальная сеть Интернет\).  
+ Datagram sockets support a bidirectional data flow that is not guaranteed to be sequenced or unduplicated. Datagrams also are not guaranteed to be reliable; they can fail to arrive. Datagram data may arrive out of order and possibly duplicated, but record boundaries in the data are preserved, as long as the records are smaller than the receiver's internal size limit. You are responsible for managing sequencing and reliability. (Reliability tends to be good on local-area networks [LAN] but less so on wide-area networks [WAN], such as the Internet.)  
   
- Датаграммы «connectionless», т е точное подключение не установлено. необходимо отправить сообщение датаграммы к определенному сокету и можно получить сообщения от заданного сокета.  
+ Datagrams are "connectionless", that is, no explicit connection is established; you send a datagram message to a specified socket and you can receive messages from a specified socket.  
   
- Пример сокета датаграмм приложение, которое сохраняет системных часов в сети синхронизирован.  Данный пример демонстрирует дополнительную возможность сокетов датаграмм хотя бы некоторых параметров: сообщения широковещания в большое количество сетевых адресов.  
+ An example of a datagram socket is an application that keeps system clocks on the network synchronized. This illustrates an additional capability of datagram sockets in at least some settings: broadcasting messages to a large number of network addresses.  
   
- Сокеты датаграмм лучше, чем сокеты потока для ориентированных на запись данных.  Сокеты датаграмм Дополнительные сведения о см. в спецификации Windows SSL, доступная в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Datagram sockets are better than stream sockets for record-oriented data. For more information about datagram sockets, see the Windows Sockets specification, available in the Windows SDK.  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)   
- [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

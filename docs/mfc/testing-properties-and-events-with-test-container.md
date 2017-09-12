@@ -1,68 +1,87 @@
 ---
-title: "Тестирование свойств и событий с использованием тестового контейнера | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнер для проверки элементов ActiveX"
-  - "элементы управления ActiveX [C++], проверка"
-  - "отладка элементов управления ActiveX"
-  - "свойства [MFC], проверка"
-  - "тестовый контейнер"
-  - "проверка, контейнеры тестов"
-  - "tstcon32.exe"
+title: Testing Properties and Events with Test Container | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- testing, test containers
+- tstcon32.exe
+- debugging ActiveX controls
+- test container
+- ActiveX Control Test Container
+- ActiveX controls [MFC], testing
+- properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Тестирование свойств и событий с использованием тестового контейнера
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b3edf6c89e6d960ad2aad3058364755b53be07db
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Приложение тестового контейнера, погруженное в Visual C\+\+, контейнера элементов управления ActiveX для тестирования и отладки элементов управления ActiveX.  Позволяет разработчику тестовый контейнер элементов управления для выполнения функции элемента управления путем изменения свойства, вызвав соответствующие методы, и происходит его события.  Тестовый контейнер может отображать журналы уведомлений привязки данных, а также предоставляет средства для тестирования функции сохранения элемента управления ActiveX. свойства можно сохранить в поток или в substorage, перезагрузить их и проверьте, хранящих данные потока.  В этом разделе описывается использование основными функциями тестового контейнера.  Дополнительные сведения, выберите контейнер меню **Справка** при выполнении тестов.  
+---
+# <a name="testing-properties-and-events-with-test-container"></a>Testing Properties and Events with Test Container
+The Test Container application, shipped in Visual C++, is an ActiveX control container for testing and debugging ActiveX controls. Test Container allows the control developer to test the control's functionality by changing its properties, invoking its methods, and firing its events. Test Container can display logs of data-binding notifications and also provides facilities for testing an ActiveX control's persistence functionality: you can save properties to a stream or to substorage, reload them, and examine the stored stream data. This section describes how to use the basic features of Test Container. For additional information, select the **Help** menu while running Test Container.  
   
-### Доступ к тестового контейнера элементов управления ActiveX  
+### <a name="to-access-the-activex-control-test-container"></a>To access the ActiveX Control Test Container  
   
-1.  Создайте [Образец TSTCON: Тестового контейнера элементов управления ActiveX](../top/visual-cpp-samples.md).  
+1.  Build the [TSTCON Sample: ActiveX Control Test Container](../visual-cpp-samples.md).  
   
-### Выполнить проверку элементов управления ActiveX  
+### <a name="to-test-your-activex-control"></a>To test your ActiveX control  
   
-1.  В меню **Изменить**  тестового контейнера, щелкните **Вставьте новый элемент управления.**  
+1.  On the **Edit** menu of Test Container, click **Insert New Control**.  
   
-2.  В окне **Вставить элемент управления**  выберите необходимый элемент управления и нажмите **ОК**.  Элемент управления отобразится в контейнер элементов управления.  
+2.  In the **Insert Control** box, select the desired control and click **OK**. The control will appear in the control container.  
   
     > [!NOTE]
-    >  Если элемент управления не отображается в диалоговом окне **Вставить элемент управления**, убедитесь, что зарегистрировать его с помощью команды **Register Controls** в меню **Файл** тестового контейнера.  
+    >  If your control is not listed in the **Insert Control** dialog box, make sure you have registered it with the **Register Controls** command from the **File** menu of Test Container.  
   
- На этом этапе можно тестировать свойства или события элемента управления.  
+ At this point you can test your control's properties or events.  
   
-#### Свойства выполнения  
+#### <a name="to-test-properties"></a>To test properties  
   
-1.  В меню **Управление** , щелкните **Вызов методов**.  
+1.  On the **Control** menu, click **Invoke Methods**.  
   
-2.  В раскрывающемся списке **Имя метода** выберите метод PropPut для свойства, которое необходимо выполнить.  
+2.  In the **Method Name** drop-down list, select the PropPut method for the property you want to test.  
   
-3.  Измените **Значение параметра** или **Тип параметра** и нажмите кнопку **Задано значение**.  
+3.  Modify the **Parameter Value** or **Parameter Type** and click on the **Set Value** button.  
   
-4.  Нажмите **Invoke** , чтобы применить новое значение в объект.  
+4.  Click **Invoke** to apply the new value to the object.  
   
-     Свойство теперь содержит новое значение.  
+     The property now contains the new value.  
   
-#### Выполнение события и определить назначение сведений о событии.  
+#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>To test events and specify the destination of event information.  
   
-1.  В меню **Параметры**  выберите пункт **Ведение журналов**.  
+1.  On the **Options** menu, click **Logging**.  
   
-2.  Укажите назначение сведений о событии.  
+2.  Specify the destination of event information.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Практическое руководство. Отладка элемента управления ActiveX](../Topic/How%20to:%20Debug%20an%20ActiveX%20Control.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [How to: Debug an ActiveX Control](/visualstudio/debugger/how-to-debug-an-activex-control)
+
+

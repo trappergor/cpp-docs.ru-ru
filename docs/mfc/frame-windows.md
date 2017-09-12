@@ -1,93 +1,112 @@
 ---
-title: "Окна фрейма | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFrameWnd - класс, окна фрейма"
-  - "окна фрейма документа"
-  - "окна фрейма [C++]"
-  - "окна фрейма [C++], об окнах фрейма"
-  - "MDI [C++], окна фрейма"
-  - "MFC [C++], окна фрейма"
-  - "однооконный интерфейс (SDI)"
-  - "однооконный интерфейс (SDI), окна фрейма"
-  - "окна разделителей, и окна фрейма"
-  - "представления [C++], и окна фрейма"
-  - "классы окон [C++], фрейм"
-  - "окна [C++], MDI - интерфейс"
+title: Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document frame windows [MFC]
+- windows [MFC], MDI
+- window classes [MFC], frame
+- single document interface (SDI) [MFC]
+- single document interface (SDI) [MFC], frame windows
+- views [MFC], and frame windows
+- CFrameWnd class [MFC], frame windows
+- frame windows [MFC]
+- frame windows [MFC], about frame widows
+- MFC, frame windows
+- MDI [MFC], frame windows
+- splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Окна фрейма
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e53a48c981fa6e470c33e54ef24bbb9bf500f09
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Если приложение выполняется в Windows, пользователь взаимодействует с документами, отображаемые в фреймовых окнах.  Фрейма документа содержит 2 основных компонента: кадр и содержимое, он кадров.  Фрейма документа может быть фреймовым окном [однодокументный интерфейс](../mfc/sdi-and-mdi.md) \(SDI\) или дочерние окна [интерфейс MDI](../mfc/sdi-and-mdi.md) \(MDI\).  Windows управляет большинство взаимодействия пользователя с фреймовым окном. перемещение и изменение размера окна, закроющ его и свернуть и разверните его.  Управление содержимое внутри кадра.  
+---
+# <a name="frame-windows"></a>Frame Windows
+When an application runs under Windows, the user interacts with documents displayed in frame windows. A document frame window has two major components: the frame and the contents that it frames. A document frame window can be a [single document interface](../mfc/sdi-and-mdi.md) (SDI) frame window or a [multiple document interface](../mfc/sdi-and-mdi.md) (MDI) child window. Windows manages most of the user's interaction with the frame window: moving and resizing the window, closing it, and minimizing and maximizing it. You manage the contents inside the frame.  
   
-## Фреймовые окна и представления  
- Платформа MFC использует фреймовые окна, чтобы содержать представления.  2 — Компонента кадр и содержимое — представлены и управляемых 2 другими классами в MFC.  Класс фреймового окна управляет кадр, и класс представления управляет содержимым.  Окно представления дочерний элемент фреймового окна.  Рисования и других взаимодействие пользователя с документом происходит в клиентской области просмотра, не клиентской области фреймового окна.  Фреймовое окно предоставляет кадр видимый для представления, выполняет с заголовком окна и стандартными элементами управления, например меню элемента управления, кнопками окна, чтобы свернуть и развернуть окно и элементы управления для размера окна.  «Содержимое» состоят из клиентской области окна, которая полностью занята дочерние окна — представлением.  На следующем рисунке показана связь между фреймовым окна и представлением.  
+## <a name="frame-windows-and-views"></a>Frame Windows and Views  
+ The MFC framework uses frame windows to contain views. The two components — frame and contents — are represented and managed by two different classes in MFC. A frame-window class manages the frame, and a view class manages the contents. The view window is a child of the frame window. Drawing and other user interaction with the document take place in the view's client area, not the frame window's client area. The frame window provides a visible frame around a view, complete with a caption bar and standard window controls such as a control menu, buttons to minimize and maximize the window, and controls for resizing the window. The "contents" consist of the window's client area, which is fully occupied by a child window — the view. The following figure shows the relationship between a frame window and a view.  
   
- ![Представление окна фрейма](../mfc/media/vc37fx1.png "vc37FX1")  
-Фреймовое окно, представление  
+ ![Frame window view](../mfc/media/vc37fx1.gif "vc37fx1")  
+Frame Window and View  
   
-## Фреймовые окна и окна\-разделители  
- Другой общий вид для фреймового окна к нескольким представлениям фрейма, обычно с помощью [разделитель](../mfc/multiple-document-types-views-and-frame-windows.md).  В окно\-разделителе, клиентской области фреймового окна занята этой окно\-разделителем, который, в свою очередь имеет несколько дочерние окна, областями, представления.  
+## <a name="frame-windows-and-splitter-windows"></a>Frame Windows and Splitter Windows  
+ Another common arrangement is for the frame window to frame multiple views, usually using a [splitter window](../mfc/multiple-document-types-views-and-frame-windows.md). In a splitter window, the frame window's client area is occupied by a splitter window, which in turn has multiple child windows, called panes, which are views.  
   
-### Дополнительные сведения  
- **Общие разделы фреймового окна**  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ **General Frame Window Topics**  
   
--   [Объекты окна](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Классы фреймового окна](../mfc/frame-window-classes.md)  
+-   [Frame window classes](../mfc/frame-window-classes.md)  
   
--   [Классы фреймового окна, созданные мастером приложений](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [The Frame-Window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [Стили фреймового окна](../Topic/Frame-Window%20Styles%20\(C++\).md)  
+-   [Frame window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [Какие фреймовые окна делают](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
- **Разделы, посвященные использованию фреймовых окон**  
+ **Topics on Using Frame Windows**  
   
--   [С помощью фреймовые окна](../Topic/Using%20Frame%20Windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [Создание фреймы окна документа](../Topic/Creating%20Document%20Frame%20Windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Уничтожения фреймовые окна](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [Управление дочерние окна MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [Управление текущее представление](../mfc/managing-the-current-view.md) в фреймовом поле, содержащее несколько представление  
+-   [Managing the current view](../mfc/managing-the-current-view.md) in a frame window that contains more than one view  
   
--   [Элемент управления меню, панели элементов управления и сочетания клавиш \(другие объекты, имеющие место фреймового окна\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (other objects that share the frame window's space)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- **Разделы о специальных возможностях фреймового окна**  
+ **Topics on Special Frame Window Capabilities**  
   
--   [Перетаскивание и удаление файлов](../Topic/Dragging%20and%20Dropping%20Files%20in%20a%20Frame%20Window.md) из проводника или файлового — в фреймовое окно  
+-   [Dragging and dropping files](../mfc/dragging-and-dropping-files-in-a-frame-window.md) from File Explorer or File Manager into a frame window  
   
--   [Ответ на обмена \(DDE\) платформы динамических данных](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [Состояния Semimodal: Контекстная справка Windows \(оркеструя другие действия окна\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: Context-sensitive Windows Help (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
--   [Состояния Semimodal: печать и предварительный просмотр \(оркеструя другие действия окна\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: printing and print preview (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
- **Разделы для других типов Windows**  
+ **Topics on Other Kinds of Windows**  
   
--   [Использование представления](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [Диалоговые окна](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [Элементы управления](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [Windows](../mfc/windows.md)
+
+

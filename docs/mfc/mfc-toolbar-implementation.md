@@ -1,113 +1,132 @@
 ---
-title: "Реализация панели инструментов MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "растровые изображения [C++], панель инструментов"
-  - "кнопки [C++], Панели инструментов MFC"
-  - "CToolBar - класс, создание панелей инструментов"
-  - "CToolBarCtrl - класс, реализация панелей инструментов"
-  - "закрепление панелей инструментов"
-  - "плавающие панели инструментов"
-  - "Панели инструментов MFC"
-  - "всплывающие подсказки [C++], включение"
-  - "элементы управления панели инструментов [MFC]"
-  - "панели инструментов [C++]"
-  - "панели инструментов [C++], создание"
-  - "панели инструментов [C++], закрепление"
-  - "панели инструментов [C++], плавающее"
-  - "панели инструментов [C++], реализация панелей инструментов MFC"
+title: MFC Toolbar Implementation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbars [MFC], creating
+- buttons [MFC], MFC toolbars
+- toolbars [MFC], docking
+- CToolBar class [MFC], creating toolbars
+- MFC toolbars
+- floating toolbars [MFC]
+- toolbars [MFC], floating
+- docking toolbars [MFC]
+- bitmaps [MFC], toolbar
+- toolbar controls [MFC]
+- CToolBarCtrl class [MFC], implementing toolbars
+- tool tips [MFC], enabling
+- toolbars [MFC]
+- toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Реализация панели инструментов MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0c04958a1d726381432a5b4281dfa634518d8c10
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Инструмент [панель элементов управления](../Topic/Control%20Bars.md), содержащий образы растрового изображения элементов управления.  Эти изображения могут работать, как кнопки, флажки или переключатели.  Класс [CToolbar](../mfc/reference/ctoolbar-class.md) предоставляет MFC для управления панели инструментов.  
+---
+# <a name="mfc-toolbar-implementation"></a>MFC Toolbar Implementation
+A toolbar is a [control bar](../mfc/control-bars.md) that contains the bitmap images of controls. These images can behave like pushbuttons, check boxes, or radio buttons. MFC supplies class [CToolbar](../mfc/reference/ctoolbar-class.md) to manage toolbars.  
   
- Если включить его, пользователям инструментов MFC можно закрепить их до края окна» или «плывите их везде внутри окна приложения.  MFC не поддерживает пользовательские инструменты настраивается, как те среды разработки.  
+ If you enable it, users of MFC toolbars can dock them to the edge of a window or "float" them anywhere within the application window. MFC doesn't support customizable toolbars like those in the development environment.  
   
- MFC также поддерживает всплывающие подсказки: малые всплывающие окна, в которых описывается назначение кнопки панели инструментов при размещении навести указатель мыши на кнопку.  По умолчанию когда пользователь нажимает кнопку панели инструментов, в строке состояния отображается в строке состояния \(если такое есть\).  Можно активировать «муха» строка состояния при обновлении для отображения строки состояния при использовании мыши размещается на нее, щелкнув его.  
+ MFC also supports tool tips: small pop-up windows that describe a toolbar button's purpose when you position the mouse over the button. By default, when the user presses a toolbar button, a status string appears in the status bar (if there is one). You can activate "fly by" status bar updating to display the status string when the mouse is positioned over the button without pressing it.  
   
 > [!NOTE]
->  Начиная с версии MFC 4.0, панели инструментов и всплывающие подсказки реализуются с помощью Windows 95 и более последней предыдущей функции, а не для реализации с MFC.  
+>  As of MFC version 4.0, toolbars and tool tips are implemented using Windows 95 and later functionality instead of the previous implementation specific to MFC.  
   
- Для обеспечения обратной совместимости MFC сохраняет старую реализация панели инструментов в классе **COldToolBar**.  Документация для более ранних версий MFC описание **COldToolBar** в `CToolBar`.  
+ For backward compatibility, MFC retains the older toolbar implementation in class **COldToolBar**. The documentation for earlier versions of MFC describe **COldToolBar** under `CToolBar`.  
   
- Создание первой панели инструментов в программе, выбрав параметр панели инструментов в мастере приложений.  Можно также создать дополнительные средства.  
+ Create the first toolbar in your program by selecting the Toolbar option in the Application Wizard. You can also create additional toolbars.  
   
- Следующие вставляются в этой статье.  
+ The following are introduced in this article:  
   
--   [Кнопки панели инструментов](#_core_toolbar_buttons)  
+-   [Toolbar buttons](#_core_toolbar_buttons)  
   
--   [Закрепление и панели инструментов с плавающей запятой](#_core_docking_and_floating_toolbars)  
+-   [Docking and floating toolbars](#_core_docking_and_floating_toolbars)  
   
--   [Панели инструментов и всплывающие подсказки](#_core_toolbars_and_tool_tips)  
+-   [Toolbars and tool tips](#_core_toolbars_and_tool_tips)  
   
--   [Классы CToolBar и CToolBarCtrl](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
+-   [The CToolBar and CToolBarCtrl classes](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
   
--   [Растровое изображение панели инструментов](#_core_the_toolbar_bitmap)  
+-   [The Toolbar bitmap](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a> Кнопки панели инструментов  
- Кнопки на панели инструментов аналогичны к элементам в меню.  Оба типа объектов пользовательского интерфейса команды, которые создают программу обрабатывает, предоставляя функции обработчика.  Часто кнопки панели инструментов дублируют функцию команд меню, реализации альтернативный пользовательский интерфейс одной и той же функции.  Такое дублирование компонуется просто заданием " и " пункт меню такой же идентификатор.  
+##  <a name="_core_toolbar_buttons"></a> Toolbar Buttons  
+ The buttons in a toolbar are analogous to the items in a menu. Both kinds of user-interface objects generate commands, which your program handles by providing handler functions. Often toolbar buttons duplicate the functionality of menu commands, providing an alternative user interface to the same functionality. Such duplication is arranged simply by giving the button and the menu item the same ID.  
   
- Это можно сделать кнопки на панели инструментов режим поведения кнопок, флажки или переключатели.  Класс [CToolBar](../mfc/reference/ctoolbar-class.md) см. Дополнительные сведения в.  
+ You can make the buttons in a toolbar appear and behave as pushbuttons, check boxes, or radio buttons. For more information, see class [CToolBar](../mfc/reference/ctoolbar-class.md).  
   
-##  <a name="_core_docking_and_floating_toolbars"></a> Усечение и панели инструментов с плавающей запятой  
- Панель инструментов MFC может:  
+##  <a name="_core_docking_and_floating_toolbars"></a> Docking and Floating Toolbars  
+ An MFC toolbar can:  
   
--   Останьтесь неподвижным вдоль одной стороны родительского окна.  
+-   Remain stationary along one side of its parent window.  
   
--   Перетащите «и» или закреплении, вложите, пользователем на все части или границ родительского окна указанного.  
+-   Be dragged and "docked," or attached, by the user to any side or sides of the parent window you specify.  
   
--   Плывите «,» или окончательное удаление из фреймового окна в собственном окне области, чтобы пользователь может его перемещения по тексту в любой удобной позиции.  
+-   Be "floated," or detached from the frame window, in its own mini-frame window so the user can move it around to any convenient position.  
   
--   Изменен при плавающая.  
+-   Be resized while floating.  
   
- Дополнительные сведения см. в статье [Усечение и панели инструментов с плавающей запятой](../mfc/docking-and-floating-toolbars.md).  
+ For more information, see the article [Docking and Floating Toolbars](../mfc/docking-and-floating-toolbars.md).  
   
-##  <a name="_core_toolbars_and_tool_tips"></a> Панели инструментов и всплывающие подсказки  
- Инструменты MFC можно также сделать для отображения всплывающих окон «всплывающих подсказок» — крошечных, содержащий короткое текстовое описание цели кнопки панели инструментов.  Как пользователь перемещается навести указатель мыши на кнопку панели инструментов, шипучки окна всплывающей подсказки до предоставляют подсказку.  Дополнительные сведения см. в статье [Всплывающие подсказки панели инструментов](../Topic/Toolbar%20Tool%20Tips.md).  
+##  <a name="_core_toolbars_and_tool_tips"></a> Toolbars and Tool Tips  
+ MFC toolbars can also be made to display "tool tips" — tiny popup windows containing a short text description of a toolbar button's purpose. As the user moves the mouse over a toolbar button, the tool tip window pops up to offer a hint. For more information, see the article [Toolbar Tool Tips](../mfc/toolbar-tool-tips.md).  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Классы CToolBar и CToolBarCtrl  
- Управление инструментов приложения с помощью класса [CToolBar](../mfc/reference/ctoolbar-class.md).  Начиная с версии MFC 4.0, `CToolBar` был повторно реализован для использования Windows 95 общего элемента управления панели инструментов, нижнего или более поздней версии и NT Windows версии 3.51 или более поздней версии.  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> The CToolBar and CToolBarCtrl Classes  
+ You manage your application's toolbars via class [CToolBar](../mfc/reference/ctoolbar-class.md). As of MFC version 4.0, `CToolBar` has been reimplemented to use the toolbar common control available under Windows 95 or later and Windows NT version 3.51 or later.  
   
- Это reimplementation обеспечивает меньший кода MFC для инструментов, поскольку MFC использует поддержку операционной системы.  Reimplementation также повышает вероятность.  Можно функции\-члены `CToolBar` использования для управления панели инструментов, или можно получить ссылку на основной объект [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) и вызовите его функции\-члены для настройки панели инструментов, а также дополнительные функции.  
+ This reimplementation results in less MFC code for toolbars, because MFC makes use of the operating system support. The reimplementation also improves capability. You can use `CToolBar` member functions to manipulate toolbars, or you can obtain a reference to the underlying [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object and call its member functions for toolbar customization and additional functionality.  
   
 > [!TIP]
->  Если инвестировали или в более ранней реализации MFC `CToolBar`, эта поддержка по\-прежнему доступна.  См. статью [С помощью панели инструментов старые](../Topic/Using%20Your%20Old%20Toolbars.md).  
+>  If you have invested heavily in the older MFC implementation of `CToolBar`, that support is still available. See the article [Using Your Old Toolbars](../mfc/using-your-old-toolbars.md).  
   
- Также см. в примере MFC [DOCKTOOL](../top/visual-cpp-samples.md) общий.  
+ Also see the MFC General sample [DOCKTOOL](../visual-cpp-samples.md).  
   
-##  <a name="_core_the_toolbar_bitmap"></a> Растровое изображение панели инструментов  
- Как только одновременно, объект `CToolBar` создает образ инструмента путем загрузки одного растровое изображение, содержащего один образ каждой кнопки.  Мастер приложений создает стандартное растровое изображение панели инструментов, можно настраивать с помощью Visual C\+\+ — [редактор панели инструментов](../mfc/toolbar-editor.md).  
+##  <a name="_core_the_toolbar_bitmap"></a> The Toolbar Bitmap  
+ Once constructed, a `CToolBar` object creates the toolbar image by loading a single bitmap that contains one image for each button. The Application Wizard creates a standard toolbar bitmap that you can customize with the Visual C++ [toolbar editor](../windows/toolbar-editor.md).  
   
-### Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Основные сведения о панели инструментов](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Закрепление и панели инструментов с плавающей запятой](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [Всплывающие подсказки панели инструментов](../Topic/Toolbar%20Tool%20Tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Работа с элементом управления панели инструментов](../Topic/Working%20with%20the%20Toolbar%20Control.md)  
+-   [Working with the Toolbar Control](../mfc/working-with-the-toolbar-control.md)  
   
--   [С помощью панели инструментов старые](../Topic/Using%20Your%20Old%20Toolbars.md)  
+-   [Using Your Old Toolbars](../mfc/using-your-old-toolbars.md)  
   
--   Классы [CToolBar](../mfc/reference/ctoolbar-class.md) и [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
-## См. также  
- [Панели инструментов](../mfc/toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>See Also  
+ [Toolbars](../mfc/toolbars.md)   
+ [Toolbar Editor](../windows/toolbar-editor.md)
+
+

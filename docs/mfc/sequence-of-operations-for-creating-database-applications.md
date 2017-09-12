@@ -1,49 +1,67 @@
 ---
-title: "Последовательность операций для создания приложений баз данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [MFC], база данных"
-  - "приложения баз данных [C++]"
-  - "приложения баз данных [C++], создание"
-  - "MFC [C++], приложения баз данных"
+title: Sequence of Operations for Creating Database Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC], database
+- database applications [MFC]
+- database applications [MFC], creating
+- MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Последовательность операций для создания приложений баз данных
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fdb4f76b3dcd3f62af27c7cac37956aff74cb60c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В следующей таблице показаны свою роль и роль платформы в приложениях баз данных записи.  
+---
+# <a name="sequence-of-operations-for-creating-database-applications"></a>Sequence of Operations for Creating Database Applications
+The following table shows your role and the framework's role in writing database applications.  
   
 > [!NOTE]
->  Что касается Visual C\+\+ .NET, то среда и мастера Visual C\+\+ больше не поддерживают DAO \(хотя классы DAO включены и вы по\-прежнему можете их использовать\).  Майкрософт рекомендует использовать ODBC для новых проектов MFC.  DAO необходимо использовать только для поддержки существующих приложений.  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use ODBC for new MFC projects. You should only use DAO in maintaining existing applications.  
   
-### Создание приложения баз данных  
+### <a name="creating-database-applications"></a>Creating Database Applications  
   
-|Задача|Выполняется|.NET Framework.|  
-|------------|-----------------|---------------------|  
-|Решите, использовать ли классы MFC DAO или ODBC.|Использование ODBC для новых проектов MFC.  DAO следует использовать только для обслуживания существующих приложений.  В разделе [Следует ли использовать DAO или ODBC?](../data/should-i-use-dao-or-odbc-q.md).  Дополнительные сведения см. в статье [Программирование доступа к данным](../data/data-access-programming-mfc-atl.md).|Предоставляет классы платформы, поддерживающие доступ к базе данных.|  
-|Создайте пользовательское приложение с параметрами схемы базы данных.|Запустите мастер приложений MFC.  Выделите параметры на этой странице поддержки баз данных.  Если был выбран параметр, который создает представление записей необходимо также указать:<br /><br /> -   Источник данных и имя таблицы или имена<br />-   Имя или имена запроса.|Мастер приложений MFC создает файлы и задает необходимое включает.  В зависимости от параметров необходимо указать файлы, может содержать класс набора записей.|  
-|Создайте в форме или формы базы данных.|Использование редактора диалоговых окон Visual C\+\+ для размещения элементов управления в ресурсах шаблона диалоговых окон для класса представления.|Мастер приложений MFC создает пустой ресурс шаблона диалоговых окон для заполнения.|  
-|Создайте дополнительные представления записей и классы набора записей при необходимости.|Используйте представление классов для создания классов и редактор диалоговых окон для разработки представления.|Представление классов создает дополнительные файлы для новых классов.|  
-|Создайте объекты наборов записей при необходимости в коде.  Используйте каждый набор записей для обработки записей…|Для наборов записей основаны на классах производных от [CRecordset](../Topic/CRecordset%20Class.md), с помощью мастера.|ODBC использует обмен полями записей \(RFX\) для обмена данными между базой данных и элементов данных полей в наборе записей.  Если используется представление записей, данные диалогового окна обмениваются данные обеспечивает DDX между набором записей и элементами управления в представлении записей.|  
-|… или создайте явное [CDatabase](../mfc/reference/cdatabase-class.md) в коде для каждой базы данных, которую нужно открыть.|Обнаружен объекты наборов записей для объектов базы данных.|Объект базы данных предоставляет интерфейс источника данных.|  
-|Столбцы данных привязки в набор записей динамически.|В ODBC, добавьте код в производный класс набора записей для управления привязки.  См. статью [Набор записей. Динамическая привязка столбцов данных \(ODBC\)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Decide whether to use the MFC ODBC or DAO classes.|Use ODBC for new MFC projects. Use DAO only to maintain existing applications. For general information, see the article [Data Access Programming](../data/data-access-programming-mfc-atl.md).|The framework supplies classes that support database access.|  
+|Create your skeleton application with database options.|Run the MFC Application Wizard. Select options on the Database Support page. If you choose an option that creates a record view, also specify:<br /><br /> -   Data source and table name or names<br />-   Query name or names.|The MFC Application Wizard creates files and specifies the necessary includes. Depending on the options you specify, the files can include a recordset class.|  
+|Design your database form or forms.|Use the Visual C++ dialog editor to place controls on the dialog template resources for your record view classes.|The MFC Application Wizard creates an empty dialog template resource for you to fill in.|  
+|Create additional record view and recordset classes as needed.|Use Class View to create the classes and the dialog editor to design the views.|Class View creates additional files for your new classes.|  
+|Create recordset objects as needed in your code. Use each recordset to manipulate records...|Your recordsets are based on the classes derived from [CRecordset](../mfc/reference/crecordset-class.md) with the wizards.|ODBC uses record field exchange (RFX) to exchange data between the database and your recordset's field data members. If you are using a record view, dialog data exchange (DDX) exchanges data between the recordset and the controls on the record view.|  
+|...or create an explicit [CDatabase](../mfc/reference/cdatabase-class.md) in your code for each database you want to open.|Base your recordset objects on the database objects.|The database object provides an interface to the data source.|  
+|Bind data columns to your recordset dynamically.|In ODBC, add code to your derived recordset class to manage the binding. See the article [Recordset: Dynamically Binding Data Columns (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||  
   
-## См. также  
- [Сборка в платформе](../mfc/building-on-the-framework.md)   
- [Последовательность операций для сборки приложений MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Последовательность операций для создания приложений OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Последовательность операций при создании элементов управления ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+

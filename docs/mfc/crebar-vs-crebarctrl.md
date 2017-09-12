@@ -1,48 +1,66 @@
 ---
-title: "CReBar и CReBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CReBar"
-  - "CReBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBar - класс, или CReBarCtrl"
-  - "GetReBarCtrl - класс"
-  - "Элементы управления главной панели, CReBarCtrl - класс"
+title: CReBar vs. CReBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CReBar
+- CReBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CReBar class [MFC], vs. CReBarCtrl
+- rebar controls [MFC], CReBarCtrl class [MFC]
+- GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CReBar и CReBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65b809ff977182ff3ef4248d9794f4ae002529c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC предоставляет 2 класса для создания основных панели: [CReBar](../mfc/reference/crebar-class.md) и [CReBarCtrl](../mfc/reference/crebarctrl-class.md) \(API, создания общего элемента управления Windows\).  **CReBar** предоставляет всю функциональность общего элемента управления главной панели, и он обрабатывает большую часть необходимых параметров и структур общего элемента управления автоматически.  
+---
+# <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
+MFC provides two classes to create rebars: [CReBar](../mfc/reference/crebar-class.md) and [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (which wraps the Windows common control API). **CReBar** provides all of the functionality of the rebar common control, and it handles many of the required common control settings and structures for you.  
   
- `CReBarCtrl` класс\-оболочка для элемента управления "Главная панель" Win32, и поэтому может существенно упростить для реализации, если не планируется интеграции главной панели архитектуры в MFC.  Если планируется использовать `CReBarCtrl` и интегрировать главной панели в архитектуру MFC, необходимо соблюдать осторожность дополнительный для связи манипуляции элемента управления "Главная панель" с MFC.  Это сообщение не сложно; однако дополнительную работу, не нужен при использовании метода **CReBar**.  
+ `CReBarCtrl` is a wrapper class for the Win32 rebar control, and therefore may be easier to implement if you do not intend to integrate the rebar into the MFC architecture. If you plan to use `CReBarCtrl` and integrate the rebar into the MFC architecture, you must take additional care to communicate rebar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use **CReBar**.  
   
- Visual C\+\+ 2 C предоставляет два способа использования общего элемента управления главной панели.  
+ Visual C++ provides two ways to take advantage of the rebar common control.  
   
--   Создайте главную панель с помощью **CReBar**, а затем вызвать [CReBar::GetReBarCtrl](../Topic/CReBar::GetReBarCtrl.md), чтобы получить доступ к функциям элемента `CReBarCtrl`.  
+-   Create the rebar using **CReBar**, and then call [CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) to get access to the `CReBarCtrl` member functions.  
   
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` встроенный функцию\-член, что указатель **this** объекта главной панели.  Это означает, что во время выполнения, вызов функции отсутствует нагрузку.  
+    >  `CReBar::GetReBarCtrl` is an inline member function that casts the **this** pointer of the rebar object. This means that, at run time, the function call has no overhead.  
   
--   Создание главной панели конструктора с помощью [CReBarCtrl](../mfc/reference/crebarctrl-class.md).  
+-   Create the rebar using [CReBarCtrl](../mfc/reference/crebarctrl-class.md)'s constructor.  
   
- Любой метод выдаст доступ к функциям элемента элемента управления "Главная панель".  При вызове `CReBar::GetReBarCtrl`, оно возвращает ссылку на объект `CReBarCtrl` таким образом можно использовать любой набор функции\-члены.  В разделе [CReBar](../mfc/reference/crebar-class.md) сведения о построении и создание главной панели с помощью **CReBar**.  
+ Either method will give you access to the member functions of the rebar control. When you call `CReBar::GetReBarCtrl`, it returns a reference to a `CReBarCtrl` object so you can use either set of member functions. See [CReBar](../mfc/reference/crebar-class.md) for information on constructing and creating a rebar using **CReBar**.  
   
-## См. также  
- [Использование CReBarCtrl](../Topic/Using%20CReBarCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

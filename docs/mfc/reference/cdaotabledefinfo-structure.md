@@ -1,5 +1,5 @@
 ---
-title: "Структура CDaoTableDefInfo | Документы Microsoft"
+title: CDaoTableDefInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoTableDefInfo structure
+- CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
 caps.latest.revision: 13
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 4d1ac5ca00f98f8c34332ce2eb1a180ab715e6ba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0268fc3d7a88bf1290303c54cd27a14d1087360
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaotabledefinfo-structure"></a>Структура CDaoTableDefInfo
-`CDaoTableDefInfo` Структура содержит сведения об объекте tabledef, определенные для объектов доступа к данным (DAO).  
+# <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo Structure
+The `CDaoTableDefInfo` structure contains information about a tabledef object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoTableDefInfo  
@@ -62,61 +62,61 @@ struct CDaoTableDefInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Дает уникальное название tabledef объекта. Чтобы получить значение этого свойства напрямую, вызовите объект tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) функции-члена. Дополнительные сведения см. в разделе «Свойства Name» в справке DAO.  
+ Uniquely names the tabledef object. To retrieve the value of this property directly, call the tabledef object's [GetName](../../mfc/reference/cdaotabledef-class.md#getname) member function. For more information, see the topic "Name Property" in DAO Help.  
   
  `m_bUpdatable`  
- Указывает, может ли внесены изменения в таблицу. Самый быстрый способ определить, является ли таблица обновляемых является открытие `CDaoTableDef` объекта для таблицы и вызов объекта [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) функции-члена. `CanUpdate`всегда возвращает ненулевое значение (**TRUE**) для объекта только что созданный tabledef и 0 (**FALSE**) tabledef вложенного объекта. Новый объект tabledef можно добавить только к базе данных, для которого у текущего пользователя есть разрешение на запись. Если таблица содержит только поля необновляемый `CanUpdate` возвращает 0. Если одно или несколько полей являются обновляемыми, `CanUpdate` возвращает ненулевое значение. Можно изменить только обновляемые поля. Дополнительные сведения см. в разделе «Обновляемые свойства» в справке DAO.  
+ Indicates whether changes can be made to the table. The quick way to determine whether a table is updatable is to open a `CDaoTableDef` object for the table and call the object's [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) member function. `CanUpdate` always returns nonzero (**TRUE**) for a newly created tabledef object and 0 (**FALSE**) for an attached tabledef object. A new tabledef object can be appended only to a database for which the current user has write permission. If the table contains only nonupdatable fields, `CanUpdate` returns 0. When one or more fields are updatable, `CanUpdate` returns nonzero. You can edit only the updatable fields. For more information, see the topic "Updatable Property" in DAO Help.  
   
  `m_lAttributes`  
- Задает характеристики таблицы, представленной объектом tabledef. Чтобы получить текущие атрибуты tabledef, вызовите его [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) функции-члена. Возвращаемое значение может быть сочетанием этих длинных констант (с помощью побитового или (**|**) оператор):  
+ Specifies characteristics of the table represented by the tabledef object. To retrieve the current attributes of a tabledef, call its [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) member function. The value returned can be a combination of these long constants (using the bitwise-OR (**&#124;**) operator):  
   
-- **dbAttachExclusive** баз данных, использующих базы данных Microsoft Jet, указывает, открыт для монопольного использования подключенной таблицы является таблица.  
+- **dbAttachExclusive** For databases that use the Microsoft Jet database engine, indicates the table is an attached table opened for exclusive use.  
   
-- **dbAttachSavePWD** для баз данных, использующих базы данных Microsoft Jet, указывает, что идентификатор пользователя и пароль для подключенной таблицы сохраняются сведения о соединении.  
+- **dbAttachSavePWD** For databases that use the Microsoft Jet database engine, indicates that the user ID and password for the attached table are saved with the connection information.  
   
-- **dbSystemObject** указывает таблица является системной таблицей, предоставляемые базы данных Microsoft Jet. (только для чтения).  
+- **dbSystemObject** Indicates the table is a system table provided by the Microsoft Jet database engine. (Read-only.)  
   
-- **dbHiddenObject** указывает таблицу, скрытые таблице, предоставленной ядро базы данных Microsoft Jet (для временного использования). (только для чтения).  
+- **dbHiddenObject** Indicates the table is a hidden table provided by the Microsoft Jet database engine (for temporary use). (Read-only.)  
   
-- **dbAttachedTable** указывает таблицу, подключенной таблицы из базы данных не ODBC, такие как базы данных Paradox.  
+- **dbAttachedTable** Indicates the table is an attached table from a non-ODBC database, such as a Paradox database.  
   
-- **dbAttachedODBC** указывает таблицу, подключенной таблицы из базы данных ODBC, например Microsoft SQL Server.  
+- **dbAttachedODBC** Indicates the table is an attached table from an ODBC database, such as Microsoft SQL Server.  
   
  `m_dateCreated`  
- Дата и время создания таблицы. Для получения Дата создания таблицы непосредственно вызвать [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) функцию-член `CDaoTableDef` объект, связанный с таблицей. Дополнительные сведения см. примечания ниже. Дополнительные сведения см. в разделе «DateCreated свойства LastUpdated» в справке DAO.  
+ The date and time the table was created. To directly retrieve the date the table was created, call the [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) member function of the `CDaoTableDef` object associated with the table. See Comments below for more information. For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  `m_dateLastUpdated`  
- Дата и время последнего изменения, внесенные в структуру таблицы. Для получения даты последнего обновления таблицы непосредственно вызвать [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) функцию-член `CDaoTableDef` объект, связанный с таблицей. Дополнительные сведения см. примечания ниже. Дополнительные сведения см. в разделе «DateCreated свойства LastUpdated» в справке DAO.  
+ The date and time of the most recent change made to the design of the table. To directly retrieve the date the table was last updated, call the [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) member function of the `CDaoTableDef` object associated with the table. See Comments below for more information. For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  *m_strSrcTableName*  
- Имя подключенной таблицы при их наличии. Для получения имени исходной таблицы непосредственно вызвать [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) функцию-член `CDaoTableDef` объект, связанный с таблицей.  
+ Specifies the name of an attached table if any. To directly retrieve the source table name, call the [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) member function of the `CDaoTableDef` object associated with the table.  
   
  `m_strConnect`  
- Предоставляет сведения об источнике открыть базу данных. Это свойство можно проверить, вызвав [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) функцию-член вашей `CDaoTableDef` объекта. Дополнительные сведения о строках подключения см. в разделе `GetConnect`.  
+ Provides information about the source of an open database. You can check this property by calling the [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) member function of your `CDaoTableDef` object. For more information about connect strings, see `GetConnect`.  
   
  `m_strValidationRule`  
- Значение, которое проверяет данные в полях tabledef, как они изменяются или добавить в таблицу. Проверка поддерживается только для баз данных, использующих базы данных Microsoft Jet. Для получения правило проверки непосредственно вызвать [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) функцию-член `CDaoTableDef` объект, связанный с таблицей. Дополнительные сведения см. в разделе «ValidationRule свойство» в справке DAO.  
+ A value that validates the data in tabledef fields as they are changed or added to a table. Validation is supported only for databases that use the Microsoft Jet database engine. To directly retrieve the validation rule, call the [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) member function of the `CDaoTableDef` object associated with the table. For related information, see the topic "ValidationRule Property" in DAO Help.  
   
  `m_strValidationText`  
- Значение, указывающее текст сообщения, приложения должны отображаться, если правило проверки, указанного в свойстве ValidationRule не выполняется. Дополнительные сведения см. в разделе «Свертыванию» в справке DAO.  
+ A value that specifies the text of the message that your application should display if the validation rule specified by the ValidationRule property is not satisfied. For related information, see the topic "ValidationText Property" in DAO Help.  
   
  *m_lRecordCount*  
- Количество записей, доступных в объекте tabledef. Этот параметр доступен только для чтения. Для получения числа записей непосредственно вызвать [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) функцию-член `CDaoTableDef` объекта. В документации по `GetRecordCount` описывает дальнейшей число записей. Обратите внимание, что получение это число может быть длительной операции, если таблица содержит много записей.  
+ The number of records accessed in a tabledef object. This property setting is read-only. To directly retrieve the record count, call the [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) member function of the `CDaoTableDef` object. The documentation for `GetRecordCount` describes the record count further. Note that retrieving this count can be a time-consuming operation if the table contains many records.  
   
-## <a name="remarks"></a>Примечания  
- Tabledef является объектом класса [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Ссылки на основной, дополнительный и все указанные выше указывают, как возвращаются сведения по [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) функции-члена в классе `CDaoDatabase`.  
+## <a name="remarks"></a>Remarks  
+ The tabledef is an object of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) member function in class `CDaoDatabase`.  
   
- Данные, полученные по [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) функции-члена хранится в `CDaoTableDefInfo` структуру. Вызов `GetTableDefInfo` функцию-член `CDaoDatabase` объекта, в которых TableDefs-коллекция хранится tabledef объект. `CDaoTableDefInfo`также определяет `Dump` создает функцию-член в режиме отладки. Можно использовать `Dump` для вывода содержимого из `CDaoTableDefInfo` объекта.  
+ Information retrieved by the [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) member function is stored in a `CDaoTableDefInfo` structure. Call the `GetTableDefInfo` member function of the `CDaoDatabase` object in whose TableDefs collection the tabledef object is stored. `CDaoTableDefInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoTableDefInfo` object.  
   
- Параметры даты и времени являются производными от компьютера, на котором создания или последнего обновления базовой таблицы. В многопользовательской среде пользователи должны получить эти параметры непосредственно с файлового сервера во избежание несоответствий в Дата создания и настройки свойств LastUpdated.  
+ The date and time settings are derived from the computer on which the base table was created or last updated. In a multiuser environment, users should get these settings directly from the file server to avoid discrepancies in the DateCreated and LastUpdated property settings.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [Класс CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)   
- [Класс CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

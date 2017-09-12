@@ -1,58 +1,77 @@
 ---
-title: "Установка состояния дня в элементе управления &quot;Календарь на месяц&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MCN_GETDAYSTATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl - класс, задание информации о состоянии дня"
-  - "MCN_GETDAYSTATE - уведомление"
-  - "элементы управления "календарь месяца", информация о состоянии дня"
+title: Setting the Day State of a Month Calendar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MCN_GETDAYSTATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMonthCalCtrl class [MFC], setting day state info
+- MCN_GETDAYSTATE notification [MFC]
+- month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Установка состояния дня в элементе управления &quot;Календарь на месяц&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5cc3c804936834f017d01c967674d19e14f1facd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Один из атрибутов календаря месяца возможность хранения данных, которые называются дня состояние элемента управления, на каждый день месяца.  Эти сведения используются для выделения определенных дат для в данный момент отображаемое название месяца.  
+---
+# <a name="setting-the-day-state-of-a-month-calendar-control"></a>Setting the Day State of a Month Calendar Control
+One of the attributes of a month calendar control is the ability to store information, referred to as the day state of the control, for each day of the month. This information is used to emphasize certain dates for the month currently displayed.  
   
 > [!NOTE]
->  Объект `CMonthCalCtrl` должен иметь стиль **MCS\_DAYSTATE** для отображения информации о состоянии дня.  
+>  The `CMonthCalCtrl` object must have the **MCS_DAYSTATE** style to display day state information.  
   
- Сведения о состоянии дня выражается в виде 32\-разрядному типу данных, **MONTHDAYSTATE**.  Каждый бит в битовом поле **MONTHDAYSTATE** \(1\) представляет состояние через 31 дня в месяце.  Если же включен, соответствующий дня будет выделен полужирным шрифтом; в противном случае он будет отображаться без ударений.  
+ Day state information is expressed as a 32-bit data type, **MONTHDAYSTATE**. Each bit in a **MONTHDAYSTATE** bit field (1 through 31) represents the state of a day in a month. If a bit is on, the corresponding day will be displayed in bold; otherwise it will be displayed with no emphasis.  
   
- 2 Для параметра метода состояние дня месяца календаря: явно, вызвав метод [CMonthCalCtrl::SetDayState](../Topic/CMonthCalCtrl::SetDayState.md) или при обработке сообщения уведомления **MCN\_GETDAYSTATE**.  
+ There are two methods for setting the day state of the month calendar control: explicitly with a call to [CMonthCalCtrl::SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) or by handling the **MCN_GETDAYSTATE** notification message.  
   
-## Для обработки сообщений уведомлений MCN\_GETDAYSTATE  
- Сообщение **MCN\_GETDAYSTATE** передается элементом управления для определения способа дни в пределах видимых месяцев должны отображаться.  
+## <a name="handling-the-mcngetdaystate-notification-message"></a>Handling the MCN_GETDAYSTATE Notification Message  
+ The **MCN_GETDAYSTATE** message is sent by the control to determine how the days within the visible months should be displayed.  
   
 > [!NOTE]
->  Поскольку элемент управления и после кэширования предыдущие месяцы, следуйте отношению к отображаемому месяцу будет получено это уведомление всякий раз, когда новый месяц выбран.  
+>  Because the control caches the previous and following months, in respect to the visible month, you will receive this notification every time a new month is chosen.  
   
- Для правильной обработки это сообщение необходимо указать сведения о состоянии, сколько дней, месяцев был запрошен для инициализации массива структур **MONTHDAYSTATE** с правильными значениями и инициализирует связанный элемент структуры с новыми данными.  В следующей процедуре, детализируя основные шаги, высказывать, с именем объекта `CMonthCalCtrl``m_monthcal` и массив объектов **MONTHDAYSTATE**, `mdState`.  
+ To properly handle this message, you must determine how many months day state information is being requested for, initialize an array of **MONTHDAYSTATE** structures with the proper values, and initialize the related structure member with the new information. The following procedure, detailing the necessary steps, assumes that you have a `CMonthCalCtrl` object called `m_monthcal` and an array of **MONTHDAYSTATE** objects, `mdState`.  
   
-#### Для обработки сообщений уведомлений MCN\_GETDAYSTATE  
+#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>To handle the MCN_GETDAYSTATE notification message  
   
-1.  С помощью окна свойств, добавьте обработчик уведомления для сообщения **MCN\_GETDAYSTATE** в объект `m_monthcal` \(см. [Сообщения сопоставления в функции](../Topic/Mapping%20Messages%20to%20Functions.md)\).  
+1.  Using the Properties window, add a notification handler for the **MCN_GETDAYSTATE** message to the `m_monthcal` object (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-2.  В теле обработчика, добавьте следующий код:  
+2.  In the body of the handler, add the following code:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/CPP/setting-the-day-state-of-a-month-calendar-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]  
   
-     Пример преобразования указателя `pNMHDR` к нужному типу, а затем укажите число месяцев сведения спрашиваются \(`pDayState->cDayState`\).  Для каждого месяца, текущее битовоеполе \(`pDayState->prgDayState[i]`\) присваивается значение равно нулю, а затем необходимые даты задано \(в данном случае пятнадцат из каждого месяца\).  
+     The example converts the `pNMHDR` pointer to the proper type, then determines how many months of information are being requested (`pDayState->cDayState`). For each month, the current bitfield (`pDayState->prgDayState[i]`) is initialized to zero and then the needed dates are set (in this case, the 15th of each month).  
   
-## См. также  
- [Использование CMonthCalCtrl](../Topic/Using%20CMonthCalCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

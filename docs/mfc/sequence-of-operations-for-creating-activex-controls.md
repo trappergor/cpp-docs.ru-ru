@@ -1,45 +1,64 @@
 ---
-title: "Последовательность операций при создании элементов управления ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [C++], создание"
-  - "элементы управления MFC ActiveX [C++], создание"
-  - "элементы управления OLE [C++], MFC - библиотека"
-  - "последовательность [C++]"
-  - "последовательность [C++], для создания элементов управления ActiveX"
+title: Sequence of Operations for Creating ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
+- sequence [MFC], for creating ActiveX controls
+- OLE controls [MFC], MFC
+- sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Последовательность операций при создании элементов управления ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c293e5add988ef1b2dbe1ab976b2ac1c04d08d1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В следующей таблице показаны свою роль и роль платформы в создание элементов управления ActiveX \(ранее называвшихся серверами элементы управления OLE\).  
+---
+# <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequence of Operations for Creating ActiveX Controls
+The following table shows your role and the framework's role in creating ActiveX controls (formerly known as OLE controls).  
   
-### Создание элементов управления ActiveX  
+### <a name="creating-activex-controls"></a>Creating ActiveX Controls  
   
-|Задача|Выполняется|.NET Framework.|  
-|------------|-----------------|---------------------|  
-|Создайте платформа элемента управления ActiveX.|Запустите мастер элемента управления ActiveX MFC для создания элемент управления.  Необходимо указать параметры в страницах Параметры.  Параметры включают тип и имя элемента управления в проекте, лицензировании, создание подкласса для, и происходит методе окна.|Мастер элементов управления ActiveX MFC создает файлы для элемента управления ActiveX с базовой функцией, включая файлы источника для приложения, элемента управления и страницы свойств или веб\-страниц. файл ресурсов. файл проекта; и другие; все портняжничанный к вашим спецификациям.|  
-|В разделе какого элемента управления и мастера элементов управления ActiveX таким образом, не добавляя линии собственного кода.|Создайте элемент управления ActiveX и выполните его с помощью Internet Explorer или [В образце TSTCON](../top/visual-cpp-samples.md).|Выполняющийся элемент управления имеет возможность несанкционированного изменения размера и выход.  Он также содержит метод **Окно "О программе** \(если выбрано\), который может вызывать.|  
-|Реализуйте методы и свойства элемента управления.|Реализуйте необходимые методы и свойства для отдельного элемента управления путем добавления функции\-члены для реализации открытый интерфейс контрольные данные.  Добавьте переменные\-члены для хранения структуры данных и обработчики событий можно использовать порождения события при определении.|Платформа уже задан сопоставление для поддержки события элемента управления, свойства и методы, и необходимо, чтобы сосредоточить внимание на как свойства и методы реализации.  Страница свойств по умолчанию отображаются и предоставляется по умолчанию о методе окна.|  
-|Создайте страницу свойств страницы или элемента управления.|Используйте редакторы ресурсов Visual C\+\+, чтобы визуально редактировать интерфейс страницы свойств элемента управления:<br /><br /> -   Создание дополнительных страниц свойств.<br />-   Создайте и правка растровые изображения, Значки, курсоры.<br /><br /> Можно также тест страницы свойств в редакторе диалоговых окон.|Файл ресурсов по умолчанию, созданный поставками мастера приложений MFC большое количество ресурсов.  C Visual C\+\+ позволяет изменять существующие ресурсы и добавить новые ресурсы легко и визуально.|  
-|Выполнение события, методы и свойства элемента управления.|Перестройте тестовый контейнер элементов управления и использовать, чтобы проверить, что обработчики работают правильно.|Можно вызывать методы элемента управления и обрабатывать его свойства через интерфейс страницы свойств или посредством тестовый контейнер.  Кроме того, тестовый контейнер использования на события отслеживания увольнянным от элемента управления и уведомления, контейнером элемента управления.|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create an ActiveX control framework.|Run the MFC ActiveX Control Wizard to create your control. Specify the options you want in the options pages. Options include the type and name of the control in the project, licensing, subclassing, and an About Box method.|The MFC ActiveX Control Wizard creates the files for an ActiveX control with basic functionality, including source files for your application, control, and property page or pages; a resource file; a project file; and others, all tailored to your specifications.|  
+|See what the control and the ActiveX Control Wizard offer without adding a line of your own code.|Build the ActiveX control and test it with Internet Explorer or the [TSTCON sample](../visual-cpp-samples.md).|The running control has the ability to be resized and moved. It also has an **About Box** method (if chosen) that can be invoked.|  
+|Implement the control's methods and properties.|Implement your control-specific methods and properties by adding member functions to provide an exposed interface to the control's data. Add member variables to hold data structures and use event handlers to fire events when you determine.|The framework has already defined a map to support the control's events, properties, and methods, leaving you to focus on how the properties and methods are implemented. The default property page is viewable and a default About Box method is supplied.|  
+|Construct the control's property page or pages.|Use the Visual C++ resource editors to visually edit the control's property page interface:<br /><br /> -   Create additional property pages.<br />-   Create and edit bitmaps, icons, and cursors.<br /><br /> You can also test the property page(s) in the dialog editor.|The default resource file created by the MFC Application Wizard supplies many of the resources you need. Visual C++ lets you edit existing resources and add new resources easily and visually.|  
+|Test the control's events, methods, and properties.|Rebuild the control and use Test Container to test that your handlers work correctly.|You can invoke the control's methods and manipulate its properties through the property page interface or through Test Container. In addition, use Test Container to track events fired from the control and notifications received by the control's container.|  
   
-## См. также  
- [Сборка в платформе](../mfc/building-on-the-framework.md)   
- [Последовательность операций для сборки приложений MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Последовательность операций для создания приложений OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Последовательность операций для создания приложений баз данных](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

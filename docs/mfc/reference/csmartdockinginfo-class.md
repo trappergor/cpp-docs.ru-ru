@@ -1,5 +1,5 @@
 ---
-title: "Класс CSmartDockingInfo | Документы Microsoft"
+title: CSmartDockingInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSmartDockingInfo class
+- CSmartDockingInfo [MFC], CopyTo
+- CSmartDockingInfo [MFC], m_bUseThemeColorInShading
+- CSmartDockingInfo [MFC], m_clrBaseBackground
+- CSmartDockingInfo [MFC], m_clrToneDest
+- CSmartDockingInfo [MFC], m_clrToneSrc
+- CSmartDockingInfo [MFC], m_clrTransparent
+- CSmartDockingInfo [MFC], m_nCentralGroupOffset
+- CSmartDockingInfo [MFC], m_sizeTotal
+- CSmartDockingInfo [MFC], m_uiMarkerBmpResID
+- CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 caps.latest.revision: 27
 author: mikeblome
@@ -44,174 +53,174 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9ae735b202299d26b98ec763f65c3f8772d9b914
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 004a49c00566369a14f89c9c383799a3461a9a05
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csmartdockinginfo-class"></a>Класс CSmartDockingInfo
-Определяет внешний вид интеллектуальных маркеров закрепления.  
+# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
+Defines the appearance of smart docking markers.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSmartDockingInfo : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CSmartDockingInfo::CSmartDockingInfo`|Конструктор по умолчанию.|  
+|`CSmartDockingInfo::CSmartDockingInfo`|Default constructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmartDockingInfo::CopyTo](#copyto)|Копирует текущий смарт-закрепления параметры info в предоставленный [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) объекта.|  
+|[CSmartDockingInfo::CopyTo](#copyto)|Copies the current smart docking info parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.|  
   
-### <a name="data-members"></a>Элементы данных  
+### <a name="data-members"></a>Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальные маркеры стыковки.|  
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Указывает цвет фона базовый интеллектуальные маркеры стыковки.|  
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Задает цвет, который заменяет `m_clrToneSrc` в смарт-закрепления растровые изображения маркера.|  
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Задает цвет смарт-закрепления растровые изображения маркера.|  
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Задает цвет смарт-закрепления точечных рисунков маркер, когда они являются прозрачными.|  
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Задает смещение центральной группы интеллектуальные маркеры стыковки из границ прямоугольника центральная группа.|  
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Задает общий размер всех интеллектуальные маркеры стыковки в группе.|  
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Определяет идентификаторы точечных рисунков, платформа использует для интеллектуальные маркеры стыковки не выделяемых ресурсов.|  
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Определяет идентификаторы точечных рисунков, платформа использует для интеллектуальные маркеры стыковки, выделенных ресурсов.|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Specifies whether to use the current theme color when the framework displays smart docking markers.|  
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Specifies the base background color of smart docking markers.|  
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Specifies the color that replaces `m_clrToneSrc` in smart docking marker bitmaps.|  
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Specifies the color of smart docking marker bitmaps.|  
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Specifies the color of smart docking marker bitmaps when they are transparent.|  
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Specifies the offset of the central group of smart docking markers from the boundaries of the central group rectangle.|  
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Specifies the total size of all smart docking markers in a group.|  
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are not highlighted.|  
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are highlighted.|  
   
-## <a name="remarks"></a>Примечания  
- Дескрипторы framework внутренне смарт-маркеров закрепления. Стандартные интеллектуальные маркеры стыковки на следующем рисунке:  
+## <a name="remarks"></a>Remarks  
+ The framework handles smart docking markers internally. The following illustration shows the standard smart docking markers:  
   
- ![Стандартные маркеры смарт-закрепления](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
+ ![Standard markers for smart docking](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- На этом рисунке на рисунке слева показано центральная группа смарт-закрепления маркер, который не поддерживает закрепление на вкладку включен. В середине рисунке смарт-закрепления маркер правой границы. На изображении справа показано центральная группа смарт-закрепления маркер, у которой есть на вкладку включено закрепление. Центральная группа смарт-закрепления маркер имеет основной точечного рисунка и пять смарт-закрепления растровые изображения маркера.  
+ In this figure, the image on the left shows a central group smart docking marker that does not have docking to a tab enabled. The image in the middle shows a right edge smart docking marker. The image on the right shows a central group smart docking marker that does have docking to a tab enabled. The central group smart docking marker has a main bitmap and five smart docking marker bitmaps.  
   
- Можно настроить следующие параметры интеллектуальные маркеры стыковки:  
+ You can customize the following parameters of smart docking markers:  
   
--   Цвет. Например синий цвет маркеров на рисунке можно заменить любой определенный пользователем цвет.  
+-   Color. For example, you can replace the blue color of the markers in the figure with any user-defined color.  
   
--   Цвет прозрачности.  
+-   Transparency color.  
   
--   Смещение смарт-закрепления маркера центральной группы от границы ограничивающего прямоугольника.  
+-   Offset of a smart docking marker in the central group from the border of the bounding rectangle.  
   
--   Основной растровое изображение, представляющее центральная группа.  
+-   The main bitmap that represents the central group.  
   
--   Точечные рисунки, представляющий интеллектуальные маркеры стыковки обычных и выделенным.  
+-   The bitmaps that represents the regular and highlighted smart docking markers.  
   
- Ниже показан пример интеллектуальные маркеры стыковки, настроенных:  
+ The following illustration shows an example of smart docking markers that have been customized:  
   
- ![Пользовательские маркеры смарт-закрепления](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
+ ![Custom markers for smart docking](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxDockingManager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
- Копирует текущие параметры смарт-закрепления в указанных [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) объекта.  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
+ Copies the current smart docking parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.  
   
 ```  
 void CopyTo(CSmartDockingInfo& params);
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `params`  
- Объект типа `CSmartDockingInfo` заполняется текущие параметры смарт-закрепления.  
+### <a name="parameters"></a>Parameters  
+ [out] `params`  
+ An object of type `CSmartDockingInfo` that is populated with the current smart docking parameters.  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
- Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальные маркеры стыковки.  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
+ Specifies whether to use the current theme color when the framework displays smart docking markers.  
   
 ```  
 BOOL m_bUseThemeColorInShading;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если `TRUE`, маркеры, отображаются с помощью текущего цвета темы; в противном случае отображаются маркеры с голубым цветом.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, the markers are drawn using the current theme color; otherwise the markers are drawn with a light blue color.  
   
- Значение по умолчанию — `FALSE`.  
+ The default value is `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
- Указывает цвет фона базовый интеллектуальные маркеры стыковки.  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
+ Specifies the base background color of smart docking markers.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
- Задает цвет, который заменит `m_clrToneSrc` в смарт-закрепления растровые изображения маркера.  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
+ Specifies the color that will replace `m_clrToneSrc` in smart docking marker bitmaps.  
   
 ```  
 COLORREF m_clrToneDest;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Это значение программно изменить цвет маркера точечных рисунков. Например, если вы хотите изменить цвет стандартные маркеры, предоставляемые с помощью платформы, это значение равно нужный цвет. По умолчанию [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) задано значение RGB (61, 123, 241) (сине цвет).  
+### <a name="remarks"></a>Remarks  
+ Set this value to change the color of marker bitmaps programmatically. For example, if you want to change the color of the standard markers provided with the framework, set this value to the desired color. By default, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) is set to RGB (61, 123, 241) (a bluish color).  
   
- Чтобы изменить цвет пользовательские маркеры, необходимо указать `m_clrToneDest` и `m_clrToneSrc`.  
+ To change the color of custom markers, you must specify both `m_clrToneDest` and `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
- Задает цвет смарт-закрепления растровые изображения маркера.  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
+ Specifies the color of smart docking marker bitmaps.  
   
 ```  
 COLORREF m_clrToneSrc;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Это значение только в том случае, если вы хотите заменить цвет пользовательского точечного рисунка с другой цвет. Необходимо задать это значение, если изменяется цвет standard (предоставляемых framework) маркера.  
+### <a name="remarks"></a>Remarks  
+ Set this value only when you want to replace the color of a custom bitmap with another color. You do not have to set this value if you are changing the color of a standard (framework provided) marker.  
   
- Используйте `(COLORREF)-1` для члена группы смарт-закрепления оставьте пустым.  
+ Use `(COLORREF)-1` to leave a member of the smart docking group empty.  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
- Задает цвет смарт-закрепления точечных рисунков маркер, когда они являются прозрачными.  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
+ Specifies the color of smart docking marker bitmaps when they are transparent.  
   
 ```  
 COLORREF m_clrTransparent;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Это значение задается при отображении пользовательские маркеры и пользовательских точечных рисунков в группе закрепления.  
+### <a name="remarks"></a>Remarks  
+ You must set this value when you display custom markers and custom bitmaps in the docking group.  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
- Указывает смещение между центральной группы интеллектуальные маркеры стыковки и границы прямоугольника центральная группа.  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
+ Specifies the offset between the central group of smart docking markers and the boundaries of the central group rectangle.  
   
 ```  
 int m_nCentralGroupOffset;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Задайте это значение, если вы хотите изменить смещение по умолчанию между пользовательские маркеры и границы центральной группы интеллектуальные маркеры стыковки. Смещение по умолчанию — 5 пикселей.  
+### <a name="remarks"></a>Remarks  
+ Specify this value if you want to change the default offset between custom markers and the bounds of the central group of smart docking markers. The default offset is 5 pixels.  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
- Задает общий размер ограничивающего прямоугольника, включающего все маркеры смарт-закрепления в группе центра.  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
+ Specifies the total size of a bounding rectangle that encloses all smart docking markers in the central group.  
   
 ```  
 CSize m_sizeTotal;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Задайте `m_sizeTotal` размер ограничивающего прямоугольника маркера центральной группы. Необходимо указать это значение при использовании пользовательских точечных рисунков для маркеров.  
+### <a name="remarks"></a>Remarks  
+ Set `m_sizeTotal` to the size of the bounding rectangle of the central group marker. You are required to specify this value if you are using custom bitmaps for markers.  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
- Определяет идентификаторы точечных рисунков, которые используются для без подсветки пользовательских интеллектуальные маркеры стыковки ресурсов.  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
+ Defines the resource IDs of the bitmaps that are used for non-highlighted custom smart docking markers.  
   
 ```  
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот массив заполняется идентификаторы точечных рисунков, представляющий интеллектуальные маркеры стыковки ресурсов. `AFX_SD_MARKERS_NUM`в настоящее время определяется как 5. Заполнение массива следующим образом:  
+### <a name="remarks"></a>Remarks  
+ Fill this array with the resource IDs of the bitmaps representing the smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -223,15 +232,15 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
- Определяет идентификаторы точечных рисунков, которые используются для выделенного пользовательские маркеры смарт-закрепления ресурсов.  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
+ Defines the resource IDs of the bitmaps that are used for highlighted custom smart docking markers.  
   
 ```  
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот массив заполняется идентификаторы точечных рисунков, представляющий выделенный интеллектуальные маркеры стыковки ресурсов. `AFX_SD_MARKERS_NUM`в настоящее время определяется как 5. Заполнение массива следующим образом:  
+### <a name="remarks"></a>Remarks  
+ Fill this array with the resource IDs of the bitmaps representing the highlighted smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   
@@ -243,8 +252,8 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

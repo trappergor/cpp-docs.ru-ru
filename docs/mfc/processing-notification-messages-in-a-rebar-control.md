@@ -1,54 +1,73 @@
 ---
-title: "Обработка уведомляющих сообщений в элементах управления главной панели | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBarCtrl - класс, сообщения с уведомлениями, отправленные"
-  - "уведомления, CReBarCtrl"
-  - "RBN_ - сообщения с уведомлением"
-  - "RBN_ - сообщения с уведомлением, описание"
+title: Processing Notification Messages in a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- RBN_ notification messages, description of
+- CReBarCtrl class [MFC], notification messages sent by
+- RBN_ notification messages [MFC]
+- notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Обработка уведомляющих сообщений в элементах управления главной панели
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9f6dd828b8864763d46592d270db38927198a0e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В родительском классе элемента управления "Главная панель", создайте функцию обработчика `OnChildNotify` с оператор switch для всех сообщений уведомлений элемента управления "Главная панель" \(`CReBarCtrl`\) необходимо обработать.  Уведомления отправляются родительскому окну, когда пользователь перетаскивает объекты над элементом управления "Главная панель", изменяет макет полос главной панели, удаляет полосы из элемента управления "Главная панель" и т д  
+---
+# <a name="processing-notification-messages-in-a-rebar-control"></a>Processing Notification Messages in a Rebar Control
+In the parent class of the rebar control, create an `OnChildNotify` handler function with a switch statement for any rebar-control (`CReBarCtrl`) notification messages you want to handle. Notifications are sent to the parent window when the user drags objects over the rebar control, changes the layout of the rebar bands, deletes bands from the rebar control, and so on.  
   
- Следующие сообщения уведомления могут отправляться объектом элемента управления "Главная панель":  
+ The following notification messages can be sent by the rebar control object:  
   
--   **RBN\_AUTOSIZE** отправленных элементом управления "Главная панель" \(созданного с стилем **RBS\_AUTOSIZE** \), если главная панель автоматически изменить.  
+-   **RBN_AUTOSIZE** Sent by a rebar control (created with the **RBS_AUTOSIZE** style) when the rebar automatically resizes itself.  
   
--   **RBN\_BEGINDRAG** отправленных элементом управления "Главная панель", когда пользователь начнется перетаскивания полоса.  
+-   **RBN_BEGINDRAG** Sent by a rebar control when the user begins dragging a band.  
   
--   **RBN\_CHILDSIZE** отправленных элементом управления "Главная панель", когда дочернее окно полосы изменяется размер.  
+-   **RBN_CHILDSIZE** Sent by a rebar control when a band's child window is resized.  
   
--   **RBN\_DELETEDBAND** отправленных элементом управления "Главная панель" после полоса, будет удалена.  
+-   **RBN_DELETEDBAND** Sent by a rebar control after a band has been deleted.  
   
--   **RBN\_DELETINGBAND** отправленных элементом управления "Главная панель", когда полоса которых должен быть удален.  
+-   **RBN_DELETINGBAND** Sent by a rebar control when a band is about to be deleted.  
   
--   **RBN\_ENDDRAG** отправленных элементом управления "Главная панель", когда пользователь прекращает перетаскивание полоса.  
+-   **RBN_ENDDRAG** Sent by a rebar control when the user stops dragging a band.  
   
--   **RBN\_GETOBJECT** отправленных элементом управления "Главная панель" \( **RBS\_REGISTERDROP** \), созданные со стилем, когда объект перетаскивается на будет полосой в элементе управления.  
+-   **RBN_GETOBJECT** Sent by a rebar control (created with the **RBS_REGISTERDROP** style) when an object is dragged over a band in the control.  
   
--   **RBN\_HEIGHTCHANGE** отправленных элементом управления "Главная панель", если его высота изменяется.  
+-   **RBN_HEIGHTCHANGE** Sent by a rebar control when its height has changed.  
   
--   **RBN\_LAYOUTCHANGED** отправленных элементом управления "Главная панель", когда пользователь изменяет макет полос элемента управления.  
+-   **RBN_LAYOUTCHANGED** Sent by a rebar control when the user changes the layout of the control's bands.  
   
- Дополнительные сведения об этих уведомлений см. в разделе [Связь элемента управления "Главная панель"](http://msdn.microsoft.com/library/windows/desktop/bb774375) в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information on these notifications, see [Rebar Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb774375) in the Windows SDK.  
   
-## См. также  
- [Использование CReBarCtrl](../Topic/Using%20CReBarCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

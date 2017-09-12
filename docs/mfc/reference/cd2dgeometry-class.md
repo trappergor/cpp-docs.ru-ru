@@ -1,5 +1,5 @@
 ---
-title: "Класс CD2DGeometry | Документы Microsoft"
+title: CD2DGeometry Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGeometry class
+- CD2DGeometry [MFC], CD2DGeometry
+- CD2DGeometry [MFC], Attach
+- CD2DGeometry [MFC], CombineWithGeometry
+- CD2DGeometry [MFC], CompareWithGeometry
+- CD2DGeometry [MFC], ComputeArea
+- CD2DGeometry [MFC], ComputeLength
+- CD2DGeometry [MFC], ComputePointAtLength
+- CD2DGeometry [MFC], Destroy
+- CD2DGeometry [MFC], Detach
+- CD2DGeometry [MFC], FillContainsPoint
+- CD2DGeometry [MFC], Get
+- CD2DGeometry [MFC], GetBounds
+- CD2DGeometry [MFC], GetWidenedBounds
+- CD2DGeometry [MFC], IsValid
+- CD2DGeometry [MFC], Outline
+- CD2DGeometry [MFC], Simplify
+- CD2DGeometry [MFC], StrokeContainsPoint
+- CD2DGeometry [MFC], Tessellate
+- CD2DGeometry [MFC], Widen
+- CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
 caps.latest.revision: 17
 author: mikeblome
@@ -54,96 +73,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 948b2e2154259557e3a52c2045586cffce2a16f8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dc5ac92b1f9ea42ff03710976678c574f69f219d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dgeometry-class"></a>Класс CD2DGeometry
-Программа-оболочка для ID2D1Geometry.  
+# <a name="cd2dgeometry-class"></a>CD2DGeometry Class
+A wrapper for ID2D1Geometry.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DGeometry : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Создает объект CD2DGeometry.|  
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Деструктор Вызывается при уничтожении объекта geometry D2D.|  
+|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Constructs a CD2DGeometry object.|  
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|The destructor. Called when a D2D geometry object is being destroyed.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::Attach](#attach)|Присоединение существующих ресурсов интерфейса в объект|  
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Объединяет этот geometry с заданной геометрий и сохраняет результат в ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Описывает пересечение этого и заданной геометрий. Сравнение выполняется с помощью заданного допуска уплощения.|  
-|[CD2DGeometry::ComputeArea](#computearea)|Вычисляет области геометрического объекта после его преобразования, заданной матрицы и выпрямления с заданным допуском.|  
-|[CD2DGeometry::ComputeLength](#computelength)|Вычисляет длину объекта geometry, как если бы каждый сегмент, развернутые в строку.|  
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Вычисляет тангенс и точки вектора расстояния вдоль геометрического объекта после его преобразования, заданной матрицы и выпрямления с заданным допуском.|  
-|[CD2DGeometry::destroy](#destroy)|Уничтожает объект CD2DGeometry. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DGeometry::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|  
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Указывает, будет ли область, заполняемую geometry содержит указанной точки, заданной с заданной погрешностью уплощения.|  
-|[CD2DGeometry::Get](#get)|Возвращает интерфейс ID2D1Geometry|  
+|[CD2DGeometry::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Combines this geometry with the specified geometry and stores the result in an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Describes the intersection between this geometry and the specified geometry. The comparison is performed using the specified flattening tolerance.|  
+|[CD2DGeometry::ComputeArea](#computearea)|Computes the area of the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::ComputeLength](#computelength)|Calculates the length of the geometry as though each segment were unrolled into a line.|  
+|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Calculates the point and tangent vector at the specified distance along the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::Destroy](#destroy)|Destroys a CD2DGeometry object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DGeometry::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Indicates whether the area filled by the geometry would contain the specified point given the specified flattening tolerance.|  
+|[CD2DGeometry::Get](#get)|Returns ID2D1Geometry interface|  
 |[CD2DGeometry::GetBounds](#getbounds)||  
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Возвращает границы геометрии после расширяются по указанным stroke ширину и стиль и преобразовать заданную матрицу.|  
-|[CD2DGeometry::IsValid](#isvalid)|Проверяет допустимость ресурсов (переопределяет [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DGeometry::Outline](#outline)|Вычисляет очертания объекта geometry и записывает результаты в ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::Simplify](#simplify)|Создание упрощенной версии геометрического объекта, содержащий только линий и кривых Безье третьего (при необходимости) и записывает результаты в ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Определяет, содержит ли обводки геометрии указанной точки, заданной толщина штриха указанного, стиль и преобразования.|  
-|[CD2DGeometry::Tessellate](#tessellate)|Создает набор по часовой стрелке треугольников, покрывающих геометрию после его преобразования с использованием заданной матрицы и выпрямления с заданным допуском.|  
-|[CD2DGeometry::Widen](#widen)|Расширяет геометрического объекта с указанным штриха и записывает результат ID2D1SimplifiedGeometrySink после его преобразования, заданной матрицы и выпрямления с заданным допуском.|  
+|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Gets the bounds of the geometry after it has been widened by the specified stroke width and style and transformed by the specified matrix.|  
+|[CD2DGeometry::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DGeometry::Outline](#outline)|Computes the outline of the geometry and writes the result to an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::Simplify](#simplify)|Creates a simplified version of the geometry that contains only lines and (optionally) cubic Bezier curves and writes the result to an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Determines whether the geometry's stroke contains the specified point given the specified stroke thickness, style, and transform.|  
+|[CD2DGeometry::Tessellate](#tessellate)|Creates a set of clockwise-wound triangles that cover the geometry after it has been transformed using the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::Widen](#widen)|Widens the geometry by the specified stroke and writes the result to an ID2D1SimplifiedGeometrySink after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Возвращает интерфейс ID2D1Geometry|  
+|[CD2DGeometry::operator ID2D1Geometry*](#operator_id2d1geometry_star)|Returns ID2D1Geometry interface|  
   
-### <a name="protected-data-members"></a>Защищенные члены данных  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|Указатель на ID2D1Geometry.|  
+|[CD2DGeometry::m_pGeometry](#m_pgeometry)|A pointer to an ID2D1Geometry.|  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  `CD2DGeometry`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
- Деструктор Вызывается при уничтожении объекта geometry D2D.  
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry::~CD2DGeometry  
+ The destructor. Called when a D2D geometry object is being destroyed.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="attach"></a>CD2DGeometry::Attach  
- Присоединение существующих ресурсов интерфейса в объект  
+##  <a name="attach"></a>  CD2DGeometry::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1Geometry* pResource);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- Существующий интерфейс ресурсов. Не может иметь значение NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
- Создает объект CD2DGeometry.  
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
+ Constructs a CD2DGeometry object.  
   
 ```  
 CD2DGeometry(
@@ -151,15 +170,15 @@ CD2DGeometry(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Указатель на целевой объект отрисовки.  
+ A pointer to the render target.  
   
  `bAutoDestroy`  
- Указывает, что объект будет уничтожен владельцем (pParentTarget).  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
- Объединяет этот geometry с заданной геометрий и сохраняет результат в ID2D1SimplifiedGeometrySink.  
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
+ Combines this geometry with the specified geometry and stores the result in an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL CombineWithGeometry(
@@ -170,27 +189,27 @@ BOOL CombineWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `inputGeometry`  
- Геометрия для комбинирования с данным экземпляром.  
+ The geometry to combine with this instance.  
   
  `combineMode`  
- Тип выполняемой операции объединения.  
+ The type of combine operation to perform.  
   
  `inputGeometryTransform`  
- Преобразование для применения к inputGeometry до объединения.  
+ The transform to apply to inputGeometry before combining.  
   
  `geometrySink`  
- Результат операции объединения.  
+ The result of the combine operation.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации данных геометрий. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
- Описывает пересечение этого и заданной геометрий. Сравнение выполняется с помощью заданного допуска уплощения.  
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
+ Describes the intersection between this geometry and the specified geometry. The comparison is performed using the specified flattening tolerance.  
   
 ```  
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -199,21 +218,21 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `inputGeometry`  
- Геометрия для проверки.  
+ The geometry to test.  
   
  `inputGeometryTransform`  
- Преобразование для применения к inputGeometry.  
+ The transform to apply to inputGeometry.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации данных геометрий. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
- Вычисляет области геометрического объекта после его преобразования, заданной матрицы и выпрямления с заданным допуском.  
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
+ Computes the area of the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL ComputeArea(
@@ -222,21 +241,21 @@ BOOL ComputeArea(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- Преобразования для применения этого geometry перед вычислением его области.  
+ The transform to apply to this geometry before computing its area.  
   
  `area`  
- При возвращении данного метода содержит указатель на область преобразованные плоский версией этого geometry. Для этого параметра необходимо выделить хранилище.  
+ When this method returns, contains a pointer to the area of the transformed, flattened version of this geometry. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
- Вычисляет длину объекта geometry, как если бы каждый сегмент, развернутые в строку.  
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
+ Calculates the length of the geometry as though each segment were unrolled into a line.  
   
 ```  
 BOOL ComputeLength(
@@ -245,21 +264,21 @@ BOOL ComputeLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- Преобразование, применяемое к геометрии до вычисления его длину.  
+ The transform to apply to the geometry before calculating its length.  
   
  `length`  
- При возвращении данного метода содержит указатель на длину геометрии. Для закрытых геометрические объекты длина включает неявные закрытия сегмента. Для этого параметра необходимо выделить хранилище.  
+ When this method returns, contains a pointer to the length of the geometry. For closed geometries, the length includes an implicit closing segment. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
- Вычисляет тангенс и точки вектора расстояния вдоль геометрического объекта после его преобразования, заданной матрицы и выпрямления с заданным допуском.  
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
+ Calculates the point and tangent vector at the specified distance along the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL ComputePointAtLength(
@@ -270,44 +289,44 @@ BOOL ComputePointAtLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `length`  
- Расстояние вдоль геометрию точки и тангенс для поиска. Если это расстояние меньше затем 0, этот метод вычисляет первой точки геометрического объекта. Если это расстояние превышает длину геометрии, этот метод вычисляет последнюю точку геометрии.  
+ The distance along the geometry of the point and tangent to find. If this distance is less then 0, this method calculates the first point in the geometry. If this distance is greater than the length of the geometry, this method calculates the last point in the geometry.  
   
  `worldTransform`  
- Преобразование, применяемое к геометрии перед расчетом указанной точки и тангенс.  
+ The transform to apply to the geometry before calculating the specified point and tangent.  
   
  `point`  
- Расположение на заданном расстоянии вдоль геометрического объекта. Если данная геометрия пуста, эта точка содержит NaN как x и y значения.  
+ The location at the specified distance along the geometry. If the geometry is empty, this point contains NaN as its x and y values.  
   
  `unitTangentVector`  
- При возвращении данного метода содержит указатель касания вектора расстояния вдоль геометрического объекта. Если данная геометрия пуста, этот вектор содержит NaN как x и y значения. Для этого параметра необходимо выделить хранилище.  
+ When this method returns, contains a pointer to the tangent vector at the specified distance along the geometry. If the geometry is empty, this vector contains NaN as its x and y values. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="destroy"></a>CD2DGeometry::destroy  
- Уничтожает объект CD2DGeometry.  
+##  <a name="destroy"></a>  CD2DGeometry::Destroy  
+ Destroys a CD2DGeometry object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DGeometry::Detach  
- Отсоединяет интерфейс ресурса из объекта  
+##  <a name="detach"></a>  CD2DGeometry::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1Geometry* Detach();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс отсоединенных ресурсов.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
- Указывает, будет ли область, заполняемую geometry содержит указанной точки, заданной с заданной погрешностью уплощения.  
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
+ Indicates whether the area filled by the geometry would contain the specified point given the specified flattening tolerance.  
   
 ```  
 BOOL FillContainsPoint(
@@ -317,33 +336,33 @@ BOOL FillContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `point`  
- Точка для проверки.  
+ The point to test.  
   
  `worldTransform`  
- Преобразование к геометрии до тестирования для включения.  
+ The transform to apply to the geometry prior to testing for containment.  
   
  `contains`  
- При возвращении данного метода содержит логическое значение, равное TRUE, если область, заполняемую геометрического объекта содержит точку; в противном случае — значение FALSE. Для этого параметра необходимо выделить хранилище.  
+ When this method returns, contains a bool value that is TRUE if the area filled by the geometry contains point; otherwise, FALSE. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- Числовой точности, с которым точный геометрического пути и пересечение путь вычисляется. Отсутствие заливки, меньше допустимого отклонения точек по-прежнему считаются внутри. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the fill by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="get"></a>CD2DGeometry::Get  
- Возвращает интерфейс ID2D1Geometry  
+##  <a name="get"></a>  CD2DGeometry::Get  
+ Returns ID2D1Geometry interface  
   
 ```  
 ID2D1Geometry* Get();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс ID2D1Geometry или значение NULL, если объект еще не инициализирован.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Geometry interface or NULL if object is not initialized yet.  
   
-##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -351,14 +370,14 @@ const D2D1_MATRIX_3X2_F& worldTransform,
 CD2DRectF& bounds) const; 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
  `bounds`  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
- Возвращает границы геометрии после расширяются по указанным stroke ширину и стиль и преобразовать заданную матрицу.  
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
+ Gets the bounds of the geometry after it has been widened by the specified stroke width and style and transformed by the specified matrix.  
   
 ```  
 BOOL GetWidenedBounds(
@@ -369,54 +388,54 @@ BOOL GetWidenedBounds(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `strokeWidth`  
- Величина, на которую расширить область геометрии, Обводка ее структуры.  
+ The amount by which to widen the geometry by stroking its outline.  
   
  `strokeStyle`  
- Стиль штриха, который расширяется геометрии.  
+ The style of the stroke that widens the geometry.  
   
  `worldTransform`  
- Преобразование для применения к геометрии, после преобразования геометрии и был нарисован геометрии.  
+ A transform to apply to the geometry after the geometry is transformed and after the geometry has been stroked.  
   
  `bounds`  
- При возвращении данного метода содержит границы расширенный геометрии. Для этого параметра необходимо выделить хранилище.  
+ When this method returns, contains the bounds of the widened geometry. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации данных геометрий. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="isvalid"></a>CD2DGeometry::IsValid  
- Проверяет допустимость ресурсов  
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
- Указатель на ID2D1Geometry.  
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
+ A pointer to an ID2D1Geometry.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
- Возвращает интерфейс ID2D1Geometry  
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry*  
+ Returns ID2D1Geometry interface  
   
 ```  
 operator ID2D1Geometry*();
 ```   
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс ID2D1Geometry или значение NULL, если объект еще не инициализирован.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Geometry interface or NULL if object is not initialized yet.  
   
-##  <a name="outline"></a>CD2DGeometry::Outline  
- Вычисляет очертания объекта geometry и записывает результаты в ID2D1SimplifiedGeometrySink.  
+##  <a name="outline"></a>  CD2DGeometry::Outline  
+ Computes the outline of the geometry and writes the result to an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL Outline(
@@ -425,21 +444,21 @@ BOOL Outline(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- Преобразование для применения к структуре geometry.  
+ The transform to apply to the geometry outline.  
   
  `geometrySink`  
- ID2D1SimplifiedGeometrySink, к которому добавляется структуры преобразованной геометрии.  
+ The ID2D1SimplifiedGeometrySink to which the geometry transformed outline is appended.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="simplify"></a>CD2DGeometry::Simplify  
- Создание упрощенной версии геометрического объекта, содержащий только линий и кривых Безье третьего (при необходимости) и записывает результаты в ID2D1SimplifiedGeometrySink.  
+##  <a name="simplify"></a>  CD2DGeometry::Simplify  
+ Creates a simplified version of the geometry that contains only lines and (optionally) cubic Bezier curves and writes the result to an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL Simplify(
@@ -449,24 +468,24 @@ BOOL Simplify(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `simplificationOption`  
- Значение, указывающее, содержат ли упрощенный geometry кривых.  
+ A value that specifies whether the simplified geometry should contain curves.  
   
  `worldTransform`  
- Преобразование для применения к упрощенный геометрии.  
+ The transform to apply to the simplified geometry.  
   
  `geometrySink`  
- ID2D1SimplifiedGeometrySink, к которому добавляется упрощенный geometry.  
+ The ID2D1SimplifiedGeometrySink to which the simplified geometry is appended.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
- Определяет, содержит ли обводки геометрии указанной точки, заданной толщина штриха указанного, стиль и преобразования.  
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
+ Determines whether the geometry's stroke contains the specified point given the specified stroke thickness, style, and transform.  
   
 ```  
 BOOL StrokeContainsPoint(
@@ -478,30 +497,30 @@ BOOL StrokeContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `point`  
- Точка для проверки на включение.  
+ The point to test for containment.  
   
  `strokeWidth`  
- Толщина штриха вступили в силу.  
+ The thickness of the stroke to apply.  
   
  `strokeStyle`  
- Стиль штриха, вступили в силу.  
+ The style of the stroke to apply.  
   
  `worldTransform`  
- Преобразование для применения к обведенные геометрии.  
+ The transform to apply to the stroked geometry.  
   
  `contains`  
- При возвращении данного метода содержит логическое значение, значение TRUE, если обводки геометрии содержит указанную точку; в противном случае — значение FALSE. Для этого параметра необходимо выделить хранилище.  
+ When this method returns, contains a boolean value set to TRUE if the geometry's stroke contains the specified point; otherwise, FALSE. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- Числовой точности, с которым точный геометрического пути и пересечение путь вычисляется. Отсутствует штриха, меньше допустимого отклонения точек по-прежнему считаются внутри. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the stroke by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
- Создает набор по часовой стрелке треугольников, покрывающих геометрию после его преобразования с использованием заданной матрицы и выпрямления с заданным допуском.  
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
+ Creates a set of clockwise-wound triangles that cover the geometry after it has been transformed using the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL Tessellate(
@@ -510,21 +529,21 @@ BOOL Tessellate(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- Преобразование geometry, или значение NULL.  
+ The transform to apply to this geometry, or NULL.  
   
  `tessellationSink`  
- ID2D1TessellationSink, к которому мозаичное добавляется.  
+ The ID2D1TessellationSink to which the tessellated is appended.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="widen"></a>CD2DGeometry::Widen  
- Расширяет геометрического объекта с указанным штриха и записывает результат ID2D1SimplifiedGeometrySink после его преобразования, заданной матрицы и выпрямления с заданным допуском.  
+##  <a name="widen"></a>  CD2DGeometry::Widen  
+ Widens the geometry by the specified stroke and writes the result to an ID2D1SimplifiedGeometrySink after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL Widen(
@@ -535,25 +554,25 @@ BOOL Widen(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `strokeWidth`  
- Величина, на которую расширить область геометрии.  
+ The amount by which to widen the geometry.  
   
  `strokeStyle`  
- Стиль штриха, чтобы применить geometry, или значение NULL.  
+ The style of stroke to apply to the geometry, or NULL.  
   
  `worldTransform`  
- Преобразование, применяемое к геометрии после его расширения.  
+ The transform to apply to the geometry after widening it.  
   
  `geometrySink`  
- ID2D1SimplifiedGeometrySink, к которому добавляется расширенный geometry.  
+ The ID2D1SimplifiedGeometrySink to which the widened geometry is appended.  
   
  `flatteningTolerance`  
- Максимальный диапазон для расстояния между точками кусочно-линейной аппроксимации геометрии. Меньшие значения выдать более точные результаты, но привести к более медленному выполнению.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращает значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

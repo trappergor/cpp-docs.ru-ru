@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCSpinButtonCtrl | Документы Microsoft"
+title: CMFCSpinButtonCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCSpinButtonCtrl class
+- CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
 caps.latest.revision: 25
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c1832062461f2ed53df07a72428089179ed493ab
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 11b76a4a73bb505182a3c380566dd9b392617f08
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>Класс CMFCSpinButtonCtrl
-`CMFCSpinButtonCtrl` Класс поддерживает наглядный диспетчер, который рисует элемент управления "Счетчик".  
+# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl Class
+The `CMFCSpinButtonCtrl` class supports a visual manager that draws a spin button control.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCSpinButtonCtrl : public CSpinButtonCtrl  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Конструктор по умолчанию.|  
-|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Деструктор.|  
+|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Default constructor.|  
+|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Обновляет текущий счетчик-элемент управления.|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Repaints the current spin button control.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы использовать диспетчер визуального представления для рисования регулятор в приложении, замените все вхождения `CSpinButtonCtrl` класса `CMFCSpinButtonCtrl` класса.  
+## <a name="remarks"></a>Remarks  
+ To use a visual manager to draw a spin button control in your application, replace all instances of the `CSpinButtonCtrl` class with the `CMFCSpinButtonCtrl` class.  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует создание объекта `CMFCSpinButtonCtrl` класс и использовать его `Create` метод.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create an object of the `CMFCSpinButtonCtrl` class and use its `Create` method.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#25;](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -85,25 +85,25 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
   
  [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxspinbuttonctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxspinbuttonctrl.h  
   
-##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
- Обновляет текущий счетчик-элемент управления.  
+##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
+ Repaints the current spin button control.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает функцию `CMFCSpinButtonCtrl::OnPaint` метод для обработки [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) сообщение, и что в свою очередь вызывает метод, это `CMFCSpinButtonCtrl::OnDraw` метод. Переопределите этот метод для настройки способа, платформа строит счетчик-элемент управления.  
+### <a name="remarks"></a>Remarks  
+ The framework calls the `CMFCSpinButtonCtrl::OnPaint` method to handle the [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message, and that method in turn calls this `CMFCSpinButtonCtrl::OnDraw` method. Override this method to customize the way the framework draws the spin button control.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
 

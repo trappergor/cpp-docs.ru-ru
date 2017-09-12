@@ -1,62 +1,81 @@
 ---
-title: "Использование CHeaderCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHeaderCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl - класс"
-  - "элементы управления "заголовок", использование"
+title: Using CHeaderCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CHeaderCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], using
+- CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование CHeaderCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b0d6b19847a3ebc366676a1c3f4816941d919f8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Используйте элемент управления " Заголовок ", представленный классом [CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md) для отображения названий столбцов для шестоватого списка.  Например, элемент управления " Заголовок " может быть полезен для реализации переключение управления поворотом колонны в электронной таблице.  
+---
+# <a name="using-cheaderctrl"></a>Using CHeaderCtrl
+Use a header control, represented by class [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), to display column headers for a columnar list. For example, a header control would be useful for implementing column controls in a spreadsheet.  
   
- Элемент управления " Заголовок " обычно подразделяется на две части, вызванных элементами заголовка «,» каждым подшипником заголовок для соответствующего столбца текста или числа.  В зависимости от задать стилей можно предоставить несколько прямых путей пользователям управлять элементами заголовка.  
+ The header control is usually divided into parts, called "header items," each bearing a title for the associated column of text or numbers. Depending on the styles you set, you can provide a number of direct ways for users to manipulate the header items.  
   
 > [!NOTE]
->  [CListCtrl](../Topic/CListCtrl%20Class.md) содержит внедренный элемент управления заголовка и [CListView](../mfc/reference/clistview-class.md) инкапсулирует `CListCtrl` в классе MFC.  Как правило, следует использовать `CHeaderCtrl` в списки метки, разрабатывается рисования.  
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) provides an embedded header control, and [CListView](../mfc/reference/clistview-class.md) encapsulates `CListCtrl` in an MFC class. In general, think of using `CHeaderCtrl` to label lists that you intend to draw yourself.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Элемент управления " Заголовок " и элемента управления "Список"](../mfc/header-control-and-list-control.md)  
+-   [Header Control and List Control](../mfc/header-control-and-list-control.md)  
   
--   [Примеры элемента управления " Заголовок "](../mfc/header-control-examples.md)  
+-   [Header Control Examples](../mfc/header-control-examples.md)  
   
--   [Элементы заголовка в элементе управления " Заголовок "](../mfc/header-items-in-a-header-control.md)  
+-   [Header Items in a Header Control](../mfc/header-items-in-a-header-control.md)  
   
--   [Настраивать внешний вид элемента заголовка](../Topic/Customizing%20the%20Header%20Item's%20Appearance.md)  
+-   [Customizing the Header Item's Appearance](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [Предоставление поддержки перетаскивания элементов заголовка](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Providing Drag-and-Drop Support for Header Items](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Использование списков изображений с элементами управления Заголовок](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using Image Lists with Header Controls](../mfc/using-image-lists-with-header-controls.md)  
   
--   [Это определенный пользователем элемент управления " Заголовок "](../mfc/making-owner-drawn-header-controls.md)  
+-   [Making Owner-Drawn Header Controls](../mfc/making-owner-drawn-header-controls.md)  
   
--   [Работа с элементом управления " Заголовок "](../mfc/working-with-a-header-control.md)  
+-   [Working with a Header Control](../mfc/working-with-a-header-control.md)  
   
--   [Создание элемента управления " Заголовок "](../mfc/creating-the-header-control.md)  
+-   [Creating the Header Control](../mfc/creating-the-header-control.md)  
   
--   [Добавление элементов в элемент управления " Заголовок "](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Порядок элементов в элементе управления " Заголовок "](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Обрабатывать уведомления элемента управления " Заголовок "](../mfc/processing-header-control-notifications.md)  
+-   [Processing Header-Control Notifications](../mfc/processing-header-control-notifications.md)  
   
-## См. также  
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

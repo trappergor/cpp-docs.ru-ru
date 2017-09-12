@@ -1,232 +1,254 @@
 ---
-title: "TN031. Панели элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.bars"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "панели элементов управления, стили"
-  - "класс CStatusBar, использование технического примечания 31"
-  - "класс CControlBar, использование технического примечания 31"
-  - "класс CControlBar, производный от"
-  - "панели элементов управления, классы"
-  - "класс CDialogBar, использование технического примечания 31"
-  - "класс CToolBar, использование технического примечания 31"
-  - "TN031"
-  - "стили, панели элементов управления"
+title: 'TN031: Control Bars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.bars
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], styles
+- CStatusBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], deriving from
+- control bars [MFC], classes [MFC]
+- CDialogBar class [MFC], Tech Note 31 usage
+- CToolBar class [MFC], Tech Note 31 usage
+- TN031
+- styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN031. Панели элементов управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96602bc469bb7aab112833a68c999d69e39df36c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn031-control-bars"></a>TN031: Control Bars
 > [!NOTE]
->  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- В этом примечании содержатся сведения о классах панели элементов управления в MFC: [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar) и **CDockBar**.  
+ This note describes the control bar classes in MFC: the general [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), and **CDockBar**.  
   
- `CControlBar`  
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
- **ControlBar** — это производный от `CWnd` класс, который:  
+ A **ControlBar** is a `CWnd`-derived class that:  
   
--   выравнивается по верхней или нижней части окна фрейма;  
+-   Is aligned to the top or bottom of a frame window.  
   
--   может содержать дочерние элементы, которые являются элементами управления на основе HWND \(например, `CDialogBar`\) или элементами, не основанными на `HWND` \(например, `CToolBar`, `CStatusBar`\).  
+-   May contain child items that are either HWND-based controls (for example, `CDialogBar`) or non-`HWND` based items (for example, `CToolBar`, `CStatusBar`).  
   
- Панели элементов управления поддерживают дополнительные стили:  
+ Control bars support the additional styles:  
   
--   `CBRS_TOP` \(по умолчанию\) закрепление панели элементов управления в верхней части;  
+- `CBRS_TOP` (The default) pin the control bar to the top.  
   
--   `CBRS_BOTTOM` закрепление панели элементов управления в нижней части;  
+- `CBRS_BOTTOM` Pin the control bar to the bottom.  
   
--   `CBRS_NOALIGN` сохранение положения панели элементов управления при изменении размера родительского элемента.  
+- `CBRS_NOALIGN` Do not reposition the control bar when the parent resizes.  
   
- Классы, производные от `CControlBar`, предоставляют более интересные реализации:  
+ Classes derived from `CControlBar` provide more interesting implementations:  
   
--   `CStatusBar` строка состояния, элементы являются панелями строки состояния, содержащими текст;  
+- `CStatusBar` A status bar, items are status bar panes containing text.  
   
--   `CToolBar` панель инструментов, элементы являются выровненными в строку кнопками с точечными рисунками;  
+- `CToolBar` A toolbar, items are bitmap buttons aligned in a row.  
   
--   `CDialogBar` фрейм в виде панели инструментов, содержащий стандартные элементы управления Windows \(созданные из ресурса шаблона диалоговых окон\);  
+- `CDialogBar` A toolbar-like frame containing standard windows controls (created from a dialog template resource).  
   
--   **CDockBar** обобщенная область закрепления для других производных объектов `CControlBar`. Определенные функции\-члены и переменные, доступные в этом классе, могут измениться в будущих версиях.  
+- **CDockBar** A generalized docking area for other `CControlBar` derived objects. The specific member functions and variables available in this class are likely to change in future releases.  
   
- Все объекты и окна панели элементов управления будут дочерними по отношению к некоторым родительским окнам фреймов. Обычно они добавляются в клиентскую область фрейма \(например, клиент MDI или представление\) как элементы одного уровня. Важное значение имеет идентификатор дочернего окна панели элементов управления. Макет панели элементов управления по умолчанию применяется только для панелей элементов управления с идентификаторами в диапазоне от **AFX\_IDW\_CONTROLBAR\_FIRST** до **AFX\_IDW\_CONTROLBAR\_LAST**. Обратите внимание, что, несмотря на существование 256 идентификаторов, особыми являются только первые 32 из них, поскольку они напрямую поддерживаются архитектурой предварительного просмотра.  
+ All control bar objects/windows will be child windows of some parent frame window. They are usually added as a sibling to the client area of the frame (for example, an MDI Client or view). The child window ID of a control bar is important. The default layout of control bar only works for control bars with IDs in the range of **AFX_IDW_CONTROLBAR_FIRST** to **AFX_IDW_CONTROLBAR_LAST**. Note that even though there is a range of 256 control bar IDs, the first 32 of these control bar IDs are special since they are directly supported by the print preview architecture.  
   
- Класс `CControlBar` предоставляет стандартную реализацию для выполнения следующих задач:  
+ The `CControlBar` class gives standard implementation for:  
   
--   выравнивание панели элементов управления по верхней, нижней или любой стороне фрейма;  
+-   Aligning the control bar to the top, bottom, or either side of the frame.  
   
--   выделение массивов элементов управления;  
+-   Allocating control item arrays.  
   
--   поддержка реализации производных классов.  
+-   Supporting the implementation of derived classes.  
   
- Обычно объекты панели элементов управления C\+\+ встраиваются как члены производного класса `CFrameWnd` и удаляются при уничтожении родительского элемента `HWND` и объекта. Если требуется выделить объект панели управления в куче, можно задать для члена **m\_bAutoDestruct** значение **TRUE**, чтобы панель элементов управления выполняла действие **delete this** при удалении `HWND`.  
+ C++ control bar objects will usually be embedded as members of a `CFrameWnd` derived class, and will be cleaned up when the parent `HWND` and object are destroyed. If you need to allocate a control bar object on the heap, you can simply set the **m_bAutoDestruct** member to **TRUE** to make the control bar "**delete this**" when the `HWND` is destroyed.  
   
 > [!NOTE]
->  При создании собственного класса, производного от `CControlBar`, а не использовании одного из производных классов MFC, такого как `CStatusBar`, `CToolBar` или `CDialogBar`, потребуется задать элемент данных `m_dwStyle`. Это можно сделать в переопределении **Create**:  
+>  If you create your own `CControlBar`-derived class, rather than using one of MFC's derived classes, such as `CStatusBar`, `CToolBar`, or `CDialogBar`, you will need to set the `m_dwStyle` data member. This can be done in the override of **Create**:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
-BOOL CMyControlBar::Create( CWnd* pParentWnd, DWORD dwStyle, UINT nID )  
+BOOL CMyControlBar::Create(CWnd* pParentWnd,
+    DWORD dwStyle,
+    UINT nID)  
 {  
-   m_dwStyle = dwStyle;  
-  
-   .  
-   .  
-   .  
+    m_dwStyle = dwStyle;  
+ 
+ .  
+ .  
+ .  
 }  
 ```  
   
- **Алгоритм макета панели элементов управления**  
+ **Control Bar Layout Algorithm**  
   
- Алгоритм макета панели управления очень прост. Окно фрейма отправляет сообщение **WM\_SIZEPARENT** всем дочерним элементам в диапазоне панели элементов управления. Вместе с этим сообщением передается указатель на клиентскую область родительского окна. Это сообщение отправляется дочерним элементам в Z\-порядке. Дочерние элементы панели элементов управления используют эту информацию для определения своих положений и уменьшения размера клиентской области родительского окна. Конечная область, которая остается для обычной клиентской области \(меньше панелей элементов управления\), используется для размещения основного окна клиента \(обычно это окно клиента MDI, представления или разделителя\).  
+ The control bar layout algorithm is very simple. The frame window sends a message **WM_SIZEPARENT** to all children in the control bar range. Along with this message, a pointer to the parent's client rectangle is passed. This message is sent to children in Z-order. The control-bar children use this information to position themselves and to decrease the size of the parent's client area. The final rectangle that is left for the normal client area (less control bars) is used to position the main client window (usually an MDI client, view or splitter window).  
   
- Дополнительные сведения см. в разделах `CWnd::RepositionBars` и `CFrameWnd::RecalcLayout`.  
+ See `CWnd::RepositionBars` and `CFrameWnd::RecalcLayout` for more details.  
   
- Закрытые сообщения MFC Windows, включая **WM\_SIZEPARENT**, описаны в [техническом примечании 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
+ MFC private Windows messages, including **WM_SIZEPARENT**, are documented in [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
- `CStatusBar`  
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
- Строка состояния представляет собой панель элементов управления со строкой панелей вывода текста. Существует два основных способа использования панелей вывода текста.  
+ A status bar is a control bar that has a row of text output panes. There are two common ways to use text output panes:  
   
--   В качестве строки сообщения  
+-   As a message line  
   
-     \(Например, строка сообщения стандартного меню "Справка".\) Как правило, для доступа используется отсчитываемый от нуля индекс.  
+     (for example, the standard menu help message line). These are usually accessed by a 0-based indexed  
   
--   В качестве индикаторов состояния  
+-   As status indicators  
   
-     \(Например, индикаторы CAP, NUM и SCRL.\) Как правило, для доступа используется идентификатор строки или команды.  
+     (for example, the CAP, NUM and SCRL indicators). These are usually accessed by string/command ID.  
   
- В качестве шрифта строки состояния используется 10\-точечный MS Sans Serif \(согласно руководству по созданию приложений с интерфейсом Windows или программе отображения шрифта лучше всего соответствует 10\-точечный пропорциональный шрифт Swiss\). В некоторых версиях Windows, например для японского языка, применяются другие шрифты.  
+ The font for the status bar is 10-point MS Sans Serif (dictated by the Windows Interface Application Design Guide or the font mappers best match of a 10-point Swiss proportional font). On certain versions of Windows, such as the Japanese edition, the fonts selected are different.  
   
- Цвета, используемые в строке состояния, также соответствуют рекомендациям в руководстве по созданию приложений с интерфейсом Windows. Эти цвета не являются фиксированными и динамически изменяются согласно пользовательским настройкам на панели управления.  
+ The colors used in the status bar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|Элемент|Значение COLOR Windows|RGB по умолчанию|  
-|-------------|----------------------------|----------------------|  
-|Фон строки состояния|**COLOR\_BTNFACE**|RGB\(192, 192, 192\)|  
-|Текст строки состояния|**COLOR\_BTNTEXT**|RGB\(000, 000, 000\)|  
-|Верхняя или левая границы строки состояния|**COLOR\_BTNHIGHLIGHT**|RGB\(255, 255, 255\)|  
-|Нижняя или правая границы строки состояния|**COLOR\_BTNSHADOW**|RGB\(128, 128, 128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|Status bar background|**COLOR_BTNFACE**|RGB(192, 192, 192)|  
+|Status bar text|**COLOR_BTNTEXT**|RGB(000, 000, 000)|  
+|Status bar top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255, 255, 255)|  
+|Status bar bot/right edges|**COLOR_BTNSHADOW**|RGB(128, 128, 128)|  
   
- **Поддержка CCmdUI для CStatusBar**  
+ **CCmdUI Support for CStatusBar**  
   
- Для обновления индикаторов обычно используется механизм `ON_UPDATE_COMMAND_UI`. Во время бездействия строка состояния вызывает обработчик `ON_UPDATE_COMMAND_UI` со строковым идентификатором панели индикаторов.  
+ The way indicators are usually updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the status bar will call the `ON_UPDATE_COMMAND_UI` handler with the string ID of the indicator pane.  
   
- Обработчик `ON_UPDATE_COMMAND_UI` может вызвать следующие функции.  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: для включения и отключения панели. Отключенная панель выглядит так же, как включенная, но текст невидим \(то есть отключен индикатор текста\).  
+- **Enable**: To enable or disable the pane. A disabled pane looks exactly like an enabled pane but the text is invisible (that is, turns off the text indicator).  
   
--   **SetText**: для изменения текста. Будьте внимательны при использовании этой функции, так как размер панели не меняется автоматически.  
+- **SetText**: To change the text. Be careful if you use this because the pane will not automatically resize.  
   
- Подробные сведения об API создания и настройки `CStatusBar` см. в описании класса [CStatusBar](../mfc/reference/cstatusbar-class.md) в *справочнике по библиотеке классов*. Большая часть настроек строк состояния должна быть выполнена до их первоначального отображения.  
+ Refer to class [CStatusBar](../mfc/reference/cstatusbar-class.md) in the *Class Library Reference* for details about `CStatusBar` creation and customization APIs. Most customization of status bars should be done before the status bar is initially made visible.  
   
- Строка состояния поддерживает только одну панель растягивания, обычно первую. Размер этой панели фактически является минимальным размером. Если размер строки состояния превышает минимальный размер всех панелей, панели растягивания будет задано дополнительное значение ширины. В приложении по умолчанию со строкой состояния индикаторы для CAP, NUM и SCRL выровнены по правому краю, так как первая панель может растягиваться.  
+ The status bar supports only one stretchy pane, usually the first pane. The size of that pane is really a minimum size. If the status bar is bigger than the minimum size of all the panes, any extra width will be given to the stretchy pane. The default application with a status bar has right-aligned indicators for CAP, NUM and SCRL since the first pane is stretchy.  
   
- `CToolBar`  
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
- Панель инструментов представляет собой панель элементов управления со строкой кнопок с точечными рисунками, которые могут содержать разделители. Поддерживаются два стиля кнопок: нажимаемые кнопки и кнопки с флажками. Функция группы переключателей может быть реализована с помощью флажков и `ON_UPDATE_COMMAND_UI`.  
+ A toolbar is a control bar with a row of bitmap buttons that may include separators. Two styles of buttons are supported: pushbuttons and check box buttons. Radio group functionality can be built with check box buttons and `ON_UPDATE_COMMAND_UI`.  
   
- Все кнопки с точечными рисунками на панели инструментов создаются из одного точечного рисунка. Этот рисунок должен содержать одно изображение или глиф для каждой кнопки. Как правило, порядок изображений или глифов в точечном рисунке совпадает с порядком их отображения на экране. \(Его можно изменить с помощью API\-интерфейсов настройки.\)  
+ All the bitmap buttons in the toolbar are taken from one bitmap. This bitmap must contain one image or glyph for each button. Typically the order of the images/glyphs in the bitmap is the same order they will be drawn on the screen. (This can be changed using the customization APIs.)  
   
- Все кнопки должны быть одинакового размера. Размером по умолчанию является стандарт в 24x22 пикселя. Все изображения или глифы должны иметь одинаковый размер и располагаться на точечном рисунке рядом друг с другом. Размер образа и глифов по умолчанию — 16x15 пикселей. Таким образом, для панели инструментов с 10 кнопками \(имеющими стандартные размеры\) потребуется точеный рисунок 160 пикселей в ширину и 15 пикселей в высоту.  
+ Each button must be the same size. The default is the standard 24x22 pixels. Each image/glyph must be the same size and must be side-by-side in the bitmap. The default image/glyph size is 16x15 pixels. Therefore, for a toolbar with 10 buttons (using standard sizes), you need a bitmap that is 160 pixels wide and 15 pixels high.  
   
- Каждая кнопка имеет только одно изображение или глиф. Разные состояния и стили кнопок \(например, нажата, отключена, включена, нажата и недоступна, не определена\) создаются алгоритмически из этого одного изображения или глифа. Теоретически можно использовать любой цветной точечный рисунок или DIB. Алгоритм создания разных состояний кнопки работает лучше всего, если исходное изображение состоит из оттенков серого. Примеры стандартных кнопок панели инструментов и картинки кнопки панели инструментов см. в примере [CLIPART](../top/visual-cpp-samples.md) MFC.  
+ Each button has one and only one image/glyph. The different button states and styles (for example, pressed, up, down, disabled, disabled down, indeterminate) are algorithmically generated from that one image/glyph. Any color bitmap or DIB can be used in theory. The algorithm for generating the different button states works best if the original image is shades of gray. Look at the standard toolbar buttons and the toolbar button clipart provided in MFC General sample [CLIPART](../visual-cpp-samples.md) for examples.  
   
- Цвета, используемые на панели инструментов, также соответствуют рекомендациям в руководстве по созданию приложений с интерфейсом Windows. Эти цвета не являются фиксированными и динамически изменяются согласно пользовательским настройкам на панели управления.  
+ The colors used in the toolbar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|Элемент|Значение COLOR Windows|RGB по умолчанию|  
-|-------------|----------------------------|----------------------|  
-|Фон панели инструментов|**COLOR\_BTNFACE**|RGB\(192,192,192\)|  
-|Верхняя и левая границы кнопок панели инструментов|**COLOR\_BTNHIGHLIGHT**|RGB\(255,255,255\)|  
-|Нижняя и правая границы кнопок панели инструментов|**COLOR\_BTNSHADOW**|RGB\(128,128,128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|ToolBar background|**COLOR_BTNFACE**|RGB(192,192,192)|  
+|ToolBar buttons top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
+|ToolBar buttons bot/right edges|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
   
- Кроме того, цвет кнопок с точечными рисунками панели инструментов изменен так, как если бы они были стандартными элементами управления кнопок Windows. Изменение цвета происходит при загрузке точечного рисунка из ресурса и в ответ на изменение системных цветов согласно пользовательским настройкам на панели управления. Следующие цвета на точечном рисунке панели инструментов будут изменены автоматически, поэтому их следует использовать с осторожностью. Если вы не хотите изменять цвет части точечного рисунка, используйте цвет, наиболее точно соответствующий сопоставленным значениям RGB. Сопоставление выполняется на основе точных значений RGB.  
+ In addition, the toolbar bitmap buttons are recolored as though they were standard Windows button controls. This recoloring occurs when the bitmap is loaded from the resource and in response to a change in system colors in response to user customization in Control Panel. The following colors in a toolbar bitmap will be recolored automatically so they should be used with caution. If you do not wish to have a portion of your bitmap recolored, then use a color that closely approximates one of the mapped RGB values. The mapping is done based on exact RGB values.  
   
-|Значение RGB|Динамически сопоставленное значение COLOR|  
-|------------------|-----------------------------------------------|  
-|RGB\(000, 000, 000\)|COLOR\_BTNTEXT|  
-|RGB\(128, 128, 128\)|COLOR\_BTNSHADOW|  
-|RGB\(192, 192, 192\)|COLOR\_BTNFACE|  
-|RGB\(255, 255, 255\)|COLOR\_BTNHIGHLIGHT|  
+|RGB value|Dynamically mapped COLOR value|  
+|---------------|------------------------------------|  
+|RGB(000, 000, 000)|COLOR_BTNTEXT|  
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|  
+|RGB(192, 192, 192)|COLOR_BTNFACE|  
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|  
   
- Подробные сведения об API создания и настройки `CToolBar` см. в описании класса [CToolBar](../mfc/reference/ctoolbar-class.md) в *справочнике по библиотеке классов*. Большая часть настроек панелей инструментов должна быть выполнена до их первоначального отображения.  
+ Refer to class [CToolBar](../mfc/reference/ctoolbar-class.md) the *Class Library Reference* for details about the `CToolBar` creation and customization APIs. Most customization of toolbars should be done before the toolbar is initially made visible.  
   
- API настройки можно использовать для корректировки идентификаторов, стилей, ширины кнопок и выбора изображений или глифов для конкретных кнопок. По умолчанию эти API не требуются.  
+ The customization APIs can be used to adjust the button IDs, styles, spacer width and which image/glyph is used for what button. By default you do not need to use these APIs.  
   
-## Поддержка CCmdUI для CToolBar  
- Обновление кнопок панели инструментов всегда происходит с помощью механизма `ON_UPDATE_COMMAND_UI`. Во время бездействия панель инструментов вызывает обработчик `ON_UPDATE_COMMAND_UI` идентификатором команды этой кнопки.`ON_UPDATE_COMMAND_UI` не вызывается для разделителей, но вызывается для кнопок и флажков.  
+## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI Support for CToolBar  
+ The way toolbar buttons are always updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the toolbar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of that button. `ON_UPDATE_COMMAND_UI` is not called for separators, but it is called for pushbuttons and check box buttons.  
   
- Обработчик `ON_UPDATE_COMMAND_UI` может вызвать следующие функции.  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: для включения и отключения кнопки. Она действует одинаково для кнопок и флажков.  
+- **Enable**: To enable or disable the button. This works equally for pushbuttons and check box buttons.  
   
--   `SetCheck`: для задания проверки состояния кнопки. При вызове этой функции для кнопки панели инструментов кнопка будет преобразована во флажок.`SetCheck` принимает параметр, который может быть равен 0 \(не установлен\), 1 \(установлен\) или 2 \(не определен\).  
+- `SetCheck`: To set the check state of a button. Calling this for a toolbar button will turn it into a check box button. `SetCheck` takes a parameter which can be 0 (not checked), 1 (checked) or 2 (indeterminate)  
   
--   `SetRadio`: сокращение для `SetCheck`.  
+- `SetRadio`: Shorthand for `SetCheck`.  
   
- Флажки являются автоматическими, то есть при их установке они сразу же изменяют состояние. Установка — это отпущенное или отключенное состояние. Встроенный в пользовательский интерфейс способ перевода кнопки в неопределенное состояние отсутствует. Для этого нужно написать код.  
+ Check box buttons are "AUTO" check box buttons; that is, when the user presses them they will immediately change state. Checked is the down or depressed state. There is no built-in user interface way to change a button into the "indeterminate" state; that must be done through code.  
   
- API\-интерфейсы настройки позволяют изменять состояние нужной кнопки панели инструментов. Предпочтительным вариантом является изменение этих состояний в обработчике `ON_UPDATE_COMMAND_UI` для команды, которую представляет кнопка панели инструментов. Помните, что обработка бездействия приводит к изменению состояния кнопок панели инструментов с обработчиком `ON_UPDATE_COMMAND_UI`, поэтому любые изменения этих состояний посредством SetButtonStyle могут быть потеряны после следующего периода бездействия.  
+ The customization APIs will permit you to change the state of a given toolbar button, preferably you should change these states in the `ON_UPDATE_COMMAND_UI` handler for the command the toolbar button represents. Remember, the idle processing will change the state of toolbar buttons with the `ON_UPDATE_COMMAND_UI` handler, so any changes to these states made through SetButtonStyle may get lost after the next idle.  
   
- Кнопки панели инструментов отправляют сообщения **WM\_COMMAND** как обычные кнопки или пункты меню и обычно обрабатываются с помощью обработчика `ON_COMMAND` в том же классе, который предоставляет обработчик `ON_UPDATE_COMMAND_UI`.  
+ Toolbar buttons will send **WM_COMMAND** messages like normal buttons or menu items and are normally handled by an `ON_COMMAND` handler in the same class that provides the `ON_UPDATE_COMMAND_UI` handler.  
   
- Существует четыре стиля кнопок панели инструментов \(TBBS\_ \<значения\>\), используемых для отображения состояний.  
+ There are four Toolbar button styles (TBBS_ values) used for display states:  
   
--   TBBS\_CHECKED: флажок установлен \(нажат\).  
+-   TBBS_CHECKED:   Check box is currently checked (down).  
   
--   TBBS\_INDETERMINATE: флажок не определен.  
+-   TBBS_INDETERMINATE:   Check box is currently indeterminate.  
   
--   TBBS\_DISABLED: кнопка отключена.  
+-   TBBS_DISABLED:   Button is currently disabled.  
   
--   TBBS\_PRESSED: кнопка нажата.  
+-   TBBS_PRESSED:   Button is currently pressed.  
   
- Следующие значения TBBS представляют шесть официальных стилей кнопок согласно руководству по созданию приложений с интерфейсом Windows.  
+ The six official Windows Interface Application Design Guide button styles are represented by the following TBBS values:  
   
--   Кнопка доступна — 0  
+-   Up = 0  
   
--   Кнопка мыши нажата — TBBS\_PRESSED \(&#124; любой другой стиль\)  
+-   Mouse Down = TBBS_PRESSED (&#124; any other style)  
   
--   Кнопка недоступна — TBBS\_DISABLED  
+-   Disabled = TBBS_DISABLED  
   
--   Кнопка нажата — TBBS\_CHECKED  
+-   Down = TBBS_CHECKED  
   
--   Кнопка нажата и недоступна — TBBS\_CHECKED &#124; TBBS\_DISABLED  
+-   Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED  
   
--   Неопределенное состояние кнопки — TBBS\_INDETERMINATE  
+-   Indeterminate = TBBS_INDETERMINATE  
   
 ##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
- Диалоговая панель — это панель элементов управления со стандартными элементами управления Windows. Она функционирует аналогично диалоговому окну в том, что она содержит элементы управления и поддерживает переходы между ними. Она также действует как диалоговое окно в том, что для представления панели она использует шаблон диалогового окна.  
+ A dialog bar is a control bar that contains standard Windows controls. It acts like a dialog in that it contains the controls and supports tabbing between them. It also acts like a dialog in that it uses a dialog template to represent the bar.  
   
- `CDialogBar` используется для панели инструментов предварительного просмотра, содержащей стандартные элементы управления кнопок.  
+ A `CDialogBar` is used for the print-preview toolbar, which contains standard pushbutton controls.  
   
- Использование `CDialogBar` аналогично `CFormView`. Необходимо определить шаблон диалогового окна для диалоговой панели и удалить все стили, кроме **WS\_CHILD**. Обратите внимание, что диалоговое окно не должно отображаться.  
+ Using a `CDialogBar` is like using a `CFormView`. You must define a dialog template for the dialog bar and remove all the styles except **WS_CHILD**. Note that the dialog must not be visible.  
   
- Уведомления элементов управления для `CDialogBar` отправляются родительскому элементу панели элементов \(как кнопки панели инструментов\).  
+ The control notifications for a `CDialogBar` will be sent to the parent of the control bar (just like toolbar buttons).  
   
-## Поддержка CCmdUI для CDialogBar  
- Кнопки диалоговой панели должны обновляться с помощью механизма обработчика `ON_UPDATE_COMMAND_UI`. Во время бездействия диалоговая панель вызывает обработчик `ON_UPDATE_COMMAND_UI` с идентификатором команды всех кнопок с ИД, больше или равным 0x8000 \(то есть в диапазоне идентификаторов\).  
+## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI Support for CDialogBar  
+ Dialog bar buttons should be updated through the `ON_UPDATE_COMMAND_UI` handler mechanism. At idle time, the dialog bar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of all the buttons that have a ID >= 0x8000 (that is, in the range of command IDs).  
   
- Обработчик `ON_UPDATE_COMMAND_UI` может вызвать следующие функции.  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   Enable: для включения и отключения кнопки.  
+-   Enable: to enable or disable the button.  
   
--   SetText: для изменения текста кнопки.  
+-   SetText: to change the text of the button.  
   
- Для настройки можно использовать стандартные API\-интерфейсы диспетчера окон.  
+ Customization can be done through standard window manager APIs.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

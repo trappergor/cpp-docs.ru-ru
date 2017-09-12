@@ -1,5 +1,5 @@
 ---
-title: "Поле со списком стили | Документы Microsoft"
+title: Combo-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,19 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBS_OWNERDRAWVARIABLE constant
-- CBS_NOINTEGRALHEIGHT constant
-- CBS_SIMPLE constant
-- CBS_AUTOHSCROLL constant
-- CBS_OEMCONVERT constant
-- CBS_DISABLENOSCROLL constant
-- CBS_HASSTRINGS constant
-- CBS_LOWERCASE constant
-- CBS_SORT constant
-- CBS_DROPDOWN constant
-- CBS_OWNERDRAWFIXED constant
-- combo boxes, styles
-- CBS_UPPERCASE constant
+- CBS_OWNERDRAWVARIABLE constant [MFC]
+- CBS_NOINTEGRALHEIGHT constant [MFC]
+- CBS_SIMPLE constant [MFC]
+- CBS_AUTOHSCROLL constant [MFC]
+- CBS_OEMCONVERT constant [MFC]
+- CBS_DISABLENOSCROLL constant [MFC]
+- CBS_HASSTRINGS constant [MFC]
+- CBS_LOWERCASE constant [MFC]
+- CBS_SORT constant [MFC]
+- CBS_DROPDOWN constant [MFC]
+- CBS_OWNERDRAWFIXED constant [MFC]
+- combo boxes [MFC], styles
+- CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
 caps.latest.revision: 12
@@ -59,45 +59,45 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 57069f6e6cd0999773ab3872e671a65e1e880bba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ca7dba78b9265110977b18549ffb6207ce9b877
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="combo-box-styles"></a>Стили полей со списками
-В MFC доступны перечисленные далее стили полей со списками.  
+# <a name="combo-box-styles"></a>Combo-Box Styles
+The following combo-box styles are available in MFC.  
   
--   **CBS_AUTOHSCROLL** Автоматическая прокрутка текста в элементе управления "Поле ввода" вправо при вводе символа в конце строки. Если этот стиль не задан, допускается только текст, который умещается в прямоугольной области.  
+-   **CBS_AUTOHSCROLL** Automatically scrolls the text in the edit control to the right when the user types a character at the end of the line. If this style is not set, only text that fits within the rectangular boundary is allowed.  
   
--   **CBS_DISABLENOSCROLL** Если в списке содержится недостаточно элементов для прокрутки, в нем отображается отключенная вертикальная полоса прокрутки. Если этот стиль не задан, полоса прокрутки будет скрыта при недостаточном количестве элементов в списке.  
+-   **CBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **CBS_DROPDOWN** Этот стиль аналогичен **CBS_SIMPLE**, за исключением того, что список отображается только после выбора значка рядом с элементом управления "Поле ввода".  
+-   **CBS_DROPDOWN** Similar to **CBS_SIMPLE**, except that the list box is not displayed unless the user selects an icon next to the edit control.  
   
--   **CBS_DROPDOWNLIST** Этот стиль аналогичен **CBS_DROPDOWN**, за исключением того, что элемент управления "Поле ввода" заменяется элементом статического текста, который отображает текущее выделение в поле со списком.  
+-   **CBS_DROPDOWNLIST** Similar to **CBS_DROPDOWN**, except that the edit control is replaced by a static-text item that displays the current selection in the list box.  
   
--   **CBS_HASSTRINGS** Рисуемое владельцем поле со списком содержит элементы, которые являются строками. Поле со списком поддерживает память и указатели для строк, поэтому приложение может использовать функцию-член `GetText` для получения текста для определенного элемента.  
+-   **CBS_HASSTRINGS** An owner-draw combo box contains items consisting of strings. The combo box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **CBS_LOWERCASE** Преобразует в нижний регистр весь текст в поле выбора и в списке.  
+-   **CBS_LOWERCASE** Converts to lowercase all text in both the selection field and the list.  
   
--   **CBS_NOINTEGRALHEIGHT** Указывает, что размер поля со списком точно соответствует размеру, заданному приложением при создании поля со списком. Как правило, в Windows размер поля со списком определяется так, чтобы в избежать частичного отображения элементов.  
+-   **CBS_NOINTEGRALHEIGHT** Specifies that the size of the combo box is exactly the size specified by the application when it created the combo box. Normally, Windows sizes a combo box so that the combo box does not display partial items.  
   
--   **CBS_OEMCONVERT** Текст, введенный в элементе управления полем со списком, преобразуется из набора символов ANSI в набор символов OEM и затем обратно в формат ANSI. Это гарантирует правильное преобразование символов, когда приложение вызывает функцию Windows `AnsiToOem` для преобразования строки ANSI в поле со списком в символы OEM. Этот стиль особенно полезен для полей со списком, содержащих имена файлов, и применяется только к полям со списком, созданным с помощью стилей **CBS_SIMPLE** или **CBS_DROPDOWN** .  
+-   **CBS_OEMCONVERT** Text entered in the combo-box edit control is converted from the ANSI character set to the OEM character set and then back to ANSI. This ensures proper character conversion when the application calls the `AnsiToOem` Windows function to convert an ANSI string in the combo box to OEM characters. This style is most useful for combo boxes that contain filenames and applies only to combo boxes created with the **CBS_SIMPLE** or **CBS_DROPDOWN** styles.  
   
--   **CBS_OWNERDRAWFIXED** Владелец списка отвечает за рисование его содержимого. Все элементы в списке имеют одинаковую высоту.  
+-   **CBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are all the same height.  
   
--   **CBS_OWNERDRAWVARIABLE** Владелец списка отвечает за рисование его содержимого. Все элементы в списке имеют разную высоту.  
+-   **CBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **CBS_SIMPLE** Список отображается всегда. Текущее выделение в списке отображается в элементе управления "Поле ввода".  
+-   **CBS_SIMPLE** The list box is displayed at all times. The current selection in the list box is displayed in the edit control.  
   
--   **CBS_SORT** Автоматически сортирует строки, вводимые в список.  
+-   **CBS_SORT** Automatically sorts strings entered into the list box.  
   
--   **CBS_UPPERCASE** Преобразует в верхний регистр весь текст в поле выбора и в списке.  
+-   **CBS_UPPERCASE** Converts to uppercase all text in both the selection field and the list.  
   
-## <a name="see-also"></a>См. также  
- [Стили, используемые MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CComboBox::Create] (ccombobox class.md #ccombobox__create   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CComboBox::Create](ccombobox-class.md#ccombobox__create   
 
 
 

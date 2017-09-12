@@ -1,43 +1,62 @@
 ---
-title: "Сборка в платформе | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "платформа приложения [C++], построение приложений"
-  - "приложения [MFC]"
-  - "классы конкретных приложений [C++]"
-  - "MFC [C++], разработка приложений"
+title: Building on the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application-specific classes [MFC]
+- application framework [MFC], building applications
+- applications [MFC]
+- MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Сборка в платформе
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14e4e98f27711fcc2b7f022d452b99f3a55969c6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Роль пользователя в настройке приложения MFC с платформой предоставить от приложения исходный код и подключить компоненты, указав, какие сообщения и команды, к которым они отвечают.  Используется язык C\+\+ стандартные методы C\+\+, чтобы создать собственные конкретного приложения из этих классов, предоставляемых библиотекой классов и переопределять и увеличить расширение функциональности базового класса.  
+---
+# <a name="building-on-the-framework"></a>Building on the Framework
+Your role in configuring an application with the MFC framework is to supply the application-specific source code and to connect the components by defining what messages and commands to which they respond. You use the C++ language and standard C++ techniques to derive your own application-specific classes from those supplied by the class library and to override and augment the base class's behavior.  
   
- В разделах, связанных в следующих таблицах описываются общие последовательность операций обычно следуете и ваши обязанности и обязанностей платформы:  
+ In related topics, the following tables describe the general sequence of operations you will typically follow and your responsibilities versus the framework's responsibilities:  
   
--   [Последовательность для построения приложений с помощью платформы .NET Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
+-   [Sequence for Building an Application with the Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
   
--   [Последовательность операций для создания приложений OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
+-   [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
   
--   [Последовательность операций при создании элементов управления ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
+-   [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
   
--   [Последовательность операций для создания приложений баз данных](../mfc/sequence-of-operations-for-creating-database-applications.md)  
+-   [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)  
   
- В большинстве случаев можно выполнить следующие таблицы как последовательность действий для создания приложения MFC, хотя некоторые шаги другие параметры.  Например, большинство приложений тип использования одного класса представления из нескольких типов доступных.  
+ For the most part, you can follow these tables as a sequence of steps for creating an MFC application, although some of the steps are alternative options. For example, most applications use one type of view class from the several types available.  
   
-## См. также  
- [Общие разделы по MFC](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

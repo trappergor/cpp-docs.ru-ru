@@ -1,5 +1,5 @@
 ---
-title: "Определение обработчика сообщений для отраженного сообщения | Документы Microsoft"
+title: Defining a Message Handler for a Reflected Message | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- messages, reflected
-- message handling, reflected messages
+- messages [MFC], reflected
+- message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
 caps.latest.revision: 9
 author: mikeblome
@@ -34,52 +34,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0033c75d351aa201a0c18e81395d764b9d45761b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e7a447048143d175e143a3e9c3072c844194bf8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="defining-a-message-handler-for-a-reflected-message"></a>Определение обработчика сообщений для отраженного сообщения
-После создания нового класса элемента управления MFC для него можно определить обработчик сообщений. Обработчики отраженных сообщений позволяют классу элемента управления обрабатывать собственные сообщения до получения сообщения является родительским элементом. Можно использовать MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) функции для отправки сообщений от элемента управления в родительское окно.  
+# <a name="defining-a-message-handler-for-a-reflected-message"></a>Defining a Message Handler for a Reflected Message
+Once you have created a new MFC control class, you can define message handlers for it. Reflected message handlers allow your control class to handle its own messages before the message is received by the parent. You can use the MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) function to send messages from your control to a parent window.  
   
- Эта функциональная возможность, вы можете, например, создать поле со списком, будет перерисовывает себя, а не полагается на родительского окна, чтобы сделать (рисование владельцем). Дополнительные сведения об отраженных сообщениях см. в разделе [обработка сообщений отражены](../../mfc/handling-reflected-messages.md).  
+ With this functionality you could, for example, create a list box that will redraw itself rather than relying on the parent window to do so (owner drawn). For more information on reflected messages, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
   
- Для создания [управления ActiveX](../../mfc/activex-controls-on-the-internet.md) с одинаковой функциональностью, необходимо создать проект для элемента управления ActiveX.  
+ To create an [ActiveX control](../../mfc/activex-controls-on-the-internet.md) with the same functionality, you must create a project for the ActiveX control.  
   
 > [!NOTE]
->  Не удается добавить отраженное сообщение (OCM_*сообщения*) для ActiveX управления с помощью окна свойств, как описано ниже. Необходимо вручную добавить эти сообщения.  
+>  You cannot add a reflected message (OCM_*Message*) for an ActiveX control using the Properties window, as described below. You must add these messages manually.  
   
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Определение обработчика сообщений для отраженного сообщения в окне «Свойства»  
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>To define a message handler for a reflected message from the Properties window  
   
-1.  Добавьте в проект MFC элемент управления, например список, контейнер элементов управления, панель инструментов или дерево.  
+1.  Add a control, such as a list, a rebar control, a toolbar, or a tree control, to your MFC project.  
   
-2.  В представлении классов щелкните имя класса элемента управления.  
+2.  In Class View, click the name of your control class.  
   
-3.  В [окно свойств](/visualstudio/ide/reference/properties-window), отображается имя класса элемента управления в **имя класса** списка.  
+3.  In the [Properties window](/visualstudio/ide/reference/properties-window), the control class name appears in the **Class Name** list.  
   
-4.  Щелкните **сообщений** кнопку, чтобы отобразить список сообщений Windows, можно добавить к элементу управления.  
+4.  Click the **Messages** button to display the Windows messages available to add to the control.  
   
-5.  Прокрутите вниз список сообщений в окне "Свойства", пока не появится заголовок **отражен**. Щелкнуть **категории** кнопку и свернуть окно, чтобы увидеть **отражен** заголовок.  
+5.  Scroll down the list of messages in the Properties window until you see the heading **Reflected**. Alternately, click the **Categories** button and collapse the view to see the **Reflected** heading.  
   
-6.  Выберите отраженное сообщение, для которого требуется определить обработчик. Отраженные сообщения помечаются знаком равенства (=).  
+6.  Select the reflected message for which you want to define a handler. Reflected messages are marked with an equal sign (=).  
   
-7.  Щелкните ячейку в столбце справа в окне «Свойства», чтобы отобразить предлагаемое имя обработчика как \<добавьте настроек*HandlerName*. (Например, **= WM_CTLCOLOR** обработчик сообщений предлагает \<добавьте настроек**CtlColor**).  
+7.  Click the cell in the right column in the Properties window to display the suggested name of the handler as \<add>*HandlerName*. (For example, the **=WM_CTLCOLOR** message handler suggests \<add>**CtlColor**).  
   
-8.  Щелкните предлагаемое имя, чтобы принять. Обработчик добавляется в проект.  
+8.  Click the suggested name to accept. The handler is added to your project.  
   
-     Отображаются имена обработчиков сообщений, добавленные в правом столбце окна отраженных сообщений.  
+     Message handler names that you have added appear in the right column of the reflected messages window.  
   
-9. Чтобы изменить или удалить обработчик сообщений, повторите шаги с 4 по 7. Щелкните ячейку, содержащую имя обработчика, чтобы изменить или удалить и выберите соответствующую задачу.  
+9. To edit or delete a message handler, repeat steps 4 through 7. Click the cell containing the handler name to edit or delete and click the appropriate task.  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление сообщений с функциями](../../mfc/reference/mapping-messages-to-functions.md)   
- [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
- [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)   
- [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

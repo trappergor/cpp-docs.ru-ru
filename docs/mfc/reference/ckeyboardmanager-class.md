@@ -1,5 +1,5 @@
 ---
-title: "Класс CKeyboardManager | Документы Microsoft"
+title: CKeyboardManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyboardManager class
+- CKeyboardManager [MFC], CKeyboardManager
+- CKeyboardManager [MFC], CleanUp
+- CKeyboardManager [MFC], FindDefaultAccelerator
+- CKeyboardManager [MFC], IsKeyHandled
+- CKeyboardManager [MFC], IsKeyPrintable
+- CKeyboardManager [MFC], IsShowAllAccelerators
+- CKeyboardManager [MFC], LoadState
+- CKeyboardManager [MFC], ResetAll
+- CKeyboardManager [MFC], SaveState
+- CKeyboardManager [MFC], ShowAllAccelerators
+- CKeyboardManager [MFC], TranslateCharToUpper
+- CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
 caps.latest.revision: 33
 author: mikeblome
@@ -46,90 +57,90 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bbe12d2bf4af0008233df25e09f09008c402ee7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c49d5be8f9e208defeb1752c4288e212bb5dec45
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
-Управляет таблицами клавиш быстрого доступа для окна главного и дочерних фреймов.  
+# <a name="ckeyboardmanager-class"></a>CKeyboardManager Class
+Manages shortcut key tables for the main frame window and child frame windows.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyboardManager : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|||  
-|-|-|  
-|Имя|Описание|  
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Создает объект `CKeyboardManager`.|  
-  
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|[CKeyboardManager::CleanUp](#cleanup)|Очищает ярлык ключа таблицы.|  
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Получает сочетание клавиш по умолчанию для указанной команды и окна.|  
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Определяет, обрабатывается ли ключ в таблице сочетаний клавиш.|  
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Указывает, является ли символ печатные.|  
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Указывает, является ли меню отображаются все сочетания клавиш для команды или сочетание клавиш по умолчанию.|  
-|[CKeyboardManager::LoadState](#loadstate)|Загружает таблицы сочетания ключа из реестра Windows.|  
-|[CKeyboardManager::ResetAll](#resetall)|Перезагружает таблиц сочетания ключа из ресурсов приложения.|  
-|[CKeyboardManager::SaveState](#savestate)|Сохранение ярлыка ключа таблицы в реестр Windows.|  
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Указывает, отображаются ли платформа сочетания клавиш для всех команд или к одному сочетанию клавиш для каждой команды. Этот метод не влияет на команды, которые имеют только один сочетанием клавиш.|  
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Преобразует символ в его верхний регистр.|  
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Обновляет таблицу ключа ярлык с новой таблицей ключа ярлык.|  
+|Name|Description|  
+|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constructs a `CKeyboardManager` object.|  
   
-## <a name="remarks"></a>Примечания  
- Члены этого класса позволяют сохранить и загрузить сочетания ключей таблицы в реестр Windows, использовать шаблон для обновления таблиц ключа ярлык и поиск по умолчанию сочетание клавиш для команды в окне фрейма. Кроме того `CKeyboardManager` позволяет контролировать способ отображения сочетания клавиш для пользователя.  
+### <a name="public-methods"></a>Public Methods  
   
- Не следует создавать `CKeyboardManager` объекта вручную. Он будет создан автоматически платформой приложения. Тем не менее, следует вызывать [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) во время инициализации приложения. Чтобы получить указатель диспетчера клавиатуры для вашего приложения, вызовите [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
+|||  
+|-|-|  
+|Name|Description|  
+|[CKeyboardManager::CleanUp](#cleanup)|Clears the shortcut key tables.|  
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Retrieves the default shortcut key for the specified command and window.|  
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determines whether a key is handled by the accelerator table.|  
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indicates whether a character is printable.|  
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indicates whether menus show all shortcut keys for a command or only the default shortcut key.|  
+|[CKeyboardManager::LoadState](#loadstate)|Loads the shortcut key tables from the Windows registry.|  
+|[CKeyboardManager::ResetAll](#resetall)|Reloads the shortcut key tables from the application resource.|  
+|[CKeyboardManager::SaveState](#savestate)|Saves the shortcut key tables to the Windows registry.|  
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Specifies whether the framework displays all the shortcut keys for all commands, or a single shortcut key for each command. This method does not affect commands that have only one associated shortcut key.|  
+|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converts a character to its upper register.|  
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Updates a shortcut key table with a new shortcut key table.|  
   
-## <a name="example"></a>Пример  
- Ниже приведен пример, как получить указатель на `CKeyboardManager` объекта из `CWinAppEx` , а также для отображения всех сочетаний клавиш, связанных с командами меню. Этот фрагмент кода является частью [пользовательские страницы образец](../../visual-cpp-samples.md).  
+## <a name="remarks"></a>Remarks  
+ The members of this class enable you to save and load shortcut key tables to the Windows registry, use a template to update the short cut key tables, and find the default shortcut key for a command in a frame window. In addition, the `CKeyboardManager` object lets you control how shortcut keys are displayed to the user.  
   
- [!code-cpp[NVC_MFC_CustomPages&#5;](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+ You should not create a `CKeyboardManager` object manually. It will be created automatically by the framework of your application. However, you should call [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) during the initialization process of your application. To get a pointer to the keyboard manager for your application, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CKeyboardManager` object from a `CWinAppEx` class, and how to show all the shortcut keys associated with menu commands. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxkeyboardmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
- Создает объект `CKeyboardManager`.  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
+ Constructs a `CKeyboardManager` object.  
   
 ```  
 CKeyboardManager();
 ```  
   
-### <a name="remarks"></a>Примечания  
- В большинстве случаев не нужно создавать `CKeyboardManager` напрямую. По умолчанию платформа создает его автоматически. Чтобы получить указатель на `CKeyboardManager`, вызовите [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). При создании одной вручную, его необходимо инициализировать с помощью метода [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
+### <a name="remarks"></a>Remarks  
+ In most cases, you do not have to create a `CKeyboardManager` directly. By default, the framework creates one for you. To get a pointer to the `CKeyboardManager`, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). If you do create one manually, you must initialize it with the method [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
- Освобождает `CKeyboardManager` ресурсы и очищает все сопоставлений сочетаний клавиш.  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
+ Frees the `CKeyboardManager` resources and clears all shortcut key mappings.  
   
 ```  
 static void CleanUp();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения о сочетаниях клавиш см. в разделе [Настройка мыши и клавиатуры](../../mfc/keyboard-and-mouse-customization.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about shortcut keys, see [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md).  
   
- Эта функция вызывается, когда приложение завершает работу, так как платформа вызывает функцию его автоматически во время выхода приложения нет.  
+ You do not have to call this function when your application exits because the framework calls it automatically during application exit.  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
- Получает сочетание клавиш по умолчанию для указанной команды и окна.  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
+ Retrieves the default shortcut key for the specified command and window.  
   
 ```  
 static BOOL FindDefaultAccelerator(
@@ -139,27 +150,27 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- Идентификатор команды.  
+ The command ID.  
   
- [выходной] `str`  
- Ссылка на объект `CString`.  
+ [out] `str`  
+ A reference to a `CString` object.  
   
  [in] `pWndFrame`  
- Указатель фрейма окна.  
+ A pointer to a frame window.  
   
  [in] `bIsDefaultFrame`  
- Указывает, является ли фрейме окна фрейма окна по умолчанию.  
+ Specifies whether the frame window is the default frame window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если найден ярлык; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the shortcut is found; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод выполняет поиск по указанной команды `uiCmd` и получает сочетание клавиш по умолчанию. Затем этот метод принимает строку, связанную с этого сочетания клавиш и записывает значение `str` параметр.  
+### <a name="remarks"></a>Remarks  
+ This method looks up the command specified by `uiCmd` and retrieves the default shortcut key. Then the method takes the string associated with this shortcut key and writes the value to the `str` parameter.  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
- Определяет, обрабатывается ли указанный ключ [CKeyboardManager класса](../../mfc/reference/ckeyboardmanager-class.md).  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
+ Determines whether the specified key is handled by the [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
 static BOOL __stdcall IsKeyHandled(
@@ -169,57 +180,57 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `nKey`|Проверяемый ключ.|  
-|[in] `fVirt`|Задает поведение клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Рамка окна. Этот метод определяет, обрабатывается ли сочетания клавиш в этом кадре.|  
-|[in] `bIsDefaultFrame`|Логический параметр, указывающий ли `pWndFrame` является фрейме окна по умолчанию.|  
+|Parameter|Description|  
+|[in] `nKey`|The key to check.|  
+|[in] `fVirt`|Specifies the behavior of the shortcut key. For a list of possible values, see [ACCEL Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] `pWndFrame`|A frame window. This method determines whether a shortcut key is handled in this frame.|  
+|[in] `bIsDefaultFrame`|A Boolean parameter that indicates whether `pWndFrame` is the default frame window.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если сочетание клавиш обрабатывается. `FALSE`Если ключ не обрабатывается или `pWndFrame` — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the shortcut key is handled. `FALSE` if the key is not handled or if `pWndFrame` is `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Входные параметры должны соответствовать записи в таблице сочетаний клавиш как для `nKey` и `fVirt` для определения того, обрабатывается ли сочетания клавиш в `pWndFrame`.  
+### <a name="remarks"></a>Remarks  
+ The input parameters must match the entry in the accelerator table both for `nKey` and `fVirt` to determine whether a shortcut key is handled in `pWndFrame`.  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
- Указывает, является ли символ печатные.  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
+ Indicates whether a character is printable.  
   
 ```  
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `nChar`|Символ, который проверяет этот метод.|  
+|Parameter|Description|  
+|[in] `nChar`|The character that this method checks.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если печатный символ нуль, если это не так.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the character is printable, zero if it is not.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод не выполняется, если вызов [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) завершается ошибкой.  
+### <a name="remarks"></a>Remarks  
+ This method fails if a call to [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) fails.  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
- Указывает, отображать ли меню, сочетания клавиш, связанные с командами меню или сочетания клавиш по умолчанию.  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
+ Indicates whether menus show all the shortcut keys associated with menu commands or only the default shortcut keys.  
   
 ```  
 static BOOL IsShowAllAccelerators();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если приложение перечислены сочетания клавиш для команд меню; 0, если приложение отображает только сочетания клавиш по умолчанию.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the application lists all the shortcut keys for menu commands; 0 if the application displays only default shortcut keys.  
   
-### <a name="remarks"></a>Примечания  
- Приложение перечислены сочетания клавиш для команды меню в строке меню. Используйте функцию [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) для управления ли приложение выводит список всех сочетаний клавиш или только сочетания клавиш по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ The application lists the shortcut keys for menu commands in the menu bar. Use the function [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) to control whether the application lists all the shortcut keys or just the default shortcut keys.  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
- Загружает таблицы сочетания ключа из реестра Windows.  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
+ Loads the shortcut key tables from the Windows registry.  
   
 ```  
 BOOL LoadState(
@@ -227,33 +238,33 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Путь реестра где `CKeyboardManager` данные сохраняются.  
+ The registry path where `CKeyboardManager` data is saved.  
   
  [in] `pDefaultFrame`  
- Указатель фрейма окна для использования в качестве стандартного окна.  
+ A pointer to a frame window to use as the default window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если состояние успешно загружен или 0 в противном случае.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was loaded successfully or 0 otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Если `lpszProfileName` параметр `NULL`, этот метод проверяет расположение реестра по умолчанию для `CKeyboardManager` данных. В разделе реестра по умолчанию определяется [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Данные должны записываться ранее с помощью метода [CKeyboardManager::SaveState](#savestate).  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method checks the default registry location for `CKeyboardManager` data. The default registry location is specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). The data must be previously written with the method [CKeyboardManager::SaveState](#savestate).  
   
- Если окно по умолчанию не задан, будет использоваться фрейма главного окна приложения.  
+ If you do not specify a default window, the main frame window of your application will be used.  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
- Перезагружает таблиц сочетания ключа из ресурсов приложения.  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
+ Reloads the shortcut key tables from the application resource.  
   
 ```  
 void ResetAll();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция удаляет ярлыки, хранящиеся в `CKeyboardManager` экземпляра. Затем он перезагрузит состояние диспетчера клавиатуры из ресурсов приложения.  
+### <a name="remarks"></a>Remarks  
+ This function clears the shortcuts stored in the `CKeyboardManager` instance. It will then reload the state of the keyboard manager from the application resource.  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
- Сохранение ярлыка ключа таблицы в реестр Windows.  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
+ Saves the shortcut key tables to the Windows registry.  
   
 ```  
 BOOL SaveState(
@@ -261,23 +272,23 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Путь в реестре для сохранения `CKeyboardManager` состояния.  
+ The registry path for saving the `CKeyboardManager` state.  
   
  [in] `pDefaultFrame`  
- Указатель фрейма окна, которая становится окна по умолчанию.  
+ A pointer to a frame window that becomes the default window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если диспетчер состояния клавиатуры сохранен успешно, или 0 в противном случае.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the keyboard manager state was saved successfully, or 0 otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Если `lpszProfileName` параметр `NULL`, этот метод запишет `CKeyboardManager` состояния в расположение по умолчанию, определяемое [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Если указать расположение, можно загрузить данные позже с помощью метода [CKeyboardManager::LoadState](#loadstate).  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method will write the `CKeyboardManager` state to the default location specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). If you specify a location, you can load the data later using the method [CKeyboardManager::LoadState](#loadstate).  
   
- Если окно по умолчанию не указано, как окна по умолчанию будет использоваться фрейма главного окна.  
+ If you do not specify a default window, the main frame window will be used as the default window.  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
- Показывает все сочетания клавиш, связанные с командами меню.  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
+ Shows all the shortcut keys associated with menu commands.  
   
 ```  
 static void ShowAllAccelerators(
@@ -285,34 +296,34 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bShowAll`  
- Если `true`, отображаются все сочетания клавиш. Если `false`, будет отображаться только первый сочетание клавиш.  
+ If `true`, all the shortcut keys will be displayed. If `false`, only the first shortcut key will be displayed.  
   
  [in] `lpszDelimiter`  
- Строка, вставляемая между сочетания клавиш. Этот разделитель не оказывает влияния только одно сочетание клавиш отображается.  
+ A string to insert between shortcut keys. This delimiter has no effect if only one shortcut key is displayed.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию Если команда имеет более одного сочетание клавиш, связанное с ним, только первый клавиш будут показаны. Эта функция позволяет перечислять все сочетания клавиш, связанных с всех команд.  
+### <a name="remarks"></a>Remarks  
+ By default, if a command has more than one shortcut key associated with it, only the first shortcut key will be shown. This function enables you to list all the shortcut keys associated with all commands.  
   
- Сочетания клавиш отображается рядом с командой в строке меню. Если отображаются все сочетания клавиш, предоставляемые строка `lpszDelimiter` разделения отдельных сочетания клавиш.  
+ The shortcut keys will be listed next to the command in the menu bar. If all the shortcut keys are displayed, the string provided by `lpszDelimiter` will separate individual shortcut keys.  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
- Преобразует символ в его верхний регистр.  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
+ Converts a character to its upper register.  
   
 ```  
 static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- Символ для преобразования.  
+ The character to convert.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Символ, который представляет верхнем регистре входного параметра.  
+### <a name="return-value"></a>Return Value  
+ The character that is the upper register of the input parameter.  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
- Обновляет таблицу ключа ярлык с новой таблицей ключа ярлык.  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
+ Updates a shortcut key table with a new shortcut key table.  
   
 ```  
 BOOL UpdateAccelTable(
@@ -328,34 +339,34 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pTemplate`  
- Указатель на шаблон документа.  
+ A pointer to a document template.  
   
  [in] `lpAccel`  
- Указатель на новое сочетание клавиш.  
+ A pointer to the new shortcut key.  
   
  [in] `nSize`  
- Размер новой таблицы ярлык.  
+ The size of the new shortcut table.  
   
  [in] `pDefaultFrame`  
- Указатель фрейма окна по умолчанию.  
+ A pointer to the default frame window.  
   
  [in] `hAccelNew`  
- Дескриптор в новую таблицу ярлык.  
+ A handle to the new shortcut table.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для замены существующей таблицы ярлык новые сочетания клавиш для нескольких объектов окна фрейма. Функция получает шаблон документа в качестве параметра для получения доступа ко всем объектам окна фрейма, подключен к шаблона данного документа.  
+### <a name="remarks"></a>Remarks  
+ Use this function to replace the existing shortcut table with new shortcut keys for several frame window objects. The function receives a document template as a parameter to obtain access to all frame window objects connected to the given document template.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
  [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)   
- [Настройка мыши и клавиатуры](../../mfc/keyboard-and-mouse-customization.md)
+ [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
 
 
 

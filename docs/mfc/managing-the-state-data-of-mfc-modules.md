@@ -1,57 +1,76 @@
 ---
-title: "Управление данными состояния модулей MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "управление данными [C++]"
-  - "управление данными [C++], MFC-модули"
-  - "экспортированные интерфейсы и глобальное состояние [C++]"
-  - "глобальное состояние [C++]"
-  - "MFC [C++], управление данными состояния"
-  - "состояние модуля восстановлено"
-  - "состояния модулей, сохранение и возобновление"
-  - "множественные модули"
-  - "точки входа процедуры окна [C++]"
+title: Managing the State Data of MFC Modules | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- global state [MFC]
+- data management [MFC], MFC modules
+- window procedure entry points [MFC]
+- exported interfaces and global state [MFC]
+- module states [MFC], saving and restoring
+- data management [MFC]
+- MFC, managing state data
+- multiple modules [MFC]
+- module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Управление данными состояния модулей MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 087c8e584d4d42f2bcdbfffdc594523d795308cb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает данными состояния модулей MFC и как это обновленное состояние, когда поток выполнения \(код принимает пути с помощью приложения при выполнении\) вводит и оставляет модуль.  Переключение состояния модуля с макросами `AFX_MANAGE_STATE` и `METHOD_PROLOGUE` также рассматривается.  
+---
+# <a name="managing-the-state-data-of-mfc-modules"></a>Managing the State Data of MFC Modules
+This article discusses the state data of MFC modules and how this state is updated when the flow of execution (the path code takes through an application when executing) enters and leaves a module. Switching module states with the `AFX_MANAGE_STATE` and `METHOD_PROLOGUE` macros is also discussed.  
   
 > [!NOTE]
->  Термин «модуль» здесь ссылается на выполняемая программе, или к библиотеке DLL \(или набор библиотек DLL\), которая работает независимо от остальной части приложения, но используется общее копию библиотеки DLL MFC.  Элемент управления ActiveX типичный пример модуля.  
+>  The term "module" here refers to an executable program, or to a DLL (or set of DLLs) that operate independently of the rest of the application, but uses a shared copy of the MFC DLL. An ActiveX control is a typical example of a module.  
   
- Как показано на следующем рисунке, MFC имеет данные состояния для каждого модуля, используемых в приложении.  Примеры этих данных включают дескрипторы экземпляров Windows, используемые для загрузки ресурсов\), указателей в текущих `CWinApp` и объектам `CWinThread` приложения, OLE счетчиков ссылок модуля и различные сопоставления, которые поддерживаются дескрипторы объекта Windows связей между и соответствующие экземпляры объектов MFC.  Однако если приложение использует несколько модулей, данные состояния каждого модуля нет широко приложения.  Вместо этого каждый модуль имеет свой закрытая копия данных состояния MFC.  
+ As shown in the following figure, MFC has state data for each module used in an application. Examples of this data include Windows instance handles (used for loading resources), pointers to the current `CWinApp` and `CWinThread` objects of an application, OLE module reference counts, and a variety of maps that maintain the connections between Windows object handles and corresponding instances of MFC objects. However, when an application uses multiple modules, the state data of each module is not application wide. Rather, each module has its own private copy of the MFC's state data.  
   
- ![Данные о состоянии для отдельного модуля &#40;приложение&#41;](../mfc/media/vc387n1.png "vc387N1")  
-Данные состояния приложения одного модуля \(\)  
+ ![State data of a single module &#40;application&#41;](../mfc/media/vc387n1.gif "vc387n1")  
+State Data of a Single Module (Application)  
   
- Данные состояния модуля содержится в структуре и всегда доступен через указатель на этой структуре.  Если поток выполнения входит в указанный модуль, как показано на следующем рисунке, состояние которого модуля должно быть «текущие» или «эффективным» состоянием.  Поэтому каждый объект потока имеет указатель на эффективной структуры состояния этого приложения.  Сохранить этот указатель обновлен во все время крайне важен для управления глобального состояния приложения и поддержанию целостности состояния каждого модуля.  Неправильное управление глобального состояния может привести к непрогнозируемому расширение функциональности приложения.  
+ A module's state data is contained in a structure and is always available via a pointer to that structure. When the flow of execution enters a particular module, as shown in the following figure, that module's state must be the "current" or "effective" state. Therefore, each thread object has a pointer to the effective state structure of that application. Keeping this pointer updated at all times is vital to managing the application's global state and maintaining the integrity of each module's state. Incorrect management of the global state can lead to unpredictable application behavior.  
   
- ![Данные состояния для нескольких модулей](../mfc/media/vc387n2.png "vc387N2")  
-Данные состояния нескольких модулей  
+ ![State data of multiple modules](../mfc/media/vc387n2.gif "vc387n2")  
+State Data of Multiple Modules  
   
- Другими словами, каждый модуль отвечает за правильно переключение между состояниями модуля во всей его точки входа.  «Точка входа» любое место, где поток выполнения может ввести код модуля.  Точки входа:  
+ In other words, each module is responsible for correctly switching between module states at all of its entry points. An "entry point" is any place where the flow of execution can enter the module's code. Entry points include:  
   
--   [Экспортированные функции из библиотеки DLL](../mfc/exported-dll-function-entry-points.md)  
+-   [Exported functions in a DLL](../mfc/exported-dll-function-entry-points.md)  
   
--   [Функции\-члены интерфейсов модели COM](../mfc/com-interface-entry-points.md)  
+-   [Member functions of COM interfaces](../mfc/com-interface-entry-points.md)  
   
--   [Оконные процедуры](../Topic/Window%20Procedure%20Entry%20Points.md)  
+-   [Window procedures](../mfc/window-procedure-entry-points.md)  
   
-## См. также  
- [Общие разделы по MFC](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

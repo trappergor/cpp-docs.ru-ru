@@ -1,5 +1,5 @@
 ---
-title: "CCmdTarget-класс | Документы Microsoft"
+title: CCmdTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,11 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message maps, CCmdTarget base class
-- command targets
-- CCmdTarget class
-- command routing, command targets
-- targets, command
+- CCmdTarget [MFC], CCmdTarget
+- CCmdTarget [MFC], BeginWaitCursor
+- CCmdTarget [MFC], DoOleVerb
+- CCmdTarget [MFC], EnableAutomation
+- CCmdTarget [MFC], EnableConnections
+- CCmdTarget [MFC], EnableTypeLib
+- CCmdTarget [MFC], EndWaitCursor
+- CCmdTarget [MFC], EnumOleVerbs
+- CCmdTarget [MFC], FromIDispatch
+- CCmdTarget [MFC], GetDispatchIID
+- CCmdTarget [MFC], GetIDispatch
+- CCmdTarget [MFC], GetTypeInfoCount
+- CCmdTarget [MFC], GetTypeInfoOfGuid
+- CCmdTarget [MFC], GetTypeLib
+- CCmdTarget [MFC], GetTypeLibCache
+- CCmdTarget [MFC], IsInvokeAllowed
+- CCmdTarget [MFC], IsResultExpected
+- CCmdTarget [MFC], OnCmdMsg
+- CCmdTarget [MFC], OnFinalRelease
+- CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 caps.latest.revision: 23
 author: mikeblome
@@ -58,99 +73,99 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: d58ee8e02c57c48c58f13c7e826fd01a1c0d9f57
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f267c5142f9009bba2d68e4a71fd777452bdec5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccmdtarget-class"></a>CCmdTarget-класс
-Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.  
+# <a name="ccmdtarget-class"></a>CCmdTarget Class
+The base class for the Microsoft Foundation Class Library message-map architecture.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCmdTarget : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCmdTarget::CCmdTarget](#ccmdtarget)|Создает объект `CCmdTarget`.|  
+|[CCmdTarget::CCmdTarget](#ccmdtarget)|Constructs a `CCmdTarget` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Отображает курсор в виде курсор с песочными часами.|  
-|[CCmdTarget::DoOleVerb](#dooleverb)|Вызывает действие, определенное командой OLE для выполнения.|  
-|[CCmdTarget::EnableAutomation](#enableautomation)|Разрешает OLE-автоматизации для `CCmdTarget` объекта.|  
-|[CCmdTarget::EnableConnections](#enableconnections)|Включает события через точки подключения.|  
-|[CCmdTarget::EnableTypeLib](#enabletypelib)|Включает библиотеку типов объекта.|  
-|[CCmdTarget::EndWaitCursor](#endwaitcursor)|Возврат к предыдущей курсора.|  
-|[CCmdTarget::EnumOleVerbs](#enumoleverbs)|Перечисляет команды объекта OLE.|  
-|[CCmdTarget::FromIDispatch](#fromidispatch)|Возвращает указатель на `CCmdTarget` объекта, связанного с `IDispatch` указателя.|  
-|[CCmdTarget::GetDispatchIID](#getdispatchiid)|Возвращает идентификатор диспетчера основной интерфейс.|  
-|[CCmdTarget::GetIDispatch](#getidispatch)|Возвращает указатель на `IDispatch` объекта, связанного с `CCmdTarget` объекта.|  
-|[CCmdTarget::GetTypeInfoCount](#gettypeinfocount)|Возвращает число интерфейсов сведения о типе, предоставляемых объектом.|  
-|[CCmdTarget::GetTypeInfoOfGuid](#gettypeinfoofguid)|Извлекает описание типа, соответствующее заданному идентификатору GUID.|  
-|[CCmdTarget::GetTypeLib](#gettypelib)|Возвращает указатель на библиотеку типов.|  
-|[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Возвращает кэш библиотеки типов.|  
-|[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|Включает вызов метода автоматизации.|  
-|[CCmdTarget::IsResultExpected](#isresultexpected)|Возвращает ненулевое значение, если функцию автоматизации должны возвращать значение.|  
-|[CCmdTarget::OnCmdMsg](#oncmdmsg)|Маршруты и отправляет сообщения команд.|  
-|[CCmdTarget::OnFinalRelease](#onfinalrelease)|Производит очистку после выпуска последняя ссылка OLE.|  
-|[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|Восстанавливает курсор с песочными часами.|  
+|[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Displays the cursor as an hourglass cursor.|  
+|[CCmdTarget::DoOleVerb](#dooleverb)|Causes an action specified by an OLE verb to be performed.|  
+|[CCmdTarget::EnableAutomation](#enableautomation)|Allows OLE automation for the `CCmdTarget` object.|  
+|[CCmdTarget::EnableConnections](#enableconnections)|Enables event firing over connection points.|  
+|[CCmdTarget::EnableTypeLib](#enabletypelib)|Enables an object's type library.|  
+|[CCmdTarget::EndWaitCursor](#endwaitcursor)|Returns to the previous cursor.|  
+|[CCmdTarget::EnumOleVerbs](#enumoleverbs)|Enumerates an object's OLE verbs.|  
+|[CCmdTarget::FromIDispatch](#fromidispatch)|Returns a pointer to the `CCmdTarget` object associated with the `IDispatch` pointer.|  
+|[CCmdTarget::GetDispatchIID](#getdispatchiid)|Gets the primary dispatch interface ID.|  
+|[CCmdTarget::GetIDispatch](#getidispatch)|Returns a pointer to the `IDispatch` object associated with the `CCmdTarget` object.|  
+|[CCmdTarget::GetTypeInfoCount](#gettypeinfocount)|Retrieves the number of type information interfaces that an object provides.|  
+|[CCmdTarget::GetTypeInfoOfGuid](#gettypeinfoofguid)|Retrieves the type description that corresponds to the specified GUID.|  
+|[CCmdTarget::GetTypeLib](#gettypelib)|Gets a pointer to a type library.|  
+|[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Gets the type library cache.|  
+|[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|Enables automation method invocation.|  
+|[CCmdTarget::IsResultExpected](#isresultexpected)|Returns nonzero if an automation function should return a value.|  
+|[CCmdTarget::OnCmdMsg](#oncmdmsg)|Routes and dispatches command messages.|  
+|[CCmdTarget::OnFinalRelease](#onfinalrelease)|Cleans up after the last OLE reference is released.|  
+|[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|Restores the hourglass cursor.|  
   
-## <a name="remarks"></a>Примечания  
- Схемы сообщений направляет команды или сообщения функции-члены, предназначенный для их обработки. (Команды — это сообщение из пункта меню, кнопки или сочетание клавиш).  
+## <a name="remarks"></a>Remarks  
+ A message map routes commands or messages to the member functions you write to handle them. (A command is a message from a menu item, command button, or accelerator key.)  
   
- Структура ключей классы, производные от `CCmdTarget` включают [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md), и [CFrameWnd](../../mfc/reference/cframewnd-class.md). Если необходимо реализовать для нового класса для обработки сообщений, создайте класс, производный от одного из этих `CCmdTarget`-производные классы. Вы редко являются производными от класса `CCmdTarget` напрямую.  
+ Key framework classes derived from `CCmdTarget` include [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md), and [CFrameWnd](../../mfc/reference/cframewnd-class.md). If you intend for a new class to handle messages, derive the class from one of these `CCmdTarget`-derived classes. You will rarely derive a class from `CCmdTarget` directly.  
   
- Общие сведения о цели команды и `OnCmdMsg` маршрутизации, в разделе [целей команды](../../mfc/command-targets.md), [маршрутизация команд](../../mfc/command-routing.md), и [сопоставление сообщений](../../mfc/mapping-messages.md).  
+ For an overview of command targets and `OnCmdMsg` routing, see [Command Targets](../../mfc/command-targets.md), [Command Routing](../../mfc/command-routing.md), and [Mapping Messages](../../mfc/mapping-messages.md).  
   
- `CCmdTarget`включает функции-члены, управления отображением курсор с песочными часами. Курсор с песочными часами отображаются в том случае, если предполагается, что команду, чтобы стать заметным интервал до выполнения.  
+ `CCmdTarget` includes member functions that handle the display of an hourglass cursor. Display the hourglass cursor when you expect a command to take a noticeable time interval to execute.  
   
- Съемы, аналогично схемы сообщений, использующиеся для поддержки OLE-автоматизации `IDispatch` функциональные возможности. Путем предоставления доступа к этот интерфейс, приложение может вызывать другими приложениями (например, Visual Basic).  
+ Dispatch maps, similar to message maps, are used to expose OLE automation `IDispatch` functionality. By exposing this interface, other applications (such as Visual Basic) can call into your application.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CCmdTarget`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
- Эта функция используется для отображения курсора как песочные часы, если ожидается команду, чтобы стать заметным интервал до выполнения.  
+##  <a name="beginwaitcursor"></a>  CCmdTarget::BeginWaitCursor  
+ Call this function to display the cursor as an hourglass when you expect a command to take a noticeable time interval to execute.  
   
 ```  
 void BeginWaitCursor();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает эту функцию для представления пользователю, что он занят, например когда **CDocument** объекта загрузки или сохранения сам файл.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function to show the user that it is busy, such as when a **CDocument** object loads or saves itself to a file.  
   
- Действия `BeginWaitCursor` не всегда действующие вне обработчика одно сообщение как другие действия, такие как `OnSetCursor` обработки, может изменить курсор.  
+ The actions of `BeginWaitCursor` are not always effective outside of a single message handler as other actions, such as `OnSetCursor` handling, could change the cursor.  
   
- Вызовите `EndWaitCursor` для восстановления предыдущего курсора.  
+ Call `EndWaitCursor` to restore the previous cursor.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
- Создает объект `CCmdTarget`.  
+##  <a name="ccmdtarget"></a>  CCmdTarget::CCmdTarget  
+ Constructs a `CCmdTarget` object.  
   
 ```  
 CCmdTarget();
 ```  
   
-##  <a name="dooleverb"></a>CCmdTarget::DoOleVerb  
- Вызывает действие, определенное командой OLE для выполнения.  
+##  <a name="dooleverb"></a>  CCmdTarget::DoOleVerb  
+ Causes an action specified by an OLE verb to be performed.  
   
 ```  
 BOOL DoOleVerb(
@@ -160,155 +175,155 @@ BOOL DoOleVerb(
     LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `iVerb`  
- Числовой идентификатор команды.  
+ Numerical identifier of the verb.  
   
  `lpMsg`  
- Указатель на [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) структура описания события (например, двойным щелчком), которое вызвало команду.  
+ Pointer to the [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) structure describing the event (such as a double-click) that invoked the verb.  
   
  `hWndParent`  
- Дескриптор окна документа, содержащего объект.  
+ Handle of the document window containing the object.  
   
  `lpRect`  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая координаты в пикселях, которые определяют объект ограничивающий прямоугольник в *hwndParent*.  
+ Pointer to the [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure containing the coordinates, in pixels, that define an object's bounding rectangle in *hwndParent*.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если успешно, в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful, otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член по сути является реализацией [функция IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). Перечисление возможных действий по [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+### <a name="remarks"></a>Remarks  
+ This member function is basically an implementation of [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). The possible actions are enumerated by [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
-##  <a name="enableautomation"></a>CCmdTarget::EnableAutomation  
- Вызывайте эту функцию, чтобы включить для объекта OLE-автоматизации.  
+##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
+ Call this function to enable OLE automation for an object.  
   
 ```  
 void EnableAutomation();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция обычно вызывается из конструктора объекта и должен вызываться только если карту диспетчеризации был объявлен для класса. Дополнительные сведения об автоматизации см. в статьях [клиенты автоматизации](../../mfc/automation-clients.md) и [серверы автоматизации](../../mfc/automation-servers.md).  
+### <a name="remarks"></a>Remarks  
+ This function is typically called from the constructor of your object and should only be called if a dispatch map has been declared for the class. For more information on automation see the articles [Automation Clients](../../mfc/automation-clients.md) and [Automation Servers](../../mfc/automation-servers.md).  
   
-##  <a name="enableconnections"></a>CCmdTarget::EnableConnections  
- Включает события через точки подключения.  
+##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections  
+ Enables event firing over connection points.  
   
 ```  
 void EnableConnections();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Чтобы включить точки подключения, вызовите эту функцию-член в конструкторе производного класса.  
+### <a name="remarks"></a>Remarks  
+ To enable connection points, call this member function in the constructor of your derived class.  
   
-##  <a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
- Включает библиотеку типов объекта.  
+##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib  
+ Enables an object's type library.  
   
 ```  
 void EnableTypeLib();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Вызовите эту функцию-член в конструкторе вашей `CCmdTarget`-производного объекта, если оно предоставляет информацию о типе. Дополнительные сведения см. в статье базы знаний Q185720, «Практическое руководство: предоставления сведений о типе из сервера автоматизации MFC.» Статьи базы знаний можно найти по адресу [http://support.microsoft.com](http://support.microsoft.com/).  
+### <a name="remarks"></a>Remarks  
+ Call this member function in the constructor of your `CCmdTarget`-derived object if it provides type information. For more information, see Knowledge Base article Q185720, "HOWTO: Provide Type Information From an MFC Automation Server." Knowledge Base articles are available at [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
- Эта функция вызывается после вызова `BeginWaitCursor` функции-члена возвращать курсор с песочными часами в предыдущем курсора.  
+##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor  
+ Call this function after you have called the `BeginWaitCursor` member function to return from the hourglass cursor to the previous cursor.  
   
 ```  
 void EndWaitCursor();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член вызывается платформой также после вызова курсор с песочными часами.  
+### <a name="remarks"></a>Remarks  
+ The framework also calls this member function after it has called the hourglass cursor.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
- Перечисляет команды объекта OLE.  
+##  <a name="enumoleverbs"></a>  CCmdTarget::EnumOleVerbs  
+ Enumerates an object's OLE verbs.  
   
 ```  
 BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ppenumOleVerb`  
- Указатель на указатель на [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) интерфейса.  
+ A pointer to a pointer to an [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) interface.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если объект поддерживает по крайней мере один команды OLE (в этом случае \* `ppenumOleVerb` указывает **IEnumOLEVERB** интерфейс перечислителя), в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the object supports at least one OLE verb (in which case \* `ppenumOleVerb` points to an **IEnumOLEVERB** enumerator interface), otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член по сути является реализацией [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+### <a name="remarks"></a>Remarks  
+ This member function is basically an implementation of [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
   
-##  <a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
- Вызывайте эту функцию для сопоставления `IDispatch` указателя, полученные от автоматизации функций-членов класса, в `CCmdTarget` объект, реализующий интерфейсы `IDispatch` объекта.  
+##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
+ Call this function to map an `IDispatch` pointer, received from automation member functions of a class, into the `CCmdTarget` object that implements the interfaces of the `IDispatch` object.  
   
 ```  
 static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpDispatch`  
- Указатель на объект `IDispatch`.  
+ A pointer to an `IDispatch` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CCmdTarget` объекта, связанного с `lpDispatch`. Эта функция возвращает **NULL** Если `IDispatch` объект не является Microsoft Foundation Class `IDispatch` объекта.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CCmdTarget` object associated with `lpDispatch`. This function returns **NULL** if the `IDispatch` object is not recognized as a Microsoft Foundation Class `IDispatch` object.  
   
-### <a name="remarks"></a>Примечания  
- Результат этой функции является обратным для вызова функции-члена `GetIDispatch`.  
+### <a name="remarks"></a>Remarks  
+ The result of this function is the inverse of a call to the member function `GetIDispatch`.  
   
-##  <a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
- Возвращает идентификатор диспетчера основной интерфейс.  
+##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID  
+ Gets the primary dispatch interface ID.  
   
 ```  
 virtual BOOL GetDispatchIID(IID* pIID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pIID*  
- Указатель на идентификатор интерфейса ( [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ A pointer to an interface ID (a [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если успешно, в противном случае — значение FALSE. В случае успешного выполнения \* *pIID* присваивается идентификатор диспетчера основной интерфейс.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful, otherwise FALSE. If successful, \* *pIID* is set to the primary dispatch interface ID.  
   
-### <a name="remarks"></a>Примечания  
- Производные классы должны переопределить эту функцию-член (если не переопределен, `GetDispatchIID` возвращает значение FALSE). В разделе [COleControl](../../mfc/reference/colecontrol-class.md).  
+### <a name="remarks"></a>Remarks  
+ Derived classes should override this member function (if not overridden, `GetDispatchIID` returns FALSE). See [COleControl](../../mfc/reference/colecontrol-class.md).  
   
- Дополнительные сведения см. в статье базы знаний Q185720, «Практическое руководство: предоставления сведений о типе из сервера автоматизации MFC.» Статьи базы знаний можно найти по адресу [http://support.microsoft.com](http://support.microsoft.com/).  
+ For more information, see Knowledge Base article Q185720, "HOWTO: Provide Type Information From an MFC Automation Server." Knowledge Base articles are available at [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="getidispatch"></a>CCmdTarget::GetIDispatch  
- Вызовите эту функцию-член для извлечения `IDispatch` указатель методом автоматизации, либо возвращает `IDispatch` указателя или принимает `IDispatch` указатель по ссылке.  
+##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch  
+ Call this member function to retrieve the `IDispatch` pointer from an automation method that either returns an `IDispatch` pointer or takes an `IDispatch` pointer by reference.  
   
 ```  
 LPDISPATCH GetIDispatch(BOOL bAddRef);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bAddRef*  
- Указывает, следует ли увеличить счетчик ссылок для объекта.  
+ Specifies whether to increment the reference count for the object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `IDispatch` Указатель, связанный с объектом.  
+### <a name="return-value"></a>Return Value  
+ The `IDispatch` pointer associated with the object.  
   
-### <a name="remarks"></a>Примечания  
- Для объектов, вызывающих метод `EnableAutomation` их конструкторы, делая их автоматизации включена, эта функция возвращает указатель на реализацию Foundation Class `IDispatch` , используемый клиентами, которые связь через `IDispatch` интерфейса. Автоматически при вызове этой функции добавляет ссылку на указатель, поэтому нет необходимости вызвать [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+### <a name="remarks"></a>Remarks  
+ For objects that call `EnableAutomation` in their constructors, making them automation enabled, this function returns a pointer to the Foundation Class implementation of `IDispatch` that is used by clients who communicate via the `IDispatch` interface. Calling this function automatically adds a reference to the pointer, so it is not necessary to make a call to [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
   
-##  <a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
- Возвращает число интерфейсов сведения о типе, предоставляемых объектом.  
+##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
+ Retrieves the number of type information interfaces that an object provides.  
   
 ```  
 virtual UINT GetTypeInfoCount();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество интерфейсов сведения о типе.  
+### <a name="return-value"></a>Return Value  
+ The number of type information interfaces.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член в основном реализуется [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
+### <a name="remarks"></a>Remarks  
+ This member function basically implements [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
   
- Производные классы должны переопределить эту функцию для возврата числа интерфейсов тип сведений, предоставляемых (0 или 1). Если не переопределен, **GetTypeInfoCount** возвращает 0. Чтобы переопределить, используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeLib` и `GetTypeLibCache`.  
+ Derived classes should override this function to return the number of type information interfaces provided (either 0 or 1). If not overridden, **GetTypeInfoCount** returns 0. To override, use the [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, which also implements `GetTypeLib` and `GetTypeLibCache`.  
   
-##  <a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
- Извлекает описание типа, соответствующее заданному идентификатору GUID.  
+##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
+ Retrieves the type description that corresponds to the specified GUID.  
   
 ```  
 HRESULT GetTypeInfoOfGuid(
@@ -317,21 +332,21 @@ HRESULT GetTypeInfoOfGuid(
     LPTYPEINFO* ppTypeInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lcid`  
- Идентификатор языкового стандарта ( `LCID`).  
+ A locale identifier ( `LCID`).  
   
  `guid`  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) описания типа.  
+ The [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) of the type description.  
   
  `ppTypeInfo`  
- Указатель на указатель на `ITypeInfo` интерфейса.  
+ Pointer to a pointer to the `ITypeInfo` interface.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * `ppTypeInfo` указывает на интерфейс типа сведений.  
+### <a name="return-value"></a>Return Value  
+ An HRESULT indicating the success or failure of the call. If successful, * `ppTypeInfo` points to the type information interface.  
   
-##  <a name="gettypelib"></a>CCmdTarget::GetTypeLib  
- Возвращает указатель на библиотеку типов.  
+##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
+ Gets a pointer to a type library.  
   
 ```  
 virtual HRESULT GetTypeLib(
@@ -339,70 +354,70 @@ virtual HRESULT GetTypeLib(
     LPTYPELIB* ppTypeLib);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lcid`  
- Идентификатор языкового стандарта ( `LCID`).  
+ A locale identifier ( `LCID`).  
   
  `ppTypeLib`  
- Указатель на указатель на `ITypeLib` интерфейса.  
+ A pointer to a pointer to the `ITypeLib` interface.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * `ppTypeLib` указывает на интерфейс библиотеки типов.  
+### <a name="return-value"></a>Return Value  
+ An HRESULT indicating the success or failure of the call. If successful, * `ppTypeLib` points to the type library interface.  
   
-### <a name="remarks"></a>Примечания  
- Производные классы должны переопределить эту функцию-член (если не переопределен, `GetTypeLib` возвращает TYPE_E_CANTLOADLIBRARY). Используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeInfoCount` и `GetTypeLibCache`.  
+### <a name="remarks"></a>Remarks  
+ Derived classes should override this member function (if not overridden, `GetTypeLib` returns TYPE_E_CANTLOADLIBRARY). Use the [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, which also implements `GetTypeInfoCount` and `GetTypeLibCache`.  
   
-##  <a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
- Возвращает кэш библиотеки типов.  
+##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache  
+ Gets the type library cache.  
   
 ```  
 virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на **CTypeLibCache** объекта.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a **CTypeLibCache** object.  
   
-### <a name="remarks"></a>Примечания  
- Производные классы должны переопределить эту функцию-член (если не переопределен, **GetTypeLibCache** возвращает значение NULL). Используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeInfoCount` и `GetTypeLib`.  
+### <a name="remarks"></a>Remarks  
+ Derived classes should override this member function (if not overridden, **GetTypeLibCache** returns NULL). Use the [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, which also implements `GetTypeInfoCount` and `GetTypeLib`.  
   
-##  <a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
- Эта функция вызывается с реализации MFC **IDispatch::Invoke** для определения метода данного автоматизации (определяется `dispid`) может быть вызван.  
+##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
+ This function is called by MFC's implementation of **IDispatch::Invoke** to determine if a given automation method (identified by `dispid`) can be invoked.  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- Идентификатор диспетчеризации.  
+ A dispatch ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если метод может быть вызванным, в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the method can be invoked, otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Если `IsInvokeAllowed` возвращает значение TRUE, **Invoke** выполняет вызов метода; в противном случае `Invoke` завершится ошибкой, возвращая E_UNEXPECTED.  
+### <a name="remarks"></a>Remarks  
+ If `IsInvokeAllowed` returns TRUE, **Invoke** proceeds to call the method; otherwise, `Invoke` will fail, returning E_UNEXPECTED.  
   
- Производные классы могут переопределить эту функцию для возврата соответствующего значения (если не переопределен, `IsInvokeAllowed` возвращает значение TRUE). См. в частности [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
+ Derived classes can override this function to return appropriate values (if not overridden, `IsInvokeAllowed` returns TRUE). See in particular [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
-##  <a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
- Используйте `IsResultExpected` чтобы выяснить, является ли клиент ожидает значение, возвращаемое из вызова его функции автоматизации.  
+##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected  
+ Use `IsResultExpected` to ascertain whether a client expects a return value from its call to an automation function.  
   
 ```  
 BOOL IsResultExpected();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция автоматизации должна возвращать значение; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if an automation function should return a value; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Интерфейс OLE предоставляет информацию о ли клиент с помощью или без учета результата вызова функции MFC, а MFC, в свою очередь, использует эти сведения для определения результата вызова `IsResultExpected`. Если производства, возвращаемое значение или ресурсов много времени, можно повысить эффективность путем вызова этой функции перед вычислением возвращаемое значение.  
+### <a name="remarks"></a>Remarks  
+ The OLE interface supplies information to MFC about whether the client is using or ignoring the result of a function call, and MFC in turn uses this information to determine the result of a call to `IsResultExpected`. If production of a return value is time- or resource-intensive, you can increase efficiency by calling this function before computing the return value.  
   
- Эта функция возвращает 0 только в том случае, когда, что позволяет получить допустимый возвращаемые значения от других функций автоматизации при вызове их из функции автоматизации, называется клиента.  
+ This function returns 0 only once so that you will get valid return values from other automation functions if you call them from the automation function that the client has called.  
   
- `IsResultExpected`возвращает ненулевое значение, если вызывается, когда вызов функции автоматизации не выполняется.  
+ `IsResultExpected` returns a nonzero value if called when an automation function call is not in progress.  
   
-##  <a name="oncmdmsg"></a>CCmdTarget::OnCmdMsg  
- Вызывается платформой для маршрутизации и отправления сообщения команд и для обработки обновление объектов пользовательского интерфейса команд.  
+##  <a name="oncmdmsg"></a>  CCmdTarget::OnCmdMsg  
+ Called by the framework to route and dispatch command messages and to handle the update of command user-interface objects.  
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -412,74 +427,74 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Содержит идентификатор команды.  
+ Contains the command ID.  
   
  `nCode`  
- Определяет код команды уведомления. В разделе **примечания** Дополнительные сведения о значениях `nCode`.  
+ Identifies the command notification code. See **Remarks** for more information about values for `nCode`.  
   
  `pExtra`  
- Используется в соответствии со значением `nCode`. В разделе **примечания** Дополнительные сведения о `pExtra`.  
+ Used according to the value of `nCode`. See **Remarks** for more information about `pExtra`.  
   
  `pHandlerInfo`  
- В противном случае **NULL**, `OnCmdMsg` заполняет **pTarget** и **pmf** члены `pHandlerInfo` структуры вместо команды диспетчеризации. Как правило, этот параметр должен быть **NULL**.  
+ If not **NULL**, `OnCmdMsg` fills in the **pTarget** and **pmf** members of the `pHandlerInfo` structure instead of dispatching the command. Typically, this parameter should be **NULL**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если сообщение обработано; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is handled; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Это процедура реализации архитектуры команда framework.  
+### <a name="remarks"></a>Remarks  
+ This is the main implementation routine of the framework command architecture.  
   
- Во время выполнения `OnCmdMsg` отправляет команды на другие объекты или обрабатывает самой команде, вызвав корневой класс `CCmdTarget::OnCmdMsg`, который выполняет Просмотр фактических схему сообщений. Полное описание маршрутизация команд по умолчанию см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+ At run time, `OnCmdMsg` dispatches a command to other objects or handles the command itself by calling the root class `CCmdTarget::OnCmdMsg`, which does the actual message-map lookup. For a complete description of the default command routing, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
- В редких случаях может потребоваться переопределить эту функцию-член для расширения framework стандартной маршрутизации команд. Ссылаться на [Технические заметки 21](../../mfc/tn021-command-and-message-routing.md) расширенные сведения архитектура маршрутизации команд.  
+ On rare occasions, you may want to override this member function to extend the framework's standard command routing. Refer to [Technical Note 21](../../mfc/tn021-command-and-message-routing.md) for advanced details of the command-routing architecture.  
   
- При переопределении `OnCmdMsg`, необходимо указать соответствующее значение для `nCode`, кода команды уведомления и `pExtra`, которая зависит от значения `nCode`. В следующей таблице перечислены соответствующие им значения:  
+ If you override `OnCmdMsg`, you must supply the appropriate value for `nCode`, the command notification code, and `pExtra`, which depends on the value of `nCode`. The following table lists their corresponding values:  
   
-|Значение `nCode`|Значение `pExtra`|  
+|`nCode` value|`pExtra` value|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
+|CN_EVENT|AFX_EVENT*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI*|  
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
 |CN_OLE_UNREGISTER|NULL|  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #44](../../mfc/codesnippet/cpp/ccmdtarget-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#44](../../mfc/codesnippet/cpp/ccmdtarget-class_2.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
   
-##  <a name="onfinalrelease"></a>CCmdTarget::OnFinalRelease  
- Вызывается платформой, когда последняя ссылка OLE на или из объекта освобождается.  
+##  <a name="onfinalrelease"></a>  CCmdTarget::OnFinalRelease  
+ Called by the framework when the last OLE reference to or from the object is released.  
   
 ```  
 virtual void OnFinalRelease();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию для обеспечения специальной обработки для данной ситуации. Реализация по умолчанию удаляет объект.  
+### <a name="remarks"></a>Remarks  
+ Override this function to provide special handling for this situation. The default implementation deletes the object.  
   
-##  <a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
- Эта функция вызывается для восстановления соответствующий курсор с песочными часами после изменения системного курсора (например, после окно сообщения открытых и закрытых затем в середине длительной операции).  
+##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor  
+ Call this function to restore the appropriate hourglass cursor after the system cursor has changed (for example, after a message box has opened and then closed while in the middle of a lengthy operation).  
   
 ```  
 void RestoreWaitCursor();
 ```  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC ACDUAL](../../visual-cpp-samples.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CCmdUI-класс](../../mfc/reference/ccmdui-class.md)   
- [CDocument-класс](../../mfc/reference/cdocument-class.md)   
- [CDocTemplate-класс](../../mfc/reference/cdoctemplate-class.md)   
- [CWinApp-класс](../../mfc/reference/cwinapp-class.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [CView-класс](../../mfc/reference/cview-class.md)   
- [CFrameWnd-класс](../../mfc/reference/cframewnd-class.md)   
- [Класс COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample ACDUAL](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CCmdUI Class](../../mfc/reference/ccmdui-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [COleDispatchDriver Class](../../mfc/reference/coledispatchdriver-class.md)
 

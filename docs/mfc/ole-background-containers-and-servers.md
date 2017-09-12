@@ -1,51 +1,70 @@
 ---
-title: "Поддержка OLE. Контейнеры и серверы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнеры, OLE - приложения контейнера"
-  - "полносерверный"
-  - "OLE - контейнеры, приложения контейнера"
-  - "полносерверные приложения OLE"
-  - "приложения сервера OLE, о серверных приложениях"
-  - "приложения сервера OLE, минисерверные приложения"
-  - "серверные приложения"
-  - "серверные приложения, взаимодействие с контейнерами"
-  - "серверные приложения, определенный"
-  - "серверные приложения, полносерверный или минисерверный"
-  - "серверные приложения, требования"
+title: 'OLE Background: Containers and Servers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE full-server applications [MFC]
+- server applications [MFC], communication with containers
+- full-server [MFC]
+- server applications [MFC], requirements
+- server applications [MFC], defined
+- OLE server applications [MFC], about server applications
+- server applications [MFC], full-server vs. mini-server
+- OLE server applications [MFC], mini-server applications
+- OLE containers [MFC], container applications
+- containers [MFC], OLE container applications
+- server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Поддержка OLE. Контейнеры и серверы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8f9c9a5735d7c66935acafee320335861d7030e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Приложение контейнера, приложение может включать внедренный или связанные элементы в собственные документы.  Документы управляемых из приложения контейнера должны иметь возможность сохранять и отображение OLE компоненты документа, и данные, созданные самим приложением.  Приложение контейнера должен также разрешить пользователям к элементам вставлять новые или изменить существующие элементы, активировать серверных приложений в случае необходимости.  Требования к пользовательского интерфейса приложения содержатся в статье [Контейнеры: Проблемы пользовательского интерфейса](../mfc/containers-user-interface-issues.md).  
+---
+# <a name="ole-background-containers-and-servers"></a>OLE Background: Containers and Servers
+A container application is an application that can incorporate embedded or linked items into its own documents. The documents managed by a container application must be able to store and display OLE document components as well as the data created by the application itself. A container application must also allow users to insert new items or edit existing items by activating server applications when necessary. The user-interface requirements of a container application are listed in the article [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md).  
   
- Применение серверного приложения или компонента приложения, может создать компоненты для использования OLE документа приложение\-контейнерами.  Серверные приложения обычно поддерживают перетаскивание или их скопировать данные в буфер обмена, чтобы можно было вставить данные в виде приложения контейнера внедрения или связанный элемент.  Приложение может быть и контейнером и сервером.  
+ A server application or component application is an application that can create OLE document components for use by container applications. Server applications usually support drag and drop or copying their data to the Clipboard so that a container application can insert the data as an embedded or linked item. An application can be both a container and a server.  
   
- Большинство автономных серверов приложений или серверов полные; их можно выполнить в качестве изолированных приложений или могут быть запущены из приложения контейнера.  Miniserver специальный тип серверного приложения, который может быть запущен только контейнером.  Он не может быть выполнено в виде изолированного приложения.  Microsoft paint и серверы графа Майкрософт примеры miniservers.  
+ Most servers are stand-alone applications or full servers; they can either be run as stand-alone applications or can be launched by a container application. A miniserver is a special type of server application that can be launched only by a container. It cannot be run as a stand-alone application. Microsoft Draw and Microsoft Graph servers are examples of miniservers.  
   
- Контейнеры и серверы не взаимодействуют напрямую.  Вместо этого они взаимодействуют через OLE библиотеки динамической компоновки \(DLL\) системы.  Эти библиотеки DLL предоставляют функции, контейнеры и вызов сервера и контейнеры и серверы предоставляют функции обратного вызова, которые вызывают библиотеку DLL.  
+ Containers and servers do not communicate directly. Instead, they communicate through the OLE system dynamic-link libraries (DLL). These DLLs provide functions that containers and servers call, and the containers and servers provide callback functions that the DLLs call.  
   
- Использование это означает сообщения, контейнер не знать подробности реализации серверного приложения.  Это позволяет контейнер к элементам, созданные любым сервером без указания типов серверов, с которыми она может работать.  В результате пользователь может воспользоваться приложения будущих приложений и форматов данных.  Если эти новые приложения OLE компоненты, составной документ будет включать элементы, созданные этими приложениями.  
+ Using this means of communication, a container does not need to know the implementation details of the server application. It allows a container to accept items created by any server without having to define the types of servers with which it can work. As a result, the user of a container application can take advantage of future applications and data formats. If these new applications are OLE components, then a compound document will be able to incorporate items created by those applications.  
   
-## См. также  
- [Поддержка OLE](../mfc/ole-background.md)   
- [Поддержка OLE. Реализация MFC](../mfc/ole-background-mfc-implementation.md)   
- [Контейнеры](../mfc/containers.md)   
- [Серверы](../mfc/servers.md)   
- [Контейнеры. Элементы клиентов](../mfc/containers-client-items.md)   
- [Серверы. Элементы сервера](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: MFC Implementation](../mfc/ole-background-mfc-implementation.md)   
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

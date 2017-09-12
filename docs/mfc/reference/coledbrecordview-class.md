@@ -1,5 +1,5 @@
 ---
-title: "COleDBRecordView-класс | Документы Microsoft"
+title: COleDBRecordView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC, OLE DB
-- COleDBRecordView class
+- COleDBRecordView [MFC], COleDBRecordView
+- COleDBRecordView [MFC], OnGetRowset
+- COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
 caps.latest.revision: 20
 author: mikeblome
@@ -38,50 +39,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4c4bfa973b7ff7fb2b93e5fcc60cf18325986a8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledbrecordview-class"></a>COleDBRecordView-класс
-Представление, которое отображает записи базы данных в элементах управления.  
+# <a name="coledbrecordview-class"></a>COleDBRecordView Class
+A view that displays database records in controls.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDBRecordView : public CFormView  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Защищенные конструкторы  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Создает объект `COleDBRecordView`.|  
+|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Constructs a `COleDBRecordView` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Возвращает стандартный `HRESULT` значение.|  
-|[COleDBRecordView::OnMove](#onmove)|Обновляет текущую запись (если «грязных») в источнике данных, а затем перемещает к определенной записи (следующего, предыдущего, первого или последнего).|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Returns a standard `HRESULT` value.|  
+|[COleDBRecordView::OnMove](#onmove)|Updates the current record (if dirty) on the data source and then moves to the specified record (next, previous, first, or last).|  
   
-## <a name="remarks"></a>Примечания  
- Представление — это представление формы, непосредственно подключенные к `CRowset` объекта. Представление создается на основе ресурс шаблона диалоговых окон и отображает поля `CRowset` в элементах управления шаблона диалогового окна. `COleDBRecordView` Объект использует обмен данными диалоговых окон (DDX) и навигационные функции встроены в `CRowset`, для автоматизации перемещения данных между полями набора строк и элементов управления в форме. `COleDBRecordView`также предоставляет реализацию по умолчанию для перемещения к первому следующего, предыдущего или последней записи и интерфейс для обновления записи в настоящее время для представления.  
+## <a name="remarks"></a>Remarks  
+ The view is a form view directly connected to a `CRowset` object. The view is created from a dialog template resource and displays the fields of the `CRowset` object in the dialog template's controls. The `COleDBRecordView` object uses dialog data exchange (DDX), and the navigational functionality built into `CRowset`, to automate the movement of data between the controls on the form and the fields of the rowset. `COleDBRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently on view.  
   
- Можно использовать функции DDX с **COleDbRecordView** для получения данных непосредственно из набора записей базы данных и его отображения в элементе управления диалогового окна. Следует использовать **DDX_\*** методы (такие как `DDX_Text`), а не **DDX_Field\* ** функции (такие как `DDX_FieldText`) с **COleDbRecordView**. `DDX_FieldText`не будет работать с **COleDbRecordView** из-за `DDX_FieldText` принимает дополнительный аргумент типа **CRecordset\*** (для `CRecordView`) или **CDaoRecordset\* ** (для `CDaoRecordView`).  
+ You can use DDX functions with **COleDbRecordView** to get data directly from the database recordset and display it in a dialog control. You should use the **DDX_\*** methods (such as `DDX_Text`), not the **DDX_Field\*** functions (such as `DDX_FieldText`) with **COleDbRecordView**. `DDX_FieldText` will not work with **COleDbRecordView** because `DDX_FieldText` takes an additional argument of type **CRecordset\*** (for `CRecordView`) or **CDaoRecordset\*** (for `CDaoRecordView`).  
   
 > [!NOTE]
->  Если вы работаете с классами объектов доступа к данным (DAO), а не классов шаблонов потребителей OLE DB, используйте класс [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) вместо него. Дополнительные сведения см. в статье [Обзор: программирования баз данных](../../data/data-access-programming-mfc-atl.md).  
+>  If you are working with the Data Access Objects (DAO) classes rather than the OLE DB Consumer Template classes, use class [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`сохраняет сведения о положение пользователя в наборе строк, чтобы представление записей можно обновить пользовательский интерфейс. При перемещении либо конца набора строк, представление записей отключает объекты пользовательского интерфейса — например, пункты меню или кнопки панели инструментов — для перемещения дальнейших в одном направлении.  
+ `COleDBRecordView` keeps track of the user's position in the rowset so that the record view can update the user interface. When the user moves to either end of the rowset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
   
- Дополнительные сведения о классах строк см. в разделе [с помощью шаблонов потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) статьи.  
+ For more information about rowset classes, see the [Using OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md) article.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -96,85 +97,85 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxoledb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
- Создает объект `COleDBRecordView`.  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
+ Constructs a `COleDBRecordView` object.  
   
 ```  
 COleDBRecordView(LPCTSTR lpszTemplateName);  
 COleDBRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Содержит строку, завершающуюся значением null, являющееся именем ресурса шаблона диалогового окна.  
+ Contains a null-terminated string that is the name of a dialog-template resource.  
   
  `nIDTemplate`  
- Содержит идентификатор ресурса шаблона диалогового окна.  
+ Contains the ID number of a dialog-template resource.  
   
-### <a name="remarks"></a>Примечания  
- При создании объекта типа производным от `COleDBRecordView`, вызвать один из конструкторов для создания объекта view и определения ресурса диалогового окна, лежащие в основе представления. Можно указать ресурс по имени (передавать строку в качестве аргумента конструктору) или по его Идентификатору (pass целое число без знака в качестве аргумента).  
+### <a name="remarks"></a>Remarks  
+ When you create an object of a type derived from `COleDBRecordView`, invoke one of the constructors to create the view object and identify the dialog resource on which the view is based. You can identify the resource either by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument).  
   
 > [!NOTE]
->  Производный класс *должен* предоставить свой собственный конструктор. В конструкторе, вызвать конструктор `COleDBRecordView::COleDBRecordView`, с именем ресурса или идентификатор в качестве аргумента.  
+>  Your derived class *must* supply its own constructor. In the constructor, invoke the constructor, `COleDBRecordView::COleDBRecordView`, with the resource name or ID as an argument.  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
- Возвращает дескриптор для **CRowset<> </>** объект, связанный с представлением записи.  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
+ Returns a handle for the **CRowset<>** object associated with the record view.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо переопределить эту функцию-член для создания или получения объекта набора строк и возвращает его дескриптор. Если объявить класс представления записей с помощью классов, мастер создает переопределение по умолчанию. Реализация по умолчанию мастер классов возвращает дескриптор набора строк, хранится в представлении записей, если он существует. Если нет, он создает объект набора строк типа, указанный с ClassWizard и вызывает его **откройте** член для открытия таблицы или выполнить запрос и возвращает дескриптор для объекта.  
+### <a name="remarks"></a>Remarks  
+ You must override this member function to construct or obtain a rowset object and return a handle to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the rowset handle stored in the record view if one exists. If not, it constructs a rowset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a handle to the object.  
   
 > [!NOTE]
->  До MFC 7.0 `OnGetRowset` возвращается указатель `CRowset`. Если у вас есть код, который вызывает `OnGetRowset`, необходимо изменить тип возвращаемого значения для шаблона класса **CRowset<>**.  
+>  Previous to MFC 7.0, `OnGetRowset` returned a pointer to `CRowset`. If you have code that calls `OnGetRowset`, you need to change the return type to the templatized class **CRowset<>**.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDatabase #38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).  
+ For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
- Переходит к другой записи в наборе строк и отображения его поля в элементах управления записи режиме.  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
+ Moves to a different record in the rowset and display its fields in the controls of the record view.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDMoveCommand`  
- Одно из следующих значений ID стандартную команду:  
+ One of the following standard command ID values:  
   
-- `ID_RECORD_FIRST`— Перемещение к первой записи в наборе записей.  
+- `ID_RECORD_FIRST` — Move to the first record in the recordset.  
   
-- `ID_RECORD_LAST`— Переход к последней записи в наборе записей.  
+- `ID_RECORD_LAST` — Move to the last record in the recordset.  
   
-- `ID_RECORD_NEXT`— Перемещение к следующей записи в наборе записей.  
+- `ID_RECORD_NEXT` — Move to the next record in the recordset.  
   
-- `ID_RECORD_PREV`— Переход к предыдущей записи в наборе записей.  
+- `ID_RECORD_PREV` — Move to the previous record in the recordset.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если перемещение прошло успешно; в противном случае значение 0, если запрос на перемещение запрещен.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the move was successful; otherwise 0 if the move request was denied.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию вызывает соответствующий **переместить** функцию-член `CRowset` объект, связанный с представлением записи.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the appropriate **Move** member function of the `CRowset` object associated with the record view.  
   
- По умолчанию `OnMove` обновляет текущую запись в источнике данных, если пользователь был изменен в режиме записи.  
+ By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
   
- В мастере приложений создает ресурс меню с пунктами меню первой записи, последнюю запись, следующая запись и предыдущей записи. Если выбран параметр Закрепляемая панель инструментов приложения мастер также создает панель инструментов с кнопками, соответствующий эти команды.  
+ The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Dockable Toolbar option, The Application Wizard also creates a toolbar with buttons corresponding to these commands.  
   
- При перемещении за последней записью в наборе записей, представление записей продолжают отображаться последнюю запись. Если переместить назад после первой записи, представление записей продолжают отображаться первой записи.  
+ If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

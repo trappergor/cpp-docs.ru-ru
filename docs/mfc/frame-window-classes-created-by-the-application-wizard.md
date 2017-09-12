@@ -1,49 +1,66 @@
 ---
-title: "Классы окна фрейма, создаваемые с помощью Мастера приложений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CMainFrame"
-  - "CMainFrame::PreCreateWindow"
-  - "CMainFrame.PreCreateWindow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "мастера приложений [C++], классы окна фрейма, созданные"
-  - "CFrameWnd - класс, окна фрейма"
-  - "классы [C++], окно фрейма"
-  - "CMainFrame - класс"
-  - "CMDIChildWnd - класс, окна фрейма"
-  - "CMDIFrameWnd - класс, окна фрейма"
-  - "классы окна фрейма, создано мастерами приложений"
-  - "классы окон"
-  - "классы окон, фрейм"
+title: Frame-Window Classes Created by the Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CMainFrame
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], frame window classes created by
+- window classes [MFC]
+- classes [MFC], frame-window
+- CMDIFrameWnd class [MFC], frame windows
+- window classes [MFC], frame
+- CFrameWnd class [MFC], frame windows
+- CMDIChildWnd class [MFC], frame windows
+- frame window classes [MFC], created by application wizards
+- CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Классы окна фрейма, создаваемые с помощью Мастера приложений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19de6bdd291126933c5a1f893c37c99824ccd062
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При использовании [Мастер приложений](../ide/creating-desktop-projects-by-using-application-wizards.md), чтобы создать общую схему приложения, в дополнение к применению, документ и классы представления, мастер приложений создает производный класс фреймового окна фрейма окна для основного приложения.  Класс называется `CMainFrame` по умолчанию и файлы, содержащие его называют MAINFRM.H и MAINFRM.CPP.  
+---
+# <a name="frame-window-classes-created-by-the-application-wizard"></a>Frame-Window Classes Created by the Application Wizard
+When you use the [Application Wizard](../ide/creating-desktop-projects-by-using-application-wizards.md) to create a skeleton application, in addition to application, document, and view classes, the Application Wizard creates a derived frame-window class for your application's main frame window. The class is called `CMainFrame` by default, and the files that contain it are named MAINFRM.H and MAINFRM.CPP.  
   
- Если приложение SDI, класс `CMainFrame` является производным от класса [CFrameWnd](../mfc/reference/cframewnd-class.md).  
+ If your application is SDI, your `CMainFrame` class is derived from class [CFrameWnd](../mfc/reference/cframewnd-class.md).  
   
- Если приложение MDI, `CMainFrame` наследуется от класса [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md).  В этом случае `CMainFrame` реализует большую ЭВМ, которая хранит меню, панели инструментов и строки состояния.  Мастер приложений не является новый класс фреймового окна документа автоматически.  Вместо этого он использует реализацию по умолчанию в [Класс CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  Платформы MFC создает дочернее окно, чтобы содержать все представления \(это может быть типа `CScrollView`, `CEditView`, `CTreeView`, `CListView` и т д\), требует приложение.  Если необходимо настраивать в фрейме окна документа, можно создать новый класс фреймового окна документа \(см. [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)\).  
+ If your application is MDI, `CMainFrame` is derived from class [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). In this case `CMainFrame` implements the main frame, which holds the menu, toolbar, and status bars. The Application Wizard does not derive a new document frame-window class for you. Instead, it uses the default implementation in [CMDIChildWnd Class](../mfc/reference/cmdichildwnd-class.md). The MFC framework creates a child window to contain each view (which can be of type `CScrollView`, `CEditView`, `CTreeView`, `CListView`, and so on) that the application requires. If you need to customize your document frame window, you can create a new document frame-window class (see [Adding a Class](../ide/adding-a-class-visual-cpp.md)).  
   
- При выборе поддержки панель инструментов, класс также содержит переменные\-члены типа [CToolBar](../mfc/reference/ctoolbar-class.md) и [CStatusBar](../mfc/reference/cstatusbar-class.md) и функции обработчика сообщений `OnCreate` для инициализации 2 [панели элементов управления](../Topic/Control%20Bars.md).  
+ If you choose to support a toolbar, the class also has member variables of type [CToolBar](../mfc/reference/ctoolbar-class.md) and [CStatusBar](../mfc/reference/cstatusbar-class.md) and an `OnCreate` message-handler function to initialize the two [control bars](../mfc/control-bars.md).  
   
- Эти классы фреймового окна работают так создается, но увеличить их функциональные возможности, необходимо добавить переменные\-члены и функции\-члены.  Кроме того, можно иметь классов окна обрабатывать другие сообщения Windows.  Дополнительные сведения см. в разделе [Изменение стилей окна с MFC](../Topic/Changing%20the%20Styles%20of%20a%20Window%20Created%20by%20MFC.md).  
+ These frame-window classes work as created, but to enhance their functionality, you must add member variables and member functions. You may also want to have your window classes handle other Windows messages. For more information, see [Changing the Styles of a Window Created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
   
-## См. также  
- [Классы окна фрейма](../mfc/frame-window-classes.md)   
- [Программа MFC или управление файлами исходного кода и заголовков](../ide/mfc-program-or-control-source-and-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Frame-Window Classes](../mfc/frame-window-classes.md)   
+ [MFC Program or Control Source and Header Files](../ide/mfc-program-or-control-source-and-header-files.md)
+
+

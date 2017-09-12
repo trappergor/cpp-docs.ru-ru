@@ -1,5 +1,5 @@
 ---
-title: "CDocTemplate-класс | Документы Microsoft"
+title: CDocTemplate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document templates
-- templates, document
-- CDocTemplate class
+- CDocTemplate [MFC], CDocTemplate
+- CDocTemplate [MFC], AddDocument
+- CDocTemplate [MFC], CloseAllDocuments
+- CDocTemplate [MFC], CreateNewDocument
+- CDocTemplate [MFC], CreateNewFrame
+- CDocTemplate [MFC], CreateOleFrame
+- CDocTemplate [MFC], CreatePreviewFrame
+- CDocTemplate [MFC], GetDocString
+- CDocTemplate [MFC], GetFirstDocPosition
+- CDocTemplate [MFC], GetNextDoc
+- CDocTemplate [MFC], InitialUpdateFrame
+- CDocTemplate [MFC], LoadTemplate
+- CDocTemplate [MFC], MatchDocType
+- CDocTemplate [MFC], OpenDocumentFile
+- CDocTemplate [MFC], RemoveDocument
+- CDocTemplate [MFC], SaveAllModified
+- CDocTemplate [MFC], SetContainerInfo
+- CDocTemplate [MFC], SetDefaultTitle
+- CDocTemplate [MFC], SetPreviewInfo
+- CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 caps.latest.revision: 22
 author: mikeblome
@@ -56,103 +73,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 56ad45a061986c320e14054a2c77683cb5d89ac2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66dd645ba2146fd8f8910deb4bc9c3e3bbe1ee8c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdoctemplate-class"></a>CDocTemplate-класс
-Абстрактный базовый класс, который определяет базовую функциональность шаблонов документов.  
+# <a name="cdoctemplate-class"></a>CDocTemplate Class
+An abstract base class that defines the basic functionality for document templates.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocTemplate : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Защищенные конструкторы  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocTemplate::CDocTemplate](#cdoctemplate)|Создает объект `CDocTemplate`.|  
+|[CDocTemplate::CDocTemplate](#cdoctemplate)|Constructs a `CDocTemplate` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocTemplate::AddDocument](#adddocument)|Добавляет документ в шаблон.|  
-|[CDocTemplate::CloseAllDocuments](#closealldocuments)|Закрывает все документы, связанные с этим шаблоном.|  
-|[CDocTemplate::CreateNewDocument](#createnewdocument)|Создает новый документ.|  
-|[CDocTemplate::CreateNewFrame](#createnewframe)|Создает новый рамка окна, содержащего документа и представления.|  
-|[CDocTemplate::CreateOleFrame](#createoleframe)|Создает окно кадров, поддержкой OLE.|  
-|[CDocTemplate::CreatePreviewFrame](#createpreviewframe)|Создает дочерний кадр, используемый для расширенного просмотра.|  
-|[CDocTemplate::GetDocString](#getdocstring)|Возвращает строку, связанную с типом документа.|  
-|[CDocTemplate::GetFirstDocPosition](#getfirstdocposition)|Возвращает позицию первого документа, связанного с этим шаблоном.|  
-|[CDocTemplate::GetNextDoc](#getnextdoc)|Получает документ и положение следующего.|  
-|[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|Инициализирует фрейма окна и при необходимости сделает ее видимой.|  
-|[CDocTemplate::LoadTemplate](#loadtemplate)|Загружает ресурсы для данного `CDocTemplate` или производного класса.|  
-|[CDocTemplate::MatchDocType](#matchdoctype)|Определяет степень уверенности в соответствие типа документа и этот шаблон.|  
-|[Функции](#opendocumentfile)|Открывает файл, указанный параметром pathname.|  
-|[CDocTemplate::RemoveDocument](#removedocument)|Удаляет документ из шаблона.|  
-|[CDocTemplate::SaveAllModified](#saveallmodified)|Сохраняет все документы, связанные с помощью этого шаблона, которые были изменены.|  
-|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|Определяет ресурсы для OLE-контейнеры, при редактировании объекта OLE на месте.|  
-|[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|Заголовка по умолчанию отображается в строке заголовка окна документа.|  
-|[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|Параметры настройки из обработчика просмотра процесса.|  
-|[CDocTemplate::SetServerInfo](#setserverinfo)|Определяет ресурсы и классы, если серверный документ внедрен или редактирования на месте.|  
+|[CDocTemplate::AddDocument](#adddocument)|Adds a document to a template.|  
+|[CDocTemplate::CloseAllDocuments](#closealldocuments)|Closes all documents associated with this template.|  
+|[CDocTemplate::CreateNewDocument](#createnewdocument)|Creates a new document.|  
+|[CDocTemplate::CreateNewFrame](#createnewframe)|Creates a new frame window containing a document and view.|  
+|[CDocTemplate::CreateOleFrame](#createoleframe)|Creates an OLE-enabled frame window.|  
+|[CDocTemplate::CreatePreviewFrame](#createpreviewframe)|Creates a child frame used for Rich Preview.|  
+|[CDocTemplate::GetDocString](#getdocstring)|Retrieves a string associated with the document type.|  
+|[CDocTemplate::GetFirstDocPosition](#getfirstdocposition)|Retrieves the position of the first document associated with this template.|  
+|[CDocTemplate::GetNextDoc](#getnextdoc)|Retrieves a document and the position of the next one.|  
+|[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|Initializes the frame window, and optionally makes it visible.|  
+|[CDocTemplate::LoadTemplate](#loadtemplate)|Loads the resources for a given `CDocTemplate` or derived class.|  
+|[CDocTemplate::MatchDocType](#matchdoctype)|Determines the degree of confidence in the match between a document type and this template.|  
+|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|Opens a file specified by a pathname.|  
+|[CDocTemplate::RemoveDocument](#removedocument)|Removes a document from a template.|  
+|[CDocTemplate::SaveAllModified](#saveallmodified)|Saves all documents associated with this template which have been modified.|  
+|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|Determines the resources for OLE containers when editing an in-place OLE item.|  
+|[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|Displays the default title in the document window's title bar.|  
+|[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|Setups out of process preview handler.|  
+|[CDocTemplate::SetServerInfo](#setserverinfo)|Determines the resources and classes when the server document is embedded or edited in-place.|  
   
-## <a name="remarks"></a>Примечания  
- Обычно создается один или несколько шаблонов документов в реализации приложения `InitInstance` функции. Шаблон документа определяет отношения между три типа классов:  
+## <a name="remarks"></a>Remarks  
+ You usually create one or more document templates in the implementation of your application's `InitInstance` function. A document template defines the relationships among three types of classes:  
   
--   Класс документа, который необходимо наследовать от **CDocument**.  
+-   A document class, which you derive from **CDocument**.  
   
--   Класс представления отображает данные из класса документа, перечисленных выше. Можно наследовать этот класс из `CView`, `CScrollView`, `CFormView`, или `CEditView`. (Можно также использовать `CEditView` напрямую.)  
+-   A view class, which displays data from the document class listed above. You can derive this class from `CView`, `CScrollView`, `CFormView`, or `CEditView`. (You can also use `CEditView` directly.)  
   
--   Класс фрейм окна, который содержит представление. Однооконный интерфейс (SDI) приложения, являются производными от этого класса `CFrameWnd`. Для нескольких приложений интерфейса (MDI) документа, необходимо наследовать от этого класса `CMDIChildWnd`. Если не нужно настраивать поведение окна фрейма, можно использовать `CFrameWnd` или `CMDIChildWnd` напрямую без создания собственного производного класса.  
+-   A frame window class, which contains the view. For a single document interface (SDI) application, you derive this class from `CFrameWnd`. For a multiple document interface (MDI) application, you derive this class from `CMDIChildWnd`. If you don't need to customize the behavior of the frame window, you can use `CFrameWnd` or `CMDIChildWnd` directly without deriving your own class.  
   
- Приложение имеет один шаблон документа для каждого типа документа, который он поддерживает. Например если приложение поддерживает электронных таблиц и текстовых документов, приложение имеет два объекта шаблона документа. Каждый шаблон документа отвечает за создание и управление ими все документы этого типа.  
+ Your application has one document template for each type of document that it supports. For example, if your application supports both spreadsheets and text documents, the application has two document template objects. Each document template is responsible for creating and managing all the documents of its type.  
   
- Шаблон документа хранит указатели на `CRuntimeClass` объектов для документов, представления и классы окна фрейма. Эти `CRuntimeClass` объекты, указанные при создании шаблона документа.  
+ The document template stores pointers to the `CRuntimeClass` objects for the document, view, and frame window classes. These `CRuntimeClass` objects are specified when constructing a document template.  
   
- Шаблон документа содержит идентификатор ресурсы, используемые с типом документа (например, меню, значок или ресурсами таблицы сочетаний клавиш). Шаблон документа имеются строки, содержащие дополнительные сведения о его тип документа. К ним относятся имя типа документа (например, «лист») и расширение файла (например, «.xls»). При необходимости он может содержать другие строки, используется интерфейс пользователя, диспетчер файлов и связывания объектов и поддержка внедрения (OLE).  
+ The document template contains the ID of the resources used with the document type (such as menu, icon, or accelerator table resources). The document template also has strings containing additional information about its document type. These include the name of the document type (for example, "Worksheet") and the file extension (for example, ".xls"). Optionally, it can contain other strings used by the application's user interface, the Windows File Manager, and Object Linking and Embedding (OLE) support.  
   
- Если приложение является OLE-контейнер, или сервера, шаблон документа также определяет идентификатор меню, которое используется во время активации на месте. Если приложение является OLE-сервер, шаблон документа определяет идентификатор панели инструментов и меню, которое используется во время активации на месте. Укажите эти дополнительные ресурсы OLE путем вызова `SetContainerInfo` и `SetServerInfo`.  
+ If your application is an OLE container and/or server, the document template also defines the ID of the menu used during in-place activation. If your application is an OLE server, the document template defines the ID of the toolbar and menu used during in-place activation. You specify these additional OLE resources by calling `SetContainerInfo` and `SetServerInfo`.  
   
- Поскольку `CDocTemplate` является абстрактным классом, класс нельзя использовать напрямую. Типичное приложение использует один из двух `CDocTemplate`-производных классов, предоставляемых библиотеки классов Microsoft Foundation: `CSingleDocTemplate`, который реализует SDI, и `CMultiDocTemplate`, который реализует MDI. В разделе этих классов для получения дополнительной информации об использовании шаблонов документов.  
+ Because `CDocTemplate` is an abstract class, you cannot use the class directly. A typical application uses one of the two `CDocTemplate`-derived classes provided by the Microsoft Foundation Class Library: `CSingleDocTemplate`, which implements SDI, and `CMultiDocTemplate`, which implements MDI. See those classes for more information on using document templates.  
   
- Если приложению требуется пользовательский интерфейс парадигмы, существенно отличается от SDI или интерфейса MDI, можно наследовать класс из `CDocTemplate`.  
+ If your application requires a user-interface paradigm that is fundamentally different from SDI or MDI, you can derive your own class from `CDocTemplate`.  
   
- Дополнительные сведения о `CDocTemplate`, в разделе [шаблоны документов и процесс создания документов и представлений](../../mfc/document-templates-and-the-document-view-creation-process.md).  
+ For more information on `CDocTemplate`, see [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocTemplate`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="adddocument"></a>CDocTemplate::AddDocument  
- Эта функция используется для добавления документа в шаблон.  
+##  <a name="adddocument"></a>  CDocTemplate::AddDocument  
+ Use this function to add a document to a template.  
   
 ```  
 virtual void AddDocument(CDocument* pDoc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- Указатель должен быть добавлен в документ.  
+ A pointer to the document to be added.  
   
-### <a name="remarks"></a>Примечания  
- Производные классы [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) и [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) переопределить эту функцию. При наследовании класса шаблона документа из `CDocTemplate`, производный класс должен переопределить эту функцию.  
+### <a name="remarks"></a>Remarks  
+ The derived classes [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) and [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) override this function. If you derive your own document-template class from `CDocTemplate`, your derived class must override this function.  
   
-##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
- Создает объект `CDocTemplate`.  
+##  <a name="cdoctemplate"></a>  CDocTemplate::CDocTemplate  
+ Constructs a `CDocTemplate` object.  
   
 ```  
 CDocTemplate (
@@ -162,11 +179,11 @@ CDocTemplate (
     CRuntimeClass* pViewClass);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- Указывает идентификатор ресурсов, используемых с типом документа. Это может включать меню, значок, таблицы сочетаний клавиш и строковые ресурсы.  
+ Specifies the ID of the resources used with the document type. This may include menu, icon, accelerator table, and string resources.  
   
- Строковый ресурс состоит из до семи подстрок, разделенных символом «\n» (символ «\n» требуется как местозаполнитель, если подстрока не включено; тем не менее, конечные символы «\n» не обязательны); Эти подстроки описания типа документа. Сведения о подстроках разделе [GetDocString](#getdocstring). Этот строковый ресурс находится в файле ресурсов приложения. Например:  
+ The string resource consists of up to seven substrings separated by the '\n' character (the '\n' character is needed as a place holder if a substring is not included; however, trailing '\n' characters are not necessary); these substrings describe the document type. For information on the substrings, see [GetDocString](#getdocstring). This string resource is found in the application's resource file. For example:  
   
  `// MYCALC.RC`  
   
@@ -178,48 +195,48 @@ CDocTemplate (
   
  `END`  
   
- Обратите внимание, что строка начинается со знака «\n»; Это вызвано первую подстроку не используется в приложениях MDI и поэтому не включено. Можно изменить эту строку в редакторе строк; вся строка представляется как одна запись в редакторе строк не семь отдельные записи.  
+ Note that the string begins with a '\n' character; this is because the first substring is not used for MDI applications and so is not included. You can edit this string using the string editor; the entire string appears as a single entry in the String Editor, not as seven separate entries.  
   
  `pDocClass`  
- Указывает `CRuntimeClass` объекта класса документа. Этот класс является **CDocument**-производный класс, определенный для представления документов.  
+ Points to the `CRuntimeClass` object of the document class. This class is a **CDocument**-derived class you define to represent your documents.  
   
  `pFrameClass`  
- Указывает `CRuntimeClass` объекта класс фреймового окна. Этот класс может быть `CFrameWnd`-производного класса, или он может быть `CFrameWnd` себя, если требуется поведение по умолчанию для главного окна фрейма.  
+ Points to the `CRuntimeClass` object of the frame window class. This class can be a `CFrameWnd`-derived class, or it can be `CFrameWnd` itself if you want default behavior for your main frame window.  
   
  `pViewClass`  
- Указывает `CRuntimeClass` объекта класса представления. Этот класс является `CView`-производного класса можно определить для отображения документов.  
+ Points to the `CRuntimeClass` object of the view class. This class is a `CView`-derived class you define to display your documents.  
   
-### <a name="remarks"></a>Примечания  
- Используйте эту функцию-член для создания `CDocTemplate` объекта. Динамически выделять `CDocTemplate` объект и передать его в [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) из `InitInstance` функции-члена класса приложения.  
+### <a name="remarks"></a>Remarks  
+ Use this member function to construct a `CDocTemplate` object. Dynamically allocate a `CDocTemplate` object and pass it to [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) from the `InitInstance` member function of your application class.  
   
-##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
- Вызовите эту функцию-член, чтобы закрыть все открытые документы.  
+##  <a name="closealldocuments"></a>  CDocTemplate::CloseAllDocuments  
+ Call this member function to close all open documents.  
   
 ```  
 virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bEndSession`  
- Указывает, является ли окончания сеанса. Это **TRUE** Если сеанс завершается; в противном случае **FALSE**.  
+ Specifies whether or not the session is being ended. It is **TRUE** if the session is being ended; otherwise **FALSE**.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член обычно используется как часть команды файл выхода. Реализация по умолчанию эта функция вызывает [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) функция-член для удаления документа данных, а затем закрывает окна фрейма для всех представлений, прикрепленной к документу.  
+### <a name="remarks"></a>Remarks  
+ This member function is typically used as part of the File Exit command. The default implementation of this function calls the [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) member function to delete the document's data and then closes the frame windows for all the views attached to the document.  
   
- Эту функцию можно переопределите, чтобы требовать от пользователя для выполнения специальной очистки обработки до закрытия документа. Например документ представляет запись в базе данных, можно переопределить эту функцию для закрытия базы данных.  
+ Override this function if you want to require the user to perform special cleanup processing before the document is closed. For example, if the document represents a record in a database, you may want to override this function to close the database.  
   
-##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
- Вызов этой функции-члена для создания документа типа, связанного с этим шаблоном документа.  
+##  <a name="createnewdocument"></a>  CDocTemplate::CreateNewDocument  
+ Call this member function to create a new document of the type associated with this document template.  
   
 ```  
 virtual CDocument* CreateNewDocument();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на только что созданного документа или **NULL** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created document, or **NULL** if an error occurs.  
   
-##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
- Создает новый рамка окна, содержащего документа и представления.  
+##  <a name="createnewframe"></a>  CDocTemplate::CreateNewFrame  
+ Creates a new frame window containing a document and view.  
   
 ```  
 virtual CFrameWnd* CreateNewFrame(
@@ -227,23 +244,23 @@ virtual CFrameWnd* CreateNewFrame(
     CFrameWnd* pOther);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- Документ, на которые должна ссылаться нового окна области. Может быть **NULL**.  
+ The document to which the new frame window should refer. Can be **NULL**.  
   
  `pOther`  
- Окна фрейма, на которой будет основываться нового окна области. Может быть **NULL**.  
+ The frame window on which the new frame window is to be based. Can be **NULL**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на только что созданный фрейме окна, или **NULL** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created frame window, or **NULL** if an error occurs.  
   
-### <a name="remarks"></a>Примечания  
- `CreateNewFrame`использует `CRuntimeClass` объекты передаются в конструктор для создания нового окна области представление и вложенный документ. Если `pDoc` параметр **NULL**, платформа выводит сообщение ТРАССИРОВКИ.  
+### <a name="remarks"></a>Remarks  
+ `CreateNewFrame` uses the `CRuntimeClass` objects passed to the constructor to create a new frame window with a view and document attached. If the `pDoc` parameter is **NULL**, the framework outputs a TRACE message.  
   
- `pOther` Параметр используется для реализации окно Новая команда. Он предоставляет окно, в котором для моделирования нового окна области. Обычно создается невидимым нового окна области. Эта функция вызывается для создания окна фрейма вне Стандартная реализация структуры новых файлов и открытие файла.  
+ The `pOther` parameter is used to implement the Window New command. It provides a frame window on which to model the new frame window. The new frame window is usually created invisible. Call this function to create frame windows outside the standard framework implementation of File New and File Open.  
   
-##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
- Создает окно фрейма OLE.  
+##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
+ Creates an OLE frame window.  
   
 ```  
 CFrameWnd* CreateOleFrame(
@@ -252,24 +269,24 @@ CFrameWnd* CreateOleFrame(
     BOOL bCreateView);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Указатель на родительское окно фрейма.  
+ A pointer to the frame's parent window.  
   
  `pDoc`  
- Указатель на документ, на которые должна ссылаться нового окна области OLE.  
+ A pointer to the document to which the new OLE frame window should refer.  
   
  `bCreateView`  
- Определяет, создается ли представление и рамки.  
+ Determines whether a view is created along with the frame.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на фрейм окна, в случае успешного выполнения; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a frame window if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Если `bCreateView` равен нулю, создается пустая рамка.  
+### <a name="remarks"></a>Remarks  
+ If `bCreateView` is zero, an empty frame is created.  
   
-##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
- Возвращает строку, связанную с типом документа.  
+##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
+ Retrieves a string associated with the document type.  
   
 ```  
 virtual BOOL GetDocString(
@@ -277,73 +294,73 @@ virtual BOOL GetDocString(
     enum DocStringIndex index) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rString`  
- Ссылку на `CString` объект, который будет содержать строку, когда функция возвращает значение.  
+ A reference to a `CString` object that will contain the string when the function returns.  
   
- *Индекс*  
- Индекс подстроки, извлекаемых из строка, описывающая тип документа. Этот параметр может принимать одно из следующих значений:  
+ *index*  
+ An index of the substring being retrieved from the string that describes the document type. This parameter can have one of the following values:  
   
-- **CDocTemplate::windowTitle** имя, которое отображается в строке (например, «Microsoft Excel») заголовка окна приложения. Присутствующие только в шаблоне документа для SDI-приложения.  
+- **CDocTemplate::windowTitle** Name that appears in the application window's title bar (for example, "Microsoft Excel"). Present only in the document template for SDI applications.  
   
-- **CDocTemplate::docName** корневого имени по умолчанию документ (например, «Таблицы»). Этим корнем, вместе с номером используется имя по умолчанию новый документ этого типа всякий раз, когда пользователь выбирает команду «New» из меню «файл» (например, «Лист1» или «Лист2»). Если не указано «Безымянный» используется по умолчанию.  
+- **CDocTemplate::docName** Root for the default document name (for example, "Sheet"). This root, plus a number, is used for the default name of a new document of this type whenever the user chooses the New command from the File menu (for example, "Sheet1" or "Sheet2"). If not specified, "Untitled" is used as the default.  
   
-- **CDocTemplate::fileNewName** имя этого типа документа. Если приложение поддерживает несколько типов документов, эта строка отображается в диалоговом окне новый файл (например, «лист»). Если не указан, тип документа недоступен с помощью команды Создать файл.  
+- **CDocTemplate::fileNewName** Name of this document type. If the application supports more than one type of document, this string is displayed in the File New dialog box (for example, "Worksheet"). If not specified, the document type is inaccessible using the File New command.  
   
-- **CDocTemplate::filterName** описание типа документа и соответствующих документов данного типа фильтра с подстановочными знаками. Эта строка отображается в раскрывающемся списке Тип файлов в диалоговом окне открытия файла (например, «листов (*.xls)»). Если не указан, тип документа недоступен с помощью команды открытия файла.  
+- **CDocTemplate::filterName** Description of the document type and a wildcard filter matching documents of this type. This string is displayed in the List Files Of Type drop-down list in the File Open dialog box (for example, "Worksheets (*.xls)"). If not specified, the document type is inaccessible using the File Open command.  
   
-- **CDocTemplate::filterExt** расширение для документов этого типа (например, «.xls»). Если не указан, тип документа недоступен с помощью команды открытия файла.  
+- **CDocTemplate::filterExt** Extension for documents of this type (for example, ".xls"). If not specified, the document type is inaccessible using the File Open command.  
   
-- **CDocTemplate::regFileTypeId** идентификатор типа документа сохраняются в базе данных регистрации, поддерживаемый Windows. Эта строка представляет только для внутреннего использования (например, «ExcelWorksheet»). Если не указан, тип документа не регистрируются с помощью диспетчера файлов Windows.  
+- **CDocTemplate::regFileTypeId** Identifier for the document type to be stored in the registration database maintained by Windows. This string is for internal use only (for example, "ExcelWorksheet"). If not specified, the document type cannot be registered with the Windows File Manager.  
   
-- **CDocTemplate::regFileTypeName** имя типа документа сохраняются в базе данных регистрации. Эта строка может отображаться в диалоговых окнах приложения, доступ к базе данных регистрации (например, «лист Microsoft Excel»).  
+- **CDocTemplate::regFileTypeName** Name of the document type to be stored in the registration database. This string may be displayed in dialog boxes of applications that access the registration database (for example, "Microsoft Excel Worksheet").  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если указанная подстрока, найдена; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified substring was found; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для получения конкретной подстроки, описывающий тип документа. Строка, содержащая эти подстроки хранится в шаблоне документа и является производным от строки в файле ресурсов для приложения. Платформа вызывает эту функцию для получения строки, необходимые для пользовательского интерфейса приложения. При указании расширения имени файла для документов в приложении платформа также вызывает эту функцию при добавлении записи в базу данных регистрации Windows. Это позволяет документы будут открываться в диспетчере файлов Windows.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve a specific substring describing the document type. The string containing these substrings is stored in the document template and is derived from a string in the resource file for the application. The framework calls this function to get the strings it needs for the application's user interface. If you have specified a filename extension for your application's documents, the framework also calls this function when adding an entry to the Windows registration database; this allows documents to be opened from the Windows File Manager.  
   
- Эта функция вызывается только в том случае, если вы сделаете производный класс от `CDocTemplate`.  
+ Call this function only if you are deriving your own class from `CDocTemplate`.  
   
-##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
- Возвращает позицию первого документа, связанного с этим шаблоном.  
+##  <a name="getfirstdocposition"></a>  CDocTemplate::GetFirstDocPosition  
+ Retrieves the position of the first document associated with this template.  
   
 ```  
 virtual POSITION GetFirstDocPosition() const = 0;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект **ПОЗИЦИИ** значение, которое может использоваться для итерации по списку документов, связанных с этим шаблоном документа; или **NULL** Если список пуст.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used to iterate through the list of documents associated with this document template; or **NULL** if the list is empty.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для получения позиции первого документа в список документов, связанных с данным шаблоном. Используйте **ПОЗИЦИИ** значение в качестве аргумента [CDocTemplate::GetNextDoc](#getnextdoc) для итерации по списку документов, связанных с шаблоном.  
+### <a name="remarks"></a>Remarks  
+ Use this function to get the position of the first document in the list of documents associated with this template. Use the **POSITION** value as an argument to [CDocTemplate::GetNextDoc](#getnextdoc) to iterate through the list of documents associated with the template.  
   
- [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) и [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) обоих переопределить это чисто виртуальную функцию. Любой класс, производный от `CDocTemplate` необходимо также переопределить эту функцию.  
+ [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) and [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) both override this pure virtual function. Any class you derive from `CDocTemplate` must also override this function.  
   
-##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
- Получает элемент списка, определенный `rPos`, затем устанавливает `rPos` для **ПОЗИЦИИ** значение следующей записи в списке.  
+##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
+ Retrieves the list element identified by `rPos`, then sets `rPos` to the **POSITION** value of the next entry in the list.  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на следующий документ в список документов, связанных с данным шаблоном.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next document in the list of documents associated with this template.  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rPos`  
- Ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим вызовом [GetFirstDocPosition](#getfirstdocposition) или `GetNextDoc`.  
+ A reference to a **POSITION** value returned by a previous call to [GetFirstDocPosition](#getfirstdocposition) or `GetNextDoc`.  
   
-### <a name="remarks"></a>Примечания  
- Если полученный элемент является последним в списке, то новое значение `rPos` равен **NULL**.  
+### <a name="remarks"></a>Remarks  
+ If the retrieved element is the last in the list, then the new value of `rPos` is set to **NULL**.  
   
- Можно использовать `GetNextDoc` в прямой итерации цикла, если установить начальное положение, с помощью вызова [GetFirstDocPosition](#getfirstdocposition).  
+ You can use `GetNextDoc` in a forward iteration loop if you establish the initial position with a call to [GetFirstDocPosition](#getfirstdocposition).  
   
- Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, утверждает отладочную версию библиотеки Microsoft Foundation Class.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
-##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
- Инициализирует фрейма окна и при необходимости сделает ее видимой.  
+##  <a name="initialupdateframe"></a>  CDocTemplate::InitialUpdateFrame  
+ Initializes the frame window, and optionally makes it visible.  
   
 ```  
 virtual void InitialUpdateFrame(
@@ -352,33 +369,33 @@ virtual void InitialUpdateFrame(
     BOOL bMakeVisible = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFrame`  
- Окно фрейма, нужно обновить начальной.  
+ The frame window that needs the initial update.  
   
  `pDoc`  
- Документ, с которым связана кадра. Может быть **NULL**.  
+ The document to which the frame is associated. Can be **NULL**.  
   
  `bMakeVisible`  
- Указывает ли кадр станет видимым и активной.  
+ Indicates whether the frame should become visible and active.  
   
-### <a name="remarks"></a>Примечания  
- Вызов **IntitialUpdateFrame** после создания новый кадр с `CreateNewFrame`. При вызове этой функции приводит представления, фрейм окна, чтобы получить их `OnInitialUpdate` вызовов. Кроме того Если существует не была ранее активное представление, основного представления окна фрейма делается активным; основное представление — это представление с ИД дочернего объекта **AFX_IDW_PANE_FIRST**. Наконец, будет виден в фрейме окна Если `bMakeVisible` значение не равно нулю. Если `bMakeVisible` равен нулю, текущим местоположением и видимое состояние окна фрейма остаются неизменными.  
+### <a name="remarks"></a>Remarks  
+ Call **IntitialUpdateFrame** after creating a new frame with `CreateNewFrame`. Calling this function causes the views in that frame window to receive their `OnInitialUpdate` calls. Also, if there was not previously an active view, the primary view of the frame window is made active; the primary view is a view with a child ID of **AFX_IDW_PANE_FIRST**. Finally, the frame window is made visible if `bMakeVisible` is non-zero. If `bMakeVisible` is zero, the current focus and visible state of the frame window will remain unchanged.  
   
- Эта функция вызывается при использовании платформы реализации новых файлов и открытие файла необязательно.  
+ It is not necessary to call this function when using the framework's implementation of File New and File Open.  
   
-##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
- Загружает ресурсы для данного `CDocTemplate` или производного класса.  
+##  <a name="loadtemplate"></a>  CDocTemplate::LoadTemplate  
+ Loads the resources for a given `CDocTemplate` or derived class.  
   
 ```  
 virtual void LoadTemplate();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член вызывается платформой для загрузки ресурсов для данной `CDocTemplate` или производного класса. Обычно он вызывается во время построения, за исключением при глобально сконструированный шаблон. В этом случае вызов `LoadTemplate` откладывается до [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) вызывается.  
+### <a name="remarks"></a>Remarks  
+ This member function is called by the framework to load the resources for a given `CDocTemplate` or derived class. Normally it is called during construction, except when the template is being constructed globally. In that case, the call to `LoadTemplate` is delayed until [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) is called.  
   
-##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
- Определяет степень уверенности в соответствие типа документа и этот шаблон.  
+##  <a name="matchdoctype"></a>  CDocTemplate::MatchDocType  
+ Determines the degree of confidence in the match between a document type and this template.  
   
 ```  
 virtual Confidence MatchDocType(
@@ -386,15 +403,15 @@ virtual Confidence MatchDocType(
     CDocument*& rpDocMatch);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- Путь файла, тип которого требуется определить.  
+ Pathname of the file whose type is to be determined.  
   
  `rpDocMatch`  
- Указатель на документ, который назначается соответствующий документ, если файл, указанный параметром `lpszPathName` уже открыт.  
+ Pointer to a document that is assigned the matching document, if the file specified by `lpszPathName` is already open.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение из **достоверности** перечисления, который определен следующим образом:  
+### <a name="return-value"></a>Return Value  
+ A value from the **Confidence** enumeration, which is defined as follows:  
   
 ```  
 enum Confidence  
@@ -408,19 +425,19 @@ enum Confidence
     };  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для определения типа шаблона документа, который используется для открытия файла. Если приложение поддерживает несколько типов файлов, например, вы эта функция используется для определения шаблонов документов, доступных для данного файла путем вызова `MatchDocType` для каждого шаблона в очередь и выбрав шаблон согласно значению достоверности возвращаемых.  
+### <a name="remarks"></a>Remarks  
+ Use this function to determine the type of document template to use for opening a file. If your application supports multiple file types, for example, you can use this function to determine which of the available document templates is appropriate for a given file by calling `MatchDocType` for each template in turn, and choosing a template according to the confidence value returned.  
   
- Если файл, указанный параметром `lpszPathName` будет уже открыт, эта функция возвращает **CDocTemplate::yesAlreadyOpen** и копирует файл **CDocument** в объект в `rpDocMatch`.  
+ If the file specified by `lpszPathName` is already open, this function returns **CDocTemplate::yesAlreadyOpen** and copies the file's **CDocument** object into the object at `rpDocMatch`.  
   
- Если файл не открыт, но с расширением в `lpszPathName` соответствует расширение, указанное **CDocTemplate::filterExt**, эта функция возвращает **CDocTemplate::yesAttemptNative** и задает `rpDocMatch` для **NULL**. Дополнительные сведения о **CDocTemplate::filterExt**, в разделе [CDocTemplate::GetDocString](#getdocstring).  
+ If the file is not open but the extension in `lpszPathName` matches the extension specified by **CDocTemplate::filterExt**, this function returns **CDocTemplate::yesAttemptNative** and sets `rpDocMatch` to **NULL**. For more information on **CDocTemplate::filterExt**, see [CDocTemplate::GetDocString](#getdocstring).  
   
- Если ни один случай имеет значение true, функция возвращает **CDocTemplate::yesAttemptForeign**.  
+ If neither case is true, the function returns **CDocTemplate::yesAttemptForeign**.  
   
- Реализация по умолчанию не возвращает **CDocTemplate::maybeAttemptForeign** или **CDocTemplate::maybeAttemptNative**. Переопределить эту функцию, чтобы реализовать сопоставление типов логики, соответствующий приложению, возможно с помощью этих двух значений из **достоверности** перечисления.  
+ The default implementation does not return **CDocTemplate::maybeAttemptForeign** or **CDocTemplate::maybeAttemptNative**. Override this function to implement type-matching logic appropriate to your application, perhaps using these two values from the **Confidence** enumeration.  
   
-##  <a name="opendocumentfile"></a>Функции  
- Открытие файла в указанном пути.  
+##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile  
+ Opens a file specified by a path.  
   
 ```  
 virtual CDocument* OpenDocumentFile(LPCTSTR lpszPathName) = 0;  
@@ -430,75 +447,75 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU) = 0;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPathName`  
- Указатель на путь к файлу, содержащему открываемого документа.  
+ Pointer to the path of the file that contains the document to be opened.  
   
  [in] `bAddToMRU`  
- `TRUE`Указывает, что документ является одним из самых последних версий файлов; `FALSE` указывает документ не является одним из самых последних версий файлов.  
+ `TRUE` indicates the document is one of the most recent files; `FALSE` indicates the document is not one of the most recent files.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на документ, названный файл которого `lpszPathName`; `NULL` в случае неудачи.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document whose file is named by `lpszPathName`; `NULL` if unsuccessful.  
   
-### <a name="remarks"></a>Примечания  
- Открывает файл, путь которого задается `lpszPathName`. Если `lpszPathName` — `NULL`, создается новый файл, содержащий документа, тип, связанный с этим шаблоном.  
+### <a name="remarks"></a>Remarks  
+ Opens the file whose path is specified by `lpszPathName`. If `lpszPathName` is `NULL`, a new file that contains a document of the type associated with this template is created.  
   
-##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
- Удаляет документ, на который указывает `pDoc` в списке документов, связанных с этим шаблоном.  
+##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
+ Removes the document pointed to by `pDoc` from the list of documents associated with this template.  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- Указатель на документ, должны быть удалены.  
+ Pointer to the document to be removed.  
   
-### <a name="remarks"></a>Примечания  
- Производные классы `CMultiDocTemplate` и `CSingleDocTemplate` переопределить эту функцию. При наследовании класса шаблона документа из `CDocTemplate`, производный класс должен переопределить эту функцию.  
+### <a name="remarks"></a>Remarks  
+ The derived classes `CMultiDocTemplate` and `CSingleDocTemplate` override this function. If you derive your own document-template class from `CDocTemplate`, your derived class must override this function.  
   
-##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
- Сохранение всех документов, которые были изменены.  
+##  <a name="saveallmodified"></a>  CDocTemplate::SaveAllModified  
+ Saves all documents that have been modified.  
   
 ```  
 virtual BOOL SaveAllModified();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если выполнено успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Non-zero if successful; otherwise 0.  
   
-##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
- Определяет ресурсы для OLE-контейнеры, при редактировании объекта OLE на месте.  
+##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo  
+ Determines the resources for OLE containers when editing an in-place OLE item.  
   
 ```  
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDOleInPlaceContainer`  
- Идентификатор ресурсы, используемые при активации внедренный объект.  
+ The ID of the resources used when an embedded object is activated.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для набор ресурсов, которые будут использоваться при активации на месте OLE-объекта. Эти ресурсы включают меню и таблицы сочетаний клавиш. Эта функция обычно вызывается [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) функции приложения.  
+### <a name="remarks"></a>Remarks  
+ Call this function to set the resources to be used when an OLE object is in-place activated. These resources may include menus and accelerator tables. This function is usually called in the [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) function of your application.  
   
- Меню, связанное с `nIDOleInPlaceContainer` содержит разделители, позволяющие меню элемента активации на месте для слияния с меню приложения-контейнера. Дополнительные сведения об объединении меню сервера и контейнера см. в статье [меню и ресурсы (OLE)](../../mfc/menus-and-resources-ole.md).  
+ The menu associated with `nIDOleInPlaceContainer` contains separators that allow the menu of the activated in-place item to merge with the menu of the container application. For more information about merging server and container menus, see the article [Menus and Resources (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
- Эта функция вызывается для загрузки по умолчанию заголовок документа и его отображения в строке заголовка документа.  
+##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
+ Call this function to load the document's default title and display it in the document's title bar.  
   
 ```  
 virtual void SetDefaultTitle(CDocument* pDocument) = 0;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pDocument*  
- Указатель на документ, чья должность имеет задать.  
+ Pointer to the document whose title is to be set.  
   
-### <a name="remarks"></a>Примечания  
- Сведения о заголовка по умолчанию, см. в описании **CDocTemplate::docName** в [CDocTemplate::GetDocString](#getdocstring).  
+### <a name="remarks"></a>Remarks  
+ For information on the default title, see the description of **CDocTemplate::docName** in [CDocTemplate::GetDocString](#getdocstring).  
   
-##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
- Определяет ресурсы и классы, если серверный документ внедрен или редактирования на месте.  
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo  
+ Determines the resources and classes when the server document is embedded or edited in-place.  
   
 ```  
 void SetServerInfo(
@@ -508,26 +525,26 @@ void SetServerInfo(
     CRuntimeClass* pOleViewClass = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *nIDOleEmbedding*  
- Идентификатор ресурсы, используемые при открытии внедренный объект в отдельном окне.  
+ The ID of the resources used when an embedded object is opened in a separate window.  
   
  `nIDOleInPlaceServer`  
- Идентификатор ресурсов, используемых при внедренный объект активации на месте.  
+ The ID of the resources used when an embedded object is activated in-place.  
   
  *pOleFrameClass*  
- Указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) структуру, содержащую сведения о классах для объект окна фрейма, созданный при активации на месте.  
+ Pointer to a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure containing class information for the frame window object created when in-place activation occurs.  
   
  *pOleViewClass*  
- Указатель на `CRuntimeClass` структуру, содержащую сведения класса для объекта представления, созданные при активации на месте.  
+ Pointer to a `CRuntimeClass` structure containing class information for the view object created when in-place activation occurs.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите эту функцию-член для идентификации ресурсов, которые будут использоваться для приложения сервера при запросе активации внедренный объект. Эти ресурсы включают меню и таблицы сочетаний клавиш. Эта функция обычно вызывается `InitInstance` приложения.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to identify resources that will be used by the server application when the user requests activation of an embedded object. These resources consist of menus and accelerator tables. This function is usually called in the `InitInstance` of your application.  
   
- Меню, связанное с `nIDOleInPlaceServer` содержит разделители, позволяющие меню сервера для слияния с помощью меню контейнера. Дополнительные сведения об объединении меню сервера и контейнера см. в статье [меню и ресурсы (OLE)](../../mfc/menus-and-resources-ole.md).  
+ The menu associated with `nIDOleInPlaceServer` contains separators that allow the server menu to merge with the menu of the container. For more information about merging server and container menus, see the article [Menus and Resources (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
- Создает дочерний кадр, используемый для расширенного просмотра.  
+##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
+ Creates a child frame used for Rich Preview.  
   
 ```  
 CFrameWnd* CreatePreviewFrame(
@@ -535,20 +552,20 @@ CFrameWnd* CreatePreviewFrame(
     CDocument* pDoc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Указатель на родительское окно (обычно предоставляется оболочка).  
+ A pointer to a parent window (usually provided by the Shell).  
   
  `pDoc`  
- Указатель на объект документа, содержимое которых будет просматриваться.  
+ A pointer to a document object, whose content will be previewed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Допустимый указатель на `CFrameWnd` объекта, или `NULL` в случае сбоя создания.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to a `CFrameWnd` object, or `NULL` if the creation fails.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
- Устанавливает вне процесса обработчика просмотра.  
+##  <a name="setpreviewinfo"></a>  CDocTemplate::SetPreviewInfo  
+ Sets up the out of process preview handler.  
   
 ```  
 void SetPreviewInfo(
@@ -557,28 +574,28 @@ void SetPreviewInfo(
     CRuntimeClass* pPreviewViewClass = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDPreviewFrame`  
- Указывает идентификатор ресурса для окна предварительного просмотра.  
+ Specifies a resource ID of the preview frame.  
   
  `pPreviewFrameClass`  
- Задает указатель на структуру сведения класса среды выполнения окна предварительного просмотра.  
+ Specifies a pointer to a runtime class information structure of the preview frame.  
   
  `pPreviewViewClass`  
- Задает указатель на структуру сведений класса среды выполнения Предварительный просмотр.  
+ Specifies a pointer to a runtime class information structure of the preview view.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [CCmdTarget-класс](../../mfc/reference/ccmdtarget-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)   
- [Класс CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)   
- [CDocument-класс](../../mfc/reference/cdocument-class.md)   
- [CView-класс](../../mfc/reference/cview-class.md)   
- [Класс CScrollView](../../mfc/reference/cscrollview-class.md)   
- [Класс CEditView](../../mfc/reference/ceditview-class.md)   
- [Класс CFormView](../../mfc/reference/cformview-class.md)   
- [CFrameWnd-класс](../../mfc/reference/cframewnd-class.md)   
- [CMDIChildWnd-класс](../../mfc/reference/cmdichildwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSingleDocTemplate Class](../../mfc/reference/csingledoctemplate-class.md)   
+ [CMultiDocTemplate Class](../../mfc/reference/cmultidoctemplate-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CScrollView Class](../../mfc/reference/cscrollview-class.md)   
+ [CEditView Class](../../mfc/reference/ceditview-class.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [CMDIChildWnd Class](../../mfc/reference/cmdichildwnd-class.md)
 

@@ -1,115 +1,134 @@
 ---
-title: "TN020. Соглашения именования и нумерации идентификаторов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "идентификаторы ресурсов"
-  - "идентификаторы ресурсов, именование и нумерация"
-  - "TN020"
+title: 'TN020: ID Naming and Numbering Conventions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.id
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN020
+- resource identifiers, naming and numbering
+- resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# TN020. Соглашения именования и нумерации идентификаторов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 87a4ee80b5ce116c792b17f0ba18f34693a5586b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта заметка описывает именование идентификатор и соглашения, оцифровки MFC 2.0 используется для ресурсов, команд, строк, элементы управления и дочерних окон.  
+---
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID Naming and Numbering Conventions
+This note describes the ID naming and numbering conventions that MFC 2.0 uses for resources, commands, strings, controls, and child windows.  
   
- Именование идентификатор MFC и соглашения оцифровки должны удовлетворять следующим требованиям:  
+ The MFC ID naming and numbering conventions are intended to meet the following requirements:  
   
--   Предоставление согласованного этой стандарт именования, используемый в библиотеку MFC и приложения MFC, поддерживаются редакторами ресурсов Visual C\+\+.  Это упрощает для программиста интерпретация тип и вертикали ресурсов на основе идентификатора.  
+-   Provide a consistent ID-naming standard used across the MFC library and MFC applications that are supported by the Visual C++ resource editor. This makes it easier for the programmer to interpret the type and origin of a resource from its ID.  
   
--   Указаны сильную наличии сопоставления одного связь между некоторыми типами идентификаторов.  
+-   Emphasize the strong 1-to-1 relationship between certain types of IDs.  
   
--   Совпадение с уже широко используемым стандартам именования для идентификаторов в Windows.  
+-   Conform to already widely used standards for naming IDs in Windows.  
   
--   Разделите пробел в этой оцифровки.  Идентификаторы могут быть присвоены программистом, MFC, Windows и визуально ресурсами C \+\+\-edited.  Необходимое разделение помогает избежать дублирования идентификатора.  
+-   Partition the ID-numbering space. ID numbers can be assigned by the programmer, MFC, Windows, and Visual C++-edited resources. Appropriate partitioning will help avoid duplication of ID numbers.  
   
-## Соглашение об именовании префикса идентификатор  
- Несколько типов идентификаторов могут возникнуть в приложении.  Соглашение именования этой MFC определяет различные префиксы для различных типов ресурсов.  
+## <a name="the-id-prefix-naming-convention"></a>The ID Prefix Naming Convention  
+ Several types of IDs can occur in an application. The MFC ID-naming convention defines different prefixes for different resource types.  
   
- MFC использует префикс «IDR\_» для указания идентификатора ресурса, которое применяется для нескольких типов ресурсов.  Например, для заданного фреймового окна, MFC использует этот префикс «IDR\_» для обозначения ресурс меню, сочетания клавиш, строки и Значка.  В следующей таблице показаны различные префиксы и их потребление:  
+ MFC uses the prefix "IDR_" to indicate a resource ID that applies to multiple resource types. For example, for a given frame window, MFC uses the same "IDR_" prefix to indicate a menu, accelerator, string and icon resource. The following table shows the various prefixes and their usage:  
   
-|Префикс|Применение|  
-|-------------|----------------|  
-|IDR\_|Для нескольких типов ресурсов \(главное меню, используемых для сочетаний клавиш и лент\).|  
-|IDD\_|Для ресурсов шаблона диалогового окна \(например, IDD\_DIALOG1\).|  
-|IDC\_|Для ресурсов курсора.|  
-|IDI\_|Для ресурса Значка.|  
-|IDB\_|Для ресурсов растрового изображения.|  
-|IDS\_|Для строковых ресурсов.|  
+|Prefix|Use|  
+|------------|---------|  
+|IDR_|For multiple resource types (primarily used for menus, accelerators, and ribbons).|  
+|IDD_|For dialog template resources (for example, IDD_DIALOG1).|  
+|IDC_|For cursor resources.|  
+|IDI_|For icon resources.|  
+|IDB_|For bitmap resources.|  
+|IDS_|For string resources.|  
   
- В ресурс диалогового окна MFC, применяются следующие правила:  
+ Within a DIALOG resource, MFC follows these conventions:  
   
-|Префикс или метка|Применение|  
-|-----------------------|----------------|  
-|IDOK, IDCANCEL|Для обычных идентификаторов кнопки.|  
-|IDC\_|Для других элементов управления диалогового окна.|  
+|Prefix or label|Use|  
+|---------------------|---------|  
+|IDOK, IDCANCEL|For standard push button IDs.|  
+|IDC_|For other dialog controls.|  
   
- Префикс «IDC\_» также используется для курсоров.  Этот конфликт имен не является проблемой, поскольку типичное приложение будет содержать несколько курсоры и множество элементов управления диалогового окна.  
+ The "IDC_" prefix is also used for cursors. This naming conflict is not usually a problem because a typical application will have few cursors and many dialog controls.  
   
- В ресурс меню MFC, применяются следующие правила:  
+ Within a menu resource, MFC follows these conventions:  
   
-|Префикс|Применение|  
-|-------------|----------------|  
-|IDM\_|Для пунктов меню, которые не используют архитектуру команды MFC.|  
-|ID\_|Для команд меню, которые используют архитектуру команды MFC.|  
+|Prefix|Use|  
+|------------|---------|  
+|IDM_|For menu items that do not use the MFC command architecture.|  
+|ID_|For menu commands that use the MFC command architecture.|  
   
- Команды, которые следуют архитектура команды MFC должен иметь обработчик команды `ON_COMMAND` и могут иметь обработчик `ON_UPDATE_COMMAND_UI`.  Если эти обработчиков команд используется архитектура команды MFC, они будут функция правильно ли они прыгнуть команду меню, кнопки панели инструментов, или кнопку диалоговой панели.  Этот префикс «ID\_» также используется для запроса строки меню, которая отображается на панели сообщений программы.  Большинство пунктов меню в приложении должна следовать соглашениям команды MFC.  Все стандартных идентификаторов команд \(например, `ID_FILE_NEW`\) используется это соглашение.  
+ Commands that follow the MFC command architecture must have an `ON_COMMAND` command handler and can have an `ON_UPDATE_COMMAND_UI` handler. If these command handlers follow the MFC command architecture, they will function correctly whether they are bound to a menu command, a toolbar button, or a dialog bar button. The same "ID_" prefix is also used for a menu prompt string that is displayed on the program's message bar. Most of the menu items in your application should follow the MFC command conventions. All of the standard command IDs (for example, `ID_FILE_NEW`) follow this convention.  
   
- MFC также использует «IDP\_» как специализированная форма строк \(вместо «IDS\_»\).  Строки с префиксом «IDP\_» запросы, то есть строки, используемые в окнах. Строки «IDP\_» могут содержать «%1 " и «%2 " в качестве местозаполнителей строк заданных программой. Строки «IDP\_» обычно есть разделы справки, связанные с ними и строки «IDS\_» нет. Строки «IDP\_» всегда локализуются и строки «IDS\_» не могут быть локализованы.  
+ MFC also uses "IDP_" as a specialized form of strings (instead of "IDS_"). Strings with the "IDP_" prefix are prompts, that is, strings used in message boxes. "IDP_" strings can contain "%1" and "%2" as placeholders of strings determined by the program. "IDP_" strings usually have help topics associated with them, and "IDS_" strings do not. "IDP_" strings are always localized, and "IDS_" strings might not be localized.  
   
- Библиотека MFC также используется префикс «IDW\_» как специализированная форма идентификатора элемента управления \(вместо «IDC\_»\).  Эти идентификаторы присвоенные дочерним окон, таких как представления и разделители классами платформы.  Идентификатор реализации MFC присоединены буква «AFX\_».  
+ The MFC library also uses the "IDW_" prefix as a specialized form of control IDs (instead of "IDC_"). These IDs are assigned to child windows such as views and splitters by the framework classes. MFC implementation IDs are prefixed with "AFX_".  
   
-## Соглашение этой оцифровки  
- В следующей таблице перечислены допустимые диапазоны идентификаторов для определенных типов.  Некоторые ограничения технические ограничения реализации и другие соглашения, предназначенных для предотвращения выполнения идентификаторы из вступать в противоречия с идентификаторы или реализациями по умолчанию MFC предопределенными Windows.  
+## <a name="the-id-numbering-convention"></a>The ID-Numbering Convention  
+ The following table lists the valid ranges for the IDs of the specific types. Some of the limits are technical implementation limits, and others are conventions that are designed to prevent your IDs from colliding with Windows predefined IDs or MFC default implementations.  
   
- Мы настоятельно рекомендуется задать все идентификаторы в три диапазонов.  Нижний предел этих диапазонов 1, поскольку 0 не используется.  Рекомендуется использовать общие соглашения и использовать 100 или 101 в качестве первого идентификатор.  
+ We strongly recommend that you define all IDs inside the recommended ranges. The lower limit of these ranges is 1 because 0 is not used. We recommend that you use the common convention and use 100 or 101 as the first ID.  
   
-|Префикс|Тип ресурса|Допустимый диапазон|  
-|-------------|-----------------|-------------------------|  
-|IDR\_|несколько|1 0x6FFF сквозное|  
-|IDD\_|шаблонов диалоговых окон|1 0x6FFF сквозное|  
-|IDC\_, IDI\_, IDB\_|курсоры, Значки, растровые изображения|1 0x6FFF сквозное|  
-|IDS\_, IDP\_|общих строк|1 0x7FFF сквозное|  
-|ID\_|команды|0x8000 через 0xDFFF|  
-|IDC\_|Элементы управления|8 0xDFFF сквозных|  
+|Prefix|Resource type|Valid range|  
+|------------|-------------------|-----------------|  
+|IDR_|multiple|1 through 0x6FFF|  
+|IDD_|dialog templates|1 through 0x6FFF|  
+|IDC_,IDI_,IDB_|cursors, icons, bitmaps|1 through 0x6FFF|  
+|IDS_, IDP_|general strings|1 through 0x7FFF|  
+|ID_|commands|0x8000 through 0xDFFF|  
+|IDC_|controls|8 through 0xDFFF|  
   
- Причины для этих диапазоне ограничения:  
+ Reasons for these range limits:  
   
--   По соглашению значение идентификатора 0 не используется.  
+-   By convention, the ID value of 0 is not used.  
   
--   Ограничения реализации Windows ограничивают истинные идентификатора ресурса, чтобы быть меньше или приравнивают в 0x7FFF.  
+-   Windows implementation limitations restrict true resource IDs to be less than or equal to 0x7FFF.  
   
--   Внутренняя платформы MFC резервирует эти диапазоны.  
+-   MFC's internal framework reserves these ranges:  
   
-    -   0x7000 через 0x7FFF \(см. afxres.h\)  
+    -   0x7000 through 0x7FFF (see afxres.h)  
   
-    -   0xE000 через 0xEFFF \(см. afxres.h\)  
+    -   0xE000 through 0xEFFF (see afxres.h)  
   
-    -   16000 до 18000 \(см. afxribbonres.h\)  
+    -   16000 through 18000 (see afxribbonres.h)  
   
-     Эти диапазоны может измениться в будущих реализациях MFC.  
+     These ranges may change in future MFC implementations.  
   
--   Несколько команд системы Windows используется диапазон 0xF000 через 0xFFFF.  
+-   Several Windows system commands use the range of 0xF000 through 0xFFFF.  
   
--   Идентификатор элемента управления 1 до 7 зарезервированы для стандартных элементов управления, таких как IDOK и IDCANCEL.  
+-   Control IDs of 1 through 7 are reserved for standard controls such as IDOK and IDCANCEL.  
   
--   Диапазон 0x8000 через 0xFFFF для строк зарезервировано для запросов меню команд.  
+-   The range of 0x8000 through 0xFFFF for strings is reserved for menu prompts for commands.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CFontDialog | Документы Microsoft"
+title: CFontDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,10 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFontDialog class
-- dialog boxes, fonts
-- fonts
-- fonts, selecting
+- CFontDialog [MFC], CFontDialog
+- CFontDialog [MFC], DoModal
+- CFontDialog [MFC], GetCharFormat
+- CFontDialog [MFC], GetColor
+- CFontDialog [MFC], GetCurrentFont
+- CFontDialog [MFC], GetFaceName
+- CFontDialog [MFC], GetSize
+- CFontDialog [MFC], GetStyleName
+- CFontDialog [MFC], GetWeight
+- CFontDialog [MFC], IsBold
+- CFontDialog [MFC], IsItalic
+- CFontDialog [MFC], IsStrikeOut
+- CFontDialog [MFC], IsUnderline
+- CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
 caps.latest.revision: 25
 author: mikeblome
@@ -51,75 +61,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6f277ba8fba72106918e03397f57726bd5beb0ff
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fd52e37128e9363085c1825a3aeee2a4a4fa5a70
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfontdialog-class"></a>Класс CFontDialog
-Позволяет включить диалоговое окно выбора шрифта в приложение.  
+# <a name="cfontdialog-class"></a>CFontDialog Class
+Allows you to incorporate a font-selection dialog box into your application.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFontDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFontDialog::CFontDialog](#cfontdialog)|Создает объект `CFontDialog`.|  
+|[CFontDialog::CFontDialog](#cfontdialog)|Constructs a `CFontDialog` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFontDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|  
-|[CFontDialog::GetCharFormat](#getcharformat)|Извлекает форматирования символов в выбранный шрифт.|  
-|[CFontDialog::GetColor](#getcolor)|Возвращает цвет выбранного шрифта.|  
-|[CFontDialog::GetCurrentFont](#getcurrentfont)|Назначает характеристики выбранный шрифт для `LOGFONT` структуры.|  
-|[CFontDialog::GetFaceName](#getfacename)|Возвращает имя шрифта выбранного шрифта.|  
-|[CFontDialog::GetSize](#getsize)|Возвращает размер выбранного шрифта.|  
-|[CFontDialog::GetStyleName](#getstylename)|Возвращает имя стиля выбранного шрифта.|  
-|[CFontDialog::GetWeight](#getweight)|Возвращает вес выбранного шрифта.|  
-|[CFontDialog::IsBold](#isbold)|Определяет, является ли шрифт полужирным.|  
-|[CFontDialog::IsItalic](#isitalic)|Определяет, является ли шрифт курсивом.|  
-|[CFontDialog::IsStrikeOut](#isstrikeout)|Определяет, отображается ли шрифт зачеркивание.|  
-|[CFontDialog::IsUnderline](#isunderline)|Определяет, является ли шрифт подчеркнутым.|  
+|[CFontDialog::DoModal](#domodal)|Displays the dialog and allows the user to make a selection.|  
+|[CFontDialog::GetCharFormat](#getcharformat)|Retrieves the character formatting of the selected font.|  
+|[CFontDialog::GetColor](#getcolor)|Returns the color of the selected font.|  
+|[CFontDialog::GetCurrentFont](#getcurrentfont)|Assigns the characteristics of the currently selected font to a `LOGFONT` structure.|  
+|[CFontDialog::GetFaceName](#getfacename)|Returns the face name of the selected font.|  
+|[CFontDialog::GetSize](#getsize)|Returns the point size of the selected font.|  
+|[CFontDialog::GetStyleName](#getstylename)|Returns the style name of the selected font.|  
+|[CFontDialog::GetWeight](#getweight)|Returns the weight of the selected font.|  
+|[CFontDialog::IsBold](#isbold)|Determines whether the font is bold.|  
+|[CFontDialog::IsItalic](#isitalic)|Determines whether the font is italic.|  
+|[CFontDialog::IsStrikeOut](#isstrikeout)|Determines whether the font is displayed with strikeout.|  
+|[CFontDialog::IsUnderline](#isunderline)|Determines whether the font is underlined.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFontDialog::m_cf](#m_cf)|Структура, используемая для настройки `CFontDialog` объекта.|  
+|[CFontDialog::m_cf](#m_cf)|A structure used to customize a `CFontDialog` object.|  
   
-## <a name="remarks"></a>Примечания  
- Объект `CFontDialog` объект — это диалоговое окно со списком шрифтов, установленных в системе. Пользователь может выбрать определенного шрифта из списка, и этот выбор затем отправляются обратно в приложение.  
+## <a name="remarks"></a>Remarks  
+ A `CFontDialog` object is a dialog box with a list of fonts that are currently installed in the system. The user can select a particular font from the list, and this selection is then reported back to the application.  
   
- Для создания `CFontDialog` объекта, используйте предоставленный конструктор или получение нового подкласса и использовать собственный пользовательский конструктор.  
+ To construct a `CFontDialog` object, use the provided constructor or derive a new subclass and use your own custom constructor.  
   
- Один раз `CFontDialog` объект был создан, можно использовать `m_cf` структуры для инициализации значения или состояния элементов управления в диалоговом окне. [M_cf](#m_cf) структуры имеет тип [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Дополнительные сведения о структуре см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Once a `CFontDialog` object has been constructed, you can use the `m_cf` structure to initialize the values or states of controls in the dialog box. The [m_cf](#m_cf) structure is of type [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). For more information on this structure, see the Windows SDK.  
   
- После инициализации объекта диалогового окна элементы управления, вызовите метод `DoModal` функции-члена для отображения диалогового окна и позволяет пользователю выбрать шрифт. `DoModal`Возвращает, выбрал ли пользователь ОК ( **IDOK**) или Отмена ( **IDCANCEL**) кнопки.  
+ After initializing the dialog object's controls, call the `DoModal` member function to display the dialog box and allow the user to select a font. `DoModal` returns whether the user selected the OK ( **IDOK**) or Cancel ( **IDCANCEL**) button.  
   
- Если `DoModal` возвращает **IDOK**, можно использовать один из `CFontDialog`функции-члены для извлечения информации, введенное пользователем.  
+ If `DoModal` returns **IDOK**, you can use one of `CFontDialog`'s member functions to retrieve the information input by the user.  
   
- Можно использовать окна [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функции, чтобы определить, произошла ли ошибка во время инициализации диалогового окна и для получения дополнительных сведений об ошибке. Дополнительные сведения об этой функции см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ You can use the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred during initialization of the dialog box and to learn more about the error. For more information on this function, see the Windows SDK.  
   
- `CFontDialog`зависит от COMMDLG. DLL-файл, поставляемый с Windows версии 3.1 и более поздней версии.  
+ `CFontDialog` relies on the COMMDLG.DLL file that ships with Windows versions 3.1 and later.  
   
- Чтобы настроить диалоговое окно, создайте класс, производный от `CFontDialog`, предоставить шаблон пользовательское диалоговое окно и добавить схему сообщений для обработки сообщений уведомления из расширенных элементов управления. Все необработанные сообщения должны передаваться в базовый класс.  
+ To customize the dialog box, derive a class from `CFontDialog`, provide a custom dialog template, and add a message-map to process the notification messages from the extended controls. Any unprocessed messages should be passed to the base class.  
   
- Настройка функцию-обработчик не является обязательным.  
+ Customizing the hook function is not required.  
   
- Дополнительные сведения об использовании `CFontDialog`, в разделе [классы общих диалоговых окон](../../mfc/common-dialog-classes.md).  
+ For more information on using `CFontDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,11 +142,11 @@ class CFontDialog : public CCommonDialog
   
  `CFontDialog`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
- Создает объект `CFontDialog`.  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
+ Constructs a `CFontDialog` object.  
   
 ```  
 CFontDialog(
@@ -152,218 +162,218 @@ CFontDialog(
     CWnd* pParentWnd = NULL);  
 ```  
   
-### <a name="parameters"></a>Параметры  
- l`plfInitial`  
- Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структура данных, которая позволяет настроить некоторые характеристики шрифта.  
+### <a name="parameters"></a>Parameters  
+ l `plfInitial`  
+ A pointer to a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) data structure that allows you to set some of the font's characteristics.  
   
  `charFormat`  
- Указатель на [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структура данных, которая позволяет настроить некоторые характеристики шрифта в широкий элемент управления.  
+ A pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) data structure that allows you to set some of the font's characteristics in a rich edit control.  
   
  `dwFlags`  
- Указывает один или несколько флагов выбора шрифта. Одно или несколько предустановленных значений можно объединить с помощью побитового оператора OR. Если вы изменяете член структуры `m_cf.Flag`, используйте оператор OR в изменениях, чтобы сохранить поведение по умолчанию. Сведения о каждом из этих флагов см. в описании [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies one or more choose-font flags. One or more preset values can be combined using the bitwise OR operator. If you modify the `m_cf.Flag`s structure member, be sure to use a bitwise OR operator in your changes to keep the default behavior intact. For details on each of these flags, see the description of the [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) structure in the Windows SDK.  
   
  pdcPrinter  
- Указатель на контекст принтера. Если этот параметр задан, он указывает на контекст принтера, для которого выбираются шрифты.  
+ A pointer to a printer-device context. If supplied, this parameter points to a printer-device context for the printer on which the fonts are to be selected.  
   
  `pParentWnd`  
- Указатель на родительское окно или окно владельца диалогового окна шрифта.  
+ A pointer to the font dialog box's parent or owner window.  
   
-### <a name="remarks"></a>Примечания  
- Обратите внимание, что конструктор автоматически заполняет члены структуры `CHOOSEFONT`. Их следует изменять, только если вам требуется диалоговое окно, отличное от стандартного.  
+### <a name="remarks"></a>Remarks  
+ Note that the constructor automatically fills in the members of the `CHOOSEFONT` structure. You should only change these if you want a font dialog different than the default.  
   
 > [!NOTE]
->  Первая версия этой функции существует, только если элементы управления форматированным редактированием не поддерживаются.  
+>  The first version of this function only exists when there is no rich edit control support.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#78;](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
- Эта функция вызывается для отображения диалогового окна Windows распространенных шрифта и позволяет пользователю выбрать шрифт.  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
+ Call this function to display the Windows common font dialog box and allow the user to choose a font.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **IDOK** или **IDCANCEL**. Если **IDCANCEL** будет возвращен, вызовите Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функцию, чтобы определить, произошла ли ошибка.  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
- **IDOK** и **IDCANCEL** константы, которые указывают, выбрал ли пользователь кнопку OK или "Отмена".  
+ **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
-### <a name="remarks"></a>Примечания  
- Если требуется инициализировать различные элементы управления диалогового окна шрифта, задав члены [m_cf](#m_cf) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various font dialog controls by setting members of the [m_cf](#m_cf) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- Если `DoModal` возвращает **IDOK**, можно вызвать другой член функции для получения параметров или данные, введенные пользователем в диалоговом окне.  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
-### <a name="example"></a>Пример  
-  Примеры для [CFontDialog::CFontDialog](#cfontdialog) и [CFontDialog::GetColor](#getcolor).  
+### <a name="example"></a>Example  
+  See the examples for [CFontDialog::CFontDialog](#cfontdialog) and [CFontDialog::GetColor](#getcolor).  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
- Извлекает форматирования символов в выбранный шрифт.  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
+ Retrieves the character formatting of the selected font.  
   
 ```  
 void GetCharFormat(CHARFORMAT& cf) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cf`  
- Объект [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую сведения о форматировании символов выбранного шрифта.  
+ A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing information about the character formatting of the selected font.  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
- Эта функция вызывается для получения цвет выбранного шрифта.  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
+ Call this function to retrieve the selected font color.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Цвет выбранного шрифта.  
+### <a name="return-value"></a>Return Value  
+ The color of the selected font.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#79;](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
- Эта функция вызывается для назначить элементы характеристики выбранный шрифт [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
+ Call this function to assign the characteristics of the currently selected font to the members of a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *lplf*  
- Указатель на `LOGFONT` структуры.  
+ A pointer to a `LOGFONT` structure.  
   
-### <a name="remarks"></a>Примечания  
- Другие `CFontDialog` функций-членов предоставляются для доступа к отдельным характеристик текущего шрифта.  
+### <a name="remarks"></a>Remarks  
+ Other `CFontDialog` member functions are provided to access individual characteristics of the current font.  
   
- Если эта функция вызывается во время вызова [DoModal](#domodal), он возвращает текущее выделение в то время (то, что пользователь видит или имеет изменены в диалоговом окне). Если эта функция вызывается после вызова `DoModal` (только если `DoModal` возвращает **IDOK**), он возвращает какие фактически выбранный пользователем.  
+ If this function is called during a call to [DoModal](#domodal), it returns the current selection at the time (what the user sees or has changed in the dialog). If this function is called after a call to `DoModal` (only if `DoModal` returns **IDOK**), it returns what the user actually selected.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#80;](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
- Эта функция вызывается для получения имя шрифта выбранного шрифта.  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
+ Call this function to retrieve the face name of the selected font.  
   
 ```  
 CString GetFaceName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имя начертания шрифта, выбранного в `CFontDialog` диалоговое окно.  
+### <a name="return-value"></a>Return Value  
+ The face name of the font selected in the `CFontDialog` dialog box.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#81;](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
- Эта функция вызывается для получения размера выбранного шрифта.  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
+ Call this function to retrieve the size of the selected font.  
   
 ```  
 int GetSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер шрифта в десятых долях точки.  
+### <a name="return-value"></a>Return Value  
+ The font's size, in tenths of a point.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#82;](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
- Эта функция вызывается для получения имени стиля выбранного шрифта.  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
+ Call this function to retrieve the style name of the selected font.  
   
 ```  
 CString GetStyleName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имя стиля шрифта.  
+### <a name="return-value"></a>Return Value  
+ The style name of the font.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#83;](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
- Эта функция вызывается для получения вес выбранного шрифта.  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
+ Call this function to retrieve the weight of the selected font.  
   
 ```  
 int GetWeight() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Вес выбранного шрифта.  
+### <a name="return-value"></a>Return Value  
+ The weight of the selected font.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения о насыщенность шрифта см. в разделе [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont).  
+### <a name="remarks"></a>Remarks  
+ For more information on the weight of a font, see [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#84;](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
- Вызывайте эту функцию, чтобы определить, является ли выбранный шрифт полужирным.  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
+ Call this function to determine if the selected font is bold.  
   
 ```  
 BOOL IsBold() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если выбранный шрифт полужирным характеристика включен; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Bold characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#85;](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
- Вызывайте эту функцию, чтобы определить, является ли шрифт курсивом.  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
+ Call this function to determine if the selected font is italic.  
   
 ```  
 BOOL IsItalic() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если выбранный шрифт характеризуется курсивом включен; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Italic characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#86;](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
- Эта функция вызывается для определения, если зачеркнутый отображается выбранный шрифт.  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
+ Call this function to determine if the selected font is displayed with strikeout.  
   
 ```  
 BOOL IsStrikeOut() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если выбранный шрифт характеризуется зачеркнутый включен; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Strikeout characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#87;](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
- Эта функция вызывается для определения, если выбранный шрифт подчеркнутым.  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
+ Call this function to determine if the selected font is underlined.  
   
 ```  
 BOOL IsUnderline() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если выбранный шрифт характеризуется Подчеркивание включено; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Underline characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#88;](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
- Структуры, члены которого хранения характеристики объекта диалогового окна.  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
+ A structure whose members store the characteristics of the dialog object.  
   
 ```  
 CHOOSEFONT m_cf;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- После построения `CFontDialog` объекта, можно использовать `m_cf` для изменения различных аспектов диалоговым окном перед вызовом метода `DoModal` функции-члена. Дополнительные сведения о структуре см. в разделе [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CFontDialog` object, you can use `m_cf` to modify various aspects of the dialog box before calling the `DoModal` member function. For more information on this structure, see [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#89;](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC HIERSVR](../../visual-cpp-samples.md)   
- [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

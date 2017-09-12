@@ -1,5 +1,5 @@
 ---
-title: "Класс COccManager | Документы Microsoft"
+title: COccManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,10 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- custom controls [MFC], sites
-- COccManager class
-- CNoTrackObject class
-- ActiveX control containers [C++], control site
+- COccManager [MFC], CreateContainer
+- COccManager [MFC], CreateDlgControls
+- COccManager [MFC], CreateSite
+- COccManager [MFC], GetDefBtnCode
+- COccManager [MFC], IsDialogMessage
+- COccManager [MFC], IsLabelControl
+- COccManager [MFC], IsMatchingMnemonic
+- COccManager [MFC], OnEvent
+- COccManager [MFC], PostCreateDialog
+- COccManager [MFC], PreCreateDialog
+- COccManager [MFC], SetDefaultButton
+- COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 caps.latest.revision: 20
 author: mikeblome
@@ -49,71 +57,71 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 14a75c491a7061d921d6c0c250c6224f4e7d2f04
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bdb6d322e821527fb41ed3e6777dcdac240e5e74
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coccmanager-class"></a>Класс COccManager
-Управляет разными сайтами пользовательского элемента управления, реализованного объектами `COleControlContainer` и `COleControlSite` .  
+# <a name="coccmanager-class"></a>COccManager Class
+Manages various custom control sites; implemented by `COleControlContainer` and `COleControlSite` objects.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COccManager : public CNoTrackObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|Создает **COleContainer** объекта.|  
-|[COccManager::CreateDlgControls](#createdlgcontrols)|Создает элементы управления ActiveX, размещенных в связанных `COleContainer` объекта.|  
-|[COccManager::CreateSite](#createsite)|Создает объект `COleClientSite`.|  
-|[COccManager::GetDefBtnCode](#getdefbtncode)|Извлекает код кнопки по умолчанию.|  
-|[COccManager::IsDialogMessage](#isdialogmessage)|Определяет целевой объект диалогового окна сообщения.|  
-|[COccManager::IsLabelControl](#islabelcontrol)|Определяет, является ли указанный элемент управления элемент управления label.|  
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Определяет, соответствует ли текущий назначенный назначенный указанного элемента управления.|  
-|[COccManager::OnEvent](#onevent)|Предпринимается попытка обработки указанного события.|  
-|[COccManager::PostCreateDialog](#postcreatedialog)|Освобождает ресурсы, выделенные во время создания диалогового окна.|  
-|[COccManager::PreCreateDialog](#precreatedialog)|Обрабатывает шаблона диалогового окна для элементов управления ActiveX.|  
-|[COccManager::SetDefaultButton](#setdefaultbutton)|Переключает состояние указанного элемента управления по умолчанию.|  
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Все существующие элементы управления ActiveX отделяет от стандартных элементов управления в шаблоне указанное диалоговое окно.|  
+|[COccManager::CreateContainer](#createcontainer)|Creates a **COleContainer** object.|  
+|[COccManager::CreateDlgControls](#createdlgcontrols)|Creates ActiveX controls, hosted by the associated `COleContainer` object.|  
+|[COccManager::CreateSite](#createsite)|Creates a `COleClientSite` object.|  
+|[COccManager::GetDefBtnCode](#getdefbtncode)|Retrieves the code of the default button.|  
+|[COccManager::IsDialogMessage](#isdialogmessage)|Determines the target of a dialog message.|  
+|[COccManager::IsLabelControl](#islabelcontrol)|Determines if the specified control is a label control.|  
+|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Determines if the current mnemonic matches the mnemonic of the specified control.|  
+|[COccManager::OnEvent](#onevent)|Attempts to handle the specified event.|  
+|[COccManager::PostCreateDialog](#postcreatedialog)|Frees resources allocated during dialog creation.|  
+|[COccManager::PreCreateDialog](#precreatedialog)|Processes a dialog template for ActiveX controls.|  
+|[COccManager::SetDefaultButton](#setdefaultbutton)|Toggles the default state of the specified control.|  
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Separates any existing ActiveX controls from common controls in the specified dialog template.|  
   
-## <a name="remarks"></a>Примечания  
- Базовый класс **CNoTrackObject**, недокументированные базовый класс (находится в AFXTLS. (H). Предназначены для использования платформой MFC, классы, производные от **CNoTrackObject** класса освобождаются от обнаружения утечек памяти. Не рекомендуется создавать производных непосредственно из **CNoTrackObject**.  
+## <a name="remarks"></a>Remarks  
+ The base class, **CNoTrackObject**, is an undocumented base class (located in AFXTLS.H). Designed for use by the MFC framework, classes derived from the **CNoTrackObject** class are exempt from memory leak detection. It is not recommended that you derive directly from **CNoTrackObject**.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CNoTrackObject`  
   
  `COccManager`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxocc.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxocc.h  
   
-##  <a name="createcontainer"></a>COccManager::CreateContainer  
- Вызывается платформой для создания контейнера элемента управления.  
+##  <a name="createcontainer"></a>  COccManager::CreateContainer  
+ Called by the framework to create a control container.  
   
 ```  
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на объект окна, связанный с контейнером пользовательского узла.  
+ A pointer to the window object associated with the custom site container.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на только что созданный контейнер; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created container; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения о создании пользовательских узлов см. в разделе [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
+### <a name="remarks"></a>Remarks  
+ For more information on creating custom sites, see [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
- Эта функция вызывается для создания элементов управления ActiveX, определяемое `pOccDialogInfo` параметр.  
+##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
+ Call this function to create ActiveX controls specified by the `pOccDialogInfo` parameter.  
   
 ```  
 virtual BOOL CreateDlgControls(
@@ -128,63 +136,63 @@ virtual BOOL CreateDlgControls(
     _AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pWndParent*  
- Указатель на родительский объект диалогового окна.  
+ A pointer to the parent of the dialog object.  
   
  `lpszResourceName`  
- Имя создаваемого ресурса.  
+ The name of the resource being created.  
   
  `pOccDialogInfo`  
- Указатель шаблона диалогового окна, используемый для создания объекта диалогового окна.  
+ A pointer to the dialog template used to create the dialog object.  
   
  `lpResource`  
- Указатель на ресурс.  
+ A pointer to a resource.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент управления был создан успешно. в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control was created successfully; otherwise zero.  
   
-##  <a name="createsite"></a>COccManager::CreateSite  
- Вызывается платформой для создания узла управления, размещенные в качестве контейнера, на который указывает `pCtrlCont`.  
+##  <a name="createsite"></a>  COccManager::CreateSite  
+ Called by the framework to create a control site, hosted by the container pointed to by `pCtrlCont`.  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pCtrlCont`  
- Указатель на размещение нового узла управления контейнера элемента управления.  
+ A pointer to the control container hosting the new control site.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на узел вновь созданного элемента управления.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created control site.  
   
-### <a name="remarks"></a>Примечания  
- Переопределить эту функцию для создания пользовательского элемента управления сайта, используя вашей [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-производного класса.  
+### <a name="remarks"></a>Remarks  
+ Override this function to create a custom control site, using your [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-derived class.  
   
- Каждый контейнер элемента управления может размещаться несколько узлов. Создайте дополнительные сайты с несколькими вызовами в `CreateSite`.  
+ Each control container can host multiple sites. Create additional sites with multiple calls to `CreateSite`.  
   
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
- Эта функция вызывается для определения, является ли элемент управления является кнопкой по умолчанию.  
+##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode  
+ Call this function to determine if the control is a default push button.  
   
 ```  
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Объект window, содержащий элемент управления button.  
+ The window object containing the button control.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ One of the following values:  
   
-- **DLGC_DEFPUSHBUTTON** элемент управления является кнопкой по умолчанию в диалоговом окне.  
+- **DLGC_DEFPUSHBUTTON** Control is the default button in the dialog.  
   
-- **DLGC_UNDEFPUSHBUTTON** элемент управления не является кнопкой по умолчанию в диалоговом окне.  
+- **DLGC_UNDEFPUSHBUTTON** Control is not the default button in the dialog.  
   
-- **0** элемент управления не является кнопкой.  
+- **0** Control is not a button.  
   
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
- Вызывается платформой для определения ли сообщение предназначено для указанного диалогового и, если это так, обрабатывает сообщение.  
+##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
+ Called by the framework to determine whether a message is intended for the specified dialog box and, if it is, processes the message.  
   
 ```  
 virtual BOOL IsDialogMessage(
@@ -192,41 +200,41 @@ virtual BOOL IsDialogMessage(
     LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pWndDlg*  
- Указатель на окно намеченного сообщения.  
+ A pointer to the intended target dialog of the message.  
   
  `lpMsg`  
- Указатель на `MSG` структуру, содержащую сообщения для проверки.  
+ A pointer to an `MSG` structure that contains the message to be checked.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если сообщение обработано; в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is processed; otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию `IsDialogMessage` — для проверки сообщений клавиатуры и преобразовывать их в выбранных элементов для соответствующего диалогового окна. Например при нажатии клавиши TAB выбирает следующий элемент управления или группы элементов управления.  
+### <a name="remarks"></a>Remarks  
+ The default behavior of `IsDialogMessage` is to check for keyboard messages and convert them into selections for the corresponding dialog box. For example, the TAB key, when pressed, selects the next control or group of controls.  
   
- Переопределите эту функцию, чтобы обеспечить пользовательское поведение для отправки сообщений на указанное диалоговое окно.  
+ Override this function to provide custom behavior for messages sent to the specified dialog.  
   
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
- Вызывайте эту функцию, чтобы определить, является ли указанный элемент управления элемент управления label.  
+##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
+ Call this function to determine if the specified control is a label control.  
   
 ```  
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);  
 static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее элемент управления.  
+ A pointer to the window containing the control.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент управления label; в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control is a label; otherwise zero  
   
-### <a name="remarks"></a>Примечания  
- Элемент управления label, которое действует как метка для любой элемент управления является следующим в порядок.  
+### <a name="remarks"></a>Remarks  
+ A label control is one that acts like a label for whatever control is next in the ordering.  
   
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
- Эта функция вызывается для определения текущего назначенный соответствия, представленного элементом управления.  
+##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
+ Call this function to determine if the current mnemonic matches that represented by the control.  
   
 ```  
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -239,20 +247,20 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
     LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее элемент управления.  
+ A pointer to the window containing the control.  
   
  `lpMsg`  
- Указатель на сообщение, содержащее мнемонический символ.  
+ A pointer to the message containing the mnemonic to match.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если назначенный соответствует элементу управления; в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the mnemonic matches the control; otherwise zero  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onevent"></a>COccManager::OnEvent  
- Вызывается платформой для обработки указанного события.  
+##  <a name="onevent"></a>  COccManager::OnEvent  
+ Called by the framework to handle the specified event.  
   
 ```  
 virtual BOOL OnEvent(
@@ -262,27 +270,27 @@ virtual BOOL OnEvent(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pCmdTarget*  
- Указатель на `CCmdTarget` объект попытка обработать событие  
+ A pointer to the `CCmdTarget` object attempting to handle the event  
   
  `idCtrl`  
- Идентификатор ресурса управления.  
+ The resource ID of the control.  
   
  `pEvent`  
- Обрабатываемого события.  
+ The event being handled.  
   
  `pHandlerInfo`  
- Если не **NULL**, `OnEvent` заполняет **pTarget** и **pmf** члены **AFX_CMDHANDLERINFO** структуры вместо отправки команды. Как правило, этот параметр должен быть **NULL**.  
+ If not **NULL**, `OnEvent` fills in the **pTarget** and **pmf** members of the **AFX_CMDHANDLERINFO** structure instead of dispatching the command. Typically, this parameter should be **NULL**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если событие было обработано, в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the event was handled, otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию для настройки процесса обработки событий по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the default event-handling process.  
   
-##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
- Вызывается платформой для обработки шаблона диалогового окна для элементов управления ActiveX перед созданием фактическое диалоговым окном.  
+##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
+ Called by the framework to process a dialog template for ActiveX controls before creating the actual dialog box.  
   
 ```  
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -290,39 +298,39 @@ virtual const DLGTEMPLATE* PreCreateDialog(
     const DLGTEMPLATE* pOrigTemplate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pOccDialogInfo`  
- **_AFX_OCC_DIALOG_INFO** структура, содержащая сведения о шаблоне диалогового окна и элементы управления ActiveX, размещенных в диалоговом окне.  
+ An **_AFX_OCC_DIALOG_INFO** structure containing information on the dialog template and any ActiveX controls hosted by the dialog.  
   
  *pOrigTemplate*  
- Указатель для использования в диалоговом окне Создание шаблона диалогового окна.  
+ A pointer to the dialog template to be used in creating the dialog box.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на структуру шаблона диалоговое окно используется для создания диалогового окна.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a dialog template structure used to create the dialog box.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию выполняется вызов `SplitDialogTemplate`, определение, если существуют элементы управления ActiveX определяет, присутствует, а затем возвращает результирующее диалоговое окно шаблона.  
+### <a name="remarks"></a>Remarks  
+ The default behavior makes a call to `SplitDialogTemplate`, determining if there are any ActiveX controls present and then returns the resultant dialog template.  
   
- Переопределите эту функцию для настройки процесса создания диалогового окна, размещение элементов управления ActiveX.  
+ Override this function to customize the process of creating a dialog box hosting ActiveX controls.  
   
-##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
- Вызывается платформой для освобождения памяти, выделенной для шаблона диалогового окна.  
+##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
+ Called by the framework to free memory allocated for the dialog template.  
   
 ```  
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pOccDialogInfo`  
- **_AFX_OCC_DIALOG_INFO** структура, содержащая сведения о шаблоне диалогового окна и элементы управления ActiveX, размещенных в диалоговом окне.  
+ An **_AFX_OCC_DIALOG_INFO** structure containing information on the dialog template and any ActiveX controls hosted by the dialog.  
   
-### <a name="remarks"></a>Примечания  
- Эта память была выделена путем вызова `SplitDialogTemplate`и был использован для любой размещаемые элементы управления ActiveX в диалоговом окне.  
+### <a name="remarks"></a>Remarks  
+ This memory was allocated by a call to `SplitDialogTemplate`, and was used for any hosted ActiveX controls in the dialog box.  
   
- Переопределите эту функцию для настройки процесса очистки все ресурсы, используемые объект диалогового окна.  
+ Override this function to customize the process of cleaning up any resources used by the dialog box object.  
   
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
- Вызывайте эту функцию, чтобы задать элемент управления как кнопка по умолчанию.  
+##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton  
+ Call this function to set the control as the default button.  
   
 ```  
 static void AFX_CDECL SetDefaultButton(
@@ -330,23 +338,23 @@ static void AFX_CDECL SetDefaultButton(
     BOOL bDefault);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее элемент управления.  
+ A pointer to the window containing the control.  
   
  `bDefault`  
- Ненулевое значение, если элемент управления должен стать кнопка по умолчанию; в противном случае — нуль.  
+ Nonzero if the control should become the default button; otherwise zero.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение в случае успеха, иначе —&0;.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Элемент управления должен иметь **OLEMISC_ACTSLIKEBUTTON** бит состояния. Дополнительные сведения о **OLEMISC, ПОЗВОЛЯЯ** флаги, в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) раздел в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  The control must have the **OLEMISC_ACTSLIKEBUTTON** status bit set. For more information on **OLEMISC** flags, see the [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) topic in the Windows SDK.  
   
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
- Вызывается платформой для разделения элементов управления ActiveX из общих элементов управления диалогового окна.  
+##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
+ Called by the framework to split the ActiveX controls from common dialog controls.  
   
 ```  
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -354,28 +362,28 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
     DLGITEMTEMPLATE** ppOleDlgItems);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pTemplate`  
- Указатель шаблона диалогового окна, которое необходимо проверить.  
+ A pointer to the dialog template to be examined.  
   
  `ppOleDlgItems`  
- Список указателей на элементов диалоговых окон, являющихся элементами управления ActiveX.  
+ A list of pointers to dialog box items that are ActiveX controls.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на структуру шаблона диалогового окна, содержащую только те элементы не ActiveX. Если присутствуют элементы управления ActiveX не **NULL** возвращается.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a dialog template structure containing only non-ActiveX controls. If no ActiveX controls are present, **NULL** is returned.  
   
-### <a name="remarks"></a>Примечания  
- Найденные элементы управления ActiveX, выполняется анализ шаблона, создается новый шаблон, содержащий только не-элементы управления ActiveX. Добавляются элементы управления ActiveX, обнаруженных в ходе этого процесса `ppOleDlgItems`.  
+### <a name="remarks"></a>Remarks  
+ If any ActiveX controls are found, the template is analyzed and a new template, containing only non-ActiveX controls, is created. Any ActiveX controls found during this process are added to `ppOleDlgItems`.  
   
- Если в шаблоне нет элементы управления ActiveX **NULL** возвращается *.*  
+ If there are no ActiveX controls in the template, **NULL** is returned *.*  
   
 > [!NOTE]
->  Память, выделенная для нового шаблона освобождается в `PostCreateDialog` функции.  
+>  Memory allocated for the new template is freed in the `PostCreateDialog` function.  
   
- Переопределите эту функцию для настройки этого процесса.  
+ Override this function to customize this process.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс COleControlSite](../../mfc/reference/colecontrolsite-class.md)   
- [Класс COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleControlSite Class](../../mfc/reference/colecontrolsite-class.md)   
+ [COleControlContainer Class](../../mfc/reference/colecontrolcontainer-class.md)
 

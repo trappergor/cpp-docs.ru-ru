@@ -1,33 +1,52 @@
 ---
-title: "Изоляция библиотеки общих элементов управления MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC - библиотека, Common Controls - функция"
+title: Isolation of the MFC Common Controls Library | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Изоляция библиотеки общих элементов управления MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: beb727301a2dcc72127f4ecd61449ada2dfaf360
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Библиотека общих элементов управления теперь изолирована внутри MFC, предоставляя различные модули \(такие как dll\-библиотеки пользователя\) для использования различных версий библиотеки общих элементов управления с указанием версии в своих манифестов.  
+---
+# <a name="isolation-of-the-mfc-common-controls-library"></a>Isolation of the MFC Common Controls Library
+The Common Controls library is now isolated within MFC, allowing different modules (such as user DLLs) to use different versions of the Common Controls library by specifying the version in their manifests.  
   
- Приложение MFC \(или код пользователя с MFC\) выполняют вызовы API библиотеки общих элементов управления с помощью функции с именами программы\-оболочки `Afx`*FunctionName*, где *FunctionName* — имя API общих элементов управления.  Эти функции оболочки определяются в afxcomctl32.h и afxcomctl32.inl.  
+ An MFC application (or user code called by MFC) makes calls to Common Controls library APIs through wrapper functions named `Afx`*FunctionName*, where *FunctionName* is the name of a Common Controls API. Those wrapper functions are defined in afxcomctl32.h and afxcomctl32.inl.  
   
- Можно использовать макрос [AFX\_COMCTL32\_IF\_EXISTS](../Topic/AFX_COMCTL32_IF_EXISTS.md) и [AFX\_COMCTL32\_IF\_EXISTS2](../Topic/AFX_COMCTL32_IF_EXISTS2.md) \(определенные в afxcomctl32.h\) для указания, реализует ли библиотека общих элементов управления некоторые API вместо вызова [GetProcAddress](../build/getprocaddress.md).  
+ You can use the [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model-services.md#afx_comctl32_if_exists) and [AFX_COMCTL32_IF_EXISTS2](reference/run-time-object-model-services.md#afx_comctl32_if_exists2) macros (defined in afxcomctl32.h) to determine whether the Common Controls library implements a certain API instead of calling [GetProcAddress](../build/getprocaddress.md).  
   
- Технически, при вызове на интерфейсы через этот класс\-оболочку, `CComCtlWrapper` библиотеки общих элементов управления \(указанный в afxcomctl32.h\).  `CComCtlWrapper` также отвечает за загрузки и выгрузки comctl32.dll.  Состояние модуля MFC содержит указатель на экземпляр `CComCtlWrapper`.  Доступ к класс\-оболочка использование макроса `afxComCtlWrapper`.  
+ Technically, you make calls to Common Controls Library APIs through a wrapper class, `CComCtlWrapper` (defined in afxcomctl32.h). `CComCtlWrapper` is also responsible for the loading and unloading of comctl32.dll. The MFC Module State contains a pointer to an instance of `CComCtlWrapper`. You can access the wrapper class using the `afxComCtlWrapper` macro.  
   
- Обратите внимание, что при вызове API общих элементов управления непосредственно \(не с помощью функции оболочки MFC\) из приложения MFC DLL или пользователя будет работать в большинстве случаев, поскольку приложение MFC DLL или пользователя привязаны к библиотеке общих элементов управления его спросило в своем манифесте\).  Однако сам код MFC должен использовать оболочки, поскольку код MFC может вызываться из библиотеки DLL пользователя с различными версиями библиотеки общих элементов управления.
+ Note that calling Common Controls API directly (not using the MFC wrapper functions) from an MFC application or user DLL will work in most cases, because the MFC application or user DLL is bound to the Common Controls library it requested in its manifest). However, the MFC code itself has to use the wrappers, because MFC code might be called from user DLLs with different Common Controls library versions.
+
+

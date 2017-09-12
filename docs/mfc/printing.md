@@ -1,68 +1,87 @@
 ---
-title: "Печать | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "документы, печать"
-  - "печать [MFC]"
-  - "печать [MFC], с платформы"
-  - "классы представлений, операции печати"
+title: Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- view classes [MFC], print operations
+- documents [MFC], printing
+- printing [MFC], from framework
+- printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Печать
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 095ef2d763a44607c5d026b61301d46d7654dfe2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Реализует независимо от Microsoft Windows для отображения.  В MFC, это означает, что такие же вызовы рисования, в функции\-члене `OnDraw` класса представления, ответственных за создание на экране и на других устройствах, таких как принтеров.  Для предварительного просмотра целевое устройство смоделированной вывод принтера для отображения.  
+---
+# <a name="printing"></a>Printing
+Microsoft Windows implements device-independent display. In MFC, this means that the same drawing calls, in the `OnDraw` member function of your view class, are responsible for drawing on the display and on other devices, such as printers. For print preview, the target device is a simulated printer output to the display.  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Роль пользователя в роли печати и .NET Framework  
- Класс представления имеет следующие обязанности.  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Your Role in Printing vs. the Framework's Role  
+ Your view class has the following responsibilities:  
   
--   Уведомляет платформу количество страниц в документе.  
+-   Inform the framework how many pages are in the document.  
   
--   Исключение, что напечатал заданной страницы, создайте этой части документа.  
+-   When asked to print a specified page, draw that portion of the document.  
   
--   Выделите и отменить все шрифты или других ресурсов \(GDI\) приборного интерфейса графических объектов, необходимых для печати.  
+-   Allocate and deallocate any fonts or other graphics device interface (GDI) resources needed for printing.  
   
--   При необходимости отправлять все коды escape\-последовательности, необходимые для изменения режима принтера перед выводом на данной странице, например, чтобы изменить ориентацию печати на каждой странице по отдельности.  
+-   If necessary, send any escape codes needed to change the printer mode before printing a given page, for example, to change the printing orientation on a per-page basis.  
   
- Обязанностью платформы следующим образом:  
+ The framework's responsibilities are as follows:  
   
--   Отобразите диалоговое окно **Печать**.  
+-   Display the **Print** dialog box.  
   
--   Создайте объект [CDC](../Topic/CDC%20Class.md) для принтера.  
+-   Create a [CDC](../mfc/reference/cdc-class.md) object for the printer.  
   
--   Вызовите функции\-члены [StartDoc](../Topic/CDC::StartDoc.md) и [EndDoc](../Topic/CDC::EndDoc.md) объекта `CDC`.  
+-   Call the [StartDoc](../mfc/reference/cdc-class.md#startdoc) and [EndDoc](../mfc/reference/cdc-class.md#enddoc) member functions of the `CDC` object.  
   
--   Повторно вызовите функцию\-член [StartPage](../Topic/CDC::StartPage.md) объекта `CDC`, уведомляет класс представления, страница должна быть напечатана и вызовите функцию\-член [EndPage](../Topic/CDC::EndPage.md) объекта `CDC`.  
+-   Repeatedly call the [StartPage](../mfc/reference/cdc-class.md#startpage) member function of the `CDC` object, inform the view class which page should be printed, and call the [EndPage](../mfc/reference/cdc-class.md#endpage) member function of the `CDC` object.  
   
--   Вызов функций переопределяемого метода в представлении в соответствующие моменты.  
+-   Call overridable functions in the view at the appropriate times.  
   
- В следующих статьях рассматривается как платформа поддерживает печать и предварительный просмотр:  
+ The following articles discuss how the framework supports printing and print preview:  
   
-### Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Как принтер по умолчанию выполняется](../Topic/How%20Default%20Printing%20Is%20Done.md)  
+-   [How default printing is done](../mfc/how-default-printing-is-done.md)  
   
--   [Multipage документы](../mfc/multipage-documents.md)  
+-   [Multipage documents](../mfc/multipage-documents.md)  
   
--   [Заголовки и нижние колонтитулы](../mfc/headers-and-footers.md)  
+-   [Headers and footers](../mfc/headers-and-footers.md)  
   
--   [Выделение ресурсов GDI для печати](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources for printing](../mfc/allocating-gdi-resources.md)  
   
--   [Предварительный просмотр](../mfc/print-preview-architecture.md)  
+-   [Print preview](../mfc/print-preview-architecture.md)  
   
-## См. также  
- [Печать и предварительный просмотр печати](../mfc/printing-and-print-preview.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)
+
+

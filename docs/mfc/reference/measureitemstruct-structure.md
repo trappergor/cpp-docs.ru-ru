@@ -1,91 +1,109 @@
 ---
-title: "Структура MEASUREITEMSTRUCT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MEASUREITEMSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MEASUREITEMSTRUCT - структура"
+title: MEASUREITEMSTRUCT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MEASUREITEMSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Структура MEASUREITEMSTRUCT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6eb06380885269ba55c187e1151d296808ccbe08
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Структура `MEASUREITEMSTRUCT` уведомляет Windows измерений определяемых пользователем элемента управления или пункта меню.  
+---
+# <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT Structure
+The `MEASUREITEMSTRUCT` structure informs Windows of the dimensions of an owner-drawn control or menu item.  
   
-## Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagMEASUREITEMSTRUCT {  
-   UINT CtlType;  
-   UINT CtlID;  
-   UINT itemID;  
-   UINT itemWidth;  
-   UINT itemHeight;  
-   DWORD itemData  
+typedef struct tagMEASUREITEMSTRUCT {  
+    UINT CtlType;  
+    UINT CtlID;  
+    UINT itemID;  
+    UINT itemWidth;  
+    UINT itemHeight;  
+    DWORD itemData  
 } MEASUREITEMSTRUCT;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- Содержит тип элемента управления.  Значения для типов элементов управления следующим образом:  
+ Contains the control type. The values for control types are as follows:  
   
--   Поле со списком рисования владельцем **ODT\_COMBOBOX**  
+- **ODT_COMBOBOX** Owner-draw combo box  
   
--   Список рисования владельцем **ODT\_LISTBOX**  
+- **ODT_LISTBOX** Owner-draw list box  
   
--   Меню рисования владельцем **ODT\_MENU**  
+- **ODT_MENU** Owner-draw menu  
   
  `CtlID`  
- Содержит идентификатор элемента управления для поля со списком, списке или кнопки.  Этот элемент не используется для меню.  
+ Contains the control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- Содержит идентификатор пункта меню для меню или идентификатор элемента список\-окно\- для поля со списком или списка переменной высоты.  Этот элемент не используется для поля со списком или списка фиксированной высоты, или для кнопки.  
+ Contains the menu-item ID for a menu or the list-box-item ID for a variable-height combo box or list box. This member is not used for a fixed-height combo box or list box, or for a button.  
   
  *itemWidth*  
- Задает ширину пункта меню.  Владелец пункта меню рисования владельцем должен заполнить этот член до возвращения из сообщения.  
+ Specifies the width of a menu item. The owner of the owner-draw menu item must fill this member before it returns from the message.  
   
  *itemHeight*  
- Задает высоту отдельного элемента в списке или меню.  До возвращения из сообщения, владелец поля со списком, списке или пункта меню рисования владельцем должен заполнять этот член.  Максимальная высота элемента списка 255.  
+ Specifies the height of an individual item in a list box or a menu. Before it returns from the message, the owner of the owner-draw combo box, list box, or menu item must fill out this member. The maximum height of a list box item is 255.  
   
  `itemData`  
- Для поля со списком или списка этот элемент содержит значение, переданные в список одним из следующих:  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
--   [CComboBox::AddString](../Topic/CComboBox::AddString.md)  
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
--   [CComboBox::InsertString](../Topic/CComboBox::InsertString.md)  
+- [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
--   [CListBox::AddString](../Topic/CListBox::AddString.md)  
+- [CListBox::AddString](../../mfc/reference/clistbox-class.md#addstring)  
   
--   [CListBox::InsertString](../Topic/CListBox::InsertString.md)  
+- [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- Для меню этот элемент содержит значение, переданные в меню одним из следующих:  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
--   [CMenu::AppendMenu](../Topic/CMenu::AppendMenu.md)  
+- [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
--   [CMenu::InsertMenu](../Topic/CMenu::InsertMenu.md)  
+- [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)  
   
--   [CMenu::ModifyMenu](../Topic/CMenu::ModifyMenu.md)  
+- [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Это позволяет Windows к процессу взаимодействия пользователя с элементом управления.  Сбой заполнения правильные члены в структуре `MEASUREITEMSTRUCT` приведет к неверная операция элемента управления.  
+ This allows Windows to process user interaction with the control correctly. Failure to fill out the proper members in the `MEASUREITEMSTRUCT` structure will cause improper operation of the control.  
   
-## Требования  
+## <a name="requirements"></a>Requirements  
  **Header:** winuser.h  
   
-## См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnMeasureItem](../Topic/CWnd::OnMeasureItem.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
+
+

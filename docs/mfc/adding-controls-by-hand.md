@@ -1,48 +1,67 @@
 ---
-title: "Добавление элементов управления вручную | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "стандартные элементы управления [C++], добавление"
-  - "управление фокусом ввода"
-  - "элементы управления [MFC], добавление в диалоговые окна"
-  - "элементы управления диалогового окна [C++], добавление в диалоговые окна"
-  - "фокус, управление вводом"
-  - "управление фокусом ввода"
-  - "общие элементы управления Windows [C++], добавление"
+title: Adding Controls By Hand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows common controls [MFC], adding
+- dialog box controls [MFC], adding to dialog boxes
+- controlling input focus
+- input focus control
+- focus, controlling input [MFC]
+- controls [MFC], adding to dialog boxes
+- common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Добавление элементов управления вручную
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f91b61355e5a1c46099cc78cdafc3b26fde08c0e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно [добавьте элементы управления в диалоговое окно с помощью редактора диалоговых окон](../mfc/using-the-dialog-editor-to-add-controls.md) или добавить их самостоятельно, с кодом.  
+---
+# <a name="adding-controls-by-hand"></a>Adding Controls By Hand
+You can either [add controls to a dialog box with the dialog editor](../mfc/using-the-dialog-editor-to-add-controls.md) or add them yourself, with code.  
   
- Чтобы создать объект управления самостоятельно, обычно требуется внедрить объект управления C\+\+ в диалоговом окне " A " C\+\+ или объекте фреймового окна.  Как и многих других объектов в платформе, элементы управления для двухшагового построения.  Следует вызвать функцию\-член **Создать** элемента управления во время создания родительских диалоговое окно или фреймовое окно.  Для диалоговых окон обычно это делается в [OnInitDialog](../Topic/CDialog::OnInitDialog.md), и для фреймовых windows см. в разделе [OnCreate](../Topic/CWnd::OnCreate.md).  
+ To create a control object yourself, you will usually embed the C++ control object in a C++ dialog or frame-window object. Like many other objects in the framework, controls require two-stage construction. You should call the control's **Create** member function as part of creating the parent dialog box or frame window. For dialog boxes, this is usually done in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), and for frame windows, in [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
   
- В следующем примере показано, как можно объявить объект `CEdit` в объявлении класса в производном классе диалогового окна и последующего вызова функции\-члена **Создать** в `OnInitDialog`.  Поскольку объект `CEdit` объявлен как внедренный объект, автоматически при построении объекта диалогового окна, но все же необходимо инициализировать со своим функцией\-членом **Создать**.  
+ The following example shows how you might declare a `CEdit` object in the class declaration of a derived dialog class and then call the **Create** member function in `OnInitDialog`. Because the `CEdit` object is declared as an embedded object, it is automatically constructed when the dialog object is constructed, but it must still be initialized with its own **Create** member function.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/CPP/adding-controls-by-hand_1.h)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- Следующая функция `OnInitDialog` настраивает прямоугольник, а затем вызывает метод **Создать** для создания элемента управления "Поле ввода" Windows и вложить ее в неинициализированном объект `CEdit`.  
+ The following `OnInitDialog` function sets up a rectangle, then calls **Create** to create the Windows edit control and attach it to the uninitialized `CEdit` object.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/CPP/adding-controls-by-hand_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   
- После создания объект правки, можно также установить фокус ввода к элементу управления, вызвав функцию\-член `SetFocus`.  Наконец, можно возвратить 0 из `OnInitDialog`, чтобы указать, что необходимо установить фокус.  Если возвращает ненулевое значение, то диспетчер диалогового окна устанавливает фокус на первый элемент элемента в списке элементов управления диалогового окна.  В большинстве случаев требуется, чтобы добавить элементы управления в диалоговым окнам с редактором диалоговых окон.  
+ After creating the edit object, you can also set the input focus to the control by calling the `SetFocus` member function. Finally, you return 0 from `OnInitDialog` to show that you set the focus. If you return a nonzero value, the dialog manager sets the focus to the first control item in the dialog item list. In most cases, you'll want to add controls to your dialog boxes with the dialog editor.  
   
-## См. также  
- [Создание и использование элементов управления](../mfc/making-and-using-controls.md)   
- [Элементы управления](../mfc/controls-mfc.md)   
- [CDialog::OnInitDialog](../Topic/CDialog::OnInitDialog.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)   
+ [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
+
+

@@ -1,71 +1,90 @@
 ---
-title: "Мастер добавления классов из TypeLib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.typelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "мастер добавления классов из TypeLib [C++]"
-  - "интерфейсы COM, классы - добавление"
+title: Add Class from Typelib Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.typelib
+dev_langs:
+- C++
+helpviewer_keywords:
+- Add Class from TypeLib Wizard [MFC]
+- COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Мастер добавления классов из TypeLib
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9622a818e6334caad172f31f717eddc7e1230965
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-С помощью этого мастера можно добавить класс MFC из доступной библиотеки типов.  В мастере создается класс для каждого интерфейса, добавляемого из выбранной библиотеки типов.  
+---
+# <a name="add-class-from-typelib-wizard"></a>Add Class from Typelib Wizard
+Use this wizard to add an MFC class from an available type library. The wizard creates a class for each interface you add from the selected type library.  
   
- **Добавить класс из**  
- Указывает расположение библиотеки типов, из которой создается класс.  
+ **Add class from**  
+ Specifies the location of the type library, from which the class is created.  
   
-|Команда|Описание|  
-|-------------|--------------|  
-|**Реестр**|Библиотека типов зарегистрирована в системе.  Зарегистрированные библиотеки типов указаны в списке **Доступные библиотеки типов**.|  
-|**Файл**|Библиотека типов не обязательно зарегистрирована в системе, но содержится в файле.  Необходимо указать расположение файла в поле **Расположение**.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Registry**|The type library is registered in the system. Registered type libraries are listed in **Available type libraries**.|  
+|**File**|The type library is not necessarily registered in the system but is contained in a file. You must provide the file location in **Location**.|  
   
- **Доступные библиотеки типов**  
- Отображает библиотеки типов, зарегистрированные в системе.  Выберите из списка библиотеку типов, чтобы ее интерфейсы отобразились в списке **Интерфейсы**.  
+ **Available type libraries**  
+ Lists the type libraries currently registered in the system. Select a type library from this list to display its interfaces in the **Interfaces** list.  
   
- Дополнительные сведения о регистрации библиотек типов см. в статье "Внутри распределенного COM\-объекта: библиотеки типов и интеграция языков" \(Inside Distributed COM: Type Libraries and Language Integration\) в библиотеке MSDN.  
+ See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information about registering type libraries.  
   
- **Расположение**  
- Указывает расположение библиотеки типов.  Если в области **Добавить класс из** выбрать параметр **Файл**, то можно указать расположение файла, содержащего библиотеку типов.  Чтобы найти расположение файла, нажмите кнопку с многоточием.  
+ **Location**  
+ Specifies the location of the type library. If you click **File** under **Add Class From**, you can provide the location of the file containing the type library. To browse to the location of the file, click the ellipsis button.  
   
- **Интерфейсы**  
- Отображает интерфейсы библиотеки типов, выбранной в списке **Доступные библиотеки типов**.  
+ **Interfaces**  
+ Lists the interfaces in the type library currently selected in the **Available type libraries** list.  
   
-|Кнопка перемещения|Описание|  
-|------------------------|--------------|  
-|**\>**|Добавляет интерфейс, выбранный в списке **Интерфейсы**.  Если нет выбранных интерфейсов, кнопка заблокирована.|  
-|**\>\>**|Добавляет все интерфейсы библиотеки типов, выбранной в списке **Доступные библиотеки типов**.|  
-|**\<**|Удаляет класс, выбранный в списке **Создаваемые классы**.  Если класс в списке **Создаваемые классы** не выбран, кнопка заблокирована.|  
-|**\<\<**|Удаляет все классы из списка **Создаваемые классы**.  Если список **Создаваемые классы** пустой, кнопка заблокирована.|  
+|Transfer button|Description|  
+|---------------------|-----------------|  
+|**>**|Adds the interface currently selected in the **Interfaces** list. Dimmed if no interface is selected.|  
+|**>>**|Adds all the interfaces in the type library currently selected in the **Available type libraries** list.|  
+|**<**|Removes the class currently selected in the **Generated classes** list. Dimmed if no class is currently selected in the **Generated classes** list.|  
+|**<\<**|Removes all the classes in the **Generated classes** list. Dimmed if the **Generated classes** list is empty.|  
   
- **Создаваемые классы**  
- Определяет имена классов, создаваемых из интерфейсов, добавленных с помощью кнопки **\>** или **\>\>**.  Можно щелкнуть этот список, чтобы выбрать класс, затем с помощью клавиш со стрелками вверх или вниз выполнить прокрутку списка, просматривая имена классов в поле `Class` и имена файлов в поле **Файл**, которые создаются мастером после того, как будет нажата кнопка **Готово**.  В этом списке можно единовременно выбрать только один класс.  
+ **Generated classes**  
+ Specifies the class names to be generated from the interfaces added using the **>** or **>>** button. You can click this box to select a class, and then use the up or down keys to scroll through the list, viewing each class name in the `Class` box and file name in the **File** box that the wizard generates when you click **Finish**. You can select only one class at a time in this box.  
   
- Класс можно удалить, выбрав его из списка и нажмите кнопку **\<**.  Нет необходимости выбор класса в окне созданных классов для удаления всех классов. щелкните **\<\<**, необходимо удалить все классы в окне **Созданные классы** .  
+ You can remove a class by selecting it in this list and clicking **<**. You do not need to select a class in the Generated classes box to remove all classes; by clicking **<<**, you remove all classes in the **Generated classes** box.  
   
  `Class`  
- Указывает имя класса, который выбран в списке **Создаваемые классы** и будет добавлен мастером после нажатия кнопки **Готово**.  Имя в поле `Class` можно изменить.  
+ Specifies the name of the class selected in the **Generated classes** box that the wizard adds when you click **Finish**. You can edit the name in the `Class` box.  
   
- **Файл**  
- Задает имя файла заголовка для нового класса.  По умолчанию это имя основано на имени, указанном в списке **Создаваемые классы**.  Нажмите кнопку с символом многоточия, чтобы сохранить файл в указанном месте или добавить объявление класса в существующий файл.  Если выбрать уже существующий файл, он не будет сохранен в выбранном месте до тех пор, пока в мастере не будет нажата кнопка **Готово**.  
+ **File**  
+ Sets the name of the header file for the new class. By default, this name is based on the name you provide in **Generated classes**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- Мастер не переписывает файл.  Если выбрать имя существующего файла, после нажатия кнопки **Готово** мастер попросит указать, следует ли добавить объявление класса к имеющемуся содержимому файла.  Чтобы добавить реализацию в файл, нажмите кнопку **Да**; чтобы вернуться в мастер и указать другое имя файла, нажмите кнопку **Нет**.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
-## См. также  
- [Класс MFC из библиотеки типов](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
- [Клиенты автоматизации. Использование библиотек типов](../Topic/Automation%20Clients:%20Using%20Type%20Libraries.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class from a Type Library](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

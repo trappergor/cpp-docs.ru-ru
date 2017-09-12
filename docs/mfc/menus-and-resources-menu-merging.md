@@ -1,68 +1,85 @@
 ---
-title: "Меню и ресурсы. Слияние меню | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "координирование шаблонов меню"
-  - "меню [C++], приложения документов OLE"
-  - "слияние панели инструментов и строки состояния"
-  - "OLE - контейнеры, меню и ресурсы"
-  - "строки состояния, приложения документов OLE"
-  - "панели инструментов [C++], приложения документов OLE"
-  - "визуальное редактирование, меню и ресурсы приложений"
+title: 'Menus and Resources: Menu Merging | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars [MFC], OLE document applications
+- visual editing [MFC], application menus and resources
+- coordinating menu layouts [MFC]
+- OLE containers [MFC], menus and resources
+- toolbars [MFC], OLE document applications
+- merging toolbar and status bar [MFC]
+- menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Меню и ресурсы. Слияние меню
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eba298c25c4be89d83913ff35f2f4d0af9e9f91d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Сведения в статье шаги для приложений OLE документа обработки встроенная функция визуального редактирования и активация правильно.  Встроенная функция активация представляет проблему и контейнера для приложений и компонентов сервера \(\).  Пользователь остается в том же окне фреймовом \(в контексте документа контейнера\), но фактически выполняется другое приложение \(сервер\).  Это требует координации между ресурсами контейнера и серверными приложениями.  
+---
+# <a name="menus-and-resources-menu-merging"></a>Menus and Resources: Menu Merging
+This article details the steps necessary for OLE document applications to handle visual editing and in-place activation properly. In-place activation poses a challenge for both container and server (component) applications. The user remains in the same frame window (within the context of the container document) but is actually running another application (the server). This requires coordination between the resources of the container and server applications.  
   
- Разделы описанные в этой статье:  
+ Topics covered in this article include:  
   
--   [Макеты меню](#_core_menu_layouts)  
+- [Menu Layouts](#_core_menu_layouts)  
   
--   [Панели инструментов и строки состояния](#_core_toolbars_and_status_bars)  
+- [Toolbars and Status Bars](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a> Макеты меню  
- Первый шаг координировать макетов меню.  Дополнительные сведения см. в разделе **Создание меню** в [Вопросы программирования меню](https://msdn.microsoft.com/en-us/library/ms647557.aspx) в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+##  <a name="_core_menu_layouts"></a> Menu Layouts  
+ The first step is to coordinate menu layouts. For more information, see the **Menu Creation** section in [Menu Programming Considerations](https://msdn.microsoft.com/library/ms647557.aspx) in the Windows SDK.  
   
- Приложение\-контейнеры необходимо создать новое меню, который следует использовать, только если внедренные элементы активированы на месте.  В меню минимуме, это должно состоять из следующего, в указанном порядке:  
+ Container applications should create a new menu to be used only when embedded items are activated in place. At the minimum, this menu should consist of the following, in the order listed:  
   
-1.  Меню "Файл" идентичное, если файлы открыты. \(Обычно другие пункты меню не помещаются до следующего элемента\).  
+1.  File menu identical to the one used when files are open. (Usually no other menu items are placed before the next item.)  
   
-2.  2 Последовательных разделителя.  
+2.  Two consecutive separators.  
   
-3.  Меню окна идентичное, если файлы открытый \(если контейнерное приложение в приложении MDI\).  Некоторые приложения могут иметь другие меню, например меню параметров, которые принадлежат в этой группе, которая находится в меню, когда вложенный элемент активирован на месте.  
+3.  Window menu identical to the one used when files are open (only if the container application in an MDI application). Some applications may have other menus, such as an Options menu, that belong in this group, which remains on the menu when an embedded item is activated in place.  
   
     > [!NOTE]
-    >  Могут существовать другие меню, которые влияют на представление документа контейнера, например увеличение.  Эти меню контейнера отображается между 2 разделителями в этом ресурсе меню.  
+    >  There may be other menus that affect the view of the container document, such as Zoom. These container menus appear between the two separators in this menu resource.  
   
- Приложения сервера \(компонента\) необходимо также создать новое меню специально для встроенной активации.  Она должна быть, например, если файлы открыть меню, но без пунктов меню, например файл и окно, управляющих документа серверного вместо данных.  Обычно это меню состоит из следующих компонентов:  
+ Server (component) applications should also create a new menu specifically for in-place activation. It should be like the menu used when files are open, but without menu items, such as File and Window that manipulate the server document instead of the data. Typically, this menu consists of the following:  
   
-1.  Меню " Правка " идентичное, если файлы открыты.  
+1.  Edit menu identical to the one used when files are open.  
   
-2.  Разделитель.  
+2.  Separator.  
   
-3.  Объект редактирования меню, например меню пера в примере приложения Scribble.  
+3.  Object editing menus, such as the Pen menu in the Scribble sample application.  
   
-4.  Разделитель.  
+4.  Separator.  
   
-5.  Меню " Справка ".  
+5.  Help menu.  
   
- Пример, просмотрите макет некоторых меню примера на месте для контейнера и сервера.  Подробности каждого пункта меню были удалены, чтобы сделать код примера.  Меню контейнера на месте имеет следующие записи:  
+ For an example, look at the layout of some sample in-place menus for a container and a server. The details of each menu item have been removed to make the example clearer. The container's in-place menu has the following entries:  
   
 ```  
 IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE   
@@ -76,7 +93,7 @@ BEGIN
 END  
 ```  
   
- Последовательные разделителей показывают, где первая часть меню сервера должны содержаться.  Теперь необходимо меню сервера на месте:  
+ The consecutive separators indicate where the first part of the server's menu should go. Now look at the server's in-place menu:  
   
 ```  
 IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE   
@@ -89,7 +106,7 @@ BEGIN
 END  
 ```  
   
- Разделители здесь показывают, где вторая группа в составе пункты меню контейнера должны содержаться.  Результирующее структура меню, когда объект из этого сервера активирован на месте внутри этого контейнера выглядит следующим образом:  
+ The separators here indicate where the second group of container menu items should go. The resulting menu structure when an object from this server is activated in place inside this container looks like this:  
   
 ```  
 BEGIN  
@@ -103,19 +120,21 @@ BEGIN
 END  
 ```  
   
- Как видно, разделители замените с различными группами в составе меню каждого приложения.  
+ As you can see, the separators have been replaced with the different groups of each application's menu.  
   
- Таблицы сочетаний клавиш, связанные с на месте меню также должны предоставляться серверными приложениями.  Контейнер будет включать их в собственные таблицы сочетаний клавиш.  
+ Accelerator tables associated with the in-place menu should also be supplied by the server application. The container will incorporate them into its own accelerator tables.  
   
- Если вложенный элемент активирован на месте платформа загружает на месте меню.  Затем запрашивает серверное приложение этого меню встроенная функция активации и вставляет его, где разделителей.  Это способ меню объединяются.  При получении меню из контейнера для работы на размещения файла и окна, и появляется меню с сервера для работы в элементе.  
+ When an embedded item is activated in place, the framework loads the in-place menu. It then asks the server application for its menu for in-place activation and inserts it where the separators are. This is how the menus combine. You get menus from the container for operating on the file and window placement, and you get menus from the server for operating on the item.  
   
-##  <a name="_core_toolbars_and_status_bars"></a> Панели инструментов и строки состояния  
- Серверные приложения необходимо создать новый инструмент растровое изображение и сохраняет его в отдельном файле.  Приложения, созданные мастером приложения сохраняют это растровое изображение в файле ITOOLBAR.BMP.  Новый инструмент заменяет панель инструментов приложения, когда элемент сервера активирован на месте и должен содержать те же элементы, что и обычный инструмент, но удалить Значки, представляющих элементы в файле и Окнах меню.  
+##  <a name="_core_toolbars_and_status_bars"></a> Toolbars and Status Bars  
+ Server applications should create a new toolbar and store its bitmap in a separate file. The application wizard-generated applications store this bitmap in a file called ITOOLBAR.BMP. The new toolbar replaces the container application's toolbar when your server's item is activated in place, and should contain the same items as your normal toolbar, but remove icons representing items on the File and Window menus.  
   
- Эта панель инструментов загружается в `COleIPFrameWnd`\- производном классе, автоматически созданный мастером приложений.  Строка состояния обрабатывается из приложения контейнера.  Дополнительные сведения о реализации окна фрейма для встроенного редактирования см. в разделе [Серверы: Реализация сервера](../mfc/servers-implementing-a-server.md).  
+ This toolbar is loaded in your `COleIPFrameWnd`-derived class, created for you by the application wizard. The status bar is handled by the container application. For more information on the implementation of in-place frame windows, see [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md).  
   
-## См. также  
- [Меню и ресурсы \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Активация](../mfc/activation-cpp.md)   
- [Серверы](../mfc/servers.md)   
- [Контейнеры](../mfc/containers.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)
+
+

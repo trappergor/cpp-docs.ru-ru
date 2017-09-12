@@ -1,56 +1,74 @@
 ---
-title: "буфер обмена | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "буфер обмена"
-  - "буфер обмена, программирование"
-  - "копирование данных"
-  - "вырезка и копирование данных"
-  - "перенос данных"
+title: Clipboard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cutting and copying data
+- copying data
+- Clipboard
+- Clipboard, programming
+- transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# буфер обмена
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ecf2044ecfa659b8ab372d72ce71930e430dc8b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Это семейство статей объясняется, как реализовать поддержку обмена Windows в приложениях MFC.  Используется в буфер обмена Windows 2 двумя способами:  
+---
+# <a name="clipboard"></a>Clipboard
+This family of articles explains how to implement support for the Windows Clipboard in MFC applications. The Windows Clipboard is used in two ways:  
   
--   Реализация стандартных команд меню " Правка, например, вырезать, копировать и вставлять.  
+-   Implementing standard Edit menu commands, such as Cut, Copy, and Paste.  
   
--   Реализация равномерную передачу данных с перетаскиванием OLE \(\).  
+-   Implementing uniform data transfer with drag and drop (OLE).  
   
- Стандартный метод обмена Windows переноса данных между источником и назначением.  Также может быть удобно в операциях OLE.  С появлением OLE, 2 механизма буфера обмена в Windows.  Стандартное API обмена Windows по\-прежнему доступно, но был дополнен с OLE механизмом передачи данных.  OLE унифицированная передача данных \(UDT\) поддерживает вырезать, копировать и вставлять exchange и перетаскивания.  
+ The Clipboard is the standard Windows method of transferring data between a source and a destination. It can also be very useful in OLE operations. With the advent of OLE, there are two Clipboard mechanisms in Windows. The standard Windows Clipboard API is still available, but it has been supplemented with the OLE data transfer mechanism. OLE uniform data transfer (UDT) supports Cut, Copy, and Paste with the Clipboard and drag and drop.  
   
- Обмен системная служба во всем сеансом Windows, поэтому он не имеет дескриптор или собственного класса.  Управление обмена с помощью функций\-членов класса [CWnd](../Topic/CWnd%20Class.md).  
+ The Clipboard is a system service shared by the entire Windows session, so it does not have a handle or class of its own. You manage the Clipboard through member functions of class [CWnd](../mfc/reference/cwnd-class.md).  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Когда использовать каждый из этих механизмов буфера обмена](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
+-   [When to use each Clipboard mechanism](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
   
--   [Наряду с помощью API обмена Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the traditional Windows Clipboard API](../mfc/clipboard-using-the-windows-clipboard.md)  
   
--   [Использование OLE механизм буфера обмена](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [Копирование и вставящ данные](../Topic/Clipboard:%20Copying%20and%20Pasting%20Data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Добавить другие форматы](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [\<caps:sentence id\="tgt18" sentenceid\="1bc8aafd7da110d0b343b54cffa169d9" class\="tgtSentence"\>Обмена Windows\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms648709)  
+-   [The Windows Clipboard](https://msdn.microsoft.com/library/ms648709)  
   
--   [Реализация перетаскивания OLE \(\)](../mfc/drag-and-drop-ole.md)  
+-   [Implementing drag and drop (OLE)](../mfc/drag-and-drop-ole.md)  
   
-## См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

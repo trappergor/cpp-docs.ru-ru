@@ -1,51 +1,69 @@
 ---
-title: "Объекты и источники данных (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "объекты данных [С++], определение"
-  - "источники данных [C++], определение"
-  - "передача данных [С++]"
-  - "передача данных [С++], определение"
-  - "OLE [C++], объекты данных"
-  - "OLE [C++], источники данных"
-  - "OLE [C++], передача данных"
+title: Data Objects and Data Sources (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data objects [MFC], definition
+- data transfer [MFC]
+- OLE [MFC], data transfer
+- data sources [MFC], definition
+- data transfer [MFC], definition
+- OLE [MFC], data objects
+- OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Объекты и источники данных (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7bfc4f325461ed3689ab9ade8b6604291ddfacca
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При выполнении передачу данных, или с помощью обмена или перетаскивания, данные имеет источник и назначение.  Одно приложение предоставляет данные для копирования и другое приложение принимает его для вставить.  Каждой стороне передачи для выполнения различных операций над теми же данными для передачи, чтобы успешно.  Библиотеки Microsoft Foundation Class \(MFC\) 2 предоставляет класса, представляющий каждую сторону этой передачи:  
+---
+# <a name="data-objects-and-data-sources-ole"></a>Data Objects and Data Sources (OLE)
+When you perform a data transfer, either by using the Clipboard or drag and drop, the data has a source and a destination. One application provides the data for copying and another application accepts it for pasting. Each side of the transfer needs to perform different operations on the same data for the transfer to succeed. The Microsoft Foundation Class (MFC) Library provides two classes that represent each side of this transfer:  
   
--   Источники данных \(как реализуется объектами `COleDataSource` \) представляют карта источника передачи данных.  Они создаются приложением при источника данных должно быть скопировано в буфер обмена, или если данные предоставляется для операции перетаскивания.  
+-   Data sources (as implemented by `COleDataSource` objects) represent the source side of the data transfer. They are created by the source application when data is to be copied to the Clipboard, or when data is provided for a drag-and-drop operation.  
   
--   Объекты данных \(как реализуется объектами `COleDataObject` \) представляют стороны назначения передачи данных.  Они создаются, когда приложение назначения содержит удаленные данные в него, или если запрос выполняет операцию, чтобы вставить из буфера обмена.  
+-   Data objects (as implemented by `COleDataObject` objects) represent the destination side of the data transfer. They are created when the destination application has data dropped into it, or when it is asked to perform a paste operation from the Clipboard.  
   
- В следующих статьях объясняется, как использовать объекты данных и источники данных в приложениях.  Эти сведения применяются как к контейнеру, так и к серверным приложениям, так как они могут быть вызваны на копировать и вставлять данные.  
+ The following articles explain how to use data objects and data sources in your applications. This information applies to both container and server applications, because both may be called upon to copy and paste data.  
   
--   [Объекты данных и источников данных. Создание и уничтожение](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Data Objects and Data Sources: Creation and Destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Объекты данных и источников данных. Управлять](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Data Objects and Data Sources: Manipulation](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## Содержание  
- [Перетаскивание](../mfc/drag-and-drop-ole.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
- [Буфер обмена](../mfc/clipboard.md)  
+ [Clipboard](../mfc/clipboard.md)  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

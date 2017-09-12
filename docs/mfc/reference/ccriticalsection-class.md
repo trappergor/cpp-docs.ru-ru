@@ -1,5 +1,5 @@
 ---
-title: "Класс CCriticalSection | Документы Microsoft"
+title: CCriticalSection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- synchronization objects, critical section
-- CCriticalSection class
-- critical sections
-- synchronization classes, CCriticalSection class
+- CCriticalSection [MFC], CCriticalSection
+- CCriticalSection [MFC], Lock
+- CCriticalSection [MFC], Unlock
+- CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
 caps.latest.revision: 21
 author: mikeblome
@@ -41,154 +41,154 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 25d4b124d089441503e9cb457e648695fc54660d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fd78fb7d86413185fc56971adf6868f65499be24
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccriticalsection-class"></a>Класс CCriticalSection
-Представляет «критическую секцию» — объект синхронизации, позволяющий одному потоку одновременно получить доступ к определенному фрагменту кода.  
+# <a name="ccriticalsection-class"></a>CCriticalSection Class
+Represents a "critical section" — a synchronization object that allows one thread at a time to access a resource or section of code.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCriticalSection : public CSyncObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::CCriticalSection](#ccriticalsection)|Создает объект `CCriticalSection`.|  
+|[CCriticalSection::CCriticalSection](#ccriticalsection)|Constructs a `CCriticalSection` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::Lock](#lock)|Для получения доступа к `CCriticalSection` объекта.|  
-|[CCriticalSection::Unlock](#unlock)|Освобождает объект `CCriticalSection`.|  
+|[CCriticalSection::Lock](#lock)|Use to gain access to the `CCriticalSection` object.|  
+|[CCriticalSection::Unlock](#unlock)|Releases the `CCriticalSection` object.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|Извлекает указатель на внутренний **CRITICAL_SECTION** объекта.|  
+|[CCriticalSection::operator CRITICAL_SECTION*](#operator_critical_section_star)|Retrieves a pointer to the internal **CRITICAL_SECTION** object.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::m_sect](#m_sect)|Объект **CRITICAL_SECTION** объекта.|  
+|[CCriticalSection::m_sect](#m_sect)|A **CRITICAL_SECTION** object.|  
   
-## <a name="remarks"></a>Примечания  
- Критические разделы полезны в тех случаях, когда только один поток за раз будет разрешено изменять данные или другой управляемый ресурс. Например добавление узлов связанного списка — это процесс, следует разрешать только одним потоком одновременно. С помощью `CCriticalSection` объекта для управления связанному списку, только один поток за раз можно получить доступ к списку.  
+## <a name="remarks"></a>Remarks  
+ Critical sections are useful when only one thread at a time can be allowed to modify data or some other controlled resource. For example, adding nodes to a linked list is a process that should only be allowed by one thread at a time. By using a `CCriticalSection` object to control the linked list, only one thread at a time can gain access to the list.  
   
 > [!NOTE]
->  Функциональные возможности `CCriticalSection` класса обеспечивается фактическое Win32 **CRITICAL_SECTION** объекта.  
+>  The functionality of the `CCriticalSection` class is provided by an actual Win32 **CRITICAL_SECTION** object.  
   
- Критические разделы используются вместо мьютексы (см. [CMutex](../../mfc/reference/cmutex-class.md)) когда важна скорость и ресурс не будет использоваться через границы процессов.  
+ Critical sections are used instead of mutexes (see [CMutex](../../mfc/reference/cmutex-class.md)) when speed is critical and the resource will not be used across process boundaries.  
   
- Существует два метода для использования `CCriticalSection` объект: изолированное и внедренное в классе.  
+ There are two methods for using a `CCriticalSection` object: stand-alone and embedded in a class.  
   
--   Автономный метод для автономного использования `CCriticalSection` объекта, создания `CCriticalSection` объекта, когда он нужен. После успешного возвращения из конструктора явно заблокировать объект с помощью вызова [блокировки](#lock). Вызов [Unlock](#unlock) после доступа к критической секции. Этот метод при яснее другому чтение исходный код, вероятность возникновения ошибки, необходимо помнить, блокировать и разблокировать критический раздел до и после доступа.  
+-   Stand-alone method   To use a stand-alone `CCriticalSection` object, construct the `CCriticalSection` object when it is needed. After a successful return from the constructor, explicitly lock the object with a call to [Lock](#lock). Call [Unlock](#unlock) when you are done accessing the critical section. This method, while clearer to someone reading your source code, is more prone to error as you must remember to lock and unlock the critical section before and after access.  
   
-     Более предпочтительным методом является использование [класс CSingleLock](../../mfc/reference/csinglelock-class.md) класса. Он также имеет `Lock` и `Unlock` метода, но не нужно беспокоиться о разблокировании ресурсов при возникновении исключения.  
+     A more preferable method is to use the [CSingleLock](../../mfc/reference/csinglelock-class.md) class. It also has a `Lock` and `Unlock` method, but you don't have to worry about unlocking the resource if an exception occurs.  
   
--   Внедренные можно также предоставить класс несколько потоков, добавив метод `CCriticalSection`-члена данных типа к классу и блокировка элемента данных, при необходимости.  
+-   Embedded method   You can also share a class with multiple threads by adding a `CCriticalSection`-type data member to the class and locking the data member when needed.  
   
- Дополнительные сведения об использовании `CCriticalSection` объектов, см. в статье [Многопоточность: использование классов синхронизации](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ For more information on using `CCriticalSection` objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CCriticalSection`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
- Создает объект `CCriticalSection`.  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
+ Constructs a `CCriticalSection` object.  
   
 ```  
 CCriticalSection();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Доступ или выпуска `CCriticalSection` объекта, создайте [класс CSingleLock](../../mfc/reference/csinglelock-class.md) и вызовите его [блокировки](../../mfc/reference/csinglelock-class.md#lock) и [Unlock](../../mfc/reference/csinglelock-class.md#unlock) функции-члены. Если `CCriticalSection` объекта используется автономный, вызвать его [Unlock](#unlock) функции-члена для его освобождения.  
+### <a name="remarks"></a>Remarks  
+ To access or release a `CCriticalSection` object, create a [CSingleLock](../../mfc/reference/csinglelock-class.md) object and call its [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock](../../mfc/reference/csinglelock-class.md#unlock) member functions. If the `CCriticalSection` object is being used stand-alone, call its [Unlock](#unlock) member function to release it.  
   
- Если конструктор не удается выделить память требуемой системы, исключение памяти (типа [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) автоматически вызывается исключение.  
+ If the constructor fails to allocate the required system memory, a memory exception (of type [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) is automatically thrown.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CCriticalSection::Lock](#lock).  
+### <a name="example"></a>Example  
+  See the example for [CCriticalSection::Lock](#lock).  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
- Вызов этой функции-члена для доступа к объекту критический раздел.  
+##  <a name="lock"></a>  CCriticalSection::Lock  
+ Call this member function to gain access to the critical section object.  
   
 ```  
 BOOL Lock();  
 BOOL Lock(DWORD dwTimeout);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwTimeout`  
- `Lock`игнорирует значение этого параметра.  
+ `Lock` ignores this parameter value.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- `Lock`является блокирующий вызов, который не возвращает значение до сигнал объект критической секции (доступна).  
+### <a name="remarks"></a>Remarks  
+ `Lock` is a blocking call that will not return until the critical section object is signaled (becomes available).  
   
- При необходимости времени ожидания, можно использовать [CMutex](../../mfc/reference/cmutex-class.md) вместо объекта `CCriticalSection` объекта.  
+ If timed waits are necessary, you can use a [CMutex](../../mfc/reference/cmutex-class.md) object instead of a `CCriticalSection` object.  
   
- Если `Lock` не удается выделить память необходимые системные, исключение памяти (типа [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) автоматически вызывается исключение.  
+ If `Lock` fails to allocate the necessary system memory, a memory exception (of type [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) is automatically thrown.  
   
-### <a name="example"></a>Пример  
- В этом примере показано вложенных критического раздела с помощью управления доступом к общему ресурсу (статический `_strShared` объекта) с помощью общего `CCriticalSection` объекта. `SomeMethod` Функция показано обновление общего ресурса в безопасном режиме.  
+### <a name="example"></a>Example  
+ This example demonstrates the nested critical section approach by controlling access to a shared resource (the static `_strShared` object) using a shared `CCriticalSection` object. The `SomeMethod` function demonstrates updating a shared resource in a safe manner.  
   
- [!code-cpp[NVC_MFC_Utilities&11;](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
+ [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
- Содержит объект критической секции, который используется всеми `CCriticalSection` методы.  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
+ Contains a critical section object that is used by all `CCriticalSection` methods.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
- Извлекает **CRITICAL_SECTION** объекта.  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION*  
+ Retrieves a **CRITICAL_SECTION** object.  
   
 ```  
 operator CRITICAL_SECTION*();
 ```   
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для получения указатель на внутренний **CRITICAL_SECTION** объекта.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve a pointer to the internal **CRITICAL_SECTION** object.  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
- Выпуски `CCriticalSection` объекта для использования другим потоком.  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
+ Releases the `CCriticalSection` object for use by another thread.  
   
 ```  
 BOOL Unlock();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если `CCriticalSection` поток был владельцем объекта и выпуска была успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CCriticalSection` object was owned by the thread and the release was successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Если `CCriticalSection` используется автономный, `Unlock` должен вызываться сразу же после завершения использования ресурсов, контролируются критический раздел. Если [класс CSingleLock](../../mfc/reference/csinglelock-class.md) используется объект, `CCriticalSection::Unlock` будет вызываться объект блокировки `Unlock` функции-члена.  
+### <a name="remarks"></a>Remarks  
+ If the `CCriticalSection` is being used stand-alone, `Unlock` must be called immediately after completing use of the resource controlled by the critical section. If a [CSingleLock](../../mfc/reference/csinglelock-class.md) object is being used, `CCriticalSection::Unlock` will be called by the lock object's `Unlock` member function.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CCriticalSection::Lock](#lock).  
+### <a name="example"></a>Example  
+  See the example for [CCriticalSection::Lock](#lock).  
   
-## <a name="see-also"></a>См. также  
- [Класс CSyncObject](../../mfc/reference/csyncobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CMutex](../../mfc/reference/cmutex-class.md)
+## <a name="see-also"></a>See Also  
+ [CSyncObject Class](../../mfc/reference/csyncobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMutex Class](../../mfc/reference/cmutex-class.md)
 

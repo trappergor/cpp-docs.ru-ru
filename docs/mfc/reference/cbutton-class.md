@@ -1,5 +1,5 @@
 ---
-title: "Класс CButton | Документы Microsoft"
+title: CButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,13 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CButton class
-- checkbox buttons
-- pushbuttons
-- button control [MFC]
-- check boxes, button controls
-- button objects (CButton)
-- radio buttons, CButton class
+- CButton [MFC], CButton
+- CButton [MFC], Create
+- CButton [MFC], DrawItem
+- CButton [MFC], GetBitmap
+- CButton [MFC], GetButtonStyle
+- CButton [MFC], GetCheck
+- CButton [MFC], GetCursor
+- CButton [MFC], GetIcon
+- CButton [MFC], GetIdealSize
+- CButton [MFC], GetImageList
+- CButton [MFC], GetNote
+- CButton [MFC], GetNoteLength
+- CButton [MFC], GetSplitGlyph
+- CButton [MFC], GetSplitImageList
+- CButton [MFC], GetSplitInfo
+- CButton [MFC], GetSplitSize
+- CButton [MFC], GetSplitStyle
+- CButton [MFC], GetState
+- CButton [MFC], GetTextMargin
+- CButton [MFC], SetBitmap
+- CButton [MFC], SetButtonStyle
+- CButton [MFC], SetCheck
+- CButton [MFC], SetCursor
+- CButton [MFC], SetDropDownState
+- CButton [MFC], SetIcon
+- CButton [MFC], SetImageList
+- CButton [MFC], SetNote
+- CButton [MFC], SetSplitGlyph
+- CButton [MFC], SetSplitImageList
+- CButton [MFC], SetSplitInfo
+- CButton [MFC], SetSplitSize
+- CButton [MFC], SetSplitStyle
+- CButton [MFC], SetState
+- CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 caps.latest.revision: 19
 author: mikeblome
@@ -74,103 +101,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 03771a3d0dd2297487953089081893a7c892b321
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: acddd4102969470c56790308969025390b3bcdc6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbutton-class"></a>Класс CButton
-Предоставляет функциональные возможности кнопочных элементов управления Windows.  
+# <a name="cbutton-class"></a>CButton Class
+Provides the functionality of Windows button controls.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CButton : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CButton::CButton](#cbutton)|Создает объект `CButton`.|  
+|[CButton::CButton](#cbutton)|Constructs a `CButton` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CButton::Create](#create)|Создает элемент управления button в Windows и прикрепляет его к `CButton` объекта.|  
-|[CButton::DrawItem](#drawitem)|Переопределение, чтобы нарисовать рисуемого владельцем `CButton` объекта.|  
-|[CButton::GetBitmap](#getbitmap)|Извлекает дескриптор растрового изображения при помощи [SetBitmap](#setbitmap).|  
-|[CButton::GetButtonStyle](#getbuttonstyle)|Извлекает сведения о стиле элемента управления button.|  
-|[CButton::GetCheck](#getcheck)|Получает состояние проверки элемента управления button.|  
-|[CButton::GetCursor](#getcursor)|Возвращает дескриптор курсора изображения ранее задан с [SetCursor](#setcursor).|  
-|[CButton::GetIcon](#geticon)|Извлекает дескриптор значка при помощи [SetIcon](#seticon).|  
-|[CButton::GetIdealSize](#getidealsize)|Извлекает идеальный размер элемента управления button.|  
-|[CButton::GetImageList](#getimagelist)|Извлекает список изображений элемента управления button.|  
-|[CButton::GetNote](#getnote)|Возвращает компонент Примечание текущего элемента управления ссылки команды.|  
-|[CButton::GetNoteLength](#getnotelength)|Получает длину текста для текущей команды управления ссылками.|  
-|[CButton::GetSplitGlyph](#getsplitglyph)|Извлекает глифов, связанных с текущей управления SplitButton.|  
-|[CButton::GetSplitImageList](#getsplitimagelist)|Извлекает список изображений для текущего управления SplitButton.|  
-|[CButton::GetSplitInfo](#getsplitinfo)|Получает сведения, определяющие текущего управления SplitButton.|  
-|[CButton::GetSplitSize](#getsplitsize)|Возвращает прямоугольник, ограничивающий компонента раскрывающегося списка для текущего управления SplitButton.|  
-|[CButton::GetSplitStyle](#getsplitstyle)|Извлекает стили кнопок разбиение, определяющие текущего управления SplitButton.|  
-|[CButton::GetState](#getstate)|Извлекает состояние флажка, состояние выделения и состояние фокуса с элемента управления button.|  
-|[CButton::GetTextMargin](#gettextmargin)|Извлекает поле текст для элемента управления button.|  
-|[CButton::SetBitmap](#setbitmap)|Задает точечный рисунок, отображаемый на кнопке.|  
-|[CButton::SetButtonStyle](#setbuttonstyle)|Изменяет стиль кнопки.|  
-|[CButton::SetCheck](#setcheck)|Задает состояние проверки элемента управления button.|  
-|[CButton::SetCursor](#setcursor)|Указывает образ курсор, отображаемый на кнопке.|  
-|[CButton::SetDropDownState](#setdropdownstate)|Задает состояние текущего управления SplitButton раскрывающегося списка.|  
-|[CButton::SetIcon](#seticon)|Задает значок, отображаемый на кнопке.|  
-|[CButton::SetImageList](#setimagelist)|Задает список изображений элемента управления button.|  
-|[CButton::SetNote](#setnote)|Задает примечание текущей команды управления ссылками.|  
-|[CButton::SetSplitGlyph](#setsplitglyph)|Связывает указанный глифа с текущего управления SplitButton.|  
-|[CButton::SetSplitImageList](#setsplitimagelist)|Связывает список изображений с текущего управления SplitButton.|  
-|[CButton::SetSplitInfo](#setsplitinfo)|Задает сведения, определяющие текущего управления SplitButton.|  
-|[CButton::SetSplitSize](#setsplitsize)|Задает ограничивающий прямоугольник компонента раскрывающегося списка для текущего управления SplitButton.|  
-|[CButton::SetSplitStyle](#setsplitstyle)|Задает стиль текущего управления SplitButton.|  
-|[CButton::SetState](#setstate)|Задает состояние выделения элемента управления button.|  
-|[CButton::SetTextMargin](#settextmargin)|Задает поле текст элемента управления button.|  
+|[CButton::Create](#create)|Creates the Windows button control and attaches it to the `CButton` object.|  
+|[CButton::DrawItem](#drawitem)|Override to draw an owner-drawn `CButton` object.|  
+|[CButton::GetBitmap](#getbitmap)|Retrieves the handle of the bitmap previously set with [SetBitmap](#setbitmap).|  
+|[CButton::GetButtonStyle](#getbuttonstyle)|Retrieves information about the button control style.|  
+|[CButton::GetCheck](#getcheck)|Retrieves the check state of a button control.|  
+|[CButton::GetCursor](#getcursor)|Retrieves the handle of the cursor image previously set with [SetCursor](#setcursor).|  
+|[CButton::GetIcon](#geticon)|Retrieves the handle of the icon previously set with [SetIcon](#seticon).|  
+|[CButton::GetIdealSize](#getidealsize)|Retrieves the ideal size of the button control.|  
+|[CButton::GetImageList](#getimagelist)|Retrieves the image list of the button control.|  
+|[CButton::GetNote](#getnote)|Retrieves the note component of the current command link control.|  
+|[CButton::GetNoteLength](#getnotelength)|Retrieves the length of the note text for the current command link control.|  
+|[CButton::GetSplitGlyph](#getsplitglyph)|Retrieves the glyph associated with the current split button control.|  
+|[CButton::GetSplitImageList](#getsplitimagelist)|Retrieves the image list for the current split button control.|  
+|[CButton::GetSplitInfo](#getsplitinfo)|Retrieves information that defines the current split button control.|  
+|[CButton::GetSplitSize](#getsplitsize)|Retrieves the bounding rectangle of the drop-down component of the current split button control.|  
+|[CButton::GetSplitStyle](#getsplitstyle)|Retrieves the split button styles that define the current split button control.|  
+|[CButton::GetState](#getstate)|Retrieves the check state, highlight state, and focus state of a button control.|  
+|[CButton::GetTextMargin](#gettextmargin)|Retrieves the text margin of the button control.|  
+|[CButton::SetBitmap](#setbitmap)|Specifies a bitmap to be displayed on the button.|  
+|[CButton::SetButtonStyle](#setbuttonstyle)|Changes the style of a button.|  
+|[CButton::SetCheck](#setcheck)|Sets the check state of a button control.|  
+|[CButton::SetCursor](#setcursor)|Specifies a cursor image to be displayed on the button.|  
+|[CButton::SetDropDownState](#setdropdownstate)|Sets the drop-down state of the current split button control.|  
+|[CButton::SetIcon](#seticon)|Specifies an icon to be displayed on the button.|  
+|[CButton::SetImageList](#setimagelist)|Sets the image list of the button control.|  
+|[CButton::SetNote](#setnote)|Sets the note on the current command link control.|  
+|[CButton::SetSplitGlyph](#setsplitglyph)|Associates a specified glyph with the current split button control.|  
+|[CButton::SetSplitImageList](#setsplitimagelist)|Associates an image list with the current split button control.|  
+|[CButton::SetSplitInfo](#setsplitinfo)|Specifies information that defines the current split button control.|  
+|[CButton::SetSplitSize](#setsplitsize)|Sets the bounding rectangle of the drop-down component of the current split button control.|  
+|[CButton::SetSplitStyle](#setsplitstyle)|Sets the style of the current split button control.|  
+|[CButton::SetState](#setstate)|Sets the highlighting state of a button control.|  
+|[CButton::SetTextMargin](#settextmargin)|Sets the text margin of the button control.|  
   
-## <a name="remarks"></a>Примечания  
- Элемент управления button является небольшой, прямоугольная дочернее окно, можно выбрать включение и отключение. Кнопки можно использовать отдельно или в группах и либо может быть меткой или отображаются без текста. Кнопка обычно изменяется внешний вид, когда пользователь нажимает кнопку.  
+## <a name="remarks"></a>Remarks  
+ A button control is a small, rectangular child window that can be clicked on and off. Buttons can be used alone or in groups and can either be labeled or appear without text. A button typically changes appearance when the user clicks it.  
   
- Обычные кнопки являются флажок, переключателя и кнопки. Объект `CButton` объект может быть любой из них, согласно [кнопку стиль](../../mfc/reference/button-styles.md) определено на его инициализация путем [создать](#create) функции-члена.  
+ Typical buttons are the check box, radio button, and pushbutton. A `CButton` object can become any of these, according to the [button style](../../mfc/reference/styles-used-by-mfc.md#button-styles) specified at its initialization by the [Create](#create) member function.  
   
- Кроме того [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) класс, производный от `CButton` поддерживает создание элементов управления с меткой с растровыми изображениями, а не текст. Объект `CBitmapButton` может иметь отдельные растровые изображения для кнопки элемента, вниз, с фокусом ввода и отключении.  
+ In addition, the [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) class derived from `CButton` supports creation of button controls labeled with bitmap images instead of text. A `CBitmapButton` can have separate bitmaps for a button's up, down, focused, and disabled states.  
   
- Элемент управления button можно создать на основе шаблона диалогового окна или непосредственно в коде. В обоих случаях сначала вызовите конструктор `CButton` для создания `CButton` объекта; затем вызвать **создать** функция-член для создания окна управления «кнопка» и присоединить его к `CButton` объекта.  
+ You can create a button control either from a dialog template or directly in your code. In both cases, first call the constructor `CButton` to construct the `CButton` object; then call the **Create** member function to create the Windows button control and attach it to the `CButton` object.  
   
- Построение может быть задачей в классе, производном от `CButton`. Создание конструктора для производного класса и вызове **создать** из внутри конструктора.  
+ Construction can be a one-step process in a class derived from `CButton`. Write a constructor for the derived class and call **Create** from within the constructor.  
   
- Если вы хотите обработки сообщений Windows уведомление посылается кнопкой элемента управления своему родителю (обычно класс, производный от [CDialog](../../mfc/reference/cdialog-class.md)), добавить схему сообщений входа и обработчик сообщений функции-члена родительского класса для каждого сообщения.  
+ If you want to handle Windows notification messages sent by a button control to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
   
- Каждая запись сопоставления сообщений имеет следующий вид:  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- где `id` указывает идентификатор дочернего окна элемента управления, отправляющего уведомление и `memberFxn` имя функции-члена родительского вы написали для обработки уведомления.  
+ where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- Прототип функции родительского элемента выглядит следующим образом:  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- Схемы сообщений записей выглядят следующим образом:  
+ Potential message-map entries are as follows:  
   
-|Элемент карты|Отправлено в качестве родительского, когда...|  
+|Map entry|Sent to parent when...|  
 |---------------|----------------------------|  
-|**ON_BN_CLICKED**|Пользователь нажимает кнопку.|  
-|**ON_BN_DOUBLECLICKED**|Пользователь дважды щелкает кнопкой.|  
+|**ON_BN_CLICKED**|The user clicks a button.|  
+|**ON_BN_DOUBLECLICKED**|The user double-clicks a button.|  
   
- Если вы создаете `CButton` из ресурса диалогового окна, `CButton` объект автоматически освобождается, когда пользователь закрывает диалоговое окно.  
+ If you create a `CButton` object from a dialog resource, the `CButton` object is automatically destroyed when the user closes the dialog box.  
   
- Если вы создаете `CButton` объекта в окне, может потребоваться удалить его. При создании `CButton` объекта в куче с помощью **новый** функции, необходимо вызвать **удаление** для объекта, чтобы уничтожить его, когда пользователь закрывает окно управления «кнопка». Если вы создаете `CButton` объект в стеке или он внедрен в родительский объект диалогового окна, удаляется автоматически.  
+ If you create a `CButton` object within a window, you may need to destroy it. If you create the `CButton` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user closes the Windows button control. If you create the `CButton` object on the stack, or it is embedded in the parent dialog object, it is destroyed automatically.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -179,21 +206,21 @@ class CButton : public CWnd
   
  `CButton`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbutton"></a>CButton::CButton  
- Создает объект `CButton`.  
+##  <a name="cbutton"></a>  CButton::CButton  
+ Constructs a `CButton` object.  
   
 ```  
 CButton();
 ```  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
-##  <a name="create"></a>CButton::Create  
- Создает элемент управления button в Windows и прикрепляет его к `CButton` объекта.  
+##  <a name="create"></a>  CButton::Create  
+ Creates the Windows button control and attaches it to the `CButton` object.  
   
 ```  
 virtual BOOL Create(
@@ -204,173 +231,173 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszCaption`  
- Задает текст элемента управления button.  
+ Specifies the button control's text.  
   
  `dwStyle`  
- Задает стиль элемента управления button. Примените любое сочетание [кнопку Стили](../../mfc/reference/button-styles.md) к кнопке.  
+ Specifies the button control's style. Apply any combination of [button styles](../../mfc/reference/styles-used-by-mfc.md#button-styles) to the button.  
   
  `rect`  
- Задает размер и положение элемента управления button. Это может быть либо `CRect` объекта или `RECT` структуры.  
+ Specifies the button control's size and position. It can be either a `CRect` object or a `RECT` structure.  
   
  `pParentWnd`  
- Указывает родительского окна элемента управления button, обычно `CDialog`. Он не должен быть **NULL**.  
+ Specifies the button control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Указывает идентификатор элемента управления button.  
+ Specifies the button control's ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CButton` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать **создать**, который создает элемент управления button в Windows и прикрепляет его к `CButton` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CButton` object in two steps. First, call the constructor and then call **Create**, which creates the Windows button control and attaches it to the `CButton` object.  
   
- Если **WS_VISIBLE** задан стиль, Windows отправляет элемент управления button все сообщения, необходимые для активации и отображения кнопки.  
+ If the **WS_VISIBLE** style is given, Windows sends the button control all the messages required to activate and show the button.  
   
- Применить следующие [стили окна](../../mfc/reference/window-styles.md) к элементу управления кнопки:  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a button control:  
   
-- **WS_CHILD** всегда  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** обычно  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** редко  
+- **WS_DISABLED** Rarely  
   
-- **WS_GROUP** для группировки элементов управления  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** для включения кнопки в порядок перехода по табуляции  
+- **WS_TABSTOP** To include the button in the tabbing order  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CButton::DrawItem  
- Вызывается платформой при изменении внешнего вида кнопки владельцем.  
+##  <a name="drawitem"></a>  CButton::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn button has changed.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Длинный указатель [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуры. Структура содержит сведения о рисуемого элемента и типа требуется рисования.  
+ A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. The structure contains information about the item to be drawn and the type of drawing required.  
   
-### <a name="remarks"></a>Примечания  
- Определяемые владельцем кнопка имеет **BS_OWNERDRAW** стиля набора. Переопределить эту функцию-член для реализации отрисовки рисуемого владельцем `CButton` объекта. Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct` до элемента, функция завершается.  
+### <a name="remarks"></a>Remarks  
+ An owner-drawn button has the **BS_OWNERDRAW** style set. Override this member function to implement drawing for an owner-drawn `CButton` object. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the member function terminates.  
   
- См. также [BS_](../../mfc/reference/button-styles.md) значений стиля.  
+ Also see the [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style values.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
-##  <a name="getbitmap"></a>CButton::GetBitmap  
- Вызовите эту функцию-член получить дескриптор растрового изображения, при помощи [SetBitmap](#setbitmap), связанный с кнопкой.  
+##  <a name="getbitmap"></a>  CButton::GetBitmap  
+ Call this member function to get the handle of a bitmap, previously set with [SetBitmap](#setbitmap), that is associated with a button.  
   
 ```  
 HBITMAP GetBitmap() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор к растровому изображению. **Значение NULL** Если ранее не растрового изображения.  
+### <a name="return-value"></a>Return Value  
+ A handle to a bitmap. **NULL** if no bitmap is previously specified.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="getbuttonstyle"></a>CButton::GetButtonStyle  
- Извлекает сведения о стиле элемента управления button.  
+##  <a name="getbuttonstyle"></a>  CButton::GetButtonStyle  
+ Retrieves information about the button control style.  
   
 ```  
 UINT GetButtonStyle() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает стили кнопок для этого `CButton` объекта. Эта функция возвращает только [BS_](../../mfc/reference/button-styles.md) значения стиля, не любой другой стиль окна.  
+### <a name="return-value"></a>Return Value  
+ Returns the button styles for this `CButton` object. This function returns only the [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style values, not any of the other window styles.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="getcheck"></a>CButton::GetCheck  
- Получает состояние флажка "переключатель" или "флажок".  
+##  <a name="getcheck"></a>  CButton::GetCheck  
+ Retrieves the check state of a radio button or check box.  
   
 ```  
 int GetCheck() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение из элемента управления button создан с **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, или **BS_3STATE** стиль является одним из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ The return value from a button control created with the **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, or **BS_3STATE** style is one of the following values:  
   
-|Значение|Значение|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|Состояние кнопки не установлен.|  
-|**BST_CHECKED**|Проверяется состояние кнопки.|  
-|**BST_INDETERMINATE**|Неопределенное состояние кнопки (применяется только в том случае, если эта кнопка имеет **BS_3STATE** или **BS_AUTO3STATE** стиль).|  
+|**BST_UNCHECKED**|Button state is unchecked.|  
+|**BST_CHECKED**|Button state is checked.|  
+|**BST_INDETERMINATE**|Button state is indeterminate (applies only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style).|  
   
- Если эта кнопка имеет любой другой стиль, возвращаемое значение равно **BST_UNCHECKED**.  
+ If the button has any other style, the return value is **BST_UNCHECKED**.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="getcursor"></a>CButton::GetCursor  
- Вызовите эту функцию-член получить дескриптор курсора, при помощи [SetCursor](#setcursor), связанный с кнопкой.  
+##  <a name="getcursor"></a>  CButton::GetCursor  
+ Call this member function to get the handle of a cursor, previously set with [SetCursor](#setcursor), that is associated with a button.  
   
 ```  
 HCURSOR GetCursor();  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор изображения курсора. **Значение NULL** Если ранее указано без курсора.  
+### <a name="return-value"></a>Return Value  
+ A handle to a cursor image. **NULL** if no cursor is previously specified.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="geticon"></a>CButton::GetIcon  
- Вызовите эту функцию-член получить дескриптор значка, при помощи [SetIcon](#seticon), связанный с кнопкой.  
+##  <a name="geticon"></a>  CButton::GetIcon  
+ Call this member function to get the handle of an icon, previously set with [SetIcon](#seticon), that is associated with a button.  
   
 ```  
 HICON GetIcon() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор для значка. **Значение NULL** Если значок не задан ранее.  
+### <a name="return-value"></a>Return Value  
+ A handle to an icon. **NULL** if no icon is previously specified.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="getidealsize"></a>CButton::GetIdealSize  
- Возвращает наилучший размер элемента управления button.  
+##  <a name="getidealsize"></a>  CButton::GetIdealSize  
+ Retrieves the ideal size for the button control.  
   
 ```  
 BOOL GetIdealSize(SIZE* psize);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *psize*  
- Указатель на текущий размер кнопки.  
+ A pointer to the current size of the button.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу **BCM_GETIDEALSIZE** сообщения, как описано в [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) раздел [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_GETIDEALSIZE** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="getimagelist"></a>CButton::GetImageList  
- Этот метод используется для получения списка изображений из элемента управления button.  
+##  <a name="getimagelist"></a>  CButton::GetImageList  
+ Call this method to get the image list from the button control.  
   
 ```  
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pbuttonImagelist`  
- Указатель на список изображений `CButton` объекта.  
+ A pointer to the image list of the `CButton` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу **BCM_GETIMAGELIST** сообщения, как описано в [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) раздел [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_GETIMAGELIST** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="getnote"></a>CButton::GetNote  
- Извлекает текст заметки, связанный с текущей команды управления ссылками.  
+##  <a name="getnote"></a>  CButton::GetNote  
+ Retrieves the note text associated with the current command link control.  
   
 ```  
 CString GetNote() const;  
@@ -380,193 +407,193 @@ BOOL GetNote(
     UINT* cchNote) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[выходной] `lpszNote`|Указатель на буфер, вызывающий объект отвечает за выделение и освобождение. Если возвращается значение `true`, буфер содержит текст заметки, связанные с текущего элемента управления ссылки команды; в противном случае, буфер не изменяется.|  
-|[in, out] `cchNote`|Указатель на переменную целого числа без знака.<br /><br /> При вызове этого метода переменная содержит размер буфера, определяемое `lpszNote` параметра.<br /><br /> Этот метод возвращает, если возвращается значение `true` переменная содержит размер заметки, связанные с текущей команды управления ссылками. Если возвращается значение `false`, переменная содержит размер буфера, необходимый для размещения заметки.|  
+|[out] `lpszNote`|Pointer to a buffer, which the caller is responsible for allocating and deallocating. If the return value is `true`, the buffer contains the note text that is associated with the current command link control; otherwise, the buffer is unchanged.|  
+|[in, out] `cchNote`|A pointer to an unsigned integer variable.<br /><br /> When this method is called, the variable contains the size of the buffer specified by the `lpszNote` parameter.<br /><br /> When this method returns, if the return value is `true` the variable contains the size of the note associated with the current command link control. If the return value is `false`, the variable contains the buffer size required to contain the note.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- В первой перегрузке [CString](../../atl-mfc-shared/using-cstring.md) объекта, содержащего текст заметки, связанные с текущей команды управления ссылками.  
+### <a name="return-value"></a>Return Value  
+ In the first overload, a [CString](../../atl-mfc-shared/using-cstring.md) object that contains the note text associated with the current command link control.  
   
- -или-  
+ -or-  
   
- Во второй перегрузке `true` Если этот метод выполнен успешно; в противном случае — `false`.  
+ In the second overload, `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_COMMANDLINK` или `BS_DEFCOMMANDLINK`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
   
- Этот метод отправляет [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) message, which is described in the Windows SDK.  
   
-##  <a name="getnotelength"></a>CButton::GetNoteLength  
- Получает длину текста для текущей команды управления ссылками.  
+##  <a name="getnotelength"></a>  CButton::GetNoteLength  
+ Retrieves the length of the note text for the current command link control.  
   
 ```  
 UINT GetNoteLength() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Длина текста заметки, в 16-битовых символов Юникода, для текущей команды управления ссылками.  
+### <a name="return-value"></a>Return Value  
+ The length of the note text, in 16-bit Unicode characters, for the current command link control.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_COMMANDLINK` или `BS_DEFCOMMANDLINK`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
   
- Этот метод отправляет [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) message, which is described in the Windows SDK.  
   
-##  <a name="getsplitglyph"></a>CButton::GetSplitGlyph  
- Извлекает глифов, связанных с текущей управления SplitButton.  
+##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
+ Retrieves the glyph associated with the current split button control.  
   
 ```  
 TCHAR GetSplitGlyph() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Глиф символ, связанный с текущей управления SplitButton.  
+### <a name="return-value"></a>Return Value  
+ The glyph character associated with the current split button control.  
   
-### <a name="remarks"></a>Примечания  
- Глиф является физическое представление символа в определенном шрифте. Например, элемент управления SplitButton может быть снабжен атрибутом глиф флажок символа Юникода (U + 2713).  
+### <a name="remarks"></a>Remarks  
+ A glyph is the physical representation of a character in a particular font. For example, a split button control might be decorated with the glyph of the Unicode check mark character (U+2713).  
   
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_GLYPH` флаг, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. При возврате функция сообщения, этот метод получает глиф из `himlGlyph` член структуры.  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_GLYPH` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the glyph from the `himlGlyph` member of the structure.  
   
-##  <a name="getsplitimagelist"></a>CButton::GetSplitImageList  
- Извлекает [списка изображений](../../mfc/reference/cimagelist-class.md) для текущего управления SplitButton.  
+##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
+ Retrieves the [image list](../../mfc/reference/cimagelist-class.md) for the current split button control.  
   
 ```  
 CImageList* GetSplitImageList() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объекта.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_IMAGE` флаг, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. При возврате функция сообщения, этот метод извлекает список изображений из `himlGlyph` член структуры.  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_IMAGE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the image list from the `himlGlyph` member of the structure.  
   
-##  <a name="getsplitinfo"></a>CButton::GetSplitInfo  
- Возвращает параметры, которые определяют, как средствами Windows текущего управления SplitButton.  
+##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
+ Retrieves parameters that determine how Windows draws the current split button control.  
   
 ```  
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[выходной] `pInfo`|Указатель на [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры, который получает сведения о текущем управления SplitButton. Вызывающий объект отвечает за выделение структуры.|  
+|[out] `pInfo`|Pointer to a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure that receives information about the current split button control. The caller is responsible for allocating the structure.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Этот метод отправляет [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message, which is described in the Windows SDK.  
   
-##  <a name="getsplitsize"></a>CButton::GetSplitSize  
- Возвращает прямоугольник, ограничивающий компонента раскрывающегося списка для текущего управления SplitButton.  
+##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
+ Retrieves the bounding rectangle of the drop-down component of the current split button control.  
   
 ```  
 BOOL GetSplitSize(LPSIZE pSize) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[выходной] `pSize`|Указатель на [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает описание прямоугольника.|  
+|[out] `pSize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that receives the description of a rectangle.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- При расширении управления SplitButton отображения раскрывающегося списка компонентами, такими как элемент управления список или элемент управления страничного навигатора. Этот метод возвращает ограничивающий прямоугольник, содержащий компонент раскрывающегося списка.  
+ When the split button control is expanded, it can display a drop-down component such as a list control or pager control. This method retrieves the bounding rectangle that contains the drop-down component.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_SIZE` флаг, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. При возврате функция сообщения, этот метод возвращает прямоугольник, ограничивающий из `size` член структуры.  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_SIZE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the bounding rectangle from the `size` member of the structure.  
   
-##  <a name="getsplitstyle"></a>CButton::GetSplitStyle  
- Извлекает стили кнопок разбиение, определяющие текущего управления SplitButton.  
+##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
+ Retrieves the split button styles that define the current split button control.  
   
 ```  
 UINT GetSplitStyle() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Побитовое сочетание стилей кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры.  
+### <a name="return-value"></a>Return Value  
+ A bitwise combination of split button styles. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Стили кнопок разбиение укажите выравнивание, пропорций и графическом формате, с которым значок кнопки разделения средствами Windows.  
+ The split button styles specify the alignment, aspect ratio, and graphical format with which Windows draws a split button icon.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_STYLE` флаг, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. При возврате функция сообщения, этот метод получает стили кнопок разбиение из `uSplitStyle` член структуры.  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_STYLE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the split button styles from the `uSplitStyle` member of the structure.  
   
-##  <a name="getstate"></a>CButton::GetState  
- Возвращает состояние элемента управления button.  
+##  <a name="getstate"></a>  CButton::GetState  
+ Retrieves the state of a button control.  
   
 ```  
 UINT GetState() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Битовое поле, которое содержит комбинацию значений, которые указывают текущее состояние элемента управления button. В следующей таблице перечислены возможные значения.  
+### <a name="return-value"></a>Return Value  
+ A bit field that contains the combination of values that indicate the current state of a button control. The following table lists possible values.  
   
-|Состояние кнопки|Значение|Описание|  
+|Button State|Value|Description|  
 |------------------|-----------|-----------------|  
-|`BST_UNCHECKED`|0x0000|Начальное состояние.|  
-|`BST_CHECKED`|0x0001|Установлен кнопке.|  
-|`BST_INDETERMINATE`|0x0002|Состояние — неопределенное (возможно только если элемент управления button имеет три состояния).|  
-|`BST_PUSHED`|0x0004|Кнопка нажата.|  
-|`BST_FOCUS`|0x0008|Этот элемент управления имеет фокус.|  
+|`BST_UNCHECKED`|0x0000|The initial state.|  
+|`BST_CHECKED`|0x0001|The button control is checked.|  
+|`BST_INDETERMINATE`|0x0002|The state is indeterminate (only possible when the button control has three states).|  
+|`BST_PUSHED`|0x0004|The button control is pressed.|  
+|`BST_FOCUS`|0x0008|The button control has the focus.|  
   
-### <a name="remarks"></a>Примечания  
- Элемент управления "Кнопка" с `BS_3STATE` или `BS_AUTO3STATE` стиль кнопки создает флажок для третьего состояния, которая называется неопределенное состояние. Неопределенное состояние указывает, что флажок не установлен и не снят флажок.  
+### <a name="remarks"></a>Remarks  
+ A button control with the `BS_3STATE` or `BS_AUTO3STATE` button style creates a check box that has a third state that is named the indeterminate state. The indeterminate state indicates that the check box is neither checked nor unchecked.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="gettextmargin"></a>CButton::GetTextMargin  
- Этот метод вызывается для получения текстового поля `CButton` объекта.  
+##  <a name="gettextmargin"></a>  CButton::GetTextMargin  
+ Call this method to get the text margin of the `CButton` object.  
   
 ```  
 BOOL GetTextMargin(RECT* pmargin);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pmargin`  
- Указатель на размер текстового поля `CButton` объекта.  
+ A pointer to the text margin of the `CButton` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает текстовое поле.  
+### <a name="return-value"></a>Return Value  
+ Returns the text margin.  
   
-### <a name="remarks"></a>Примечания  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="remarks"></a>Remarks  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу **BCM_GETTEXTMARGIN** сообщения, как описано в [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) раздел [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_GETTEXTMARGIN** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="setbitmap"></a>CButton::SetBitmap  
- Вызовите эту функцию-член для связывания новое растровое изображение с помощью кнопки.  
+##  <a name="setbitmap"></a>  CButton::SetBitmap  
+ Call this member function to associate a new bitmap with the button.  
   
 ```  
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hBitmap`  
- Дескриптор растрового изображения.  
+ The handle of a bitmap.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор растрового изображения, ранее назначенный данной кнопке.  
+### <a name="return-value"></a>Return Value  
+ The handle of a bitmap previously associated with the button.  
   
-### <a name="remarks"></a>Примечания  
- Битовая карта будет автоматически помещается на лицевой стороне кнопки, по центру по умолчанию. Если растровое изображение слишком велико для кнопки, он будет обрезан по обеим сторонам. Можно выбрать другие параметры выравнивания, включая следующие:  
+### <a name="remarks"></a>Remarks  
+ The bitmap will be automatically placed on the face of the button, centered by default. If the bitmap is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
   
 - **BS_TOP**  
   
@@ -580,15 +607,15 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
 - **BS_VCENTER**  
   
- В отличие от [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), которая использует четыре растровые изображения на кнопке, `SetBitmap` использует только один растрового изображения на кнопке. При нажатии этой кнопки появляется точечный рисунок необходимо сдвинуть вниз и вправо.  
+ Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetBitmap` uses only one bitmap per the button. When the button is pressed, the bitmap appears to shift down and to the right.  
   
- Вы отвечаете за освобождая растрового изображения, когда вы завершили работу с ним.  
+ You are responsible for releasing the bitmap when you are done with it.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="setbuttonstyle"></a>CButton::SetButtonStyle  
- Изменяет стиль кнопки.  
+##  <a name="setbuttonstyle"></a>  CButton::SetButtonStyle  
+ Changes the style of a button.  
   
 ```  
 void SetButtonStyle(
@@ -596,58 +623,58 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- Указывает [кнопку стиль](../../mfc/reference/button-styles.md).  
+ Specifies the [button style](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
  `bRedraw`  
- Указывает, является ли кнопки перерисовку. Ненулевое значение — перерисовывает кнопку. Значение 0 не перерисовывает кнопки. По умолчанию перерисовке кнопки.  
+ Specifies whether the button is to be redrawn. A nonzero value redraws the button. A 0 value does not redraw the button. The button is redrawn by default.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `GetButtonStyle` функция-член для извлечения стиль кнопки. Младшее слово стиля "Завершить" соответствует стилю кнопками.  
+### <a name="remarks"></a>Remarks  
+ Use the `GetButtonStyle` member function to retrieve the button style. The low-order word of the complete button style is the button-specific style.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="setcheck"></a>CButton::SetCheck  
- Устанавливает или сбрасывает состояние флажка "переключатель" или "флажок".  
+##  <a name="setcheck"></a>  CButton::SetCheck  
+ Sets or resets the check state of a radio button or check box.  
   
 ```  
 void SetCheck(int nCheck);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nCheck`  
- Указывает состояние проверки. Этот параметр может иметь одно из следующих значений:  
+ Specifies the check state. This parameter can be one of the following:  
   
-|Значение|Значение|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|Задайте состояние кнопки, снимите флажок.|  
-|**BST_CHECKED**|Задайте состояние кнопки для проверки.|  
-|**BST_INDETERMINATE**|Значение неопределенное состояние кнопки. Это значение может использоваться только в том случае, если кнопка имеет **BS_3STATE** или **BS_AUTO3STATE** стиля.|  
+|**BST_UNCHECKED**|Set the button state to unchecked.|  
+|**BST_CHECKED**|Set the button state to checked.|  
+|**BST_INDETERMINATE**|Set the button state to indeterminate. This value can be used only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style.|  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член не оказывает влияния на кнопки.  
+### <a name="remarks"></a>Remarks  
+ This member function has no effect on a pushbutton.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="setcursor"></a>CButton::SetCursor  
- Вызовите эту функцию-член, чтобы связать новый курсор с кнопки.  
+##  <a name="setcursor"></a>  CButton::SetCursor  
+ Call this member function to associate a new cursor with the button.  
   
 ```  
 HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hCursor`  
- Дескриптор курсора.  
+ The handle of a cursor.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор курсора, ранее назначенный данной кнопке.  
+### <a name="return-value"></a>Return Value  
+ The handle of a cursor previously associated with the button.  
   
-### <a name="remarks"></a>Примечания  
- Курсор автоматически помещается на лицевой стороне кнопки, по центру по умолчанию. Если курсор находится слишком велик для кнопки, он будет обрезан по обеим сторонам. Можно выбрать другие параметры выравнивания, включая следующие:  
+### <a name="remarks"></a>Remarks  
+ The cursor will be automatically placed on the face of the button, centered by default. If the cursor is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
   
 - **BS_TOP**  
   
@@ -661,79 +688,79 @@ HCURSOR SetCursor(HCURSOR hCursor);
   
 - **BS_VCENTER**  
   
- В отличие от [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), которая использует четыре растровые изображения на кнопке, `SetCursor` использует только один курсор на кнопке. При нажатии кнопки курсор отображается смещения вниз и вправо.  
+ Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetCursor` uses only one cursor per the button. When the button is pressed, the cursor appears to shift down and to the right.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="setdropdownstate"></a>CButton::SetDropDownState  
- Задает состояние текущего управления SplitButton раскрывающегося списка.  
+##  <a name="setdropdownstate"></a>  CButton::SetDropDownState  
+ Sets the drop-down state of the current split button control.  
   
 ```  
 BOOL SetDropDownState(BOOL fDropDown);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true`Чтобы задать `BST_DROPDOWNPUSHED` состояние; в противном случае — `false`.|  
+|[in] `fDropDown`|`true` to set `BST_DROPDOWNPUSHED` state; otherwise, `false`.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Элемент управления SplitButton имеет стиль `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON` и состоит из кнопки и стрелку раскрывающегося списка справа. Дополнительные сведения см. в разделе [стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb775951). Обычно когда пользователь щелкает стрелку раскрывающегося списка переходит в состояние раскрывающегося списка. Используйте этот метод, чтобы программно задать состояние раскрывающегося списка элемента управления. Стрелка раскрывающегося списка рисуется затененные для указания состояния.  
+### <a name="remarks"></a>Remarks  
+ A split button control has a style of `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON` and consists of a button and a drop-down arrow to its right. For more information, see [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951). Usually, the drop-down state is set when the user clicks the drop-down arrow. Use this method to programmatically set the drop-down state of the control. The drop-down arrow is drawn shaded to indicate the state.  
   
- Этот метод отправляет [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к управления SplitButton. Эта переменная используется в следующем примере.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control. This variable is used in the following example.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода задает состояние элемента управления SplitButton для указания, что помещается стрелку раскрывающегося списка.  
+### <a name="example"></a>Example  
+ The following code example sets the state of the split button control to indicate that the drop-down arrow is pushed.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
   
-##  <a name="setelevationrequired"></a>CButton::SetElevationRequired  
- Задает состояние текущего элемента управления кнопки для `elevation required`, которая необходима для элемента управления для отображения значка повышенных привилегий.  
+##  <a name="setelevationrequired"></a>  CButton::SetElevationRequired  
+ Sets the state of the current button control to `elevation required`, which is necessary for the control to display an elevated security icon.  
   
 ```  
 BOOL SetElevationRequired(BOOL fElevationRequired);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `fElevationRequired`|`true`Чтобы задать `elevation required` состояние; в противном случае — `false`.|  
+|[in] `fElevationRequired`|`true` to set `elevation required` state; otherwise, `false`.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Если элемент управления связями кнопку или команду требуются повышенные разрешения для выполнения действия, значение элемента управления `elevation required` состояние. Впоследствии появится значок щита управления учетных записей (UAC) в элементе управления. Дополнительные сведения см. в разделе «Контроль учетных записей пользователей» в [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+### <a name="remarks"></a>Remarks  
+ If a button or command link control requires elevated security permission to perform an action, set the control to `elevation required` state. Subsequently, Windows displays the User Account Control (UAC) shield icon on the control. For more information, see "User Account Control" at [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
   
- Этот метод отправляет [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) message, which is described in the Windows SDK.  
   
-##  <a name="seticon"></a>CButton::SetIcon  
- Вызовите эту функцию-член для присоединения к ним новый значок кнопки.  
+##  <a name="seticon"></a>  CButton::SetIcon  
+ Call this member function to associate a new icon with the button.  
   
 ```  
 HICON SetIcon(HICON hIcon);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hIcon`  
- Дескриптор значка.  
+ The handle of an icon.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор значка, ранее назначенный данной кнопке.  
+### <a name="return-value"></a>Return Value  
+ The handle of an icon previously associated with the button.  
   
-### <a name="remarks"></a>Примечания  
- Значок будет автоматически помещается на лицевой стороне кнопки, по центру по умолчанию. Если значок слишком велик для кнопки, он будет обрезан по обеим сторонам. Можно выбрать другие параметры выравнивания, включая следующие:  
+### <a name="remarks"></a>Remarks  
+ The icon will be automatically placed on the face of the button, centered by default. If the icon is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
   
 - **BS_TOP**  
   
@@ -747,245 +774,245 @@ HICON SetIcon(HICON hIcon);
   
 - **BS_VCENTER**  
   
- В отличие от [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), которая использует четыре растровые изображения на кнопке, `SetIcon` использует только один значок на кнопке. При нажатии кнопки, значок отображается для сдвига вниз и вправо.  
+ Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetIcon` uses only one icon per the button. When the button is pressed, the icon appears to shift down and to the right.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="setimagelist"></a>CButton::SetImageList  
- Вызовите этот метод, чтобы задать список изображений `CButton` объекта.  
+##  <a name="setimagelist"></a>  CButton::SetImageList  
+ Call this method to set the image list of the `CButton` object.  
   
 ```  
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pbuttonImagelist`  
- Указатель на новый список изображений.  
+ A pointer to the new image list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу **BCM_SETIMAGELIST** сообщения, как описано в [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) раздел [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_SETIMAGELIST** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="setnote"></a>CButton::SetNote  
- Задает текст для текущей команды управления ссылками.  
+##  <a name="setnote"></a>  CButton::SetNote  
+ Sets the note text for the current command link control.  
   
 ```  
 BOOL SetNote(LPCTSTR lpszNote);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `lpszNote`|Указатель на строку Юникода, заданный как текст для команды управления ссылками.|  
+|[in] `lpszNote`|Pointer to a Unicode string that is set as the note text for the command link control.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_COMMANDLINK` или `BS_DEFCOMMANDLINK`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
   
- Этот метод отправляет [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_cmdLink`, который используется для программного доступа к команды управления ссылками. Эта переменная используется в следующем примере.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_cmdLink`, that is used to programmatically access the command link control. This variable is used in the following example.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода задает текст для команды управления ссылками.  
+### <a name="example"></a>Example  
+ The following code example sets the note text for the command link control.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
   
-##  <a name="setsplitglyph"></a>CButton::SetSplitGlyph  
- Связывает указанный глифа с текущего управления SplitButton.  
+##  <a name="setsplitglyph"></a>  CButton::SetSplitGlyph  
+ Associates a specified glyph with the current split button control.  
   
 ```  
 BOOL SetSplitGlyph(TCHAR chGlyph);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `chGlyph`|Символ, указывающий глиф для использования в качестве разбиение стрелку раскрывающегося списка.|  
+|[in] `chGlyph`|A character that specifies the glyph to use as the split button drop-down arrow.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с помощью элементов управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls that have the button style `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Глиф является физическое представление символа в определенном шрифте. `chGlyph` Параметр не используется в качестве глифа, но вместо этого используется для выбора глиф из набора глифов, определенная системой. Глиф стрелку раскрывающегося списка по умолчанию задается символ "6" и напоминает знак Юникода, который ЧЕРНЫМ вниз ТРЕУГОЛЬНИК (U + 25BC).  
+ A glyph is the physical representation of a character in a particular font. The `chGlyph` parameter is not used as the glyph, but is instead used to select a glyph from a set of system-defined glyphs. The default drop-down arrow glyph is specified by a character '6', and resembles the Unicode character BLACK DOWN-POINTING TRIANGLE (U+25BC).  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_GLYPH` флаг и `himlGlyph` член с `chGlyph` параметра, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_GLYPH` flag and the `himlGlyph` member with the `chGlyph` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-##  <a name="setsplitimagelist"></a>CButton::SetSplitImageList  
- Связывает [списка изображений](../../mfc/reference/cimagelist-class.md) с текущего управления SplitButton.  
+##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
+ Associates an [image list](../../mfc/reference/cimagelist-class.md) with the current split button control.  
   
 ```  
 BOOL SetSplitImageList(CImageList* pSplitImageList);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект для назначения текущего управления SplitButton.|  
+|[in] `pSplitImageList`|Pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object to assign to the current split button control.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_IMAGE` флаг и `himlGlyph` член с `pSplitImageList` параметра, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_IMAGE` flag and the `himlGlyph` member with the `pSplitImageList` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-##  <a name="setsplitinfo"></a>CButton::SetSplitInfo  
- Указывает параметры, которые определяют, как средствами Windows текущего управления SplitButton.  
+##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
+ Specifies parameters that determine how Windows draws the current split button control.  
   
 ```  
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pInfo`|Указатель на [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура, определяющая текущего управления SplitButton.|  
+|[in] `pInfo`|Pointer to a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure that defines the current split button control.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Этот метод отправляет [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к управления SplitButton.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода изменяется глифа, используемый для разбиения стрелку раскрывающегося списка. В примере подставляются глифа направленный вверх треугольник глифа направленный вниз треугольник по умолчанию. Значок, отображаемый зависит от символ, указанный в `himlGlyph` членом `BUTTON_SPLITINFO` структуры. Глиф направленный вниз треугольник указывается символ "6"и глиф направленный вверх треугольник указан символ ' 5'. Сравнение см. в разделе удобный метод, [CButton::SetSplitGlyph](#setsplitglyph).  
+### <a name="example"></a>Example  
+ The following code example changes the glyph that is used for the split button drop-down arrow. The example substitutes an up-pointing triangle glyph for the default down-pointing triangle glyph. The glyph that is displayed depends on the character that you specify in the `himlGlyph` member of the `BUTTON_SPLITINFO` structure. The down-pointing triangle glyph is specified by a character '6' and the up-pointing triangle glyph is specified by a character '5'. For comparison, see the convenience method, [CButton::SetSplitGlyph](#setsplitglyph).  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
   
-##  <a name="setsplitsize"></a>CButton::SetSplitSize  
- Задает ограничивающий прямоугольник компонента раскрывающегося списка для текущего управления SplitButton.  
+##  <a name="setsplitsize"></a>  CButton::SetSplitSize  
+ Sets the bounding rectangle of the drop-down component of the current split button control.  
   
 ```  
 BOOL SetSplitSize(LPSIZE pSize);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pSize`|Указатель на [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структура, описывающая ограничивающего прямоугольника.|  
+|[in] `pSize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that describes a bounding rectangle.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- При расширении управления SplitButton отображения раскрывающегося списка компонентами, такими как элемент управления список или элемент управления страничного навигатора. Этот метод задает размер ограничивающего прямоугольника, содержащего компонент раскрывающегося списка.  
+ When the split button control is expanded, it can display a drop-down component such as a list control or pager control. This method specifies the size of the bounding rectangle that contains the drop-down component.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_SIZE` флаг и `size` член с `pSize` параметра, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_SIZE` flag and the `size` member with the `pSize` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к управления SplitButton. Эта переменная используется в следующем примере.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control. This variable is used in the following example.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода удваивается объем разбиение стрелку раскрывающегося списка.  
+### <a name="example"></a>Example  
+ The following code example doubles the size of the split button drop-down arrow.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
   
-##  <a name="setsplitstyle"></a>CButton::SetSplitStyle  
- Задает стиль текущего управления SplitButton.  
+##  <a name="setsplitstyle"></a>  CButton::SetSplitStyle  
+ Sets the style of the current split button control.  
   
 ```  
 BOOL SetSplitStyle(UINT uSplitStyle);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|Побитовое сочетание стилей кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры.|  
+|[in] `uSplitStyle`|A bitwise combination of split button styles. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно использовать только с элементами управления, имеющих стиль кнопки `BS_SPLITBUTTON` или `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- Стили кнопок разбиение укажите выравнивание, пропорций и графическом формате, с которым значок кнопки разделения средствами Windows. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры.  
+ The split button styles specify the alignment, aspect ratio, and graphical format with which Windows draws a split button icon. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура с `BCSIF_STYLE` флаг и `uSplitStyle` член с `uSplitStyle` параметра, а затем отправляет, структуры в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_STYLE` flag and the `uSplitStyle` member with the `uSplitStyle` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к управления SplitButton.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода задает стиль разбиение стрелку раскрывающегося списка. `BCSS_ALIGNLEFT` Отображение стрелку слева от кнопки и `BCSS_STRETCH` стиль сохраняет пропорции стрелку раскрывающегося списка, при изменении размера кнопки.  
+### <a name="example"></a>Example  
+ The following code example sets the style of the split button drop-down arrow. The `BCSS_ALIGNLEFT` style displays the arrow on the left side of the button, and the `BCSS_STRETCH` style retains the drop-down arrow's proportions when you resize the button.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1;3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
   
-##  <a name="setstate"></a>CButton::SetState  
- Указывает, будет выделен элемент управления button или нет.  
+##  <a name="setstate"></a>  CButton::SetState  
+ Sets whether a button control is highlighted or not.  
   
 ```  
 void SetState(BOOL bHighlight);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bHighlight*  
- Указывает, будет ли отображаться кнопки. Ненулевое значение выделяет кнопки. значение 0 удаляет все выделение.  
+ Specifies whether the button is to be highlighted. A nonzero value highlights the button; a 0 value removes any highlighting.  
   
-### <a name="remarks"></a>Примечания  
- Выделение влияет на внешнее элемента управления button. Он не оказывает влияния на состояние флажка "переключатель" или "флажок".  
+### <a name="remarks"></a>Remarks  
+ Highlighting affects the exterior of a button control. It has no effect on the check state of a radio button or check box.  
   
- Элемент управления button автоматически выделяется, когда пользователь нажимает и удерживает левой кнопки мыши. Выделение удаляется, когда пользователь отпускает кнопку мыши.  
+ A button control is automatically highlighted when the user clicks and holds the left mouse button. The highlighting is removed when the user releases the mouse button.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CButton #9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="settextmargin"></a>CButton::SetTextMargin  
- Вызовите этот метод, чтобы задать размер текстового поля `CButton` объекта.  
+##  <a name="settextmargin"></a>  CButton::SetTextMargin  
+ Call this method to set the text margin of the `CButton` object.  
   
 ```  
 BOOL SetTextMargin(RECT* pmargin);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pmargin`  
- Указатель на поле новый текст.  
+ A pointer to the new text margin.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу **BCM_SETTEXTMARGIN** сообщения, как описано в [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) раздел [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_SETTEXTMARGIN** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [CComboBox-класс](../../mfc/reference/ccombobox-class.md)   
- [Класс CEdit](../../mfc/reference/cedit-class.md)   
- [CListBox-класс](../../mfc/reference/clistbox-class.md)   
- [Класс CScrollBar](../../mfc/reference/cscrollbar-class.md)   
- [Класс CStatic](../../mfc/reference/cstatic-class.md)   
- [Класс CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)   
- [Класс CDialog](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CBitmapButton Class](../../mfc/reference/cbitmapbutton-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

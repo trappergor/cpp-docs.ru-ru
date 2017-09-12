@@ -1,77 +1,95 @@
 ---
-title: "Страница &quot;Строки шаблонов документов&quot;, мастер добавления классов MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.mfc.simple.doctemp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Мастер добавления класса MFC, строки элементов управления документов"
+title: Document Template Strings, MFC Add Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.mfc.simple.doctemp
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Страница &quot;Строки шаблонов документов&quot;, мастер добавления классов MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a59d61f3fd4c0c08396be20dfc38dada842d41be
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта страница мастера доступна только для классов, отвечающих следующим критериям:  
+---
+# <a name="document-template-strings-mfc-add-class-wizard"></a>Document Template Strings, MFC Add Class Wizard
+This page of the wizard is available only for classes meeting the following criteria:  
   
--   Проект MFC поддерживает архитектуру документ\/представление.  
+-   The MFC project supports the document/view architecture.  
   
--   Базовым классом для нового класса является [CFormView](../../mfc/reference/cformview-class.md).  
+-   The base class of the new class is [CFormView](../../mfc/reference/cformview-class.md).  
   
--   Флажок **Генерировать ресурсы DocTemplate** установлен в разделе **Имена** [мастера классов MFC](../../mfc/reference/mfc-add-class-wizard.md).  
+-   The check box **Generate DocTemplate resources** is checked on the **Names** section of the [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md).  
   
- Мастер задает по умолчанию следующие значения, помогающие при проектировании и локализации представлений форм, а также управлении ими.  Поскольку большая часть шаблонов строк документов видимы пользователям формы и используются ими, они переводятся на **язык ресурса**, заданный на странице [Типы приложений](../Topic/Application%20Type,%20MFC%20Application%20Wizard.md) мастера приложений MFC при создании проекта.  
-  
-> [!NOTE]
->  Мастер не обеспечивает автоматическую поддержку печати для классов, производных от `CFormView`.  
-  
- Дополнительные сведения см. в разделе [Шаблоны документов и процесс создания документов и представлений](../../mfc/document-templates-and-the-document-view-creation-process.md).  
-  
-## Нелокализованные строки  
- Этот раздел относится к приложениям, создающим пользовательские документы.  Пользователям будет легче открывать и сохранять документы, если типу документа сопоставлены расширение файла и идентификатор типа файла.  Эти элементы не локализуются, поскольку используются системой, а не пользователем.  
-  
- **Расширение файла**  
- Задает расширение файла, связанное типом документа данного приложения Windows Forms.  По умолчанию за основу для расширения файла берется имя класса.  Например, если новый класс MFC называется **CWidget**, то по умолчанию файлам будет присваиваться расширение WID.  Расширение файла используется в файловых фильтрах и в диалоговых окнах **Открытие файла** и **Сохранение файла**.  
-  
- Если изменить расширение файла, это изменение отразится в поле **Имя фильтра**.  
+ The wizard provides defaults for the following values to help with forms view design, management, and localization. Because most document template strings are visible and used by the form's users, they are localized into the **Resource language** indicated in the [Application Types](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard when the project was created.  
   
 > [!NOTE]
->  При изменении заданного по умолчанию расширения файла не указывайте точку.  
+>  The wizard does not provide automatic printing support for classes derived from `CFormView`.  
   
- **ИД типа файла**  
- Задает метку для данного типа документа в реестре системы.  
+ See [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md) for more information.  
   
-## Локализованные строки  
- Создает строки, связанные с формами и документами, которые видны пользователям приложения и используются ими, и в этой связи локализуются.  
+## <a name="nonlocalized-strings"></a>Nonlocalized strings  
+ Applies to applications that create user documents. Users can open and save documents more easily if the document type has a file extension and a file type ID. These items are not localized because they are used by the system rather than by the user.  
   
- **Имя типа документа**  
- Задает имя типа документа, по которому могут группироваться документы данного приложения.  По умолчанию за основу для него берется имя класса.  Например, если новый класс MFC называется **CWidget**, то по умолчанию имя типа документа будет Widget.  Изменение значения по умолчанию не меняет какие\-либо другие параметры в этом диалоговом окне.  
+ **File extension**  
+ Sets the file extension associated with the document type for this forms application. The file extension default based on the class name. For example, if the new MFC class is named **CWidget**, by default, the file extension is .wid. The file extension is used in file filters and the **Open** and **Save as** dialog boxes.  
   
- **Имя фильтра**  
- Задает имя, которое пользователи смогут указывать для поиска файлов заданного типа  Этот параметр доступен в полях **Тип файла** и **Тип файлов** стандартных диалоговых окон Windows **Открыть** и **Сохранить как**.  По умолчанию это слово "файлы" и имя проекта, за которым следует расширение файла, указанное в поле **Расширение файла**.  Например, если проект называется Widget, а файлы имеют расширение WID, поле **Имя фильтра** будет по умолчанию содержать текст "Файлы Widget \(\*.wid\)".  
+ If you change the file extension, the change is reflected in the **Filter name** box.  
   
- **Короткое имя создаваемого файла**  
- Задает имя, отображаемое в стандартном диалоговом окне Windows `New`, если проект имеет более одного шаблона.  Если приложение является [сервером автоматизации](../../mfc/automation-servers.md), это имя используется в качестве краткого имени объекта автоматизации.  По умолчанию за основу для него берется имя класса.  
+> [!NOTE]
+>  If you change the default file extension, do not include the period.  
   
- **Длинное имя типа файла**  
- Задает имя типа файла в системном реестре.  Если приложение является сервером автоматизации, это имя используется в качестве длинного имени объекта автоматизации.  По умолчанию оно образуется из слова "Документ" и имени класса.  Например, для класса с именем **CWidget** поле **Длинное имя типа файла** будет содержать текст "Документ Widget".  
+ **File type ID**  
+ Sets the label for your document type in the system registry.  
   
- **Класс документа**  
- Указывает класс документа проекта.  По умолчанию это основной класс документа приложения, указанный на странице [Обзор созданных классов](../../mfc/reference/generated-classes-mfc-application-wizard.md) мастера приложений MFC.  Можно выбрать из списка другой класс, если вы добавляли в проект другие классы документов.  
+## <a name="localized-strings"></a>Localized strings  
+ Produces strings associated with the forms and documents that are read and used by the application's users, so the strings are localized.  
   
-## См. также  
- [Мастер добавления классов MFC](../../mfc/reference/mfc-add-class-wizard.md)   
- [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)   
- [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)
+ **Doc type name**  
+ Identifies the type of document under which a document of the application can be grouped. By default, it is based on the name of the class. For example, if the new MFC class is named **CWidget**, by default, the document type name is Widget. Changing the default does not change any other options in this dialog box.  
+  
+ **Filter name**  
+ Sets the name that users can indicate to find files of the specified file type. This option is available from the **Files of type** and **Save as type** options in the standard Windows **Open** and **Save as** dialog boxes. By default, the name is based on the project name plus Files, followed by the extension indicated in **File Extension**. For example, if your project is named Widget, and the file extension is .wid, the **Filter name** is Widget Files (*.wid) by default.  
+  
+ **File new short name**  
+ Sets the name appearing in the standard Windows `New` dialog box, if the project has more than one document template. If your application is an [Automation server](../../mfc/automation-servers.md), this name is used as the short name of your Automation object. By default, this name is based on the class name.  
+  
+ **File type long name**  
+ Sets the file type name in the system registry. If your application is an Automation server, this name is used as the long name of your Automation object. By default, this name is based on the class name plus .Document. For example, if the class name is **CWidget**, the **File type long name** is Widget Document.  
+  
+ **Document class**  
+ Indicates the project's document class. By default, this class is the main application's document class, as listed in the [Review Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the MFC Application Wizard. You can select another document class from the list, if you have added other document classes in the project.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC Add Class Wizard](../../mfc/reference/mfc-add-class-wizard.md)   
+ [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

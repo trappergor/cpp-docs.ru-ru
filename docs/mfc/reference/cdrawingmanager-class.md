@@ -1,5 +1,5 @@
 ---
-title: "Класс CDrawingManager | Документы Microsoft"
+title: CDrawingManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,7 +39,31 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDrawingManager class
+- CDrawingManager [MFC], CDrawingManager
+- CDrawingManager [MFC], CreateBitmap_32
+- CDrawingManager [MFC], DrawAlpha
+- CDrawingManager [MFC], DrawRotated
+- CDrawingManager [MFC], DrawEllipse
+- CDrawingManager [MFC], DrawGradientRing
+- CDrawingManager [MFC], DrawRect
+- CDrawingManager [MFC], DrawShadow
+- CDrawingManager [MFC], Fill4ColorsGradient
+- CDrawingManager [MFC], FillGradient
+- CDrawingManager [MFC], FillGradient2
+- CDrawingManager [MFC], GrayRect
+- CDrawingManager [MFC], HighlightRect
+- CDrawingManager [MFC], HLStoRGB_ONE
+- CDrawingManager [MFC], HLStoRGB_TWO
+- CDrawingManager [MFC], HSVtoRGB
+- CDrawingManager [MFC], HuetoRGB
+- CDrawingManager [MFC], MirrorRect
+- CDrawingManager [MFC], PixelAlpha
+- CDrawingManager [MFC], PrepareShadowMask
+- CDrawingManager [MFC], RGBtoHSL
+- CDrawingManager [MFC], RGBtoHSV
+- CDrawingManager [MFC], SetAlphaPixel
+- CDrawingManager [MFC], SetPixel
+- CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 caps.latest.revision: 30
 author: mikeblome
@@ -59,84 +83,84 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: e34373651ccd652cccbcab044ab2a8fc60c30401
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1f9d78d61698baae62e32e8f3a4b189845ca74f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdrawingmanager-class"></a>Класс CDrawingManager
-`CDrawingManager` Класс реализует сложные алгоритмы рисования.  
+# <a name="cdrawingmanager-class"></a>CDrawingManager Class
+The `CDrawingManager` class implements complex drawing algorithms.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDrawingManager : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDrawingManager::CDrawingManager](#cdrawingmanager)|Создает объект `CDrawingManager`.|  
-|`CDrawingManager::~CDrawingManager`|Деструктор.|  
+|[CDrawingManager::CDrawingManager](#cdrawingmanager)|Constructs a `CDrawingManager` object.|  
+|`CDrawingManager::~CDrawingManager`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Создает 32-разрядных аппаратно независимый точечный рисунок (DIB), приложения могут выполнять запись напрямую.|  
-|[CDrawingManager::DrawAlpha](#drawalpha)|Отображает растровых изображений, имеющих пикселей прозрачным или полупрозрачным.|  
-|[CDrawingManager::DrawRotated](#drawrotated)|Поворачивает исходного контроллера домена содержимое внутри данного прямоугольника по +/-90 градусов|  
-|[CDrawingManager::DrawEllipse](#drawellipse)|Рисует эллипс, предоставленных цветами, заполнения и границы.|  
-|[CDrawingManager::DrawGradientRing](#drawgradientring)|Рисует кольцо и заполняет его с цветным градиентом.|  
-|[CDrawingManager::DrawLine CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Проводит линию.|  
-|[CDrawingManager::DrawRect](#drawrect)|Рисование прямоугольника с помощью предоставленного цвета заливки и границы.|  
-|[CDrawingManager::DrawShadow](#drawshadow)|Рисует тень для прямоугольной области.|  
-|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Заполняет прямоугольную область два цвета градиента.|  
-|[CDrawingManager::FillGradient](#fillgradient)|Заполняет указанный цвет градиента прямоугольной области.|  
-|[CDrawingManager::FillGradient2](#fillgradient2)|Заполняет указанный цвет градиента прямоугольной области. Также указывается направление изменение цвета градиента.|  
-|[CDrawingManager::GrayRect](#grayrect)|Заполняет указанный серый цвет прямоугольника.|  
-|[CDrawingManager::HighlightRect](#highlightrect)|Выделяет прямоугольной области.|  
-|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Преобразует цвет из представления HLS в RGB.|  
-|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Преобразует цвет из представления HLS в RGB.|  
-|[CDrawingManager::HSVtoRGB](#hsvtorgb)|Преобразует цвет из представления HSV в RGB.|  
-|[CDrawingManager::HuetoRGB](#huetorgb)|Вспомогательный метод, который преобразует значение оттенка красного, зеленого или синего компонента.|  
-|[CDrawingManager::MirrorRect](#mirrorrect)|Зеркальное отражение прямоугольной области.|  
-|[CDrawingManager::PixelAlpha](#pixelalpha)|Вспомогательный метод, который определяет конечный цвет для полупрозрачными пикселей.|  
-|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Создает точечного рисунка, который можно использовать в качестве тень.|  
-|[CDrawingManager::RGBtoHSL](#rgbtohsl)|Преобразует цвет из представления RGB в HSL.|  
-|[CDrawingManager::RGBtoHSV](#rgbtohsv)|Преобразует цвет из представления RGB в HSV.|  
-|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Вспомогательный метод, который сделает полупрозрачные пикселя в точечном рисунке.|  
-|[CDrawingManager::SetPixel](#setpixel)|Вспомогательный метод, что изменения одной точки в точечном рисунке указанным цветом.|  
-|[CDrawingManager::SmartMixColors](#smartmixcolors)|Объединяет два цвета на основе взвешенных коэффициента.|  
+|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Creates a 32-bit device-independent bitmap (DIB) that applications can write to directly.|  
+|[CDrawingManager::DrawAlpha](#drawalpha)|Displays bitmaps that have transparent or semitransparent pixels.|  
+|[CDrawingManager::DrawRotated](#drawrotated)|Rotates a source DC content inside the given rectangle by +/- 90 degrees|  
+|[CDrawingManager::DrawEllipse](#drawellipse)|Draws an ellipse with the supplied fill and border colors.|  
+|[CDrawingManager::DrawGradientRing](#drawgradientring)|Draws a ring and fills it with a color gradient.|  
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Draws a line.|  
+|[CDrawingManager::DrawRect](#drawrect)|Draws a rectangle with the supplied fill and border colors.|  
+|[CDrawingManager::DrawShadow](#drawshadow)|Draws a shadow for a rectangular area.|  
+|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Fills a rectangular area with two color gradients.|  
+|[CDrawingManager::FillGradient](#fillgradient)|Fills a rectangular area with a specified color gradient.|  
+|[CDrawingManager::FillGradient2](#fillgradient2)|Fills a rectangular area with a specified color gradient. The direction of the gradient's color change is also specified.|  
+|[CDrawingManager::GrayRect](#grayrect)|Fills a rectangle with a specified gray color.|  
+|[CDrawingManager::HighlightRect](#highlightrect)|Highlights a rectangular area.|  
+|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Converts a color from a HLS representation to a RGB representation.|  
+|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Converts a color from a HLS representation to a RGB representation.|  
+|[CDrawingManager::HSVtoRGB](#hsvtorgb)|Converts a color from a HSV representation to a RGB representation.|  
+|[CDrawingManager::HuetoRGB](#huetorgb)|Helper method that converts a hue value to a red, green, or blue component.|  
+|[CDrawingManager::MirrorRect](#mirrorrect)|Flips a rectangular area.|  
+|[CDrawingManager::PixelAlpha](#pixelalpha)|Helper method that determines the final color for a semitransparent pixel.|  
+|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Creates a bitmap that can be used as a shadow.|  
+|[CDrawingManager::RGBtoHSL](#rgbtohsl)|Converts a color from a RGB representation to a HSL representation.|  
+|[CDrawingManager::RGBtoHSV](#rgbtohsv)|Converts a color from a RGB representation to a HSV representation.|  
+|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Helper method that colors a partially transparent pixel in a bitmap.|  
+|[CDrawingManager::SetPixel](#setpixel)|Helper method that changes a single pixel in a bitmap to the specified color.|  
+|[CDrawingManager::SmartMixColors](#smartmixcolors)|Combines two colors based on a weighted ratio.|  
   
-## <a name="remarks"></a>Примечания  
- `CDrawingManager` Класс предоставляет функции для рисования тени, цветовые градиенты и выделенные прямоугольники. Он также выполняет альфа смешения. Этот класс можно использовать для непосредственного изменения пользовательского интерфейса приложения.  
+## <a name="remarks"></a>Remarks  
+ The `CDrawingManager` class provides functions for drawing shadows, color gradients, and highlighted rectangles. It also performs alpha-blending. You can use this class to directly change your application's UI.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
  `CDrawingManager`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdrawmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdrawmanager.h  
   
-##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
- Создает [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) объекта.  
+##  <a name="cdrawingmanager"></a>  CDrawingManager::CDrawingManager  
+ Constructs a [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) object.  
   
 ```  
 CDrawingManager(CDC& dc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dc`  
- Ссылка на контекст устройства. `CDrawingManager` Использует этот контекст для рисования.  
+ A reference to a device context. The `CDrawingManager` uses this context for drawing.  
   
-##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
- Создает 32-разрядных аппаратно независимый точечный рисунок (DIB), приложения могут выполнять запись напрямую.  
+##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
+ Creates a 32-bit device-independent bitmap (DIB) that applications can write to directly.  
   
 ```  
 static HBITMAP __stdcall CreateBitmap_32(
@@ -148,24 +172,24 @@ static HBITMAP __stdcall CreateBitmap_32(
     COLORREF clrTransparent = -1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `size`|Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) параметра, который определяет размер растрового изображения.|  
-|[выходной] `pBits`|Указатель на указатель на данные, который получает расположение DIB-разрядных значений.|  
-|`bitmap`|Дескриптор для исходного растрового изображения|  
-|`clrTransparent`|Значение RGB, указав прозрачный цвет исходного растрового изображения.|  
+|Parameter|Description|  
+|[in] `size`|A [CSize](../../atl-mfc-shared/reference/csize-class.md) parameter that indicates the size of the bitmap.|  
+|[out] `pBits`|A pointer to a data pointer that receives the location of the DIB's bit values.|  
+|`bitmap`|A handle to the original bitmap|  
+|`clrTransparent`|An RGB value specifying transparent color of the original bitmap.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор вновь созданного точечного DIB, если этот метод выполнен успешно; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A handle to the newly created DIB bitmap if this method is successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения о способах создания растрового изображения DIB см. в разделе [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+### <a name="remarks"></a>Remarks  
+ For more information about how to create a DIB bitmap, see [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
   
-##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
- Отображает растровых изображений, имеющих пикселей прозрачным или полупрозрачным.  
+##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
+ Displays bitmaps that have transparent or semitransparent pixels.  
   
 ```  
 void DrawAlpha(
@@ -175,24 +199,24 @@ void DrawAlpha(
     const CRect& rectSrc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDstDC`  
- Указатель на контекст устройства для назначения.  
+ A pointer to the device context for the destination.  
   
  [in] `rectDst`  
- Прямоугольника назначения.  
+ The destination rectangle.  
   
  [in] `pSrcDC`  
- Указатель на контекст устройства для источника.  
+ A pointer to the device context for the source.  
   
  [in] `rectSrc`  
- Исходного прямоугольника.  
+ The source rectangle.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод выполняет альфа смешения для двух растровых изображений. Дополнительные сведения о альфа смешения см. в разделе [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) в Windows SDK.  
+### <a name="remarks"></a>Remarks  
+ This method performs alpha-blending for two bitmaps. For more information about alpha-blending, see [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) in the Windows SDK.  
   
-##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
- Рисует эллипс, предоставленных цветами, заполнения и границы.  
+##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
+ Draws an ellipse with the supplied fill and border colors.  
   
 ```  
 void DrawEllipse(
@@ -201,21 +225,21 @@ void DrawEllipse(
     COLORREF clrLine);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Ограничивающий прямоугольник для эллипса.  
+ The bounding rectangle for the ellipse.  
   
  [in] `clrFill`  
- Цвет, который использует этот метод для заполнения эллипса.  
+ The color this method uses to fill the ellipse.  
   
  [in] `clrLine`  
- Цвет, этот метод использует в качестве границы эллипса.  
+ The color this method uses as the border of the ellipse.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращается без Рисование эллипса, если любой цвет задан равным -1. Он также возвращает без Рисование эллипса 0 в случае любого размера, ограничивающего прямоугольника.  
+### <a name="remarks"></a>Remarks  
+ This method returns without drawing an ellipse if either color is set to -1. It also returns without drawing an ellipse if either dimension of the bounding rectangle is 0.  
   
-##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
- Рисует кольцо и заполняет его с цветным градиентом.  
+##  <a name="drawgradientring"></a>  CDrawingManager::DrawGradientRing  
+ Draws a ring and fills it with a color gradient.  
   
 ```  
 BOOL DrawGradientRing(
@@ -228,36 +252,36 @@ BOOL DrawGradientRing(
     COLORREF clrFace = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) параметр, который определяет границы для градиента кольца.  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md) parameter that specifies the boundary for the gradient ring.  
   
  [in] `colorStart`  
- Первый цвет градиента.  
+ The first color for the gradient.  
   
  [in] `colorFinish`  
- Последний цвет градиента.  
+ The last color for the gradient.  
   
  [in] `colorBorder`  
- Цвет границы.  
+ The color of the border.  
   
  [in] `nAngle`  
- Параметр, который определяет начальный угол градиентной рисования. Это значение должно быть в диапазоне от 0 до 360.  
+ A parameter that specifies the initial gradient drawing angle. This value should be between 0 and 360.  
   
  [in] `nWidth`  
- Ширина границы для кольца.  
+ The width of the border for the ring.  
   
  [in] `clrFace`  
- Цвет внутреннего кольца.  
+ The color of the interior of the ring.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Прямоугольник, определяемый `rect` должен быть по крайней мере 5 точек и шириной в 5 пикселей в высоту.  
+### <a name="remarks"></a>Remarks  
+ The rectangle defined by `rect` must be at least 5 pixels wide and 5 pixels high.  
   
-##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
- Проводит линию.  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA  
+ Draws a line.  
   
 ```  
 void DrawLine(
@@ -275,22 +299,22 @@ void DrawLineA(
     COLORREF clrLine);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `x1`|Координата x, с которой начинается строка.|  
-|[in] `y1`|Координата y, с которой начинается строка.|  
-|[in] `x2`|Координата x, где строка завершается.|  
-|[in] `y2`|Координата y, где строка завершается.|  
-|[in] `clrLine`|Цвет линии.|  
+|Parameter|Description|  
+|[in] `x1`|The x coordinate where the line starts.|  
+|[in] `y1`|The y coordinate where the line starts.|  
+|[in] `x2`|The x coordinate where the line ends.|  
+|[in] `y2`|The y coordinate where the line ends.|  
+|[in] `clrLine`|The color of the line.|  
   
-### <a name="remarks"></a>Примечания  
- Этот метод завершается ошибкой, если `clrLine` равно -1.  
+### <a name="remarks"></a>Remarks  
+ This method fails if `clrLine` equals -1.  
   
-##  <a name="drawrect"></a>CDrawingManager::DrawRect  
- Рисование прямоугольника с помощью предоставленного цвета заливки и границы.  
+##  <a name="drawrect"></a>  CDrawingManager::DrawRect  
+ Draws a rectangle with the supplied fill and border colors.  
   
 ```  
 void DrawRect(
@@ -299,21 +323,21 @@ void DrawRect(
     COLORREF clrLine);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Границы для прямоугольника.  
+ The boundaries for the rectangle.  
   
  [in] `clrFill`  
- Цвет, который использует этот метод для заполнения прямоугольника.  
+ The color this method uses to fill the rectangle.  
   
  [in] `clrLine`  
- Цвет, этот метод использует для границы прямоугольника.  
+ The color this method uses for the border of the rectangle.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращается без Рисование прямоугольника, если любой цвет задан равным -1. Он также возвращает, если измерения, либо прямоугольника равен 0.  
+### <a name="remarks"></a>Remarks  
+ This method returns without drawing a rectangle if either color is set to -1. It also returns if either dimension of the rectangle is 0.  
   
-##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
- Рисует тень для прямоугольной области.  
+##  <a name="drawshadow"></a>  CDrawingManager::DrawShadow  
+ Draws a shadow for a rectangular area.  
   
 ```  
 BOOL DrawShadow(
@@ -327,48 +351,48 @@ BOOL DrawShadow(
     BOOL bRightShadow = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Прямоугольная область в приложении. Рисование manager будет нарисовать тень под этой области.  
+ A rectangular area in your application. The drawing manager will draw a shadow underneath this area.  
   
  [in] `nDepth`  
- Ширина и высота тени.  
+ The width and height of the shadow.  
   
  [in] `iMinBrightness`  
- Минимальная яркости тени.  
+ The minimum brightness of the shadow.  
   
  [in] `iMaxBrightness`  
- Максимальная яркость тени.  
+ The maximum brightness of the shadow.  
   
  [in] `pBmpSaveBottom`  
- Указатель точечного рисунка, который содержит изображение, чтобы в нижней части тени.  
+ A pointer to a bitmap that contains the image for the bottom part of the shadow.  
   
  [in] `pBmpSaveRight`  
- Указатель точечного рисунка, который содержит изображение, чтобы тени, рисуется с правой стороны прямоугольника.  
+ A pointer to a bitmap that contains the image for the shadow that is drawn on the right side of the rectangle.  
   
  [in] `clrBase`  
- Цвет тени.  
+ The color of the shadow.  
   
  [in] `bRightShadow`  
- Логический параметр, указывает способ рисования тени. Если `bRightShadow` — `TRUE`, `DrawShadow` рисует тень правой стороны прямоугольника.  
+ A Boolean parameter that indicates how the shadow is drawn. If `bRightShadow` is `TRUE`, `DrawShadow` draws a shadow on the right side of the rectangle.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- С помощью параметров можно предоставить два допустимых растровые изображения для нижнего и правого shadows `pBmpSaveBottom` и `pBmpSaveRight`. Если эти [CBitmap](../../mfc/reference/cbitmap-class.md) объекты имеют присоединяемый объект GDI `DrawShadow` будет использовать эти растровых изображений как тени. Если `CBitmap` параметры не имеют присоединяемый объект GDI `DrawShadow` рисует тени и присоединяет точечных рисунков с параметрами. В последующих вызовов `DrawShadow`, вы можете предоставить эти битовые карты, чтобы ускорить процесс рисования. Дополнительные сведения о `CBitmap` классов и объекты GDI, в разделе [графические объекты](../../mfc/graphic-objects.md).  
+### <a name="remarks"></a>Remarks  
+ You can provide two valid bitmaps for the bottom and right shadows by using the parameters `pBmpSaveBottom` and `pBmpSaveRight`. If these [CBitmap](../../mfc/reference/cbitmap-class.md) objects have an attached GDI object, `DrawShadow` will use those bitmaps as the shadows. If the `CBitmap` parameters do not have an attached GDI object, `DrawShadow` draws the shadow and attaches the bitmaps to the parameters. In future calls to `DrawShadow`, you can provide these bitmaps to speed up the drawing process. For more information about the `CBitmap` class and GDI objects, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
- Если выполняется любое из этих параметров `NULL`, `DrawShadow` автоматически будет отрисовка теней.  
+ If either of these parameters is `NULL`, `DrawShadow` will automatically draw the shadow.  
   
- Если задать `bRightShadow` для `FALSE`, снизу и слева от прямоугольной области, будут отрисовываться тени.  
+ If you set `bRightShadow` to `FALSE`, the shadow will be drawn underneath and to the left of the rectangular area.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `DrawShadow` метод `CDrawingManager` класса. Этот фрагмент кода является частью [Prop лист демонстрационный пример](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `DrawShadow` method of the `CDrawingManager` class. This code snippet is part of the [Prop Sheet Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_PropSheetDemo #1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
- Заполняет прямоугольную область два цвета градиента.  
+##  <a name="fill4colorsgradient"></a>  CDrawingManager::Fill4ColorsGradient  
+ Fills a rectangular area with two color gradients.  
   
 ```  
 void Fill4ColorsGradient(
@@ -381,35 +405,35 @@ void Fill4ColorsGradient(
     int nPercentage = 50);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Прямоугольник для заливки.  
+ The rectangle to fill.  
   
  [in] `colorStart1`  
- Цвет для цветового градиента первой.  
+ The initial color for the first color gradient.  
   
  [in] `colorFinish1`  
- Конечный цвет для первый цвет градиента.  
+ The final color for the first color gradient.  
   
  [in] `colorStart2`  
- Цвет для второй цвет градиента.  
+ The initial color for the second color gradient.  
   
  [in] `colorFinish2`  
- Конечный цвет для второй цвет градиента.  
+ The final color for the second color gradient.  
   
  [in] `bHorz`  
- Логический параметр, указывает ли `Fill4ColorsGradient` горизонтальный или Вертикальный градиент цветов. `TRUE`Указывает горизонтальный градиент.  
+ A Boolean parameter that indicates whether `Fill4ColorsGradient` colors a horizontal or vertical gradient. `TRUE` indicates a horizontal gradient.  
   
  [in] `nPercentage`  
- Целое число от 0 до 100. Это значение указывает процент прямоугольника для заливки с первый цвет градиента.  
+ An integer from 0-100. This value indicates the percentage of the rectangle to fill with the first color gradient.  
   
-### <a name="remarks"></a>Примечания  
- При заполнении прямоугольник с двумя цветовые градиенты, они расположены выше друг с другом либо Далее друг на друга в зависимости от значения `bHorz`. Каждый цвет градиента вычисляется независимо друг от друга с помощью метода [CDrawingManager::FillGradient](#fillgradient).  
+### <a name="remarks"></a>Remarks  
+ When a rectangle is filled with two color gradients, they are either located above each other or next to each other, depending on the value of `bHorz`. Each color gradient is calculated independently with the method [CDrawingManager::FillGradient](#fillgradient).  
   
- Если этот метод создает Сбой утверждения `nPercentage` меньше 0 или больше 100.  
+ This method generates an assertion failure if `nPercentage` is less than 0 or more than 100.  
   
-##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
- Заполняет указанный цвет градиента прямоугольной области.  
+##  <a name="fillgradient"></a>  CDrawingManager::FillGradient  
+ Fills a rectangular area with the specified color gradient.  
   
 ```  
 void FillGradient(
@@ -421,32 +445,32 @@ void FillGradient(
     int nEndFlatPercentage = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Прямоугольная область для заливки.  
+ The rectangular area to fill.  
   
  [in] `colorStart`  
- Первый цвет градиента.  
+ The first color for the gradient.  
   
  [in] `colorFinish`  
- Последний цвет градиента.  
+ The final color for the gradient.  
   
  [in] `bHorz`  
- Логический параметр, указывает ли `FillGradient` отображать горизонтального или вертикального градиента.  
+ A Boolean parameter that specifies whether `FillGradient` should draw a horizontal or vertical gradient.  
   
  [in] `nStartFlatPercentage`  
- Процент прямоугольника, `FillGradient` заполняет `colorStart` перед началом градиента.  
+ The percentage of the rectangle that `FillGradient` fills with `colorStart` before it starts the gradient.  
   
  [in] `nEndFlatPercentage`  
- Процент прямоугольника, `FillGradient` заполняет `colorFinish` после ее завершения градиента.  
+ The percentage of the rectangle that `FillGradient` fills with `colorFinish` after it finishes the gradient.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `FillGradient` метод `CDrawingManager` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационный пример](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `FillGradient` method of the `CDrawingManager` class. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo #12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
- Заполняет указанный цвет градиента прямоугольной области.  
+##  <a name="fillgradient2"></a>  CDrawingManager::FillGradient2  
+ Fills a rectangular area with a specified color gradient.  
   
 ```  
 void FillGradient2 (
@@ -456,29 +480,29 @@ void FillGradient2 (
     int nAngle = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Прямоугольная область для заливки.  
+ The rectangular area to fill.  
   
  [in] `colorStart`  
- Первый цвет градиента.  
+ The first color of the gradient.  
   
  [in] `colorFinish`  
- Последний цвет градиента.  
+ The last color of the gradient.  
   
  [in] `nAngle`  
- Целое число от 0 до 360. Этот параметр задает направление цветового градиента.  
+ An integer between 0 and 360. This parameter specifies the direction of the color gradient.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `nAngle` для указания направления цветового градиента. При указании направление цвет градиента, можно также указать начало градиента. Значение 0 для `nAngle` указывает градиента начинается от верхней стороны прямоугольника. Как `nAngle` увеличивается, начальное положение для градиента перемещается в направлении против часовой стрелки на основе углов.  
+### <a name="remarks"></a>Remarks  
+ Use `nAngle` to specify the direction of the color gradient. When you specify the direction of the color gradient, you also specify where the color gradient starts. A value of 0 for `nAngle` indicates the gradient starts from the top of the rectangle. As `nAngle` increases, the starting location for the gradient moves in a counter-clockwise direction based on the angle.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `FillGradient2` метод `CDrawingManager` класса. Этот фрагмент кода является частью [образец новые элементы управления](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `FillGradient2` method of the `CDrawingManager` class. This code snippet is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="grayrect"></a>CDrawingManager::GrayRect  
- Заполняет указанный серый цвет прямоугольника.  
+##  <a name="grayrect"></a>  CDrawingManager::GrayRect  
+ Fills a rectangle with a specified gray color.  
   
 ```  
 BOOL GrayRect(
@@ -488,29 +512,29 @@ BOOL GrayRect(
     COLORREF clrDisabled = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Прямоугольная область для заливки.  
+ The rectangular area to fill.  
   
  [in] `nPercentage`  
- Процент серого в прямоугольник.  
+ The percentage of gray you want in the rectangle.  
   
  [in] `clrTransparent`  
- Прозрачный цвет.  
+ The transparent color.  
   
  [in] `clrDisabled`  
- Цвет, который использует этот метод для отмены насыщенности, если `nPercentage` имеет значение -1.  
+ The color that this method uses for de-saturation if `nPercentage` is set to -1.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Для параметра `nPercentage`, более низкое значение указывает более темным цветом.  
+### <a name="remarks"></a>Remarks  
+ For the parameter `nPercentage`, a lower value indicates a darker color.  
   
- Максимальное значение для `nPercentage` равно 200. Значение больше, чем 200 не изменяет внешний вид прямоугольника. Если значение равно -1, этот метод использует `clrDisabled` для ограничения насыщенность прямоугольника.  
+ The maximum value for `nPercentage` is 200. A value larger than 200 does not change the appearance of the rectangle. If the value is -1, this method uses `clrDisabled` to limit the saturation of the rectangle.  
   
-##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
- Выделяет прямоугольной области.  
+##  <a name="highlightrect"></a>  CDrawingManager::HighlightRect  
+ Highlights a rectangular area.  
   
 ```  
 BOOL HighlightRect(
@@ -521,32 +545,32 @@ BOOL HighlightRect(
     COLORREF clrBlend = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Прямоугольная область, чтобы выделить.  
+ A rectangular area to highlight.  
   
  [in] `nPercentage`  
- Процент, на который указывает степень прозрачности выделения.  
+ A percentage that indicates how transparent the highlight should be.  
   
  [in] `clrTransparent`  
- Прозрачный цвет.  
+ The transparent color.  
   
  [in] `nTolerance`  
- Целое число от 0 до 255, указывающее допустимое значение цвета.  
+ An integer between 0 and 255 that indicates the color tolerance.  
   
  [in] `clrBlend`  
- Базовый цвет для наложения.  
+ The base color for blending.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method is successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Если `nPercentage` находится в диапазоне от 0 до 99, `HighlightRect` использует альфа-смешения алгоритма. Дополнительные сведения о альфа-смешение см. в разделе [альфа смешение цвета для линий и заливок](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Если `nPercentage` равно -1, этот метод использует уровень выделения по умолчанию. Если `nPercentage` — 100, этот метод не выполняет никаких действий и возвращает `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ If `nPercentage` is between 0 and 99, `HighlightRect` uses the alpha blending algorithm. For more information about alpha blending, see [Alpha Blending Lines and Fills](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). If `nPercentage` is -1, this method uses the default highlight level. If `nPercentage` is 100, this method does nothing and returns `TRUE`.  
   
- Метод использует параметр `nTolerance` для определения необходимости выделите прямоугольной области. Чтобы выделить прямоугольник разницу между цвет фона для приложения и `clrTransparent` должно быть меньше, чем `nTolerance` в каждом компоненте цвета (красный, зеленый и синий).  
+ The method uses the parameter `nTolerance` to determine whether to highlight the rectangular area. To highlight the rectangle, the difference between the background color of your application and `clrTransparent` must be less than `nTolerance` in each color component (red, green, and blue).  
   
-##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
- Преобразует цвет из представления HLS в RGB.  
+##  <a name="hlstorgb_one"></a>  CDrawingManager::HLStoRGB_ONE  
+ Converts a color from a HLS representation to a RGB representation.  
   
 ```  
 static COLORREF __stdcall HLStoRGB_ONE(
@@ -555,26 +579,26 @@ static COLORREF __stdcall HLStoRGB_ONE(
     double S);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `H`  
- Число от 0 до 1, представляющее оттенок цвета.  
+ A number between 0 and 1 that represents the hue for the color.  
   
  [in] `L`  
- Число от 0 до 1, указывающее, яркость цвета.  
+ A number between 0 and 1 that indicates the luminosity for the color.  
   
  [in] `S`  
- Число от 0 до 1, указывающее, насыщенность цвета.  
+ A number between 0 and 1 that indicates the saturation for the color.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Представление RGB предоставленный цвета HLS.  
+### <a name="return-value"></a>Return Value  
+ The RGB representation of the HLS color provided.  
   
-### <a name="remarks"></a>Примечания  
- Цвета могут быть представлены как HSV (цветового тона, насыщенности и значение), HSL (цветового тона, насыщенности и яркости) или RGB (красный, зеленый и синий). Дополнительные сведения о разных представления цвета в разделе [цвет](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Этот метод и `CDrawingManager::HLStoRGB_TWO` метод выполнить ту же операцию, но требуется указывать другие значения для `H` параметра. В этом методе `H` в процентах от круга. В `CDrawingManager::HLStoRGB_TWO` метода `H` имеет значение в градусах от 0 до 360 градусов, для которых представляют красный. Например, с помощью `HLStoRGB_ONE`, значение 0,25 для `H` эквивалентен значению 90 с `HLStoRGB_TWO`.  
+ This method and the `CDrawingManager::HLStoRGB_TWO` method perform the same operation, but require different values for the `H` parameter. In this method, `H` is a percentage of the circle. In the `CDrawingManager::HLStoRGB_TWO` method, `H` is a degree value between 0 and 360, which both represent red. For example, with `HLStoRGB_ONE`, a value of 0.25 for `H` is equivalent to a value of 90 with `HLStoRGB_TWO`.  
   
-##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
- Преобразует цвет из представления HLS в RGB.  
+##  <a name="hlstorgb_two"></a>  CDrawingManager::HLStoRGB_TWO  
+ Converts a color from a HLS representation to a RGB representation.  
   
 ```  
 static COLORREF __stdcall HLStoRGB_TWO(
@@ -583,26 +607,26 @@ static COLORREF __stdcall HLStoRGB_TWO(
     double S);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `H`  
- Число от 0 до 360, представляющее оттенок цвета.  
+ A number between 0 and 360 that represents the hue for the color.  
   
  [in] `L`  
- Число от 0 до 1, указывающее, яркость цвета.  
+ A number between 0 and 1 that indicates the luminosity for the color.  
   
  [in] `S`  
- Число от 0 до 1, указывающее, насыщенность цвета.  
+ A number between 0 and 1 that indicates the saturation for the color.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Представление RGB предоставленный цвета HLS.  
+### <a name="return-value"></a>Return Value  
+ The RGB representation of the HLS color provided.  
   
-### <a name="remarks"></a>Примечания  
- Цвета могут быть представлены как HSV (цветового тона, насыщенности и значение), HSL (цветового тона, насыщенности и яркости) или RGB (красный, зеленый и синий). Дополнительные сведения о разных представления цвета в разделе [цвет](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Этот метод и [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) метод выполнить ту же операцию, но требуется указывать другие значения для `H` параметра. В этом методе `H` имеет значение в градусах от 0 до 360 градусов, для которых представляют красный. В [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) метода `H` в процентах от круга. Например, с помощью `HLStoRGB_ONE`, значение 0,25 для `H` эквивалентен значению 90 с `HLStoRGB_TWO`.  
+ This method and the [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) method perform the same operation, but require different values for the `H` parameter. In this method, `H` is a degree value between 0 and 360, which both represent red. In the [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) method, `H` is a percentage of the circle. For example, with `HLStoRGB_ONE`, a value of 0.25 for `H` is equivalent to a value of 90 with `HLStoRGB_TWO`.  
   
-##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
- Преобразует цвет из представления HSV в RGB.  
+##  <a name="hsvtorgb"></a>  CDrawingManager::HSVtoRGB  
+ Converts a color from a HSV representation to a RGB representation.  
   
 ```  
 static COLORREF __stdcall HSVtoRGB(
@@ -611,23 +635,23 @@ static COLORREF __stdcall HSVtoRGB(
     double V);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `H`|Число от 0 до 360, указывающее оттенок цвета.|  
-|[in] `S`|Число от 0 до 1, указывающее, насыщенность цвета.|  
-|[in] `V`|Число от 0 до 1, которое указывает значение цвета.|  
+|Parameter|Description|  
+|[in] `H`|A number between 0 and 360 that indicates the hue for the color.|  
+|[in] `S`|A number between 0 and 1 that indicates the saturation for the color.|  
+|[in] `V`|A number between 0 and 1 that indicates the value for the color.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Представление RGB указанный цвет HSV.  
+### <a name="return-value"></a>Return Value  
+ The RGB representation of the HSV color provided.  
   
-### <a name="remarks"></a>Примечания  
- Цвета могут быть представлены как HSV (цветового тона, насыщенности и значение), HSL (цветового тона, насыщенности и яркости) или RGB (красный, зеленый и синий). Дополнительные сведения о разных представления цвета в разделе [цвет](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
-##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
- Преобразует значение оттенка красного, зеленого или синего компонента.  
+##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB  
+ Converts a hue value to a red, green, or blue component.  
   
 ```  
 static double __stdcall HuetoRGB(
@@ -642,32 +666,32 @@ static BYTE __stdcall HueToRGB(
     float rh);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `m1`  
- См. заметки.  
+ See Remarks.  
   
  [in] `m2`  
- См. заметки.  
+ See Remarks.  
   
  [in] `h`  
- См. заметки.  
+ See Remarks.  
   
  [in] `rm1`  
- См. заметки.  
+ See Remarks.  
   
  [in] `rm2`  
- См. заметки.  
+ See Remarks.  
   
  [in] `rh`  
- См. заметки.  
+ See Remarks.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отдельные красного, зеленого и синего компонентов компонент для предоставленного цветовой тон.  
+### <a name="return-value"></a>Return Value  
+ The individual red, green, or blue component for the provided hue.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод является вспомогательным методом, `CDrawingManager` класс использует для отдельных компонентов красного, зеленого и синего цвета в иерархической структуре HSV или HSL вычисления. Этот метод предназначен не должна вызываться напрямую программиста. Входные параметры являются значениями, которые зависят от алгоритма преобразования.  
+### <a name="remarks"></a>Remarks  
+ This method is a helper method that the `CDrawingManager` class uses to compute the individual red, green, and blue components of a color in a HSV or HSL representation. This method is not designed to be called directly by the programmer. The input parameters are values that depend on the conversion algorithm.  
   
- Чтобы преобразовать HSV или HSL цвета RGB представление, вызовите один из следующих методов:  
+ To convert a HSV or HSL color to a RGB representation, call one of the following methods:  
   
 - [CDrawingManager::HSVtoRGB](#hsvtorgb)  
   
@@ -675,8 +699,8 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
- Зеркальное отражение прямоугольной области.  
+##  <a name="mirrorrect"></a>  CDrawingManager::MirrorRect  
+ Flips a rectangular area.  
   
 ```  
 void MirrorRect(
@@ -684,18 +708,18 @@ void MirrorRect(
     BOOL bHorz = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Ограничивающий прямоугольник области, чтобы отразить.  
+ The bounding rectangle of the area to flip.  
   
  [in] `bHorz`  
- Логический параметр, указывает ли прямоугольник зеркальное отражение, горизонтально или вертикально.  
+ A Boolean parameter that indicates whether the rectangle flips horizontally or vertically.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод можно отразить любую область контекста устройства, принадлежащие `CDrawingManager` класса. Если `bHorz` равно `TRUE`, этот метод горизонтальное зеркальное отражение области. В противном случае он Вертикальное зеркальное отражение области.  
+### <a name="remarks"></a>Remarks  
+ This method can flip any area of the device context owned by the `CDrawingManager` class. If `bHorz` is set to `TRUE`, this method flips the area horizontally. Otherwise, it flips the area vertically.  
   
-##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
- Вычисляет окончательный цвет полупрозрачными пиксель.  
+##  <a name="pixelalpha"></a>  CDrawingManager::PixelAlpha  
+ Calculates the final color for a semitransparent pixel.  
   
 ```  
 static COLORREF __stdcall PixelAlpha(
@@ -714,35 +738,35 @@ static COLORREF __stdcall PixelAlpha(
     int percent);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `srcPixel`  
- Начальный цвет пикселя.  
+ The initial color for the pixel.  
   
  [in] `percent`  
- Число от 0 до 100, представляющее процент прозрачности. Значение 100 указывает, что начальный цвет является полностью прозрачным.  
+ A number between 0 and 100 that represents the percentage of transparency. A value of 100 indicates that the initial color is completely transparent.  
   
  [in] `percentR`  
- Число, представляющее процент прозрачности для красного компонента от 0 до 100.  
+ A number between 0 and 100 that represents the percentage of transparency for the red component.  
   
  [in] `percentG`  
- Число, представляющее процент прозрачности для зеленого компонента от 0 до 100.  
+ A number between 0 and 100 that represents the percentage of transparency for the green component.  
   
  [in] `percentB`  
- Число, представляющее процент прозрачности для синего компонента от 0 до 100.  
+ A number between 0 and 100 that represents the percentage of transparency for the blue component.  
   
  [in] `dstPixel`  
- Базовый цвет пикселя.  
+ The base color for the pixel.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Конечный цвет для полупрозрачными пикселей.  
+### <a name="return-value"></a>Return Value  
+ The final color for the semitransparent pixel.  
   
-### <a name="remarks"></a>Примечания  
- — Это вспомогательный класс для выделения цветом полупрозрачными растровые изображения и не предназначен для вызова непосредственно программистом.  
+### <a name="remarks"></a>Remarks  
+ This is a helper class for coloring semitransparent bitmaps and is not designed to be called directly by the programmer.  
   
- При использовании версии метода, который имеет `dstPixel`, окончательный цвет представляет собой сочетание `dstPixel` и `srcPixel`. `srcPixel` Цвет является частично прозрачный цвет через базовый цвет `dstPixel`.  
+ When you use the version of the method that has `dstPixel`, the final color is a combination of `dstPixel` and `srcPixel`. The `srcPixel` color is the partially transparent color over the base color of `dstPixel`.  
   
-##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
- Создает точечного рисунка, который можно использовать в качестве тень.  
+##  <a name="prepareshadowmask"></a>  CDrawingManager::PrepareShadowMask  
+ Creates a bitmap that can be used as a shadow.  
   
 ```  
 static HBITMAP __stdcall PrepareShadowMask (
@@ -752,27 +776,27 @@ static HBITMAP __stdcall PrepareShadowMask (
     int iMaxBrightness = 100);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nDepth`  
- Ширина и высота тени.  
+ The width and height of the shadow.  
   
  [in] `clrBase`  
- Цвет тени.  
+ The color of the shadow.  
   
  [in] `iMinBrightness`  
- Минимальная яркости тени.  
+ The minimum brightness of the shadow.  
   
  [in] `iMaxBrightness`  
- Максимальная яркость тени.  
+ The maximum brightness of the shadow.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор для созданного точечного рисунка, если этот метод выполнен успешно; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A handle to the created bitmap if this method is successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Если `nDepth` задано значение 0, этот метод завершает работу и возвращает `NULL`. Если `nDepth` меньше 3, ширину и высоту тени равным 3 пикселей.  
+### <a name="remarks"></a>Remarks  
+ If `nDepth` is set to 0, this method exits and returns `NULL`. If `nDepth` is less than 3, the width and height of the shadow are set to 3 pixels.  
   
-##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
- Преобразует цвет из представления красного, зеленого и синего (RGB) цветового тона, насыщенности и яркости (HSL) представление.  
+##  <a name="rgbtohsl"></a>  CDrawingManager::RGBtoHSL  
+ Converts a color from a red, green, and blue (RGB) representation to a hue, saturation, and lightness (HSL) representation.  
   
 ```  
 static void __stdcall RGBtoHSL(
@@ -782,23 +806,23 @@ static void __stdcall RGBtoHSL(
     double* L);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `rgb`|С цветом RGB-значения.|  
-|[выходной] `H`|Указатель на значение типа double, где метод сохраняет оттенок цвета.|  
-|[выходной] `S`|Указатель на значение типа double, где метод сохраняет насыщенность цвета.|  
-|[выходной] `L`|Указатель на значение типа double, где метод сохраняет яркости цвета.|  
+|Parameter|Description|  
+|[in] `rgb`|The color in RGB values.|  
+|[out] `H`|A pointer to a double where the method stores the hue for the color.|  
+|[out] `S`|A pointer to a double where the method stores the saturation for the color.|  
+|[out] `L`|A pointer to a double where the method stores the lightness for the color.|  
   
-### <a name="remarks"></a>Примечания  
- Цвета могут быть представлены как HSV (цветового тона, насыщенности и значение), HSL (цветового тона, насыщенности и яркости) или RGB (красный, зеленый и синий). Дополнительные сведения о разных представления цвета в разделе [цвет](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Возвращаемое значение для `H` представляется в виде дробного числа от 0 и 1, где 0 и 1 представляют красный. Возвращаемые `S` и `L` являются числами от 0 до 1.  
+ The returned value for `H` is represented as a fraction between 0 and 1 where both 0 and 1 represent red. The returned values for `S` and `L` are numbers between 0 and 1.  
   
-##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
- Преобразует цвет из представления RGB в HSV.  
+##  <a name="rgbtohsv"></a>  CDrawingManager::RGBtoHSV  
+ Converts a color from a RGB representation to a HSV representation.  
   
 ```  
 static void __stdcall RGBtoHSV(
@@ -808,26 +832,26 @@ static void __stdcall RGBtoHSV(
     double* V);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rgb`  
- Цвет для преобразования в представление RGB.  
+ The color to convert in a RGB representation.  
   
- [выходной] `H`  
- Указатель на значение типа double, где этот метод сохраняет полученный оттенок цвета.  
+ [out] `H`  
+ A pointer to a double where this method stores the resulting hue for the color.  
   
- [выходной] `S`  
- Указатель на значение типа double, где этот метод сохраняет полученный насыщенность цвета.  
+ [out] `S`  
+ A pointer to a double where this method stores the resulting saturation for the color.  
   
- [выходной] `V`  
- Указатель на значение типа double, где этот метод сохраняет полученное значение цвета.  
+ [out] `V`  
+ A pointer to a double where this method stores the resulting value for the color.  
   
-### <a name="remarks"></a>Примечания  
- Цвета могут быть представлены как HSV (цветового тона, насыщенности и значение), HSL (цветового тона, насыщенности и яркости) или RGB (красный, зеленый и синий). Дополнительные сведения о разных представления цвета в разделе [цвет](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Возвращаемое значение для `H` , число от 0 до 360 градусов, где 0 до 360 градусов указать красный. Возвращаемые значения для `S` и `V` являются числами от 0 до 1.  
+ The returned value for `H` is a number between 0 and 360 where both 0 and 360 indicate red. The return values for `S` and `V` are numbers between 0 and 1.  
   
-##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
- Цвет прозрачной пикселя в точечном рисунке.  
+##  <a name="setalphapixel"></a>  CDrawingManager::SetAlphaPixel  
+ Colors a transparent pixel in a bitmap.  
   
 ```  
 static void __stdcall SetAlphaPixel(
@@ -841,38 +865,38 @@ static void __stdcall SetAlphaPixel(
     BOOL bIsRight = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pBits`  
- Указатель на битовые значения для битовой карты.  
+ A pointer to the bit values for the bitmap.  
   
  [in] `rect`  
- Прямоугольная область в приложении. Рисование manager рисует тень снизу и справа от этой области.  
+ A rectangular area in your application. The drawing manager draws a shadow underneath and to the right of this area.  
   
  [in] `x`  
- Горизонтальная координата цвет пикселя.  
+ The horizontal coordinate of the pixel to color.  
   
  [in] `y`  
- Вертикальная координата цвет пикселя.  
+ The vertical coordinate of the pixel to color.  
   
  [in] `percent`  
- Процент прозрачности.  
+ The percentage of transparency.  
   
  [in] `iShadowSize`  
- Ширина и высота тени.  
+ The width and height of the shadow.  
   
  [in] `clrBase`  
- Цвет тени.  
+ The color of the shadow.  
   
  [in] `bIsRight`  
- Логический параметр, указывающий пикселей, какой цвет. Дополнительные сведения см. в разделе "Примечания".  
+ A Boolean parameter that indicates which pixel to color. See the Remarks section for more information.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод — это вспомогательный метод, который используется [CDrawingManager::DrawShadow](#drawshadow) метод. Корпорация Майкрософт рекомендует, чтобы нарисовать тень, вызывающих `CDrawingManager::DrawShadow` вместо него.  
+### <a name="remarks"></a>Remarks  
+ This method is a helper method that is used by the [CDrawingManager::DrawShadow](#drawshadow) method. We recommend that if you want to draw a shadow, call `CDrawingManager::DrawShadow` instead.  
   
- Если `bIsRight` равно `TRUE`, цвет пикселя измеряется `x` пикселей от правого края `rect`. Если это `FALSE`, цвет пикселя измеряется `x` пикселей от левого края `rect`.  
+ If `bIsRight` is set to `TRUE`, the pixel to color is measured `x` pixels from the right edge of `rect`. If it is `FALSE`, the pixel to color is measured `x` pixels from the left edge of `rect`.  
   
-##  <a name="setpixel"></a>CDrawingManager::SetPixel  
- Изменение одной точки в точечном рисунке указанный цвет.  
+##  <a name="setpixel"></a>  CDrawingManager::SetPixel  
+ Changes a single pixel in a bitmap to the specified color.  
   
 ```  
 static void __stdcall SetPixel(
@@ -884,20 +908,20 @@ static void __stdcall SetPixel(
     COLORREF color);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pBits`|Указатель на значения битов битовой карты.|  
-|[in] `cx`|Общая ширина растрового изображения.|  
-|[in] `cy`|Общая высота растрового изображения.|  
-|[in] `x`|Координата x точки в битовой карте для изменения.|  
-|[in] `y`|Координата y точки в битовой карте для изменения.|  
-|[in] `color`|Новый цвет пикселя, с координатами предоставленного.|  
+|Parameter|Description|  
+|[in] `pBits`|A pointer to the bit values of the bitmap.|  
+|[in] `cx`|The total width of the bitmap.|  
+|[in] `cy`|The total height of the bitmap.|  
+|[in] `x`|The x-coordinate of the pixel in the bitmap to change.|  
+|[in] `y`|The y-coordinate of the pixel in the bitmap to change.|  
+|[in] `color`|The new color for the pixel identified by the supplied coordinates.|  
   
-##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
- Объединяет два цвета на основе взвешенных коэффициента.  
+##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
+ Combines two colors based on a weighted ratio.  
   
 ```  
 static COLORREF __stdcall SmartMixColors(
@@ -908,27 +932,27 @@ static COLORREF __stdcall SmartMixColors(
     int k2 = 1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `color1`|Первый цвет смешивания.|  
-|[in] `color2`|Второй цвет смешивания.|  
-|[in] `dblLumRatio`|Соотношение яркость новый цвет. `SmartMixColors`Умножает яркость цвета смешанного перед определением окончательный цвет этого отношения.|  
-|[in] `k1`|Взвешенное соотношение первый цвет.|  
-|[in] `k2`|Взвешенное отношение для второй цвет.|  
+|Parameter|Description|  
+|[in] `color1`|The first color to mix.|  
+|[in] `color2`|The second color to mix.|  
+|[in] `dblLumRatio`|The ratio for the new color's luminosity. `SmartMixColors` multiplies the luminosity of the mixed color by this ratio before determining a final color.|  
+|[in] `k1`|The weighted ratio for the first color.|  
+|[in] `k2`|The weighted ratio for the second color.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Цвет, представляющий взвешенного сочетание указанного цвета.  
+### <a name="return-value"></a>Return Value  
+ A color that represents a weighted mixture of the supplied colors.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод завершается с ошибкой, если параметр `k1` или `k2` меньше нуля. Если оба этих параметра имеют значение 0, то метод возвращает `RGB(0, 0, 0)`.  
+### <a name="remarks"></a>Remarks  
+ This method fails with an error if either `k1` or `k2` is less than zero. If both of these parameters are set to 0, the method returns `RGB(0, 0, 0)`.  
   
- Взвешенное отношение рассчитывается по следующей формуле: (color1 * k1 + цвет2 \* k2) /(k1 + k2). После определения коэффициент взвешенного метода вычисляет яркость для смешанных цвета. Затем она умножает яркость с `dblLumRatio`. Если значение больше, чем 1.0, метод устанавливает яркость цвета смешанного новое значение. В противном случае яркость равно 1.0.  
+ The weighted ratio is calculated with the following formula:                         (color1 * k1 + color2 \* k2)/(k1 + k2). After the weighted ratio is determined, the method calculates the luminosity for the mixed color. It then multiplies the luminosity by `dblLumRatio`. If the value is larger than 1.0, the method sets the luminosity for the mixed color to the new value. Otherwise, the luminosity is set to 1.0.  
   
-##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
- Поворачивает исходного контроллера домена содержимое внутри данного прямоугольника на 90 градусов.  
+##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
+ Rotates a source DC content inside the given rectangle by 90 degrees.  
   
 ```  
 void DrawRotated(
@@ -937,19 +961,19 @@ void DrawRotated(
     BOOL bClockWise);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rectDest`  
- Прямоугольника назначения.  
+ Destination rectangle.  
   
  `dcSrc`  
- Контекст исходного устройства.  
+ The source device context.  
   
  `bClockWise`  
- `TRUE`Указывает поворот + 90 градусов; `FALSE` указывает поворот-90 градусов.  
+ `TRUE` indicates rotate +90 degrees; `FALSE` indicates rotate -90 degrees.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

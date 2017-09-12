@@ -1,55 +1,74 @@
 ---
-title: "Одноэтапное и двухэтапное сборка объектов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "создание объектов, графические объекты"
-  - "объекты [C++], создание графических объектов"
-  - "объекты [C++], графические объекты"
-  - "одноэтапное и двухэтапное создание объектов"
+title: One-Stage and Two-Stage Construction of Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], creating graphic objects
+- object creation [MFC], graphic objects
+- objects [MFC], graphic objects
+- one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Одноэтапное и двухэтапное сборка объектов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 154c97ac97e2410d786c27305d0262a8cb133c0a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Имеется выбор между 2 методами для создания графических объектов, например перья и кисти.  
+---
+# <a name="one-stage-and-two-stage-construction-of-objects"></a>One-Stage and Two-Stage Construction of Objects
+You have a choice between two techniques for creating graphic objects, such as pens and brushes:  
   
--   *построение от этапа*: Создание и инициализация объекта в одном этапе, всем с конструктором.  
+-   *One-stage construction*: Construct and initialize the object in one stage, all with the constructor.  
   
--   *Двухшаговое построения*: Создание и инициализация объекта в 2 отдельных шагах.  Конструктор создает объект и функцию инициализации инициализирует его.  
+-   *Two-stage construction*: Construct and initialize the object in two separate stages. The constructor creates the object and an initialization function initializes it.  
   
- Двухшаговое построение всегда более безопасным.  В построении от этапа, конструктор может создать исключение, если требуется предоставить неправильные аргументы или выделение памяти завершается неудачей.  Эта проблема выполнении двухшаговым построением \(необходимо проверить наличие ошибок.  В любом случае удалить объект один процесс.  
+ Two-stage construction is always safer. In one-stage construction, the constructor could throw an exception if you provide incorrect arguments or memory allocation fails. That problem is avoided by two-stage construction, although you do have to check for failure. In either case, destroying the object is the same process.  
   
 > [!NOTE]
->  Эти методы применяются к созданию все объекты, не только графических объектов.  
+>  These techniques apply to creating any objects, not just graphic objects.  
   
-## Пример обоих методов построения  
- В следующем примере показан кратко оба метода построения объект пера.  
+## <a name="example-of-both-construction-techniques"></a>Example of Both Construction Techniques  
+ The following brief example shows both methods of constructing a pen object:  
   
- [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/CPP/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
   
-### Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Графические объекты](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
--   [Выбор графического объекта в контексте устройства](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
+-   [Selecting a graphic object into a device context](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
--   [Контексты устройств](../Topic/Device%20Contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [Рисование в представлении](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a View](../mfc/drawing-in-a-view.md)  
   
-## См. также  
- [Графические объекты](../mfc/graphic-objects.md)
+## <a name="see-also"></a>See Also  
+ [Graphic Objects](../mfc/graphic-objects.md)
+
+

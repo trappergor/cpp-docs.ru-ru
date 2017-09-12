@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCCaptionButton | Документы Microsoft"
+title: CMFCCaptionButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCaptionButton class
+- CMFCCaptionButton [MFC], CMFCCaptionButton
+- CMFCCaptionButton [MFC], GetHit
+- CMFCCaptionButton [MFC], GetIconID
+- CMFCCaptionButton [MFC], GetRect
+- CMFCCaptionButton [MFC], GetSize
+- CMFCCaptionButton [MFC], IsMiniFrameButton
+- CMFCCaptionButton [MFC], Move
+- CMFCCaptionButton [MFC], OnDraw
+- CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
 caps.latest.revision: 28
 author: mikeblome
@@ -43,67 +51,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9d6342f87622c34b671ad5ea443eb78ffd8c3838
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b23d49205c080b9eb38577f97ee0b6e0a1e4f6b3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccaptionbutton-class"></a>Класс CMFCCaptionButton
-`CMFCCaptionButton` Класс реализует кнопку, которая отображается в заголовке окна для закрепляемой области или окна области. Как правило, платформа создает кнопки заголовка автоматически.  
+# <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton Class
+The `CMFCCaptionButton` class implements a button that is displayed on the caption bar for a docking pane or a mini-frame window. Typically, the framework creates caption buttons automatically.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCaptionButton : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Создает объект CMFCCaptionButton.|  
+|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Constructs a CMFCCaptionButton object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionButton::GetHit](#gethit)|Возвращает команду, представленного кнопки.|  
-|[CMFCCaptionButton::GetIconID](#geticonid)|Возвращает идентификатор изображения, связанные с кнопкой.|  
-|[CMFCCaptionButton::GetRect](#getrect)|Возвращает прямоугольник, занимаемый кнопки.|  
-|[CMFCCaptionButton::GetSize](#getsize)|Возвращает ширину и высоту кнопки.|  
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Указывает, установлен ли размер мини-высоте строки заголовка.|  
-|[CMFCCaptionButton::Move](#move)|Задает местоположение рисования кнопку и показ состояния окна.|  
-|[CMFCCaptionButton::OnDraw](#ondraw)|Рисует кнопки заголовка.|  
-|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Задает размер мини-заголовке.|  
+|[CMFCCaptionButton::GetHit](#gethit)|Returns the command represented by the button.|  
+|[CMFCCaptionButton::GetIconID](#geticonid)|Returns the image ID associated with the button.|  
+|[CMFCCaptionButton::GetRect](#getrect)|Returns the rectangle occupied by the button.|  
+|[CMFCCaptionButton::GetSize](#getsize)|Returns the width and height of the button.|  
+|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Indicates whether the title bar height is set to mini size.|  
+|[CMFCCaptionButton::Move](#move)|Sets the button draw location and window show state.|  
+|[CMFCCaptionButton::OnDraw](#ondraw)|Draws the caption button.|  
+|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Sets the mini size of the title bar.|  
   
-## <a name="remarks"></a>Примечания  
- Можно наследовать класс от [класса CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) и использовать защищенный метод `AddButton`, для добавления кнопки заголовка окна мини-кадра.  
+## <a name="remarks"></a>Remarks  
+ You can derive a class from [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md) and use the protected method, `AddButton`, to add caption buttons to a mini frame window.  
   
- CPaneFrameWnd.h определяет идентификаторы команд для двух типов значков в заголовке:  
+ CPaneFrameWnd.h defines command IDs for two types of caption buttons:  
   
-- `AFX_CAPTION_BTN_PIN`, которая отображает кнопку закрепления при закрепляемой области поддерживает режим автоматического скрытия.  
+- `AFX_CAPTION_BTN_PIN`, which displays a pin button when the docking pane supports auto-hide mode.  
   
-- `AFX_CAPTION_BTN_CLOSE`, который отображает **закрыть** когда области могут быть закрыты или скрыты.  
+- `AFX_CAPTION_BTN_CLOSE`, which displays a **Close** button when the pane can be closed or hidden.  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует `CMFCCaptionButton` и задайте размер мини-заголовке.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCCaptionButton` object and set the mini size of the title bar.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#43;](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcaptionbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
- Создает объект `CMFCCaptionButton`.  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
+ Constructs a `CMFCCaptionButton` object.  
   
 ```  
 CMFCCaptionButton();
@@ -114,54 +122,54 @@ CMFCCaptionButton(
     BOOL bLeftAlign = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nHit`  
- Команда, назначенная данной кнопке.  
+ The command associated with the button.  
   
  [in] `bLeftAlign`  
- Указывает, выравнивается ли кнопка слева.  
+ Specifies whether the button is aligned to the left.  
   
- В следующей таблице перечислены возможные значения для `nHit` параметр.  
+ The following table lists possible values for the `nHit` parameter.  
   
-|Значение|Команда|  
+|Value|Command|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|Кнопка закрытия.|  
-|`HTMINBUTTON`|Кнопка свертывания.|  
-|`HTMAXBUTTON`|Кнопка развертывания окна.|  
-|`AFX_HTLEFTBUTTON`|Кнопка со стрелкой влево.|  
-|`AFX_HTRIGHTBUTTON`|Кнопка со стрелкой вправо.|  
-|`AFX_HTMENU`|Меню клавишу со стрелкой.|  
-|`HTNOWHERE`|Значение по умолчанию; представляет ни одной команды.|  
+|`AFX_HTCLOSE`|Close button.|  
+|`HTMINBUTTON`|Minimize button.|  
+|`HTMAXBUTTON`|Maximize button.|  
+|`AFX_HTLEFTBUTTON`|Left arrow button.|  
+|`AFX_HTRIGHTBUTTON`|Right arrow button.|  
+|`AFX_HTMENU`|Down arrow menu button.|  
+|`HTNOWHERE`|The default value; represents no command.|  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию кнопки заголовка не связаны с командой.  
+### <a name="remarks"></a>Remarks  
+ By default, caption buttons are not associated with a command.  
   
- Кнопки заголовка выравнивается по правой или левой.  
+ Caption buttons are aligned either on the right or left.  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
- Возвращает команду, представленного кнопки.  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
+ Returns the command represented by the button.  
   
 ```  
 UINT GetHit() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Команда, представленного кнопки.  
+### <a name="return-value"></a>Return Value  
+ The command represented by the button.  
   
- В следующей таблице перечислены возможные возвращаемые значения.  
+ The following table lists possible return values.  
   
-|Значение|Команда|  
+|Value|Command|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|Кнопка закрытия.|  
-|`HTMINBUTTON`|Кнопка свертывания.|  
-|`HTMAXBUTTON`|Кнопка развертывания окна.|  
-|`AFX_HTLEFTBUTTON`|Кнопка со стрелкой влево.|  
-|`AFX_HTRIGHTBUTTON`|Кнопка со стрелкой вправо.|  
-|`AFX_HTMENU`|Меню клавишу со стрелкой.|  
-|`HTNOWHERE`|Значение по умолчанию; представляет ни одной команды.|  
+|`AFX_HTCLOSE`|Close button.|  
+|`HTMINBUTTON`|Minimize button.|  
+|`HTMAXBUTTON`|Maximize button.|  
+|`AFX_HTLEFTBUTTON`|Left arrow button.|  
+|`AFX_HTRIGHTBUTTON`|Right arrow button.|  
+|`AFX_HTMENU`|Down arrow menu button.|  
+|`HTNOWHERE`|The default value; represents no command.|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
- Возвращает идентификатор изображения, связанные с кнопкой.  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
+ Returns the image ID associated with the button.  
   
 ```  
 virtual CMenuImages::IMAGES_IDS GetIconID(
@@ -169,59 +177,59 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
     BOOL bMaximized = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bHorz`  
- `TRUE`Стрелка влево или вправо образа идентификаторы; `FALSE` для вверх или Стрелка вниз изображения идентификаторы.  
+ `TRUE` for left or right arrow image IDs; `FALSE` for up or down arrow image IDs.  
   
  [in] `bMaximized`  
- `TRUE`для идентификатора развернуть образ; `FALSE` для свертывания изображения идентификатор.  
+ `TRUE` for a maximize image ID; `FALSE` for a minimize image ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Идентификатор изображения.  
+### <a name="return-value"></a>Return Value  
+ The image ID.  
   
-### <a name="remarks"></a>Примечания  
- Параметры укажите идентификаторы изображение свернуть или развернуть кнопки заголовка.  
+### <a name="remarks"></a>Remarks  
+ The parameters specify image IDs for minimize or maximize caption buttons.  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
- Возвращает прямоугольник, занимаемый кнопки.  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
+ Returns the rectangle occupied by the button.  
   
 ```  
 virtual CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прямоугольник, представляющий расположение кнопки.  
+### <a name="return-value"></a>Return Value  
+ The rectangle that represents the location of the button.  
   
-### <a name="remarks"></a>Примечания  
- Если кнопка не видна, возвращаемый размер равен 0.  
+### <a name="remarks"></a>Remarks  
+ If you cannot see the button, the size returned is 0.  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
- Возвращает ширину и высоту кнопки.  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
+ Returns the width and height of the button.  
   
 ```  
 static CSize GetSize();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Габаритные размеры кнопки.  
+### <a name="return-value"></a>Return Value  
+ The outer dimensions of the button.  
   
-### <a name="remarks"></a>Примечания  
- Возвращаемый размер включает кнопку поля и границы.  
+### <a name="remarks"></a>Remarks  
+ The size returned includes button margin and border.  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
- Указывает, установлен ли размер мини-высоте строки заголовка.  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
+ Indicates whether the title bar height is set to mini size.  
   
 ```  
 BOOL IsMiniFrameButton() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если заголовок равен размеру мини; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption is set to mini size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
- Задает местоположение рисования кнопку и показ состояния окна.  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
+ Sets the button draw location and window show state.  
   
 ```  
 void Move(
@@ -229,15 +237,15 @@ void Move(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `ptTo`  
- Новое расположение.  
+ The new location.  
   
  [in] `bHide`  
- Следует ли показывать кнопку.  
+ Whether to show the button.  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
- Рисует кнопки заголовка.  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
+ Draws the caption button.  
   
 ```  
 virtual void OnDraw(
@@ -248,39 +256,39 @@ virtual void OnDraw(
     BOOL bDisabled = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства для кнопки.  
+ Pointer to a device context for the button.  
   
  [in] `bActive`  
- Следует ли Рисование изображения активной кнопки.  
+ Whether to draw an active button image.  
   
  [in] `bHorz`  
- Зарезервировано для использования в производном классе.  
+ Reserved for use in a derived class.  
   
  [in] `bMaximized`  
- Следует ли рисовать изображение развернутого кнопки.  
+ Whether to draw a maximized button image.  
   
  [in] `bDisabled`  
- Следует ли рисовать включена кнопка изображения.  
+ Whether to draw an enabled button image.  
   
-### <a name="remarks"></a>Примечания  
- `bMaximized` Параметр используется, когда кнопка находится развернуть или свернуть.  
+### <a name="remarks"></a>Remarks  
+ The `bMaximized` parameter is used when the button is a maximize or minimize button.  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
- Задает размер мини-заголовке.  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
+ Sets the mini size of the title bar.  
   
 ```  
 void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`для высоты мини-заголовок панели; `FALSE` для высоте строки заголовка по умолчанию.  
+ `TRUE` for mini title bar height; `FALSE` for default title bar height.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)   
- [Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

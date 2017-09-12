@@ -1,50 +1,69 @@
 ---
-title: "Использование списков изображений в элементе управления панели инструментов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl - класс, списки изображений"
-  - "списки изображений [C++], элементы управления панели инструментов"
-  - "элементы управления панели инструментов [MFC], изображение"
+title: Using Image Lists in a Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], image
+- image lists [MFC], toolbar controls
+- CToolBarCtrl class [MFC], image lists
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Использование списков изображений в элементе управления панели инструментов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5569e45080f2427481041ef8164e369becc97792
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-По умолчанию изображения, используемые кнопки в элементе управления панели инструментов хранятся в виде единой растровое изображение.  Однако можно также изображения кнопок магазина в наборе списков изображений.  Объект элемента управления панели инструментов можно использовать до 3 отдельного списка изображений:  
+---
+# <a name="using-image-lists-in-a-toolbar-control"></a>Using Image Lists in a Toolbar Control
+By default, the images used by the buttons in a toolbar control are stored as a single bitmap. However, you can also store button images in a set of image lists. The toolbar control object can use up to three separate image lists:  
   
--   Enabled список изображений содержит изображения для кнопок панели инструментов, которые в данный момент недоступны.  
+-   Enabled image list   Contains images for toolbar buttons that are currently enabled.  
   
--   Отключенный список изображений содержит изображения для кнопок панели инструментов, которые в данный момент запрещены.  
+-   Disabled image list   Contains images for toolbar buttons that are currently disabled.  
   
--   Выбранный список изображений содержит изображения для кнопок панели инструментов, которые в данный момент выделены.  Этот список изображений используется только при инструмент используется стиль **TBSTYLE\_FLAT**.  
+-   Highlighted image list   Contains images for toolbar buttons that are currently highlighted. This image list is used only when the toolbar uses the **TBSTYLE_FLAT** style.  
   
- Эти списки изображений используются элементом управления панели инструментов при связать их с объектом `CToolBarCtrl`.  Эта ассоциация выполняется вызовом [CToolBarCtrl::SetImageList](../Topic/CToolBarCtrl::SetImageList.md), [SetDisabledImageList](../Topic/CToolBarCtrl::SetDisabledImageList.md) и [SetHotImageList](../Topic/CToolBarCtrl::SetHotImageList.md).  
+ These image lists are used by the toolbar control when you associate them with the `CToolBarCtrl` object. This association is accomplished by making calls to [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), and [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   
- По умолчанию MFC использует класс `CToolBar` для реализации панели инструментов приложения MFC.  Однако функции\-члена `GetToolBarCtrl` можно использовать для получения встроенный объект `CToolBarCtrl`.  Затем можно вызывать к функциям элемента `CToolBarCtrl` использование возвращаемый объект.  
+ By default, MFC uses the `CToolBar` class to implement MFC application toolbars. However, the `GetToolBarCtrl` member function can be used to retrieve the embedded `CToolBarCtrl` object. You can then make calls to `CToolBarCtrl` member functions using the returned object.  
   
- В следующем примере показан этот метод путем присвоения список изображений enabled \(`m_ToolBarImages`\) и отключенный \(`m_ToolBarDisabledImages`\) в объект `CToolBarCtrl` \(`m_ToolBarCtrl`\).  
+ The following example demonstrates this technique by assigning an enabled (`m_ToolBarImages`) and disabled (`m_ToolBarDisabledImages`) image list to a `CToolBarCtrl` object (`m_ToolBarCtrl`).  
   
- [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/CPP/using-image-lists-in-a-toolbar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]  
   
 > [!NOTE]
->  Списки изображений, используемых объектом инструмента должны быть постоянными объектами.  По этой причине они обычно элементы данных классов MFC; в этом примере, главный класс фреймового окна.  
+>  The image lists used by the toolbar object must be permanent objects. For this reason, they are commonly data members of an MFC class; in this example, the main frame window class.  
   
- Как только списки изображений связаны с объектом `CToolBarCtrl` платформа автоматически отображается правильное изображение кнопки.  
+ Once the image lists are associated with the `CToolBarCtrl` object, the framework automatically displays the proper button image.  
   
-## См. также  
- [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

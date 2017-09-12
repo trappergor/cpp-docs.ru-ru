@@ -1,42 +1,61 @@
 ---
-title: "Использование CToolTipCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolTipCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl - класс"
-  - "CToolTipCtrl - класс, всплывающие подсказки - создание"
+title: Using CToolTipCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolTipCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], creating tool tips
+- CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование CToolTipCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ba708c5c1c8dbaa1b8de84ed81a7ccf20b023b0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Класс [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md) инкапсулирует функции управления всплывающей подсказки, о всплывающего окна, указывающее отдельную линии текста, цель средства в приложении.  Всплывающая подсказка скрыта чаще всего появится только в том случае, если пользователь помещает курсор на средства и оставляет этот компонент для приблизительно на половину второго.  Всплывающая подсказка отображается рядом с курсора и исчезнет, когда пользователь нажимает кнопку мыши или перемещает курсор средства.  
+---
+# <a name="using-ctooltipctrl"></a>Using CToolTipCtrl
+The [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) class encapsulates the functionality of a tool tip control, a small pop-up window that displays a single line of text describing the purpose of a tool in an application. A tool tip is hidden most of the time, appearing only when the user puts the cursor on a tool and leaves it there for approximately one-half second. The tool tip appears near the cursor and disappears when the user clicks a mouse button or moves the cursor off of the tool.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Методы создания всплывающие подсказки](../mfc/methods-of-creating-tool-tips.md)  
+-   [Methods of Creating Tool Tips](../mfc/methods-of-creating-tool-tips.md)  
   
--   [Параметры для управления всплывающей подсказки](../mfc/settings-for-the-tool-tip-control.md)  
+-   [Settings for the Tool Tip Control](../mfc/settings-for-the-tool-tip-control.md)  
   
--   [С помощью CToolTipCtrl для создания и управления объект CToolTipCtrl](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)  
+-   [Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)  
   
--   [Элемент управления всплывающей подсказки](../mfc/manipulating-the-tool-tip-control.md)  
+-   [Manipulating the Tool Tip Control](../mfc/manipulating-the-tool-tip-control.md)  
   
-## См. также  
- [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

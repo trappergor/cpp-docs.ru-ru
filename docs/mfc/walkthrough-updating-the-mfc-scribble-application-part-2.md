@@ -1,339 +1,350 @@
 ---
-title: "Пошаговое руководство. Обновление приложения MFC Scribble (часть 2) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "пошаговые руководства [C++]"
+title: 'Walkthrough: Updating the MFC Scribble Application (Part 2) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 caps.latest.revision: 36
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# Пошаговое руководство. Обновление приложения MFC Scribble (часть 2)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68a0cd9d36d869db9945b3921c7837b3d1410535
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-[Часть 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) затем показано, как добавить пошагового руководства Microsoft Office Fluent ленты на классическому приложения Scribble.  Эта часть добавление панели и элементы управления ленты, что пользователи могут использовать вместо меню и команд.  
+---
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Walkthrough: Updating the MFC Scribble Application (Part 2)
+[Part 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) of this walkthrough showed how to add an Office Fluent Ribbon to the classic Scribble application. This part shows how to add ribbon panels and controls that users can use instead of menus and commands.  
   
-## Обязательные компоненты  
- [Примеры кода на Visual C\+\+](../top/visual-cpp-samples.md)  
+## <a name="prerequisites"></a>Prerequisites  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
-##  <a name="top"></a> Подразделы  
- В этой части пошагового руководства имеет следующие разделы:  
+##  <a name="top"></a> Sections  
+ This part of the walkthrough has the following sections:  
   
--   [Добавление новых панели на ленту](#addNewPanel)  
+- [Adding New Panels to the Ribbon](#addnewpanel)  
   
--   [Добавить панель справки на ленту](#addHelpPanel)  
+- [Adding a Help Panel to the Ribbon](#addhelppanel)  
   
--   [Добавление панели пера на ленту](#addPenPanel)  
+- [Adding a Pen Panel to the Ribbon](#addpenpanel)  
   
--   [Чтобы добавить кнопку цвета на ленту](#addColorButton)  
+- [Adding a Color Button to the Ribbon](#addcolorbutton)  
   
--   [Добавить элемент цвета в класс документа](#addColorMember)  
+- [Adding a Color Member to the Document Class](#addcolormember)  
   
--   [Инициализация перья и сохранить настройки](#initPenSave)  
+- [Initializing Pens and Saving Preferences](#initpensave)  
   
-##  <a name="addNewPanel"></a> Добавление новых панели на ленту  
- В следующих шагов, как добавить панель **Вид**, которая содержит 2 флажка видимость элемента управления панели инструментов и строки состояния, а также панель **Окно**, которая содержит по вертикали ориентирована разворачивающаяся кнопка, создание и размещение элементов управления windows \(MDI\) для поддержки интерфейса.  
+##  <a name="addnewpanel"></a> Adding New Panels to the Ribbon  
+ These steps show how to add a **View** panel that contains two check boxes that control the visibility of the toolbar and the status bar, and also a **Window** panel that contains a vertically oriented split button that controls the creation and arrangement of multiple-document interface (MDI) windows.  
   
-#### Добавление панели представления и панель окна на панели ленты  
+#### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>To add a View panel and Window panel to the ribbon bar  
   
-1.  Создайте панель `Вид`, который содержит 2 флажка, изменить строку состояния и панель инструментов.  
+1.  Create a panel named `View`, which has two check boxes that toggle the status bar and toolbar.  
   
-    1.  Из **Панель элементов** перетащите **Панель**  в категории **Главная**.  Затем перетащите 2 на панели **Флажки**.  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Check Boxes** to the panel.  
   
-    2.  Щелкните панель, чтобы изменить его свойства.  Измените **Заголовок** на `Вид`.  
+    2.  Click the panel to modify its properties. Change **Caption** to `View`.  
   
-    3.  Щелкните этот флажок, чтобы изменить его свойства.  Измените **Идентификатор** на `ID_VIEW_TOOLBAR`, а свойству **Заголовок** значение `Панель инструментов`.  
+    3.  Click the first check box to modify its properties. Change **ID** to `ID_VIEW_TOOLBAR` and **Caption** to `Toolbar`.  
   
-    4.  Щелкните второй флажок, чтобы изменить его свойства.  Измените **Идентификатор** на `ID_VIEW_STATUS_BAR`, а свойству **Заголовок** значение `Строка состояния`.  
+    4.  Click the second check box to modify its properties. Change **ID** to `ID_VIEW_STATUS_BAR` and **Caption** to `Status Bar`.  
   
-2.  Создайте панель `Окно` с разворачивающейся кнопки.  Когда пользователь щелкает разворачивающаяся кнопка, отображения контекстного меню 3 команды, уже определены в приложении Scribble.  
+2.  Create a panel named `Window` that has a split button. When a user clicks the split button, a shortcut menu displays three commands that are already defined in the Scribble application.  
   
-    1.  Из **Панель элементов** перетащите **Панель** в категории **Главная**.  Затем перетащите **Кнопка** в панели.  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Button** to the panel.  
   
-    2.  Щелкните панель, чтобы изменить его свойства.  Измените **Заголовок** на `Окно`.  
+    2.  Click the panel to modify its properties. Change **Caption** to `Window`.  
   
-    3.  Щелкните кнопку.  Измените **Заголовок** на **Ключи** значение `Окна`, `w`, `1` в **Большой индекс образа** и **Режим разделения** на `ложь`.  Затем щелкните многоточие \(**...**\) рядом с полем **элементы меню**, чтобы открыть диалоговое окно **Редактор элементов**.  
+    3.  Click the button. Change **Caption** to `Windows`, **Keys** to `w`, **Large Image Index** to `1`, and **Split Mode** to `False`. Then click the ellipsis (**...**) next to **Menu Items** to open the **Items Editor** dialog box.  
   
-    4.  Щелкните **Добавить** три раза, чтобы добавить 3 кнопки.  
+    4.  Click **Add** three times to add three buttons.  
   
-    5.  Щелкните первую кнопку и измените **Заголовок** на `Новое окно`, а для свойства **Идентификатор** значение `ID_WINDOW_NEW`.  
+    5.  Click the first button and then change **Caption** to `New Window`, and **ID** to `ID_WINDOW_NEW`.  
   
-    6.  Щелкните вторую кнопку и измените **Заголовок** на `Каскадом`, а для свойства **Идентификатор** значение `ID_WINDOW_CASCADE`.  
+    6.  Click the second button and then change **Caption** to `Cascade`, and **ID** to `ID_WINDOW_CASCADE`.  
   
-    7.  Нажмите на кнопку и измените **Заголовок** на `Рядом`, а для свойства **Идентификатор** значение `ID_WINDOW_TILE_HORZ`.  
+    7.  Click the third button and then change **Caption** to `Tile`, and **ID** to `ID_WINDOW_TILE_HORZ`.  
   
-3.  Сохраните изменения, а затем построить и запустить приложение.  Панели **Вид** и **Окно** должны отображаться.  Нажмите кнопки, чтобы убедиться, что они правильно функции.  
+3.  Save the changes, and then build and run the application. The **View** and **Window** panels should be displayed. Click the buttons to confirm that they function correctly.  
   
- \[[Подразделы](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addHelpPanel"></a> Добавить панель справки на ленту  
- Теперь можно присвоить 2 пунктов меню, которые определены в приложении Scribble для кнопок ленты, называются **Вызов справки**  и  **О Scribble**.  Кнопки добавляются в новой с панели **Справка**.  
+##  <a name="addhelppanel"></a> Adding a Help Panel to the Ribbon  
+ Now, you can assign two menu items that are defined in the Scribble application to ribbon buttons that are named **Help Topics** and **About Scribble**. The buttons are added to a new panel named **Help**.  
   
-#### Добавить панель справки  
+#### <a name="to-add-a-help-panel"></a>To add a Help panel  
   
-1.  Из **Панель элементов** перетащите **Панель** в категории **Главная**.  Затем перетащите 2 на панели **Кнопка**.  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Buttons** to the panel.  
   
-2.  Щелкните панель, чтобы изменить его свойства.  Измените **Заголовок** на `Справка`.  
+2.  Click the panel to modify its properties. Change **Caption** to `Help`.  
   
-3.  Щелкните первую кнопку.  Измените **Заголовок** на `Вызов справки`, а для свойства **Идентификатор** значение `ID_HELP_FINDER`.  
+3.  Click the first button. Change **Caption** to `Help Topics`, and **ID** to `ID_HELP_FINDER`.  
   
-4.  Щелкните вторую кнопку.  Измените **Заголовок** на `О Scribble…`, а для свойства **Идентификатор** значение `ID_APP_ABOUT`.  
+4.  Click the second button. Change **Caption** to `About Scribble...`, and **ID** to `ID_APP_ABOUT`.  
   
-5.  Сохраните изменения, а затем построить и запустить приложение.  Панель **Справка**, которая содержит 2 кнопки ленты должна отображаться.  
+5.  Save the changes, and then build and run the application. A **Help** panel that contains two ribbon buttons should be displayed.  
   
     > [!IMPORTANT]
-    >  При нажатии кнопки **Вызов справки**, приложения Scribble для открытия сжанное HTML \(.chm\) *your\_project\_name* с файлом справки .chm.  Следовательно, если проект не называется Scribble, его необходимо переименовать файл справки в имени проекта.  
+    >  When you click the **Help Topics** button, the Scribble application opens a compressed HTML (.chm) help file named *your_project_name*.chm. Consequently, if your project is not named Scribble, you must rename the help file to your project name.  
   
- \[[Подразделы](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addPenPanel"></a> Добавление панели пера на ленту  
- Теперь добавьте в панель кнопок отображения, элемент управления толщина пера и цвет.  Эта панель содержит флажок, переключает толстые и место перья.  Эта функция похож на одно из пункта меню **Толстая линия** в приложении Scribble.  
+##  <a name="addpenpanel"></a> Adding a Pen Panel to the Ribbon  
+ Now, add a panel to display buttons that control the thickness and the color of the pen. This panel contains a check box that toggles between thick and thin pens. Its functionality resembles that of the **Thick Line** menu item in the Scribble application.  
   
- Изначально приложения Scribble позволяет ширину пера пользователя отборным из диалогового окна, которое появляется, когда пользователь нажимает кнопку **Ширины пера** в меню.  Поскольку область ленты содержит широко место для новых элементов управления, можно заменить диалоговое окно с помощью 2 полей со списком на ленте.  Одно поле со списком настроить ширину тонкого пера и другое поле со списком настроить ширину толстого пера.  
+ The original Scribble application lets the user select pen widths from a dialog box that appears when the user clicks **Pen Widths** on the menu. Because the ribbon bar has ample room for new controls, you can replace the dialog box by using two combo boxes on the ribbon. One combo box adjusts the width of the thin pen and the other combo box adjusts the width of the thick pen.  
   
-#### Добавление панели и поле со списком на ленте пера  
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>To add a Pen panel and combo boxes to the ribbon  
   
-1.  Из **Панель элементов** перетащите **Панель** в категории **Главная**.  Затем перетащите **флажок** и 2 на панели **Поля со списком**.  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Check Box** and two **Combo Boxes** to the panel.  
   
-2.  Щелкните панель, чтобы изменить его свойства.  Измените **Заголовок** на `Перо`.  
+2.  Click the panel to modify its properties. Change **Caption** to `Pen`.  
   
-3.  Щелкните флажок.  Измените **Заголовок** на `Используйте толщиной`, а для свойства **Идентификатор** значение `ID_PEN_THICK_OR_THIN`.  
+3.  Click the check box. Change **Caption** to `Use Thick`, and **ID** to `ID_PEN_THICK_OR_THIN`.  
   
-4.  Щелкните первое поле со списком.  **Заголовок** Измените значение **Идентификатор** на `Компактный перо`, `ID_PEN_THIN_WIDTH`, `2`, **Текст** для **Тип** и значение `Раскрывающийся список` для свойства **Данные** значение `1; 2; 3; 4; 5; 6; 7; 8; 9;`.  
+4.  Click the first combo box. Change **Caption** to `Thin Pen`, **ID** to `ID_PEN_THIN_WIDTH`, **Text** to `2`, **Type** to `Drop List`, and **Data** to `1;2;3;4;5;6;7;8;9;`.  
   
-5.  Щелкните второе поле со списком.  Измените **Заголовок** на **Идентификатор** значение `Толстое перо`, `ID_PEN_THICK_WIDTH`, `5`, **Текст** для **Тип** и значение `Раскрывающийся список` для свойства **Данные** значение `5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20;`.  
+5.  Click the second combo box. Change **Caption** to `Thick Pen`, **ID** to `ID_PEN_THICK_WIDTH`, **Text** to `5`, **Type** to `Drop List`, and **Data** to `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
   
-6.  Новые поля со списком не соответствуют имеющимся пунктов меню.  Следовательно, необходимо создать пункт меню для каждого параметра пера.  
+6.  The new combo boxes do not correspond to any existing menu items. Therefore, you must create a menu item for every pen option.  
   
-    1.  В окне **Ресурсы** откройте ресурс меню IDR\_SCRIBBTYPE.  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Нажмите кнопку **Перо**, чтобы открыть меню **ru** p.  Затем нажмите **Прототип для текста** и введите `Thi&перо n`.  
+    2.  Click **Pen** to open the p**en** menu. Then click **Type Here** and type `Thi&n Pen`.  
   
-    3.  Щелкните правой кнопкой мыши текст, который только что для открытия окна **Свойства** и измените свойства идентификатора значение `ID_PEN_THIN_WIDTH`.  
+    3.  Right-click the text that you just typed to open the **Properties** window, and then change the ID property to `ID_PEN_THIN_WIDTH`.  
   
-    4.  Необходимо также создать обработчик событий для каждого пункта меню пера.  Щелкните правой кнопкой мыши пункт меню **Утончить&перо**, созданные и затем нажмите **Добавить обработчик события**.  **Мастер обработчика события**.  
+    4.  You must also create an event handler for every pen menu item. Right-click the **Thi&n Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  В поле **Список классов** в мастере, выберите **CScribbleDoc** и нажмите кнопку **Добавить\/править**.  Будет создан обработчик событий `CScribbleDoc::OnPenThinWidth`.  
+    5.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThinWidth`.  
   
-    6.  Добавьте следующий код к `CScribbleDoc::OnPenThinWidth`.  
+    6.  Add the following code to `CScribbleDoc::OnPenThinWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        // Get a pointer to the Thin Width combo box  
-        CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-        //Get the selected value  
-        int nCurSel = pThinComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();    
-        ```  
+ ``` *// Get a pointer to the ribbon bar CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon); *// Get a pointer to the Thin Width combo box CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *//Get the selected value  
+    int nCurSel = pThinComboBox->GetCurSel(); if (nCurSel>= 0)  
+{  
+m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-7.  Теперь создайте пункт меню и обработчики событий для толстого пера.  
+7.  Next, create a menu item and event handlers for the thick pen.  
   
-    1.  В окне **Ресурсы** откройте ресурс меню IDR\_SCRIBBTYPE.  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Нажмите кнопку **Перо** , чтобы открыть меню пера.  Затем нажмите **Прототип для текста** и введите `Thic&перо k`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
   
-    3.  Щелкните правой кнопкой мыши текст, который только что для отображения окна **Свойства**.  Измените свойства идентификатора значение `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
   
-    4.  Щелкните правой кнопкой мыши пункт меню **Толстое перо**, созданные и затем нажмите **Добавить обработчик события**.  **Мастер обработчика события**.  
+    4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  В окне мастера **Список классов**, выберите **CScribbleDoc** и нажмите кнопку **Добавить\/править**.  Будет создан обработчик событий `CScribbleDoc::OnPenThickWidth`.  
+    5.  In the **Class list** box of the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThickWidth`.  
   
-    6.  Добавьте следующий код к `CScribbleDoc::OnPenThickWidth`.  
+    6.  Add the following code to `CScribbleDoc::OnPenThickWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-        // Get the selected value  
-        int nCurSel = pThickComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();  
-        ```  
+ ``` *// Get a pointer to the ribbon bar  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(
+    CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));
+*// Get the selected value  
+    int nCurSel = pThickComboBox->GetCurSel();
+if (nCurSel>= 0)  
+ {  
+    m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-8.  Сохраните изменения, а затем построить и запустить приложение.  Новые кнопки и поля со списком должны отображаться.  Попробуйте использовать различные ширины пера в scribble.  
+8.  Save the changes, and then build and run the application. New buttons and combo boxes should be displayed. Try using different pen widths to scribble.  
   
- \[[Подразделы](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addColorButton"></a> Чтобы добавить кнопку цвета на панель пера  
- Затем добавьте объект [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md), который позволяет scribble пользователя цветом.  
+##  <a name="addcolorbutton"></a> Adding a Color Button to the Pen Panel  
+ Next, add a [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) object that lets the user scribble in color.  
   
-#### Чтобы добавить кнопку цвета на панель пера  
+#### <a name="to-add-a-color-button-to-the-pen-panel"></a>To add a color button to the Pen panel  
   
-1.  Прежде чем добавить кнопку цвета, создайте пункт меню для него.  В окне **Ресурсы** откройте ресурс меню IDR\_SCRIBBTYPE.  Щелкните пункт меню **Перо**  для открытия меню пера.  Затем нажмите **Прототип для текста** и введите `&Color`.  Щелкните правой кнопкой мыши текст, который только что для отображения окна **Свойства**.  Измените идентификатор на `ID_PEN_COLOR`.  
+1.  Before you add the color button, create a menu item for it. In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource. Click the **Pen** menu item to open the pen menu. Then click **Type Here** and type `&Color`. Right-click the text that you just typed to display the **Properties** window. Change the ID to `ID_PEN_COLOR`.  
   
-2.  Добавьте кнопку цвета.  Из **Панель элементов** перетащите **Кнопка цвета** на панель **Перо**.  
+2.  Now add the color button. From the **Toolbox**, drag a **Color Button** to the **Pen** panel.  
   
-3.  Нажмите кнопку цвета.  Измените **Заголовок** на **Идентификатор** значение `Цвет`, `ID_PEN_COLOR`, `True`, к **ПростойПросмотретьБольшой индекс образа** на `1`, а для свойства **Режим разделения** значение `ложь`.  
+3.  Click the color button. Change **Caption** to `Color`, **ID** to `ID_PEN_COLOR`, **SimpleLook** to `True`, **Large Image Index** to `1`, and **Split Mode** to `False`.  
   
-4.  Сохраните изменения, а затем построить и запустить приложение.  Новая кнопку цвета должна отображаться на панели **Перо**.  Однако ее нельзя использовать, так как она еще не существует обработчик событий.  Ниже показано, как добавить обработчик событий для кнопки цвета.  
+4.  Save the changes, and then build and run the application. The new color button should be displayed on the **Pen** panel. However, it cannot be used because it does not yet have an event handler. The next steps show how to add an event handler for the color button.  
   
- \[[Подразделы](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addColorMember"></a> Добавить элемент цвета в класс документа  
- Поскольку исходного приложения Scribble не имеет перья цвета, необходимо написать их реализацию.  Для хранения цвета пера документа добавьте новый элемент в класс документа `CscribbleDoc.`  
+##  <a name="addcolormember"></a> Adding a Color Member to the Document Class  
+ Because the original Scribble application does not have color pens, you must write an implementation for them. To store the pen color of the document, add a new member to the document class, `CscribbleDoc.`  
   
-#### Добавить элемент цвета в класс документа  
+#### <a name="to-add-a-color-member-to-the-document-class"></a>To add a color member to the document class  
   
-1.  В scribdoc.h, в классе `CScribbleDoc` найдите раздел `// Attributes`.  Добавьте следующие строки кода после определения элемента данных `m_nThickWidth`.  
+1.  In scribdoc.h, in the `CScribbleDoc` class, find the `// Attributes` section. Add the following lines of code after the definition of the `m_nThickWidth` data member.  
   
-    ```  
-    // Current pen color  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Current pen color  
+    COLORREF m_penColor;  
+ ```  
   
-2.  Каждый документ содержит список гладит рукой, что пользователь уже выписал.  Каждый штрих определяется объектом `CStroke`.  Класс `CStroke` не включает сведения о цвете пера.  Поэтому необходимо изменить класс.  В scribdoc.h, в классе `CStroke`, добавьте следующие строки кода после определения элемента данных `m_nPenWidth`.  
+2.  Every document contains a list of stokes that the user has already drawn. Every stroke is defined by a `CStroke` object. The `CStroke` class does not include information about pen color. Therefore, you must modify the class. In scribdoc.h, in the `CStroke` class, add the following lines of code after the definition of the `m_nPenWidth` data member.  
   
-    ```  
-    // Pen color for the stroke  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Pen color for the stroke  
+    COLORREF m_penColor;  
+ ```  
   
-3.  В scribdoc.h добавьте новый конструктор `CStroke` параметры определяют, ширину и цвет.  Добавьте следующую строку кода после выписки `CStroke(UINT nPenWidth);`.  
+3.  In scribdoc.h, add a new `CStroke` constructor whose parameters specify a width and color. Add the following line of code after the `CStroke(UINT nPenWidth);` statement.  
   
-    ```  
-    CStroke(UINT nPenWidth, COLORREF penColor);  
-    ```  
+ ```  
+    CStroke(UINT nPenWidth, COLORREF penColor);
+
+ ```  
   
-4.  В scribdoc.cpp добавьте реализация нового конструктора `CStroke`.  Добавьте следующий код после реализации конструктора `CStroke::CStroke(UINT nPenWidth)`.  
+4.  In scribdoc.cpp, add the implementation of the new `CStroke` constructor. Add the following code after the implementation of the `CStroke::CStroke(UINT nPenWidth)` constructor.  
   
-    ```  
-    // Constructor that uses the document's current width and color  
+ ``` *// Constructor that uses the document's current width and color  
     CStroke::CStroke(UINT nPenWidth, COLORREF penColor)  
-    {  
-       m_nPenWidth = nPenWidth;  
-       m_penColor = penColor;  
-       m_rectBounding.SetRectEmpty();  
-    }  
-    ```  
+ {  
+    m_nPenWidth = nPenWidth;  
+    m_penColor = penColor;  
+    m_rectBounding.SetRectEmpty();
+
+ }  
+ ```  
   
-5.  Измените вторая линия метода `CStroke::DrawStroke` следующим образом.  
+5.  Change the second line of the `CStroke::DrawStroke` method as follows.  
   
-    ```  
+ ```  
     if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))  
-    ```  
+ ```  
   
-6.  Настройка цвета пера по умолчанию для класса документа.  В scribdoc.cpp добавьте следующие линии в `CScribbleDoc::InitDocument` после выписки `m_nThickWidth = 5;`.  
+6.  Set the default pen color for the document class. In scribdoc.cpp, add the following lines to `CScribbleDoc::InitDocument`, after the `m_nThickWidth = 5;` statement.  
   
-    ```  
-    // default pen color is black  
-    m_penColor = RGB(0,0,0);   
-    ```  
+ ``` *// default pen color is black  
+    m_penColor = RGB(0,
+    0,
+    0);
+
+ ```  
   
-7.  В scribdoc.cpp измените первая линия метода `CScribbleDoc::NewStroke` к другому.  
+7.  In scribdoc.cpp, change the first line of the `CScribbleDoc::NewStroke` method to the following.  
   
-    ```  
-    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
+
+ ```  
   
-8.  Измените последнюю линия метода `CScribbleDoc::ReplacePen` к другому.  
+8.  Change the last line of the `CScribbleDoc::ReplacePen` method to the following.  
   
-    ```  
-    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    m_penCur.CreatePen(PS_SOLID,
+    m_nPenWidth,
+    m_penColor);
+
+ ```  
   
-9. Добавленный элемент `m_penColor` на предыдущем шаге.  Теперь создайте обработчик событий для кнопки цвета, которая задает члена.  
+9. You added the `m_penColor` member in a previous step. Now, create an event handler for the color button that sets the member.  
   
-    1.  В окне **Ресурсы** откройте ресурс меню IDR\_SCRIBBTYPE.  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Щелкните правой кнопкой мыши пункт меню **Цвет** и щелкните **Добавление обработчика событий…**.  **Мастер обработчика события**.  
+    2.  Right-click the **Color** menu item and click **Add Event Handler**. The **Event Handler Wizard** appears.  
   
-    3.  В поле **Список классов** в мастере, выберите **CScribbleDoc** и нажмите кнопку **Добавить\/править**.  При этом создается заглушка обработчика событий `CScribbleDoc::OnPenColor`.  
+    3.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click the **Add and Edit** button. This creates the `CScribbleDoc::OnPenColor` event handler stub.  
   
-10. Замените заглушка обработчика событий `CScribbleDoc::OnPenColor` следующим кодом.  
+10. Replace the stub for the `CScribbleDoc::OnPenColor` event handler with the following code.  
   
-    ```  
+ ```  
     void CScribbleDoc::OnPenColor()  
-    {  
-    // Change pen color to reflect color button's current selection  
-    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));  
-    m_penColor = pColorBtn->GetColor();  
-    // Create new pen using the selected color  
-    ReplacePen();  
-    }  
-    ```  
+ { *// Change pen color to reflect color button's current selection  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(
+    CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));
+
+    m_penColor = pColorBtn->GetColor();
+*// Create new pen using the selected color  
+    ReplacePen();
+
+ }  
+ ```  
   
-11. Сохраните изменения и затем выполните построение и запустите приложение.  Необходимо знать, как нажать кнопку цвета и изменения цвета пера.  
+11. Save the changes and then build and run the application. You should be able to press the color button and change the pen's color.  
   
- \[[Подразделы](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="initPenSave"></a> Инициализация перья и сохранить настройки  
- Далее, инициализируйте цвет и ширину перьев.  Наконец, сохранять и загружает рисунок цвета из файла.  
+##  <a name="initpensave"></a> Initializing Pens and Saving Preferences  
+ Next, initialize the color and width of the pens. Finally, save and load a color drawing from a file.  
   
-#### Инициализация элементов управления в панели ленты  
+#### <a name="to-initialize-controls-on-the-ribbon-bar"></a>To initialize controls on the ribbon bar  
   
-1.  Инициализация перья на панели ленты.  
+1.  Initialize the pens on the ribbon bar.  
   
-     Добавьте следующий код в scribdoc.cpp, в методе `CScribbleDoc::InitDocument` после выписки `m_sizeDoc = CSize(200,200)`.  
+     Add the following code to scribdoc.cpp, in the `CScribbleDoc::InitDocument` method, after the `m_sizeDoc = CSize(200,200)` statement.  
   
-    ```  
-    // Reset the ribbon UI to its initial values  
-    CMFCRibbonBar* pRibbon =   
-       ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton,   
-       pRibbon->FindByID(ID_PEN_COLOR));  
-    // Set ColorButton to black  
-    pColorBtn->SetColor(RGB(0,0,0));    
-    CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-    // Set Thin pen combobox to 2  
-    pThinComboBox->SelectItem(1);   
-    CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-    // Set Thick pen combobox to 5  
-    pThickComboBox->SelectItem(0);  
-    ```  
+ ``` *// Reset the ribbon UI to its initial values CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST( CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR)); *// Set ColorButton to black  
+    pColorBtn->SetColor(RGB(0, 0, 0));
+
+ CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *// Set Thin pen combobox to 2  
+    pThinComboBox->SelectItem(1);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH)); *// Set Thick pen combobox to 5  
+    pThickComboBox->SelectItem(0);
+
+ ```  
   
-2.  Сохраните цвет рисования в файл.  Добавьте следующую выписка в scribdoc.cpp, в методе `CStroke::Serialize` после выписки `ar << (WORD)m_nPenWidth;`.  
+2.  Save a color drawing to a file. Add the following statement to scribdoc.cpp, in the `CStroke::Serialize` method, after the `ar << (WORD)m_nPenWidth;` statement.  
   
-    ```  
-    ar << (COLORREF)m_penColor;  
-    ```  
+ ```  
+    ar <<(COLORREF)m_penColor;  
+ ```  
   
-3.  Наконец, загрузите рисунок цвета из файла.  Добавьте следующую строку кода, в методе `CStroke::Serialize` после выписки `m_nPenWidth = w;`.  
+3.  Finally, load a color drawing from a file. Add the following line of code, in the `CStroke::Serialize` method, after the `m_nPenWidth = w;` statement.  
   
-    ```  
-    ar >> m_penColor;  
-    ```  
+ ```  
+    ar>> m_penColor;  
+ ```  
   
-4.  Теперь scribble цветом и сохраняет пользовательское рисование в файл.  
+4.  Now scribble in color and save your drawing to a file.  
   
- \[[Подразделы](#top)\]  
+ [[Sections](#top)]  
   
-## Заключение  
- Обновления приложения MFC Scribble.  Используйте в данном пошаговом руководстве в качестве руководства при изменении существующих приложений.  
+## Conclusion  
+ You have updated the MFC Scribble application. Use this walkthrough as a guide when you modify your existing applications.  
   
-## См. также  
- [Пошаговые руководства](../mfc/walkthroughs-mfc.md)   
- [Пошаговое руководство. Обновление приложения MFC Scribble \(часть 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+
+

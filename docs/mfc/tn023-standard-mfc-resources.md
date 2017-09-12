@@ -1,111 +1,130 @@
 ---
-title: "TN023. Стандартные ресурсы MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.resources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ресурсы [MFC]"
-  - "стандартные ресурсы"
-  - "TN023"
+title: 'TN023: Standard MFC Resources | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.resources
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC]
+- TN023
+- standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# TN023. Стандартные ресурсы MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7eb5865f96cb7308159a2035c051f470e8d8143c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта заметка описаны стандартные ресурсы, предоставленные и требуется библиотекой MFC.  
+---
+# <a name="tn023-standard-mfc-resources"></a>TN023: Standard MFC Resources
+This note describes the standard resources provided with and needed by the MFC library.  
   
-## Стандартные ресурсы  
- MFC предлагает 2 категории предварительно определенных ресурсов, которые можно использовать в приложении: ресурсы коллекций картинок и стандартные ресурсы платформы.  
+## <a name="standard-resources"></a>Standard Resources  
+ MFC offers two categories of predefined resources that you can use in your application: clip-art resources and standard framework resources.  
   
- Ресурсы коллекций картинок дополнительные ресурсы, среда не зависит от того, но, возможно, для добавления в интерфейс пользователя приложения.  Следующие ресурсы отсечение\- искусства содержатся в примере MFC [CLIPART](../top/visual-cpp-samples.md) имеют:  
+ Clip-art resources are additional resources that the framework does not depend on, but which you might want to add to your application's user interface. The following clip-art resources are contained in the MFC General sample [CLIPART](../visual-cpp-samples.md):  
   
--   Common.rc: Отдельный файл ресурсов, содержащий:  
+-   Common.rc: A single file of resources that contains:  
   
-    -   Большая коллекция Значков, которые представляют различные бизнес\-логика и задачи введенной информачии.  
+    -   A large collection of icons that represent a variety of business and data-processing tasks.  
   
-    -   Несколько общих курсоров \(см. также Afxres.rc\).  
+    -   Several common cursors (see also Afxres.rc).  
   
-    -   Растровое изображение панели инструментов, содержит несколько кнопок панели инструментов.  
+    -   A toolbar bitmap that contains several toolbar buttons.  
   
-    -   Ресурсы растрового изображения и значков, используемых Commdlg.dll.  
+    -   The bitmap and icon resources that are used by Commdlg.dll.  
   
--   Indicate.rc: Содержит строковые ресурсы для индикаторов ключей состояния строки состояния, например «НАКОНЕЧНИК» для Caps Lock.  
+-   Indicate.rc: Contains string resources for the status-bar key-state indicators, such as "CAP" for Caps Lock.  
   
--   Prompts.rc: Содержит строковые ресурсы возврата запроса для каждой предварительно определенной команды, например «создать новый документ» для `ID_FILE_NEW`.  
+-   Prompts.rc: Contains menu-prompt string resources for each predefined command, such as "Create a new document" for `ID_FILE_NEW`.  
   
--   Commdlg.rc: Файл Visual C\+\+ — совместимы .rc, содержащий стандартных шаблонов диалоговых окон COMMDLG.  
+-   Commdlg.rc: A Visual C++ compatible .rc file that contains the standard COMMDLG dialog templates.  
   
- Стандартные ресурсы платформы ресурсов с указанными AFX\- идентификаторы зависит от того, что платформа для внутренних реализаций.  Для редко потребуется изменить эти AFX\- определенные ресурсы.  Если это сделать, необходимо выполнить процедуру законспектированная далее в этом разделе.  
+ Standard framework resources are resources with AFX-defined IDs that the framework depends on for internal implementations. You will rarely need to change these AFX-defined resources. If you do, you should follow the procedure outlined later in this topic.  
   
- Следующие ресурсы платформы содержатся в каталоге MFC\\INCLUDE:  
+ The following framework resources are contained in the MFC\INCLUDE directory:  
   
--   Afxres.rc: Общие ресурсы, используемые средой выполнения.  
+-   Afxres.rc: Common resources used by the framework.  
   
--   Afxprint.rc: Ресурсы, относящиеся к печати.  
+-   Afxprint.rc: Resources specific to printing.  
   
--   Afxolecl.rc: Ресурсы, относящиеся к клиентским приложениям OLE.  
+-   Afxolecl.rc: Resources specific to OLE client applications.  
   
--   Afxolev.rc: Ресурсы, связанные с полным OLE\-сервера приложений.  
+-   Afxolev.rc: Resources specific to full OLE server applications.  
   
-## Использование ресурсов коллекций картинок  
+## <a name="using-clip-art-resources"></a>Using Clip-Art Resources  
   
-#### Использование ресурса бинарный отсечение\- искусства  
+#### <a name="to-use-a-clip-art-binary-resource"></a>To use a clip-art binary resource  
   
-1.  Откройте файл ресурсов приложения в Visual C\+\+.  
+1.  Open your application's resource file in Visual C++.  
   
-2.  Открытие Common.rc.  Этот файл содержит все ресурсы отсечение\- бинарные искусства.  Это может занять некоторое время, поскольку файл Common.rc компилироваться.  
+2.  Open Common.rc. This file contains all the binary clip-art resources. This may take some time because the Common.rc file is compiled.  
   
-3.  Удерживая клавишу CTRL при перетаскивании ресурсы, которые необходимо использовать в Common.rc в файле ресурсов приложения.  
+3.  Hold down CTRL while you drag the resources that you want to use from Common.rc to your application's resource file.  
   
- Для использования других ресурсов отсечение\- искусства выполните те же шаги.  Единственное отличие заключается в том, что открытии нужный rc\-файл, а не Common.rc.  
+ To use other clip-art resources, follow the same steps. The only difference is that you will open the appropriate .rc file instead of Common.rc.  
   
 > [!NOTE]
->  Следите за тем, чтобы изменения не перемещение ресурсов из Common.rc окончательно.  Если навести ключ, CTRL при перетаскивании ресурсы создается копия.  Если не удерживайте клавишу CTRL вниз, при перетаскивании ресурсы, будут отменены.  Если существует, можно случайно внести изменения в файл Common.rc, щелкните «нет», чтобы подтвердить операцию ли сохранить изменения в Common.rc.  
+>  Be careful not to unintentionally move resources out of Common.rc permanently. If you hold the CTRL key while you drag resources, you will create a copy. If you do not hold CTRL down while you drag, the resources will be moved. If you are concerned that you might have accidentally made changes to the Common.rc file, click "No" when you are asked whether to save the changes to Common.rc.  
   
 > [!NOTE]
->  Файлы ресурсов .rc имеют специальный ресурс `TEXTINCLUDE` в их, средствами разработчика случайным образом сохранить поверх стандартных файлов rc\-файл.  
+>  The .rc resource files have a special `TEXTINCLUDE` resource in them that will prevent you from accidentally saving on top of the standard .rc files.  
   
-### Настраивать стандартные ресурсы платформы .NET Framework  
- Стандартные ресурсы платформы обычно включаются в приложении с помощью команды \#include в файле ресурсов приложения.  AppWizard создаст файл ресурсов.  Этот файл содержит ресурсы платформы соответствующий стандарту, в зависимости от включенных параметров AppWizard будет выбрана.  Можно просматривать, добавлять или удалять, ресурсы включаются путем изменения времени компиляции директивы.  Чтобы сделать это, открыть меню **Ресурс** и выделяет **Содержит набор**.  Просмотрите «элемент правки времени компиляции директив».  Примеры.  
+### <a name="customizing-standard-framework-resources"></a>Customizing Standard Framework Resources  
+ Standard framework resources are usually included in an application by using the #include command in an application's resource file. AppWizard will generate a resource file. This file includes the appropriate standard framework resources, depending on which AppWizard options you select. You can review, add, or remove which resources are included by changing the compile-time directives. To do this, open the **Resource** menu and select **Set Includes**. Look at the "Compile-Time Directives" edit item. For example:  
   
 ```  
 #include "afxres.rc"  
 #include "afxprint.rc"  
 ```  
   
- Наиболее распространенный случай настраивать стандартные ресурсы платформы для добавления или удаления дополнительный включает ввод, для поддержки OLE клиента и OLE\-сервера.  
+ The most common case of customizing standard framework resources is adding or removing additional includes for printing, OLE Client, and OLE Server support.  
   
- В некоторых редких случаях может потребоваться настраивать содержимое стандартных ресурсов платформы для определенного приложения, а не только для добавления и удаления всего файла.  Инструкции последователей показывают, как можно ограничить ресурсы, входящие:  
+ In some rare cases you might want to customize the contents of the standard framework resources for your particular application, not just add and remove the entire file. The followings steps show how you can limit the resources that are included:  
   
-##### Настраивать содержимое стандартного файла ресурсов  
+##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>To customize the contents of a standard resource file  
   
-1.  Откройте файл ресурсов в Visual C\+\+.  
+1.  Open the resource file in Visual C++.  
   
-2.  Использование наборов ресурсов содержит команду, удалите `#include` для стандартного rc\-файла, необходимо настраивать.  Например, чтобы настраивать панели инструментов предварительного просмотра, удалите линия `#include "afxprint.rc"`.  
+2.  Using the Resource Set Includes command, remove the `#include` for the standard .rc file that you want to customize. For example, to customize the print-preview toolbar, remove the `#include "afxprint.rc"` line.  
   
-3.  Открытие файлов ресурсов соответствующего заключается в MFC\\INCLUDE.  Следующий пример ранее в этом разделе, соответствующий файл MFC\\Include\\Aafxprint.rc  
+3.  Open the appropriate standard resources files in MFC\INCLUDE. Following the example earlier in this topic, the appropriate file is MFC\Include\Aafxprint.rc  
   
-4.  Скопируйте все ресурсы из стандартного rc\-файла в файл ресурсов приложения.  
+4.  Copy all the resources from the standard .rc file to your application resource file.  
   
-5.  Изменить копию стандартных ресурсов в файле ресурсов приложения.  
+5.  Modify the copy of the standard resources in your application resource file.  
   
 > [!NOTE]
->  Не изменяйте ресурсы непосредственно в стандартных rc\-файлов.  Создание таким образом изменять ресурсы, доступные в каждом приложении, а не только в одном в настоящее время работы.  
+>  Do not modify the resources directly in the standard .rc files. Doing so will modify the resources available in every application, not just in the one you are currently working on.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

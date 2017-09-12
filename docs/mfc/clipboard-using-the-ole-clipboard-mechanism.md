@@ -1,56 +1,75 @@
 ---
-title: "Буфер обмена. Использование механизма буфера обмена OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [OLE], буфер обмена"
-  - "буфер обмена [C++], OLE - форматы"
-  - "форматы [C++], Буфер обмена для OLE"
-  - "Буфер обмена OLE"
-  - "Буфер обмена OLE, форматы"
+title: 'Clipboard: Using the OLE Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard
+- Clipboard [MFC], OLE formats
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Буфер обмена. Использование механизма буфера обмена OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8087ff3c5054193fa681ea094d1f223855889b78
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-OLE использует стандартные форматы и некоторые форматы OLE\-, для передачи данных через буфер обмена.  
+---
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Clipboard: Using the OLE Clipboard Mechanism
+OLE uses standard formats and some OLE-specific formats for transferring data through the Clipboard.  
   
- При вырежете или копировать данные из приложения, данные хранятся в буфере обмена, который будет использоваться далее в операциях ".  Эти данные в различных форматах.  Когда пользователь выбирает вставить данные из буфера обмена, приложение может выбрать, этих форматов, которые требуется использовать.  Приложение должно быть написано, чтобы выбрать формат, в котором содержатся последние данные, если только пользователь не будет просить определенный формат, используя для вставки.  Прежде чем продолжить, может понадобиться прочитать разделы [Объекты данных и источники данных OLE \(\)](../mfc/data-objects-and-data-sources-ole.md).  Они описывают основные принципы передачи данных работают, и способов их реализации в приложениях.  
+ When you cut or copy data from an application, the data is stored on the Clipboard to be used later in paste operations. This data is in a variety of formats. When a user chooses to paste data from the Clipboard, the application can choose which of these formats to use. The application should be written to choose the format that provides the most information, unless the user specifically asks for a certain format, using Paste Special. Before continuing, you may want to read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics. They describe the fundamentals of how data transfers work, and how to implement them in your applications.  
   
- Windows определяет несколько стандартных форматов, которые можно использовать для передачи данных через буфер обмена.  Они включают метафайлы, текст, растровые изображения и другие.  OLE определяет несколько форматов OLE\- функции, также.  Для приложений, которым требуется больше информации, чем заданное эти стандартные форматы, рекомендуется, регистрация собственные пользовательские форматы обмена.  Выполните [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции Win32 API это.  
+ Windows defines a number of standard formats that can be used for transferring data through the Clipboard. These include metafiles, text, bitmaps, and others. OLE defines a number of OLE-specific formats, as well. For applications that need more detail than given by these standard formats, it is a good idea to register their own custom Clipboard formats. Use the Win32 API function [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) to do this.  
   
- Например, Microsoft Excel регистрирует пользовательский формат для электронных таблиц.  Этот формат передает значительно больше сведений, чем, например растровое изображение;  Если эти данные — в приложение, поддерживающее формат электронной таблицы, все формулы и значения из электронной таблицы сохраняются и обновляются при необходимости.  Microsoft Excel также помещает данные в буфер обмена в форматы, поэтому он может вставить как элемент OLE.  Любой OLE контейнер документа может вставить эту информацию как вложенный элемент.  Этот вложенный элемент можно изменить с помощью Microsoft Excel.  Обмен также содержит простое растровое изображение образа выделенного диапазона в электронной таблице.  Это также можно вставить в OLE контейнеры документа или в редакторы растрового изображения, как создать.  В случае растрового изображения, однако, не существует способа управления данными в эту таблицу.  
+ For example, Microsoft Excel registers a custom format for spreadsheets. This format carries much more information than, for example, a bitmap does. When this data is pasted into an application that supports the spreadsheet format, all the formulas and values from the spreadsheet are retained and can be updated if necessary. Microsoft Excel also puts data on the Clipboard in formats so that it can be pasted as an OLE item. Any OLE document container can paste this information as an embedded item. This embedded item can be changed using Microsoft Excel. The Clipboard also contains a simple bitmap of the image of the selected range on the spreadsheet. This can also be pasted into OLE document containers or into bitmap editors, like Paint. In the case of a bitmap, however, there is no way to manipulate the data as a spreadsheet.  
   
- Чтобы получить максимальный объем сведения из буфера обмена, приложения должны проверять наличие этих пользовательских форматов перед вставить данные из буфера обмена.  
+ To retrieve the maximum amount of information from the Clipboard, applications should check for these custom formats before pasting data from the Clipboard.  
   
- Например, чтобы включить команду, можно написать обработчик примерно следующим образом:  
+ For example, to enable the Cut command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#3](../mfc/codesnippet/CPP/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Копирование и вставящ данные](../Topic/Clipboard:%20Copying%20and%20Pasting%20Data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Добавить другие форматы](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [С помощью обмена Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the Windows Clipboard](../mfc/clipboard-using-the-windows-clipboard.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
--   [Объекты OLE данных и источники данных и унифицированная передача данных](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
-## См. также  
- [буфер обмена](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

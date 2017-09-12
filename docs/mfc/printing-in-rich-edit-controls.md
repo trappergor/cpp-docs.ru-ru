@@ -1,37 +1,56 @@
 ---
-title: "Печать в элементах управления &quot;Rich Edit&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl - класс, печать"
-  - "печать [MFC], CRichEditCtrl"
-  - "элементы управления Rich Edit, печать"
+title: Printing in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC], CRichEditCtrl
+- rich edit controls [MFC], printing
+- CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Печать в элементах управления &quot;Rich Edit&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9924723e2f304ea6d76f5fd767b6515595d88949
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Это свойство указывает, что элемент управления расширенного редактирования \([CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\) отображает выходные данные для конкретного устройства, например принтера.  Можно также указать устройство вывода, для которого форматы управления расширенного редактирования его текст.  
+---
+# <a name="printing-in-rich-edit-controls"></a>Printing in Rich Edit Controls
+You can tell a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to render its output for a specified device, such as a printer. You can also specify the output device for which a rich edit control formats its text.  
   
- Для форматирования часть содержимого управления расширенного редактирования для конкретного устройства можно использовать функцию\-член [FormatRange](../Topic/CRichEditCtrl::FormatRange.md).  Структура [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911), используемую с данной функцией определяет диапазон текста для форматирования, так и контекст устройства \(DC\) для целевого устройства.  
+ To format part of the contents of a rich edit control for a specific device, you can use the [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) member function. The [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure used with this function specifies the range of text to format as well as the device context (DC) for the target device.  
   
- После форматирования текста для устройства вывода, можно отправить вывод в устройства с помощью функции\-члена [DisplayBand](../Topic/CRichEditCtrl::DisplayBand.md).  Повторное использование `FormatRange` и `DisplayBand`, приложение, которое выводит содержимого элемента управления расширенного редактирования может реализовать использование диапазонов. \(Использование диапазонов деление вывода на более мелкие части для распечатки\).  
+ After formatting text for an output device, you can send the output to the device by using the [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) member function. By repeatedly using `FormatRange` and `DisplayBand`, an application that prints the contents of a rich edit control can implement banding. (Banding is division of output into smaller parts for printing purposes.)  
   
- Можно использовать функцию\-член [SetTargetDevice](../Topic/CRichEditCtrl::SetTargetDevice.md), чтобы определить целевое устройство, для которого форматы управления расширенного редактирования его текст.  Эта функция полезна для режима представления WYSIWYG \(что будет видно, что при получении\) форматирования текста, в котором апликаций позиции с помощью метрика шрифта установленного по умолчанию вместо экрана.  
+ You can use the [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) member function to specify the target device for which a rich edit control formats its text. This function is useful for WYSIWYG (what you see is what you get) formatting, in which an application positions text using the default printer's font metrics instead of the screen's.  
   
-## См. также  
- [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,44 +1,63 @@
 ---
-title: "Способы создания панели инструментов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBar - класс, создание панелей инструментов"
-  - "CToolBarCtrl - класс, и класс CToolBar"
-  - "CToolBarCtrl - класс, создание панелей инструментов"
-  - "Панели инструментов MFC"
-  - "элементы управления панели инструментов [MFC]"
-  - "элементы управления панели инструментов [MFC], создание"
+title: Methods of Creating a Toolbar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolBarCtrl class [MFC], and CToolBar class [MFC]
+- CToolBar class [MFC], creating toolbars
+- MFC toolbars
+- toolbar controls [MFC]
+- toolbar controls [MFC], creating
+- CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Способы создания панели инструментов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fabdce772443dc433233b74683956f1091118290
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC предоставляет 2 класса для создания панелей инструментов: [CToolBar](../mfc/reference/ctoolbar-class.md) и [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) \(API, создания общего элемента управления Windows\).  `CToolBar` предоставляет всю функциональность общего элемента управления панели инструментов, а также обрабатывает большую часть необходимых параметров и структур общего элемента управления автоматически; однако, если полученный исполняемый файл обычно будет больше, чем у созданного с помощью `CToolBarCtrl`.  
+---
+# <a name="methods-of-creating-a-toolbar"></a>Methods of Creating a Toolbar
+MFC provides two classes to create toolbars: [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (which wraps the Windows common control API). `CToolBar` provides all of the functionality of the toolbar common control, and it handles many of the required common control settings and structures for you; however, your resulting executable usually will be larger than that created by using `CToolBarCtrl`.  
   
- `CToolBarCtrl` обычно приводит к уменьшению исполняемый файл, который может быть использован `CToolBarCtrl`, если не планируется инструмент архитектуры интеграции в MFC.  Если планируется использовать `CToolBarCtrl` и интегрировать инструмент архитектуры в MFC, необходимо соблюдать осторожность дополнительный для связи манипуляции элемента управления панели инструментов в MFC.  Это сообщение не сложно; однако дополнительную работу, не нужен при использовании `CToolBar`.  
+ `CToolBarCtrl` usually results in a smaller executable, and you may prefer to use `CToolBarCtrl` if you do not intend to integrate the toolbar into the MFC architecture. If you plan to use `CToolBarCtrl` and integrate the toolbar into the MFC architecture, you must take additional care to communicate toolbar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use `CToolBar`.  
   
- Visual C\+\+ 2 C предоставляет два способа использования общего элемента управления панели инструментов.  
+ Visual C++ provides two ways to take advantage of the toolbar common control.  
   
--   Создайте панель инструментов с помощью `CToolBar`, а затем вызвать [CToolBar::GetToolBarCtrl](../Topic/CToolBar::GetToolBarCtrl.md), чтобы получить доступ к функциям элемента `CToolBarCtrl`.  
+-   Create the toolbar using `CToolBar`, and then call [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) to get access to the `CToolBarCtrl` member functions.  
   
--   Создайте панель инструментов с помощью конструктора [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md).  
+-   Create the toolbar using [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)'s constructor.  
   
- Любой метод выдаст доступ к функциям элемента элемента управления панели инструментов.  При вызове `CToolBar::GetToolBarCtrl`, оно возвращает ссылку на объект `CToolBarCtrl` таким образом можно использовать любой набор функции\-члены.  В разделе [CToolBar](../mfc/reference/ctoolbar-class.md) сведения о построении и создать панель инструментов с помощью `CToolBar`.  
+ Either method will give you access to the member functions of the toolbar control. When you call `CToolBar::GetToolBarCtrl`, it returns a reference to a `CToolBarCtrl` object so you can use either set of member functions. See [CToolBar](../mfc/reference/ctoolbar-class.md) for information on constructing and creating a toolbar using `CToolBar`.  
   
-## См. также  
- [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

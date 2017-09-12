@@ -1,43 +1,62 @@
 ---
-title: "Вызовы к обработчику со стороны платформы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка команд, вызов обработчиков и кода в MFC"
-  - "маршрутизация команд, MFC - библиотека"
-  - "функции обработчика, Платформа MFC"
-  - "MFC - библиотека, маршрутизация команд"
+title: How the Framework Calls a Handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- handler functions, MFC framework
+- command handling [MFC], calling handlers and code in MFC
+- command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Вызовы к обработчику со стороны платформы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 629e9d10934b2bfd39d3ad224cc194bdb250d670
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В следующих разделах сначала проверяет как платформа направляет участников команды, в то время как другие сообщения и уведомления отправляются окна элемента управления:  
+---
+# <a name="how-the-framework-calls-a-handler"></a>How the Framework Calls a Handler
+The following topics first examine how the framework routes commands, then examine how other messages and control notifications are sent to windows:  
   
--   [Сообщение отправя и при получении](../mfc/message-sending-and-receiving.md)  
+-   [Message sending and receiving](../mfc/message-sending-and-receiving.md)  
   
--   [Как noncommand сообщения достигают обработчики](../Topic/How%20Noncommand%20Messages%20Reach%20Their%20Handlers.md)  
+-   [How noncommand messages reach their handlers](../mfc/how-noncommand-messages-reach-their-handlers.md)  
   
--   [Маршрутизация команд](../mfc/command-routing.md)  
+-   [Command routing](../mfc/command-routing.md)  
   
--   [Рисунок маршрутизации команд](../mfc/command-routing-illustration.md)  
+-   [Command Routing Illustration](../mfc/command-routing-illustration.md)  
   
--   [Обработчик OnCmdMsg](../mfc/oncmdmsg-handler.md)  
+-   [The OnCmdMsg Handler](../mfc/oncmdmsg-handler.md)  
   
--   [Переопределить стандартную маршрутизация команд](../mfc/overriding-the-standard-command-routing.md)  
+-   [Overriding the Standard Command Routing](../mfc/overriding-the-standard-command-routing.md)  
   
-## См. также  
- [Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

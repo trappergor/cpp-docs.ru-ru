@@ -1,43 +1,62 @@
 ---
-title: "Объекты пользовательского интерфейса и идентификаторы команд | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка команд, объекты пользовательского интерфейса"
-  - "идентификаторы команд, объекты пользовательского интерфейса"
-  - "маршрутизация команд, MFC - библиотека"
-  - "сочетания клавиш, связь с идентификаторами"
-  - "пункты меню, связь с идентификаторами"
-  - "MFC - библиотека, маршрутизация команд"
-  - "элементы управления панели инструментов [MFC], идентификатор команды"
-  - "объекты пользовательского интерфейса, связь с идентификаторами"
+title: User-Interface Objects and Command IDs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard shortcuts, associating with IDs
+- MFC, command routing
+- toolbar controls [MFC], command ID
+- menu items, associating with IDs
+- user interface objects [MFC], associating with IDs
+- command IDs, user interface objects
+- command routing [MFC], MFC
+- command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Объекты пользовательского интерфейса и идентификаторы команд
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b3051afe12e290990d6248e4cfc1ad2994e617f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Пункты меню, кнопки панели инструментов и сочетания клавиш «объекты пользовательского интерфейса», предназначенный для создания команды.  Каждый такой объект пользовательского интерфейса имеет идентификатор.  Связывается объект пользовательского интерфейса с команды можно присвоить одно и то же идентификатор на объект и команды.  Как описано в [Сообщения](../mfc/messages.md), команды реализованы как особые сообщения.  На рисунке «команды в платформе .NET Framework» ниже показано, как среда управляет команды.  Когда объект пользовательского интерфейса создает команды, например `ID_EDIT_CLEAR_ALL`, один из объектов в приложении обрабатывает команды — на рисунке ниже, функция `OnEditClearAll` объекта документа вызывается с помощью сообщений схему документа.  
+---
+# <a name="user-interface-objects-and-command-ids"></a>User-Interface Objects and Command IDs
+Menu items, toolbar buttons, and accelerator keys are "user-interface objects" capable of generating commands. Each such user-interface object has an ID. You associate a user-interface object with a command by assigning the same ID to the object and the command. As explained in [Messages](../mfc/messages.md), commands are implemented as special messages. The figure "Commands in the Framework" below shows how the framework manages commands. When a user-interface object generates a command, such as `ID_EDIT_CLEAR_ALL`, one of the objects in your application handles the command — in the figure below, the document object's `OnEditClearAll` function is called via the document's message map.  
   
- ![Команды в Framework](../mfc/media/vc385p1.png "vc385P1")  
-Команды в платформе .NET Framework  
+ ![Commands in the Framework](../mfc/media/vc385p1.gif "vc385p1")  
+Commands in the Framework  
   
- На рисунке «команды обновления в платформе .NET Framework» ниже показано, как MFC обновления объектов пользовательского интерфейса, например пунктов меню и кнопки панели инструментов.  Прежде чем удалить меню вниз или во время циклом бездействия в случае кнопок панели инструментов, MFC и команды обновления.  На рисунке ниже, объект документа вызывается обработчик команды обновления, `OnUpdateEditClearAll`, чтобы включить или отключить объект пользовательского интерфейса.  
+ The figure "Command Updating in the Framework" below shows how MFC updates user-interface objects such as menu items and toolbar buttons. Before a menu drops down, or during the idle loop in the case of toolbar buttons, MFC routes an update command. In the figure below, the document object calls its update command handler, `OnUpdateEditClearAll`, to enable or disable the user-interface object.  
   
- ![Обновление команд в Framework](../Image/vc385P2.png "vc385P2")  
-Команда обновления в платформе .NET Framework  
+ ![Command updating in the Framework](../mfc/media/vc385p2.png "vc385p2")  
+Command Updating in the Framework  
   
-## См. также  
- [Сообщения и команды платформы](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

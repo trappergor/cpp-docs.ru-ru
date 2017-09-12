@@ -1,119 +1,138 @@
 ---
-title: "Конструктор лент (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Конструктор лент MFC"
-  - "Конструктор лент (MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Конструктор лент (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Конструктор лент позволяет создавать и настраивать ленту в приложениях MFC.  Лента — это элемент пользовательского интерфейса \(UI\), который объединяет команды в логические группы.  Эти группы отображаются на отдельных вкладках ленты в верхней части окна.  Лента заменяет меню и панели инструментов.  Лента может значительно повысить удобство использования приложения.  Дополнительные сведения см. в разделе [Ленты](http://go.microsoft.com/fwlink/?LinkId=129233).  На следующем рисунке показана лента.  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![Элемент управления ресурсом ленты MFC](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- В более ранних версиях Visual Studio ленты создавались в коде, который использует классы ленты MFC, такие как [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  В [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] конструктор лент предоставляет альтернативный метод создания лент. Во\-первых, создайте и настройте ленту как ресурс.  Затем загрузите ресурс ленты из кода в приложение MFC.  Можно даже использовать ресурсы ленты и классы ленты MFC вместе.  Например, можно создать ресурс ленты и программно добавлять дополнительные элементы в нее во время выполнения.  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## Основные сведения о конструкторе лент  
- Конструктор лент создает и сохраняет ленты как ресурсы.  При создании ресурса ленты конструктор лент выполняет следующие три действия.  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   Добавляет запись в скрипт определения ресурсов проекта \(\*.rc\).  В следующем примере `IDR_RIBBON` — уникальное имя, идентифицирующее ресурс ленты, `RT_RIBBON_XML` — тип ресурса, а `ribbon.mfcribbon-ms` — имя файла ресурсов.  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   Добавляет определения идентификаторов команд в файл resource.h.  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   Создает файл ресурсов ленты \(\*.mfcribbon\-ms\), который содержит XML\-код, определяющий кнопки, элементы управления и атрибуты ленты.  Изменения в конструкторе ленты на ленту сохраняются в файле ресурсов как XML.  В следующем примере кода показана часть содержимого файла \*.mfcribbon\-ms:  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- Чтобы использовать ресурс ленты в приложении MFC, загрузите его, вызвав [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md).  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## Создание ленты с помощью конструктора лент  
- Ниже описаны два способа для добавления ресурса ленты в проект MFC.  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   Создайте приложение MFC и настройте мастер проектов MFC для создания ленты.  Дополнительные сведения см. в разделе [Пошаговое руководство. Создание приложения ленты с помощью MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   Создайте ресурс ленты в существующем проекте MFC и загрузите его.  Дополнительные сведения см. в разделе [Пошаговое руководство. Обновление приложения MFC Scribble \(часть 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- Если в проекте уже есть вручную закодированная лента, MFC предоставляет функции, которые можно использовать для преобразования существующей ленты в ресурс ленты.  Дополнительные сведения см. в разделе [Практическое руководство. Преобразование существующей ленты MFC в ресурс ленты](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  Ленты не могут быть созданы в приложениях на базе диалоговых окон.  Дополнительные сведения см. в разделе [Тип приложения, мастер приложений MFC](../Topic/Application%20Type,%20MFC%20Application%20Wizard.md).  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## Настройка лент  
- Чтобы открыть ленту в конструкторе лент, дважды щелкните ресурс ленты в представлении ресурсов.  В конструкторе можно добавлять, удалять и настраивать элементы на ленте, кнопку «Приложение» и панель инструментов быстрого доступа.  Вы также можете привязать события, например события нажатия кнопки и события меню, к методу в приложении.  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- На следующем рисунке показаны различные компоненты конструктора лент.  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![Конструктор лент MFC](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **Панель элементов** содержит элементы управления, которые можно перетаскивать в область конструктора.  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **Поверхность конструктора** содержит визуальное представление ресурса ленты.  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **Окно свойств** содержит список атрибутов элемента, выбранного на поверхности конструктора.  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **Окно представления ресурсов** отображает ресурсы, содержащие ресурсы ленты, в проекте.  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **Панель инструментов редактора ленты** содержит команды, которые позволяют просмотреть ленту и изменить ее визуальную тему.  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- В следующих разделах описаны способы использования функций в конструкторе лент.  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [Практическое руководство. Настройка кнопки приложения](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [Практическое руководство. Настройка панели быстрого доступа](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [Практическое руководство. Добавление элементов управления и обработчиков событий ленты](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [Практическое руководство. Загрузка ресурса ленты из приложения MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## Определения элементов ленты  
- ![Лента MFC](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **Кнопка «Приложение»:** кнопка, которая появляется в левом верхнем углу ленты.  Кнопка «Приложение» заменяет меню «Файл» и отображается, даже если лента свернута.  При нажатии этой кнопки отображается меню, которое содержит список команд.  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **Панель инструментов быстрого доступа:** небольшая настраиваемая панель инструментов, в которой отображаются часто используемые команды.  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **Категория**: логическая группа, которая представляет содержимое вкладки ленты.  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **Кнопка «Категория по умолчанию»:** кнопка, которая отображается, когда лента свернута.  При нажатии кнопки категория снова появляется как меню.  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **Панель:** область ленты, в которой отображается группа связанных элементов управления.  Каждая категория ленты содержит одну или несколько панелей ленты.  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **Элементы ленты:** элементы управления в панелях, например кнопки и поля со списком.  Описание различных элементов, которые можно разместить на ленте, см. в разделе [Пример RibbonGadgets: приложение с гаджетами на ленте](../top/visual-cpp-samples.md).  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)   
- [Working with Resource Files](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

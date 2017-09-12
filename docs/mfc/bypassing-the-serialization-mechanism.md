@@ -1,42 +1,61 @@
 ---
-title: "Обход механизма сериализации | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "объекты архива [C++]"
-  - "архивы [C++]"
-  - "архивы [C++], сериализация"
-  - "сериализация обхода"
-  - "сериализация [C++], обход"
-  - "сериализация [C++], переопределение"
-  - "сериализация [C++], роль платформы"
+title: Bypassing the Serialization Mechanism | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- archive objects [MFC]
+- bypassing serialization
+- archives [MFC], serialization
+- serialization [MFC], bypassing
+- archives [MFC]
+- serialization [MFC], role of framework
+- serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Обход механизма сериализации
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12efe0a246eba721834bab2a37513aeafc09a24c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Так как вы видели, платформа предоставляет способ по умолчанию чтение и запись данных на диск и с него файлов.  Сериализация через объект имеет большой архива соответствует требованиям многих приложений.  Такое приложение считывает файл полностью в память, дает пользователю возможность обновления файла, а затем записывает обновленную версию на диск снова.  
+---
+# <a name="bypassing-the-serialization-mechanism"></a>Bypassing the Serialization Mechanism
+As you have seen, the framework provides a default way to read and write data to and from files. Serializing through an archive object suits the needs of a great many applications. Such an application reads a file entirely into memory, lets the user update the file, and then writes the updated version to disk again.  
   
- Однако некоторые приложения работают данные очень по\-разному, и для этих приложений сериализация по архивным не эквивалентны.  Примеры включают в себя программы базы данных программы, которые изменяют только части больших файлов, программы, которые создают только для текста и файлы программы, а файлы данных.  
+ However, some applications operate on data very differently, and for these applications serialization through an archive is not suitable. Examples include database programs, programs that edit only parts of large files, programs that write text-only files, and programs that share data files.  
   
- В таких случаях можно переопределить функцию [Выполнять сериализацию](../Topic/CObject::Serialize.md) по\-другому, чтобы посредничать действия файла с помощью объекта [CFile](../mfc/reference/cfile-class.md), а не объект [CArchive](../mfc/reference/carchive-class.md).  
+ In these cases, you can override the [Serialize](../mfc/reference/cobject-class.md#serialize) function in a different way to mediate file actions through a [CFile](../mfc/reference/cfile-class.md) object rather than a [CArchive](../mfc/reference/carchive-class.md) object.  
   
- Можно использовать **Открыть**, **Чтение**, **запись**, **Закрыть** и функции\-члены `Seek` класса `CFile` для открытия файла, чтобы указатель файла \(поиск\) к определенному моменту в файле, чтение запись \(указанное число байтов\) в этой точке, дают пользователям возможность обновления записи, то строки в одной и той же точки снова и записывает записи обратно в файл.  Платформа позволяет открыть файл автоматически, а с помощью функции\-члена `GetFile` класса `CArchive` получить указатель на объект `CFile`.  Даже для более изощренного и гибкого участка можно переопределить функции\-члены [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) и [OnSaveDocument](../Topic/CDocument::OnSaveDocument.md) класса `CWinApp`.  Класс [CFile](../mfc/reference/cfile-class.md). Дополнительные сведения см. в *справочнике по MFC*.  
+ You can use the **Open**, **Read**, **Write**, **Close**, and `Seek` member functions of class `CFile` to open a file, move the file pointer (seek) to a specific point in the file, read a record (a specified number of bytes) at that point, let the user update the record, then seek to the same point again and write the record back to the file. The framework will open the file for you, and you can use the `GetFile` member function of class `CArchive` to obtain a pointer to the `CFile` object. For even more sophisticated and flexible use, you can override the [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) and [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) member functions of class `CWinApp`. For more information, see class [CFile](../mfc/reference/cfile-class.md) in the *MFC Reference*.  
   
- В этом сценарии, переопределенный `Serialize` не будет ничего делать, если, например, нужно использовать его для чтения и записи заголовка файла, чтобы сохранить его последней при закрывает документ.  
+ In this scenario, your `Serialize` override does nothing, unless, for example, you want to have it read and write a file header to keep it up to date when the document closes.  
   
-## См. также  
- [Использование документов](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

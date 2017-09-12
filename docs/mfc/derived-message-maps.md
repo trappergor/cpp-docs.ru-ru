@@ -1,48 +1,67 @@
 ---
-title: "Производные схемы сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "производные схемы сообщений"
-  - "обработка сообщений, производные обработчики сообщений"
-  - "схемы сообщений, производные"
-  - "сообщения, маршрутизация"
+title: Derived Message Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handling [MFC], derived message handlers
+- messages, routing
+- message maps [MFC]], derived
+- derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Производные схемы сообщений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76817ca4892bbdba9d67434d4c95741b690c3be3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Во время обработки сообщений, чтобы проверить собственную схему класса сообщений нет конца описания функциональности схемы сообщений.  Что происходит, если класс `CMyView` \(производное от `CView`\) не имеет сопоставления для записи сообщения?  
+---
+# <a name="derived-message-maps"></a>Derived Message Maps
+During message handling, checking a class's own message map is not the end of the message-map story. What happens if class `CMyView` (derived from `CView`) has no matching entry for a message  
   
- Имейте в виду, `CView`, базовый класс `CMyView`, в свою очередь, является производным из `CWnd`.  Таким образом `CMyView` `CView` и `CWnd`.  Каждый из этих классов имеет собственную схему сообщений.  На рисунке иерархия «представления» ниже показано иерархическую связь классов, но считается, что объект `CMyView` один объект с характеристиками 3 классов.  
+ Keep in mind that `CView`, the base class of `CMyView`, is derived in turn from `CWnd`. Thus `CMyView` *is* a `CView` and *is* a `CWnd`. Each of those classes has its own message map. The figure "A View Hierarchy" below shows the hierarchical relationship of the classes, but keep in mind that a `CMyView` object is a single object that has the characteristics of all three classes.  
   
- ![Иерархия представления](../mfc/media/vc38621.png "vc38621")  
-Иерархия представлений  
+ ![Hierarchy of a view](../mfc/media/vc38621.gif "vc38621")  
+A View Hierarchy  
   
- Поэтому, если сообщение не удается сопоставить с схеме сообщений, `CMyView` класса, среда выполнения также схема сообщений его непосредственного базового класса.  Макрос `BEGIN_MESSAGE_MAP` в начале сопоставления сообщений определяет 2 имени класса в качестве ее аргументы:  
+ So if a message can't be matched in class `CMyView`'s message map, the framework also searches the message map of its immediate base class. The `BEGIN_MESSAGE_MAP` macro at the start of the message map specifies two class names as its arguments:  
   
- [!CODE [NVC_MFCMessageHandling#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#2)]  
+ [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]  
   
- Имена аргументов первый класс, к которому принадлежит схема сообщений.  Второй аргумент предоставляет соединение с немедленным базовым классом — `CView` здесь — поэтому платформа выполняет поиск в качестве схемы сообщений, слишком.  
+ The first argument names the class to which the message map belongs. The second argument provides a connection with the immediate base class — `CView` here — so the framework can search its message map, too.  
   
- Обработчик сообщений предусмотренные в базовом классе таким образом наследуются производным классом.  Это очень похоже на нормальным виртуальной функции\-члена без вносить функции\-члены обработчика виртуальным.  
+ The message handlers provided in a base class are thus inherited by the derived class. This is very similar to normal virtual member functions without needing to make all handler member functions virtual.  
   
- Если ни один обработчик не найден в любой схеме сообщений базового класса, обработка сообщений по умолчанию выполняется.  Если сообщение команды, платформа направляет ее к следующему конечному объекту команды.  Если стандартное сообщение Windows, это сообщение передается в соответствующей процедуре окна по умолчанию.  
+ If no handler is found in any of the base-class message maps, default processing of the message is performed. If the message is a command, the framework routes it to the next command target. If it is a standard Windows message, the message is passed to the appropriate default window procedure.  
   
- Для сопоставления схемы сообщений скорости платформа кэшировать последние совпадения на вероятность того, что она получит такое же сообщение.  Следствием этого является то, что процессы платформы необработанные сообщения гораздо эффективнее.  Схемы сообщений также является более эффективным, чем реализации, использующих виртуальные функции.  
+ To speed message-map matching, the framework caches recent matches on the likelihood that it will receive the same message again. One consequence of this is that the framework processes unhandled messages quite efficiently. Message maps are also more space-efficient than implementations that use virtual functions.  
   
-## См. также  
- [Выполнение платформой поиска по схемам сообщений](../mfc/how-the-framework-searches-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Searches Message Maps](../mfc/how-the-framework-searches-message-maps.md)
+
+

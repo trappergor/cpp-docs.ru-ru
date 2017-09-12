@@ -1,5 +1,5 @@
 ---
-title: "Класс CSettingsStoreSP | Документы Microsoft"
+title: CSettingsStoreSP Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSettingsStoreSP class
+- CSettingsStoreSP [MFC], CSettingsStoreSP
+- CSettingsStoreSP [MFC], Create
+- CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
 caps.latest.revision: 18
 author: mikeblome
@@ -37,64 +39,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 00131a3c03fdb2c1c1de247a8e1bdcfd9beaf852
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cafba9ad629afadbdfb2299d4810230fa2a2d441
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csettingsstoresp-class"></a>Класс CSettingsStoreSP
-`CSettingsStoreSP` Класс является вспомогательным классом, который можно использовать для создания экземпляров [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
+# <a name="csettingsstoresp-class"></a>CSettingsStoreSP Class
+The `CSettingsStoreSP` class is a helper class that you can use to create instances of the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSettingsStoreSP  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Создает объект `CSettingsStoreSP`.|  
+|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Constructs a `CSettingsStoreSP` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStoreSP::Create](#create)|Создает экземпляр класса, который является производным от `CSettingsStore`.|  
-|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Задает класс среды выполнения. `Create` Метод использует класс среды выполнения, чтобы определить, какой класс объектов для создания.|  
+|[CSettingsStoreSP::Create](#create)|Creates an instance of a class that is derived from `CSettingsStore`.|  
+|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Sets the runtime class. The `Create` method uses the runtime class to determine what class of objects to create.|  
   
-### <a name="data-members"></a>Элементы данных  
+### <a name="data-members"></a>Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_dwUserData`|Пользовательские данные, хранящиеся в `CSettingsStoreSP` объекта. Предоставить эти данные в конструкторе `CSettingsStoreSP` объекта.|  
-|`m_pRegistry`|`CSettingsStore`-Производного объекта, `Create` методом.|  
+|`m_dwUserData`|Custom user data that is stored in the `CSettingsStoreSP` object. You supply this data in the constructor of the `CSettingsStoreSP` object.|  
+|`m_pRegistry`|The `CSettingsStore`-derived object that the `Create` method creates.|  
   
-## <a name="remarks"></a>Примечания  
- Можно использовать `CSettingsStoreSP` класса для перенаправления всех операций реестра MFC в других местах, например в XML-файл или базу данных. Для этого выполните следующие действия:  
+## <a name="remarks"></a>Remarks  
+ You can use the `CSettingsStoreSP` class to redirect all MFC registry operations to other locations, such as an XML file or a database. To do this, follow these steps:  
   
-1.  Создайте класс (например, `CMyStore`) и сделайте его производным от `CSettingsStore`.  
+1.  Create a class (such as `CMyStore`) and derive it from `CSettingsStore`.  
   
-2.  Используйте [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) и [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) макросов с пользовательским `CSettingsStore` класса для включения динамического создания.  
+2.  Use [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) and [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) macros with your custom `CSettingsStore` class to enable dynamic creation.  
   
-3.  Переопределение виртуальных функций и реализовать `Read` и `Write` функции в пользовательский класс. Реализуйте другие функциональные возможности для чтения и записи данных в нужном расположении.  
+3.  Override the virtual functions and implement the `Read` and `Write` functions in your custom class. Implement any other functionality to read and write data to your desired location.  
   
-4.  В приложении, вызывать `CSettingsStoreSP::SetRuntimeClass` и передать указатель на [структуры CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) получен из вашего класса.  
+4.  In your application, call `CSettingsStoreSP::SetRuntimeClass` and pass in a pointer to the [CRuntimeClass Structure](../../mfc/reference/cruntimeclass-structure.md) obtained from your class.  
   
- Каждый раз, когда платформа обычно бы доступ к реестру, она будет динамически создать пользовательский класс и использовать его для чтения или записи данных.  
+ Whenever the framework would typically access the registry, it will now dynamically instantiate your custom class and use it to read or write data.  
   
- `CSettingsStoreSP::SetRuntimeClass`использует глобальные статической переменной. Таким образом только одного пользовательского хранилища доступен одновременно.  
+ `CSettingsStoreSP::SetRuntimeClass` uses a global static variable. Therefore, only one custom store is available at a time.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxsettingsstore.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
- Создает новый экземпляр объекта, который является производным от [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
+ Creates a new instance of an object that is derived from the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
 CSettingsStore& CSettingsStoreSP Create(
@@ -102,61 +104,61 @@ CSettingsStore& CSettingsStoreSP Create(
     BOOL bReadOnly);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bAdmin`  
- Логический параметр, который определяет, является ли `CSettingsStore` объект создается в режиме администратора.  
+ A Boolean parameter that determines whether a `CSettingsStore` object is created in administrator mode.  
   
  [in] `bReadOnly`  
- Логический параметр, который определяет, является ли `CSettingsStore` объекта создается для доступа только для чтения.  
+ A Boolean parameter that determines whether a `CSettingsStore` object is created for read-only access.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на вновь созданный `CSettingsStore` объекта.  
+### <a name="return-value"></a>Return Value  
+ A reference to the newly created `CSettingsStore` object.  
   
-### <a name="remarks"></a>Примечания  
- Можно использовать метод [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) , чтобы определить, какой тип объекта `CSettingsStoreSP::Create` будет создан. По умолчанию этот метод создает `CSettingsStore` объекта.  
+### <a name="remarks"></a>Remarks  
+ You can use the method [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) to determine what type of object `CSettingsStoreSP::Create` will create. By default, this method creates a `CSettingsStore` object.  
   
- При создании `CSettingsStore` объекта в режиме администратора, расположение по умолчанию для всех доступ реестра HKEY_LOCAL_MACHINE. В противном случае — расположение по умолчанию для всех доступ к реестру — HKEY_CURRENT_USER.  
+ If you create a `CSettingsStore` object in administrator mode, the default location for all registry access is HKEY_LOCAL_MACHINE. Otherwise, the default location for all registry access is HKEY_CURRENT_USER.  
   
- Если `bAdmin` — `TRUE`, приложение должно иметь права администратора. В противном случае он завершится ошибкой при попытке доступа к реестру.  
+ If `bAdmin` is `TRUE`, the application must have administration rights. Otherwise, it will fail when it tries to access the registry.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `Create` метод `CSettingsStoreSP` класса.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method of the `CSettingsStoreSP` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#33;](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
- Создает [CSettingsStoreSP класс](../../mfc/reference/csettingsstoresp-class.md) объекта.  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
+ Constructs a [CSettingsStoreSP Class](../../mfc/reference/csettingsstoresp-class.md) object.  
   
 ```  
 CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dwUserData`  
- Определяемые пользователем данные, `CSettingsStoreSP` объекта хранилища.  
+ User-defined data that the `CSettingsStoreSP` object stores.  
   
-### <a name="remarks"></a>Примечания  
- `CSettingsStoreSP` Объект сохраняет данные из `dwUserData` в защищенный член переменной `m_dwUserData`.  
+### <a name="remarks"></a>Remarks  
+ The `CSettingsStoreSP` object stores the data from `dwUserData` in the protected member variable `m_dwUserData`.  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
- Задает класс среды выполнения. Метод [CSettingsStoreSP::Create](#create) использует класс среды выполнения для определения типа создаваемого объекта.  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
+ Sets the runtime class. The method [CSettingsStoreSP::Create](#create) uses the runtime class to determine what type of object to create.  
   
 ```  
 static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pRTI`  
- Указатель на данные класса среды выполнения в класс производным от [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
+ A pointer to the runtime class information for a class derived from the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`в случае успешного выполнения; `FALSE` Если определить класс `pRTI` не является производным от `CSettingsStore`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` if the class identified by `pRTI` is not derived from `CSettingsStore`.  
   
-### <a name="remarks"></a>Примечания  
- Можно использовать [класса CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) создавать производные классы от `CSettingsStore`. Используйте метод `SetRuntimeClass` необходимо создать пользовательский класс, производный от объектов `CSettingsStore`.  
+### <a name="remarks"></a>Remarks  
+ You can use the [CSettingsStoreSP Class](../../mfc/reference/csettingsstoresp-class.md) to derive classes from `CSettingsStore`. Use the method `SetRuntimeClass` if you want to create objects of a custom class that is derived from `CSettingsStore`.  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CSettingsStore](../../mfc/reference/csettingsstore-class.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md)
 

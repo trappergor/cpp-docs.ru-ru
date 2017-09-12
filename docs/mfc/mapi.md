@@ -1,45 +1,64 @@
 ---
-title: "MAPI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "электронная почта, включение"
-  - "включение приложений для почты"
-  - "включение приложений для MAPI"
-  - "почта, включение приложения"
-  - "поддержка MAPI в MFC"
-  - "MAPI, MFC - библиотека"
-  - "обмен сообщениями, клиентские приложения"
+title: MAPI | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messaging [MFC], client applications
+- enabling applications for MAPI [MFC]
+- MAPI support in MFC
+- e-mail [MFC], enabling
+- mail [MFC], enabling your application
+- MAPI, MFC
+- enabling applications for mail [MFC]
 ms.assetid: 193449f7-b131-4ab0-9301-8d4f6cd1e7c4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MAPI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0805f8d1d76795305152a3af98d71682297cb65
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются интерфейс MAPI \(MAPI\) Майкрософт для разработчиков приложений сообщения клиента.  Поддержка MFC предоставляет для подмножества MAPI в классе **CDocument**, но не инкапсулирует все API.  Дополнительные сведения см. в разделе [Поддержка MAPI в MFC](../mfc/mapi-support-in-mfc.md).  
+---
+# <a name="mapi"></a>MAPI
+This article describes the Microsoft Messaging Application Programming Interface (MAPI) for client message application developers. MFC supplies support for a subset of MAPI in class **CDocument** but does not encapsulate the entire API. For more information, see [MAPI Support in MFC](../mfc/mapi-support-in-mfc.md).  
   
- MAPI набор функций, которые позволяют Почта\- и Почта\- приложении приложений для создания, обработки передачи и сохранять почтовые сообщения.  Это дает разработчикам приложения средства, чтобы определить назначение и содержимое почтовых сообщений и дает им гибкость их в элементе управления, хранимыми в почтовых сообщений.  MAPI также предоставляет общий интерфейс, который разработчики приложения могут использовать для создания Почта\- enabled и Почта\- информации об электропитании не зависит от приложений базовой системы обмена сообщениями.  
+ MAPI is a set of functions that mail-enabled and mail-aware applications use to create, manipulate, transfer, and store mail messages. It gives application developers the tools to define the purpose and content of mail messages and gives them flexibility in their management of stored mail messages. MAPI also provides a common interface that application developers can use to create mail-enabled and mail-aware applications independent of the underlying messaging system.  
   
- Клиенты, которая моделирует передающие предоставляют интерфейс для взаимодействия с системой обмена сообщениями \(WMS\) Microsoft Windows.  Взаимодействие обычно включает запрос службы из MAPI\- совместимых поставщиков, например сообщение хранится и относительной адресной книги.  
+ Messaging clients provide a human interface for interaction with the Microsoft Windows Messaging System (WMS). This interaction typically includes requesting services from MAPI-compliant providers such as message stores and address books.  
   
- Дополнительные сведения о MAPI см. в руководстве статьи в буфер обмена сообщениями Win32 \(MAPI\) [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information about MAPI, see the articles under Guide in Win32 Messaging (MAPI) of the Windows SDK.  
   
-## Содержание  
- [Поддержка MAPI в MFC](../mfc/mapi-support-in-mfc.md)  
+## <a name="in-this-section"></a>In This Section  
+ [MAPI Support in MFC](../mfc/mapi-support-in-mfc.md)  
   
-## См. также  
- [CDocument::OnFileSendMail](../Topic/CDocument::OnFileSendMail.md)   
- [CDocument::OnUpdateFileSendMail](../Topic/CDocument::OnUpdateFileSendMail.md)   
- [COleDocument::OnFileSendMail](../Topic/COleDocument::OnFileSendMail.md)
+## <a name="see-also"></a>See Also  
+ [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)   
+ [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)   
+ [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+
+

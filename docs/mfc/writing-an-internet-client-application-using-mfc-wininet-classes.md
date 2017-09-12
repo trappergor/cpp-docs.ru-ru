@@ -1,65 +1,83 @@
 ---
-title: "Создание клиентских приложений в Интернете с использованием классов MFC WinInet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Интернет-приложения, клиентские приложения"
-  - "Интернет-приложения, WinInet"
-  - "клиентские интернет-приложения"
-  - "клиентские интернет-приложения, написание"
-  - "MFC - библиотека, Интернет-приложения"
-  - "WinInet - классы, программирование"
+title: Writing an Internet Client Application Using MFC WinInet Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet client applications [MFC]
+- WinInet classes [MFC], programming
+- Internet client applications [MFC], writing
+- Internet applications [MFC], WinInet
+- Internet applications [MFC], client applications
+- MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Создание клиентских приложений в Интернете с использованием классов MFC WinInet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ea6439a98b9c0db66058be10643e4a936cb6c7f9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Основа каждого приложения Интернет\-клиента сеанс Интернета.  MFC реализует сеансы Интернета как объекты класса [CInternetSession](../Topic/CInternetSession%20Class.md).  С помощью этого класса, можно создать один сеанс Интернета или несколько параллельных сеансов.  
+---
+# <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Writing an Internet Client Application Using MFC WinInet Classes
+The basis of every Internet client application is the Internet session. MFC implements Internet sessions as objects of class [CInternetSession](../mfc/reference/cinternetsession-class.md). Using this class, you can create one Internet session or several simultaneous sessions.  
   
- Для связи с сервером нужно создать два объекта: объект [CInternetConnection](../Topic/CInternetConnection%20Class.md), так и `CInternetSession`.  Можно создать `CInternetConnection` с помощью [CInternetSession::GetFtpConnection](../Topic/CInternetSession::GetFtpConnection.md), [CInternetSession::GetHttpConnection](../Topic/CInternetSession::GetHttpConnection.md) или [CInternetSession::GetGopherConnection](../Topic/CInternetSession::GetGopherConnection.md).  Каждый из этих вызовов относится к типу протокола.  Эти вызовы не позволяет открыть файл на сервере для чтения или записи.  Если требуется считывать и записывать данные, необходимо открыть файл как отдельно.  
+ To communicate with a server, you need a [CInternetConnection](../mfc/reference/cinternetconnection-class.md) object as well as a `CInternetSession`. You can create a `CInternetConnection` by using [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection), [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection), or [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection). Each of these calls is specific to the protocol type. These calls do not open a file on the server for reading or writing. If you intend to read or write data, you must open the file as a separate step.  
   
- Для большинства сеансов Интернета объект `CInternetSession` работает рука об руку с объектом [CInternetFile](../mfc/reference/cinternetfile-class.md):  
+ For most Internet sessions, the `CInternetSession` object works hand-in-hand with a [CInternetFile](../mfc/reference/cinternetfile-class.md) object:  
   
--   Для сеанса в интернете необходимо создать экземпляр [CInternetSession](../Topic/CInternetSession%20Class.md).  
+-   For an Internet session, you must create an instance of [CInternetSession](../mfc/reference/cinternetsession-class.md).  
   
--   Если сеанс Интернета считывает или записывает данные, необходимо создать экземпляр `CInternetFile` \(или его подклассов, [CHttpFile](../Topic/CHttpFile%20Class.md) или [CGopherFile](../mfc/reference/cgopherfile-class.md)\).  Самый простой способ чтения данных вызова [CInternetSession::OpenURL](../Topic/CInternetSession::OpenURL.md).  Эта функция анализирует средство поиска \(URL\) ресурсов как введено текущим пользователем, открывает соединение с сервером, URL\-адрес и возвращает только для чтения объект `CInternetFile`.  `CInternetSession::OpenURL` не только на один тип протокола — тот же вызов работает для любого FTP, HTTP, или URL\-адрес gopher.  `CInternetSession::OpenURL` даже работает с локальные файлы \(возврат `CStdioFile` вместо `CInternetFile`\).  
+-   If your Internet session reads or writes data, you must create an instance of `CInternetFile` (or its subclasses, [CHttpFile](../mfc/reference/chttpfile-class.md) or [CGopherFile](../mfc/reference/cgopherfile-class.md)). The easiest way to read data is to call [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). This function parses a Universal Resource Locator (URL) supplied by you, opens a connection to the server specified by the URL, and returns a read-only `CInternetFile` object. `CInternetSession::OpenURL` is not specific to one protocol type — the same call works for any FTP, HTTP, or gopher URL. `CInternetSession::OpenURL` even works with local files (returning a `CStdioFile` instead of a `CInternetFile`).  
   
--   Если сеанс не считывает Интернета или не записывает, то данные, но выполняет другие задачи, например удаление файла в каталоге FTP, не может создать экземпляр `CInternetFile`.  
+-   If your Internet session does not read or write data, but performs other tasks, such as deleting a file in an FTP directory, you may not need to create an instance of `CInternetFile`.  
   
- 2 Способа создания объекта `CInternetFile`:  
+ There are two ways to create a `CInternetFile` object:  
   
--   При использовании `CInternetSession::OpenURL`, чтобы установить подключение сервера, вызов `OpenURL` возвращает `CStdioFile`.  
+-   If you use `CInternetSession::OpenURL` to establish your server connection, the call to `OpenURL` returns a `CStdioFile`.  
   
--   Если использовать **CInternetSession::GetFtpConnection**, `GetGopherConnection` или `GetHttpConnection` установить подключение сервера, необходимо вызвать `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, или **CHttpConnection::OpenRequest,**, соответственно, возвращать `CInternetFile`, `CGopherFile` или `CHttpFile` соответственно.  
+-   If use **CInternetSession::GetFtpConnection**, `GetGopherConnection`, or `GetHttpConnection` to establish your server connection, you must call `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, or **CHttpConnection::OpenRequest,** respectively, to return a `CInternetFile`, `CGopherFile`, or `CHttpFile`, respectively.  
   
- Этапы реализации приложения Интернет\-клиента различаются в зависимости от того, необходимость создания Интернет\-клиент универсальный шаблон, основанный на **OpenURL**  или клиент протокол\-, используя одну из функций **GetConnection**.  
+ The steps in implementing an Internet client application vary depending on whether you create a generic Internet client based on **OpenURL** or a protocol-specific client using one of the **GetConnection** functions.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Разделы справки Интернет\-клиента пишет приложение, которое работает с родов FTP, HTTP и gopher?](../Topic/Steps%20in%20a%20Typical%20Internet%20Client%20Application.md)  
+-   [How do I write an Internet client application that works generically with FTP, HTTP, and gopher](../mfc/steps-in-a-typical-internet-client-application.md)  
   
--   [Разделы справки записывает клиентское приложение FTP для открытия файла?](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [How do I write an FTP client application that opens a file](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [Разделы справки записывает клиентское приложение FTP, позволяет открыть файл, но не выполняет операцию каталога, например удаление файла?](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
+-   [How do I write an FTP client application that does not open a file but performs a directory operation, such as deleting a file](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
   
--   [Разделы справки записывает клиентское приложение gopher?](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [How do I write a gopher client application](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
--   [Разделы справки записывает клиентское приложение HTTP?](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [How do I write an HTTP client application](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## См. также  
- [Расширения Интернета Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Классы MFC для создания клиентских приложений в Интернете](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
- [Необходимые компоненты для клиентских классов в Интернете](../Topic/Prerequisites%20for%20Internet%20Client%20Classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [MFC Classes for Creating Internet Client Applications](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)
+

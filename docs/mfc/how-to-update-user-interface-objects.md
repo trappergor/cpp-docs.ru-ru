@@ -1,51 +1,70 @@
 ---
-title: "Практическое руководство. Обновление объектов интерфейса пользователя | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "команды, обновление пользовательского интерфейса"
-  - "отключение меню"
-  - "отключение элементов пользовательского интерфейса"
-  - "включение меню"
-  - "включение элементов пользовательского интерфейса"
-  - "меню, обновление как контекстных изменений"
-  - "обработчики обновлений"
-  - "обновление объектов пользовательского интерфейса"
-  - "объекты пользовательского интерфейса"
-  - "объекты пользовательского интерфейса, обновление"
+title: 'How to: Update User-Interface Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], updating as context changes
+- user interface objects [MFC], updating
+- user interface objects [MFC]
+- update handlers [MFC]
+- enabling UI elements [MFC]
+- disabling menus [MFC]
+- updating user-interface objects [MFC]
+- disabling UI elements [MFC]
+- commands [MFC], updating UI
+- enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Практическое руководство. Обновление объектов интерфейса пользователя
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b1e085cf7ee4d0e3ac040b3128ca2d778fdaea4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Как правило, пункты меню и кнопки панели инструментов имеет более одного состояния.  Например, пункт меню grayed \(затенен\), если он недоступен присутствующем в контексте.  Пункты меню можно также проверить или пропуск.  Кнопки панели инструментов можно также отключить, если отсутствует, или ее можно проверить.  
+---
+# <a name="how-to-update-user-interface-objects"></a>How to: Update User-Interface Objects
+Typically, menu items and toolbar buttons have more than one state. For example, a menu item is grayed (dimmed) if it is unavailable in the present context. Menu items can also be checked or unchecked. A toolbar button can also be disabled if unavailable, or it can be checked.  
   
- Кто обновляет состояние этих элементов по мере изменения условий программы?  Логический, если пункт меню создает команды, которая обрабатывается следуют, предположим, документ имеет смысл использовать документ обновление пункта меню.  Документ, содержащий сведения о которых обновление основан.  
+ Who updates the state of these items as program conditions change Logically, if a menu item generates a command that is handled by, say, a document, it makes sense to have the document update the menu item. The document probably contains the information on which the update is based.  
   
- Если команда содержит несколько объектов пользовательского интерфейса \(возможно пункт меню и кнопки панели инструментов\), то оба направляются на той же функции обработчика.  Это инкапсулирует код обновления интерфейса пользователя для всех соответствующих объектов пользовательского интерфейса в одном месте.  
+ If a command has multiple user-interface objects (perhaps a menu item and a toolbar button), both are routed to the same handler function. This encapsulates your user-interface update code for all of the equivalent user-interface objects in a single place.  
   
- Платформа предоставляет удобный интерфейс для автоматического обновления объектов пользовательского интерфейса.  Можно выбрать задачу обновление каким\-либо другим способом, но предоставленный интерфейс является и простым в использовании.  
+ The framework provides a convenient interface for automatically updating user-interface objects. You can choose to do the updating in some other way, but the interface provided is efficient and easy to use.  
   
- В следующих разделах объясняется использование обработчиков обновления:  
+ The following topics explain the use of update handlers:  
   
--   [После обновления называются обработчики](../mfc/when-update-handlers-are-called.md)  
+-   [When update handlers are called](../mfc/when-update-handlers-are-called.md)  
   
--   [Макрос ON\_UPDATE\_COMMAND\_UI](../mfc/on-update-command-ui-macro.md)  
+-   [The ON_UPDATE_COMMAND_UI macro](../mfc/on-update-command-ui-macro.md)  
   
--   [Класс CCmdUI](../mfc/the-ccmdui-class.md)  
+-   [The CCmdUI class](../mfc/the-ccmdui-class.md)  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [Menus](../mfc/menus-mfc.md)
+
+

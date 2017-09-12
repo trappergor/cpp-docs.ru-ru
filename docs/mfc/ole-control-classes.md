@@ -1,77 +1,96 @@
 ---
-title: "Классы элементов управления OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX - классы [C++]"
-  - "ActiveX - классы элементов управления [C++]"
-  - "элементы управления ActiveX [C++], классы элементов управления OLE"
-  - "пользовательские элементы управления [MFC], классы"
-  - "OLE - классы элементов управления [C++]"
-  - "элементы управления OLE [C++], классы"
-  - "классы компонентов многократного использования"
+title: OLE Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- custom controls [MFC], classes
+- ActiveX controls [MFC], OLE control classes
+- ActiveX control classes [MFC]
+- OLE controls [MFC], classes
+- OLE control classes [MFC]
+- reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Классы элементов управления OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a81de0a104d188f50c112d9f199ca04e315af920
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эти основные классы, используемые при создании элементов управления OLE.  Класс `COleControlModule` в модуле элемента управления OLE как класс [CWinApp](../mfc/reference/cwinapp-class.md) в приложении.  Каждый модуль реализует один или несколько элементов управления OLE; эти элементы управления представлены объектами `COleControl`.  Эти элементы управления взаимодействуют с их контейнерами с помощью объектов `CConnectionPoint`.  
+---
+# <a name="ole-control-classes"></a>OLE Control Classes
+These are the primary classes you use when writing OLE controls. The `COleControlModule` class in an OLE control module is like the [CWinApp](../mfc/reference/cwinapp-class.md) class in an application. Each module implements one or more OLE controls; these controls are represented by `COleControl` objects. These controls communicate with their containers using `CConnectionPoint` objects.  
   
- Классы `CPictureHolder` и `CFontHolder` инкапсулируют интерфейсов модели COM примеры и шрифтов, а классы `COlePropertyPage` и `CPropExchange` помогают реализовать страницы свойств и сохранение свойства для элемента управления.  
+ The `CPictureHolder` and `CFontHolder` classes encapsulate COM interfaces for pictures and fonts, while the `COlePropertyPage` and `CPropExchange` classes help you implement property pages and property persistence for your control.  
   
  [COleControlModule](../mfc/reference/colecontrolmodule-class.md)  
- Заменяет класс `CWinApp` для данного модуля элемента управления OLE.  Наследование от класса `COleControlModule` разрабатывать модульный объект элемента управления OLE.  Он предоставляет функции\-члены для инициализации модуля элемента управления OLE.  
+ Replaces the `CWinApp` class for your OLE control module. Derive from the `COleControlModule` class to develop an OLE control module object. It provides member functions for initializing your OLE control's module.  
   
  [COleControl](../mfc/reference/colecontrol-class.md)  
- Наследование от класса `COleControl` для создания пользовательского элемента управления OLE.  Производное от `CWnd`, этот класс наследует все функциональные возможности объекта окна Windows и дополнительно функция OLE\- функции, такие как включение событий и возможность поддерживать методы и свойства.  
+ Derive from the `COleControl` class to develop an OLE control. Derived from `CWnd`, this class inherits all the functionality of a Windows window object plus additional OLE-specific functionality, such as event firing and the ability to support methods and properties.  
   
- [CConnectionPoint](../Topic/CConnectionPoint%20Class.md)  
- Класс `CConnectionPoint` определяет вызывается особый тип интерфейса, используемый для связи с другими объектами OLE, точкой подключения.  Точка подключения реализует исходящий интерфейс, который может инициировать действия на другие объекты, такие как события и включения уведомлений об изменении.  
+ [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)  
+ The `CConnectionPoint` class defines a special type of interface used to communicate with other OLE objects, called a connection point. A connection point implements an outgoing interface that is able to initiate actions on other objects, such as firing events and change notifications.  
   
  [CPictureHolder](../mfc/reference/cpictureholder-class.md)  
- Инкапсулирует функции объекта рисунка Windows и COM\-интерфейса `IPicture`; используется для реализации пользовательского свойства рисунков элемента управления OLE.  
+ Encapsulates the functionality of a Windows picture object and the `IPicture` COM interface; used to implement the custom Picture property of an OLE control.  
   
  [CFontHolder](../mfc/reference/cfontholder-class.md)  
- Инкапсулирует функции объекта шрифта Windows и COM\-интерфейса `IFont`; используется для реализации свойства font элемента управления OLE.  
+ Encapsulates the functionality of a Windows font object and the `IFont` COM interface; used to implement the stock Font property of an OLE control.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- Отображает свойства элемента управления OLE в графическом интерфейсе, аналогично диалоговому окну.  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
- [CPropExchange](../Topic/CPropExchange%20Class.md)  
- Поддерживает реализацию сохранения свойств для элементов управления OLE.  Аналогичный в [CDataExchange](../Topic/CDataExchange%20Class.md) для диалоговых окон.  
+ [CPropExchange](../mfc/reference/cpropexchange-class.md)  
+ Supports the implementation of property persistence for your OLE controls. Analogous to [CDataExchange](../mfc/reference/cdataexchange-class.md) for dialog boxes.  
   
- [CMonikerFile](../Topic/CMonikerFile%20Class.md)  
- Принимает моникер или строковое представление, он может выполнять в моникер и привязывает его одновременно в поток, для которого моникер имя.  
+ [CMonikerFile](../mfc/reference/cmonikerfile-class.md)  
+ Takes a moniker, or a string representation that it can make into a moniker, and binds it synchronously to the stream for which the moniker is a name.  
   
  [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)  
- Работает аналогично `CMonikerFile`; однако он привязывает моникер асинхронно в поток, для которого моникер имя.  
+ Works similarly to `CMonikerFile`; however, it binds the moniker asynchronously to the stream for which the moniker is a name.  
   
  [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)  
- Реализует свойство элемента управления OLE, которое можно загрузить асинхронно.  
+ Implements an OLE control property that can be loaded asynchronously.  
   
  [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md)  
- Реализует свойство элемента управления OLE, асинхронно переданного и кэшированного в файле памяти.  
+ Implements an OLE control property transferred asynchronously and cached in a memory file.  
   
  [COleCmdUI](../mfc/reference/colecmdui-class.md)  
- Позволяет активный документ для получения команды, расположенных в интерфейсе пользователя контейнера \(например, FileNew, открытый, печать и т д\) и позволяет контейнер для получения команды, расположенных в интерфейсе пользователя активного документа.  
+ Allows an Active document to receive commands that originate in its container's user interface (such as FileNew, Open, Print, and so on), and allows a container to receive commands that originate in the Active document's user interface.  
   
  [COleSafeArray](../mfc/reference/colesafearray-class.md)  
- Для работы с массивами произвольных типов и измерения.  
+ Works with arrays of arbitrary type and dimension.  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

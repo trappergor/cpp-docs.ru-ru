@@ -1,67 +1,85 @@
 ---
-title: "Исключения. Использование макросов MFC и исключений C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "catch - блоки, явное удаление кода в"
-  - "catch - блоки, смешанный"
-  - "обработка исключений, MFC - библиотека"
-  - "обработка исключений, смешанный язык"
-  - "объекты исключения"
-  - "объекты исключения, удаление"
-  - "исключения, макросы MFC или ключевые слова C++"
-  - "повреждение кучи"
-  - "утечки памяти, объект исключения не удален"
-  - "вложенные блоки catch"
-  - "вложенные блоки try"
-  - "обработка исключений try-catch, смешение макросов MFC и ключевых слов C++"
-  - "обработка исключений try-catch, вложенные блоки try"
+title: 'Exceptions: Using MFC Macros and C++ Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception objects [MFC]
+- memory leaks [MFC], exception object not deleted
+- exception handling [MFC], MFC
+- try-catch exception handling [MFC], mixing MFC macros and C++ keywords
+- exception objects [MFC], deleting
+- exceptions [MFC], MFC macros vs. C++ keywords
+- catch blocks [MFC], mixed
+- exception handling [MFC], mixed-language
+- nested try blocks [MFC]
+- catch blocks [MFC], explicitly deleting code in
+- try-catch exception handling [MFC], nested try blocks
+- heap corruption [MFC]
+- nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Исключения. Использование макросов MFC и исключений C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7c03b00d45482d8b9da33d12d26af1c1d8c01a27
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье рассматриваются вопросы написания кода, использующего и макросы обработки исключений MFC и ключевые слова обработки исключений C\+\+.  
+---
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceptions: Using MFC Macros and C++ Exceptions
+This article discusses considerations for writing code that uses both the MFC exception-handling macros and the C++ exception-handling keywords.  
   
- Этот раздел охватывает следующее:  
+ This article covers the following topics:  
   
--   [Смешивание ключевые слова и макросы исключения](#_core_mixing_exception_keywords_and_macros)  
+-   [Mixing exception keywords and macros](#_core_mixing_exception_keywords_and_macros)  
   
--   [Блоки catch блоков try внутренние](#_core_try_blocks_inside_catch_blocks)  
+-   [Try blocks inside catch blocks](#_core_try_blocks_inside_catch_blocks)  
   
-##  <a name="_core_mixing_exception_keywords_and_macros"></a> Смешивание ключевые слова и макросы исключения  
- Ключевые слова можно макросов MFC исключения набора исключений C\+\+ в одной программе.  Однако нельзя макросов MFC набора с ключевыми словами исключения C\+\+ в одном блоке, поскольку макросы удаляют объекты исключений автоматически, если они находятся вне области, тогда как код с помощью ключевых слов обработки исключений не требуется.  Дополнительные сведения см. в статье [Исключения: Улавливающ и удаление исключения](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+##  <a name="_core_mixing_exception_keywords_and_macros"></a> Mixing Exception Keywords and Macros  
+ You can mix MFC exception macros and C++ exception keywords in the same program. But you cannot mix MFC macros with C++ exception keywords in the same block because the macros delete exception objects automatically when they go out of scope, whereas code using the exception-handling keywords does not. For more information, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
- Основное различие между макросами и ключевыми словами, макросы «автоматически» удаление перехваченное исключение при возникновении исключения выходит за пределы области действия.  Код с помощью ключевого слова не выполняется; перехваченные исключения в блоке catch должна быть явно удалена.  Ключевые слова смешивание макросы исключение C\+\+ могут привести к утечке памяти, когда объект исключения не удален, или повреждения кучи, когда исключение удаляется дважды.  
+ The main difference between the macros and the keywords is that the macros "automatically" delete a caught exception when the exception goes out of scope. Code using the keywords does not; exceptions caught in a catch block must be explicitly deleted. Mixing macros and C++ exception keywords can cause memory leaks when an exception object is not deleted, or heap corruption when an exception is deleted twice.  
   
- В следующем коде, например, что указатель исключения:  
+ The following code, for example, invalidates the exception pointer:  
   
- [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/CPP/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- Проблема возникает, поскольку `e` удаляется при выполнении передает «из» внутреннего блока **CATCH**.  Использование макроса `THROW_LAST` вместо выписки **THROW** приведет к «» внешний блок **CATCH** получить допустимый указатель.  
+ The problem occurs because `e` is deleted when execution passes out of the "inner" **CATCH** block. Using the `THROW_LAST` macro instead of the **THROW** statement will cause the "outer" **CATCH** block to receive a valid pointer:  
   
- [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/CPP/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   
-##  <a name="_core_try_blocks_inside_catch_blocks"></a> Блоки catch блоков try внутренние  
- Невозможно повторно ход текущее исключение из блока **try** внутри блока **CATCH**.  Следующий пример является недопустимым:  
+##  <a name="_core_try_blocks_inside_catch_blocks"></a> Try Blocks Inside Catch Blocks  
+ You cannot re-throw the current exception from within a **try** block that is inside a **CATCH** block. The following example is invalid:  
   
- [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/CPP/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  
   
- Дополнительные сведения см. в разделе [Исключения: Просмотр содержимого исключения](../mfc/exceptions-examining-exception-contents.md).  
+ For more information, see [Exceptions: Examining Exception Contents](../mfc/exceptions-examining-exception-contents.md).  
   
-## См. также  
- [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

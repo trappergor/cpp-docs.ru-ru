@@ -1,58 +1,78 @@
 ---
-title: "Практическое руководство. Добавление поддержки диспетчера перезапуска | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "диспетчер перезапуска"
-  - "C++, поддержка аварийного завершения приложений"
+title: 'How to: Add Restart Manager Support | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Restart manager [MFC]
+- C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Практическое руководство. Добавление поддержки диспетчера перезапуска
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 13369ead9b6aac2e91f03a9e9939153ec1f94caf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Диспетчер перезапуска — это компонент, добавленный в [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] для [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Диспетчер перезапуска обеспечивает функции поддержки для приложения в случае его непредвиденного закрытия или перезапуска. Поведение диспетчера перезапуска зависит от типа приложения. Если приложение является редактором документов, то диспетчер перезапуска позволяет приложению автоматически сохранять состояние и содержимое всех открытых документов, а затем перезапускает приложение после непредвиденного закрытия. Если приложение не является редактором документов, диспетчер перезапуска перезапускает приложение, однако не может сохранить состояние приложения по умолчанию.  
+---
+# <a name="how-to-add-restart-manager-support"></a>How to: Add Restart Manager Support
+The restart manager is a feature added to [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] for [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. The restart manager adds support for your application if it unexpectedly closes or restarts. The behavior of the restart manager depends on the type of your application. If your application is a document editor, the restart manager enabled your application to automatically save the state and content of any open documents and restarts your application after an unexpected closure. If your application is not a document editor, the restart manager will restart the application, but it cannot save the state of the application by default.  
   
- После перезапуска приложение выводит диалоговое окно задач \(для Юникода\). Если это приложение ANSI, оно выводит окно сообщения Windows. На этом этапе пользователь выбирает, нужно ли восстановить автоматически сохраненные документы. Если пользователь не восстанавливает автоматически сохраненные документы, диспетчер перезапуска удаляет временные файлы.  
+ After restart, the application displays a task dialog box if the application is Unicode. If it is an ANSI application, the application displays a Windows Message box. At this point, the user chooses whether to restore the automatically saved documents. If the user does not restore the automatically saved documents, the restart manager discards the temporary files.  
   
 > [!NOTE]
->  Поведение диспетчера перезапуска по умолчанию можно переопределить для сохранения данных и перезапуска приложения.  
+>  You can override the default behavior of the restart manager for saving data and restarting the application.  
   
- По умолчанию приложения MFC, созданные с помощью мастера проектов в [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], поддерживают диспетчер перезапуска, если приложение работает на компьютере с [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Если поддержка диспетчера перезапуска в приложении не требуется, можно отключить диспетчер перезапуска в мастере создания проекта.  
+ By default, MFC applications created by using the project wizard in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] support the restart manager when the applications are run on a computer that has [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. If you do not want your application to support the restart manager, you can disable the restart manager in the new project wizard.  
   
-### Добавление поддержки диспетчера перезапуска в существующее приложение  
+### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>To Add Support For the Restart Manager to an Existing Application  
   
-1.  Откройте существующее приложение MFC в [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+1.  Open an existing MFC application in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
-2.  Откройте исходный файл для основного приложения. По умолчанию это CPP\-файл, который имеет то же имя, что и приложение. Например, исходный файл основного приложения для MyProject — MyProject.cpp.  
+2.  Open the source file for your main application. By default this is the .cpp file that has the same name as your application. For example, the main application source file for MyProject is MyProject.cpp.  
   
-3.  Найдите конструктор для основного приложения. Например, если проект — MyProject, конструктор имеет имя `CMyProjectApp::CMyProjectApp()`.  
+3.  Find the constructor for your main application. For example, if your project is MyProject, the constructor is `CMyProjectApp::CMyProjectApp()`.  
   
-4.  Добавьте следующий код в конструктор.  
+4.  Add the following line of code to your constructor.  
   
-    ```  
+ ```  
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
-    ```  
+ ```  
   
-5.  Убедитесь, что метод `InitInstance` приложения вызывает родительский метод `InitInstance`: [CWinApp::InitInstance](../Topic/CWinApp::InitInstance.md) или `CWinAppEx::InitInstance`. Метод `InitInstance` отвечает за проверку параметра `m_dwRestartManagerSupportFlags`.  
+5.  Make sure the `InitInstance` method of your application calls its parent `InitInstance` method: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) or `CWinAppEx::InitInstance`. The `InitInstance` method is responsible for checking the `m_dwRestartManagerSupportFlags` parameter.  
   
-6.  Скомпилируйте и запустите приложение.  
+6.  Compile and run your application.  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [CDataRecoveryHandler Class](../mfc/reference/cdatarecoveryhandler-class.md)   
- [CWinApp::m\_dwRestartManagerSupportFlags](../Topic/CWinApp::m_dwRestartManagerSupportFlags.md)   
+ [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp Class](../mfc/reference/cwinapp-class.md)   
- [CWinApp::m\_nAutosaveInterval](../Topic/CWinApp::m_nAutosaveInterval.md)   
- [CDocument::OnDocumentEvent](../Topic/CDocument::OnDocumentEvent.md)
+ [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)   
+ [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
+
+

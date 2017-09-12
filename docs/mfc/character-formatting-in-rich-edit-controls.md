@@ -1,39 +1,58 @@
 ---
-title: "Форматирование знаков с использованием элементов управления &quot;Rich Edit&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl - класс, форматирование знаков в"
-  - "форматирование [C++], знаки"
-  - "элементы управления Rich Edit, форматирование знаков в"
+title: Character Formatting in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- formatting [MFC], characters
+- rich edit controls [MFC], character formatting in
+- CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Форматирование знаков с использованием элементов управления &quot;Rich Edit&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2da6052721125835517a2b93341a6800c75205e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно использовать функции\-члены управления расширенного редактирования \([CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\) со знаками формата и извлекать сведения о форматировании.  Для символов можно указать шрифт, размер, цвета и эффекты, как полужирный, курсив и защитить.  
+---
+# <a name="character-formatting-in-rich-edit-controls"></a>Character Formatting in Rich Edit Controls
+You can use member functions of the rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to format characters and to retrieve formatting information. For characters, you can specify typeface, size, color, and effects such as bold, italic, and protected.  
   
- Можно применить форматирование символов с помощью функций\-членов [SetSelectionCharFormat](../Topic/CRichEditCtrl::SetSelectionCharFormat.md) и [SetWordCharFormat](../Topic/CRichEditCtrl::SetWordCharFormat.md).  Для определения текущего форматирования символов для выбранного текста используйте функции\-члена [GetSelectionCharFormat](../Topic/CRichEditCtrl::GetSelectionCharFormat.md).  Структура [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) используется с этими функции\-членами для определения атрибутов символов.  Одним из важных членов **CHARFORMATdwMask**.  В `SetSelectionCharFormat` и `SetWordCharFormat`, **dwMask** определяет, какие атрибуты символов будут установлены этим вызовом функции.  отчеты `GetSelectionCharFormat` атрибуты первого символа в выделении; **dwMask** определяет атрибуты, которые согласуются на протяжении выделения.  
+ You can apply character formatting by using the [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) and [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) member functions. To determine the current character formatting for the selected text, use the [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) member function. The [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure is used with these member functions to specify character attributes. One of the important members of **CHARFORMAT** is **dwMask**. In `SetSelectionCharFormat` and `SetWordCharFormat`, **dwMask** specifies which character attributes will be set by this function call. `GetSelectionCharFormat` reports the attributes of the first character in the selection; **dwMask** specifies the attributes that are consistent throughout the selection.  
   
- Можно также получить и задать форматирование символов «по умолчанию», которые форматирование применяется ко всем далее введенным символам.  Например, если приложение задает форматирования символов по умолчанию к типам пользователя начертание и затем знак, то этот символ полужирным шрифтом.  Для получения и форматирование по умолчанию набора символов использует функций\-членов [GetDefaultCharFormat](../Topic/CRichEditCtrl::GetDefaultCharFormat.md) и [SetDefaultCharFormat](../Topic/CRichEditCtrl::SetDefaultCharFormat.md).  
+ You can also get and set the "default character formatting," which is the formatting applied to any subsequently inserted characters. For example, if an application sets the default character formatting to bold and the user then types a character, that character is bold. To get and set default character formatting, use the [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) and [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) member functions.  
   
- » Атрибут «защищенный символов не изменяет внешний вид текста.  Если пользователь пытается изменить защищенный текст, управление расширенного редактирования отправляет его родительское окно сообщения уведомления **EN\_PROTECTED**, что родительское окно, чтобы разрешить или запретить изменение.  Чтобы открыть это сообщение уведомления, необходимо включить его с помощью функции\-члена [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md).  Дополнительные сведения о маска события см. в разделе [Уведомления от управления расширенного редактирования](../mfc/notifications-from-a-rich-edit-control.md) далее в этом разделе.  
+ The "protected" character attribute does not change the appearance of text. If the user attempts to modify protected text, a rich edit control sends its parent window an **EN_PROTECTED** notification message, allowing the parent window to allow or prevent the change. To receive this notification message, you must enable it by using the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. For more information about the event mask, see [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md), later in this topic.  
   
- Цвет переднего плана атрибут символов, однако цвет фона свойства элемента управления расширенного редактирования.  Для задания цвета фона используйте функции\-члена [SetBackgroundColor](../Topic/CRichEditCtrl::SetBackgroundColor.md).  
+ Foreground color is a character attribute, but background color is a property of the rich edit control. To set the background color, use the [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) member function.  
   
-## См. также  
- [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Сопоставляет приемника событий | Документы Microsoft"
+title: Event Sink Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- event sink maps
+- event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
 caps.latest.revision: 14
 author: mikeblome
@@ -33,228 +33,228 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 97e0a23daee3fc9e0312ef603f80c064fa07edf7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="event-sink-maps"></a>Схемы приемников событий
-Если внедренный элемент управления OLE запускает событие, контейнера элемента управления получает событие, используя механизм, называемый «картой приемника событий, «предоставляемые MFC. На этой карте приемника событий определяет функции обработчика для каждого конкретного события, а также параметры таких событий. Дополнительные сведения о картах приемника событий см. в статье [контейнеры элементов управления ActiveX](../../mfc/activex-control-containers.md).  
+# <a name="event-sink-maps"></a>Event Sink Maps
+When an embedded OLE control fires an event, the control's container receives the event using a mechanism, called an "event sink map," supplied by MFC. This event sink map designates handler functions for each specific event, as well as parameters of those events. For more information on event sink maps, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="event-sink-maps"></a>Схемы приемников событий  
+### <a name="event-sink-maps"></a>Event Sink Maps  
   
 |||  
 |-|-|  
-|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Начинается определение картой приемника событий.|  
-|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Объявляет картой приемника событий.|  
-|[END_EVENTSINK_MAP](#end_eventsink_map)|Завершает определение картой приемника событий.|  
-|[ON_EVENT](#on_event)|Задает обработчик событий для конкретного события.|  
-|[ON_EVENT_RANGE](#on_event_range)|Задает обработчик событий для определенных событий, инициируемых с набором элементов управления OLE.|  
-|[ON_EVENT_REFLECT](#on_event_reflect)|Получает события, создаваемые элемента управления, прежде чем они будут обработаны с контейнера элемента управления.|  
-|[ON_PROPNOTIFY](#on_propnotify)|Определяет обработчик для обработки уведомления свойства из элемента управления OLE.|  
-|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Определяет обработчик для обработки уведомлений свойство из набора элементов управления OLE.|  
-|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Получает свойство уведомлений, отправленных с помощью элемента управления, прежде чем они будут обработаны с контейнера элемента управления.|  
+|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Starts the definition of an event sink map.|  
+|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Declares an event sink map.|  
+|[END_EVENTSINK_MAP](#end_eventsink_map)|Ends the definition of an event sink map.|  
+|[ON_EVENT](#on_event)|Defines an event handler for a specific event.|  
+|[ON_EVENT_RANGE](#on_event_range)|Defines an event handler for a specific event fired from a set of OLE controls.|  
+|[ON_EVENT_REFLECT](#on_event_reflect)|Receives events fired by the control before they are handled by the control's container.|  
+|[ON_PROPNOTIFY](#on_propnotify)|Defines a handler for handling property notifications from an OLE control.|  
+|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Defines a handler for handling property notifications from a set of OLE controls.|  
+|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Receives property notifications sent by the control before they are handled by the control's container.|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
- Начинается определение вашей картой приемника событий.  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
+ Begins the definition of your event sink map.  
   
 ```   
 BEGIN_EVENTSINK_MAP(theClass, baseClass)  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Указывает, что имя класса элемента управления, сопоставления которых приемника событий.  
+ Specifies the name of the control class whose event sink map this is.  
   
  `baseClass`  
- Указывает имя базового класса `theClass`.  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>Примечания  
- В файле реализации (CPP), который определяет функции-члены класса, запустите картой приемника событий с `BEGIN_EVENTSINK_MAP` макрос, затем добавить макрос записи для каждого события получать уведомления об и завершить картой приемника событий с `END_EVENTSINK_MAP` макрос.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the event sink map with the `BEGIN_EVENTSINK_MAP` macro, then add macro entries for each event to be notified of, and complete the event sink map with the `END_EVENTSINK_MAP` macro.  
   
- Дополнительные сведения о схемы приемников событий и контейнеры элементов управления OLE, см. в статье [контейнеры элементов управления ActiveX](../../mfc/activex-control-containers.md).  
+ For more information on event sink maps and OLE control containers, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
- OLE-контейнер позволяет картой приемника событий для задания событий, которые будет уведомляться контейнера.  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
+ An OLE container can provide an event sink map to specify the events your container will be notified of.  
   
 ```   
 DECLARE_EVENTSINK_MAP()   
 ```  
   
-### <a name="remarks"></a>Примечания  
- Используйте `DECLARE_EVENTSINK_MAP` макрос в конце объявления класса. Затем в. CPP-файл, который определяет член функции для класса, используйте `BEGIN_EVENTSINK_MAP` макрос, макрос операции для каждого из событий, чтобы получать уведомления и `END_EVENTSINK_MAP` макрос для объявления в конец списка приемника событий.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_EVENTSINK_MAP` macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the `BEGIN_EVENTSINK_MAP` macro, macro entries for each of the events to be notified of, and the `END_EVENTSINK_MAP` macro to declare the end of the event sink list.  
   
- Дополнительные сведения о картах приемника событий см. в статье [контейнеры элементов управления ActiveX](../../mfc/activex-control-containers.md).  
+ For more information on event sink maps, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
- Завершает определение вашей картой приемника событий.  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
+ Ends the definition of your event sink map.  
   
 ```   
 END_EVENTSINK_MAP()   
 ```  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT  
- Используйте `ON_EVENT` макрос, чтобы определить функцию обработчика событий для события, инициируемые элемента управления OLE.  
+##  <a name="on_event"></a>  ON_EVENT  
+ Use the `ON_EVENT` macro to define an event handler function for an event fired by an OLE control.  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Класс, к которому принадлежит этот картой приемника событий.  
+ The class to which this event sink map belongs.  
   
  `id`  
- Идентификатор элемента управления элемента управления OLE.  
+ The control ID of the OLE control.  
   
  `dispid`  
- Идентификатор диспетчеризации на событие, запускаемое с помощью элемента управления.  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- Указатель на функцию-член, который обрабатывает событие. Данная функция должна иметь **BOOL** возвращаемого значения и типы параметров, соответствующих параметров событий (см. `vtsParams`). Функция должна возвращать **TRUE** для указания событие было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type, and parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- Последовательность **VTS_** констант, указывающих типы параметров для события. Это же константы, которые используются в операциях отправки карты, например `DISP_FUNCTION`.  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из этих значений, разделенных пробелами (не запятые) Указывает список параметров функции. Пример:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Указывает список, содержащий короткое целое число, за которым следует **BOOL**.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- Список **VTS_** константы, в разделе [EVENT_CUSTOM](event-maps.md#event_custom).  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE  
- Используйте `ON_EVENT_RANGE` макрос, чтобы определить функцию обработчика событий для события, инициируемые любого элемента управления OLE, наличие идентификатор элемента управления на непрерывный диапазон идентификаторов.  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
+ Use the `ON_EVENT_RANGE` macro to define an event handler function for an event fired by any OLE control having a control ID within a contiguous range of IDs.  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Класс, к которому принадлежит этот картой приемника событий.  
+ The class to which this event sink map belongs.  
   
  `idFirst`  
- Идентификатор элемента управления, в диапазоне от первого элемента управления OLE.  
+ The control ID of the first OLE control in the range.  
   
  `idLast`  
- Идентификатор элемента управления, в диапазоне от последнего элемента управления OLE.  
+ The control ID of the last OLE control in the range.  
   
  `dispid`  
- Идентификатор диспетчеризации на событие, запускаемое с помощью элемента управления.  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- Указатель на функцию-член, который обрабатывает событие. Данная функция должна иметь **BOOL** возвращаемый тип, первый параметр типа **UINT** (для управления Идентификатором) и типы дополнительных параметров, соответствующих параметров события (см. `vtsParams`). Функция должна возвращать **TRUE** для указания событие было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type, a first parameter of type **UINT** (for the control ID), and additional parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- Последовательность **VTS_** констант, указывающих типы параметров для события. Первая константа имеет тип **VTS_I4**, для идентификатора элемента управления Это же константы, которые используются в операциях отправки карты, например `DISP_FUNCTION`.  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. The first constant should be of type **VTS_I4**, for the control ID. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из этих значений, разделенных пробелами (не запятые) Указывает список параметров функции. Пример:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Указывает список, содержащий короткое целое число, за которым следует **BOOL**.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- Список **VTS_** константы, в разделе [EVENT_CUSTOM](event-maps.md#event_custom).  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="example"></a>Пример  
- В следующем примере показан обработчик событий для событий MouseDown, реализовано для трех элементов управления ( `IDC_MYCTRL1` через `IDC_MYCTRL3`). Функция обработчика событий `OnRangeMouseDown`, объявляется в файле заголовка класса диалогового окна ( `CMyDlg`) как:  
+### <a name="example"></a>Example  
+ The following example demonstrates an event handler, for the MouseDown event, implemented for three controls ( `IDC_MYCTRL1` through `IDC_MYCTRL3`). The event handler function, `OnRangeMouseDown`, is declared in the header file of the dialog class ( `CMyDlg`) as:  
   
- [!code-cpp[NVC_MFCAutomation&#12;](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
+ [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
- В следующем примере кода определяется в файле реализации класса диалогового окна.  
+ The code below is defined in the implementation file of the dialog class.  
   
- [!code-cpp[NVC_MFCAutomation&#13;](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
- `ON_EVENT_REFLECT` Макрос, при использовании событий приемником сопоставления класса-оболочки элемента управления OLE, получает события, создаваемые элемента управления, прежде чем они будут обработаны с контейнера элемента управления.  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
+ The `ON_EVENT_REFLECT` macro, when used in the event sink map of an OLE control's wrapper class, receives events fired by the control before they are handled by the control's container.  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Класс, к которому принадлежит этот картой приемника событий.  
+ The class to which this event sink map belongs.  
   
- Идентификатор DISPID  
- Идентификатор диспетчеризации на событие, запускаемое с помощью элемента управления.  
+ dispid  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- Указатель на функцию-член, который обрабатывает событие. Данная функция должна иметь **BOOL** возвращаемого значения и типы параметров, соответствующих параметров событий (см. `vtsParams`). Функция должна возвращать **TRUE** для указания событие было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type and parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- Последовательность **VTS_** констант, указывающих типы параметров для события. Это же константы, которые используются в операциях отправки карты, например `DISP_FUNCTION`.  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы.  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants.  
   
- Один или несколько из этих значений, разделенных пробелами (не запятые) Указывает список параметров функции. Например:  
+ One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Указывает список, содержащий короткое целое число, за которым следует **BOOL**.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- Список **VTS_** константы, в разделе [EVENT_CUSTOM](event-maps.md#event_custom).  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
- Используйте `ON_PROPNOTIFY` макрос для определения запись карты приемника событий для обработки уведомления свойства из элемента управления OLE.  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
+ Use the `ON_PROPNOTIFY` macro to define an event sink map entry for handling property notifications from an OLE control.  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Класс, к которому принадлежит этот картой приемника событий.  
+ The class to which this event sink map belongs.  
   
  `id`  
- Идентификатор элемента управления элемента управления OLE.  
+ The control ID of the OLE control.  
   
  `dispid`  
- Идентификатор диспетчеризации свойства, участвующих в уведомлении.  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- Указатель на функцию-член, который обрабатывает **OnRequestEdit** уведомления для этого свойства. Данная функция должна иметь **BOOL** тип возвращаемого значения и **BOOL\* ** параметр. Эту функцию следует присвоить параметру **TRUE** позволяет изменить свойства и **FALSE** запретить. Функция должна возвращать **TRUE** для указания уведомление было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and a **BOOL\*** parameter. This function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- Указатель на функцию-член, который обрабатывает **OnChanged** уведомления для этого свойства. Функция должна иметь **BOOL** тип возвращаемого значения и **UINT** параметр. Функция должна возвращать **TRUE** для указания, что уведомление было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and a **UINT** parameter. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
-### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из этих значений, разделенных пробелами (не запятые) Указывает список параметров функции. Например:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Указывает список, содержащий короткое целое число, за которым следует **BOOL**.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- Список **VTS_** константы, в разделе [EVENT_CUSTOM](event-maps.md#event_custom).  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
- Используйте `ON_PROPNOTIFY_RANGE` макрос, определение запись карты приемника событий для обработки свойств уведомлений из любого элемента управления OLE, наличие идентификатор элемента управления на непрерывный диапазон идентификаторов.  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
+ Use the `ON_PROPNOTIFY_RANGE` macro to define an event sink map entry for handling property notifications from any OLE control having a control ID within a contiguous range of IDs.  
   
 ```  
  
@@ -262,30 +262,30 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Класс, к которому принадлежит этот картой приемника событий.  
+ The class to which this event sink map belongs.  
   
  `idFirst`  
- Идентификатор элемента управления, в диапазоне от первого элемента управления OLE.  
+ The control ID of the first OLE control in the range.  
   
  `idLast`  
- Идентификатор элемента управления, в диапазоне от последнего элемента управления OLE.  
+ The control ID of the last OLE control in the range.  
   
  `dispid`  
- Идентификатор диспетчеризации свойства, участвующих в уведомлении.  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- Указатель на функцию-член, который обрабатывает **OnRequestEdit** уведомления для этого свойства. Данная функция должна иметь **BOOL** тип возвращаемого значения и **UINT** и **BOOL\* ** параметров. Функция следует присвоить параметру **TRUE** позволяет изменить свойства и **FALSE** запретить. Функция должна возвращать **TRUE** для указания, что уведомление было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and **UINT** and **BOOL\*** parameters. The function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- Указатель на функцию-член, который обрабатывает **OnChanged** уведомления для этого свойства. Функция должна иметь **BOOL** тип возвращаемого значения и **UINT** параметр. Функция должна возвращать **TRUE** для указания, что уведомление было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and a **UINT** parameter. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
- `ON_PROPNOTIFY_REFLECT` Макрос, при использовании событий приемником сопоставления класса-оболочки элемента управления OLE, Получает свойство уведомлений, отправленных с помощью элемента управления, прежде чем они будут обработаны с контейнера элемента управления.  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
+ The `ON_PROPNOTIFY_REFLECT` macro, when used in the event sink map of an OLE control's wrapper class, receives property notifications sent by the control before they are handled by the control's container.  
   
 ```  
  
@@ -293,22 +293,22 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Класс, к которому принадлежит этот картой приемника событий.  
+ The class to which this event sink map belongs.  
   
  `dispid`  
- Идентификатор диспетчеризации свойства, участвующих в уведомлении.  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- Указатель на функцию-член, который обрабатывает **OnRequestEdit** уведомления для этого свойства. Данная функция должна иметь **BOOL** тип возвращаемого значения и **BOOL\* ** параметр. Эту функцию следует присвоить параметру **TRUE** позволяет изменить свойства и **FALSE** запретить. Функция должна возвращать **TRUE** для указания уведомление было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and a **BOOL\*** parameter. This function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- Указатель на функцию-член, который обрабатывает **OnChanged** уведомления для этого свойства. Функция должна иметь **BOOL** возвращаемого значения и без параметров. Функция должна возвращать **TRUE** для указания уведомление было обработано; в противном случае **FALSE**.  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and no parameters. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
     
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

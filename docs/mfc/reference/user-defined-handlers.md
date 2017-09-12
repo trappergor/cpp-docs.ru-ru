@@ -1,5 +1,5 @@
 ---
-title: "Пользовательские обработчики | Документы Microsoft"
+title: User-Defined Handlers | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ON_REGISTERED_MESSAGE macro
-- ON_MESSAGE macro
-- user-defined handlers
+- ON_REGISTERED_MESSAGE macro [MFC]
+- ON_MESSAGE macro [MFC]
+- user-defined handlers [MFC]
 ms.assetid: 99478294-bef0-4ba7-a369-25a6abdcdb62
 caps.latest.revision: 10
 author: mikeblome
@@ -35,25 +35,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f0fc367bc19f0db23efddfc69fdeac519185ff0c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f55f9fa4b13b0e7b0dcebb34e968e2cdb8cecd3a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="user-defined-handlers"></a>Пользовательские обработчики
-Следующие записи карты соответствуют прототипы функций.  
+# <a name="user-defined-handlers"></a>User-Defined Handlers
+The following map entries correspond to the function prototypes.  
   
-|Запись сопоставления|Прототип функции|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
-|ON_MESSAGE ( \<сообщений настроек, \<memberFxn настроек)|memberFxn LRESULT afx_msg (WPARAM, LPARAM);|  
-|ON_REGISTERED_MESSAGE ( \<nMessageVariable настроек, \<memberFxn настроек)|memberFxn LRESULT afx_msg (WPARAM, LPARAM);|  
-|ON_THREAD_MESSAGE ( \<сообщений настроек, \<memberFxn настроек)|void memberFxn afx_msg (WPARAM, LPARAM);|  
-|ON_REGISTERED_THREAD_MESSAGE ( \<nMessageVariable настроек, \<memberFxn настроек)|void memberFxn afx_msg (WPARAM, LPARAM);|  
+|ON_MESSAGE( \<message>, \<memberFxn> )|afx_msg LRESULT memberFxn( WPARAM, LPARAM );|  
+|ON_REGISTERED_MESSAGE( \<nMessageVariable>, \<memberFxn> )|afx_msg LRESULT memberFxn( WPARAM, LPARAM );|  
+|ON_THREAD_MESSAGE( \<message>, \<memberFxn> )|afx_msg void memberFxn( WPARAM, LPARAM );|  
+|ON_REGISTERED_THREAD_MESSAGE( \<nMessageVariable>, \<memberFxn> )|afx_msg void memberFxn( WPARAM, LPARAM );|  
   
-## <a name="see-also"></a>См. также  
- [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)   
- [Обработчики для сообщений WM_](../../mfc/reference/handlers-for-wm-messages.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)   
+ [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
 
 

@@ -1,51 +1,71 @@
 ---
-title: "Параметры приложения, мастер элементов управления ActiveX MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Мастер элементов управления ActiveX MFC, параметры приложения"
+title: Application Settings, MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.appset
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Параметры приложения, мастер элементов управления ActiveX MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e4fb7cc0e9c07d1f1996531bfc4c5b2c05146a2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта страница мастера элементов управления ActiveX MFC служит для создания и добавления основных компонентов в новый проект ActiveX библиотеки MFC. Эти параметры применяются к самому приложению, а не к какому\-либо конкретному компоненту или частям элемента управления.  
+---
+# <a name="application-settings-mfc-activex-control-wizard"></a>Application Settings, MFC ActiveX Control Wizard
+Use this page of the MFC ActiveX Control Wizard to design and add basic features to a new MFC ActiveX project. These settings apply to the application itself and not to any specific feature or element of the control.  
   
- **Лицензия времени выполнения**  
- Выберите этот вариант, чтобы создать пользовательскую лицензию для распространения с элементом управления. Лицензия — это текстовый файл *projname*.lic. Этот файл должен быть в том же каталоге, что и библиотека DLL элемента управления, чтобы можно было создавать экземпляр элемента управления в среде разработки. Обычно этот файл распространяется с созданным элементом управления, однако ваши клиенты его не распространяют.  
+ **Run-time license**  
+ Select this option to generate a user license file to distribute with the control. The license is a text file, *projname*.lic. This file must be in the same directory as the control's DLL to allow an instance of the control to be created in a design-time environment. You usually distribute this file with your control, but your customers do not distribute it.  
   
- **Создание файлов справки**  
- Выберите этот вариант, чтобы создать файлы справки, для которых созданы заглушки, и настройте в проекте включение справки для элемента управления. Проект по умолчанию, созданный без данного параметра, создает только поле **О программе**, которое отображается, когда пользователь щелкает элемент управления правой кнопкой мыши, нажимает клавишу F1 или щелкает **Справка** для контейнера элемента управления.  
+ **Generate help files**  
+ Select this option to generate stubbed help files and configure the project to include help for your control. A default project, created without this option, generates only an **About** box that is displayed when the user right clicks the control, uses F1, or clicks **Help** on the control's container.  
   
 > [!NOTE]
->  Способ отображения справки зависит от того, как элемент управления взаимодействует с контейнером. Если справка включена в контейнер, необходимо обрабатывать обмен сообщениями между элементом управления и контейнером для правильного отображения справки.  
+>  How help is displayed depends on how your control interacts with its container. If you include help with your container, you must handle messages between the control and the container to display the help appropriately.  
   
- При создании файлов справки с помощью мастера в проект будет включено следующее:  
+ When you generate help files using the wizard, your project includes the following:  
   
--   VCPROJ\-файл содержит код для построения и настройки файла справки при построении проекта.  
+-   The file .vcxproj contains code to build and configure the help file when the project is built.  
   
--   Файл *projnamePropPage*.cpp включает функцию [SetHelpInfo](../Topic/COlePropertyPage::SetHelpInfo.md) в конструктор.  
+-   The file *projnamePropPage*.cpp file includes a [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) function in the constructor.  
   
--   Файл projname.hpj — это файл проекта справки, который используется компилятором справки для создания файла справки элемента управления ActiveX. HPJ\-файл — это текстовый файл, содержащий сведения о построении файла справки и путях к дополнительным файлам \(например, к точечным рисункам\) в файле справки.  
+-   The file projname.hpj, is the help project file used by the help compiler to create the ActiveX control's help file. The .hpj file is a text file containing the information about building your help file and the paths to the additional files (for example, bitmaps) the help file includes.  
   
--   Проект включает каталог HLP, который содержит файлы точечных рисунков справки проекта и файлы разделов справки \(*projname*.rtf\). Файл раздела справки содержит стандартные разделы справки для общих свойств, событий и методов, поддерживаемых большинством элементов управления ActiveX. Вы можете изменить RTF\-файл, чтобы добавить или удалить определенные разделы справки.  
+-   The project includes the HLP directory to contain the project help bitmap files and the help topic file (*projname*.rtf). This help topic file contains the standard help topics for the common properties, events, and methods supported by many ActiveX controls. You can edit the .rtf file to add or remove specific help topics.  
   
-## См. также  
- [мастер элементов управления MFC ActiveX](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Имена элементов управления, мастер элементов управления ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
- [Страница "Параметры элемента управления" мастера элементов управления ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+
+

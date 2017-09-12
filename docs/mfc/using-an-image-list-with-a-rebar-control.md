@@ -1,48 +1,67 @@
 ---
-title: "Использование списка изображений с элементом управления главной панели | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "списки изображений [C++], Элементы управления главной панели"
-  - "Элементы управления главной панели, списки изображений"
+title: Using an Image List with a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], rebar controls
+- rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Использование списка изображений с элементом управления главной панели
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2f705dcbc58eae33688197066e5e59874ddb761
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Каждая полоса главной панели может содержать, помимо прочего, изображение из связанного списка изображений.  Следующая процедура подробно шаги, необходимые для отображения изображения в полосе главной панели.  
+---
+# <a name="using-an-image-list-with-a-rebar-control"></a>Using an Image List with a Rebar Control
+Each rebar band can contain, among other things, an image from an associated image list. The following procedure details the necessary steps for displaying an image in a rebar band.  
   
-### В образам отображения в полосе главной панели  
+### <a name="to-display-images-in-a-rebar-band"></a>To display images in a rebar band  
   
-1.  Вложение список изображений в объект элемента управления "Главная панель" вызовом [SetImageList](../Topic/CReBarCtrl::SetImageList.md), передав указатель на существующий список изображений.  
+1.  Attach an image list to your rebar control object by making a call to [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), passing a pointer to an existing image list.  
   
-2.  Изменение структуры **REBARBANDINFO** для присвоения изображение в полосе главной панели:  
+2.  Modify the **REBARBANDINFO** structure to assign an image to a rebar band:  
   
-    -   Установите для элемента **fMask** в **RBBIM\_IMAGE** с помощью побитовый оператор ИЛИ, чтобы включить дополнительные флажки по мере необходимости.  
+    -   Set the **fMask** member to **RBBIM_IMAGE**, using the bitwise OR operator to include additional flags as necessary.  
   
-    -   Задайте члена `iImage` к индексу списка изображений образа для отображения.  
+    -   Set the `iImage` member to the image list index of the image to be displayed.  
   
-3.  Инициализируйте все оставшиеся элементы данных, таких как размер, текст и дескриптор, который содержит два окна, необходимую информацию.  
+3.  Initialize any remaining data members, such as the size, text, and handle of the contained child window, with the necessary information.  
   
-4.  Вставьте новую полосу \(с образом\) с вызовом метода [CReBarCtrl::InsertBand](../Topic/CReBarCtrl::InsertBand.md), передав структуру **REBARBANDINFO** .  
+4.  Insert the new band (with the image) with a call to [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), passing the **REBARBANDINFO** structure.  
   
- В следующем примере высказывать существующий объект списка изображений с 2 образами, вложенной в объект элемента управления "Главная панель" \(`m_wndReBar`\).  Новая полоса главной панели \(определенная `rbi`\), содержащий первый изображение, добавляется с вызовом `InsertBand`:  
+ The following example assumes that an existing image list object with two images was attached to the rebar control object (`m_wndReBar`). A new rebar band (defined by `rbi`), containing the first image, is added with a call to `InsertBand`:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/CPP/using-an-image-list-with-a-rebar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]  
   
-## См. также  
- [Использование CReBarCtrl](../Topic/Using%20CReBarCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

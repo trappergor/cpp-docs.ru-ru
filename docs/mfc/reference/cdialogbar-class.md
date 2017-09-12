@@ -1,5 +1,5 @@
 ---
-title: "CDialogBar-класс | Документы Microsoft"
+title: CDialogBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog bars, Windows modeless dialog box
-- CDialogBar class
-- dialog boxes, modeless
+- CDialogBar [MFC], CDialogBar
+- CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 caps.latest.revision: 23
 author: mikeblome
@@ -38,47 +37,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 33dc5f5f4d345745a4b9435e725f411f4387e287
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3a292e7cf09871b4d22e60f4e81f6fedf13d3c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogbar-class"></a>CDialogBar-класс
-Предоставляет функциональные возможности немодального диалогового окна Windows на панели элементов управления.  
+# <a name="cdialogbar-class"></a>CDialogBar Class
+Provides the functionality of a Windows modeless dialog box in a control bar.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::CDialogBar](#cdialogbar)|Создает объект `CDialogBar`.|  
+|[CDialogBar::CDialogBar](#cdialogbar)|Constructs a `CDialogBar` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::Create](#create)|Создает панель диалогового окна Windows и присоединяет его к `CDialogBar` объекта.|  
+|[CDialogBar::Create](#create)|Creates a Windows dialog bar and attaches it to the `CDialogBar` object.|  
   
-## <a name="remarks"></a>Примечания  
- Панель диалогового окна напоминает диалоговое окно содержит стандартные элементы управления Windows, пользователь может перейти между. Другой схожесть существует создания шаблона диалогового окна для представления панели диалогового окна.  
+## <a name="remarks"></a>Remarks  
+ A dialog bar resembles a dialog box in that it contains standard Windows controls that the user can tab between. Another similarity is that you create a dialog template to represent the dialog bar.  
   
- Создание и использование диалоговой панели похож на создание и использование `CFormView` объекта. Во-первых, используйте [редактор диалоговых окон](../../windows/dialog-editor.md) для определения шаблона диалогового окна в стиле **WS_CHILD** и другие стили отсутствуют. Шаблон не должен иметь стиль **WS_VISIBLE**. В коде приложения вызовите конструктор для создания `CDialogBar` , а затем вызвать **создать** для создания окна диалоговая панель и присоединить его к `CDialogBar` объекта.  
+ Creating and using a dialog bar is similar to creating and using a `CFormView` object. First, use the [dialog editor](../../windows/dialog-editor.md) to define a dialog template with the style **WS_CHILD** and no other style. The template must not have the style **WS_VISIBLE**. In your application code, call the constructor to construct the `CDialogBar` object, then call **Create** to create the dialog-bar window and attach it to the `CDialogBar` object.  
   
- Дополнительные сведения о `CDialogBar`, см. в статье [диалоговые](../../mfc/dialog-bars.md) и [Технические заметки 31](../../mfc/tn031-control-bars.md), панелей элементов управления.  
+ For more information on `CDialogBar`, see the article [Dialog Bars](../../mfc/dialog-bars.md) and [Technical Note 31](../../mfc/tn031-control-bars.md), Control Bars.  
   
 > [!NOTE]
->  В текущем выпуске `CDialogBar` не может размещать элементы управления Windows Forms. Дополнительные сведения об элементах управления Windows Forms в Visual C++ см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+>  In the current release, a `CDialogBar` object cannot host Windows Forms controls. For more information about Windows Forms controls in Visual C++, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,18 +88,18 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** файле afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
- Создает объект `CDialogBar`.  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
+ Constructs a `CDialogBar` object.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
- Загружает ресурс шаблона диалоговых окон, указанного в `lpszTemplateName` или `nIDTemplate`, создает окно Панель диалогового окна, задает его стиль и связывает его с `CDialogBar` объекта.  
+##  <a name="create"></a>  CDialogBar::Create  
+ Loads the dialog-box resource template specified by `lpszTemplateName` or `nIDTemplate`, creates the dialog-bar window, sets its style, and associates it with the `CDialogBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -117,53 +116,53 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Указатель на родительский `CWnd` объекта.  
+ A pointer to the parent `CWnd` object.  
   
  `lpszTemplateName`  
- Указатель на имя `CDialogBar` шаблона диалоговых ресурсов объекта.  
+ A pointer to the name of the `CDialogBar` object's dialog-box resource template.  
   
  `nStyle`  
- Стиль панели инструментов. Существуют следующие стили дополнительных инструментов поддерживается:  
+ The toolbar style. Additional toolbar styles supported are:  
   
-- `CBRS_TOP`Панель находится в верхней части окна фрейма.  
+- `CBRS_TOP` Control bar is at top of the frame window.  
   
-- `CBRS_BOTTOM`Панель элементов управления — в нижней части окна фрейма.  
+- `CBRS_BOTTOM` Control bar is at bottom of the frame window.  
   
-- `CBRS_NOALIGN`При изменении размера родительской панели элементов управления не перемещен.  
+- `CBRS_NOALIGN` Control bar is not repositioned when the parent is resized.  
   
-- `CBRS_TOOLTIPS`Панель отображает всплывающие подсказки.  
+- `CBRS_TOOLTIPS` Control bar displays tool tips.  
   
-- **CBRS_SIZE_DYNAMIC** панели элементов управления является динамическим.  
+- **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
-- **CBRS_SIZE_FIXED** предопределенной панели элементов управления.  
+- **CBRS_SIZE_FIXED** Control bar is fixed.  
   
-- **CBRS_FLOATING** плавающей панели элементов управления.  
+- **CBRS_FLOATING** Control bar is floating.  
   
-- `CBRS_FLYBY`Строка состояния отображает сведения о кнопке.  
+- `CBRS_FLYBY` Status bar displays information about the button.  
   
-- **CBRS_HIDE_INPLACE** панель управления не отображается для пользователя.  
+- **CBRS_HIDE_INPLACE** Control bar is not displayed to the user.  
   
  `nID`  
- Идентификатор элемента управления панели диалогового окна.  
+ The control ID of the dialog bar.  
   
  `nIDTemplate`  
- Идентификатор ресурса `CDialogBar` шаблона диалогового объекта.  
+ The resource ID of the `CDialogBar` object's dialog-box template.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- При указании `CBRS_TOP` или `CBRS_BOTTOM` стиль выравнивания диалоговая панель ширина, окна фрейма, а высота это ресурс, заданный параметром `nIDTemplate`. При указании `CBRS_LEFT` или `CBRS_RIGHT` стиль выравнивания диалоговая панель высота, окна фрейма, а ширина — это ресурс, заданный параметром `nIDTemplate`.  
+### <a name="remarks"></a>Remarks  
+ If you specify the `CBRS_TOP` or `CBRS_BOTTOM` alignment style, the dialog bar's width is that of the frame window and its height is that of the resource specified by `nIDTemplate`. If you specify the `CBRS_LEFT` or `CBRS_RIGHT` alignment style, the dialog bar's height is that of the frame window and its width is that of the resource specified by `nIDTemplate`.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCMessageMaps&#13;](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC CTRLBARS](../../visual-cpp-samples.md)   
- [CControlBar-класс](../../mfc/reference/ccontrolbar-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CFormView](../../mfc/reference/cformview-class.md)   
- [CControlBar-класс](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
 

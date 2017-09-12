@@ -1,42 +1,61 @@
 ---
-title: "Использование списка изображений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList - класс, использование"
-  - "списки изображений [C++]"
-  - "списки [C++], изображение"
+title: Using an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lists [MFC], image
+- CImageList class [MFC], using
+- image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование списка изображений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28533532f589e58307ca6e5624a3faf758d24e06
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Типичное потребление списка изображений соответствующий шаблон ниже:  
+---
+# <a name="using-an-image-list"></a>Using an Image List
+Typical usage of an image list follows the pattern below:  
   
--   Создает объект [CImageList](../Topic/CImageList%20Class.md) и вызовите одну из перегрузок своей функции [Создать](../Topic/CImageList::Create.md) для создания списка изображений и вложить его в объект `CImageList`.  
+-   Construct a [CImageList](../mfc/reference/cimagelist-class.md) object and call one of the overloads of its [Create](../mfc/reference/cimagelist-class.md#create) function to create an image list and attach it to the `CImageList` object.  
   
--   Если не был добавлен способ, при создании списка изображений можно добавлять изображения в список изображений, вызвав функцию\-член [Добавить](../Topic/CImageList::Add.md) или [Чтение](../Topic/CImageList::Read.md).  
+-   If you didn't add images when you created the image list, add images to the image list by calling the [Add](../mfc/reference/cimagelist-class.md#add) or [Read](../mfc/reference/cimagelist-class.md#read) member function.  
   
--   Связывание списка изображений с элементом управления, вызывая соответствующую функцию\-член, элемента управления или рисунок отображает из списка изображений самостоятельно с помощью функции\-члена [Рисование](../Topic/CImageList::Draw.md) списка изображений.  
+-   Associate the image list with a control by calling the appropriate member function of that control, or draw images from the image list yourself using the image list's [Draw](../mfc/reference/cimagelist-class.md#draw) member function.  
   
--   Можно разрешить пользователю для перетаскивания изображение, с помощью списка изображений встроенную поддержку для перетаскивания.  
+-   Perhaps allow the user to drag an image, using the image list's built-in support for dragging.  
   
 > [!NOTE]
->  Если список изображений был создан с помощью оператора **новый**, необходимо удалить объект `CImageList` по завершении с ним.  
+>  If the image list was created with the **new** operator, you must destroy the `CImageList` object when you are done with it.  
   
-## См. также  
- [Использование CImageList](../mfc/using-cimagelist.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

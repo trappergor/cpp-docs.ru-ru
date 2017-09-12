@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCRibbonSeparator | Документы Microsoft"
+title: CMFCRibbonSeparator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonSeparator class
-- GetThisClass method
-- CreateObject method
+- CMFCRibbonSeparator [MFC], CMFCRibbonSeparator
+- CMFCRibbonSeparator [MFC], AddToListBox
+- CMFCRibbonSeparator [MFC], CopyFrom
+- CMFCRibbonSeparator [MFC], GetRegularSize
+- CMFCRibbonSeparator [MFC], IsSeparator
+- CMFCRibbonSeparator [MFC], IsTabStop
+- CMFCRibbonSeparator [MFC], OnDraw
+- CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
 caps.latest.revision: 21
 author: mikeblome
@@ -44,56 +49,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 98a58d43b5e6299f26521d873caec06d4581f7b3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9dbf1f41e811d44abe8d763d18f2de6634aeec87
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonseparator-class"></a>Класс CMFCRibbonSeparator
-Реализует разделителя ленты.  
+# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator Class
+Implements the ribbon separator.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonSeparator : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|||  
-|-|-|  
-|Имя|Описание|  
-|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Создает объект `CMFCRibbonSeparator`.|  
-  
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Добавляет разделитель для **команды** список **Настройка** диалоговое окно. (Переопределяет [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
-|`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|`CMFCRibbonSeparator::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|Name|Description|  
+|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Constructs a `CMFCRibbonSeparator` object.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Метод копирования, который задает разделитель член переменных из другого объекта.|  
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Возвращает размер разделителя.|  
-|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Указывает, является ли разделитель.|  
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Указывает, является ли знак табуляции.|  
-|[CMFCRibbonSeparator::OnDraw](#ondraw)|Вызывается системой для рисования разделителя на ленте или в панель быстрого доступа.|  
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Вызывается системой для рисования разделителя в **команды** списка.|  
+|Name|Description|  
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Adds a separator to the **Commands** list in the **Customize** dialog box. (Overrides [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
+|`CMFCRibbonSeparator::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonSeparator::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>Примечания  
- Разделитель ленты — вертикальной или горизонтальной линией, логически разделяет ленте элементов. Разделитель элементов могут быть нарисованы на элемент управления ленты, главное приложение меню, строки состояния ленты и панель быстрого доступа.  
+### <a name="protected-methods"></a>Protected Methods  
   
- Необходимо использовать разделитель в приложении, создайте новый объект и добавьте его в меню основного приложения, как показано ниже:  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|A copy method that sets a separator's member variables from another object.|  
+|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Returns the size of a separator.|  
+|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Indicates whether this is a separator.|  
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Indicates whether this is a tab stop.|  
+|[CMFCRibbonSeparator::OnDraw](#ondraw)|Called by the system to draw the separator on either the ribbon or the Quick Access Toolbar.|  
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Called by the system to draw the separator on the **Commands** list.|  
+  
+## <a name="remarks"></a>Remarks  
+ A ribbon separator is a vertical or horizontal line that logically separates ribbon elements. A separator can be drawn on the ribbon control, the main application menu, the ribbon status bar, and the Quick Access Toolbar.  
+  
+ To use a separator in your application, construct the new object and add it to the main application menu as shown here:  
   
 ```  
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -103,20 +108,20 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...  
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```  
-Вызов [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) Добавление разделителей в панели ленты. Выделение и внутренним образом добавить разделители `AddSeparator` метод.  
+Call [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) to add separators to ribbon panels. The separators are allocated and added internally by the `AddSeparator` method.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxbaseribbonelement.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
- Добавляет разделитель для **команды** список **Настройка** диалоговое окно.  
+##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
+ Adds a separator to the **Commands** list in the **Customize** dialog box.  
   
 ```  
 virtual int AddToListBox(
@@ -124,96 +129,96 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndListBox`  
- Указатель на **команды** списка, куда добавляется разделитель.  
+ A pointer to the **Commands** list where the separator is added.  
   
  [in] `bDeep`  
- Не обрабатывается.  
+ Ignored.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс строки, в поле со списком, определяемое `pWndListBox`.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index to the string in the list box specified by `pWndListBox`.  
   
-##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
- Создает объект `CMFCRibbonSeparator`.  
+##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
+ Constructs a `CMFCRibbonSeparator` object.  
   
 ```  
 CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bIsHoriz`  
- Если `TRUE`, разделитель является горизонтальной; Если `FALSE`, вертикального разделителя.  
+ If `TRUE`, the separator is horizontal; if `FALSE`, the separator is vertical.  
   
-### <a name="remarks"></a>Примечания  
- В меню приложения используются горизонтальные разделители. Вертикальные разделители используются в панели инструментов.  
+### <a name="remarks"></a>Remarks  
+ Horizontal separators are used in application menus. Vertical separators are used in toolbars.  
   
-### <a name="example"></a>Пример  
- Следующий пример демонстрирует создания объекта `CMFCRibbonSeparator` класса.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonSeparator` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp&19;](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
- Метод копирования, который задает разделитель член переменных из другого объекта.  
+##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
+ A copy method that sets a separator's member variables from another object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `Src`  
- Исходный элемент ленты для копирования из.  
+ The source ribbon element to copy from.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
- Возвращает размер разделителя.  
+##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
+ Returns the size of a separator.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на содержимое устройства.  
+ A pointer to a device content.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер разделителя в контексте данного устройства.  
+### <a name="return-value"></a>Return Value  
+ The size of the separator on the given device context.  
   
-##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
- Указывает, является ли разделитель.  
+##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
+ Indicates whether this is a separator.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда `TRUE` к этому классу.  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE` for this class.  
   
-##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
- Указывает, является ли знак табуляции.  
+##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
+ Indicates whether this is a tab stop.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда `FALSE` к этому классу.  
+### <a name="return-value"></a>Return Value  
+ Always `FALSE` for this class.  
   
-### <a name="remarks"></a>Примечания  
- Разделитель ленты не табуляции.  
+### <a name="remarks"></a>Remarks  
+ A ribbon separator is not a tab stop.  
   
-##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
- Вызывается системой для рисования разделителя на ленте или в панель быстрого доступа.  
+##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
+ Called by the system to draw the separator on either the ribbon or the Quick Access Toolbar.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
- Вызывается системой для рисования разделителя в **команды** списка.  
+##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
+ Called by the system to draw the separator on the **Commands** list.  
   
 ```  
 virtual void OnDrawOnList(
@@ -225,19 +230,19 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pDC`|Указатель на контекст устройства.|  
-|[in] `strText`|Текст, отображаемый в списке.|  
-|[in] `nTextOffset`|Расстояние между текстом и левого края ограничивающего прямоугольника.|  
-|[in] `rect`|Указывает ограничивающий прямоугольник.|  
-|[in] `bIsSelected`|Не обрабатывается.|  
-|[in] `bHighlighted`|Не обрабатывается.|  
+|Parameter|Description|  
+|[in] `pDC`|A pointer to a device context.|  
+|[in] `strText`|Text displayed on the list.|  
+|[in] `nTextOffset`|Spacing between the text and the left side of the bounding rectangle.|  
+|[in] `rect`|Specifies the bounding rectangle.|  
+|[in] `bIsSelected`|Ignored.|  
+|[in] `bHighlighted`|Ignored.|  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

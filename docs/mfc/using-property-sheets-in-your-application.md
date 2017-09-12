@@ -1,73 +1,92 @@
 ---
-title: "Использование вкладок свойств в приложении | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddPage - метод"
-  - "CPropertyPage - класс, стили"
-  - "Create - метод [C++], страницы свойств"
-  - "диалоговые ресурсы"
-  - "диалоговые шаблоны, страницы свойств"
-  - "DoModal - вкладки свойств метода"
-  - "страницы свойств, страницы свойств"
-  - "страницы свойств, о вкладках свойств"
+title: Using Property Sheets in Your Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog templates [MFC], property sheets
+- dialog resources
+- property pages [MFC], property sheets
+- DoModal method property sheets
+- AddPage method [MFC]
+- property sheets, about property sheets
+- Create method [MFC], property sheets
+- CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование вкладок свойств в приложении
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45c1c305309c7136dc3b749bb1489c818764479b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Для использования страниц свойств в приложении выполните следующие действия:  
+---
+# <a name="using-property-sheets-in-your-application"></a>Using Property Sheets in Your Application
+To use a property sheet in your application, complete the following steps:  
   
-1.  Создайте ресурс шаблона диалоговых окон для каждой страницы свойств.  Имейте в виду, что пользователь может переключать с одной страницы на другую, поэтому создавать макет каждую страницу как можно последовательно.  
+1.  Create a dialog template resource for each property page. Keep in mind that the user may be switching from one page to another, so lay out each page as consistently as possible.  
   
-     Шаблонов диалоговых окон для всех страниц не должны быть одинаковым размером.  Платформа использует размер самой крупной страницы для определения количества места, чтобы выбрать на странице свойств страниц свойств.  
+     The dialog templates for all pages do not have to be the same size. The framework uses the size of the largest page to determine how much space to allocate in the property sheet for the property pages.  
   
-     При создании ресурс шаблона диалоговых окон для страницы свойств необходимо указать следующие стили на странице свойств свойства диалогового окна:  
+     When you create the dialog template resource for a property page, you must specify the following styles in the Dialog Properties property sheet:  
   
-    -   Задайте в поле ввода **Заголовок**  на странице **Общие**  в текст, который нужно поместить в вкладку для этой страницы.  
+    -   Set the **Caption** edit box on the **General** page to the text you wish to appear in the tab for this page.  
   
-    -   Выберите в списке **Стиль**  на странице **Стили**  на **Дочерний**.  
+    -   Set the **Style** list box on the **Styles** page to **Child**.  
   
-    -   Выберите в списке **Граница**  на странице **Стили**  на **Тонкая**.  
+    -   Set the **Border** list box on the **Styles** page to **Thin**.  
   
-    -   Убедитесь, что установлен флажок **Titlebar**  на странице **Стили** .  
+    -   Ensure that the **Titlebar** check box on the **Styles** page is selected.  
   
-    -   Убедитесь, что установлен флажок **Отключено**  на странице **Другие стили**.  
+    -   Ensure that the **Disabled** check box on the **More Styles** page is selected.  
   
-2.  Создайте [CPropertyPage](../mfc/reference/cpropertypage-class.md)\- производный класс, соответствующий каждому шаблону диалоговых окон страниц свойств.  В разделе [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md).  Выберите `CPropertyPage` в качестве базового класса.  
+2.  Create a [CPropertyPage](../mfc/reference/cpropertypage-class.md)-derived class corresponding to each property page dialog template. See [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose `CPropertyPage` as the base class.  
   
-3.  Создайте переменные\-члены для хранения значений для этой страницы свойств.  Процесс переменные\-члены для добавления на страницу свойств точно также, как добавить в диалоговое окно переменные\-члены, так как страница свойств специализированное диалоговое окно.  Дополнительные сведения см. в разделе [Определение переменные\-члены для элементов управления диалогового окна](../mfc/defining-member-variables-for-dialog-controls.md) в.  
+3.  Create member variables to hold the values for this property page. The process for adding member variables to a property page is exactly the same as adding member variables to a dialog box, because a property page is a specialized dialog box. For more information, see [Defining Member Variables for Dialog Controls](../windows/defining-member-variables-for-dialog-controls.md).  
   
-4.  Создайте объект [CPropertySheet](../mfc/reference/cpropertysheet-class.md) в исходном коде.  Как правило, при создании объекта `CPropertySheet` в обработчике для команды, которая отображает страницу свойств.  Этот объект представляет всю страницу свойств.  При создании режимная страница свойств с функцией [Метод DoModal](../Topic/CPropertySheet::DoModal.md), платформа предоставляет 3 кнопки команд по умолчанию: ОК, Отмена и применяется.  Платформа не создает кнопки команд для немодальных страниц свойств, созданных с помощью функции [Создать](../Topic/CPropertySheet::Create.md).  Нет необходимости производный от `CPropertySheet`, если не планируется, или добавить другие элементы управления \(например, окно просмотра\) или " безрежимную страницы свойств.  Этот шаг необходим для немодальных страниц свойств, поскольку они не содержат элементы управления по умолчанию, которые могут использоваться, чтобы закрыть страницы свойств.  
+4.  Construct a [CPropertySheet](../mfc/reference/cpropertysheet-class.md) object in your source code. Usually, you construct the `CPropertySheet` object in the handler for the command that displays the property sheet. This object represents the entire property sheet. If you create a modal property sheet with the [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) function, the framework supplies three command buttons by default: OK, Cancel, and Apply. The framework creates no command buttons for modeless property sheets created with the [Create](../mfc/reference/cpropertysheet-class.md#create) function. You do not need to derive a class from `CPropertySheet` unless you want to either add other controls (such as a preview window) or display a modeless property sheet. This step is necessary for modeless property sheets because they do not contain any default controls that could be used to close the property sheet.  
   
-5.  Для каждой страницы добавляемый к странице свойств, выполните следующие действия:  
+5.  For each page to be added to the property sheet, do the following:  
   
-    -   Создайте один объект для каждого `CPropertyPage`\- производного класса, созданного ранее в этот процесс.  
+    -   Construct one object for each `CPropertyPage`-derived class that you created earlier in this process.  
   
-    -   Вызов [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md) для каждой страницы.  
+    -   Call [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) for each page.  
   
-     Обычно объект, который создает `CPropertySheet` также создает объекты `CPropertyPage` на этом шаге.  Однако при реализации `CPropertySheet`\- производный класс можно внедрить объекты `CPropertyPage` в объекте `CPropertySheet` и вызовите `AddPage` для каждой страницы `CPropertySheet`\- из конструктора производного класса.  `AddPage` добавляет объект `CPropertyPage` в список страницы свойств страниц, но фактически не создает окно для данной страницы.  Поэтому не следует ожидать до создания окна страницы свойств для вызова `AddPage`; можно вызвать `AddPage` из конструктора страницы свойств.  
+     Typically, the object that creates the `CPropertySheet` also creates the `CPropertyPage` objects in this step. However, if you implement a `CPropertySheet`-derived class, you can embed the `CPropertyPage` objects in the `CPropertySheet` object and call `AddPage` for each page from the `CPropertySheet`-derived class constructor. `AddPage` adds the `CPropertyPage` object to the property sheet's list of pages but does not actually create the window for that page. Therefore, it is not necessary to wait until creation of the property sheet window to call `AddPage`; you can call `AddPage` from the property sheet's constructor.  
   
-     По умолчанию если страница свойств имеет несколько вкладок, чем в одной строке приспособит страницы свойств табуляции, будут стека в нескольких строках.  Чтобы отключить штабелировать, вызовите функцию [CPropertySheet::EnableStackedTabs](../Topic/CPropertySheet::EnableStackedTabs.md) с параметром, равным **ЛОЖЬ**.  Необходимо вызвать `EnableStackedTabs` при создании страницы свойств.  
+     By default, if a property sheet has more tabs than will fit in a single row of the property sheet, the tabs will stack in multiple rows. To disable stacking, call [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) with the parameter set to **FALSE**. You must call `EnableStackedTabs` when you create the property sheet.  
   
-6.  Вызовите [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) или [Создать](../Topic/CPropertySheet::Create.md), чтобы открыть страницу свойств.  Вызовите `DoModal` для создания страницы свойств как модальное диалоговое окно.  Вызовите **Создать** для создания страницы свойств в качестве безрежимного диалогового окна.  
+6.  Call [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) or [Create](../mfc/reference/cpropertysheet-class.md#create) to display the property sheet. Call `DoModal` to create a property sheet as a modal dialog box. Call **Create** to create the property sheet as a modeless dialog box.  
   
-7.  Обмен данными между страниц свойств и владельцем страницы свойств.  Это описано в статье [Обменивая данные](../mfc/exchanging-data.md).  
+7.  Exchange data between property pages and the owner of the property sheet. This is explained in the article [Exchanging Data](../mfc/exchanging-data.md).  
   
- Пример использования страниц свойств, см. в примере MFC [PROPDLG](../top/visual-cpp-samples.md) общий.  
+ For an example of how to use property sheets, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## См. также  
- [Страницы свойств](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

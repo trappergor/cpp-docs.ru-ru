@@ -1,51 +1,70 @@
 ---
-title: "Поддержка OLE. Стратегии реализации | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [OLE], реализация OLE"
-  - "OLE [C++], стратегия разработки"
-  - "приложения OLE [C++], реализация OLE"
+title: 'OLE Background: Implementation Strategies | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], development strategy
+- OLE applications [MFC], implementing OLE
+- applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Поддержка OLE. Стратегии реализации
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ac98cd3ba6b9d75be159a51b35238ecec03126d0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В зависимости от приложения 4 возможных реализации стратегии для добавления поддержки OLE.  
+---
+# <a name="ole-background-implementation-strategies"></a>OLE Background: Implementation Strategies
+Depending on your application, there are four possible implementation strategies for adding OLE support:  
   
--   При разработке нового приложения.  
+-   You are writing a new application.  
   
-     Эта ситуация обычно требуется наименьшее работы.  При запуске мастера приложений MFC и выделите или дополнительные функции или составного поддержка документа, чтобы создать общую схему приложения.  Дополнительные сведения об этих параметрах и что они реализуют см. в статье [Создание программы MFC EXE](../Topic/MFC%20Application%20Wizard.md).  
+     This situation usually requires the least work. You run the MFC Application Wizard and select either Advanced Features or Compound Document Support to create a skeleton application. For information on these options and what they do, see the article [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md).  
   
--   Имеется программы XML версии 2.0 библиотеки Microsoft Foundation Class или выше, не поддерживающей OLE.  
+-   You have a program written with the Microsoft Foundation Class Library version 2.0 or higher that does not support OLE.  
   
-     Создайте новое приложение с помощью мастера приложений MFC, как было сказано выше, а затем скопируйте и вставьте код из приложения в существующие приложения.  Это будет работать для серверов, контейнеров или приложений автоматизации.  В примере MFC [Образец SCRIBBLE](../top/visual-cpp-samples.md) пример такой стратегии.  
+     Create a new application with the MFC Application Wizard as previously mentioned, and then copy and paste the code from the new application into your existing application. This will work for servers, containers, or automated applications. See the MFC [SCRIBBLE](../visual-cpp-samples.md) sample for an example of this strategy.  
   
--   Имеется программы библиотеки Microsoft Foundation Class, которая реализует поддержку OLE версии 1.0.  
+-   You have a Microsoft Foundation Class Library program that implements OLE version 1.0 support.  
   
-     В разделе [Техническом примечании MFC 41](../Topic/TN041:%20MFC-OLE1%20Migration%20to%20MFC-OLE%202.md) для этой стратегии преобразования.  
+     See [MFC Technical Note 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) for this conversion strategy.  
   
--   Имеется приложение, не были написаны с помощью классов библиотеки Microsoft Foundation, а может и не может реализовать поддержку OLE.  
+-   You have an application that was not written using the Microsoft Foundation Classes and that may or may not have implemented OLE support.  
   
-     Эта ситуация требует наиболее активных.  Один из способов создания нового приложения, как в первой стратегии, а затем скопировать и вставить в существующий код в него.  Если существующий код создается в C, можно изменить таким образом, чтобы он может компилировать код как C C\+\+.  Если код C вызывает API Windows, не следует изменить его для использования классов библиотеки Microsoft Foundation.  Этот подход, возможно, будет необходимо, чтобы некоторые реорганизация программы поддержки архитектуры документов и представлений, используемых версий 2.0 и выше классов библиотеки Microsoft Foundation.  Дополнительные сведения об этой архитектуры см. в разделе [Техническое примечание 25](../mfc/tn025-document-view-and-frame-creation.md).  
+     This situation requires the most work. One approach is to create a new application, as in the first strategy, and then copy and paste your existing code into it. If your existing code is written in C, then you may need to modify it so it can compile as C++ code. If your C code calls the Windows API, then you do not have to change it to use the Microsoft Foundation classes. This approach likely will require some restructuring of your program to support the document/view architecture used by versions 2.0 and higher of the Microsoft Foundation Classes. For more information on this architecture, see [Technical Note 25](../mfc/tn025-document-view-and-frame-creation.md).  
   
- После выносить стратегия необходимо или чтения статьи [Контейнеры](../mfc/containers.md) или [Серверы](../mfc/servers.md) \(в зависимости от типа приложения создается разработчиком\) или просмотреть примеры программ, или оба.  Примеры MFC OLE [OCLIENT](../top/visual-cpp-samples.md) и [HIERSVR](../top/visual-cpp-samples.md) показано, как реализовать различные аспекты контейнеров и серверов соответственно.  В различных точках во всей эти статьи будет обычно к некоторым функциям в этих примерах в качестве примеров, обсужданными методов.  
+ Once you have decided on a strategy, you should either read the [Containers](../mfc/containers.md) or [Servers](../mfc/servers.md) articles (depending on the type of application you are writing) or examine the sample programs, or both. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) show how to implement the various aspects of containers and servers, respectively. At various points throughout these articles, you will be referred to certain functions in these samples as examples of the techniques being discussed.  
   
-## См. также  
- [Поддержка OLE](../mfc/ole-background.md)   
- [Контейнеры. Реализация контейнера](../mfc/containers-implementing-a-container.md)   
- [Серверы. Реализация сервера](../mfc/servers-implementing-a-server.md)   
- [мастер приложений MFC](../Topic/MFC%20Application%20Wizard.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [Containers: Implementing a Container](../mfc/containers-implementing-a-container.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

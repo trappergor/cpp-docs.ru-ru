@@ -1,70 +1,89 @@
 ---
-title: "Элементы интерфейса | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "архитектура [C++], Пакет компонентов MFC"
-  - "Пакет компонентов MFC, архитектура"
+title: Interface Elements | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- architecture [MFC], MFC Feature Pack
+- MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 caps.latest.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Элементы интерфейса
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19599bd4aa299b60034a2bffa9cd0dafaaeb3107
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом документе описаны элементы интерфейса, вставленных в [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1, а также описаны различия с более ранней версией библиотеки.  
+---
+# <a name="interface-elements"></a>Interface Elements
+This document describes interface elements that were introduced in [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1, and also describes differences with the earlier version of the library.  
   
- На следующем рисунке показано приложение, которое было создано с помощью новых элементов интерфейса.  
+ The following illustration shows an application that was built by using the new interface elements.  
   
- ![Приложение примера MFC Feature Pack](../mfc/media/mfc_featurepack.png "MFC\_FeaturePack")  
+ ![MFC Feature Pack example application](../mfc/media/mfc_featurepack.png "mfc_featurepack")  
   
-## Закрепление окна  
- Функция закрепления окна напоминает закрепление окна, графический интерфейс пользователя [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+## <a name="window-docking"></a>Window Docking  
+ Window docking functionality resembles the window docking that the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] graphical user interface uses.  
   
-## Панели элементов управления теперь области  
- Панели элементов управления теперь как область и являются производными от [CBasePane Class](../mfc/reference/cbasepane-class.md).  В более ранних версиях MFC, базовый класс панелей элементов управления. `CControlBar`.  
+## <a name="control-bars-are-now-panes"></a>Control Bars are Now Panes  
+ Control bars are now known as panes and are derived from [CBasePane Class](../mfc/reference/cbasepane-class.md). In earlier versions of MFC, the base class of control bars was `CControlBar`.  
   
- Фреймовое главное окно приложения обычно представлено [CFrameWndEx Class](../mfc/reference/cframewndex-class.md) или [Класс CMDIFrameWndEx](../Topic/CMDIFrameWndEx%20Class.md).  Большая ЭВМ вызывается *закрепить распологает*.  Области могут иметь один из 3 типов родительских элементов: сайт, закрепления панели закрепления или окна области.  
+ The application main frame window is usually represented by the [CFrameWndEx Class](../mfc/reference/cframewndex-class.md) or the [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md). The main frame is called the *dock site*. Panes can have one of three types of parents: a dock site, a dock bar, or a mini-frame window.  
   
- 2 Типа областей: не менять и менять.  Менять области, например строки состояния и панели инструментов, могут иметь соответствующий размер разделителей или с помощью ползунков.  Контейнеры могут менять области формы \(одна область можно закрепить в другой области, создание разделитель между ними\).  Однако изменяемого области нельзя вложить \(закреплены\) для закрепления панели.  
+ There are two types of panes: non-resizable and resizable. Resizable panes, such as status bars and toolbars, can be resized by using splitters or sliders. Resizable panes can form containers (one pane can be docked to another pane, creating a splitter between them). However, resizable panes cannot be attached (docked) to dock bars.  
   
- Если приложение использует не менять области, он должен быть производным от [CPane Class](../mfc/reference/cpane-class.md).  Если приложение использует изменяемого области, он должен быть производным от [CDockablePane Class](../Topic/CDockablePane%20Class.md)  
+ If your application uses non-resizable panes, derive them from [CPane Class](../mfc/reference/cpane-class.md).  If your application uses resizable panes, derive them from [CDockablePane Class](../mfc/reference/cdockablepane-class.md)  
   
-## Закрепите сайта  
- Сайт закрепления \(или главного фреймовое окно\) имеют все области и окна области в приложении.  Сайт закрепления содержащий элемент [CDockingManager](../mfc/reference/cdockingmanager-class.md).  Этот элемент содержит список всех областей, которые принадлежат к сайту закрепления.  Список отсортирован, чтобы области, созданные в наружных краях сайта закрепления будут расположены в начале списка.  Когда платформа перерисовывает сайт закрепления, она выполняет итерацию этим списком и настроить макет каждой области для включения текущего ограничивающего прямоугольника сайта закрепления.  Можно вызвать `AdjustDockingLayout` или `RecalcLayout` при необходимости настроить макет закрепления и платформа перенаправляет вызов в диспетчер закрепления.  
+## <a name="dock-site"></a>Dock Site  
+ The dock site (or main frame window) owns all panes and mini-frame windows in an application. The dock site contains a [CDockingManager](../mfc/reference/cdockingmanager-class.md) member. This member maintains a list of all panes that belong to the dock site. The list is ordered so that the panes created at the outer edges of the dock site are positioned at the start of the list. When the framework redraws the dock site, it loops over this list and adjusts the layout of each pane to include the current bounding rectangle of the dock site. You can call `AdjustDockingLayout` or `RecalcLayout` when you have to adjust the docking layout, and the framework redirects this call to the docking manager.  
   
-## Панели закрепления  
- Главное каждое фреймовое окно может разместить *панели закрепления* по его границы.  Панели закрепления область, принадлежащей к [CDockSite Class](../mfc/reference/cdocksite-class.md).  Панели закрепления могут принимать объекты, унаследованные от [CPane](../mfc/reference/cpane-class.md), например средства.  Для создания панели закрепления при главного фреймовое окно инициализации вызовите `EnableDocking`.  Чтобы включить автоматические панели скрывать, вызовите `EnableAutoHideBars`.  `EnableAutoHideBars` создает объект [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) и их позиции рядом с каждой панелью закрепления.  
+## <a name="dock-bars"></a>Dock Bars  
+ Each main frame window can position *dock bars* along its borders. A dock bar is a pane that belongs to a [CDockSite Class](../mfc/reference/cdocksite-class.md). Dock bars can accept objects derived from [CPane](../mfc/reference/cpane-class.md), such as toolbars. To create dock bars when the main frame window is initialized, call `EnableDocking`. To enable auto hide bars, call `EnableAutoHideBars`. `EnableAutoHideBars` creates [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objects, and positions them next to each dock bar.  
   
- Каждая панели закрепления состоит из нескольких строк закрепления.  Строки закрепления представлены [CDockingPanesRow Class](../mfc/reference/cdockingpanesrow-class.md).  Каждая строка содержит список закрепления панелей инструментов.  Если пользователь закрепит панель инструментов панели инструментов или перемещается из одной строки в другую в одной панели закрепления, то платформа создает новую строку и изменения панели закрепления соответственно, или ее расположение панели инструментов в существующей строке.  
+ Each dock bar is divided into dock rows. Dock rows are represented by the [CDockingPanesRow Class](../mfc/reference/cdockingpanesrow-class.md). Each dock row contains a list of toolbars. If a user docks a toolbar or moves the toolbar from one row to another within the same dock bar, the framework either creates a new row and resizes the dock bar accordingly, or it positions the toolbar on an existing row.  
   
-## Окна области  
- Область с плавающей запятой, в поле области.  Окна области представлены классами: 2 [CMDITabInfo Class](../Topic/CMDITabInfo%20Class.md) \(которое может содержать только одну область\) и [CMultiPaneFrameWnd Class](../mfc/reference/cmultipaneframewnd-class.md) \(которое может содержать несколько областей\).  Чтобы плыть область в коде, вызовите метод [CBasePane::FloatPane](../Topic/CBasePane::FloatPane.md).  После области будет плавающим платформа автоматически создает окно области и появится окно области будет родительским элементом с плавающей запятой области.  Когда область с плавающей запятой закрепит платформа сбросит родительским элементом, область с плавающей запятой \(для закрепления будет панелью инструментов\) или сайтом закрепления \(для изменяемых размера областей\).  
+## <a name="mini-frame-windows"></a>Mini-frame Windows  
+ A floating pane resides in a mini-frame window. Mini-frame windows are represented by two classes: [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md) (which can contain only one pane) and [CMultiPaneFrameWnd Class](../mfc/reference/cmultipaneframewnd-class.md) (which can contain several panes). To float a pane in your code, call [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). After a pane floats, the framework automatically creates a mini-frame window and that mini-frame window becomes the floating pane's parent. When the floating pane docks, the framework resets its parent, and the floating pane becomes a dock bar (for toolbars) or a dock site (for resizable panes).  
   
-## Разделители области  
- Также в двух разделителей области \(ползунками или разделителями\) представлены [CPaneDivider Class](../mfc/reference/cpanedivider-class.md).  Когда пользователь закрепит область, платформа создает разделителей области, независимо от обрезается ли область на сайте закрепления или в другой области.  Когда область закреплен на сайт, закрепления разделитель области вызывается *разделитель области по умолчанию*.  Разделитель области по умолчанию отвечает за макета всех областей закрепления на сайте закрепления.  Диспетчер закрепления ведет список разделителей области по умолчанию и список областей.  Диспетчеры закрепления за макета всех областей закрепления.  
+## <a name="pane-dividers"></a>Pane Dividers  
+ Pane dividers (also named sliders or splitters) are represented by the [CPaneDivider Class](../mfc/reference/cpanedivider-class.md). When a user docks a pane, the framework creates pane dividers, regardless of whether the pane is docked at the dock site or at another pane. When a pane docks to the dock site, the pane divider is called the *default pane divider*. The default pane divider is responsible for the layout of all the docking panes in the dock site. The dock manager maintains a list of default pane dividers, and a list of panes. Dock managers are responsible for the layout of all the docking panes.  
   
-## Контейнеры  
- Все изменяемого области, закрепленный друг с другом, обслуживаются в контейнерах.  Контейнеры представлены [CPaneContainer Class](../mfc/reference/cpanecontainer-class.md).  Каждый контейнер имеет указатели на левой панели щелкните его правой области, левому часть контейнер, правый часть контейнер, а разделителю левыми правыми и между частями. \( *Справа* *налево* и не относится к физическим сторонам, а определяется ветви структуры дерева\). Таким образом можно осуществить построение дерева областей и разделителей, поэтому для достижения сложных макетов областей, которые можно изменять вместе.  Класс `CPaneContainer` обслуживает дерево контейнеров; он также поддерживает 2 списка областей и ползунки, находятся в этом дереве.  Диспетчеры контейнера области обычно внедрены в ползунки и окна области по умолчанию, которые содержат несколько областей.  
+## <a name="containers"></a>Containers  
+ All resizable panes, when docked to each other, are maintained in containers. Containers are represented by the [CPaneContainer Class](../mfc/reference/cpanecontainer-class.md). Each container has pointers to its left pane, right pane, left sub-container, right sub-container, and the splitter between the left and right parts. (*Left* and *right* do not refer to physical sides but rather identify the branches of a tree structure.) In this manner we can build a tree of panes and splitters and therefore achieve complex layouts of panes that can be resized together. The `CPaneContainer` class maintains the tree of containers; it also maintains two lists of panes and sliders that reside in this tree. Pane container managers are usually embedded into default sliders and mini-frame windows that carry multiple panes.  
   
-## Автоматического скрытия панели элементов управления  
- По умолчанию каждое `CDockablePane` поддерживает функции автоматического скрытия.  Когда пользователь нажимает кнопку закрепления в заголовке `CDockablePane` платформа область переключается в режим автоматического скрытия.  Для обработки команду платформа создает [CMFCAutoHideBar Class](../Topic/CMFCAutoHideBar%20Class.md) и [CMFCAutoHideButton Class](../mfc/reference/cmfcautohidebutton-class.md), связанные с объектом `CMFCAutoHideBar`.  Платформа помещает новое `CMFCAutoHideBar` на [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md).  Платформа также вложение `CMFCAutoHideButton` на панель инструментов.  [CDockingManager Class](../mfc/reference/cdockingmanager-class.md) поддерживает `CDockablePane`.  
+## <a name="auto-hide-control-bars"></a>Auto-hide Control Bars  
+ By default, each `CDockablePane` supports the auto-hide feature. When a user clicks the pin button on the caption of the `CDockablePane`, the framework switches the pane to auto-hide mode. To handle the click, the framework creates a [CMFCAutoHideBar Class](../mfc/reference/cmfcautohidebar-class.md) and a [CMFCAutoHideButton Class](../mfc/reference/cmfcautohidebutton-class.md) associated with the `CMFCAutoHideBar` object. The framework puts the new `CMFCAutoHideBar` on the [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). The framework also attaches the `CMFCAutoHideButton` to the toolbar. The [CDockingManager Class](../mfc/reference/cdockingmanager-class.md) maintains the `CDockablePane`.  
   
-## Нашитые панели элементов управления и панели outlook  
- [CMFCBaseTabCtrl Class](../mfc/reference/cmfcbasetabctrl-class.md) реализует базовую функциональность нашитого отделяемыми окна с вкладками.  Для использования объекта `CMFCBaseTabCtrl`, инициализируйте [Класс CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) в приложении.  `CBaseTabbedPane` является производным от `CDockablePane` и поддерживает указатель на объект `CMFCBaseTabCtrl`.  `CBaseTabbedPane` позволяет пользователям усечение и изменить нашитые панели элементов управления.  Используйте [CDockablePane::AttachToTabWnd](../Topic/CDockablePane::AttachToTabWnd.md) для динамического создания панели элементов управления, закреплено и нашиты.  
+## <a name="tabbed-control-bars-and-outlook-bars"></a>Tabbed Control Bars and Outlook Bars  
+ The [CMFCBaseTabCtrl Class](../mfc/reference/cmfcbasetabctrl-class.md) implements the base functionality of a tabbed window with detachable tabs. To use a `CMFCBaseTabCtrl` object, initialize a [CBaseTabbedPane Class](../mfc/reference/cbasetabbedpane-class.md) in your application. `CBaseTabbedPane` is derived from `CDockablePane` and maintains a pointer to a `CMFCBaseTabCtrl` object. The `CBaseTabbedPane` enables users to dock and resize tabbed control bars. Use [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) to dynamically create control bars that are docked and tabbed.  
   
- Элемент управления панели outlook также основана на предварительного панелях.  [Класс CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md) является производным от `CBaseTabbedPane`.  Дополнительные сведения о использовании панели outlook см. в разделе [Класс CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md).  
+ The Outlook bar control is also based on tabbed bars. The [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md) is derived from `CBaseTabbedPane`. For more information about how to use Outlook bar, see [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md).  
   
-## См. также  
- [Основные понятия](../mfc/mfc-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)
+
+

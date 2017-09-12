@@ -1,51 +1,70 @@
 ---
-title: "Классы архитектуры приложения MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы архитектуры приложений"
-  - "классы [C++], MFC - библиотека"
-  - "MFC [C++], разработка приложений"
-  - "MFC [C++], классы"
+title: MFC Application Architecture Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, classes
+- MFC, application development
+- classes [MFC], MFC
+- application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Классы архитектуры приложения MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff7e847340e6afb6c1a97160a7b1763e43447a6a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Классы в этой категории, составляющие архитектуру приложения платформы.  Они предоставляют функциональные возможности, общие для большинства приложений.  Заливки в платформу для добавления функции для конкретного приложения.  Обычно это сделать новые классы, производные от классов архитектуры, а затем добавлять новые члены или переопределять существующие функции\-члены.  
+---
+# <a name="mfc-application-architecture-classes"></a>MFC Application Architecture Classes
+Classes in this category contribute to the architecture of a framework application. They supply functionality common to most applications. You fill in the framework to add application-specific functionality. Typically, you do so by deriving new classes from the architecture classes, and then adding new members or overriding existing member functions.  
   
- [Мастер приложений](../Topic/MFC%20Application%20Wizard.md) создать несколько типов приложений, использующих платформу приложения в различных вариантах.  Приложения однодокументного интерфейса \(SDI\) и \(MDI\)\) позволяют полностью использовать части от платформы архитектурой документов и представлений.  Другие приложения, например приложения на основе диалоговых окон, приложения на основе форм и библиотеки DLL, используют только некоторые из функций архитектуры документов и представлений.  
+ [Application wizards](../mfc/reference/mfc-application-wizard.md) generate several types of applications, all of which use the application framework in differing ways. SDI (single document interface) and MDI (multiple document interface) applications make full use of a part of the framework called document/view architecture. Other types of applications, such as dialog-based applications, form-based applications, and DLLs, use only some of document/view architecture features.  
   
- Приложения документа или представления содержат один или несколько основные документов, представления и фреймовые окна.  Объект шаблона документов связывают классы для всех документов и представлений и набора кадра.  
+ Document/view applications contain one or more sets of documents, views, and frame windows. A document-template object associates the classes for each document/view/frame set.  
   
- Однако не следует использовать архитектуры документов и представлений в приложении MFC, существует несколько преимуществ методика.  Поддержка контейнера и сервера MFC OLE основана на архитектуре документ\/представление, как поддержка печати и предварительного просмотра.  
+ Although you do not have to use document/view architecture in your MFC application, there are a number of advantages to doing so. The MFC OLE container and server support is based on document/view architecture, as is support for printing and print preview.  
   
- Все приложения MFC имеют по крайней мере 2 объекта: объект приложения, являющийся производным от [CWinApp](../mfc/reference/cwinapp-class.md), и некоторые параметры сортировки объекта главного окна, производная \(часто косвенно\) из [CWnd](../Topic/CWnd%20Class.md). \(Чаще всего главного окна являются производными от [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) или [CDialog](../mfc/reference/cdialog-class.md), которые являются производными от `CWnd`\).  
+ All MFC applications have at least two objects: an application object derived from [CWinApp](../mfc/reference/cwinapp-class.md), and some sort of main window object, derived (often indirectly) from [CWnd](../mfc/reference/cwnd-class.md). (Most often, the main window is derived from [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), or [CDialog](../mfc/reference/cdialog-class.md), all of which are derived from `CWnd`.)  
   
- Приложения, которые используют архитектуру " документ\-представление " содержат дополнительные объекты.  Основные объекты:  
+ Applications that use document/view architecture contain additional objects. The principal objects are:  
   
--   Объект приложения, являющийся производным от класса [CWinApp](../mfc/reference/cwinapp-class.md), как упоминалось ранее.  
+-   An application object derived from class [CWinApp](../mfc/reference/cwinapp-class.md), as mentioned before.  
   
--   Один или несколько объектов класса документа, производных от класса [CDocument](../Topic/CDocument%20Class.md).  Объекты класса документа за внутреннего представления данных манипулированного в представлении.  Они могут быть связаны с файлом данных.  
+-   One or more document class objects derived from class [CDocument](../mfc/reference/cdocument-class.md). Document class objects are responsible for the internal representation of the data manipulated in the view. They may be associated with a data file.  
   
--   Один или несколько объектов представления, производных от класса [CView](../Topic/CView%20Class.md).  Каждое представление окно, вложено в документ и связанных с фреймовым окном.  Представления отображают и управляют данными, содержащимися в объекте класса документа.  
+-   One or more view objects derived from class [CView](../mfc/reference/cview-class.md). Each view is a window that is attached to a document and associated with a frame window. Views display and manipulate the data contained in a document class object.  
   
- Приложения документ\/представление также содержат фреймовые производные из окна \( [CFrameWnd](../mfc/reference/cframewnd-class.md)\) и шаблоны документов, производных от \( [CDocTemplate](../mfc/reference/cdoctemplate-class.md)\).  
+ Document/view applications also contain frame windows (derived from [CFrameWnd](../mfc/reference/cframewnd-class.md)) and document templates (derived from [CDocTemplate](../mfc/reference/cdoctemplate-class.md)).  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

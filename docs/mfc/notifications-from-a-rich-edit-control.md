@@ -1,44 +1,63 @@
 ---
-title: "Уведомления из элемента управления &quot;Rich Edit&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl - класс, уведомления"
-  - "сообщения, уведомление"
-  - "уведомления, из CRichEditCtrl"
-  - "элементы управления Rich Edit, уведомления"
+title: Notifications from a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], notification [MFC]
+- CRichEditCtrl class [MFC], notifications
+- rich edit controls [MFC], notifications
+- notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Уведомления из элемента управления &quot;Rich Edit&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd56c62172b1d98cc5f95aceaa3fa45a7e642d23
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Сообщения уведомления " события, влияющих на управление расширенного редактирования \([CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\).  Они могут рассматриваться родительским окном или с использованием отражения сообщения, расширенного редактирования самим элементом управления.  Управления расширенного редактирования поддерживают все сообщения уведомления, используемые с элементами управления "Поле ввода", так и несколько дополнительных одного.  Можно указать, сообщения уведомлений управление расширенного редактирования отправляет его родительское окно, установив его «маску события».  
+---
+# <a name="notifications-from-a-rich-edit-control"></a>Notifications from a Rich Edit Control
+Notification messages report events affecting a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). They can be processed by the parent window or, using message reflection, by the rich edit control itself. Rich edit controls support all of the notification messages used with edit controls as well as several additional ones. You can determine which notification messages a rich edit control sends its parent window by setting its "event mask."  
   
- Чтобы задать маску события для элемента управления расширенного редактирования, используйте функции\-члена [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md).  Можно извлечь маска рядового события для элемента управления расширенного редактирования с помощью функции\-члена [GetEventMask](../Topic/CRichEditCtrl::GetEventMask.md).  
+ To set the event mask for a rich edit control, use the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. You can retrieve the current event mask for a rich edit control by using the [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) member function.  
   
- Ниже перечислены несколько абзацев определенных уведомлений и их использование.  
+ The following paragraphs list several specific notifications and their uses:  
   
--   **EN\_MSGFILTER** обработки уведомления **EN\_MSGFILTER** позволяет классу или элемент управления расширенного редактирования или ее родительское окно, фильтрует все клавиатуры и ввода мыши на элемент управления.  Обработчик может предотвратить сообщений клавиатуры и мыши из обрабатывалось или может изменить сообщение, изменив указанная структура [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936).  
+-   **EN_MSGFILTER** Handling the **EN_MSGFILTER** notification lets a class, either the rich edit control or its parent window, filter all keyboard and mouse input to the control. The handler can prevent the keyboard or mouse message from being processed or can change the message by modifying the specified [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) structure.  
   
--   Дескриптор **EN\_PROTECTED** сообщение уведомления **EN\_PROTECTED**, чтобы определить, когда пользователь пытается изменить защищенный текст.  Чтобы указать диапазон текста, как защищено, можно установить защищенный эффект символов.  Дополнительные сведения см. в разделе [Форматирование символов в элементах управления расширенного редактирования](../mfc/character-formatting-in-rich-edit-controls.md) в.  
+-   **EN_PROTECTED** Handle the **EN_PROTECTED** notification message to detect when the user attempts to modify protected text. To mark a range of text as protected, you can set the protected character effect. For more information, see [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   **EN\_DROPFILES** можно разрешить пользователю удалять файлы в элементе управления расширенного редактирования, для обработки сообщений уведомлений **EN\_DROPFILES**.  Указанная структура [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) содержит сведения о файлах, удаленной.  
+-   **EN_DROPFILES** You can enable the user to drop files in a rich edit control by processing the **EN_DROPFILES** notification message. The specified [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) structure contains information about the files being dropped.  
   
--   **EN\_SELCHANGE** приложение может обнаружить, когда текущее выделение изменяется при обработке сообщения уведомления **EN\_SELCHANGE**.  Сообщение уведомления [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) определяет структуру, содержащую сведения о новом выделения.  
+-   **EN_SELCHANGE** An application can detect when the current selection changes by processing the **EN_SELCHANGE** notification message. The notification message specifies a [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) structure containing information about the new selection.  
   
-## См. также  
- [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

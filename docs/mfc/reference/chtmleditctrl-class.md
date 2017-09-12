@@ -1,5 +1,5 @@
 ---
-title: "Класс CHtmlEditCtrl | Документы Microsoft"
+title: CHtmlEditCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHtmlEditCtrl class
+- CHtmlEditCtrl [MFC], CHtmlEditCtrl
+- CHtmlEditCtrl [MFC], Create
+- CHtmlEditCtrl [MFC], GetDHtmlDocument
+- CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
 caps.latest.revision: 22
 author: mikeblome
@@ -38,43 +41,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4aca52508663e94ee9a1b55843ad05613aa40b0b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1cc64d8ff812db406c70d2971ad982f089ba1a29
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chtmleditctrl-class"></a>Класс CHtmlEditCtrl
-Предоставляет функциональные возможности элемента управления ActiveX WebBrowser в окне MFC.  
+# <a name="chtmleditctrl-class"></a>CHtmlEditCtrl Class
+Provides the functionality of the WebBrowser ActiveX control in an MFC window.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHtmlEditCtrl: public CWnd,   
     public CHtmlEditCtrlBase<CHtmlEditCtrl>  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|Создает объект `CHtmlEditCtrl`.|  
+|[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|Constructs a `CHtmlEditCtrl` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::Create](#create)|Создает элемент управления WebBrowser ActiveX и присоединяет его к `CHtmlEditCtrl` объекта. Эта функция автоматически переводит элемент управления WebBrowser ActiveX в режиме редактирования.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейс на документ, загруженных в элемента управления WebBrowser в контейнере.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Получает URL-адрес документа по умолчанию для загрузки в элемента управления WebBrowser в контейнере.|  
+|[CHtmlEditCtrl::Create](#create)|Creates a WebBrowser ActiveX control and attaches it to the `CHtmlEditCtrl` object. This function automatically puts the WebBrowser ActiveX control into edit mode.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Retrieves the [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface on the document currently loaded in the contained WebBrowser control.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Retrieves the URL to a default document to load in the contained WebBrowser control.|  
   
-## <a name="remarks"></a>Примечания  
- Размещенного элемента управления WebBrowser, элемент управления автоматически переводится в режим редактирования, после его создания.  
+## <a name="remarks"></a>Remarks  
+ The hosted WebBrowser control is automatically put into edit mode after it is created.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -85,18 +88,18 @@ class CHtmlEditCtrl: public CWnd,
   
  `CHtmlEditCtrl`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxhtml.h  
   
-##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
- Создает объект `CHtmlEditCtrl`.  
+##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl  
+ Constructs a `CHtmlEditCtrl` object.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="create"></a>CHtmlEditCtrl::Create  
- Создает элемент управления WebBrowser ActiveX и присоединяет его к `CHtmlEditCtrl` объекта. Режим редактирования WebBrowser ActiveX, элемент управления автоматически переходит к документу по умолчанию и затем помещается в этой функцией.  
+##  <a name="create"></a>  CHtmlEditCtrl::Create  
+ Creates a WebBrowser ActiveX control and attaches it to the `CHtmlEditCtrl` object. The WebBrowser ActiveX control automatically navigates to a default document and then is placed in edit mode by this function.  
   
 ```  
 virtual BOOL Create(
@@ -108,47 +111,47 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszWindowName`  
- Этот параметр не используется.  
+ This parameter is unused.  
   
  `dwStyle`  
- Этот параметр не используется.  
+ This parameter is unused.  
   
  `rect`  
- Задает размер и положение элемента управления.  
+ Specifies the control's size and position.  
   
  `pParentWnd`  
- Указывает элемент управления родительского окна. Оно не должно быть **NULL**.  
+ Specifies the control's parent window. It must not be **NULL**.  
   
  `nID`  
- Указывает идентификатор элемента управления.  
+ Specifies the control's ID.  
   
  `pContext`  
- Этот параметр не используется.  
+ This parameter is unused.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** в случае успешного выполнения **FALSE** в случае сбоя.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
- Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейс на документ, загруженных в содержащегося элемента управления WebBrowser  
+##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
+ Retrieves the [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface on the document currently loaded in the contained WebBrowser control  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ppDocument`  
- Интерфейс документа.  
+ The document interface.  
   
-##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
- Получает URL-адрес документа по умолчанию для загрузки в элемента управления WebBrowser в контейнере.  
+##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
+ Retrieves the URL to a default document to load in the contained WebBrowser control.  
   
 ```  
 virtual LPCTSTR GetStartDocument();
 ```  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

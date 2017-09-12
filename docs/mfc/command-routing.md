@@ -1,56 +1,76 @@
 ---
-title: "Маршрутизация команд | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, маршрутизация команд"
-  - "обработка команд, маршрутизация команд"
-  - "обработчики"
-  - "обработчики, команда"
-  - "маршрутизация команд"
+title: Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- handlers [MFC]
+- handlers, command [MFC]
+- command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Маршрутизация команд
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9b8b2c0deef88405b15d1b04dcd02fa09960bc1d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Ваши действия при работе с командами ограничиваются установкой связей между командами и их функциями обработчиков на схеме сообщений — задачей, для выполнения которой используется окно свойств. Вам также необходимо написать большинство обработчиков команд.  
+---
+# <a name="command-routing"></a>Command Routing
+Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the Properties window. You must also write most command handlers.  
   
- Сообщения Windows обычно отправляются в основную область окна, однако командные сообщения затем направляются в другие объекты. Платформа перенаправляет команды через стандартную последовательность целевых объектов команд, один из которых должен иметь обработчик команды. Каждый целевой объект команды проверяет схему сообщений, чтобы определить возможность обработки входящих сообщений.  
+ Windows messages are usually sent to the main frame window, but command messages are then routed to other objects. The framework routes commands through a standard sequence of command-target objects, one of which is expected to have a handler for the command. Each command-target object checks its message map to see if it can handle the incoming message.  
   
- Разные целевые классы команд проверяют свои схемы сообщений в разное время. Как правило, класс направляет команду в определенные другие объекты, чтобы дать им первый шанс обработки команды. Если ни один из этих объектов не может обработать команду, исходный класс проверяет собственную схему сообщений. Затем, если он не может предоставить обработчик, оно может перенаправить команду в другие объекты. В приведенной ниже таблице [Стандартная маршрутизация команды](#_core_standard_command_route) показано, как каждый из классов формирует эту последовательность. Общая последовательность маршрутизации команды выглядит следующим образом.  
+ Different command-target classes check their own message maps at different times. Typically, a class routes the command to certain other objects to give them first chance at the command. If none of those objects handles the command, the original class checks its own message map. Then, if it can't supply a handler itself, it may route the command to yet more command targets. The table [Standard Command Route](#_core_standard_command_route) below shows how each of the classes structures this sequence. The general order in which a command target routes a command is:  
   
-1.  К текущему активному дочернему целевому объекту команды.  
+1.  To its currently active child command-target object.  
   
-2.  К себе.  
+2.  To itself.  
   
-3.  К другим целевым объектам команды.  
+3.  To other command targets.  
   
- Сколько ресурсов требуется для этого механизма маршрутизации? По сравнению с действиями обработчика в ответ на команду для маршрутизации требуется незначительный объем ресурсов. Следует иметь в виду, что платформа создает команды только в том случае, когда пользователь взаимодействует с объектами пользовательского интерфейса.  
+ How expensive is this routing mechanism Compared to what your handler does in response to a command, the cost of the routing is low. Bear in mind that the framework generates commands only when the user interacts with a user-interface object.  
   
-### Стандартная маршрутизация команды  
+### <a name="_core_standard_command_route"></a> Standard Command Route  
   
-|Когда объект этого типа получает команду. . .|Он и другие целевые объекты команды сначала пытаются самостоятельно обработать команду в следующем порядке:|  
-|---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|Окно области MDI \(`CMDIFrameWnd`\)|1.  Активное `CMDIChildWnd`<br />2.  Это окно области<br />3.  Приложение \(объект `CWinApp`\)|  
-|Окно области документа \(`CFrameWnd`, `CMDIChildWnd`\)|1.  Активное представление<br />2.  Это окно области<br />3.  Приложение \(объект `CWinApp`\)|  
-|Просмотр|1.  Это представление<br />2.  Документ, прикрепленный к представлению|  
-|Document|1.  Этот документ<br />2.  Шаблон документа, прикрепленный к документу|  
-|Диалоговое окно|1.  Это диалоговое окно<br />2.  Окно, которому принадлежит это диалоговое окно<br />3.  Приложение \(объект `CWinApp`\)|  
+|When an object of this type receives a command . . .|It gives itself and other command-target objects a chance to handle the command in this order:|  
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
+|MDI frame window  (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|Document frame window  (`CFrameWnd`, `CMDIChildWnd`)|1.  Active view<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|View|1.  This view<br />2.  Document attached to the view|  
+|Document|1.  This document<br />2.  Document template attached to the document|  
+|Dialog box|1.  This dialog box<br />2.  Window that owns the dialog box<br />3.  Application (`CWinApp` object)|  
   
- Если пронумерованные элементы во втором столбце таблицы указывают на другие объекты, например документ, см. соответствующий элемент в первом столбце. Например, если во втором столбце говорится, что представление перенаправляет команду в документ, см. запись "Документ" в первом столбце, чтобы отследить дальнейшую маршрутизацию.  
+ Where numbered entries in the second column of the preceding table mention other objects, such as a document, see the corresponding item in the first column. For instance, when you read in the second column that the view forwards a command to its document, see the "Document" entry in the first column to follow the routing further.  
   
-## См. также  
- [Вызовы к обработчику со стороны платформы](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

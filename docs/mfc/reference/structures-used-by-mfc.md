@@ -1,5 +1,5 @@
 ---
-title: "Структуры, используемые MFC | Документы Microsoft"
+title: Structures Used by MFC | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,45 +34,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d26b374e233326ac5acc97486edc8d38e6bf5d81
-ms.openlocfilehash: 68c5119715516a4a35af56bc8dd7ce4d9176ee97
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e3cdc1f69aa5b710ecdd29bd0917cf1eb0266541
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="structures-used-by-mfc"></a>Структуры, используемые MFC
-В следующей таблице перечислены структуры, которые вызываются из различных функций-членов. Дополнительные сведения об использовании отдельных структуры ссылаться на классы и функции-члены, указаны в списке см. также для каждой структуры.  
+# <a name="structures-used-by-mfc"></a>Structures Used by MFC
+The following table lists structures that are called from various member functions. For further information on individual structure usage, refer to the classes and member functions noted in the See Also list for each structure.  
   
-|[Структура ABC](../../mfc/reference/abc-structure.md)|[Структура HSE_VERSION_INFO](../../mfc/reference/hse-version-info-structure.md)|  
+|[ABC Structure](../../mfc/reference/abc-structure.md)|[HSE_VERSION_INFO Structure](../../mfc/reference/hse-version-info-structure.md)|  
 |--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|  
-|[Структура ABCFLOAT](../../mfc/reference/abcfloat-structure.md)|[Структура LINGER](../../mfc/reference/linger-structure.md)|  
-|[Структура AFX_EXTENSION_MODULE](../../mfc/reference/afx-extension-module-structure.md)|[Структура LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
-|[Структура BITMAP](../../mfc/reference/bitmap-structure.md)|[Структура LOGPEN](../../mfc/reference/logpen-structure.md)|  
-|[Структура BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)|[Структура MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)|  
-|[Структура CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)|[Структура MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md)|  
-|[Структура CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)|[Структура MSG](../../mfc/reference/msg-structure1.md)|  
-|[Структура CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)|[Структура NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md)|  
-|[Структура CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[Структура PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)|  
-|[Структура CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)|[Структура POINT](../../mfc/reference/point-structure1.md)|  
-|[Структура CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)|[Структура RECT](../../mfc/reference/rect-structure1.md)|  
-|[Структура CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Структура RGNDATA](../../mfc/reference/rgndata-structure.md)|  
-|[Структура CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[Структура SOCKADDR](../../mfc/reference/sockaddr-structure.md)|  
-|[Структура CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)|[Структура SOCKADDR_IN](../../mfc/reference/sockaddr-in-structure.md)|  
-|[Структура CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)|[Структура SYSTEMTIME](systemtime-structure1.md)
-|[Структура CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[Структура WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)|  
-|[Структура CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md)|[Структура WINDOWPOS](../../mfc/reference/windowpos-structure1.md)  
-|[Структура COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)|[Структура WSADATA](../../mfc/reference/wsadata-structure.md)|  
-|[Структура COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)|[Структура XFORM](../../mfc/reference/xform-structure.md)|  
-|[Структура CREATESTRUCT](../../mfc/reference/createstruct-structure.md)||  
-|[Структура DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)||  
-|[Структура DEVNAMES](../../mfc/reference/devnames-structure.md)||  
-|[Dhtmlurleventmapentry-структура](../../mfc/reference/dhtmlurleventmapentry-structure.md)||  
-|[Структура DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)||  
-|**Структура EXTENSION_CONTROL_BLOCK**||  
-|[Структура FILETIME](../../mfc/reference/filetime-structure.md)  
+|[ABCFLOAT Structure](../../mfc/reference/abcfloat-structure.md)|[LINGER Structure](../../mfc/reference/linger-structure.md)|  
+|[AFX_EXTENSION_MODULE Structure](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH Structure](../../mfc/reference/logbrush-structure.md)|  
+|[BITMAP Structure](../../mfc/reference/bitmap-structure.md)|[LOGPEN Structure](../../mfc/reference/logpen-structure.md)|  
+|[BITMAPINFO Structure](../../mfc/reference/bitmapinfo-structure.md)|[MEASUREITEMSTRUCT Structure](../../mfc/reference/measureitemstruct-structure.md)|  
+|[CDaoDatabaseInfo Structure](../../mfc/reference/cdaodatabaseinfo-structure.md)|[MINMAXINFO Structure](../../mfc/reference/minmaxinfo-structure.md)|  
+|[CDaoErrorInfo Structure](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG Structure](../../mfc/reference/msg-structure1.md)|  
+|[CDaoFieldInfo Structure](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS Structure](../../mfc/reference/nccalcsize-params-structure.md)|  
+|[CDaoIndexFieldInfo Structure](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT Structure](../../mfc/reference/paintstruct-structure.md)|  
+|[CDaoIndexInfo Structure](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT Structure](../../mfc/reference/point-structure1.md)|  
+|[CDaoParameterInfo Structure](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT Structure](../../mfc/reference/rect-structure1.md)|  
+|[CDaoQueryDefInfo Structure](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA Structure](../../mfc/reference/rgndata-structure.md)|  
+|[CDaoRelationFieldInfo Structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR Structure](../../mfc/reference/sockaddr-structure.md)|  
+|[CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN Structure](../../mfc/reference/sockaddr-in-structure.md)|  
+|[CDaoTableDefInfo Structure](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME Structure](systemtime-structure1.md)
+|[CDaoWorkspaceInfo Structure](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT Structure](../../mfc/reference/windowplacement-structure.md)|  
+|[CODBCFieldInfo Structure](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS Structure](../../mfc/reference/windowpos-structure1.md)  
+|[COLORADJUSTMENT Structure](../../mfc/reference/coloradjustment-structure.md)|[WSADATA Structure](../../mfc/reference/wsadata-structure.md)|  
+|[COMPAREITEMSTRUCT Structure](../../mfc/reference/compareitemstruct-structure.md)|[XFORM Structure](../../mfc/reference/xform-structure.md)|  
+|[CREATESTRUCT Structure](../../mfc/reference/createstruct-structure.md)||  
+|[DELETEITEMSTRUCT Structure](../../mfc/reference/deleteitemstruct-structure.md)||  
+|[DEVNAMES Structure](../../mfc/reference/devnames-structure.md)||  
+|[DHtmlUrlEventMapEntry Structure](../../mfc/reference/dhtmlurleventmapentry-structure.md)||  
+|[DRAWITEMSTRUCT Structure](../../mfc/reference/drawitemstruct-structure.md)||  
+|**EXTENSION_CONTROL_BLOCK Structure**||  
+|[FILETIME Structure](../../mfc/reference/filetime-structure.md)  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 

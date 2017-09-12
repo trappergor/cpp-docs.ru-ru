@@ -1,5 +1,5 @@
 ---
-title: "Класс CMiniFrameWnd | Документы Microsoft"
+title: CMiniFrameWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMiniFrameWnd class
-- mini-frame windows
-- toolbars [C++]
+- CMiniFrameWnd [MFC], CMiniFrameWnd
+- CMiniFrameWnd [MFC], Create
+- CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 caps.latest.revision: 21
 author: mikeblome
@@ -39,45 +39,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7a7119a7317e8837c7ce672b2607a4e37b5239f5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7191683a95253c2a1eb0d8ed49552b5d2e507894
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cminiframewnd-class"></a>Класс CMiniFrameWnd
-Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.  
+# <a name="cminiframewnd-class"></a>CMiniFrameWnd Class
+Represents a half-height frame window typically seen around floating toolbars.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMiniFrameWnd : public CFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Создает объект `CMiniFrameWnd`.|  
+|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Constructs a `CMiniFrameWnd` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::Create](#create)|Создает `CMiniFrameWnd` объект после создания экземпляра.|  
-|[CMiniFrameWnd::CreateEx](#createex)|Создает `CMiniFrameWnd` объекта (с дополнительными параметрами) после построения.|  
+|[CMiniFrameWnd::Create](#create)|Creates a `CMiniFrameWnd` object after construction.|  
+|[CMiniFrameWnd::CreateEx](#createex)|Creates a `CMiniFrameWnd` object (with additional options) after construction.|  
   
-## <a name="remarks"></a>Примечания  
- Эти окна ведут себя как обычный фреймов, за исключением того, что они не имеют свернуть или развернуть кнопки или меню и вам необходимо только одним щелчком в системном меню, чтобы закрыть их.  
+## <a name="remarks"></a>Remarks  
+ These mini-frame windows behave like normal frame windows, except that they do not have minimize/maximize buttons or menus and you only have to single-click on the system menu to dismiss them.  
   
- Для использования `CMiniFrameWnd` объекта, сначала Определите объект. Затем вызовите [создать](#create) функции-члена для отображения окна области.  
+ To use a `CMiniFrameWnd` object, first define the object. Then call the [Create](#create) member function to display the mini-frame window.  
   
- Дополнительные сведения об использовании `CMiniFrameWnd` объектов, см. в статье [стыковка и плавающей панели инструментов](../../mfc/docking-and-floating-toolbars.md).  
+ For more information on how to use `CMiniFrameWnd` objects, see the article [Docking and Floating Toolbars](../../mfc/docking-and-floating-toolbars.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,21 +88,21 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
- Создает `CMiniFrameWnd` объекта, но не удалось создать окно.  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
+ Constructs a `CMiniFrameWnd` object, but does not create the window.  
   
 ```  
 CMiniFrameWnd();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Для создания окна, вызовите [CMiniFrameWnd::Create](#create).  
+### <a name="remarks"></a>Remarks  
+ To create the window, call [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
- Создает окно области Windows и прикрепляет его к `CMiniFrameWnd` объекта.  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
+ Creates the Windows mini-frame window and attaches it to the `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL Create(
@@ -114,57 +114,57 @@ virtual BOOL Create(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpClassName`  
- Указывает строку символом null, с именем класса Windows. Имя класса может быть любое имя, зарегистрированное с глобальным [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) функции. Если **NULL**, класс окна будет зарегистрирована автоматически платформой. MFC предоставляет класса по умолчанию следующие атрибуты и стили:  
+ Points to a null-terminated character string that names the Windows class. The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function. If **NULL**, the window class will be registered for you by the framework. MFC gives the default class the following styles and attributes:  
   
--   Задает стиль бит **CS_DBLCLKS**, которая отправляет дважды щелкните сообщения в процедуру при двойном щелчке мыши.  
+-   Sets style bit **CS_DBLCLKS**, which sends double-click messages to the window procedure when the user double-clicks the mouse.  
   
--   Задает стиль bits **CS_HREDRAW** и **CS_VREDRAW**, который прямое содержимое клиентской области перерисовку при изменении размера окна.  
+-   Sets style bits **CS_HREDRAW** and **CS_VREDRAW**, which direct the contents of the client area to be redrawn when the window changes size.  
   
--   Задает класс курсор к стандарту Windows **IDC_ARROW**.  
+-   Sets the class cursor to the Windows standard **IDC_ARROW**.  
   
--   Задает класс кисть фона **NULL**, поэтому не удалит его фона окна.  
+-   Sets the class background brush to **NULL**, so the window will not erase its background.  
   
--   Задает значок класса стандартные, нетерпеливых флаг значка логотипа Windows.  
+-   Sets the class icon to the standard, waving-flag Windows logo icon.  
   
--   Задает окна по умолчанию размер и положение, как указано в Windows.  
+-   Sets the window to the default size and position, as indicated by Windows.  
   
  `lpWindowName`  
- Указатель на завершающуюся значением null строка, содержащая имя окна.  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- Задает атрибуты стилей окна. Они могут включать стили стандартное окно и один или несколько из следующих специальных стилей:  
+ Specifies the window style attributes. These can include standard window styles and one or more of the following special styles:  
   
-- **MFS_MOVEFRAME** позволяет переместить, щелкнув любой границы окна, не только заголовок окна области.  
+- **MFS_MOVEFRAME** Allows the mini-frame window to be moved by clicking on any edge of the window, not just the caption.  
   
-- **MFS_4THICKFRAME** отключает изменение размера окна области.  
+- **MFS_4THICKFRAME** Disables resizing of the mini-frame window.  
   
-- **MFS_SYNCACTIVE** синхронизирует активации окна области для активации родительского окна.  
+- **MFS_SYNCACTIVE** Synchronizes the activation of the mini-frame window to the activation of its parent window.  
   
-- **MFS_THICKFRAME** позволяет соответствовать требованиям малой разрешить содержимое клиентской области окна области.  
+- **MFS_THICKFRAME** Allows the mini-frame window to be sized as small as the contents of the client area allow.  
   
-- **MFS_BLOCKSYSMENU** запрещают доступ к меню системы и элемента управления меню и преобразует их в часть заголовка (заголовок).  
+- **MFS_BLOCKSYSMENU** Disables access to the system menu and the control menu, and converts them to part of the caption (title bar).  
   
- В разделе [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание значений стилей окон невозможно. Типичные сочетание, используемый для окна **WS_POPUP | WS_CAPTION | WS_SYSMENU**.  
+ See [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of possible window style values. The typical combination used for mini-frame windows is **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
- Объект `RECT` структуры, указав нужные размеры окна.  
+ A `RECT` structure specifying the desired dimensions of the window.  
   
  `pParentWnd`  
- Указатель на родительское окно. Используйте **NULL** для окон верхнего уровня.  
+ Points to the parent window. Use **NULL** for top-level windows.  
   
  `nID`  
- Если окно области создается как дочернего окна, это идентификатор дочернего элемента управления; в противном случае — 0.  
+ If the mini-frame window is created as a child window, this is the identifier of the child control; otherwise 0.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- **Создание** инициализирует окна имя класса и имя окна и регистрирует значения по умолчанию для его стиль и родительского элемента.  
+### <a name="remarks"></a>Remarks  
+ **Create** initializes the window's class name and window name and registers default values for its style and parent.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
- Создает объект `CMiniFrameWnd`.  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
+ Creates a `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -177,48 +177,48 @@ virtual BOOL CreateEx(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Задает расширенный стиль `CMiniFrameWnd` создается. Применить любой из [расширенные стили окна](../../mfc/reference/extended-window-styles.md) окна.  
+ Specifies the extended style of the `CMiniFrameWnd` being created. Apply any of the [extended window styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) to the window.  
   
  `lpClassName`  
- Указывает строку завершающуюся значением null, с именем класса Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) структуры). Имя класса может быть любое имя, зарегистрированное с глобальным [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) функции или какие-либо имена предопределенных класс элемента управления. Он не должен быть **NULL**.  
+ Points to a null-terminated character string that names the Windows class (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure). The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function or any of the predefined control-class names. It must not be **NULL**.  
   
  `lpWindowName`  
- Указатель на завершающуюся значением null строка, содержащая имя окна.  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- Задает атрибуты стилей окна. В разделе [стили окна](../../mfc/reference/window-styles.md) и [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание возможных значений.  
+ Specifies the window style attributes. See [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of the possible values.  
   
  `rect`  
- Размер и положение окна в клиентские координаты `pParentWnd`.  
+ The size and position of the window, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Указывает объект родительского окна.  
+ Points to the parent window object.  
   
  `nID`  
- Идентификатор дочернего окна.  
+ The identifier of the child window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-### <a name="remarks"></a>Примечания  
- `CreateEx` Параметры определяют **WNDCLASS**, стиль окна и (необязательно) начальное положение и размер окна. `CreateEx`также указывает окна родительского (если таковые имеются) и идентификатор.  
+### <a name="remarks"></a>Remarks  
+ The `CreateEx` parameters specify the **WNDCLASS**, window style, and (optionally) initial position and size of the window. `CreateEx` also specifies the window's parent (if any) and ID.  
   
- Когда `CreateEx` выполняет Windows отправляет [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), и [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) сообщения в окно.  
+ When `CreateEx` executes, Windows sends the [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) messages to the window.  
   
- Чтобы расширить возможности обработки сообщений по умолчанию, создайте класс, производный от `CMiniFrameWnd`, добавить схему сообщений к новому классу, а функции-члены для сообщениях выше. Переопределить `OnCreate`, например, для выполнения инициализации, необходимые для нового класса.  
+ To extend the default message handling, derive a class from `CMiniFrameWnd`, add a message map to the new class, and provide member functions for the above messages. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- Переопределить дальнейшей **на***сообщение* обработчиков для обеспечения дополнительной функциональности производного класса сообщений.  
+ Override further **On***Message* message handlers to add further functionality to your derived class.  
   
- Если **WS_VISIBLE** задан стиль, Windows посылает окне все необходимые для активации и отображение окна сообщения. Если стиль окна указывает строку заголовка, заголовок окна указывает `lpszWindowName` параметр отображается в заголовке окна.  
+ If the **WS_VISIBLE** style is given, Windows sends the window all the messages required to activate and show the window. If the window style specifies a title bar, the window title pointed to by the `lpszWindowName` parameter is displayed in the title bar.  
   
- `dwStyle` Параметр может иметь любое сочетание [стили окна](../../mfc/reference/window-styles.md).  
+ The `dwStyle` parameter can be any combination of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- Старый стиль windows элементов палитры больше не поддерживаются. Старый стиль, который не имел кнопки «X» закрыть, поддерживались при запуске приложения MFC в предыдущих версиях Windows, но больше не поддерживается в Visual C++ .NET. Только новые `WS_EX_TOOLWINDOW` стиль теперь поддерживается; описание этого стиля см. в разделе [расширенные стили окна](../../mfc/reference/extended-window-styles.md).  
+ The old style Palette toolbox windows are no longer supported. The old style, which did not have an "X" Close button, was supported when running an MFC application on previous versions of Windows, but is no longer supported in Visual C++.NET. Only the new `WS_EX_TOOLWINDOW` style is now supported; for a description of this style, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
-## <a name="see-also"></a>См. также  
- [CFrameWnd-класс](../../mfc/reference/cframewnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CFrameWnd](../../mfc/reference/cframewnd-class.md)
+## <a name="see-also"></a>See Also  
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)
 

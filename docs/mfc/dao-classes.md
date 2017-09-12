@@ -1,73 +1,92 @@
 ---
-title: "Классы DAO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], классы"
-  - "классы баз данных [C++], DAO"
+title: DAO Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [MFC], DAO
+- DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Классы DAO
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dbc2c515978597e4d7a386ec05afe1e5caae6563
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эти классы работают с другими классами платформы приложения для удобного доступа к базам данных \(DAO\) объекта доступа к данным, которые используют одно и то же ядра СУБД как Microsoft Visual Basic и Microsoft Access.  Классы DAO можно также получить множество различных баз данных, для которых драйверы ODBC \(ODBC\).  
+---
+# <a name="dao-classes"></a>DAO Classes
+These classes work with the other application framework classes to give easy access to Data Access Object (DAO) databases, which use the same database engine as Microsoft Visual Basic and Microsoft Access. The DAO classes can also access a wide variety of databases for which Open Database Connectivity (ODBC) drivers are available.  
   
- Программ, использующих базы данных DAO имеют по крайней мере объект `CDaoDatabase` и объект `CDaoRecordset`.  
+ Programs that use DAO databases will have at least a `CDaoDatabase` object and a `CDaoRecordset` object.  
   
 > [!NOTE]
->  Что касается Visual C\+\+ .NET, то среда и мастера Visual C\+\+ больше не поддерживают DAO \(хотя классы DAO включены и вы по\-прежнему можете их использовать\).  Майкрософт рекомендует использовать ODBC для новых проектов MFC.  DAO необходимо использовать только для поддержки существующих приложений.  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use ODBC for new MFC projects. You should only use DAO in maintaining existing applications.  
   
  [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)  
- Управление именованный, защищенный паролем сеанс базы данных из входа, чтобы выход из системы.  Большинство программ используют рабочую область по умолчанию.  
+ Manages a named, password-protected database session from login to logoff. Most programs use the default workspace.  
   
  [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)  
- Подключение к базе данных через, можно работает на данные.  
+ A connection to a database through which you can operate on the data.  
   
  [CDaoRecordset](../mfc/reference/cdaorecordset-class.md)  
- Представляет набор записей, выбранных из источника данных.  
+ Represents a set of records selected from a data source.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Представление, которое отображает записи базы данных в элементах управления.  
+ A view that displays database records in controls.  
   
  [CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)  
- Представляет определение запроса, как правило, сохраненное в базе данных.  
+ Represents a query definition, usually one saved in a database.  
   
  [CDaoTableDef](../mfc/reference/cdaotabledef-class.md)  
- Представляет хранимое определение базовой или подключенной таблицы.  
+ Represents the stored definition of a base table or an attached table.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Представляет условие исключения, поступающие от классов DAO.  
+ Represents an exception condition arising from the DAO classes.  
   
  [CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)  
- Поддерживает процедуры обмена полями записей \(DAO DFX\), используемые классами баз данных DAO.  Обычно непосредственно не будет использовать этот класс.  
+ Supports the DAO record field exchange (DFX) routines used by the DAO database classes. You will normally not directly use this class.  
   
-## Связанные классы  
+## <a name="related-classes"></a>Related Classes  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Инкапсулирует дескриптор хранилище для большого двоичного объекта \(BLOB\), например растровое изображение.  объекты `CLongBinary` используются для управления большими объектами данных, хранящихся в таблицах базы данных.  
+ Encapsulates a handle to storage for a binary large object (BLOB), such as a bitmap. `CLongBinary` objects are used to manage large data objects stored in database tables.  
   
- [COleCurrency](../Topic/COleCurrency%20Class.md)  
- Программа\-оболочка для типа **CURRENCY** ole\-автоматизации, с фиксированной запятой арифметического типа, с 15 цифрами перед десятичной запятой и 4 цифр позже.  
+ [COleCurrency](../mfc/reference/colecurrency-class.md)  
+ Wrapper for the OLE automation type **CURRENCY**, a fixed-point arithmetic type, with 15 digits before the decimal point and 4 digits after.  
   
  [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- Программа\-оболочка для типа **date** ole\-автоматизации.  Представляет значения даты и времени.  
+ Wrapper for the OLE automation type **DATE**. Represents date and time values.  
   
  [COleVariant](../mfc/reference/colevariant-class.md)  
- Программа\-оболочка для типа **VARIANT** ole\-автоматизации.  Данные в **VARIANT**, можно хранить в несколько форматов.  
+ Wrapper for the OLE automation type **VARIANT**. Data in **VARIANT**s can be stored in many formats.  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

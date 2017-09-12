@@ -1,52 +1,71 @@
 ---
-title: "Перетаскивание (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "перетаскивание [C++]"
-  - "перетаскивание [C++], о перетаскивании OLE"
-  - "поддержка перетаскивания диспетчера файлов"
-  - "OLE - приложения, перетаскивание"
-  - "перетаскивание OLE"
-  - "приложения сервера OLE, перетаскивание"
+title: Drag and Drop (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], drag and drop
+- drag and drop [MFC]
+- OLE applications [MFC], drag and drop
+- File Manager drag and drop support [MFC]
+- drag and drop [MFC], about OLE drag and drop
+- OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Перетаскивание (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1f25b062583bf498fa18399a84e708db774aecf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Функция перетаскивания OLE в основном ярлык для скопировать и вставить данные.  При использовании обмена, чтобы скопировать и вставить данные, несколько шагов необходимы.  Необходимо выделить данные, выберите пункт **Вырезать** или **Копировать** в меню **Изменить**, переход в конечный файл, окна или приложения, установите курсор в нужное место и нажмите кнопку **Вставить** в меню **Изменить**.  
+---
+# <a name="drag-and-drop-ole"></a>Drag and Drop (OLE)
+The drag-and-drop feature of OLE is primarily a shortcut for copying and pasting data. When you use the Clipboard to copy or paste data, a number of steps are required. You select the data, click **Cut** or **Copy** from the **Edit** menu, move to the destination file, window or application, place the cursor in the desired location, and click **Paste** from the **Edit** menu.  
   
- Перетаскивание OLE отличается от механизма перетаскивания файлового менеджера, который может обрабатывать только имена файлов и специально предназначенному для передачи имена файлов в приложения.  Перетаскивание OLE гораздо более общее.  Он позволяет перетаскиваним к любым данным, которые могут быть помещены в буфер обмена.  
+ OLE drag and drop is different from the File Manager drag-and-drop mechanism, which can only handle filenames and is designed specifically to pass filenames to applications. OLE drag and drop is much more general. It allows you to drag and drop any data that could also be placed on the Clipboard.  
   
- При использовании перетаскиванием OLE, удаляется из шага 2 процесса.  Необходимо выделить данные из окна источника \(«источника перетаскивания»\), перетащите его в нужное место назначения \(«целевому объекту перетаскивания»\), и удалите его с отпущена кнопка мыши.  Операция исключается необходимость в меню и быстрее, чем скопировать и вставить последовательность.  Единственное требование заключается в том, что и источник и целевой объект перетаскивания размещения должны быть открыты и по крайней мере частично отображаются на экране.  
+ When you use OLE drag and drop, you remove two steps from the process. You select the data from the source window (the "drop source"), drag it to the desired destination (the "drop target"), and drop it by releasing the mouse button. The operation eliminates the need for menus and is quicker than the copy/paste sequence. The only requirement is that both the drop source and drop target must be open and at least partially visible on the screen.  
   
- С помощью перетаскивания OLE, данные можно перемещать из одного места в другое в документе, между различными документами или между приложениями.  Его можно реализовать в контейнере или или серверном приложении, и любое приложение может быть источником размещения, целевым объектом перетаскивания, или и того, и другого.  Если приложение имеет и, размещение\- источника и целевого объекта поддержки перетаскивания, позволяет перетаскивания между дочерними окнами, или в одно окно.  Эта функция может сделать приложение гораздо проще использовать.  
+ Using OLE drag and drop, data can be transferred from one location to another within a document, between different documents, or between applications. It can be implemented in either a container or a server application, and any application can be a drop source, a drop target, or both. If an application has both drop-source and drop-target support implemented, drag and drop is enabled between child windows, or within one window. This feature can make your application much easier to use.  
   
- Если требуется использовать только перетаскивание OLE возможности см. в разделе [Перетаскивания: Настраивать](../Topic/Drag%20and%20Drop:%20Customizing.md).  С помощью методов проверки, описанных в этой статье, чтобы сделать источники размещения приложений не OLE.  Статья [Перетаскивания: Реализация целевой объект перетаскивания](../mfc/drag-and-drop-implementing-a-drop-target.md) описываются способы реализации поддержки целевого объекта и перетаскивания для приложений OLE и без OLE.  Также будет полезно просмотреть примеры MFC OLE [OCLIENT](../top/visual-cpp-samples.md) и [HIERSVR](../top/visual-cpp-samples.md).  
+ If you only want to use the drag-and-drop capabilities of OLE, see [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md). You can use the techniques explained in that article to make non-OLE applications drop sources. The article [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md) describes how to implement drop-target support for both OLE and non-OLE applications. It will also be helpful to examine the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
- Если не имеются семейство [Объекты данных и источники данных OLE \(\)](../mfc/data-objects-and-data-sources-ole.md) статей, может потребоваться ее сейчас.  Эти статьи описаны основные принципы передачи данных, а также реализовать его в приложениях.  
+ If you have not read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) family of articles, you may want to do so now. These articles explain the fundamentals of data transfer, and how to implement it in your applications.  
   
- Дополнительные сведения о перетаскивания см. в разделе:  
+ For more information about drag and drop, see:  
   
--   [Перетаскивания: Реализация источнику перетаскивания](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Drag and Drop: Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Перетаскивания: Реализация целевой объект перетаскивания](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Перетаскивания: Настраивать](../Topic/Drag%20and%20Drop:%20Customizing.md)  
+-   [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md)  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Объекты и источники данных \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+

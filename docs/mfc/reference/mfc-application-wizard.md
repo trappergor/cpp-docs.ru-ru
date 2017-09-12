@@ -1,5 +1,5 @@
 ---
-title: "Мастер приложений MFC | Документы Microsoft"
+title: MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,78 +34,78 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2d1d950ac5adb5d17b172fa058a40593e4e61c34
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 53d9ebf66ba5d097b68690ecefd5aa58aac6a55a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-application-wizard"></a>мастер приложений MFC
-Мастер приложений MFC создает приложение, в скомпилированном виде реализует базовые возможности приложения Windows, исполняемый файл (.exe). Начальное приложение MFC включает файлы C++ (.cpp) источника, файлы ресурсов (RC), файлы заголовков (h) и файл проекта (VCXPROJ). Код, созданный в этих начальных файлах, основан на MFC.  
+# <a name="mfc-application-wizard"></a>MFC Application Wizard
+The MFC Application Wizard generates an application that, when compiled, implements the basic features of a Windows executable (.exe) application. The MFC starter application includes C++ source (.cpp) files, resource (.rc) files, header (.h) files, and a project (.vcxproj) file. The code that is generated in these starter files is based on MFC.  
   
 > [!NOTE]
->  В зависимости от выбранных параметров мастер создает дополнительные файлы в проекте. Например, если выбрать **контекстной справки** на [дополнительные функции](../../mfc/reference/advanced-features-mfc-application-wizard.md) страницы, мастер создает файлы, необходимые для компиляции файлов справки проекта. Дополнительные сведения о файлах, создаваемых мастером в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)и содержатся в файле Readme.txt в проекте.  
+>  Depending on the options that you select, the wizard creates additional files in your project. For example, if you select **Context-sensitive help** on the [Advanced Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) page, the wizard creates the files that are necessary to compile the project's Help files. For more information about the files that the wizard creates, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md), and see the Readme.txt file in the project.  
   
-## <a name="overview"></a>Обзор  
- На этой странице мастера описываются текущие параметры приложения для создаваемого приложения MFC. По умолчанию мастер создает проект следующим образом:  
+## <a name="overview"></a>Overview  
+ This wizard page describes the current application settings for the MFC application that you are creating. By default, the wizard creates a project as follows:  
   
--   [Тип приложения, мастер приложений MFC](../../mfc/reference/application-type-mfc-application-wizard.md)  
+-   [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md)  
   
-    -   Проект создается с поддержкой с вкладками многодокументного интерфейса (MDI). Дополнительные сведения см. в разделе [SDI и MDI](../../mfc/sdi-and-mdi.md).  
+    -   The project is created with tabbed multiple-document interface (MDI) support. For more information, see [SDI and MDI](../../mfc/sdi-and-mdi.md).  
   
-    -   В проекте используется [архитектуры документ/представление](../../mfc/document-view-architecture.md).  
+    -   The project uses the [Document/View Architecture](../../mfc/document-view-architecture.md).  
   
-    -   В проекте используются библиотеки Юникод.  
+    -   The project uses Unicode libraries.  
   
-    -   Проект создается с использованием стиля проекта Visual Studio и поддержкой переключения визуальных стилей.  
+    -   The project is created using the Visual Studio project style and enables visual style switching.  
   
-    -   Проект использует MFC в общей библиотеке DLL. Дополнительные сведения см. в разделе [библиотеки DLL в Visual C++](../../build/dlls-in-visual-cpp.md).  
+    -   The project uses MFC in a shared DLL. For more information, see [DLLs in Visual C++](../../build/dlls-in-visual-cpp.md).  
   
--   [Поддержка составных документов, мастер приложений MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
+-   [Compound Document Support, MFC Application Wizard](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   
-    -   Проект не поддерживает составные документы.  
+    -   The project provides no support for compound documents.  
   
--   [Строки шаблонов документов, мастер приложений MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
+-   [Document Template Strings, MFC Application Wizard](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
   
-    -   Данный проект использует имя проекта для строки шаблонов документов по умолчанию.  
+    -   The project uses the project name for the default document template strings.  
   
--   [Поддержка базы данных, мастер приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Database Support, MFC Application Wizard](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
-    -   Проект не поддерживает базы данных.  
+    -   The project provides no support for databases.  
   
--   [Возможности пользовательского интерфейса, мастер приложений MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
+-   [User Interface Features, MFC Application Wizard](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
   
-    -   Проект реализует пользовательский интерфейс такие возможности, как главное меню, строка состояния, кнопки свертывания и развертывания окна, стандартная Windows **о** поле, стандартные строка меню и закрепления панели инструментов и дочерних фреймов.  
+    -   The project implements standard Windows user interface features such as a system menu, a status bar, maximize and minimize boxes, an **About** box, a standard menu bar and docking toolbar, and child frames.  
   
--   [Дополнительные возможности, мастер приложений MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
+-   [Advanced Features, MFC Application Wizard](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
   
-    -   Проект поддерживает печать и предварительный просмотр.  
+    -   The project supports printing and print preview.  
   
-    -   Проект поддерживает элементы управления ActiveX. Дополнительные сведения см. в разделе [последовательность операций для создания элементов управления ActiveX](../../mfc/sequence-of-operations-for-creating-activex-controls.md).  
+    -   The project supports ActiveX controls. For more information, see [Sequence of Operations for Creating ActiveX Controls](../../mfc/sequence-of-operations-for-creating-activex-controls.md).  
   
-    -   Проект не поддерживает [автоматизации](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [Windows Sockets](../../mfc/windows-sockets-in-mfc.md), или Active Accessibility.  
+    -   The project provides no support for [Automation](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [Windows Sockets](../../mfc/windows-sockets-in-mfc.md), or Active Accessibility.  
   
-    -   Проект поддерживает **Explorer** закрепляемой области **вывод** закрепляемой области и **свойства** закрепляемой области.  
+    -   The project supports an **Explorer** docking pane, an **Ouput** docking pane, and a **Properties** docking pane.  
   
--   [Создаваемые классы, мастер приложений MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
+-   [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
   
-    -   Класс представления проекта является производным от [CView-класс](../../mfc/reference/cview-class.md).  
+    -   The project's view class is derived from the [CView Class](../../mfc/reference/cview-class.md).  
   
-    -   Класс приложения проекта является производным от [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
+    -   The project's application class is derived from the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
   
-    -   Класс документа проекта является производным от [CDocument-класс](../../mfc/reference/cdocument-class.md).  
+    -   The project's document class is derived from the [CDocument Class](../../mfc/reference/cdocument-class.md).  
   
-    -   Класс основного фрейма проекта является производным от [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md).  
+    -   The project's main frame class is derived from the [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md).  
   
-    -   Класс дочернего фрейма проекта является производным от [класс CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md).  
+    -   The project's child frame class is derived from the [CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md).  
   
- Чтобы изменить эти параметры по умолчанию, щелкните соответствующую вкладку заголовок в левом столбце мастера и внести изменения на появившейся странице.  
+ To change these default settings, click the appropriate tab title in the left column of the wizard and make the changes on the page that appears.  
   
- После создания проекта приложения MFC, можно добавить объекты и элементы управления в проект Visual C++ с помощью [мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md).  
+ After you create an MFC application project, you can add objects or controls to your project using Visual C++ [code wizards](../../ide/adding-functionality-with-code-wizards-cpp.md).  
   
-## <a name="see-also"></a>См. также  
- [Создание приложения MFC](../../mfc/reference/creating-an-mfc-application.md)   
- [Настольных приложений MFC](../../mfc/mfc-desktop-applications.md)   
- [Использование классов для создания приложений для Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md)   
+ [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)   
+ [Using the Classes to Write Applications for Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Класс COleDataSource | Документы Microsoft"
+title: COleDataSource Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,17 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag and drop [C++], MFC support
-- Clipboard [C++], OLE support
-- uniform data transfer
-- OLE [C++], uniform data transfer
-- Clipboard [C++], MFC support
-- OLE Clipboard [C++], support
-- IDataObject, MFC encapsulation
-- data transfer [C++], OLE
-- COleDataSource class
-- OLE data transfer [C++]
-- uniform data transfer, OLE
+- COleDataSource [MFC], COleDataSource
+- COleDataSource [MFC], CacheData
+- COleDataSource [MFC], CacheGlobalData
+- COleDataSource [MFC], DelayRenderData
+- COleDataSource [MFC], DelayRenderFileData
+- COleDataSource [MFC], DelaySetData
+- COleDataSource [MFC], DoDragDrop
+- COleDataSource [MFC], Empty
+- COleDataSource [MFC], FlushClipboard
+- COleDataSource [MFC], GetClipboardOwner
+- COleDataSource [MFC], OnRenderData
+- COleDataSource [MFC], OnRenderFileData
+- COleDataSource [MFC], OnRenderGlobalData
+- COleDataSource [MFC], OnSetData
+- COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 caps.latest.revision: 23
 author: mikeblome
@@ -59,68 +63,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3839ebe5f278d71f933b6e76f2ad50dc8e62a165
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0d6db9b64098bf2bee5129b98dfe1797edfd6d8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledatasource-class"></a>COleDataSource-класс
-Играет роль кэша, в который приложение помещает данные, которые оно будет предлагать во время операций передачи данных, таких как операции с буфером обмена или операции перетаскивания.  
+# <a name="coledatasource-class"></a>COleDataSource Class
+Acts as a cache into which an application places the data that it will offer during data transfer operations, such as Clipboard or drag-and-drop operations.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDataSource : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataSource::COleDataSource](#coledatasource)|Создает объект `COleDataSource`.|  
+|[COleDataSource::COleDataSource](#coledatasource)|Constructs a `COleDataSource` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataSource::CacheData](#cachedata)|Предоставляет данные в указанном формате, используя **STGMEDIUM** структуры.|  
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Предоставляет данные в указанном формате, используя `HGLOBAL`.|  
-|[COleDataSource::DelayRenderData](#delayrenderdata)|Предоставляет данные в указанном формате, с использованием отложенной подготовки к просмотру.|  
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Предоставляет данные в указанном формате в `CFile` указателя.|  
-|[COleDataSource::DelaySetData](#delaysetdata)|Вызывается для каждого формата, поддерживаемого в `OnSetData`.|  
-|[COleDataSource::DoDragDrop](#dodragdrop)|Выполняет операции перетаскивания и вставки с источником данных.|  
-|[COleDataSource::Empty](#empty)|Очищает `COleDataSource` объект данных.|  
-|[COleDataSource::FlushClipboard](#flushclipboard)|Отображает все данные в буфер обмена.|  
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Проверяет, что данные, помещенные в буфер обмена по-прежнему возможна.|  
-|[COleDataSource::OnRenderData](#onrenderdata)|Извлекает данные в рамках отложенной подготовки к просмотру.|  
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Получает данные в `CFile` как часть отложенной подготовки к просмотру.|  
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Получает данные в `HGLOBAL` как часть отложенной подготовки к просмотру.|  
-|[COleDataSource::OnSetData](#onsetdata)|Вызывается для замены данных в `COleDataSource` объекта.|  
-|[COleDataSource::SetClipboard](#setclipboard)|Окружение `COleDataSource` объектов в буфер обмена.|  
+|[COleDataSource::CacheData](#cachedata)|Offers data in a specified format using a **STGMEDIUM** structure.|  
+|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Offers data in a specified format using an `HGLOBAL`.|  
+|[COleDataSource::DelayRenderData](#delayrenderdata)|Offers data in a specified format using delayed rendering.|  
+|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Offers data in a specified format in a `CFile` pointer.|  
+|[COleDataSource::DelaySetData](#delaysetdata)|Called for every format that is supported in `OnSetData`.|  
+|[COleDataSource::DoDragDrop](#dodragdrop)|Performs drag-and-drop operations with a data source.|  
+|[COleDataSource::Empty](#empty)|Empties the `COleDataSource` object of data.|  
+|[COleDataSource::FlushClipboard](#flushclipboard)|Renders all data to the Clipboard.|  
+|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Verifies that the data placed on the Clipboard is still there.|  
+|[COleDataSource::OnRenderData](#onrenderdata)|Retrieves data as part of delayed rendering.|  
+|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Retrieves data into a `CFile` as part of delayed rendering.|  
+|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Retrieves data into an `HGLOBAL` as part of delayed rendering.|  
+|[COleDataSource::OnSetData](#onsetdata)|Called to replace the data in the `COleDataSource` object.|  
+|[COleDataSource::SetClipboard](#setclipboard)|Places a `COleDataSource` object on the Clipboard.|  
   
-## <a name="remarks"></a>Примечания  
- Можно создавать источники данных OLE напрямую. Кроме того [COleClientItem](../../mfc/reference/coleclientitem-class.md) и [COleServerItem](../../mfc/reference/coleserveritem-class.md) классы создают источников данных OLE в ответ на их `CopyToClipboard` и `DoDragDrop` функции-члены. В разделе [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) краткое описание. Переопределить `OnGetClipboardData` созданные функции-члена класса клиента элемента или сервер элемента будут добавляться дополнительные форматы буфера обмена данные в источнике данных OLE для `CopyToClipboard` или `DoDragDrop` функции-члена.  
+## <a name="remarks"></a>Remarks  
+ You can create OLE data sources directly. Alternately, the [COleClientItem](../../mfc/reference/coleclientitem-class.md) and [COleServerItem](../../mfc/reference/coleserveritem-class.md) classes create OLE data sources in response to their `CopyToClipboard` and `DoDragDrop` member functions. See [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) for a brief description. Override the `OnGetClipboardData` member function of your client item or server item class to add additional Clipboard formats to the data in the OLE data source created for the `CopyToClipboard` or `DoDragDrop` member function.  
   
- Каждый раз, когда вы хотите подготовить данные для передачи, следует создать объект этого класса и заполнить его данных с использованием наиболее подходящий метод для своих данных. Способ вставки в источник данных непосредственно зависит от ли немедленно заданы данные (немедленно подготовки) или по требованию (отложенная отрисовка). Для каждого формата буфера обмена, в котором данные предоставляются путем передачи формат буфера обмена для использования (необязательный [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры), вызовите [DelayRenderData](#delayrenderdata).  
+ Whenever you want to prepare data for a transfer, you should create an object of this class and fill it with your data using the most appropriate method for your data. The way it is inserted into a data source is directly affected by whether the data is supplied immediately (immediate rendering) or on demand (delayed rendering). For every Clipboard format in which you are providing data by passing the Clipboard format to be used (and an optional [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure), call [DelayRenderData](#delayrenderdata).  
   
- Дополнительные сведения об источниках данных и передача данных см. в статье [объектов данных и источники данных (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Кроме того, статья [разделы буфер обмена](../../mfc/clipboard.md) Описание механизма буфера обмена OLE.  
+ For more information about data sources and data transfer, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md). In addition, the article [Clipboard Topics](../../mfc/clipboard.md) describes the OLE Clipboard mechanism.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDataSource`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="cachedata"></a>COleDataSource::CacheData  
- Эта функция используется для указания формата, в котором данные предлагается данных операций передачи.  
+##  <a name="cachedata"></a>  COleDataSource::CacheData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void CacheData(
@@ -129,31 +133,31 @@ void CacheData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- Формат буфера обмена, в котором будет предлагаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpStgMedium`  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуру, содержащую данные в указанный формат.  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure containing the data in the format specified.  
   
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором будет предлагаться данные. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо указать данные, поскольку эта функция обеспечивает его с помощью интерпретации подготовки к просмотру. Данные кэшируются, пока не требуется.  
+### <a name="remarks"></a>Remarks  
+ You must supply the data, because this function provides it by using immediate rendering. The data is cached until needed.  
   
- Предоставьте данные с помощью [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры. Можно также использовать `CacheGlobalData` функции-члена при указании объем данных слишком мало для передачи эффективно с использованием `HGLOBAL`.  
+ Supply the data using a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure. You can also use the `CacheGlobalData` member function if the amount of data you are supplying is small enough to be transferred efficiently using an `HGLOBAL`.  
   
- После вызова `CacheData` **ptd** членом `lpFormatEtc` и содержимое `lpStgMedium` принадлежат объект данных не вызывающим объектом.  
+ After the call to `CacheData` the **ptd** member of `lpFormatEtc` and the contents of `lpStgMedium` are owned by the data object, not by the caller.  
   
- Использование отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функции-члена. Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ To use delayed rendering, call the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структур в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures in the Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
- Эта функция используется для указания формата, в котором данные предлагается данных операций передачи.  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void CacheGlobalData(
@@ -162,34 +166,34 @@ void CacheGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- Формат буфера обмена, в котором будет предлагаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  *hGlobal*  
- Дескриптор глобальной памяти блок, содержащий данные в указанный формат.  
+ Handle to the global memory block containing the data in the format specified.  
   
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором будет предлагаться данные. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция предоставляет данные с помощью немедленно модуль подготовки отчетов, поэтому необходимо указать данные, при вызове функции; данные кэшируются, пока не требуется. Используйте `CacheData` функция-член, если вы указали большой объем данных или если требуется средний структурированного хранилища.  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using immediate rendering, so you must supply the data when calling the function; the data is cached until needed. Use the `CacheData` member function if you are supplying a large amount of data or if you require a structured storage medium.  
   
- Использование отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функции-члена. Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ To use delayed rendering, call the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
- Создает объект `COleDataSource`.  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
+ Constructs a `COleDataSource` object.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
- Эта функция используется для указания формата, в котором данные предлагается данных операций передачи.  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void DelayRenderData(
@@ -197,26 +201,26 @@ void DelayRenderData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- Формат буфера обмена, в котором будет предлагаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором будет предлагаться данные. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция предоставляет данные с помощью отложенной подготовки к просмотру, поэтому данные не предоставляются непосредственно. [OnRenderData](#onrenderdata) или [OnRenderGlobalData](#onrenderglobaldata) функция-член вызывается для запроса данных.  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using delayed rendering, so the data is not supplied immediately. The [OnRenderData](#onrenderdata) or [OnRenderGlobalData](#onrenderglobaldata) member function is called to request the data.  
   
- Используйте эту функцию, если вы не собираетесь предоставить данные с помощью `CFile` объекта. Если необходимо предоставить данные с помощью `CFile` , вызовите [DelayRenderFileData](#delayrenderfiledata) функции-члена. Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Use this function if you are not going to supply your data through a `CFile` object. If you are going to supply the data through a `CFile` object, call the [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Чтобы использовать немедленное отрисовки, вызовите [CacheData](#cachedata) или [CacheGlobalData](#cacheglobaldata) функции-члена.  
+ To use immediate rendering, call the [CacheData](#cachedata) or [CacheGlobalData](#cacheglobaldata) member function.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
- Эта функция используется для указания формата, в котором данные предлагается данных операций передачи.  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void DelayRenderFileData(
@@ -224,26 +228,26 @@ void DelayRenderFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- Формат буфера обмена, в котором будет предлагаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором будет предлагаться данные. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция предоставляет данные с помощью отложенной подготовки к просмотру, поэтому данные не предоставляются непосредственно. [OnRenderFileData](#onrenderfiledata) функция-член вызывается для запроса данных.  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using delayed rendering, so the data is not supplied immediately. The [OnRenderFileData](#onrenderfiledata) member function is called to request the data.  
   
- Используйте эту функцию, если планируется использовать `CFile` объект в качестве источника данных. Если вы не собираетесь использовать `CFile` , вызовите [DelayRenderData](#delayrenderdata) функции-члена. Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Use this function if you are going to use a `CFile` object to supply the data. If you are not going to use a `CFile` object, call the [DelayRenderData](#delayrenderdata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Чтобы использовать немедленное отрисовки, вызовите [CacheData](#cachedata) или [CacheGlobalData](#cacheglobaldata) функции-члена.  
+ To use immediate rendering, call the [CacheData](#cachedata) or [CacheGlobalData](#cacheglobaldata) member function.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
- Эта функция поддерживает изменение содержимого источника данных.  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
+ Call this function to support changing the contents of the data source.  
   
 ```  
 void DelaySetData(
@@ -251,22 +255,22 @@ void DelaySetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- Формат буфера обмена, в котором будет размещаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ The Clipboard format in which the data is to be placed. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором необходимо заменить данные. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be replaced. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>Примечания  
- [OnSetData](#onsetdata) вызывается платформой, когда это происходит. Это используется, только когда платформа Возвращает источник данных, из [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Если `DelaySetData` не вызывается, ваш `OnSetData` функция никогда не будет вызываться. `DelaySetData`должен вызываться для каждого буфера обмена или **FORMATETC** требуется поддержка формата.  
+### <a name="remarks"></a>Remarks  
+ [OnSetData](#onsetdata) will be called by the framework when this happens. This is only used when the framework returns the data source from [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). If `DelaySetData` is not called, your `OnSetData` function will never be called. `DelaySetData` should be called for each Clipboard or **FORMATETC** format you support.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="dodragdrop"></a>COleDataSource::DoDragDrop  
- Вызовите `DoDragDrop` функции-члена для операции перетаскивания и вставки для этого источника данных, обычно в виде [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) обработчика.  
+##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
+ Call the `DoDragDrop` member function to perform a drag-and-drop operation for this data source, typically in an [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) handler.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -275,76 +279,76 @@ DROPEFFECT DoDragDrop(
     COleDropSource* pDropSource = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwEffects`  
- И перетащите операции, разрешенные для этого источника данных. Может иметь одно или несколько из следующих:  
+ Drag-and-drop operations that are allowed on this data source. Can be one or more of the following:  
   
-- `DROPEFFECT_COPY`Операция копирования может быть выполнена.  
+- `DROPEFFECT_COPY` A copy operation could be performed.  
   
-- `DROPEFFECT_MOVE`Может быть выполнена операция перемещения.  
+- `DROPEFFECT_MOVE` A move operation could be performed.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными может быть установлено.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data could be established.  
   
-- `DROPEFFECT_SCROLL`Указывает, что может произойти прокрутки операции перетаскивания.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation could occur.  
   
  `lpRectStartDrag`  
- Указатель на прямоугольник, который определяет, где фактически начинает перетаскивание. Дополнительные сведения см. в разделе "Примечания".  
+ Pointer to the rectangle that defines where the drag actually starts. For more information, see the following Remarks section.  
   
  *pDropSource*  
- Указывает источника перетаскивания. Если **NULL** затем реализацию по умолчанию [COleDropSource](../../mfc/reference/coledropsource-class.md) будет использоваться.  
+ Points to a drop source. If **NULL** then a default implementation of [COleDropSource](../../mfc/reference/coledropsource-class.md) will be used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Удалить эффект, созданные операцией перетаскивания и вставки; в противном случае `DROPEFFECT_NONE` Если операция никогда не начинается, так как пользователь отпущена перед выходом из предоставленного прямоугольника.  
+### <a name="return-value"></a>Return Value  
+ Drop effect generated by the drag-and-drop operation; otherwise `DROPEFFECT_NONE` if the operation never begins because the user released the mouse button before leaving the supplied rectangle.  
   
-### <a name="remarks"></a>Примечания  
- Операции перетаскивания и вставки не начинается немедленно. Он ожидает, пока курсор мыши выходит за пределы прямоугольника, определяемого `lpRectStartDrag` или пока не были пройдены указанного числа миллисекунд. Если `lpRectStartDrag` — **NULL**, размер прямоугольника равно одному пикселю.  
+### <a name="remarks"></a>Remarks  
+ The drag-and-drop operation does not start immediately. It waits until the mouse cursor leaves the rectangle specified by `lpRectStartDrag` or until a specified number of milliseconds have passed. If `lpRectStartDrag` is **NULL**, the size of the rectangle is one pixel.  
   
- Время задержки задается параметр раздела реестра. Время задержки можно изменить путем вызова [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) или [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Если время задержки не указан, используется значение по умолчанию 200 миллисекунд. Время задержки перетащите хранится следующим образом:  
+ The delay time is specified by a registry key setting. You can change the delay time by calling [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) or [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). If you do not specify the delay time, a default value of 200 milliseconds is used. Drag delay time is stored as follows:  
   
--   Время задержки Windows NT перетащите хранится в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
+-   Windows NT   Drag delay time is stored in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
   
--   Время задержки перетащите 3.x Windows хранится в WIN. INI-файл, в разделе [Windows}.  
+-   Windows 3.x   Drag delay time is stored in the WIN.INI file, under the [Windows} section.  
   
--   Время задержки Windows 95/98 перетащите хранится в кэшированная версия WIN. INI-ФАЙЛЕ.  
+-   Windows 95/98   Drag delay time is stored in a cached version of WIN.INI.  
   
- Для перетащите Дополнительные сведения о том, как задержки сведения хранятся в реестре или. INI-файл, в разделе [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about how drag delay information is stored in either the registry or the .INI file, see [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in the Windows SDK.  
   
- Дополнительные сведения см. в статье [перетаскивание: реализация источника Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
+ For more information, see the article [Drag and Drop: Implementing a Drop Source](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="empty"></a>COleDataSource::Empty  
- Эта функция вызывается для пустой `COleDataSource` объект данных.  
+##  <a name="empty"></a>  COleDataSource::Empty  
+ Call this function to empty the `COleDataSource` object of data.  
   
 ```  
 void Empty();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оба кэшируются и форматов подготовки к просмотру задержки очищаются, поэтому они могут использоваться повторно.  
+### <a name="remarks"></a>Remarks  
+ Both cached and delay render formats are emptied so they can be reused.  
   
- Дополнительные сведения см. в разделе [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) in the Windows SDK.  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
- Отображает данные, в буфере обмена, а затем позволяет вставлять данные из буфера обмена после закрытия приложения.  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
+ Renders data that is on the Clipboard, and then lets you paste data from the Clipboard after your application shuts down.  
   
 ```  
 static void PASCAL FlushClipboard();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Используйте [SetClipboard](#setclipboard) поместить данные в буфер обмена.  
+### <a name="remarks"></a>Remarks  
+ Use [SetClipboard](#setclipboard) to put data on the Clipboard.  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
- Определяет, является ли данные в буфере обмена была изменена с момента [SetClipboard](#setclipboard) последнего вызова метода и если да, идентифицирует текущий владелец.  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
+ Determines whether the data on the Clipboard has changed since [SetClipboard](#setclipboard) was last called and, if so, identifies the current owner.  
   
 ```  
 static COleDataSource* PASCAL GetClipboardOwner();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Источник данных в данный момент в буфере обмена или **NULL** Если нет ничего в буфер обмена или буфера обмена не является владельцем вызывающего приложения.  
+### <a name="return-value"></a>Return Value  
+ The data source currently on the Clipboard, or **NULL** if there is nothing on the Clipboard or if the Clipboard is not owned by the calling application.  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
- Вызывается платформой для извлечения данных в указанном формате.  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
+ Called by the framework to retrieve data in the specified format.  
   
 ```  
 virtual BOOL OnRenderData(
@@ -352,27 +356,27 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `lpStgMedium`  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структура, в которой должны быть возвращены данные.  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in which the data is to be returned.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Указанный формат является одним помещенный в `COleDataSource` с помощью [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функции-члена для отложенной подготовки к просмотру. Реализация по умолчанию эта функция будет вызывать [OnRenderFileData](#onrenderfiledata) или [OnRenderGlobalData](#onrenderglobaldata) Если указанный носитель файла или памяти, соответственно. Если не указано ни одно из этих форматов, реализация по умолчанию возвращает значение 0 и не выполняют никаких действий. Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function for delayed rendering. The default implementation of this function will call [OnRenderFileData](#onrenderfiledata) or [OnRenderGlobalData](#onrenderglobaldata) if the supplied storage medium is either a file or memory, respectively. If neither of these formats are supplied, then the default implementation will return 0 and do nothing. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Если `lpStgMedium` ->  *tymed* — **TYMED_NULL**, **STGMEDIUM** следует выделять и заполнены в соответствии с *lpFormatEtc-> tymed*. Если это не **TYMED_NULL**, **STGMEDIUM** должно быть заполнено на месте с данными.  
+ If `lpStgMedium`-> *tymed* is **TYMED_NULL**, the **STGMEDIUM** should be allocated and filled as specified by *lpFormatEtc->tymed*. If it is not **TYMED_NULL**, the **STGMEDIUM** should be filled in place with the data.  
   
- Существует расширенная overridable. Переопределите эту функцию для предоставления данных в запрошенном пользователем формате и средних. В зависимости от данных может потребоваться переопределить один из версии этих функций вместо него. Если данные хранятся в малых и фиксированного размера, переопределяют `OnRenderGlobalData`. Если данные в файле или является переменного размера, переопределите `OnRenderFileData`.  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If your data is small and fixed in size, override `OnRenderGlobalData`. If your data is in a file, or is of variable size, override `OnRenderFileData`.  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) тип перечисления и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures, the [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) enumeration type, and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
- Вызывается платформой для извлечения данных в указанном формате, если указанный носитель — это файл.  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is a file.  
   
 ```  
 virtual BOOL OnRenderFileData(
@@ -380,25 +384,25 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `pFile`  
- Указывает на [CFile](../../mfc/reference/cfile-class.md) объект, в котором должен быть подготовлен к просмотру данные.  
+ Points to a [CFile](../../mfc/reference/cfile-class.md) object in which the data is to be rendered.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Указанный формат является одним помещенный в `COleDataSource` с помощью [DelayRenderData](#delayrenderdata) функции-члена для отложенной подготовки к просмотру. Реализация по умолчанию эта функция просто возвращает **FALSE**.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- Существует расширенная overridable. Переопределите эту функцию для предоставления данных в запрошенном пользователем формате и средних. В зависимости от данных может потребоваться переопределить один из версии этих функций вместо него. Если для обработки нескольких носителей, необходимо переопределить [OnRenderData](#onrenderdata). Если данные в файле или является переменного размера, переопределите `OnRenderFileData`. Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you might want to override one of the other versions of this function instead. If you want to handle multiple storage media, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override `OnRenderFileData`. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
- Вызывается платформой для получения данных в указанном формате, если указанный носитель является глобальной памяти.  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is global memory.  
   
 ```  
 virtual BOOL OnRenderGlobalData(
@@ -406,27 +410,27 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `phGlobal`  
- Указывает дескриптор глобальной памяти, в котором данные тоже должны быть возвращены. Если один еще не был выделен, этот параметр может иметь **NULL**.  
+ Points to a handle to global memory in which the data is to be returned. If one has not yet been allocated, this parameter can be **NULL**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Указанный формат является одним помещенный в `COleDataSource` с помощью [DelayRenderData](#delayrenderdata) функции-члена для отложенной подготовки к просмотру. Реализация по умолчанию эта функция просто возвращает **FALSE**.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- Если `phGlobal` — **NULL**, затем новый `HGLOBAL` следует выделять и возвращаются в `phGlobal`. В противном случае `HGLOBAL` заданные `phGlobal` должно быть заполнено с данными. Объем данных помещаются в `HGLOBAL` не должен превышать текущий размер блока памяти. Кроме того блок не может быть перемещен к значению большего размера.  
+ If `phGlobal` is **NULL**, then a new `HGLOBAL` should be allocated and returned in `phGlobal`. Otherwise, the `HGLOBAL` specified by `phGlobal` should be filled with the data. The amount of data placed in the `HGLOBAL` must not exceed the current size of the memory block. Also, the block cannot be reallocated to a larger size.  
   
- Существует расширенная overridable. Переопределите эту функцию для предоставления данных в запрошенном пользователем формате и средних. В зависимости от данных может потребоваться переопределить один из версии этих функций вместо него. Если для обработки нескольких носителей, необходимо переопределить [OnRenderData](#onrenderdata). Если данные в файле или является переменного размера, переопределите [OnRenderFileData](#onrenderfiledata). Дополнительные сведения о отложенной подготовки к просмотру как обработанное MFC, см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If you want to handle multiple storage media, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override [OnRenderFileData](#onrenderfiledata). For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
- Вызывается платформой для установки или замены данных в `COleDataSource` объекта в указанном формате.  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
+ Called by the framework to set or replace the data in the `COleDataSource` object in the specified format.  
   
 ```  
 virtual BOOL OnSetData(
@@ -435,37 +439,37 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат замены данных.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which data is being replaced.  
   
  `lpStgMedium`  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуру, содержащую данные, который заменяет текущее содержимое `COleDataSource` объекта.  
+ Points to the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure containing the data that will replace the current contents of the `COleDataSource` object.  
   
  `bRelease`  
- Указывает, кто является владельцем среды хранения после завершения вызова функции. Вызывающая сторона определяет, кто отвечает за освобождение ресурсов, выделенной среды хранения. Вызывающий объект устанавливается не `bRelease`. Если `bRelease` имеет ненулевое значение, источник данных принимает право на владение, освобождение среды после завершения его использования. Когда `bRelease` имеет значение 0, вызывающий объект продолжает владеть и источника данных можно использовать среду хранения только в течение всего вызова.  
+ Indicates who has ownership of the storage medium after completing the function call. The caller decides who is responsible for releasing the resources allocated on behalf of the storage medium. The caller does this by setting `bRelease`. If `bRelease` is nonzero, the data source takes ownership, freeing the medium when it has finished using it. When `bRelease` is 0, the caller retains ownership and the data source can use the storage medium only for the duration of the call.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Источник данных вступают в владения данных он получен успешно. То есть, он не стать владельцем, если `OnSetData` возвращает 0. Если источник данных принимает право на владение, он освобождает среду хранения путем вызова [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) функции.  
+### <a name="remarks"></a>Remarks  
+ The data source does not take ownership of the data until it has successfully obtained it. That is, it does not take ownership if `OnSetData` returns 0. If the data source takes ownership, it frees the storage medium by calling the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) function.  
   
- Реализация по умолчанию не выполняет никаких действий. Переопределите эту функцию для замены данных в указанном формате. Существует расширенная overridable.  
+ The default implementation does nothing. Override this function to replace the data in the specified format. This is an advanced overridable.  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) функции в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures and the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) functions in the Windows SDK.  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
- Помещает данные, содержащиеся в `COleDataSource` объекта в буфере обмена после вызова одного из следующих функций: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), или [DelayRenderFileData](#delayrenderfiledata).  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
+ Puts the data contained in the `COleDataSource` object on the Clipboard after calling one of the following functions: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), or [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  
 void SetClipboard();
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC HIERSVR](../../visual-cpp-samples.md)   
- [Пример MFC OCLIENT](../../visual-cpp-samples.md)   
- [CCmdTarget-класс](../../mfc/reference/ccmdtarget-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс COleDataObject](../../mfc/reference/coledataobject-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDataObject Class](../../mfc/reference/coledataobject-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Класс CCheckListBox | Документы Microsoft"
+title: CCheckListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCheckListBox class
-- checklist boxes
+- CCheckListBox [MFC], CCheckListBox
+- CCheckListBox [MFC], Create
+- CCheckListBox [MFC], DrawItem
+- CCheckListBox [MFC], Enable
+- CCheckListBox [MFC], GetCheck
+- CCheckListBox [MFC], GetCheckStyle
+- CCheckListBox [MFC], IsEnabled
+- CCheckListBox [MFC], MeasureItem
+- CCheckListBox [MFC], OnGetCheckPosition
+- CCheckListBox [MFC], SetCheck
+- CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 caps.latest.revision: 26
 author: mikeblome
@@ -46,73 +55,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2cce91e3b6cb6cdf6ec2f4564fcf5090a54c917f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af338e05ffbbbcce5cd6fadd8e8d9e432924b353
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cchecklistbox-class"></a>Класс CCheckListBox
-Предоставляет функции поля со списком Windows.  
+# <a name="cchecklistbox-class"></a>CCheckListBox Class
+Provides the functionality of a Windows checklist box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCheckListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::CCheckListBox](#cchecklistbox)|Создает объект `CCheckListBox`.|  
+|[CCheckListBox::CCheckListBox](#cchecklistbox)|Constructs a `CCheckListBox` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::Create](#create)|Поле контрольного списка Windows создает и присоединяет его к `CCheckListBox` объекта.|  
-|[CCheckListBox::DrawItem](#drawitem)|Вызывается инфраструктурой при изменении внешнего вида изменяется список рисование владельцем.|  
-|[CCheckListBox::Enable](#enable)|Включает или отключает элемент поля контрольный список.|  
-|[CCheckListBox::GetCheck](#getcheck)|Получает состояние флажка элемента.|  
-|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Получает стиль элемента управления флажков.|  
-|[CCheckListBox::IsEnabled](#isenabled)|Определяет, включен ли элемент.|  
-|[CCheckListBox::MeasureItem](#measureitem)|Вызывается инфраструктурой при создании списка стилей рисования владельцем.|  
-|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Вызывается платформой для получения позиции элемента флажок.|  
-|[CCheckListBox::SetCheck](#setcheck)|Задает состояние флажка элемента.|  
-|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Задает стиль элемента управления флажков.|  
+|[CCheckListBox::Create](#create)|Creates the Windows checklist box and attaches it to the `CCheckListBox` object.|  
+|[CCheckListBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-draw list box changes.|  
+|[CCheckListBox::Enable](#enable)|Enables or disables a checklist box item.|  
+|[CCheckListBox::GetCheck](#getcheck)|Gets the state of an item's check box.|  
+|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Gets the style of the control's check boxes.|  
+|[CCheckListBox::IsEnabled](#isenabled)|Determines whether an item is enabled.|  
+|[CCheckListBox::MeasureItem](#measureitem)|Called by the framework when a list box with an owner-draw style is created.|  
+|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Called by the framework to get the position of an item's check box.|  
+|[CCheckListBox::SetCheck](#setcheck)|Sets the state of an item's check box.|  
+|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Sets the style of the control's check boxes.|  
   
-## <a name="remarks"></a>Примечания  
- «Контрольный список для поля» отображает список элементов, таких как имена файлов. Каждый элемент в списке имеет флажок рядом с ним, пользователь может установите или снимите флажок.  
+## <a name="remarks"></a>Remarks  
+ A "checklist box" displays a list of items, such as filenames. Each item in the list has a check box next to it that the user can check or clear.  
   
- `CCheckListBox`используется только для определяемых владельцем элементов управления, поскольку список содержит несколько текстовых строк. В простейшем случае поле контрольного списка содержит флажки и текстовые строки, но необходимо иметь текст вообще. Например может иметь маленькие точечные рисунки, снимите флажок рядом с каждым элементом списка.  
+ `CCheckListBox` is only for owner-drawn controls because the list contains more than text strings. At its simplest, a checklist box contains text strings and check boxes, but you do not need to have text at all. For example, you could have a list of small bitmaps with a check box next to each item.  
   
- Для создания собственного контрольного списка, необходимо создать производный класс из `CCheckListBox`. Для создания собственного производного класса, создание конструктора для производного класса, затем вызовите **создать**.  
+ To create your own checklist box, you must derive your own class from `CCheckListBox`. To derive your own class, write a constructor for the derived class, then call **Create**.  
   
- Если требуется обрабатывать сообщения уведомления Windows, отправляемые поле со списком с родительским (обычно класс, производный от [CDialog](../../mfc/reference/cdialog-class.md)), добавление карты сообщение входа и обработчик сообщений функции-члена родительский класс для каждого сообщения.  
+ If you want to handle Windows notification messages sent by a list box to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
   
- Каждая запись сопоставления сообщений имеет следующий вид:  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- где `id` указывает идентификатор дочернего окна элемента управления отправки уведомлений и `memberFxn` имя родительской функции члена, написанный для обработки уведомления.  
+ where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- Прототип функции родительского выглядит следующим образом:  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- Существует только одна запись сопоставления сообщений, относящиеся конкретно к **CCheckListBox** (но см. также записи карт сообщений для [CListBox](../../mfc/reference/clistbox-class.md)):  
+ There is only one message-map entry that pertains specifically to **CCheckListBox** (but see also the message-map entries for [CListBox](../../mfc/reference/clistbox-class.md)):  
   
-- **ON_CLBN_CHKCHANGE** пользователь изменил состояние флажка элемента.  
+- **ON_CLBN_CHKCHANGE** The user has changed the state of an item's checkbox.  
   
- Если ваш контрольный список является окном контрольный список по умолчанию (список строк с размерами по умолчанию флажки слева от каждого), можно использовать значение по умолчанию [CCheckListBox::DrawItem](#drawitem) для отрисовки поля со списком. В противном случае, необходимо переопределить [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) функции и [CCheckListBox::DrawItem](#drawitem) и [CCheckListBox::MeasureItem](#measureitem) функции.  
+ If your checklist box is a default checklist box (a list of strings with the default-sized checkboxes to the left of each), you can use the default [CCheckListBox::DrawItem](#drawitem) to draw the checklist box. Otherwise, you must override the [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) function and the [CCheckListBox::DrawItem](#drawitem) and [CCheckListBox::MeasureItem](#measureitem) functions.  
   
- Поле контрольного списка можно создать из шаблона диалогового окна или непосредственно в коде.  
+ You can create a checklist box either from a dialog template or directly in your code.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -123,24 +132,24 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
- Создает объект `CCheckListBox`.  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
+ Constructs a `CCheckListBox` object.  
   
 ```  
 CCheckListBox();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Создании `CCheckListBox` объекта в два этапа. Сначала определите класс, производный от `CCheckListBox`, затем вызовите **создать**, который инициализирует поля со списком Windows и присоединяет его к `CCheckListBox` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First define a class derived from `CCheckListBox`, then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCControlLadenDialog&#60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
- Поле контрольного списка Windows создает и присоединяет его к `CCheckListBox` объекта.  
+##  <a name="create"></a>  CCheckListBox::Create  
+ Creates the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -150,67 +159,67 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Задает стиль поля со списком. Необходимо выбрать **LBS_HASSTRINGS** и **LBS_OWNERDRAWFIXED** (все элементы в списке имеют одинаковую высоту) или **LBS_OWNERDRAWVARIABLE** (элементов в списке — различной высоты). Этот стиль можно объединять с другими [стили списков](../../mfc/reference/list-box-styles.md) за исключением **LBS_USETABSTOPS**.  
+ Specifies the style of the checklist box. The style must be **LBS_HASSTRINGS** and either **LBS_OWNERDRAWFIXED** (all items in the list are the same height) or **LBS_OWNERDRAWVARIABLE** (items in the list are of varying heights). This style can be combined with other [list-box styles](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) except **LBS_USETABSTOPS**.  
   
  `rect`  
- Указывает поле контрольного списка размеров и положения. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.  
+ Specifies the checklist-box size and position. Can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- Указывает поле контрольного списка родительского окна (обычно `CDialog` объекта). Оно не должно быть **NULL**.  
+ Specifies the checklist box's parent window (usually a `CDialog` object). It must not be **NULL**.  
   
  `nID`  
- Указывает идентификатор элемента управления поле контрольного списка.  
+ Specifies the checklist box's control ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CCheckListBox` объекта в два этапа. Во-первых, определите класс, производный от **CcheckListBox** , а затем вызвать **создать**, который инициализирует поля со списком Windows и присоединяет его к `CCheckListBox`. В разделе [CCheckListBox::CCheckListBox](#cchecklistbox) образец.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First, define a class derived from **CcheckListBox** and then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox`. See [CCheckListBox::CCheckListBox](#cchecklistbox) for a sample.  
   
- При **создать** выполняет Windows отправляет [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), и [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) сообщений для элемента управления полем контрольный список.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the checklist-box control.  
   
- Эти сообщения обрабатываются по умолчанию с помощью [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), и [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) функции-члены в `CWnd` базового класса. Для расширения обработки сообщений по умолчанию, добавить схему сообщений для производного класса и функции-члены переопределение предыдущий обработчик сообщений. Переопределение `OnCreate`, например, для выполнения инициализации, необходимые для нового класса.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, add a message map to the your derived class and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- Примените следующий [стили окна](../../mfc/reference/window-styles.md) к элементу управления поле контрольного списка:  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a checklist-box control:  
   
-- **WS_CHILD** всегда  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** обычно  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** редко  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL** для добавления вертикальной полосы прокрутки  
+- **WS_VSCROLL** To add a vertical scroll bar  
   
-- **WS_HSCROLL** для добавления горизонтальной полосы прокрутки  
+- **WS_HSCROLL** To add a horizontal scroll bar  
   
-- **WS_GROUP** для группирования элементов управления  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** чтобы разрешить переход к этому элементу управления  
+- **WS_TABSTOP** To allow tabbing to this control  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
- Вызывается инфраструктурой при изменении внешнего вида изменяется определяемые владельцем контрольный список.  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn checklist box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Длинный указатель [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе требуется рисования.  
+ A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>Примечания  
- **ItemAction** и **itemState** члены `DRAWITEMSTRUCT` структуры определяют рисования действие, которое должно быть выполнено.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** and **itemState** members of the `DRAWITEMSTRUCT` structure define the drawing action that is to be performed.  
   
- По умолчанию эта функция выводит список флажок по умолчанию, содержащая список строк, каждый с размерами по умолчанию флажок рядом с. Размер списка флажок не указано в [создать](#create).  
+ By default, this function draws a default checkbox list, consisting of a list of strings each with a default-sized checkbox to the left. The checkbox list size is the one specified in [Create](#create).  
   
- Переопределите эту функцию-член для реализации Рисование рисование владельцем контрольный список полей, которые не используются по умолчанию, такие как контрольный список полей со списками, которые не являются строками, элементы переменной высоты или флажки, которые не входят в левом. Приложение должно восстановить всех графических устройств интерфейс (GDI) выбранных объектов в контексте отображения указано в `lpDrawItemStruct` до завершения работы этой функции-члена.  
+ Override this member function to implement drawing of owner-draw checklist boxes that are not the default, such as checklist boxes with lists that aren't strings, with variable-height items, or with checkboxes that aren't on the left. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
- Если контрольный список элементов не ту же высоту, контрольный список поле стиль (указанного в **создать**) должны быть **LBS_OWNERVARIABLE**, и необходимо переопределить [MeasureItem](#measureitem) функции.  
+ If checklist box items are not all the same height, the checklist box style (specified in **Create**) must be **LBS_OWNERVARIABLE**, and you must override the [MeasureItem](#measureitem) function.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
- Эта функция вызывается для включения или отключения элемент поля контрольный список.  
+##  <a name="enable"></a>  CCheckListBox::Enable  
+ Call this function to enable or disable a checklist box item.  
   
 ```  
 void Enable(
@@ -218,76 +227,76 @@ void Enable(
     BOOL bEnabled = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Индекс элемента поле контрольного списка для включения.  
+ Index of the checklist box item to be enabled.  
   
  `bEnabled`  
- Указывает, включен ли элемент.  
+ Specifies whether the item is enabled or disabled.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
- Получает состояние указанного флажок.  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
+ Retrieves the state of the specified check box.  
   
 ```  
 int GetCheck(int nIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Отсчитываемый от нуля индекс флажок, который содержится в списке.  
+ Zero-based index of a check box that is contained in the list box.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Состояние указанный флажок. В следующей таблице перечислены возможные значения.  
+### <a name="return-value"></a>Return Value  
+ The state of the specified check box. The following table lists possible values.  
   
-|Значение|Описание|  
+|Value|Description|  
 |-----------|-----------------|  
-|`BST_CHECKED`|Флажок установлен.|  
-|`BST_UNCHECKED`|Флажок не установлен.|  
-|`BST_INDETERMINATE`|Состояние флажка не определено.|  
+|`BST_CHECKED`|The check box is checked.|  
+|`BST_UNCHECKED`|The check box is not checked.|  
+|`BST_INDETERMINATE`|The check box state is indeterminate.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
- Эта функция вызывается для получения стиля поле контрольного списка.  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
+ Call this function to get the checklist box's style.  
   
 ```  
 UINT GetCheckStyle();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Стиль элемента управления флажки.  
+### <a name="return-value"></a>Return Value  
+ The style of the control's check boxes.  
   
-### <a name="remarks"></a>Примечания  
- Сведения о возможных стилей см. в разделе [SetCheckStyle](#setcheckstyle).  
+### <a name="remarks"></a>Remarks  
+ For information on possible styles, see [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
- Эта функция вызывается для определения, включен ли элемент.  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
+ Call this function to determine whether an item is enabled.  
   
 ```  
 BOOL IsEnabled(int nIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Индекс элемента.  
+ Index of the item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент включен; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is enabled; otherwise 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
- Вызывается инфраструктурой при создании нестандартных стиль поля со списком.  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
+ Called by the framework when a checklist box with a nondefault style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- Длинный указатель [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) структуры.  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию эта функция-член не выполняет никаких действий. Переопределить эту функцию-член и заполните `MEASUREITEMSTRUCT` структуры для информирования Windows измерений поле контрольного списка элементов. Если поле контрольного списка создается с [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) стиль, платформа вызывает эту функцию-член для каждого элемента в списке. В противном случае этот член вызывается только один раз.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of checklist-box items. If the checklist box is created with the [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
- Платформа вызывает эту функцию для получения позиции и размера флажка в элементе.  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
+ The framework calls this function to get the position and size of the check box in an item.  
   
 ```  
 virtual CRect OnGetCheckPosition(
@@ -295,21 +304,21 @@ virtual CRect OnGetCheckPosition(
     CRect rectCheckBox);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *rectItem*  
- Положение и размер элемента списка.  
+ The position and size of the list item.  
   
  `rectCheckBox`  
- По умолчанию положение и размер флажка элемента.  
+ The default position and size of an item's check box.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Положение и размер флажка элемента.  
+### <a name="return-value"></a>Return Value  
+ The position and size of an item's check box.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию возвращает только по умолчанию положение и размер флажка ( `rectCheckBox`). По умолчанию флажок выравнивается в левом верхнем углу элемента и размер стандартный флажок. Возможны случаи, когда требуется флажки справа или хотите флажок больше или меньше. В этих случаях переопределить `OnGetCheckPosition` изменение флажок положение и размер в элементе.  
+### <a name="remarks"></a>Remarks  
+ The default implementation only returns the default position and size of the check box ( `rectCheckBox`). By default, a check box is aligned in the upper-left corner of an item and is the standard check box size. There may be cases where you want the check boxes on the right, or want a larger or smaller check box. In these cases, override `OnGetCheckPosition` to change the check box position and size within the item.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
- Задает состояние указанного флажок.  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
+ Sets the state of the specified check box.  
   
 ```  
 void SetCheck(
@@ -317,35 +326,35 @@ void SetCheck(
     int nCheck);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Отсчитываемый от нуля индекс флажок, который содержится в списке.  
+ Zero-based index of a check box that is contained in the list box.  
   
  `nCheck`  
- Состояние кнопки для указанного поля с флажком. Возможные значения см.  
+ The button state for the specified check box. See the Remarks section for possible values.  
   
-### <a name="remarks"></a>Примечания  
- В следующей таблице перечислены возможные значения для `nCheck` параметр.  
+### <a name="remarks"></a>Remarks  
+ The following table lists possible values for the `nCheck` parameter.  
   
-|Значение|Описание|  
+|Value|Description|  
 |-----------|-----------------|  
-|**BST_CHECKED**|Установите указанный флажок.|  
-|**BST_UNCHECKED**|Снимите указанный флажок.|  
-|**BST_INDETERMINATE**|Установите неопределенное состояние указанный флажок.<br /><br /> Это состояние доступна, только если флажок стиль `BS_AUTO3STATE` или `BS_3STATE`. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/button-styles.md).|  
+|**BST_CHECKED**|Select the specified check box.|  
+|**BST_UNCHECKED**|Clear the specified check box.|  
+|**BST_INDETERMINATE**|Set the specified check box state to indeterminate.<br /><br /> This state is only available if the check box style is `BS_AUTO3STATE` or `BS_3STATE`. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
- Эта функция вызывается для задания стиля флажков в окне контрольного списка.  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
+ Call this function to set the style of check boxes in the checklist box.  
   
 ```  
 void SetCheckStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- Определяет стиль флажки в поле контрольного списка.  
+ Determines the style of check boxes in the checklist box.  
   
-### <a name="remarks"></a>Примечания  
- Допустимы стили являются:  
+### <a name="remarks"></a>Remarks  
+ Valid styles are:  
   
 - **BS_CHECKBOX**  
   
@@ -355,11 +364,11 @@ void SetCheckStyle(UINT nStyle);
   
 - **BS_3STATE**  
   
- Сведения об этих стилей см. в разделе [стили кнопок](../../mfc/reference/button-styles.md).  
+ For information on these styles, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC TSTCON](../../visual-cpp-samples.md)   
- [CListBox-класс](../../mfc/reference/clistbox-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CListBox-класс](../../mfc/reference/clistbox-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TSTCON](../../visual-cpp-samples.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)
 

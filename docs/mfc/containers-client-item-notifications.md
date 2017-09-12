@@ -1,61 +1,80 @@
 ---
-title: "Контейнеры. Уведомления элементов клиентов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "клиентские элементы и контейнеры OLE"
-  - "уведомления, клиентский элемент контейнера"
-  - "OLE - контейнеры, уведомления клиентских элементов"
+title: 'Containers: Client-Item Notifications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], container client item
+- OLE containers [MFC], client-item notifications
+- client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Контейнеры. Уведомления элементов клиентов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5023d697e6c87199d449687f21e35c3e31fea854
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает функции переопределяемого метода, платформы MFC вызывает серверные приложения при изменении элементов документа для клиентского приложения.  
+---
+# <a name="containers-client-item-notifications"></a>Containers: Client-Item Notifications
+This article discusses the overridable functions that the MFC framework calls when server applications modify items in your client application's document.  
   
- [COleClientItem](../mfc/reference/coleclientitem-class.md) определяет несколько функций переопределяемого метода, которые вызываются в ответ на запросы из компонентов приложения, которое также называется серверным приложением.  Эти переопределяемые методы обычно используются в качестве уведомления.  Они " контейнерное приложение различных событий, таких как прокрутка, активация или изменение положения и изменений, пользователь выполняет редактирования или иным управление элемент.  
+ [COleClientItem](../mfc/reference/coleclientitem-class.md) defines several overridable functions that are called in response to requests from the component application, which is also called the server application. These overridables usually act as notifications. They inform the container application of various events, such as scrolling, activation, or a change of position, and of changes that the user makes when editing or otherwise manipulating the item.  
   
- Платформа уведомляет в приложение контейнера изменений посредством вызова метода `COleClientItem::OnChange`, при которой реализацию переопределяемого метода не требуется.  Защищенная эта функция получает 2 аргумента.  Первое указывает причину сервер изменился элемент:  
+ The framework notifies your container application of changes through a call to `COleClientItem::OnChange`, an overridable function whose implementation is required. This protected function receives two arguments. The first specifies the reason the server changed the item:  
   
-|Уведомление|Значение|  
-|-----------------|--------------|  
-|`OLE_CHANGED`|Внешний вид элемент OLE был изменен.|  
-|`OLE_SAVED`|Элемент OLE сохранено.|  
-|`OLE_CLOSED`|Элемент OLE было закрыто.|  
-|**OLE\_RENAMED**|Серверный документ, содержащий элемент OLE переименован.|  
-|`OLE_CHANGED_STATE`|Элемент OLE изменилось из одного состояния в другое.|  
-|**OLE\_CHANGED\_ASPECT**|Аспект рисования элемент OLE был изменен средой выполнения.|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|`OLE_CHANGED`|The OLE item's appearance has changed.|  
+|`OLE_SAVED`|The OLE item has been saved.|  
+|`OLE_CLOSED`|The OLE item has been closed.|  
+|**OLE_RENAMED**|The server document containing the OLE item has been renamed.|  
+|`OLE_CHANGED_STATE`|The OLE item has changed from one state to another.|  
+|**OLE_CHANGED_ASPECT**|The OLE item's draw aspect has been changed by the framework.|  
   
- Эти значения из перечисления **OLE\_NOTIFICATION**, который определен в AFXOLE.H.  
+ These values are from the **OLE_NOTIFICATION** enumeration, which is defined in AFXOLE.H.  
   
- Второй аргумент для данной функции определяет, как элемент был изменен или, какое состояние он входил:  
+ The second argument to this function specifies how the item has changed or what state it has entered:  
   
-|Если первый аргумент|Второй аргумент|  
-|--------------------------|---------------------|  
-|`OLE_SAVED` или `OLE_CLOSED`|Не используется.|  
-|`OLE_CHANGED`|Указывает аспект элемент OLE, которое было изменено.|  
-|`OLE_CHANGED_STATE`|Описание перехода в состояние \(`emptyState`, **loadedState**`openState`, `activeState` или `activeUIState`\).|  
+|When first argument is|Second argument|  
+|----------------------------|---------------------|  
+|`OLE_SAVED` or `OLE_CLOSED`|Is not used.|  
+|`OLE_CHANGED`|Specifies the aspect of the OLE item that has changed.|  
+|`OLE_CHANGED_STATE`|Describes the state being entered (`emptyState`, **loadedState**, `openState`, `activeState`, or `activeUIState`).|  
   
- Дополнительные сведения о состоянии элемент клиента может принимать см. в разделе [Контейнеры: Состояния элемента клиента](../mfc/containers-client-item-states.md).  
+ For more information about the states a client item can assume, see [Containers: Client-Item States](../mfc/containers-client-item-states.md).  
   
- Платформа вызывает `COleClientItem::OnGetItemPosition`, когда элемент активировать для редактирования локально.  Реализация необходима для приложений, которые поддерживают редактирование локально.  Мастер приложений MFC предоставляет базовую реализацию, присвоить координаты элемента в объект `CRect`, передается в качестве аргумента в `OnGetItemPosition`.  
+ The framework calls `COleClientItem::OnGetItemPosition` when an item is being activated for in-place editing. Implementation is required for applications that support in-place editing. The MFC Application Wizard provides a basic implementation, which assigns the item's coordinates to the `CRect` object that is passed as an argument to `OnGetItemPosition`.  
   
- Если размер или положение элемент OLE изменяются во время редактирования локально, данные о контейнера прямоугольниках позиции и обрезки элемента необходимо обновить и сервер должен получить сведения об изменениях.  Платформа вызывает `COleClientItem::OnChangeItemPosition` для этой цели.  Мастер приложений MFC предоставляет переопределение, вызывает функцию базового класса.  Необходимо изменить функцию, которая записывает мастера приложений для `COleClientItem`\- производного класса, чтобы функция обновляет любые сведения сохранянные системным объектом элемента клиента.  
+ If an OLE item's position or size changes during in-place editing, the container's information about the item's position and clipping rectangles must be updated and the server must receive information about the changes. The framework calls `COleClientItem::OnChangeItemPosition` for this purpose. The MFC Application Wizard provides an override that calls the base class's function. You should edit the function that the application wizard writes for your `COleClientItem`-derived class so that the function updates any information retained by your client-item object.  
   
-## См. также  
- [Контейнеры](../mfc/containers.md)   
- [Контейнеры. Состояния элементов клиентов](../mfc/containers-client-item-states.md)   
- [COleClientItem::OnChangeItemPosition](../Topic/COleClientItem::OnChangeItemPosition.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Client-Item States](../mfc/containers-client-item-states.md)   
+ [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+
+

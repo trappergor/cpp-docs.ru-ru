@@ -1,48 +1,67 @@
 ---
-title: "Функции-члены элемента управления &quot;Ползунок&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl - класс, методы"
-  - "элементы управления "Ползунок", функция-член"
+title: Slider Control Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], methods
+- slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Функции-члены элемента управления &quot;Ползунок&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 440f9a20c1d73bc7f7b125867216d356251d4a08
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Приложение может вызвать функции\-члены элемента управления "ползунок" для получения сведений об элементе управления "ползунок" \([CSliderCtrl](../mfc/reference/csliderctrl-class.md)\) и изменить его характеристики.  
+---
+# <a name="slider-control-member-functions"></a>Slider Control Member Functions
+An application can call the slider control's member functions to retrieve information about the slider control ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) and to change its characteristics.  
   
- Для извлечения положение ползунка \(т е значение пользователь выбирал\), используйте функции\-члена [GetPos](../Topic/CSliderCtrl::GetPos.md).  Чтобы задать положение ползунка используйте функции\-члена [SetPos](../Topic/CSliderCtrl::SetPos.md).  В любой момент можно воспользоваться функцией\-членом класса `VerifyPos` убедиться, что ползунок между минимальным и максимальным значениями.  
+ To retrieve the position of the slider (that is, the value the user has chosen), use the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function. To set the position of the slider, use the [SetPos](../mfc/reference/csliderctrl-class.md#setpos) member function. At any time you can use the `VerifyPos` member function to make sure that the slider is between the minimum and maximum values.  
   
- Диапазон элемента управления "ползунок" набор последовательных значений, элемент управления "ползунок" может представлять.  Большинство приложений используют функции\-члена [SetRange](../Topic/CSliderCtrl::SetRange.md), чтобы установить диапазон элемента управления "ползунок", когда он впервые создается.  Приложения могут динамически изменяется диапазон после элемента управления "ползунок" были созданы с помощью функций\-членов [SetRangeMax](../Topic/CSliderCtrl::SetRangeMax.md) и [SetRangeMin](../Topic/CSliderCtrl::SetRangeMin.md).  Приложение, позволяющее диапазон, который должен изменять динамически обычно получает параметры целевого пробега, когда пользователь завершил работу с элементом управления "ползунок".  Для получения этих параметров используйте [GetRange](../Topic/CSliderCtrl::GetRange.md), [GetRangeMax](../Topic/CSliderCtrl::GetRangeMax.md) и функций\-членов [GetRangeMin](../Topic/CSliderCtrl::GetRangeMin.md).  
+ The range of a slider control is the set of contiguous values that the slider control can represent. Most applications use the [SetRange](../mfc/reference/csliderctrl-class.md#setrange) member function to set the range of a slider control when it is first created. Applications can dynamically alter the range after the slider control has been created by using the [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) and [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) member functions. An application that allows the range to be changed dynamically typically retrieves the final range settings when the user has finished working with the slider control. To retrieve these settings, use the [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), and [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) member functions.  
   
- Приложение может использовать стиль `TBS_AUTOTICKS` наличие деления элемента управления "ползунок", автоматически.  Если приложению требуется элемент управления позицию или частота делений, то можно использовать несколько функции\-члены.  
+ An application can use the `TBS_AUTOTICKS` style to have a slider control's tick marks displayed automatically. If an application needs to control the position or frequency of the tick marks, however, a number of member functions can be used.  
   
- Чтобы задать положение деления, приложение может использовать функции\-члена [SetTic](../Topic/CSliderCtrl::SetTic.md).  Функцию\-член [SetTicFreq](../Topic/CSliderCtrl::SetTicFreq.md) позволяет приложению задавать деления, отображаемые через определенные интервалы в диапазон элемента управления "ползунок".  Например, приложение может использовать этот функции\-члена для отображения только 10 делений в диапазоне от 1 до 100.  
+ To set the position of a tick mark, an application can use the [SetTic](../mfc/reference/csliderctrl-class.md#settic) member function. The [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) member function allows an application to set tick marks that appear at regular intervals in the slider control's range. For example, the application can use this member function to display only 10 tick marks in a range of 1 through 100.  
   
- Для извлечения индекс в диапазоне, соответствующая делению, используйте функции\-члена [GetTic](../Topic/CSliderCtrl::GetTic.md).  Функцию\-член [GetTicArray](../Topic/CSliderCtrl::GetTicArray.md) извлекает массив этих индексов.  Извлечение положение деления, в клиентских координатах, использует функции\-члена [GetTicPos](../Topic/CSliderCtrl::GetTicPos.md).  Приложение может получить количество делений с помощью функции\-члена [GetNumTics](../Topic/CSliderCtrl::GetNumTics.md).  
+ To retrieve the index in the range corresponding to a tick mark, use the [GetTic](../mfc/reference/csliderctrl-class.md#gettic) member function. The [GetTicArray](../mfc/reference/csliderctrl-class.md#getticarray) member function retrieves an array of these indices. To retrieve the position of a tick mark, in client coordinates, use the [GetTicPos](../mfc/reference/csliderctrl-class.md#getticpos) member function. An application can retrieve the number of tick marks by using the [GetNumTics](../mfc/reference/csliderctrl-class.md#getnumtics) member function.  
   
- Функцию\-член [ClearTics](../Topic/CSliderCtrl::ClearTics.md) удаляет все делений элемента управления "ползунок".  
+ The [ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) member function removes all of a slider control's tick marks.  
   
- Размер линии элемента управления "ползунок" определяет, насколько ползунок перемещение, когда приложение получает сообщение уведомления **TB\_LINEDOWN** или **TB\_LINEUP**.  Аналогично, размер страницы определяется ответ на сообщения уведомления **TB\_PAGEDOWN** и **TB\_PAGEUP**.  Приложения могут получать и задавать значения линии и размере страницы с помощью [GetLineSize](../Topic/CSliderCtrl::GetLineSize.md), [SetLineSize](../Topic/CSliderCtrl::SetLineSize.md), [GetPageSize](../Topic/CSliderCtrl::GetPageSize.md) и функций\-членов [SetPageSize](../Topic/CSliderCtrl::SetPageSize.md).  
+ A slider control's line size determines how far the slider moves when an application receives a **TB_LINEDOWN** or **TB_LINEUP** notification message. Similarly, the page size determines the response to the **TB_PAGEDOWN** and **TB_PAGEUP** notification messages. Applications can retrieve and set the line and page size values by using the [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), and [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) member functions.  
   
- Приложение может использовать функций\-членов для извлечения размеры элемента управления "ползунок".  Функцию\-член [GetThumbRect](../Topic/CSliderCtrl::GetThumbRect.md) возвращает ограничивающий прямоугольник для демонстрации.  Функцию\-член [GetChannelRect](../Topic/CSliderCtrl::GetChannelRect.md) возвращает ограничивающий прямоугольник для канала элемента управления "ползунок". \(Канал область над которой ползунок, содержащей выделение перемещается и при выборе диапазон\).  
+ An application can use member functions to retrieve the dimensions of a slider control. The [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) member function retrieves the bounding rectangle for the slider. The [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) member function retrieves the bounding rectangle for the slider control's channel. (The channel is the area over which the slider moves and which contains the highlight when a range is selected.)  
   
- Если элемент управления "ползунок" имеет стиль `TBS_ENABLESELRANGE`, пользователь может выделение диапазона последовательных значений из него.  Несколько функции\-члены позволяют диапазон выделения, чтобы настроить динамически.  Функцию\-член [SetSelection](../Topic/CSliderCtrl::SetSelection.md) задает начальное и конечное положение выделения.  Когда пользователь завершил задан диапазон выделения, приложение может получить параметры с помощью функции\-члена [GetSelection](../Topic/CSliderCtrl::GetSelection.md).  Чтобы удалить выделения пользователя, используйте функции\-члена [ClearSel](../Topic/CSliderCtrl::ClearSel.md).  
+ If a slider control has the `TBS_ENABLESELRANGE` style, the user can select a range of contiguous values from it. A number of member functions allow the selection range to be adjusted dynamically. The [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) member function sets the starting and ending positions of a selection. When the user has finished setting a selection range, an application can retrieve the settings by using the [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) member function. To clear a user's selection, use the [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) member function.  
   
-## См. также  
- [Использование CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

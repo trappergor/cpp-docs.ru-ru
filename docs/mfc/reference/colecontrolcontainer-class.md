@@ -1,5 +1,5 @@
 ---
-title: "Класс COleControlContainer | Документы Microsoft"
+title: COleControlContainer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- custom controls [MFC], sites
-- COleControlContainer class
-- ActiveX control containers [C++], control site
+- COleControlContainer [MFC], COleControlContainer
+- COleControlContainer [MFC], AttachControlSite
+- COleControlContainer [MFC], BroadcastAmbientPropertyChange
+- COleControlContainer [MFC], CheckDlgButton
+- COleControlContainer [MFC], CheckRadioButton
+- COleControlContainer [MFC], CreateControl
+- COleControlContainer [MFC], CreateOleFont
+- COleControlContainer [MFC], FindItem
+- COleControlContainer [MFC], FreezeAllEvents
+- COleControlContainer [MFC], GetAmbientProp
+- COleControlContainer [MFC], GetDlgItem
+- COleControlContainer [MFC], GetDlgItemInt
+- COleControlContainer [MFC], GetDlgItemText
+- COleControlContainer [MFC], HandleSetFocus
+- COleControlContainer [MFC], HandleWindowlessMessage
+- COleControlContainer [MFC], IsDlgButtonChecked
+- COleControlContainer [MFC], OnPaint
+- COleControlContainer [MFC], OnUIActivate
+- COleControlContainer [MFC], OnUIDeactivate
+- COleControlContainer [MFC], ScrollChildren
+- COleControlContainer [MFC], SendDlgItemMessage
+- COleControlContainer [MFC], SetDlgItemInt
+- COleControlContainer [MFC], SetDlgItemText
+- COleControlContainer [MFC], m_crBack
+- COleControlContainer [MFC], m_crFore
+- COleControlContainer [MFC], m_listSitesOrWnds
+- COleControlContainer [MFC], m_nWindowlessControls
+- COleControlContainer [MFC], m_pOleFont
+- COleControlContainer [MFC], m_pSiteCapture
+- COleControlContainer [MFC], m_pSiteFocus
+- COleControlContainer [MFC], m_pSiteUIActive
+- COleControlContainer [MFC], m_pWnd
+- COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
 caps.latest.revision: 21
 author: mikeblome
@@ -69,89 +99,89 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 764583d28bf71319eac5b7e51e0915ae786261a7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6f668fb6613b0970efbe198523d5e3a27a01dbc6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colecontrolcontainer-class"></a>Класс COleControlContainer
-Играет роль контейнера для элементов управления ActiveX.  
+# <a name="colecontrolcontainer-class"></a>COleControlContainer Class
+Acts as a control container for ActiveX controls.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleControlContainer : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleControlContainer::COleControlContainer](#colecontrolcontainer)|Создает объект `COleControlContainer`.|  
+|[COleControlContainer::COleControlContainer](#colecontrolcontainer)|Constructs a `COleControlContainer` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Создает узел элемента управления, размещенного в контейнере.|  
-|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Уведомляет все размещенные элементы управления, которые внешнее свойство изменилось.|  
-|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Изменяет указанную кнопку управления.|  
-|[COleControlContainer::CheckRadioButton](#checkradiobutton)|Выбирает указанный переключатель в группе.|  
-|[COleControlContainer::CreateControl](#createcontrol)|Создает размещенный элемент управления ActiveX.|  
-|[COleControlContainer::CreateOleFont](#createolefont)|Создает шрифт OLE.|  
-|[COleControlContainer::FindItem](#finditem)|Возвращает пользовательский узел указанного элемента управления.|  
-|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Определяет, если сайт элемента управления принимает события.|  
-|[COleControlContainer::GetAmbientProp](#getambientprop)|Получает указанное свойство окружения.|  
-|[COleControlContainer::GetDlgItem](#getdlgitem)|Возвращает элемент указанного диалогового окна.|  
-|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Получает значение элемента управления указанное диалоговое окно.|  
-|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Извлекает заголовок элемента управления указанное диалоговое окно.|  
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Определяет, поддерживает ли `WM_SETFOCUS` сообщения.|  
-|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Обрабатывает сообщения, отправляемые безоконный элемент управления.|  
-|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Определяет состояние указанную кнопку.|  
-|[COleControlContainer::OnPaint](#onpaint)|Вызывается для отрисовки части контейнера.|  
-|[COleControlContainer::OnUIActivate](#onuiactivate)|Вызывается, когда элемент управления будет активирован на месте.|  
-|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Вызывается при деактивации элемента управления.|  
-|[COleControlContainer::ScrollChildren](#scrollchildren)|Вызывается инфраструктурой при получении сообщений прокрутки из дочернего окна.|  
-|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Отправляет сообщение указанному элементу управления.|  
-|[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Задает значение указанного элемента управления.|  
-|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Задает текст указанного элемента управления.|  
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Creates a control site, hosted by the container.|  
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informs all hosted controls that an ambient property has changed.|  
+|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Modifies the specified button control.|  
+|[COleControlContainer::CheckRadioButton](#checkradiobutton)|Selects the specified radio button of a group.|  
+|[COleControlContainer::CreateControl](#createcontrol)|Creates a hosted ActiveX control.|  
+|[COleControlContainer::CreateOleFont](#createolefont)|Creates an OLE font.|  
+|[COleControlContainer::FindItem](#finditem)|Returns the custom site of the specified control.|  
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Determines if the control site is accepting events.|  
+|[COleControlContainer::GetAmbientProp](#getambientprop)|Retrieves the specified ambient property.|  
+|[COleControlContainer::GetDlgItem](#getdlgitem)|Retrieves the specified dialog control.|  
+|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Retrieves the value of the specified dialog control.|  
+|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Retrieves the caption of the specified dialog control.|  
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Determines if the container handles `WM_SETFOCUS` messages.|  
+|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Handles messages sent to a windowless control.|  
+|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Determines the state of the specified button.|  
+|[COleControlContainer::OnPaint](#onpaint)|Called to repaint a portion of the container.|  
+|[COleControlContainer::OnUIActivate](#onuiactivate)|Called when a control is about to be in-place activated.|  
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Called when a control is about to be deactivated.|  
+|[COleControlContainer::ScrollChildren](#scrollchildren)|Called by the framework when scroll messages are received from a child window.|  
+|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Sends a message to the specified control.|  
+|[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Sets the value of the specified control.|  
+|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Sets the text of the specified control.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleControlContainer::m_crBack](#m_crback)|Цвет фона контейнера.|  
-|[COleControlContainer::m_crFore](#m_crfore)|Цвет переднего плана в контейнере.|  
-|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Список поддерживаемых управления сайтами.|  
-|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|Количество элементов управления без окон.|  
-|[COleControlContainer::m_pOleFont](#m_polefont)|Указатель на шрифт узел пользовательского элемента управления OLE.|  
-|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Указатель узла управления записи.|  
-|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Указатель на элемент управления, который в данный момент имеет фокус ввода.|  
-|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Указатель на элемент управления, который в данный момент активации на месте.|  
-|[COleControlContainer::m_pWnd](#m_pwnd)|Указатель на окно реализация контейнера элемента управления.|  
-|[COleControlContainer::m_siteMap](#m_sitemap)|Карта сайта.|  
+|[COleControlContainer::m_crBack](#m_crback)|The background color of the container.|  
+|[COleControlContainer::m_crFore](#m_crfore)|The foreground color of the container.|  
+|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|A list of the supported control sites.|  
+|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|The number of hosted windowless controls.|  
+|[COleControlContainer::m_pOleFont](#m_polefont)|A pointer to the OLE font of the custom control site.|  
+|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Pointer to the capture control site.|  
+|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Pointer to the control that currently has input focus.|  
+|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Pointer to the control that is currently in-place activated.|  
+|[COleControlContainer::m_pWnd](#m_pwnd)|Pointer to the window implementing the control container.|  
+|[COleControlContainer::m_siteMap](#m_sitemap)|The site map.|  
   
-## <a name="remarks"></a>Примечания  
- Это делается, предоставляя поддержку одного или нескольких узлов элемента управления ActiveX (реализованный `COleControlSite`). `COleControlContainer`полностью реализует [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) и [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) интерфейсы, позволяя вложенные элементы управления ActiveX для удовлетворения их квалификации, как элементы на месте.  
+## <a name="remarks"></a>Remarks  
+ This is done by providing support for one or more ActiveX control sites (implemented by `COleControlSite`). `COleControlContainer` fully implements the [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) and [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) interfaces, allowing the contained ActiveX controls to fulfill their qualifications as in-place items.  
   
- Обычно этот класс используется в сочетании с `COccManager` и `COleControlSite` для реализации настраиваемого контейнера элементов управления ActiveX, с помощью пользовательских узлов для одного или нескольких элементов управления ActiveX.  
+ Commonly, this class is used in conjunction with `COccManager` and `COleControlSite` to implement a custom ActiveX control container, with custom sites for one or more ActiveX controls.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleControlContainer`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxocc.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxocc.h  
   
-##  <a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite  
- Вызывается платформой для создания и присоединения узла управления.  
+##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite  
+ Called by the framework to create and attach a control site.  
   
 ```  
 virtual void AttachControlSite(
@@ -164,35 +194,35 @@ void AttachControlSite(
     UINT nIDC = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на объект `CWnd`.  
+ A pointer to a `CWnd` object.  
   
  `nIDC`  
- Идентификатор элемента управления должны быть присоединены.  
+ The ID of the control to be attached.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию, если вы хотите настроить этот процесс.  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to customize this process.  
   
 > [!NOTE]
->  Используйте первую форму для данной функции при использовании статической привязки библиотеки MFC. Если вы динамического связывания с библиотекой MFC, следует используйте вторую форму.  
+>  Use the first form of this function if you are statically linking to the MFC library. Use the second form if you are dynamically linking to the MFC library.  
   
-##  <a name="broadcastambientpropertychange"></a>COleControlContainer::BroadcastAmbientPropertyChange  
- Уведомляет все размещенные элементы управления, которые внешнее свойство изменилось.  
+##  <a name="broadcastambientpropertychange"></a>  COleControlContainer::BroadcastAmbientPropertyChange  
+ Informs all hosted controls that an ambient property has changed.  
   
 ```  
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- Идентификатор диспетчеризации изменяемое свойство окружения.  
+ The dispatch ID of the ambient property being changed.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается инфраструктурой при изменении значения свойства окружения. Переопределите эту функцию, чтобы изменить это поведение.  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework when an ambient property has changed value. Override this function to customize this behavior.  
   
-##  <a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton  
- Изменяет текущее состояние кнопки.  
+##  <a name="checkdlgbutton"></a>  COleControlContainer::CheckDlgButton  
+ Modifies the current state of the button.  
   
 ```  
 virtual void CheckDlgButton(
@@ -200,21 +230,21 @@ virtual void CheckDlgButton(
     UINT nCheck);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDButton`  
- Идентификатор изменяемой кнопки.  
+ The ID of the button to be modified.  
   
  `nCheck`  
- Указывает состояние кнопки. Ниже указаны доступные значения.  
+ Specifies the state of the button. Can be one of the following:  
   
-- **BST_CHECKED** задает состояние кнопки checked.  
+- **BST_CHECKED** Sets the button state to checked.  
   
-- **BST_INDETERMINATE** задает состояние кнопки серый, указывающее неопределенное состояние. Используйте это значение только в том случае, если кнопка имеет **BS_3STATE** или **BS_AUTO3STATE** стиль.  
+- **BST_INDETERMINATE** Sets the button state to grayed, indicating an indeterminate state. Use this value only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style.  
   
-- **BST_UNCHECKED** задает состояние кнопки снят.  
+- **BST_UNCHECKED** Sets the button state to cleared.  
   
-##  <a name="checkradiobutton"></a>COleControlContainer::CheckRadioButton  
- Выбирает указанный переключатель в группе и очищает оставшихся кнопок в группе.  
+##  <a name="checkradiobutton"></a>  COleControlContainer::CheckRadioButton  
+ Selects a specified radio button in a group and clears the remaining buttons in the group.  
   
 ```  
 virtual void CheckRadioButton(
@@ -223,32 +253,32 @@ virtual void CheckRadioButton(
     int nIDCheckButton);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDFirstButton`  
- Указывает идентификатор первый переключатель в группе.  
+ Specifies the identifier of the first radio button in the group.  
   
  `nIDLastButton`  
- Указывает идентификатор последнего переключателя в группе.  
+ Specifies the identifier of the last radio button in the group.  
   
  `nIDCheckButton`  
- Указывает идентификатор переключатель для проверки.  
+ Specifies the identifier of the radio button to be checked.  
   
-##  <a name="colecontrolcontainer"></a>COleControlContainer::COleControlContainer  
- Создает объект `COleControlContainer`.  
+##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
+ Constructs a `COleControlContainer` object.  
   
 ```  
 explicit COleControlContainer(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на родительское окно контейнера элемента управления.  
+ A pointer to the parent window of the control container.  
   
-### <a name="remarks"></a>Примечания  
- После успешного создания объекта добавить узел пользовательского элемента управления с помощью вызова `AttachControlSite`.  
+### <a name="remarks"></a>Remarks  
+ Once the object has been successfully created, add a custom control site with a call to `AttachControlSite`.  
   
-##  <a name="createcontrol"></a>COleControlContainer::CreateControl  
- Создает элемент управления ActiveX, размещенных на заданный `COleControlSite` объекта.  
+##  <a name="createcontrol"></a>  COleControlContainer::CreateControl  
+ Creates an ActiveX control, hosted by the specified `COleControlSite` object.  
   
 ```  
 BOOL CreateControl(
@@ -278,104 +308,104 @@ BOOL CreateControl(
     COleControlSite** ppNewSite =NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWndCtrl`  
- Указатель на объект window, представляющий элемент управления.  
+ A pointer to the window object representing the control.  
   
  `clsid`  
- Идентификатор уникального класса элемента управления.  
+ The unique class ID of the control.  
   
  `lpszWindowName`  
- Указатель на текст, отображаемый в элементе управления. Задает значение свойства элемента управления заголовок или текст (при наличии). Если **NULL**, свойство заголовок или текст элемента управления не изменяется.  
+ A pointer to the text to be displayed in the control. Sets the value of the control's Caption or Text property (if any). If **NULL**, the control's Caption or Text property is not changed.  
   
  `dwStyle`  
- Стили Windows. В списке перечислены доступные стили **примечания** раздел.  
+ Windows styles. The available styles are listed under the **Remarks** section.  
   
  `rect`  
- Задает размер и положение элемента управления. Это может быть либо `CRect` объекта или `RECT` структуры.  
+ Specifies the control's size and position. It can be either a `CRect` object or a `RECT` structure.  
   
  `nID`  
- Указывает идентификатор элемента управления дочернего окна.  
+ Specifies the control's child window ID.  
   
  `pPersist`  
- Указатель на `CFile` содержащий постоянное состояние элемента управления. Значение по умолчанию — **NULL**, указывающее, что элемент управления инициализирует себя без восстановления состояния из любой из постоянного хранилища. Если не **NULL**, он должен быть указателем `CFile`-производный объект, содержащий постоянных данных элемента управления в форме потока или хранилища. Может, эти данные были сохранены в предыдущей активации клиента. `CFile` Может содержать другие данные, но не ее указатель чтения и записи, устанавливается на первый байт постоянные данные во время вызова `CreateControl`.  
+ A pointer to a `CFile` containing the persistent state for the control. The default value is **NULL**, indicating that the control initializes itself without restoring its state from any persistent storage. If not **NULL**, it should be a pointer to a `CFile`-derived object that contains the control's persistent data, in the form of either a stream or a storage. This data could have been saved in a previous activation of the client. The `CFile` can contain other data, but must have its read-write pointer set to the first byte of persistent data at the time of the call to `CreateControl`.  
   
  `bStorage`  
- Указывает, является ли данные в `pPersist` должен интерпретироваться как `IStorage` или `IStream` данных. Если данные в `pPersist` — это хранилище `bStorage` должно быть **TRUE**. Если данные в `pPersist` представляет собой поток `bStorage` должно быть **FALSE**. Значение по умолчанию — **FALSE**.  
+ Indicates whether the data in `pPersist` should be interpreted as `IStorage` or `IStream` data. If the data in `pPersist` is a storage, `bStorage` should be **TRUE**. If the data in `pPersist` is a stream, `bStorage` should be **FALSE**. The default value is **FALSE**.  
   
  `bstrLicKey`  
- Необязательные данные ключа лицензии. Это данные, необходимые только для создания элементов управления, требующих выполнения лицензионный ключ. Если элемент управления поддерживает лицензирования, необходимо указать лицензионный ключ для создания элемента управления, для успешного выполнения. Значение по умолчанию — **NULL**.  
+ Optional license key data. This data is needed only for creating controls that require a run-time license key. If the control supports licensing, you must provide a license key for the creation of the control to succeed. The default value is **NULL**.  
   
  *ppNewSite*  
- Указатель на узле управления, где будет размещаться создаваемого элемента управления. Значение по умолчанию — **NULL**, указывающее, что новый узел элемента управления будет автоматически создается и присоединенные к нового элемента управления.  
+ A pointer to the existing control site that will host the control being created. The default value is **NULL**, indicating that a new control site will be automatically created and attached to the new control.  
   
  `ppt`  
- Указатель на **ТОЧКИ** структуру, содержащую в левый верхний угол элемента управления. Размер элемента управления определяется значение *psize*. `ppt` И *psize* значения — это необязательный метод указания размера и положения элемента управления.  
+ A pointer to a **POINT** structure that contains the upper-left corner of the control. The size of the control is determined by the value of *psize*. The `ppt` and *psize* values are an optional method of specifying the size and position of the control.  
   
  *psize*  
- Указатель на **размер** структуру, содержащую размер элемента управления. Левый верхний угол определяется значение `ppt`. `ppt` И *psize* значения — это необязательный метод указания размера и положения элемента управления.  
+ A pointer to a **SIZE** structure that contains the size of the control. The upper-left corner is determined by the value of `ppt`. The `ppt` and *psize* values are an optional method of specifying the size and position of the control.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Только подмножество Windows `dwStyle` поддерживаемые флаги `CreateControl`:  
+### <a name="remarks"></a>Remarks  
+ Only a subset of the Windows `dwStyle` flags are supported by `CreateControl`:  
   
-- **WS_VISIBLE** создает окно, которое изначально является видимым. Обязательно, если элемент управления видимым сразу же, как обычные окна.  
+- **WS_VISIBLE** Creates a window that is initially visible. Required if you want the control to be visible immediately, like ordinary windows.  
   
-- **WS_DISABLED** создает окно, которое первоначально будет отключено. Отключенного окна не может получать входные данные от пользователя. Можно задать, если элемент управления имеет свойство Enabled.  
+- **WS_DISABLED** Creates a window that is initially disabled. A disabled window cannot receive input from the user. Can be set if the control has an Enabled property.  
   
-- `WS_BORDER`Создает окно с тонкой линии границы. Можно задать, если элемент управления имеет свойство BorderStyle.  
+- `WS_BORDER` Creates a window with a thin-line border. Can be set if control has a BorderStyle property.  
   
-- **WS_GROUP** определяет первый элемент группы элементов управления. Пользователь может изменить фокус с одного элемента управления в группе к другому с помощью клавиш направления. Все элементы управления, определенные с помощью **WS_GROUP** стиля после первого элемента управления относятся к той же группе. Следующий элемент управления с **WS_GROUP** стиля завершает группу и запуске следующей группы.  
+- **WS_GROUP** Specifies the first control of a group of controls. The user can change the keyboard focus from one control in the group to the next by using the direction keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the group and starts the next group.  
   
-- **WS_TABSTOP** указывает элемент управления, который может получать фокус клавиатуры, когда пользователь нажимает клавишу TAB. Нажатие клавиши TAB изменяет фокус на следующий элемент управления из **WS_TABSTOP** стиля.  
+- **WS_TABSTOP** Specifies a control that can receive the keyboard focus when the user presses the TAB key. Pressing the TAB key changes the keyboard focus to the next control of the **WS_TABSTOP** style.  
   
- Создание элементов управления с размерами по умолчанию используйте вторую перегрузку.  
+ Use the second overload to create default-sized controls.  
   
-##  <a name="createolefont"></a>COleControlContainer::CreateOleFont  
- Создает шрифт OLE.  
+##  <a name="createolefont"></a>  COleControlContainer::CreateOleFont  
+ Creates an OLE font.  
   
 ```  
 void CreateOleFont(CFont* pFont);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFont`  
- Указатель шрифта для использования в качестве контейнера элемента управления.  
+ A pointer to the font to be used by the control container.  
   
-##  <a name="finditem"></a>COleControlContainer::FindItem  
- Находит пользовательский сайт, на котором размещается указанный элемент.  
+##  <a name="finditem"></a>  COleControlContainer::FindItem  
+ Finds the custom site that hosts the specified item.  
   
 ```  
 virtual COleControlSite* FindItem(UINT nID) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Идентификатор элемента, который требуется найти.  
+ The identifier of the item to be found.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на индивидуализированные указанного элемента.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the custom site of the specified item.  
   
-##  <a name="freezeallevents"></a>COleControlContainer::FreezeAllEvents  
- Определяет, контейнер будет игнорировать различные события из вложенного элемента управления сайтами или принимаю условия лицензионного соглашения.  
+##  <a name="freezeallevents"></a>  COleControlContainer::FreezeAllEvents  
+ Determines if the container will ignore events from the attached control sites or accept them.  
   
 ```  
 void FreezeAllEvents(BOOL bFreeze);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bFreeze`  
- Ненулевое значение, если события будут обработаны; в противном случае — 0.  
+ Nonzero if events will be processed; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Элемент управления не является обязательным для остановки обработки событий по запросу контейнера элемента управления. Он может продолжать активироваться, но все последующие события будут игнорироваться службой контейнера элемента управления.  
+>  The control is not required to stop firing events if requested by the control container. It can continue firing but all subsequent events will be ignored by the control container.  
   
-##  <a name="getambientprop"></a>COleControlContainer::GetAmbientProp  
- Возвращает значение указанного свойства окружающей среды.  
+##  <a name="getambientprop"></a>  COleControlContainer::GetAmbientProp  
+ Retrieves the value of a specified ambient property.  
   
 ```  
 virtual BOOL GetAmbientProp(
@@ -384,21 +414,21 @@ virtual BOOL GetAmbientProp(
     VARIANT* pvarResult);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pSite`  
- Указатель на узел элемента управления, из которого требуется извлечь свойства окружения.  
+ A pointer to a control site from which the ambient property will be retrieved.  
   
  `dispid`  
- Идентификатор диспетчеризации требуемое внешнее свойство.  
+ The dispatch ID of the desired ambient property.  
   
  *pVarResult*  
- Указатель на значение свойства окружения.  
+ A pointer to the value of the ambient property.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="getdlgitem"></a>COleControlContainer::GetDlgItem  
- Извлекает указатель для указанного элемента управления или дочерние окна в диалоговом окне или в другом окне.  
+##  <a name="getdlgitem"></a>  COleControlContainer::GetDlgItem  
+ Retrieves a pointer to the specified control or child window in a dialog box or other window.  
   
 ```  
 virtual CWnd* GetDlgItem(int nID) const;  
@@ -408,18 +438,18 @@ virtual void GetDlgItem(
     HWND* phWnd) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Идентификатор элемента диалогового окна.  
+ Identifier of the dialog item to retrieve.  
   
  `phWnd`  
- Указатель на дескриптор объекта окна элемента указанное диалоговое окно.  
+ A pointer to the handle of the specified dialog item's window object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент диалогового окна.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the dialog item's window.  
   
-##  <a name="getdlgitemint"></a>COleControlContainer::GetDlgItemInt  
- Получает значение переведенный текст заданного элемента управления.  
+##  <a name="getdlgitemint"></a>  COleControlContainer::GetDlgItemInt  
+ Retrieves the value of the translated text of the given control.  
   
 ```  
 virtual UINT GetDlgItemInt(
@@ -428,30 +458,30 @@ virtual UINT GetDlgItemInt(
     BOOL bSigned) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Идентификатор элемента управления.  
+ The identifier of the control.  
   
  `lpTrans`  
- Указатель на логическую переменную, получающую значение успешное завершение или сбой функции ( **TRUE** указывает на успешное завершение, **FALSE** указывает на ошибку).  
+ Pointer to a Boolean variable that receives a function success/failure value ( **TRUE** indicates success, **FALSE** indicates failure).  
   
  `bSigned`  
- Указывает ли функция изучить текст для отрицательный знак в начале и возвращают значение целого числа со знаком, если он находит. Если `bSigned` параметр **TRUE**, указывается, что значение является целочисленное значение со знаком, привести возвращаемое значение к `int` типа. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Specifies whether the function should examine the text for a minus sign at the beginning and return a signed integer value if it finds one. If the `bSigned` parameter is **TRUE**, specifying that the value to be retrieved is a signed integer value, cast the return value to an `int` type. To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- При успешном выполнении переменная ссылается `lpTrans` равен **TRUE**, и возвращаемое значение является значением переведенный текст в элементе управления.  
+### <a name="return-value"></a>Return Value  
+ If successful, the variable pointed to by `lpTrans` is set to **TRUE**, and the return value is the translated value of the control text.  
   
- Если функция завершается с ошибкой, переменная ссылается `lpTrans` равен **FALSE**, и возвращаемое значение равно нулю. Обратите внимание, что, поскольку ноль возможные преобразованное значение, возвращаемое значение равно нулю не сама по себе указывают на сбой.  
+ If the function fails, the variable pointed to by `lpTrans` is set to **FALSE**, and the return value is zero. Note that, since zero is a possible translated value, a return value of zero does not by itself indicate failure.  
   
- Если `lpTrans` — **NULL**, функция возвращает сведения об успехе или неудаче.  
+ If `lpTrans` is **NULL**, the function returns no information about success or failure.  
   
-### <a name="remarks"></a>Примечания  
- Функция преобразует возвращаемый текст путем удаления лишних пробелов в начале текста и последующего преобразования десятичных цифр. Функция останавливает перевод при достижении конца текста или встречает нечисловых знаков.  
+### <a name="remarks"></a>Remarks  
+ The function translates the retrieved text by stripping any extra spaces at the beginning of the text and then converting the decimal digits. The function stops translating when it reaches the end of the text or encounters a nonnumeric character.  
   
- Эта функция возвращает ноль, если преобразованное значение больше, чем **INT_MAX** (для со знаком номера) или **UINT_MAX** (для чисел без знака).  
+ This function returns zero if the translated value is greater than **INT_MAX** (for signed numbers) or **UINT_MAX** (for unsigned numbers).  
   
-##  <a name="getdlgitemtext"></a>COleControlContainer::GetDlgItemText  
- Извлекает текст данного элемента управления.  
+##  <a name="getdlgitemtext"></a>  COleControlContainer::GetDlgItemText  
+ Retrieves the text of the given control.  
   
 ```  
 virtual int GetDlgItemText(
@@ -460,33 +490,33 @@ virtual int GetDlgItemText(
     int nMaxCount) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Идентификатор элемента управления.  
+ The identifier of the control.  
   
  `lpStr`  
- Указатель на текст элемента управления.  
+ Pointer to the text of the control.  
   
  `nMaxCount`  
- Указывает максимальную длину в символах, строки копируются в буфер, на который указывает `lpStr`. Если длина строки превышает предел, то строка усекается.  
+ Specifies the maximum length, in characters, of the string to be copied to the buffer pointed to by `lpStr`. If the length of the string exceeds the limit, the string is truncated.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если функция выполняется успешно, возвращаемое значение указывает количество символов, скопировать в буфер, не включая завершающий символ null.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value specifies the number of characters copied to the buffer, not including the terminating null character.  
   
- Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ If the function fails, the return value is zero. To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-##  <a name="handlesetfocus"></a>COleControlContainer::HandleSetFocus  
- Определяет, поддерживает ли `WM_SETFOCUS` сообщения.  
+##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
+ Determines if the container handles `WM_SETFOCUS` messages.  
   
 ```  
 virtual BOOL HandleSetFocus();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если контейнер `WM_SETFOCUS` сообщения; в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the container handles `WM_SETFOCUS` messages; otherwise zero.  
   
-##  <a name="handlewindowlessmessage"></a>COleControlContainer::HandleWindowlessMessage  
- Обрабатывает сообщения окна для элементов управления без окон.  
+##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
+ Processes window messages for windowless controls.  
   
 ```  
 virtual BOOL HandleWindowlessMessage(
@@ -496,165 +526,165 @@ virtual BOOL HandleWindowlessMessage(
     LRESULT* plResult);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `message`  
- Идентификатор для окна сообщения, предоставляемые Windows.  
+ The identifier for the window message, provided by Windows.  
   
  `wParam`  
- Параметр сообщения. предоставляемые Windows. Задает дополнительные сведения для конкретного сообщения. Содержимое этого параметра зависит от значения `message` параметр.  
+ Parameter of the message; provided by Windows. Specifies additional message-specific information. The contents of this parameter depend on the value of the `message` parameter.  
   
  `lParam`  
- Параметр сообщения. предоставляемые Windows. Задает дополнительные сведения для конкретного сообщения. Содержимое этого параметра зависит от значения `message` параметр.  
+ Parameter of the message; provided by Windows. Specifies additional message-specific information. The contents of this parameter depend on the value of the `message` parameter.  
   
  *plResult*  
- Код результата Windows. Указывает результат обработки сообщения и зависит от отправленного сообщения.  
+ Windows result code. Specifies the result of the message processing and depends on the message sent.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение в случае успеха, иначе —&0;.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию, чтобы настроить обработку сообщений безоконный элемент управления.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the handling of windowless control messages.  
   
-##  <a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked  
- Определяет состояние указанную кнопку.  
+##  <a name="isdlgbuttonchecked"></a>  COleControlContainer::IsDlgButtonChecked  
+ Determines the state of the specified button.  
   
 ```  
 virtual UINT IsDlgButtonChecked(int nIDButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDButton`  
- Идентификатор элемента управления button.  
+ The identifier of the button control.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение, с помощью кнопки, созданные с **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, или **BS_3STATE** стиль. Ниже указаны доступные значения.  
+### <a name="return-value"></a>Return Value  
+ The return value, from a button created with the **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, or **BS_3STATE** style. Can be one of the following:  
   
-- **BST_CHECKED** устанавливается переключатель.  
+- **BST_CHECKED** Button is checked.  
   
-- **BST_INDETERMINATE** кнопка отображается серым цветом, неопределенное состояние, указывающее (применяется только в том случае, если кнопка имеет **BS_3STATE** или **BS_AUTO3STATE** стиль).  
+- **BST_INDETERMINATE** Button is grayed, indicating an indeterminate state (applies only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style).  
   
-- **BST_UNCHECKED** очищен кнопки.  
+- **BST_UNCHECKED** Button is cleared.  
   
-### <a name="remarks"></a>Примечания  
- Если кнопка элемента управления с тремя состояниями, функция-член, определяет ли он недоступен, этот флажок установлен, или ни одного.  
+### <a name="remarks"></a>Remarks  
+ If the button is a three-state control, the member function determines whether it is dimmed, checked, or neither.  
   
-##  <a name="m_crback"></a>COleControlContainer::m_crBack  
- Цвет фона контейнера.  
+##  <a name="m_crback"></a>  COleControlContainer::m_crBack  
+ The background color of the container.  
   
 ```  
 COLORREF m_crBack;  
 ```  
   
-##  <a name="m_crfore"></a>COleControlContainer::m_crFore  
- Цвет переднего плана в контейнере.  
+##  <a name="m_crfore"></a>  COleControlContainer::m_crFore  
+ The foreground color of the container.  
   
 ```  
 COLORREF m_crFore;  
 ```  
   
-##  <a name="m_listsitesorwnds"></a>COleControlContainer::m_listSitesOrWnds  
- Список узлов элемента управления, размещенных в контейнере.  
+##  <a name="m_listsitesorwnds"></a>  COleControlContainer::m_listSitesOrWnds  
+ A list of the control sites hosted by the container.  
   
 ```  
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;  
 ```  
   
-##  <a name="m_nwindowlesscontrols"></a>COleControlContainer::m_nWindowlessControls  
- Количество безоконный элементы управления, размещенные в качестве контейнера элемента управления.  
+##  <a name="m_nwindowlesscontrols"></a>  COleControlContainer::m_nWindowlessControls  
+ The number of windowless controls hosted by the control container.  
   
 ```  
 int m_nWindowlessControls;  
 ```  
   
-##  <a name="m_polefont"></a>COleControlContainer::m_pOleFont  
- Указатель на шрифт узел пользовательского элемента управления OLE.  
+##  <a name="m_polefont"></a>  COleControlContainer::m_pOleFont  
+ A pointer to the OLE font of the custom control site.  
   
 ```  
 LPFONTDISP m_pOleFont;  
 ```  
   
-##  <a name="m_psitecapture"></a>COleControlContainer::m_pSiteCapture  
- Указатель узла управления записи.  
+##  <a name="m_psitecapture"></a>  COleControlContainer::m_pSiteCapture  
+ Pointer to the capture control site.  
   
 ```  
 COleControlSite* m_pSiteCapture;  
 ```  
   
-##  <a name="m_psitefocus"></a>COleControlContainer::m_pSiteFocus  
- Указатель на узел элемента управления, который в данный момент имеет фокус ввода.  
+##  <a name="m_psitefocus"></a>  COleControlContainer::m_pSiteFocus  
+ A pointer to the control site that currently has input focus.  
   
 ```  
 COleControlSite* m_pSiteFocus;  
 ```  
   
-##  <a name="m_psiteuiactive"></a>COleControlContainer::m_pSiteUIActive  
- Указатель на узле управления, активации на месте.  
+##  <a name="m_psiteuiactive"></a>  COleControlContainer::m_pSiteUIActive  
+ A pointer to the control site that is in-place activated.  
   
 ```  
 COleControlSite* m_pSiteUIActive;  
 ```  
   
-##  <a name="m_pwnd"></a>COleControlContainer::m_pWnd  
- Указатель на объект окна, связанный с контейнером.  
+##  <a name="m_pwnd"></a>  COleControlContainer::m_pWnd  
+ A pointer to the window object associated with the container.  
   
 ```  
 CWnd* m_pWnd;  
 ```  
   
-##  <a name="m_sitemap"></a>COleControlContainer::m_siteMap  
- Карта сайта.  
+##  <a name="m_sitemap"></a>  COleControlContainer::m_siteMap  
+ The site map.  
   
 ```  
 CMapPtrToPtr m_siteMap;  
 ```  
   
-##  <a name="onpaint"></a>COleControlContainer::OnPaint  
- Вызывается платформой для обработки `WM_PAINT` запросов.  
+##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
+ Called by the framework to handle `WM_PAINT` requests.  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указатель на контекст устройства, используемые контейнером.  
+ A pointer to the device context used by the container.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если сообщение обработано; в противном случае — нуль.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message was handled; otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию, чтобы настроить процесс рисования.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the painting process.  
   
-##  <a name="onuiactivate"></a>COleControlContainer::OnUIActivate  
- Вызывается инфраструктурой при сайт элемента управления, на который указывает `pSite`, будет активирована на месте.  
+##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
+ Called by the framework when the control site, pointed to by `pSite`, is about to be activated in-place.  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pSite`  
- Указатель на узел элемента управления будет активирован на месте.  
+ A pointer to the control site about to be in-place activated.  
   
-### <a name="remarks"></a>Примечания  
- Активация на месте означает, что главное меню контейнера заменяются составного меню на месте.  
+### <a name="remarks"></a>Remarks  
+ In-place activation means that the container's main menu is replaced with an in-place composite menu.  
   
-##  <a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate  
- Вызывается инфраструктурой при сайт элемента управления, на который указывает `pSite`, должен быть отключен.  
+##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
+ Called by the framework when the control site, pointed to by `pSite`, is about to be deactivated.  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pSite`  
- Указатель на узел управления деактивации.  
+ A pointer to the control site about to be deactivated.  
   
-### <a name="remarks"></a>Примечания  
- При получении этого уведомления контейнер должен переустановить его пользовательский интерфейс и получить фокус ввода.  
+### <a name="remarks"></a>Remarks  
+ When this notification is received, the container should reinstall its user interface and take focus.  
   
-##  <a name="scrollchildren"></a>COleControlContainer::ScrollChildren  
- Вызывается инфраструктурой при получении сообщений прокрутки из дочернего окна.  
+##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren  
+ Called by the framework when scroll messages are received from a child window.  
   
 ```  
 virtual void ScrollChildren(
@@ -662,15 +692,15 @@ virtual void ScrollChildren(
     int dy);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dx`  
- Объем, в пикселях, прокрутка по оси x.  
+ The amount, in pixels, of scrolling along the x-axis.  
   
  *dy*  
- Объем, в пикселях, прокрутка по оси y.  
+ The amount, in pixels, of scrolling along the y-axis.  
   
-##  <a name="senddlgitemmessage"></a>COleControlContainer::SendDlgItemMessage  
- Отправляет сообщение указанному элементу управления.  
+##  <a name="senddlgitemmessage"></a>  COleControlContainer::SendDlgItemMessage  
+ Sends a message to the specified control.  
   
 ```  
 virtual LRESULT SendDlgItemMessage(
@@ -680,21 +710,21 @@ virtual LRESULT SendDlgItemMessage(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Задает идентификатор элемента управления, который получает сообщение.  
+ Specifies the identifier of the control that receives the message.  
   
  `message`  
- Задает отправку сообщения.  
+ Specifies the message to be sent.  
   
  `wParam`  
- Задает дополнительные сведения для конкретного сообщения.  
+ Specifies additional message-specific information.  
   
  `lParam`  
- Задает дополнительные сведения для конкретного сообщения.  
+ Specifies additional message-specific information.  
   
-##  <a name="setdlgitemint"></a>COleControlContainer::SetDlgItemInt  
- Задает текст элемента управления в диалоговом окне строковое представление заданного целого.  
+##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
+ Sets the text of a control in a dialog box to the string representation of a specified integer value.  
   
 ```  
 virtual void SetDlgItemInt(
@@ -703,18 +733,18 @@ virtual void SetDlgItemInt(
     BOOL bSigned);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Идентификатор элемента управления.  
+ The identifier of the control.  
   
  `nValue`  
- Целочисленное значение для отображения.  
+ The integer value to be displayed.  
   
  `bSigned`  
- Указывает, является ли `nValue` параметр знак или нет. Если этот параметр равен **TRUE**, `nValue` подписан. Если этот параметр равен **TRUE** и `nValue` меньше нуля, минус входа размещается перед первой цифрой в строке. Если этот параметр равен **FALSE**, `nValue` без знака.  
+ Specifies whether the `nValue` parameter is signed or unsigned. If this parameter is **TRUE**, `nValue` is signed. If this parameter is **TRUE** and `nValue` is less than zero, a minus sign is placed before the first digit in the string. If this parameter is **FALSE**, `nValue` is unsigned.  
   
-##  <a name="setdlgitemtext"></a>COleControlContainer::SetDlgItemText  
- Задает текст указанного элемента управления, используя текст, содержащийся в `lpszString`.  
+##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
+ Sets the text of the specified control, using the text contained in `lpszString`.  
   
 ```  
 virtual void SetDlgItemText(
@@ -722,16 +752,16 @@ virtual void SetDlgItemText(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Идентификатор элемента управления.  
+ The identifier of the control.  
   
  `lpszString`  
- Указатель на текст элемента управления.  
+ Pointer to the text of the control.  
   
-## <a name="see-also"></a>См. также  
- [CCmdTarget-класс](../../mfc/reference/ccmdtarget-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс COleControlSite](../../mfc/reference/colecontrolsite-class.md)   
- [Класс COccManager](../../mfc/reference/coccmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleControlSite Class](../../mfc/reference/colecontrolsite-class.md)   
+ [COccManager Class](../../mfc/reference/coccmanager-class.md)
 

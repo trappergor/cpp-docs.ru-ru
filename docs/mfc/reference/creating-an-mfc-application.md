@@ -1,5 +1,5 @@
 ---
-title: "Создание приложения MFC | Документы Microsoft"
+title: Creating an MFC Application | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC]
-- MFC [C++], creating applications
+- MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
 caps.latest.revision: 12
@@ -34,52 +34,52 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6d900cc7c81907fa755ab44b23af3e3ec5fab56b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bcd182ca4dd184bb8a7986b7b818117a24cc89da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-an-mfc-application"></a>Создание приложения MFC
-Приложение MFC является исполняемым приложением для Windows на основе библиотеки Microsoft Foundation Class (MFC). Наиболее простым способом создания приложения MFC является использование мастера приложений MFC.  
+# <a name="creating-an-mfc-application"></a>Creating an MFC Application
+An MFC application is an executable application for Windows that is based on the Microsoft Foundation Class (MFC) Library. The easiest way to create an MFC application is to use the MFC Application Wizard.  
   
 > [!IMPORTANT]
->  Проекты MFC не поддерживаются в выпусках Visual Studio Express.  
+>  MFC projects are not supported in Visual Studio Express editions.  
   
- Исполняемые файлы MFC обычно делятся на пять типов: стандартные приложения Windows, диалоговые окна, приложений на основе форм, приложения в стиле проводника и веб-обозревателя приложений. Дополнительные сведения:  
+ MFC executables generally fall into five types: standard Windows applications, dialog boxes, forms-based applications, Explorer-style applications, and Web browser-style applications. For more information, see:  
   
--   [Использование классов для создания приложений Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
+-   [Using the Classes to Write Windows Applications](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
--   [Создание и отображение диалоговых окон](../../mfc/creating-and-displaying-dialog-boxes.md)  
+-   [Creating and Displaying Dialog Boxes](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Создание приложений MFC на основе форм](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
+-   [Creating a Forms-Based MFC Application](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
--   [Создание приложения MFC в стиле проводника](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
+-   [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
   
--   [Создание приложения MFC в стиле браузера](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
+-   [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
   
- Мастер приложений MFC создает соответствующие классы и файлы для приложений любого типа в зависимости от параметров, выбранных в мастере.  
+ The MFC Application Wizard generates the appropriate classes and files for any of these types of applications, depending on the options you select in the wizard.  
   
-### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Создание приложения MFC при помощи мастера приложений MFC.  
+### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>To create an MFC application using the MFC Application Wizard  
   
-1.  Следуйте инструкциям в разделе справки [Создание проекта с использованием мастера приложений Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  В **новый проект** выберите **приложение MFC** в области шаблонов, чтобы открыть мастер.  
+2.  In the **New Project** dialog box, select **MFC Application** in the Templates pane to open the wizard.  
   
-3.  Задайте параметры приложения с помощью [мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md).  
+3.  Define your application settings using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md).  
   
     > [!NOTE]
-    >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.  
+    >  Skip this step to keep the wizard default settings.  
   
-4.  Нажмите кнопку **Готово** завершить работу мастера и откройте новый проект в среде разработки.  
+4.  Click **Finish** to close the wizard and open your new project in the development environment.  
   
- После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ Once your project is created, you can view the files created in **Solution Explorer**. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
-## <a name="see-also"></a>См. также  
- [Подготовка к отладке: Приложения Windows на Visual C++](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
- [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
- [Развертывание приложений](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [Debugging Preparation: Visual C++ Windows Applications](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 
 

@@ -1,66 +1,84 @@
 ---
-title: "MSG Structure1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MSG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MSG - структура"
+title: MSG Structure1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MSG
+dev_langs:
+- C++
+helpviewer_keywords:
+- MSG structure [MFC]
 ms.assetid: dc166d27-9423-41f1-9599-5ba76d2f0138
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Структура MSG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2c07f74157d8bcccb9c5b23727ce0a9107bfb51b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Структура `MSG` содержит данные сообщения из очереди сообщений потока.  
+---
+# <a name="msg-structure1"></a>MSG Structure1
+The `MSG` structure contains message information from a thread's message queue.  
   
-## Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagMSG {     // msg    
-   HWND hwnd;  
-   UINT message;  
-   WPARAM wParam;  
-   LPARAM lParam;  
-   DWORD time;  
-   POINT pt;  
+typedef struct tagMSG {     // msg    
+    HWND hwnd;  
+    UINT message;  
+    WPARAM wParam;  
+    LPARAM lParam;  
+    DWORD time;  
+    POINT pt;  
 } MSG;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Parameters  
  *hwnd*  
- Определяет окно процедура окна, получает сообщение.  
+ Identifies the window whose window procedure receives the message.  
   
  `message`  
- Задает номер сообщения.  
+ Specifies the message number.  
   
  `wParam`  
- Задает дополнительные сведения о сообщении.  Точное значение зависит от значения элемента **message**.  
+ Specifies additional information about the message. The exact meaning depends on the value of the **message** member.  
   
  `lParam`  
- Задает дополнительные сведения о сообщении.  Точное значение зависит от значения элемента **message**.  
+ Specifies additional information about the message. The exact meaning depends on the value of the **message** member.  
   
  `time`  
- Определяет время, в которой сообщение отправлено.  
+ Specifies the time at which the message was posted.  
   
  `pt`  
- Задает положение курсора в экранных координатах, когда сообщение отправлено.  
+ Specifies the cursor position, in screen coordinates, when the message was posted.  
   
-## Требования  
+## <a name="requirements"></a>Requirements  
  **Header:** winuser.h  
   
-## См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+

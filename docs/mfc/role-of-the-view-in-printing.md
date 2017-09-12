@@ -1,41 +1,60 @@
 ---
-title: "Роль просмотра при печати | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CView - класс, роль в печати"
-  - "OnDraw - метод, и печать"
-  - "печать [MFC], OnDraw - метод"
-  - "печать [MFC], представления"
-  - "представления печати"
-  - "представления, печать"
+title: Role of the View in Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], printing
+- OnDraw method [MFC], and printing
+- printing [MFC], OnDraw method [MFC]
+- printing [MFC], views
+- CView class [MFC], role in printing
+- printing views [MFC]
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Роль просмотра при печати
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28d18718ca992c77d20416e63adb24c24cc6a647
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Представления также играет роль в 2 важных ввести его связанный документ.  
+---
+# <a name="role-of-the-view-in-printing"></a>Role of the View in Printing
+Your view also plays two important roles in printing its associated document.  
   
- Представление:  
+ The view:  
   
--   Использует тот же код [OnDraw](../Topic/CView::OnDraw.md) для рисования на принтере о рисовании на экране.  
+-   Uses the same [OnDraw](../mfc/reference/cview-class.md#ondraw) code to draw on the printer as to draw on the screen.  
   
--   Manages разделяя документ в страницы для печати.  
+-   Manages dividing the document into pages for printing.  
   
- Дополнительные сведения о печати и роли представления в печати см. в разделе [Печать и предварительный просмотр](../mfc/printing-and-print-preview.md).  
+ For more information about printing and about the view's role in printing, see [Printing and Print Preview](../mfc/printing-and-print-preview.md).  
   
-## См. также  
- [Использование представлений](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

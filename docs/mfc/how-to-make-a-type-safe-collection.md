@@ -1,107 +1,126 @@
 ---
-title: "Практическое руководство. Создание типобезопасных коллекций | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы коллекций, производное из нешаблонного"
-  - "классы коллекций, на основе шаблона"
-  - "классы коллекций, безопасность типа"
-  - "сериализация [C++], классы коллекций"
-  - "SerializeElements - функция"
-  - "сериализуемые элементы класса коллекции"
-  - "типобезопасные коллекции"
+title: 'How to: Make a Type-Safe Collection | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type-safe collections [MFC]
+- serializing collection-class elements [MFC]
+- collection classes [MFC], type safety
+- SerializeElements function [MFC]
+- collection classes [MFC], template-based
+- serialization [MFC], collection classes
+- collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Практическое руководство. Создание типобезопасных коллекций
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2d36dc3511c083f64b6a37e79fc01fb1dbd99cab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается, как сделать типобезопасные коллекции для собственных типов данных.  Ниже приведен список разделов.  
+---
+# <a name="how-to-make-a-type-safe-collection"></a>How to: Make a Type-Safe Collection
+This article explains how to make type-safe collections for your own data types. Topics include:  
   
--   [С помощью класса, созданный на основе шаблона для безопасности типов](#_core_using_template.2d.based_classes_for_type_safety)  
+-   [Using template-based classes for type safety](#_core_using_template.2d.based_classes_for_type_safety)  
   
--   [Реализация вспомогательные функции](#_core_implementing_helper_functions)  
+-   [Implementing helper functions](#_core_implementing_helper_functions)  
   
--   [Использование классов коллекций nontemplate](#_core_using_nontemplate_collection_classes)  
+-   [Using nontemplate collection classes](#_core_using_nontemplate_collection_classes)  
   
- Библиотеки Microsoft Foundation Class предоставляет предварительно определенные типобезопасные коллекции, основанные на шаблонах C C\+\+.  Поскольку эти шаблоны, эти классы помогают обеспечить безопасность типов и простые в использовании без приведения, а другую дополнительную работу, задействованных при использовании класса nontemplate для этой цели.  В примере MFC [СОБЕРИТЕ](../top/visual-cpp-samples.md) показано использование классов коллекций команды, в приложении MFC.  Как правило, эти классы каждый раз при написании нового кода коллекции.  
+ The Microsoft Foundation Class Library provides predefined type-safe collections based on C++ templates. Because they are templates, these classes help provide type safety and ease of use without the type-casting and other extra work involved in using a nontemplate class for this purpose. The MFC sample [COLLECT](../visual-cpp-samples.md) demonstrates the use of template-based collection classes in an MFC application. In general, use these classes any time you write new collections code.  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> С помощью класса, созданный на основе шаблона для безопасности типов  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Using Template-Based Classes for Type Safety  
   
-#### Использование класса, созданный на основе шаблона  
+#### <a name="to-use-template-based-classes"></a>To use template-based classes  
   
-1.  Объявите переменную типа класса коллекции.  Примеры.  
+1.  Declare a variable of the collection class type. For example:  
   
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_1.cpp)]  
+     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]  
   
-2.  Вызовите функции\-члены объекта коллекции.  Примеры.  
+2.  Call the member functions of the collection object. For example:  
   
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_2.cpp)]  
+     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]  
   
-3.  При необходимости, реализуйте [вспомогательные функции](../mfc/reference/collection-class-helpers.md) и [SerializeElements](../Topic/SerializeElements.md).  Сведения о реализации этих функций см. в разделе [Реализация вспомогательные функции](#_core_implementing_helper_functions).  
+3.  If necessary, implement the [helper functions](../mfc/reference/collection-class-helpers.md) and [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). For information on implementing these functions, see [Implementing Helper Functions](#_core_implementing_helper_functions).  
   
- В этом примере показано объявление списка целых чисел.  Первый параметр в шаге 1 тип данных, хранящихся в виде элементов списка.  Второй параметр задает, как данные и передавать, возвращенным функции\-члены класса коллекций, например **Добавить** и `GetAt`.  
+ This example shows the declaration of a list of integers. The first parameter in step 1 is the type of data stored as elements of the list. The second parameter specifies how the data is to be passed to and returned from member functions of the collection class, such as **Add** and `GetAt`.  
   
-##  <a name="_core_implementing_helper_functions"></a> Реализация вспомогательные функции  
- Классы коллекций `CArray`, `CList` и вспомогательные функции команды на основе использования 5 `CMap` глобальные, можно настраивать по мере необходимости для производного класса коллекции.  Дополнительные сведения об этих вспомогательных функций см. в разделе [Вспомогательных классов коллекций](../mfc/reference/collection-class-helpers.md) в *справочнике по MFC*.  Реализация функции сериализации требуется для большинства использует классы коллекций, команды.  
+##  <a name="_core_implementing_helper_functions"></a> Implementing Helper Functions  
+ The template-based collection classes `CArray`, `CList`, and `CMap` use five global helper functions that you can customize as needed for your derived collection class. For information on these helper functions, see [Collection Class Helpers](../mfc/reference/collection-class-helpers.md) in the *MFC Reference*. Implementation of the serialization function is necessary for most uses of the template-based collection classes.  
   
-###  <a name="_core_serializing_elements"></a> Сериализация элементы  
- `CArray`, `CList` и классы `CMap` вызывают `SerializeElements` для хранения элементы коллекции к или зачитывать их из архива.  
+###  <a name="_core_serializing_elements"></a> Serializing Elements  
+ The `CArray`, `CList`, and `CMap` classes call `SerializeElements` to store collection elements to or read them from an archive.  
   
- Реализация по умолчанию вспомогательной функции `SerializeElements` выполняет побитовые записи из объектов в архив, или побитовое прочитанному из архива к объектам в зависимости от того, хранятся ли объекты в или извлечь из архива.  Переопределите `SerializeElements`, если это действие не подходит.  
+ The default implementation of the `SerializeElements` helper function does a bitwise write from the objects to the archive, or a bitwise read from the archive to the objects, depending on whether the objects are being stored in or retrieved from the archive. Override `SerializeElements` if this action is not appropriate.  
   
- Если коллекция содержит объекты, унаследованные от `CObject` и используется макрос `IMPLEMENT_SERIAL` в реализации класса элемента коллекции, можно воспользоваться преимуществами функции сериализации, созданных в `CArchive` и `CObject`:  
+ If your collection stores objects derived from `CObject` and you use the `IMPLEMENT_SERIAL` macro in the implementation of the collection element class, you can take advantage of the serialization functionality built into `CArchive` and `CObject`:  
   
- [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- Перегруженные операторы вставки для `CArchive` вызывают `CObject::Serialize` \(или переопределения этой функции\) для каждого объекта **CPerson**.  
+ The overloaded insertion operators for `CArchive` call `CObject::Serialize` (or an override of that function) for each **CPerson** object.  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a> Использование классов коллекций Nontemplate  
- MFC также поддерживает классы коллекций, которые используются с версии MFC 1.0.  Эти классы не основаны на шаблонах.  Их можно использовать для хранения данных, поддерживаемых типов `CObject*`, **uint**`DWORD` и `CString`.  Можно использовать эти предопределенные коллекции \(например, `CObList`\) хранения коллекции всех объектов, производном от `CObject`.  MFC предоставляет также другие предопределенные коллекции для хранения простые типы, такие как **uint** и указатели \(`void`\*\).  Как правило, однако оптимальнее определения собственных типобезопасные коллекции для хранения объектов более определенного класса и его производных.  Обратите внимание, что управляемая куча с классами коллекций не на основе шаблонов больше операций, чем с помощью класса, созданный на основе шаблона.  
+##  <a name="_core_using_nontemplate_collection_classes"></a> Using Nontemplate Collection Classes  
+ MFC also supports the collection classes introduced with MFC version 1.0. These classes are not based on templates. They can be used to contain data of the supported types `CObject*`, **UINT**, `DWORD`, and `CString`. You can use these predefined collections (such as `CObList`) to hold collections of any objects derived from `CObject`. MFC also provides other predefined collections to hold primitive types such as **UINT** and void pointers (`void`*). In general, however, it is often useful to define your own type-safe collections to hold objects of a more specific class and its derivatives. Note that doing so with the collection classes not based on templates is more work than using the template-based classes.  
   
- Существует два способа создания 2 типобезопасные коллекции с коллекциями nontemplate:  
+ There are two ways to create type-safe collections with the nontemplate collections:  
   
-1.  Используйте nontemplate коллекции, где тип позволяет при необходимости.  Это наиболее простой подход.  
+1.  Use the nontemplate collections, with type casting if necessary. This is the easier approach.  
   
-2.  Наследование от и расширить типобезопасную коллекцию nontemplate.  
+2.  Derive from and extend a nontemplate type-safe collection.  
   
-#### Использование коллекции nontemplate с приведением типов  
+#### <a name="to-use-the-nontemplate-collections-with-type-casting"></a>To use the nontemplate collections with type casting  
   
-1.  Используйте один из классов nontemplate, например `CWordArray`, напрямую.  
+1.  Use one of the nontemplate classes, such as `CWordArray`, directly.  
   
-     Например, можно создать `CWordArray` и добавьте все 32 разрядные значения в него, а затем извлечь их.  Ничего несколько задач.  Вы только используется предварительно определенной функции.  
+     For example, you can create a `CWordArray` and add any 32-bit values to it, then retrieve them. There is nothing more to do. You just use the predefined functionality.  
   
-     Можно также использовать предварительно определенная коллекция, например `CObList`, хранение всех объектов, производных от `CObject`.  Коллекция `CObList` определяется для хранения указателей на `CObject`.  При извлечении объекта из списка, можно привести результат к нужному типу, поскольку функции `CObList` возвращают указатели на `CObject`.  Например, если хранить объекты `CPerson` в коллекции `CObList`, необходимо привести извлекается элемент, который должен быть указателем на объект `CPerson`.  В следующем примере используется коллекцию `CObList` для хранения объектов `CPerson`:  
+     You can also use a predefined collection, such as `CObList`, to hold any objects derived from `CObject`. A `CObList` collection is defined to hold pointers to `CObject`. When you retrieve an object from the list, you may have to cast the result to the proper type since the `CObList` functions return pointers to `CObject`. For example, if you store `CPerson` objects in a `CObList` collection, you have to cast a retrieved element to be a pointer to a `CPerson` object. The following example uses a `CObList` collection to hold `CPerson` objects:  
   
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_4.cpp)]  
+     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]  
   
-     Этот метод использования типа предварительно определенной коллекции и приведение при необходимости может быть целесообразным для многих из коллекции.  Если требуется более дальнеишая функция или более безопасность типов, используйте класс, созданный на основе шаблона или выполните следующую процедуру.  
+     This technique of using a predefined collection type and casting as necessary may be adequate for many of your collection needs. If you need further functionality or more type safety, use a template-based class, or follow the next procedure.  
   
-#### Создать и расширить типобезопасную коллекцию nontemplate  
+#### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>To derive and extend a nontemplate type-safe collection  
   
-1.  Создать собственный класс коллекции из одного из предварительно определенных классов nontemplate.  
+1.  Derive your own collection class from one of the predefined nontemplate classes.  
   
-     При получении класса можно добавить типобезопасные функции оболочки для реализации типобезопасный интерфейс существующих функций.  
+     When you derive your class, you can add type-safe wrapper functions to provide a type-safe interface to existing functions.  
   
-     Например, если вывели список из `CObList` для хранения объектов `CPerson`, можно добавить функции `AddHeadPerson` и `GetHeadPerson` оболочки, как показано ниже.  
+     For example, if you derived a list from `CObList` to hold `CPerson` objects, you might add the wrapper functions `AddHeadPerson` and `GetHeadPerson`, as shown below.  
   
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_5.h)]  
+     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]  
   
-     Эти функции оболочки предоставляет типобезопасный способ добавлять и извлекать объекты `CPerson` производного списка.  Можно видеть, что для функции `GetHeadPerson`, просто ресурсами приведение типов.  
+     These wrapper functions provide a type-safe way to add and retrieve `CPerson` objects from the derived list. You can see that for the `GetHeadPerson` function, you are simply encapsulating the type casting.  
   
-     Можно также добавить новую функцию, определяя новые функции, которые расширяют возможности коллекции, а не только определение программу\-оболочку существующие функциональные возможности в типобезопасных программах\-оболочках.  Например, статья [Удалить все объекты в коллекции CObject](../Topic/Deleting%20All%20Objects%20in%20a%20CObject%20Collection.md) описываются функции для удаления всех объектов, содержащихся в списке.  Эта функция может быть добавлена в производный класс как функции\-члена.  
+     You can also add new functionality by defining new functions that extend the capabilities of the collection rather than just wrapping existing functionality in type-safe wrappers. For example, the article [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md) describes a function to delete all the objects contained in a list. This function could be added to the derived class as a member function.  
   
-## См. также  
- [Коллекции](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

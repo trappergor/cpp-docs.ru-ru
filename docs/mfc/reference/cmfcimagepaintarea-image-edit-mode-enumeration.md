@@ -1,5 +1,5 @@
 ---
-title: "Перечисление CMFCImagePaintArea::IMAGE_EDIT_MODE | Документы Microsoft"
+title: CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,12 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - IMAGE_EDIT_MODE Enumeration
-- CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
-- CMFCImagePaintArea.IMAGE_EDIT_MODE Enumeration
 dev_langs:
 - C++
 helpviewer_keywords:
-- IMAGE_EDIT_MODE Enumeration method
+- IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
 caps.latest.revision: 15
 author: mikeblome
@@ -35,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 364b33568e2a21a4649923f4478b5b2456b23747
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 644159d71a44297094f8304d40f990ee6957f450
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>Перечисление CMFCImagePaintArea::IMAGE_EDIT_MODE
-Задает режим рисования, который используется для изменения образа в диалоговое окно редактора изображений.  
+# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
+Specifies a drawing mode that you use to modify an image in an image editor dialog box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum IMAGE_EDIT_MODE  
@@ -59,30 +57,30 @@ enum IMAGE_EDIT_MODE
 };  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|`IMAGE_EDIT_MODE_PEN`|Используется для рисования отдельным точкам.|  
-|`IMAGE_EDIT_MODE_FILL`|Используется для заполнения всех смежные области, содержащие цвет в текущем положении курсора.|  
-|`IMAGE_EDIT_MODE_LINE`|Используется для рисования линии.|  
-|`IMAGE_EDIT_MODE_RECT`|Используется, чтобы нарисовать прямоугольник.|  
-|`IMAGE_EDIT_MODE_ELLIPSE`|Используется, чтобы нарисовать эллипс.|  
-|`IMAGE_EDIT_MODE_COLOR`|Используется для задания текущего цвета на цвет в текущей позиции курсора.|  
+|Name|Description|  
+|`IMAGE_EDIT_MODE_PEN`|Used to draw individual pixels.|  
+|`IMAGE_EDIT_MODE_FILL`|Used to fill all adjacent areas that contain the color at the current cursor location.|  
+|`IMAGE_EDIT_MODE_LINE`|Used to draw a line.|  
+|`IMAGE_EDIT_MODE_RECT`|Used to draw a rectangle.|  
+|`IMAGE_EDIT_MODE_ELLIPSE`|Used to draw an ellipse.|  
+|`IMAGE_EDIT_MODE_COLOR`|Used to set the current color to the color at the current cursor location.|  
   
-### <a name="remarks"></a>Примечания  
- `CMFCImagePaintArea` И `CMFCImageEditorDialog` это перечисление используется классами, чтобы задать режим рисования. Режим рисования и текущего цвета используются для изменения области рисунка в диалоговое окно редактора изображений. Дополнительные сведения о `CMFCImagePaintArea` и `CMFCImageEditorDialog`, в разделе [класса CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) и [CMFCImageEditorDialog класса](../../mfc/reference/cmfcimageeditordialog-class.md).  
+### <a name="remarks"></a>Remarks  
+ The `CMFCImagePaintArea` and `CMFCImageEditorDialog` classes use this enumeration to set the current drawing mode. The drawing mode and current color are used to modify the picture area in an image editor dialog box. For more information about `CMFCImagePaintArea` and `CMFCImageEditorDialog`, see [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md) and [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
- При выборе цвета из образа с помощью `IMAGE_EDIT_MODE_COLOR` режим рисования, платформа задает текущий режим рисования `IMAGE_EDIT_MODE_PEN`.  
+ When you select a color from an image by using the `IMAGE_EDIT_MODE_COLOR` drawing mode, the framework sets the current drawing mode to `IMAGE_EDIT_MODE_PEN`.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afximagepaintarea.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afximagepaintarea.h  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)   
- [Класс CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md)   
+ [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
 

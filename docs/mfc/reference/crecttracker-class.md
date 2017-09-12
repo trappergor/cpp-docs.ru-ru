@@ -1,5 +1,5 @@
 ---
-title: "CRectTracker-класс | Документы Microsoft"
+title: CRectTracker Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,9 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- displaying items
-- CRectTracker class
-- resizing items
+- CRectTracker [MFC], CRectTracker
+- CRectTracker [MFC], AdjustRect
+- CRectTracker [MFC], Draw
+- CRectTracker [MFC], DrawTrackerRect
+- CRectTracker [MFC], GetHandleMask
+- CRectTracker [MFC], GetTrueRect
+- CRectTracker [MFC], HitTest
+- CRectTracker [MFC], NormalizeHit
+- CRectTracker [MFC], OnChangedRect
+- CRectTracker [MFC], SetCursor
+- CRectTracker [MFC], Track
+- CRectTracker [MFC], TrackRubberBand
+- CRectTracker [MFC], m_nHandleSize
+- CRectTracker [MFC], m_nStyle
+- CRectTracker [MFC], m_rect
+- CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
 caps.latest.revision: 23
 author: mikeblome
@@ -52,74 +65,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 21fbd5457b6a3294a2925c88a72c32d568cce5e4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 270ace8e02abeac1d8cb9307dd64c3ca786c724e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crecttracker-class"></a>CRectTracker-класс
-Позволяет элементу отображаются, перемещать и изменять размер различными способами.  
+# <a name="crecttracker-class"></a>CRectTracker Class
+Allows an item to be displayed, moved, and resized in different fashions.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRectTracker  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRectTracker::CRectTracker](#crecttracker)|Создает объект `CRectTracker`.|  
+|[CRectTracker::CRectTracker](#crecttracker)|Constructs a `CRectTracker` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRectTracker::AdjustRect](#adjustrect)|Вызывается, когда размер прямоугольника.|  
-|[CRectTracker::Draw](#draw)|Отрисовывает прямоугольник.|  
-|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Вызывается при рисовании границы `CRectTracker` объекта.|  
-|[CRectTracker::GetHandleMask](#gethandlemask)|Вызывается для получения маски `CRectTracker` маркеры изменения размеров элемента.|  
-|[CRectTracker::GetTrueRect](#gettruerect)|Возвращает ширину и высоту прямоугольника и маркеров изменения размера.|  
-|[CRectTracker::HitTest](#hittest)|Возвращает текущую позицию курсора, связанные с `CRectTracker` объекта.|  
-|[CRectTracker::NormalizeHit](#normalizehit)|Нормализует код проверки нажатия.|  
-|[CRectTracker::OnChangedRect](#onchangedrect)|Вызывается, когда после изменения размера или перемещения прямоугольника.|  
-|[CRectTracker::SetCursor](#setcursor)|Задает курсор, в зависимости от его положение по прямоугольника.|  
-|[CRectTracker::Track](#track)|Позволяет пользователю управлять прямоугольника.|  
-|[CRectTracker::TrackRubberBand](#trackrubberband)|Позволяет пользователю «эластичное» выделение.|  
+|[CRectTracker::AdjustRect](#adjustrect)|Called when the rectangle is resized.|  
+|[CRectTracker::Draw](#draw)|Renders the rectangle.|  
+|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Called when drawing the border of a `CRectTracker` object.|  
+|[CRectTracker::GetHandleMask](#gethandlemask)|Called to get the mask of a `CRectTracker` item's resize handles.|  
+|[CRectTracker::GetTrueRect](#gettruerect)|Returns width and height of rectangle, including resize handles.|  
+|[CRectTracker::HitTest](#hittest)|Returns the current position of the cursor related to the `CRectTracker` object.|  
+|[CRectTracker::NormalizeHit](#normalizehit)|Normalizes a hit-test code.|  
+|[CRectTracker::OnChangedRect](#onchangedrect)|Called when the rectangle has been resized or moved.|  
+|[CRectTracker::SetCursor](#setcursor)|Sets the cursor, depending on its position over the rectangle.|  
+|[CRectTracker::Track](#track)|Allows the user to manipulate the rectangle.|  
+|[CRectTracker::TrackRubberBand](#trackrubberband)|Allows the user to "rubber-band" the selection.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Определяет размер маркеров изменения размера.|  
-|[CRectTracker::m_nStyle](#m_nstyle)|Текущий style(s) средство отслеживания.|  
-|[CRectTracker::m_rect](#m_rect)|Текущая позиция (в пикселях) прямоугольника.|  
-|[CRectTracker::m_sizeMin](#m_sizemin)|Определяет минимальное прямоугольников ширины и высоты.|  
+|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Determines size of resize handles.|  
+|[CRectTracker::m_nStyle](#m_nstyle)|Current style(s) of the tracker.|  
+|[CRectTracker::m_rect](#m_rect)|Current position (in pixels) of the rectangle.|  
+|[CRectTracker::m_sizeMin](#m_sizemin)|Determines minimum rectangle width and height.|  
   
-## <a name="remarks"></a>Примечания  
- `CRectTracker`не имеет базового класса.  
+## <a name="remarks"></a>Remarks  
+ `CRectTracker` does not have a base class.  
   
- Несмотря на то что `CRectTracker` класс предназначена для взаимодействия с OLE-элементы с помощью графического интерфейса пользователя, его использование не ограничено для приложений с поддержкой OLE. Он может использоваться в любом интерфейс пользователя не требуется.  
+ Although the `CRectTracker` class is designed to allow the user to interact with OLE items by using a graphical interface, its use is not restricted to OLE-enabled applications. It can be used anywhere such a user interface is required.  
   
- `CRectTracker`границы могут быть сплошной или пунктирными линиями. Элемент может быть заданному штриховой границей или накладывается заштрихованного шаблон для указания различных состояний элемента. Можно поместить восемь маркеров изменения размера на внешней или внутренней границы элемента. (Описание маркеры изменения размера, в разделе [GetHandleMask](#gethandlemask).) Наконец `CRectTracker` позволяет изменение ориентации элемента при изменении размера.  
+ `CRectTracker` borders can be solid or dotted lines. The item can be given a hatched border or overlaid with a hatched pattern to indicate different states of the item. You can place eight resize handles on either the outside or the inside border of the item. (For an explanation of the resize handles, see [GetHandleMask](#gethandlemask).) Finally, a `CRectTracker` allows you to change the orientation of an item during resizing.  
   
- Для использования `CRectTracker`, создания `CRectTracker` и укажите, какие состояния отображения инициализируются. Затем этот интерфейс можно использовать для предоставления пользователю визуальную обратную связь на текущее состояние объекта OLE, связанные с `CRectTracker` объекта.  
+ To use `CRectTracker`, construct a `CRectTracker` object and specify which display states are initialized. You can then use this interface to give the user visual feedback on the current status of the OLE item associated with the `CRectTracker` object.  
   
- Дополнительные сведения об использовании `CRectTracker`, см. в статье [средства отслеживания](../../mfc/trackers.md).  
+ For more information on using `CRectTracker`, see the article [Trackers](../../mfc/trackers.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CRectTracker`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
- Вызывается платформой при изменении размеров прямоугольника отслеживания с помощью маркер изменения размера.  
+##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
+ Called by the framework when the tracking rectangle is resized by using a resize handle.  
   
 ```  
 virtual void AdjustRect(
@@ -127,22 +140,22 @@ virtual void AdjustRect(
     LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nHandle`  
- Дескриптор, который используется индекс.  
+ Index of handle used.  
   
  `lpRect`  
- Указатель на текущий размер прямоугольника. (Размер прямоугольника определяется его высота и ширина.)  
+ Pointer to the current size of the rectangle. (The size of a rectangle is given by its height and width.)  
   
-### <a name="remarks"></a>Примечания  
- Поведение по умолчанию эта функция позволяет ориентации прямоугольника для изменения только если `Track` и `TrackRubberBand` вызван с Инверсия разрешено.  
+### <a name="remarks"></a>Remarks  
+ The default behavior of this function allows the rectangle's orientation to change only when `Track` and `TrackRubberBand` are called with inverting allowed.  
   
- Переопределите эту функцию для управления корректировки прямоугольника отслеживания во время операции перетаскивания. Первый способ — настроить координатами, заданными `lpRect` перед возвратом.  
+ Override this function to control the adjustment of the tracking rectangle during a dragging operation. One method is to adjust the coordinates specified by `lpRect` before returning.  
   
- Специальные функции, которые не поддерживаются напрямую `CRectTracker`, такие как сетку привязки или сохранять--пропорции, можно реализовать путем переопределения этой функции.  
+ Special features that are not directly supported by `CRectTracker`, such as snap-to-grid or keep-aspect-ratio, can be implemented by overriding this function.  
   
-##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
- Создает и инициализирует `CRectTracker` объекта.  
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
+ Creates and initializes a `CRectTracker` object.  
   
 ```  
 CRectTracker();
@@ -153,44 +166,44 @@ CRectTracker(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpSrcRect`  
- Координаты объекта rectangle.  
+ The coordinates of the rectangle object.  
   
  `nStyle`  
- Задает стиль `CRectTracker` объекта. Поддерживаются следующие стили:  
+ Specifies the style of the `CRectTracker` object. The following styles are supported:  
   
-- **CRectTracker::solidLine** использовать сплошной линии для границы прямоугольника.  
+- **CRectTracker::solidLine** Use a solid line for the rectangle border.  
   
-- **CRectTracker::dottedLine** использовать пунктирной линии для границы прямоугольника.  
+- **CRectTracker::dottedLine** Use a dotted line for the rectangle border.  
   
-- **CRectTracker::hatchedBorder** используют заштрихованного шаблон для границы прямоугольника.  
+- **CRectTracker::hatchedBorder** Use a hatched pattern for the rectangle border.  
   
-- **CRectTracker::resizeInside** находятся внутри прямоугольника маркеры изменения размера.  
+- **CRectTracker::resizeInside** Resize handles located inside the rectangle.  
   
-- **CRectTracker::resizeOutside** расположен вне прямоугольника маркеры изменения размера.  
+- **CRectTracker::resizeOutside** Resize handles located outside the rectangle.  
   
-- **CRectTracker::hatchInside** Hatched шаблон охватывает весь прямоугольник.  
+- **CRectTracker::hatchInside** Hatched pattern covers the entire rectangle.  
   
-### <a name="remarks"></a>Примечания  
- Конструктор по умолчанию инициализирует `CRectTracker` со значениями из `lpSrcRect` и инициализирует других размеров параметры системы по умолчанию. Если объект создается без параметров, `m_rect` и `m_nStyle` данные-члены не инициализированы.  
+### <a name="remarks"></a>Remarks  
+ The default constructor initializes the `CRectTracker` object with the values from `lpSrcRect` and initializes other sizes to system defaults. If the object is created with no parameters, the `m_rect` and `m_nStyle` data members are uninitialized.  
   
-##  <a name="draw"></a>CRectTracker::Draw  
- Эта функция вызывается для рисования внешней линий и внутренняя область прямоугольника.  
+##  <a name="draw"></a>  CRectTracker::Draw  
+ Call this function to draw the rectangle's outer lines and inner region.  
   
 ```  
 void Draw(CDC* pDC) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указатель на контекст устройства, на котором выполняется отрисовка.  
+ Pointer to the device context on which to draw.  
   
-### <a name="remarks"></a>Примечания  
- Стиль окна инспектора определяет, как выполняется рисование. В разделе конструктор для `CRectTracker` Дополнительные сведения о доступных стилей.  
+### <a name="remarks"></a>Remarks  
+ The style of the tracker determines how the drawing is done. See the constructor for `CRectTracker` for more information on the styles available.  
   
-##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
- Вызывается платформой при каждом изменении позиции инспектор while внутри `Track` или `TrackRubberBand` функции-члена.  
+##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
+ Called by the framework whenever the position of the tracker has changed while inside the `Track` or `TrackRubberBand` member function.  
   
 ```  
 virtual void DrawTrackerRect(
@@ -200,72 +213,72 @@ virtual void DrawTrackerRect(
     CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- Указатель на `RECT` , содержащий прямоугольника для рисования.  
+ Pointer to the `RECT` that contains the rectangle to draw.  
   
  `pWndClipTo`  
- Указатель на окно для использования в прямоугольной обрезки.  
+ Pointer to the window to use in clipping the rectangle.  
   
  `pDC`  
- Указатель на контекст устройства, на котором выполняется отрисовка.  
+ Pointer to the device context on which to draw.  
   
  `pWnd`  
- Указатель на окно, на котором будет выполняться рисование.  
+ Pointer to the window on which the drawing will occur.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию вызывает метод `CDC::DrawFocusRect`, который рисует прямоугольник пунктирная.  
+### <a name="remarks"></a>Remarks  
+ The default implementation makes a call to `CDC::DrawFocusRect`, which draws a dotted rectangle.  
   
- Переопределите эту функцию для предоставления отзывов различных во время операции отслеживания.  
+ Override this function to provide different feedback during the tracking operation.  
   
-##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
- Платформа вызывает эту функцию-член для извлечения маску для прямоугольника маркеры изменения размера.  
+##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
+ The framework calls this member function to retrieve the mask for a rectangle's resize handles.  
   
 ```  
 virtual UINT GetHandleMask() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Маска `CRectTracker` маркеры изменения размеров элемента.  
+### <a name="return-value"></a>Return Value  
+ The mask of a `CRectTracker` item's resize handles.  
   
-### <a name="remarks"></a>Примечания  
- Маркеры изменения размера появляются на сторонах углов прямоугольника и разрешить пользователю контролировать форму и размер прямоугольника.  
+### <a name="remarks"></a>Remarks  
+ The resize handles appear on the sides and corners of the rectangle and allow the user to control the shape and size of the rectangle.  
   
- Прямоугольник имеет 8 маркеры изменения размера с номерами от 0 до 7. Каждый маркер изменения размера представленного бита в маске; значение бита равно 2 ^ *n*, где *n* номер маркер изменения размера. Биты 0-3 соответствуют маркеры изменения размера угла, начиная с верхней левой перемещение по часовой стрелке. Бит 4-7 соответствуют стороне изменить размер маркеров, начиная сверху стрелке. На следующем рисунке показано маркеры изменения размера прямоугольника и соответствующие им изменить дескриптор числа и значения:  
+ A rectangle has 8 resize handles numbered 0-7. Each resize handle is represented by a bit in the mask; the value of that bit is 2^ *n*, where *n* is the resize handle number. Bits 0-3 correspond to the corner resize handles, starting at the top left moving clockwise. Bits 4-7 correspond to the side resize handles starting at the top moving clockwise. The following illustration shows a rectangle's resize handles and their corresponding resize handle numbers and values:  
   
- ![Числа маркера изменения размера](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
+ ![Resize handle numbers](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
- Реализация по умолчанию **GetHandleMask** возвращает значение маски битов, чтобы появились маркеры изменения размера. Если один бит включен, отображается соответствующий маркер изменения размера.  
+ The default implementation of **GetHandleMask** returns the mask of the bits so that the resize handles appear. If the single bit is on, the corresponding resize handle will be drawn.  
   
- Переопределите эту функцию-член, чтобы скрыть или отобразить выбранный маркеры изменения размера.  
+ Override this member function to hide or show the indicated resize handles.  
   
-##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
- Вызывайте эту функцию для извлечения координат прямоугольника.  
+##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
+ Call this function to retrieve the coordinates of the rectangle.  
   
 ```  
 void GetTrueRect(LPRECT lpTrueRect) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpTrueRect`  
- Указатель на `RECT` координаты структура, которая будет содержать устройство `CRectTracker` объекта.  
+ Pointer to the `RECT` structure that will contain the device coordinates of the `CRectTracker` object.  
   
-### <a name="remarks"></a>Примечания  
- Размеры прямоугольника включают высоту и ширину все маркеры изменения размера, расположенных на внешней границы. При возвращении, `lpTrueRect` всегда представляет собой нормализованное прямоугольник в координатах устройства.  
+### <a name="remarks"></a>Remarks  
+ The dimensions of the rectangle include the height and width of any resize handles located on the outer border. Upon returning, `lpTrueRect` is always a normalized rectangle in device coordinates.  
   
-##  <a name="hittest"></a>CRectTracker::HitTest  
- Вызывайте эту функцию, чтобы узнать, является ли пользователь захвачено маркер изменения размера.  
+##  <a name="hittest"></a>  CRectTracker::HitTest  
+ Call this function to find out whether the user has grabbed a resize handle.  
   
 ```  
 int HitTest(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `point`  
- Точка в координатах устройства, для тестирования.  
+ The point, in device coordinates, to test.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение зависит от перечисляемого типа **CRectTracker::TrackerHit** и может иметь одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ The value returned is based on the enumerated type **CRectTracker::TrackerHit** and can have one of the following values:  
   
 - **CRectTracker::hitNothing** -1  
   
@@ -287,78 +300,78 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
- Размер в пикселях от `CRectTracker` маркеры изменения размера.  
+##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
+ The size, in pixels, of the `CRectTracker` resize handles.  
   
 ```  
 int m_nHandleSize;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Инициализирован системы по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ Initialized with the default system value.  
   
-##  <a name="m_rect"></a>CRectTracker::m_rect  
- Текущая позиция прямоугольника в клиентские координаты (в пикселях).  
+##  <a name="m_rect"></a>  CRectTracker::m_rect  
+ The current position of the rectangle in client coordinates (pixels).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
- Минимальный размер прямоугольника.  
+##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin  
+ The minimum size of the rectangle.  
   
 ```  
 CSize m_sizeMin;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оба значения по умолчанию **cx** и **cy**, вычисляются на основе системы по умолчанию для ширины границы. Этот член данных используется только `AdjustRect` функции-члена.  
+### <a name="remarks"></a>Remarks  
+ Both default values, **cx** and **cy**, are calculated from the default system value for the border width. This data member is used only by the `AdjustRect` member function.  
   
-##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
- Текущий стиль прямоугольника.  
+##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
+ Current style of the rectangle.  
   
 ```  
 UINT m_nStyle;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- В разделе [CRectTracker::CRectTracker](#crecttracker) список возможных стилей.  
+### <a name="remarks"></a>Remarks  
+ See [CRectTracker::CRectTracker](#crecttracker) for a list of possible styles.  
   
-##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
- Вызовите эту функцию для преобразования потенциально инвертированный дескриптор.  
+##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
+ Call this function to convert a potentially inverted handle.  
   
 ```  
 int NormalizeHit(int nHandle) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nHandle`  
- Дескриптор, выбранных пользователем.  
+ Handle selected by the user.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Индекс нормализованный дескриптор.  
+### <a name="return-value"></a>Return Value  
+ The index of the normalized handle.  
   
-### <a name="remarks"></a>Примечания  
- Когда `CRectTracker::Track` или `CRectTracker::TrackRubberBand` вызывается с Инверсия допускается, существует возможность прямоугольник обратные на оси x и оси y. В этом случае `HitTest` будет возвращать маркеры, которые также обратным по отношению к прямоугольника. Это не подходит для рисования курсоров, так как отзывы зависит от позиции экрана прямоугольника, а не часть структуры данных прямоугольник, который будет изменен.  
+### <a name="remarks"></a>Remarks  
+ When `CRectTracker::Track` or `CRectTracker::TrackRubberBand` is called with inverting allowed, it is possible for the rectangle to be inverted on the x-axis, the y-axis, or both. When this happens, `HitTest` will return handles that are also inverted with respect to the rectangle. This is inappropriate for drawing cursor feedback because the feedback depends on the screen position of the rectangle, not the portion of the rectangle data structure that will be modified.  
   
-##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
- Вызывается платформой при каждом прямоугольнике отслеживания был изменен во время вызова `Track`.  
+##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
+ Called by the framework whenever the tracker rectangle has changed during a call to `Track`.  
   
 ```  
 virtual void OnChangedRect(const CRect& rectOld);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *rectOld*  
- Содержит координаты старое устройство `CRectTracker` объекта.  
+ Contains the old device coordinates of the `CRectTracker` object.  
   
-### <a name="remarks"></a>Примечания  
- Во время вызова этой функции, все отзывы, нарисованных при помощи `DrawTrackerRect` был удален. Реализация по умолчанию этой функции не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ At the time this function is called, all feedback drawn with `DrawTrackerRect` has been removed. The default implementation of this function does nothing.  
   
- Переопределите эту функцию, если вы хотите выполнить действия после был изменен размер прямоугольника.  
+ Override this function when you want to perform any actions after the rectangle has been resized.  
   
-##  <a name="setcursor"></a>CRectTracker::SetCursor  
- Эта функция вызывается для изменения формы курсора, когда оно находится над `CRectTracker` области объекта.  
+##  <a name="setcursor"></a>  CRectTracker::SetCursor  
+ Call this function to change the cursor shape while it is over the `CRectTracker` object's region.  
   
 ```  
 BOOL SetCursor(
@@ -366,21 +379,21 @@ BOOL SetCursor(
     UINT nHitTest) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Точки окна, которое в данный момент находится курсор.  
+ Points to the window that currently contains the cursor.  
   
  `nHitTest`  
- Результаты предыдущей проверки нажатия из `WM_SETCURSOR` сообщения.  
+ Results of the previous hit test, from the `WM_SETCURSOR` message.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если предыдущее соответствие по протоколу прямоугольник регистрации; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the previous hit was over the tracker rectangle; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Вызывайте эту функцию из внутри функции окна, который обрабатывает `WM_SETCURSOR` сообщений (обычно `OnSetCursor`).  
+### <a name="remarks"></a>Remarks  
+ Call this function from inside the function of your window that handles the `WM_SETCURSOR` message (typically `OnSetCursor`).  
   
-##  <a name="track"></a>CRectTracker::Track  
- Эта функция вызывается для отображения пользовательского интерфейса для изменения размеров прямоугольника.  
+##  <a name="track"></a>  CRectTracker::Track  
+ Call this function to display the user interface for resizing the rectangle.  
   
 ```  
 BOOL Track(
@@ -390,31 +403,31 @@ BOOL Track(
     CWnd* pWndClipTo = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Объект window, содержащей прямоугольник.  
+ The window object that contains the rectangle.  
   
  `point`  
- Устройство координаты текущего положения мыши относительно клиентской области.  
+ Device coordinates of the current mouse position relative to the client area.  
   
  `bAllowInvert`  
- Если **TRUE**, прямоугольник может быть инвертированный вдоль оси x и оси y; в противном случае **FALSE**.  
+ If **TRUE**, the rectangle can be inverted along the x-axis or y-axis; otherwise **FALSE**.  
   
  `pWndClipTo`  
- Окно, в котором операций рисования будет обрезан по ее. Если **NULL**, `pWnd` используется в качестве отсекающего прямоугольника.  
+ The window that drawing operations will be clipped to. If **NULL**, `pWnd` is used as the clipping rectangle.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если нажата клавиша ESC, остановить процесс отслеживания, прямоугольник, хранящиеся в объекте отслеживания не изменяется и возвращается значение 0. При фиксации изменений с мышью и, не отпуская кнопку мыши, новое положение и размер записывается в средство отслеживания прямоугольник и возвращается ненулевое значение.  
+### <a name="return-value"></a>Return Value  
+ If the ESC key is pressed, the tracking process is halted, the rectangle stored in the tracker is not altered, and 0 is returned. If the change is committed, by moving the mouse and releasing the left mouse button, the new position and/or size is recorded in the tracker's rectangle and nonzero is returned.  
   
-### <a name="remarks"></a>Примечания  
- Обычно это вызывается из внутри функции приложения, которые обрабатывают `WM_LBUTTONDOWN` сообщений (обычно `OnLButtonDown`).  
+### <a name="remarks"></a>Remarks  
+ This is usually called from inside the function of your application that handles the `WM_LBUTTONDOWN` message (typically `OnLButtonDown`).  
   
- Эта функция будет захватить мышь, пока пользователь отпускает левую кнопку мыши, клавиши ESC или нажатии правой кнопки мыши. Обновляется, когда пользователь перемещает указатель мыши, обратную связь путем вызова `DrawTrackerRect` и `OnChangedRect`.  
+ This function will capture the mouse until the user releases the left mouse button, presses the ESC key, or presses the right mouse button. As the user moves the mouse cursor, the feedback is updated by calling `DrawTrackerRect` and `OnChangedRect`.  
   
- Если `bAllowInvert` — **TRUE**, прямоугольник отслеживания могут быть инвертированы на оси x или оси y.  
+ If `bAllowInvert` is **TRUE**, the tracking rectangle can be inverted on either the x-axis or y-axis.  
   
-##  <a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
- Вызовите эту функцию, чтобы сделать выбор эластичное.  
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
+ Call this function to do rubber-band selection.  
   
 ```  
 BOOL TrackRubberBand(
@@ -423,30 +436,30 @@ BOOL TrackRubberBand(
     BOOL bAllowInvert = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Объект window, содержащей прямоугольник.  
+ The window object that contains the rectangle.  
   
  `point`  
- Устройство координаты текущего положения мыши относительно клиентской области.  
+ Device coordinates of the current mouse position relative to the client area.  
   
  `bAllowInvert`  
- Если **задано значение TRUE,** прямоугольник может быть инвертированный вдоль оси x и оси y; в противном случае **FALSE**.  
+ If **TRUE,** the rectangle can be inverted along the x-axis or y-axis; otherwise **FALSE**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если мышь перемещена и прямоугольника, не является пустой; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the mouse has moved and the rectangle is not empty; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Обычно она вызывается из внутри функции приложения, которые обрабатывают `WM_LBUTTONDOWN` сообщений (обычно `OnLButtonDown`).  
+### <a name="remarks"></a>Remarks  
+ It is usually called from inside the function of your application that handles the `WM_LBUTTONDOWN` message (typically `OnLButtonDown`).  
   
- Эта функция будет захватить мышь, пока пользователь отпускает левую кнопку мыши, клавиши ESC или нажатии правой кнопки мыши. Обновляется, когда пользователь перемещает указатель мыши, обратную связь путем вызова `DrawTrackerRect` и `OnChangedRect`.  
+ This function will capture the mouse until the user releases the left mouse button, presses the ESC key, or presses the right mouse button. As the user moves the mouse cursor, the feedback is updated by calling `DrawTrackerRect` and `OnChangedRect`.  
   
- Отслеживание выполняется с выбора эластичные внешнего типа из нижнего правого дескриптора. Если разрешается обращение, прямоугольник можно изменять, перетаскивая либо вверх и влево или вниз и вправо.  
+ Tracking is performed with a rubber-band-type selection from the lower-right handle. If inverting is allowed, the rectangle can be sized by dragging either up and to the left or down and to the right.  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC ОТСЛЕЖИВАНИЯ](../../visual-cpp-samples.md)   
- [Пример MFC ФУНКЦИЙ](../../visual-cpp-samples.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс COleResizeBar](../../mfc/reference/coleresizebar-class.md)   
- [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TRACKER](../../visual-cpp-samples.md)   
+ [MFC Sample DRAWCLI](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleResizeBar Class](../../mfc/reference/coleresizebar-class.md)   
+ [CRect Class](../../atl-mfc-shared/reference/crect-class.md)
 

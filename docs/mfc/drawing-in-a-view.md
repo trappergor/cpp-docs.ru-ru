@@ -1,57 +1,76 @@
 ---
-title: "Рисование в представлении | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контексты устройств, рисунки экрана"
-  - "рисование, в представлениях"
-  - "рисование сообщений в классе представления"
-  - "печать [MFC], представления"
-  - "представления печати"
-  - "представления, печать"
-  - "представления, отрисовка"
-  - "представления, обновление"
+title: Drawing in a View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- drawing [MFC], in views
+- views [MFC], printing
+- views [MFC], updating
+- printing [MFC], views
+- views [MFC], rendering
+- printing views [MFC]
+- paint messages in view class [MFC]
+- device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Рисование в представлении
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e06b65ad11b5a71fe3d950e08a8880a6df3829c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Почти все изображение в приложении происходит в функции\-члене `OnDraw` представления, которые необходимо переопределить по в представлении класс. \(Исключение рисование мышь, обсуженное в [Интерпретация введенные пользователем данные через представление](../mfc/interpreting-user-input-through-a-view.md)\). Переопределенный `OnDraw`:  
+---
+# <a name="drawing-in-a-view"></a>Drawing in a View
+Nearly all drawing in your application occurs in the view's `OnDraw` member function, which you must override in your view class. (The exception is mouse drawing, discussed in [Interpreting User Input Through a View](../mfc/interpreting-user-input-through-a-view.md).) Your `OnDraw` override:  
   
-1.  Получает данные путем вызова функции\-члены документа предоставляется.  
+1.  Gets data by calling the document member functions you provide.  
   
-2.  Отображает данные путем вызова функции\-члены объекта контекста устройства, что платформа передаче `OnDraw`.  
+2.  Displays the data by calling member functions of a device-context object that the framework passes to `OnDraw`.  
   
- Если данные документа изменяется каким\-либо образом, представление следует перерисовать для отражения изменений.  Обычно это происходит, когда пользователь вносит изменения через представление в документе.  В этом случае представление функции\-члена [UpdateAllViews](../Topic/CDocument::UpdateAllViews.md) документа, чтобы уведомить всех представления в одном документе для обновления.  `UpdateAllViews` функции\-члена [OnUpdate](../Topic/CView::OnUpdate.md) каждого представления.  Реализация по умолчанию `OnUpdate` что всю клиентскую область представления.  Можно переопределить, чтобы сделать только те области клиентской области, которые сопоставляют измененных части документа.  
+ When a document's data changes in some way, the view must be redrawn to reflect the changes. Typically, this happens when the user makes a change through a view on the document. In this case, the view calls the document's [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) member function to notify all views on the same document to update themselves. `UpdateAllViews` calls each view's [OnUpdate](../mfc/reference/cview-class.md#onupdate) member function. The default implementation of `OnUpdate` invalidates the view's entire client area. You can override it to invalidate only those regions of the client area that map to the modified portions of the document.  
   
- Функция\-член `UpdateAllViews` класса **CDocument**, а функция\-член `OnUpdate` класса `CView` позволяют передавать сведения, какие части документа было изменено.  Этот механизм «подсказки» позволяет ограничить область, представление должно redraw.  `OnUpdate` принимает 2 аргумента «подсказки».  Во\-первых, `lHint`, тип **LPARAM**, позволяет передавать любые данные, чтобы позже, а второй, `pHint`, типа `CObject`\*, позволяет передавать указатель на любой объект, производный от `CObject`.  
+ The `UpdateAllViews` member function of class **CDocument** and the `OnUpdate` member function of class `CView` let you pass information describing what parts of the document were modified. This "hint" mechanism lets you limit the area that the view must redraw. `OnUpdate` takes two "hint" arguments. The first, `lHint`, of type **LPARAM**, lets you pass any data you like, while the second, `pHint`, of type `CObject`*, lets you pass a pointer to any object derived from `CObject`.  
   
- Если представление будет недопустимым Windows, он отправляет сообщение `WM_PAINT`.  Функции обработчика [OnPaint](../Topic/CWnd::OnPaint.md) представления отвечает на сообщение путем создания объекта контекста устройства класса [CPaintDC](../mfc/reference/cpaintdc-class.md) и вызывает функцию\-член `OnDraw` данного представления.  Обычно писать при переопределении функции обработчика `OnPaint`.  
+ When a view becomes invalid, Windows sends it a `WM_PAINT` message. The view's [OnPaint](../mfc/reference/cwnd-class.md#onpaint) handler function responds to the message by creating a device-context object of class [CPaintDC](../mfc/reference/cpaintdc-class.md) and calls your view's `OnDraw` member function. You do not normally have to write an overriding `OnPaint` handler function.  
   
- [контекст устройства](../Topic/Device%20Contexts.md) — это структура данных Windows, которая содержит сведения об атрибутах рисования устройствах, таких как отображение или принтер.  Все выполненные рисования с помощью объекта контекста устройства.  Для рисования на экране `OnDraw` передается объект `CPaintDC`.  Для рисования на принтер он передается объектом [CDC](../Topic/CDC%20Class.md) настроено для текущего принтера.  
+ A [device context](../mfc/device-contexts.md) is a Windows data structure that contains information about the drawing attributes of a device such as a display or a printer. All drawing calls are made through a device-context object. For drawing on the screen, `OnDraw` is passed a `CPaintDC` object. For drawing on a printer, it is passed a [CDC](../mfc/reference/cdc-class.md) object set up for the current printer.  
   
- Код для рисования в представлении сначала получает указатель на объект document, затем осуществляет рисования через контекст устройства.  В следующем примере `OnDraw` показан процесс:  
+ Your code for drawing in the view first retrieves a pointer to the document, then makes drawing calls through the device context. The following simple `OnDraw` example illustrates the process:  
   
- [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/CPP/drawing-in-a-view_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/cpp/drawing-in-a-view_1.cpp)]  
   
- В этом примере выполняется были бы функции `GetData` как член производного класса документа.  
+ In this example, you would define the `GetData` function as a member of your derived document class.  
   
- Пример выводит любая строка получает из документа, центрированного в представлении.  Если вызов `OnDraw` для рисования экрана, объект `CDC`, в `pDC``CPaintDC` конструктор которого уже, `BeginPaint`.  К функциям рисования выполненные с помощью указателя контекста устройства.  Дополнительные сведения о контекстах устройства и вызовах рисования см. в описании класса [CDC](../Topic/CDC%20Class.md) и [Работа с объектами окна](../Topic/Working%20with%20Window%20Objects.md) в справочнике по *MFC*.  
+ The example prints whatever string it gets from the document, centered in the view. If the `OnDraw` call is for screen drawing, the `CDC` object passed in `pDC` is a `CPaintDC` whose constructor has already called `BeginPaint`. Calls to drawing functions are made through the device-context pointer. For information about device contexts and drawing calls, see class [CDC](../mfc/reference/cdc-class.md) in the *MFC Reference* and [Working with Window Objects](../mfc/working-with-window-objects.md).  
   
- Дополнительные примеры создания `OnDraw` см. в разделе [Примеры MFC](../top/visual-cpp-samples.md).  
+ For more examples of how to write `OnDraw`, see the [MFC Samples](../visual-cpp-samples.md).  
   
-## См. также  
- [Использование представлений](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

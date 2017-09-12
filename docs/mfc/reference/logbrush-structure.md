@@ -1,5 +1,5 @@
 ---
-title: "Структура LOGBRUSH | Документы Microsoft"
+title: LOGBRUSH Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGBRUSH structure
+- LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: eea7caf6139fd43dd77163271701d170c7a744e2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd4d96a7f7c858f8b3cf2e39bdc98233224a1e7a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logbrush-structure"></a>Структура LOGBRUSH
-`LOGBRUSH` Структура определяет стиль, цвет и шаблон физических кисти. Он используется системой Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) и [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) функции.  
+# <a name="logbrush-structure"></a>LOGBRUSH Structure
+The `LOGBRUSH` structure defines the style, color, and pattern of a physical brush. It is used by the Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) and [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) functions.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tag LOGBRUSH { /* lb */  
@@ -53,56 +53,56 @@ typedef struct tag LOGBRUSH { /* lb */
 } LOGBRUSH;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `lbStyle`  
- Задает стиль кисти. `lbStyle` Элемент должен быть один из следующих стилей:  
+ Specifies the brush style. The `lbStyle` member must be one of the following styles:  
   
-- **BS_DIBPATTERN** шаблон кисти, определенных спецификацией аппаратно независимым точечным рисунком (DIB). Если `lbStyle` — **BS_DIBPATTERN**, **lbHatch** член содержит дескриптор упакованным DIB.  
+- **BS_DIBPATTERN** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB.  
   
-- **BS_DIBPATTERNPT** шаблон кисти, определенных спецификацией аппаратно независимым точечным рисунком (DIB). Если `lbStyle` — **BS_DIBPATTERNPT**, **lbHatch** члена содержит указатель на упакованный DIB.  
+- **BS_DIBPATTERNPT** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB.  
   
-- **BS_HATCHED** Hatched кисти.  
+- **BS_HATCHED** Hatched brush.  
   
-- **BS_HOLLOW** пустая кисти.  
+- **BS_HOLLOW** Hollow brush.  
   
-- **BS_NULL** как **BS_HOLLOW**.  
+- **BS_NULL** Same as **BS_HOLLOW**.  
   
-- **BS_PATTERN** шаблона кисти определяется памяти растрового изображения.  
+- **BS_PATTERN** Pattern brush defined by a memory bitmap.  
   
-- **BS_SOLID** сплошной кисти.  
+- **BS_SOLID** Solid brush.  
   
  `lbColor`  
- Задает цвет, в котором будет рисоваться кисти. Если `lbStyle` — **BS_HOLLOW** или **BS_PATTERN** стиля, **lbColor** игнорируется. Если `lbStyle` — **BS_DIBPATTERN** или **BS_DIBPATTERNBT**, младшее слово из **lbColor** указывает ли **bmiColors** члены [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) структура содержит явную красный, зеленый, синий (RGB) значения или индексов в палитре в настоящее время реализованных логических. **LbColor** член должен быть одним из следующих значений:  
+ Specifies the color in which the brush is to be drawn. If `lbStyle` is the **BS_HOLLOW** or **BS_PATTERN** style, **lbColor** is ignored. If `lbStyle` is **BS_DIBPATTERN** or **BS_DIBPATTERNBT**, the low-order word of **lbColor** specifies whether the **bmiColors** members of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contain explicit red, green, blue (RGB) values or indices into the currently realized logical palette. The **lbColor** member must be one of the following values:  
   
-- **DIB_PAL_COLORS** таблица цветов состоит из массива 16-разрядными индексами в палитре в настоящее время реализованных логических.  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indices into the currently realized logical palette.  
   
-- **DIB_RGB_COLORS** таблица цветов содержит литеральные значения RGB.  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lbHatch*  
- Задает стиль штриховки. Значение зависит от стиля кисти, описанного в `lbStyle`. Если `lbStyle` — **BS_DIBPATTERN**, **lbHatch** член содержит дескриптор упакованным DIB. Если `lbStyle` — **BS_DIBPATTERNPT**, **lbHatch** члена содержит указатель на упакованный DIB. Если `lbStyle` — **BS_HATCHED**, **lbHatch** член задает ориентацию линии, используемые для создания штриховки. Он может принимать одно из следующих значений:  
+ Specifies a hatch style. The meaning depends on the brush style defined by `lbStyle`. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB. If `lbStyle` is **BS_HATCHED**, the **lbHatch** member specifies the orientation of the lines used to create the hatch. It can be one of the following values:  
   
-- `HS_BDIAGONAL`45 градусов штриховку вверх, слева направо  
+- `HS_BDIAGONAL` A 45-degree upward, left-to-right hatch  
   
-- `HS_CROSS`Горизонтальные и вертикальные штриховки  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`штриховки 45 градусов  
+- `HS_DIAGCROSS` 45-degree crosshatch  
   
-- `HS_FDIAGONAL`45 градусов штриховку вниз, слева направо  
+- `HS_FDIAGONAL` A 45-degree downward, left-to-right hatch  
   
-- `HS_HORIZONTAL`Горизонтальная штриховка  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Вертикальная штриховка  
+- `HS_VERTICAL` Vertical hatch  
   
- Если `lbStyle` — **BS_PATTERN**, **lbHatch** является дескриптором растровому изображению, которое определяет шаблон. Если `lbStyle` — **BS_SOLID** или **BS_HOLLOW**, **lbHatch** игнорируется.  
+ If `lbStyle` is **BS_PATTERN**, **lbHatch** is a handle to the bitmap that defines the pattern. If `lbStyle` is **BS_SOLID** or **BS_HOLLOW**, **lbHatch** is ignored.  
   
-## <a name="remarks"></a>Примечания  
- Хотя **lbColor** определяет цвет штриховой кистью, [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) и [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) функции управления цветом фона.  
+## <a name="remarks"></a>Remarks  
+ Although **lbColor** controls the foreground color of a hatch brush, the [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) and [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) functions control the background color.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Стандартная команда и идентификаторы окон | Документы Microsoft"
+title: Standard Command and Window IDs | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,29 +33,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: d308f3f9efc5933124460d9839a0e94fffa60b4a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30a36f5b71a99888eff47c539c9bf3534481e71d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="standard-command-and-window-ids"></a>Стандартная команда и идентификаторы окон
-Библиотеки классов Microsoft Foundation определяет количество стандартная команда и идентификаторы окон в файле Afxres.h. Эти идентификаторы наиболее часто используются в редакторы ресурсов и в окне «Свойства» для сопоставления функций-обработчиков сообщений. Все стандартные команды имеют **ID_** префикс. Например, при использовании редактора меню обычно привязке элемента меню File Open стандарта `ID_FILE_OPEN` команды идентификатор.  
+# <a name="standard-command-and-window-ids"></a>Standard Command and Window IDs
+The Microsoft Foundation Class Library defines a number of standard command and window IDs in Afxres.h. These IDs are most commonly used within the resource editors and the Properties window to map messages to your handler functions. All standard commands have an             **ID_** prefix. For example, when you use the menu editor, you normally bind the File Open menu item to the standard             `ID_FILE_OPEN` command ID.  
   
- Для большинство стандартных команд, код приложения не требуется для ссылки на идентификатор команды, поскольку сама инфраструктура обрабатывает команды по схемам сообщений в классах основной framework ( `CWinThread`, `CWinApp`, `CView`, **CDocument**и так далее).  
+ For most standard commands, application code does not need to refer to the command ID, because the framework itself handles the commands through message maps in its primary framework classes (                `CWinThread`,                 `CWinApp`,                 `CView`,                 **CDocument**, and so on).  
   
- Помимо стандартных идентификаторов команд, ряд других стандартных идентификаторов определяются которого имеют префикс из **AFX_ID**. Эти идентификаторы включают стандартное окно идентификаторы (префикс **AFX_IDW_**), строка, идентификаторы (префикс **AFX_IDS_**) и несколько других типов.  
+ In addition to standard command IDs, a number of other standard IDs are defined which have a prefix of                 **AFX_ID**. These IDs include standard window IDs (prefix                 **AFX_IDW_**), string IDs (prefix                 **AFX_IDS_**), and several other types.  
   
- Идентификаторы, начинающиеся с **AFX_ID** префикс редко используются разработчиками, но может понадобиться для ссылки на эти идентификаторы при переопределении функции framework, которые также называют **AFX_ID**s.  
+ IDs that begin with the                 **AFX_ID** prefix are rarely used by programmers, but you might need to refer to these IDs when overriding framework functions that also refer to the                 **AFX_ID**s.  
   
- Идентификаторы не документированы в этом справочнике по отдельности. Дополнительные сведения о них можно найти в Технические примечания [20](../../mfc/tn020-id-naming-and-numbering-conventions.md), [21](../../mfc/tn021-command-and-message-routing.md), и [22](../../mfc/tn022-standard-commands-implementation.md).  
+ IDs are not individually documented in this reference. You can find more information on them in Technical Notes                 [20](../../mfc/tn020-id-naming-and-numbering-conventions.md),                 [21](../../mfc/tn021-command-and-message-routing.md), and                 [22](../../mfc/tn022-standard-commands-implementation.md).  
   
 > [!NOTE]
->  Файл заголовка Afxres.h неявно включается в Afxwin.h. Явным образом, необходимо включить следующую инструкцию в RC-файл приложения ресурсов:  
+>  The header file Afxres.h is indirectly included in Afxwin.h. You must explicitly include the following statement in your application's resource script (.rc) file:  
   
- [!code-cpp[NVC_MFC_Utilities&#47;](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
+ [!code-cpp[NVC_MFC_Utilities#47](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

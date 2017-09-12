@@ -1,86 +1,107 @@
 ---
-title: "Доступ ко всем членам коллекции | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, коллекции"
-  - "перечисления [MFC]"
-  - "перечисление коллекций"
-  - "коллекции, доступ"
-  - "классы коллекций, доступ к членам"
-  - "массивы [C++], итерация"
-  - "итерация, коллекции"
-  - "доступ к членам, коллекции"
-  - "итерации коллекции списков"
-  - "классы коллекций MFC, доступ к членам"
-  - "коллекции, циклический перебор"
-  - "циклические структуры, циклический перебор элементов в коллекции"
+title: Accessing All Members of a Collection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- enumerations [MFC]
+- enumerating collections [MFC]
+- collections [MFC], accessing
+- collection classes [MFC]
+- accessing members"
+- arrays [MFC], iterating
+- iteration [MFC], collections
+- member access [MFC], collections
+- list collection iteration [MFC]s
+- MFC collection classes [MFC], accessing members
+- collections [MFC], looping through
+- loop structures [MFC], looping through collections
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Доступ ко всем членам коллекции
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4fd4aa1189b62b6689795ef1ba4ac2585cfcb059
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Для доступа к своим элементам классы коллекций массивов MFC \(как шаблонные, так и нешаблонные\) используют индексы. Для описания в заданной позиции в коллекции классы коллекций списков и схем MFC \(как шаблонные, так и нешаблонные\) используют индикатор типа **POSITION**. Чтобы получить доступ к одному или нескольким членам этих коллекций, сначала следует инициализировать индикатор позиции, а затем повторно передавать эту позицию в коллекцию с запросом на возврат следующего элемента. Коллекция не отвечает за поддержание сведений о состоянии хода выполнения итерации. Эта информация хранится в индикаторе позиции. Однако, принимая во внимание конкретную позицию, коллекция отвечает за возврат следующего элемента.  
+---
+# <a name="accessing-all-members-of-a-collection"></a>Accessing All Members of a Collection
+The MFC array collection classes — both template-based and not — use indexes to access their elements. The MFC list and map collection classes — both template-based and not — use an indicator of type **POSITION** to describe a given position within the collection. To access one or more members of these collections, you first initialize the position indicator and then repeatedly pass that position to the collection and ask it to return the next element. The collection is not responsible for maintaining state information about the progress of the iteration. That information is kept in the position indicator. But, given a particular position, the collection is responsible for returning the next element.  
   
- В приведенных далее процедурах показана итерация в трех основных типах коллекций в MFC.  
+ The following procedures show how to iterate over the three main types of collections provided with MFC:  
   
--   [Итерация массива](#_core_to_iterate_an_array)  
+-   [Iterating an array](#_core_to_iterate_an_array)  
   
--   [Итерация списка](#_core_to_iterate_a_list)  
+-   [Iterating a list](#_core_to_iterate_a_list)  
   
--   [Итерация схемы](#_core_to_iterate_a_map)  
+-   [Iterating a map](#_core_to_iterate_a_map)  
   
-### Итерация массива  
+### <a name="_core_to_iterate_an_array"></a> To iterate an array  
   
-1.  Используйте последовательные номера индекса с функцией\-членом `GetAt`.  
+1.  Use sequential index numbers with the `GetAt` member function:  
   
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_1.cpp)]  
+     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]  
   
-     В этом примере используется массив типизированных указателей, который содержит указатели на объекты `CPerson`. Массив является производным от класса `CObArray`, одного из нешаблонных предопределенных классов.`CPerson` возвращает указатель на объект `GetAt`. Для классов коллекций типизированных указателей \(массивов или списков\) первый параметр указывает базовый класс, второй параметр указывает тип для хранения.  
+     This example uses a typed pointer array that contains pointers to `CPerson` objects. The array is derived from class `CObArray`, one of the nontemplate predefined classes. `GetAt` returns a pointer to a `CPerson` object. For typed pointer collection classes — arrays or lists — the first parameter specifies the base class; the second parameter specifies the type to store.  
   
-     Класс `CTypedPtrArray` также перегружает оператор **\[ \]**, поэтому для доступа к элементам массива можно использовать обычный синтаксис индекса массива. Альтернативой инструкции в теле приведенного выше цикла `for` является  
+     The `CTypedPtrArray` class also overloads the **[ ]** operator so that you can use the customary array-subscript syntax to access elements of an array. An alternative to the statement in the body of the `for` loop above is  
   
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_2.cpp)]  
+     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   
-     Этот оператор существует как в **константной**, так и в не**константной** версиях.**Константная** версия, которая вызывается для **константных** массивов, может отображаться только в правой части оператора присваивания.  
+     This operator exists in both **const** and non-**const** versions. The **const** version, which is invoked for **const** arrays, can appear only on the right side of an assignment statement.  
   
-### Итерация списка  
+### <a name="_core_to_iterate_a_list"></a> To iterate a list  
   
-1.  Для прохода по списку используйте функции\-члены `GetHeadPosition` и `GetNext`:  
+1.  Use the member functions `GetHeadPosition` and `GetNext` to work your way through the list:  
   
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_3.cpp)]  
+     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]  
   
-     В этом примере используется список типизированных указателей, который содержит указатели на объекты `CPerson`. Объявление списка напоминает объявление для массива в процедуре [Итерация массива](#_core_to_iterate_an_array), но является производным от класса `CObList`.`CPerson` возвращает указатель на объект `GetNext`.  
+     This example uses a typed pointer list to contain pointers to `CPerson` objects. The list declaration resembles the one for the array in the procedure [To iterate an array](#_core_to_iterate_an_array) but is derived from class `CObList`. `GetNext` returns a pointer to a `CPerson` object.  
   
-### Итерация схемы  
+### <a name="_core_to_iterate_a_map"></a> To iterate a map  
   
-1.  Используйте `GetStartPosition` для перехода в начало схемы и `GetNextAssoc` для повторного получения следующего ключа и значения из схемы, как показано в следующем примере.  
+1.  Use `GetStartPosition` to get to the beginning of the map and `GetNextAssoc` to repeatedly get the next key and value from the map, as shown by the following example:  
   
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_4.cpp)]  
+     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]  
   
-     В этом примере применяется шаблон простой схемы \(а не коллекция типизированных указателей\), использующий ключи `CString` и сохраняющий указатели на объекты `CPerson`. При использовании функций доступа, таких как `GetNextAssoc`, класс предоставляет указатели на объекты `CPerson`. При использовании одной из коллекций нешаблонных схем необходимо привести возвращенный указатель `CObject` к указателю на `CPerson`.  
+     This example uses a simple map template (rather than a typed pointer collection) that uses `CString` keys and stores pointers to `CPerson` objects. When you use access functions such as `GetNextAssoc`, the class provides pointers to `CPerson` objects. If you use one of the nontemplate map collections instead, you must cast the returned `CObject` pointer to a pointer to a `CPerson`.  
   
     > [!NOTE]
-    >  При работе с нешаблонными схемами компилятору требуется ссылка на указатель `CObject` в последнем параметре на `GetNextAssoc`. При воде данных необходимо привести указатели к этому типу, как показано в следующем примере.  
+    >  For nontemplate maps, the compiler requires a reference to a `CObject` pointer in the last parameter to `GetNextAssoc`. On input, you must cast your pointers to that type, as shown in the next example.  
   
-     Шаблонное решение проще в использовании и помогает обеспечить более высокий уровень безопасности типов. Как видно из примера ниже, нешаблонный код более сложен.  
+     The template solution is simpler and helps provide better type safety. The nontemplate code is more complicated, as you can see here:  
   
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_5.cpp)]  
+     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]  
   
- Дополнительные сведения см. в разделе [Удаление всех объектов из коллекции CObject](../Topic/Deleting%20All%20Objects%20in%20a%20CObject%20Collection.md).  
+ For more information, see [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md).  
   
-## См. также  
- [Коллекции](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

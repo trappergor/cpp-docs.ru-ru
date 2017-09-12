@@ -1,48 +1,67 @@
 ---
-title: "Элементы обратного вызова и маска обратного вызова | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы обратного вызова в классе CListCtrl"
-  - "CListCtrl - класс, элемент обратного вызова и маска обратного вызова"
+title: Callback Items and the Callback Mask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback items in CListCtrl class [MFC]
+- CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Элементы обратного вызова и маска обратного вызова
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e943e5445620b25437a0f6d70a6703a927d5e636
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Для каждого из его элементов управляет списком обычно содержит текст метки, индекс списка изображений Значков панели элементов и набор бита \(в состоянии элемента.  Можно указать отдельные элементы как элементы обратного вызова, которые полезны, если приложение уже содержит некоторые сведения для элемента.  
+---
+# <a name="callback-items-and-the-callback-mask"></a>Callback Items and the Callback Mask
+For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state. You can define individual items as callback items, which are useful if your application already stores some of the information for an item.  
   
- Укажите элемент как элемент обратного вызова, указав соответствующие значения для членов `pszText` и `iImage` структуры **LV\_ITEM** \(см. раздел [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)\).  Если приложение поддерживает текст элемента или subitem, укажите значение **LPSTR\_TEXTCALLBACK** для элемента `pszText`.  Если приложение отслеживает Значка для элемента, укажите значение **I\_IMAGECALLBACK** для элемента `iImage`.  
+ You define an item as a callback item by specifying appropriate values for the `pszText` and `iImage` members of the **LV_ITEM** structure (see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). If the application maintains the item's or subitem's text, specify the **LPSTR_TEXTCALLBACK** value for the `pszText` member. If the application keeps track of the icon for the item, specify the **I_IMAGECALLBACK** value for the `iImage` member.  
   
- Помимо указания элементов обратного вызова, можно изменить маску обратного вызова элемента управления.  Эта маска набор флажков бита, определяющие состояния элемента, для которых приложение, а не элемент управления, содержит текущие данные.  Маска обратного вызова применяется к элементам всех элементов управления, в отличие от " элемента обратного вызова, который применяется к определенному элементу.  Маска обратного вызова нулю по умолчанию, это означает, что элемент управления отслеживает все состояния элемента.  Чтобы изменить эту реакция на событие по умолчанию, инициализируйте маска сочетанию на любой из следующих значений:  
+ In addition to defining callback items, you can also modify the control's callback mask. This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data. The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item. The callback mask is zero by default, meaning that the control tracks all item states. To change this default behavior, initialize the mask to any combination of the following values:  
   
--   `LVIS_CUT` элемент был отмечен для операции отрезать И вставить.  
+-   `LVIS_CUT` The item is marked for a cut-and-paste operation.  
   
--   `LVIS_DROPHILITED` элемент выбран в качестве перетаскивания целевой объект.  
+-   `LVIS_DROPHILITED` The item is highlighted as a drag-and-drop target.  
   
--   `LVIS_FOCUSED` элемент имеет фокус.  
+-   `LVIS_FOCUSED` The item has the focus.  
   
--   `LVIS_SELECTED` элемент выбран.  
+-   `LVIS_SELECTED` The item is selected.  
   
--   **LVIS\_OVERLAYMASK** приложение сохраняет индекс списка изображений текущего образа перекрытия для каждого элемента.  
+-   **LVIS_OVERLAYMASK** The application stores the image list index of the current overlay image for each item.  
   
--   **LVIS\_STATEIMAGEMASK** приложение сохраняет индекс списка изображений образа текущего состояния для каждого элемента.  
+-   **LVIS_STATEIMAGEMASK** The application stores the image list index of the current state image for each item.  
   
- Дополнительные сведения о относительно извлечение и устанавливать этой маски см. в разделах [CListCtrl::GetCallbackMask](../Topic/CListCtrl::GetCallbackMask.md) и [CListCtrl::SetCallbackMask](../Topic/CListCtrl::SetCallbackMask.md).  
+ For further information on retrieving and setting this mask, see [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) and [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
   
-## См. также  
- [Использование CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

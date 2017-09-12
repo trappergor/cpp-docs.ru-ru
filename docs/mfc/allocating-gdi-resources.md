@@ -1,42 +1,61 @@
 ---
-title: "Выделение ресурсов GDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI-объекты, выделение во время печати"
-  - "печать [MFC], выделение ресурсов GDI"
-  - "ресурсы [MFC], печать"
+title: Allocating GDI Resources | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC], printing
+- GDI objects [MFC], allocating during printing
+- printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Выделение ресурсов GDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 00f4d9e1eee45c7684d7e8f58806449f35f3bf84
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье объясняется, как выделять и освобождать объекты интерфейса графических устройств \(GDI\) Windows, необходимые для печати.  
+---
+# <a name="allocating-gdi-resources"></a>Allocating GDI Resources
+This article explains how to allocate and deallocate the Windows graphics device interface (GDI) objects needed for printing.  
   
 > [!NOTE]
->  GDI\+ входит в состав Windows XP и доступен в виде распространяемого пакета для Windows NT 4.0 с пакетом обновления 6 \(SP6\), Windows 2000, Windows 98 и Windows Me.  Сведения о скачивании последнего распространяемого пакета см. на странице [http:\/\/www.microsoft.com\/msdownload\/platformsdk\/sdkupdate\/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm).  Подробные сведения см. в документации GDI\+ SDK на портале MSDN: [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/gdicpp\/GDIPlus\/GDIPlus.asp](http://msdn.microsoft.com/library/default.asp?url=/library/gdicpp/GDIPlus/GDIPlus.asp).  
+>  GDI+ is included with Windows XP and is available as a redistributable for Windows NT 4.0  SP6, Windows 2000, Windows 98, and Windows Me. To download the latest redistributable, see  [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). For more information, see the GDI+ SDK documentation at: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
- Предположим, что вам требуется использовать определенные шрифты, перья или другие объекты GDI для печати, но не для отображения на экране.  Из\-за необходимого им объема памяти неэффективно выделить эти объекты при запуске приложения.  Если приложение не печатает документ, эта память может потребоваться для других целей.  Лучше выделить их, когда печать начинается, и затем удалите их.  
+ Suppose you need to use certain fonts, pens, or other GDI objects for printing, but not for screen display. Because of the memory they require, it's inefficient to allocate these objects when the application starts up. When the application isn't printing a document, that memory might be needed for other purposes. It's better to allocate them when printing begins, and then delete them when printing ends.  
   
- Чтобы выделить эти объекты GDI, переопределите функцию\-член [OnBeginPrinting](../Topic/CView::OnBeginPrinting.md).  Эта функция хорошо подходит для этой цели по двум причинам: платформа вызывает эту функцию один раз в начале каждого задания печати и, в отличие от [OnPreparePrinting](../Topic/CView::OnPreparePrinting.md), эта функция имеет доступ к объекту [CDC](../Topic/CDC%20Class.md), представляющему драйвер принтера.  Эти объекты можно сохранить во время выполнения задания печати, определив переменные\-члены в классе представления, которые указывают на объекты GDI \(например, **CFont \*** и т. д.\).  
+ To allocate these GDI objects, override the [OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting) member function. This function is well suited to this purpose for two reasons: the framework calls this function once at the beginning of each print job and, unlike [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting), this function has access to the [CDC](../mfc/reference/cdc-class.md) object representing the printer device driver. You can store these objects for use during the print job by defining member variables in your view class that point to GDI objects (for example, **CFont \*** members, and so on).  
   
- Чтобы использовать созданные объекты GDI, выберите их в контексте устройства принтера в функции\-члене [OnPrint](../Topic/CView::OnPrint.md).  Если вам требуются различные объекты GDI для разных страниц документа, можно изучить элемент `m_nCurPage` структуры [CPrintInfo](../mfc/reference/cprintinfo-structure.md) и выбрать объект GDI соответствующим образом.  Если вам требуется объект GDI для нескольких последовательных страниц, в Windows необходимо выбирать его в контексте устройства при каждом вызове `OnPrint`.  
+ To use the GDI objects you've created, select them into the printer device context in the [OnPrint](../mfc/reference/cview-class.md#onprint) member function. If you need different GDI objects for different pages of the document, you can examine the `m_nCurPage` member of the [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structure and select the GDI object accordingly. If you need a GDI object for several consecutive pages, Windows requires that you select it into the device context each time `OnPrint` is called.  
   
- Чтобы освободить эти объекты GDI, переопределите функцию\-член [OnEndPrinting](../Topic/CView::OnEndPrinting.md).  Платформа вызывает эту функцию в конце каждого задания печати, что дает вам возможность освободить объекты GDI для печати перед возвратом приложения к другим задачам.  
+ To deallocate these GDI objects, override the [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) member function. The framework calls this function at the end of each print job, giving you the opportunity to deallocate printing-specific GDI objects before the application returns to other tasks.  
   
-## См. также  
- [Печать](../mfc/printing.md)   
- [Печать по умолчанию](../Topic/How%20Default%20Printing%20Is%20Done.md)
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)   
+ [How Default Printing Is Done](../mfc/how-default-printing-is-done.md)
+
+

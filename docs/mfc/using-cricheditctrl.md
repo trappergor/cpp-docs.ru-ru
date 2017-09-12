@@ -1,57 +1,76 @@
 ---
-title: "Использование CRichEditCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRichEditCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl - класс, использование"
-  - "элементы управления Rich Edit, использование"
+title: Using CRichEditCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRichEditCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], using
+- CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование CRichEditCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccf20f2b621e2b000ca28b380339ff479dac0ace
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Управление расширенного редактирования окно, в котором пользователь может вводить и изменения текста.  Текст можно присвоить символ и форматирование абзаца, и содержать внедренные объекты OLE.  Управление расширенного редактирования представлен в MFC классом [CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md).  
+---
+# <a name="using-cricheditctrl"></a>Using CRichEditCtrl
+A rich edit control is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. The rich edit control is represented in MFC by the [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) class.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Обзор элемента управления расширенного редактирования](../mfc/overview-of-the-rich-edit-control.md)  
+-   [Overview of the Rich Edit Control](../mfc/overview-of-the-rich-edit-control.md)  
   
--   [Классы, относящиеся к элементам управления расширенного редактирования](../mfc/classes-related-to-rich-edit-controls.md)  
+-   [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md)  
   
--   [Примеры управления расширенного редактирования](../Topic/Rich%20Edit%20Control%20Examples.md)  
+-   [Rich Edit Control Examples](../mfc/rich-edit-control-examples.md)  
   
--   [Форматирование символов в элементах управления расширенного редактирования](../mfc/character-formatting-in-rich-edit-controls.md)  
+-   [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md)  
   
--   [Форматирование абзаца в элементах управления расширенного редактирования](../Topic/Paragraph%20Formatting%20in%20Rich%20Edit%20Controls.md)  
+-   [Paragraph Formatting in Rich Edit Controls](../mfc/paragraph-formatting-in-rich-edit-controls.md)  
   
--   [Текущее выделение в элементе управления расширенного редактирования](../mfc/current-selection-in-a-rich-edit-control.md)  
+-   [Current Selection in a Rich Edit Control](../mfc/current-selection-in-a-rich-edit-control.md)  
   
--   [Переносы ключевых слов в элементе управления расширенного редактирования](../mfc/word-breaks-in-rich-edit-controls.md)  
+-   [Word Breaks in a Rich Edit Control](../mfc/word-breaks-in-rich-edit-controls.md)  
   
--   [Операции с буфером обмена в элементах управления расширенного редактирования](../mfc/clipboard-operations-in-rich-edit-controls.md)  
+-   [Clipboard Operations in Rich Edit Controls](../mfc/clipboard-operations-in-rich-edit-controls.md)  
   
--   [Потоковые операции в элементах управления расширенного редактирования](../mfc/stream-operations-in-rich-edit-controls.md)  
+-   [Stream Operations in Rich Edit Controls](../mfc/stream-operations-in-rich-edit-controls.md)  
   
--   [Печать в элементах управления расширенного редактирования](../mfc/printing-in-rich-edit-controls.md)  
+-   [Printing in Rich Edit Controls](../mfc/printing-in-rich-edit-controls.md)  
   
--   [Бездонные управления расширенного редактирования](../mfc/bottomless-rich-edit-controls.md)  
+-   [Bottomless Rich Edit Controls](../mfc/bottomless-rich-edit-controls.md)  
   
--   [Уведомления от управления расширенного редактирования](../mfc/notifications-from-a-rich-edit-control.md)  
+-   [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md)  
   
-## См. также  
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

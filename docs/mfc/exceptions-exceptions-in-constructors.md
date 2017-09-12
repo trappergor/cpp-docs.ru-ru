@@ -1,34 +1,53 @@
 ---
-title: "Исключения. Исключения в конструкторах | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "конструкторы [C++], исключения"
-  - "исключения, в конструкторах"
-  - "создание исключений, в конструкторах"
+title: 'Exceptions: Exceptions in Constructors | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- constructors [MFC], exceptions
+- throwing exceptions [MFC], in constructors
+- exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Исключения. Исключения в конструкторах
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48785ca5507c026ddeee6b361b6cc7d25d3a635d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При порождении исключения в конструкторе, очистка все объекты и выделения памяти, сделанные до возникновения исключения, как описано в разделе [Исключения: При порождении исключения из собственных функций](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  
+---
+# <a name="exceptions-exceptions-in-constructors"></a>Exceptions: Exceptions in Constructors
+When throwing an exception in a constructor, clean up whatever objects and memory allocations you have made prior to throwing the exception, as explained in [Exceptions: Throwing Exceptions from Your Own Functions](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  
   
- При порождении исключения в конструкторе, сама память для объекта уже была выбрана к моменту конструктор.  Таким образом, компилятор автоматически отменить память занятая объектом после того, как исключение будет вызвано.  
+ When throwing an exception in a constructor, the memory for the object itself has already been allocated by the time the constructor is called. So, the compiler will automatically deallocate the memory occupied by the object after the exception is thrown.  
   
- Дополнительные сведения см. в разделе [Исключения: Освобождение объектов в исключениях](../Topic/Exceptions:%20Freeing%20Objects%20in%20Exceptions.md).  
+ For more information, see [Exceptions: Freeing Objects in Exceptions](../mfc/exceptions-freeing-objects-in-exceptions.md).  
   
-## См. также  
- [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

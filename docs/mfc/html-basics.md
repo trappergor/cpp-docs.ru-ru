@@ -1,99 +1,116 @@
 ---
-title: "Основы HTML | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HTML, сведения о HTML"
+title: HTML Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Основы HTML
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 765f52d5de6f85346eefe13ce60db45520a25552
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Большинство браузеров имеют возможность просматривать источник страниц HTML просмотре.  При просмотре источника появится несколько тегов HTML \(гипертекстовой языка разметки\), окруженных угловыми скобки \(\<\>\), пересыпанными с текстом.  
+---
+# <a name="html-basics"></a>HTML Basics
+Most browsers have the capability of examining the HTML source of the pages you browse. When you view the source you will see a number of HTML (Hypertext markup language) tags, surrounded by angle brackets(<>), interspersed with text.  
   
- В следующих шагах подробно HTML\-тегами использования для построения простую страницу.  В этих шагах, при вводе обычного текста в файл в блокноте, которой несколько изменений, сохраните файл и перезагрузите страница в браузере, чтобы увидеть изменения.  
+ The steps below use HTML tags to build a simple Web page. In these steps, you'll type plain text into a file in Notepad, make a few changes, save the file, and reload your page in the browser to see your changes.  
   
-#### Создание HTML\-файла  
+#### <a name="to-create-an-html-file"></a>To create an HTML file  
   
-1.  Откройте блокнот или любой текстовый редактор.  
+1.  Open Notepad or any plain text editor.  
   
-2.  В меню **Файл**  выберите команду `New`.  
+2.  From the **File** menu, choose `New`.  
   
-3.  Введите следующие линии:  
+3.  Type the following lines:  
   
-    ```  
-    <HTML>  
-    <HEAD>  
-    <TITLE>Top HTML Tags</TITLE>  
-    </HEAD>  
-    </HTML>  
-    ```  
+ ```  
+ <HTML>  
+ <HEAD>  
+ <TITLE>Top HTML Tags</TITLE>  
+ </HEAD>  
+ </HTML>  
+ ```  
   
-4.  В меню **Файл**  выберите команду **Сохранить** и сохраните файл как C: \\webpages\\First.htm.  Оставьте файл открыт в редакторе.  
+4.  From the **File** menu, choose **Save**, and save the file as c:\webpages\First.htm. Leave the file open in the editor.  
   
-5.  Переключитесь в браузере, в меню **Файл**  выберите пункт **Открыть** или введите `file://C:/webpages/first.htm` в поле ввода URL\-адреса браузера.  Вы должны увидеть пустую страницу с заголовком «верхние HTML\-тегами окна».  
+5.  Switch to your browser, and from the **File** menu, choose **Open**, or type `file://C:/webpages/first.htm` in the browser's URL edit box. You should see a blank page with the window caption "Top HTML Tags."  
   
-     Обратите внимание, что теги вызывается и включены в угловых скобках.  Теги не учитывает регистр, но использовать прописных букв часто используется, чтобы сделать тегов стоять работу.  
+     Notice the tags are paired and are included in angle brackets. Tags are not case-sensitive, but capitalization is often used to make tags stand out.  
   
-     Тег \<HTML\> документ начинается и заканчивается тега \<\/HTML\> его.  Остановка не всегда требуемые теги \(\) аналогично начальный тег, но содержат косую черту \(\/\) перед тегом.  Должно быть не пространства между стенной угольник \(\<\) и начала выбранного тега.  
+     The tag \<HTML> starts the document, and the tag \</HTML> ends it. Ending tags (not always required) are the same as the starting tag, but have a forward slash (/) in front of the tag. There should be no spaces between the angle bracket (<) and the start of your tag.  
   
-6.  Вернитесь в блокнот и после \<\/HEAD\> линии, введите:  
+6.  Switch back to Notepad, and after the \</HEAD> line, type:  
   
-    ```  
-    <BODY>  
+ ```  
+ <BODY>  
     HTML is swell.  
     Life is good.  
-    </BODY>  
-    ```  
+ </BODY>  
+ ```  
   
-7.  В меню **Файл** выберите команду **Сохранить**.  
+7.  From the **File** menu, choose **Save**.  
   
-8.  Вернитесь в браузере и обновите страницу.  
+8.  Switch back to your browser and refresh the page.  
   
-     Ключевые слова отображаются в клиентской области приложения окна браузера.  Обратите внимание, что возврат каретки игнорируется.  Если нужно использовать разрыв строки, необходимо включить тег `<BR>` после первой линии.  
+     The words will appear in the client area of your browser's window. Notice that your carriage return is ignored. If you want to have a line break, you must include a `<BR>` tag after the first line.  
   
-     Для всех шагов выполните вставьте текст в любом месте между \<BODY\> и \<\/BODY\> добавить в тело данного документа.  
+     For all the steps that follow, insert the text anywhere between \<BODY> and \</BODY> to add to the body of your document.  
   
-9. Добавьте заголовок:  
+9. Add a header:  
   
-    ```  
-    <H3>Here's the big picture</H3>  
-    ```  
+ ```  
+ <H3>Here's the big picture</H3>  
+ ```  
   
-10. Добавьте изображение, используя файл .gif, сохраненный в том же каталоге, что и страница:  
+10. Add an image, using a .gif file saved in the same directory as your page:  
   
-    ```  
-    <IMG src="yourfile.gif">  
-    ```  
+ ```  
+ <IMG src="yourfile.gif">  
+ ```  
   
-11. Добавьте список.  
+11. Add a list:  
   
-    ```  
-    <UL>Make me an unordered list.  
-    <LI>One programmer</LI>  
-    <LI>Ten SDKs</LI>  
-    <LI>Great Internet Apps</LI>  
-    </UL>  
-    ```  
+ ```  
+ <UL>Make me an unordered list.  
+ <LI>One programmer</LI>  
+ <LI>Ten SDKs</LI>  
+ <LI>Great Internet Apps</LI>  
+ </UL>  
+ ```  
   
-12. В число список вместо этого используется связыванный \<OL\> и \<\/OL\> теги вместо \<UL\> и \<\/UL\> тегов.  
+12. To number the list instead, use paired \<OL> and \</OL> tags in place of the \<UL> and \</UL> tags.  
   
- Это необходимо получить, запущенный.  Если отображается как функцию на странице, можно узнать, как она была создана путем анализа источник HTML.  Редакторы HTML, например титульный лист Майкрософт можно использовать для создания и простые и сложные страницы.  
+ That should get you started. If you see a great feature on a Web page, you can find out how it was created by examining the HTML source. HTML editors such as Microsoft Front Page can be used to create both simple and advanced pages.  
   
- Здесь весь источник HTML для файла для построенной:  
+ Here's the entire HTML source for the file you've been building:  
   
 ```  
 <HTML>  
@@ -114,9 +131,11 @@ Life is good.
 </HTML>  
 ```  
   
- Полное описание тегов, атрибуты и расширения см. в спецификации Hypertext Markup Language \(HTML\).  
+ For a complete description of tags, attributes, and extensions, see the Hypertext Markup Language (HTML) specification:  
   
- [http:\/\/www.w3.org\/pub\/WWW\/MarkUp\/](http://www.w3.org/pub/WWW/MarkUp/)  
+ [http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)  
   
-## См. также  
- [Основы программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

@@ -1,40 +1,59 @@
 ---
-title: "Родительские и дочерние элементы древовидного элемента управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "дочерние элементы в элементе управления "дерево""
-  - "CTreeCtrl - класс, родительские и дочерние элементы"
-  - "родительские элементы в CTreeCtrl"
-  - "элементы управления "дерево", родительские и дочерние элементы"
+title: Tree Control Parent and Child Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- parent items in CTreeCtrl [MFC]
+- child items in tree control [MFC]
+- CTreeCtrl class [MFC], parent and child items
+- tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Родительские и дочерние элементы древовидного элемента управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 823c7ce4bf946d8698b670f3c8b014d7dec1d7e9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Любой элемент в элементе управления дерева \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) может содержать список подэлементов, которые называются дочерними элементами, связанный с ним.  Элемент, содержащий один или несколько дочерних элементов называется родительским элементом.  Дочерний элемент отображается под его родительским элементом и отступ для обозначения того, что он субординационн к родительскому элементу.  Элемент, который не имеет родительского вершины иерархии и называется корневым элементом.  
+---
+# <a name="tree-control-parent-and-child-items"></a>Tree Control Parent and Child Items
+Any item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a list of subitems, which are called child items, associated with it. An item that has one or more child items is called a parent item. A child item is displayed below its parent item and is indented to indicate it is subordinate to the parent. An item that has no parent is at the top of the hierarchy and is called a root item.  
   
- В любой момент времени, состояние родительского элемента списка дочерних элементов можно развернуть или свернуть.  Если состояние развернуто, дочерние элементы выводятся под родительским элементом.  Если он свернут, дочерние элементы не отображаются.  Список автоматически переключение между развернутыми и свернутыми состояниями, когда пользователь дважды щелкает родительский элемент или, если родительский имеет стиль **TVS\_HASBUTTONS**, когда пользователь нажимает кнопку, связанной с родительским элементом.  Приложение может развернуть или свернуть дочерние элементы с помощью функции\-члена [Развернуть](../Topic/CTreeCtrl::Expand.md).  
+ At any given time, the state of a parent item's list of child items can be either expanded or collapsed. When the state is expanded, the child items are displayed below the parent item. When it is collapsed, the child items are not displayed. The list automatically toggles between the expanded and collapsed states when the user double-clicks the parent item or, if the parent has the **TVS_HASBUTTONS** style, when the user clicks the button associated with the parent item. An application can expand or collapse the child items by using the [Expand](../mfc/reference/ctreectrl-class.md#expand) member function.  
   
- Элемент добавляется в элемент управления дерева, вызвав функцию\-член [InsertItem](../Topic/CTreeCtrl::InsertItem.md).  Эта функция возвращает дескриптор типа **HTREEITEM**, который уникальным образом определяет элемент.  При добавлении элемента необходимо указать дескриптор нового элемента родительского элемента.  Если указано значение **NULL** или **TVI\_ROOT** вместо обработки родительского элемента в структуре [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) или параметра `hParent`, то элемент добавляется как корневой элемент.  
+ You add an item to a tree control by calling the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. This function returns a handle of the **HTREEITEM** type, which uniquely identifies the item. When adding an item, you must specify the handle of the new item's parent item. If you specify **NULL** or the **TVI_ROOT** value instead of a parent item handle in the [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) structure or `hParent` parameter, the item is added as a root item.  
   
- Элемент управления "Дерево" отправляет сообщение уведомления [TVN\_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) родительского элемента, если список дочерних элементов или быть примерно развернутым свернутым.  Уведомление дает возможность предотвратить изменение или задать все атрибуты родительского элемента, зависят от состояния списка дочерних элементов.  После изменения состояния списка, элемент управления "Дерево" отправляет сообщение уведомления [TVN\_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533).  
+ A tree control sends a [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) notification message when a parent item's list of child items is about to be expanded or collapsed. The notification gives you the opportunity to prevent the change or to set any attributes of the parent item that depend on the state of the list of child items. After changing the state of the list, the tree control sends a [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) notification message.  
   
- Если список дочерних элементов развернут, он иметь отступ относительно родительского элемента.  Можно задать количество отступов с помощью функции\-члена [SetIndent](../Topic/CTreeCtrl::SetIndent.md) или извлечь текущий объем с помощью функции\-члена [GetIndent](../Topic/CTreeCtrl::GetIndent.md).  
+ When a list of child items is expanded, it is indented relative to the parent item. You can set the amount of indentation by using the [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) member function or retrieve the current amount by using the [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) member function.  
   
-## См. также  
- [Использование CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CDialogEx | Документы Microsoft"
+title: CDialogEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDialogEx class
-- CDialogEx::PreTranslateMessage method
+- CDialogEx [MFC], CDialogEx
+- CDialogEx [MFC], SetBackgroundColor
+- CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
 caps.latest.revision: 27
 author: mikeblome
@@ -38,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c12aa0152fdbf83e423b944a0100045962ddb704
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63da5d8ae72d64020ee336dc4d8b3b0bceb428ff
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogex-class"></a>Класс CDialogEx
-Класс `CDialogEx` задает цвет фона и фоновое изображение для диалогового окна.  
+# <a name="cdialogex-class"></a>CDialogEx Class
+The `CDialogEx` class specifies the background color and background image of a dialog box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogEx : public CDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::CDialogEx](#cdialogex)|Создает объект `CDialogEx`.|  
-|`CDialogEx::~CDialogEx`|Деструктор.|  
+|[CDialogEx::CDialogEx](#cdialogex)|Constructs a `CDialogEx` object.|  
+|`CDialogEx::~CDialogEx`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cdialogex::setbackgroundcolor при использовании](#setbackgroundcolor)|Задает цвет фона диалогового окна.|  
-|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Задает фоновое изображение диалогового окна.|  
+|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Sets the background color of the dialog box.|  
+|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Sets the background image of the dialog box.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы использовать класс `CDialogEx`, сформируйте класс диалогового окна из класса `CDialogEx` вместо класса `CDialog`.  
+## <a name="remarks"></a>Remarks  
+ To use the `CDialogEx` class, derive your dialog box class from the `CDialogEx` class instead of the `CDialog` class.  
   
- Изображения диалогового окна хранятся в файле ресурсов. Платформа автоматически удаляет все изображения, загруженные из файла ресурсов. Чтобы программно удалить текущее фоновое изображение, вызовите [CDialogEx::SetBackgroundImage](#setbackgroundimage) метода или реализации `OnDestroy` обработчика событий. При вызове [CDialogEx::SetBackgroundImage](#setbackgroundimage) метод, передайте `HBITMAP` параметр в виде маркера изображения. Объект `CDialogEx` будет распоряжаться изображением и может удалить его, если для флажка `m_bAutoDestroyBmp` установлено значение `TRUE`.  
+ Dialog box images are stored in a resource file. The framework automatically deletes any image that is loaded from the resource file. To programmatically delete the current background image, call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method or implement an `OnDestroy` event handler. When you call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method, pass in an `HBITMAP` parameter as the image handle. The `CDialogEx` object will take ownership of the image and delete it if the `m_bAutoDestroyBmp` flag is `TRUE`.  
   
- Объект `CDialogEx` объект может быть родительским для [CMFCPopupMenu класс](../../mfc/reference/cmfcpopupmenu-class.md) объекта. [Класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объектов вызывают `CDialogEx::SetActiveMenu` метод при [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md) открытии объекта. После этого `CDialogEx` объект обрабатывает любые события меню до [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md) объект закрыт.  
+ A `CDialogEx` object can be a parent of a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object. The [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object calls the `CDialogEx::SetActiveMenu` method when the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object opens. Afterward, the `CDialogEx` object handles any menu event until the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object is closed.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +89,11 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdialogex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
- Создает объект `CDialogEx`.  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
+ Constructs a `CDialogEx` object.  
   
 ```  
 CDialogEx(
@@ -105,25 +106,25 @@ CDialogEx(
     CWnd* pParentWnd=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nIDTemplate`  
- Идентификатор ресурса в шаблон диалогового окна.  
+ The resource ID of a dialog box template.  
   
  [in] `lpszTemplateName`  
- Имя ресурса шаблон диалогового окна.  
+ The resource name of a dialog box template.  
   
  [in] `pParent`  
- Указатель на родительское окно. Значение по умолчанию — `NULL`.  
+ A pointer to the parent window. The default value is `NULL`.  
   
  [in] `pParentWnd`  
- Указатель на родительское окно. Значение по умолчанию — `NULL`.  
+ A pointer to the parent window. The default value is `NULL`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundcolor"></a>Cdialogex::setbackgroundcolor при использовании  
- Задает цвет фона диалогового окна.  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
+ Sets the background color of the dialog box.  
   
 ```  
 void SetBackgroundColor(
@@ -131,17 +132,17 @@ void SetBackgroundColor(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- Значение цвета RGB.  
+ An RGB color value.  
   
  [in] `bRepaint`  
- `TRUE`Чтобы немедленно обновить экрана; в противном случае — `FALSE`. Значение по умолчанию — `TRUE`.  
+ `TRUE` to immediately update the screen; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
- Задает фоновое изображение диалогового окна.  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
+ Sets the background image of the dialog box.  
   
 ```  
 void SetBackgroundImage(
@@ -157,31 +158,31 @@ BOOL SetBackgroundImage(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `hBitmap`  
- Дескриптор для фонового изображения.  
+ A handle to the background image.  
   
  [in] `uiBmpResId`  
- Идентификатор ресурса фонового изображения.  
+ The resource ID of the background image.  
   
  [in] `location`  
- Один из `CDialogEx::BackgroundLocation` значения, указывающие расположение образа. Допустимые значения: BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT и BACKGR_BOTTOMRIGHT. Значение по умолчанию — BACKGR_TILE.  
+ One of the `CDialogEx::BackgroundLocation` values that specify the location of the image. Valid values include BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, and BACKGR_BOTTOMRIGHT. The default value is BACKGR_TILE.  
   
  [in] `bAutoDestroy`  
- `TRUE`Чтобы автоматически удалить фоновое изображение; в противном случае — `FALSE`.  
+ `TRUE` to automatically destroy the background image; otherwise, `FALSE`.  
   
  [in] `bRepaint`  
- `TRUE`Чтобы немедленно перерисовывает диалоговое окно. в противном случае — `FALSE`.  
+ `TRUE` to immediately redraw the dialog box; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Во втором методе перегрузка синтаксис, `TRUE` Если метод выполнен успешно; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ In the second method overload syntax, `TRUE` if the method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Образ не растягивается область диалогового окна клиента.  
+### <a name="remarks"></a>Remarks  
+ The image that you specify is not stretched to fit the dialog box client area.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)   
- [Класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)   
+ [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md)
 

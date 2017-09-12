@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCDesktopAlertWnd | Документы Microsoft"
+title: CMFCDesktopAlertWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertWnd class
+- CMFCDesktopAlertWnd [MFC], Create
+- CMFCDesktopAlertWnd [MFC], GetAnimationSpeed
+- CMFCDesktopAlertWnd [MFC], GetAnimationType
+- CMFCDesktopAlertWnd [MFC], GetAutoCloseTime
+- CMFCDesktopAlertWnd [MFC], GetCaptionHeight
+- CMFCDesktopAlertWnd [MFC], GetDialogSize
+- CMFCDesktopAlertWnd [MFC], GetLastPos
+- CMFCDesktopAlertWnd [MFC], GetTransparency
+- CMFCDesktopAlertWnd [MFC], HasSmallCaption
+- CMFCDesktopAlertWnd [MFC], OnBeforeShow
+- CMFCDesktopAlertWnd [MFC], OnClickLinkButton
+- CMFCDesktopAlertWnd [MFC], OnCommand
+- CMFCDesktopAlertWnd [MFC], OnDraw
+- CMFCDesktopAlertWnd [MFC], ProcessCommand
+- CMFCDesktopAlertWnd [MFC], SetAnimationSpeed
+- CMFCDesktopAlertWnd [MFC], SetAnimationType
+- CMFCDesktopAlertWnd [MFC], SetAutoCloseTime
+- CMFCDesktopAlertWnd [MFC], SetSmallCaption
+- CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
 caps.latest.revision: 33
 author: mikeblome
@@ -53,84 +71,84 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: be9d81ffff003119aa7ff9e0cd100c575bd82d36
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd8a09db3e17d8b0232b6fcff5c02e6e8767eb42
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
-`CMFCDesktopAlertWnd` Класс реализует функции немодального диалогового окно, которое отображается на экране, пользователь получает уведомление о событии.  
+The `CMFCDesktopAlertWnd` class implements the functionality of a modeless dialog box which appears on the screen to inform the user about an event.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDesktopAlertWnd : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWnd::Create](#create)|Создает и инициализирует окно оповещения.|  
-|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Возвращает скорость анимации.|  
-|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Возвращает тип анимации.|  
-|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Возвращает время ожидания автоматическое закрытие.|  
-|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Возвращает высоту заголовка.|  
+|[CMFCDesktopAlertWnd::Create](#create)|Creates and initializes the desktop alert window.|  
+|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Returns the animation speed.|  
+|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Returns the animation type.|  
+|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Returns the auto-close time out.|  
+|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Returns the height of the caption.|  
 |[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||  
-|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Возвращает последний допустимый позицию окно оповещения на экране.|  
-|[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Возвращает уровень прозрачности.|  
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Определяет, отображается ли окно оповещения с меньшего заголовка.|  
+|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Returns the last valid position of the desktop alert window on the screen.|  
+|[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Returns the transparency level.|  
+|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Determines whether the desktop alert window is displayed with the small caption.|  
 |[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||  
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Вызывается платформой, когда пользователь щелкает ссылку, расположенную меню рабочего стола предупреждения.|  
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|При выборе пользователем элемента меню, когда дочерний элемент управления будет отправлять уведомления о или при переводе сочетания клавиш, платформа вызывает эту функцию-член. (Переопределяет [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
+|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Called by the framework when the user clicks a link button located on the desktop alert menu.|  
+|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|The framework calls this member function when the user selects an item from a menu, when a child control sends a notification message, or when an accelerator keystroke is translated. (Overrides [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
 |[CMFCDesktopAlertWnd::OnDraw](#ondraw)||  
 |[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||  
-|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Задает новый скорость анимации.|  
-|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Задает тип анимации.|  
-|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Задает время ожидания автоматическое закрытие.|  
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Переключение между небольшим и обычные заголовки.|  
-|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Задает уровень прозрачности.|  
+|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Sets the new animation speed.|  
+|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Sets the animation type.|  
+|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Sets the auto-close time out.|  
+|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Switches between small and normal captions.|  
+|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Sets the transparency level.|  
   
-## <a name="remarks"></a>Примечания  
- Окно оповещения может быть прозрачным, он может отображаться с эффектами анимации и исчезают (после заданной задержки или когда пользователь закрывает его, нажав кнопку «Закрыть»).  
+## <a name="remarks"></a>Remarks  
+ A desktop alert window can be transparent, it can appear with animation effects, and it can disappear (after a specified delay or when the user dismisses it by clicking the close button).  
   
- Окно оповещения также могут содержать диалоговое окно по умолчанию, который в свою очередь содержит значок, текст сообщения (метка) и ссылки. Кроме того окно оповещения может содержать пользовательское диалоговое окно из ресурсов приложения.  
+ A desktop alert window can also contain a default dialog that in turn contains an icon, message text (a label), and a link. Alternatively, a desktop alert window can contain a custom dialog from the application's resources.  
   
- Создать окно оповещения в два этапа. Во-первых, вызовите конструктор для создания `CMFCDesktopAlertWnd` объекта. Во-вторых, вызовите [CMFCDesktopAlertWnd::Create](#create) функции-члена для создания окна и присоединить его к `CMFCDesktopAlertWnd` объекта.  
+ You create a desktop alert window in two steps. First, call the constructor to construct the `CMFCDesktopAlertWnd` object. Second, call the [CMFCDesktopAlertWnd::Create](#create) member function to create the window and attach it to the `CMFCDesktopAlertWnd` object.  
   
- `CMFCDesktopAlertWnd` Объект создает специальные дочерние диалоговым окном, которое заполняет область клиента окно оповещения. Диалоговое окно является владельцем всех элементов управления, расположенные на нем.  
+ The `CMFCDesktopAlertWnd` object creates a special child dialog box that fills the client area of the desktop alert window. The dialog owns all the controls that are positioned on it.  
   
- Чтобы отобразить пользовательское диалоговое окно во всплывающем окне, выполните следующие действия.  
+ To display a custom dialog box on the popup window, follow these steps:  
   
-1.  Создайте производный класс от класса `CMFCDesktopAlertDialog`.  
+1.  Derive a class from `CMFCDesktopAlertDialog`.  
   
-2.  Создайте шаблон дочернего диалогового окна в ресурсах.  
+2.  Create a child dialog box template in the resources.  
   
-3.  Вызов [CMFCDesktopAlertWnd::Create](#create) с помощью идентификатора ресурса из шаблонов диалоговых окон и указатель на данные класса среды выполнения производного класса.  
+3.  Call [CMFCDesktopAlertWnd::Create](#create) using the resource ID of the dialog box template and a pointer to the runtime class information of the derived class.  
   
-4.  Программа пользовательские диалоговые окна для обработки всех уведомлений, поступающих от размещенные элементы управления или программа размещенные элементы управления непосредственно обрабатывать эти уведомления.  
+4.  Program the custom dialog box to handle all notifications coming from the hosted controls, or program the hosted controls to handle these notifications directly.  
   
- Следующие функции используются для управления поведением окно оповещения:  
+ Use the following functions to control the behavior of the desktop alert window:  
   
--   Задать тип анимации, вызвав [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Допустимые значения: unfold слайда и эффект затухания.  
+-   Set the animation type by calling [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Valid options include unfold, slide, and fade.  
   
--   Установить скорость кадров анимации путем вызова [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
+-   Set the animation frame speed by calling [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
   
--   Установить уровень прозрачности путем вызова [CMFCDesktopAlertWnd::SetTransparency](#settransparency).  
+-   Set the transparency level by calling [CMFCDesktopAlertWnd::SetTransparency](#settransparency).  
   
--   Изменить размер заголовка для небольших путем вызова [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Меньшего заголовка — 7 пикселов в высоту.  
+-   Change the size of the caption to small by calling [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). The small caption is 7 pixels high.  
   
-## <a name="example"></a>Пример  
- Следующий пример показывает, как использовать различные методы в `CMFCDesktopAlertWnd` класс для настройки `CMFCDesktopAlertWnd` объекта. Пример показано, как задать тип анимации, прозрачности всплывающего окна, укажите, что окно оповещения отображает малого заголовка и задать время, по истечении которого автоматически закрывает окно оповещения. В примере также показано создание и инициализация окно оповещения. Этот фрагмент кода является частью [рабочего стола предупреждения демонстрационного](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example illustrates how to use various methods in the `CMFCDesktopAlertWnd` class to configure a `CMFCDesktopAlertWnd` object. The example shows how to set an animation type, set the transparency of the pop-up window, specify that the alert window displays a small caption, and set the time that elapses before the alert window automatically closes. The example also demonstrates how to create and initialize the desktop alert window. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo&#1;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -139,11 +157,11 @@ class CMFCDesktopAlertWnd : public CWnd
   
  [CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxDesktopAlertWnd.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDesktopAlertWnd.h  
   
-##  <a name="create"></a>CMFCDesktopAlertWnd::Create  
- Создает и инициализирует окно оповещения.  
+##  <a name="create"></a>  CMFCDesktopAlertWnd::Create  
+ Creates and initializes the desktop alert window.  
   
 ```  
 virtual BOOL Create(
@@ -161,57 +179,57 @@ virtual BOOL Create(
     CPoint ptPos = CPoint(-1,-1));
 ```  
   
-### <a name="parameters"></a>Параметры  
- [in] [out]`pWndOwner`  
- Указывает владельца окно оповещения. Этот владелец затем получает все уведомления для окно оповещения. Это значение не может быть равно `NULL`.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pWndOwner`  
+ Specifies the owner of the alert window. That owner will then receive all notifications for the desktop alert window. This value cannot be `NULL`.  
   
  [in] `uiDlgResID`  
- Указывает идентификатор ресурса окно оповещения.  
+ Specifies the resource ID of the alert window.  
   
  [in] `hMenu`  
- Указывает меню, которое отображается при нажатии пользователем кнопки меню. Если `NULL`, кнопка меню не отображается.  
+ Specifies the menu that displays when the user clicks the menu button. If `NULL`, the menu button is not displayed.  
   
  [in] `ptPos`  
- Определяет начальное положение, где отображается окно оповещения, с помощью координат экрана. Если этот параметр (-1, -1), в правом нижнем углу экрана отображается окно оповещения.  
+ Specifies the initial position where the alert window is displayed, using screen coordinates. If this parameter is (-1, -1), the alert window is displayed in the lower-right corner of the screen.  
   
  [in] `pRTIDlgBar`  
- Сведения о класса среды выполнения для класс пользовательского диалогового окна, охватывающую клиентской области окна оповещений.  
+ Runtime class information for a custom dialog box class that covers the alert window's client area.  
   
  [in] `params`  
- Указывает параметры, используемые для создания окне оповещения.  
+ Specifies parameters that are used to create an alert window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если окно оповещения был создан успешно. в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the alert window was created successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для создания окне оповещения. Клиентской области окна оповещений содержит дочерние диалоговым окном, которое размещает все элементы управления, которые отображаются для пользователя.  
+### <a name="remarks"></a>Remarks  
+ Call this method to create an alert window. The client area of the alert window contains a child dialog box that hosts all controls that are displayed to the user.  
   
- Первая перегрузка метода создает окне оповещения, содержащий дочерние диалоговым окном, которое загружается из ресурсов приложения. Первая перегрузка метода можно также указать сведения о классах среды выполнения для класса пользовательского диалогового окна.  
+ The first method overload creates an alert window that contains a child dialog box that is loaded from the application's resources. The first method overload can also specify runtime class information for a custom dialog box class.  
   
- Вторая перегрузка метода создает окно оповещения, который содержит элементы управления по умолчанию. Можно указать, какие элементы управления должны отображаться, изменив [CMFCDesktopAlertWndInfo класса](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
+ The second method overload creates an alert window that contains default controls. You can specify which controls to display by modifying the [CMFCDesktopAlertWndInfo Class](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
   
-##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
- Возвращает скорость анимации.  
+##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed  
+ Returns the animation speed.  
   
 ```  
 UINT GetAnimationSpeed() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Скорость анимации окно оповещения, в миллисекундах.  
+### <a name="return-value"></a>Return Value  
+ The animation speed of the alert window, in milliseconds.  
   
-### <a name="remarks"></a>Примечания  
- Скорость анимации описывает, как быстро окно оповещения открывает и закрывает.  
+### <a name="remarks"></a>Remarks  
+ The animation speed describes how fast the alert window opens and closes.  
   
-##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
- Возвращает тип анимации.  
+##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType  
+ Returns the animation type.  
   
 ```  
 CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Один из следующих типов анимации:  
+### <a name="return-value"></a>Return Value  
+ One of the following animation types:  
   
 - `NO_ANIMATION`  
   
@@ -223,103 +241,103 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
- Возвращает время ожидания автоматическое закрытие.  
+##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime  
+ Returns the auto-close time out.  
   
 ```  
 int GetAutoCloseTime() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Время в миллисекундах, после чего автоматически закроет окно оповещения.  
+### <a name="return-value"></a>Return Value  
+ The time, in milliseconds, after which the alert window will automatically close.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы определить, сколько времени должно пройти, прежде чем автоматически закроет окно оповещения.  
+### <a name="remarks"></a>Remarks  
+ Use this method to determine how much time should elapse before the alert window will automatically close.  
   
-##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
- Возвращает высоту заголовка.  
+##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight  
+ Returns the height of the caption.  
   
 ```  
 virtual int GetCaptionHeight();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Высота в пикселях заголовка.  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of the caption.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод может быть переопределен в производном классе. Реализация по умолчанию либо: возвращает значение высоту меньшего заголовка (7 точек), если всплывающего окна должно отображаться меньшего заголовка, или значение, полученное от функции Windows API `GetSystemMetrics(SM_CYSMCAPTION)`.  
+### <a name="remarks"></a>Remarks  
+ This method can be overridden in a derived class. The default implementation either: returns the small caption height value (7 pixels) if the popup window should display the small caption, or the value obtained from the Windows API function `GetSystemMetrics(SM_CYSMCAPTION)`.  
   
-##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
- Возвращает позицию последнего окно оповещения на экране.  
+##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos  
+ Returns the last position of the desktop alert window on the screen.  
   
 ```  
 CPoint GetLastPos() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Точка, в экранных координатах.  
+### <a name="return-value"></a>Return Value  
+ A point, in screen coordinates.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращает позицию последнего допустимый предупреждения окна на экране.  
+### <a name="remarks"></a>Remarks  
+ This method returns the last valid position of the alert window on the screen.  
   
-##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
- Возвращает уровень прозрачности.  
+##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency  
+ Returns the transparency level.  
   
 ```  
 BYTE GetTransparency() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Уровень прозрачности от 0 до 255 включительно. Чем больше значение, более непрозрачный окна.  
+### <a name="return-value"></a>Return Value  
+ A transparency level between 0 and 255, inclusive. The greater the value, the more opaque the window.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы получить текущий уровень прозрачности окно оповещения.  
+### <a name="remarks"></a>Remarks  
+ Use this method to retrieve the current transparency level of the alert window.  
   
-##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
- Определяет, имеет ли окно оповещения малого заголовка или заголовок обычного размера.  
+##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption  
+ Determines whether the desktop alert window has a small caption or a regular-size caption.  
   
 ```  
 BOOL HasSmallCaption() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если во всплывающем окне отображается с меньшего заголовка; `FALSE` если всплывающее окно отображается с надписью обычный.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the popup window is displayed with a small caption; `FALSE` if the popup window is displayed with a regular-sized caption.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод для определения наличия меньшего заголовка или обычного размера заголовок всплывающего окна. По умолчанию меньшего заголовка — 7 пикселов в высоту. Высота заголовка обычного размера можно получить, вызвав функцию Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
+### <a name="remarks"></a>Remarks  
+ Use this method to determine whether the popup window has a small caption or a regular-size caption. By default, the small caption is 7 pixels high. You can obtain the height of the regular-size caption by calling the Windows API function `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow  
 
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `CPoint&`  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
- Вызывается платформой, когда пользователь щелкает ссылку, расположенную меню рабочего стола предупреждения.  
+##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton  
+ Called by the framework when the user clicks a link button located on the desktop alert menu.  
   
 ```  
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, если вы хотите получать уведомления, когда пользователь щелкает ссылку на окно оповещения.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want to be notified when a user clicks the link on the alert window.  
   
-##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand  
 
   
 ```  
@@ -328,67 +346,67 @@ virtual BOOL OnCommand(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `wParam`  
  [in] `lParam`  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw  
 
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand  
 
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `hwnd`  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
- Задает новый скорость анимации.  
+##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed  
+ Sets the new animation speed.  
   
 ```  
 void SetAnimationSpeed(UINT nSpeed);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nSpeed`  
- Указывает новый скорость анимации, в миллисекундах.  
+ Specifies the new animation speed, in milliseconds.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для установки скорости анимации для окна оповещения. Скорость анимации по умолчанию — 30 миллисекунд.  
+### <a name="remarks"></a>Remarks  
+ Call this method to set the animation speed for the alert window. The default animation speed is 30 milliseconds.  
   
-##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
- Задает тип анимации.  
+##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType  
+ Sets the animation type.  
   
 ```  
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `type`  
- Указывает тип анимации.  
+ Specifies the animation type.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для задания типа анимации. Можно указать одно из следующих значений.  
+### <a name="remarks"></a>Remarks  
+ Call this method to set animation type. You can specify one of the following values:  
   
 - `NO_ANIMATION`  
   
@@ -400,63 +418,63 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
- Задает время ожидания автоматическое закрытие.  
+##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime  
+ Sets the auto-close time out.  
   
 ```  
 void SetAutoCloseTime(int nTime);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nTime`  
- Время в миллисекундах, прошедшее до автоматически закрывает окно оповещения.  
+ The time, in milliseconds, that elapses before the alert window automatically closes.  
   
-### <a name="remarks"></a>Примечания  
- Окно оповещения автоматически закрывается после указанного времени, если пользователь не взаимодействует с окном.  
+### <a name="remarks"></a>Remarks  
+ The alert window is automatically closed after the specified time if the user does not interact with the window.  
   
-##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
- Переключение между небольшим и обычного размера заголовков.  
+##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption  
+ Switches between small and regular-size captions.  
   
 ```  
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bSmallCaption`  
- `TRUE`Чтобы указать, что окно оповещения отображает малого заголовка; в противном случае — `FALSE` для указания, что окно предупреждения отображается заголовок обычного размера.  
+ `TRUE` to specify that the alert window displays a small caption; otherwise, `FALSE` to specify that the alert window displays a regular-size caption.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для отображения заголовка небольшого или обычного размера. По умолчанию меньшего заголовка — 7 пикселов в высоту. Размер заголовка регулярных можно получить путем вызова функции Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to display the small or regular-size caption. By default, the small caption is 7 pixels high. You can obtain the size of the regular caption by calling the Windows API function `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
- Задает уровень прозрачности всплывающего окна.  
+##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency  
+ Sets the transparency level of the popup window.  
   
 ```  
 void SetTransparency(BYTE nTransparency);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nTransparency`  
- Определяет уровень прозрачности. Это значение должно быть в диапазоне от 0 до 255 включительно. Чем больше значение, более непрозрачный окна.  
+ Specifies the transparency level. This value must be between 0 and 255, inclusive. The greater the value, the more opaque the window.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для установки уровня прозрачности всплывающего окна.  
+### <a name="remarks"></a>Remarks  
+ Call this function to set the transparency level of the popup window.  
   
-##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize  
 
   
 ```  
 virtual CSize GetDialogSize();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
- [Класс CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertWndInfo Class](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
+ [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)
 

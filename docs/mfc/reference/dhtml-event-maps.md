@@ -1,5 +1,5 @@
 ---
-title: "Схемы событий DHTML | Документы Microsoft"
+title: DHTML Event Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,11 +13,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- event map macros
-- DHTML, event map macros
-- macros, DHTML event map
-- DHTML events, event map
-- DHTML events
+- event map macros [MFC]
+- DHTML [MFC], event map macros
+- macros [MFC], DHTML event map
+- DHTML events [MFC], event map
+- DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
 caps.latest.revision: 14
 author: mikeblome
@@ -37,457 +37,457 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4f7b85df3ac1952e49b5cbf84c6e8ce4e9e64a62
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dhtml-event-maps"></a>Схемы событий DHTML
-Следующие макросы можно использовать для обработки событий DHTML.  
+# <a name="dhtml-event-maps"></a>DHTML Event Maps
+The following macros can be used to handle DHTML events.  
   
-## <a name="dhtml-event-map-macros"></a>Макросы схемы событий DHTML  
- Следующие макросы можно использовать для обработки событий DHTML в [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-производные классы.  
-  
-|||  
-|-|-|  
-|[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)|Отмечает начало карты событий DHTML.|  
-|[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)|Отмечает начало карты событий DHTML.|  
-|[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)|Объявляет DHTML-схема событий.|  
-|[DHTML_EVENT](#dhtml_event)|Используется для обработки события на уровне документа для единичного элемента HTML.|  
-|[DHTML_EVENT_AXCONTROL](#dhtml_event_axcontrol)|Используется, чтобы обрабатывать событие, инициированное элемента управления ActiveX.|  
-|[DHTML_EVENT_CLASS](#dhtml_event_class)|Используется для обработки события на уровне документа для всех элементов HTML с определенного класса CSS.|  
-|[DHTML_EVENT_ELEMENT](#dhtml_event_element)|Используется для обработки события на уровне элемента.|  
-|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|Используется для обработки **onafterupdate** события из элемента HTML.|  
-|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|Используется для обработки **onbeforeupdate** события из элемента HTML.|  
-|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|Используется для обработки **onblur** события из элемента HTML.|  
-|[DHTML_EVENT_ONCHANGE](#dhtml_event_onchange)|Используется для обработки `onchange` события из элемента HTML.|  
-|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|Используется для обработки **onclick** события из элемента HTML.|  
-|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|Используется для обработки **ondataavailable** события из элемента HTML.|  
-|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|Используется для обработки **ondatasetchanged** события из элемента HTML.|  
-|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|Используется для обработки **ondatasetcomplete** события из элемента HTML.|  
-|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|Используется для обработки **ondblclick** события из элемента HTML.|  
-|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|Используется для обработки **ondragstart** события из элемента HTML.|  
-|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|Используется для обработки **onerrorupdate** события из элемента HTML.|  
-|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|Используется для обработки **onfilterchange** события из элемента HTML.|  
-|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|Используется для обработки **onfocus** события из элемента HTML.|  
-|[DHTML_EVENT_ONHELP](#dhtml_event_onhelp)|Используется для обработки `onhelp` события из элемента HTML.|  
-|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|Используется для обработки **onkeydown** события из элемента HTML.|  
-|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|Используется для обработки **onkeypress** события из элемента HTML.|  
-|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|Используется для обработки **onkeyup** события из элемента HTML.|  
-|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|Используется для обработки **onmousedown** события из элемента HTML.|  
-|[DHTML_EVENT_ONMOUSEMOVE](#dhtml_event_onmousemove)|Используется для обработки `onmousemove` события из элемента HTML.|  
-|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|Используется для обработки **onmouseout** события из элемента HTML.|  
-|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|Используется для обработки **onmouseover** события из элемента HTML.|  
-|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|Используется для обработки **onmouseup** события из элемента HTML.|  
-|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|Используется для обработки **onresize** события из элемента HTML.|  
-|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|Используется для обработки **onrowenter** события из элемента HTML.|  
-|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|Используется для обработки **onrowexit** события из элемента HTML.|  
-|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|Используется для обработки **onselectstart** события из элемента HTML.|  
-|[DHTML_EVENT_TAG](#dhtml_event_tag)|Используется для обработки события на уровне документа для всех элементов с определенным тегом HTML.|  
-|[END_DHTML_EVENT_MAP](#end_dhtml_event_map)|Отмечает конец DHTML-схема событий.|  
-|[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)|Отмечает конец DHTML-схема событий. |
-  
-## <a name="url-event-map-macros"></a>Макросы схемы событий URL-адрес  
- Следующие макросы можно использовать для обработки событий DHTML в [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-производные классы.  
+## <a name="dhtml-event-map-macros"></a>DHTML Event Map Macros  
+ The following macros can be used to handle DHTML events in [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-derived classes.  
   
 |||  
 |-|-|  
-|[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)|Отмечает начало многостраничные схема событий DHTML и URL-адрес.|  
-|[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)|Отмечает начало внедренные карта событий DHTML.|  
-|[BEGIN_URL_ENTRIES](#begin_url_entries)|Отмечает начало карты запись событий URL-адрес.|  
-|[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)|Объявляет многостраничные схема событий DHTML и URL-адрес.|  
-|[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)|Отмечает конец многостраничные схема событий DHTML и URL-адрес.|  
-|[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)|Отмечает конец внедренного карта событий DHTML.|  
-|[END_URL_ENTRIES](#end_url_entries)|Отмечает конец карты запись событий URL-адрес.|  
-|[URL_EVENT_ENTRY](#url_event_entry)|Сопоставляет ресурс URL-адрес или HTML-страницу в многостраничное диалоговое окно.|  
+|[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)|Marks the start of the DHTML event map.|  
+|[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)|Marks the start of the DHTML event map.|  
+|[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)|Declares the DHTML event map.|  
+|[DHTML_EVENT](#dhtml_event)|Used to handle an event at the document level for a single HTML element.|  
+|[DHTML_EVENT_AXCONTROL](#dhtml_event_axcontrol)|Used to handle an event fired by an ActiveX control.|  
+|[DHTML_EVENT_CLASS](#dhtml_event_class)|Used to handle an event at the document level for all HTML elements with a particular CSS class.|  
+|[DHTML_EVENT_ELEMENT](#dhtml_event_element)|Used to handle an event at the element level.|  
+|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|Used to handle the **onafterupdate** event from an HTML element.|  
+|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|Used to handle the **onbeforeupdate** event from an HTML element.|  
+|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|Used to handle the **onblur** event from an HTML element.|  
+|[DHTML_EVENT_ONCHANGE](#dhtml_event_onchange)|Used to handle the `onchange` event from an HTML element.|  
+|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|Used to handle the **onclick** event from an HTML element.|  
+|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|Used to handle the **ondataavailable** event from an HTML element.|  
+|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|Used to handle the **ondatasetchanged** event from an HTML element.|  
+|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|Used to handle the **ondatasetcomplete** event from an HTML element.|  
+|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|Used to handle the **ondblclick** event from an HTML element.|  
+|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|Used to handle the **ondragstart** event from an HTML element.|  
+|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|Used to handle the **onerrorupdate** event from an HTML element.|  
+|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|Used to handle the **onfilterchange** event from an HTML element.|  
+|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|Used to handle the **onfocus** event from an HTML element.|  
+|[DHTML_EVENT_ONHELP](#dhtml_event_onhelp)|Used to handle the `onhelp` event from an HTML element.|  
+|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|Used to handle the **onkeydown** event from an HTML element.|  
+|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|Used to handle the **onkeypress** event from an HTML element.|  
+|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|Used to handle the **onkeyup** event from an HTML element.|  
+|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|Used to handle the **onmousedown** event from an HTML element.|  
+|[DHTML_EVENT_ONMOUSEMOVE](#dhtml_event_onmousemove)|Used to handle the `onmousemove` event from an HTML element.|  
+|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|Used to handle the **onmouseout** event from an HTML element.|  
+|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|Used to handle the **onmouseover** event from an HTML element.|  
+|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|Used to handle the **onmouseup** event from an HTML element.|  
+|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|Used to handle the **onresize** event from an HTML element.|  
+|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|Used to handle the **onrowenter** event from an HTML element.|  
+|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|Used to handle the **onrowexit** event from an HTML element.|  
+|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|Used to handle the **onselectstart** event from an HTML element.|  
+|[DHTML_EVENT_TAG](#dhtml_event_tag)|Used to handle an event at the document level for all elements with a particular HTML tag.|  
+|[END_DHTML_EVENT_MAP](#end_dhtml_event_map)|Marks the end of the DHTML event map.|  
+|[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)|Marks the end of the DHTML event map. |
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+## <a name="url-event-map-macros"></a>URL Event Map Macros  
+ The following macros can be used to handle DHTML events in [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-derived classes.  
   
-##  <a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP  
- Отмечает начало карты событий DHTML при помещении в исходном файле для класса, обозначенную `className`.  
+|||  
+|-|-|  
+|[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)|Marks the start of the multipage DHTML and URL event map.|  
+|[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)|Marks the start of an embedded DHTML event map.|  
+|[BEGIN_URL_ENTRIES](#begin_url_entries)|Marks the start of a URL event entry map.|  
+|[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)|Declares the multipage DHTML and URL event map.|  
+|[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)|Marks the end of the multipage DHTML and URL event map.|  
+|[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)|Marks the end of an embedded DHTML event map.|  
+|[END_URL_ENTRIES](#end_url_entries)|Marks the end of a URL event entry map.|  
+|[URL_EVENT_ENTRY](#url_event_entry)|Maps a URL or HTML resource to a page in a multipage dialog.|  
+  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
+  
+##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP  
+ Marks the beginning of the DHTML event map when placed in the source file for the class identified by `className`.  
   
 ```   
 BEGIN_DHTML_EVENT_MAP(className)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `className`  
- Имя класса, содержащего DHTML-схема событий. Этот класс должен наследоваться от прямо или косвенно [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) и включать [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) макрос в соответствии с определением класса.  
+ The name of the class containing the DHTML event map. This class should derive directly or indirectly from [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) and include the [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro within its class definition.  
   
-### <a name="remarks"></a>Примечания  
- Добавьте в класс для предоставления сведений о DHTML-схема событий **CDHtmlDialog** может использоваться на маршруте события, создаваемые элементы HTML или элементы управления ActiveX в веб-страницы для функции обработчика в классе.  
+### <a name="remarks"></a>Remarks  
+ Add a DHTML event map to your class to provide information to **CDHtmlDialog** that can be used to route events fired by HTML elements or ActiveX controls in a web page to handler functions in your class.  
   
- Место `BEGIN_DHTML_EVENT_MAP` макрос в файле реализации (CPP) класса, за которым следует `DHTML_EVENT` макросы для событий класса состоит в обработке (например, `DHTML_EVENT_ONMOUSEOVER` для события наведения мыши). Используйте [END_DHTML_EVENT_MAP](#end_dhtml_event_map) макрос для обозначения конца схема событий. Эти макросы реализовывать следующие функции:  
+ Place the `BEGIN_DHTML_EVENT_MAP` macro in the class's implementation (.cpp) file followed by `DHTML_EVENT` macros for the events the class is to handle (for example, `DHTML_EVENT_ONMOUSEOVER` for mouseover events). Use the [END_DHTML_EVENT_MAP](#end_dhtml_event_map) macro to mark the end of the event map. These macros implement the following function:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE  
- Отмечает начало карты событий DHTML в определении класса для `className`.  
+##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
+ Marks the beginning of the DHTML event map within the class definition for `className`.  
   
 ```   
 BEGIN_DHTML_EVENT_MAP_INLINE(className)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `className`  
- Имя класса, содержащего DHTML-схема событий. Этот класс должен наследоваться от прямо или косвенно [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) и включать [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) макрос в соответствии с определением класса.  
+ The name of the class containing the DHTML event map. This class should derive directly or indirectly from [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) and include the [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro within its class definition.  
   
-### <a name="remarks"></a>Примечания  
- Добавьте в класс для предоставления сведений о DHTML-схема событий **CDHtmlDialog** может использоваться на маршруте события, создаваемые элементы HTML или элементы управления ActiveX в веб-страницы для функции обработчика в классе.  
+### <a name="remarks"></a>Remarks  
+ Add a DHTML event map to your class to provide information to **CDHtmlDialog** that can be used to route events fired by HTML elements or ActiveX controls in a web page to handler functions in your class.  
   
- Место `BEGIN_DHTML_EVENT_MAP` макрос в файл (.h) определение класса, за которым следует `DHTML_EVENT` макросы для событий класса состоит в обработке (например, `DHTML_EVENT_ONMOUSEOVER` для события наведения мыши). Используйте [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) макрос для обозначения конца схема событий. Эти макросы реализовывать следующие функции:  
+ Place the `BEGIN_DHTML_EVENT_MAP` macro in the class's definition (.h) file followed by `DHTML_EVENT` macros for the events the class is to handle (for example, `DHTML_EVENT_ONMOUSEOVER` for mouseover events). Use the [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) macro to mark the end of the event map. These macros implement the following function:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
 
   
-##  <a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP  
- Объявляет событие DHTML карты в определении класса.  
+##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP  
+ Declares a DHTML event map in a class definition.  
   
 ```   
 DECLARE_DHTML_EVENT_MAP()   
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот макрос будет использоваться в определении [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-производные классы.  
+### <a name="remarks"></a>Remarks  
+ This macro is to be used in the definition of [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-derived classes.  
   
- Используйте [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map) или [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline) реализовать схему.  
+ Use [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map) or [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline) to implement the map.  
   
- [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) объявляет следующую функцию:  
+ [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) declares the following function:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap( );`  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event"></a>DHTML_EVENT  
- Обрабатывает (на уровне документа), событие, обозначенное `dispid` с HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event"></a>  DHTML_EVENT  
+ Handles (at the document level) an event identified by `dispid` originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT(dispid, elemName,  memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- DISPID обрабатываемого события.  
+ The DISPID of the event to be handled.  
   
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники событий, или **NULL** обрабатывать события документа.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event, or **NULL** to handle document events.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL  
- Обрабатывает событие, обозначенное `dispid` , инициированные с помощью элемента управления ActiveX, определяемый `controlName`.  
+##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
+ Handles the event identified by `dispid` fired by the ActiveX control identified by `controlName`.  
   
 ```   
 DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- Идентификатор диспетчеризации обрабатываемого события.  
+ The dispatch ID of the event to be handled.  
   
  `controlName`  
- `LPCWSTR` Удерживая HTML-идентификатор элемента управления, запускающий событие.  
+ An `LPCWSTR` holding the HTML ID of the control firing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_class"></a>DHTML_EVENT_CLASS  
- Обрабатывает (на уровне документа), событие, обозначенное `dispid` была создана с любой HTML-элемент с помощью класса CSS, определяемый `elemName`.  
+##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
+ Handles (at the document level) an event identified by `dispid` originated by any HTML element with the CSS class identified by `elemName`.  
   
 ```   
 DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- Идентификатор диспетчеризации обрабатываемого события.  
+ The dispatch ID of the event to be handled.  
   
  `elemName`  
- `LPCWSTR` Удерживая класс CSS, HTML-элементов, источники события.  
+ An `LPCWSTR` holding the CSS class of the HTML elements sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT  
- Обрабатывает (на элемент, идентифицируемый `elemName`) событие, обозначенное `dispid`.  
+##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
+ Handles (at the element identified by `elemName`) an event identified by `dispid`.  
   
 ```   
 DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn) 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- Идентификатор диспетчеризации обрабатываемого события.  
+ The dispatch ID of the event to be handled.  
   
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
- Этот макрос используется для обработки событий nonbubbling, источник события будет ли элемент, идентифицируемый `elemName`.  
+ If this macro is used to handle nonbubbling events, the source of the event will be the element identified by `elemName`.  
   
- Если этот макрос используется для обработки событий восходящей, определяется элемент `elemName` не может быть источником события (источник может быть любой элемент, содержащиеся в `elemName`).  
+ If this macro is used to handle bubbling events, the element identified by `elemName` may not be the source of the event (the source could be any element contained by `elemName`).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE  
- Обрабатывает (на уровне документа) **onafterupdate** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
+ Handles (at the document level) the **onafterupdate** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE  
- Обрабатывает (на уровне документа) **onbeforeupdate** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
+ Handles (at the document level) the **onbeforeupdate** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR  
- Обрабатывает (на уровне элемента) **onblur** событий. Это событие nonbubbling.  
+##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
+ Handles (at the element level) the **onblur** event. This is a nonbubbling event.  
   
 ```   
 DHTML_EVENT_ONBLUR(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE  
- Обрабатывает (на уровне элемента) `onchange` событий. Это событие nonbubbling.  
+##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE  
+ Handles (at the element level) the `onchange` event. This is a nonbubbling event.  
   
 ```   
 DHTML_EVENT_ONCHANGE(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK  
- Обрабатывает (на уровне документа) **onclick** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
+ Handles (at the document level) the **onclick** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONCLICK(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE  
- Обрабатывает (на уровне документа) **ondataavailable** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
+ Handles (at the document level) the **ondataavailable** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED  
- Обрабатывает (на уровне документа) **ondatasetchanged** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
+ Handles (at the document level) the **ondatasetchanged** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE  
- Обрабатывает (на уровне документа) **ondatasetcomplete** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
+ Handles (at the document level) the **ondatasetcomplete** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn) 
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK  
- Обрабатывает (на уровне документа) **ondblclick** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
+ Handles (at the document level) the **ondblclick** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART  
- Обрабатывает (на уровне документа) **ondragstart** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
+ Handles (at the document level) the **ondragstart** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE  
- Обрабатывает (на уровне документа) **onerrorupdate** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
+ Handles (at the document level) the **onerrorupdate** event originated by the HTML element identified by `elemName`.  
   
 ```   
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)  
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE  
- Обрабатывает (на уровне документа) **onfilterchange** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
+ Handles (at the document level) the **onfilterchange** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -495,21 +495,21 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS  
- Обрабатывает (на уровне элемента) **onfocus** событий. Это событие nonbubbling.  
+##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
+ Handles (at the element level) the **onfocus** event. This is a nonbubbling event.  
   
 ```  
  
@@ -517,21 +517,21 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP  
- Обрабатывает (на уровне документа) `onhelp` возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
+ Handles (at the document level) the `onhelp` event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -539,21 +539,21 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN  
- Обрабатывает (на уровне документа) **onkeydown** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
+ Handles (at the document level) the **onkeydown** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -561,21 +561,21 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS  
- Обрабатывает (на уровне документа) **onkeypress** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
+ Handles (at the document level) the **onkeypress** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -583,21 +583,21 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP  
- Обрабатывает (на уровне документа) **onkeyup** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
+ Handles (at the document level) the **onkeyup** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -605,21 +605,21 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN  
- Обрабатывает (на уровне документа) **onmousedown** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
+ Handles (at the document level) the **onmousedown** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -627,21 +627,21 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE  
- Обрабатывает (на уровне документа) `onmousemove` возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
+ Handles (at the document level) the `onmousemove` event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -649,21 +649,21 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT  
- Обрабатывает (на уровне документа) **onmouseout** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
+ Handles (at the document level) the **onmouseout** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -671,21 +671,21 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER  
- Обрабатывает (на уровне документа) **onmouseover** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
+ Handles (at the document level) the **onmouseover** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -693,21 +693,21 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP  
- Обрабатывает (на уровне документа) **onmouseup** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
+ Handles (at the document level) the **onmouseup** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -715,21 +715,21 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE  
- Обрабатывает (на уровне элемента) **onresize** событий. Это событие nonbubbling.  
+##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
+ Handles (at the element level) the **onresize** event. This is a nonbubbling event.  
   
 ```  
  
@@ -737,21 +737,21 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER  
- Обрабатывает (на уровне документа) **onrowenter** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
+ Handles (at the document level) the **onrowenter** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -759,21 +759,21 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT  
- Обрабатывает (на уровне документа) **onrowexit** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
+ Handles (at the document level) the **onrowexit** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -781,21 +781,21 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART  
- Обрабатывает (на уровне документа) **onselectstart** возникло событие HTML-элемент, идентифицируемый `elemName`.  
+##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
+ Handles (at the document level) the **onselectstart** event originated by the HTML element identified by `elemName`.  
   
 ```  
  
@@ -803,226 +803,226 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `elemName`  
- `LPCWSTR` Удерживая идентификатор HTML-элемента, источники события.  
+ An `LPCWSTR` holding the ID of the HTML element sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="dhtml_event_tag"></a>DHTML_EVENT_TAG  
- Обрабатывает (на уровне документа), событие, обозначенное `dispid` была создана с любой HTML-элемент с HTML-тегом, обозначенную `elemName`.  
+##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
+ Handles (at the document level) an event identified by `dispid` originated by any HTML element with the HTML tag identified by `elemName`.  
   
 ```   
 DHTML_EVENT_TAG(dispid, elemName,  memberFxn)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- Идентификатор диспетчеризации обрабатываемого события.  
+ The dispatch ID of the event to be handled.  
   
  `elemName`  
- HTML-тега HTML-элементов, источники события.  
+ The HTML tag of the HTML elements sourcing the event.  
   
  `memberFxn`  
- Функция обработчика для события.  
+ The handler function for the event.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос для добавления записи для [DHTML-схема событий](#begin_dhtml_event_map_inline) в классе.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to add an entry to the [DHTML event map](#begin_dhtml_event_map_inline) in your class.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP  
- Отмечает конец DHTML-схема событий.  
+##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP  
+ Marks the end of the DHTML event map.  
   
 ```   
 END_DHTML_EVENT_MAP()   
 ```  
   
-### <a name="remarks"></a>Примечания  
- Необходимо использовать в сочетании с [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map).  
+### <a name="remarks"></a>Remarks  
+ Must be used in conjunction with [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP  
- Запускает многостраничное диалоговое окно Определение сопоставления событий DHTML и URL-адрес.  
+##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP  
+ Starts the definition of a DHTML and URL event map in a multipage dialog.  
   
 ```  
 BEGIN_DHTML_URL_EVENT_MAP()  
  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Поместите `BEGIN_DHTML_URL_EVENT_MAP` в файле реализации вашей [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-производного класса. Следовать ей с [встроенные схемы событий DHTML](#begin_embed_dhtml_event_map) и [URL-адресов,](#begin_url_entries), а затем закройте его с [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Включить [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) макрос внутри определения класса.  
+### <a name="remarks"></a>Remarks  
+ Put `BEGIN_DHTML_URL_EVENT_MAP` in the implementation file of your [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-derived class. Follow it with [embedded DHTML event maps](#begin_embed_dhtml_event_map) and [URL entries](#begin_url_entries), and then close it with [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Include the [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) macro within the class definition.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP  
- Запускает определение внедренного карта событий DHTML многостраничное диалоговое окно.  
+##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP  
+ Starts the definition of an embedded DHTML event map in a multipage dialog.  
   
 ```  
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)  
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `className`  
- Имя класса, содержащего схема событий. Этот класс должен наследоваться от прямо или косвенно [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Внедренные DHTML-схема событий должны находиться внутри [схема событий DHTML и URL-адрес](#begin_dhtml_url_event_map)).  
+ The name of the class containing the event map. This class should derive directly or indirectly from [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). The embedded DHTML event map must be inside a [DHTML and URL event map](#begin_dhtml_url_event_map)).  
   
  *mapName*  
- Указывает, что страница, событие которого сопоставления. Это соответствует *mapName* в [URL_EVENT_ENTRY](#url_event_entry) макрос фактически определению ресурса URL-адрес или HTML.  
+ Specifies the page whose event map this is. This matches *mapName* in the [URL_EVENT_ENTRY](#url_event_entry) macro actually defining the URL or HTML resource.  
   
-### <a name="remarks"></a>Примечания  
- Поскольку многостраничное диалоговое окно DHTML состоит из несколько HTML-страниц, каждая из которых может создавать события DHTML, схемы внедренные событий используются для сопоставления событий с обработчиками на уровне страниц.  
+### <a name="remarks"></a>Remarks  
+ Because a multipage DHTML dialog consists of multiple HTML pages, each of which can raise DHTML events, embedded event maps are used to map events to handlers on a per-page basis.  
   
- Схемы событий внедренные в карту событий DHTML и URL-адрес состоит из `BEGIN_EMBED_DHTML_EVENT_MAP` макрос, за которым следует [DHTML_EVENT](#dhtml_event) макросы и [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) макрос.  
+ Embedded event maps within a DHTML and URL event map consist of a `BEGIN_EMBED_DHTML_EVENT_MAP` macro followed by [DHTML_EVENT](#dhtml_event) macros and an [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) macro.  
   
- Каждая карта внедренные событий требуется соответствующий [записью о событии URL-адрес](#url_event_entry) для сопоставления *mapName* (указано в `BEGIN_EMBED_DHTML_EVENT_MAP`) к ресурсу URL-адрес или HTML.  
+ Each embedded event map requires a corresponding [URL event entry](#url_event_entry) to map *mapName* (specified in `BEGIN_EMBED_DHTML_EVENT_MAP`) to a URL or HTML resource.  
   
-### <a name="example"></a>Пример  
- См. пример в [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
+### <a name="example"></a>Example  
+ See the example in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="begin_url_entries"></a>BEGIN_URL_ENTRIES  
- Запускает Определение сопоставления URL-адрес запись событий в многостраничное диалоговое окно.  
+##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES  
+ Starts the definition of a URL event entry map in a multipage dialog.  
   
 ```  
 BEGIN_URL_ENTRIES(className)  
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `className`  
- Имя класса, содержащего URL-адрес карты запись событий. Этот класс должен наследоваться от прямо или косвенно [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). URL-адрес события входа должны быть заданы внутри [схема событий DHTML и URL-адрес](#begin_dhtml_url_event_map)).  
+ The name of the class containing the URL event entry map. This class should derive directly or indirectly from [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). The URL event entry map must be inside a [DHTML and URL event map](#begin_dhtml_url_event_map)).  
   
-### <a name="remarks"></a>Примечания  
- Поскольку многостраничное диалоговое окно DHTML состоит из нескольких страниц HTML, URL-адресов, события используются для сопоставления URL-адреса или HTML-ресурсы, соответствующий [встроенные схемы событий DHTML](#begin_embed_dhtml_event_map). Поместите `URL_EVENT_ENTRY` макросы между `BEGIN_URL_ENTRIES` и [END_URL_ENTRIES](#end_url_entries) макросы.  
+### <a name="remarks"></a>Remarks  
+ Because a multipage DHTML dialog consists of multiple HTML pages, URL event entries are used to map URLs or HTML resources to corresponding [embedded DHTML event maps](#begin_embed_dhtml_event_map). Put `URL_EVENT_ENTRY` macros between `BEGIN_URL_ENTRIES` and [END_URL_ENTRIES](#end_url_entries) macros.  
   
-### <a name="example"></a>Пример  
- См. пример в [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
+### <a name="example"></a>Example  
+ See the example in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP  
- Объявляет схема событий DHTML и URL-адрес в определении класса.  
+##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP  
+ Declares a DHTML and URL event map in a class definition.  
   
 ```  
 DECLARE_DHTML_URL_EVENT_MAP()  
  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот макрос будет использоваться в определении [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-производные классы.  
+### <a name="remarks"></a>Remarks  
+ This macro is to be used in the definition of [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-derived classes.  
   
- Сопоставление событий DHTML и URL-адрес содержит [встроенные схемы событий DHTML](#begin_embed_dhtml_event_map) и [URL-адресов, событие](#begin_url_entries) для сопоставления DHTML-события для обработчиков на уровне страниц. Используйте [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) реализовать схему.  
+ A DHTML and URL event map contains [embedded DHTML event maps](#begin_embed_dhtml_event_map) and [URL event entries](#begin_url_entries) to map DHTML events to handlers on a per-page basis. Use [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) to implement the map.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP  
- Отмечает конец карты событий DHTML и URL-адрес.  
+##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP  
+ Marks the end of a DHTML and URL event map.  
   
 ```  
 END_DHTML_URL_EVENT_MAP(className)  
  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `className`  
- Имя класса, содержащего схема событий. Этот класс должен наследоваться от прямо или косвенно [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Оно должно соответствовать `className` в соответствующем [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) макрос.  
+ The name of the class containing the event map. This class should derive directly or indirectly from [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). This should match `className` in the corresponding [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) macro.  
   
-### <a name="example"></a>Пример  
- См. пример в [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
+### <a name="example"></a>Example  
+ See the example in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP  
- Отмечает конец внедренного карта событий DHTML.  
+##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP  
+ Marks the end of an embedded DHTML event map.  
   
 ```  
 END_EMBED_DHTML_EVENT_MAP()  
  
 ```  
   
-### <a name="example"></a>Пример  
- См. пример в [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
+### <a name="example"></a>Example  
+ See the example in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="end_url_entries"></a>END_URL_ENTRIES  
- Отмечает конец карты запись событий URL-адрес.  
+##  <a name="end_url_entries"></a>  END_URL_ENTRIES  
+ Marks the end of a URL event entry map.  
   
 ```  
 END_URL_ENTRIES()  
  
 ```  
   
-### <a name="example"></a>Пример  
- См. пример в [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
+### <a name="example"></a>Example  
+ See the example in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
   
-##  <a name="url_event_entry"></a>URL_EVENT_ENTRY  
- Сопоставляет ресурс URL-адрес или HTML-страницу в многостраничное диалоговое окно.  
+##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY  
+ Maps a URL or HTML resource to a page in a multipage dialog.  
   
 ```  
 URL_EVENT_ENTRY(className, url,  mapName)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `className`  
- Имя класса, содержащего URL-адрес карты запись событий. Этот класс должен наследоваться от прямо или косвенно [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). URL-адрес события входа должны быть заданы внутри [схема событий DHTML и URL-адрес](#begin_dhtml_url_event_map)).  
+ The name of the class containing the URL event entry map. This class should derive directly or indirectly from [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). The URL event entry map must be inside a [DHTML and URL event map](#begin_dhtml_url_event_map)).  
   
- *URL-адрес*  
- Ресурс URL-адрес или HTML-страницы.  
+ *url*  
+ The URL or HTML resource for the page.  
   
  *mapName*  
- Указывает URL-адресом страницы *URL-адрес*. Это соответствует *mapName* в [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map) макрос, который сопоставляет события с этой страницы.  
+ Specifies the page whose URL is *url*. This matches *mapName* in the [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map) macro that maps events from this page.  
   
-### <a name="remarks"></a>Примечания  
- Если страница является ресурс HTML *URL-адрес* должен быть строковым представлением номер идентификатора ресурса (то есть «123», не 123 или ID_HTMLRES1).  
+### <a name="remarks"></a>Remarks  
+ If the page is an HTML resource, *url* must be the string representation of the resource's ID number (that is, "123", not 123 or ID_HTMLRES1).  
   
- Идентификатор страницы *mapName*, — это произвольный символов, используемых для связывания встроенные схемы событий DHTML схемы запись событий URL-адрес. Ограничен областью, на схеме событий DHTML и URL-адрес.  
+ The page identifier, *mapName*, is an arbitrary symbol used to link embedded DHTML event maps to URL event entry maps. It is limited in scope to the DHTML and URL event map.  
   
-### <a name="example"></a>Пример  
- См. пример в [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
+### <a name="example"></a>Example  
+ See the example in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
 
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdhtml.h  
 
 ##  <a name="end_dhtml_event_map_inline"></a>END_DHTML_EVENT_MAP_INLINE
-Отмечает конец DHTML-схема событий.  
+Marks the end of the DHTML event map.  
    
-### <a name="syntax"></a>Синтаксис    
+### <a name="syntax"></a>Syntax    
 ```
 END_DHTML_EVENT_MAP_INLINE( )    
 ```  
    
-### <a name="remarks"></a>Примечания  
- Необходимо использовать в сочетании с [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline).  
+### <a name="remarks"></a>Remarks  
+ Must be used in conjunction with [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline).  
    
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdhtml.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
    
-### <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
 

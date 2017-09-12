@@ -1,51 +1,70 @@
 ---
-title: "Доступ к встроенному элементу управления &quot;Календарь на месяц&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl - класс, доступ к внедренному элементу управления"
-  - "CMonthCalCtrl - класс, изменение шрифта"
-  - "DateTimePicker - элемент управления [MFC]"
-  - "DateTimePicker - элемент управления [MFC], доступ к календарю месяца"
-  - "элементы управления "календарь месяца", изменение шрифта"
-  - "элементы управления "календарь месяца", встроено в средство выбора даты и времени"
+title: Accessing the Embedded Month Calendar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], accessing month calendar
+- CDateTimeCtrl class [MFC], accessing embedded control
+- month calendar controls [MFC], embedded in date/time picker
+- CMonthCalCtrl class [MFC], changing the font
+- month calendar controls [MFC], changing the font
+- DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Доступ к встроенному элементу управления &quot;Календарь на месяц&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ad47b376fd5f3cc044bffe3c98116489362d046d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Встроенный объект календаря месяца можно получить из объекта `CDateTimeCtrl` с вызовом функцию\-член [GetMonthCalCtrl](../Topic/CDateTimeCtrl::GetMonthCalCtrl.md).  
+---
+# <a name="accessing-the-embedded-month-calendar-control"></a>Accessing the Embedded Month Calendar Control
+The embedded month calendar control object can be accessed from the `CDateTimeCtrl` object with a call to the [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) member function.  
   
 > [!NOTE]
->  Вложенный элемент управления календаря месяца используется только в том случае, если элемент управления " выбор даты и времени не имеет стиль, **DTS\_UPDOWN** .  
+>  The embedded month calendar control is used only when the date and time picker control does not have the **DTS_UPDOWN** style set.  
   
- Это полезно, если требуется изменить некоторые атрибуты, прежде чем встроенный элемент управления.  Для этого обработайте уведомление **DTN\_DROPDOWN**, извлечь элемент управления календаря месяца \(с помощью [CDateTimeCtrl::GetMonthCalCtrl](../Topic/CDateTimeCtrl::GetMonthCalCtrl.md)\) и внесите необходимые изменения.  К сожалению, элемент управления не упорен календарь месяца.  
+ This is useful if you want to modify certain attributes before the embedded control is displayed. To accomplish this, handle the **DTN_DROPDOWN** notification, retrieve the month calendar control (using [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)), and make your modifications. Unfortunately, the month calendar control is not persistent.  
   
- Другими словами, при создании пользовательских запросов отображение календаря месяца, новый элемент управления календаря перед уведомлением месяца \( **DTN\_DROPDOWN** \).  Элемент управления уничтожается после уведомления \( **DTN\_CLOSEUP** \) закрытый пользователем.  Это означает, что все атрибуты изменения, прежде чем встроенный элемент управления отображается, теряются при встроенный элемент управления закрыт.  
+ In other words, when the user requests the display of the month calendar control, a new month calendar control is created (before the **DTN_DROPDOWN** notification). The control is destroyed (after the **DTN_CLOSEUP** notification) when dismissed by the user. This means that any attributes you modify, before the embedded control is displayed, are lost when the embedded control is dismissed.  
   
- В следующем примере показано использование этой процедуры, обработчик для уведомления **DTN\_DROPDOWN**.  Код изменяет цвет фона календаря месяца, вызвав метод [SetMonthCalColor](../Topic/CDateTimeCtrl::SetMonthCalColor.md), в серому цвет.  Код следующим образом.  
+ The following example demonstrates this procedure, using a handler for the **DTN_DROPDOWN** notification. The code changes the background color of the month calendar control, with a call to [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), to gray. The code is as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/CPP/accessing-the-embedded-month-calendar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]  
   
- Как уже говорилось ранее, все изменения свойств календаря месяца теряются, с 2 исключения, если встроенный элемент управления закрыт.  Первое исключение, цвета календаря месяца, уже был рассмотрен.  Второе исключение шрифт, используемый элементом управления календаря месяца.  Можно изменить шрифт по умолчанию вызовом [CDateTimeCtrl::SetMonthCalFont](../Topic/CDateTimeCtrl::SetMonthCalFont.md), передав дескриптор существующего шрифта.  В следующем примере \(где `m_dtPicker` объект даты и контроля времени\) показан один из возможных метод:  
+ As stated previously, all modifications to properties of the month calendar control are lost, with two exceptions, when the embedded control is dismissed. The first exception, the colors of the month calendar control, has already been discussed. The second exception is the font used by the month calendar control. You can modify the default font by making a call to [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), passing the handle of an existing font. The following example (where `m_dtPicker` is the date and time control object) demonstrates one possible method:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/CPP/accessing-the-embedded-month-calendar-control_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]  
   
- Как только сохраняется и используется шрифт был изменен, вызвав метод `CDateTimeCtrl::SetMonthCalFont`, новый шрифт в следующий раз элемент управления календаря месяца для отображения.  
+ Once the font has been changed, with a call to `CDateTimeCtrl::SetMonthCalFont`, the new font is stored and used the next time a month calendar is to be displayed.  
   
-## См. также  
- [Использование CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

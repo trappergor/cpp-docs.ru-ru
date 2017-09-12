@@ -1,64 +1,83 @@
 ---
-title: "Обмен данными диалоговых окон | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "отмена обмена данными"
-  - "захват пользовательского ввода"
-  - "CDataExchange - класс, использование языка DDX"
-  - "обмен данными диалоговых окон (DDX), отмена"
-  - "обмен данными диалоговых окон (DDX), механизм обмена данными"
-  - "данные диалогового окна"
-  - "данные диалогового окна, извлечение"
-  - "диалоговые окна, обмен данными"
-  - "диалоговые окна, инициализация"
-  - "диалоговые окна, извлечение пользовательского ввода с помощью DDX"
-  - "DoDataExchange - метод"
-  - "инициализация диалоговых окон"
-  - "извлечение данных диалоговых окон"
-  - "перенос данных диалоговых окон"
-  - "UpdateData - метод"
-  - "ввод данных пользователем, извлечение из диалоговых окон MFC"
+title: Dialog Data Exchange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing dialog boxes
+- canceling data exchange
+- dialog box data, retrieving
+- DDX (dialog data exchange), data exchange mechanism
+- dialog boxes [MFC], initializing
+- dialog boxes [MFC], retrieving user input using DDX
+- dialog box data
+- dialog boxes [MFC], data exchange
+- CDataExchange class [MFC], using DDX
+- DoDataExchange method [MFC]
+- user input [MFC], retrieving from MFC dialog boxes
+- capturing user input [MFC]
+- transferring dialog box data
+- DDX (dialog data exchange), canceling
+- UpdateData method [MFC]
+- retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Обмен данными диалоговых окон
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fbb20507f4412ee32309d178ab473375bec1d29
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При использовании механизма DDX, следует установить начальные значения переменных\-членов объекта диалогового окна, обычно в обработчике `OnInitDialog` или конструкторе диалогового окна.  Непосредственно перед диалоговое окно отображается, механизма DDX платформы передает значения переменные\-члены для элементов управления в диалоговом окне, где они отображаются в диалоговом окне само отображается в ответ на `DoModal` или **Создать**.  Реализация по умолчанию `OnInitDialog` в `CDialog` функции\-члена `UpdateData` класса `CWnd` для инициализации элементов управления в диалоговом окне.  
+---
+# <a name="dialog-data-exchange"></a>Dialog Data Exchange
+If you use the DDX mechanism, you set the initial values of the dialog object's member variables, typically in your `OnInitDialog` handler or the dialog constructor. Immediately before the dialog is displayed, the framework's DDX mechanism transfers the values of the member variables to the controls in the dialog box, where they appear when the dialog box itself appears in response to `DoModal` or **Create**. The default implementation of `OnInitDialog` in `CDialog` calls the `UpdateData` member function of class `CWnd` to initialize the controls in the dialog box.  
   
- Возвращает тот же механизм значений элементов управления к переменным, когда пользователь нажимает кнопку " ОК " \(или при вызове функции\-члена `UpdateData` с аргументом **TRUE**\).  Механизм проверки данных диалогового окна проверяет все элементы данных, для которых был указан правила проверки.  
+ The same mechanism transfers values from the controls to the member variables when the user clicks the OK button (or whenever you call the `UpdateData` member function with the argument **TRUE**). The dialog data validation mechanism validates any data items for which you specified validation rules.  
   
- Следующий рисунок иллюстрирует обмена данными с диалоговым окном.  
+ The following figure illustrates dialog data exchange.  
   
- ![Обмен данными диалоговых окон](../mfc/media/vc379d1.png "vc379D1")  
-Обмен данными в диалоговом окне  
+ ![Dialog box data exchange](../mfc/media/vc379d1.gif "vc379d1")  
+Dialog Data Exchange  
   
- `UpdateData` работает в обоих направлениях, заданное параметром **bool**, переданным ему.  Для выполнения обмена `UpdateData` настраивает объект `CDataExchange` и вызовет переопределение класса диалогового окна функции\-члена `CDialog``DoDataExchange`.  `DoDataExchange` принимает аргумент типа `CDataExchange`.  Объект `CDataExchange`, переданный `UpdateData` представляет контекст обмена, указав такие сведения, как направление обмена.  
+ `UpdateData` works in both directions, as specified by the **BOOL** parameter passed to it. To carry out the exchange, `UpdateData` sets up a `CDataExchange` object and calls your dialog class's override of `CDialog`'s `DoDataExchange` member function. `DoDataExchange` takes an argument of type `CDataExchange`. The `CDataExchange` object passed to `UpdateData` represents the context of the exchange, defining such information as the direction of the exchange.  
   
- Когда пользователь \(или мастера кода\) переопределите `DoDataExchange` указывается вызова одной функции DDX при использовании dataitem \(элемент управления\).  Каждая функция DDX знает, как для обмена данными в обоих направлениях исходя из контекста указанный аргументом `CDataExchange` передаваемого в `DoDataExchange``UpdateData`.  
+ When you (or a Code wizard) override `DoDataExchange`, you specify a call to one DDX function per data member (control). Each DDX function knows how to exchange data in both directions based on the context supplied by the `CDataExchange` argument passed to your `DoDataExchange` by `UpdateData`.  
   
- MFC предоставляет различные функции DDX для различных типов обмена.  В следующем примере показано переопределение `DoDataExchange`, в котором вызываются 2 функции DDX и одной функции DDV:  
+ MFC provides many DDX functions for different kinds of exchange. The following example shows a `DoDataExchange` override in which two DDX functions and one DDV function are called:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/CPP/dialog-data-exchange_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]  
   
- Линии `DDX_` и `DDV_` сопоставление данных.  Пример DDX и отображаются функции DDV для управления чек\- окна и управления поля ввода, соответственно.  
+ The `DDX_` and `DDV_` lines are a data map. The sample DDX and DDV functions shown are for a check-box control and an edit-box control, respectively.  
   
- Если пользователь отменяет модальное диалоговое окно, функцию\-член `OnCancel` заканчивается диалоговое окно и `DoModal` возвращает значение **IDCANCEL**.  В этом случае никакие данные не обменян между кнопками и объектом диалогового окна.  
+ If the user cancels a modal dialog box, the `OnCancel` member function terminates the dialog box and `DoModal` returns the value **IDCANCEL**. In that case, no data is exchanged between the dialog box and the dialog object.  
   
-## См. также  
- [Обмен данными диалоговых окон и их проверка](../mfc/dialog-data-exchange-and-validation.md)   
- [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)   
- [Проверка данных диалогового окна](../mfc/dialog-data-validation.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Validation](../mfc/dialog-data-validation.md)
+
+

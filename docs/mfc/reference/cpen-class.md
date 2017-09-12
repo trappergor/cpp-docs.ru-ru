@@ -1,5 +1,5 @@
 ---
-title: "CPen-класс | Документы Microsoft"
+title: CPen Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,9 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HPEN
-- CPen class
-- pens, MFC
+- CPen [MFC], CPen
+- CPen [MFC], CreatePen
+- CPen [MFC], CreatePenIndirect
+- CPen [MFC], FromHandle
+- CPen [MFC], GetExtLogPen
+- CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
 caps.latest.revision: 20
 author: mikeblome
@@ -42,61 +45,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: edea12c84a8f39161acbf367360fd86a1ff19998
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de0a94fd6b6a324c64a7efee4ce0b07a38edc954
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpen-class"></a>CPen-класс
-Инкапсулирует перо интерфейса графических устройств Windows (GDI).  
+# <a name="cpen-class"></a>CPen Class
+Encapsulates a Windows graphics device interface (GDI) pen.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPen : public CGdiObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPen::CPen](#cpen)|Создает объект `CPen`.|  
+|[CPen::CPen](#cpen)|Constructs a `CPen` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPen::CreatePen](#createpen)|Создает логические декоративным или геометрических пера с указанный стиль, ширину и атрибуты кисти и присоединяется к `CPen` объекта.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Создает перо с стиль, ширину и цвет в [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) структуры и присоединяет его к `CPen` объекта.|  
-|[CPen::FromHandle](#fromhandle)|Возвращает указатель на `CPen` объект для заданного Windows `HPEN`.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Возвращает [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) базовой структуры.|  
-|[CPen::GetLogPen](#getlogpen)|Возвращает [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) базовой структуры.|  
+|[CPen::CreatePen](#createpen)|Creates a logical cosmetic or geometric pen with the specified style, width, and brush attributes, and attaches it to the `CPen` object.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Creates a pen with the style, width, and color given in a [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure, and attaches it to the `CPen` object.|  
+|[CPen::FromHandle](#fromhandle)|Returns a pointer to a `CPen` object when given a Windows `HPEN`.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Gets an [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) underlying structure.|  
+|[CPen::GetLogPen](#getlogpen)|Gets a [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) underlying structure.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPen::operator HPEN](#operator_hpen)|Возвращает дескриптор Windows, присоединенные к `CPen` объекта.|  
+|[CPen::operator HPEN](#operator_hpen)|Returns the Windows handle attached to the `CPen` object.|  
   
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения об использовании `CPen`, в разделе [графические объекты](../../mfc/graphic-objects.md).  
+## <a name="remarks"></a>Remarks  
+ For more information on using `CPen`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CPen`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
- Создает объект `CPen`.  
+##  <a name="cpen"></a>  CPen::CPen  
+ Constructs a `CPen` object.  
   
 ```  
 CPen();
@@ -116,81 +119,81 @@ CPen(
     const DWORD* lpStyle = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nPenStyle`  
- Задает стиль пера. В первой версии конструктора, этот параметр может принимать одно из следующих значений:  
+ Specifies the pen style. This parameter in the first version of the constructor can be one of the following values:  
   
-- **PS_SOLID** создает сплошной перо.  
+- **PS_SOLID** Creates a solid pen.  
   
-- **PS_DASH** создает штрихового пера. Допустимо, только если ширину пера единиц 1 или менее, в устройстве.  
+- **PS_DASH** Creates a dashed pen. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_DOT** создает точечный перо. Допустимо, только если ширину пера единиц 1 или менее, в устройстве.  
+- **PS_DOT** Creates a dotted pen. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_DASHDOT** создает перо с чередованием, дефисы и точки. Допустимо, только если ширину пера единиц 1 или менее, в устройстве.  
+- **PS_DASHDOT** Creates a pen with alternating dashes and dots. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_DASHDOTDOT** создает с сменяющих друг друга штрихов и double точек пера. Допустимо, только если ширину пера единиц 1 или менее, в устройстве.  
+- **PS_DASHDOTDOT** Creates a pen with alternating dashes and double dots. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_NULL** создает null перо.  
+- **PS_NULL** Creates a null pen.  
   
-- **PS_INSIDEFRAME** создает перо, рисующее строки внутри кадра замкнутые фигуры, созданные выходные данные функции Windows GDI, определяющие ограничивающий прямоугольник (например, **эллипс**, **прямоугольник**, `RoundRect`, `Pie`, и `Chord` функции-члены). При использовании этого стиля с Windows GDI выходные данные функции, которые задают ограничивающий прямоугольник (например, `LineTo` функции-члена), область рисования пера не ограничивается кадра.  
+- **PS_INSIDEFRAME** Creates a pen that draws a line inside the frame of closed shapes produced by the Windows GDI output functions that specify a bounding rectangle (for example, the **Ellipse**, **Rectangle**, `RoundRect`, `Pie`, and `Chord` member functions). When this style is used with Windows GDI output functions that do not specify a bounding rectangle (for example, the `LineTo` member function), the drawing area of the pen is not limited by a frame.  
   
- Вторая версия `CPen` конструктор задает сочетание атрибутов соединения, конец, тип и стилей. Значения из каждой категории следует использовать в сочетании с помощью оператора побитового или (|). Тип пера может принимать одно из следующих значений:  
+ The second version of the `CPen` constructor specifies a combination of type, style, end cap, and join attributes. The values from each category should be combined by using the bitwise OR operator (&#124;). The pen type can be one of the following values:  
   
-- **PS_GEOMETRIC** создает геометрические перо.  
+- **PS_GEOMETRIC** Creates a geometric pen.  
   
-- **PS_COSMETIC** создает декоративным перо.  
+- **PS_COSMETIC** Creates a cosmetic pen.  
   
-     Вторая версия `CPen` конструктор добавляет следующие стили пера для `nPenStyle`:  
+     The second version of the `CPen` constructor adds the following pen styles for `nPenStyle`:  
   
-- **PS_ALTERNATE** создает перо, которая устанавливает все пикселы. (Этот стиль применяется только для перьев, декоративным.)  
+- **PS_ALTERNATE** Creates a pen that sets every other pixel. (This style is applicable only for cosmetic pens.)  
   
-- **PS_USERSTYLE** создает перо, использующий массив стилей, предоставленные пользователем.  
+- **PS_USERSTYLE** Creates a pen that uses a styling array supplied by the user.  
   
-     Конец может принимать одно из следующих значений:  
+     The end cap can be one of the following values:  
   
-- **PS_ENDCAP_ROUND** оконечных округления.  
+- **PS_ENDCAP_ROUND** End caps are round.  
   
-- **PS_ENDCAP_SQUARE** оконечных квадрата.  
+- **PS_ENDCAP_SQUARE** End caps are square.  
   
-- **PS_ENDCAP_FLAT** оконечных являются плоскими.  
+- **PS_ENDCAP_FLAT** End caps are flat.  
   
-     Соединение может принимать одно из следующих значений:  
+     The join can be one of the following values:  
   
-- **PS_JOIN_BEVEL** со скошенными соединения.  
+- **PS_JOIN_BEVEL** Joins are beveled.  
   
-- **PS_JOIN_MITER** соединения являются углом, когда они находятся в текущей предельного значения, заданного [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) функции. Если соединения превышает этот предел, он является со скошенными.  
+- **PS_JOIN_MITER** Joins are mitered when they are within the current limit set by the [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) function. If the join exceeds this limit, it is beveled.  
   
-- **PS_JOIN_ROUND** round соединения.  
+- **PS_JOIN_ROUND** Joins are round.  
   
  `nWidth`  
- Задает ширину пера.  
+ Specifies the width of the pen.  
   
--   Для первой версии конструктора Если это значение равно 0, ширина в единицы устройства всегда равно 1 пиксель, независимо от режима сопоставления.  
+-   For the first version of the constructor, if this value is 0, the width in device units is always 1 pixel, regardless of the mapping mode.  
   
--   Для второй версии конструктора Если `nPenStyle` — **PS_GEOMETRIC**, ширина предоставляется в логических единицах. Если `nPenStyle` — **PS_COSMETIC**, ширина должно быть установлено в 1.  
+-   For the second version of the constructor, if `nPenStyle` is **PS_GEOMETRIC**, the width is given in logical units. If `nPenStyle` is **PS_COSMETIC**, the width must be set to 1.  
   
  `crColor`  
- Содержит цвета в формате RGB для пера.  
+ Contains an RGB color for the pen.  
   
  `pLogBrush`  
- Указывает `LOGBRUSH` структуры. Если `nPenStyle` — **PS_COSMETIC**, `lbColor` членом `LOGBRUSH` структура определяет цвет пера и `lbStyle` членом `LOGBRUSH` структуры должно быть присвоено **BS_SOLID**. Если `nPenStyle` — **PS_GEOMETRIC**, все члены должен использоваться для указания атрибутов кисти пера.  
+ Points to a `LOGBRUSH` structure. If `nPenStyle` is **PS_COSMETIC**, the `lbColor` member of the `LOGBRUSH` structure specifies the color of the pen and the `lbStyle` member of the `LOGBRUSH` structure must be set to **BS_SOLID**. If `nPenStyle` is **PS_GEOMETRIC**, all members must be used to specify the brush attributes of the pen.  
   
  `nStyleCount`  
- Указывает длину в единицах двойное `lpStyle` массива. Это значение должно быть равно нулю, если `nPenStyle` не **PS_USERSTYLE**.  
+ Specifies the length, in doubleword units, of the `lpStyle` array. This value must be zero if `nPenStyle` is not **PS_USERSTYLE**.  
   
  `lpStyle`  
- Указывает массив значений двойное слово соответственно. Первое значение задает длину первой штриха в пользовательский стиль, второе значение указывает длину первого пробела и т. д. Этот указатель должен быть **NULL** Если `nPenStyle` не **PS_USERSTYLE**.  
+ Points to an array of doubleword values. The first value specifies the length of the first dash in a user-defined style, the second value specifies the length of the first space, and so on. This pointer must be **NULL** if `nPenStyle` is not **PS_USERSTYLE**.  
   
-### <a name="remarks"></a>Примечания  
- Если вы используете конструктор без аргументов, необходимо инициализировать итоговый `CPen` объекта с `CreatePen`, `CreatePenIndirect`, или `CreateStockObject` функции-члены.  
+### <a name="remarks"></a>Remarks  
+ If you use the constructor with no arguments, you must initialize the resulting `CPen` object with the `CreatePen`, `CreatePenIndirect`, or `CreateStockObject` member functions.  
   
- Если вы используете конструктор, который принимает аргументы, Дополнительная инициализация не не требуется. Конструктор аргументов может создавать исключения, если возникли ошибки, хотя конструктор без аргументов всегда будет успешным.  
+ If you use the constructor that takes arguments, then no further initialization is necessary. The constructor with arguments can throw an exception if errors are encountered, while the constructor with no arguments will always succeed.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#99;](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
- Создает логические декоративным или геометрических пера с указанный стиль, ширину и атрибуты кисти и присоединяется к `CPen` объекта.  
+##  <a name="createpen"></a>  CPen::CreatePen  
+ Creates a logical cosmetic or geometric pen with the specified style, width, and brush attributes, and attaches it to the `CPen` object.  
   
 ```  
 BOOL CreatePen(
@@ -207,114 +210,114 @@ BOOL CreatePen(
     const DWORD* lpStyle = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nPenStyle`  
- Задает стиль для пера. Список возможных значений см. в разделе `nPenStyle` параметр в [CPen](#cpen) конструктор.  
+ Specifies the style for the pen. For a list of possible values, see the `nPenStyle` parameter in the [CPen](#cpen) constructor.  
   
  `nWidth`  
- Задает ширину пера.  
+ Specifies the width of the pen.  
   
--   Для первой версии `CreatePen`, если это значение равно 0, ширина в единицы устройства — 1 пиксель, независимо от режима сопоставления.  
+-   For the first version of `CreatePen`, if this value is 0, the width in device units is always 1 pixel, regardless of the mapping mode.  
   
--   Для второй версии `CreatePen`, если `nPenStyle` — **PS_GEOMETRIC**, ширина предоставляется в логических единицах. Если `nPenStyle` — **PS_COSMETIC**, ширина должно быть установлено в 1.  
+-   For the second version of `CreatePen`, if `nPenStyle` is **PS_GEOMETRIC**, the width is given in logical units. If `nPenStyle` is **PS_COSMETIC**, the width must be set to 1.  
   
  `crColor`  
- Содержит цвета в формате RGB для пера.  
+ Contains an RGB color for the pen.  
   
  `pLogBrush`  
- Указывает [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры. Если `nPenStyle` — **PS_COSMETIC**, **lbColor** членом `LOGBRUSH` структура определяет цвет пера и `lbStyle` членом `LOGBRUSH` структуры должно быть присвоено **BS_SOLID**. Если **nPenStyle** — **PS_GEOMETRIC**, все члены должен использоваться для указания атрибутов кисти пера.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure. If `nPenStyle` is **PS_COSMETIC**, the **lbColor** member of the `LOGBRUSH` structure specifies the color of the pen and the `lbStyle` member of the `LOGBRUSH` structure must be set to **BS_SOLID**. If **nPenStyle** is **PS_GEOMETRIC**, all members must be used to specify the brush attributes of the pen.  
   
  `nStyleCount`  
- Указывает длину в единицах двойное `lpStyle` массива. Это значение должно быть равно нулю, если `nPenStyle` не **PS_USERSTYLE**.  
+ Specifies the length, in doubleword units, of the `lpStyle` array. This value must be zero if `nPenStyle` is not **PS_USERSTYLE**.  
   
  `lpStyle`  
- Указывает массив значений двойное слово соответственно. Первое значение задает длину первой штриха в пользовательский стиль, второе значение указывает длину первого пробела и т. д. Этот указатель должен быть **NULL** Если `nPenStyle` не **PS_USERSTYLE**.  
+ Points to an array of doubleword values. The first value specifies the length of the first dash in a user-defined style, the second value specifies the length of the first space, and so on. This pointer must be **NULL** if `nPenStyle` is not **PS_USERSTYLE**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если успешно, или нуль, если происходит сбой метода.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful, or zero if the method fails.  
   
-### <a name="remarks"></a>Примечания  
- Первая версия `CreatePen` инициализирует пера с указанный стиль, ширину и цвет. Перо может быть впоследствии выбран в качестве текущего пера для любого контекста устройства.  
+### <a name="remarks"></a>Remarks  
+ The first version of `CreatePen` initializes a pen with the specified style, width, and color. The pen can be subsequently selected as the current pen for any device context.  
   
- Перья, которые имеют размер больше 1 пиксель всегда должен иметь либо **PS_NULL**, **PS_SOLID**, или **PS_INSIDEFRAME** стиль.  
+ Pens that have a width greater than 1 pixel should always have either the **PS_NULL**, **PS_SOLID**, or **PS_INSIDEFRAME** style.  
   
- Если перо имеет **PS_INSIDEFRAME** стиль и цвет, который не соответствует цвет в таблице логических цветов нарисован с помощью сглаженный цвет пера. **PS_SOLID** стиль пера не может использоваться для создания с сглаженный цвет пера. Стиль **PS_INSIDEFRAME** идентичен **PS_SOLID** Если ширину пера меньше или равно 1.  
+ If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_SOLID** pen style cannot be used to create a pen with a dithered color. The style **PS_INSIDEFRAME** is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
- Вторая версия `CreatePen` инициализирует логический декоративным или геометрические пера, имеющий указанный стиль, ширину и кисти атрибуты. Ширину пера, декоративным всегда равно 1; ширину пера геометрические всегда указывается в международных единицах измерения. После приложение создает логический пера, его можно выбрать этого пера в контекст устройства, вызвав [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) функции. После выбора пера в контекст устройства, он может использоваться для рисования линий и кривых.  
+ The second version of `CreatePen` initializes a logical cosmetic or geometric pen that has the specified style, width, and brush attributes. The width of a cosmetic pen is always 1; the width of a geometric pen is always specified in world units. After an application creates a logical pen, it can select that pen into a device context by calling the [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) function. After a pen is selected into a device context, it can be used to draw lines and curves.  
   
--   Если `nPenStyle` — **PS_COSMETIC** и **PS_USERSTYLE**, записи в `lpStyle` массива укажите длину штрихов и пробелов в единицах стиля. Единое стиля определяется устройства, в котором используется перо для рисования линии.  
+-   If `nPenStyle` is **PS_COSMETIC** and **PS_USERSTYLE**, the entries in the `lpStyle` array specify lengths of dashes and spaces in style units. A style unit is defined by the device in which the pen is used to draw a line.  
   
--   Если `nPenStyle` — **PS_GEOMETRIC** и **PS_USERSTYLE**, записи в `lpStyle` массива укажите длину штрихов и пробелов в логических единицах.  
+-   If `nPenStyle` is **PS_GEOMETRIC** and **PS_USERSTYLE**, the entries in the `lpStyle` array specify lengths of dashes and spaces in logical units.  
   
--   Если `nPenStyle` — **PS_ALTERNATE**, единицы стиль игнорируется и задать все пикселы.  
+-   If `nPenStyle` is **PS_ALTERNATE**, the style unit is ignored and every other pixel is set.  
   
- Если приложению требуется больше заданного пера, он должен вызывать [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) члена функции или уничтожить `CPen` таким образом, чтобы ресурс больше не используется. Приложение не следует удалять пера, при выборе пера в контекст устройства.  
+ When an application no longer requires a given pen, it should call the [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function or destroy the `CPen` object so the resource is no longer in use. An application should not delete a pen when the pen is selected in a device context.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#100;](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
- Инициализирует перо, имеет стиль, ширину и цвет, заданного в структуре, на который указывает `lpLogPen`.  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
+ Initializes a pen that has the style, width, and color given in the structure pointed to by `lpLogPen`.  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpLogPen`  
- Указывает Windows [LOGPEN](../../mfc/reference/logpen-structure.md) структуру, содержащую сведения о пера.  
+ Points to the Windows [LOGPEN](../../mfc/reference/logpen-structure.md) structure that contains information about the pen.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Перья, которые имеют размер больше 1 пиксель всегда должен иметь либо **PS_NULL**, **PS_SOLID**, или **PS_INSIDEFRAME** стиль.  
+### <a name="remarks"></a>Remarks  
+ Pens that have a width greater than 1 pixel should always have either the **PS_NULL**, **PS_SOLID**, or **PS_INSIDEFRAME** style.  
   
- Если перо имеет **PS_INSIDEFRAME** стиль и цвет, который не соответствует цвет в таблице логических цветов нарисован с помощью сглаженный цвет пера. **PS_INSIDEFRAME** стиль идентична **PS_SOLID** Если ширину пера меньше или равно 1.  
+ If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_INSIDEFRAME** style is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#101;](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
- Возвращает указатель на `CPen` объект, заданный дескриптор для объекта pen Windows GDI.  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
+ Returns a pointer to a `CPen` object given a handle to a Windows GDI pen object.  
   
 ```  
 static CPen* PASCAL FromHandle(HPEN hPen);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *hPen*  
- `HPEN`Дескриптор Windows GDI пера.  
+ `HPEN` handle to Windows GDI pen.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CPen` объекта, если успешно; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CPen` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Если объект `CPen` не прикреплен к дескриптору, создается и прикрепляется временный объект `CPen`. Этот временный `CPen` допустимо только до следующей приложение имеет время простоя в свой цикл событий, после чего график все временные объекты удаляются. Другими словами временный объект допустим только во время обработки одного окна сообщения.  
+### <a name="remarks"></a>Remarks  
+ If a `CPen` object is not attached to the handle, a temporary `CPen` object is created and attached. This temporary `CPen` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. In other words, the temporary object is only valid during the processing of one window message.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#105;](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
- Возвращает **EXTLOGPEN** базовой структуры.  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
+ Gets an **EXTLOGPEN** underlying structure.  
   
 ```  
 int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pLogPen`  
- Указывает [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) структуру, содержащую сведения о пера.  
+ Points to an [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) structure that contains information about the pen.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- **EXTLOGPEN** структура определяет стиль, ширину и кисти атрибуты пера. Например, вызов `GetExtLogPen` в соответствии со стилем, определенного для пера.  
+### <a name="remarks"></a>Remarks  
+ The **EXTLOGPEN** structure defines the style, width, and brush attributes of a pen. For example, call `GetExtLogPen` to match the particular style of a pen.  
   
- В следующих разделах в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] сведения об атрибутах пера:  
+ See the following topics in the Windows SDK for information about pen attributes:  
   
-- [Функция GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
   
 - [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
   
@@ -322,61 +325,61 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 - [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
   
-### <a name="example"></a>Пример  
- В следующем примере кода демонстрируется вызов `GetExtLogPen` для извлечения атрибутов с помощью пера, а затем создать новый, декоративным пера с тем же цветом.  
+### <a name="example"></a>Example  
+ The following code example demonstrates calling `GetExtLogPen` to retrieve a pen's attributes, and then create a new, cosmetic pen with the same color.  
   
- [!code-cpp[NVC_MFCDocView&#102;](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
- Возвращает `LOGPEN` базовой структуры.  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
+ Gets a `LOGPEN` underlying structure.  
   
 ```  
 int GetLogPen(LOGPEN* pLogPen);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pLogPen`  
- Указывает [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) структура, содержащая сведения о пера.  
+ Points to a [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure to contain information about the pen.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- `LOGPEN` Структура определяет стиль, цвет и шаблон для пера.  
+### <a name="remarks"></a>Remarks  
+ The `LOGPEN` structure defines the style, color, and pattern of a pen.  
   
- Например, вызов `GetLogPen` в соответствии со стилем, определенного пера.  
+ For example, call `GetLogPen` to match the particular style of pen.  
   
- В следующих разделах в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] сведения об атрибутах пера:  
+ See the following topics in the Windows SDK for information about pen attributes:  
   
-- [Функция GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
   
 - [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
   
-### <a name="example"></a>Пример  
- В следующем примере кода демонстрируется вызов `GetLogPen` для получения символа пера, а затем создать новый, сплошной пера с тем же цветом.  
+### <a name="example"></a>Example  
+ The following code example demonstrates calling `GetLogPen` to retrieve a pen character, and then create a new, solid pen with the same color.  
   
- [!code-cpp[NVC_MFCDocView&#103;](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
- Возвращает дескриптор вложенного Windows GDI `CPen` объекта.  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
+ Gets the attached Windows GDI handle of the `CPen` object.  
   
 ```  
 operator HPEN() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если успешно, дескриптор объекта Windows GDI представлена `CPen` объекта; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CPen` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Этот оператор — оператор приведения, который поддерживает непосредственное использование `HPEN` объекта.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HPEN` object.  
   
- Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#104;](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CBrush-класс](../../mfc/reference/cbrush-class.md)
+## <a name="see-also"></a>See Also  
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBrush Class](../../mfc/reference/cbrush-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CReBar-класс | Документы Microsoft"
+title: CReBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- rebar controls, control bar
-- CReBar class
-- Internet Explorer 4.0 common controls
+- CReBar [MFC], AddBar
+- CReBar [MFC], Create
+- CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
 caps.latest.revision: 22
 author: mikeblome
@@ -39,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 38ac4611503bec70ea9f809a4d4f9d4b5133e30e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19014f5049d32a469699ffcbf59052d945bc7e81
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crebar-class"></a>CReBar-класс
-Панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления главной панели.  
+# <a name="crebar-class"></a>CReBar Class
+A control bar that provides layout, persistence, and state information for rebar controls.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CReBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CReBar::AddBar](#addbar)|Добавляет диапазон главной панели.|  
-|[CReBar::Create](#create)|Создает элемент управления главной панели и присоединяет его к `CReBar` объекта.|  
-|[CReBar::GetReBarCtrl](#getrebarctrl)|Предоставляет прямой доступ к базовой стандартного элемента управления.|  
+|[CReBar::AddBar](#addbar)|Adds a band to a rebar.|  
+|[CReBar::Create](#create)|Creates the rebar control and attaches it to the `CReBar` object.|  
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Allows direct access to the underlying common control.|  
   
-## <a name="remarks"></a>Примечания  
- На главной панели объект может содержать множество дочерних окон, обычно других элементов управления, включая поля ввода, панели инструментов и списки. Объект главной панели можно отобразить его дочерних окон на указанном точечном рисунке. Приложения можно автоматически изменить размеры главной панели, или пользователь вручную изменять размеры главной панели, щелкните и перетащите его захвата.  
+## <a name="remarks"></a>Remarks  
+ A rebar object can contain a variety of child windows, usually other controls, including edit boxes, toolbars, and list boxes. A rebar object can display its child windows over a specified bitmap. Your application can automatically resize the rebar, or the user can manually resize the rebar by clicking or dragging its gripper bar.  
   
- ![Пример меню rebarmenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
+ ![Example of RebarMenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
   
-## <a name="rebar-control"></a>Элемент управления главной панели  
- На главной панели объект ведет себя аналогично объект панели инструментов. Главная панель использует механизм щелкните и перетащите для изменения размеров его делений. Контейнер элементов управления может содержать один или несколько полосы с каждого диапазона с любым сочетанием полосу захвата, точечный рисунок, текстовую метку и дочернего окна. Однако полосы не может содержать более одного дочернего окна.  
+## <a name="rebar-control"></a>Rebar Control  
+ A rebar object behaves similarly to a toolbar object. A rebar uses the click-and-drag mechanism to resize its bands. A rebar control can contain one or more bands, with each band having any combination of a gripper bar, a bitmap, a text label, and a child window. However, bands cannot contain more than one child window.  
   
- **CReBar** использует [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) класса для обеспечения его реализации. Можно получить доступ к главной панели управления через [GetReBarCtrl](#getrebarctrl) преимуществами возможностей настройки элемента управления. Дополнительные сведения об элементах управления главной панели см. в разделе `CReBarCtrl`. Дополнительные сведения об использовании элементов управления главной панели см. в разделе [CReBarCtrl с помощью](../../mfc/using-crebarctrl.md).  
+ **CReBar** uses the [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) class to provide its implementation. You can access the rebar control through [GetReBarCtrl](#getrebarctrl) to take advantage of the control's customization options. For more information about rebar controls, see `CReBarCtrl`. For more information about using rebar controls, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Панель закрепления элементов управления MFC не поддерживают главной панели и объекты управления главной панели. Если **CRebar::EnableDocking** вызывается, приложение будет assert.  
+>  Rebar and rebar control objects do not support MFC control bar docking. If **CRebar::EnableDocking** is called, your application will assert.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,11 +89,11 @@ class CReBar : public CControlBar
   
  `CReBar`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** файле afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="addbar"></a>CReBar::AddBar  
- Вызовите эту функцию-член добавляемый диапазон на главной панели.  
+##  <a name="addbar"></a>  CReBar::AddBar  
+ Call this member function to add a band to the rebar.  
   
 ```  
 BOOL AddBar(
@@ -111,33 +111,33 @@ BOOL AddBar(
     DWORD dwStyle = RBBS_GRIPPERALWAYS);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- Указатель на `CWnd` объект, который представляет дочернее окно должны быть вставлены в главной панели. Указанный объект должен иметь **WS_CHILD**.  
+ A pointer to a `CWnd` object that is the child window to be inserted into the rebar. The referenced object must have a **WS_CHILD**.  
   
  `lpszText`  
- Указатель на строку, содержащую текст, отображаемый на главной панели. **Значение NULL,** по умолчанию. Текст, содержащийся в `lpszText` не является частью дочернего окна; он находится на главной панели, сам.  
+ A pointer to a string containing the text to appear on the rebar. **NULL** by default. The text contained in `lpszText` is not part of the child window; it is on the rebar itself.  
   
  `pbmp`  
- Указатель на `CBitmap` объект отображался на фоне главной панели. **Значение NULL,** по умолчанию.  
+ A pointer to a `CBitmap` object to be displayed on the rebar background. **NULL** by default.  
   
  `dwStyle`  
- A `DWORD` содержащий стиль, применяемый к главной панели. В разделе **fStyle** функции описание структуры Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) полный список стилей аппаратного контроллера управления.  
+ A `DWORD` containing the style to apply to the rebar. See the **fStyle** function description in the Win32 structure [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) for a complete list of band styles.  
   
  *clrFore*  
- Объект **COLORREF** значение, представляющее цвет переднего плана главной панели.  
+ A **COLORREF** value that represents the foreground color of the rebar.  
   
  *clrBack*  
- Объект **COLORREF** значение, представляющее цвет фона главной панели.  
+ A **COLORREF** value that represents the background color of the rebar.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CReBarCtrl&#1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="create"></a>CReBar::Create  
- Вызовите эту функцию-член для создания главной панели.  
+##  <a name="create"></a>  CReBar::Create  
+ Call this member function to create a rebar.  
   
 ```  
 virtual BOOL Create(
@@ -147,47 +147,47 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_REBAR);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Указатель на `CWnd` объект которого окно Windows является родительским элементом в строке состояния. Обычно фрейм окна.  
+ Pointer to the `CWnd` object whose Windows window is the parent of the status bar. Normally your frame window.  
   
  `dwCtrlStyle`  
- Стиль элемента управления главной панели. По умолчанию **RBS_BANDBORDERS**, который отображает ограничить строки для разделения соседних полосами в элементе управления главной панели. В разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] список стилей.  
+ The rebar control style. By default, **RBS_BANDBORDERS**, which displays narrow lines to separate adjacent bands within the rebar control. See [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK for a list of styles.  
   
  `dwStyle`  
- Стили окна главной панели.  
+ The rebar window styles.  
   
  `nID`  
- Идентификатор главной панели дочернего окна.  
+ The rebar's child-window ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CReBar::AddBar](#addbar).  
+### <a name="example"></a>Example  
+  See the example for [CReBar::AddBar](#addbar).  
   
-##  <a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
- Эта функция-член предоставляет прямой доступ к базовой стандартного элемента управления.  
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl  
+ This member function allows direct access to the underlying common control.  
   
 ```  
 CReBarCtrl& GetReBarCtrl() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылку на [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) объекта.  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) object.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите эту функцию-член для использования функциональных возможностей Windows главной панели стандартного элемента управления для настройки вашей главной панели. При вызове `GetReBarCtrl`, он возвращает объект ссылки на `CReBarCtrl` объекта, поэтому можно использовать любой набор функций-членов.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to take advantage of the functionality of the Windows rebar common control in customizing your rebar. When you call `GetReBarCtrl`, it returns a reference object to the `CReBarCtrl` object so you can use either set of member functions.  
   
- Дополнительные сведения об использовании `CReBarCtrl` для настройки вашей главной панели, в разделе [CReBarCtrl с помощью](../../mfc/using-crebarctrl.md).  
+ For more information about using `CReBarCtrl` to customize your rebar, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CReBarCtrl&#2;](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC MFCIE](../../visual-cpp-samples.md)   
- [CControlBar-класс](../../mfc/reference/ccontrolbar-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MFCIE](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

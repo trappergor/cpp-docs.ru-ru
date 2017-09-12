@@ -1,41 +1,59 @@
 ---
-title: "История DCOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM"
-  - "DCOM, сведения о DCOM"
-  - "Удаленная автоматизация, DCOM"
+title: History of DCOM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
+- DCOM, about DCOM
+- DCOM
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# История DCOM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a932ac569b5c43aa652eeb39ae2758d33298f6ec
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При автоматизации сначала была представлена в предыдущем 1993 она была способна использовались только между приложениями, выполняющихся на том же компьютере.  Однако поскольку это общая те же, что и остальная часть опоры OLE, т е модели COM \(или модели COM\), всегда предназначался, что она станет «удаленных» при модели COM само было обновлено для включения возможностей удаленного взаимодействия.  Также предназначался, что переход от чисто локальной операции в распределенной операции требует небольших или никаких изменений в существующий код.  
+---
+# <a name="history-of-dcom"></a>History of DCOM
+When Automation was first introduced in early 1993, it was capable of being used only between applications running on the same machine. However, because it shared the same underpinnings as the rest of OLE, that is, COM (or Component Object Model), it was always intended that it would become "remotable" when COM itself was updated to include remoting capabilities. It was also planned that the transition from purely local operation to distributed operation would require little or no change to existing code.  
   
- Таким образом, что делает центральная удаленного взаимодействия»? «  Локальное модели COM продиктовало, чтобы объект\-получатель интерфейса, и выполняется на том же компьютере, что и поставщика этого интерфейса.  Например, Microsoft Visual Basic может скопировать элемент управления Microsoft Excel на компьютере рабочего стола, но он не был поддерживает прямое выполнение Excel на другом компьютере.  С помощью средств разработки распределянного модели COM, объект\-получателю интерфейса больше не должна находиться на том же компьютере, то поставщик интерфейса, на котором выполняется.  
+ So what does "remoting" mean Local COM dictated that the consumer of an interface reside and execute on the same machine as the provider of that interface. For example, Microsoft Visual Basic could control a copy of Microsoft Excel on your desktop machine, but it was not capable of directing the execution of Excel on another machine. With the development of distributed COM, the consumer of an interface no longer needs to reside on the same machine as that on which the interface provider executes.  
   
- После создания модели COM, требовал попиксельного для работы в сети, то любой интерфейс, который не был связан с локальной модели выполнения \(некоторые интерфейсы имеет встроенного доверие на помещениях локального компьютера, например, эти интерфейсы рисования методы которых имеют дескрипторов с контекстами устройств в качестве параметров\) имеется возможность быть нескольким.  Объект\-получатель интерфейса выполнялось бы запрос для данного интерфейса. этот интерфейс может быть настроены экземпляром объекта, \(или запускать\) на другом компьютере.  Средство распространения внутри модели COM подключитьTm бы объект\-получатель поставщику таким образом, что вызовы методов вызовы, выполняемые объект\-получателем будут отображены в конец поставщика, где они будут выполнены.  Все возвращаемые значения затем будут возвращается к объект\-получателю.  Во всех отношениях и цели, процесс распределения как прозрачный в объект\-получателю, так и к поставщику.  
+ Once COM was adapted to work across a network, then any interface that was not tied to a local execution model (some interfaces have inherent reliance on local machine facilities, such as those drawing interfaces whose methods have handles to device contexts as parameters) would have the capability of being distributed. An interface consumer would make a request for a given interface; that interface may be provided by an instance of an object running (or to be run) on a different machine. The distribution mechanism inside COM would connect the consumer to the provider in such a way that method calls made by the consumer would appear at the provider end, where they would be executed. Any return values would then be sent back to the consumer. To all intents and purposes, the act of distribution is transparent to both the consumer and the provider.  
   
- Такое различные модели COM теперь существует.  DCOM \(для «распределянного модели COM»\) поставляемую с версии Windows NT начиная с версии 4.0 и включая Windows 2000.  С момента последнего 1996, он также доступен для Windows 9x.  В обоих случаях DCOM состоит из набора замены и дополнительные библиотеки DLL, с некоторыми служебными программами, которые обеспечивают и локальные и удаленные возможности модели COM.  Поэтому теперь стандартные части на платформе на базе win32 и выполняется доступ на других платформах другими организациями с течением времени.  
+ Such a variety of COM does now exist. DCOM (for "distributed COM") has shipped with versions of Windows NT beginning with version 4.0 and including Windows 2000. Since late 1996, it has also been available for Windows 9x. In both cases, DCOM comprises a set of replacement and additional DLLs, with some utilities, which provide both local and remote COM capabilities. It is therefore now an inherent part of Win32-based platforms, and will be made available on other platforms by other organizations over time.  
   
-## Содержание  
- [, Где выполняется удаленная автоматизации преобразованная в?](../mfc/where-does-remote-automation-fit-in-q.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)  
   
- [Что удаленной автоматизации предоставляет?](../mfc/what-does-remote-automation-provide-q.md)  
+ [What Does Remote Automation Provide](what-does-remote-automation-provide-q.md)  
   
-## См. также  
- [Удаленная автоматизация](../mfc/remote-automation.md)
+## <a name="see-also"></a>See Also  
+ [Remote Automation](../mfc/remote-automation.md)
+

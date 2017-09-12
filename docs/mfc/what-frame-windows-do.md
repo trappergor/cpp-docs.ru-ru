@@ -1,48 +1,67 @@
 ---
-title: "Функция окон фрейма | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "окна фрейма, об окнах фрейма"
-  - "окна фрейма, задачи"
-  - "MFC - библиотека, окна фрейма"
+title: What Frame Windows Do | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], about frame widows
+- frame windows [MFC], tasks
+- MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Функция окон фрейма
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c36c7c4390f548128ad31767bfd8288f079b5f40
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Помимо просто обрамлять представление, фреймовые окна за многочисленные задачи, относящиеся к фрейм в соответствии с текущим представлением и с приложением.  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) наследуется от [CFrameWnd](../mfc/reference/cframewnd-class.md) и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md), поэтому они имеют возможности `CFrameWnd`, так и новые возможности, которые они добавляют.  Примеры включают представления дочерние окна, элементы управления, как кнопки и списки и панели элементов управления, в том числе панелей инструментов, строки состояния и диалоговые панели.  
+---
+# <a name="what-frame-windows-do"></a>What Frame Windows Do
+Besides simply framing a view, frame windows are responsible for numerous tasks involved in coordinating the frame with its view and with the application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) inherit from [CFrameWnd](../mfc/reference/cframewnd-class.md), so they have `CFrameWnd` capabilities as well as new capabilities that they add. Examples of child windows include views, controls such as buttons and list boxes, and control bars, including toolbars, status bars, and dialog bars.  
   
- Фреймовое окно отвечает за управление макет дочерних окон.  В платформе MFC, позициях фреймового окна все панели элементов управления, представлениях и других дочерних окнах в клиентской области.  
+ The frame window is responsible for managing the layout of its child windows. In the MFC framework, a frame window positions any control bars, views, and other child windows inside its client area.  
   
- Фреймовое окно также переадресует команды с соответствующим представлениям и может отвечать на сообщения уведомлений от окна элемента управления.  
+ The frame window also forwards commands to its views and can respond to notification messages from control windows.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Панели элементов управления \(их поместили в фреймовое окно\)](../Topic/Control%20Bars.md)  
+-   [Control bars (how they fit into the frame window)](../mfc/control-bars.md)  
   
--   [Элемент управления меню, панели элементов управления и сочетания клавиш \(их поместили в фреймовое окно\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (how they fit into the frame window)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
--   [Маршрутизация команд \(из фреймового окна к представлению и другим конечным объекты команды\)](../mfc/command-routing.md)  
+-   [Command Routing (from the frame window to its view and other command targets)](../mfc/command-routing.md)  
   
--   [Архитектура \/View документа](../Topic/Document-View%20Architecture.md)  
+-   [Document /View Architecture](../mfc/document-view-architecture.md)  
   
--   [Панели элементов управления](../Topic/Control%20Bars.md)  
+-   [Control bars](../mfc/control-bars.md)  
   
--   [Элементы управления](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## См. также  
- [Окна фрейма](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

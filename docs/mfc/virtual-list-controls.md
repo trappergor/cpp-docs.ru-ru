@@ -1,74 +1,93 @@
 ---
-title: "Элементы управления виртуального списка | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "кэш, данные элементов управления виртуального списка"
-  - "Список - элементы управления, представления списков"
-  - "Список - элементы управления, виртуальные"
-  - "элементы управления виртуального списка"
+title: Virtual List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache, virtual list control item data
+- list controls [MFC], virtual
+- list controls [MFC], List view
+- virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Элементы управления виртуального списка
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c16450ee3a8529513badb118400a32a705bd0d6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Виртуальный элемент управления "Список" управление список, который имеет стиль **LVS\_OWNERDATA**.  Этот подход позволяет элемент управления должен поддерживать число элементов до `DWORD` \(количество элемента по умолчанию только до `int`\).  Однако наибольшее преимущество, этим стилем возможность иметь только подмножество элементов данных в памяти одновременно.  Это позволяет виртуальное управляет списком, чтобы одолжить для использования с большими базами данных сведения, где определенные методы доступа к данным уже на месте.  
+---
+# <a name="virtual-list-controls"></a>Virtual List Controls
+A virtual list control is a list view control that has the **LVS_OWNERDATA** style. This style enables the control to support an item count up to a `DWORD` (the default item count only extends to an `int`). However, the biggest advantage provided by this style is the ability to only have a subset of data items in memory at any one time. This allows the virtual list view control to lend itself for use with large databases of information, where specific methods of accessing data are already in place.  
   
 > [!NOTE]
->  Кроме того, что виртуальную функцию списка в `CListCtrl`, MFC также предоставляет те же функциональные возможности в классе [CListView](../mfc/reference/clistview-class.md).  
+>  In addition to providing virtual list functionality in `CListCtrl`, MFC also provides the same functionality in the [CListView](../mfc/reference/clistview-class.md) class.  
   
- Некоторые проблемы совместимости следует иметь в виду развивая виртуальные элементы управления "Список".  Дополнительные сведения см. в разделе проблем совместимости раздела список элементов управления в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ There are some compatibility issues you should be aware of when developing virtual list controls. For more information, see the Compatibility Issues section of the List-View Controls topic in the Windows SDK.  
   
-## Обработка уведомления LVN\_GETDISPINFO  
- Виртуальные элементы управления поддерживают Список очень маленькие данные элемента.  За исключением выделения элемента и данные фокуса, все данные элемента управляемых владельцем элемента управления.  Данные запрашиваются платформой через сообщение уведомления **LVN\_GETDISPINFO**.  Чтобы обеспечить требуемую информацию, владелец виртуального элемента управления "Список" \(или элемент управления сам\) необходимо обрабатывать это уведомление.  Это легко сделать с помощью окна свойств \(см. [Сообщения сопоставления в функции](../Topic/Mapping%20Messages%20to%20Functions.md)\).  Результирующий код должен выглядеть примерно так, как в следующем примере \(где `CMyDialog` имеет виртуальный объект элемента управления "Список" и диалоговое окно обрабатывает уведомление\).  
+## <a name="handling-the-lvngetdispinfo-notification"></a>Handling the LVN_GETDISPINFO Notification  
+ Virtual list controls maintain very little item information. Except for the item selection and focus information, all item information is managed by the owner of the control. Information is requested by the framework via a **LVN_GETDISPINFO** notification message. To provide the requested information, the owner of the virtual list control (or the control itself) must handle this notification. This can easily be done using the Properties window (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)). The resultant code should look something like the following example (where `CMyDialog` owns the virtual list control object and the dialog is handling the notification):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/CPP/virtual-list-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/cpp/virtual-list-controls_1.cpp)]  
   
- В обработчике сообщения уведомления **LVN\_GETDISPINFO**, необходимо проверить, чтобы узнать, какой тип данных был запрошен.  Возможны следующие значения.  
+ In the handler for the **LVN_GETDISPINFO** notification message, you must check to see what type of information is being requested. The possible values are:  
   
--   `LVIF_TEXT` член `pszText` необходимо заполнить.  
+-   `LVIF_TEXT` The `pszText` member must be filled in.  
   
--   `LVIF_IMAGE` член `iImage` необходимо заполнить.  
+-   `LVIF_IMAGE` The `iImage` member must be filled in.  
   
--   **LVIF\_INDENT** *iIndent*  член необходимо заполнить.  
+-   **LVIF_INDENT** The *iIndent* member must be filled in.  
   
--   `LVIF_PARAM` член *lParam*  необходимо заполнить. \(Отсутствующего для дополнительных элементов\).  
+-   `LVIF_PARAM` The *lParam* member must be filled in. (Not present for sub-items.)  
   
--   `LVIF_STATE` *член приоритетов*  необходимо заполнить.  
+-   `LVIF_STATE` The *state* member must be filled in.  
   
- Затем необходимо указать все, что угодновсе, что любые данные запрашиваются обратно в платформе.  
+ You should then supply whatever information is requested back to the framework.  
   
- В следующем примере \(принятия из тела обработчика уведомлений для объекта элемента управления "Список"\) показан один из возможных метод, указав сведения для текстовых буферов и образа элемента:  
+ The following example (taken from the body of the notification handler for the list control object) demonstrates one possible method by supplying information for the text buffers and image of an item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/CPP/virtual-list-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/cpp/virtual-list-controls_2.cpp)]  
   
-## Кэширование и виртуальные элементы управления "Список"  
- Поскольку этот тип элемента управления "Список" предназначен для больших наборов данных, рекомендуется кэшировать запрашиваемую информацию о элемента, чтобы улучшить производительность считывания.  Платформа предоставляет механизм кэш\- намекая помочь оптимизировать в кэш, отправляя сообщение уведомления **LVN\_ODCACHEHINT**.  
+## <a name="caching-and-virtual-list-controls"></a>Caching and Virtual List Controls  
+ Because this type of list control is intended for large data sets, it is recommended that you cache requested item data to improve retrieval performance. The framework provides a cache-hinting mechanism to assist in optimizing the cache by sending an **LVN_ODCACHEHINT** notification message.  
   
- Следующий пример обновляет кэш с диапазон, переданный функции обработчика.  
+ The following example updates the cache with the range passed to the handler function.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/CPP/virtual-list-controls_3.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]  
   
- Дополнительные сведения о подготовки и поддержании кэш см. раздел " управление кэша раздела список элементов управления в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information on preparing and maintaining a cache, see the Cache Management section of the List-View Controls topic in the Windows SDK.  
   
-## Найти определенные элементы  
- Сообщение уведомления **LVN\_ODFINDITEM** передается виртуальным элементом управления Список по определенному элементу элемента управления "Список" должен быть уже.  Отправляется уведомление, когда элемент управления получает список быстрый доступ ключевой или при получении сообщения **LVM\_FINDITEM**.  Поиск данные отправляются в форме структуры **LVFINDINFO**, которая является членом структуры **NMLVFINDITEM**.  Данное сообщение путем переопределения функция `OnChildNotify` ваших объектов и внутри элемента управления "Список" тело обработчика, проверка сообщения **LVN\_ODFINDITEM**.  Если найдено выполните соответствующие действия.  
+## <a name="finding-specific-items"></a>Finding Specific Items  
+ The **LVN_ODFINDITEM** notification message is sent by the virtual list control when a particular list control item needs to be found. The notification message is sent when the list view control receives quick key access or when it receives an **LVM_FINDITEM** message. Search information is sent in the form of an **LVFINDINFO** structure, which is a member of the **NMLVFINDITEM** structure. Handle this message by overriding the `OnChildNotify` function of your list control object and inside the body of the handler, check for the **LVN_ODFINDITEM** message. If found, perform the appropriate action.  
   
- Необходимо быть подготовлены для поиска элемента, который соответствует сведениям, определяемого управляет списком.  Необходимо вернуть индекс элемента в случае успеха или \-1, если элемент не найден.  
+ You should be prepared to search for an item that matches the information given by the list view control. You should return the index of the item if successful, or -1 if no matching item is found.  
   
-## См. также  
- [Использование CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

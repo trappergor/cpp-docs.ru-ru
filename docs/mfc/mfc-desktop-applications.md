@@ -1,99 +1,117 @@
 ---
-title: "Приложения MFC для рабочего стола | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC"
-  - "mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "библиотеки классов, MFC - библиотека"
-  - "библиотеки, MFC - библиотека"
-  - "MFC - библиотека, сведения о MFC"
+title: MFC Desktop Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC
+- mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- libraries, MFC
+- class libraries, MFC
+- MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
 caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Приложения MFC для рабочего стола
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b299c2ce56449f7ce66d17f9a3fde342ec221bca
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Библиотека Microsoft Foundation Class \(MFC\) предоставляет объектно\-ориентированную программу\-оболочку для многих API Win32 и COM.  Хотя ее можно использовать для создания очень простых классических приложений, в наибольшей степени она полезна при разработке сложных пользовательских интерфейсов с многочисленными элементами управления.  MFC 11.0 можно использовать для создания приложений с пользовательскими интерфейсами в стиле Office.  
+---
+# <a name="mfc-desktop-applications"></a>MFC Desktop Applications
+The Microsoft Foundation Class (MFC) Library provides an object-oriented wrapper over much of the Win32 and COM APIs. Although it can be used to create very simple desktop applications, it is most useful when you need to develop more complex user interfaces with multiple controls. You can use MFC to create applications with Office-style user interfaces.  
   
- Справочник по MFC описывает классы, глобальные функции, глобальные переменные и макросы, составляющие библиотеку MFC.  
+ The MFC Reference covers the classes, global functions, global variables, and macros that make up the Microsoft Foundation Class Library.  
   
- Отдельные диаграммы иерархии, поставляемые с каждым классом, полезны для обнаружения базовых классов.  Справочник MFC обычно не описывает наследуемые функции\-члены или наследуемые операторы.  Сведения об этих функциях см. в базовых классах, описанных в диаграммах иерархий.  
+ The individual hierarchy charts included with each class are useful for locating base classes. The MFC Reference usually does not describe inherited member functions or inherited operators. For information on these functions, refer to the base classes depicted in the hierarchy diagrams.  
   
- Документация для каждого класса содержит общие сведения о классах, сводку элементов по категориям и разделы для функций\-членов, перегруженных операторов и данных\-членов.  
+ The documentation for each class includes a class overview, a member summary by category, and topics for the member functions, overloaded operators, and data members.  
   
- Открытые и защищенные члены класса фиксируются документально, только если они стандартно используются в прикладных программах или производных классах.  См. файлы заголовков классов для получения полного списка членов класса.  
+ Public and protected class members are documented only when they are normally used in application programs or derived classes. See the class header files for a complete listing of class members.  
   
 > [!IMPORTANT]
->  Классы MFC и их члены невозможно использовать в приложениях, выполняемых в [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+>  The MFC classes and their members cannot be used in applications that execute in the Windows Runtime environment.  
 >   
->  Библиотеки MFC \(DLL\) для кодирования многобайтовых символов \(MBCS\) больше не включается в Visual Studio, однако доступны как дополнительный компонент Visual Studio.  Дополнительные сведения см. в разделе [Надстройка DLL MBCS MFC](../mfc/mfc-mbcs-dll-add-on.md).  
+>  MFC libraries (DLLs) for multibyte character encoding (MBCS) are no longer included in Visual Studio, but are available as a Visual Studio add-on. For more information, see [MFC MBCS DLL Add-on](mfc-mbcs-dll-add-on.md).  
   
-## Содержание раздела  
- [Основные понятия](../mfc/mfc-concepts.md)  
- Основные статьи по MFC.  
+## <a name="in-this-section"></a>In This Section  
+ [Concepts](mfc-concepts.md)  
+ Conceptual articles on MFC topics.  
   
- [Диаграмма иерархии](../mfc/hierarchy-chart.md)  
- Визуально представляет связи класса в библиотеке классов.  
+ [Hierarchy Chart](hierarchy-chart.md)  
+ Visually details the class relationships in the class library.  
   
- [Общие сведения о классах](../mfc/class-library-overview.md)  
- Перечисляет классы в библиотеке MFC по категориям.  
+ [Class Overview](class-library-overview.md)  
+ Lists the classes in the MFC Library according to category.  
   
- [Пошаговые руководства](../mfc/walkthroughs-mfc.md)  
- Содержит статьи с пошаговыми руководствами для различных задач, связанных с функциями библиотеки MFC.  
+ [Walkthroughs](walkthroughs-mfc.md)  
+ Contains articles that walk you through various tasks associated with MFC library features.  
   
- [Технические примечания](../mfc/mfc-technical-notes.md)  
- Содержит ссылки на разделы, которые специализированные командой разработки MFC, в библиотеке классов.  
+ [Technical Notes](mfc-technical-notes.md)  
+ Provides links to specialized topics, written by the MFC development team, on the class library.  
   
- [Настройка для MFC](../mfc/customization-for-mfc.md)  
- Предоставляет советы по пользовательской настройке приложения MFC.  
+ [Customization for MFC](customization-for-mfc.md)  
+ Provides some tips for customizing your MFC application.  
   
- [Классы](../Topic/MFC%20Classes.md)  
- Предоставляет ссылки и данные файла заголовка для классов MFC.  
+ [Classes](reference/mfc-classes.md)  
+ Provides links to and header file information for the MFC classes.  
   
- [Внутренние классы](../mfc/reference/internal-classes.md)  
- Для внутреннего использования в MFC.  В данном разделе эти внутренние классы описываются с целью предоставления полной информации, но они не предназначены для непосредственного использования в коде.  
+ [Internal Classes](reference/internal-classes.md)  
+ Used internally in MFC. For completeness, this section describes these internal classes, but they are not intended to be used directly in your code.  
   
- [Макросы и глобальные объекты](../mfc/reference/mfc-macros-and-globals.md)  
- Предоставляет ссылки на глобальные функции и макросы в библиотеке MFC.  
+ [Macros and Globals](reference/mfc-macros-and-globals.md)  
+ Provides links to the macros and global functions in the MFC Library.  
   
- [Структуры, стили, обратные вызовы и схемы сообщений](../mfc/reference/structures-styles-callbacks-and-message-maps.md)  
- Предоставляет ссылки на структуры, стили, обратные вызовы и схемы сообщений, используемых библиотекой MFC.  
+ [Structures, Styles, Callbacks, and Message Maps](reference/structures-styles-callbacks-and-message-maps.md)  
+ Provides links to the structures, styles, callbacks, and message maps used by the MFC Library.  
   
- [Мастеры и диалоговые окна MFC](../mfc/reference/mfc-wizards-and-dialog-boxes.md)  
- Руководство по функциям и компонентам в Visual Studio для создания приложений MFC.  
+ [MFC Wizards and Dialog Boxes](reference/mfc-wizards-and-dialog-boxes.md)  
+ A guide to the features in Visual Studio for creating MFC applications.  
   
- [Working with Resource Files](../mfc/working-with-resource-files.md)  
- Использование файлов ресурсов для управления данными статического пользовательского интерфейса, такими как строки пользовательского интерфейса и макеты диалоговых окон.  
+ [Working with Resource Files](../windows/working-with-resource-files.md)  
+ How to use resource files to manage static user interface data such as UI strings and dialog box layout.  
   
-## Связанные разделы  
- [Категории таблицы иерархии](../Topic/Hierarchy%20Chart%20Categories.md)  
- Описывает диаграммы иерархии MFC по категориям.  
+## <a name="related-sections"></a>Related Sections  
+ [Hierarchy Chart Categories](hierarchy-chart-categories.md)  
+ Describes the MFC hierarchy chart by category.  
   
- [ATL\/MFC Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md)  
- Предоставляет ссылки на классы, которые совместно используются MFC и библиотекой ATL.  
+ [ATL/MFC Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md)  
+ Provides links to classes that are shared between MFC and ATL.  
   
- [Примеры библиотек MFC](../top/visual-cpp-samples.md)  
- Содержит ссылки на примеры использования MFC.  
+ [MFC Samples](../visual-cpp-samples.md)  
+ Provides links to samples that demonstrate how to use MFC.  
   
- [Visual C\+\+ Libraries Reference](http://msdn.microsoft.com/ru-ru/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Содержит ссылки на различные библиотеки, входящие в состав Visual C\+\+, включая шаблоны ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C\+\+.  
+ [Visual C++ Libraries Reference](../standard-library/cpp-standard-library-reference.md)  
+ Provides links to the various libraries provided with Visual C++, including ATL, MFC, OLE DB Templates, the C run-time library, and the C++ Standard Library.  
   
- [Отладка в Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md)  
- Ссылки на разделы, описывающие использование отладчика Visual Studio для устранения логических ошибок в приложениях и хранимых процедурах.  
+ [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)  
+ Provides links to using the Visual Studio debugger to correct logic errors in your application or stored procedures.  
   
-## См. также  
- [MFC и ATL](../mfc/mfc-and-atl.md)
+## <a name="see-also"></a>See Also  
+ [MFC and ATL](mfc-and-atl.md)
+

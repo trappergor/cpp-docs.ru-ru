@@ -1,49 +1,68 @@
 ---
-title: "Стили счетчика | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl - класс, стили"
-  - "счетчик - элемент управления, стили"
-  - "стили, CSpinButtonCtrl"
-  - "стили, счетчик - элемент управления"
+title: Spin Button Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- styles [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl class [MFC], styles
+- styles [MFC], spin button control
+- spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Стили счетчика
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f13ad271270af4c5eb5bcc12d62c3397d8edb8fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Многие из параметров счетчика \([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\) управляются стилями.  Можно установить следующие стилей с помощью окна **Свойства** в редакторе диалоговых окон.  
+---
+# <a name="spin-button-styles"></a>Spin Button Styles
+Many of the settings for a spin button ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) are controlled by styles. You can set the following styles using the **Properties** window in the dialog editor.  
   
--   **Ориентация** Или отражения, отражение сверху вниз или слева направо.  Элементы управления ориентацией кнопки со стрелками.  Связанный со стилем `UDS_HORZ`.  
+-   **Orientation** Either Vertical or Horizontal. Controls the orientation of the arrow buttons. Associated with the `UDS_HORZ` style.  
   
--   **Выравнивание** — Какой удаленным, левое, или вправо.  Элементы управления расположение счетчика.  Позиция внутри проекта, влево и вправо счетчик рядом с полем приятеля.  Ширина окна приятеля снижается, чтобы вместить счетчика.  Связанный со стилями `UDS_ALIGNLEFT` и `UDS_ALIGNRIGHT`.  
+-   **Alignment** One of Unattached, Left, or Right. Controls the location of the spin button. Left and Right position the spin button next to the buddy window. The width of the buddy window is decreased to accommodate the spin button. Associated with the `UDS_ALIGNLEFT` and `UDS_ALIGNRIGHT` styles.  
   
--   **Auto pal** Автоматически выделяет предыдущее окно в z\-порядке как окно приятеля для счетчика.  В шаблоне диалоговых окон, это элемент управления, который предшествует счетчика в последовательности табуляции.  Связанный со стилем `UDS_AUTOBUDDY`.  
+-   **Auto Buddy** Automatically selects the previous window in Z-order as buddy window to the spin button. In a dialog template, this is the control which precedes the spin button in the tab order. Associated with the `UDS_AUTOBUDDY` style.  
   
--   **Укажите целое число приятеля** Элемент управления вызывает увеличения и уменьшения заголовок окна приятеля как текущая позиция изменяется.  Связанный со стилем `UDS_SETBUDDYINT`.  
+-   **Set Buddy Integer** Causes the spin control to increment and decrement the caption of the buddy window as the current position changes. Associated with the `UDS_SETBUDDYINT` style.  
   
--   **Нет тысяч** Не вставляет разделитель тысяч в значение заголовка окна приятеля.  Связанный со стилем `UDS_NOTHOUSANDS`.  
+-   **No Thousands** Does not insert the thousands separator in the value in the caption of the buddy window. Associated with the `UDS_NOTHOUSANDS` style.  
   
     > [!NOTE]
-    >  Установите этот стиль, если требуется использовать обмена данными \(DDX\) для получения целочисленное значение из элемента управления приятеля.  `DDX_Text` не принимает внедряло тысяч разделителей.  
+    >  Set this style if you want to use dialog data exchange (DDX) to get the integer value from the buddy control. `DDX_Text` does not accept embedded thousand separators.  
   
--   **Wrap** указывает положение «создать» как значение увеличивается на декрементировано за диапазоном или элемента управления.  Связанный со стилем `UDS_WRAP`.  
+-   **Wrap** Causes the position to "wrap" as the value is incremented or decremented beyond the range of the control. Associated with the `UDS_WRAP` style.  
   
--   **Клавиши со стрелкой** Вызывает увеличения или уменьшения счетчика положение если нажать ключи СТРЕЛКА ВВЕРХ и СТРЕЛКА ВНИЗ.  Связанный со стилем `UDS_ARROWKEYS`.  
+-   **Arrow Keys** Causes the spin button to increment or decrement the position when the UP ARROW and DOWN ARROW keys are pressed. Associated with the `UDS_ARROWKEYS` style.  
   
-## См. также  
- [Использование CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

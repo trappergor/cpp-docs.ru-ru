@@ -1,37 +1,56 @@
 ---
-title: "Способы создания всплывающих подсказок | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl - класс, всплывающие подсказки - создание"
-  - "всплывающие подсказки [C++], создание"
-  - "всплывающие подсказки [C++], элементы управления всплывающих подсказок"
+title: Methods of Creating Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], creating tool tips
+- tool tips [MFC], tool tip controls
+- tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Способы создания всплывающих подсказок
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f241e39e640da8927943d3628af9ccc7e430c0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC предоставляет 3 класса для создания и управления элемент управления всплывающей подсказки. [CWnd](../Topic/CWnd%20Class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md) и [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md).  Функции\-члены всплывающей подсказки в этих классах создания API общего элемента управления Windows.  Класс `CToolBarCtrl` и класс `CToolTipCtrl` являются производными от класса `CWnd`.  
+---
+# <a name="methods-of-creating-tool-tips"></a>Methods of Creating Tool Tips
+MFC provides three classes to create and manage the tool tip control: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) and [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). The tool tip member functions in these classes wrap the Windows common control API. Class `CToolBarCtrl` and class `CToolTipCtrl` are derived from class `CWnd`.  
   
- `CWnd` предоставляет 4 функции\-члена для создания и управления всплывающие подсказки: [EnableToolTips](../Topic/CWnd::EnableToolTips.md), [CancelToolTips](../Topic/CWnd::CancelToolTips.md), [FilterToolTipMessage](../Topic/CWnd::FilterToolTipMessage.md) и [OnToolHitTest](../Topic/CWnd::OnToolHitTest.md).  В разделе эти функции отдельного участника дополнительные сведения о том, как они реализуют всплывающие подсказки.  
+ `CWnd` provides four member functions to create and manage tool tips: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), and [OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). See these individual member functions for more information about how they implement tool tips.  
   
- При создании панель инструментов с помощью `CToolBarCtrl`, можно реализовать всплывающие подсказки для этого инструмента непосредственно с помощью следующих функции\-члены. [GetToolTips](../Topic/CToolBarCtrl::GetToolTips.md) и [SetToolTips](../Topic/CToolBarCtrl::SetToolTips.md).  В разделе эти функции [Обрабатывать уведомления всплывающей подсказки](../mfc/handling-tool-tip-notifications.md) и отдельного участника дополнительные сведения о том, как они реализуют всплывающие подсказки.  
+ If you create a toolbar using `CToolBarCtrl`, you can implement tool tips for that toolbar directly using the following member functions: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) and [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). See these individual member functions and [Handling Tool Tip Notifications](../mfc/handling-tool-tip-notifications.md) for more information about how they implement tool tips.  
   
- Класс `CToolTipCtrl` предоставляет функцию управления всплывающей подсказки Windows ".  Один элемент управления всплывающей подсказки подробные сведения для более чем одного инструмента.  Средство или окно, например дочернее окно или элемент управления или приложением, прямоугольная область в клиентской области окна.  Класс [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) является производным от `CToolTipCtrl` и предоставляет дополнительные стили и функции.  
+ The `CToolTipCtrl` class provides the functionality of the Windows common tool tip control. A single tool tip control can provide information for more than one tool. A tool is either a window, such as a child window or control, or an application-defined rectangular area within a window's client area. The [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) class derives from `CToolTipCtrl` and provides additional visual styles and functionality.  
   
-## См. также  
- [Использование CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

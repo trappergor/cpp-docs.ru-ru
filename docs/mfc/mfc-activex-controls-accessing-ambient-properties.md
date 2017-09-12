@@ -1,68 +1,87 @@
 ---
-title: "Элементы управления ActiveX в MFC. Доступ к свойствам окружения | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, доступ к внешним свойствам"
-  - "свойства [MFC], доступ к внешним"
+title: 'MFC ActiveX Controls: Accessing Ambient Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], accessing ambient properties
+- properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Элементы управления ActiveX в MFC. Доступ к свойствам окружения
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4f5e0f7e81d91bbbf41a680a328ced5a379ce6a7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает элемент управления ActiveX может принимать внешние свойства контейнера элементов управления.  
+---
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX Controls: Accessing Ambient Properties
+This article discusses how an ActiveX control can access the ambient properties of its control container.  
   
- Элемент управления может получать сведения о текущем контейнере через внешние свойства контейнера.  Эти свойства предоставляют визуальные характеристики, как цвет фона контейнера, текущий шрифт, используемый контейнером и рабочие характеристики, например ли контейнер в данный момент в режиме пользователя или в режиме конструктора.  Элемент управления может использовать внешние свойства настраивать его внешний вид и расширения функциональности к указанному контейнеру, в который он внедрен.  Однако элемент управления никогда не высказывать его контейнером будет поддерживать любое определенное внешнее свойство.  Фактически, некоторые контейнеры могут не поддерживать все свойства окружения вообще.  В отсутствие внешнего свойства, элемент управления должен следует принять значения по умолчанию.  
+ A control can obtain information about its container by accessing the container's ambient properties. These properties expose visual characteristics, such as the container's background color, the current font used by the container, and operational characteristics, such as whether the container is currently in user mode or designer mode. A control can use ambient properties to tailor its appearance and behavior to the particular container in which it is embedded. However, a control should never assume that its container will support any particular ambient property. In fact, some containers may not support any ambient properties at all. In the absence of an ambient property, a control should assume a reasonable default value.  
   
- Для получения внешнее свойство вызывать в [COleControl::GetAmbientProperty](../Topic/COleControl::GetAmbientProperty.md).  Эта функция должна идентификатор обработки для внешнего свойства как первый параметр \(файл OLECTL.H определяет идентификаторов диспетчеризации для стандартного набора внешних свойств\).  
+ To access an ambient property, make a call to [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). This function expects the dispatch ID for the ambient property as the first parameter (the file OLECTL.H defines dispatch IDs for the standard set of ambient properties).  
   
- Параметры функции `GetAmbientProperty` идентификатор обработки, другой тег, ожидается тип свойства и указатель на память, значение должно быть возвращено.  Тип данных, на которые ссылается этот указатель будет изменяться в зависимости от другого тега.  Функция возвращает значение **TRUE**, если контейнер поддерживает свойство, в противном случае возвращается значение **ЛОЖЬ**.  
+ The parameters of the `GetAmbientProperty` function are the dispatch ID, a variant tag indicating the expected property type, and a pointer to memory where the value should be returned. The type of data to which this pointer refers will vary depending on the variant tag. The function returns **TRUE** if the container supports the property, otherwise it returns **FALSE**.  
   
- В следующем примере получается значение с именем внешнего UserMode» свойства «. Если свойство не поддерживается контейнером, значение по умолчанию **TRUE** происходит:  
+ The following code example obtains the value of the ambient property called "UserMode." If the property is not supported by the container, a default value of **TRUE** is assumed:  
   
- [!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/CPP/mfc-activex-controls-accessing-ambient-properties_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]  
   
- Для удобства вспомогательные функции `COleControl`, обращающиеся к многие часто используемые свойства окружения и возвращает соответствующие свойства по умолчанию, если не доступны.  Эти вспомогательные функции следующим образом:  
+ For your convenience, `COleControl` supplies helper functions that access many of the commonly used ambient properties and return appropriate defaults when the properties are not available. These helper functions are as follows:  
   
--   [COleControl::AmbientBackColor](../Topic/COleControl::AmbientBackColor.md)  
+-   [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)  
   
--   [AmbientDisplayName](../Topic/COleControl::AmbientDisplayName.md)  
+-   [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)  
   
--   [AmbientFont](../Topic/COleControl::AmbientFont.md)  
+-   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Вызывающий объект должен вызвать **Release\( \)** для возвращенного шрифтом.  
+    >  Caller must call **Release( )** on the returned font.  
   
--   [AmbientForeColor](../Topic/COleControl::AmbientForeColor.md)  
+-   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
--   [AmbientLocaleID](../Topic/COleControl::AmbientLocaleID.md)  
+-   [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)  
   
--   [AmbientScaleUnits](../Topic/COleControl::AmbientScaleUnits.md)  
+-   [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)  
   
--   [AmbientTextAlign](../Topic/COleControl::AmbientTextAlign.md)  
+-   [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)  
   
--   [AmbientUserMode](../Topic/COleControl::AmbientUserMode.md)  
+-   [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)  
   
--   [AmbientUIDead](../Topic/COleControl::AmbientUIDead.md)  
+-   [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)  
   
--   [AmbientShowHatching](../Topic/COleControl::AmbientShowHatching.md)  
+-   [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)  
   
--   [AmbientShowGrabHandles](../Topic/COleControl::AmbientShowGrabHandles.md)  
+-   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- Если значение свойства внешнего изменяет \(через определенное действие контейнера\), вызывается функцию\-член **OnAmbientPropertyChanged** элемента управления.  Переопределите этот функцию\-член для обработки такое уведомление.  Параметр **OnAmbientPropertyChanged** для обработки затрагиваемого внешнего идентификатор свойства.  Значение этого идентификатора обработки может быть **DISPID\_UNKNOWN**, что означает, что один или несколько внешние свойства были изменены, но сведения о том, какие свойства были затронуты недоступна.  
+ If the value of an ambient property changes (through some action of the container), the **OnAmbientPropertyChanged** member function of the control is called. Override this member function to handle such a notification. The parameter for **OnAmbientPropertyChanged** is the dispatch ID of the affected ambient property. The value of this dispatch ID may be **DISPID_UNKNOWN**, which indicates that one or more ambient properties has changed, but information about which properties were affected is unavailable.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

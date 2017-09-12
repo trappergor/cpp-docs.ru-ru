@@ -1,177 +1,201 @@
 ---
-title: "TN058. Реализация состояния модуля MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.implementation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL-библиотеки [C++], состояния модулей"
-  - "MFC [C++], управление данными состояния"
-  - "состояния модулей [C++], управление данными состояния"
-  - "состояния модулей [C++], переключение"
-  - "состояние процесса [C++]"
-  - "состояние потока [C++]"
-  - "TN058"
+title: 'TN058: MFC Module State Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.implementation
+dev_langs:
+- C++
+helpviewer_keywords:
+- thread state [MFC]
+- module states [MFC], managing state data
+- TN058
+- MFC, managing state data
+- module states [MFC], switching
+- DLLs [MFC], module states
+- process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN058. Реализация состояния модуля MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9da6f59763f67397a8cf008f9016a561df1d94b8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn058-mfc-module-state-implementation"></a>TN058: MFC Module State Implementation
 > [!NOTE]
->  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию.  В результате некоторые процедуры и разделы могут быть устаревшими или неверными.  Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Это техническое примечание описывает реализацию конструкций «состояние» модуля MFC.  О реализации состояния модуля критическое для использования общих библиотек DLL MFC из библиотеки DLL \(или OLE внутрипроцессного сервера\).  
+ This technical note describes the implementation of MFC "module state" constructs. An understanding of the module state implementation is critical for using the MFC shared DLLs from a DLL (or OLE in-process server).  
   
- Прежде чем чтения эту заметку см. в разделе «управление данными состояния модулей MFC» раздела [Создание новых документов, Windows и представления](../Topic/Creating%20New%20Documents,%20Windows,%20and%20Views.md).  Этот раздел содержит важные данные потребления и сведения о вопросу.  
+ Before reading this note, refer to "Managing the State Data of MFC Modules" in [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md). This article contains important usage information and overview information on this subject.  
   
-## Обзор  
- 3 Типа сведений о состоянии MFC. Состояние модуля, состояние процесса и состояния потока.  Иногда эти типы состояния можно комбинировать.  Например, сопоставления дескрипторов MFC и локального модуля и локальный потока.  Это позволяет 2 различных модулей, чтобы иметь различные сопоставления в каждой из них потоков.  
+## <a name="overview"></a>Overview  
+ There are three kinds of MFC state information: Module State, Process State, and Thread State. Sometimes these state types can be combined. For example, MFC's handle maps are both module local and thread local. This allows two different modules to have different maps in each of their threads.  
   
- Состояние процесса аналогично и состояния потока.  Эти элементы данных действия, обычно глобальные переменные, но есть необходимость были в заданное процесс или поток для правильной поддержки Win32s или для правильной поддержки многопоточности.  Категория, заданный элемент данных размещать в зависит от этого элемента и его требуемой семантике относительно границ процессов и потоков.  
+ Process State and Thread State are similar. These data items are things that have traditionally been global variables, but have need to be specific to a given process or thread for proper Win32s support or for proper multithreading support. Which category a given data item fits in depends on that item and its desired semantics with regard to process and thread boundaries.  
   
- Состояние модуля уникально в том, что он может содержать либо по\-настоящему глобальные состояния или заявлять процессов, локальный или локальный потока.  Кроме того, его можно быстро перейти.  
+ Module State is unique in that it can contain either truly global state or state that is process local or thread local. In addition, it can be switched quickly.  
   
-## Переключение состояния модуля  
- Каждый поток содержит указатель на текущий «» или «» активное состояние модуля \(не удивительно, указатель часть локального состояния потока MFC\).  Этот указатель изменяется, когда поток выполнения передает границу модуля, например приложения при вызове в элемент управления OLE или DLL или элемент управления OLE при вызове обратно в приложение.  
+## <a name="module-state-switching"></a>Module State Switching  
+ Each thread contains a pointer to the "current" or "active" module state (not surprisingly, the pointer is part of MFC's thread local state). This pointer is changed when the thread of execution passes a module boundary, such as an application calling into an OLE Control or DLL, or an OLE Control calling back into an application.  
   
- Текущее состояние модуля переключено с помощью метода **AfxSetModuleState**.  В большинстве случаев, никогда не будет работать непосредственно с помощью API.  MFC, во многих случаях вызове автоматически \(на WinMain, OLE точках входа, **AfxWndProc** и т д\). Это можно сделать в любом компоненте написания статического связывания особым **WndProc** и отдельное `WinMain` \(или `DllMain`\), который знает, состояние модуля должно быть является текущим.  Можно просмотреть этот код, выполняя поиск DLLMODUL.CPP или APPMODUL.CPP в каталоге MFC\\SRC.  
+ The current module state is switched by calling **AfxSetModuleState**. For the most part, you will never deal directly with the API. MFC, in many cases, will call it for you (at WinMain, OLE entry-points, **AfxWndProc**, etc.). This is done in any component you write by statically linking in a special **WndProc**, and a special `WinMain` (or `DllMain`) that knows which module state should be current. You can see this code by looking at DLLMODUL.CPP or APPMODUL.CPP in the MFC\SRC directory.  
   
- Его редко, необходимо задать состояние модуля и затем не установить ее.  В большинстве случаев требуется «между» собственное состояние модуля в качестве текущего значения и затем, после этого «извлекает» исходную back контекста.  Это делается макросом [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) и специальным классом **AFX\_MAINTAIN\_STATE**.  
+ It is rare that you want to set the module state and then not set it back. Most of the time you want to "push" your own module state as the current one and then, after you are done, "pop" the original context back. This is done by the macro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) and the special class **AFX_MAINTAIN_STATE**.  
   
- `CCmdTarget` содержит функции для поддержки переключения состояния модуля.  В частности, `CCmdTarget` корневой класс, используемый для точки входа модели COM и OLE ole\-автоматизации.  Как и любая другая представленной точка входа в систему, эти точки входа необходимо задать верное состояние модуля.  Как заданного `CCmdTarget` знает, какое состояние модуля «» должно быть?  Ответить на его «запоминает», «» текущее состояние модуля при построении, таким образом, чтобы он может задать текущее состояние модуля к этому «вспомненное» значение при его позже данной функции.  В результате состояние модуля, что данный объект `CCmdTarget` связан с состоянием модуля, которая была текущей во время, когда был создан объект.  Создание простой пример загрузки сервер INPROC, создание объекта и вызывать соответствующие методы.  
+ `CCmdTarget` has special features for supporting module state switching. In particular, a `CCmdTarget` is the root class used for OLE automation and OLE COM entry points. Like any other entry point exposed to the system, these entry points must set the correct module state. How does a given `CCmdTarget` know what the "correct" module state should be The answer is that it "remembers" what the "current" module state is when it is constructed, such that it can set the current module state to that "remembered" value when it is later called. As a result, the module state that a given `CCmdTarget` object is associated with is the module state that was current when the object was constructed. Take a simple example of loading an INPROC server, creating an object, and calling its methods.  
   
-1.  Библиотека DLL загружается OLE с помощью **LoadLibrary**.  
+1.  The DLL is loaded by OLE using **LoadLibrary**.  
   
-2.  сначала вызывается метод **RawDllMain**.  Он устанавливает состояние модуля в известное состояние статического модуля DLL.  По этой причине **RawDllMain** статически связана с библиотекой DLL.  
+2. **RawDllMain** is called first. It sets the module state to the known static module state for the DLL. For this reason **RawDllMain** is statically linked to the DLL.  
   
-3.  Конструктор для класса фабрики обработать, связанной с объектом.  `COleObjectFactory` является производным от `CCmdTarget` и поэтому он запоминает в него модуля, состояние экземпляра.  Это важно, если запрос, чтобы создать фабрику класса объектов, известно, что теперь состояние модуля, чтобы сделать текущий.  
+3.  The constructor for the class factory associated with our object is called. `COleObjectFactory` is derived from `CCmdTarget` and as a result, it remembers in which module state it was instantiated. This is important — when the class factory is asked to create objects, it knows now what module state to make current.  
   
-4.  `DllGetClassObject` вызывается, чтобы получить фабрику класса.  MFC поиск в списке фабрики класса, связанный с данным модулем и возвращает его.  
+4. `DllGetClassObject` is called to obtain the class factory. MFC searches the class factory list associated with this module and returns it.  
   
-5.  Вызывается метод **COleObjectFactory::XClassFactory2::CreateInstance**.  Перед созданием объекта и возвращения ее, эта функция задает состояние модуля в состояние модуля, которая была текущей в шаге 3 \(один, которая была текущей во время, когда было, после чего создан ее экземпляр `COleObjectFactory` \).  Это делается в [METHOD\_PROLOGUE](../Topic/METHOD_PROLOGUE.md).  
+5. **COleObjectFactory::XClassFactory2::CreateInstance** is called. Before creating the object and returning it, this function sets the module state to the module state that was current in step 3 (the one that was current when the `COleObjectFactory` was instantiated). This is done inside of [METHOD_PROLOGUE](com-interface-entry-points.md).  
   
-6.  При создании объекта, это слишком производный `CCmdTarget` и таким же образом вспомненное `COleObjectFactory`, состояние модуля были активны, делает этот новый объект.  Теперь объект знает, состояние модуля, который необходимо переключиться, когда он вызывается.  
+6.  When the object is created, it too is a `CCmdTarget` derivative and in the same way `COleObjectFactory` remembered which module state was active, so does this new object. Now the object knows which module state to switch to whenever it is called.  
   
-7.  Клиент вызывает функцию OLE на COM\-объект полученным из его вызова `CoCreateInstance`.  Вызывается, когда объект используется `METHOD_PROLOGUE` для переключения состояния модуля, как `COleObjectFactory` действий.  
+7.  The client calls a function on the OLE COM object it received from its `CoCreateInstance` call. When the object is called it uses `METHOD_PROLOGUE` to switch the module state just like `COleObjectFactory` does.  
   
- Как видно, состояние модуля распространяется из объекта в объект при их создании.  Важно, чтобы иметь состояние модуля, но соответствующим образом.  Если он не задан, то в DLL или COM\-объект — могут взаимодействовать с приложением MFC, которая вызывает его, или может не найти собственные ресурсы или сбой в других горемычных способами.  
+ As you can see, the module state is propagated from object to object as they are created. It is important to have the module state set appropriately. If it is not set, your DLL or COM object may interact poorly with an MFC application that is calling it, or may be unable to find its own resources, or may fail in other miserable ways.  
   
- Обратите внимание, что некоторые виды библиотек DLL, в частности «библиотеки DLL расширения MFC» не переключают состояние модуля в их \( **RawDllMain**, который они обычно даже не имеет **RawDllMain**\).  Это происходит потому, что они должны быть «, если они фактически» присутствовали в приложении, которое использует их.  Они много часть приложения, выполняется, и их изменение глобального состояния этого приложения.  
+ Note that certain kinds of DLLs, specifically "MFC Extension" DLLs do not switch the module state in their **RawDllMain** (actually, they usually don't even have a **RawDllMain**). This is because they are intended to behave "as if" they were actually present in the application that uses them. They are very much a part of the application that is running and it is their intention to modify that application's global state.  
   
- Элементы управления OLE и другие библиотеки DLL очень различаются.  Они не хотят изменение состояния вызывающего приложения; приложения, вызывающего их может не быть приложением MFC и поэтому не может быть ни одному состоянием, которое необходимо изменить.  Причина в том, что переключение состояния модуля. изобретен.  
+ OLE Controls and other DLLs are very different. They do not want to modify the calling application's state; the application that is calling them may not even be an MFC application and so there may be no state to modify. This is the reason that module state switching was invented.  
   
- Экспортированных функций из библиотеки DLL, подобный приведенному запускает диалоговое окно в библиотеке DLL, необходимо добавить следующий код в начало функции:  
+ For exported functions from a DLL, such as one that launches a dialog box in your DLL, you need to add the following code to the beginning of the function:  
   
 ```  
-AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
+AFX_MANAGE_STATE(AfxGetStaticModuleState())  
 ```  
   
- Это не будет обменивать состояние модуля с состояние, возвращенное из [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md) до конца текущей области.  
+ This swaps the current module state with the state returned from [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate) until the end of the current scope.  
   
- Проблемы с ресурсами в библиотеке DLL возникают, если макрос `AFX_MODULE_STATE` не используется.  По умолчанию MFC использует дескриптор ресурса основного приложения загрузить шаблон ресурса.  Этот шаблон, хранится в библиотеке DLL.  Первопричина, что данные состояния модуля MFC не были переключены макросом `AFX_MODULE_STATE`.  Дескриптор ресурса взят из состояния модуля MFC.  Нельзя переключать состояние модуля, неверный дескриптор ресурса для использования.  
+ Problems with resources in DLLs will occur if the `AFX_MODULE_STATE` macro is not used. By default, MFC uses the resource handle of the main application to load the resource template. This template is actually stored in the DLL. The root cause is that MFC's module state information has not been switched by the `AFX_MODULE_STATE` macro. The resource handle is recovered from MFC's module state. Not switching the module state causes the wrong resource handle to be used.  
   
- `AFX_MODULE_STATE` не для формирования в каждой функции из библиотеки DLL.  Например, `InitInstance` может быть вызван кодом MFC в приложении без `AFX_MODULE_STATE`, поскольку MFC автоматически сдвигает состояние модуля перед `InitInstance` и затем переключателями его снова после `InitInstance` возвращает.  То же самое верно для всех обработчиков сообщений схемы.  Обычная библиотека DLL фактически находятся в отдельной master оконную процедуру, автоматически меняет состояние модуля, прежде чем направлять все сообщения.  
+ `AFX_MODULE_STATE` does not need to be put in every function in the DLL. For example, `InitInstance` can be called by the MFC code in the application without `AFX_MODULE_STATE` because MFC automatically shifts the module state before `InitInstance` and then switches it back after `InitInstance` returns. The same is true for all message map handlers. Regular MFC DLLs actually have a special master window procedure that automatically switches the module state before routing any message.  
   
-## Процесс локальных данных  
- Процесс локальные данные не были бы такого огромного беспокойства нет их, не будут несоответствия модели для библиотеки DLL Win32s.  Во всех DLL Win32s совместно использовать их глобальных данных, даже если загружается несколькими приложениями.  Это отличается от очень «имеет» модель данных DLL Win32, где каждое DLL получает отдельные копии его пространства данных в каждом процесс, вложение в библиотеке DLL.  Чтобы добавить к сложности данные, размещенный в куче в библиотеке DLL Win32s фактически отростчатая с \(по крайней мере, сколько владение переходит\).  Рассмотрим следующие данные и код:  
+## <a name="process-local-data"></a>Process Local Data  
+ Process local data would not be of such great concern had it not been for the difficulty of the Win32s DLL model. In Win32s all DLLs share their global data, even when loaded by multiple applications. This is very different from the "real" Win32 DLL data model, where each DLL gets a separate copy of its data space in each process that attaches to the DLL. To add to the complexity, data allocated on the heap in a Win32s DLL is in fact process specific (at least as far as ownership goes). Consider the following data and code:  
   
 ```  
 static CString strGlobal; // at file scope  
-  
+ 
 __declspec(dllexport)   
 void SetGlobalString(LPCTSTR lpsz)  
 {  
-   strGlobal = lpsz;  
+    strGlobal = lpsz;  
 }  
-  
+ 
 __declspec(dllexport)  
-void GetGlobalString(LPCTSTR lpsz, size_t cb)  
+void GetGlobalString(LPCTSTR lpsz,
+    size_t cb)  
 {  
-   StringCbCopy(lpsz, cb, strGlobal);  
+    StringCbCopy(lpsz,
+    cb,
+    strGlobal);
+
 }  
 ```  
   
- Рассмотрим, что произойдет, если приведенный выше код в находится в библиотеке DLL и будет загружена библиотека DLL 2 процессами a и B, \(может, на самом деле, быть 2 экземпляр одного приложения\).  Вызовы `SetGlobalString("Hello from A")`.  В результате память выделяется для данных `CString` в контексте A. процесса.  Имейте в виду, что `CString` само глобально и отображается как к a и B к.  Теперь вызовы `GetGlobalString(sz, sizeof(sz))` B.  Б. просмотр данных, — a.  Это происходит потому, что Win32s не обеспечивают защиту между процессами Win32, как требуется.  В первую очередь; в большинстве случаев не желательно иметь одну глобальных данных на приложения, считается, что имены другим приложением.  
+ Consider what happens if the above code is in located in a DLL and that DLL is loaded by two processes A and B (it could, in fact, be two instances of the same application). A calls `SetGlobalString("Hello from A")`. As a result, memory is allocated for the `CString` data in the context of process A. Keep in mind that the `CString` itself is global and is visible to both A and B. Now B calls `GetGlobalString(sz, sizeof(sz))`. B will be able to see the data that A set. This is because Win32s offers no protection between processes like Win32 does. That is the first problem; in many cases it is not desirable to have one application affect global data that is considered to be owned by a different application.  
   
- Также дополнительные проблемы.  Рассмотрим следующий фраза, а теперь не влияет.  Когда отобразится a, память, используемая строкой '`strGlobal`' сделана доступной для системы, т е всю память, выделенная процессом a освобождается автоматически операционной системой.  Она не освобождается, поскольку деструктор `CString` вызова; она не была вызвана во время выполнения.  Он освобождается просто, поскольку приложение, выбранной его выходило сцены.  Теперь, если B вызывает `GetGlobalString(sz, sizeof(sz))`, не может получить доступ к допустимые данные.  Другое приложение может использовать эту память для подобное.  
+ There are additional problems as well. Let's say that A now exits. When A exits, the memory used by the '`strGlobal`' string is made available for the system — that is, all memory allocated by process A is freed automatically by the operating system. It is not freed because the `CString` destructor is being called; it hasn't been called yet. It is freed simply because the application which allocated it has left the scene. Now if B called `GetGlobalString(sz, sizeof(sz))`, it may not get valid data. Some other application may have used that memory for something else.  
   
- Четко проблема существует.  MFC 3.x использовал метод локальной памяти потока \(TLS\).  MFC 3.x выделитьTm бы индекс TLS, в действительности Win32s действует как индекс процесс\- локального хранилища, даже если не вызывается, и затем ссылатьсяTfо, все данные, основанные на этом индексе TLS.  Это аналогично индексу TLS, используемого для хранения данных для локального на Win32 \(см. ниже дополнительные сведения в этой теме\).  Это вызовет каждое библиотеки DLL MFC — использование по крайней мере 2 индекса TLS на процесс.  При указании нескольких загрузки библиотеки DLL элемента управления \(OLE OCXs\), можно быстро выполнять из индексов TLS \(доступное только 64\).  Кроме того, MFC должен установить все эти данные в одном месте, в одной структуре.  Он не имеет очень расширяемый и не был идеален по его использования индексов TLS.  
+ Clearly a problem exists. MFC 3.x used a technique called thread-local storage (TLS). MFC 3.x would allocate a TLS index that under Win32s really acts as a process-local storage index, even though it is not called that and then would reference all data based on that TLS index. This is similar to the TLS index that was used to store thread-local data on Win32 (see below for more information on that subject). This caused every MFC DLL to utilize at least two TLS indices per process. When you account for loading many OLE Control DLLs (OCXs), you quickly run out of TLS indices (there are only 64 available). In addition, MFC had to place all this data in one place, in a single structure. It was not very extensible and was not ideal with regard to its use of TLS indices.  
   
- Адреса MFC 4.x это с набором шаблонов класса «можно использовать программы\-оболочки» для данных, которые должны быть отростчатым локальным.  Например, ошибка упомянутая выше может быть устранена путем записи:  
+ MFC 4.x addresses this with a set of class templates you can "wrap" around the data that should be process local. For example, the problem mentioned above could be fixed by writing:  
   
 ```  
 struct CMyGlobalData : public CNoTrackObject  
 {  
-   CString strGlobal;  
+    CString strGlobal;  
 };  
 CProcessLocal<CMyGlobalData> globalData;  
-  
+ 
 __declspec(dllexport)   
 void SetGlobalString(LPCTSTR lpsz)  
 {  
-   globalData->strGlobal = lpsz;  
+    globalData->strGlobal = lpsz;  
 }  
-  
+ 
 __declspec(dllexport)  
 void GetGlobalString(LPCTSTR lpsz, size_t cb)  
 {  
-   StringCbCopy(lpsz, cb, globalData->strGlobal);  
+    StringCbCopy(lpsz, cb, globalData->strGlobal);
+
 }  
 ```  
   
- MFC реализует это в шаге 2.  Во\-первых, уровень поверх API Win32 **Tls\*** \(**TlsAlloc**, **TlsSetValue**, **TlsGetValue** и т д\), которые используют только 2 индекса TLS на процесс, независимо от количества библиотеки DLL, имеют.  Во\-вторых, предоставляемых, что доступ шаблон `CProcessLocal` эти данные.  Переопределяет operator\-\>, что позволяет пользователям понятный синтаксис отображается выше.  Все объекты, которые будут создаваться программу\-оболочку `CProcessLocal` должен наследоваться от `CNoTrackObject`.  `CNoTrackObject` предоставляет распределитель низкого уровня \(**LocalAlloc** и **LocalFree**\) и виртуальный деструктор так, что MFC автоматически может удалить процесс локальных объектов, когда процесс завершен.  Такие объекты могут иметь пользовательский деструктор, если необходима дополнительная очистка.  В приведенном выше примере не требуется один, поскольку компилятор создает деструктор по умолчанию для удаления встроенный объект `CString`.  
+ MFC implements this in two steps. First, there is a layer on top of the Win32 **Tls\*** APIs (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**, etc.) which use only two TLS indexes per process, no matter how many DLLs you have. Second, the `CProcessLocal` template is provided to access this data. It overrides operator-> which is what allows the intuitive syntax you see above. All objects that are wrapped by `CProcessLocal` must be derived from `CNoTrackObject`. `CNoTrackObject` provides a lower-level allocator (**LocalAlloc**/**LocalFree**) and a virtual destructor such that MFC can automatically destroy the process local objects when the process is terminated. Such objects can have a custom destructor if additional cleanup is required. The above example doesn't require one, since the compiler will generate a default destructor to destroy the embedded `CString` object.  
   
- Другие интересные преимущества к этому подходу.  Не только не создаются все объекты `CProcessLocal` удаляется автоматически, они до тех пор, пока они не потребуются  `CProcessLocal::operator->` создается связанный объект в первый раз, он будет вызван, и не раньше.  В приведенном выше примере, это означает, что строка '`strGlobal`' не будет построена до появления первой вызывается метод **GetGlobalString** или **SetGlobalString**.  В некоторых случаях это помогает сократить время запуска библиотеки DLL.  
+ There are other interesting advantages to this approach. Not only are all `CProcessLocal` objects destroyed automatically, they are not constructed until they are needed. `CProcessLocal::operator->` will instantiate the associated object the first time it is called, and no sooner. In the example above, that means that the '`strGlobal`' string will not be constructed until the first time **SetGlobalString** or **GetGlobalString** is called. In some instances, this can help decrease DLL startup time.  
   
-## Локальные данные потока  
- Аналогично отростчатым локальным данным, локальным данным потока используется, когда данные должны быть локальным для данного потока.  То есть, необходим отдельный экземпляр данных для каждого потока, доступа к этим данным.  Это можно использовать несколько раз вместо основные механизмов синхронизации.  Если данные не должны совместно использоваться несколькими потоками, такие механизмы могут оказаться весьма ресурсоемкими и ненужными.  Предположим, что мы содержит объект `CString` \(как в примере выше\).  Это можно сделать его локального потока, создайте его с шаблоном `CThreadLocal`:  
+## <a name="thread-local-data"></a>Thread Local Data  
+ Similar to process local data, thread local data is used when the data must be local to a given thread. That is, you need a separate instance of the data for each thread that accesses that data. This can many times be used in lieu of extensive synchronization mechanisms. If the data does not need to be shared by multiple threads, such mechanisms can be expensive and unnecessary. Suppose we had a `CString` object (much like the sample above). We can make it thread local by wrapping it with a `CThreadLocal` template:  
   
 ```  
 struct CMyThreadData : public CNoTrackObject  
 {  
-   CString strThread;  
+    CString strThread;  
 };  
 CThreadLocal<CMyThreadData> threadData;  
-  
+ 
 void MakeRandomString()  
-{  
-   // a kind of card shuffle (not a great one)  
-   CString& str = threadData->strThread;  
-   str.Empty();  
-   while (str.GetLength() != 52)  
-   {  
-      unsigned int randomNumber;  
-      errno_t randErr;  
-      randErr = rand_s( &randomNumber );  
-      if ( randErr == 0 )  
-      {  
-         TCHAR ch = randomNumber % 52 + 1;  
-         if (str.Find(ch) < 0)  
-            str += ch; // not found, add it  
-      }  
-   }  
+{ *// a kind of card shuffle (not a great one)  
+    CString& str = threadData->strThread;  
+    str.Empty();
+while (str.GetLength() != 52)  
+ {  
+    unsigned int randomNumber;  
+    errno_t randErr;  
+    randErr = rand_s(&randomNumber);
+
+    if (randErr == 0)  
+ {  
+    TCHAR ch = randomNumber % 52 + 1;  
+    if (str.Find(ch) <0)  
+    str += ch; // not found, add it  
+ }  
+ }  
 }  
 ```  
   
- Если `MakeRandomString` вызывался 2 из разных потоков, каждое «в случайном порядкеTfо:» строка различными способами, не препятствует с другим.  Это происходит потому, что является экземпляром `strThread` в каждом потоке, а не только один глобального экземпляра.  
+ If `MakeRandomString` was called from two different threads, each would "shuffle" the string in different ways without interfering with the other. This is because there is actually a `strThread` instance per thread instead of just one global instance.  
   
- Следует заметить, что ссылка используется, чтобы получить адрес `CString` один раз, а не только на итерацию цикла.  Используется код цикла может быть записан с `threadData->strThread` везде '`str`', однако код будет гораздо медленнее при выполнении.  Рекомендуется кэшировать ссылки на данные, если эти ссылки возникают в циклах.  
+ Note how a reference is used to capture the `CString` address once instead of once per loop iteration. The loop code could have been written with `threadData->strThread` everywhere '`str`' is used, but the code would be much slower in execution. It is best to cache a reference to the data when such references occur in loops.  
   
- Шаблон класса `CThreadLocal` используются те же механизмы, что и `CProcessLocal` выполняет те же методы реализации.  
+ The `CThreadLocal` class template uses the same mechanisms that `CProcessLocal` does and the same implementation techniques.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

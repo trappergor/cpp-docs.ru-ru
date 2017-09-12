@@ -1,56 +1,75 @@
 ---
-title: "Сериализация данных в файлы и из них | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "данные [MFC]"
-  - "данные [MFC], сериализация"
-  - "десериализация [C++]"
-  - "данные документа [C++]"
-  - "документы [C++], сохранение"
-  - "документы [C++], сериализация"
-  - "сохранение документов"
-  - "сериализация [C++], роль данных"
-  - "сериализация [C++], роль документа"
+title: Serializing Data to and from Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], serialization
+- documents [MFC], saving
+- saving documents
+- deserialization [MFC]
+- serialization [MFC], role of document
+- serialization [MFC], role of data
+- data [MFC]
+- data [MFC], serializing
+- document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Сериализация данных в файлы и из них
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94f8f6b569b47bf54f0707c5e782b8d4e892bf7b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Основная мысль сохранения, объект должен записывать его текущее состояние, показанное значениями его переменных\-членов, в постоянное хранилище.  В дальнейшем объект можно воссоздать, или путем чтения «поиск» состояние объекта из постоянного хранилища.  Узловой пункт заключается в том, что сам объект отвечает за чтения и записи состояния.  Таким образом, для класса, который должен быть упорен, он должен реализовать базовые операции сериализации.  
+---
+# <a name="serializing-data-to-and-from-files"></a>Serializing Data to and from Files
+The basic idea of persistence is that an object should be able to write its current state, indicated by the values of its member variables, to persistent storage. Later, the object can be re-created by reading, or "deserializing," the object's state from persistent storage. A key point here is that the object itself is responsible for reading and writing its own state. Thus, for a class to be persistent, it must implement the basic serialization operations.  
   
- Платформа предоставляет реализацию по умолчанию для хранения документов на дисковым файлам в ответ на и команды "Сохранить как" в меню " Файл и для загрузки документов из дисковых файлов в ответ на открытую команды.  Очень с меньшим работы, можно реализовать возможность документа записывать и считывать данные из и в файле.  Главный элемент необходимо сделать переопределить функцию\-член [Выполнять сериализацию](../Topic/CObject::Serialize.md) в классе документа.  
+ The framework provides a default implementation for saving documents to disk files in response to the Save and Save As commands on the File menu and for loading documents from disk files in response to the Open command. With very little work, you can implement a document's ability to write and read its data to and from a file. The main thing you must do is override the [Serialize](../mfc/reference/cobject-class.md#serialize) member function in your document class.  
   
- Мастер приложений MFC задает скелетное переопределить функцию\-член `Serialize`**CDocument** в классе документа создается автоматически.  После реализации переменных\-членов приложения можно заполните переопределенный `Serialize` с кодом, отправить данные в «подключенному объект архива» в файл.  Объект [CArchive](../mfc/reference/carchive-class.md) похож на объекты ввода\-вывода `cin` и `cout` в библиотеке iostream C C\+\+.  Однако `CArchive` записи и считывает бинарный формат, не форматированный текст.  
+ The MFC Application Wizard places a skeletal override of the **CDocument** member function `Serialize` in the document class it creates for you. After you have implemented your application's member variables, you can fill in your `Serialize` override with code that sends the data to an "archive object" connected to a file. A [CArchive](../mfc/reference/carchive-class.md) object is similar to the `cin` and `cout` input/output objects from the C++ iostream library. However, `CArchive` writes and reads binary format, not formatted text.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Сериализация](../Topic/Serialization%20in%20MFC.md)  
+-   [Serialization](../mfc/serialization-in-mfc.md)  
   
--   [Роль document в сериализации](#_core_the_document.92.s_role_in_serialization)  
+-   [The document's role in serialization](#_core_the_document.92.s_role_in_serialization)  
   
--   [Роль в сериализации данных](#_core_the_data.92.s_role_in_serialization)  
+-   [The data's role in serialization](#_core_the_data.92.s_role_in_serialization)  
   
--   [Пропуск механизм сериализации](../mfc/bypassing-the-serialization-mechanism.md)  
+-   [Bypassing the serialization mechanism](../mfc/bypassing-the-serialization-mechanism.md)  
   
-##  <a name="_core_the_document.92.s_role_in_serialization"></a> Роль document в сериализации  
- Платформа отвечает автоматически в меню "Файл" команды " открыть, сохранения и сохранить как путем вызова функции\-члена `Serialize` документа, если она реализована.  Команда `ID_FILE_OPEN`, например, вызывает функцию обработчика в объекте приложения.  Во время этого процесса, пользователь видит и ответа в диалоговое окно файла открытый и платформа получает имя файла выбранные пользователем.  Платформа создает настройку объекта `CArchive` для загрузки данных в документ и передает архив в `Serialize`.  Платформа уже раскрывала файл.  Код в функции\-члене `Serialize` создаваемого документа считывает данные в архив, реконструируя через объекты данных по мере необходимости.  Дополнительные сведения о сериализации см. в статье [Сериализация](../Topic/Serialization%20in%20MFC.md).  
+##  <a name="_core_the_document.92.s_role_in_serialization"></a> The Document's Role in Serialization  
+ The framework responds automatically to the File menu's Open, Save, and Save As commands by calling the document's `Serialize` member function if it is implemented. An `ID_FILE_OPEN` command, for example, calls a handler function in the application object. During this process, the user sees and responds to the File Open dialog box and the framework obtains the filename the user chooses. The framework creates a `CArchive` object set up for loading data into the document and passes the archive to `Serialize`. The framework has already opened the file. The code in your document's `Serialize` member function reads the data in through the archive, reconstructing data objects as needed. For more information about serialization, see the article [Serialization](../mfc/serialization-in-mfc.md).  
   
-##  <a name="_core_the_data.92.s_role_in_serialization"></a> Роль в сериализации данных  
- Как правило, данные типа класса должна быть возможность сериализации.  Это значит, что при передаче объекта в архив, он должен знать, как создаются в архив и считывания из архива.  MFC предоставляет поддержку для создания классов сериализуемый таким образом.  При создании класса для указания типа данных и требуется сериализовать данные этого типа, создайте для сериализации.  
+##  <a name="_core_the_data.92.s_role_in_serialization"></a> The Data's Role in Serialization  
+ In general, class-type data should be able to serialize itself. That is, when you pass an object to an archive, the object should know how to write itself to the archive and how to read itself from the archive. MFC provides support for making classes serializable in this way. If you design a class to define a data type and you intend to serialize data of that type, design for serialization.  
   
-## См. также  
- [Использование документов](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

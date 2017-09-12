@@ -1,121 +1,140 @@
 ---
-title: "Закрепленные и плавающие панели инструментов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBRS_SIZE_DYNAMIC"
-  - "CBRS_SIZE_FIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBRS_ALIGN_ANY - константа"
-  - "CBRS_SIZE_DYNAMIC - константа"
-  - "CBRS_SIZE_FIXED - константа"
-  - "панели инструментов фиксированного размера"
-  - "плавающие палитры"
-  - "плавающие панели инструментов"
-  - "окна фрейма, закрепление панели инструментов"
-  - "палитры, плавающее"
-  - "размер"
-  - "размер, панели инструментов"
-  - "элементы управления панели инструментов [MFC], создание оболочек"
-  - "панели инструментов [C++], закрепление"
-  - "панели инструментов [C++], плавающее"
-  - "панели инструментов [C++], размер"
-  - "панели инструментов [C++], создание оболочек"
+title: Docking and Floating Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBRS_SIZE_DYNAMIC
+- CBRS_SIZE_FIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- size [MFC], toolbars
+- size
+- frame windows [MFC], toolbar docking
+- CBRS_ALIGN_ANY constant [MFC]
+- palettes, floating
+- toolbars [MFC], docking
+- CBRS_SIZE_DYNAMIC constant [MFC]
+- floating toolbars
+- toolbars [MFC], size
+- toolbars [MFC], floating
+- fixed-size toolbars
+- CBRS_SIZE_FIXED constant [MFC]
+- toolbar controls [MFC], wrapping
+- toolbars [MFC], wrapping
+- floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Закрепленные и плавающие панели инструментов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a22dbdc0aec475896833460411275c7bae8c3b85
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Библиотеки Microsoft Foundation Class поддерживает закрепляемых панелей инструментов.  Закрепляемая панели инструментов можно вложить или закрепленного, в любой части родительского окна или ему может быть окончательно удалить; или, в уплыто собственное окно области.  В этой статье описывается, как использовать закрепляемых панелей инструментов в приложениях.  
+---
+# <a name="docking-and-floating-toolbars"></a>Docking and Floating Toolbars
+The Microsoft Foundation Class Library supports dockable toolbars. A dockable toolbar can be attached, or docked, to any side of its parent window, or it can be detached, or floated, in its own mini-frame window. This article explains how to use dockable toolbars in your applications.  
   
- При использовании мастера приложений для создания схемы приложения, то будет предложено, чтобы выбрать необходимость закрепляемых панелей инструментов.  По умолчанию с помощью мастера приложений создает код, который выполняет 3 необходимого действия, укажите закрепляемую панели инструментов в приложении:  
+ If you use the Application Wizard to generate the skeleton of your application, you are asked to choose whether you want dockable toolbars. By default, the Application Wizard generates the code that performs the three actions necessary to place a dockable toolbar in your application:  
   
--   [Включение закрепления в окне фреймовом](#_core_enabling_docking_in_a_frame_window).  
+-   [Enable docking in a frame window](#_core_enabling_docking_in_a_frame_window).  
   
--   [Включение закрепления для панели инструментов](#_core_enabling_docking_for_a_toolbar).  
+-   [Enable docking for a toolbar](#_core_enabling_docking_for_a_toolbar).  
   
--   [Закрепление панели инструментов \(в фреймовому окно\)](#_core_docking_the_toolbar).  
+-   [Dock the toolbar (to the frame window)](#_core_docking_the_toolbar).  
   
- Если какие\-либо из этих шагов отсутствует, приложение будет выводиться панель инструментов.  Последние два действия необходимо выполнить для каждой закрепляемой панели инструментов в приложении.  
+ If any of these steps are missing, your application will display a standard toolbar. The last two steps must be performed for each dockable toolbar in your application.  
   
- Другие разделы, описанные в этой статье:  
+ Other topics covered in this article include:  
   
--   [Плавать панель инструментов](#_core_floating_the_toolbar)  
+-   [Floating the toolbar](#_core_floating_the_toolbar)  
   
--   [Динамическое изменение размера панели инструментов](#_core_dynamically_resizing_the_toolbar)  
+-   [Dynamically resizing the toolbar](#_core_dynamically_resizing_the_toolbar)  
   
--   [Задание позиции использованих программы\-оболочек для панели инструментов фиксированной стиля](#_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar)  
+-   [Setting wrap positions for a fixed-style toolbar](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)  
   
- В примере MFC [DOCKTOOL](../top/visual-cpp-samples.md) общий пример.  
+ See the MFC General sample [DOCKTOOL](../visual-cpp-samples.md) for examples.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a> Включение закрепления в окне фреймовом  
- Для закрепления панели инструментов в фреймовому фреймовое окно окно \(или присвоение\) необходимо включить закрепление разрешения.  Это делается с помощью функции [CFrameWnd::EnableDocking](../Topic/CFrameWnd::EnableDocking.md), которая принимает один параметр `DWORD`, набор отображение бит стиля, сторона фреймового окна поддерживает закрепление.  Если панель инструментов будет иметь закрепленным и несколько стороны, что он может быть закрепляется на, стороны, указанные в параметре, передаваемом в `EnableDocking` используются в следующем порядке: верхний, нижний, левое, вправо.  Если требуется возможность закрепление панели элементов управления в любом месте, передайте `CBRS_ALIGN_ANY` в `EnableDocking`.  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Enabling Docking in a Frame Window  
+ To dock toolbars to a frame window, the frame window (or destination) must be enabled to allow docking. This is done using the [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) function, which takes one `DWORD` parameter that is a set of style bits indicating which side of the frame window accepts docking. If a toolbar is about to be docked and there are multiple sides that it could be docked to, the sides indicated in the parameter passed to `EnableDocking` are used in the following order: top, bottom, left, right. If you want to be able to dock control bars anywhere, pass `CBRS_ALIGN_ANY` to `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a> Включение закрепления для панели инструментов  
- После подготовили назначение для закрепления необходимо подготовить инструментом \(источник\) или в подобной таким.  Вызов [CControlBar::EnableDocking](../Topic/CControlBar::EnableDocking.md) для каждой панели инструментов следует закрепить, указывая стороны назначения, у которых должна закрепляться панель инструментов.  Если ни одна из сторон, определенных в вызове совпадению `CControlBar::EnableDocking` разрешенные стороны для закрепления в окне фреймовом, панель инструментов не могут закрепляться \), то они плывут.  После того как панель инструментов стала плавающей, она останется плавающей и не сможет закрепляться в фрейме окна.  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Enabling Docking for a Toolbar  
+ After you have prepared the destination for docking, you must prepare the toolbar (or source) in a similar fashion. Call [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) for each toolbar you want to dock, specifying the destination sides to which the toolbar should dock. If none of the sides specified in the call to `CControlBar::EnableDocking` match the sides enabled for docking in the frame window, the toolbar cannot dock — it will float. Once it has been floated, it remains a floating toolbar, unable to dock to the frame window.  
   
- Если результат требуется панель инструментов полностью с плавающей запятой, вызывает `EnableDocking` с параметром 0.  Затем вызов [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md).  Панель инструментов остается с плавающей запятой, постоянно невозможно закрепления в любом месте.  
+ If the effect you want is a permanently floating toolbar, call `EnableDocking` with a parameter of 0. Then call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). The toolbar remains floating, permanently unable to dock anywhere.  
   
-##  <a name="_core_docking_the_toolbar"></a> Закрепление панели инструментов  
- Платформа вызывает функцию [CFrameWnd::DockControlBar](../Topic/CFrameWnd::DockControlBar.md), когда пользователь пытается удалить панель инструментов на стороне фреймового окна, которое позволяет закрепление.  
+##  <a name="_core_docking_the_toolbar"></a> Docking the Toolbar  
+ The framework calls [CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) when the user attempts to drop the toolbar on a side of the frame window that allows docking.  
   
- Кроме того, можно вызвать эту функцию в любое время для закрепления панели элементов управления в фреймовому окно.  Это обычно делается во время инициализации.  Несколько можно закрепить панель инструментов в конкретной стороне фреймового окна.  
+ In addition, you can call this function at any time to dock control bars to the frame window. This is normally done during initialization. More than one toolbar can be docked to a particular side of the frame window.  
   
-##  <a name="_core_floating_the_toolbar"></a> Плавать панели инструментов  
- Окончательное удаление закрепляемая панель инструментов из фреймового окна вызывает плавать панель инструментов.  Для этого вызова [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md).  Определите панель инструментов, необходимо плыть, точку, в которой он должен поместить и стиль выравнивания, указывает ли панель инструментов с плавающей запятой горизонтальн или вертикален.  
+##  <a name="_core_floating_the_toolbar"></a> Floating the Toolbar  
+ Detaching a dockable toolbar from the frame window is called floating the toolbar. Call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) to do this. Specify the toolbar to be floated, the point where it should be placed, and an alignment style that determines whether the floating toolbar is horizontal or vertical.  
   
- Платформа вызывает данную функцию, если пользователь перетаскивает панель инструментов с его состыкованного расположения и удаляет его в место, где закрепление не включен.  Это может быть в любом месте внутри или вне фреймового окна.  Как и `DockControlBar` можно также вызвать эту функцию во время инициализации.  
+ The framework calls this function when a user drags a toolbar off its docked location and drops it in a location where docking is not enabled. This can be anywhere inside or outside the frame window. As with `DockControlBar`, you can also call this function during initialization.  
   
- Реализация MFC закрепляемых панелей инструментов не предоставляет некоторые используя функций, найденных в некоторых приложениях, поддерживающих закрепляемых панелей инструментов.  Пользовательские функции, такие как настраивается инструментов не защищены.  
+ The MFC implementation of dockable toolbars does not provide some of the extended features found in some applications that support dockable toolbars. Features such as customizable toolbars are not provided.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a> Динамическое изменение размера панели инструментов  
- Начиная с версии Visual C\+\+ 4.0 C, можно сделать ее возможной для пользователей приложения изменить панели инструментов с плавающей запятой динамически.  Обычно в панели инструментов содержит протяженную, линейную фигуры, показанная по горизонтали.  Но можно изменить его тип и ориентацию панели инструментов.  Например, когда пользователь закрепит инструмент для одной из сторон вертикальных фреймового окна, фигура изменяется на то вертикальный макет.  Также можно переформовать панель инструментов в прямоугольник с несколькими строками кнопок.  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dynamically Resizing the Toolbar  
+ As of Visual C++ version 4.0, you can make it possible for users of your application to resize floating toolbars dynamically. Typically, a toolbar has a long, linear shape, displayed horizontally. But you can change the toolbar's orientation and its shape. For example, when the user docks a toolbar against one of the vertical sides of the frame window, the shape changes to a vertical layout. It's also possible to reshape the toolbar into a rectangle with multiple rows of buttons.  
   
- Можно выполнить следующие действия.  
+ You can:  
   
--   Определите динамический размер как характеристика инструмента.  
+-   Specify dynamic sizing as a toolbar characteristic.  
   
--   Как указать размер устраняет характеристика инструмента.  
+-   Specify fixed sizing as a toolbar characteristic.  
   
- Чтобы обеспечить такую поддержку, существует 2 новых стиля инструмента для использования на вызовах функцию\-член [CToolBar::Create](../Topic/CToolBar::Create.md).  К ним относятся:  
+ To provide this support, there are two new toolbar styles for use in your calls to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) member function. They are:  
   
--   Панель элементов управления **CBRS\_SIZE\_DYNAMIC** являются динамическими.  
+-   **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
--   Панель элементов управления **CBRS\_SIZE\_FIXED** исправлена.  
+-   **CBRS_SIZE_FIXED** Control bar is fixed.  
   
- Стиль размера в динамический позволяет пользователю изменять панель инструментов во время его с плавающей запятой, но не во время его обрезается.  Панель инструментов «создать», где требуется изменение вида как перетаскивания пользователя его границы.  
+ The size dynamic style lets your user resize the toolbar while it is floating, but not while it is docked. The toolbar "wraps" where needed to change shape as the user drags its edges.  
   
- Стиль исправлено размером сохраняет состояния использованих программы\-оболочек инструмента, исправление положение кнопок в каждом столбце.  Пользователя приложения не может изменить фигуры инструмента.  Использование панели оболочки на пять раз, например расположения разделителей между кнопками.  Он поддерживает эту форму ли ограничен панель инструментов или плавать.  Эффект фиксированная палитра с несколькими столбцами кнопок.  
+ The size fixed style preserves the wrap states of a toolbar, fixing the position of the buttons in each column. Your application's user can't change the shape of the toolbar. The toolbar wraps at designated places, such as the locations of separators between the buttons. It maintains this shape whether the toolbar is docked or floating. The effect is a fixed palette with multiple columns of buttons.  
   
- Можно также использовать [CToolBar::GetButtonStyle](../Topic/CToolBar::GetButtonStyle.md) вернуть состояние и стиль для кнопок с инструментов.  Определяет, как стиль кнопки появляется кнопка и принципы ее отвечает на ввод пользователя; состояние указывает ли кнопка в создаватьом программу\-оболочку состоянии.  
+ You can also use [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) to return a state and style for buttons on your toolbars. A button's style determines how the button appears and how it responds to user input; the state tells whether the button is in a wrapped state.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar"></a> Задание позиции использованих программы\-оболочек для панели инструментов фиксированной стиля  
- Для панели инструментов с стилем зафиксированным размером обозначьте индексы кнопки панели инструментов на панель инструментов экземпляра.  В следующем коде показано, как сделать это в переопределении `OnCreate` основного фреймового окна:  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Setting Wrap Positions for a Fixed-Style Toolbar  
+ For a toolbar with the size fixed style, designate toolbar button indexes at which the toolbar will wrap. The following code shows how to do this in your main frame window's `OnCreate` override:  
   
- [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/CPP/docking-and-floating-toolbars_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
   
- В примере MFC [DOCKTOOL](../top/visual-cpp-samples.md) является использование функций\-членов класса [CControlBar](../mfc/reference/ccontrolbar-class.md) и [CToolBar](../mfc/reference/ctoolbar-class.md) для управления динамический макет панели инструментов.  См. файл в EDITBAR.CPP DOCKTOOL.  
+ The MFC General sample [DOCKTOOL](../visual-cpp-samples.md) shows how to use member functions of classes [CControlBar](../mfc/reference/ccontrolbar-class.md) and [CToolBar](../mfc/reference/ctoolbar-class.md) to manage dynamic layout of a toolbar. See the file EDITBAR.CPP in DOCKTOOL.  
   
-### Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Основные сведения о панели инструментов](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Всплывающие подсказки панели инструментов](../Topic/Toolbar%20Tool%20Tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [С помощью панели инструментов старые](../Topic/Using%20Your%20Old%20Toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## См. также  
- [Реализация панели инструментов MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

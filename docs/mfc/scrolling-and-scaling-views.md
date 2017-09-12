@@ -1,58 +1,77 @@
 ---
-title: "Изменение масштаба и прокрутка представлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработчики сообщений"
-  - "обработка сообщений, полосы прокрутки в классе представления"
-  - "масштабирование представлений"
-  - "полосы прокрутки, сообщения"
-  - "представления прокрутки"
+title: Scrolling and Scaling Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- scaling views [MFC]
+- message handling [MFC], scroll bars in view class [MFC]
+- scroll bars [MFC], messages
+- scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Изменение масштаба и прокрутка представлений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ba8ef3c6b1eaa228d136289323209d8bf220023
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC поддерживает представления, — и представления, автоматически масштабируется в соответствии с размером фреймового окна, в котором будут отображаться.  Класс `CScrollView` поддерживает оба типа представления.  
+---
+# <a name="scrolling-and-scaling-views"></a>Scrolling and Scaling Views
+MFC supports views that scroll and views that are automatically scaled to the size of the frame window that displays them. Class `CScrollView` supports both kinds of views.  
   
- Дополнительные сведения о прокрутя и класс масштабируя см. в разделе [CScrollView](../mfc/reference/cscrollview-class.md) в *справочнике по MFC*.  Пример прокрутки см. в разделе [Образец Scribble](../top/visual-cpp-samples.md).  
+ For more information about scrolling and scaling, see class [CScrollView](../mfc/reference/cscrollview-class.md) in the *MFC Reference*. For a scrolling example, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   Прокрутить представление  
+-   Scrolling a view  
   
--   Масштабирование представления  
+-   Scaling a view  
   
--   [\<caps:sentence id\="tgt8" sentenceid\="f321fcf7c88bc6e3f892ae0fc9b2f0d8" class\="tgtSentence"\>Координаты представления\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [View coordinates](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
   
-##  <a name="_core_scrolling_a_view"></a> Прокрутить представление  
- Часто размер документа превышает размер его представление может отобразить.  Это может произойти, так как данные документа увеличивают окно пользователь или уменьшите это представление кадров.  В таких случаях представление должно поддерживать прокрутки.  
+##  <a name="_core_scrolling_a_view"></a> Scrolling a View  
+ Frequently the size of a document is greater than the size its view can display. This may occur because the document's data increases or the user shrinks the window that frames the view. In such cases, the view must support scrolling.  
   
- Любое представление может обрабатывать сообщения полосы прокрутки в его функций\-членов `OnHScroll` и `OnVScroll`.  Можно реализовать обработку сообщений полосы прокрутки в этих функциях, создание всего рабочего самостоятельно, или можно использовать класс `CScrollView` обработки прокрутка автоматически.  
+ Any view can handle scroll-bar messages in its `OnHScroll` and `OnVScroll` member functions. You can either implement scroll-bar message handling in these functions, doing all the work yourself, or you can use the `CScrollView` class to handle scrolling for you.  
   
- Объект `CScrollView` выполняет следующие действия.  
+ `CScrollView` does the following:  
   
--   Управление размеры окна и окна просмотра и режимы сопоставления  
+-   Manages window and viewport sizes and mapping modes  
   
--   Прокрутки автоматически в ответ на сообщения полосы прокрутки  
+-   Scrolls automatically in response to scroll-bar messages  
   
- Можно указать как для прокрутки для «страницы» \(при нажатии на основании полосы прокрутки\) и «линия» \(при нажатии на кнопку со стрелкой для прокрутки\).  Планирование этих значений в соответствии с требованиями природа данного представления.  Например, может понадобиться переход на 1 пиксель для представления графика, но в сегментами, основанных на высоте линии в текстовых документах.  
+ You can specify how much to scroll for a "page" (when the user clicks in a scroll-bar shaft) and a "line" (when the user clicks in a scroll arrow). Plan these values to suit the nature of your view. For example, you might want to scroll in 1-pixel increments for a graphics view but in increments based on the line height in text documents.  
   
-##  <a name="_core_scaling_a_view"></a> Масштабирование представления  
- При необходимости представление автоматически адаптация размер его фреймового окна, можно использовать `CScrollView` для масштабирования вместо прокрутки.  Логическое представление или на то растянуто для точного соответствия клиентской области окна.  Масштабированное представление не содержит полосы прокрутки.  
+##  <a name="_core_scaling_a_view"></a> Scaling a View  
+ When you want the view to automatically fit the size of its frame window, you can use `CScrollView` for scaling instead of scrolling. The logical view is stretched or shrunk to fit the window's client area exactly. A scaled view has no scroll bars.  
   
-## См. также  
- [Использование представлений](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

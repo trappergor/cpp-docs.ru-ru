@@ -1,71 +1,90 @@
 ---
-title: "Основные сведения о WinInet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnStatusCallback - метод"
-  - "WinInet - классы, WinInet - о классах"
-  - "WinInet - классы, отображение хода выполнения"
+title: WinInet Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnStatusCallback method [MFC]
+- WinInet classes [MFC], displaying progress
+- WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Основные сведения о WinInet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 414145be61b80e794133f0c7e4b90e6fa4b18662
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно использовать WinInet добавление поддержки FTP, чтобы загрузить и передавать файлы из приложения.  Можно переопределить [OnStatusCallback](../Topic/CInternetSession::OnStatusCallback.md) и используйте параметр `dwContext` для реализации информацию о ходе выполнения пользователи как для поиска и загрузите файлы.  
+---
+# <a name="wininet-basics"></a>WinInet Basics
+You can use WinInet to add FTP support to download and upload files from within your application. You can override [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) and use the `dwContext` parameter to provide progress information to users as you search for and download files.  
   
- Этот раздел содержит следующие подразделы:  
+ This article contains the following topics:  
   
--   [Создайте очень простой браузер](#_core_create_a_very_simple_browser)  
+-   [Create a Very Simple Browser](#_core_create_a_very_simple_browser)  
   
--   [Загрузите страницу](#_core_download_a_web_page)  
+-   [Download a Web Page](#_core_download_a_web_page)  
   
--   [Файл FTP](#_core_ftp_a_file)  
+-   [FTP a File](#_core_ftp_a_file)  
   
--   [Извлечение каталог gopher](#_core_retrieve_a_gopher_directory)  
+-   [Retrieve a Gopher Directory](#_core_retrieve_a_gopher_directory)  
   
--   [Отображает сведения о ходе выполнения во время перемещающ файлы](#_core_display_progress_information_while_transferring_files)  
+-   [Display Progress Information While Transferring Files](#_core_display_progress_information_while_transferring_files)  
   
- Извлечь кода демонстрируют, как создать простой браузер, загрузят страницы, FTP файл и поиск файла gopher.  Они не предназначены для как полные примеры и не содержат все обработку исключений.  
+ The code excerpts below demonstrate how to create a simple browser, download a Web page, FTP a file, and search for a gopher file. They are not meant as complete examples and not all contain exception handling.  
   
- Дополнительные сведения о WinInet см. в разделе [Расширения Win32 Интернета \(WinInet\)](../mfc/win32-internet-extensions-wininet.md).  
+ For additional information on WinInet, see [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
   
-##  <a name="_core_create_a_very_simple_browser"></a> Создайте очень простой браузер  
- [!CODE [NVC_MFCWinInet#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCWinInet#1)]  
+##  <a name="_core_create_a_very_simple_browser"></a> Create a Very Simple Browser  
+ [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]  
   
-##  <a name="_core_download_a_web_page"></a> Загрузите страницу  
- [!CODE [NVC_MFCWinInet#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCWinInet#2)]  
+##  <a name="_core_download_a_web_page"></a> Download a Web Page  
+ [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]  
   
-##  <a name="_core_ftp_a_file"></a> Файл FTP  
- [!CODE [NVC_MFCWinInet#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCWinInet#3)]  
+##  <a name="_core_ftp_a_file"></a> FTP a File  
+ [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]  
   
-##  <a name="_core_retrieve_a_gopher_directory"></a> Извлечение каталог gopher  
- [!CODE [NVC_MFCWinInet#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCWinInet#4)]  
+##  <a name="_core_retrieve_a_gopher_directory"></a> Retrieve a Gopher Directory  
+ [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]  
   
-## Используйте OnStatusCallback  
- При использовании классов WinInet, можно использовать элемент [OnStatusCallback](../Topic/CInternetSession::OnStatusCallback.md) объекта [CInternetSession](../Topic/CInternetSession%20Class.md) приложения извлечь сведения о состоянии.  Если производный объект `CInternetSession`, переопределите `OnStatusCallback` и включить обратные вызовы состояния, MFC вызывает пользовательскую функцию `OnStatusCallback` со сведениями о ходе выполнения о работе полностью в этом сеансе Интернета.  
+## <a name="use-onstatuscallback"></a>Use OnStatusCallback  
+ When using the WinInet classes, you can use the [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) member of your application's [CInternetSession](../mfc/reference/cinternetsession-class.md) object to retrieve status information. If you derive your own `CInternetSession` object, override `OnStatusCallback`, and enable status callbacks, MFC will call your `OnStatusCallback` function with progress information about all the activity in that Internet session.  
   
- Поскольку один сеанс может поддерживать несколько подключений \(, по своим времени существования, можно выполнять различные определенных операций\), `OnStatusCallback` требуется механизм определения каждое изменение состояния с указанными подключение или транзакцией.  Механизм, предоставляется параметром контекстного идентификатора, присвоенное многие функции\-члены в классах поддержки WinInet.  Этот параметр всегда типа `DWORD` и всегда имеет имя `dwContext`.  
+ Because a single session might support several connections (which, over their lifetime, might perform many different distinct operations), `OnStatusCallback` needs a mechanism to identify each status change with a particular connection or transaction. That mechanism is provided by the context ID parameter given to many of the member functions in the WinInet support classes. This parameter is always of type `DWORD` and is always named `dwContext`.  
   
- Контекст, в частности объект Интернета используется только для определения причины работы объекта в элементе `OnStatusCallback` объекта `CInternetSession`.  Вызов `OnStatusCallback` получит несколько параметров; эти параметры работают вместе, чтобы сообщить приложению о ходе выполнения, выполненной для которого транзакции и подключение.  
+ The context assigned to a particular Internet object is used only to identify the activity the object causes in the `OnStatusCallback` member of the `CInternetSession` object. The call to `OnStatusCallback` receives several parameters; these parameters work together to tell your application what progress has been made for which transaction and connection.  
   
- При создании объекта `CInternetSession` можно указать параметр `dwContext` в конструктор.  `CInternetSession` сам не использует контекстный идентификатор; вместо этого он передает контекстный идентификатор и перейти к любому **InternetConnection**\- производным объектам, которые явно не задает контекстный идентификатор их.  В свою очередь, эти объекты `CInternetConnection` загружают контекстный идентификатор вперед к объектам `CInternetFile` они создают, если явно не указан идентификатор другого контекста  Если, с другой стороны, нужно задать конкретный контекстный идентификатор, объект, и любой рабочий она позволяет связать с этим идентификатором контекста  Можно использовать идентификатор контекста указать сведения о состоянии указан в функции `OnStatusCallback`.  
+ When you create a `CInternetSession` object, you can specify a `dwContext` parameter to the constructor. `CInternetSession` itself doesn't use the context ID; instead, it passes the context ID on to any **InternetConnection**-derived objects that don't explicitly get a context ID of their own. In turn, those `CInternetConnection` objects will pass the context ID along to `CInternetFile` objects they create if you don't explicitly specify a different context ID. If, on the other hand, you do specify a specific context ID of your own, the object and any work it does will be associated with that context ID. You can use the context IDs to identify what status information is being given to you in your `OnStatusCallback` function.  
   
-##  <a name="_core_display_progress_information_while_transferring_files"></a> Отображает сведения о ходе выполнения во время перемещающ файлы  
- Например, если нужно создать приложение, которое создает соединение с FTP\-сервером для считывания файла, а также подключиться к HTTP\-серверу для доступа к странице будет создан объект `CInternetSession`, 2 объекта `CInternetConnection` \(один будет **CFtpSession** и другой будет **CHttpSession**\) и 2 объекта `CInternetFile` \(по одному для каждого соединения\).  При использовании значения по умолчанию для параметров `dwContext`, то, возможно, будет различать вызовами `OnStatusCallback`, отражающих прогресс для подключения FTP и вызовы, отражающих прогресс для подключения HTTP.  Если указан идентификатор `dwContext`, которое можно более новый тест в `OnStatusCallback` необходимо узнать, какая операция генерировала обратный вызов.  
+##  <a name="_core_display_progress_information_while_transferring_files"></a> Display Progress Information While Transferring Files  
+ For example, if you write an application that creates a connection with an FTP server to read a file and also connects to an HTTP server to get a Web page, you'll have a `CInternetSession` object, two `CInternetConnection` objects (one would be a **CFtpSession** and the other would be a **CHttpSession**), and two `CInternetFile` objects (one for each connection). If you used default values for the `dwContext` parameters, you would not be able to distinguish between the `OnStatusCallback` invocations that indicate progress for the FTP connection and the invocations that indicate progress for the HTTP connection. If you specify a `dwContext` ID, which you can later test for in `OnStatusCallback`, you will know which operation generated the callback.  
   
-## См. также  
- [Основы программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-basics.md)   
- [Расширения Интернета Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+
+

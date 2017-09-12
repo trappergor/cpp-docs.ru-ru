@@ -1,50 +1,69 @@
 ---
-title: "Реализация рабочих областей в элементах управления &quot;Список&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Список - элементы управления, рабочие области"
-  - "рабочие области в элементе управления списком"
+title: Implementing Working Areas in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- list controls [MFC], working areas
+- working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Реализация рабочих областей в элементах управления &quot;Список&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6e1f2eea1f21dfef17389e5534107c0ba15c41e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-По умолчанию элемент управления упорядочивает Список всех элементов в стандартной таким сетки.  Однако поддерживается другой метод, рабочие области, который упорядочивает элементы списка в прямоугольные группы.  Для изображения элемента управления "Список", реализующий рабочие области см. в разделе использование элемента управления "список" в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+---
+# <a name="implementing-working-areas-in-list-controls"></a>Implementing Working Areas in List Controls
+By default, a list control arranges all items in a standard grid fashion. However, another method is supported, working areas, that arranges the list items into rectangular groups. For an image of a list control that implements working areas, see Using List-View Controls in the Windows SDK.  
   
 > [!NOTE]
->  Рабочие области отображаются, только если элемент управления "Список" на Значке или малых режиме Значка.  Однако все текущие рабочие области поддерживаются, если представление переключено режим отчета или списка.  
+>  Working areas are visible only when the list control is in icon or small icon mode. However, any current working areas are maintained if the view is switched to the report or list mode.  
   
- Рабочие области можно использовать для отображения пустой границы \(на слева, сверху справа или элементов\), или сбой горизонтальную полосу прокрутки для отображения, когда обычно не было бы одного.  Это общее потребление создать несколько рабочих областей, в которых элементы можно перемещать или удалять.  С помощью этого метода, можно создать области в одном представлении, имеют различные значения.  Пользователь может затем классифицировать элементы, размещая их в другую область.  Пример этого будет представлением файловой системы, имеющее область для чтения\/записи, что файлы и другая область только для чтения файлов.  Если элемент перемещен в файла только для чтения области, он автоматически стал бы только для чтения.  Перемещение чтение из файла только для чтения\/записи области в области файла для чтения\/записи.  
+ Working areas can be used to display an empty border (on the left, top and/or right of the items), or cause a horizontal scroll bar to be displayed when there normally wouldn't be one. Another common usage is to create multiple working areas to which items can be moved or dropped. With this method, you could create areas in a single view that have different meanings. The user could then categorize the items by placing them in a different area. An example of this would be a view of a file system that has an area for read/write files and another area for read-only files. If a file item were moved into the read-only area, it would automatically become read-only. Moving a file from the read-only area into the read/write area would make the file read/write.  
   
- `CListCtrl` предоставляет функции\-члены для создания и управления рабочие области в элементе управления списка.  [GetWorkAreas](../Topic/CListCtrl::GetWorkAreas.md)[SetWorkAreas](../Topic/CListCtrl::SetWorkAreas.md) извлекает и и задает массив объектов `CRect` \(или структур `RECT` \), которые хранятся в данный момент, рабочие области для элемента управления "Список".  Кроме того, [GetNumberOfWorkAreas](../Topic/CListCtrl::GetNumberOfWorkAreas.md) извлекает количество рабочих областей для элемента управления "Список" \(по умолчанию\), ноль.  
+ `CListCtrl` provides several member functions for creating and managing working areas in your list control. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) and [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) retrieve and set an array of `CRect` objects (or `RECT` structures), which store the currently implemented working areas for your list control. In addition, [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) retrieves the current number of working areas for your list control (by default, zero).  
   
-## Элементы и рабочие области  
- Если рабочая область создана, элементы, которые лежат в пределах рабочей области имеют членами ее.  Аналогично, если элемент перемещен в рабочую область, выполняется членом рабочей области, которой она была перемещена.  Если элемент не находится в пределах любой рабочей области, автоматически переходит членом первой \(индекс 0\) рабочей области.  Если требуется создать элемент и просматривать его размещать в пределах конкретной рабочей области, необходимо создать элемент, а затем переместить его в нужную рабочую область с вызовом метода [SetItemPosition](../Topic/CListCtrl::SetItemPosition.md).  Второй пример показывает этот метод.  
+## <a name="items-and-working-areas"></a>Items and Working Areas  
+ When a working area is created, items that lie within the working area become members of it. Similarly, if an item is moved into a working area, it becomes a member of the working area to which it was moved. If an item does not lie within any working area, it automatically becomes a member of the first (index 0) working area. If you want to create an item and have it placed within a specific working area, you will need to create the item and then move it into the desired working area with a call to [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). The second example below demonstrates this technique.  
   
- В следующем примере реализуется 4 рабочей области \(`rcWorkAreas`\), равного размеру с шириной в 10 пикселей границы вокруг каждой рабочей области, в элементе управления списка \(`m_WorkAreaListCtrl`\).  
+ The following example implements four working areas (`rcWorkAreas`), of equal size with a 10-pixel-wide border around each working area, in a list control (`m_WorkAreaListCtrl`).  
   
- [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/CPP/implementing-working-areas-in-list-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]  
   
- В [ApproximateViewRect](../Topic/CListCtrl::ApproximateViewRect.md) вызван для получения полной оценку всей площади, необходимые для отображения всех элементов в одной области.  Эта оценка затем разделяется на 4 области и проложена с шириной в 5 пикселей границы.  
+ The call to [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) was made to get an estimate of the total area required to display all items in one region. This estimate is then divided into four regions and padded with a 5-pixel-wide border.  
   
- Следующий пример присваивает существующие элементы списка в каждой группе \(`rcWorkAreas`\) и обновляет элемент управления \(`m_``WorkAreaListCtrl`\) для выполнения в силу.  
+ The next example assigns the existing list items to each group (`rcWorkAreas`) and refreshes the control view (`m_WorkAreaListCtrl`) to complete the effect.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/CPP/implementing-working-areas-in-list-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]  
   
-## См. также  
- [Использование CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

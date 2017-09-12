@@ -1,5 +1,5 @@
 ---
-title: "Класс CHttpConnection | Документы Microsoft"
+title: CHttpConnection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,18 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, connecting to
-- protocols, HTTP
-- connecting to servers, HTTP servers
-- Internet protocols, HTTP
-- HTTP connections
-- Internet protocols
-- CHttpConnection class
-- HTTP servers, connecting to
-- connecting to servers
-- Internet connections, HTTP
-- connections [C++], HTTP
-- Internet server, HTTP
+- CHttpConnection [MFC], CHttpConnection
+- CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 caps.latest.revision: 24
 author: mikeblome
@@ -47,57 +37,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1b02a79cebbd73a05478887115646f0544f0a92d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a484b97fcdb5a3cb3ddfe603594d6e10657a181
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chttpconnection-class"></a>Класс CHttpConnection
-Управление подключением к HTTP-серверу.  
+# <a name="chttpconnection-class"></a>CHttpConnection Class
+Manages your connection to an HTTP server.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHttpConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::CHttpConnection](#chttpconnection)|Создает объект `CHttpConnection`.|  
+|[CHttpConnection::CHttpConnection](#chttpconnection)|Creates a `CHttpConnection` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::OpenRequest](#openrequest)|Открытие HTTP-запроса.|  
+|[CHttpConnection::OpenRequest](#openrequest)|Opens an HTTP request.|  
   
-## <a name="remarks"></a>Примечания  
- HTTP является одним из трех серверные протоколы Интернета, реализованы с помощью классов MFC WinInet.  
+## <a name="remarks"></a>Remarks  
+ HTTP is one of three Internet server protocols implemented by the MFC WinInet classes.  
   
- Класс `CHttpConnection` содержит конструктор и один член функции, [OpenRequest](#openrequest), который управляет подключения к серверу с помощью протокола HTTP.  
+ The class `CHttpConnection` contains a constructor and one member function, [OpenRequest](#openrequest), that manages connections to a server with an HTTP protocol.  
   
- Для взаимодействия с HTTP-сервере, необходимо создать экземпляр [CInternetSession](../../mfc/reference/cinternetsession-class.md), а затем создать [CHttpConnection](#_mfc_chttpconnection) объекта. Никогда не создавать `CHttpConnection` напрямую; вместо этого вызвать метод [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), который создает `CHttpConnection` объекта и возвращает указатель на него.  
+ To communicate with an HTTP server, you must first create an instance of [CInternetSession](../../mfc/reference/cinternetsession-class.md), and then create a [CHttpConnection](#_mfc_chttpconnection) object. You never create a `CHttpConnection` object directly; rather, call [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), which creates the `CHttpConnection` object and returns a pointer to it.  
   
- Дополнительные сведения о том, как `CHttpConnection` работает с другими классами MFC Интернет, см. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md). Дополнительные сведения о подключении к серверам с использованием двух других поддерживаемых протоколов Интернета, gopher и FTP, в разделе классы [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) и [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
+ To learn more about how `CHttpConnection` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md). For more information about connecting to servers using the other two supported Internet protocols, gopher and FTP, see the classes [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
- Эта функция-член вызывается для создания `CHttpConnection` объекта.  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
+ This member function is called to construct a `CHttpConnection` object.  
   
 ```  
 CHttpConnection(
@@ -126,43 +116,43 @@ CHttpConnection(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pSession`  
- Указатель на [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта.  
+ A pointer to a [CInternetSession](../../mfc/reference/cinternetsession-class.md) object.  
   
  `hConnected`  
- Дескриптор для подключения к Интернету.  
+ A handle to an Internet connection.  
   
  `pstrServer`  
- Указатель на строку, содержащую имя сервера.  
+ A pointer to a string containing the server name.  
   
  `dwContext`  
- Идентификатор контекста для `CInternetConnection` объекта. В разделе **примечания** Дополнительные сведения о `dwContext`.  
+ The context identifier for the `CInternetConnection` object. See **Remarks** for more information about `dwContext`.  
   
  `nPort`  
- Число, идентифицирующее порт Интернета для данного подключения.  
+ The number that identifies the Internet port for this connection.  
   
  `pstrUserName`  
- Указатель на строку с завершающим нулем, указывающее имя пользователя для входа. Если **NULL**, значение по умолчанию является анонимным.  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- Указатель нулем строку, которая указывает пароль, используемый для входа. Если оба `pstrPassword` и `pstrUserName` , **NULL**, анонимных паролей по умолчанию является имя электронной почты пользователя. Если `pstrPassword` — **NULL** (или пустую строку), но `pstrUserName` не **NULL**, используется пустой пароль. В следующей таблице описаны поведения четыре возможные параметры `pstrUserName` и `pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|Имя пользователя передается серверу FTP|Пароль передается серверу FTP|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** или «»|**NULL** или «»|«anonymous»|Имя пользователя электронной почты|  
-|Не- **NULL** строки|**NULL** или «»|`pstrUserName`|" "|  
-|**NULL** отличных **NULL** строки|**ОШИБКА**|**ОШИБКА**||  
-|Не- **NULL** строки|Не- **NULL** строки|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `dwFlags`  
- Любое сочетание **INTERNET_ FLAG_\* ** флаги. См. в таблице **примечания** раздел [CHttpConnection::OpenRequest](#openrequest) описание `dwFlags` значения.  
+ Any combination of the **INTERNET_ FLAG_\*** flags. See the table in the **Remarks** section of [CHttpConnection::OpenRequest](#openrequest) for a description of `dwFlags` values.  
   
-### <a name="remarks"></a>Примечания  
- Никогда не создавать `CHttpConnection` напрямую. Вместо этого объекта создается путем вызова [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
+### <a name="remarks"></a>Remarks  
+ You never create a `CHttpConnection` directly. Rather, you create an object by calling [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
- Вызовите эту функцию-член для открытия HTTP-соединения.  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
+ Call this member function to open an HTTP connection.  
   
 ```  
 CHttpFile* OpenRequest(
@@ -185,32 +175,32 @@ CHttpFile* OpenRequest(
     DWORD dwFlags = INTERNET_FLAG_EXISTING_CONNECT);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pstrVerb`  
- Указатель на строку, содержащую команду, которую необходимо использовать в запросе. Если `NULL`, используется «Получить».  
+ A pointer to a string containing the verb to use in the request. If `NULL`, "GET" is used.  
   
  `pstrObjectName`  
- Указатель на строку, содержащую целевой объект указанную команду. Обычно это имя файла, исполняемый модуль или описатель поиска.  
+ A pointer to a string containing the target object of the specified verb. This is generally a filename, an executable module, or a search specifier.  
   
  `pstrReferer`  
- Указатель на строку, указывающую адрес (URL) документа, из которого URL-адрес в запросе ( `pstrObjectName`) был получен. Если `NULL`, указан без заголовка HTTP.  
+ A pointer to a string that specifies the address (URL) of the document from which the URL in the request ( `pstrObjectName`) was obtained. If `NULL`, no HTTP header is specified.  
   
  `dwContext`  
- Идентификатор контекста для `OpenRequest` операции. В разделе «Примечания» для получения дополнительной информации `dwContext`.  
+ The context identifier for the `OpenRequest` operation. See the Remarks section for more information about `dwContext`.  
   
  `ppstrAcceptTypes`  
- Указатель на массив нули из `LPCTSTR` указатели для строк, указывающих типы содержимого, принятый клиентом. Если `ppstrAcceptTypes` — `NULL`, серверы интерпретировать клиент принимает только документы типа «текст / *» (то есть только текстовых документов и не изображения или другие двоичные файлы). Тип содержимого является эквивалентом переменных CONTENT_TYPE CGI, который определяет тип данных для запросов, которые были присоединены сведения, такие как HTTP POST и PUT.  
+ A pointer to a null-terminated array of `LPCTSTR` pointers to strings indicating content types accepted by the client. If `ppstrAcceptTypes` is `NULL`, the servers interpret that the client only accepts documents of type "text/*" (that is, only text documents and not pictures or other binary files). The content type is equivalent to the CGI variable CONTENT_TYPE, which identifies the type of data for queries that have attached information, such as HTTP POST and PUT.  
   
  `pstrVersion`  
- Указатель на строку, определяющую версию HTTP. Если `NULL`, используется «HTTP/1.0».  
+ A pointer to a string defining the HTTP version. If `NULL`, "HTTP/1.0" is used.  
   
  `dwFlags`  
- Любое сочетание флагов INTERNET_ FLAG_ *. В разделе «Примечания» для описания возможных `dwFlags` значения.  
+ Any combination of the INTERNET_ FLAG_* flags. See the Remarks section for a description of possible `dwFlags` values.  
   
  `nVerb`  
- Номер, связанный с типом запроса HTTP. Ниже указаны доступные значения.  
+ A number associated with the HTTP request type. Can be one of the following:  
   
-|Тип запроса HTTP|Значение `nVerb`|  
+|HTTP request type|`nVerb` value|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -220,27 +210,27 @@ CHttpFile* OpenRequest(
 |`HTTP_VERB_DELETE`|5|  
 |`HTTP_VERB_UNLINK`|6|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [CHttpFile](../../mfc/reference/chttpfile-class.md) запрошенный объект.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CHttpFile](../../mfc/reference/chttpfile-class.md) object requested.  
   
-### <a name="remarks"></a>Примечания  
- `dwFlags` может принимать следующие значения:  
+### <a name="remarks"></a>Remarks  
+ `dwFlags` can be one of the following:  
   
-|Флаг Интернета|Описание|  
+|Internet flag|Description|  
 |-------------------|-----------------|  
-|`INTERNET_FLAG_RELOAD`|Вызывает принудительную загрузку запрошенного файла, объекта или просмотр каталога на исходном сервере, а не из кэша.|  
-|`INTERNET_FLAG_DONT_CACHE`|Не добавляет возвращаемой сущности в кэш.|  
-|`INTERNET_FLAG_MAKE_PERSISTENT`|Добавляет в кэш возвращаемой сущности как постоянные сущность. Это означает, что очистка кэша standard, проверки согласованности или сборщик мусора не удается удалить этот элемент из кэша.|  
-|`INTERNET_FLAG_SECURE`|Безопасные транзакции используют семантику. Это означает использование SSL или PCT и применяется только в HTTP-запросов|  
-|`INTERNET_FLAG_NO_AUTO_REDIRECT`|Используется только с HTTP, указывает, что перенаправление не должен обрабатываться автоматически в [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|  
+|`INTERNET_FLAG_RELOAD`|Forces a download of the requested file, object, or directory listing from the origin server, not from the cache.|  
+|`INTERNET_FLAG_DONT_CACHE`|Does not add the returned entity to the cache.|  
+|`INTERNET_FLAG_MAKE_PERSISTENT`|Adds the returned entity to the cache as a persistent entity. This means that standard cache cleanup, consistency checking, or garbage collection cannot remove this item from the cache.|  
+|`INTERNET_FLAG_SECURE`|Uses secure transaction semantics. This translates to using SSL/PCT and is only meaningful in HTTP requests|  
+|`INTERNET_FLAG_NO_AUTO_REDIRECT`|Used only with HTTP, specifies that redirections should not be automatically handled in [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|  
   
- Переопределение `dwContext` по умолчанию для идентификатора контекста параметру значение по своему выбору. Идентификатор контекста связан с этой конкретной операции `CHttpConnection` объект, созданный его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) для предоставления состояния операции, с помощью которого определяется. См. в статье [Интернет первые шаги: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
+ Override the `dwContext` default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CHttpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
- С помощью этой функции могут быть исключения.  
+ Exceptions may be thrown with this function.  
   
-## <a name="see-also"></a>См. также  
- [Класс CInternetConnection](../../mfc/reference/cinternetconnection-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CInternetConnection](../../mfc/reference/cinternetconnection-class.md)   
- [Класс CHttpFile](../../mfc/reference/chttpfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CHttpFile Class](../../mfc/reference/chttpfile-class.md)
 

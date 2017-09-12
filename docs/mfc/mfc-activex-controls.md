@@ -1,123 +1,139 @@
 ---
-title: "Элементы управления ActiveX MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC ActiveX Controls (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [C++], MFC"
-  - "COleControl - класс, MFC ActiveX - элементы управления"
-  - "контейнеры [C++], MFC ActiveX - элементы управления"
-  - "съемы подготовки к отправке, для элементов управления ActiveX MFC"
-  - "события [C++], Элементы управления ActiveX"
-  - "элементы управления MFC ActiveX [C++]"
-  - "элементы управления MFC ActiveX [C++], активное и неактивное состояние"
-  - "элементы управления MFC ActiveX [C++], контейнеры"
-  - "элементы управления MFC ActiveX [C++], сериализация"
-  - "сериализация [C++], MFC ActiveX - элементы управления"
+title: MFC ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC ActiveX Controls (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleControl class [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], MFC
+- containers [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], serializing
+- MFC ActiveX controls [MFC], containers
+- serialization [MFC], MFC ActiveX controls
+- dispatch maps [MFC]], for MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- events [MFC], ActiveX controls
+- MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Элементы управления ActiveX MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a584f1787c8ee5a3bb28cb3b336a138cb9f56f54
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Элемент управления ActiveX ― это многократно используемый компонент программы, основанный на модели COM, который поддерживает широкий диапазон функциональных возможностей OLE и может быть настроен для соответствия многим потребностям программного обеспечения.  Элементы управления ActiveX разработаны для использования и обычных контейнерах элементов управления ActiveX и в Интернете, на страницах веб\-форм.  Можно создать элементы управления ActiveX или с MFC, описанный здесь, или с помощью [Библиотека шаблонных классов ATL \(ATL\)](../atl/active-template-library-atl-concepts.md).  
+---
+# <a name="mfc-activex-controls"></a>MFC ActiveX Controls
+An ActiveX control is a reusable software component based on the Component Object Model (COM) that supports a wide variety of OLE functionality and can be customized to fit many software needs. ActiveX controls are designed for use both in ordinary ActiveX control containers and on the Internet, in World Wide Web pages. You can create ActiveX controls either with MFC, described here, or with the [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
- Элемент управления ActiveX может создавать в отдельном окне, реагирует на события \(например щелчки мышью\), и было управляемое через интерфейс, который содержит свойства и методы аналогично тем в объектах автоматизации.  
+ An ActiveX control can draw itself in its own window, respond to events (such as mouse clicks), and be managed through an interface that includes properties and methods similar to those in Automation objects.  
   
- Эти элементы управления можно разработать для многих используют, например доступ к базе данных, мониторинг данных или изображать диаграммой.  Помимо их ошибки, элементы управления ActiveX поддерживают функции еще не доступные для элементов управления ActiveX, например совместимость с существующими OLE\-контейнер и возможности интеграции их меню с меню OLE\-контейнер.  Кроме того, элемент управления ActiveX полностью поддерживает автоматизации, которая позволяет элементу управления к свойствам read\\write VBA и набор методов, которые могут быть вызваны пользователем элемента управления.  
+ These controls can be developed for many uses, such as database access, data monitoring, or graphing. Besides their portability, ActiveX controls support features previously not available to ActiveX controls, such as compatibility with existing OLE containers and the ability to integrate their menus with the OLE container menus. In addition, an ActiveX control fully supports Automation, which allows the control to expose read\write properties and a set of methods that can be called by the control user.  
   
- Можно создать безоконные элементы управления ActiveX и элементы управления, которые создают только окно, когда они становятся активными.  Безоконная скорость элементов управления с помощью отображения приложения и дает возможность иметь прозрачные и nonrectangular элементы управления.  Можно также свойства элемента управления ActiveX загрузки асинхронно.  
+ You can create windowless ActiveX controls and controls that only create a window when they become active. Windowless controls speed up the display of your application and make it possible to have transparent and nonrectangular controls. You can also load ActiveX control properties asynchronously.  
   
- Элемент управления ActiveX реализуется как внутрипроцессный сервер \(обычно\) — это объект, который можно использовать в любом OLE\-контейнер.  Обратите внимание, что полной функциональности элемента управления ActiveX доступна только при использовании в OLE\-контейнер учитывать созданное для элементов управления ActiveX.  В разделе [Элементы управления ActiveX порта из других приложений](../Topic/Containers%20for%20ActiveX%20Controls.md) для списка контейнеров, которые поддерживают элементы управления ActiveX.  Этот тип с именем контейнера, «контейнером элементов управления,» может при операциях элемент управления ActiveX с помощью свойств и методов элемента управления, и получения уведомлений от элемента управления ActiveX в форме событий.  На следующем рисунке показано взаимодействие.  
+ An ActiveX control is implemented as an in-process server (typically a small object) that can be used in any OLE container. Note that the full functionality of an ActiveX control is available only when used within an OLE container designed to be aware of ActiveX controls. See [Port ActiveX Controls to Other Applications](../mfc/containers-for-activex-controls.md) for a list of containers that support ActiveX controls. This container type, hereafter called a "control container," can operate an ActiveX control by using the control's properties and methods, and receives notifications from the ActiveX control in the form of events. The following figure demonstrates this interaction.  
   
- ![Взаимодействие элемента управления ActiveX и его контейнера](../mfc/media/vc37221.png "vc37221")  
-Взаимодействие между версией контейнера элементов управления ActiveX и элемент управления ActiveX Windowed  
+ ![Interplay of ActiveX control container and control](../mfc/media/vc37221.gif "vc37221")  
+Interaction Between an ActiveX Control Container and a Windowed ActiveX Control  
   
- Для некоторых последние сведения о оптимизировать элементов управления ActiveX см. в разделе [Элементы управления ActiveX MFC. Оптимизация](../mfc/mfc-activex-controls-optimization.md).  
+ For some recent information on optimizing your ActiveX controls, see [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- Для создания элемента управления ActiveX MFC см. в разделе [Создание проекта элемента управления ActiveX](../mfc/reference/mfc-activex-control-wizard.md).  
+ To create an MFC ActiveX control, see [Create an ActiveX control project](../mfc/reference/mfc-activex-control-wizard.md).  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Контейнеры элементов управления ActiveX](../mfc/activex-control-containers.md)  
+-   [ActiveX Control Containers](../mfc/activex-control-containers.md)  
   
--   [Активные документы](../Topic/Active%20Documents.md)  
+-   [Active Documents](../mfc/active-documents.md)  
   
--   [Использование элементов управления ActiveX](../Topic/Using%20ActiveX%20Controls.md)  
+-   [Understanding ActiveX Controls](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
   
--   [\<caps:sentence id\="tgt23" sentenceid\="e07c7a1ebdac21120a91f75018670c81" class\="tgtSentence"\>Описание элементов управления ActiveX\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
+-   [Upgrading an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Обновление существующего элемента управления ActiveX, используемый в Интернете](../Topic/Upgrading%20an%20Existing%20ActiveX%20Control.md)  
+##  <a name="_core_basic_components_of_an_activex_control"></a> Basic Components of an ActiveX Control  
+ An ActiveX control uses several programmatic elements to interact efficiently with a control container and with the user. These are class [COleControl](../mfc/reference/colecontrol-class.md), a set of event-firing functions, and a dispatch map.  
   
-##  <a name="_core_basic_components_of_an_activex_control"></a> Базовые компоненты элемент управления ActiveX  
- Элемент управления ActiveX используется несколько программируемых элементов, чтобы эффективно взаимодействовать с контейнером элементов управления и с пользователем.  Эти класс [COleControl](../mfc/reference/colecontrol-class.md), набор функций события включения и схемы подготовки к сообщению.  
+ Every ActiveX control object you develop inherits a powerful set of features from its MFC base class, `COleControl`. These features include in-place activation, and Automation logic. `COleControl` can provide the control object with the same functionality as an MFC window object, plus the ability to fire events. `COleControl` can also provide [windowless controls](../mfc/providing-windowless-activation.md), which rely on their container for help with some of the functionality a window provides (mouse capture, keyboard focus, scrolling), but offer much faster display.  
   
- Каждый объект элемента управления ActiveX разрабатывается наследует мощный набор функций из базового класса MFC, `COleControl`.  Эти функции включают встроенной активации и сценарий автоматизации.  `COleControl` может предоставить объект управления с одной и той же функции, что и объект окна MFC, а также возможность порождать события.  `COleControl` может также включать [безоконные элементы управления](../mfc/providing-windowless-activation.md), которые используют их контейнере для справки с определенной функции из окна предоставляет \(захват мыши, фокус клавиатуры, прокрутя\), но отображении предложения намного быстрее.  
+ Because the control class derives from `COleControl`, it inherits the capability to send, or "fire," messages, called events, to the control container when certain conditions are met. These events are used to notify the control container when something important happens in the control. You can send additional information about an event to the control container by attaching parameters to the event. For more information about ActiveX control events, see the article [MFC ActiveX Controls: Events](../mfc/mfc-activex-controls-events.md).  
   
- Поскольку класс элемента управления является производным от `COleControl`, он наследует возможность отправлять или увольняйте «,» сообщения, называемые событиями, в контейнер элементов управления, когда некоторые условия.  Эти события используются для оповещения контейнер элементов управления, когда происходит что\-то важное в элементе управления.  Можно отправлять дополнительную информацию о событии в контейнер элементов управления, вложение параметры к событию.  События элементов управления ActiveX Дополнительные сведения о см. в статье [Элементы управления ActiveX MFC. События](../mfc/mfc-activex-controls-events.md).  
+ The final element is a dispatch map, which is used to expose a set of functions (called methods) and attributes (called properties) to the control user. Properties allow the control container or the control user to manipulate the control in various ways. The user can change the appearance of the control, change certain values of the control, or make requests of the control, such as accessing a specific piece of data that the control maintains. This interface is determined by the control developer and is defined using **Class View**. For more information on ActiveX control methods and properties, see the articles [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md) and [Properties](../mfc/mfc-activex-controls-properties.md).  
   
- Последний элемент схемы подготовки к сообщению, которая используется для предоставления набора вызываемых функций \(методы\) и вызываемых атрибутов \(свойств\) пользователю элемента управления.  Свойства позволяют контейнер элементов управления или пользователь элемента управления для управления элемент управления различными способами.  Пользователи могут изменять внешний вид элемента управления, изменить некоторые значения элементов управления или делать запросы из элемента управления, как получить определенный фрагмент данных, который поддерживает элемент управления.  Этот интерфейс определяется разработчиком элементов управления и определяется с помощью **Представление классов**.  Дополнительные сведения о методах и свойствах элементов управления ActiveX см. в статье [Элементы управления ActiveX MFC. Методы](../mfc/mfc-activex-controls-methods.md) и [Свойства](../mfc/mfc-activex-controls-properties.md).  
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interaction Between Controls with Windows and ActiveX Control Containers  
+ When a control is used within a control container, it uses two mechanisms to communicate: it exposes properties and methods, and it fires events. The following figure demonstrates how these two mechanisms are implemented.  
   
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Взаимодействие между элементами управления с Windows и контейнерами для элементов управления ActiveX  
- Если используется элемент управления в контейнере элементов управления, используется 2 механизма для передачи: он предоставляет свойства и методы, и он вызывает события.  На следующем рисунке показано, как эти 2 механизма реализованы.  
+ ![ActiveX control communicates with its container](../mfc/media/vc37222.gif "vc37222")  
+Communication Between an ActiveX Control Container and an ActiveX Control  
   
- ![Элемент управления ActiveX взаимодействует со своим контейнером](../mfc/media/vc37222.png "vc37222")  
-Связь между версией контейнера элементов управления ActiveX и элемент управления ActiveX  
+ The previous figure also illustrates how other OLE interfaces (besides automation and events) are handled by controls.  
   
- На предыдущем рисунке также показано, как других интерфейсов OLE \(помимо автоматизации и событий\) обрабатываются элементами управления.  
+ All of a control's communication with the container is performed by `COleControl`. To handle some of the container's requests, **COleControl** will call member functions that are implemented in the control class. All methods and some properties are handled in this way. Your control's class can also initiate communication with the container by calling member functions of `COleControl`. Events are fired in this manner.  
   
- Все взаимодействия с контейнером элемента управления выполняется `COleControl`.  Для обработки некоторых запросов контейнера функция **COleControl**  вызывает функции\-члены, реализованные в классе элемента управления.  Все методы и некоторые свойства обрабатываются таким образом.  Класс элемента управления также может начать сообщение с контейнером путем вызова функции\-члены `COleControl`.  События инициируемых таким образом.  
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Active and Inactive States of an ActiveX Control  
+ A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Активные и неактивные состояния элемента управления ActiveX  
- Элемент управления имеет 2 основных состояния: активным или неактивный.  Обычно эти состояния различаются по дополнительным символом, были ли элемент управления окно.  Активный элемент управления, окно; неактивный элемент управления не выполнялось.  С введением безоконной активации, это различие больше не всеобщее, но по\-прежнему применяется ко многим элементам управления.  
+ When a [windowless control](../mfc/providing-windowless-activation.md) goes active, it invokes mouse capture, keyboard focus, scrolling, and other window services from its container. You can also [provide mouse interaction to inactive controls](../mfc/providing-mouse-interaction-while-inactive.md), as well as create controls that [wait until activated to create a window](../mfc/turning-off-the-activate-when-visible-option.md).  
   
- Если [элемент управления безоконный](../mfc/providing-windowless-activation.md) становится активным, он вызывает захват мыши, фокус клавиатуры, прокрутку и другие службы окна из контейнера.  Можно также [реализуйте мышью неактивные элементы управления](../Topic/Providing%20Mouse%20Interaction%20While%20Inactive.md), так и создайте элементы управления, [дождитесь активированы для создания окна](../mfc/turning-off-the-activate-when-visible-option.md).  
+ When a control with a window becomes active, it is able to interact fully with the control container, the user, and Windows. The figure below demonstrates the paths of communication between the ActiveX control, the control container, and the operating system.  
   
- Если элемент управления с окном становится активным, он может полностью взаимодействовать с контейнером элементов управления, пользователем, и Windows.  На рисунке ниже показаны пути обмена данными между элемента управления ActiveX, контейнером элементов управления и операционной системой.  
+ ![Msg processing in active windowed ActiveX control](../mfc/media/vc37223.gif "vc37223")  
+Windows Message Processing in a Windowed ActiveX Control (When Active)  
   
- ![Обработка сообщений в элементе управления ActiveX активного окна](../mfc/media/vc37223.png "vc37223")  
-Обработка сообщений Windows в элемент управления ActiveX Windowed \(когда активный\)  
+##  <a name="_core_serializing_activex_elements"></a> Serialization  
+ The ability to serialize data, sometimes referred to as persistence, allows the control to write the value of its properties to persistent storage. Controls can then be recreated by reading the object's state from the storage.  
   
-##  <a name="_core_serializing_activex_elements"></a> Сериализация  
- Возможность сериализации данных, иногда называемые постоянство, позволяет элементу управления для записи значения его свойств в постоянное хранилище.  Элементы управления могут затем быть воссозданы прочитав состояние объекта из хранилища.  
+ Note that a control is not responsible for obtaining access to the storage medium. Instead, the control's container is responsible for providing the control with a storage medium to use at the appropriate times. For more information on serialization, see the article [MFC ActiveX Controls: Serializing](../mfc/mfc-activex-controls-serializing.md). For information on optimizing serialization, see [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md) in ActiveX Controls: Optimization.  
   
- Обратите внимание, что элемент управления не отвечает за получение доступа к носителю записи.  Вместо этого контейнер элемента управления отвечает за предоставление элемента управления с носителем записи для использования в соответствующие моменты.  Дополнительные сведения о сериализации см. в статье [Элементы управления ActiveX MFC. Сериализация](../mfc/mfc-activex-controls-serializing.md).  Сведения о оптимизировать сериализации см. в разделе [Оптимизировать сохранение и инициализация](../mfc/optimizing-persistence-and-initialization.md) в элементах управления ActiveX. Оптимизация.  
+##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installing ActiveX Control Classes and Tools  
+ When you install Visual C++, the MFC ActiveX control classes and retail and debug ActiveX control run-time DLLs are automatically installed if ActiveX controls are selected in Setup (they are selected by default).  
   
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> Установка классы и средства элемент управления ActiveX  
- При размещении Visual C\+\+, классы retail элемента управления ActiveX MFC и начните отладку элемента управления ActiveX времени выполнения DLL автоматически устанавливаются, если элементы управления ActiveX выбранные в настройке, они выделены \(по умолчанию\).  
+ By default, the ActiveX control classes and tools are installed in the following subdirectories under \Program Files\Microsoft Visual Studio .NET:  
   
- По умолчанию классы элементов управления ActiveX и средства устанавливаются в следующих вложенных каталогах в \\Program Files\\Microsoft Visual Studio .NET.  
+-   **\Common7\Tools**  
   
--   **\\Common7\\Tools**  
+     Contains the Test Container files (TstCon32.exe, as well as its Help files).  
   
-     Содержит файлы тестового контейнера \(TstCon32.exe, так и его файлы справки\).  
+-   **\Vc7\atlmfc\include**  
   
--   **\\Vc7\\atlmfc\\include**  
+     Contains the include files needed to develop ActiveX controls with MFC  
   
-     Включение содержит файлы, необходимые для разработки элементов управления ActiveX с MFC  
+-   **\Vc7\atlmfc\src\mfc**  
   
--   **\\Vc7\\atlmfc\\src\\mfc**  
+     Contains the source code for specific ActiveX control classes in MFC  
   
-     Содержит исходный код для определенных классов элементов управления ActiveX в MFC  
+-   **\Vc7\atlmfc\lib**  
   
--   **\\Vc7\\atlmfc\\lib**  
+     Contains the libraries required to develop ActiveX controls with MFC  
   
-     Содержит библиотек, необходимые для разработки элементов управления ActiveX с MFC  
+ There are also samples for MFC ActiveX controls. For more information about these samples, see [Controls Samples: MFC-Based ActiveX Controls](../visual-cpp-samples.md)  
   
- Также примеры для элементов управления ActiveX MFC.  Дополнительные сведения о эти примеры см. в разделе [Примеры элементов управления: Элементы управления ActiveX на основе MFC](../top/visual-cpp-samples.md)  
-  
-## См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

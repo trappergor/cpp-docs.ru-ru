@@ -1,52 +1,71 @@
 ---
-title: "Основы HTTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HTTP-запросы, коды возврата"
-  - "HTTP, коды возврата"
-  - "коды возврата"
+title: HTTP Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTTP [MFC], return codes
+- return codes [MFC]
+- HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Основы HTTP
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb737fbca0bccb35ea6038d6279dadb064ca2328
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При написании приложения в интернете необходимо часто проверяются и добавить к сведениям в заголовке HTTP.  Коды возврата указывают успех или неудача запрошенный события.  Несколько общих кодов возврата, перечислены в следующей таблице.  
+---
+# <a name="http-basics"></a>HTTP Basics
+When writing an internet application, you often examine and add to the information in HTTP header. Return codes indicate the success or failure of the requested event. Several common return codes are listed in the following table.  
   
-|Код возврата|Значение|  
-|------------------|--------------|  
-|200|URL\-адрес, расположенное после передачи|  
-|400|Неразборчивый запрос|  
-|404|Не найден запрошенный URL\-адреса|  
-|405|Сервер не поддерживает запрошенный метод|  
-|500|Неизвестная ошибка сервера|  
-|503|Служба недоступна|  
+|Return Code|Meaning|  
+|-----------------|-------------|  
+|200|URL located, transmission follows|  
+|400|Unintelligible request|  
+|404|Requested URL not found|  
+|405|Server does not support requested method|  
+|500|Unknown server error|  
+|503|Service unavailable|  
   
- Ответы HTTP группированы, как показано в следующей таблице.  
+ The HTTP responses are grouped as shown in the following table.  
   
-|Группа|Значение|  
-|------------|--------------|  
-|200–299|Success|  
-|300–399|Сведения|  
-|400–499|Ошибка запроса|  
-|500–599|Ошибка сервера|  
+|Group|Meaning|  
+|-----------|-------------|  
+|200-299|Success|  
+|300-399|Information|  
+|400-499|Request error|  
+|500-599|Server error|  
   
- Протокол HTTP \(HTTP\) уровня протокола для ИТ\-службы hypermedia.  Дополнительные сведения о HTTP и как веб\-браузер и серверы взаимодействуют см. в спецификации протокола HTTP \(HTTP\).  
+ The Hypertext Transfer Protocol (HTTP) is an application-level protocol for hypermedia information systems. For more information about HTTP, and how Web browsers and servers communicate, see the Hypertext Transfer Protocol (HTTP) specification:  
   
- [http:\/\/www.w3.org\/pub\/WWW\/Protocols\/](http://www.w3.org/pub/WWW/Protocols/)  
+ [http://www.w3.org/pub/WWW/Protocols/](http://www.w3.org/pub/www/protocols/)  
   
-## См. также  
- [Основы программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

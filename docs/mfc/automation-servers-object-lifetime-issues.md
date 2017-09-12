@@ -1,42 +1,61 @@
 ---
-title: "Серверы автоматизации. Вопросы времени жизни объектов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Серверы автоматизации, время существования объекта"
-  - "время существования, сервер автоматизации"
-  - "объекты [C++], время существования"
-  - "серверы, время жизни автоматизации"
+title: 'Automation Servers: Object-Lifetime Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], lifetime
+- lifetime, automation server
+- Automation servers, object lifetime
+- servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Серверы автоматизации. Вопросы времени жизни объектов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ffb133e595e8367b2c454e2c77b3e453d65f4afe
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Когда клиент автоматизации создает или активировать элемент OLE, сервер передает клиентом указатель на этот объект.  Клиент задает ссылку на объект OLE через вызов функции [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  Эта ссылка действует до тех пор, пока клиент не вызовет [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). \(Клиентским приложениям, созданном с класс OLE библиотеки Microsoft Foundation Class не требуется выполнять эти; платформа выполняется\). Система сама OLE и сервер могут устанавливать ссылки на объект.  Сервер не должен удалить объект, если внешние ссылки на объект остаются действительными.  
+---
+# <a name="automation-servers-object-lifetime-issues"></a>Automation Servers: Object-Lifetime Issues
+When an Automation client creates or activates an OLE item, the server passes the client a pointer to that object. The client establishes a reference to the object through a call to the OLE function [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). This reference is in effect until the client calls [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Client applications written with the Microsoft Foundation Class Library's OLE classes need not make these calls; the framework does so.) The OLE system and the server itself may establish references to the object. A server should not destroy an object as long as external references to the object remain in effect.  
   
- Платформа поддерживает внутреннее количество ссылок на стороне сервера любой объект, производный от [CCmdTarget](../Topic/CCmdTarget%20Class.md).  Этот счетчик обновляется, когда клиент автоматизации или другую сущность добавляют и выпуски ссылку на объект.  
+ The framework maintains an internal count of the number of references to any server object derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md). This count is updated when an Automation client or other entity adds or releases a reference to the object.  
   
- Когда число ссылок будет 0 платформа вызывает виртуальная функция [CCmdTarget::OnFinalRelease](../Topic/CCmdTarget::OnFinalRelease.md).  Реализация по умолчанию этого вызовы функций оператор **удалить** для удаления этого объекта.  
+ When the reference count becomes 0, the framework calls the virtual function [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). The default implementation of this function calls the **delete** operator to delete this object.  
   
- Библиотеки Microsoft Foundation Class предоставляет дополнительные средства для управления расширения функциональности приложения во внешних клиентов имеются ссылки на объекты приложения.  Помимо сохранения числа ссылок к каждому объекту, серверы поддерживают глобальное число активных объектов.  Глобальные функции [AfxOleLockApp](../Topic/AfxOleLockApp.md) и [AfxOleUnlockApp](../Topic/AfxOleUnlockApp.md) в ходе обновления приложения число активных объектов.  Если это число отлично от нуля, приложение не заканчивается, когда пользователь выбирает закрыть меню или выхода из системы из меню "Файл".  Вместо этого главное окно приложения скрыто \(но не уничтоженному\) до тех пор, пока всех ожидающих запросов клиентов, не будут выполнены.  Как правило, `AfxOleLockApp` и `AfxOleUnlockApp` вызываются в конструкторах деструкторах и, соответственно, классов, поддержки автоматизации.  
+ The Microsoft Foundation Class Library provides additional facilities for controlling application behavior when external clients have references to the application's objects. Besides maintaining a count of references to each object, servers maintain a global count of active objects. The global functions [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) and [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) update the application's count of active objects. If this count is nonzero, the application does not terminate when the user chooses Close from the system menu or Exit from the File menu. Instead, the application's main window is hidden (but not destroyed) until all pending client requests have been completed. Typically, `AfxOleLockApp` and `AfxOleUnlockApp` are called in the constructors and destructors, respectively, of classes that support Automation.  
   
- В некоторых случаях выполнение сервер для выполнения пока клиент по\-прежнему содержит ссылку на объект.  Например, ресурс, на котором сервер зависит могут стать недоступными, что может возникнуть ошибка сервера.  Пользователь также может закрыть серверный документ, содержащий объекты, на которые ссылаются другие приложения.  
+ Sometimes circumstances force the server to terminate while a client still has a reference to an object. For example, a resource on which the server depends may become unavailable, causing the server to encounter an error. The user may also close a server document that contains objects to which other applications have references.  
   
- В [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] см. в разделе `IUnknown::AddRef` и `IUnknown::Release`.  
+ In the Windows SDK, see `IUnknown::AddRef` and `IUnknown::Release`.  
   
-## См. также  
- [Серверы автоматизации](../mfc/automation-servers.md)   
- [AfxOleCanExitApp](../Topic/AfxOleCanExitApp.md)
+## <a name="see-also"></a>See Also  
+ [Automation Servers](../mfc/automation-servers.md)   
+ [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
+
+

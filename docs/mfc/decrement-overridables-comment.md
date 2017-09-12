@@ -1,48 +1,66 @@
 ---
-title: "// Комментарий переопределяемости | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "комментарии, MFC - библиотека"
-  - "исходные файлы MFC, Комментарий переопределяемости"
-  - "Комментарий переопределяемости в исходных файлах MFC"
-  - "переопределение, Комментарий переопределяемости в исходных файлах MFC"
+title: -- Overridables Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Overridables comment in MFC source files
+- MFC source files, Overridables comment
+- overriding, Overridables comment in MFC source files
+- comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Комментарий переопределяемости
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1c0031565dcc66b1db0c1f6ce35a4f7fc490da9f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Раздел `// Overridables` объявления классов MFC содержит виртуальные функции, может быть переопределен в производном классе, когда требуется изменить расширение функциональности базового класса.  Они обычно называются начинаться с " ON ", но не является строго обязательным.  Здесь функции должны быть переопределяемая и часто реализуют или предоставляющих определенную сортировки «обратного вызова» или «ядра». Как правило, эти члены защищены.  
+---
+# <a name="-overridables-comment"></a>// Overridables Comment
+The `// Overridables` section of an MFC class declaration contains virtual functions that you can override in a derived class when you need to modify the base class behavior. They are usually named starting with "On", although it is not strictly necessary. Functions here are designed to be overridden, and often implement or provide some sort of "callback" or "hook." Typically, these members are protected.  
   
- В самом MFC, чисто виртуальные функции всегда помещаются в этом разделе.  Чисто виртуальную функцию в C к одной из формы.  
+ In MFC itself, pure virtual functions are always placed in this section. A pure virtual function in C++ is one of the form:  
   
  `virtual void OnDraw( ) = 0;`  
   
- В списке примера из класса `CStdioFile`, в [Пример комментариев](../mfc/an-example-of-the-comments.md), список не содержит ни один раздел переопределяемых методов.  Класс **CDocument**, с другой стороны, перечислены приблизительно 10 функции\-члены переопределяемого метода.  
+ In the sample listing from class `CStdioFile`, in [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes no overridables section. Class **CDocument**, on the other hand, lists approximately 10 overridable member functions.  
   
- В некоторых классах, можно также просмотреть комментарий `// Advanced Overridables`.  Эти функции, только сложные программисты должны попытка для переопределения.  Вероятно, никогда не потребуется переопределить их.  
+ In some classes, you may also see the comment `// Advanced Overridables`. These are functions that only advanced programmers should attempt to override. You will probably never need to override them.  
   
 > [!NOTE]
->  Правила, описанные в этой статье также хорошо работают, как правило, для методов и свойств автоматизации \(ранее называвшейся ole\-автоматизацией\) или как.  Методы автоматизации аналогичны операций MFC.  Свойства автоматизации похожи на атрибуты MFC.  События автоматизации \(поддерживаются для элементов управления ActiveX, ранее как элементы управления OLE\) аналогичны функциям элемента переопределяемого метода MFC.  
+>  The conventions described in this article also work well, in general, for Automation (formerly known as OLE Automation) methods and properties. Automation methods are similar to MFC operations. Automation properties are similar to MFC attributes. Automation events (supported for ActiveX controls, formerly known as OLE controls) are similar to MFC overridable member functions.  
   
-## См. также  
- [Использование файлов с исходным кодом MFC](../Topic/Using%20the%20MFC%20Source%20Files.md)   
- [Пример комментариев](../mfc/an-example-of-the-comments.md)   
- [\/\/ Комментарий реализации](../mfc/decrement-implementation-comment.md)   
- [\/\/ Комментарий конструкторов](../mfc/decrement-constructors-comment.md)   
- [\/\/ Комментарий атрибутов](../Topic/--%20Attributes%20Comment.md)   
- [\/\/ Комментарий операций](../mfc/decrement-operations-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)
+
+

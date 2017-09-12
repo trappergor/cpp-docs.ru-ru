@@ -1,5 +1,5 @@
 ---
-title: "Страницы свойств (MFC) | Документы Microsoft"
+title: Property Pages (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
-- property pages, global MFC functions
+- property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
 caps.latest.revision: 14
 author: mikeblome
@@ -34,47 +34,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f8c11b8b59c2de16180173251b81e5f8fbbf35f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="property-pages-mfc"></a>Страницы свойств (MFC)
-Страницы свойств отображения текущих значений свойств элемента управления OLE в настраиваемый графический интерфейс для просмотра и редактирования, поддерживая механизм сопоставления данных, основанный на обмен данными (диалоговых окон DDX).  
+# <a name="property-pages-mfc"></a>Property Pages (MFC)
+Property pages display the current values of specific OLE control properties in a customizable, graphical interface for viewing and editing by supporting a data-mapping mechanism based on dialog data exchange (DDX).  
   
- Этот механизм сопоставления данных сопоставляет элементы управления страницы свойств отдельные свойства элемента управления OLE. Значение свойства элемента управления отражает состояние или содержимое элемента управления страницы свойств. Сопоставление элементов управления страницы свойств и свойств определяется **DDP_** вызывает функцию на странице свойств `DoDataExchange` функции-члена. Ниже приведен список **DDP_** функций, которые обмениваются данные, введенные с помощью страницы свойств элемента управления:  
+ This data-mapping mechanism maps property page controls to the individual properties of the OLE control. The value of the control property reflects the status or content of the property page control. The mapping between property page controls and properties is specified by **DDP_** function calls in the property page's `DoDataExchange` member function. The following is a list of **DDP_** functions that exchange data entered using the property page of your control:  
   
-### <a name="property-page-data-transfer"></a>Передача данных страницы свойств  
-  
-|||  
-|-|-|  
-|[DDP_CBIndex](#ddp_cbindex)|Связывает индекс выбранной строки в поле со списком со свойством элемента управления.|  
-|[DDP_CBString](#ddp_cbstring)|Связывает выбранную строку в поле со списком со свойством элемента управления. Можно начать с того же буквы как значение свойства выбранной строки, но не требуется полностью совпадают.|  
-|[DDP_CBStringExact](#ddp_cbstringexact)|Связывает выбранную строку в поле со списком со свойством элемента управления. Выбранной строки и значения свойства строки должны точно совпадать.|  
-|[DDP_Check](#ddp_check)|Связывает флажок на странице свойств элемента управления со свойством элемента управления.|  
-|[DDP_LBIndex](#ddp_lbindex)|Связывает индекс выбранной строки в поле со списком со свойством элемента управления.|  
-|[DDP_LBString](#ddp_lbstring)|Связывает выбранную строку в поле со списком со свойством элемента управления. Можно начать с того же буквы как значение свойства выбранной строки, но не должно соответствовать его полностью.|  
-|[DDP_LBStringExact](#ddp_lbstringexact)|Связывает выбранную строку в поле со списком со свойством элемента управления. Выбранной строки и значения свойства строки должны точно совпадать.|  
-|[DDP_PostProcessing](#ddp_postprocessing)|Завершает передачу значения свойств из элемента управления.|  
-|[DDP_Radio](#ddp_radio)|Ссылки в переключателе на странице свойств элемента управления со свойством элемента управления.|  
-|[DDP_Text](#ddp_text)|Элемент управления на странице свойств элемента управления со свойством элемента управления ссылками. Эта функция обрабатывает несколько различных типов свойств, таких как **двойные**, **короткие**, `BSTR`, и **длинные**.|  
-  
- Дополнительные сведения о `DoDataExchange` страницы функций и свойств, см. в статье [элементы управления ActiveX: страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).  
-  
- Ниже приведен список макросов, которые используются для создания и управления страниц свойств для элемента управления OLE.  
-  
-### <a name="property-pages"></a>Страницы свойств  
+### <a name="property-page-data-transfer"></a>Property Page Data Transfer  
   
 |||  
 |-|-|  
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Начинает список кодов страницы свойств.|  
-|[END_PROPPAGEIDS](#end_proppageids)|Завершает список кодов страницы свойств.|  
-|[PROPPAGEID](#proppageid)|Объявляет страницы свойств класса элемента управления.|  
+|[DDP_CBIndex](#ddp_cbindex)|Links the selected string's index in a combo box with a control's property.|  
+|[DDP_CBString](#ddp_cbstring)|Links the selected string in a combo box with a control's property. The selected string can begin with the same letters as the property's value but does not need to match it fully.|  
+|[DDP_CBStringExact](#ddp_cbstringexact)|Links the selected string in a combo box with a control's property. The selected string and the property's string value must match exactly.|  
+|[DDP_Check](#ddp_check)|Links a check box in the control's property page with a control's property.|  
+|[DDP_LBIndex](#ddp_lbindex)|Links the selected string's index in a list box with a control's property.|  
+|[DDP_LBString](#ddp_lbstring)|Links the selected string in a list box with a control's property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|[DDP_LBStringExact](#ddp_lbstringexact)|Links the selected string in a list box with a control's property. The selected string and the property's string value must match exactly.|  
+|[DDP_PostProcessing](#ddp_postprocessing)|Finishes the transfer of property values from your control.|  
+|[DDP_Radio](#ddp_radio)|Links a radio button group in the control's property page with a control's property.|  
+|[DDP_Text](#ddp_text)|Links a control in the control's property page with a control's property. This function handles several different types of properties, such as **double**, **short**, `BSTR`, and **long**.|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации с индекс текущего выделенного фрагмента в поле со списком на странице свойств значение свойства целого числа.  
+ For more information about the `DoDataExchange` function and property pages, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
+  
+ The following is a list of macros used to create and manage property pages for an OLE control:  
+  
+### <a name="property-pages"></a>Property Pages  
+  
+|||  
+|-|-|  
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Begins the list of property page IDs.|  
+|[END_PROPPAGEIDS](#end_proppageids)|Ends the list of property page IDs.|  
+|[PROPPAGEID](#proppageid)|Declares a property page of the control class.|  
+  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of an integer property with the index of the current selection in a combo box on the property page.  
   
 ```   
 void AFXAPI DDP_CBIndex(
@@ -84,27 +84,27 @@ void AFXAPI DDP_CBIndex(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса в поле со списком поле элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена со списком, определяемое `id`.  
+ The property name of the control property to be exchanged with the combo box control specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_CBIndex` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBIndex` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации с текущее выделение в поле со списком на странице свойств значение строкового свойства.  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property with the current selection in a combo box on the property page.  
   
 ```  
 void AFXAPI DDP_CBString(
@@ -114,27 +114,27 @@ void AFXAPI DDP_CBString(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса в поле со списком поле элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена на строки поле со списком, заданной параметром `id`.  
+ The property name of the control property to be exchanged with the combo box string specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_CBString` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBString` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации значение строковое свойство, точно соответствует текущее выделение в поле со списком на странице свойств.  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property that exactly matches the current selection in a combo box on the property page.  
   
 ```  
 void AFXAPI DDP_CBStringExact(
@@ -144,27 +144,27 @@ void AFXAPI DDP_CBStringExact(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса в поле со списком поле элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена на строки поле со списком, заданной параметром `id`.  
+ The property name of the control property to be exchanged with the combo box string specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_CBStringExact` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBStringExact` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_check"></a>DDP_Check  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации с управления "флажок" для связанного свойства страницы значение свойства.  
+##  <a name="ddp_check"></a>  DDP_Check  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of the property with the associated property page check box control.  
   
 ```   
 void AFXAPI DDP_Check(
@@ -174,27 +174,27 @@ void AFXAPI DDP_Check(
     LPCSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса для управления "флажок", связанный со свойством элемента управления `pszPropName`.  
+ The resource ID of the check box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена на элемент управления флажком, определяемое `id`.  
+ The property name of the control property to be exchanged with the check box control specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_Check` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Check` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации с индекс текущего выделенного фрагмента в списке на странице свойств значение свойства целого числа.  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of an integer property with the index of the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBIndex(
@@ -204,27 +204,27 @@ void AFXAPI DDP_LBIndex(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса в списке поле элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена на список поле строки `id`.  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_LBIndex` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBIndex` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации с текущее выделение в списке на странице свойств значение строкового свойства.  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property with the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBString(
@@ -234,27 +234,27 @@ void AFXAPI DDP_LBString(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса в списке поле элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена на список поле строки `id`.  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_LBString` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBString` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
- Эта функция вызывается на странице свойств `DoDataExchange` функции для синхронизации значение строковое свойство, точно соответствует текущее выделение в списке на странице свойств.  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property that exactly matches the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBStringExact(
@@ -264,46 +264,46 @@ void AFXAPI DDP_LBStringExact(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса в списке поле элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена на список поле строки `id`.  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_LBStringExact` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBStringExact` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
- Эта функция вызывается на странице свойств `DoDataExchange` функция завершения передачи значений свойств на странице свойств для элемента управления при сохранении значений свойств.  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
+ Call this function in your property page's `DoDataExchange` function, to finish the transfer of property values from the property page to your control when property values are being saved.  
   
 ```   
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию следует вызывать после завершения все функции обмена данными. Пример:  
+### <a name="remarks"></a>Remarks  
+ This function should be called after all data exchange functions are completed. For example:  
   
- [!code-cpp[NVC_MFCAxCtl&#15;](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
- Эта функция вызывается в элементе управления `DoPropExchange` функции для синхронизации с связанного свойства страницы переключателя значение свойства.  
+##  <a name="ddp_radio"></a>  DDP_Radio  
+ Call this function in your control's `DoPropExchange` function to synchronize the value of the property with the associated property page radio button control.  
   
 ```   
 void AFXAPI DDP_Radio(
@@ -313,27 +313,27 @@ void AFXAPI DDP_Radio(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса радио кнопки элемента управления, связанного со свойством элемента управления `pszPropName`.  
+ The resource ID of the radio button control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена с помощью переключателя, определяемое `id`.  
+ The property name of the control property to be exchanged with the radio button control specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_Radio` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Radio` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_text"></a>DDP_Text  
- Эта функция вызывается в элементе управления `DoDataExchange` функция синхронизации значение свойства с связанного свойства элемента управления страницы.  
+##  <a name="ddp_text"></a>  DDP_Text  
+ Call this function in your control's `DoDataExchange` function to synchronize the value of the property with the associated property page control.  
   
 ```   
 void AFXAPI DDP_Text(
@@ -385,78 +385,78 @@ void AFXAPI DDP_Text(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на `CDataExchange` объект. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Идентификатор ресурса для элемента управления, связанный со свойством элемента управления `pszPropName`.  
+ The resource ID of the control associated with the control property specified by `pszPropName`.  
   
  `member`  
- Связанные с управления страницы свойств, указанный в переменной-члена `id` и свойство, заданное параметром `pszPropName`.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- Имя свойства для свойства элемента управления для обмена с элементом управления, заданные `id`.  
+ The property name of the control property to be exchanged with the control specified by `id`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция должна вызываться до соответствующей `DDX_Text` вызов функции.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Text` function call.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
- Начинается определение списка элемента управления на странице свойств идентификаторов.  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
+ Begins the definition of your control's list of property page IDs.  
   
 ```   
 BEGIN_PROPPAGEIDS(class_name,  count)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- Имя класса элемента управления, какие свойства указаны страницы.  
+ The name of the control class for which property pages are being specified.  
   
  *count*  
- Количество страниц свойств, используемых класс элемента управления.  
+ The number of property pages used by the control class.  
   
-### <a name="remarks"></a>Примечания  
- В файле реализации (CPP), который определяет функции-члены класса, маркированный список свойств страницы с `BEGIN_PROPPAGEIDS` макрос, затем добавить макрос записи для каждой из страниц свойств и полный список страниц свойств с `END_PROPPAGEIDS` макрос.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the property page list with the `BEGIN_PROPPAGEIDS` macro, then add macro entries for each of your property pages, and complete the property page list with the `END_PROPPAGEIDS` macro.  
   
- Дополнительные сведения на страницах свойств см. в статье [элементы управления ActiveX: страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).  
+ For more information on property pages, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
- Завершает определение списка идентификатор страницы свойств.  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
+ Ends the definition of your property page ID list.  
   
 ```   
 END_PROPPAGEIDS(class_name)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- Имя класса элемента управления, которому принадлежит страница свойств.  
+ The name of the control class that owns the property page.  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
- Добавляет страницы свойств для использования элемента управления OLE.  
+##  <a name="proppageid"></a>  PROPPAGEID  
+ Adds a property page for use by your OLE control.  
   
 ```   
 PROPPAGEID(clsid)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- Идентификатор уникального класса страницы свойств.  
+ The unique class ID of a property page.  
   
-### <a name="remarks"></a>Примечания  
- Все `PROPPAGEID` макросы должны быть помещены между `BEGIN_PROPPAGEIDS` и `END_PROPPAGEIDS` макросы в файле реализации элемента управления.  
+### <a name="remarks"></a>Remarks  
+ All `PROPPAGEID` macros must be placed between the `BEGIN_PROPPAGEIDS` and `END_PROPPAGEIDS` macros in your control's implementation file.  
 
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
     
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

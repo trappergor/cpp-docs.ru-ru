@@ -1,5 +1,5 @@
 ---
-title: "CArray-класс | Документы Microsoft"
+title: CArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,10 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CArray class
-- arrays [C++], classes
-- templates, collection classes
-- collection classes, template-based
+- CArray [MFC], CArray
+- CArray [MFC], Add
+- CArray [MFC], Append
+- CArray [MFC], Copy
+- CArray [MFC], ElementAt
+- CArray [MFC], FreeExtra
+- CArray [MFC], GetAt
+- CArray [MFC], GetCount
+- CArray [MFC], GetData
+- CArray [MFC], GetSize
+- CArray [MFC], GetUpperBound
+- CArray [MFC], InsertAt
+- CArray [MFC], IsEmpty
+- CArray [MFC], RemoveAll
+- CArray [MFC], RemoveAt
+- CArray [MFC], SetAt
+- CArray [MFC], SetAtGrow
+- CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 caps.latest.revision: 33
 author: mikeblome
@@ -55,297 +69,297 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d76790072babb607c223937d9c9dae67f90d50b5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94fdb7947d1ef7e993a47b9a55e9faf5903d3d2c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="carray-class"></a>CArray-класс
-Поддерживает массивы, которые похожи на массивы C, но позволяет динамически снизить и уменьшаться по мере необходимости.  
+# <a name="carray-class"></a>CArray Class
+Supports arrays that are like C arrays, but can dynamically reduce and grow as necessary.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class TYPE, class ARG_TYPE = const TYPE&>  
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `TYPE`  
- Параметр шаблона, который указывает тип объектов, хранящихся в массиве. `TYPE`— параметр, который возвращается методом `CArray`.  
+ Template parameter that specifies the type of objects stored in the array. `TYPE` is a parameter that is returned by `CArray`.  
   
  `ARG` *_* `TYPE`  
- Параметр шаблона, определяющий тип аргумента, который используется для доступа к объектам, которые хранятся в массиве. Часто ссылку на `TYPE`. `ARG_TYPE`— Это параметр, передаваемый `CArray`.  
+ Template parameter that specifies the argument type that is used to access objects stored in the array. Often a reference to `TYPE`. `ARG_TYPE` is a parameter that is passed to `CArray`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArray::CArray](#carray)|Создает пустой массив.|  
+|[CArray::CArray](#carray)|Constructs an empty array.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArray::Add](#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
-|[CArray::Append](#append)|Добавляет другой массив массива. размер массива увеличивается при необходимости|  
-|[CArray::Copy](#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|  
-|[CArray::ElementAt](#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|  
-|[CArray::FreeExtra](#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|  
-|[CArray::GetAt](#getat)|Возвращает значение по указанному индексу.|  
-|[CArray::GetCount](#getcount)|Возвращает количество элементов в массиве.|  
-|[CArray::GetData](#getdata)|Разрешает доступ к элементам в массиве. Может быть **NULL**.|  
-|[CArray::GetSize](#getsize)|Возвращает количество элементов в массиве.|  
-|[CArray::GetUpperBound](#getupperbound)|Возвращает самый большой допустимый индекс.|  
-|[CArray::InsertAt](#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|  
-|[CArray::IsEmpty](#isempty)|Определяет, пуст ли массив.|  
-|[CArray::RemoveAll](#removeall)|Удаляет все элементы из этого массива.|  
-|[CArray::RemoveAt](#removeat)|Удаляет элемент по указанному индексу.|  
-|[CArray::SetAt](#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|  
-|[CArray::SetAtGrow](#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|  
-|[CArray::SetSize](#setsize)|Задает число элементов, которые будут храниться в этом массиве.|  
+|[CArray::Add](#add)|Adds an element to the end of the array; grows the array if necessary.|  
+|[CArray::Append](#append)|Appends another array to the array; grows the array if necessary|  
+|[CArray::Copy](#copy)|Copies another array to the array; grows the array if necessary.|  
+|[CArray::ElementAt](#elementat)|Returns a temporary reference to the element pointer within the array.|  
+|[CArray::FreeExtra](#freeextra)|Frees all unused memory above the current upper bound.|  
+|[CArray::GetAt](#getat)|Returns the value at a given index.|  
+|[CArray::GetCount](#getcount)|Gets the number of elements in this array.|  
+|[CArray::GetData](#getdata)|Allows access to elements in the array. Can be **NULL**.|  
+|[CArray::GetSize](#getsize)|Gets the number of elements in this array.|  
+|[CArray::GetUpperBound](#getupperbound)|Returns the largest valid index.|  
+|[CArray::InsertAt](#insertat)|Inserts an element (or all the elements in another array) at a specified index.|  
+|[CArray::IsEmpty](#isempty)|Determines whether the array is empty.|  
+|[CArray::RemoveAll](#removeall)|Removes all the elements from this array.|  
+|[CArray::RemoveAt](#removeat)|Removes an element at a specific index.|  
+|[CArray::SetAt](#setat)|Sets the value for a given index; array not allowed to grow.|  
+|[CArray::SetAtGrow](#setatgrow)|Sets the value for a given index; grows the array if necessary.|  
+|[CArray::SetSize](#setsize)|Sets the number of elements to be contained in this array.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[operator&#91;&#93;](#operator_at)|Получает или задает элемент с указанным индексом.|  
+|[operator&#91;&#93;](#operator_at)|Sets or gets the element at the specified index.|  
   
-## <a name="remarks"></a>Примечания  
- Индексы массива всегда начинаются в позиции 0. Можно решить, будет ли исправить верхнюю границу или включить массива для развертывания при добавлении элементов за пределами текущей привязки. Последовательно выделяется память для верхней границы, даже если некоторые элементы имеют значение null.  
+## <a name="remarks"></a>Remarks  
+ Array indexes always start at position 0. You can decide whether to fix the upper bound or enable the array to expand when you add elements past the current bound. Memory is allocated contiguously to the upper bound, even if some elements are null.  
   
 > [!NOTE]
->  Большинство методов, размер которых `CArray` объекта или добавить элементы к нему используют [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) для перемещения элементов. Это является проблемой, так как `memcpy_s` не совместим с все объекты, которые требуют вызываемый конструктор. Если элементы в `CArray` не совместимы с `memcpy_s`, необходимо создать новый `CArray` соответствующего размера. После этого необходимо использовать [CArray::Copy](#copy) и [CArray::SetAt](#setat) для заполнения нового массива, так как эти методы используют оператор присваивания вместо `memcpy_s`.  
+>  Most methods that resize a `CArray` object or add elements to it use [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) to move elements. This is a problem because `memcpy_s` is not compatible with any objects that require the constructor to be called. If the items in the `CArray` are not compatible with `memcpy_s`, you must create a new `CArray` of the appropriate size. You must then use [CArray::Copy](#copy) and [CArray::SetAt](#setat) to populate the new array because those methods use an assignment operator instead of `memcpy_s`.  
   
- Как и в случае с массивом C времени доступа к `CArray` индексированного элемента является константой и не зависит от размера массива.  
+ As with a C array, the access time for a `CArray` indexed element is constant and is independent of the array size.  
   
 > [!TIP]
->  Перед работой с массивом используйте [SetSize](#setsize) определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  
+>  Before using an array, use [SetSize](#setsize) to establish its size and allocate memory for it. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- Если вам требуется дамп отдельных элементов в массиве, необходимо задать глубину [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 1 или большего размера объекта.  
+ If you need a dump of individual elements in an array, you must set the depth of the [CDumpContext](../../mfc/reference/cdumpcontext-class.md) object to 1 or larger.  
   
- Некоторые функции-члены этого класса вызова глобальных вспомогательные функции, следует настроить для использования большинства `CArray` класса. См. в разделе [вспомогательные функции классов коллекции](../../mfc/reference/collection-class-helpers.md) в разделе макросов MFC и глобальные переменные.  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CArray` class. See the topic [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the MFC Macros and Globals section.  
   
- Массив производного класса аналогично вывода списка.  
+ Array class derivation is like list derivation.  
   
- Дополнительные сведения об использовании `CArray`, см. в статье [коллекции](../../mfc/collections.md).  
+ For more information about how to use `CArray`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CArray`  
   
-## <a name="requirements"></a>Требования  
- `Header:`afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ `Header:` afxtempl.h  
   
-##  <a name="add"></a>CArray::Add  
- Добавляет новый элемент в конец массива, увеличение массива на 1.  
+##  <a name="add"></a>  CArray::Add  
+ Adds a new element to the end of an array, growing the array by 1.  
   
 ```  
 INT_PTR Add(ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ARG_TYPE`  
- Параметр шаблона, указывающий тип аргументов, создание ссылок на элементы в этом массиве.  
+ Template parameter specifying the type of arguments referencing elements in this array.  
   
  `newElement`  
- Элемент, добавляемый в этот массив.  
+ The element to be added to this array.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Индекс добавленного элемента.  
+### <a name="return-value"></a>Return Value  
+ The index of the added element.  
   
-### <a name="remarks"></a>Примечания  
- Если [SetSize](#setsize) был использован с `nGrowBy` значение больше 1, то дополнительная память может выделяться. Тем не менее значение верхней границы увеличивается на 1 только.  
+### <a name="remarks"></a>Remarks  
+ If [SetSize](#setsize) has been used with an `nGrowBy` value greater than 1, then extra memory may be allocated. However, the upper bound will increase by only 1.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="append"></a>CArray::Append  
- Вызовите эту функцию-член для добавления содержимого одного массива в другой конец.  
+##  <a name="append"></a>  CArray::Append  
+ Call this member function to add the contents of one array to the end of another.  
   
 ```  
 INT_PTR Append(const CArray& src);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *src*  
- Источник элементов, добавляемых в массив.  
+ Source of the elements to be appended to an array.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Индекс первый добавленный элемент.  
+### <a name="return-value"></a>Return Value  
+ The index of the first appended element.  
   
-### <a name="remarks"></a>Примечания  
- Массивы должны быть одного типа.  
+### <a name="remarks"></a>Remarks  
+ The arrays must be of the same type.  
   
- При необходимости **Append** может выделить дополнительный объем памяти для размещения элементов, добавляемый в конец массива.  
+ If necessary, **Append** may allocate extra memory to accommodate the elements appended to the array.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="carray"></a>CArray::CArray  
- Создает пустой массив.  
+##  <a name="carray"></a>  CArray::CArray  
+ Constructs an empty array.  
   
 ```  
 CArray();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Массив растет одного элемента за раз.  
+### <a name="remarks"></a>Remarks  
+ The array grows one element at a time.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="copy"></a>CArray::Copy  
- Используйте эту функцию-член для копирования элементов одного массива в другой.  
+##  <a name="copy"></a>  CArray::Copy  
+ Use this member function to copy the elements of one array to another.  
   
 ```  
 void Copy(const CArray& src);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *src*  
- Источник элементов, копируемых в массив.  
+ Source of the elements to be copied to an array.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите эту функцию-член для перезаписи элементы одного массива с элементами другого массива.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to overwrite the elements of one array with the elements of another array.  
   
- **Копировать** не освобождает память, однако при необходимости **копирования** может выделить дополнительный объем памяти для размещения элементов, копируемых в массив.  
+ **Copy** does not free memory; however, if necessary, **Copy** may allocate extra memory to accommodate the elements copied to the array.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CArray::ElementAt  
- Возвращает временную ссылку на указанный элемент в массиве.  
+##  <a name="elementat"></a>  CArray::ElementAt  
+ Returns a temporary reference to the specified element within the array.  
   
 ```  
 TYPE& ElementAt(INT_PTR nIndex);  
 const TYPE& ElementAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного [GetUpperBound](#getupperbound).  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на элемент массива.  
+### <a name="return-value"></a>Return Value  
+ A reference to an array element.  
   
-### <a name="remarks"></a>Примечания  
- Он используется для реализации оператор слева от оператора присваивания для массивов.  
+### <a name="remarks"></a>Remarks  
+ It is used to implement the left-side assignment operator for arrays.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [GetSize](#getsize).  
+### <a name="example"></a>Example  
+  See the example for [GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CArray::FreeExtra  
- Освобождает все дополнительную память, выделенную пока массива был увеличил.  
+##  <a name="freeextra"></a>  CArray::FreeExtra  
+ Frees any extra memory that was allocated while the array was grown.  
   
 ```  
 void FreeExtra();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не оказывает влияния на размер или верхней границы массива.  
+### <a name="remarks"></a>Remarks  
+ This function has no effect on the size or upper bound of the array.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [GetData](#getdata).  
+### <a name="example"></a>Example  
+  See the example for [GetData](#getdata).  
   
-##  <a name="getat"></a>CArray::GetAt  
- Возвращает элемент массива по указанному индексу.  
+##  <a name="getat"></a>  CArray::GetAt  
+ Returns the array element at the specified index.  
   
 ```  
 TYPE& GetAt(INT_PTR nIndex);  
 const TYPE& GetAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, задающее тип элементов массива.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the array elements.  
   
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного [GetUpperBound](#getupperbound).  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Элемент массива, в настоящее время по этому индексу.  
+### <a name="return-value"></a>Return Value  
+ The array element currently at this index.  
   
-### <a name="remarks"></a>Примечания  
- Передача отрицательное значение или значение больше, чем значение, возвращаемое `GetUpperBound` приведет к утверждение, вызвавшее сбой.  
+### <a name="remarks"></a>Remarks  
+ Passing a negative value or a value greater than the value returned by `GetUpperBound` will result in a failed assertion.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CArray::GetCount  
- Возвращает число элементов массива.  
+##  <a name="getcount"></a>  CArray::GetCount  
+ Returns the number of array elements.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество элементов в массиве.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the array.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается для получения количества элементов в массиве. Так как индексы отсчитываются от нуля, размер составляет 1 больше, чем наибольший индекс. Вызов этого метода будет создавать один и тот же результат как [CArray::GetSize](#getsize) метод.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the array. Because indexes are zero-based, the size is 1 greater than the largest index. Calling this method will generate the same result as the [CArray::GetSize](#getsize) method.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CArray::GetData  
- Используйте эту функцию-член для прямого доступа к элементам в массиве.  
+##  <a name="getdata"></a>  CArray::GetData  
+ Use this member function to gain direct access to the elements in an array.  
   
 ```  
 const TYPE* GetData() const; 
 TYPE* GetData();
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, задающее тип элементов массива.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the array elements.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент массива.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an array element.  
   
-### <a name="remarks"></a>Примечания  
- Если нет элементов, `GetData` возвращает значение null.  
+### <a name="remarks"></a>Remarks  
+ If no elements are available, `GetData` returns a null value.  
   
- При прямой доступ к элементам массива может помочь вам работать быстрее, соблюдайте осторожность при вызове `GetData`; все ошибки, внесенные непосредственно влияют на элементы массива.  
+ While direct access to the elements of an array can help you work more quickly, use caution when calling `GetData`; any errors you make directly affect the elements of your array.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CArray::GetSize  
- Возвращает размер массива.  
+##  <a name="getsize"></a>  CArray::GetSize  
+ Returns the size of the array.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Так как индексы отсчитываются от нуля, размер составляет 1 больше, чем наибольший индекс. Вызов этого метода будет создавать один и тот же результат как [CArray::GetCount](#getcount) метод.  
+### <a name="remarks"></a>Remarks  
+ Because indexes are zero-based, the size is 1 greater than the largest index. Calling this method will generate the same result as the [CArray::GetCount](#getcount) method.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CArray::GetUpperBound  
- Возвращает текущий верхнюю границу данного массива.  
+##  <a name="getupperbound"></a>  CArray::GetUpperBound  
+ Returns the current upper bound of this array.  
   
 ```  
 INT_PTR GetUpperBound() const;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Так как индексы массива отсчитываются от нуля, эта функция возвращает значение 1 меньше, чем `GetSize`.  
+### <a name="remarks"></a>Remarks  
+ Because array indexes are zero-based, this function returns a value 1 less than `GetSize`.  
   
- Условие **(GetUpperBound)** = -1 означает, что массив не содержит элементов.  
+ The condition **GetUpperBound( )** = -1 indicates that the array contains no elements.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CArray::GetAt](#getat).  
+### <a name="example"></a>Example  
+  See the example for [CArray::GetAt](#getat).  
   
-##  <a name="insertat"></a>CArray::InsertAt  
- Первая версия `InsertAt` вставляет один элемент (или несколько копий элемента) по указанному индексу в массиве.  
+##  <a name="insertat"></a>  CArray::InsertAt  
+ The first version of `InsertAt` inserts one element (or multiple copies of an element) at a specified index in an array.  
   
 ```  
 void InsertAt(
@@ -358,70 +372,70 @@ void InsertAt(
     CArray* pNewArray);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Целое значение индекса, может быть больше, чем значение, возвращаемое `GetUpperBound`.  
+ An integer index that may be greater than the value returned by `GetUpperBound`.  
   
  `ARG_TYPE`  
- Параметр шаблона, указывающий тип элементов в этом массиве.  
+ Template parameter specifying the type of elements in this array.  
   
  `newElement`  
- Элемент должен располагаться в этом массиве.  
+ The element to be placed in this array.  
   
  `nCount`  
- Количество раз, когда этот элемент должен быть вставлен (по умолчанию-1).  
+ The number of times this element should be inserted (defaults to 1).  
   
  `nStartIndex`  
- Целое значение индекса, может быть больше, чем значение, возвращаемое [GetUpperBound](#getupperbound).  
+ An integer index that may be greater than the value returned by [GetUpperBound](#getupperbound).  
   
  `pNewArray`  
- Другой массив, содержащий элементы для добавления в этот массив.  
+ Another array that contains elements to be added to this array.  
   
-### <a name="remarks"></a>Примечания  
- В процессе его передвигается (путем увеличения или уменьшения индекс) существующий элемент в этот индекс и его передвигается элементы над ним.  
+### <a name="remarks"></a>Remarks  
+ In the process, it shifts up (by incrementing the index) the existing element at this index, and it shifts up all the elements above it.  
   
- Вторая версия вставляет все элементы из другого `CArray` коллекции, начиная с `nStartIndex` позиции.  
+ The second version inserts all the elements from another `CArray` collection, starting at the `nStartIndex` position.  
   
- `SetAt` Функции, напротив, заменяет один элемент указанного массива и не переместится какие-либо элементы.  
+ The `SetAt` function, in contrast, replaces one specified array element and does not shift any elements.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CArray::IsEmpty  
- Определяет, пуст ли массив.  
+##  <a name="isempty"></a>  CArray::IsEmpty  
+ Determines whether the array is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если массив не содержит элементов; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the array contains no elements; otherwise 0.  
   
-##  <a name="operator_at"></a>CArray::operator\[\]  
- Все эти подстрочного оператора удобный заменяют [SetAt](#setat) и [GetAt](#getat) функции.  
+##  <a name="operator_at"></a>  CArray::operator \[\]  
+ These subscript operators are a convenient substitute for the [SetAt](#setat) and [GetAt](#getat) functions.  
   
 ```  
 TYPE& operator[](int_ptr nindex);  
 const TYPE& operator[](int_ptr nindex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указывающий тип элементов в этом массиве.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements in this array.  
   
  `nIndex`  
- Индекс элемента, должен быть предоставлен доступ.  
+ Index of the element to be accessed.  
   
-### <a name="remarks"></a>Примечания  
- Первый оператор вызывается для массивов, которые не являются **const**, могут быть использованы в правом (r-значение) или (l значение) слева от оператора присваивания. Второе, вызывается для **const** массивов, могут быть использованы только в правой части окна.  
+### <a name="remarks"></a>Remarks  
+ The first operator, called for arrays that are not **const**, may be used on either the right (r-value) or the left (l-value) of an assignment statement. The second, called for **const** arrays, may be used only on the right.  
   
- Отладочная версия библиотеки утверждения, если индекс (либо левой или правой части оператора присваивания) выходит за границы.  
+ The Debug version of the library asserts if the subscript (either on the left or right side of an assignment statement) is out of bounds.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="relocateelements"></a>CArray::RelocateElements  
- Перемещает данные в новый буфер при массива должен разрастании или сжатии.  
+##  <a name="relocateelements"></a>  CArray::RelocateElements  
+ Relocates data to a new buffer when the array should grow or shrink.  
   
 ```  
 template<class TYPE, class ARG_TYPE>  
@@ -431,38 +445,38 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
     INT_PTR nCount);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pNewData`  
- Новый буфер массив элементов.  
+ A new buffer for the array of elements.  
   
  `pData`  
- Старый массив элементов.  
+ The old array of elements.  
   
  `nCount`  
- Число элементов в массиве старого.  
+ Number of elements in the old array.  
   
-### <a name="remarks"></a>Примечания  
- `pNewData`всегда является достаточным для хранения всех `pData` элементов.  
+### <a name="remarks"></a>Remarks  
+ `pNewData` is always large enough to hold all the `pData` elements.  
   
- [CArray](../../mfc/reference/carray-class.md) реализация использует этот метод для копирования старые данные в новый буфер при массива должен увеличения или сжатия (когда [SetSize](#setsize) или [FreeExtra](#freeextra) называются). Реализация по умолчанию просто копирует данные.  
+ The [CArray](../../mfc/reference/carray-class.md) implementation uses this method to copy the old data to a new buffer when the array should grow or shrink (when [SetSize](#setsize) or [FreeExtra](#freeextra) are called). The default implementation just copies the data.  
   
- Для массивов, в которых элемент содержит указатель на один из членов или другую структуру содержит указатель на один из элементов массива указатели, не обновляются в обычный копирования. В этом случае можно исправить путем реализации специализацией указатели `RelocateElements` соответствующими типами. Также вы отвечаете за копировать данные.  
+ For arrays in which an element contains a pointer to one of its own members, or another structure contains a pointer to one of the array elements, the pointers are not updated in plain copy. In this case, you can correct pointers by implementing a specialization of `RelocateElements` with the relevant types. You are also responsible for data copying.  
   
-##  <a name="removeall"></a>CArray::RemoveAll  
- Удаляет все элементы из этого массива.  
+##  <a name="removeall"></a>  CArray::RemoveAll  
+ Removes all the elements from this array.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если массив уже является пустым, функция все еще работает.  
+### <a name="remarks"></a>Remarks  
+ If the array is already empty, the function still works.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="removeat"></a>CArray::RemoveAt  
- Удаляет один или несколько элементов, начиная с указанного индекса в массиве.  
+##  <a name="removeat"></a>  CArray::RemoveAt  
+ Removes one or more elements starting at a specified index in an array.  
   
 ```  
 void RemoveAt(
@@ -470,71 +484,71 @@ void RemoveAt(
     INT_PTR nCount = 1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного [GetUpperBound](#getupperbound).  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
  `nCount`  
- Число удаляемых элементов.  
+ The number of elements to remove.  
   
-### <a name="remarks"></a>Примечания  
- В процессе сдвигаются вниз элементы выше удаленных элементов. Он уменьшает верхняя граница массива, но не освобождает память.  
+### <a name="remarks"></a>Remarks  
+ In the process, it shifts down all the elements above the removed element(s). It decrements the upper bound of the array but does not free memory.  
   
- Если вы попытаетесь удалить элементы, содержащиеся в массиве над точкой удаления, отладочная версия библиотеки утверждения.  
+ If you try to remove more elements than are contained in the array above the removal point, then the Debug version of the library asserts.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="setat"></a>CArray::SetAt  
- Задает элемент массива по указанному индексу.  
+##  <a name="setat"></a>  CArray::SetAt  
+ Sets the array element at the specified index.  
   
 ```  
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0 и меньше или равно значения, возвращенного [GetUpperBound](#getupperbound).  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
  `ARG_TYPE`  
- Параметр шаблона, указывающий тип аргументы, используемые для ссылки на элементы массива.  
+ Template parameter specifying the type of arguments used for referencing array elements.  
   
  `newElement`  
- Новое значение элемента для сохранения в указанной позиции.  
+ The new element value to be stored at the specified position.  
   
-### <a name="remarks"></a>Примечания  
- `SetAt`не вызовет массива может увеличиваться. Используйте [SetAtGrow](#setatgrow) Если разрешено автоматическое увеличение массива.  
+### <a name="remarks"></a>Remarks  
+ `SetAt` will not cause the array to grow. Use [SetAtGrow](#setatgrow) if you want the array to grow automatically.  
   
- Необходимо убедиться, что значение индекса представляет является допустимой позицией в массиве. Если вне допустимых границ, отладочная версия библиотеки утверждения.  
+ You must ensure that your index value represents a valid position in the array. If it is out of bounds, then the Debug version of the library asserts.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [GetAt](#getat).  
+### <a name="example"></a>Example  
+  See the example for [GetAt](#getat).  
   
-##  <a name="setatgrow"></a>CArray::SetAtGrow  
- Задает элемент массива по указанному индексу.  
+##  <a name="setatgrow"></a>  CArray::SetAtGrow  
+ Sets the array element at the specified index.  
   
 ```  
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Целочисленный индекс, который больше или равно 0.  
+ An integer index that is greater than or equal to 0.  
   
  `ARG_TYPE`  
- Параметр шаблона, указывающий тип элементов в массиве.  
+ Template parameter specifying the type of elements in the array.  
   
  `newElement`  
- Элемент, добавляемый в этот массив. Объект **NULL** является допустимым значением.  
+ The element to be added to this array. A **NULL** value is allowed.  
   
-### <a name="remarks"></a>Примечания  
- При необходимости массива увеличился автоматически (то есть, верхняя граница корректируется для размещения нового элемента).  
+### <a name="remarks"></a>Remarks  
+ The array grows automatically if necessary (that is, the upper bound is adjusted to accommodate the new element).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="setsize"></a>CArray::SetSize  
- Устанавливает размер массива пустой или существующей; Выделяет память при необходимости.  
+##  <a name="setsize"></a>  CArray::SetSize  
+ Establishes the size of an empty or existing array; allocates memory if necessary.  
   
 ```  
 void SetSize(
@@ -542,27 +556,27 @@ void SetSize(
     INT_PTR nGrowBy = -1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nNewSize`  
- Новый размер массива (число элементов). Должно быть больше или равно 0.  
+ The new array size (number of elements). Must be greater than or equal to 0.  
   
  `nGrowBy`  
- Минимальное число слотов элемент для выделения, если увеличение размера не требуется.  
+ The minimum number of element slots to allocate if a size increase is necessary.  
   
-### <a name="remarks"></a>Примечания  
- Если новый размер меньше, чем старого, массив усекается, а всю неиспользуемую память освобождается.  
+### <a name="remarks"></a>Remarks  
+ If the new size is smaller than the old size, then the array is truncated and all unused memory is released.  
   
- Эта функция используется для установки размера массива, прежде чем начать использование массива. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  
+ Use this function to set the size of your array before you begin using the array. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- `nGrowBy` Параметр влияет на выделения внутренней памяти, пока увеличение массива. Его использование никогда не влияет на размер массива, сообщаемые [GetSize](#getsize) и [GetUpperBound](#getupperbound). Если используется значение по умолчанию, MFC выделяет память таким образом, для уменьшения фрагментации памяти и оптимизации эффективности для большинства случаев.  
+ The `nGrowBy` parameter affects internal memory allocation while the array is growing. Its use never affects the array size as reported by [GetSize](#getsize) and [GetUpperBound](#getupperbound). If the default value is used, MFC allocates memory in a way calculated to avoid memory fragmentation and optimize efficiency for most cases.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [GetData](#getdata).  
+### <a name="example"></a>Example  
+  See the example for [GetData](#getdata).  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC СБОРА](../../visual-cpp-samples.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CObArray](../../mfc/reference/cobarray-class.md)   
- [Вспомогательные функции классов коллекции](../../mfc/reference/collection-class-helpers.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObArray Class](../../mfc/reference/cobarray-class.md)   
+ [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md)
 

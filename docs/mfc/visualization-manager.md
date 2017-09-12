@@ -1,86 +1,105 @@
 ---
-title: "Диспетчер визуализации | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Диспетчер визуализации"
+title: Visualization Manager | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Диспетчер визуализации
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 263fd911d68d6b179ee110594e4b8ed855b69473
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Диспетчер визуального представления объект, элементы управления внешний вид всего приложения.  Он работает как один класс, где можно поместить весь код рисования для приложения.  Библиотека MFC содержит несколько диспетчеров визуального представления.  Также можно создать собственный диспетчер визуального представления, если необходимо создать пользовательское представление для приложения.  Следующие изображений отображается такое же приложение при различных диспетчеров визуального представления включены.  
+---
+# <a name="visualization-manager"></a>Visualization Manager
+The visual manager is an object that controls the appearance of a whole application. It acts as a single class where you can put all the drawing code for your application. The MFC Library includes several visual managers. You can also create your own visual manager if you want to create a custom view for your application. The following images show the same application when different visual managers are enabled:  
   
- ![MyApp, преобразованный CMFCVisualManagerWindows](../Image/VMWindows.png "VMWindows")  
-MyApp, которое использует диспетчер визуального представления CMFCVisualManagerWindows  
+ ![MyApp as rendered by CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows")  
+MyApp that uses the CMFCVisualManagerWindows visual manager  
   
- ![MyApp, преобразованный CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "VMVS2005")  
-MyApp, которое использует диспетчер визуального представления CMFCVisualManagerVS2005  
+ ![MyApp as rendered by CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005")  
+MyApp that uses the CMFCVisualManagerVS2005 visual manager  
   
- ![MyApp, преобразованный CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "VMOfficeXP")  
-MyApp, которое использует диспетчер визуального представления CMFCVisualManagerOfficeXP  
+ ![MyApp as rendered by CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp")  
+MyApp that uses the CMFCVisualManagerOfficeXP visual manager  
   
- ![MyApp, преобразованный CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "VMOffice2003")  
-MyApp, которое использует диспетчер визуального представления CMFCVisualManagerOffice2003  
+ ![MyApp as rendered by CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003")  
+MyApp that uses the CMFCVisualManagerOffice2003 visual manager  
   
- ![MyApp, преобразованный CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MSOffice2007")  
-MyApp, которое использует диспетчер визуального представления CMFCVisualManagerOffice2007  
+ ![MyApp as rendered by CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007")  
+MyApp that uses the CMFCVisualManagerOffice2007 visual manager  
   
- По умолчанию диспетчер визуального представления поддерживает код окраски для нескольких элементов ГРАФИЧЕСКОГО ИНТЕРФЕЙСА ПОЛЬЗОВАТЕЛЯ.  Для предоставления пользовательских элементов пользовательского интерфейса необходимо переопределить соответствующие методы рисования диспетчера визуального представления.  Список этих методов см. в разделе [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md).  Методы, которые можно переопределить, чтобы реализовать пользовательский вид все методы, которые начинаются с `OnDraw`.  
+ By default, the visual manager maintains the drawing code for several GUI elements. To provide custom UI elements, you need to override the related drawing methods of the visual manager. For the list of these methods, see [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md). The methods that you can override to provide a custom appearance are all the methods that start with `OnDraw`.  
   
- Приложение может иметь только один объект `CMFCVisualManager`.  Чтобы получить указатель на диспетчер визуального представления для приложения, вызовите статическая функция [CMFCVisualManager::GetInstance](../Topic/CMFCVisualManager::GetInstance.md).  Поскольку все диспетчеров визуального представления наследуются от `CMFCVisualManager`, метод `CMFCVisualManager::GetInstance` получает указатель к соответствующему диспетчеру визуального представления, даже если создается пользовательский диспетчер визуального представления.  
+ Your application can have only one `CMFCVisualManager` object. To obtain a pointer to the visual manager for your application, call the static function [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Because all visual managers inherit from `CMFCVisualManager`, the `CMFCVisualManager::GetInstance` method will get a pointer to the appropriate visual manager, even if you create a custom visual manager.  
   
- Если необходимо создать пользовательский диспетчер визуального представления, необходимо наследовать его от диспетчера визуального представления, который уже существует.  Класс по умолчанию, который должен быть производным от `CMFCVisualManager`.  Однако можно использовать другой диспетчер визуального представления, если она лучше показано, что требуется для приложения.  Например, если требуется использовать диспетчер визуального представления `CMFCVisualManagerOffice2007`, но можно изменить только как разделители вид, можно создать пользовательский класс из `CMFCVisualManagerOffice2007`.  В этом сценарии необходимо переписать только методы для рисования разделителей.  
+ If you want to create a custom visual manager, you must derive it from a visual manager that already exists. The default class to derive from is `CMFCVisualManager`. However, you can use a different visual manager if it better resembles what you want for your application. For example, if you wanted to use the `CMFCVisualManagerOffice2007` visual manager, but wanted only to change how separators look, you could derive your custom class from `CMFCVisualManagerOffice2007`. In this scenario, you should overwrite only the methods for drawing separators.  
   
- 2 Возможных способа использования конкретный диспетчер визуального представления для приложения.  Один из способов вызова метода [CMFCVisualManager::SetDefaultManager](../Topic/CMFCVisualManager::SetDefaultManager.md) и передать нужный диспетчер визуального представления в качестве параметра.  В следующем примере кода показано, как можно использовать диспетчер визуального представления `CMFCVisualManagerVS2005` с этим методом.  
+ There are two possible ways to use a specific visual manager for your application. One way is to call the [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) method and pass the appropriate visual manager as a parameter. The following code example shows how you would use the `CMFCVisualManagerVS2005` visual manager with this method:  
   
 ```  
-CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));  
+CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```  
   
- Другой способ — использовать диспетчер визуального представления в приложении для создания его вручную.  Затем приложение будет использовать этот новый диспетчер визуального представления по всей отрисовки.  Однако поскольку может существовать только один объект `CMFCVisualManager` для каждого приложения, удалять текущий диспетчер визуального представления перед созданием нового один.  В следующем примере, `CMyVisualManager` пользовательский диспетчер визуального представления, который является производным от `CMFCVisualManager`.  Следующий метод изменяет какой диспетчер визуального представления используется для отображения приложения, в зависимости от индекса:  
+ The other way to use a visual manager in your application is to create it manually. The application will then use this new visual manager for all the rendering. However, because there can be only one `CMFCVisualManager` object per application, you will have to delete the current visual manager before you create a new one. In the following example, `CMyVisualManager` is a custom visual manager that is derived from `CMFCVisualManager`. The following method will change what visual manager is used to display your application, depending on an index:  
   
 ```  
 void CMyApp::SetSkin (int index)  
 {  
-   if (CMFCVisualManager::GetInstance() != NULL)  
-   {  
-      delete CMFCVisualManager::GetInstance();  
-   }  
-  
-   switch (index)  
-   {  
-   case DEFAULT_STYLE:  
-      // The following statement creates a new CMFCVisualManager  
-      CMFCVisualManager::GetInstance();  
-      break;  
-  
-   case CUSTOM_STYLE:  
-      new CMyVisualManager;  
-      break;  
-  
-   default:  
-      CMFCVisualManager::GetInstance();  
-      break;  
-   }  
-  
-   CMFCVisualManager::GetInstance()->RedrawAll();  
-}  
+    if (CMFCVisualManager::GetInstance() != NULL)  
+ {  
+    delete CMFCVisualManager::GetInstance();
+
+ }  
+ 
+    switch (index)  
+ {  
+    case DEFAULT_STYLE: *// The following statement creates a new CMFCVisualManager  
+    CMFCVisualManager::GetInstance();
+break;  
+ 
+    case CUSTOM_STYLE:  
+    new CMyVisualManager;  
+    break; 
+ 
+    default: 
+    CMFCVisualManager::GetInstance();
+break;  
+ }  
+ 
+    CMFCVisualManager::GetInstance()->RedrawAll();
+
+} 
 ```  
   
-## См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
  [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md)
+

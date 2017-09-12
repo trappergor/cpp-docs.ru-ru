@@ -1,45 +1,64 @@
 ---
-title: "Добавление столбцов в элемент управления (представление отчета) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl - класс, добавление столбцов"
-  - "CListCtrl - класс, представление отчета"
-  - "столбцы [C++], добавление в CListCtrl"
-  - "представление отчета в классе CListCtrl"
-  - "представления, отчет"
+title: Adding Columns to the Control (Report View) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], adding columns
+- report view in CListCtrl class [MFC]
+- views [MFC], report
+- columns [MFC], adding to CListCtrl
+- CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Добавление столбцов в элемент управления (представление отчета)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae67c7c011123533227f1a7d4891b553f2cd0dc7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="adding-columns-to-the-control-report-view"></a>Adding Columns to the Control (Report View)
 > [!NOTE]
->  Следующая процедура применяется к объекту [CListView](../mfc/reference/clistview-class.md) или [CListCtrl](../Topic/CListCtrl%20Class.md).  
+>  The following procedure applies to either a [CListView](../mfc/reference/clistview-class.md) or [CListCtrl](../mfc/reference/clistctrl-class.md) object.  
   
- Если элемент управления "Список" в представлении отчета, отображаются столбцы, создавая метод организации различных подэлементов каждого элемента управления "Список".  Эта организация реализуется с взаимнооднозначным соответствием между столбцом в элементе управления списка и связанным subitem элемента управления "Список".  Дополнительные сведения о подэлементов см. в разделе [Добавление элементов в элемент управления](../mfc/adding-items-to-the-control.md).  Пример элемента управления "Список" в представлении отчета используется представление сведений в проводнике Windows 95 и Windows 98.  Первая папка списков столбцов, Значки файла и метки.  Другой размер файла списка столбцов, типы файлов, последним измененной даты и т д  
+ When a list control is in report view, columns are displayed, providing a method of organizing the various subitems of each list control item. This organization is implemented with a one-to-one correspondence between a column in the list control and the associated subitem of the list control item. For more information on subitems, see [Adding Items to the Control](../mfc/adding-items-to-the-control.md). An example of a list control in report view is provided by the Details view in Windows 95 and Windows 98 Explorer. The first column lists folder, file icons, and labels. Other columns list file size, file type, date last modified, and so on.  
   
- Даже если столбцы можно добавить к элементу управления Список в любое время, столбцы отображаются, только если элемент управления содержит включенный бит стиля `LVS_REPORT`.  
+ Even though columns can be added to a list control at any time, the columns are visible only when the control has the `LVS_REPORT` style bit turned on.  
   
- Каждый столбец имеет связанный объект элемента заголовка \(см. раздел [CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md)\), метки столбца и позволяют пользователям изменять столбец.  
+ Each column has an associated header item (see [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) object that labels the column and allows users to resize the column.  
   
- Если элемент управления поддерживает Список представление отчета, необходимо добавить столбец для каждого возможного subitem в элементе элемента управления "Список".  Добавьте столбец, подготовки структуры [LV\_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) и затем обращения к [InsertColumn](../Topic/CListCtrl::InsertColumn.md).  После добавления необходимые столбцы \(иногда называемые элементы заголовка\) можно изменять расположение их с помощью функций\-членов и стили, относящийся к элементу управления, встроенному Заголовок.  Дополнительные сведения см. в разделе [Порядок элементов в элементе управления " Заголовок "](../mfc/ordering-items-in-the-header-control.md).  
+ If your list control supports a report view, you need to add a column for each possible subitem in a list control item. Add a column by preparing an [LV_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) structure and then making a call to [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). After adding the necessary columns (sometimes referred to as header items), you can reorder them using member functions and styles belonging to the embedded header control. For more information, see [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md).  
   
 > [!NOTE]
->  Если элемент управления создается Список со стилем **LVS\_NOCOLUMNHEADER** , будет обработана любая попытка вставки столбцов.  
+>  If the list control is created with the **LVS_NOCOLUMNHEADER** style, any attempt to insert columns will be ignored.  
   
-## См. также  
- [Использование CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

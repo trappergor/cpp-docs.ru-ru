@@ -1,56 +1,75 @@
 ---
-title: "Обработка уведомлений всплывающих подсказок | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl - класс, обработка уведомлений"
-  - "уведомления, всплывающие подсказки"
-  - "всплывающие подсказки [C++], уведомления"
-  - "TOOLTIPTEXT - структура"
+title: Handling Tool Tip Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Обработка уведомлений всплывающих подсказок
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4b6ad56302dc7bcbafad48452408bd931696257b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При определении стиля `TBSTYLE_TOOLTIPS`, инструмент создает и управляет элемент управления всплывающей подсказки.  Всплывающая подсказка небольшое всплывающее окно, содержащее линии текста, кнопки панели инструментов.  Скрыта всплывающая подсказка, появится только в том случае, если пользователь помещает курсор на кнопку панели инструментов и. этот компонент для приблизительно на половину второго.  Всплывающая подсказка отображается рядом с курсора.  
+---
+# <a name="handling-tool-tip-notifications"></a>Handling Tool Tip Notifications
+When you specify the `TBSTYLE_TOOLTIPS` style, the toolbar creates and manages a tool tip control. A tool tip is a small pop-up window that contains a line of text describing a toolbar button. The tool tip is hidden, appearing only when the user puts the cursor on a toolbar button and leaves it there for approximately one-half second. The tool tip is displayed near the cursor.  
   
- Прежде чем всплывающая подсказка, сообщение уведомления **TTN\_NEEDTEXT** отправляется в окне " средства для извлечения описательный текст кнопки.  Если окно " панели инструментов окна `CFrameWnd`, всплывающие подсказки отображаются без какого\-либо дополнительных действий, поскольку `CFrameWnd` содержит обработчик для уведомления по умолчанию **TTN\_NEEDTEXT**.  Если окно " панели инструментов не является производным от `CFrameWnd`, например диалоговое окно или представление формы, необходимо добавить запись в схеме сообщений данного окна " и предоставить обработчик уведомления в схеме сообщений.  Запись сообщений в схеме, окна " следующим образом:  
+ Before the tool tip is displayed, the **TTN_NEEDTEXT** notification message is sent to the toolbar's owner window to retrieve the descriptive text for the button. If the toolbar's owner window is a `CFrameWnd` window, tool tips are displayed without any extra effort, because `CFrameWnd` has a default handler for the **TTN_NEEDTEXT** notification. If the toolbar's owner window is not derived from `CFrameWnd`, such as a dialog box or form view, you must add an entry to your owner window's message map and provide a notification handler in the message map. The entry to your owner window's message map is as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/CPP/handling-tool-tip-notifications_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]  
   
-## Заметки  
+## <a name="remarks"></a>Remarks  
  `memberFxn`  
- Функция\-член, вызываемую при текст является обязательным для этой кнопки.  
+ The member function to be called when text is needed for this button.  
   
- Обратите внимание, что идентификаторы всплывающей подсказки всегда равен 0.  
+ Note that the id of a tool tip is always 0.  
   
- В дополнение к уведомлению **TTN\_NEEDTEXT**, элемент управления всплывающей подсказки может отправлять уведомления следующие к элементу управления панели инструментов:  
+ In addition to the **TTN_NEEDTEXT** notification, a tool tip control can send the following notifications to a toolbar control:  
   
-|Уведомление|Значение|  
-|-----------------|--------------|  
-|**TTN\_NEEDTEXTA**|Элемент управления всплывающей подсказки для текста ASCII \(только для Windows 95\)|  
-|**TTN\_NEEDTEXTW**|Элемент управления всплывающей подсказки для текста ЮНИКОДАА \(Windows NT только\)|  
-|**TBN\_HOTITEMCHANGE**|Указывает, что \(высокий\) выбранный элемент был изменен.|  
-|**NM\_RCLICK**|Указывает, что пользователь щелкнул правой кнопкой мыши кнопку.|  
-|**TBN\_DRAGOUT**|Указывает, что пользователь нажимает кнопку и перетащил указатель мыши за границы кнопки.  Она позволяет приложению реализовать перетаскивания из кнопки панели инструментов.  Это уведомление, принимающее приложение начнет операцию перетаскивания.|  
-|**TBN\_DROPDOWN**|Указывает, что пользователь нажимает кнопку, которая использует стиль **TBSTYLE\_DROPDOWN**.|  
-|**TBN\_GETOBJECT**|Указывает, что пользователь переместил указатель на кнопку, которая использует стиль **TBSTYLE\_DROPPABLE**.|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|**TTN_NEEDTEXTA**|Tool tip control requires ASCII text (Windows 95 only)|  
+|**TTN_NEEDTEXTW**|Tool tip control requires UNICODE text (Windows NT only)|  
+|**TBN_HOTITEMCHANGE**|Indicates that the hot (highlighted) item has changed.|  
+|**NM_RCLICK**|Indicates the user has right-clicked a button.|  
+|**TBN_DRAGOUT**|Indicates the user has clicked the button and dragged the pointer off the button. It allows an application to implement drag and drop from a toolbar button. When receiving this notification, the application will begin the drag and drop operation.|  
+|**TBN_DROPDOWN**|Indicates the user has clicked a button that uses the **TBSTYLE_DROPDOWN** style.|  
+|**TBN_GETOBJECT**|Indicates the user moved the pointer over a button that uses the **TBSTYLE_DROPPABLE** style.|  
   
- Функции обработчика для этого примера и дополнительные сведения о включении всплывающие подсказки см. в разделе [Всплывающие подсказки](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ For an example handler function and more information about enabling tool tips, see [Tool Tips](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
-## См. также  
- [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

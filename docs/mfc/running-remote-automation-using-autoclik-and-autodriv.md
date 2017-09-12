@@ -1,58 +1,77 @@
 ---
-title: "Выполнение удаленной автоматизации с помощью AUTOCLIK и AUTODRIV | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AUTOCLIK - пример [MFC]"
+title: Running Remote Automation Using AUTOCLIK and AUTODRIV | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- AUTOCLIK sample [MFC]
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Выполнение удаленной автоматизации с помощью AUTOCLIK и AUTODRIV
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 56240a60197b63f5098ecef080719bd96bde81d1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-AUTOCLIK простой пример приложения сервера автоматизации, который можно использовать в качестве базы, из которой подробные сведения об удаленной автоматизации.  AUTODRIV представляет простое клиентское приложение автоматизации, которое управляет AUTOCLIK.  Их можно использовать для демонстрации удаленной автоматизации.  
+---
+# Running Remote Automation Using AUTOCLIK and AUTODRIV
+AUTOCLIK is a simple Automation server sample application that you can use as a base from which to learn more about Remote Automation. AUTODRIV is a simple Automation client application that drives AUTOCLIK. You can use them to demonstrate Remote Automation.  
   
-#### Установка AUTOCLIK.EXE 2 на компьютерах и администрирования его из удаленной автоматизации  
+#### To install AUTOCLIK.EXE on two machines and drive it using Remote Automation  
   
-1.  Установите образец приложения [AUTOCLIK](../top/visual-cpp-samples.md) на компьютер разработки.  
+1.  Install the [AUTOCLIK](../visual-cpp-samples.md) sample application onto your development machine.  
   
-2.  Выполните построение AUTOCLIK.EXE.  
+2.  Build AUTOCLIK.EXE.  
   
-3.  Выполните AUTOCLIK.EXE в изолированной таким и затем закройте его вниз.  Это зарегистрирован как сервер автоматизации.  
+3.  Run AUTOCLIK.EXE in standalone fashion and then shut it down. This will register it as an Automation server.  
   
-4.  Скопируйте AUTOCLIK.EXE к удаленному компьютеру, запустите его в ней, а затем закройте его вниз.  
+4.  Copy AUTOCLIK.EXE to a remote machine, run it there, and then shut it down.  
   
-5.  Выполните AUTODRIV.EXE на локальном компьютере и убедитесь, что он начинается выполнение AUTOCLIK.EXE.  Для получения дополнительных сведений о AUTODRIV.EXE см. в разделе [AUTOCLIK](../top/visual-cpp-samples.md).  
+5.  Run AUTODRIV.EXE on the local machine and verify that running it starts AUTOCLIK.EXE. To find out more about AUTODRIV.EXE, see [AUTOCLIK](../visual-cpp-samples.md).  
   
-6.  На удаленном компьютере запустите AUTMGR32.EXE \(диспетчер автоматизации\).  
+6.  On the remote machine, start AUTMGR32.EXE (Automation Manager).  
   
-7.  На удаленном компьютере запустите RACMGR32.EXE \(удаленной автоматизации диспетчер соединений\).  
+7.  On the remote machine, start RACMGR32.EXE (Remote Automation Connection Manager).  
   
-8.  В удаленной автоматизации диспетчер подключений, выберите AutoClik.Document из списка **Класс OLE**.  
+8.  In the Remote Automation Connection Manager, select AutoClik.Document from the **OLE Classes** list.  
   
-9. Выберите политику безопасности системы на вкладке **Клиентский доступ**, чтобы предоставить клиентский доступ к AutoClik.Document.  
+9. Choose a system security policy from the **Client Access** tab to grant client access to AutoClik.Document.  
   
-10. На локальном компьютере, даты начала и RACMGR32.EXE select AutoClik.Document из списка **Класс OLE**.  
+10. On the local machine, start RACMGR32.EXE and select AutoClik.Document from the **OLE Classes** list.  
   
-11. На вкладке **Подключение к серверу** выберите и сетевой адрес удаленного компьютера и соответствующий сетевой протокол.  
+11. From the **Server Connection** tab, choose both the network address of the remote machine and the appropriate network protocol.  
   
-12. С AutoClik.Document по\-прежнему выбранного в списке **Класс OLE**, выберите команду **Удаленный** в меню `Register`.  
+12. With AutoClik.Document still selected in the **OLE Classes** list box, choose the **Remote** command from the `Register` menu.  
   
-13. На локальном компьютере, выполнения AUTODRIV.EXE или соответствующем проекте AUTOCLIK.MAK Visual Basic, если требуется Visual Basic, а не MFC, клиент.  
+13. On the local machine, run AUTODRIV.EXE or the equivalent AUTOCLIK.MAK Visual Basic project if you want to have a Visual Basic, rather than an MFC, client.  
   
- На удаленном компьютере необходимо теперь можно увидеть AUTOCLIK выполнение команды, разработанных с локального клиента.  
+ On the remote machine, you should now be able to see AUTOCLIK executing commands initiated from the local client.  
   
-## См. также  
- [Удаленная автоматизация](../mfc/remote-automation.md)
+## See Also  
+ [Remote Automation](../mfc/remote-automation.md)
+
+

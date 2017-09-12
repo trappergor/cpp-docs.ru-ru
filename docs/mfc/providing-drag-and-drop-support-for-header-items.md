@@ -1,36 +1,55 @@
 ---
-title: "Предоставление поддержки перетаскивания для элементов заголовка | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl - класс, поддержка перетаскивания"
-  - "HDN_ - уведомления"
-  - "HDS_DRAGDROP - стиль"
-  - "элементы заголовка в элементах управления заголовка"
+title: Providing Drag-and-Drop Support for Header Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HDS_DRAGDROP style
+- header items in header controls
+- CHeaderCtrl class [MFC], drag and drop support
+- HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Предоставление поддержки перетаскивания для элементов заголовка
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c8f65b9cbc240523ba7dd8e615a83e16a0ccab83
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Чтобы обеспечить поддержку перетаскивания элементов заголовка укажите стиль `HDS_DRAGDROP`.  Поддержка перетаскивания элементов заголовка дает пользователю возможность изменять порядок элементов заголовка элемента управления " Заголовок ".  Реакция на событие по умолчанию предоставляет semitransparent изображение перетаскивания, перетащенной элемента заголовка и визуальный индикатор положения заголовка, если элемент удален.  
+---
+# <a name="providing-drag-and-drop-support-for-header-items"></a>Providing Drag-and-Drop Support for Header Items
+To provide drag-and-drop support for header items, specify the `HDS_DRAGDROP` style. Drag-and-drop support for header items gives the user the ability to reorder the header items of a header control. The default behavior provides a semitransparent drag image of the header item being dragged and a visual indicator of the new position, if the header item is dropped.  
   
- Как и в случае с функцией перетаскивания общего можно расширить возможности расширения функциональности перетаскивания по умолчанию обработка уведомления **HDN\_BEGINDRAG** и **HDN\_ENDDRAG**.  Можно также настраивать внешний вид образа перетаскивания можно переопределить функцию\-член [CHeaderCtrl::CreateDragImage](../Topic/CHeaderCtrl::CreateDragImage.md).  
+ As with common drag-and-drop functionality, you can extend the default drag-and-drop behavior by handling the **HDN_BEGINDRAG** and **HDN_ENDDRAG** notifications. You can also customize the appearance of the drag image by overriding the [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) member function.  
   
 > [!NOTE]
->  Если указать перетаскивания поддержку внутреннего элемента управления " Заголовок " в элементе управления списка, см. раздел расширенных стилей в разделе [Изменение стилей элемента управления "Список"](../Topic/Changing%20List%20Control%20Styles.md).  
+>  If you are providing drag-and-drop support for an embedded header control in a list control, see the Extended Style section in the [Changing List Control Styles](../mfc/changing-list-control-styles.md) topic.  
   
-## См. также  
- [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

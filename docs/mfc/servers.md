@@ -1,71 +1,90 @@
 ---
-title: "Серверы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "полносерверный"
-  - "минисервер"
-  - "приложения сервера OLE"
-  - "приложения сервера OLE, активация"
-  - "приложения сервера OLE, типы сервера"
-  - "серверные приложения"
-  - "серверы"
+title: Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC]
+- OLE server applications [MFC], activation
+- full-server
+- servers
+- mini-server
+- OLE server applications [MFC], server types
+- server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Серверы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 47c6019418107070d1982c7cc55a1e303ff30536
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Серверное приложение \(или компонент приложения\), создают элемент OLE \(или компоненты\) для использования приложение\-контейнерами.  Серверного приложения визуального редактирования также поддерживает редактирования или встроенной активации визуального объекта.  Другую форму OLE\-сервера [сервер автоматизации](../mfc/automation-servers.md).  Некоторые серверные приложения поддерживают только создание встроенных элементов; другие поддерживают создание и внедренными и связанные элементы.  Некоторые поддерживают связывание только, хотя это редко.  Все серверные приложения должны поддерживать активацию приложение\-контейнерами, когда пользователь хочет изменить элемент.  Приложение может быть и контейнером и сервером.  Другими словами, он может и включения данных в его документы и создает данные, которые можно включить в виде элементов в документы других приложений.  
+---
+# <a name="servers"></a>Servers
+A server application (or component application) creates OLE items (or components) for use by container applications. A visual editing server application also supports visual editing or in-place activation. Another form of OLE server is an [automation server](../mfc/automation-servers.md). Some server applications support only the creation of embedded items; others support the creation of both embedded and linked items. Some support linking only, although this is rare. All server applications must support activation by container applications when the user wants to edit an item. An application can be both a container and a server. In other words, it can both incorporate data into its documents, and create data that can be incorporated as items into other applications' documents.  
   
- Miniserver специальный тип серверного приложения, который может быть запущен контейнером.  Microsoft paint граф и примеры miniservers Майкрософт.  Miniserver не сохраняет документы на диске в виде файлов.  Вместо этого он считывает его из документов и записывает их к элементам в документах, относящийся к контейнерам.  В результате miniserver поддерживает внедрение только, не связывание.  
+ A miniserver is a special type of server application that can only be launched by a container. Microsoft Draw and Microsoft Graph are examples of miniservers. A miniserver does not store documents as files on disk. Instead, it reads its documents from and writes them to items in documents belonging to containers. As a result, a miniserver supports embedding only, not linking.  
   
- Полного сервера можно запустить или в виде изолированного приложения или запустить из приложения контейнера.  Полный сервер может хранить документы на диске в виде файлов.  Он может поддерживать только внедрения и embedding и связывание или связывание только.  Пользователь приложения может создать вложенный элемент с помощью вырезать или команду копирования на сервере и в команде вставлять в контейнере.  Связанный элемент создан с помощью команды копирования на сервере и в команде ссылки " в контейнере.  Кроме того, пользователь может создать внедрить или связанный элемент с помощью диалогового окна объекта вставки.  
+ A full server can be run either as a stand-alone application or launched by a container application. A full server can store documents as files on disk. It can support embedding only, both embedding and linking, or linking only. The user of a container application can create an embedded item by choosing the Cut or Copy command in the server and the Paste command in the container. A linked item is created by choosing the Copy command in the server and the Paste Link command in the container. Alternatively, the user can create an embedded or linked item using the Insert Object dialog box.  
   
- В следующей таблице приведены характеристики различных типов серверов.  
+ The following table summarizes characteristics of different types of servers:  
   
-### Характеристики сервера  
+### <a name="server-characteristics"></a>Server Characteristics  
   
-|Тип сервера|Поддерживает несколько экземпляров|Элементы в документ|Документы для каждого экземпляра|  
-|-----------------|----------------------------------------|-------------------------|--------------------------------------|  
-|Miniserver|Да|1|1|  
-|Полного сервера SDI|Да|1 \(если связать поддерживается, 1 или более\)|1|  
-|Полного сервера MDI|\(Не обязательно\).|1 \(если связать поддерживается, 1 или более\)|0 или более|  
+|Type of server|Supports multiple instances|Items per document|Documents per instance|  
+|--------------------|---------------------------------|------------------------|----------------------------|  
+|Miniserver|Yes|1|1|  
+|SDI full server|Yes|1 (if linking is supported, 1 or more)|1|  
+|MDI full server|No (not required)|1 (if linking is supported, 1 or more)|0 or more|  
   
- Серверное приложение должно поддерживать несколько контейнеров одновременно, в случаеесли несколько контейнер будет использоваться для редактирования внедрить или связанный элемент.  Если сервер SDI \(или miniserver с интерфейсом диалогового окна\), несколько экземпляров сервера должны выполнять одновременно.  Это позволяет отдельного экземпляра приложения обработки каждого запроса контейнера.  
+ A server application should support multiple containers simultaneously, in the event that more than one container will be used to edit an embedded or linked item. If the server is an SDI application (or a miniserver with a dialog box interface), multiple instances of the server must be able to run simultaneously. This allows a separate instance of the application to handle each container request.  
   
- Если сервер приложение с интерфейсом MDI, он может создать новое дочернее окно MDI каждый раз, когда контейнер для изменения элемента.  Таким образом, один экземпляр приложения может поддерживать несколько контейнеров.  
+ If the server is an MDI application, it can create a new MDI child window each time a container needs to edit an item. In this way, a single instance of the application can support multiple containers.  
   
- В серверное приложение должно указать OLE системные библиотеки DLL, что делать, если один экземпляр сервера уже выполняется, когда другие запросы контейнера его службы: следует ли его запустить новый экземпляр сервера или непосредственно запросы всех контейнеров к одному экземпляру сервера.  
+ Your server application must tell the OLE system DLLs what to do if one instance of the server is already running when another container requests its services: whether it should launch a new instance of the server or direct all containers' requests to one instance of the server.  
   
- Более подробные сведения о серверах см. в разделе:  
+ For more details on servers, see:  
   
--   [Серверы: реализация сервера](../mfc/servers-implementing-a-server.md)  
+-   [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)  
   
--   [Серверы: Реализация серверные документы](../mfc/servers-implementing-server-documents.md)  
+-   [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)  
   
--   [Серверы: Реализация фреймового окна для встроенного редактирования](../Topic/Servers:%20Implementing%20In-Place%20Frame%20Windows.md)  
+-   [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)  
   
--   [Серверы: Серверные](../mfc/servers-server-items.md)  
+-   [Servers: Server Items](../mfc/servers-server-items.md)  
   
--   [Серверы: Проблемы пользовательского интерфейса](../mfc/servers-user-interface-issues.md)  
+-   [Servers: User-Interface Issues](../mfc/servers-user-interface-issues.md)  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Контейнеры](../mfc/containers.md)   
- [Контейнеры. Дополнительные возможности](../mfc/containers-advanced-features.md)   
- [Меню и ресурсы \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Регистрация](../mfc/registration.md)   
- [Серверы автоматизации](../mfc/automation-servers.md)
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)   
+ [Automation Servers](../mfc/automation-servers.md)
+
+

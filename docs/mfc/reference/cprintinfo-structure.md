@@ -1,5 +1,5 @@
 ---
-title: "CPrintInfo-структура | Документы Microsoft"
+title: CPrintInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPrintInfo structure
+- CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
 caps.latest.revision: 21
 author: mikeblome
@@ -33,75 +33,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ffa72acc58e0ac1a387e67e6542abcd466be9640
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1c4169e62bbd35e2883cd15a1005c2a815a76d19
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cprintinfo-structure"></a>CPrintInfo-структура
-Хранит сведения о печати и предварительного задания.  
+# <a name="cprintinfo-structure"></a>CPrintInfo Structure
+Stores information about a print or print-preview job.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CPrintInfo  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPrintInfo::GetFromPage](#getfrompage)|Возвращает номер первой страницы печати.|  
-|[CPrintInfo::GetMaxPage](#getmaxpage)|Возвращает номер последней страницы документа.|  
-|[CPrintInfo::GetMinPage](#getminpage)|Возвращает номер первой страницы документа.|  
-|[CPrintInfo::GetOffsetPage](#getoffsetpage)|Возвращает число страниц, предшествующей первой страницы элемента DocObject печать в объединенный DocObject задания печати.|  
-|[CPrintInfo::GetToPage](#gettopage)|Возвращает номер последней страницы, печать.|  
-|[CPrintInfo::SetMaxPage](#setmaxpage)|Задает номер последней страницы документа.|  
-|[CPrintInfo::SetMinPage](#setminpage)|Задает номер первой страницы документа.|  
+|[CPrintInfo::GetFromPage](#getfrompage)|Returns the number of the first page being printed.|  
+|[CPrintInfo::GetMaxPage](#getmaxpage)|Returns the number of the last page of the document.|  
+|[CPrintInfo::GetMinPage](#getminpage)|Returns the number of the first page of the document.|  
+|[CPrintInfo::GetOffsetPage](#getoffsetpage)|Returns the number of the pages preceding the first page of a DocObject item being printed in a combined DocObject print job.|  
+|[CPrintInfo::GetToPage](#gettopage)|Returns the number of the last page being printed.|  
+|[CPrintInfo::SetMaxPage](#setmaxpage)|Sets the number of the last page of the document.|  
+|[CPrintInfo::SetMinPage](#setminpage)|Sets the number of the first page of the document.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Содержит флаг, указывающий, следует ли продолжать цикл печати платформы.|  
-|[CPrintInfo::m_bDirect](#m_bdirect)|Содержит флаг, указывающий, следует ли печатать документ напрямую (без отображения диалогового окна «Печать»).|  
-|[CPrintInfo::m_bDocObject](#m_bdocobject)|Содержит флаг, указывающий ли DocObject выводимого на печать документа.|  
-|[CPrintInfo::m_bPreview](#m_bpreview)|Содержит флаг, указывающий, сейчас выполняется предварительный просмотр документа.|  
-|[CPrintInfo::m_dwFlags](#m_dwflags)|Указывает DocObject операции печати.|  
-|[CPrintInfo::m_lpUserData](#m_lpuserdata)|Содержит указатель на структуру, созданные пользователем.|  
-|[CPrintInfo::m_nCurPage](#m_ncurpage)|Определяет число страниц в настоящее время печатается.|  
-|[CPrintInfo::m_nJobNumber](#m_njobnumber)|Указывает номер задания, назначенный операционной системой для текущего задания печати|  
-|[CPrintInfo::m_nNumPreviewPages](#m_nnumpreviewpages)|Общее число страниц, отображаемых в окне предварительного просмотра; 1 или 2.|  
-|[CPrintInfo::m_nOffsetPage](#m_noffsetpage)|Задает смещение определенного DocObject первой страницы в объединенный DocObject задания печати.|  
-|[CPrintInfo::m_pPD](#m_ppd)|Содержит указатель на `CPrintDialog` объект, используемый для диалогового окна печати.|  
-|[CPrintInfo::m_rectDraw](#m_rectdraw)|Задает прямоугольник, определяющий размера страницы.|  
-|[CPrintInfo::m_strPageDesc](#m_strpagedesc)|Содержит строку форматирования для отображения номеров страниц.|  
+|[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Contains a flag indicating whether the framework should continue the print loop.|  
+|[CPrintInfo::m_bDirect](#m_bdirect)|Contains a flag indicating whether the document is being printed directly (without displaying the Print dialog box).|  
+|[CPrintInfo::m_bDocObject](#m_bdocobject)|Contains a flag indicating whether the document being printed is a DocObject.|  
+|[CPrintInfo::m_bPreview](#m_bpreview)|Contains a flag indicating whether the document is being previewed.|  
+|[CPrintInfo::m_dwFlags](#m_dwflags)|Specifies DocObject printing operations.|  
+|[CPrintInfo::m_lpUserData](#m_lpuserdata)|Contains a pointer to a user-created structure.|  
+|[CPrintInfo::m_nCurPage](#m_ncurpage)|Identifies the number of the page currently being printed.|  
+|[CPrintInfo::m_nJobNumber](#m_njobnumber)|Specifies the job number assigned by the operating system for the current print job|  
+|[CPrintInfo::m_nNumPreviewPages](#m_nnumpreviewpages)|Identifies the number of pages displayed in the preview window; either 1 or 2.|  
+|[CPrintInfo::m_nOffsetPage](#m_noffsetpage)|Specifies offset of a particular DocObject's first page in a combined DocObject print job.|  
+|[CPrintInfo::m_pPD](#m_ppd)|Contains a pointer to the `CPrintDialog` object used for the Print dialog box.|  
+|[CPrintInfo::m_rectDraw](#m_rectdraw)|Specifies a rectangle defining the current usable page area.|  
+|[CPrintInfo::m_strPageDesc](#m_strpagedesc)|Contains a format string for page-number display.|  
   
-## <a name="remarks"></a>Примечания  
- `CPrintInfo`представляет собой структуру и не имеет базового класса.  
+## <a name="remarks"></a>Remarks  
+ `CPrintInfo` is a structure and does not have a base class.  
   
- Платформа создает объект `CPrintInfo` каждый раз при печати или команда Предварительный выбран и удаляет его при выполнении команды.  
+ The framework creates an object of `CPrintInfo` each time the Print or Print Preview command is chosen and destroys it when the command is completed.  
   
- `CPrintInfo`содержит сведения о печати в целом, такие как диапазон страниц для печати и текущее состояние задания печати, например страницы, которые в настоящее время печатается. Некоторые сведения хранятся в связанный с ним [CPrintDialog](../../mfc/reference/cprintdialog-class.md) объекта; этот объект содержит значения, введенные пользователем в диалоговом окне «Печать».  
+ `CPrintInfo` contains information about both the print job as a whole, such as the range of pages to be printed, and the current status of the print job, such as the page currently being printed. Some information is stored in an associated [CPrintDialog](../../mfc/reference/cprintdialog-class.md) object; this object contains the values entered by the user in the Print dialog box.  
   
- Объект `CPrintInfo` объект передается между платформы и класс представления процессе печати и используется для обмена данными между ними. Например, платформа сообщает класса представления какие страницы документа для печати путем присвоения значения `m_nCurPage` членом `CPrintInfo`; представление класса извлекает значение и выполняет фактическую печать указанную страницу.  
+ A `CPrintInfo` object is passed between the framework and your view class during the printing process and is used to exchange information between the two. For example, the framework informs the view class which page of the document to print by assigning a value to the `m_nCurPage` member of `CPrintInfo`; the view class retrieves the value and performs the actual printing of the specified page.  
   
- Другим примером является случай, в котором длина документа не известна до печати. В этом случае класс представления тесты для конца документа каждый раз, когда печати страницы. По достижении границы класса представления задает `m_bContinuePrinting` членом `CPrintInfo` для **FALSE**; это информирует framework для остановки цикла печати.  
+ Another example is the case in which the length of the document is not known until it is printed. In this situation, the view class tests for the end of the document each time a page is printed. When the end is reached, the view class sets the `m_bContinuePrinting` member of `CPrintInfo` to **FALSE**; this informs the framework to stop the print loop.  
   
- `CPrintInfo`используемые функции-члены `CView` перечислены в разделе «см.» Дополнительные сведения об архитектуре печати, предоставляемых библиотеки классов Microsoft Foundation см. в разделе [окна фрейма](../../mfc/frame-windows.md) и [архитектуры документ/представление](../../mfc/document-view-architecture.md) и статьи [печати](../../mfc/printing.md) и [печати: Многостраничные документы](../../mfc/multipage-documents.md).  
+ `CPrintInfo` is used by the member functions of `CView` listed under "See Also." For more information about the printing architecture provided by the Microsoft Foundation Class Library, see [Frame Windows](../../mfc/frame-windows.md) and [Document/View Architecture](../../mfc/document-view-architecture.md) and the articles [Printing](../../mfc/printing.md) and [Printing: Multipage Documents](../../mfc/multipage-documents.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CPrintInfo`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** файле afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="getfrompage"></a>CPrintInfo::GetFromPage  
- Эта функция вызывается для получения номер первой страницы для печати.  
+##  <a name="getfrompage"></a>  CPrintInfo::GetFromPage  
+ Call this function to retrieve the number of the first page to be printed.  
   
 ```  
 UINT GetFromPage() const;
@@ -109,14 +109,14 @@ UINT GetFromPage() const;
  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Номер первой страницы для печати.  
+### <a name="return-value"></a>Return Value  
+ The number of the first page to be printed.  
   
-### <a name="remarks"></a>Примечания  
- Это значение, указанное пользователем в диалоговом окне «Печать», и он сохраняется в `CPrintDialog` объект ссылается `m_pPD` член. Если пользователь не указал значение, по умолчанию используется первой страницы документа.  
+### <a name="remarks"></a>Remarks  
+ This is the value specified by the user in the Print dialog box, and it is stored in the `CPrintDialog` object referenced by the `m_pPD` member. If the user has not specified a value, the default is the first page of the document.  
   
-##  <a name="getmaxpage"></a>CPrintInfo::GetMaxPage  
- Эта функция вызывается для извлечения номера последней страницы документа.  
+##  <a name="getmaxpage"></a>  CPrintInfo::GetMaxPage  
+ Call this function to retrieve the number of the last page of the document.  
   
 ```  
 UINT GetMaxPage() const;
@@ -124,14 +124,14 @@ UINT GetMaxPage() const;
  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Номер последней страницы документа.  
+### <a name="return-value"></a>Return Value  
+ The number of the last page of the document.  
   
-### <a name="remarks"></a>Примечания  
- Это значение хранится в `CPrintDialog` объект ссылается `m_pPD` член.  
+### <a name="remarks"></a>Remarks  
+ This value is stored in the `CPrintDialog` object referenced by the `m_pPD` member.  
   
-##  <a name="getminpage"></a>CPrintInfo::GetMinPage  
- Эта функция вызывается для извлечения номера первой страницы документа.  
+##  <a name="getminpage"></a>  CPrintInfo::GetMinPage  
+ Call this function to retrieve the number of the first page of the document.  
   
 ```  
 UINT GetMinPage() const;
@@ -139,14 +139,14 @@ UINT GetMinPage() const;
  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Номер первой страницы документа.  
+### <a name="return-value"></a>Return Value  
+ The number of the first page of the document.  
   
-### <a name="remarks"></a>Примечания  
- Это значение хранится в `CPrintDialog` объект ссылается `m_pPD` член.  
+### <a name="remarks"></a>Remarks  
+ This value is stored in the `CPrintDialog` object referenced by the `m_pPD` member.  
   
-##  <a name="getoffsetpage"></a>CPrintInfo::GetOffsetPage  
- Эта функция вызывается для извлечения значения смещения при печати нескольких элементов DocObject DocObject клиента.  
+##  <a name="getoffsetpage"></a>  CPrintInfo::GetOffsetPage  
+ Call this function to retrieve the offset when printing multiple DocObject items from a DocObject client.  
   
 ```  
 UINT GetOffsetPage() const;
@@ -154,14 +154,14 @@ UINT GetOffsetPage() const;
  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество страниц, предшествующей первой страницы элемента DocObject печать в объединенный DocObject задания печати.  
+### <a name="return-value"></a>Return Value  
+ The number of pages preceding the first page of a DocObject item being printed in a combined DocObject print job.  
   
-### <a name="remarks"></a>Примечания  
- Это значение указывает **m_nOffsetPage** член. Первой страницы документа будут пронумерованы **m_nOffsetPage** значение + 1 при печати как DocObject с других активных документов. **M_nOffsetPage** элемент действителен только тогда, когда **m_bDocObject** значение **TRUE**.  
+### <a name="remarks"></a>Remarks  
+ This value is referenced by the **m_nOffsetPage** member. The first page of your document will be numbered the **m_nOffsetPage** value + 1 when printed as a DocObject with other active documents. The **m_nOffsetPage** member is valid only if the **m_bDocObject** value is **TRUE**.  
   
-##  <a name="gettopage"></a>CPrintInfo::GetToPage  
- Эта функция вызывается для извлечения номера последней страницы для печати.  
+##  <a name="gettopage"></a>  CPrintInfo::GetToPage  
+ Call this function to retrieve the number of the last page to be printed.  
   
 ```  
 UINT GetToPage() const;
@@ -169,45 +169,45 @@ UINT GetToPage() const;
  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Номер последней страницы для печати.  
+### <a name="return-value"></a>Return Value  
+ The number of the last page to be printed.  
   
-### <a name="remarks"></a>Примечания  
- Это значение, указанное пользователем в диалоговом окне «Печать», и он сохраняется в `CPrintDialog` объект ссылается `m_pPD` член. Если пользователь не указал значение, по умолчанию используется последней страницы документа.  
+### <a name="remarks"></a>Remarks  
+ This is the value specified by the user in the Print dialog box, and it is stored in the `CPrintDialog` object referenced by the `m_pPD` member. If the user has not specified a value, the default is the last page of the document.  
   
-##  <a name="m_bcontinueprinting"></a>CPrintInfo::m_bContinuePrinting  
- Содержит флаг, указывающий, следует ли продолжать цикл печати платформы.  
+##  <a name="m_bcontinueprinting"></a>  CPrintInfo::m_bContinuePrinting  
+ Contains a flag indicating whether the framework should continue the print loop.  
   
-### <a name="remarks"></a>Примечания  
- При выполнении разбиения на страницы во время печати, следует установить этот компонент **FALSE** в переопределении `CView::OnPrepareDC` достижении конца документа. Необходимо изменить эту переменную при указании длины документа в начале задания печати с помощью `SetMaxPage` функции-члена. `m_bContinuePrinting` Элемент — это открытая переменная типа **BOOL**.  
+### <a name="remarks"></a>Remarks  
+ If you are doing print-time pagination, you can set this member to **FALSE** in your override of `CView::OnPrepareDC` once the end of the document has been reached. You do not have to modify this variable if you have specified the length of the document at the beginning of the print job using the `SetMaxPage` member function. The `m_bContinuePrinting` member is a public variable of type **BOOL**.  
   
-##  <a name="m_bdirect"></a>CPrintInfo::m_bDirect  
- Этот элемент задает платформа **TRUE** Если диалоговое окно печати не выполняется для прямой печати. **FALSE** в противном случае.  
+##  <a name="m_bdirect"></a>  CPrintInfo::m_bDirect  
+ The framework sets this member to **TRUE** if the Print dialog box will be bypassed for direct printing; **FALSE** otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Диалогового окна печати обычно пропускается при печати из оболочки или при печати выполняется с помощью идентификатора команды **ID_FILE_PRINT_DIRECT**.  
+### <a name="remarks"></a>Remarks  
+ The Print dialog is normally bypassed when you print from the shell or when printing is done using the command ID **ID_FILE_PRINT_DIRECT**.  
   
- Здесь обычно не изменять этот член, но если изменить его, изменить его перед вызовом [CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting) в переопределении [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).  
+ You normally don't change this member, but if you do change it, change it before you call [CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting) in your override of [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).  
   
-##  <a name="m_bdocobject"></a>CPrintInfo::m_bDocObject  
- Содержит флаг, указывающий ли DocObject выводимого на печать документа.  
+##  <a name="m_bdocobject"></a>  CPrintInfo::m_bDocObject  
+ Contains a flag indicating whether the document being printed is a DocObject.  
   
-### <a name="remarks"></a>Примечания  
- Члены данных `m_dwFlags` и **m_nOffsetPage** являются недопустимыми, если этот флаг не **TRUE**.  
+### <a name="remarks"></a>Remarks  
+ Data members `m_dwFlags` and **m_nOffsetPage** are invalid unless this flag is **TRUE**.  
   
-##  <a name="m_bpreview"></a>CPrintInfo::m_bPreview  
- Содержит флаг, указывающий, сейчас выполняется предварительный просмотр документа.  
+##  <a name="m_bpreview"></a>  CPrintInfo::m_bPreview  
+ Contains a flag indicating whether the document is being previewed.  
   
-### <a name="remarks"></a>Примечания  
- Это задается платформой, в зависимости от того, что выполнена команда пользователя. Диалоговое окно «Печать» не отображается для предварительного задания. **M_bPreview** элемент — это открытая переменная типа **BOOL**.  
+### <a name="remarks"></a>Remarks  
+ This is set by the framework depending on which command the user executed. The Print dialog box is not displayed for a print-preview job. The **m_bPreview** member is a public variable of type **BOOL**.  
   
-##  <a name="m_dwflags"></a>CPrintInfo::m_dwFlags  
- Содержит сочетание флагов, указав DocObject операции печати.  
+##  <a name="m_dwflags"></a>  CPrintInfo::m_dwFlags  
+ Contains a combination of flags specifying DocObject printing operations.  
   
-### <a name="remarks"></a>Примечания  
- Только если данные-член **m_bDocObject** — **TRUE**.  
+### <a name="remarks"></a>Remarks  
+ Valid only if data member **m_bDocObject** is **TRUE**.  
   
- Флаги может быть один или несколько из следующих значений:  
+ The flags can be one or more of the following values:  
   
 - **PRINTFLAG_MAYBOTHERUSER**  
   
@@ -223,87 +223,87 @@ UINT GetToPage() const;
   
 - **PRINTFLAG_PRINTTOFILE**  
   
-##  <a name="m_lpuserdata"></a>CPrintInfo::m_lpUserData  
- Содержит указатель на структуру, созданные пользователем.  
+##  <a name="m_lpuserdata"></a>  CPrintInfo::m_lpUserData  
+ Contains a pointer to a user-created structure.  
   
-### <a name="remarks"></a>Примечания  
- Это можно использовать для хранения данных печати, не следует сохранить в классе представления. **M_lpUserData** элемент — это открытая переменная типа **LPVOID**.  
+### <a name="remarks"></a>Remarks  
+ You can use this to store printing-specific data that you do not want to store in your view class. The **m_lpUserData** member is a public variable of type **LPVOID**.  
   
-##  <a name="m_ncurpage"></a>CPrintInfo::m_nCurPage  
- Содержит номер текущей страницы.  
+##  <a name="m_ncurpage"></a>  CPrintInfo::m_nCurPage  
+ Contains the number of the current page.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает функцию `CView::OnPrepareDC` и `CView::OnPrint` один раз для каждой страницы документа, указав другое значение для этого элемента при каждом; его значения в диапазоне от значение, возвращаемое `GetFromPage` , возвращаемый `GetToPage`. Этот элемент можно использовать в вашей переопределения `CView::OnPrepareDC` и `CView::OnPrint` для печати указанной страницы документа.  
+### <a name="remarks"></a>Remarks  
+ The framework calls `CView::OnPrepareDC` and `CView::OnPrint` once for each page of the document, specifying a different value for this member each time; its values range from the value returned by `GetFromPage` to that returned by `GetToPage`. Use this member in your overrides of `CView::OnPrepareDC` and `CView::OnPrint` to print the specified page of the document.  
   
- При вызове режим предварительного просмотра framework считывает значение этого элемента, чтобы определить, какие страницы документа должны просматриваться изначально. Можно задать значение этого элемента в переопределении `CView::OnPreparePrinting` для поддержания пользователя текущей позиции в документе при переходе в режим предварительного просмотра. `m_nCurPage` Элемент — это открытая переменная типа **UINT**.  
+ When preview mode is first invoked, the framework reads the value of this member to determine which page of the document should be previewed initially. You can set the value of this member in your override of `CView::OnPreparePrinting` to maintain the user's current position in the document when entering preview mode. The `m_nCurPage` member is a public variable of type **UINT**.  
   
-##  <a name="m_njobnumber"></a>CPrintInfo::m_nJobNumber  
- Указывает номер задания, назначенный операционной системой для текущего задания печати.  
+##  <a name="m_njobnumber"></a>  CPrintInfo::m_nJobNumber  
+ Indicates the job number assigned by the operating system for the current print job.  
   
-### <a name="remarks"></a>Примечания  
- Это значение может быть **SP_ERROR** Если задание еще не выдает (то есть, если `CPrintInfo` объект вновь создан и еще не использовался для печати), или если произошла ошибка при запуске задания.  
+### <a name="remarks"></a>Remarks  
+ This value may be **SP_ERROR** if the job hasn't yet printed (that is, if the `CPrintInfo` object is newly constructed and has not yet been used to print), or if there was an error in starting the job.  
   
-##  <a name="m_nnumpreviewpages"></a>CPrintInfo::m_nNumPreviewPages  
- Содержит количество страниц, отображаемых в режиме предварительного просмотра; он может быть 1 или 2.  
+##  <a name="m_nnumpreviewpages"></a>  CPrintInfo::m_nNumPreviewPages  
+ Contains the number of pages displayed in preview mode; it can be either 1 or 2.  
   
-### <a name="remarks"></a>Примечания  
- **M_nNumPreviewPages** элемент — это открытая переменная типа **UINT**.  
+### <a name="remarks"></a>Remarks  
+ The **m_nNumPreviewPages** member is a public variable of type **UINT**.  
   
-##  <a name="m_noffsetpage"></a>CPrintInfo::m_nOffsetPage  
- Содержит номер страницы перед первой страницы конкретного DocObject в объединенный DocObject задания печати.  
+##  <a name="m_noffsetpage"></a>  CPrintInfo::m_nOffsetPage  
+ Contains the number of pages preceding the first page of a particular DocObject in a combined DocObject print job.  
   
-##  <a name="m_ppd"></a>CPrintInfo::m_pPD  
- Содержит указатель на `CPrintDialog` объект, используемый для отображения диалоговое окно печати задания печати.  
+##  <a name="m_ppd"></a>  CPrintInfo::m_pPD  
+ Contains a pointer to the `CPrintDialog` object used to display the Print dialog box for the print job.  
   
-### <a name="remarks"></a>Примечания  
- `m_pPD` Член — это открытая переменная, объявленная как указатель на `CPrintDialog`.  
+### <a name="remarks"></a>Remarks  
+ The `m_pPD` member is a public variable declared as a pointer to `CPrintDialog`.  
   
-##  <a name="m_rectdraw"></a>CPrintInfo::m_rectDraw  
- Указывает область рисования можно использовать страницы в логических координатах.  
+##  <a name="m_rectdraw"></a>  CPrintInfo::m_rectDraw  
+ Specifies the usable drawing area of the page in logical coordinates.  
   
-### <a name="remarks"></a>Примечания  
- Можно ссылаться на это в переопределении `CView::OnPrint`. Этот элемент можно использовать для отслеживания того, какая область остается доступной после печати заголовки, нижние колонтитулы и т. д. **M_rectDraw** элемент — это открытая переменная типа `CRect`.  
+### <a name="remarks"></a>Remarks  
+ You may want to refer to this in your override of `CView::OnPrint`. You can use this member to keep track of what area remains usable after you print headers, footers, and so on. The **m_rectDraw** member is a public variable of type `CRect`.  
   
-##  <a name="m_strpagedesc"></a>CPrintInfo::m_strPageDesc  
- Содержит строку форматирования, используемый для отображения номеров страниц во время предварительного просмотра; Эта строка состоит из двух подстрок, один для отображения одной страницы и один для отображения страницы дважды, каждый завершаться символом «\n».  
+##  <a name="m_strpagedesc"></a>  CPrintInfo::m_strPageDesc  
+ Contains a format string used to display the page numbers during print preview; this string consists of two substrings, one for single-page display and one for double-page display, each terminated by a '\n' character.  
   
-### <a name="remarks"></a>Примечания  
- Платформа использует «U-%u\n % %u\nPages страницы» как значение по умолчанию. Если требуется другой формат номера страниц, задайте строку формата в переопределении `CView::OnPreparePrinting`. **M_strPageDesc** элемент — это открытая переменная типа `CString`.  
+### <a name="remarks"></a>Remarks  
+ The framework uses "Page %u\nPages %u-%u\n" as the default value. If you want a different format for the page numbers, specify a format string in your override of `CView::OnPreparePrinting`. The **m_strPageDesc** member is a public variable of type `CString`.  
   
-##  <a name="setmaxpage"></a>CPrintInfo::SetMaxPage  
- Эта функция используется для указания номера последней страницы документа.  
+##  <a name="setmaxpage"></a>  CPrintInfo::SetMaxPage  
+ Call this function to specify the number of the last page of the document.  
   
 ```  
 void SetMaxPage(UINT nMaxPage);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *nMaxPage*  
- Номер последней страницы документа.  
+ Number of the last page of the document.  
   
-### <a name="remarks"></a>Примечания  
- Это значение хранится в `CPrintDialog` объект ссылается `m_pPD` член. Если длина документа известен, перед печатью, эта функция вызывается из переопределение метода `CView::OnPreparePrinting`. Если длина документа зависит от параметра, указанное пользователем в диалоговом окне «Печать», эта функция вызывается из переопределение метода `CView::OnBeginPrinting`. Если длина документа не известна до печати, используйте `m_bContinuePrinting` элемент управления печати цикла.  
+### <a name="remarks"></a>Remarks  
+ This value is stored in the `CPrintDialog` object referenced by the `m_pPD` member. If the length of the document is known before it is printed, call this function from your override of `CView::OnPreparePrinting`. If the length of the document depends on a setting specified by the user in the Print dialog box, call this function from your override of `CView::OnBeginPrinting`. If the length of the document is not known until it is printed, use the `m_bContinuePrinting` member to control the print loop.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).  
+### <a name="example"></a>Example  
+  See the example for [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).  
   
-##  <a name="setminpage"></a>CPrintInfo::SetMinPage  
- Эта функция используется для указания номера первой страницы документа.  
+##  <a name="setminpage"></a>  CPrintInfo::SetMinPage  
+ Call this function to specify the number of the first page of the document.  
   
 ```  
 void SetMinPage(UINT nMinPage);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *nMinPage*  
- Номер первой страницы документа.  
+ Number of the first page of the document.  
   
-### <a name="remarks"></a>Примечания  
- Номера страниц обычно начинаются с 1. Это значение хранится в `CPrintDialog` объект ссылается `m_pPD` член.  
+### <a name="remarks"></a>Remarks  
+ Page numbers normally start at 1. This value is stored in the `CPrintDialog` object referenced by the `m_pPD` member.  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC DIBLOOK](../../visual-cpp-samples.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)   
  [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)   
  [CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)   

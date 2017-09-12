@@ -1,5 +1,5 @@
 ---
-title: "CComboBox-класс | Документы Microsoft"
+title: CComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -65,8 +65,57 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- combo boxes, CComboBox objects
-- CComboBox class
+- CComboBox [MFC], CComboBox
+- CComboBox [MFC], AddString
+- CComboBox [MFC], Clear
+- CComboBox [MFC], CompareItem
+- CComboBox [MFC], Copy
+- CComboBox [MFC], Create
+- CComboBox [MFC], Cut
+- CComboBox [MFC], DeleteItem
+- CComboBox [MFC], DeleteString
+- CComboBox [MFC], Dir
+- CComboBox [MFC], DrawItem
+- CComboBox [MFC], FindString
+- CComboBox [MFC], FindStringExact
+- CComboBox [MFC], GetComboBoxInfo
+- CComboBox [MFC], GetCount
+- CComboBox [MFC], GetCueBanner
+- CComboBox [MFC], GetCurSel
+- CComboBox [MFC], GetDroppedControlRect
+- CComboBox [MFC], GetDroppedState
+- CComboBox [MFC], GetDroppedWidth
+- CComboBox [MFC], GetEditSel
+- CComboBox [MFC], GetExtendedUI
+- CComboBox [MFC], GetHorizontalExtent
+- CComboBox [MFC], GetItemData
+- CComboBox [MFC], GetItemDataPtr
+- CComboBox [MFC], GetItemHeight
+- CComboBox [MFC], GetLBText
+- CComboBox [MFC], GetLBTextLen
+- CComboBox [MFC], GetLocale
+- CComboBox [MFC], GetMinVisible
+- CComboBox [MFC], GetTopIndex
+- CComboBox [MFC], InitStorage
+- CComboBox [MFC], InsertString
+- CComboBox [MFC], LimitText
+- CComboBox [MFC], MeasureItem
+- CComboBox [MFC], Paste
+- CComboBox [MFC], ResetContent
+- CComboBox [MFC], SelectString
+- CComboBox [MFC], SetCueBanner
+- CComboBox [MFC], SetCurSel
+- CComboBox [MFC], SetDroppedWidth
+- CComboBox [MFC], SetEditSel
+- CComboBox [MFC], SetExtendedUI
+- CComboBox [MFC], SetHorizontalExtent
+- CComboBox [MFC], SetItemData
+- CComboBox [MFC], SetItemDataPtr
+- CComboBox [MFC], SetItemHeight
+- CComboBox [MFC], SetLocale
+- CComboBox [MFC], SetMinVisibleItems
+- CComboBox [MFC], SetTopIndex
+- CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 caps.latest.revision: 25
 author: mikeblome
@@ -86,145 +135,145 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6cd8407f3c70469afa256d8fb7608b7de43b6c72
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dfedd307ab71d780e9a6ae03dea2608580319f60
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccombobox-class"></a>CComboBox-класс
-Предоставляет функции поля со списком Windows.  
+# <a name="ccombobox-class"></a>CComboBox Class
+Provides the functionality of a Windows combo box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CComboBox : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|  
+|[CComboBox::CComboBox](#ccombobox)|Constructs a `CComboBox` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CComboBox::AddString](#addstring)|Добавляет строку в конец списка в поле со списком списком или позиции отсортированных списков с **CBS_SORT** стиля.|  
-|[CComboBox::Clear](#clear)|Удаляет (очищает) текущее выделение, если таковая имеется, в поле редактирования.|  
-|[CComboBox::CompareItem](#compareitem)|Вызывается платформой для определения относительной позиции элемента списка в отсортированном определяемые владельцем поле со списком.|  
-|[CComboBox::Copy](#copy)|Копирует текущее выделение в том случае, если таковая имеется, в буфер обмена в **CF_TEXT** формат.|  
-|[CComboBox::Create](#create)|Создает поле со списком и прикрепляет его к `CComboBox` объекта.|  
-|[CComboBox::Cut](#cut)|Удаляет (порезов) выделенного элемента, если имеется, в режиме изменения управления и копирует удаленный текст в буфер обмена в **CF_TEXT** формат.|  
-|[CComboBox::DeleteItem](#deleteitem)|Вызывается платформой при удалении элемента списка из определяемых владельцем списком.|  
-|[CComboBox::DeleteString](#deletestring)|Удаляет строку из списка поля со списком.|  
-|[CComboBox::Dir](#dir)|Добавляет список имен файлов в список поля со списком.|  
-|[CComboBox::DrawItem](#drawitem)|Вызывается платформой при изменении внешнего вида пользовательского со списком, изменится.|  
-|[CComboBox::FindString](#findstring)|Находит первая строка, содержащая префикс, указанный в списке поля со списком.|  
-|[CComboBox::FindStringExact](#findstringexact)|Находит первый списков строки (в поле со списком), совпадающий с указанной строкой.|  
-|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Извлекает сведения о `CComboBox` объекта.|  
-|[CComboBox::GetCount](#getcount)|Возвращает число элементов в списке поля со списком.|  
-|[CComboBox::GetCueBanner](#getcuebanner)|Возвращает текст подсказки, отображаемый для элемента управления поля со списком.|  
-|[CComboBox::GetCurSel](#getcursel)|Извлекает индекс текущего выделенного элемента, если таковая имеется, в списке поля со списком.|  
-|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Извлекает координаты на экране отображается (удаленные вниз) списка раскрывающемся поле со списком.|  
-|[CComboBox::GetDroppedState](#getdroppedstate)|Определяет, является ли поле со списком в поле с раскрывающимся списком отображается (раскрыл).|  
-|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Возвращает минимально допустимого ширину части раскрывающегося списка в поле со списком.|  
-|[CComboBox::GetEditSel](#geteditsel)|Возвращает позиции символов начала и конца текущего выделенного фрагмента в элементе управления списком.|  
-|[CComboBox::GetExtendedUI](#getextendedui)|Определяет, имеет ли поле со списком пользовательский интерфейс по умолчанию или расширенный пользовательский интерфейс.|  
-|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Возвращает ширину в пикселях горизонтальной прокруткой списков часть поле со списком.|  
-|[CComboBox::GetItemData](#getitemdata)|Извлекает значение предоставленного приложением 32-разрядной, связанное с указанным списком элементов.|  
-|[CComboBox::GetItemDataPtr](#getitemdataptr)|Возвращает 32-разрядного указателя предоставленную приложением, который связан с указанным списком элементов.|  
-|[CComboBox::GetItemHeight](#getitemheight)|Получает высоту элементов списка в поле со списком.|  
-|[CComboBox::GetLBText](#getlbtext)|Получает строку из списка поля со списком.|  
-|[CComboBox::GetLBTextLen](#getlbtextlen)|Возвращает длину строки в списке поля со списком.|  
-|[CComboBox::GetLocale](#getlocale)|Возвращает идентификатор языкового стандарта для поля со списком.|  
-|[CComboBox::GetMinVisible](#getminvisible)|Получает минимальное количество видимых элементов в раскрывающемся списке текущего поля со списком.|  
-|[CComboBox::GetTopIndex](#gettopindex)|Возвращает индекс первой видимой позиции в списке части поле со списком.|  
-|[CComboBox::InitStorage](#initstorage)|Предварительно размещает блоки памяти для элементов и строк в списке части поле со списком.|  
-|[CComboBox::InsertString](#insertstring)|Вставляет строку в список поля со списком.|  
-|[CComboBox::LimitText](#limittext)|Ограничивает длину текста, который пользователь может ввести в элемент управления списком.|  
-|[CComboBox::MeasureItem](#measureitem)|Вызывается платформой для определения измерений поле со списком при создании определяемых владельцем списком.|  
-|[CComboBox::Paste](#paste)|Вставляет данные из буфера обмена в элемент управления, расположенный в текущей позиции курсора. Вставляются данные только в том случае, если в буфере обмена содержатся данные в **CF_TEXT** формат.|  
-|[CComboBox::ResetContent](#resetcontent)|Удаляет все элементы из списка и измените элемент управления списком.|  
-|[CComboBox::SelectString](#selectstring)|Выполняет поиск строки в списке поля со списком и, если строка найдена, выбирает строки в поле со списком и копирует строки в элемент управления для редактирования.|  
-|[CComboBox::SetCueBanner](#setcuebanner)|Задает текст подсказки, отображаемый для элемента управления поля со списком.|  
-|[CComboBox::SetCurSel](#setcursel)|Выбирает строку в списке поля со списком.|  
-|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Задает минимально допустимого ширину части раскрывающегося списка в поле со списком.|  
-|[CComboBox::SetEditSel](#seteditsel)|Выбирает символов в элементе управления списком.|  
-|[CComboBox::SetExtendedUI](#setextendedui)|Выбирает пользовательский интерфейс по умолчанию или расширенный пользовательский интерфейс поле со списком, который имеет **CBS_DROPDOWN** или **CBS_DROPDOWNLIST** стиля.|  
-|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Задает ширину в пикселях горизонтальной прокруткой списков часть поле со списком.|  
-|[CComboBox::SetItemData](#setitemdata)|Задает 32-разрядное значение, связанное с указанным элементом в поле со списком.|  
-|[CComboBox::SetItemDataPtr](#setitemdataptr)|Задает 32-разрядный указатель, связанный с указанного элемента в поле со списком.|  
-|[CComboBox::SetItemHeight](#setitemheight)|Задает высоту элементов списка в поле со списком или высота элемента управления редактирования (или статического текста) часть со списком.|  
-|[CComboBox::SetLocale](#setlocale)|Задает идентификатор языкового стандарта для поля со списком.|  
-|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Задает минимальное число видимых элементов в раскрывающемся списке текущего поля со списком.|  
-|[CComboBox::SetTopIndex](#settopindex)|Сообщает списков часть поле со списком для отображения элемента с указанным индексом в верхней.|  
-|[CComboBox::ShowDropDown](#showdropdown)|Показывает или скрывает поле со списком поле со списком, который имеет **CBS_DROPDOWN** или **CBS_DROPDOWNLIST** стиля.|  
+|[CComboBox::AddString](#addstring)|Adds a string to the end of the list in the list box of a combo box, or at the sorted position for list boxes with the **CBS_SORT** style.|  
+|[CComboBox::Clear](#clear)|Deletes (clears) the current selection, if any, in the edit control.|  
+|[CComboBox::CompareItem](#compareitem)|Called by the framework to determine the relative position of a new list item in a sorted owner-drawn combo box.|  
+|[CComboBox::Copy](#copy)|Copies the current selection, if any, onto the Clipboard in **CF_TEXT** format.|  
+|[CComboBox::Create](#create)|Creates the combo box and attaches it to the `CComboBox` object.|  
+|[CComboBox::Cut](#cut)|Deletes (cuts) the current selection, if any, in the edit control and copies the deleted text onto the Clipboard in **CF_TEXT** format.|  
+|[CComboBox::DeleteItem](#deleteitem)|Called by the framework when a list item is deleted from an owner-drawn combo box.|  
+|[CComboBox::DeleteString](#deletestring)|Deletes a string from the list box of a combo box.|  
+|[CComboBox::Dir](#dir)|Adds a list of file names to the list box of a combo box.|  
+|[CComboBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-drawn combo box changes.|  
+|[CComboBox::FindString](#findstring)|Finds the first string that contains the specified prefix in the list box of a combo box.|  
+|[CComboBox::FindStringExact](#findstringexact)|Finds the first list-box string (in a combo box) that matches the specified string.|  
+|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Retrieves information about the `CComboBox` object.|  
+|[CComboBox::GetCount](#getcount)|Retrieves the number of items in the list box of a combo box.|  
+|[CComboBox::GetCueBanner](#getcuebanner)|Gets the cue text that is displayed for a combo box control.|  
+|[CComboBox::GetCurSel](#getcursel)|Retrieves the index of the currently selected item, if any, in the list box of a combo box.|  
+|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Retrieves the screen coordinates of the visible (dropped down) list box of a drop-down combo box.|  
+|[CComboBox::GetDroppedState](#getdroppedstate)|Determines whether the list box of a drop-down combo box is visible (dropped down).|  
+|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Retrieves the minimum allowed width for the drop-down list-box portion of a combo box.|  
+|[CComboBox::GetEditSel](#geteditsel)|Gets the starting and ending character positions of the current selection in the edit control of a combo box.|  
+|[CComboBox::GetExtendedUI](#getextendedui)|Determines whether a combo box has the default user interface or the extended user interface.|  
+|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Returns the width in pixels that the list-box portion of the combo box can be scrolled horizontally.|  
+|[CComboBox::GetItemData](#getitemdata)|Retrieves the application-supplied 32-bit value associated with the specified combo-box item.|  
+|[CComboBox::GetItemDataPtr](#getitemdataptr)|Retrieves the application-supplied 32-bit pointer that is associated with the specified combo-box item.|  
+|[CComboBox::GetItemHeight](#getitemheight)|Retrieves the height of list items in a combo box.|  
+|[CComboBox::GetLBText](#getlbtext)|Gets a string from the list box of a combo box.|  
+|[CComboBox::GetLBTextLen](#getlbtextlen)|Gets the length of a string in the list box of a combo box.|  
+|[CComboBox::GetLocale](#getlocale)|Retrieves the locale identifier for a combo box.|  
+|[CComboBox::GetMinVisible](#getminvisible)|Gets the minimum number of visible items in the drop-down list of the current combo box.|  
+|[CComboBox::GetTopIndex](#gettopindex)|Returns the index of the first visible item in the list-box portion of the combo box.|  
+|[CComboBox::InitStorage](#initstorage)|Preallocates blocks of memory for items and strings in the list-box portion of the combo box.|  
+|[CComboBox::InsertString](#insertstring)|Inserts a string into the list box of a combo box.|  
+|[CComboBox::LimitText](#limittext)|Limits the length of the text that the user can enter into the edit control of a combo box.|  
+|[CComboBox::MeasureItem](#measureitem)|Called by the framework to determine combo box dimensions when an owner-drawn combo box is created.|  
+|[CComboBox::Paste](#paste)|Inserts the data from the Clipboard into the edit control at the current cursor position. Data is inserted only if the Clipboard contains data in **CF_TEXT** format.|  
+|[CComboBox::ResetContent](#resetcontent)|Removes all items from the list box and edit control of a combo box.|  
+|[CComboBox::SelectString](#selectstring)|Searches for a string in the list box of a combo box and, if the string is found, selects the string in the list box and copies the string to the edit control.|  
+|[CComboBox::SetCueBanner](#setcuebanner)|Sets the cue text that is displayed for a combo box control.|  
+|[CComboBox::SetCurSel](#setcursel)|Selects a string in the list box of a combo box.|  
+|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Sets the minimum allowed width for the drop-down list-box portion of a combo box.|  
+|[CComboBox::SetEditSel](#seteditsel)|Selects characters in the edit control of a combo box.|  
+|[CComboBox::SetExtendedUI](#setextendedui)|Selects either the default user interface or the extended user interface for a combo box that has the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.|  
+|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Sets the width in pixels that the list-box portion of the combo box can be scrolled horizontally.|  
+|[CComboBox::SetItemData](#setitemdata)|Sets the 32-bit value associated with the specified item in a combo box.|  
+|[CComboBox::SetItemDataPtr](#setitemdataptr)|Sets the 32-bit pointer associated with the specified item in a combo box.|  
+|[CComboBox::SetItemHeight](#setitemheight)|Sets the height of list items in a combo box or the height of the edit-control (or static-text) portion of a combo box.|  
+|[CComboBox::SetLocale](#setlocale)|Sets the locale identifier for a combo box.|  
+|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Sets the minimum number of visible items in the drop-down list of the current combo box.|  
+|[CComboBox::SetTopIndex](#settopindex)|Tells the list-box portion of the combo box to display the item with the specified index at the top.|  
+|[CComboBox::ShowDropDown](#showdropdown)|Shows or hides the list box of a combo box that has the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.|  
   
-## <a name="remarks"></a>Примечания  
- Поле со списком содержит поле со списком, в сочетании с статический элемент управления или элемент управления. Списков части элемента управления могут отображаться все время или только может раскрывающийся список, когда пользователь выбирает стрелку раскрывающегося списка рядом с элементом управления.  
+## <a name="remarks"></a>Remarks  
+ A combo box consists of a list box combined with either a static control or edit control. The list-box portion of the control may be displayed at all times or may only drop down when the user selects the drop-down arrow next to the control.  
   
- Текущего выделенного элемента (если таковые имеются) в поле со списком отображается в статическом или элемента управления edit. Кроме того Если поле со списком имеет стиль раскрывающегося списка, пользователь может ввести начальный символ для одного из элементов в списке и списке, если она видна, будут выделены следующего элемента с этого начального знака.  
+ The currently selected item (if any) in the list box is displayed in the static or edit control. In addition, if the combo box has the drop-down list style, the user can type the initial character of one of the items in the list, and the list box, if visible, will highlight the next item with that initial character.  
   
- В следующей таблице сравниваются три списком [стили](../../mfc/reference/combo-box-styles.md).  
+ The following table compares the three combo-box [styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   
-|Стиль|Если отображается список|Статический метод или редактирования элемента управления|  
+|Style|When is list box visible|Static or edit control|  
 |-----------|-------------------------------|-----------------------------|  
-|Простая|Всегда|Правка|  
-|Drop-down|При удалении|Правка|  
-|Раскрывающийся список|При удалении|Static|  
+|Simple|Always|Edit|  
+|Drop-down|When dropped down|Edit|  
+|Drop-down list|When dropped down|Static|  
   
- Можно создать `CComboBox` объекта на основе шаблона диалогового окна или непосредственно в коде. В обоих случаях сначала вызовите конструктор `CComboBox` для создания `CComboBox` объекта; затем вызвать [создать](#create) функции-члена для создания элемента управления и присоединить его к `CComboBox` объекта.  
+ You can create a `CComboBox` object from either a dialog template or directly in your code. In both cases, first call the constructor `CComboBox` to construct the `CComboBox` object; then call the [Create](#create) member function to create the control and attach it to the `CComboBox` object.  
   
- Если вы хотите обработки сообщений Windows уведомлений, отправленных в поле со списком с родительским (обычно класс, производный от `CDialog`), добавить схему сообщений входа и обработчик сообщений функции-члена родительского класса для каждого сообщения.  
+ If you want to handle Windows notification messages sent by a combo box to its parent (usually a class derived from `CDialog`), add a message-map entry and message-handler member function to the parent class for each message.  
   
- Каждая запись сопоставления сообщений имеет следующий вид:  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`**,**`memberFxn`**)**  
   
- где `id` указывает идентификатор дочернего окна элемента управления списком, отправляющего уведомление и `memberFxn` имя функции-члена родительского вы написали для обработки уведомления.  
+ where `id` specifies the child-window ID of the combo-box control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- Прототип функции родительского элемента выглядит следующим образом:  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- Невозможно предсказать порядок, в котором некоторые уведомления будут отправляться. В частности **CBN_SELCHANGE** уведомление может возникнуть до или после **CBN_CLOSEUP** уведомления.  
+ The order in which certain notifications will be sent cannot be predicted. In particular, a **CBN_SELCHANGE** notification may occur either before or after a **CBN_CLOSEUP** notification.  
   
- Ниже перечислены возможные записи схемы сообщений.  
+ Potential message-map entries are the following:  
   
-- **ON_CBN_CLOSEUP** (Windows 3.1 или более поздней версии.) Поле со списком списком закрыл. Это сообщение уведомления не отправляются для поля со списком, которое имеет [CBS_SIMPLE](../../mfc/reference/combo-box-styles.md) стиля.  
+- **ON_CBN_CLOSEUP** (Windows 3.1 and later.) The list box of a combo box has closed. This notification message is not sent for a combo box that has the [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
-- **ON_CBN_DBLCLK** пользователь дважды щелкает строку в списке поля со списком. Это уведомление отправляется только в поле со списком **CBS_SIMPLE** стиля. Для поля со списком с [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) или [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля, двойным щелчком невозможен из-за одним щелчком скрывает поле списка.  
+- **ON_CBN_DBLCLK** The user double-clicks a string in the list box of a combo box. This notification message is only sent for a combo box with the **CBS_SIMPLE** style. For a combo box with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, a double-click cannot occur because a single click hides the list box.  
   
-- **ON_CBN_DROPDOWN** поле со списком списком — раскрывающийся список (виден). Это сообщение уведомления возможна только в поле со списком **CBS_DROPDOWN** или **CBS_DROPDOWNLIST** стиля.  
+- **ON_CBN_DROPDOWN** The list box of a combo box is about to drop down (be made visible). This notification message can occur only for a combo box with the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_EDITCHANGE** смены действие, которое может изменен текст в элемент управления Правка часть со списком. В отличие от **CBN_EDITUPDATE** , это сообщение будет отправлено после обновления экрана в Windows. Не отправляются, если поле со списком имеет **CBS_DROPDOWNLIST** стиля.  
+- **ON_CBN_EDITCHANGE** The user has taken an action that may have altered the text in the edit-control portion of a combo box. Unlike the **CBN_EDITUPDATE** message, this message is sent after Windows updates the screen. It is not sent if the combo box has the **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_EDITUPDATE** управления редактирования часть со списком собирается отобразить измененный текст. Это уведомление отправляется после форматирования текста элемента управления, но до отображения текста. Не отправляются, если поле со списком имеет **CBS_DROPDOWNLIST** стиля.  
+- **ON_CBN_EDITUPDATE** The edit-control portion of a combo box is about to display altered text. This notification message is sent after the control has formatted the text but before it displays the text. It is not sent if the combo box has the **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_ERRSPACE** поле со списком не удается выделить достаточно памяти для выполнения конкретного запроса.  
+- **ON_CBN_ERRSPACE** The combo box cannot allocate enough memory to meet a specific request.  
   
-- **ON_CBN_SELENDCANCEL** (Windows 3.1 или более поздней версии.) Указывает, что следует отменить выбор пользователя. Пользователь щелкает элемент и затем нажимает другого окна или элемента управления, чтобы скрыть поле со списком в поле со списком. Это уведомление отправляется перед **CBN_CLOSEUP** сообщение уведомления, чтобы указать игнорирования выбранных пользователем. **CBN_SELENDCANCEL** или **CBN_SELENDOK** отправляется уведомление даже в том случае, если **CBN_CLOSEUP** не отправляется уведомление (как в случае в поле со списком **CBS_SIMPLE** стиль).  
+- **ON_CBN_SELENDCANCEL** (Windows 3.1 and later.) Indicates the user's selection should be canceled. The user clicks an item and then clicks another window or control to hide the list box of a combo box. This notification message is sent before the **CBN_CLOSEUP** notification message to indicate that the user's selection should be ignored. The **CBN_SELENDCANCEL** or **CBN_SELENDOK** notification message is sent even if the **CBN_CLOSEUP** notification message is not sent (as in the case of a combo box with the **CBS_SIMPLE** style).  
   
-- **ON_CBN_SELENDOK** пользователь выбирает элемент и затем нажимает клавишу ВВОД или нажимает клавиши Стрелка вниз, чтобы скрыть поле со списком в поле со списком. Это уведомление отправляется перед **CBN_CLOSEUP** сообщение, чтобы указать, что выбор пользователем должно считаться допустимым. **CBN_SELENDCANCEL** или **CBN_SELENDOK** отправляется уведомление даже в том случае, если **CBN_CLOSEUP** не отправляется уведомление (как в случае в поле со списком **CBS_SIMPLE** стиль).  
+- **ON_CBN_SELENDOK** The user selects an item and then either presses the ENTER key or clicks the DOWN ARROW key to hide the list box of a combo box. This notification message is sent before the **CBN_CLOSEUP** message to indicate that the user's selection should be considered valid. The **CBN_SELENDCANCEL** or **CBN_SELENDOK** notification message is sent even if the **CBN_CLOSEUP** notification message is not sent (as in the case of a combo box with the **CBS_SIMPLE** style).  
   
-- **ON_CBN_KILLFOCUS** поле со списком теряет фокус ввода.  
+- **ON_CBN_KILLFOCUS** The combo box is losing the input focus.  
   
-- **ON_CBN_SELCHANGE** элемент, выбранный в списке поля со списком собирается измениться в результате пользователь, щелкнув в поле со списком или изменение выделения с помощью клавиш со стрелками. При обработке этого сообщения, текст в поле редактирования комбинированного окна можно получить только через `GetLBText` или другой аналогичные функции. `GetWindowText`не может использоваться.  
+- **ON_CBN_SELCHANGE** The selection in the list box of a combo box is about to be changed as a result of the user either clicking in the list box or changing the selection by using the arrow keys. When processing this message, the text in the edit control of the combo box can only be retrieved via `GetLBText` or another similar function. `GetWindowText` cannot be used.  
   
-- **ON_CBN_SETFOCUS** поле со списком получает фокус ввода.  
+- **ON_CBN_SETFOCUS** The combo box receives the input focus.  
   
- Если вы создаете `CComboBox` объектов в диалоговом окне (с помощью ресурса диалогового окна) `CComboBox` объект автоматически освобождается, когда пользователь закрывает диалоговое окно.  
+ If you create a `CComboBox` object within a dialog box (through a dialog resource), the `CComboBox` object is automatically destroyed when the user closes the dialog box.  
   
- При внедрении `CComboBox` объекта объект внутри другого окна необходимо уничтожить его. Если вы создаете `CComboBox` объекта в стеке, удаляется автоматически. При создании `CComboBox` объекта в куче с помощью **новый** функции, необходимо вызвать **удаление** для объекта, чтобы оно уничтожается при уничтожении поле со списком Windows.  
+ If you embed a `CComboBox` object within another window object, you do not need to destroy it. If you create the `CComboBox` object on the stack, it is destroyed automatically. If you create the `CComboBox` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the Windows combo box is destroyed.  
   
- **Примечание** Если необходимо обработать `WM_KEYDOWN` и `WM_CHAR` сообщений, необходимо подкласс поле со списком редактировать и список элементов управления, создавать производные классы от `CEdit` и `CListBox`, и добавьте обработчики для этих сообщений для производных классов. Дополнительные сведения см. в разделе [http://support.microsoft.com/default.aspxscid=kb;en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) и [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Note** If you want to handle `WM_KEYDOWN` and `WM_CHAR` messages, you have to subclass the combo box's edit and list box controls, derive classes from `CEdit` and `CListBox`, and add handlers for those messages to the derived classes. For more information, see [http://support.microsoft.com/default.aspxscid=kb;en-us;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) and [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -233,97 +282,97 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="addstring"></a>CComboBox::AddString  
- Добавляет строку в списке поля со списком.  
+##  <a name="addstring"></a>  CComboBox::AddString  
+ Adds a string to the list box of a combo box.  
   
 ```  
 int AddString(LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- Указывает на строку, завершающуюся значением null, который должен быть добавлен.  
+ Points to the null-terminated string that is to be added.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если возвращаемое значение больше или равно 0, это начинающийся с нуля индекс строки в окне списка. Возвращает значение **CB_ERR** ; при возникновении ошибки возвращается **CB_ERRSPACE** Если недостаточно места для хранения новой строки.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index to the string in the list box. The return value is **CB_ERR** if an error occurs; the return value is **CB_ERRSPACE** if insufficient space is available to store the new string.  
   
-### <a name="remarks"></a>Примечания  
- Если в списке не был создан с [CBS_SORT](../../mfc/reference/combo-box-styles.md) стиля, строка добавляется в конец списка. В противном случае строка вставляется в списке, и список сортируется.  
+### <a name="remarks"></a>Remarks  
+ If the list box was not created with the [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, the string is added to the end of the list. Otherwise, the string is inserted into the list, and the list is sorted.  
   
 > [!NOTE]
->  Эта функция не поддерживается элементом управления Windows **ComboBoxEx** . Дополнительные сведения в этом элементе управления см. в разделе [управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
- Чтобы вставить строку в определенное место в списке, используйте [InsertString](#insertstring) функции-члена.  
+ To insert a string into a specific location within the list, use the [InsertString](#insertstring) member function.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="ccombobox"></a>CComboBox::CComboBox  
- Создает объект `CComboBox`.  
+##  <a name="ccombobox"></a>  CComboBox::CComboBox  
+ Constructs a `CComboBox` object.  
   
 ```  
 CComboBox();
 ```  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="clear"></a>CComboBox::Clear  
- Удаляет (очищает) текущее выделение, если таковая имеется, в поле редактирования комбинированного окна.  
+##  <a name="clear"></a>  CComboBox::Clear  
+ Deletes (clears) the current selection, if any, in the edit control of the combo box.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Чтобы удалить текущий выделенный фрагмент и поместить удаленные содержимое в буфер обмена, используйте [Вырезать](#cut) функции-члена.  
+### <a name="remarks"></a>Remarks  
+ To delete the current selection and place the deleted contents onto the Clipboard, use the [Cut](#cut) member function.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CComboBox::CompareItem  
- Вызывается платформой для определения относительной позиции нового элемента в списке части отсортированный рисования владельцем поле со списком.  
+##  <a name="compareitem"></a>  CComboBox::CompareItem  
+ Called by the framework to determine the relative position of a new item in the list-box portion of a sorted owner-draw combo box.  
   
 ```  
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpCompareItemStruct`  
- Длинный указатель [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) структуры.  
+ A long pointer to a [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указывает относительную позицию двух элементов, описанных в `COMPAREITEMSTRUCT` структуры. Он может иметь любое из следующих значений.  
+### <a name="return-value"></a>Return Value  
+ Indicates the relative position of the two items described in the `COMPAREITEMSTRUCT` structure. It can be any of the following values:  
   
-|Значение|Значение|  
+|Value|Meaning|  
 |-----------|-------------|  
-|- 1|Элемент 1 предшествует элемент 2.|  
-|0|1 и 2 элемент сортировки одинаковыми.|  
-|1|Элемент 1 сортирует после элемента 2.|  
+|- 1|Item 1 sorts before item 2.|  
+|0|Item 1 and item 2 sort the same.|  
+|1|Item 1 sorts after item 2.|  
   
- В разделе [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) описание `COMPAREITEMSTRUCT`.  
+ See [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) for a description of `COMPAREITEMSTRUCT`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию эта функция-член не выполняет никаких действий. При создании поле со списком рисуемый владельцем **LBS_SORT** стилей, необходимо переопределить эту функцию-член для помощи в новые элементы, добавленные в список сортировки платформу.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. If you create an owner-draw combo box with the **LBS_SORT** style, you must override this member function to assist the framework in sorting new items added to the list box.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="copy"></a>CComboBox::Copy  
- Копирует текущее выделение в том случае, если таковая имеется, в поле редактирования комбинированного окна в буфер обмена в **CF_TEXT** формат.  
+##  <a name="copy"></a>  CComboBox::Copy  
+ Copies the current selection, if any, in the edit control of the combo box onto the Clipboard in **CF_TEXT** format.  
   
 ```  
 void Copy();
 ```  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="create"></a>CComboBox::Create  
- Создает поле со списком и прикрепляет его к `CComboBox` объекта.  
+##  <a name="create"></a>  CComboBox::Create  
+ Creates the combo box and attaches it to the `CComboBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -333,100 +382,100 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Задает стиль поля со списком. Примените любое сочетание [стили полей со списками](../../mfc/reference/combo-box-styles.md) в поле.  
+ Specifies the style of the combo box. Apply any combination of [combo-box styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) to the box.  
   
  `rect`  
- Указывает положение и размер комбинированного окна. Может быть [структура RECT](../../mfc/reference/rect-structure1.md) или `CRect` объекта.  
+ Points to the position and size of the combo box. Can be a [RECT structure](../../mfc/reference/rect-structure1.md) or a `CRect` object.  
   
  `pParentWnd`  
- Указывает поле со списком родительскому окну (обычно `CDialog`). Он не должен быть **NULL**.  
+ Specifies the combo box's parent window (usually a `CDialog`). It must not be **NULL**.  
   
  `nID`  
- Указывает идентификатор элемента управления поля со списком.  
+ Specifies the combo box's control ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CComboBox` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать **создать**, который создает поле со списком Windows и прикрепляет его к `CComboBox` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CComboBox` object in two steps. First, call the constructor and then call **Create**, which creates the Windows combo box and attaches it to the `CComboBox` object.  
   
- Когда **создать** выполняет Windows отправляет [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), и [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) сообщений в поле со списком.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the combo box.  
   
- Эти сообщения обрабатываются по умолчанию с помощью [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), и [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) функции-члены в `CWnd` базового класса. Чтобы расширить возможности обработки сообщений по умолчанию, создайте класс, производный от `CComboBox`, добавить схему сообщений к новому классу и переопределить предыдущей функции-члены обработчика сообщений. Переопределить `OnCreate`, например, для выполнения инициализации, необходимые для нового класса.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, derive a class from `CComboBox`, add a message map to the new class, and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- Применить следующие [стили окна](../../mfc/reference/window-styles.md) к элементу управления полем со списком. :  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a combo-box control. :  
   
-- **WS_CHILD** всегда  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** обычно  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** редко  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL** Добавление вертикальную прокрутку, для поля со списком в поле со списком  
+- **WS_VSCROLL** To add vertical scrolling for the list box in the combo box  
   
-- **WS_HSCROLL** для добавления горизонтальной прокрутки для поля со списком в поле со списком  
+- **WS_HSCROLL** To add horizontal scrolling for the list box in the combo box  
   
-- **WS_GROUP** для группировки элементов управления  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** включать поле со списком в порядок перехода по табуляции  
+- **WS_TABSTOP** To include the combo box in the tabbing order  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="cut"></a>CComboBox::Cut  
- Удалений (порезов) текущее выделение, если таковой имеется, в поле со списком ввода, управления и копирует удаленный текст в буфер обмена в **CF_TEXT** формат.  
+##  <a name="cut"></a>  CComboBox::Cut  
+ Deletes (cuts) the current selection, if any, in the combo-box edit control and copies the deleted text onto the Clipboard in **CF_TEXT** format.  
   
 ```  
 void Cut();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Чтобы удалить выбранные элементы без помещения удаленный текст в буфер обмена, вызовите [снимите](#clear) функции-члена.  
+### <a name="remarks"></a>Remarks  
+ To delete the current selection without placing the deleted text onto the Clipboard, call the [Clear](#clear) member function.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="deleteitem"></a>CComboBox::DeleteItem  
- Вызывается платформой, когда пользователь удаляет элемент из рисуемый владельцем `CComboBox` объекта или уничтожает поле со списком.  
+##  <a name="deleteitem"></a>  CComboBox::DeleteItem  
+ Called by the framework when the user deletes an item from an owner-draw `CComboBox` object or destroys the combo box.  
   
 ```  
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpDeleteItemStruct`  
- Длинный указатель на Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) структуру, содержащую сведения о удаляемого элемента. В разделе [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) описание этой структуры.  
+ A long pointer to a Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure that contains information about the deleted item. See [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) for a description of this structure.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этой функции не выполняет никаких действий. Переопределите эту функцию для перерисовки поле со списком, при необходимости.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to redraw the combo box as needed.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="deletestring"></a>CComboBox::DeleteString  
- Удаляет элемент в позиции `nIndex` из поля со списком.  
+##  <a name="deletestring"></a>  CComboBox::DeleteString  
+ Deletes the item in position `nIndex` from the combo box.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Задает индекс строки, который требуется удалить.  
+ Specifies the index to the string that is to be deleted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если возвращаемое значение больше или равно 0, представляет число строк, оставшихся в списке. Возвращает значение **CB_ERR** Если `nIndex` указывает индекс больше числа элементов в списке.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, then it is a count of the strings remaining in the list. The return value is **CB_ERR** if `nIndex` specifies an index greater than the number of items in the list.  
   
-### <a name="remarks"></a>Примечания  
- Все элементы, следующие `nIndex` теперь перемещаются на одну позицию вниз. Например если поле со списком содержит два элемента, удаление первого элемента приведет оставшиеся элемента: теперь в первую позицию. `nIndex`= 0 в первую позицию элемента.  
+### <a name="remarks"></a>Remarks  
+ All items following `nIndex` now move down one position. For example, if a combo box contains two items, deleting the first item will cause the remaining item to now be in the first position. `nIndex`=0 for the item in the first position.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="dir"></a>CComboBox::Dir  
- Список имен файлов или накопителей добавляет в список поля со списком.  
+##  <a name="dir"></a>  CComboBox::Dir  
+ Adds a list of filenames or drives to the list box of a combo box.  
   
 ```  
 int Dir(
@@ -434,59 +483,59 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `attr`  
- Может быть любым сочетанием `enum` значений описано в [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) или любое сочетание следующих значений:  
+ Can be any combination of the `enum` values described in [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) or any combination of the following values:  
   
-- **DDL_READWRITE** файл для чтения и записи.  
+- **DDL_READWRITE** File can be read from or written to.  
   
-- **DDL_READONLY** файл можно считывать, но не записываются.  
+- **DDL_READONLY** File can be read from but not written to.  
   
-- **DDL_HIDDEN** файл является скрытым и не отображается в списках каталогов.  
+- **DDL_HIDDEN** File is hidden and does not appear in a directory listing.  
   
-- **DDL_SYSTEM** файл является системным файлом.  
+- **DDL_SYSTEM** File is a system file.  
   
-- **DDL_DIRECTORY** имя, заданное `lpszWildCard` указывает каталог.  
+- **DDL_DIRECTORY** The name specified by `lpszWildCard` specifies a directory.  
   
-- **DDL_ARCHIVE** файл помещен в архив.  
+- **DDL_ARCHIVE** File has been archived.  
   
-- **DDL_DRIVES** относятся все диски, которые соответствуют имени, указанного параметром `lpszWildCard`.  
+- **DDL_DRIVES** Include all drives that match the name specified by `lpszWildCard`.  
   
-- **DDL_EXCLUSIVE** флаг Exclusive. Если установить флаг exclusive, включаются только файлы указанного типа. В противном случае файлы указанного типа, перечислены помимо файлов «normal».  
+- **DDL_EXCLUSIVE** Exclusive flag. If the exclusive flag is set, only files of the specified type are listed. Otherwise, files of the specified type are listed in addition to "normal" files.  
   
  `lpszWildCard`  
- Указывает строку спецификация файла. Строка может содержать подстановочные знаки (например, *.\*).  
+ Points to a file-specification string. The string can contain wildcards (for example, *.\*).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если возвращаемое значение больше или равно 0, это начинающийся с нуля индекс последнего имени файла добавляется в список. Возвращает значение **CB_ERR** ; при возникновении ошибки возвращается **CB_ERRSPACE** Если недостаточно места для хранения новых строк.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index of the last filename added to the list. The return value is **CB_ERR** if an error occurs; the return value is **CB_ERRSPACE** if insufficient space is available to store the new strings.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не поддерживается элементом управления Windows **ComboBoxEx** . Дополнительные сведения в этом элементе управления см. в разделе [управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="drawitem"></a>CComboBox::DrawItem  
- Вызывается платформой при изменении внешнего вида рисуемый владельцем со списком, изменится.  
+##  <a name="drawitem"></a>  CComboBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw combo box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Указатель на [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе требуется рисования.  
+ A pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>Примечания  
- **ItemAction** членом `DRAWITEMSTRUCT` структура определяет рисования действие, которое должно быть выполнено. В разделе [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) описание этой структуры.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed. See [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) for a description of this structure.  
   
- По умолчанию эта функция-член не выполняет никаких действий. Переопределить эту функцию-член для реализации отрисовки рисуемый владельцем `CComboBox` объекта. Перед завершением работы этой функции-члена, приложение следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct`.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CComboBox` object. Before this member function terminates, the application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct`.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox № 11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="findstring"></a>CComboBox::FindString  
- Находит, но не приводит к выделению, первая строка, содержащая префикс, указанный в списке поля со списком.  
+##  <a name="findstring"></a>  CComboBox::FindString  
+ Finds, but doesn't select, the first string that contains the specified prefix in the list box of a combo box.  
   
 ```  
 int FindString(
@@ -494,24 +543,24 @@ int FindString(
     LPCTSTR lpszString) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nStartAfter`  
- Содержит отсчитываемый от нуля индекс элемента перед первым элементом, в котором производится поиск. Когда поиск достигает нижней части списка, он по-прежнему в верхней части списка обратно элемент с указанным `nStartAfter`. Если значение-1, весь список выполняется поиск с начала.  
+ Contains the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nStartAfter`. If -1, the entire list box is searched from the beginning.  
   
  `lpszString`  
- Указывает на строку, завершающуюся значением null, содержащая префикс для поиска. Поиск ситуация независимые, поэтому эта строка может содержать любое сочетание прописных и строчных букв.  
+ Points to the null-terminated string that contains the prefix to search for. The search is case independent, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если возвращаемое значение больше или равно 0, это начинающийся с нуля индекс элемента сопоставления. Это **CB_ERR** , если не удалось выполнить поиск.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index of the matching item. It is **CB_ERR** if the search was unsuccessful.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не поддерживается элементом управления Windows **ComboBoxEx** . Дополнительные сведения в этом элементе управления см. в разделе [управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="findstringexact"></a>CComboBox::FindStringExact  
- Вызовите `FindStringExact` для поиска первого списков строки (в поле со списком), соответствующая строка, указанная в функции-члена `lpszFind`.  
+##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
+ Call the `FindStringExact` member function to find the first list-box string (in a combo box) that matches the string specified in `lpszFind`.  
   
 ```  
 int FindStringExact(
@@ -519,54 +568,54 @@ int FindStringExact(
     LPCTSTR lpszFind) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndexStart`  
- Задает отсчитываемый от нуля индекс элемента перед первым элементом, в котором производится поиск. Когда поиск достигает нижней части списка, он по-прежнему в верхней части списка обратно элемент с указанным `nIndexStart`. Если `nIndexStart` равно -1, весь список просматривается с самого начала.  
+ Specifies the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nIndexStart`. If `nIndexStart` is -1, the entire list box is searched from the beginning.  
   
  `lpszFind`  
- Указывает на строку, завершающуюся значением null, для поиска. Эта строка может содержать полное имя файла, включая расширение. Поиск не учитывается регистр, поэтому эта строка может содержать любое сочетание букв верхнего и нижнего регистра.  
+ Points to the null-terminated string to search for. This string can contain a complete filename, including the extension. The search is not case sensitive, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс элемента сопоставления или **CB_ERR** , если не удалось выполнить поиск.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the matching item, or **CB_ERR** if the search was unsuccessful.  
   
-### <a name="remarks"></a>Примечания  
- Если поле со списком был создан в стиле рисуемый владельцем, но без [CBS_HASSTRINGS](../../mfc/reference/combo-box-styles.md) стиля, `FindStringExact` пытается сопоставить двойное значение для значения `lpszFind`.  
+### <a name="remarks"></a>Remarks  
+ If the combo box was created with an owner-draw style but without the [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `FindStringExact` attempts to match the doubleword value against the value of `lpszFind`.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
- Возвращает сведения о `CComboBox` объекта.  
+##  <a name="getcomboboxinfo"></a>  CComboBox::GetComboBoxInfo  
+ Retrieves information for the `CComboBox` object.  
   
 ```  
 BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pcbi*  
- Указатель на [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) структуры.  
+ A pointer to the [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) structure.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) сообщения, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) message, as described in the Windows SDK.  
   
-##  <a name="getcount"></a>CComboBox::GetCount  
- Вызовите эту функцию-член для получения количества элементов в списке часть со списком.  
+##  <a name="getcount"></a>  CComboBox::GetCount  
+ Call this member function to retrieve the number of items in the list-box portion of a combo box.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов. Количество возвращаемых результатов — единицу больше, чем значение индекса последнего элемента (индекс начинается с нуля). Это **CB_ERR** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ The number of items. The returned count is one greater than the index value of the last item (the index is zero-based). It is **CB_ERR** if an error occurs.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
- Возвращает текст подсказки, отображаемый для элемента управления поля со списком.  
+##  <a name="getcuebanner"></a>  CComboBox::GetCueBanner  
+ Gets the cue text that is displayed for a combo box control.  
   
 ```  
 CString GetCueBanner() const;  
@@ -576,193 +625,193 @@ BOOL GetCueBanner(
     int cchText) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[выходной] `lpszText`|Указатель на буфер, получающий текст баннера подсказки.|  
-|[in] `cchText`|Размер буфера, `lpszText` указывает параметр.|  
+|[out] `lpszText`|Pointer to a buffer that receives the cue banner text.|  
+|[in] `cchText`|Size of the buffer that the `lpszText` parameter points to.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- В первой перегрузке [CString](../../atl-mfc-shared/using-cstring.md) , содержащий текст баннера подсказки, если он существует; в противном случае `CString` объект, который имеет нулевую длину.  
+### <a name="return-value"></a>Return Value  
+ In the first overload, a [CString](../../atl-mfc-shared/using-cstring.md) object that contains the cue banner text if it exists; otherwise, a `CString` object that has zero length.  
   
- -или-  
+ -or-  
   
- Во второй перегрузке `true` Если этот метод выполнен успешно; в противном случае — `false`.  
+ In the second overload, `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Текст подсказки является приглашение, которое отображается в области ввода поля со списком. Текст подсказки отображается до ввода данных пользователем.  
+### <a name="remarks"></a>Remarks  
+ Cue text is a prompt that is displayed in the input area of the combo box control. The cue text is displayed until the user provides input.  
   
- Этот метод отправляет [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) message, which is described in the Windows SDK.  
   
-##  <a name="getcursel"></a>CComboBox::GetCurSel  
- Вызовите эту функцию-член для определения выбранного элемента в поле со списком.  
+##  <a name="getcursel"></a>  CComboBox::GetCurSel  
+ Call this member function to determine which item in the combo box is selected.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс текущего выделенного элемента в поле со списком, списка или **CB_ERR** , если элемент не выбран.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the currently selected item in the list box of a combo box, or **CB_ERR** if no item is selected.  
   
-### <a name="remarks"></a>Примечания  
- `GetCurSel`Возвращает индекс в списке.  
+### <a name="remarks"></a>Remarks  
+ `GetCurSel` returns an index into the list.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
- Вызовите `GetDroppedControlRect` функция-член для извлечения координаты на экране отображается (удалены) списка раскрывающемся поле со списком.  
+##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect  
+ Call the `GetDroppedControlRect` member function to retrieve the screen coordinates of the visible (dropped-down) list box of a drop-down combo box.  
   
 ```  
 void GetDroppedControlRect(LPRECT lprect) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *lprect*  
- Указывает на [структура RECT](../../mfc/reference/rect-structure1.md) , предназначенный для получения координат.  
+ Points to the [RECT structure](../../mfc/reference/rect-structure1.md) that is to receive the coordinates.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox № 16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
- Вызовите `GetDroppedState` функцию-член, чтобы определить, является ли поле со списком в поле с раскрывающимся списком отображается (раскрыл).  
+##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState  
+ Call the `GetDroppedState` member function to determine whether the list box of a drop-down combo box is visible (dropped down).  
   
 ```  
 BOOL GetDroppedState() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если список является видимым. в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the list box is visible; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox 17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
- Эта функция вызывается для получения минимального допустимого ширину в пикселях списка поля со списком.  
+##  <a name="getdroppedwidth"></a>  CComboBox::GetDroppedWidth  
+ Call this function to retrieve the minimum allowable width, in pixels, of the list box of a combo box.  
   
 ```  
 int GetDroppedWidth() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения Минимальная допустимая ширина в пикселях; в противном случае **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the minimum allowable width, in pixels; otherwise, **CB_ERR**.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция применяется только для полей со списком [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) или [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля.  
+### <a name="remarks"></a>Remarks  
+ This function only applies to combo boxes with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
- По умолчанию минимальная ширина, допустимая раскрывающегося списка — 0. Минимальная допустимая ширина можно задать путем вызова [SetDroppedWidth](#setdroppedwidth). При отображении списков часть поле со списком его ширину больше Минимальная допустимая ширина или ширина поля со списком.  
+ By default, the minimum allowable width of the drop-down list box is 0. The minimum allowable width can be set by calling [SetDroppedWidth](#setdroppedwidth). When the list-box portion of the combo box is displayed, its width is the larger of the minimum allowable width or the combo box width.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [SetDroppedWidth](#setdroppedwidth).  
+### <a name="example"></a>Example  
+  See the example for [SetDroppedWidth](#setdroppedwidth).  
   
-##  <a name="geteditsel"></a>CComboBox::GetEditSel  
- Возвращает позиции символов начала и конца текущего выделенного фрагмента в элементе управления списком.  
+##  <a name="geteditsel"></a>  CComboBox::GetEditSel  
+ Gets the starting and ending character positions of the current selection in the edit control of a combo box.  
   
 ```  
 DWORD GetEditSel() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- 32-разрядное значение, содержащий начальную позицию в младшее слово и позицию первого символа невыбранные после окончания выделенного текста в word высокого порядка. Если эта функция используется в поле со списком без элемент управления редактированием **CB_ERR** возвращается.  
+### <a name="return-value"></a>Return Value  
+ A 32-bit value that contains the starting position in the low-order word and the position of the first nonselected character after the end of the selection in the high-order word. If this function is used on a combo box without an edit control, **CB_ERR** is returned.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox 18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
- Вызовите `GetExtendedUI` функции-члена для определения, имеет ли поле со списком пользовательский интерфейс по умолчанию или расширенный пользовательский интерфейс.  
+##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI  
+ Call the `GetExtendedUI` member function to determine whether a combo box has the default user interface or the extended user interface.  
   
 ```  
 BOOL GetExtendedUI() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если поле со списком содержит расширенный пользовательский интерфейс; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the combo box has the extended user interface; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Расширенный пользовательский интерфейс может быть идентифицирована одним из следующих способов.  
+### <a name="remarks"></a>Remarks  
+ The extended user interface can be identified in the following ways:  
   
--   Щелкните статический элемент управления отображает список только для полей со списком [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля.  
+-   Clicking the static control displays the list box only for combo boxes with the [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
--   Нажмите клавишу Стрелка вниз отображает список (F4 отключен).  
+-   Pressing the DOWN ARROW key displays the list box (F4 is disabled).  
   
- Если в списке элементов не является видимым (стрелка ключи отключены) прокрутки в статический элемент управления отключен.  
+ Scrolling in the static control is disabled when the item list is not visible (arrow keys are disabled).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox 19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
- Извлекает поле со списком ширину в пикселях, по которым списков часть поле со списком может прокручиваться по горизонтали.  
+##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent  
+ Retrieves from the combo box the width in pixels by which the list-box portion of the combo box can be scrolled horizontally.  
   
 ```  
 UINT GetHorizontalExtent() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Прокручиваемые ширина списков части поле со списком в пикселях.  
+### <a name="return-value"></a>Return Value  
+ The scrollable width of the list-box portion of the combo box, in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Это применимо только в том случае, если часть со списком списков горизонтальной полосы прокрутки.  
+### <a name="remarks"></a>Remarks  
+ This is applicable only if the list-box portion of the combo box has a horizontal scroll bar.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox № 20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="getitemdata"></a>CComboBox::GetItemData  
- Извлекает значение предоставленного приложением 32-разрядной, связанное с указанным списком элементов.  
+##  <a name="getitemdata"></a>  CComboBox::GetItemData  
+ Retrieves the application-supplied 32-bit value associated with the specified combo-box item.  
   
 ```  
 DWORD_PTR GetItemData(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс элемента в списке поля со списком.  
+ Contains the zero-based index of an item in the combo box's list box.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- 32-разрядное значение, связанное с элементом, или **CB_ERR** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value associated with the item, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Примечания  
- 32-разрядное значение можно задать с помощью `dwItemData` параметр [SetItemData](#setitemdata) вызова функции-члена. Используйте `GetItemDataPtr` Если 32-разрядное значение, чтобы получить указатель функции-члена ( **void\***).  
+### <a name="remarks"></a>Remarks  
+ The 32-bit value can be set with the `dwItemData` parameter of a [SetItemData](#setitemdata) member function call. Use the `GetItemDataPtr` member function if the 32-bit value to be retrieved is a pointer ( **void\***).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
- Возвращает значение 32-разрядных предоставляемую приложением, связанное с указанным списком элемент как указатель ( **void\***).  
+##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
+ Retrieves the application-supplied 32-bit value associated with the specified combo-box item as a pointer ( **void\***).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс элемента в списке поля со списком.  
+ Contains the zero-based index of an item in the combo box's list box.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Извлекает указатель или значение -1, если произошла ошибка.  
+### <a name="return-value"></a>Return Value  
+ Retrieves a pointer, or -1 if an error occurs.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
- Вызовите `GetItemHeight` функция-член для извлечения высота элементов списка в поле со списком.  
+##  <a name="getitemheight"></a>  CComboBox::GetItemHeight  
+ Call the `GetItemHeight` member function to retrieve the height of list items in a combo box.  
   
 ```  
 int GetItemHeight(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Указывает компонент поле со списком имеет высоту которого требуется получить. Если `nIndex` параметр имеет значение -1, извлекается высоты элемента управления редактирования (или статического текста) часть поле со списком. Если поле со списком имеет [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) стиль `nIndex` указывает отсчитываемый от нуля индекс элемента списка, который имеет высоту которого требуется получить. В противном случае `nIndex` должно быть равно 0.  
+ Specifies the component of the combo box whose height is to be retrieved. If the `nIndex` parameter is -1, the height of the edit-control (or static-text) portion of the combo box is retrieved. If the combo box has the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` specifies the zero-based index of the list item whose height is to be retrieved. Otherwise, `nIndex` should be set to 0.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Высота в пикселях указанного элемента в поле со списком. При возникновении ошибки возвращается значение **CB_ERR** .  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of the specified item in a combo box. The return value is **CB_ERR** if an error occurs.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="getlbtext"></a>CComboBox::GetLBText  
- Получает строку из списка поля со списком.  
+##  <a name="getlbtext"></a>  CComboBox::GetLBText  
+ Gets a string from the list box of a combo box.  
   
 ```  
 int GetLBText(
@@ -774,89 +823,89 @@ void GetLBText(
     CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс строки для копирования списков.  
+ Contains the zero-based index of the list-box string to be copied.  
   
  `lpszText`  
- Указывает на буфер, который принимает строку. Буфер должен иметь достаточно места для строки и знак завершения null.  
+ Points to a buffer that is to receive the string. The buffer must have sufficient space for the string and a terminating null character.  
   
  `rString`  
- Ссылку на `CString`.  
+ A reference to a `CString`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Длина строки, за исключением завершающего символа null (в байтах). Если `nIndex` не указывает допустимый индекс, возвращаемым значением является **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ The length (in bytes) of the string, excluding the terminating null character. If `nIndex` does not specify a valid index, the return value is **CB_ERR**.  
   
-### <a name="remarks"></a>Примечания  
- Вторая форма этого элемента функция заливки `CString` вместе с текстом элемента.  
+### <a name="remarks"></a>Remarks  
+ The second form of this member function fills a `CString` object with the item's text.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
- Возвращает длину строки в списке поля со списком.  
+##  <a name="getlbtextlen"></a>  CComboBox::GetLBTextLen  
+ Gets the length of a string in the list box of a combo box.  
   
 ```  
 int GetLBTextLen(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс строки списков.  
+ Contains the zero-based index of the list-box string.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Длина строки в байтах, за исключением завершающего символа null. Если `nIndex` не указывает допустимый индекс, возвращаемым значением является **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ The length of the string in bytes, excluding the terminating null character. If `nIndex` does not specify a valid index, the return value is **CB_ERR**.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CComboBox::GetLBText](#getlbtext).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetLBText](#getlbtext).  
   
-##  <a name="getlocale"></a>CComboBox::GetLocale  
- Возвращает языковой стандарт, используемый в поле со списком.  
+##  <a name="getlocale"></a>  CComboBox::GetLocale  
+ Retrieves the locale used by the combo box.  
   
 ```  
 LCID GetLocale() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение код (LCID) языка для строк, указанных в поле со списком.  
+### <a name="return-value"></a>Return Value  
+ The locale identifier (LCID) value for the strings in the combo box.  
   
-### <a name="remarks"></a>Примечания  
- Локаль используется, например, для определения порядка сортировки строк в отсортированном со списком.  
+### <a name="remarks"></a>Remarks  
+ The locale is used, for example, to determine the sort order of the strings in a sorted combo box.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CComboBox::SetLocale](#setlocale).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::SetLocale](#setlocale).  
   
-##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
- Получает минимальное количество видимых элементов в раскрывающемся списке текущего элемента управления поля со списком.  
+##  <a name="getminvisible"></a>  CComboBox::GetMinVisible  
+ Gets the minimum number of visible items in the drop-down list of the current combo box control.  
   
 ```  
 int GetMinVisible() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Минимальное число видимых элементов в текущем списке раскрывающегося списка.  
+### <a name="return-value"></a>Return Value  
+ The minimum number of visible items in the current drop-down list.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, which is described in the Windows SDK.  
   
-##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
- Возвращает отсчитываемый от нуля индекс первой видимой позиции в списке части поле со списком.  
+##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
+ Retrieves the zero-based index of the first visible item in the list-box portion of the combo box.  
   
 ```  
 int GetTopIndex() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс первой видимой позиции в списке части поле со списком в случае успешного выполнения **CB_ERR** в противном случае.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the first visible item in the list-box portion of the combo box if successful, **CB_ERR** otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Изначально элемент 0 находится в верхней части списка, но если прокрутить список, сверху может оказаться другой элемент.  
+### <a name="remarks"></a>Remarks  
+ Initially, item 0 is at the top of the list box, but if the list box is scrolled, another item may be at the top.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="initstorage"></a>CComboBox::InitStorage  
- Выделяет память для хранения элементов списка в списке части поле со списком.  
+##  <a name="initstorage"></a>  CComboBox::InitStorage  
+ Allocates memory for storing list box items in the list-box portion of the combo box.  
   
 ```  
 int InitStorage(
@@ -864,28 +913,28 @@ int InitStorage(
     UINT nBytes);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItems`  
- Указывает количество элементов для добавления.  
+ Specifies the number of items to add.  
   
  `nBytes`  
- Указывает объем памяти в байтах для выделения для элемента строки.  
+ Specifies the amount of memory, in bytes, to allocate for item strings.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- При успешном выполнении максимальное количество элементов, списке часть поле со списком может хранить до перераспределение памяти требуется **CB_ERRSPACE**, доступен, то есть не хватает памяти.  
+### <a name="return-value"></a>Return Value  
+ If successful, the maximum number of items that the list-box portion of the combo box can store before a memory reallocation is needed, otherwise **CB_ERRSPACE**, meaning not enough memory is available.  
   
-### <a name="remarks"></a>Примечания  
- Вызывайте эту функцию перед добавлением большое количество элементов в списке часть `CComboBox`.  
+### <a name="remarks"></a>Remarks  
+ Call this function before adding a large number of items to the list-box portion of the `CComboBox`.  
   
- Windows 95/98 только: `wParam` ограничен 16-разрядных значений. Это означает, что списки не может содержать более 32 767 элементов. Несмотря на то, что количество элементов является ограниченным, общий размер элементов в поле со списком ограничен только объемом доступной памяти.  
+ Windows 95/98 only: The `wParam` parameter is limited to 16-bit values. This means list boxes cannot contain more than 32,767 items. Although the number of items is restricted, the total size of the items in a list box is limited only by available memory.  
   
- Эта функция помогает ускорить инициализации списка полей, имеющих большое количество элементов (более 100). Он предварительно размещает указанный объем памяти, поэтому последующие [AddString](#addstring), [InsertString](#insertstring), и [Dir](#dir) функции принимают кратчайшие сроки. Оценки можно использовать для параметров. Если вы пересмотреть, некоторые дополнительная память выделяется; Если стоит недооценивать, обычный распределение используется для элементов, которые превышают предварительно выделенной сумму.  
+ This function helps speed up the initialization of list boxes that have a large number of items (more than 100). It preallocates the specified amount of memory so that subsequent [AddString](#addstring), [InsertString](#insertstring), and [Dir](#dir) functions take the shortest possible time. You can use estimates for the parameters. If you overestimate, some extra memory is allocated; if you underestimate, the normal allocation is used for items that exceed the preallocated amount.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="insertstring"></a>CComboBox::InsertString  
- Вставляет строку в список поля со списком.  
+##  <a name="insertstring"></a>  CComboBox::InsertString  
+ Inserts a string into the list box of a combo box.  
   
 ```  
 int InsertString(
@@ -893,93 +942,93 @@ int InsertString(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс позиции в списке, в которую будет вставлена строка. Если этот параметр имеет значение -1, строка добавляется в конец списка.  
+ Contains the zero-based index to the position in the list box that will receive the string. If this parameter is -1, the string is added to the end of the list.  
   
  `lpszString`  
- Указывает на оканчивающуюся символом NULL строку, которую нужно вставить.  
+ Points to the null-terminated string that is to be inserted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс позиции, в которую была вставлена строка. При возникновении ошибки возвращается значение **CB_ERR** . Если для хранения новой строки недостаточно места, возвращается значение **CB_ERRSPACE** .  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position at which the string was inserted. The return value is **CB_ERR** if an error occurs. The return value is **CB_ERRSPACE** if insufficient space is available to store the new string.  
   
-### <a name="remarks"></a>Примечания  
- В отличие от [AddString](#addstring) функции-члена `InsertString` функции-члена не ведет список с [CBS_SORT](../../mfc/reference/combo-box-styles.md) стиль сортировки.  
+### <a name="remarks"></a>Remarks  
+ Unlike the [AddString](#addstring) member function, the `InsertString` member function does not cause a list with the [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style to be sorted.  
   
 > [!NOTE]
->  Эта функция не поддерживается элементом управления Windows **ComboBoxEx** . Дополнительные сведения в этом элементе управления см. в разделе [управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="limittext"></a>CComboBox::LimitText  
- Ограничивает длину в байтах текст, который пользователь может ввести в элемент управления списком.  
+##  <a name="limittext"></a>  CComboBox::LimitText  
+ Limits the length in bytes of the text that the user can enter into the edit control of a combo box.  
   
 ```  
 BOOL LimitText(int nMaxChars);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nMaxChars`  
- Указывает длину (в байтах), пользователь может ввести текст. Если этот параметр равен 0, длина текста имеет значение 65 535 байт.  
+ Specifies the length (in bytes) of the text that the user can enter. If this parameter is 0, the text length is set to 65,535 bytes.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, в случае успешного выполнения. При вызове для поля со списком в стиле [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) или списком без элемента управления, возвращается значение **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful. If called for a combo box with the style [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or for a combo box without an edit control, the return value is **CB_ERR**.  
   
-### <a name="remarks"></a>Примечания  
- Если поле со списком имеет стиль [CBS_AUTOHSCROLL](../../mfc/reference/combo-box-styles.md), установленное которых превышает размер элемента управления редактирования текста не будет действовать.  
+### <a name="remarks"></a>Remarks  
+ If the combo box does not have the style [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), setting the text limit to be larger than the size of the edit control will have no effect.  
   
- `LimitText`ограничивает только текст, который пользователь может ввести. Он уже не влияет на любой текст в элементе управления при отправке сообщения, а также влияет на длину текста, скопировать элемент управления для редактирования при выборе строки в поле со списком.  
+ `LimitText` only limits the text the user can enter. It has no effect on any text already in the edit control when the message is sent, nor does it affect the length of the text copied to the edit control when a string in the list box is selected.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="measureitem"></a>CComboBox::MeasureItem  
- Вызывается платформой при создании стиля рисования владельцем поле со списком.  
+##  <a name="measureitem"></a>  CComboBox::MeasureItem  
+ Called by the framework when a combo box with an owner-draw style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- Длинный указатель [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) структуры.  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию эта функция-член не выполняет никаких действий. Переопределить эту функцию-член и заполните `MEASUREITEMSTRUCT` структуры для информирования поле Windows размеры этого списка в поле со списком. Если поле со списком создается с [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) стиля, платформа вызывает эту функцию-член для каждого элемента в поле со списком. В противном случае этот член вызывается только один раз.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of the list box in the combo box. If the combo box is created with the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
- С помощью **CBS_OWNERDRAWFIXED** стиля в поле со списком рисуемый владельцем, созданных с помощью [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) функцию-член `CWnd` включает рекомендации по дальнейшей программирования. См. обсуждение в [Технические заметки 14](../../mfc/tn014-custom-controls.md).  
+ Using the **CBS_OWNERDRAWFIXED** style in an owner-draw combo box created with the [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) member function of `CWnd` involves further programming considerations. See the discussion in [Technical Note 14](../../mfc/tn014-custom-controls.md).  
   
- В разделе [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) описание `MEASUREITEMSTRUCT` структуры.  
+ See [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) for a description of the `MEASUREITEMSTRUCT` structure.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="paste"></a>CComboBox::Paste  
- Вставляет данные из буфера обмена в поле редактирования комбинированного окна в текущей позиции курсора.  
+##  <a name="paste"></a>  CComboBox::Paste  
+ Inserts the data from the Clipboard into the edit control of the combo box at the current cursor position.  
   
 ```  
 void Paste();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Вставляются данные только в том случае, если в буфере обмена содержатся данные в **CF_TEXT** формат.  
+### <a name="remarks"></a>Remarks  
+ Data is inserted only if the Clipboard contains data in **CF_TEXT** format.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="resetcontent"></a>CComboBox::ResetContent  
- Удаляет все элементы из списка и измените элемент управления списком.  
+##  <a name="resetcontent"></a>  CComboBox::ResetContent  
+ Removes all items from the list box and edit control of a combo box.  
   
 ```  
 void ResetContent();
 ```  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="selectstring"></a>CComboBox::SelectString  
- Выполняет поиск строки в списке поля со списком и если строка найдена, выбирает строки в окне списка и копирует его в поле редактирования.  
+##  <a name="selectstring"></a>  CComboBox::SelectString  
+ Searches for a string in the list box of a combo box, and if the string is found, selects the string in the list box and copies it to the edit control.  
   
 ```  
 int SelectString(
@@ -987,99 +1036,99 @@ int SelectString(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nStartAfter`  
- Содержит отсчитываемый от нуля индекс элемента перед первым элементом, в котором производится поиск. Когда поиск достигает нижней части списка, он по-прежнему в верхней части списка обратно элемент с указанным `nStartAfter`. Если значение-1, весь список выполняется поиск с начала.  
+ Contains the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nStartAfter`. If -1, the entire list box is searched from the beginning.  
   
  `lpszString`  
- Указывает на строку, завершающуюся значением null, содержащая префикс для поиска. Поиск ситуация независимые, поэтому эта строка может содержать любое сочетание прописных и строчных букв.  
+ Points to the null-terminated string that contains the prefix to search for. The search is case independent, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс выбранного элемента, если строка была найдена. Если поиск завершилась неудачно, возвращается **CB_ERR** и текущего выделения не изменяется.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the selected item if the string was found. If the search was unsuccessful, the return value is **CB_ERR** and the current selection is not changed.  
   
-### <a name="remarks"></a>Примечания  
- Строка выбирается только в том случае, если его начальные символы (от начальной) совпадать с символами в строке префикса.  
+### <a name="remarks"></a>Remarks  
+ A string is selected only if its initial characters (from the starting point) match the characters in the prefix string.  
   
- Обратите внимание, что `SelectString` и `FindString` функции-члены обоих поиска строки, но `SelectString` функция-член также выделяет строку.  
+ Note that the `SelectString` and `FindString` member functions both find a string, but the `SelectString` member function also selects the string.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
- Задает текст подсказки, отображаемый для элемента управления поля со списком.  
+##  <a name="setcuebanner"></a>  CComboBox::SetCueBanner  
+ Sets the cue text that is displayed for a combo box control.  
   
 ```  
 BOOL SetCueBanner(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] *lpszText*|Указатель на буфер, содержащий текст подсказки завершающуюся значением null.|  
+|[in] *lpszText*|Pointer to a null-terminated buffer that contains the cue text.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если метод выполнен успешно; в противном случае — значение `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Текст подсказки является приглашение, которое отображается в области ввода поля со списком. Текст подсказки отображается до ввода данных пользователем.  
+### <a name="remarks"></a>Remarks  
+ Cue text is a prompt that is displayed in the input area of the combo box control. The cue text is displayed until the user provides input.  
   
- Этот метод отправляет [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_combobox`, который используется для программного доступа к поле со списком. Эта переменная используется в следующем примере.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_combobox`, that is used to programmatically access the combo box control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1;1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода задается баннер подсказки для элемента управления полем со списком.  
+### <a name="example"></a>Example  
+ The following code example sets the cue banner for the combo box control.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1;2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="setcursel"></a>CComboBox::SetCurSel  
- Выбирает строку в списке поля со списком.  
+##  <a name="setcursel"></a>  CComboBox::SetCurSel  
+ Selects a string in the list box of a combo box.  
   
 ```  
 int SetCurSel(int nSelect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nSelect`  
- Задает отсчитываемый от нуля индекс строки для выбора. Если значение-1, любое текущее выделение в поле со списком удаляется и очищается поле редактирования.  
+ Specifies the zero-based index of the string to select. If -1, any current selection in the list box is removed and the edit control is cleared.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс элемента, выбранного при успешном выполнении сообщения. Возвращает значение **CB_ERR** Если `nSelect` больше, чем число элементов в списке или, если `nSelect` имеет значение -1, который отменяет выделение.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the item selected if the message is successful. The return value is **CB_ERR** if `nSelect` is greater than the number of items in the list or if `nSelect` is set to -1, which clears the selection.  
   
-### <a name="remarks"></a>Примечания  
- При необходимости списке прокрутке строке (если в списке отображается). Текст в поле редактирования комбинированного окна изменяется, чтобы отразить новое выделение. Предыдущее выделение в поле со списком удаляется.  
+### <a name="remarks"></a>Remarks  
+ If necessary, the list box scrolls the string into view (if the list box is visible). The text in the edit control of the combo box is changed to reflect the new selection. Any previous selection in the list box is removed.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
- Вызывайте эту функцию, чтобы задать минимальную допустимую ширину в пикселях списка поля со списком.  
+##  <a name="setdroppedwidth"></a>  CComboBox::SetDroppedWidth  
+ Call this function to set the minimum allowable width, in pixels, of the list box of a combo box.  
   
 ```  
 int SetDroppedWidth(UINT nWidth);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- Минимальная ширина допустимый списков части поле со списком в пикселях.  
+ The minimum allowable width of the list-box portion of the combo box, in pixels.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если успешно, новая ширина списка поле, в противном случае **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the new width of the list box, otherwise **CB_ERR**.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция применяется только для полей со списком [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) или [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля.  
+### <a name="remarks"></a>Remarks  
+ This function only applies to combo boxes with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
- По умолчанию минимальная ширина, допустимая раскрывающегося списка — 0. При отображении списков часть поле со списком его ширину больше Минимальная допустимая ширина или ширина поля со списком.  
+ By default, the minimum allowable width of the drop-down list box is 0. When the list-box portion of the combo box is displayed, its width is the larger of the minimum allowable width or the combo box width.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="seteditsel"></a>CComboBox::SetEditSel  
- Выбирает символов в элементе управления списком.  
+##  <a name="seteditsel"></a>  CComboBox::SetEditSel  
+ Selects characters in the edit control of a combo box.  
   
 ```  
 BOOL SetEditSel(
@@ -1087,70 +1136,70 @@ BOOL SetEditSel(
     int nEndChar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nStartChar`  
- Указывает начальную позицию. Если начальная позиция имеет значение -1, удаляется любого существующего выделения.  
+ Specifies the starting position. If the starting position is set to -1, then any existing selection is removed.  
   
  `nEndChar`  
- Указывает конечную позицию. Если конечная позиция имеет значение -1, затем весь текст от начальной позиции до конца выбирается символ в поле редактирования.  
+ Specifies the ending position. If the ending position is set to -1, then all text from the starting position to the last character in the edit control is selected.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция-член прошла успешно; в противном случае — 0. Это **CB_ERR** Если `CComboBox` имеет [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля или не имеет поле со списком.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the member function is successful; otherwise 0. It is **CB_ERR** if `CComboBox` has the [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style or does not have a list box.  
   
-### <a name="remarks"></a>Примечания  
- Позиции отсчитываются от нуля. Чтобы выбрать первый символ элемента управления, указать начальную позицию 0. Конечная позиция — для символа сразу после последнего символа для выбора. Например чтобы выбрать первые четыре символа элемента управления, используется начальная позиция 0 и конечного 4.  
+### <a name="remarks"></a>Remarks  
+ The positions are zero-based. To select the first character of the edit control, you specify a starting position of 0. The ending position is for the character just after the last character to select. For example, to select the first four characters of the edit control, you would use a starting position of 0 and an ending position of 4.  
   
 > [!NOTE]
->  Эта функция не поддерживается элементом управления Windows **ComboBoxEx** . Дополнительные сведения в этом элементе управления см. в разделе [управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CComboBox::GetEditSel](#geteditsel).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetEditSel](#geteditsel).  
   
-##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
- Вызовите `SetExtendedUI` функции-члена для выбора по умолчанию пользовательский интерфейс или расширенный пользовательский интерфейс поле со списком, который имеет [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) или [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля.  
+##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI  
+ Call the `SetExtendedUI` member function to select either the default user interface or the extended user interface for a combo box that has the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
 ```  
 int SetExtendedUI(BOOL bExtended = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bExtended*  
- Указывает, следует ли использовать поле со списком, расширенный пользовательский интерфейс или пользовательского интерфейса по умолчанию. Значение **TRUE** выбирает расширенного пользовательского интерфейса; значение **FALSE** выбирает стандартный пользовательский интерфейс.  
+ Specifies whether the combo box should use the extended user interface or the default user interface. A value of **TRUE** selects the extended user interface; a value of **FALSE** selects the standard user interface.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **CB_OKAY** , если операция выполнена успешно, или **CB_ERR** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ **CB_OKAY** if the operation is successful, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Примечания  
- Расширенный пользовательский интерфейс может быть идентифицирована одним из следующих способов.  
+### <a name="remarks"></a>Remarks  
+ The extended user interface can be identified in the following ways:  
   
--   Щелкните статический элемент управления отображает список только для полей со списком **CBS_DROPDOWNLIST** стиля.  
+-   Clicking the static control displays the list box only for combo boxes with the **CBS_DROPDOWNLIST** style.  
   
--   Нажмите клавишу Стрелка вниз отображает список (F4 отключен).  
+-   Pressing the DOWN ARROW key displays the list box (F4 is disabled).  
   
- Прокрутка в статический элемент управления остается недоступной, если не отображается в списке элементов (отключены клавиши со стрелками).  
+ Scrolling in the static control is disabled when the item list is not visible (the arrow keys are disabled).  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CComboBox::GetExtendedUI](#getextendedui).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetExtendedUI](#getextendedui).  
   
-##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
- Задает ширину в пикселях, на которое списков часть поле со списком может прокручиваться по горизонтали.  
+##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent  
+ Sets the width, in pixels, by which the list-box portion of the combo box can be scrolled horizontally.  
   
 ```  
 void SetHorizontalExtent(UINT nExtent);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *nExtent*  
- Задает количество пикселей, на которое списков часть поле со списком может прокручиваться по горизонтали.  
+ Specifies the number of pixels by which the list-box portion of the combo box can be scrolled horizontally.  
   
-### <a name="remarks"></a>Примечания  
- Если ширина поля меньше, чем это значение, горизонтальная полоса прокрутки по горизонтали прокручивает элементы в поле со списком. Если ширина списка равно или больше, чем это значение, горизонтальная полоса прокрутки будет скрыта или, если поле со списком имеет [CBS_DISABLENOSCROLL](../../mfc/reference/combo-box-styles.md) стиля, отключен.  
+### <a name="remarks"></a>Remarks  
+ If the width of the list box is smaller than this value, the horizontal scroll bar will horizontally scroll items in the list box. If the width of the list box is equal to or greater than this value, the horizontal scroll bar is hidden or, if the combo box has the [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, disabled.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="setitemdata"></a>CComboBox::SetItemData  
- Задает 32-разрядное значение, связанное с указанным элементом в поле со списком.  
+##  <a name="setitemdata"></a>  CComboBox::SetItemData  
+ Sets the 32-bit value associated with the specified item in a combo box.  
   
 ```  
 int SetItemData(
@@ -1158,24 +1207,24 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс задаваемого элемента.  
+ Contains a zero-based index to the item to set.  
   
  `dwItemData`  
- Содержит новое значение, связанное с элементом.  
+ Contains the new value to associate with the item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **CB_ERR** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `SetItemDataPtr` Если 32-разрядных элемент должен быть указателем функции-члена.  
+### <a name="remarks"></a>Remarks  
+ Use the `SetItemDataPtr` member function if the 32-bit item is to be a pointer.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
- Задает 32-разрядное значение, связанное с указанным элементом в поле со списком указанный указатель ( **void\***).  
+##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
+ Sets the 32-bit value associated with the specified item in a combo box to be the specified pointer ( **void\***).  
   
 ```  
 int SetItemDataPtr(
@@ -1183,24 +1232,24 @@ int SetItemDataPtr(
     void* pData);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Содержит отсчитываемый от нуля индекс изменяемого элемента.  
+ Contains a zero-based index to the item.  
   
  `pData`  
- Содержит указатель, связываемый с элементом.  
+ Contains the pointer to associate with the item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **CB_ERR** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Примечания  
- Этот указатель остается допустимым в течение жизненного цикла поле со списком, несмотря на то, что относительное положение данного элемента в поле со списком может измениться при добавлении и удалении элементов. Таким образом индекс элемента в поле можно изменить, но указатель остается надежным.  
+### <a name="remarks"></a>Remarks  
+ This pointer remains valid for the life of the combo box, even though the item's relative position within the combo box might change as items are added or removed. Hence, the item's index within the box can change, but the pointer remains reliable.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
- Вызовите `SetItemHeight` функции-члена для задайте высоту элементов списка в поле со списком или высота элемента управления редактирования (или статического текста) часть со списком.  
+##  <a name="setitemheight"></a>  CComboBox::SetItemHeight  
+ Call the `SetItemHeight` member function to set the height of list items in a combo box or the height of the edit-control (or static-text) portion of a combo box.  
   
 ```  
 int SetItemHeight(
@@ -1208,123 +1257,123 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Указывает, задан ли высота элементов списка или высоту элемента управления редактирования (или статического текста) части поле со списком.  
+ Specifies whether the height of list items or the height of the edit-control (or static-text) portion of the combo box is set.  
   
- Если поле со списком имеет [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) стиля, `nIndex` указывает отсчитываемый от нуля индекс, высоту которого будет задано; в противном случае — элемент списка `nIndex` должно быть 0 и высоту список всех элементов будет значение.  
+ If the combo box has the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` specifies the zero-based index of the list item whose height is to be set; otherwise, `nIndex` must be 0 and the height of all list items will be set.  
   
- Если `nIndex` является -1, высота элемента управления редактирования или часть статического текста в поле со списком задать.  
+ If `nIndex` is -1, the height of the edit-control or static-text portion of the combo box is to be set.  
   
  `cyItemHeight`  
- Указывает высоту в пикселях компонент списком `nIndex`.  
+ Specifies the height, in pixels, of the combo-box component identified by `nIndex`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **CB_ERR** Если индекс или высоту недопустим; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if the index or height is invalid; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Высота элемента управления редактирования (или статического текста) часть поле со списком устанавливается независимо от высоты элементов списка. Приложения необходимо убедиться, что высота этой части элемента управления редактирования (или статического текста) не меньше, чем высота элемента определенного списка.  
+### <a name="remarks"></a>Remarks  
+ The height of the edit-control (or static-text) portion of the combo box is set independently of the height of the list items. An application must ensure that the height of the edit-control (or static-text) portion is not smaller than the height of a particular list-box item.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="setlocale"></a>CComboBox::SetLocale  
- Задает идентификатор языкового стандарта для этого поля со списком.  
+##  <a name="setlocale"></a>  CComboBox::SetLocale  
+ Sets the locale identifier for this combo box.  
   
 ```  
 LCID SetLocale(LCID nNewLocale);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nNewLocale`  
- Новое значение код (LCID) языка должно быть задано для поле со списком.  
+ The new locale identifier (LCID) value to set for the combo box.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Предыдущее значение языкового стандарта код (LCID) для этого поля со списком.  
+### <a name="return-value"></a>Return Value  
+ The previous locale identifier (LCID) value for this combo box.  
   
-### <a name="remarks"></a>Примечания  
- Если **SetLocale** не вызывается, значение по умолчанию языковой стандарт, полученной из системы. Этот язык системы по умолчанию можно изменить с помощью панели управления язык (или международной) приложения.  
+### <a name="remarks"></a>Remarks  
+ If **SetLocale** is not called, the default locale is obtained from the system. This system default locale can be modified by using Control Panel's Regional (or International) application.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
- Задает минимальное число видимых элементов в раскрывающемся списке текущего поля со списком.  
+##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems  
+ Sets the minimum number of visible items in the drop-down list of the current combo box control.  
   
 ```  
 BOOL SetMinVisibleItems(int iMinVisible);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|Указывает минимальное число видимых элементов.|  
+|[in] `iMinVisible`|Specifies the minimum number of visible items.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) сообщение, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода определяется переменная `m_combobox`, который используется для программного доступа к поле со списком. Эта переменная используется в следующем примере.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_combobox`, that is used to programmatically access the combo box control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1;1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
-### <a name="example"></a>Пример  
- В следующем примере кода вставляет 20 элементов в раскрывающемся списке элемента управления полем со списком. Затем он задает отображение менее 10 элементов при нажатии клавиши со стрелкой раскрывающегося списка.  
+### <a name="example"></a>Example  
+ The following code example inserts 20 items into the drop-down list of a combo box control. Then it specifies that a minimum of 10 items be displayed when a user presses the drop-down arrow.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1;2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="settopindex"></a>CComboBox::SetTopIndex  
- Гарантирует, что какой-либо элемент отображается в списке части поле со списком.  
+##  <a name="settopindex"></a>  CComboBox::SetTopIndex  
+ Ensures that a particular item is visible in the list-box portion of the combo box.  
   
 ```  
 int SetTopIndex(int nIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Задает отсчитываемый от нуля индекс элемента списка.  
+ Specifies the zero-based index of the list-box item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ноль при успешном завершении, или **CB_ERR** при возникновении ошибки.  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Примечания  
- Система выполняет прокрутку списка до элемента, заданного параметром `nIndex` отображается в верхней части списка достигнут диапазона максимальную прокрутку или поля.  
+### <a name="remarks"></a>Remarks  
+ The system scrolls the list box until either the item specified by `nIndex` appears at the top of the list box or the maximum scroll range has been reached.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CComboBox #40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
- Показывает или скрывает поле со списком поле со списком, который имеет [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) или [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) стиля.  
+##  <a name="showdropdown"></a>  CComboBox::ShowDropDown  
+ Shows or hides the list box of a combo box that has the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
 ```  
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bShowIt*  
- Указывает, является ли поле раскрывающегося списка отображаться или скрываться. Значение **TRUE** показывает поле списка. Значение **FALSE** скрывает поле списка.  
+ Specifies whether the drop-down list box is to be shown or hidden. A value of **TRUE** shows the list box. A value of **FALSE** hides the list box.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию поле со списком этого стиля будет показывать окно списка.  
+### <a name="remarks"></a>Remarks  
+ By default, a combo box of this style will show the list box.  
   
- Эта функция-член не оказывает влияния на поле со списком, созданных с помощью [CBS_SIMPLE](../../mfc/reference/combo-box-styles.md) стиля.  
+ This member function has no effect on a combo box created with the [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CComboBox::GetDroppedState](#getdroppedstate).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetDroppedState](#getdroppedstate).  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC CTRLBARS](../../visual-cpp-samples.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Класс CButton](../../mfc/reference/cbutton-class.md)   
- [Класс CEdit](../../mfc/reference/cedit-class.md)   
- [CListBox-класс](../../mfc/reference/clistbox-class.md)   
- [Класс CScrollBar](../../mfc/reference/cscrollbar-class.md)   
- [Класс CStatic](../../mfc/reference/cstatic-class.md)   
- [Класс CDialog](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

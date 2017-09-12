@@ -1,111 +1,130 @@
 ---
-title: "Управление памятью. Примеры | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], выделение ресурсов"
-  - "массивы [C++], управление памятью"
-  - "структуры данных [C++]"
-  - "структуры данных [C++], выделение памяти"
-  - "примеры [MFC], выделение памяти"
-  - "выделение кадров"
-  - "выделение кучи, примеры"
-  - "выделение памяти [C++], массивы"
-  - "выделение памяти [C++], структуры данных"
-  - "выделение памяти [C++], примеры"
-  - "выделение памяти [C++], объекты"
-  - "MFC [C++], управление памятью"
-  - "объекты [C++], выделение памяти"
-  - "объекты [C++], выделение памяти"
-  - "выделение памяти структуры"
-  - "типы [C++], выделение памяти"
+title: 'Memory Management: Examples | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], memory allocation
+- data structures [MFC]
+- arrays [MFC], allocating resources
+- objects [MFC], allocating memory
+- data structures [MFC], allocating memory
+- examples [MFC], memory allocation
+- heap allocation [MFC], examples
+- memory allocation [MFC], arrays
+- MFC, memory management
+- struct memory allocation [MFC]
+- types [MFC], memory allocation
+- memory allocation [MFC], objects
+- memory allocation [MFC], examples
+- arrays [MFC], memory management
+- frame allocation [MFC]
+- memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Управление памятью. Примеры
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 108a4988ca87c96642c2368764ec3d047de746a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются как MFC выполняет выделения кадра и выделения памяти для каждого из 3 типичных выделения памяти:  
+---
+# <a name="memory-management-examples"></a>Memory Management: Examples
+This article describes how MFC performs frame allocations and heap allocations for each of the three typical kinds of memory allocations:  
   
--   [Массив байтов](#_core_allocation_of_an_array_of_bytes)  
+-   [An array of bytes](#_core_allocation_of_an_array_of_bytes)  
   
--   [Структура данных](#_core_allocation_of_a_data_structure)  
+-   [A data structure](#_core_allocation_of_a_data_structure)  
   
--   [Объект](#_core_allocation_of_an_object)  
+-   [An object](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a> Выделение массива байтов  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocation of an Array of Bytes  
   
-#### Выбор массив байтов в кадре  
+#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>To allocate an array of bytes on the frame  
   
-1.  Определите массив, как показано в следующем коде.  Массив автоматически удаляется, и его освобождение памяти, если переменная массива не влияет на ее область.  
+1.  Define the array as shown by the following code. The array is automatically deleted and its memory reclaimed when the array variable exits its scope.  
   
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/CPP/memory-management-examples_1.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]  
   
-#### Выбор массив байтов \(или любой примитивный тип данных в куче\)  
+#### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>To allocate an array of bytes (or any primitive data type) on the heap  
   
-1.  Оператор **новый** с синтаксисом массива, показанный в следующем примере:  
+1.  Use the **new** operator with the array syntax shown in this example:  
   
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/CPP/memory-management-examples_2.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]  
   
-#### Отменить массивы из кучи  
+#### <a name="to-deallocate-the-arrays-from-the-heap"></a>To deallocate the arrays from the heap  
   
-1.  Оператор **удалить** следующим образом:  
+1.  Use the **delete** operator as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/CPP/memory-management-examples_3.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a> Выделение структуры данных  
+##  <a name="_core_allocation_of_a_data_structure"></a> Allocation of a Data Structure  
   
-#### Выбор структуры данных в кадре  
+#### <a name="to-allocate-a-data-structure-on-the-frame"></a>To allocate a data structure on the frame  
   
-1.  Определите переменную структуры следующим образом:  
+1.  Define the structure variable as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/CPP/memory-management-examples_4.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]  
   
-     Память занятая структурой фиксируется при ее не влияет на ее область.  
+     The memory occupied by the structure is reclaimed when it exits its scope.  
   
-#### Выбор структуры данных в куче  
+#### <a name="to-allocate-data-structures-on-the-heap"></a>To allocate data structures on the heap  
   
-1.  Используйте **новый** для выделения структуры данных в куче и **удалить**, чтобы отменить их, как показано в следующих примерах:  
+1.  Use **new** to allocate data structures on the heap and **delete** to deallocate them, as shown by the following examples:  
   
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/CPP/memory-management-examples_5.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a> Выделение объектов  
+##  <a name="_core_allocation_of_an_object"></a> Allocation of an Object  
   
-#### Выберите объект в кадре  
+#### <a name="to-allocate-an-object-on-the-frame"></a>To allocate an object on the frame  
   
-1.  Объявите объект следующим образом:  
+1.  Declare the object as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/CPP/memory-management-examples_6.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]  
   
-     Деструктор для объекта автоматически вызывается, когда объект покидает его области.  
+     The destructor for the object is automatically invoked when the object exits its scope.  
   
-#### Выбор объекта в куче  
+#### <a name="to-allocate-an-object-on-the-heap"></a>To allocate an object on the heap  
   
-1.  Оператор **новый**, который возвращает указатель на объект, чтобы выделить объекты в куче.  Оператор **удалить** для удаления их.  
+1.  Use the **new** operator, which returns a pointer to the object, to allocate objects on the heap. Use the **delete** operator to delete them.  
   
-     В следующих примерах кучи и кадра высказывать конструктор `CPerson` не принимает аргументов.  
+     The following heap and frame examples assume that the `CPerson` constructor takes no arguments.  
   
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/CPP/memory-management-examples_7.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Если аргумент для конструктора `CPerson` указатель на `char`, выписка для выделения кадра выглядит следующим образом:  
+     If the argument for the `CPerson` constructor is a pointer to `char`, the statement for frame allocation is:  
   
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/CPP/memory-management-examples_8.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   
-     Выписка для выделения кучи выглядит следующим образом:  
+     The statement for heap allocation is:  
   
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/CPP/memory-management-examples_9.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]  
   
-## См. также  
- [Управление памятью. Выделение кучи](../mfc/memory-management-heap-allocation.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management: Heap Allocation](../mfc/memory-management-heap-allocation.md)
+
+

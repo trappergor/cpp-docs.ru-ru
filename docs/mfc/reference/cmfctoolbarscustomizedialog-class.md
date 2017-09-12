@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCToolBarsCustomizeDialog | Документы Microsoft"
+title: CMFCToolBarsCustomizeDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarsCustomizeDialog class
+- CMFCToolBarsCustomizeDialog [MFC], CMFCToolBarsCustomizeDialog
+- CMFCToolBarsCustomizeDialog [MFC], FillAllCommandsList
+- CMFCToolBarsCustomizeDialog [MFC], FillCategoriesComboBox
+- CMFCToolBarsCustomizeDialog [MFC], FillCategoriesListBox
+- CMFCToolBarsCustomizeDialog [MFC], GetCommandName
+- CMFCToolBarsCustomizeDialog [MFC], GetCountInCategory
+- CMFCToolBarsCustomizeDialog [MFC], GetFlags
+- CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
+- CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 caps.latest.revision: 28
 author: mikeblome
@@ -43,80 +51,80 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 069498d958dd5d9c3befc2a179c67636ce0ac9ae
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b15970d300c146253679ba137f2389eb9f9a3f2d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarscustomizedialog-class"></a>Класс CMFCToolBarsCustomizeDialog
-Диалоговое окно немодальное вкладки ( [CPropertySheet-класс](../../mfc/reference/cpropertysheet-class.md)), которые позволяют пользователю настраивать панели инструментов, меню, сочетания клавиш, определенные пользователем инструменты и визуальный стиль в приложении. Обычно пользователь осуществляет доступ к этому диалоговому окну, выбирая **Настроить** в меню **Сервис** .  
+# <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog Class
+A modeless tab dialog box ( [CPropertySheet Class](../../mfc/reference/cpropertysheet-class.md)) that enables the user to customize the toolbars, menus, keyboard shortcuts, user-defined tools, and visual style in an application. Typically, the user accesses this dialog box by selecting **Customize** from the **Tools** menu.  
   
- **Настройка** диалоговое окно содержит шесть вкладок: **команды**, **панели инструментов**, **средства**, **клавиатуры**, **меню**, и **параметры**.  
+ The **Customize** dialog box has six tabs: **Commands**, **Toolbars**, **Tools**, **Keyboard**, **Menu**, and **Options**.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarsCustomizeDialog : public CPropertySheet  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Создает объект `CMFCToolBarsCustomizeDialog`.|  
-|`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Деструктор.|  
+|[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Constructs a `CMFCToolBarsCustomizeDialog` object.|  
+|`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Вставляет кнопку панели инструментов в списке команд на **команды** страницы|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Загружает меню из ресурсов и вызывает [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) Чтобы добавить список команд, меню на **команды** страницы.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Загружает меню из ресурсов и вызывает [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) Чтобы добавить список команд, меню на **команды** страницы.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Загружает панель инструментов из ресурсов. Затем для каждой команды в меню вызывает [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) метод, чтобы добавить кнопку в списке команд на **команды** страницы в указанной категории.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::Create](#create)|Отображает **настройки** диалоговое окно.|  
-|`CMFCToolBarsCustomizeDialog::EnableTools`|Зарезервировано для будущего использования.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Включает или отключает создание новых панелей инструментов с помощью **Настройка** диалоговое окно.|  
-|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Заполняет предоставленный `CListBox` объектов с помощью команд в **все команды** категории.|  
-|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Заполняет предоставленный `CComboBox` объект с именем каждой категории команд в **Настройка** диалоговое окно.|  
-|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Заполняет предоставленный `CListBox` объект с именем каждой категории команд в **Настройка** диалоговое окно.|  
-|[CMFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|Получает имя, связанный с данной команды.|  
-|[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Получает число элементов в указанный список с меткой заданный текст.|  
-|[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|Получает набор флагов, влияющих на поведение диалогового окна.|  
-|`CMFCToolBarsCustomizeDialog::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Запускает редактор изображений, что пользователь может настроить значка элемента кнопки или меню на панели инструментов.|  
-|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|Переопределения для дополнения инициализации листа свойств. (Переопределяет [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
-|[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|Вызывается платформой после окно уже уничтожено. (Переопределяет `CPropertySheet::PostNcDestroy`.)|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Удаление кнопки с заданным Идентификатором команды из указанной категории, или из всех категорий.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|Переименовывает категорию в списке категорий на **команды** вкладки.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|Заменяет кнопки в списке команд на **команды** вкладки с новый объект кнопки панели инструментов.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Добавление категории в список категорий, которые будут отображаться на **команды** вкладки.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Inserts a toolbar button into the list of commands on the **Commands** page|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Loads a menu from the resources and calls [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) to add that menu to the list of commands on the **Commands** page.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Loads a menu from the resources and calls [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) to add that menu to the list of commands on the **Commands** page.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Loads a toolbar from the resources. Then, for each command in the menu calls the [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) method to insert a button in the list of commands on the **Commands** page under the specified category.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::Create](#create)|Displays the **Customization** dialog box.|  
+|`CMFCToolBarsCustomizeDialog::EnableTools`|Reserved for future use.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Enables or disables creating new toolbars by using the **Customize** dialog box.|  
+|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Populates the provided `CListBox` object with the commands in the **All Commands** category.|  
+|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Populates the provided `CComboBox` object with the name of each command category in the **Customize** dialog box.|  
+|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Populates the provided `CListBox` object with the name of each command category in the **Customize** dialog box.|  
+|[CMFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|Retrieves the name that is associated with the given command ID.|  
+|[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Retrieves the number of items in the provided list that have a given text label.|  
+|[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|Retrieves the set of flags that affect the behavior of the dialog box.|  
+|`CMFCToolBarsCustomizeDialog::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Starts an image editor so that a user can customize a toolbar button or menu item icon.|  
+|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|Overrides to augment property sheet initialization. (Overrides [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|Called by the framework after the window has been destroyed. (Overrides `CPropertySheet::PostNcDestroy`.)|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Removes the button with the specified command ID from the specified category, or from all categories.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|Renames a category in the list box of categories on the **Commands** tab.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|Replaces a button in the list of commands on the **Commands** tab with a new toolbar button object.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Adds a category to the list of categories that will be displayed on the **Commands** tab.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Вызывается платформой для определения допустимости список пользовательских средств.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Вызывается инфраструктурой при изменении свойств инструмент, определенный пользователем.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|Определяет ли указанный сочетания клавиш могут быть назначены действия.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|Определяет, можно ли изменить определяемый пользователем инструмент.|  
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|Вызывается платформой, когда пользователь выбирает **средства** вкладку запрашивается.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Called by the framework to determine whether the list of user-defined tools is valid.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Called by the framework when the properties of a user-defined tool change.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|Determines whether a specified keyboard shortcut can be assigned to an action.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|Determines whether a user-defined tool can be changed.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|Called by the framework when the user chooses the **Tools** tab is requested.|  
   
-## <a name="remarks"></a>Примечания  
- Для отображения **Настройка** диалоговом окне создайте `CMFCToolBarsCustomizeDialog` и вызовите [CMFCToolBarsCustomizeDialog::Create](#create) метод.  
+## <a name="remarks"></a>Remarks  
+ To display the **Customize** dialog box, create a `CMFCToolBarsCustomizeDialog` object and call the [CMFCToolBarsCustomizeDialog::Create](#create) method.  
   
- Хотя **Настройка** диалоговом окне, что приложение работает в специальный режим, который ограничивает пользователя задач настройки.  
+ While the **Customize** dialog box is active, the application works in a special mode that limits the user to customization tasks.  
   
-## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать различные методы в `CMFCToolBarsCustomizeDialog` класса. Примере показано, как заменить кнопку панели инструментов в окне списка команд на **команды** включите создание новых панелей инструментов с помощью **Настройка** диалоговое окно параметров отображения и **настройки** диалоговое окно. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCToolBarsCustomizeDialog` class. The example shows how to replace a toolbar button in the list box of commands on the **Commands** page, enable creating new toolbars by using the **Customize** dialog box, and display the **Customization** dialog box. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo&#4;](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -127,11 +135,11 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
   
  `CMFCToolBarsCustomizeDialog`   
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxToolBarsCustomizeDialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxToolBarsCustomizeDialog.h  
   
-##  <a name="addbutton"></a>CMFCToolBarsCustomizeDialog::AddButton  
- Вставляет кнопку панели инструментов в списке команд на **команды** страницы.  
+##  <a name="addbutton"></a>  CMFCToolBarsCustomizeDialog::AddButton  
+ Inserts a toolbar button into the list of commands on the **Commands** page.  
   
 ```  
 void AddButton(
@@ -145,52 +153,52 @@ void AddButton(
     int iInsertBefore=-1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCategoryId`  
- Указывает идентификатор категории, в который необходимо вставить кнопку.  
+ Specifies the category ID into which to insert the button.  
   
  [in] `button`  
- Задает кнопки для вставки.  
+ Specifies the button to insert.  
   
  [in] `iInsertBefore`  
- Задает отсчитываемый от нуля индекс кнопки панели инструментов, после которого вставляется кнопки.  
+ Specifies the zero-based index of a toolbar button before which the button is inserted.  
   
  [in] `lpszCategory`  
- Указывает строку категории для вставки кнопки.  
+ Specifies the category string to insert the button.  
   
-### <a name="remarks"></a>Примечания  
- `AddButton` Метод игнорирует кнопок, которые имеют стандартные идентификаторы команд (например, ID_FILE_MRU_FILE1), команды, не допускаются (см. [CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) и фиктивная кнопок.  
+### <a name="remarks"></a>Remarks  
+ The `AddButton` method ignores buttons that have the standard command IDs (such as ID_FILE_MRU_FILE1), commands that are not permitted (see [CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) and dummy buttons.  
   
- Этот метод создает новый объект того же типа, что `button` (обычно [CMFCToolBarButton класса](../../mfc/reference/cmfctoolbarbutton-class.md)) с помощью кнопки класса среды выполнения. Затем он вызывает [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom) на копирование членов данных кнопки и вставляет ее в указанной категории.  
+ This method creates a new object of the same type as `button` (usually a [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)) by using the runtime class of the button. It then calls [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom) to copy the data members of button, and inserts the copy into the specified category.  
   
- При вставке новой кнопки, он получает `OnAddToCustomizePage` уведомления.  
+ When the new button is inserted, it receives the `OnAddToCustomizePage` notification.  
   
- Если `iInsertBefore` равно -1, кнопки добавляется в список категорий; в противном случае он вставляется перед элементом с заданным индексом.  
+ If `iInsertBefore` is -1, the button is appended to the list of categories; otherwise it is inserted before the item with the specified index.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `AddButton` метод `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [образце Slider](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `AddButton` method of the `CMFCToolBarsCustomizeDialog` class. This code snippet is part of the [Slider sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_Slider&#1;](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]  
   
-##  <a name="addmenu"></a>CMFCToolBarsCustomizeDialog::AddMenu  
- Загружает меню из ресурсов и вызывает [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) Чтобы добавить список команд, меню на **команды** страницы.  
+##  <a name="addmenu"></a>  CMFCToolBarsCustomizeDialog::AddMenu  
+ Loads a menu from the resources and calls [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) to add that menu to the list of commands on the **Commands** page.  
   
 ```  
 BOOL AddMenu(UINT uiMenuResId);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiMenuResId`  
- Указывает идентификатор ресурса меню загрузки.  
+ Specifies the resource ID of a menu to load.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если меню был успешно добавлен; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a menu was added successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- При вызове `AddMenuCommands`, `bPopup` — `FALSE`. В результате этот метод не добавляет элементы меню, содержащие подменю список команд. Этот метод добавляет пункты меню в подменю список команд.  
+### <a name="remarks"></a>Remarks  
+ In the call to `AddMenuCommands`, `bPopup` is `FALSE`. As a result, that method does not add menu items that contain submenus to the list of commands. This method does add the menu items in the submenus to the list of commands.  
   
-##  <a name="addmenucommands"></a>CMFCToolBarsCustomizeDialog::AddMenuCommands  
- Добавляет элементы в список команд в **команды** страницу для представления всех элементов в указанное меню.  
+##  <a name="addmenucommands"></a>  CMFCToolBarsCustomizeDialog::AddMenuCommands  
+ Adds items to the list of commands in the **Commands** page to represent all the items in the specified menu.  
   
 ```  
 void AddMenuCommands(
@@ -200,26 +208,26 @@ void AddMenuCommands(
     LPCTSTR lpszMenuPath=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pMenu`  
- Указатель на объект CMenu для добавления.  
+ A pointer to the CMenu object to add.  
   
  [in] `bPopup`  
- Указывает, следует ли вставлять элементы всплывающего меню к списку команд.  
+ Specifies whether to insert the popup menu items to the list of commands.  
   
  [in] `lpszCategory`  
- Имя категории для вставки в меню.  
+ The name of the category to insert the menu.  
   
  [in] `lpszMenuPath`  
- Префикс, который добавляется к имени, когда команда отображается в **все категории** списка.  
+ A prefix that is added to the name when the command is shown in the **All Categories** list.  
   
-### <a name="remarks"></a>Примечания  
- `AddMenuCommands` Метод циклов через все элементы меню `pMenu`. Для каждого пункта меню, который не содержит подменю, этот метод создает [класса CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) и вызывает [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) метод для добавления элемента меню кнопки панели инструментов в список команд на **команды** страницы. Разделители учитываются в этом процессе.  
+### <a name="remarks"></a>Remarks  
+ The `AddMenuCommands` method loops over all menu items of `pMenu`. For each menu item that does not contain a submenu, this method creates a [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) object and calls the [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) method to add the menu item as a toolbar button to the list of commands on the **Commands** page. Separators are ignored in this process.  
   
- Если `bPopup` — `TRUE`, для каждого пункта меню, который содержит подменю этот метод создает [класса CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) объекта и вставляет его в список команд, вызвав `AddButton`. В противном случае элементы меню, содержащие подменю не отображаются в списке команд. В любом случае при `AddMenuCommands` встречает элемент меню с подменю он вызывает себя рекурсивно, передать указатель на подменю как `pMenu` параметр и добавления метки в подменю для `lpszMenuPath`.  
+ If `bPopup` is `TRUE`, for each menu item that contains a submenu this method creates a [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md) object and inserts it into the list of commands by calling `AddButton`. Otherwise menu items that contain submenus are not displayed in the list of commands. In either case, when `AddMenuCommands` encounters a menu item with a submenu it calls itself recursively, passing a pointer to the submenu as the `pMenu` parameter and appending the label of the submenu to `lpszMenuPath`.  
   
-##  <a name="addtoolbar"></a>CMFCToolBarsCustomizeDialog::AddToolBar  
- Загружает панель инструментов из ресурсов. Затем для каждой команды в меню вызывает [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) метод, чтобы добавить кнопку в списке команд на **команды** страницы в указанной категории.  
+##  <a name="addtoolbar"></a>  CMFCToolBarsCustomizeDialog::AddToolBar  
+ Loads a toolbar from the resources. Then, for each command in the menu calls the [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) method to insert a button in the list of commands on the **Commands** page under the specified category.  
   
 ```  
 BOOL AddToolBar(
@@ -231,48 +239,48 @@ BOOL AddToolBar(
     UINT uiToolbarResId);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCategoryId`  
- Указывает идентификатор ресурса категории для добавления панели инструментов.  
+ Specifies the resource ID of the category to add the toolbar to.  
   
  [in] `uiToolbarResId`  
- Указывает идентификатор ресурса, команды которого вставляются в список команд панели инструментов.  
+ Specifies the resource ID of a toolbar whose commands are inserted into the list of commands.  
   
  [in] `lpszCategory`  
- Задает имя категории, к которому необходимо добавить панель инструментов.  
+ Specifies the name of the category to which to add the toolbar.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method is successful; otherwise `FALSE`.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `AddToolBar` метод `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [Word Pad образец](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `AddToolBar` method in the `CMFCToolBarsCustomizeDialog` class. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad&11;](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]  
   
-### <a name="remarks"></a>Примечания  
- Элемент управления, используемый для представления каждой команды [CMFCToolBarButton класс](../../mfc/reference/cmfctoolbarbutton-class.md) объекта. После добавления панели инструментов, можно заменить кнопки элемента управления, производного типа путем вызова [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton).  
+### <a name="remarks"></a>Remarks  
+ The control that is used to represent each command is a [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) object. After you add the toolbar, you can replace the button with a control of a derived type by calling [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton).  
   
-##  <a name="checktoolsvalidity"></a>CMFCToolBarsCustomizeDialog::CheckToolsValidity  
- Проверяет правильность списка средств пользователя.  
+##  <a name="checktoolsvalidity"></a>  CMFCToolBarsCustomizeDialog::CheckToolsValidity  
+ Verifies the validity of the list of user tools.  
   
 ```  
 virtual BOOL CheckToolsValidity(const CObList& lstTools);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lstTools`  
- Список пользовательских средств для проверки.  
+ The list of user-defined tools to check.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` Если список пользовательских средств является допустимым; в противном случае `FALSE`. Реализация по умолчанию всегда возвращает `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the list of user-defined tools is valid; otherwise `FALSE`. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод для проверки допустимости объектов, представляющих пользовательские инструменты, возвращенный [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity).  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to verify the validity of objects that represent user-defined tools returned by [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity).  
   
- Переопределение `CheckToolsValidity` метод в класс производным от `CMFCToolBarsCustomizeDialog` требуется для проверки пользовательских средств, прежде чем пользователь закрывает диалоговое окно. Если этот метод возвращает `FALSE` при щелчке по любой **закрыть** кнопки в правом верхнем углу диалогового окна или кнопка **закрыть** в нижнем правом углу диалогового окна отображает диалоговое окно **средства** вкладку вместо закрытия. Если этот метод возвращает `FALSE` при щелчке вкладки для перехода с **средства** вкладке навигации не происходит. Следует отобразить окно сообщения для информирования пользователей проблема, которая привела к сбою проверки.  
+ Override the `CheckToolsValidity` method in a class derived from `CMFCToolBarsCustomizeDialog`  if you want to validate the user tools before the user closes the dialog box. If this method returns `FALSE` when the user clicks either the **Close** button in the upper-right corner of the dialog box or the button labeled **Close** in the lower-right corner of the dialog box, the dialog box displays the **Tools** tab instead of closing. If this method returns `FALSE` when the user clicks a tab to navigate away from the **Tools** tab, the navigation does not occur. You should display an appropriate message box to inform the user of the problem that caused validation to fail.  
   
-##  <a name="cmfctoolbarscustomizedialog"></a>CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog  
- Создает объект `CMFCToolBarsCustomizeDialog`.  
+##  <a name="cmfctoolbarscustomizedialog"></a>  CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog  
+ Constructs a `CMFCToolBarsCustomizeDialog` object.  
   
 ```  
 CMFCToolBarsCustomizeDialog(
@@ -282,15 +290,15 @@ CMFCToolBarsCustomizeDialog(
     CList <CRuntimeClass*, CRuntimeClass*>* p listCustomPages = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParentFrame`  
- Указатель родительского фрейма. Этот параметр не должен иметь значение `NULL`.  
+ A pointer to the parent frame. This parameter must not be `NULL`.  
   
  [in] `bAutoSetFromMenus`  
- Логическое значение, которое указывает, следует ли добавить команды меню все меню список команд на **команды** страницы. Если этот параметр равен `TRUE`, добавляются команды меню. В противном случае — не добавляются команды меню.  
+ A Boolean value that specifies whether to add the menu commands from all menus to the list of commands on the **Commands** page. If this parameter is `TRUE`, the menu commands are added. Otherwise, the menu commands are not added.  
   
  [in] `uiFlags`  
- Сочетание флагов, влияющих на поведение диалогового окна. Этот параметр может иметь одно или несколько из следующих значений:  
+ A combination of flags that affect the behavior of the dialog box. This parameter can be one or more of the following values:  
   
 - `AFX_CUSTOMIZE_MENU_SHADOWS`  
   
@@ -309,67 +317,67 @@ CMFCToolBarsCustomizeDialog(
 - `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
   
  [in] `plistCustomPages`  
- Указатель на список `CRuntimeClass` объекты, которые указывают дополнительные пользовательские страницы.  
+ A pointer to a list of `CRuntimeClass` objects that specify additional custom pages.  
   
-### <a name="remarks"></a>Примечания  
- `plistCustomPages` Параметр ссылается на список `CRuntimeClass` объекты, которые указывают дополнительные пользовательские страницы. Конструктор добавляет дополнительные страницы в диалоговом окне с помощью [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) метод. См. в образце CustomPages пример добавляет дополнительные страницы для **Настройка** диалоговое окно.  
+### <a name="remarks"></a>Remarks  
+ The `plistCustomPages` parameter refers to the list of `CRuntimeClass` objects that specify additional custom pages. The constructor adds more pages to the dialog box by using the [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) method. See the CustomPages sample for an example that adds more pages to the **Customize** dialog box.  
   
- Дополнительные сведения о значениях, которые можно передать в `uiFlags` параметр в разделе [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
+ For more information about the values that you can pass in the `uiFlags` parameter, see [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
   
-### <a name="example"></a>Пример  
- Следующий пример демонстрирует создания объекта `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [пользовательские страницы образец](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCToolBarsCustomizeDialog` class. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_CustomPages&#3;](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]  
   
-##  <a name="create"></a>CMFCToolBarsCustomizeDialog::Create  
- Отображает **настройки** диалоговое окно.  
+##  <a name="create"></a>  CMFCToolBarsCustomizeDialog::Create  
+ Displays the **Customization** dialog box.  
   
 ```  
 virtual BOOL Create();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если окно свойств настройки создано успешно; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the customization property sheet is created successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Вызов `Create` метод только после полной инициализации класса.  
+### <a name="remarks"></a>Remarks  
+ Call the `Create` method only after you fully initialize the class.  
   
-##  <a name="enableuserdefinedtoolbars"></a>CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars  
- Включает или отключает создание новых панелей инструментов с помощью **Настройка** диалоговое окно.  
+##  <a name="enableuserdefinedtoolbars"></a>  CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars  
+ Enables or disables creating new toolbars by using the **Customize** dialog box.  
   
 ```  
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Чтобы включить пользовательские панели инструментов; `FALSE` отключение панели инструментов.  
+ `TRUE` to enable the user-defined toolbars; `FALSE` to disable the toolbars.  
   
-### <a name="remarks"></a>Примечания  
- Если `bEnable` — `TRUE`, **New**, **переименование** и **удаление** кнопок на **панели инструментов** страницы.  
+### <a name="remarks"></a>Remarks  
+ If `bEnable` is `TRUE`, the **New**, **Rename** and **Delete** buttons are displayed on the **Toolbars** page.  
   
- По умолчанию или если `bEnable` — `FALSE`, эти кнопки не отображаются, и пользователь не может определить новые панели инструментов.  
+ By default, or if `bEnable` is `FALSE`, these buttons are not displayed and the user cannot define new toolbars.  
   
-##  <a name="fillallcommandslist"></a>CMFCToolBarsCustomizeDialog::FillAllCommandsList  
- Заполняет предоставленный `CListBox` объектов с помощью команд в **все команды** категории.  
+##  <a name="fillallcommandslist"></a>  CMFCToolBarsCustomizeDialog::FillAllCommandsList  
+ Populates the provided `CListBox` object with the commands in the **All Commands** category.  
   
 ```  
 virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `wndListOfCommands`  
- Ссылку на `CListBox` объекта для заполнения.  
+### <a name="parameters"></a>Parameters  
+ [out] `wndListOfCommands`  
+ A reference to the `CListBox` object to populate.  
   
-### <a name="remarks"></a>Примечания  
- **Все команды** категории команды всех категорий. [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) метод добавляет команду, которая связана с кнопкой, предоставленный для **все команды** категория для вас.  
+### <a name="remarks"></a>Remarks  
+ The **All Commands** category contains the commands of all categories. The [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) method adds the command that is associated with the provided button to the **All Commands** category for you.  
   
- Этот метод очищает содержимое указанных `CListBox` объекта до заполнения его с помощью команд в **все команды** категории.  
+ This method clears the contents of the provided `CListBox` object before populating it with the commands in the **All Commands** category.  
   
- `CMFCMousePropertyPage` Класс использует этот метод для заполнения списка дважды щелкните событие.  
+ The `CMFCMousePropertyPage` class uses this method to populate the double-click event list box.  
   
-##  <a name="fillcategoriescombobox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesComboBox  
- Заполняет предоставленный `CComboBox` объект с именем каждой категории команд в **Настройка** диалоговое окно.  
+##  <a name="fillcategoriescombobox"></a>  CMFCToolBarsCustomizeDialog::FillCategoriesComboBox  
+ Populates the provided `CComboBox` object with the name of each command category in the **Customize** dialog box.  
   
 ```  
 void FillCategoriesComboBox(
@@ -377,24 +385,24 @@ void FillCategoriesComboBox(
     BOOL bAddEmpty = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `wndCategory`  
- Ссылку на `CComboBox` объекта для заполнения.  
+### <a name="parameters"></a>Parameters  
+ [out] `wndCategory`  
+ A reference to the `CComboBox` object to populate.  
   
  [in] `bAddEmpty`  
- Логическое значение, указывающее, следует ли добавить категории в поле со списком, у которых нет команды. Если этот параметр равен `TRUE`, пустой категории добавляются в поле со списком. В противном случае — пустой категории не добавляются.  
+ A Boolean value that specifies whether to add categories to the combo box that do not have commands. If this parameter is `TRUE`, empty categories are added to the combo box. Otherwise, empty categories are not added.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод аналогичен [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox) метод за исключением того, что этот метод работает с `CComboBox` объекта.  
+### <a name="remarks"></a>Remarks  
+ This method is like the [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox) method except that this method works with a `CComboBox` object.  
   
- Этот метод не очищает содержимое `CComboBox` объекта до его заполнения. Гарантирует, что **все команды** категории — последний элемент в поле со списком.  
+ This method does not clear the contents of the `CComboBox` object before populating it. It guarantees that the **All Commands** category is the final item in the combo box.  
   
- Можно добавить новые категории команд с помощью [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) метод. Можно изменить имя существующей категории с помощью [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) метод.  
+ You can add new command categories by using the [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) method. You can change the name of an existing category by using the [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) method.  
   
- `CMFCToolBarsKeyboardPropertyPage` И `CMFCKeyMapDialog` классы используют этот метод для категоризации раскладки клавиатуры.  
+ The `CMFCToolBarsKeyboardPropertyPage` and `CMFCKeyMapDialog` classes use this method to categorize keyboard mappings.  
   
-##  <a name="fillcategorieslistbox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesListBox  
- Заполняет предоставленный `CListBox` объект с именем каждой категории команд в **Настройка** диалоговое окно.  
+##  <a name="fillcategorieslistbox"></a>  CMFCToolBarsCustomizeDialog::FillCategoriesListBox  
+ Populates the provided `CListBox` object with the name of each command category in the **Customize** dialog box.  
   
 ```  
 void FillCategoriesListBox(
@@ -402,38 +410,38 @@ void FillCategoriesListBox(
     BOOL bAddEmpty = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `wndCategory`  
- Ссылку на `CListBox` объекта для заполнения.  
+### <a name="parameters"></a>Parameters  
+ [out] `wndCategory`  
+ A reference to the `CListBox` object to populate.  
   
  [in] `bAddEmpty`  
- Логическое значение, указывающее, следует ли добавить категории в поле списка, у которых нет команды. Если этот параметр равен `TRUE`, пустой категории добавляются в список. В противном случае — пустой категории не добавляются.  
+ A Boolean value that specifies whether to add categories to the list box that do not have commands. If this parameter is `TRUE`, empty categories are added to the list box. Otherwise, empty categories are not added.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод аналогичен [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox) метод за исключением того, что этот метод работает с `CListBox` объекта.  
+### <a name="remarks"></a>Remarks  
+ This method is like the [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox) method except that this method works with a `CListBox` object.  
   
- Этот метод не очищает содержимое `CListBox` объекта до его заполнения. Гарантирует, что **все команды** категория — последний элемент в поле со списком.  
+ This method does not clear the contents of the `CListBox` object before populating it. It guarantees that the **All Commands** category is the final item in the list box.  
   
- Можно добавить новые категории команд с помощью [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) метод. Можно изменить имя существующей категории с помощью [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) метод.  
+ You can add new command categories by using the [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) method. You can change the name of an existing category by using the [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) method.  
   
- `CMFCToolBarsCommandsPropertyPage` Класс использует этот метод для отображения списка команд, связанных с каждой категорией команды.  
+ The `CMFCToolBarsCommandsPropertyPage` class uses this method to show the list of commands that is associated with each command category.  
   
-##  <a name="getcommandname"></a>CMFCToolBarsCustomizeDialog::GetCommandName  
- Получает имя, связанный с данной команды.  
+##  <a name="getcommandname"></a>  CMFCToolBarsCustomizeDialog::GetCommandName  
+ Retrieves the name that is associated with the given command ID.  
   
 ```  
 LPCTSTR GetCommandName(UINT uiCmd) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- Идентификатор команды для получения.  
+ The ID of the command to retrieve.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имя, связанное с заданным Идентификатором команды, или `NULL` Если команда не существует.  
+### <a name="return-value"></a>Return Value  
+ The name that is associated with the given command ID, or `NULL` if the command does not exist.  
   
-##  <a name="getcountincategory"></a>CMFCToolBarsCustomizeDialog::GetCountInCategory  
- Получает число элементов в указанный список с меткой заданный текст.  
+##  <a name="getcountincategory"></a>  CMFCToolBarsCustomizeDialog::GetCountInCategory  
+ Retrieves the number of items in the provided list that have a given text label.  
   
 ```  
 int GetCountInCategory(
@@ -441,105 +449,105 @@ int GetCountInCategory(
     const CObList& lstCommands) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszItemName`  
- Текстовая метка для сопоставления.  
+ The text label to match.  
   
  [in] `lstCommands`  
- Ссылку на список, содержащий `CMFCToolBarButton` объектов.  
+ A reference to a list that contains `CMFCToolBarButton` objects.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов в предоставленном списке которых равно текст метки `lpszItemName`.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the provided list whose text label equals `lpszItemName`.  
   
-### <a name="remarks"></a>Примечания  
- Каждый элемент в списке предоставленный объект должен иметь тип `CMFCToolBarButton`. Этот метод сравнивает `lpszItemName` с [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) данные-член.  
+### <a name="remarks"></a>Remarks  
+ Each element in the provided object list must be of type `CMFCToolBarButton`. This method compares `lpszItemName` with the [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) data member.  
   
-##  <a name="getflags"></a>CMFCToolBarsCustomizeDialog::GetFlags  
- Получает набор флагов, влияющих на поведение диалогового окна.  
+##  <a name="getflags"></a>  CMFCToolBarsCustomizeDialog::GetFlags  
+ Retrieves the set of flags that affect the behavior of the dialog box.  
   
 ```  
 UINT GetFlags() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Набор флагов, влияющих на поведение диалогового окна.  
+### <a name="return-value"></a>Return Value  
+ The set of flags that affect the behavior of the dialog box.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращает значение `uiFlags` параметр, передаваемый в конструктор. Возвращаемое значение может быть один или несколько из следующих значений:  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the value of the `uiFlags` parameter that is passed to the constructor. The return value can be one or more of the following values:  
   
  `AFX_CUSTOMIZE_MENU_SHADOWS`  
- Позволяет пользователю задавать тени внешний вид меню.  
+ Allows the user to specify the shadow appearance of the menu.  
   
  `AFX_CUSTOMIZE_TEXT_LABELS`  
- Позволяет пользователю указать, отображаются ли метки текст под изображения кнопок панели инструментов.  
+ Allows the user to specify whether text labels are shown underneath the toolbar button images.  
   
  `AFX_CUSTOMIZE_MENU_ANIMATIONS`  
- Позволяет пользователю задать стиль анимации меню.  
+ Allows the user to specify the menu animation style.  
   
  `AFX_CUSTOMIZE_NOHELP`  
- Удаляет «Справка» из диалогового окна настройки.  
+ Removes the help button from the customization dialog box.  
   
  `AFX_CUSTOMIZE_CONTEXT_HELP`  
- Позволяет `WS_EX_CONTEXTHELP` визуального стиля.  
+ Enables the `WS_EX_CONTEXTHELP` visual style.  
   
  `AFX_CUSTOMIZE_NOTOOLS`  
- Удаляет **средства** страницы из диалогового окна настройки. Этот флаг является допустимым, если приложение использует `CUserToolsManager` класса.  
+ Removes the **Tools** page from the customization dialog box. This flag is valid if your application uses the `CUserToolsManager` class.  
   
  `AFX_CUSTOMIZE_MENUAMPERS`  
- Позволяет кнопках содержать амперсанд ( ** & **) символов.  
+ Allows button captions to contain the ampersand ( **&**) character.  
   
  `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
- Удаляет **крупные значки** параметр из диалогового окна настройки.  
+ Removes the **Large Icons** option from the customization dialog box.  
   
- Дополнительные сведения о `WS_EX_CONTEXTHELP` визуальный стиль в разделе [расширенные стили окна](../../mfc/reference/extended-window-styles.md).  
+ For more information about the `WS_EX_CONTEXTHELP` visual style, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
-##  <a name="onafterchangetool"></a>CMFCToolBarsCustomizeDialog::OnAfterChangeTool  
- Реагирует на изменения в пользовательский инструмент сразу же после возникновения.  
+##  <a name="onafterchangetool"></a>  CMFCToolBarsCustomizeDialog::OnAfterChangeTool  
+ Responds to a change in a user tool immediately after it occurs.  
   
 ```  
 virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in, out] `pSelTool`  
- Указатель на объект пользователя средства, которое было изменено.  
+ A pointer to the user tool object that has been changed.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается инфраструктурой при изменении свойства инструмент, определенный пользователем. Реализация по умолчанию не выполняет никаких действий. Переопределите этот метод в классе, производном от `CMFCToolBarsCustomizeDialog` для выполнения обработки после изменении пользовательский инструмент.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when a user changes the properties of a user-defined tool. The default implementation does nothing. Override this method in a class derived from `CMFCToolBarsCustomizeDialog`  to perform processing after a change to a user tool occurs.  
   
-##  <a name="onassignkey"></a>CMFCToolBarsCustomizeDialog::OnAssignKey  
- Проверяет сочетания клавиш, как пользователь определяет их.  
+##  <a name="onassignkey"></a>  CMFCToolBarsCustomizeDialog::OnAssignKey  
+ Validates keyboard shortcuts as a user defines them.  
   
 ```  
 virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in, out] `pAccel`  
- Указатель на назначение предложенный клавиатуры, который выражается в виде [ВЫЗОВ](http://msdn.microsoft.com/library/windows/desktop/ms646340) структуры.  
+ Pointer to the proposed keyboard assigment that is expressed as an [ACCEL](http://msdn.microsoft.com/library/windows/desktop/ms646340) struct.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если ключ может быть назначена или `FALSE` , если ключ не может быть назначен. Реализация по умолчанию всегда возвращает `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the key can be assigned, or `FALSE` if the key cannot be assigned. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе для выполнения дополнительной обработки, когда пользователь назначает новое сочетание клавиш или проверить сочетания клавиш как пользователь определяет их. Чтобы запретить присваивание ярлык, возвращают `FALSE`. Следует также отобразить окно сообщения или в противном случае информирует пользователя о причина, почему был отклонен сочетания клавиш.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to perform extra processing when a user assigns a new keyboard shortcut, or to validate keyboard shortcuts as the user defines them. To prevent a shortcut from being assigned, return `FALSE`. You should also display a message box or otherwise inform the user of the reason why the keyboard shortcut was rejected.  
   
-##  <a name="onbeforechangetool"></a>CMFCToolBarsCustomizeDialog::OnBeforeChangeTool  
- Выполняет специальной обработки при изменении пользовательский инструмент, когда пользователь собирается применить изменение.  
+##  <a name="onbeforechangetool"></a>  CMFCToolBarsCustomizeDialog::OnBeforeChangeTool  
+ Performs custom processing when a change to a user tool when the user is about to apply a change.  
   
 ```  
 virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in, out] `pSelTool`  
- Указатель на объект средства пользователя, который должен быть заменен.  
+ A pointer to the user tool object that is about to be replaced.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается инфраструктурой при свойства инструмент, определенный пользователем. Реализация по умолчанию не выполняет никаких действий. Переопределение `OnBeforeChangeTool` метод в класс производным от `CMFCToolBarsCustomizeDialog` Если вы хотите выполнить обработку, прежде чем произойдет изменение пользовательский инструмент, такие как освобождение ресурсов, `pSelTool` использует.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when the properties of a user-defined tool is about to change. The default implementation does nothing. Override the `OnBeforeChangeTool` method in a class derived from `CMFCToolBarsCustomizeDialog`  if you want to perform processing before a change to a user tool occurs, such as releasing resources that `pSelTool` uses.  
   
-##  <a name="onedittoolbarmenuimage"></a>CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
- Запускает редактор изображений, что пользователь может настроить значка элемента кнопки или меню на панели инструментов.  
+##  <a name="onedittoolbarmenuimage"></a>  CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
+ Starts an image editor so that a user can customize a toolbar button or menu item icon.  
   
 ```  
 virtual BOOL OnEditToolbarMenuImage(
@@ -548,59 +556,59 @@ virtual BOOL OnEditToolbarMenuImage(
     int nBitsPerPixel);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Указатель на родительское окно.  
+ A pointer to the parent window.  
   
  [in] `bitmap`  
- Ссылка на объект bitmap для редактирования.  
+ A reference to a bitmap object to be edited.  
   
  [in] `nBitsPerPixel`  
- Битовая карта, цветовое разрешение в бит на пиксель.  
+ Bitmap color resolution, in bits per pixel.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если изменение фиксируется; в противном случае `FALSE`. Реализация по умолчанию отображается диалоговое окно и возвращает `TRUE` при нажатии кнопки **ОК**, или `FALSE` при нажатии кнопки **отменить** или **закрыть** кнопки.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a change is being committed; otherwise `FALSE`. The default implementation displays a dialog box and returns `TRUE` if the user clicks **OK**, or `FALSE` if the user clicks **Cancel** or the **Close** button.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается инфраструктурой при запуске редактора изображений. Реализация по умолчанию отображает [CMFCImageEditorDialog класса](../../mfc/reference/cmfcimageeditordialog-class.md) диалоговое окно. Переопределение `OnEditToolbarMenuImage` в производном классе с помощью редактора пользовательского образа.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when the user runs the image editor. The default implementation displays [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md) dialog box. Override `OnEditToolbarMenuImage` in a derived class to use a custom image editor.  
   
-##  <a name="oninitdialog"></a>CMFCToolBarsCustomizeDialog::OnInitDialog  
- Переопределения для дополнения инициализации листа свойств.  
+##  <a name="oninitdialog"></a>  CMFCToolBarsCustomizeDialog::OnInitDialog  
+ Overrides to augment property sheet initialization.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Результат вызова метода [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog) метод.  
+### <a name="return-value"></a>Return Value  
+ The result of calling the [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog) method.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод расширяет реализацию базового класса, [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog), путем отображения **закрыть** кнопки, убедившись, что диалоговое окно соответствует текущий размер экрана и переместив **помочь** кнопки в нижнем левом углу диалогового окна.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog), by displaying the **Close** button, by making sure that the dialog box fits the current screen size, and by moving the **Help** button to the lower-left corner of the dialog box.  
   
-##  <a name="oninittoolspage"></a>CMFCToolBarsCustomizeDialog::OnInitToolsPage  
- Обрабатывает уведомления от платформы, **средства** страницы является инициализироваться.  
+##  <a name="oninittoolspage"></a>  CMFCToolBarsCustomizeDialog::OnInitToolsPage  
+ Handles the notification from the framework that the **Tools** page is about to be initialized.  
   
 ```  
 virtual void OnInitToolsPage();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию не выполняет никаких действий. Переопределите этот метод в производном классе для обработки этого уведомления.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing. Override this method in a derived class to process this notification.  
   
-##  <a name="postncdestroy"></a>CMFCToolBarsCustomizeDialog::PostNcDestroy  
- Вызывается платформой после окно уже уничтожено.  
+##  <a name="postncdestroy"></a>  CMFCToolBarsCustomizeDialog::PostNcDestroy  
+ Called by the framework after the window has been destroyed.  
   
 ```  
 virtual void PostNcDestroy();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод расширяет реализацию базового класса, `CPropertySheet::PostNcDestroy`, восстановив его в предыдущий режим.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, `CPropertySheet::PostNcDestroy`, by restoring the application to the previous mode.  
   
- [CMFCToolBarsCustomizeDialog::Create](#create) метод помещает его в специальный режим, который ограничивает пользователя задач настройки.  
+ The [CMFCToolBarsCustomizeDialog::Create](#create) method puts the application in a special mode that limits the user to customization tasks.  
   
-##  <a name="removebutton"></a>CMFCToolBarsCustomizeDialog::RemoveButton  
- Удаление кнопки с заданным Идентификатором команды из указанной категории, или из всех категорий.  
+##  <a name="removebutton"></a>  CMFCToolBarsCustomizeDialog::RemoveButton  
+ Removes the button with the specified command ID from the specified category, or from all categories.  
   
 ```  
 int RemoveButton(
@@ -612,24 +620,24 @@ int RemoveButton(
     UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCategoryId`  
- Указывает идентификатор категории, из которого нужно удалить кнопку.  
+ Specifies the category ID from which to remove the button.  
   
  [in] `uiCmdId`  
- Указывает идентификатор команды кнопки.  
+ Specifies the command ID of the button.  
   
  [in] `lpszCategory`  
- Задает имя категории, из которого нужно удалить кнопку.  
+ Specifies the name of the category from which to remove the button.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс кнопка удаляется или -1, если заданный идентификатор команды не был найден в указанной категории. Если `uiCategoryId` равно -1, возвращаемое значение равно 0.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the removed button, or -1 if the specified command ID was not found in the specified category. If `uiCategoryId` is -1, the return value is 0.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы удалить кнопку из всех категорий, вызовите первая перегрузка этого метода и набор `uiCategoryId` значение -1.  
+### <a name="remarks"></a>Remarks  
+ To remove a button from all categories, call the first overload of this method and set `uiCategoryId` to -1.  
   
-##  <a name="renamecategory"></a>CMFCToolBarsCustomizeDialog::RenameCategory  
- Переименовывает категорию в списке категорий на **команды** страницы.  
+##  <a name="renamecategory"></a>  CMFCToolBarsCustomizeDialog::RenameCategory  
+ Renames a category in the list box of categories on the **Commands** page.  
   
 ```  
 BOOL RenameCategory(
@@ -637,21 +645,21 @@ BOOL RenameCategory(
     LPCTSTR lpszCategoryNew);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCategoryOld`  
- Чтобы изменить имя категории.  
+ The category name to change.  
   
  [in] `lpszCategoryNew`  
- Имя новой категории.  
+ The new category name.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод был выполнен успешно; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Имя категории должно быть уникальным.  
+### <a name="remarks"></a>Remarks  
+ The category name must be unique.  
   
-##  <a name="replacebutton"></a>CMFCToolBarsCustomizeDialog::ReplaceButton  
- Заменяет кнопки панели инструментов в окне списка команд на **команды** страницы.  
+##  <a name="replacebutton"></a>  CMFCToolBarsCustomizeDialog::ReplaceButton  
+ Replaces a toolbar button in the list box of commands on the **Commands** page.  
   
 ```  
 void ReplaceButton(
@@ -659,40 +667,40 @@ void ReplaceButton(
     const CMFCToolBarButton& button);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- Команда кнопку для замены.  
+ Specifies the command of the button to be replaced.  
   
  [in] `button`  
- A `const` ссылку на объект кнопки панели инструментов, заменяет старый кнопки.  
+ A `const` reference to the toolbar button object that replaces the old button.  
   
-### <a name="remarks"></a>Примечания  
- При [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), или [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) добавляет команды **команды** страницы, что команда находится в форме [класса CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) объекта (или [класса CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) объекта для пункта меню, содержащему вложенное меню, добавленные `AddMenuCommands`). Платформа также вызывает эти три метода, чтобы автоматически добавить команды. Получить команду, чтобы представить его с помощью производного типа, метод `ReplaceButton` и передать в кнопке производного типа.  
+### <a name="remarks"></a>Remarks  
+ When [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), or [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) adds a command to the **Commands** page, that command is in the form of a [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) object (or a [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md) object for a menu item that contains a submenu added by `AddMenuCommands`). The framework also calls these three methods to add commands automatically. If you want a command to be represented by a derived type instead, call `ReplaceButton` and pass in a button of the derived type.  
   
-### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `ReplaceButton` метод `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `ReplaceButton` method in the `CMFCToolBarsCustomizeDialog` class. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#34;](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]  
   
-##  <a name="setusercategory"></a>CMFCToolBarsCustomizeDialog::SetUserCategory  
- Указывает категорию в списке категорий на **команды** страница является категории пользователей. Эту функцию необходимо вызывать перед вызовом метода [CMFCToolBarsCustomizeDialog::Create](#create).  
+##  <a name="setusercategory"></a>  CMFCToolBarsCustomizeDialog::SetUserCategory  
+ Specifies which category in the list of categories on the **Commands** page is the user category. You must call this function before you call [CMFCToolBarsCustomizeDialog::Create](#create).  
   
 ```  
 BOOL SetUserCategory(LPCTSTR lpszCategory);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCategory`  
- Имя категории.  
+ The name of the category.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method is successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Параметр категории пользователь в настоящее время не используется платформой.  
+### <a name="remarks"></a>Remarks  
+ The user category setting is not currently used by the framework.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [CPropertySheet-класс](../../mfc/reference/cpropertysheet-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CPropertySheet Class](../../mfc/reference/cpropertysheet-class.md)
 
